@@ -1,0 +1,33 @@
+h1 {
+    font-family: Georgia;
+    font-size: 30pt;
+    font-weight: bold;
+}
+h2 {
+    font-family: Georgia;
+    font-size: 25pt;
+    font-weight: bold;
+}
+.title {
+    font-family: Arial;
+    font-size: 15pt;
+    font-weight: bold;   
+}
+subheader {
+    font-family: Arial;
+    font-size: 13pt;
+}
+p {
+    font-family: Arial;
+    font-size: 10pt;
+}
+body_bold {
+    font-family: Arial;
+    font-size: 10pt;
+    font-weight: bold;
+}
+button {
+    font-family: Arial;
+    font-size: 13pt;
+    font-weight: bold;  
+}
