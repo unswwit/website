@@ -1,0 +1,14 @@
+.crop {
+    margin: auto;
+    width: 527px;
+    height: 353px;
+    overflow: hidden;
+}
+
+.profile_img img {
+    width: 527px;
+    height: 353px;
+    margin: -75px 0 0 -100px;
+}
+
+/* To do: css for the different word styles in the profile description */

@@ -1,16 +1,18 @@
-import React from 'react';
+import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
+  Link
   // Redirect
 } from "react-router-dom";
 // import logo from './logo.svg';
-import './App.css';
-import './style.css';
-import JoinUs from './joinUs';
-import Sponsors from './sponsors';
+
+import "./App.css";
+import "./style.css";
+import JoinUs from "./joinUs";
+import Sponsors from "./sponsors";
+import Team from "./team";
 // import { ResponsiveImage, ResponsiveImageSize } from 'react-responsive-image';
 // const { width, height } = Dimensions.get('window');
 
@@ -26,6 +28,9 @@ function App() {
             <li>
               <Link to="/sponsors">Sponsors</Link>
             </li>
+            <li>
+              <Link to="/our-team">Our Team</Link>
+            </li>
           </ul>
         </nav>
 
@@ -37,6 +42,9 @@ function App() {
           </Route>
           <Route path="/sponsors">
             <Sponsors />
+          </Route>
+          <Route path="/our-team">
+            <Team />
           </Route>
           <Route path="/">
             <Home />
