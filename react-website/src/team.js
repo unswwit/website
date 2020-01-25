@@ -8,6 +8,7 @@ class TeamPage extends Component {
     // TODO: Make Profiile Component, and use includes rather hardcoded html
     return (
       <div>
+        {/* Cover Photo */}
         <img
           src={process.env.PUBLIC_URL + "/wit_cover_team.jpg"}
           className=""
@@ -19,6 +20,7 @@ class TeamPage extends Component {
           }}
         />
 
+        {/* Main Title, and Subtitle Area */}
         <div className="title_area">
           <h1 className="centre">Meet Our Team!</h1>
           <p className="subheader centre">
@@ -27,8 +29,10 @@ class TeamPage extends Component {
                     `}
           </p>
         </div>
-
+        
+        {/* Row of Profiles */}
         <div className="section">
+          {/* Individual Profile of an Exec */}
           <div class="profile">
             <img
               src={process.env.PUBLIC_URL + "/wit_team_elicia.jpg"}
@@ -37,6 +41,7 @@ class TeamPage extends Component {
               resizeMode="contain"
             />
 
+            {/* Profile Details */}
             <div className="profile_details">
               <p className="profile_text_name">Elicia Moustache Au Doung</p>
               <p className="profile_text_position">Position</p>
@@ -149,67 +154,69 @@ class TeamPage extends Component {
           </div>
         </div>
 
-        <div className="section">
-          <div class="profile">
-            <img
-              src={process.env.PUBLIC_URL + "/wit_team_elicia.jpg"}
-              className="profile_img"
-              alt="banner"
-              resizeMode="contain"
-            />
-          </div>
+        <div className="section_subcommittee">
+          <img
+            src={process.env.PUBLIC_URL + "/wit_team_elicia.jpg"}
+            className="profile_img"
+            alt="banner"
+            resizeMode="contain"
+          />
 
-          <div class="profile">
-            <div className="profile_details">
-              <p className="profile_text_name">Elicia Moustache Au Doung</p>
-              <p className="profile_text_position">Position</p>
-              <p>degree and year</p>
-              <p>cool funny quote or details</p>
-              <p>more interesting stuff</p>
+          <div className="profile_details_subcommittee">
+            <p className="profile_text_name">Elicia Moustache Au Doung</p>
+            <p className="profile_text_position">Position</p>
+            <p>degree and year</p>
+            <p>cool funny quote or details</p>
+            <p>more interesting stuff</p>
 
-              {/* Icon Bar shoulddd be a horizontal row of icons */}
-              <div classname="icon_bar">
-                {/* Linkedin Icon - target=_blank opens in new tab */}
-                <a
-                  href="https://www.linkedin.com/in/eliciaauduong/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {/* LinkedIn Icon Img */}
-                  <img
-                    className="icon"
-                    src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
-                    alt="Facebook Icon"
-                  />
-                </a>
+            {/* Icon Bar shoulddd be a horizontal row of icons */}
+            <div classname="icon_bar">
+              {/* Linkedin Icon - target=_blank opens in new tab */}
+              <a
+                href="https://www.linkedin.com/in/eliciaauduong/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {/* LinkedIn Icon Img */}
+                <img
+                  className="icon"
+                  src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
+                  alt="Facebook Icon"
+                />
+              </a>
 
-                {/* Facebook Icon */}
-                <a
-                  href="https://www.facebook.com/eliciacauduong/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    className="icon"
-                    src={process.env.PUBLIC_URL + "/icon_facebook.png"}
-                    alt="Facebook Icon"
-                  />
-                </a>
+              {/* Facebook Icon */}
+              <a
+                href="https://www.facebook.com/eliciacauduong/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  className="icon"
+                  src={process.env.PUBLIC_URL + "/icon_facebook.png"}
+                  alt="Facebook Icon"
+                />
+              </a>
 
-                {/* This email address needs to be changed to Elicia's rn is just Execs */}
-                <a
-                  href="mailto:elicia@unswwit.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    className="icon"
-                    src={process.env.PUBLIC_URL + "/icon_email.png"}
-                    alt="Facebook Icon"
-                  />
-                </a>
-              </div>
+              {/* This email address needs to be changed to Elicia's rn is just Execs */}
+              <a
+                href="mailto:elicia@unswwit.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  className="icon"
+                  src={process.env.PUBLIC_URL + "/icon_email.png"}
+                  alt="Facebook Icon"
+                />
+              </a>
             </div>
+
+            <p>Subcommittee Member Names Here: </p>
+            <p>- Tree 1 </p>
+            <p>- Child Node 1 </p>
+            <p>- Child Node 2 </p>
+            <p>- Prune Tree =( </p>
           </div>
         </div>
       </div>

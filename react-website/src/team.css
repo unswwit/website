@@ -19,6 +19,14 @@
   padding: 10px;
 }
 
+.section_subcommittee {
+    display: flex;
+    margin-left: 190px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
 .profile {
   flex: 50%;
   /* hardcorded padding - may have issues if image size changes */
@@ -29,15 +37,17 @@
   float: none;
 }
 
-
-
 .profile_details {
-    text-align: left;
+  text-align: left;
 }
+
+.profile_details_subcommittee {
+    margin-left: 40px;
+    text-align: left;
+  }
 
 .icon_bar {
   width: 90px;
-  overflow: auto;
 }
 
 .icon_bar a {
@@ -55,31 +65,30 @@
 
 /* To do: css for the different word styles in the profile description */
 
-
 .subheader {
-    font-family: Arial;
-    font-size: 13pt;
-    color: grey;
-    font-weight: bold;
+  font-family: Arial;
+  font-size: 13pt;
+  color: grey;
+  font-weight: bold;
 }
 
 .profile_text_name {
-    font-family: Arial;
-    font-size: 9pt;
-    font-weight: bold;
-    color: orange;   
+  font-family: Arial;
+  font-size: 9pt;
+  font-weight: bold;
+  color: orange;
 }
 
 .profile_text_position {
-    font-family: Arial;
-    font-size: 5pt;
-    color: orange;
-    font-weight: bold;
+  font-family: Arial;
+  font-size: 5pt;
+  color: orange;
+  font-weight: bold;
 }
 
 p {
-    font-family: Arial;
-    font-size: 7pt;
-    margin-top: 0;
-    color: orange;
+  font-family: Arial;
+  font-size: 7pt;
+  margin-top: 0;
+  color: orange;
 }
