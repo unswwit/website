@@ -21,6 +21,7 @@
   display: flex;
   margin-left: 100px;
   margin-right: 100px;
+  margin-bottom: 50px;
   padding: 10px;
 }
 
@@ -30,10 +31,22 @@
   padding-right: 70px;
 }
 
+.icon_bar {
+  width: 90px;
+  overflow: auto;
+}
+
+.icon_bar a {
+  float: left;
+  width: 20%;
+  padding: 12px 0;
+}
+
 .icon {
-  width: 42px;
-  height: 42px;
+  width: 25px;
+  height: 25px;
   border: 0;
+  margin-right: 10px;
 }
 
 /* To do: css for the different word styles in the profile description */
