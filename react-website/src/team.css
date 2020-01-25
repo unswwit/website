@@ -1,29 +1,39 @@
 .profile_img {
-    
-    /* object-fit: contain; */
-    max-width: 100%;
-    height: auto;
-    overflow: hidden;
-    margin-bottom: 20px;
+  /* object-fit: contain; */
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .crop img {
-    width: 527px;
-    height: 353px;
-    margin: -75px 0 0 -100px;
+  width: 527px;
+  height: 353px;
+  margin: -75px 0 0 -100px;
+}
+
+.title_area {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .section {
-    display: flex;
-    margin-left: 100px;
-    margin-right: 100px;
-    padding: 10px;
+  display: flex;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 10px;
 }
 
 .profile {
-    flex: 50%;
-    padding-left: 70px;
-    padding-right: 70px;
+  flex: 50%;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+  border: 0;
 }
 
 /* To do: css for the different word styles in the profile description */

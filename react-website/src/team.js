@@ -18,13 +18,15 @@ class TeamPage extends Component {
             height: "auto"
           }}
         />
-        <h1 className="centre">Meet Our Team!</h1>
-        <p className="subheader centre">
-          {`
+
+        <div className="title_area">
+          <h1 className="centre">Meet Our Team!</h1>
+          <p className="subheader centre">
+            {`
                         2020 Executive Team
                     `}
-        </p>
-
+          </p>
+        </div>
 
         <div className="section">
           <div class="profile">
@@ -43,8 +45,14 @@ class TeamPage extends Component {
               <p>more interesting stuff</p>
             </div>
 
-            <div classname="icons">
+            <div classname="icon_bar">
               {/* Todo: insert icon images in a row with h-ref links */}
+              <a href="https://www.linkedin.com/in/eliciaauduong/">
+                <img className="icon"
+                  src={process.env.PUBLIC_URL + "/icon_linkedin"}
+                  alt="Facebook Icon"
+                />
+              </a>
             </div>
           </div>
 
