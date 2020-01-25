@@ -38,54 +38,53 @@ class TeamPage extends Component {
             />
 
             <div className="profile_details">
-              <p className="title">Elicia Moustache Au Doung</p>
-              <p className="subheader">Position</p>
+              <p className="profile_text_name">Elicia Moustache Au Doung</p>
+              <p className="profile_text_position">Position</p>
               <p>degree and year</p>
               <p>cool funny quote or details</p>
               <p>more interesting stuff</p>
-            </div>
+              {/* Icon Bar shoulddd be a horizontal row of icons */}
+              <div classname="icon_bar">
+                {/* Linkedin Icon - target=_blank opens in new tab */}
+                <a
+                  href="https://www.linkedin.com/in/eliciaauduong/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* LinkedIn Icon Img */}
+                  <img
+                    className="icon"
+                    src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
+                    alt="Facebook Icon"
+                  />
+                </a>
 
-            {/* Icon Bar shoulddd be a horizontal row of icons */}
-            <div classname="icon_bar">
-              {/* Linkedin Icon - target=_blank opens in new tab */}
-              <a
-                href="https://www.linkedin.com/in/eliciaauduong/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {/* LinkedIn Icon Img */}
-                <img
-                  className="icon"
-                  src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
-                  alt="Facebook Icon"
-                />
-              </a>
+                {/* Facebook Icon */}
+                <a
+                  href="https://www.facebook.com/eliciacauduong/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    className="icon"
+                    src={process.env.PUBLIC_URL + "/icon_facebook.png"}
+                    alt="Facebook Icon"
+                  />
+                </a>
 
-              {/* Facebook Icon */}
-              <a
-                href="https://www.facebook.com/eliciacauduong/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="icon"
-                  src={process.env.PUBLIC_URL + "/icon_facebook.png"}
-                  alt="Facebook Icon"
-                />
-              </a>
-
-              {/* This email address needs to be changed to Elicia's rn is just Execs */}
-              <a
-                href="mailto:exec@unswwit.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="icon"
-                  src={process.env.PUBLIC_URL + "/icon_email.png"}
-                  alt="Facebook Icon"
-                />
-              </a>
+                {/* This email address needs to be changed to Elicia's rn is just Execs */}
+                <a
+                  href="mailto:elicia@unswwit.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    className="icon"
+                    src={process.env.PUBLIC_URL + "/icon_email.png"}
+                    alt="Facebook Icon"
+                  />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -98,58 +97,56 @@ class TeamPage extends Component {
             />
 
             <div className="profile_details">
-              <p className="title">Elicia Moustache Au Doung</p>
-              <p className="subheader">Position</p>
+              <p className="profile_text_name">Elicia Moustache Au Doung</p>
+              <p className="profile_text_position">Position</p>
               <p>degree and year</p>
               <p>cool funny quote or details</p>
               <p>more interesting stuff</p>
+
+              {/* Icon Bar shoulddd be a horizontal row of icons */}
+              <div classname="icon_bar">
+                {/* Linkedin Icon - target=_blank opens in new tab */}
+                <a
+                  href="https://www.linkedin.com/in/eliciaauduong/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* LinkedIn Icon Img */}
+                  <img
+                    className="icon"
+                    src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
+                    alt="Facebook Icon"
+                  />
+                </a>
+
+                {/* Facebook Icon */}
+                <a
+                  href="https://www.facebook.com/eliciacauduong/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    className="icon"
+                    src={process.env.PUBLIC_URL + "/icon_facebook.png"}
+                    alt="Facebook Icon"
+                  />
+                </a>
+
+                {/* This email address needs to be changed to Elicia's rn is just Execs */}
+                <a
+                  href="mailto:elicia@unswwit.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    className="icon"
+                    src={process.env.PUBLIC_URL + "/icon_email.png"}
+                    alt="Facebook Icon"
+                  />
+                </a>
+              </div>
             </div>
-
-            {/* Icon Bar shoulddd be a horizontal row of icons */}
-            <div classname="icon_bar">
-              {/* Linkedin Icon - target=_blank opens in new tab */}
-              <a
-                href="https://www.linkedin.com/in/eliciaauduong/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {/* LinkedIn Icon Img */}
-                <img
-                  className="icon"
-                  src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
-                  alt="Facebook Icon"
-                />
-              </a>
-
-              {/* Facebook Icon */}
-              <a
-                href="https://www.facebook.com/eliciacauduong/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="icon"
-                  src={process.env.PUBLIC_URL + "/icon_facebook.png"}
-                  alt="Facebook Icon"
-                />
-              </a>
-
-              {/* This email address needs to be changed to Elicia's rn is just Execs */}
-              <a
-                href="mailto:exec@unswwit.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="icon"
-                  src={process.env.PUBLIC_URL + "/icon_email.png"}
-                  alt="Facebook Icon"
-                />
-              </a>
-            </div>
-
           </div>
-
         </div>
 
         <div className="section">
@@ -160,122 +157,61 @@ class TeamPage extends Component {
               alt="banner"
               resizeMode="contain"
             />
-
-            <div className="profile_details">
-              <p className="title">Elicia Moustache Au Doung</p>
-              <p className="subheader">Position</p>
-              <p>degree and year</p>
-              <p>cool funny quote or details</p>
-              <p>more interesting stuff</p>
-            </div>
-
-            {/* Icon Bar shoulddd be a horizontal row of icons */}
-            <div classname="icon_bar">
-              {/* Linkedin Icon - target=_blank opens in new tab */}
-              <a
-                href="https://www.linkedin.com/in/eliciaauduong/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {/* LinkedIn Icon Img */}
-                <img
-                  className="icon"
-                  src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
-                  alt="Facebook Icon"
-                />
-              </a>
-
-              {/* Facebook Icon */}
-              <a
-                href="https://www.facebook.com/eliciacauduong/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="icon"
-                  src={process.env.PUBLIC_URL + "/icon_facebook.png"}
-                  alt="Facebook Icon"
-                />
-              </a>
-
-              {/* This email address needs to be changed to Elicia's rn is just Execs */}
-              <a
-                href="mailto:exec@unswwit.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="icon"
-                  src={process.env.PUBLIC_URL + "/icon_email.png"}
-                  alt="Facebook Icon"
-                />
-              </a>
-            </div>
           </div>
 
           <div class="profile">
-            <img
-              src={process.env.PUBLIC_URL + "/wit_team_elicia.jpg"}
-              className="profile_img"
-              alt="banner"
-              resizeMode="contain"
-            />
-
             <div className="profile_details">
-              <p className="title">Elicia Moustache Au Doung</p>
-              <p className="subheader">Position</p>
+              <p className="profile_text_name">Elicia Moustache Au Doung</p>
+              <p className="profile_text_position">Position</p>
               <p>degree and year</p>
               <p>cool funny quote or details</p>
               <p>more interesting stuff</p>
+
+              {/* Icon Bar shoulddd be a horizontal row of icons */}
+              <div classname="icon_bar">
+                {/* Linkedin Icon - target=_blank opens in new tab */}
+                <a
+                  href="https://www.linkedin.com/in/eliciaauduong/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* LinkedIn Icon Img */}
+                  <img
+                    className="icon"
+                    src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
+                    alt="Facebook Icon"
+                  />
+                </a>
+
+                {/* Facebook Icon */}
+                <a
+                  href="https://www.facebook.com/eliciacauduong/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    className="icon"
+                    src={process.env.PUBLIC_URL + "/icon_facebook.png"}
+                    alt="Facebook Icon"
+                  />
+                </a>
+
+                {/* This email address needs to be changed to Elicia's rn is just Execs */}
+                <a
+                  href="mailto:elicia@unswwit.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    className="icon"
+                    src={process.env.PUBLIC_URL + "/icon_email.png"}
+                    alt="Facebook Icon"
+                  />
+                </a>
+              </div>
             </div>
-
-            {/* Icon Bar shoulddd be a horizontal row of icons */}
-            <div classname="icon_bar">
-              {/* Linkedin Icon - target=_blank opens in new tab */}
-              <a
-                href="https://www.linkedin.com/in/eliciaauduong/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {/* LinkedIn Icon Img */}
-                <img
-                  className="icon"
-                  src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
-                  alt="Facebook Icon"
-                />
-              </a>
-
-              {/* Facebook Icon */}
-              <a
-                href="https://www.facebook.com/eliciacauduong/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="icon"
-                  src={process.env.PUBLIC_URL + "/icon_facebook.png"}
-                  alt="Facebook Icon"
-                />
-              </a>
-
-              {/* This email address needs to be changed to Elicia's rn is just Execs */}
-              <a
-                href="mailto:exec@unswwit.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="icon"
-                  src={process.env.PUBLIC_URL + "/icon_email.png"}
-                  alt="Facebook Icon"
-                />
-              </a>
-            </div>
-
           </div>
-
         </div>
-
       </div>
     );
   }

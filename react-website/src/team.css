@@ -1,15 +1,9 @@
 .profile_img {
   /* object-fit: contain; */
-  max-width: 100%;
+  max-width: 360px;
   height: auto;
   overflow: hidden;
-  margin-bottom: 20px;
-}
-
-.crop img {
-  width: 527px;
-  height: 353px;
-  margin: -75px 0 0 -100px;
+  margin-bottom: 10px;
 }
 
 .title_area {
@@ -21,14 +15,24 @@
   display: flex;
   margin-left: 100px;
   margin-right: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   padding: 10px;
 }
 
 .profile {
   flex: 50%;
-  padding-left: 70px;
-  padding-right: 70px;
+  /* hardcorded padding - may have issues if image size changes */
+  padding-left: 90px;
+  padding-right: 90px;
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+
+
+.profile_details {
+    text-align: left;
 }
 
 .icon_bar {
@@ -43,10 +47,39 @@
 }
 
 .icon {
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 15px;
   border: 0;
   margin-right: 10px;
 }
 
 /* To do: css for the different word styles in the profile description */
+
+
+.subheader {
+    font-family: Arial;
+    font-size: 13pt;
+    color: grey;
+    font-weight: bold;
+}
+
+.profile_text_name {
+    font-family: Arial;
+    font-size: 9pt;
+    font-weight: bold;
+    color: orange;   
+}
+
+.profile_text_position {
+    font-family: Arial;
+    font-size: 5pt;
+    color: orange;
+    font-weight: bold;
+}
+
+p {
+    font-family: Arial;
+    font-size: 7pt;
+    margin-top: 0;
+    color: orange;
+}
