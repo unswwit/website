@@ -1,10 +1,11 @@
+//All necessary imports for this javascript
 import React, { Component } from "react";
 import "./style.css";
 import "./team.css";
 
 class TeamPage extends Component {
   render() {
-    // TODO: Make Executive Component, and include in here
+    // TODO: Make Profiile Component, and use includes rather hardcoded html
     return (
       <div>
         <img
@@ -13,9 +14,8 @@ class TeamPage extends Component {
           alt="banner"
           resizeMode="contain"
           style={{
-            //Todo: Make image fit
-            maxHeight: 768,
-            maxWidth: 1336
+            width: "100%",
+            height: "auto"
           }}
         />
         <h1 className="centre">Meet Our Team!</h1>
@@ -25,32 +25,48 @@ class TeamPage extends Component {
                     `}
         </p>
 
-        {/*Everything inside is made into columns */}
-        <div className="column">
+
+        <div className="section">
           <div class="profile">
-            <div class="profile_image">
-              <img
-                src={process.env.PUBLIC_URL + "/wit_team_elicia.jpg"}
-                className=""
-                alt="banner"
-                resizeMode="contain"
-              />
-            </div>
+            <img
+              src={process.env.PUBLIC_URL + "/wit_team_elicia.jpg"}
+              className="profile_img"
+              alt="banner"
+              resizeMode="contain"
+            />
+
             <div className="profile_details">
-              
+              <p className="title">Elicia Moustache Au Doung</p>
+              <p className="subheader">Position</p>
+              <p>degree and year</p>
+              <p>cool funny quote or details</p>
+              <p>more interesting stuff</p>
+            </div>
+
+            <div classname="icons">
+              {/* Todo: insert icon images in a row with h-ref links */}
             </div>
           </div>
 
           <div class="profile">
-            <div class="profile_image">
-              <img
-                src={process.env.PUBLIC_URL + "/wit_team_elicia.jpg"}
-                className=""
-                alt="banner"
-                resizeMode="contain"
-              />
+            <img
+              src={process.env.PUBLIC_URL + "/wit_team_elicia.jpg"}
+              className="profile_img"
+              alt="banner"
+              resizeMode="contain"
+            />
+
+            <div className="profile_details">
+              <p className="title">Elicia Moustache Au Doung</p>
+              <p className="subheader">Position</p>
+              <p>degree and year</p>
+              <p>cool funny quote or details</p>
+              <p>more interesting stuff</p>
             </div>
-            <div className="profile_details"></div>
+
+            <div classname="icons">
+              {/* Todo: insert icon images in a row with h-ref links */}
+            </div>
           </div>
         </div>
       </div>

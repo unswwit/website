@@ -1,14 +1,29 @@
-.crop {
-    margin: auto;
-    width: 527px;
-    height: 353px;
+.profile_img {
+    
+    /* object-fit: contain; */
+    max-width: 100%;
+    height: auto;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
-.profile_img img {
+.crop img {
     width: 527px;
     height: 353px;
     margin: -75px 0 0 -100px;
+}
+
+.section {
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 10px;
+}
+
+.profile {
+    flex: 50%;
+    padding-left: 70px;
+    padding-right: 70px;
 }
 
 /* To do: css for the different word styles in the profile description */
