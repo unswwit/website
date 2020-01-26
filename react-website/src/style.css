@@ -1,0 +1,112 @@
+h1 {
+    font-family: Georgia;
+    font-size: 30pt;
+    font-weight: bold;
+    color: orange;
+}
+
+h2 {
+    font-family: Georgia;
+    font-size: 25pt;
+    font-weight: bold;
+}
+
+.title {
+    font-family: Arial;
+    font-size: 15pt;
+    font-weight: bold;   
+}
+
+.subheader {
+    font-family: Arial;
+    font-size: 13pt;
+    color: grey;
+}
+
+p {
+    font-family: Arial;
+    font-size: 10pt;
+    margin-top: 0;
+}
+
+.body_bold {
+    font-family: Arial;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.centre {
+    text-align: center;
+}
+
+.button {
+    font-family: Arial;
+    font-size: 13pt;
+    font-weight: bold;
+    background-color: orange;
+    border-radius: 8px;
+    border-style: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: white;
+    color: orange;
+    border: 2px solid orange;
+}
+
+.column {
+    column-count: 3;
+    text-align: center;
+    /* FIXME: column top alignment */
+    /* display: inline-block; */
+    margin: 1em 0 !important;
+    vertical-align: top;
+    margin-top: 0;
+}
+
+.divider {
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
+.bg-custom{
+    background-color: orange;
+    opacity: 0.5;
+}
+.nav{
+  height: 70px;
+}
+.navbar-nav{
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  float: right;
+}
+.nav-item{
+  padding: 5px;
+}
+li{
+  float:right;
+}
+
+li a{
+  color: white;
+  padding: 10px 5px;
+  text-decoration: none;
+}
+/* #col {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+  
+h3 {
+margin-top: 0;
+} */
