@@ -61,11 +61,13 @@ p {
     border: 2px solid orange;
 }
 
+.sponsorImg:hover {
+    cursor: pointer;        
+}
+
 .column {
     column-count: 3;
     text-align: center;
-    /* FIXME: column top alignment */
-    /* display: inline-block; */
     margin: 1em 0 !important;
     vertical-align: top;
     margin-top: 0;
@@ -77,12 +79,33 @@ p {
     display:inline-block;
 }
 
-/* #col {
-    -moz-column-count: 2;
-    -webkit-column-count: 2;
-    column-count: 2;
-  }
+.principal {
+    display: inline-block;
+    max-width: 600px;
+    text-align: justify;
+    /* text-justify: inter-word; */
+}
+
+.major {
+    display: inline-block;
+    min-width: 300px;
+    text-align: justify;
+}
+
+.support {
+    display: inline-block;
+    max-width: 150px;
+    text-align: justify;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
   
-h3 {
-margin-top: 0;
-} */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}

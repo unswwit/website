@@ -11,7 +11,7 @@ import './App.css';
 import './style.css';
 import JoinUs from './joinUs';
 import Sponsors from './sponsors';
-// import { ResponsiveImage, ResponsiveImageSize } from 'react-responsive-image';
+import Test from './test';
 // const { width, height } = Dimensions.get('window');
 
 function App() {
@@ -26,6 +26,9 @@ function App() {
             <li>
               <Link to="/sponsors">Sponsors</Link>
             </li>
+            <li>
+              <Link to="/test">Test</Link>
+            </li>
           </ul>
         </nav>
 
@@ -37,6 +40,9 @@ function App() {
           </Route>
           <Route path="/sponsors">
             <Sponsors />
+          </Route>
+          <Route path="/test">
+            <Test />
           </Route>
           <Route path="/">
             <Home />
