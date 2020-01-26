@@ -1,78 +1,41 @@
-import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-  // Redirect
-} from "react-router-dom";
-// import logo from './logo.svg';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+//import logo from './logo.svg';
+import './App.css';
+//import './style.css';
+//import AboutUs from "./aboutUs"
+import OurTeam from "./team"
+//import JoinUs from "./joinUs"
+//import Sponsors from "./sponsors"
+//import ContactUs from "./contactUs"
 
-import "./App.css";
-import "./style.css";
-import JoinUs from "./joinUs";
-import Sponsors from "./sponsors";
-import Team from "./team";
-// import { ResponsiveImage, ResponsiveImageSize } from 'react-responsive-image';
-// const { width, height } = Dimensions.get('window');
-
-function App() {
+class App extends Component{ 
+  render(){
   return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/join-us">Join Us</Link>
-            </li>
-            <li>
-              <Link to="/sponsors">Sponsors</Link>
-            </li>
-            <li>
-              <Link to="/our-team">Our Team</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/join-us">
-            <JoinUs />
-          </Route>
-          <Route path="/sponsors">
-            <Sponsors />
-          </Route>
-          <Route path="/our-team">
-            <Team />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
+	<Router>
+  		<nav class="navbar navbar-expand-md navbar-light bg-faded fixed-top ">
+	  		<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+	  		<ul class="navbar-nav ml-auto">
+          <li class="nav-item"><NavLink to="/">About Us</NavLink></li>
+          <li class="nav-item"><NavLink to="/our-team"> Our Team</NavLink></li>
+          <li class="nav-item"><NavLink to="/join-us"> Join Us</NavLink></li>
+          <li class="nav-item"><NavLink to="/sponsors"> Sponsors</NavLink></li>
+          <li class="nav-item"><NavLink to="/contact-us">Contact Us</NavLink></li>
+	  		</ul>
+	  		</div>
+	  	</nav>
+	  	<div className="content">
+      <Route path="/our-team" component = {OurTeam}/>
+			{/* //<Route exact path="/" component = {AboutUs}/>
+			<Route path="/our-team" component = {OurTeam}/>
+	  	//<Route path="/join-us" component = {JoinUs}/>
+			//<Route path="/sponsors" component = {Sponsors}/>
+	  	//<Route path="/contact-us" component = {ContactUs}/> */}
+	  	</div>
+	  </Router>
   );
+}
 }
 
 export default App;
-
-function Home() {
-  return <h2>Home</h2>;
-}

@@ -5,7 +5,7 @@ import "./team.css";
 
 class TeamPage extends Component {
   render() {
-    // TODO: Make Profiile Component, and use includes rather hardcoded html
+    // TODO: Make Profile Component, and use includes rather hardcoded html
     return (
       <div>
         {/* Cover Photo */}

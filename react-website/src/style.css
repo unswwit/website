@@ -1,3 +1,36 @@
+.bg-faded{
+    background-color: orange;
+    opacity: 0.7;
+}
+
+.nav{
+  height: 70px;
+  /* opacity: 0.3; */
+}
+
+.navbar-nav{
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  float: right;
+  opacity:
+}
+
+.nav-item{
+  padding: 5px;
+  color: white;
+}
+
+li{
+  float:right;
+}
+
+li a{
+  color: white;
+  padding: 10px 5px;
+  text-decoration: none;
+}
+
 h1 {
     font-family: Georgia;
     font-size: 30pt;
@@ -86,3 +119,4 @@ p {
 h3 {
 margin-top: 0;
 } */
+
