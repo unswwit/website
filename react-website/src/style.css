@@ -100,6 +100,30 @@ li a{
   color: white;
   padding: 10px 5px;
   text-decoration: none;
+
+}
+
+.container {
+  position: relative;
+}
+
+.container .btn{
+  position: absolute;
+  top: 65%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.headline{
+   float: right;
+   position: absolute;
+   top:30%;
+   left: 70%
+}
+
+.unite{
+   padding: 20px 20px 20px 20px;
+   text-align: center;
 }
 /* #col {
     -moz-column-count: 2;
