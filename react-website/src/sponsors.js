@@ -31,31 +31,15 @@ class Sponsors extends React.Component {
 
                 {/* 300x150 */}
                 <h1>Major Sponsors</h1> 
-                {/* <div className="row">
-                    <div class="column">
-                        <img src="img_snow.jpg" alt="Snow" style="width:100%">
-                    </div>
-                    <div class="column">
-                        <img src="img_forest.jpg" alt="Forest" style="width:100%">
-                    </div>
-                    <div class="column">
-                        <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
-                    </div>
-                </div> */}
+                <div id="majorContainer">
+                    <ToggleBox title='/sponsors/EY.png'>
+                        <EY />
+                    </ToggleBox>
+                    <ToggleBox title='/sponsors/Google.png'>
+                        <Google />
+                    </ToggleBox>
+                </div>        
 
-                <div className='row'>
-                    <div className='column'>
-                        <ToggleBox title='/sponsors/EY.png'>
-                            <EY />
-                        </ToggleBox>
-                    </div>
-                    <div className='column'>
-                        <ToggleBox title='/sponsors/Google.png'>
-                            <Google />
-                        </ToggleBox>
-                    </div>
-                </div>
-                
                 {/* 150x150 */}
                 <h1>Support Sponsors</h1>
                 <ToggleBox title='/sponsors/Palantir.png'>
