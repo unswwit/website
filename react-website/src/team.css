@@ -13,6 +13,7 @@
 
 .section {
   display: flex;
+  flex-wrap: wrap;
   margin-left: 100px;
   margin-right: 100px;
   margin-bottom: 20px;
@@ -28,7 +29,8 @@
   }
 
 .profile {
-  flex: 50%;
+  /* totally didn't hard code this part in :D  */
+  flex: 30%;
   /* hardcorded padding - may have issues if image size changes */
   padding-left: 90px;
   padding-right: 90px;
