@@ -14,10 +14,8 @@
 .section {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-bottom: 20px;
-  padding: 10px;
+  /* Makes the columns (profile) be spaced evenly across screen size */
+  justify-content: space-evenly;
 }
 
 .section_subcommittee {
@@ -29,11 +27,8 @@
   }
 
 .profile {
-  /* totally didn't hard code this part in :D  */
-  flex: 30%;
-  /* hardcorded padding - may have issues if image size changes */
-  padding-left: 90px;
-  padding-right: 90px;
+  /* Space between when resizing */
+  padding: 10px;
   display: inline-block;
   vertical-align: middle;
   float: none;
