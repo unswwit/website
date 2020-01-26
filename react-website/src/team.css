@@ -1,9 +1,17 @@
 .profile_img {
-  /* object-fit: contain; */
   max-width: 360px;
   height: auto;
   overflow: hidden;
   margin-bottom: 10px;
+}
+
+.profile_img_subcommittee_version {
+  max-width: 360px;
+  height: auto;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
 }
 
 .title_area {
@@ -19,12 +27,13 @@
 }
 
 .section_subcommittee {
-    display: flex;
-    margin-left: 160px;
-    margin-right: 100px;
-    margin-bottom: 20px;
-    padding: 10px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 160px;
+  margin-right: 100px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
 
 .profile {
   /* Space between when resizing */
@@ -36,12 +45,15 @@
 
 .profile_details {
   text-align: left;
+  line-height: 5%;
 }
 
 .profile_details_subcommittee {
-    margin-left: 40px;
-    text-align: left;
-  }
+  margin-top: 10px;
+  margin-left: 30px;
+  text-align: left;
+  line-height: 5%;
+}
 
 .icon_bar {
   width: 90px;

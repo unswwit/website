@@ -5,7 +5,7 @@ import "./team.css";
 
 class TeamPage extends Component {
   render() {
-    // TODO: Make Profile Component, and use includes rather hardcoded html
+    // TODO: Make Profiile Component, and use includes rather hardcoded html
     return (
       <div>
         {/* Cover Photo */}
@@ -155,9 +155,10 @@ class TeamPage extends Component {
         </div>
 
         <div className="section_subcommittee">
+          
           <img
             src={process.env.PUBLIC_URL + "/wit_team_elicia.jpg"}
-            className="profile_img"
+            className="profile_img_subcommittee_version"
             alt="banner"
             resizeMode="contain"
           />
@@ -169,6 +170,7 @@ class TeamPage extends Component {
             <p>cool funny quote or details</p>
             <p>more interesting stuff</p>
 
+            <p>
             {/* Icon Bar shoulddd be a horizontal row of icons */}
             <div classname="icon_bar">
               {/* Linkedin Icon - target=_blank opens in new tab */}
@@ -211,7 +213,7 @@ class TeamPage extends Component {
                 />
               </a>
             </div>
-
+            </p>
             <p>Subcommittee Member Names Here: </p>
             <p>- Tree 1 </p>
             <p>- Child Node 1 </p>
