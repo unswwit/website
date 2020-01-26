@@ -1,10 +1,11 @@
 import React from 'react';
 // import {Dropdown, ButtonToolbar, DropdownButton } from 'react-dropdown';
 import ToggleBox from "./sponsors/toggleBox";
-import Telstra from "./sponsors/Telstra";
+import Amazon from "./sponsors/Amazon";
 import EY from "./sponsors/EY";
 import Google from "./sponsors/Google";
 import Palantir from "./sponsors/Palantir";
+import Telstra from "./sponsors/Telstra";
 
 class Sponsors extends React.Component {
     render() {
@@ -31,19 +32,13 @@ class Sponsors extends React.Component {
 
                 {/* 300x150 */}
                 <h1>Major Sponsors</h1> 
-                {/* <div className="row">
-                    <div class="column">
-                        <img src="img_snow.jpg" alt="Snow" style="width:100%">
-                    </div>
-                    <div class="column">
-                        <img src="img_forest.jpg" alt="Forest" style="width:100%">
-                    </div>
-                    <div class="column">
-                        <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
-                    </div>
-                </div> */}
 
                 <div className='row'>
+                    <div className='column'>
+                        <ToggleBox title='/sponsors/Amazon.png'>
+                            <Amazon />
+                        </ToggleBox>
+                    </div>
                     <div className='column'>
                         <ToggleBox title='/sponsors/EY.png'>
                             <EY />

@@ -11,8 +11,6 @@ import './App.css';
 import './style.css';
 import JoinUs from './joinUs';
 import Sponsors from './sponsors';
-import Test from './test';
-// const { width, height } = Dimensions.get('window');
 
 function App() {
   return (
@@ -26,9 +24,6 @@ function App() {
             <li>
               <Link to="/sponsors">Sponsors</Link>
             </li>
-            <li>
-              <Link to="/test">Test</Link>
-            </li>
           </ul>
         </nav>
 
@@ -41,31 +36,12 @@ function App() {
           <Route path="/sponsors">
             <Sponsors />
           </Route>
-          <Route path="/test">
-            <Test />
-          </Route>
           <Route path="/">
             <Home />
           </Route>
         </Switch>
       </div>
     </Router>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
   );
 }
 
