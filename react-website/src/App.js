@@ -14,14 +14,14 @@ class App extends Component{
   render(){
   return (
 	<Router>
-  		<nav class="navbar navbar-expand-md navbar-light bg-custom">
+  		<nav class="navbar navbar-expand-md navbar-light bg-custom fixed-top">
 	  		<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
 	  		<ul class="navbar-nav ml-auto">
-				<li class="nav-item"><NavLink to="/">About Us</NavLink></li>
-      				<li class="nav-item"><NavLink to="/our-team"> Our Team</NavLink></li>
-      				<li class="nav-item"><NavLink to="/join-us"> Join Us</NavLink></li>
-				<li class="nav-item"><NavLink to="/sponsors"> Sponsors</NavLink></li>
-				<li class="nav-item"><NavLink to="/contact-us">Contact Us</NavLink></li>
+				<li class="nav-item"><NavLink to="/"><strong>About Us</strong></NavLink></li>
+      				<li class="nav-item"><NavLink to="/our-team"><strong>Our Team</strong></NavLink></li>
+      				<li class="nav-item"><NavLink to="/join-us"><strong>Join Us</strong></NavLink></li>
+				<li class="nav-item"><NavLink to="/sponsors"> <strong>Sponsors</strong></NavLink></li>
+				<li class="nav-item"><NavLink to="/contact-us"><strong>Contact Us</strong></NavLink></li>
 	  		</ul>
 	  		</div>
 	  	</nav>
