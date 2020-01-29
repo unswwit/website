@@ -9,17 +9,19 @@ import OurTeam from "./ourTeam"
 import JoinUs from "./joinUs"
 import Sponsors from "./sponsors"
 import ContactUs from "./contactUs"
+import Footer from './footer'
 
 class App extends Component{ 
   render(){
   return (
+	<div>
 	<Router>
   		<nav class="navbar navbar-expand-md navbar-light bg-custom fixed-top">
 	  		<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
 	  		<ul class="navbar-nav ml-auto">
 				<li class="nav-item"><NavLink to="/"><strong>About Us</strong></NavLink></li>
-      				<li class="nav-item"><NavLink to="/our-team"><strong>Our Team</strong></NavLink></li>
-      				<li class="nav-item"><NavLink to="/join-us"><strong>Join Us</strong></NavLink></li>
+      			<li class="nav-item"><NavLink to="/our-team"><strong>Our Team</strong></NavLink></li>
+      			<li class="nav-item"><NavLink to="/join-us"><strong>Join Us</strong></NavLink></li>
 				<li class="nav-item"><NavLink to="/sponsors"> <strong>Sponsors</strong></NavLink></li>
 				<li class="nav-item"><NavLink to="/contact-us"><strong>Contact Us</strong></NavLink></li>
 	  		</ul>
@@ -33,6 +35,8 @@ class App extends Component{
 	  		<Route path="/contact-us" component = {ContactUs}/>
 	  	</div>
 	  </Router>
+	<div><Footer /></div>
+	</div>
   );
 }
 }

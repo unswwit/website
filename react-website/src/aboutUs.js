@@ -46,23 +46,49 @@ In 2020, we aim to go above and beyond to create events and opportunities for ou
 					<img src={process.env.PUBLIC_URL + '/volunteer.jpg'} className="event2" alt="banner"  />
 				</div>
 			</div>
-			<div class="stats">
-				<img src={process.env.PUBLIC_URL + './Untitled-2.1.jpg'} className="photo" alt="banner" resizeMode='contain'
-                		style={{width: '100vw'}} />
+
+			<div class="stats" onScroll={this.handleScroll}>
+				
+				<img src={process.env.PUBLIC_URL + './Untitled-2.1.jpg'} className="photo-1" alt="banner" resizeMode='contain'
+                		style={{width: '100vw'}}/>
 				<div class="number">
 					<span><CountUp end={50} duration={2}/></span>
 					<span><CountUp end={11} duration={4}/></span>
 					<span><CountUp end={900} duration={1}/></span>
 				</div>
 				<div class="words">
-					<span>Team Members</span>
+					<span>Members</span>
 					<span>Sponsors</span>
 					<span>Members</span>
 				</div>
+
+				<div class="texts" >
+					<p class="title" >Headline</p>
+
+					<p class="hmmm">
+						SOME WORDS <br/>
+						SOME WORDSSOME WORDS <br/>
+						SOME WORDSSOME WORDSSOME WORDS
+					</p>
+					
+					<br/>
+					<p class="hmm">
+						Join UNSW WIT via SpARC <br/>
+						Some words some words some words
+					</p>
+					<button class="button btn-sparc">Join Us</button>
+
+				</div>
 			</div>
+
+			<div class="unite" >
+				<h1>Our Sponsors</h1>
+				<img src={process.env.PUBLIC_URL + './Untitled-3.jpg'} className="photo" alt="banner" resizeMode='contain'
+                		style={{width: '90vw'}} />
 			</div>
-			
 		
+		</div>
+			
 		);
 
 	}
