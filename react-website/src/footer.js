@@ -11,7 +11,7 @@ class Footer extends Component{
                     <p> Biscuit lollipop jujubes sugar plum ice cream bear claw danish topping I love.
                     </p>
                     <div>
-                    <input type="text" name="mail" placeholder="Email" style={{width:'200px', 'padding-right': '10px', 'border-width':'2px', 'border-color':'orange'}}/>
+                    <input type="text" name="mail" placeholder="Email Address"/>
                     <button class="button btn-subscribe">Subscribe</button>   
                     </div>
                 </div>

@@ -4,10 +4,11 @@ import CountUp from 'react-countup';
 class AboutUs extends Component{
 	render(){
 		return (
-			<div>
+			<body>
+
 			<div class="contain">
-                	<img src={process.env.PUBLIC_URL + '/arts-build-close-up-commerce-273230.jpg'} class="banner" alt="banner"
-					 style={{maxHeight: 768}}/>
+				<img src={process.env.PUBLIC_URL + '/arts-build-close-up-commerce-273230.jpg'} class="banner" alt="banner"
+					style={{maxHeight: 768}}/>
 
 				<div class="headline">
 					<h1>UNSW</h1>
@@ -89,7 +90,7 @@ In 2020, we aim to go above and beyond to create events and opportunities for ou
                 		style={{width: '90vw'}} />
 			</div>
 		
-		</div>
+		</body>
 			
 		);
 

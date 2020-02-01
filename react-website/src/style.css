@@ -1,8 +1,3 @@
-/*.content{
-   width: 50%;
-   padding: 60px;
-}*/
-
 h1 {
     font-family: Georgia;
     font-size: 30pt;
@@ -22,12 +17,16 @@ h2 {
     font-weight: bold;   
 }
 
+.header{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+}
 .subheader {
     font-family: Arial;
     font-size: 13pt;
     color: grey;
 }
-
 p {
     font-family: Arial;
     font-size: 10pt;
@@ -222,7 +221,6 @@ div .footer{
 
 .footer a{
   color: orange;
-  font-weight: bold;
   float: right;
   font-family: Arial;
   font-size: 10pt;
@@ -233,6 +231,7 @@ div .footer{
 .btn-subscribe{
   margin-left: 10px; 
   font-size: 10pt;
+
   border-radius: 5px;
   padding: 7px 20px;
 }
@@ -249,4 +248,16 @@ div .logo{
   float: right;
   padding: 0px 5px 0px;
   
- }
+}
+
+input{
+  width: 200px;
+  padding-right: 10px;
+  border-width:2px;
+  border-color:orange;
+  border-radius: 5px;
+  background-color: rgb(247, 235, 220);
+}
+
+
+
