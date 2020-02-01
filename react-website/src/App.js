@@ -27,13 +27,14 @@ class App extends Component{
 	  		</ul>
 	  		</div>
 	  	</nav>
-	  	<div className="content">
+		 
+	  	
 			<Route exact path="/" component = {AboutUs}/>
 			<Route path="/our-team" component = {OurTeam}/>
 	  		<Route path="/join-us" component = {JoinUs}/>
 			<Route path="/sponsors" component = {Sponsors}/>
 	  		<Route path="/contact-us" component = {ContactUs}/>
-	  	</div>
+	  	
 	  </Router>
 	<div><Footer /></div>
 	</div>

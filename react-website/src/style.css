@@ -1,6 +1,7 @@
-.content{
+/*.content{
    width: 50%;
-}
+   padding: 60px;
+}*/
 
 h1 {
     font-family: Georgia;
@@ -45,7 +46,6 @@ p {
 
 .button {
     font-family: Arial;
-    font-size: 13pt;
     font-weight: bold;
     background-color: orange;
     border-radius: 8px;
@@ -112,51 +112,35 @@ p {
 
 }
 
-.container {
+.banner{
+  max-height: 768px;
+  width: 100%;
+}
+
+.contain {
   position: relative;
-  
+  width: auto;
 }
 
-.container .btn{
-  float: right;
+.btn-join{
   position: absolute;
-  
-  top: 100%;
-  left: 130;
-
+  left:75%;
 }
-.headline{
-   float: left;
+
+div .headline{
+   text-align: right;
    position: absolute;
-   top:30%;
-   left: 130%
+   top:40%;
+   left: 50%;
 }
 
 .unite{
    text-align: center;
    float: center;
-   padding: 50px 0px 0px 50px;
-}
-/* #col {
-    -moz-column-count: 2;
-    -webkit-column-count: 2;
-    column-count: 2;
-  }
-  
-h3 {
-margin-top: 0;
-} */
-
-.photo{
-  
-  float: center;
-  
+   padding-top: 50px ;
 }
 
-.row{
-  padding: 0px 100px 100px 50px;
-  
-}
+
 .row h2{
   color: orange;
 }
@@ -166,20 +150,20 @@ margin-top: 0;
 }
 
 .event2{
-  width: 500%;
+  width: 100%;
   padding: 0px 50px;
 }
 
 .stats{
   position: relative;
 }
+
 .number{
   position: absolute;
-  float: left;
-  left: 110%;
+  right: 10%;
   bottom: 25%;
-
 }
+
 .number span{
   padding: 20px;
   font-size: 50pt;
@@ -190,25 +174,30 @@ margin-top: 0;
 
 .words{
   position: absolute;
-  float: left;
-  left: 100%;
-  bottom: 23%;
-
+  right: 12%;
+  bottom: 24%;
+  margin-left: 10px;
+  
 }
 
 .words span{
-  padding: 40px 50px;
+  padding: 0px 40px;
   font-size: 9pt;
   color: white;
   font-family: Arial;
-  
+  font-size: 12pt;
+}
+
+.btn-sparc{
+  background-color: white;
+  color: orange;
 }
 
 .texts{
   position: absolute;
   float: right;
-  top: 50%;
-  right: 50%;
+  top: 60%;
+  right: 60%;
   font-weight: bold;
 
 }
@@ -219,7 +208,6 @@ div .texts{
 }
 
 .photo-1{
-  
   float: center;
   filter: brightness(50%);
 }
@@ -232,7 +220,6 @@ div .footer{
  height: 250px;
 }
 
-
 .footer a{
   color: orange;
   font-weight: bold;
@@ -243,15 +230,23 @@ div .footer{
 
 }
 
+.btn-subscribe{
+  margin-left: 10px; 
+  font-size: 10pt;
+  border-radius: 5px;
+  padding: 7px 20px;
+}
+
 div .logo{
   color:white;
   background-color: orange;
   font-weight: bold;
-  height: 40px;
+  height: 50px;
+  padding-right: 10px;
  }
 
- .icon li{
+.icon li{
   float: right;
-  padding: 0px 10px;
+  padding: 0px 5px 0px;
   
  }

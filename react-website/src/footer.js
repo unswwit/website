@@ -11,7 +11,7 @@ class Footer extends Component{
                     <p> Biscuit lollipop jujubes sugar plum ice cream bear claw danish topping I love.
                     </p>
                     <div>
-                    <input type="text" name="mail" style={{width:'200px', 'padding-right': '20px', 'border-width':'2px', 'border-color':'orange'}}/>
+                    <input type="text" name="mail" placeholder="Email" style={{width:'200px', 'padding-right': '10px', 'border-width':'2px', 'border-color':'orange'}}/>
                     <button class="button btn-subscribe">Subscribe</button>   
                     </div>
                 </div>
@@ -27,14 +27,16 @@ class Footer extends Component{
                 </div>
             </div>
             <div class="row logo">
-                <div class="col" style={{padding:'20px', left: '40px'}}> 
-                    <p>UNSW WIT 2020</p>
+                <div class="col" style={{margin:'10px',left: '40px'}}> 
+                    <p>&copy; UNSW WIT 2020</p>
                 </div>
-                <u class="icon" style={{'list-style': 'none',  padding:"20px" }}> 
+                <u class="icon" style={{'list-style': 'none',  margin:"10px", 'padding-right': '20px' }}> 
+                    
                     <li><img src={process.env.PUBLIC_URL + '/twitter.png'} className="" alt="banner" resizeMode='contain'
                 		style={{width:'25px', height:'25px'}} /></li>
                     <li><img src={process.env.PUBLIC_URL + '/facebook.png'} className="" alt="banner" resizeMode='contain'
                     style={{width:'25px', height:'25px'}} /></li>
+                    <li> &copy; </li>
                 </u>
             </div>
             </div>

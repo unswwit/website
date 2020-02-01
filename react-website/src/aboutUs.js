@@ -5,23 +5,24 @@ class AboutUs extends Component{
 	render(){
 		return (
 			<div>
-			<div class="container">
-                	<img src={process.env.PUBLIC_URL + '/arts-build-close-up-commerce-273230.jpg'} className="" alt="banner" resizeMode='contain'
-                		style={{width: '100vw', margin:'0px -15px'}} />
+			<div class="contain">
+                	<img src={process.env.PUBLIC_URL + '/arts-build-close-up-commerce-273230.jpg'} class="banner" alt="banner"
+					 style={{maxHeight: 768}}/>
+
 				<div class="headline">
 					<h1>UNSW</h1>
 					<h1>Women In Techonology</h1>
-					<p class="title">
+					<p class="title" style={{color: 'white'}}>
 						Empowering and Inspiring 
 						<br/>
 						the Artchitects of Change
 					</p>
-					<button class="button btn">Join Us</button>
+					<button class="button btn-join">Join Us</button>
 				</div>		
 			</div>
 
 			<div class="unite">
-				<h1>Unite, Empower & Upskill</h1>
+				<h1 style={{padding: '0px 0px 50px 0px'}}>Unite, Empower & Upskill</h1>
 				<p>
 				Technology is the driving force of our future and is a vital part of our everyday lives, and yet the industry still does not represent the society that they’re creating solutions for. That’s why we are passionate about equality and diversity in the tech industry.
 
@@ -33,16 +34,16 @@ In 2020, we aim to go above and beyond to create events and opportunities for ou
 
 				</p>
 			</div>
-			<img src={process.env.PUBLIC_URL + '/Untitled-1.jpg'} className="photo" alt="banner" resizeMode='contain'
-                		style={{width: '100vw'}} />
+
+			<img src={process.env.PUBLIC_URL + '/Untitled-1.jpg'} class="banner" alt="banner" style={{maxHeight: 768}}/>
 			
-			<div class="row">
-				<div class="col">
+			<div class="row" style={{'padding': '0px 100px 100px '}}>
+				<div class="col-md-4">
 					<h2>Upcoming Events</h2>
 					<p>LOL</p>
 					<img src={process.env.PUBLIC_URL + '/logo_competition.jpg'} className="event1" alt="banner"  />
 				</div>
-				<div class="col-md-4">
+				<div class="col-lg-8">
 					<img src={process.env.PUBLIC_URL + '/volunteer.jpg'} className="event2" alt="banner"  />
 				</div>
 			</div>
@@ -53,28 +54,29 @@ In 2020, we aim to go above and beyond to create events and opportunities for ou
                 		style={{width: '100vw'}}/>
 				<div class="number">
 					<span><CountUp end={50} duration={2}/></span>
-					<span><CountUp end={11} duration={4}/></span>
+					<span ><CountUp end={11} duration={4}/></span>
 					<span><CountUp end={900} duration={1}/></span>
 				</div>
 				<div class="words">
-					<span>Members</span>
-					<span>Sponsors</span>
+					<span>Team Members</span>
+					<span>Sponsors </span>
 					<span>Members</span>
 				</div>
 
 				<div class="texts" >
-					<p class="title" >Headline</p>
+					<h1 style={{color: 'white'}}>Headline</h1>
 
-					<p class="hmmm">
+					<p class="title">
 						SOME WORDS <br/>
 						SOME WORDSSOME WORDS <br/>
 						SOME WORDSSOME WORDSSOME WORDS
 					</p>
 					
 					<br/>
-					<p class="hmm">
+					<p>
 						Join UNSW WIT via SpARC <br/>
 						Some words some words some words
+						<br/>
 					</p>
 					<button class="button btn-sparc">Join Us</button>
 
