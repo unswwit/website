@@ -9,7 +9,7 @@ class ContactUs extends React.Component {
                 <div class='row' style={{'padding': '0px 100px 100px '}}> 
                     <div class="col-md-4">
                         <p className='subheader' style={{textAlign: 'left'}}><strong>Send Through a General Inquiry</strong></p>
-                        <form action="mailto:someone@example.com" method="post" enctype="text/plain" style={{color:'orange'}}>
+                        <form action="mailto:exec@unswwit.com" method="post" enctype="text/plain" style={{color:'orange'}}>
                             <strong>Name</strong>
                             <br/>
                             <input type="text" name="name"/>
