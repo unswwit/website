@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import CountUp from 'react-countup';
+import "./aboutUs.css";
 
 class AboutUs extends Component{
 	render(){
@@ -26,22 +27,21 @@ class AboutUs extends Component{
 				<h1 style={{padding: '0px 0px 50px 0px'}}>Unite, Empower & Upskill</h1>
 				<p>
 				Technology is the driving force of our future and is a vital part of our everyday lives, and yet the industry still does not represent the society that they’re creating solutions for. That’s why we are passionate about equality and diversity in the tech industry.
-
-Formed in late 2016, we have grown to be a platform that empowers, unites and up-skills female and male students alike that are passionate about our mission. Women in Technology (WIT) aims to cultivate future leaders that are prepared  to challenge the prejudices and bring change into the industry while building a strong community where they can find lasting friendships and support.
+				</p> <p>Formed in late 2016, we have grown to be a platform that empowers, unites and up-skills female and male students alike that are passionate about our mission. Women in Technology (WIT) aims to cultivate future leaders that are prepared  to challenge the prejudices and bring change into the industry while building a strong community where they can find lasting friendships and support.
 
 At WIT, our focus is on providing events that foster development catering to first to final years. Whether it’s personal, academic, professional or social, we want our students to be the best version of themselves. As part out aim, we also connect current and future students with alumni and industry sponsors to serve as role models to inspire.
 
-In 2020, we aim to go above and beyond to create events and opportunities for our members to learn and develop both their technical and professional skills.
+</p><p>In 2020, we aim to go above and beyond to create events and opportunities for our members to learn and develop both their technical and professional skills.
 
 				</p>
 			</div>
 
-			<img src={process.env.PUBLIC_URL + '/Untitled-1.jpg'} class="banner" alt="banner" style={{maxHeight: 768}}/>
+			{/* <img src={process.env.PUBLIC_URL + '/Untitled-1.jpg'} class="banner" alt="banner" style={{maxHeight: 768}}/> */}
 			
-			<div class="row" style={{'padding': '0px 100px 100px '}}>
+			<div class="row" style={{'padding': '20px 100px 100px '}}>
 				<div class="col-md-4">
 					<h2>Upcoming Events</h2>
-					<p>LOL</p>
+					<p>It's never too late to get involved with WIT and upskill your technical and soft skills!</p>
 					<img src={process.env.PUBLIC_URL + '/logo_competition.jpg'} className="event1" alt="banner"  />
 				</div>
 				<div class="col-lg-8">
@@ -84,7 +84,7 @@ In 2020, we aim to go above and beyond to create events and opportunities for ou
 				</div>
 			</div>
 
-			<div class="unite" >
+			<div class="sponsors" >
 				<h1>Our Sponsors</h1>
 				<img src={process.env.PUBLIC_URL + './Untitled-3.jpg'} className="photo" alt="banner" resizeMode='contain'
                 		style={{width: '90vw'}} />
