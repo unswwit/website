@@ -55,7 +55,7 @@ class ContactUs extends React.Component {
                                 </ul>
                                 <ul style={{'list-style': 'none', 'padding-left': '5px'}}>
                                     <li><a href="mailto:vivianwong@unswwit.com">vivianwong@unswwit.com</a></li>
-                                    <li><a href="mailto:gabriella@unswwit.com">gabriella@unswwit.com</a></li>
+                                    <li><a href="mailto:gabriella@unswwit.com">gabrielle@unswwit.com</a></li>
                                     <li><a href="mailto:rhea@unswwit.com">rhea@unswwit.com</a></li>
                                     <li><a href="mailto:alison@unswwit.com">alison@unswwit.com</a></li>
                                     <li><a href="mailto:elicia@unswwit.com">elicia@unswwit.com</a></li>
