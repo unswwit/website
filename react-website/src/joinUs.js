@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Redirect } from 'react-router-dom'
 
 class JoinUs extends React.Component {
     render() {
@@ -10,9 +9,6 @@ class JoinUs extends React.Component {
         const instagramUrl = "https://www.instagram.com/wit.unsw/";
 
         return (
-            // <Router>
-            //   <Route path='/join' component={JoinUs}/>
-            // </Router>
             <div>
                 <img src={process.env.PUBLIC_URL + '/wit_cover.jpg'} className="centre" alt="banner" 
                 resizeMode='contain'
@@ -25,7 +21,7 @@ class JoinUs extends React.Component {
                         How you can get involved
                     `}
                 </p>
-                <div className='column'>
+                <div className='joinColumn'>
                     <p className='subheader'>{`
                         Become an official Member by joining us on SpARC
                     `}

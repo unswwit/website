@@ -65,7 +65,7 @@ p {
     cursor: pointer;        
 }
 
-.column {
+.joinColumn {
     column-count: 3;
     text-align: center;
     margin: 1em 0 !important;
@@ -82,20 +82,20 @@ p {
 .principal {
     display: inline-block;
     max-width: 600px;
-    text-align: justify;
+    text-align: left;
     /* text-justify: inter-word; */
 }
 
 .major {
     display: inline-block;
-    min-width: 300px;
-    text-align: justify;
+    width: 300px;
+    text-align: left;
 }
 
 .support {
     display: inline-block;
     max-width: 150px;
-    text-align: justify;
+    text-align: left;
 }
 
 .column {
@@ -108,4 +108,11 @@ p {
     content: "";
     clear: both;
     display: table;
+}
+
+#majorContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-end;
 }

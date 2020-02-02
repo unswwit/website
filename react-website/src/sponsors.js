@@ -1,11 +1,15 @@
 import React from 'react';
-// import {Dropdown, ButtonToolbar, DropdownButton } from 'react-dropdown';
 import ToggleBox from "./sponsors/toggleBox";
 import Amazon from "./sponsors/Amazon";
+import Atlassian from "./sponsors/Atlassian";
 import EY from "./sponsors/EY";
 import Google from "./sponsors/Google";
+import McGrathNicol from "./sponsors/McGrathNicol";
+import NinePublishing from "./sponsors/NinePublishing";
 import Palantir from "./sponsors/Palantir";
+import Quantium from "./sponsors/Quantium";
 import Telstra from "./sponsors/Telstra";
+import VMWare from "./sponsors/VMWare";
 
 class Sponsors extends React.Component {
     render() {
@@ -32,25 +36,37 @@ class Sponsors extends React.Component {
 
                 {/* 300x150 */}
                 <h1>Major Sponsors</h1> 
+                <div id="majorContainer">
+                    <ToggleBox title='/sponsors/Amazon.png'>
+                        <Amazon />
+                    </ToggleBox>
+                    <ToggleBox title='/sponsors/Atlassian.png'>
+                        <Atlassian />
+                    </ToggleBox>
+                    <ToggleBox title='/sponsors/EY.png'>
+                        <EY />
+                    </ToggleBox>
+                </div>        
+                <div id="majorContainer">    
+                    <ToggleBox title='/sponsors/Google.png'>
+                        <Google />
+                    </ToggleBox>
+                    <ToggleBox title='/sponsors/McGrathNicol.png'>
+                        <McGrathNicol />
+                    </ToggleBox>
+                    <ToggleBox title='/sponsors/Nine-Publishing.png'>
+                        <NinePublishing />
+                    </ToggleBox>
+                </div>    
+                <div id="majorContainer">    
+                    <ToggleBox title='/sponsors/Quantium.png'>
+                        <Quantium />
+                    </ToggleBox>
+                    <ToggleBox title='/sponsors/vmware.png'>
+                        <VMWare />
+                    </ToggleBox>
+                </div>    
 
-                <div className='row'>
-                    <div className='column'>
-                        <ToggleBox title='/sponsors/Amazon.png'>
-                            <Amazon />
-                        </ToggleBox>
-                    </div>
-                    <div className='column'>
-                        <ToggleBox title='/sponsors/EY.png'>
-                            <EY />
-                        </ToggleBox>
-                    </div>
-                    <div className='column'>
-                        <ToggleBox title='/sponsors/Google.png'>
-                            <Google />
-                        </ToggleBox>
-                    </div>
-                </div>
-                
                 {/* 150x150 */}
                 <h1>Support Sponsors</h1>
                 <ToggleBox title='/sponsors/Palantir.png'>

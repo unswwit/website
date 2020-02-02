@@ -4,9 +4,7 @@ import {
   Switch,
   Route,
   Link,
-  // Redirect
 } from "react-router-dom";
-// import logo from './logo.svg';
 import './App.css';
 import './style.css';
 import JoinUs from './joinUs';
