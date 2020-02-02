@@ -1,5 +1,6 @@
 import React from "react";
 
+// This class is used to show and hide the sponsor descriptions when the logo has been clicked
 class ToggleBox extends React.Component {
 
 	constructor(props) {
@@ -20,12 +21,6 @@ class ToggleBox extends React.Component {
 	render() {
 		var { title, children } = this.props;
 		const { opened } = this.state;
-
-		// if (opened) {
-		// 	title ='Hide Company';
-		// } else {
-		// 	title ='Show Company';
-		// }
 
 		return (
 			<div className="box">
