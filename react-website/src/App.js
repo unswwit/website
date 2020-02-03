@@ -1,50 +1,46 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-} from "react-router-dom";
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+//import logo from './logo.svg';
 import './App.css';
 import './style.css';
-import JoinUs from './joinUs';
-import Sponsors from './sponsors';
+import AboutUs from "./aboutUs"
+import OurTeam from "./ourTeam"
+import JoinUs from "./joinUs"
+import Sponsors from "./sponsors"
+import ContactUs from "./contactUs"
+import Footer from './footer'
 
-function App() {
+class App extends Component{ 
+  render(){
   return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/join-us">Join Us</Link>
-            </li>
-            <li>
-              <Link to="/sponsors">Sponsors</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/join-us">
-            <JoinUs />
-          </Route>
-          <Route path="/sponsors">
-            <Sponsors />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+	<div>
+	<Router>
+  		<nav class="navbar navbar-expand-md navbar-light bg-custom fixed-top">
+	  		<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+	  		<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><NavLink to="/"><strong>About Us</strong></NavLink></li>
+      			<li class="nav-item"><NavLink to="/our-team"><strong>Our Team</strong></NavLink></li>
+      			<li class="nav-item"><NavLink to="/join-us"><strong>Join Us</strong></NavLink></li>
+				<li class="nav-item"><NavLink to="/sponsors"> <strong>Sponsors</strong></NavLink></li>
+				<li class="nav-item"><NavLink to="/contact-us"><strong>Contact Us</strong></NavLink></li>
+	  		</ul>
+	  		</div>
+	  	</nav>
+		 
+		  <body>
+			<Route exact path="/" component = {AboutUs}/>
+			<Route path="/our-team" component = {OurTeam}/>
+	  		<Route path="/join-us" component = {JoinUs}/>
+			<Route path="/sponsors" component = {Sponsors}/>
+	  		<Route path="/contact-us" component = {ContactUs}/>
+			</body>
+	  	
+	  </Router>
+	<div><Footer /></div>
+	</div>
   );
+}
 }
 
 export default App;
-
-function Home() {
-  return <h2>Home</h2>;
-}
