@@ -5,11 +5,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './style.css';
 import AboutUs from "./aboutUs"
-import OurTeam from "./ourTeam"
 import JoinUs from "./joinUs"
 import Sponsors from "./sponsors"
 import ContactUs from "./contactUs"
 import Footer from './footer'
+import OurTeam from "./team"
+
 
 class App extends Component{ 
   render(){
@@ -29,11 +30,11 @@ class App extends Component{
 	  	</nav>
 		 
 		  <body>
-			<Route exact path="/" component = {AboutUs}/>
-			<Route path="/our-team" component = {OurTeam}/>
-	  		<Route path="/join-us" component = {JoinUs}/>
-			<Route path="/sponsors" component = {Sponsors}/>
-	  		<Route path="/contact-us" component = {ContactUs}/>
+        <Route exact path="/" component = {AboutUs}/>
+        <Route path="/our-team" component = {OurTeam}/>
+        <Route path="/join-us" component = {JoinUs}/>
+        <Route path="/sponsors" component = {Sponsors}/>
+        <Route path="/contact-us" component = {ContactUs}/>
 			</body>
 	  	
 	  </Router>
