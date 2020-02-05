@@ -141,12 +141,9 @@ transform: translate( -50%, -45%);
   margin: 20px 20px 70px 20px;
   text-align: left;
   line-height: 25px;
-  width: inherit;  
-  height: inherit;
   justify-content: space-evenly;
   overflow: hidden;
   align-content: center;
-  object-fit: contain; 
   
 }
 
@@ -191,7 +188,7 @@ transform: translate( -50%, -45%);
   font-family: Arial;
   font-size: 14pt;
   color: orange;
-  
+  font-weight: lighter;
 }
 
 .profile_degree {
@@ -202,6 +199,7 @@ transform: translate( -50%, -45%);
   font-style: italic;
   word-wrap: break-word;
   white-space: initial;
+  font-weight: lighter;
 }
 
 

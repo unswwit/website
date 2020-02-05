@@ -293,7 +293,7 @@ class TeamPage extends Component {
               <div className="profile_details_subcommittee">
                 <p className="profile_text_name">Vivian Wong</p>
                 <p className="profile_text_position">Education Executive</p>
-                <p>Commerce/Acturial Science, 2nd Year</p>
+                <p className="profile_degree">Commerce/Acturial Science, 2nd Year</p>
 
                 <p>
                 {/* Icon Bar shoulddd be a horizontal row of icons */}
@@ -420,7 +420,7 @@ class TeamPage extends Component {
               <div className="profile_details_subcommittee">
                 <p className="profile_text_name">Rhea Thomas</p>
                 <p className="profile_text_position">Externals Executive</p>
-                <p>Information Systems, 2nd Year</p>
+                <p className="profile_degree">Information Systems, 2nd Year</p>
                 <p>
                 {/* Icon Bar shoulddd be a horizontal row of icons */}
                   <div classname="icon_bar">
@@ -480,7 +480,7 @@ class TeamPage extends Component {
               <div className="profile_details_subcommittee">
                 <p className="profile_text_name">Alision Chin</p>
                 <p className="profile_text_position">Human Resources Executive</p>
-                <p>Information Systems, 3rd Year</p>
+                <p className="profile_degree">Information Systems, 3rd Year</p>
 
                 <p>
                   {/* Icon Bar shoulddd be a horizontal row of icons */}
