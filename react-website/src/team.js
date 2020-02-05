@@ -276,9 +276,11 @@ class TeamPage extends Component {
         {/* section div */}
         </div>
 
-
+        
         <div className="section_subcommittee">
-          <div className="flex_subcommittee">
+        <table>
+          <tr>
+            <th>
             <div className="profile_subcommittee"> 
               <div className="profile_crop">
                 <img
@@ -338,6 +340,9 @@ class TeamPage extends Component {
                 </p>
               </div>
             </div>
+            </th>
+
+            <th>
 
             <div className="profile_subcommittee"> 
               <div className="profile_crop">
@@ -398,9 +403,11 @@ class TeamPage extends Component {
                 </p>
               </div>
             </div>
-          </div>
+            </th>
+          </tr>
+          <tr>
 
-          <div className="flex_subcommittee">
+            <th>
             <div className="profile_subcommittee"> 
               <div className="profile_crop">
                 <img
@@ -458,6 +465,9 @@ class TeamPage extends Component {
                 </p>
               </div>
             </div>
+            </th>
+
+            <th>
             <div className="profile_subcommittee"> 
               <div className="profile_crop">
                 <img
@@ -502,8 +512,7 @@ class TeamPage extends Component {
                       />
                     </a>
 
-                    {/* This email address needs to be changed to Elicia's rn is just Execs */}
-                    <a
+                   <a
                       href="mailto:alison@unswwit.com"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -518,9 +527,11 @@ class TeamPage extends Component {
                 </p>
               </div>
             </div>
-          </div>
+            </th>
+          </tr>
 
-          <div className="flex_subcommittee">
+          <tr>
+          <th>
             <div className="profile_subcommittee"> 
               <div className="profile_crop">
                 <img
@@ -581,6 +592,8 @@ class TeamPage extends Component {
                 </p>
               </div>
             </div>
+            </th>
+            <th>
             <div className="profile_subcommittee"> 
               <div className="profile_crop">
                 <img
@@ -640,11 +653,17 @@ class TeamPage extends Component {
                 </p>
               </div>  
             </div>
-          </div>
+            </th>
+          {/* </div> */}
+          </tr>
+          </table>
         </div>
         
+        
       </div>
+      <footer>
         <div className="footer_area"></div>
+        </footer>
 
 {/* the very last diff */}
       </div>

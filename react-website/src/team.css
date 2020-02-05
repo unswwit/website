@@ -55,13 +55,13 @@ transform: translate( -50%, -45%);
   margin-bottom: 50px;
 }
 
-.all_execs_section {
+/* .all_execs_section {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-content: center;
   float: none;
-}
+} */
 
 .section {
   display: flex;
@@ -133,17 +133,6 @@ transform: translate( -50%, -45%);
   padding: 20px; 
   display: inline-flex;
   vertical-align: middle;
-  float: none;
-}
-
-
-
-.flex_subcommittee {
-  position: relative;
-  display: inline-block;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
   float: none;
 }
 
@@ -226,4 +215,19 @@ p {
   font-size: 7pt;
   margin-top: 0;
   color: orange;
+}
+
+th, td {
+  margin: 5pt;
+}
+table { 
+  border-collapse: separate;
+  margin: 5pt;
+}
+
+footer {
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 0px;
+  clear: both;
 }
