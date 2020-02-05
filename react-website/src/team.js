@@ -284,7 +284,7 @@ class TeamPage extends Component {
             <div className="profile_subcommittee"> 
               <div className="profile_crop">
                 <img
-                  src={process.env.PUBLIC_URL + "/wit_team_elicia.jpg"}
+                  src={process.env.PUBLIC_URL + "/potraits/vivw.jpg"}
                   className="profile_img_subcommittee_version"
                   alt="vivian-wong"
                   resizeMode="contain"
@@ -347,7 +347,7 @@ class TeamPage extends Component {
             <div className="profile_subcommittee"> 
               <div className="profile_crop">
                 <img
-                  src={process.env.PUBLIC_URL + "/potraits/gab.png"}
+                  src={process.env.PUBLIC_URL + "/potraits/gabby.jpg"}
                   className="profile_img_subcommittee_version"
                   alt="gabrielle"
                   resizeMode="contain"
