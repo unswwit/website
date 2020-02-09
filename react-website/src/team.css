@@ -1,48 +1,53 @@
-.profile_img {
-  width: 360px;
+/* this needs to be consistent with other pages */
+.banner {
+  width: 100%;
   height: auto;
   max-width: 100%;
-  display: block;
   overflow: hidden;
+  object-fit: contain; 
+  align-content: center;
+  position: relative;
+  top: 50%;     
+  left: 50%;
+  transform: translate( -50%, -55%);
+}
+
+.crop {
+  position: relative;
+  height: 700px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* same as img */
+.profile_img {
+  display: block;
   border: 0.5px solid lightgray;
-  margin: 15px;
   background-size: cover;
   position: relative;
-  width: 360px;     
-  height: 270px;
+  max-width: 100%;
+  width: 100%;     
+  height: auto;
   overflow: hidden;
+  top: 50%;     
+left: 50%;
+transform: translate( -50%, -50%);
 }
 
+/* same as img */
 .profile_img_subcommittee_version {
-  width: 360px;
+  position: relative;
+  width: 100%;
   height: auto;
   max-width: 100%;
   overflow: hidden;
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
+  /* vertical-align: middle; */
   float: none;
   background-size: cover;
-}
-
-
-img.profile {
-  position: absolute;
-  max-width: 100%;
-  width: 100%;
-  height: auto;
   top: 50%;     
-  left: 50%;
-  transform: translate( -50%, -50%);
-}
-
-img.section_subcommittee{
-  position: absolute;
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  top: 50%;     
-  left: 50%;
-  transform: translate( -50%, -50%);
+left: 50%;
+transform: translate( -50%, -45%);
 }
 
 .title_area {
@@ -50,40 +55,96 @@ img.section_subcommittee{
   margin-bottom: 50px;
 }
 
+.all_execs_section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  float: none;
+}
+
 .section {
   display: flex;
   flex-wrap: wrap;
   /* Makes the columns (profile) be spaced evenly across screen size */
+  justify-content: center;
+  align-content: center;
+}
+
+
+.section_subcommittee {
+  position: relative;
+  /* margin-left: 160px;
+  margin-right: 100px;
+  margin-bottom: 20px; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  /* Makes the columns (profile) be spaced evenly across screen size */
+  /* float: none; */
+  /* Makes the columns (profile) be spaced evenly across screen size */
+  justify-content: center;
+  align-content: center;
+
+} 
+ /* the parent -> same as .square */
+.profile {
+  /* Space between when resizing */
+  position: relative;
+  padding: 20px; 
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+  
+}
+
+.profile_crop {
+  position: relative;
+  width: 360px;  
+  height: 230px;
+  max-width: 100%;
+  overflow: hidden;
+  align-content: center;
+  object-fit: contain; 
+}
+.profile_details {
+  margin: 20px 0px 70px 0px;
+  text-align: left;
+  line-height: 15px;
+  align-content: center;
+  line-height: 15pt;
   justify-content: space-evenly;
 }
 
-.section_subcommittee {
+.profile_subcommittee {
+  /* position: relative;
+  padding-bottom: 5%; 
+  justify-content: space-evenly;
+  display: inline-block;
+  float: none;
   display: flex;
   flex-wrap: wrap;
-  margin-left: 160px;
-  margin-right: 100px;
-  margin-bottom: 20px;
-  padding: 10px;
-}
-
-.profile {
-  /* Space between when resizing */
-  padding: 20px;
-  display: inline-block;
+  align-content: left; */
+  /* margin: 15px 15px 0px 0px; */
+  /* margin: auto 0; */
+  position: relative;
+  width: inherit;  
+  height: auto;
+  padding: 20px; 
+  display: inline-flex;
   vertical-align: middle;
   float: none;
 }
 
-.profile_details {
-  text-align: left;
-  line-height: 5%;
-}
 
 .profile_details_subcommittee {
-  margin-top: 10px;
-  margin-left: 30px;
+  margin: 20px 20px 70px 20px;
   text-align: left;
-  line-height: 5%;
+  line-height: 25px;
+  justify-content: space-evenly;
+  overflow: hidden;
+  align-content: center;
+  
 }
 
 .icon_bar {
@@ -113,22 +174,59 @@ img.section_subcommittee{
 }
 
 .profile_text_name {
+  position: relative;
+  align-content: center;
   font-family: Arial;
-  font-size: 9pt;
-  font-weight: bold;
+  font-size: 20pt;
   color: orange;
+  font-weight: bold;
 }
 
 .profile_text_position {
+  position: relative;
+  align-content: center;
   font-family: Arial;
-  font-size: 5pt;
+  font-size: 14pt;
   color: orange;
-  font-weight: bold;
+  font-weight: lighter;
 }
+
+.profile_degree {
+  position: relative;
+  font-family: Arial;
+  font-size: 9pt;
+  color: orange;
+  font-style: italic;
+  word-wrap: break-word;
+  white-space: initial;
+  font-weight: lighter;
+}
+
+
 
 p {
   font-family: Arial;
   font-size: 7pt;
   margin-top: 0;
   color: orange;
+}
+
+table { 
+  border-collapse: separate;
+  margin: 5pt;
+  justify-content: center;
+}
+
+.footer_area {
+  background-color: orange;
+  width: 100%;
+  height: 50pt;
+  opacity: 0.8;
+  padding: 8px 16px;
+}
+footer {
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 0px;
+  clear: both;
 }
