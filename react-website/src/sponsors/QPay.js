@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 
-class NinePublishing extends Component {	 
+class QPay extends Component {	 
 	render() {
 		return (
             <div className='subheader'>
                 <div className='major'>
                     <br></br>
-                    {/* <p>TODO</p> */}
+                    <p></p>
                 </div>
                 <br></br>
-                <a href="https://www.nineforbrands.com.au/about/" className="button" >Visit Nine Publishing</a>
+                <a href="https://webapp.getqpay.com/login" className="button" >Visit QPay</a>
             </div>
         );
 	}
 }
 
-export default NinePublishing;
+export default QPay;

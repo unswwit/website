@@ -5,7 +5,7 @@ class Amazon extends Component {
 		return (
             <div className='subheader'>
                 <div className='major'>
-                    <p>TODO: Amazon does not have a description yet.</p>
+                    {/* <p>TODO: Amazon does not have a description yet.</p> */}
                 </div>
                 <br></br>
                 <a href="https://www.amazon.jobs/en" className="button" >Visit Amazon</a>
