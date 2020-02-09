@@ -6,7 +6,7 @@ class VMWare extends Component {
             <div className='subheader'>
                 <div className='major'>
                     <br></br>
-                    <p>TODO</p>
+                    {/* <p>TODO</p> */}
                 </div>
                 <br></br>
                 <a href="https://www.vmware.com/au.html" className="button" >Visit VMWare</a>

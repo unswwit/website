@@ -9,7 +9,7 @@ class AboutUs extends Component{
 
 			<div class="contain">
 				<img src={process.env.PUBLIC_URL + '/arts-build-close-up-commerce-273230.jpg'} class="banner" alt="banner"
-					style={{maxHeight: 768}}/>
+					style={{maxHeight: 6000}}/>
 
 				<div class="headline">
 					<h1>UNSW</h1>
@@ -41,8 +41,8 @@ At WIT, our focus is on providing events that foster development catering to fir
 			<div class="row" style={{'padding': '20px 100px 100px '}}>
 				<div class="col-md-4">
 					<h2>Upcoming Events</h2>
-					<p>It's never too late to get involved with WIT and upskill your technical and soft skills!</p>
-					<img src={process.env.PUBLIC_URL + '/logo_competition.jpg'} className="event1" alt="banner"  />
+					<p style={{'font-size': '20px'}}>It's never too late to get involved with WIT and upskill your technical and soft skills!</p>
+					<img id="small" src={process.env.PUBLIC_URL + '/O-Week.jpg'} className="event1" alt="banner"  />
 				</div>
 				<div class="col-lg-8">
 					<img src={process.env.PUBLIC_URL + '/volunteer.jpg'} className="event2" alt="banner"  />
@@ -65,19 +65,14 @@ At WIT, our focus is on providing events that foster development catering to fir
 				</div>
 
 				<div class="texts" >
-					<h1 style={{color: 'white'}}>Headline</h1>
+					<h1 style={{color: 'white'}}>UNSW WIT</h1>
 
 					<p class="title">
-						SOME WORDS <br/>
-						SOME WORDSSOME WORDS <br/>
-						SOME WORDSSOME WORDSSOME WORDS
+						Collaborate • Inspire • Change
 					</p>
 					
-					<br/>
 					<p>
 						Join UNSW WIT via SpARC <br/>
-						Some words some words some words
-						<br/>
 					</p>
 					<button class="button btn-sparc">Join Us</button>
 
@@ -86,8 +81,8 @@ At WIT, our focus is on providing events that foster development catering to fir
 
 			<div class="sponsors" >
 				<h1>Our Sponsors</h1>
-				<img src={process.env.PUBLIC_URL + './Untitled-3.jpg'} className="photo" alt="banner" resizeMode='contain'
-                		style={{width: '90vw'}} />
+				<img src={process.env.PUBLIC_URL + './logos.png'} className="photo" alt="banner" resizeMode='contain'
+                		style={{width: '50vw'}} />
 			</div>
 		
 		</body>

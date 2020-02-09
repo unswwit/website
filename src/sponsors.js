@@ -10,6 +10,7 @@ import Palantir from "./sponsors/Palantir";
 import Quantium from "./sponsors/Quantium";
 import Telstra from "./sponsors/Telstra";
 import VMWare from "./sponsors/VMWare";
+import QPay from "./sponsors/QPay";
 
 class Sponsors extends React.Component {
     render() {
@@ -71,6 +72,12 @@ class Sponsors extends React.Component {
                 <h1>Support Sponsors</h1>
                 <ToggleBox title='/sponsors/Palantir.png'>
                     <Palantir />
+                </ToggleBox>
+
+                {/* 150x150 */}
+                <h1>In-Kind Sponsors</h1>
+                <ToggleBox title='/sponsors/QPay.png'>
+                    <QPay />
                 </ToggleBox>
             
                 <h3 className='subheader'>{`Interested in partnering with us? Contact us at `}

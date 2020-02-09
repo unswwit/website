@@ -4,7 +4,7 @@ class JoinUs extends React.Component {
     render() {
         const spARCUrl = "https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371W0xQAE";
         const fbPageUrl = "https://www.facebook.com/unsw.wit/?ref=br_rs";
-        const fbGroupUrl = "https://www.facebook.com/groups/804189483040095/";
+        const fbGroupUrl = "https://www.facebook.com/groups/2815903298432739/";
         const linkedInUrl = "https://www.linkedin.com/company/unsw-women-in-technology/";
         const instagramUrl = "https://www.instagram.com/wit.unsw/";
 
@@ -14,7 +14,7 @@ class JoinUs extends React.Component {
                 resizeMode='contain'
                 style={{
                     maxHeight: 768,
-                    maxWidth: 1366
+                    maxWidth: 1366,
                     }} />
                 <h1 className='centre'>Join Us!</h1>
                 <p className='subheader centre'>{`

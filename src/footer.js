@@ -7,13 +7,13 @@ class Footer extends Component{
             <div>
             <div class="row footer">
                 <div class="col" style={{padding: "60px"}}>
-                    <p> Subscribe to UNSW WIT via Email</p>
+                    {/* <p> Subscribe to UNSW WIT via Email</p>
                     <p> Biscuit lollipop jujubes sugar plum ice cream bear claw danish topping I love.
                     </p>
                     <div>
                     <input type="text" name="mail" placeholder="Email Address"/>
                     <button class="button btn-subscribe">Subscribe</button>   
-                    </div>
+                    </div> */}
                 </div>
 
                 <div>
