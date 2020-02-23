@@ -293,7 +293,7 @@ class OurTeam extends Component {
               <div className="profile_details_subcommittee">
                 <p className="profile_text_name">Vivian Wong</p>
                 <p className="profile_text_position">Education Executive</p>
-                <p className="profile_degree">Commerce/Acturial Science, 2nd Year</p>
+                <p className="profile_degree">Commerce/Actuarial Science, 2nd Year</p>
 
                 <p>
                 {/* Icon Bar shoulddd be a horizontal row of icons */}
