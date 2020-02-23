@@ -13,7 +13,7 @@ class AboutUs extends Component{
 
 				<div class="headline">
 					<h1>UNSW</h1>
-					<h1>Women In Techonology</h1>
+					<h1>Women In Technology</h1>
 					<p class="title" style={{color: 'white'}}>
 						Empowering and Inspiring 
 						<br/>
