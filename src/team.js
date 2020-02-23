@@ -478,7 +478,7 @@ class OurTeam extends Component {
                 />
               </div>
               <div className="profile_details_subcommittee">
-                <p className="profile_text_name">Alision Chin</p>
+                <p className="profile_text_name">Alison Chin</p>
                 <p className="profile_text_position">Human Resources Executive</p>
                 <p className="profile_degree">Information Systems, 3rd Year</p>
 
