@@ -604,7 +604,7 @@ class OurTeam extends Component {
                 />
               </div>
               <div className="profile_details_subcommittee">
-                <p className="profile_text_name">Elicia Au Dong</p>
+                <p className="profile_text_name">Elicia Au Duong</p>
                 <p className="profile_text_position">IT Executive</p>
                 <p>Commerce/Computer Science, 2nd Year</p>
 
