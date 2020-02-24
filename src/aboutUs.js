@@ -35,17 +35,14 @@ At WIT, our focus is on providing events that foster development catering to fir
 
 				</p>
 			</div>
-
-			{/* <img src={process.env.PUBLIC_URL + '/Untitled-1.jpg'} class="banner" alt="banner" style={{maxHeight: 768}}/> */}
-			
 			<div class="row" style={{'padding': '20px 100px 100px '}}>
 				<div class="col-md-4">
 					<h2>Upcoming Events</h2>
 					<p style={{'font-size': '20px'}}>It's never too late to get involved with WIT and upskill your technical and soft skills!</p>
-					<img id="small" src={process.env.PUBLIC_URL + '/O-Week.jpg'} className="event1" alt="banner"  />
+					<img src={process.env.PUBLIC_URL + '/app-scratch.png'} className="event1" alt="banner"  />
 				</div>
 				<div class="col-lg-8">
-					<img src={process.env.PUBLIC_URL + '/volunteer.jpg'} className="event2" alt="banner"  />
+					<img src={process.env.PUBLIC_URL + '/alumnight.jpg'} className="event2" alt="banner"  />
 				</div>
 			</div>
 
@@ -54,9 +51,9 @@ At WIT, our focus is on providing events that foster development catering to fir
 				<img src={process.env.PUBLIC_URL + './Untitled-2.1.jpg'} className="photo-1" alt="banner" resizeMode='contain'
                 		style={{width: '100vw'}}/>
 				<div class="number">
-					<span><CountUp end={50} duration={2}/></span>
-					<span ><CountUp end={11} duration={4}/></span>
-					<span><CountUp end={900} duration={1}/></span>
+					<span><CountUp end={10} duration={4}/></span>
+					<span ><CountUp end={13} duration={4}/></span>
+					<span><CountUp end={753} duration={1.5}/></span>
 				</div>
 				<div class="words">
 					<span>Team Members</span>
@@ -81,8 +78,8 @@ At WIT, our focus is on providing events that foster development catering to fir
 
 			<div class="sponsors" >
 				<h1>Our Sponsors</h1>
-				<img src={process.env.PUBLIC_URL + './logos.png'} className="photo" alt="banner" resizeMode='contain'
-                		style={{width: '50vw'}} />
+				<img src={process.env.PUBLIC_URL + './home-sponsors.jpg'} className="photo" alt="banner" resizeMode='contain'
+                		style={{width: '80vw'}} />
 			</div>
 		
 		</body>
