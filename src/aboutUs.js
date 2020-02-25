@@ -78,8 +78,8 @@ At WIT, our focus is on providing events that foster development catering to fir
 
 			<div class="sponsors" >
 				<h1>Our Sponsors</h1>
-				<img src={process.env.PUBLIC_URL + './home-sponsors.jpg'} className="photo" alt="banner" resizeMode='contain'
-                		style={{width: '80vw'}} />
+				<img src={process.env.PUBLIC_URL + './sponsors-home.png'} className="photo" alt="banner" resizeMode='contain'
+                		style={{width: '65vw'}} />
 			</div>
 		
 		</body>
