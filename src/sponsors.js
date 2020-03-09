@@ -76,12 +76,12 @@ class Sponsors extends React.Component {
 
                 {/* 150x150 */}
                 <h1>In-Kind Sponsors</h1>
-                <ToggleBox title='/sponsors/QPay.png'>
+                <ToggleBox title='/sponsors/qpay.png'>
                     <QPay />
                 </ToggleBox>
             
                 <h3 className='subheader'>{`Interested in partnering with us? Contact us at `}
-                    <a className='subheader' href="mailto:external.unswwit@gmail.com">external.unswwit@gmail.com</a>.
+                    <a className='subheader' href="mailto:externals@unswwit.com">externals@unswwit.com</a>.
                 </h3>
             </div>
         );
