@@ -3,12 +3,14 @@ class ContactUs extends React.Component {
     render() {
         return (
             <div>
-                <img src={process.env.PUBLIC_URL + '/54350237_2008106259494245_4144372870585253888_o.jpg'} class="banner" alt="banner" style={{maxHeight: 768}}/>
+                <img src={process.env.PUBLIC_URL + '/contact-header.jpg'} class="banner" alt="banner" style={{maxHeight: 768}}/>
                 <h1 class="header">Contact Us</h1>
                 
                 <div class='row' style={{'padding': '0px 100px 100px '}}> 
                     <div class="col-md-4">
-                        <p className='subheader' style={{textAlign: 'left'}}><strong>Send Through a General Inquiry</strong></p>
+                        <p className='subheader' style={{textAlign: 'left'}}>
+                            <strong>Send Through a General Inquiry</strong>
+                        </p>
                         <form action="mailto:exec@unswwit.com" method="post" enctype="text/plain" style={{color:'orange'}}>
                             <strong>Name</strong>
                             <br/>
@@ -27,7 +29,9 @@ class ContactUs extends React.Component {
                     </div>
 
                     <div class="col-lg-8">
-					<p className='subheader' style={{textAlign: 'center'}}><strong>Contact Our Team</strong></p>
+                        <p className='subheader' style={{textAlign: 'center'}}>
+                            <strong>Contact Our Team</strong>
+                        </p>
                         <div class='row'> 
                             <div class='col-sm-4' style={{'text-align': 'right'}}>
                                 <ul style={{'list-style': 'none'}}>

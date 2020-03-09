@@ -104,7 +104,7 @@ class OurTeam extends Component {
               <div className="profile_details">
                 <p className="profile_text_name">Amanda Li</p>
                 <p className="profile_text_position">Vice President</p>
-                <p className="profile_degree">Software Engineer, 3rd Year</p>
+                <p className="profile_degree">Software Engineering, 3rd Year</p>
 
                 {/* Icon Bar shoulddd be a horizontal row of icons */}
                 <div classname="icon_bar">
@@ -166,7 +166,7 @@ class OurTeam extends Component {
             <div className="profile_details">
               <p className="profile_text_name">Kelly Liang</p>
               <p className="profile_text_position">General Secretary</p>
-              <p className="profile_degree">Commerce and Information System, 2nd Year</p>
+              <p className="profile_degree">Commerce/Information System, 2nd Year</p>
               {/* Icon Bar shoulddd be a horizontal row of icons */}
               <div classname="icon_bar">
                 {/* Linkedin Icon - target=_blank opens in new tab */}
@@ -224,7 +224,7 @@ class OurTeam extends Component {
             <div className="profile_details">
               <p className="profile_text_name">Elizabeth Zhong</p>
               <p className="profile_text_position">Treasurer</p>
-              <p className="profile_degree">Software Engineer, 3rd Year</p>
+              <p className="profile_degree">Software Engineering, 3rd Year</p>
 
               {/* Icon Bar shoulddd be a horizontal row of icons */}
               <div classname="icon_bar">
@@ -293,7 +293,7 @@ class OurTeam extends Component {
               <div className="profile_details_subcommittee">
                 <p className="profile_text_name">Vivian Wong</p>
                 <p className="profile_text_position">Education Executive</p>
-                <p className="profile_degree">Commerce/Acturial Science, 2nd Year</p>
+                <p className="profile_degree">Commerce/Actuarial Science, 2nd Year</p>
 
                 <p>
                 {/* Icon Bar shoulddd be a horizontal row of icons */}
@@ -478,7 +478,7 @@ class OurTeam extends Component {
                 />
               </div>
               <div className="profile_details_subcommittee">
-                <p className="profile_text_name">Alision Chin</p>
+                <p className="profile_text_name">Alison Chin</p>
                 <p className="profile_text_position">Human Resources Executive</p>
                 <p className="profile_degree">Information Systems, 3rd Year</p>
 
@@ -545,7 +545,7 @@ class OurTeam extends Component {
               <div className="profile_details_subcommittee">
                 <p className="profile_text_name">Felicia Ee</p>
                 <p className="profile_text_position">Marketing Executive</p>
-                <p>Commerce/Computer Science, 2nd Year</p>
+                <p className="profile_degree">Commerce/Software Engineering, 2nd Year</p>
 
                 <p>
                 {/* Icon Bar shoulddd be a horizontal row of icons */}
@@ -604,9 +604,9 @@ class OurTeam extends Component {
                 />
               </div>
               <div className="profile_details_subcommittee">
-                <p className="profile_text_name">Elicia Au Dong</p>
+                <p className="profile_text_name">Elicia Au Duong</p>
                 <p className="profile_text_position">IT Executive</p>
-                <p>Commerce/Computer Science, 2nd Year</p>
+                <p className="profile_degree">Commerce/Computer Science, 2nd Year</p>
 
                 <p>
                 {/* Icon Bar shoulddd be a horizontal row of icons */}
@@ -658,8 +658,6 @@ class OurTeam extends Component {
           </tr>
           </table>
         </div>
-        
-        
       </div>
       <footer>
         <div className="footer_area"></div>
