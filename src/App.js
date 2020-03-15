@@ -16,28 +16,31 @@ class App extends Component{
   render(){
   return (
 	<div>
-	<Router>
-  		<nav class="navbar navbar-expand-md navbar-light bg-custom fixed-top">
-	  		<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-	  		<ul class="navbar-nav ml-auto">
-				<li class="nav-item"><NavLink to="/">HOME</NavLink></li>
-    			<li class="nav-item"><NavLink to="/our-team">TEAM</NavLink></li>
-				<li class="nav-item"><NavLink to="/sponsors">SPONSORS</NavLink></li>
-      			<li class="nav-item"><NavLink to="/join-us">JOIN</NavLink></li>
-				<li class="nav-item"><NavLink to="/contact-us">CONTACT</NavLink></li>
-	  		</ul>
-	  		</div>
-	  	</nav>
-		 
-		<body>
-			<Route exact path="/" component = {Home}/>
-			<Route path="/our-team" component = {OurTeam}/>
-			<Route path="/join-us" component = {JoinUs}/>
-			<Route path="/sponsors" component = {Sponsors}/>
-			<Route path="/contact-us" component = {ContactUs}/>
-		</body>
-	  	
-	  </Router>
+		<Router>
+			<nav class="navbar navbar-expand-md navbar-dark bg-custom fixed-top justify-content-between">
+				<a class="navbar-brand" href="/">
+					<img src={process.env.PUBLIC_URL + './logo.png'} className="photo" alt="wit logo" 
+						resizeMode='contain' style={{width: '35px'}} />
+				</a>
+				<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><NavLink to="/">HOME</NavLink></li>
+						<li class="nav-item"><NavLink to="/our-team">TEAM</NavLink></li>
+						<li class="nav-item"><NavLink to="/sponsors">SPONSORS</NavLink></li>
+						<li class="nav-item"><NavLink to="/join-us">JOIN</NavLink></li>
+						<li class="nav-item"><NavLink to="/contact-us">CONTACT</NavLink></li>
+					</ul>
+				</div>
+			</nav>
+			
+			<body>
+				<Route exact path="/" component = {Home}/>
+				<Route path="/our-team" component = {OurTeam}/>
+				<Route path="/join-us" component = {JoinUs}/>
+				<Route path="/sponsors" component = {Sponsors}/>
+				<Route path="/contact-us" component = {ContactUs}/>
+			</body>
+		</Router>
 	<div><Footer /></div>
 	</div>
   );
