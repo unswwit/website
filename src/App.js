@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 //import logo from './logo.svg';
 import './App.css';
 import './style.css';
-import AboutUs from "./aboutUs"
+import Home from "./home"
 import JoinUs from "./joinUs"
 import Sponsors from "./sponsors"
 import ContactUs from "./contactUs"
@@ -20,7 +20,7 @@ class App extends Component{
   		<nav class="navbar navbar-expand-md navbar-light bg-custom fixed-top">
 	  		<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
 	  		<ul class="navbar-nav ml-auto">
-				<li class="nav-item"><NavLink to="/"><strong>About Us</strong></NavLink></li>
+				<li class="nav-item"><NavLink to="/"><strong>Home</strong></NavLink></li>
       			<li class="nav-item"><NavLink to="/our-team"><strong>Our Team</strong></NavLink></li>
       			<li class="nav-item"><NavLink to="/join-us"><strong>Join Us</strong></NavLink></li>
 				<li class="nav-item"><NavLink to="/sponsors"> <strong>Sponsors</strong></NavLink></li>
@@ -30,7 +30,7 @@ class App extends Component{
 	  	</nav>
 		 
 		  <body>
-        <Route exact path="/" component = {AboutUs}/>
+        <Route exact path="/" component = {Home}/>
         <Route path="/our-team" component = {OurTeam}/>
         <Route path="/join-us" component = {JoinUs}/>
         <Route path="/sponsors" component = {Sponsors}/>

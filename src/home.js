@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import CountUp from 'react-countup';
-import "./aboutUs.css";
+import "./home.css";
 
-class AboutUs extends Component{
+class Home extends Component{
 	render(){
 		return (
 			<body>
@@ -98,4 +98,4 @@ class AboutUs extends Component{
 	}
 }
 
-export default AboutUs
+export default Home
