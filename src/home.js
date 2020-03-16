@@ -22,7 +22,6 @@ class Home extends Component{
 					<button class="button btn-join">Join Us</button>
 				</div>		
 			</div>
-
 			<div class="unite">
 				<h1 style={{padding: '0px 0px 50px 0px'}}>Unite, Empower & Upskill</h1>
 				<p class="description">
@@ -42,26 +41,12 @@ class Home extends Component{
 					In 2020, we aim to go above and beyond to create events and opportunities for our members to learn and develop both their technical and professional skills.
 				</p>
 			</div>
-			<div class="row" style={{'padding': '20px 100px 100px '}}>
-				<div class="col-md-4">
-					<h2>Upcoming Events</h2>
-					<p style={{'font-size': '18px'}}>
-						It's never too late to get involved with WIT and upskill your technical and soft skills!
-					</p>
-					<img src={process.env.PUBLIC_URL + '/app-scratch.png'} className="event1" alt="banner"  />
-				</div>
-				<div class="col-lg-8">
-					<img src={process.env.PUBLIC_URL + '/alumnight.jpg'} className="event2" alt="banner"  />
-				</div>
-			</div>
-
 			<div class="stats" onScroll={this.handleScroll}>
-				
 				<img src={process.env.PUBLIC_URL + './metrics-bg.jpg'} className="photo-1" alt="banner" resizeMode='contain'
                 		style={{width: '100vw'}}/>
 				<div class="number">
 					<span><CountUp end={10} duration={4}/></span>
-					<span ><CountUp end={13} duration={4}/></span>
+					<span><CountUp end={13} duration={4}/></span>
 					<span><CountUp end={753} duration={1.5}/></span>
 				</div>
 				<div class="words">
@@ -84,7 +69,19 @@ class Home extends Component{
 
 				</div>
 			</div>
-
+			<div class="row" style={{'padding': '20px 100px 100px '}}>
+				<div class="col-md-4">
+					<h2>Upcoming Events</h2>
+					<p style={{'font-size': '18px'}}>
+						It's never too late to get involved with WIT and upskill your technical and soft skills!
+					</p>
+					<img src={process.env.PUBLIC_URL + '/app-scratch.png'} className="event1" alt="banner"  />
+				</div>
+				<div class="col-lg-8">
+					<img src={process.env.PUBLIC_URL + '/alumnight.jpg'} className="event2" alt="banner"  />
+				</div>
+			</div>
+			<div class='join-us'>Join Us</div>
 			<div class="sponsors" >
 				<h1>Our Sponsors</h1>
 				<img src={process.env.PUBLIC_URL + './sponsors-home.png'} className="photo" alt="banner" resizeMode='contain'
