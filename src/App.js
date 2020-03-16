@@ -11,20 +11,21 @@ import ContactUs from "./contactUs"
 import Footer from './footer'
 import OurTeam from "./team"
 
-
 class App extends Component{ 
   render(){
   return (
 	<div>
 	<Router>
-  		<nav class="navbar navbar-expand-md navbar-light bg-custom fixed-top">
+  		<nav class="navbar navbar-expand-md navbar-light bg-custom position-absolute">
 	  		<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-	  		<ul class="navbar-nav ml-auto">
-				<li class="nav-item"><NavLink to="/"><strong>About Us</strong></NavLink></li>
-      			<li class="nav-item"><NavLink to="/our-team"><strong>Our Team</strong></NavLink></li>
-      			<li class="nav-item"><NavLink to="/join-us"><strong>Join Us</strong></NavLink></li>
-				<li class="nav-item"><NavLink to="/sponsors"> <strong>Sponsors</strong></NavLink></li>
-				<li class="nav-item"><NavLink to="/contact-us"><strong>Contact Us</strong></NavLink></li>
+	  		<img class="nav-logo" src={process.env.PUBLIC_URL + '/white_favicon.ico.png'} style={{width: '60px'}}></img>
+			  <ul class="navbar-nav ml-auto">
+				<li class="nav-item"><NavLink to="/"><strong>Home</strong></NavLink></li>
+				<li class="nav-item"><NavLink to="/"><strong>About</strong></NavLink></li>
+      			<li class="nav-item"><NavLink to="/our-team"><strong>Team</strong></NavLink></li>
+      			<li class="nav-item"><NavLink to="/sponsors"> <strong>Sponsors</strong></NavLink></li>
+				<li class="nav-item"><NavLink to="/join-us"><strong>Join</strong></NavLink></li>
+				<li class="nav-item"><NavLink to="/contact-us"><strong>Contact</strong></NavLink></li>
 	  		</ul>
 	  		</div>
 	  	</nav>

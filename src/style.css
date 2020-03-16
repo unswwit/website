@@ -2,7 +2,7 @@ h1 {
     font-family: Georgia;
     font-size: 30pt;
     font-weight: bold;
-    color: #ffa372;
+    color:rgb(230, 165, 67);
 }
 
 h2 {
@@ -46,11 +46,11 @@ p {
 .button {
     font-family: Arial;
     font-weight: bold;
-    background-color: orange;
+    background-color:rgb(230, 165, 67);
     border-radius: 8px;
     border-style: none;
     color: white;
-    padding: 10px 32px;
+    padding: 10px 45px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -131,8 +131,9 @@ p {
     align-items: flex-end;
 }
 .bg-custom{
-    background: rgba(255,165,0,0.6);
-    font-size: 9pt;
+    font-size: 10pt;
+    margin: 20px;
+    margin-left: 10px;
 }
 
 .nav{
@@ -144,13 +145,23 @@ p {
   text-align: center;
   text-decoration: none;
   float: right;
+  z-index: 999;
 }
+
+.nav-logo{
+  z-index: 999;
+  margin-right: 55vw;
+}
+
 .nav-item{
   padding: 5px;
   float:right;
   color: white;
-  padding: 10px 5px;
+  padding: 10px 15px;
   text-decoration: none;
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 1.5px;
 }
 
 
@@ -177,9 +188,9 @@ p {
 }
 
 div .headline{
-   text-align: right;
+   text-align: left;
    position: absolute;
-   top:30%;
+   top: 30%;
    left: 55%;
 }
 

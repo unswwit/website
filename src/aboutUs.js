@@ -8,7 +8,7 @@ class AboutUs extends Component{
 			<body>
 			<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'></link>
 			<div class="contain">
-				<header></header>
+				<div class='cover'></div>
 				<div class="headline">
 					<h1>UNSW</h1>
 					<h1>Women In</h1>
@@ -16,7 +16,10 @@ class AboutUs extends Component{
 					<p class="title" style={{color: 'white'}}>
 						Empowering and Inspiring | The Architects of Change
 					</p>
-					<button class="button btn-join">Join Us</button>
+					<form action="/join-us">
+						<button class="button btn-join">Join Us</button>
+					</form>
+					
 				</div>
 			</div>
 
@@ -55,7 +58,7 @@ class AboutUs extends Component{
 			<div class="stats" onScroll={this.handleScroll}>
 				
 				<img src={process.env.PUBLIC_URL + './metrics-bg.jpg'} className="photo-1" alt="banner" resizeMode='contain'
-                		style={{width: '100vw'}}/>
+                		style={{width: '100%'}}/>
 				<div class="number">
 					<span><CountUp end={10} duration={4}/></span>
 					<span ><CountUp end={13} duration={4}/></span>
