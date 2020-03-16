@@ -2,7 +2,7 @@ h1 {
     font-family: Georgia;
     font-size: 30pt;
     font-weight: bold;
-    color: orange;
+    color: #ffa372;
 }
 
 h2 {
@@ -179,8 +179,8 @@ p {
 div .headline{
    text-align: right;
    position: absolute;
-   top:40%;
-   left: 50%;
+   top:30%;
+   left: 55%;
 }
 
 .unite{

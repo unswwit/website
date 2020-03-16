@@ -6,21 +6,18 @@ class AboutUs extends Component{
 	render(){
 		return (
 			<body>
-
+			<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'></link>
 			<div class="contain">
-				<img src={process.env.PUBLIC_URL + '/header.jpg'} class="banner" alt="header"
-					style={{maxHeight: 5000}}/>
-
+				<header></header>
 				<div class="headline">
 					<h1>UNSW</h1>
-					<h1>Women In Technology</h1>
+					<h1>Women In</h1>
+					<h1>Technology</h1>
 					<p class="title" style={{color: 'white'}}>
-						Empowering and Inspiring 
-						<br/>
-						the Artchitects of Change
+						Empowering and Inspiring | The Architects of Change
 					</p>
 					<button class="button btn-join">Join Us</button>
-				</div>		
+				</div>
 			</div>
 
 			<div class="unite">
