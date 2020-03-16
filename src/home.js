@@ -15,34 +15,34 @@ class Home extends Component{
 					<h1>UNSW</h1>
 					<h1>Women In Technology</h1>
 					<p class="title" style={{color: 'white'}}>
-						Empowering and Inspiring 
+						Empowering and Inspiring
 						<br/>
 						the Artchitects of Change
 					</p>
 					<button class="button btn-join">Join Us</button>
-				</div>		
+				</div>
 			</div>
 			<div class="unite">
 				<h1 style={{padding: '0px 0px 50px 0px'}}>Unite, Empower & Upskill</h1>
 				<p class="description">
-					Technology is the driving force of our future and is a vital part of our everyday lives, 
-					and yet the industry still does not represent the society that they’re creating solutions for. 
-					That’s why we are passionate about equality and diversity in the tech industry.</p> 
+					Technology is the driving force of our future and is a vital part of our everyday lives,
+					and yet the industry still does not represent the society that they’re creating solutions for.
+					That’s why we are passionate about equality and diversity in the tech industry.</p>
 				<p class="description">
-					Formed in late 2016, we have grown to be a platform that empowers, unites and up-skills female 
-					and male students alike that are passionate about our mission. Women in Technology (WIT) 
-					aims to cultivate future leaders that are prepared to challenge the prejudices and bring 
+					Formed in late 2016, we have grown to be a platform that empowers, unites and up-skills female
+					and male students alike that are passionate about our mission. Women in Technology (WIT)
+					aims to cultivate future leaders that are prepared to challenge the prejudices and bring
 					change into the industry while building a strong community where they can find lasting friendships and support.</p>
 				<p class="description">
-					At WIT, our focus is on providing events that foster development catering to first to final years. 
-					Whether it’s personal, academic, professional or social, we want our students to be the best version of themselves. 
+					At WIT, our focus is on providing events that foster development catering to first to final years.
+					Whether it’s personal, academic, professional or social, we want our students to be the best version of themselves.
 					As part out aim, we also connect current and future students with alumni and industry sponsors to serve as role models to inspire.</p>
 				<p class="description">
 					In 2020, we aim to go above and beyond to create events and opportunities for our members to learn and develop both their technical and professional skills.
 				</p>
 			</div>
 			<div class="stats" onScroll={this.handleScroll}>
-				<img src={process.env.PUBLIC_URL + './metrics-bg.jpg'} className="photo-1" alt="banner" resizeMode='contain'
+				<img src={process.env.PUBLIC_URL + './stats-background.png'} className="photo-1" alt="banner" resizeMode='contain'
                 		style={{width: '100vw'}}/>
 				<div class="number">
 					<span><CountUp end={10} duration={4}/></span>
@@ -61,7 +61,7 @@ class Home extends Component{
 					<p class="title">
 						Collaborate • Inspire • Change
 					</p>
-					
+
 					<p style={{'font-size': '14px'}}>
 						Join UNSW WIT via SpARC <br/>
 					</p>
@@ -87,9 +87,9 @@ class Home extends Component{
 				<img src={process.env.PUBLIC_URL + './home-sponsors.png'} className="photo" alt="banner" resizeMode='contain'
                 		style={{width: '65vw'}} />
 			</div>
-		
+
 		</body>
-			
+
 		);
 
 	}
