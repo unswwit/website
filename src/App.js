@@ -18,7 +18,7 @@ class App extends Component{
 	<Router>
   		<nav class="navbar navbar-expand-md navbar-light bg-custom position-absolute">
 	  		<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-	  		<img class="nav-logo" src={process.env.PUBLIC_URL + '/white_favicon.ico.png'} style={{width: '60px'}}></img>
+	  		<img class="nav-logo" src={process.env.PUBLIC_URL + '/favicon.ico.png'} style={{width: '60px'}}></img>
 			  <ul class="navbar-nav ml-auto">
 				<li class="nav-item"><NavLink to="/"><strong>Home</strong></NavLink></li>
 				<li class="nav-item"><NavLink to="/"><strong>About</strong></NavLink></li>
