@@ -145,12 +145,6 @@ p {
   text-align: center;
   text-decoration: none;
   float: right;
-  z-index: 999;
-}
-
-.nav-logo{
-  z-index: 999;
-  margin-right: 55vw;
 }
 
 .nav-item{
@@ -159,7 +153,6 @@ p {
   color: white;
   padding: 10px 15px;
   text-decoration: none;
-  text-transform: uppercase;
   font-weight: lighter;
   letter-spacing: 1.5px;
 }
@@ -168,7 +161,6 @@ p {
   color: white;
   padding: 10px 5px;
   text-decoration: none;
-
 }
 
 .banner{
