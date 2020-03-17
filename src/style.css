@@ -130,10 +130,10 @@ p {
     justify-content: space-evenly;
     align-items: flex-end;
 }
+
 .bg-custom{
+    background: rgba(255,165,0);
     font-size: 10pt;
-    margin: 20px;
-    margin-left: 10px;
 }
 
 .nav{
@@ -163,7 +163,6 @@ p {
   font-weight: lighter;
   letter-spacing: 1.5px;
 }
-
 
 .nav-item a{
   color: white;
@@ -272,21 +271,35 @@ div .texts{
   filter: brightness(50%);
 }
 
-div .footer{
- color:orange;
- list-style: none;
- background-color: rgb(247, 235, 220);
- font-weight: bold;
- height: 250px;
+.footer-top {
+  margin: 0 auto;
 }
 
-.footer a{
-  color: orange;
-  float: right;
-  font-family: Arial;
-  font-size: 10pt;
-  margin-top: 10px;
+.footer-links {
+  list-style-type: none;
+  align: center;
+}
 
+.footer-item {
+  display: inline;
+  padding: 20px;
+  color: #0f4c81;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links {
+  margin: 20px auto;
+  padding: 0;
+  align-self: center;
+  width: 54%;
+}
+.container {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .btn-subscribe{
@@ -305,12 +318,6 @@ div .logo{
   padding-right: 10px;
  }
 
-.icon li{
-  float: right;
-  padding: 0px 5px 0px;
-  
-}
-
 input{
   width: 200px;
   padding-right: 10px;
@@ -321,6 +328,18 @@ input{
 }
 
 h3 {
-margin-top: 0;
+  margin-top: 0;
 } 
 
+.footer-copyright, a {
+  color: #0f4c81;
+}
+
+.footer-item a:hover {
+  color: #feb14b;
+  text-decoration: none;
+}
+
+#copyright {
+  padding: 0px;
+}

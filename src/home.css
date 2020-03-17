@@ -1,0 +1,47 @@
+/*This is the CSS for the 'brief intro' on the home page */
+.unite {
+    max-width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+.uniteLeft {
+    display: inline-block;
+    width: 50%;
+    padding: 50px 50px 50px 0px;
+    height:440px;
+    float:left;
+}
+.uniteRight {
+    display: inline-block;
+    width: 50%;
+    height:440px;
+    text-align: left;
+    padding: 12% 30px 10% 40px;
+    float:right;
+    line-height:22px;
+}
+.description {
+    color: rgb(165,165,165);
+    font-size: 15px;
+}
+.uniteTitle {
+    text-align: right;
+    font-size:75px;
+    padding: 0px, 0px, 50px, 200px;
+    font-family: sans-serif;
+    line-height:100px;
+    color: rgb(245,178,22);
+}
+/*END CSS for 'brief intro'   */
+
+
+.sponsors {
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+}
+
+#small {
+    padding-top: 45px;
+}
