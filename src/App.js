@@ -18,7 +18,7 @@ class App extends Component{
 		<Router>
 			<nav class="navbar navbar-expand-md navbar-dark bg-custom fixed-top justify-content-between">
 				<a class="navbar-brand" href="/">
-					<img src={process.env.PUBLIC_URL + './logo.png'} className="photo nav-logo" alt="wit logo" 
+					<img src={process.env.PUBLIC_URL + './logo.png'} className="photo" alt="wit logo" 
 						resizeMode='contain' style={{width: '35px'}} />
 				</a>
 				<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
