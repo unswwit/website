@@ -42,7 +42,7 @@ class Home extends Component{
 
 			<div class="stats" onScroll={this.handleScroll}>
 				<img src={process.env.PUBLIC_URL + './metrics-bg.jpg'} className="photo-1" alt="banner" resizeMode='contain'
-                		style={{width: '100%'}}/>
+                		style={{width: '100vw'}}/>
 				<div class="number">
 					<span><CountUp end={10} duration={4}/></span>
 					<span><CountUp end={13} duration={4}/></span>
