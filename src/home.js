@@ -14,11 +14,11 @@ class Home extends Component{
 					<h1>Women In</h1>
 					<h1>Technology</h1>
 					<p class="title" style={{color: 'white'}}>
-						Empowering and Inspiring | The Architects of Change
+						Empowering and inspiring the architects of change
 					</p>
-					<form action="/join-us">
+					<a href="/join-us">
 						<button class="button btn-join">Join Us</button>
-					</form>
+					</a>
 					
 				</div>
 			</div>
