@@ -9,7 +9,6 @@ class Home extends Component{
 			<body>
 			<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'></link>
 			<div class="contain">
-				<div class='cover'></div>
 				<div class="headline">
 					<h1>UNSW</h1>
 					<h1>Women In</h1>

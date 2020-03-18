@@ -12,6 +12,7 @@
     height:440px;
     float:left;
 }
+
 .uniteRight {
     display: inline-block;
     width: 50%;
@@ -46,18 +47,12 @@
     padding-top: 45px;
 }
 
-.cover {
+.contain {
     background-size: cover;
-    background-image: url('/header.jpg');
     height: 100vh;
     background-repeat: no-repeat;
-    display: flex;
-    opacity: 0.52;
-}
-
-.contain {
-    background-color: rgba(15, 76, 129, 1);
-    width: 100vw;
+    background-image: url('/header.png');
+    background-position: center bottom 30%;
 }
 
 .headline h1 {
