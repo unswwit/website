@@ -53,6 +53,7 @@
     background-repeat: no-repeat;
     background-image: url('/header.png');
     background-position: center bottom 30%;
+    width: 100vw;
 }
 
 .headline h1 {
