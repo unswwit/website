@@ -22,11 +22,13 @@ h2 {
     padding-bottom: 20px;
     text-align: center;
 }
+
 .subheader {
     font-family: Arial;
     font-size: 13pt;
     color: grey;
 }
+
 p {
     font-family: Arial;
     font-size: 10pt;
@@ -172,15 +174,19 @@ p {
 }
 
 .btn-join{
-  position: absolute;
-  left:75%;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  font-size: 1.2vw;
+  display: table-cell;
+  float: right;
+  margin-right: 1vw;
 }
 
 div .headline{
    text-align: left;
    position: absolute;
    top: 30%;
-   left: 55%;
+   left: 54vw;
 }
 
 .unite{

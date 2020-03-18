@@ -8,6 +8,7 @@ class Home extends Component{
 
 			<body>
 			<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'></link>
+			<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"></meta>
 			<div class="contain">
 				<div class="headline">
 					<h1>UNSW</h1>
@@ -16,10 +17,11 @@ class Home extends Component{
 					<p class="title" style={{color: 'white'}}>
 						Empowering and inspiring the architects of change
 					</p>
+					<div>
 					<a href="/join-us">
 						<button class="button btn-join">Join Us</button>
 					</a>
-					
+					</div>
 				</div>
 			</div>
 
