@@ -36,6 +36,30 @@
 /*END CSS for 'brief intro'   */
 
 
+/*
+  This is the CSS for the 'upcoming events' on the home page
+  Disclaimer: it is an experimental work!
+*/
+.description {
+    text-align: right;
+    margin: auto;
+    font-size: 15px;
+}
+
+.eventsTitle {
+    text-align: left;
+    font-size:60px;
+    font-family: sans-serif;
+    color: rgb(245,178,22);
+}
+
+.picture {
+    padding: 30px 30px 30px 30px;
+    
+}
+
+/*END CSS for 'brief intro'   */
+
 .sponsors {
     text-align: center;
     margin: auto;
@@ -53,7 +77,7 @@
     background-image: url('/header.png');
     background-position: center bottom 40%;
     max-width: 100%;
-   
+
 }
 
 .headline h1 {
