@@ -17,11 +17,9 @@ class Home extends Component{
 					<p class="title" style={{color: 'white'}}>
 						Empowering and inspiring the architects of change
 					</p>
-					<div>
 					<a href="/join-us">
 						<button class="button btn-join">Join Us</button>
 					</a>
-					</div>
 				</div>
 			</div>
 
