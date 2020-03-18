@@ -7,20 +7,21 @@ class Home extends Component{
 		return (
 
 			<body>
-
+			<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'></link>
+			<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"></meta>
 			<div class="contain">
-				<img src={process.env.PUBLIC_URL + '/header.jpg'} class="banner" alt="header"
-					style={{maxHeight: 5000}}/>
-
 				<div class="headline">
 					<h1>UNSW</h1>
-					<h1>Women In Technology</h1>
+					<h1>Women In</h1>
+					<h1>Technology</h1>
 					<p class="title" style={{color: 'white'}}>
-						Empowering and Inspiring
-						<br/>
-						the Artchitects of Change
+						Empowering and inspiring the architects of change
 					</p>
-					<button class="button btn-join">Join Us</button>
+					<div>
+					<a href="/join-us">
+						<button class="button btn-join">Join Us</button>
+					</a>
+					</div>
 				</div>
 			</div>
 
@@ -42,7 +43,7 @@ class Home extends Component{
 
 			<div class="stats" onScroll={this.handleScroll}>
 				<img src={process.env.PUBLIC_URL + './metrics-bg.jpg'} className="photo-1" alt="banner" resizeMode='contain'
-                		style={{width: '100vw'}}/>
+                		style={{width: '100%'}}/>
 				<div class="number">
 					<span><CountUp end={10} duration={4}/></span>
 					<span><CountUp end={13} duration={4}/></span>

@@ -2,7 +2,7 @@ h1 {
     font-family: Georgia;
     font-size: 30pt;
     font-weight: bold;
-    color: orange;
+    color:rgb(230, 165, 67);
 }
 
 h2 {
@@ -22,11 +22,13 @@ h2 {
     padding-bottom: 20px;
     text-align: center;
 }
+
 .subheader {
     font-family: Arial;
     font-size: 13pt;
     color: grey;
 }
+
 p {
     font-family: Arial;
     font-size: 10pt;
@@ -46,11 +48,11 @@ p {
 .button {
     font-family: Arial;
     font-weight: bold;
-    background-color: orange;
+    background-color:rgb(230, 165, 67);
     border-radius: 8px;
     border-style: none;
     color: white;
-    padding: 10px 32px;
+    padding: 10px 45px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -146,19 +148,19 @@ p {
   text-decoration: none;
   float: right;
 }
+
 .nav-item{
-  padding: 5px;
   float:right;
   color: white;
-  padding: 10px 5px;
+  padding: 5px;
   text-decoration: none;
+  letter-spacing: 1.5px;
 }
 
 .nav-item a{
   color: white;
-  padding: 10px 5px;
+  padding: 10px 15px;
   text-decoration: none;
-
 }
 
 .banner{
@@ -172,15 +174,19 @@ p {
 }
 
 .btn-join{
-  position: absolute;
-  left:75%;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  font-size: 1.2vw;
+  display: table-cell;
+  float: right;
+  margin-right: 1vw;
 }
 
 div .headline{
-   text-align: right;
+   text-align: left;
    position: absolute;
-   top:40%;
-   left: 50%;
+   top: 30%;
+   left: 54vw;
 }
 
 .unite{
@@ -188,7 +194,6 @@ div .headline{
    float: center;
    padding-top: 50px ;
 }
-
 
 .row h2{
   color: orange;
