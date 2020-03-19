@@ -16,7 +16,7 @@
     display: inline-block;
     width: 50%;
     height:440px;
-    text-align: left;
+    text-align: justify;
     padding: 12% 30px 10% 40px;
     float:right;
     line-height:22px;
@@ -53,7 +53,7 @@
     background-image: url('/header.png');
     background-position: center bottom 40%;
     max-width: 100%;
-   
+
 }
 
 .headline h1 {
