@@ -23,7 +23,7 @@ class Sponsors extends React.Component {
                     resizeMode='contain'
                     />
 
-                  <h1 className='sponsorHeaderText'>SPONSORS</h1>
+                  <h1>SPONSORS</h1>
                 </div>
                 <p className='subheader'>{`
                     Thank you to our sponsors for generously supporting our cause and
