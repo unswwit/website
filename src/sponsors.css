@@ -1,0 +1,35 @@
+/* this is used to add style to sponsors page and header */
+
+.sponsorHeader {  /* the 'box''*/
+  position: relative;
+  display: inline-block;
+}
+
+.sponsorHeader .sponsorHeaderText { /*the text inside the box*/
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 45%; /* Adjust this value to move the positioned div up and down */
+  font-family: Arial,sans-serif;
+  font-weight: 100;
+  font-family:serif;
+  font-size:66px;
+  letter-spacing: 3px;
+  width: 60%; /* Set the width of the positioned div */
+}
+
+p.subheader {
+  font-size: 22px;
+  color: grey;
+  padding: 100px 250px 100px 250px;
+
+  font-weight: lighter;
+  font-family: sans-serif;
+  line-height: 30px;
+  letter-spacing: 2px;
+
+  /*being overwritten???? CHECK*/
+}

@@ -12,20 +12,22 @@ import Telstra from "./sponsors/Telstra";
 import VMWare from "./sponsors/VMWare";
 import QPay from "./sponsors/QPay";
 
+import "./sponsors.css";
+
 class Sponsors extends React.Component {
     render() {
         return (
             <div className='centre'>
-                <img src={process.env.PUBLIC_URL + '/wit_cover_sponsors.jpg'} className="" alt="banner" 
+                <div className = 'sponsorHeader'>
+                  <img src={process.env.PUBLIC_URL + '/sponsors-header.png'} width = "100%" className="" alt="banner"
                     resizeMode='contain'
-                    style={{
-                    maxHeight: 768,
-                    maxWidth: 1366
-                    }} />
-                <h1>Sponsors</h1>
+                    />
+
+                  <h1 className='sponsorHeaderText'>SPONSORS</h1>
+                </div>
                 <p className='subheader'>{`
-                    Thank you to our sponsors for generously supporting our cause and 
-                    collaborating with us to provide our students invaluable opportunities.
+                    Thank you to our sponsors for generously supporting our cause and
+                    collaborating with us to provide our students invaluable opportunities
                     `}
                 </p>
 
@@ -33,10 +35,10 @@ class Sponsors extends React.Component {
                 <h1>Principal Sponsors</h1>
                 <ToggleBox title='/sponsors/Telstra.png'>
                     <Telstra />
-                </ToggleBox>   
+                </ToggleBox>
 
                 {/* 300x150 */}
-                <h1>Major Sponsors</h1> 
+                <h1>Major Sponsors</h1>
                 <div id="majorContainer">
                     <ToggleBox title='/sponsors/Amazon.png'>
                         <Amazon />
@@ -47,8 +49,8 @@ class Sponsors extends React.Component {
                     <ToggleBox title='/sponsors/EY.png'>
                         <EY />
                     </ToggleBox>
-                </div>        
-                <div id="majorContainer">    
+                </div>
+                <div id="majorContainer">
                     <ToggleBox title='/sponsors/Google.png'>
                         <Google />
                     </ToggleBox>
@@ -58,15 +60,15 @@ class Sponsors extends React.Component {
                     <ToggleBox title='/sponsors/Nine-Publishing.png'>
                         <NinePublishing />
                     </ToggleBox>
-                </div>    
-                <div id="majorContainer">    
+                </div>
+                <div id="majorContainer">
                     <ToggleBox title='/sponsors/Quantium.png'>
                         <Quantium />
                     </ToggleBox>
                     <ToggleBox title='/sponsors/vmware.png'>
                         <VMWare />
                     </ToggleBox>
-                </div>    
+                </div>
 
                 {/* 150x150 */}
                 <h1>Support Sponsors</h1>
@@ -79,7 +81,7 @@ class Sponsors extends React.Component {
                 <ToggleBox title='/sponsors/qpay.png'>
                     <QPay />
                 </ToggleBox>
-            
+
                 <h3 className='subheader'>{`Interested in partnering with us? Contact us at `}
                     <a className='subheader' href="mailto:externals@unswwit.com">externals@unswwit.com</a>.
                 </h3>
