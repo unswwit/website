@@ -67,6 +67,49 @@ class Home extends Component{
 
 				</div>
 			</div>
+
+			{/*Upcoming events area*/}
+			{/*The container*/}
+			<div class="row" style={{'padding': '100px 100px 100px '}}>
+
+				{/*First collumn*/}
+				<div class="col-xl-6 order-lg-1">
+					<h2 class ="eventsTitle"> UPCOMING
+					<br/> EVENTS </h2>
+
+				</div>
+
+				{/*Second Column*/}
+				<div class="col-xl-6 order-lg-12" style={{'text-align': 'right'}}>
+					<p style={{'font-size': '18px'}}>
+						It's never too late to get involved with WIT and upskill your technical and soft skills!
+					</p>
+					<p class="description">
+						At WIT, our focus is on providing events that foster development 
+						catering to first to final years. Whether it’s personal, academic, 
+						professional or social, we want our students to be the best version 
+						of themselves. As part out aim, we also connect current and future 
+						students with alumni and industry sponsors to serve as role 
+						models to inspire.
+					</p>
+				</div>
+			</div>
+
+
+			<div class="row" style={{'padding': '50px 100px 100px '}}>
+				<div class="col-md-6 col-lg-4 picture">
+					<img src={process.env.PUBLIC_URL + '/app-scratch.png'} className="event1" alt="banner"  />
+				</div>
+				<div class="col-md-6 col-lg-4 picture">
+					<img src={process.env.PUBLIC_URL + '/alumnight.jpg'} className="event2" alt="banner"/>
+				</div>
+				<div class="col-md-6 col-lg-4 picture">
+					<img src={process.env.PUBLIC_URL + '/app-scratch.png'} className="event1" alt="banner"  />
+				</div>
+			</div>
+			{/*End of upcoming events area*/}
+
+			{/*
 			<div class="row" style={{'padding': '20px 100px 100px '}}>
 				<div class="col-md-4">
 					<h2>Upcoming Events</h2>
@@ -84,7 +127,7 @@ class Home extends Component{
 				<h1>Our Sponsors</h1>
 				<img src={process.env.PUBLIC_URL + './home-sponsors.png'} className="photo" alt="banner" resizeMode='contain'
                 		style={{maxWidth: '80%'}} />
-			</div>
+			</div>*/}
 
 		</body>
 
