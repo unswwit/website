@@ -30,20 +30,19 @@ class JoinUs extends React.Component {
                       <img src={process.env.PUBLIC_URL + '/facebook.png'} className="" alt="banner" resizeMode='contain'
                             style={{width:'100%', height:'100%'}} />
                     </a>
-                    <a href={instagramUrl}>
-                      <img src={process.env.PUBLIC_URL + '/instagram.png'} className="" alt="banner" resizeMode='contain'
-                            style={{width:'100%', height:'100%'}} />
-
-                    </a>
                     <a href={linkedInUrl}>
                       <img src={process.env.PUBLIC_URL + '/linkedin.png'} className="" alt="banner" resizeMode='contain'
                             style={{width:'100%', height:'100%'}} />
-
                     </a>
+                    <a href={instagramUrl}>
+                      <img src={process.env.PUBLIC_URL + '/instagram.png'} className="" alt="banner" resizeMode='contain'
+                            style={{width:'100%', height:'100%'}} />
+                    </a>            
                   </div>
                   <h2>Subscribe to our mailing list</h2>
                   <div className = 'mailingForm' >
                   </div>
+                  <button type = "button" className = 'submitButton' >Join Us</button>
                 </div>
               </div>
 

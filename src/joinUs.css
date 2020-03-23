@@ -21,6 +21,7 @@
   font-weight: normal;
   letter-spacing: 8px;
   width: 60%; /* Set the width of the positioned div */
+  color: rgb(245,178,22);
 }
 
 .joinUsBody {
@@ -52,11 +53,11 @@
 }
 
 .joinUsRight h2 {
-  color: orange;
   font-family: sans-serif;
-  font-size: 28px;
-  line-height: 60px;
+  font-size: 26px;
+  line-height: 50px;
   letter-spacing: 1.5px;
+  color: rgb(245,178,22);
 }
 
 .joinButtons {  /*container for buttons */
@@ -78,4 +79,17 @@
   border-style: solid;
   border-radius: 10px;
   color: grey;
+}
+
+.submitButton {
+  width: 180px;
+  height: 48px;
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 10px;
+  background-color: rgb(245,178,22);
+  color: white;
+  margin-top: 20px;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 1px;
 }
