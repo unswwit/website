@@ -1,4 +1,4 @@
-{/*import React from 'react';
+import React from 'react';
 import ToggleBox from "./sponsors/toggleBox";
 import Amazon from "./sponsors/Amazon";
 import Atlassian from "./sponsors/Atlassian";
@@ -10,7 +10,7 @@ import Palantir from "./sponsors/Palantir";
 import Quantium from "./sponsors/Quantium";
 import Telstra from "./sponsors/Telstra";
 import VMWare from "./sponsors/VMWare";
-import QPay from "./sponsors/QPay";*/}
+import QPay from "./sponsors/QPay";
 
 
 import "./sponsors.css";
@@ -36,16 +36,15 @@ class Sponsors extends React.Component {
                 <h1>Principal Sponsors</h1>
                 <a href="https://www.telstra.com.au/">
                   <img
-                    src={process.env.PUBLIC_URL + "/sponsors/Telstra.png"}
+                    //src={process.env.PUBLIC_URL + "/sponsors/Telstra.png"}
+                    src={process.env.PUBLIC_URL + "/icon_email.png"}
                     alt="Telstra"
                     resizeMode="contain"
                     style={{'height': '300px', 'width': '600px'}}
                   />
                 </a>
 
-                <ToggleBox title='/sponsors/Telstra.png'>
-                    <Telstra />
-                </ToggleBox>
+
 
 
                 {/* 300x150 */}
@@ -53,7 +52,8 @@ class Sponsors extends React.Component {
                 <div id="majorContainer">
                     <a href="https://www.amazon.jobs/en">
                       <img
-                        src={process.env.PUBLIC_URL + "/sponsors/Amazon.png"}
+                        //src={process.env.PUBLIC_URL + "/sponsors/Amazon.png"}
+                        src={process.env.PUBLIC_URL + "/icon_email.png"}
                         alt="Amazon"
                         resizeMode="contain"
                         style={{'height': '150px', 'width': '300px'}}
@@ -61,20 +61,22 @@ class Sponsors extends React.Component {
                     </a>
 
 
-                    <a href="https://www.amazon.jobs/en">
+                    <a href="https://www.atlassian.com/">
                       <img
-                        src={process.env.PUBLIC_URL + "/sponsors/Atlassian.png"}
-                        alt="Amazon"
+                        //src={process.env.PUBLIC_URL + "/sponsors/Atlassian.png"}
+                        src={process.env.PUBLIC_URL + "/facebook.png"}
+                        alt="Atlassian"
                         resizeMode="contain"
                         style={{'height': '150px', 'width': '300px'}}
                       />
                     </a>
 
 
-                    <a href="https://www.amazon.jobs/en">
+                    <a href="https://www.ey.com/en_au">
                       <img
-                        src={process.env.PUBLIC_URL + "/sponsors/EY.png"}
-                        alt="Amazon"
+                        //src={process.env.PUBLIC_URL + "/sponsors/EY.png"}
+                        src={process.env.PUBLIC_URL + "/icon_email.png"}
+                        alt="EY"
                         resizeMode="contain"
                         style={{'height': '150px', 'width': '300px'}}
                       />
@@ -84,99 +86,92 @@ class Sponsors extends React.Component {
                 </div>
                 <div id="majorContainer">
 
-                    <a href="https://www.amazon.jobs/en">
+                    <a href="https://careers.google.com/">
                       <img
-                        src={process.env.PUBLIC_URL + "/icon_email.png"}
-                        alt="Amazon"
+                        //src={process.env.PUBLIC_URL + "/sponsors/Google.png"}
+                        src={process.env.PUBLIC_URL + "/facebook.png"}
+                        alt="Google"
                         resizeMode="contain"
                         style={{'height': '150px', 'width': '300px'}}
                       />
                     </a>
-                    <ToggleBox title='/sponsors/Google.png'>
-                        <Google />
-                    </ToggleBox>
 
 
-                    <a href="https://www.amazon.jobs/en">
+
+                    <a href="https://www.mcgrathnicol.com/">
                       <img
+                        //src={process.env.PUBLIC_URL + "/sponsors/McGrathNicol.png"}
                         src={process.env.PUBLIC_URL + "/icon_email.png"}
-                        alt="Amazon"
+                        alt="McGrathNicol"
                         resizeMode="contain"
                         style={{'height': '150px', 'width': '300px'}}
                       />
                     </a>
-                    <ToggleBox title='/sponsors/McGrathNicol.png'>
-                        <McGrathNicol />
-                    </ToggleBox>
 
 
-                    <a href="https://www.amazon.jobs/en">
+
+                    <a href="https://www.nineforbrands.com.au/about/">
                       <img
+                        //src={process.env.PUBLIC_URL + "/sponsors/Nine-Publishing.png"}
                         src={process.env.PUBLIC_URL + "/icon_email.png"}
-                        alt="Amazon"
+                        alt="Nine-Publishing"
                         resizeMode="contain"
                         style={{'height': '150px', 'width': '300px'}}
                       />
                     </a>
-                    <ToggleBox title='/sponsors/Nine-Publishing.png'>
-                        <NinePublishing />
-                    </ToggleBox>
+
                 </div>
                 <div id="majorContainer">
 
-                    <a href="https://www.amazon.jobs/en">
+                    <a href="https://quantium.com/">
                       <img
+                        //src={process.env.PUBLIC_URL + "/sponsors/Quantium.png"}
                         src={process.env.PUBLIC_URL + "/icon_email.png"}
-                        alt="Amazon"
+                        alt="Quantium"
                         resizeMode="contain"
                         style={{'height': '150px', 'width': '300px'}}
                       />
                     </a>
-                    <ToggleBox title='/sponsors/Quantium.png'>
-                        <Quantium />
-                    </ToggleBox>
 
 
-                    <a href="https://www.amazon.jobs/en">
+
+                    <a href="https://www.vmware.com/au.html">
                       <img
+                        //src={process.env.PUBLIC_URL + "/sponsors/vmware.png"}
                         src={process.env.PUBLIC_URL + "/icon_email.png"}
-                        alt="Amazon"
+                        alt="Vmware"
                         resizeMode="contain"
                         style={{'height': '150px', 'width': '300px'}}
                       />
                     </a>
-                    <ToggleBox title='/sponsors/vmware.png'>
-                        <VMWare />
-                    </ToggleBox>
+
                 </div>
 
                 {/* 150x150 */}
                 <h1>Support Sponsors</h1>
-                <a href="https://www.amazon.jobs/en">
+                <a href="https://www.palantir.com/">
                   <img
+                    //src={process.env.PUBLIC_URL + "/sponsors/Palantir.png"}
                     src={process.env.PUBLIC_URL + "/icon_email.png"}
-                    alt="Amazon"
+                    alt="Palantir"
                     resizeMode="contain"
                     style={{'height': '150px', 'width': '150px'}}
                   />
                 </a>
-                <ToggleBox title='/sponsors/Palantir.png'>
-                    <Palantir />
-                </ToggleBox>
+
 
                 {/* 150x150 */}
                 <h1>In-Kind Sponsors</h1>
-                <a href="https://www.amazon.jobs/en">
+                <a href="https://webapp.getqpay.com/login">
                   <img
+                    //src={process.env.PUBLIC_URL + "/sponsors/qpay.png"}
                     src={process.env.PUBLIC_URL + "/icon_email.png"}
                     alt="qPay"
                     resizeMode="contain"
                     style={{'height': '150px', 'width': '150px'}}
                   />
                 </a>
-                <ToggleBox title='/sponsors/qpay.png'>
-                    <QPay />
-                </ToggleBox>
+
 
                 <h3 className='subheader'>{`Interested in partnering with us? Contact us at `}
                     <a className='subheader' href="mailto:externals@unswwit.com">externals@unswwit.com</a>.
