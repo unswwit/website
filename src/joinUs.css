@@ -53,11 +53,12 @@
 }
 
 .joinUsRight h2 {
-  font-family: sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 26px;
   line-height: 50px;
   letter-spacing: 1.5px;
   color: rgb(245,178,22);
+  font-weight: bold;
 }
 
 .joinButtons {  /*container for buttons */
@@ -70,26 +71,7 @@
   margin-right: 15px;
   width: 60px;
   height: 60px;
-  padding: 4px;
-}
+  padding: 4px 4px 4px 4px;
+  margin-bottom: 6px;
 
-.mailingForm {
-  width: 100%;
-  height: 48px;
-  border-style: solid;
-  border-radius: 10px;
-  color: grey;
-}
-
-.submitButton {
-  width: 180px;
-  height: 48px;
-  border-style: solid;
-  border-width: 0px;
-  border-radius: 10px;
-  background-color: rgb(245,178,22);
-  color: white;
-  margin-top: 20px;
-  font-family: Roboto, sans-serif;
-  letter-spacing: 1px;
 }

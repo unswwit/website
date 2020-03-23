@@ -11,7 +11,6 @@ class JoinUs extends React.Component {
         const instagramUrl = "https://www.instagram.com/wit.unsw/";
 
         return (
-
             <div>
               <div className = 'joinUsHeader'>
                 <img src={process.env.PUBLIC_URL + '/join-header.png'} width = "100%" className="centre" alt="banner"
@@ -37,15 +36,11 @@ class JoinUs extends React.Component {
                     <a href={instagramUrl}>
                       <img src={process.env.PUBLIC_URL + '/instagram.png'} className="" alt="banner" resizeMode='contain'
                             style={{width:'100%', height:'100%'}} />
-                    </a>            
+                    </a>
                   </div>
                   <h2>Subscribe to our mailing list</h2>
-                  <div className = 'mailingForm' >
-                  </div>
-                  <button type = "button" className = 'submitButton' >Join Us</button>
                 </div>
               </div>
-
             </div>
 
         );
