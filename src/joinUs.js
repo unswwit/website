@@ -26,19 +26,23 @@ class JoinUs extends React.Component {
                   <h2>Connect with us</h2>
                   <div className = 'joinButtons'>
                     <a href={fbPageUrl}>
-                      <img src={process.env.PUBLIC_URL + '/facebook.png'} className="" alt="banner" resizeMode='contain'
+                      <img src={process.env.PUBLIC_URL + '/facebook.png'} title = 'Facebook Page' className="" alt="banner" resizeMode='contain'
+                            style={{width:'100%', height:'100%'}} />
+                    </a>
+                    <a href={fbGroupUrl}>
+                      <img src={process.env.PUBLIC_URL + '/facebook-group.png'} title = 'Facebook Group' className="" alt="banner" resizeMode='contain'
                             style={{width:'100%', height:'100%'}} />
                     </a>
                     <a href={linkedInUrl}>
-                      <img src={process.env.PUBLIC_URL + '/linkedin.png'} className="" alt="banner" resizeMode='contain'
+                      <img src={process.env.PUBLIC_URL + '/linkedin.png'} title = 'Linked-In' className="" alt="banner" resizeMode='contain'
                             style={{width:'100%', height:'100%'}} />
                     </a>
                     <a href={instagramUrl}>
-                      <img src={process.env.PUBLIC_URL + '/instagram.png'} className="" alt="banner" resizeMode='contain'
+                      <img src={process.env.PUBLIC_URL + '/instagram.png'} title = 'Instagram' className="" alt="banner" resizeMode='contain'
                             style={{width:'100%', height:'100%'}} />
                     </a>
                   </div>
-                  <h2>Subscribe to our mailing list</h2>
+
                 </div>
               </div>
             </div>
