@@ -12,7 +12,6 @@ import Telstra from "./sponsors/Telstra";
 import VMWare from "./sponsors/VMWare";
 import QPay from "./sponsors/QPay";
 
-
 import "./sponsors.css";
 
 class Sponsors extends React.Component {
@@ -34,17 +33,9 @@ class Sponsors extends React.Component {
 
                 {/* 600x300 */}
                 <h1>Principal Sponsors</h1>
-                <a href="https://www.telstra.com.au/">
-                  <img
-                    src={process.env.PUBLIC_URL + "/sponsors/Telstra.png"}
-                    alt="Telstra"
-                    resizeMode="contain"
-                    style={{'height': '300px', 'width': '600px'}}
-                  />
-                </a>
-
-
-
+                <ToggleBox title='/sponsors/Telstra.png'>
+                    <Telstra />
+                </ToggleBox>
 
                 {/* 300x150 */}
                 <h1>Major Sponsors</h1>
@@ -58,7 +49,6 @@ class Sponsors extends React.Component {
                       />
                     </a>
 
-
                     <a href="https://www.atlassian.com/">
                       <img
                         src={process.env.PUBLIC_URL + "/sponsors/Atlassian.png"}
@@ -67,7 +57,6 @@ class Sponsors extends React.Component {
                         style={{'height': '150px', 'width': '300px'}}
                       />
                     </a>
-
 
                     <a href="https://www.ey.com/en_au">
                       <img
@@ -91,8 +80,6 @@ class Sponsors extends React.Component {
                       />
                     </a>
 
-
-
                     <a href="https://www.mcgrathnicol.com/">
                       <img
                         src={process.env.PUBLIC_URL + "/sponsors/McGrathNicol.png"}
@@ -101,8 +88,6 @@ class Sponsors extends React.Component {
                         style={{'height': '150px', 'width': '300px'}}
                       />
                     </a>
-
-
 
                     <a href="https://www.nineforbrands.com.au/about/">
                       <img
@@ -125,8 +110,6 @@ class Sponsors extends React.Component {
                       />
                     </a>
 
-
-
                     <a href="https://www.vmware.com/au.html">
                       <img
                         src={process.env.PUBLIC_URL + "/sponsors/vmware.png"}
@@ -135,34 +118,19 @@ class Sponsors extends React.Component {
                         style={{'height': '150px', 'width': '300px'}}
                       />
                     </a>
-
                 </div>
 
                 {/* 150x150 */}
                 <h1>Support Sponsors</h1>
-                <a href="https://www.palantir.com/">
-                  <img
-                    //src={process.env.PUBLIC_URL + "/sponsors/Palantir.png"}
-                    src={process.env.PUBLIC_URL + "/icon_email.png"}
-                    alt="Palantir"
-                    resizeMode="contain"
-                    style={{'height': '150px', 'width': '150px'}}
-                  />
-                </a>
-
+                <ToggleBox title='/sponsors/Palantir.png'>
+                    <Palantir />
+                </ToggleBox>
 
                 {/* 150x150 */}
                 <h1>In-Kind Sponsors</h1>
-                <a href="https://webapp.getqpay.com/login">
-                  <img
-                    //src={process.env.PUBLIC_URL + "/sponsors/qpay.png"}
-                    src={process.env.PUBLIC_URL + "/icon_email.png"}
-                    alt="qPay"
-                    resizeMode="contain"
-                    style={{'height': '150px', 'width': '150px'}}
-                  />
-                </a>
-
+                <ToggleBox title='/sponsors/qpay.png'>
+                    <QPay />
+                </ToggleBox>
 
                 <h3 className='subheader'>{`Interested in partnering with us? Contact us at `}
                     <a className='subheader' href="mailto:externals@unswwit.com">externals@unswwit.com</a>.
