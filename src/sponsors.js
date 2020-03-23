@@ -28,7 +28,7 @@ class Sponsors extends React.Component {
                 </div>
                 <p className='subheader'>{`
                     Thank you to our sponsors for generously supporting our cause and
-                    collaborating with us to provide our students invaluable opportunities
+                    collaborating with us to provide our students invaluable opportunities.
                     `}
                 </p>
 
@@ -36,7 +36,6 @@ class Sponsors extends React.Component {
                 <h1>Principal Sponsors</h1>
                 <a href="https://www.telstra.com.au/">
                   <img
-                    //src={process.env.PUBLIC_URL + "/sponsors/Telstra.png"}
                     src={process.env.PUBLIC_URL + "/sponsors/Telstra.png"}
                     alt="Telstra"
                     resizeMode="contain"
@@ -52,7 +51,6 @@ class Sponsors extends React.Component {
                 <div id="majorContainer">
                     <a href="https://www.amazon.jobs/en">
                       <img
-                        //src={process.env.PUBLIC_URL + "/sponsors/Amazon.png"}
                         src={process.env.PUBLIC_URL + "/sponsors/Amazon.png"}
                         alt="Amazon"
                         resizeMode="contain"
@@ -63,8 +61,7 @@ class Sponsors extends React.Component {
 
                     <a href="https://www.atlassian.com/">
                       <img
-                        //src={process.env.PUBLIC_URL + "/sponsors/Atlassian.png"}
-                        src={process.env.PUBLIC_URL + "/sponsors/Atlassian.pngg"}
+                        src={process.env.PUBLIC_URL + "/sponsors/Atlassian.png"}
                         alt="Atlassian"
                         resizeMode="contain"
                         style={{'height': '150px', 'width': '300px'}}
@@ -74,7 +71,6 @@ class Sponsors extends React.Component {
 
                     <a href="https://www.ey.com/en_au">
                       <img
-                        //src={process.env.PUBLIC_URL + "/sponsors/EY.png"}
                         src={process.env.PUBLIC_URL + "/sponsors/EY.png"}
                         alt="EY"
                         resizeMode="contain"
@@ -88,7 +84,6 @@ class Sponsors extends React.Component {
 
                     <a href="https://careers.google.com/">
                       <img
-                        //src={process.env.PUBLIC_URL + "/sponsors/Google.png"}
                         src={process.env.PUBLIC_URL + "/sponsors/Google.png"}
                         alt="Google"
                         resizeMode="contain"
@@ -100,7 +95,6 @@ class Sponsors extends React.Component {
 
                     <a href="https://www.mcgrathnicol.com/">
                       <img
-                        //src={process.env.PUBLIC_URL + "/sponsors/McGrathNicol.png"}
                         src={process.env.PUBLIC_URL + "/sponsors/McGrathNicol.png"}
                         alt="McGrathNicol"
                         resizeMode="contain"
@@ -112,7 +106,6 @@ class Sponsors extends React.Component {
 
                     <a href="https://www.nineforbrands.com.au/about/">
                       <img
-                        //src={process.env.PUBLIC_URL + "/sponsors/Nine-Publishing.png"}
                         src={process.env.PUBLIC_URL + "/sponsors/Nine-Publishing.png"}
                         alt="Nine-Publishing"
                         resizeMode="contain"
@@ -125,7 +118,6 @@ class Sponsors extends React.Component {
 
                     <a href="https://quantium.com/">
                       <img
-                        //src={process.env.PUBLIC_URL + "/sponsors/Quantium.png"}
                         src={process.env.PUBLIC_URL + "/sponsors/Quantium.png"}
                         alt="Quantium"
                         resizeMode="contain"
@@ -137,7 +129,6 @@ class Sponsors extends React.Component {
 
                     <a href="https://www.vmware.com/au.html">
                       <img
-                        //src={process.env.PUBLIC_URL + "/sponsors/vmware.png"}
                         src={process.env.PUBLIC_URL + "/sponsors/vmware.png"}
                         alt="Vmware"
                         resizeMode="contain"
