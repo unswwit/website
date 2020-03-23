@@ -2,7 +2,7 @@ h1 {
     font-family: Georgia;
     font-size: 30pt;
     font-weight: bold;
-    color:rgb(230, 165, 67);
+    color:rgb(245,178,22);
 }
 
 h2 {
@@ -14,7 +14,7 @@ h2 {
 .title {
     font-family: Arial;
     font-size: 15pt;
-    font-weight: bold;   
+    font-weight: bold;
 }
 
 .header{
@@ -67,7 +67,7 @@ p {
 }
 
 .sponsorImg:hover {
-    cursor: pointer;        
+    cursor: pointer;
 }
 
 .column {
@@ -81,7 +81,7 @@ p {
 }
 
 .joinColumn {
-    
+
   column-count: 3;
   text-align: center;
   margin: 1em 0 !important;
@@ -119,7 +119,7 @@ p {
     width: 33.33%;
     padding: 5px;
 }
-  
+
 .row::after {
     content: "";
     clear: both;
@@ -127,6 +127,7 @@ p {
 }
 
 #majorContainer {
+    padding: 0px 175px 50px 175px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -231,7 +232,7 @@ div .headline{
   right: 12%;
   bottom: 24%;
   margin-left: 10px;
-  
+
 }
 
 .words span{
@@ -298,7 +299,7 @@ footer {
 }
 
 .btn-subscribe{
-  margin-left: 10px; 
+  margin-left: 10px;
   font-size: 10pt;
 
   border-radius: 5px;
@@ -324,7 +325,7 @@ input{
 
 h3 {
   margin-top: 0;
-} 
+}
 
 .footer-copyright, a {
   color: #0f4c81;
