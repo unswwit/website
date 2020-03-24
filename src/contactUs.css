@@ -1,0 +1,41 @@
+/* style for contact us page. So far:
+- the email segment
+- the forms segment
+*/
+
+
+.form {
+    max-width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+.formLeft {
+    display: inline-block;
+    width: 50%;
+    padding: 50px;
+    height:500px;
+    float:left;
+
+    border-style: solid;
+}
+.formRight {
+    display: inline-block;
+    width: 50%;
+    height:500px;
+    padding: 12% 30px 10% 40px;
+    float:right;
+
+    border-style: solid;
+}
+
+.formLeft form {
+  float: left;
+  text-align: left;
+
+}
+
+.formInput {
+  color: blue;
+
+}

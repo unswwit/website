@@ -1,38 +1,51 @@
 import React from 'react'
+
+import "./contactUs.css";
+
 class ContactUs extends React.Component {
     render() {
         return (
             <div>
                 <img src={process.env.PUBLIC_URL + '/contact-header.jpg'} class="banner" alt="banner" style={{maxHeight: 768}}/>
                 <h1 class="header">Contact Us</h1>
-                
-                <div class='row' style={{'padding': '0px 100px 100px '}}> 
-                    <div class="col-md-4">
-                        <p className='subheader' style={{textAlign: 'left'}}>
-                            <strong>Send Through a General Inquiry</strong>
-                        </p>
-                        <form action="mailto:exec@unswwit.com" method="post" enctype="text/plain" style={{color:'orange'}}>
-                            <strong>Name</strong>
+
+
+
+                <div className = 'body'>
+                    <div className = 'form'>
+                      <div className = 'formLeft'>
+
+                        <h2>Send Through a General Inquiry</h2>
+
+                        <form action="mailto:exec@unswwit.com" method="post" enctype="text/plain" className = 'formStyle'>
+
                             <br/>
-                            <input type="text" name="name"/>
+                            <input className = 'formInput' type="text" name="name" placeholder = "Full Name"/>
                             <br/>
-                            <strong>E-mail</strong>
+
                             <br/>
-                            <input type="text" name="mail" />
+                            <input className = 'formInput' type="text" name="mail" placeholder = 'Email Address' />
                             <br/>
-                            <strong>Message</strong>
+
                             <br/>
-                            <textarea name="message" rows="5" style={{width:'200px', borderColor: 'orange', 'background-color': 'rgb(247, 235, 220)'}}></textarea>
+                            <textarea className = 'formInput' name="message" placeholder = 'Message' rows="5" style={{width:'200px', borderColor: 'orange', 'background-color': 'rgb(247, 235, 220)'}}></textarea>
                             <br/>
-                            <input type="submit" value="Send" class="button" style={{float: 'right', width: '100px'}} />
+                            <input type="submit" value="Send" class="button" style={{float: 'left', width: '100px'}} />
                         </form>
+                      </div>
+
+                      <div className = 'formRight'>
+
+                      </div>
                     </div>
+
+
 
                     <div class="col-lg-8">
                         <p className='subheader' style={{textAlign: 'center'}}>
                             <strong>Contact Our Team</strong>
                         </p>
-                        <div class='row'> 
+                        <div class='row'>
                             <div class='col-sm-4' style={{'text-align': 'right'}}>
                                 <ul style={{'list-style': 'none'}}>
                                     <li>Vivian Shen</li>
@@ -46,8 +59,8 @@ class ContactUs extends React.Component {
                                     <li>Rhea Thomas</li>
                                     <li>Alison Chin</li>
                                     <li>Elicia Au Duong</li>
-                                    <li>Felicia Ee</li>  
-                                     
+                                    <li>Felicia Ee</li>
+
                                 </ul>
                             </div>
                             <div class='col-lg-2' style={{'text-align': 'left'}}>
@@ -63,7 +76,7 @@ class ContactUs extends React.Component {
                                     <li><a href="mailto:rhea@unswwit.com">rhea@unswwit.com</a></li>
                                     <li><a href="mailto:alison@unswwit.com">alison@unswwit.com</a></li>
                                     <li><a href="mailto:elicia@unswwit.com">elicia@unswwit.com</a></li>
-                                    <li><a href="mailto:felicia@unswwit.com">felicia@unswwit.com</a></li> 
+                                    <li><a href="mailto:felicia@unswwit.com">felicia@unswwit.com</a></li>
                                 </ul>
                             </div>
                             <div class='col-sm-4' style={{'text-align': 'left', 'padding-top': '112px'}}>
@@ -73,13 +86,17 @@ class ContactUs extends React.Component {
                                     <li><a href="mailto:externals@unswwit.com">externals@unswwit.com</a></li>
                                     <li><a href="mailto:hr@unswwit.com">hr@unswwit.com</a></li>
                                     <li><a href="mailto:it@unswwit.com">it@unswwit.com</a></li>
-                                    <li><a href="mailto:marketing@unswwit.com">marketing@unswwit.com</a></li> 
+                                    <li><a href="mailto:marketing@unswwit.com">marketing@unswwit.com</a></li>
                                 </ul>
                             </div>
-                            
+
                         </div>
 				    </div>
                 </div>
+
+
+
+
             </div>
         );
     }
