@@ -54,20 +54,6 @@ class Home extends Component{
 					<span>Sponsors</span>
 					<span>Members</span>
 				</div>
-
-				<div class="texts" >
-					<h1 style={{color: 'white'}}>UNSW WIT</h1>
-
-					<p class="title">
-						Collaborate • Inspire • Change
-					</p>
-
-					<p style={{'font-size': '14px'}}>
-						Join UNSW WIT via SpARC <br/>
-					</p>
-					<button class="button btn-sparc">Join Us</button>
-
-				</div>
 			</div>
 			<div class="row" style={{'padding': '20px 100px 100px '}}>
 				<div class="col-md-4">
