@@ -17,3 +17,37 @@
 .description {
     font-size: 12pt;
 }
+
+/*This is the CSS for stats on the home page */
+
+.number, .words {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    font-family: Roboto, sans-serif;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 25%;
+    text-align: center;
+    width: 60%; /* Set the width of the positioned div */
+}
+
+.number span {
+  font-size: 100px;
+  font-weight: bold;
+  padding-right: 30px;
+  padding-left: 30px;
+  color: #ffa372;
+}
+
+.words {
+  top: 70%;
+}
+
+.words span {
+  padding-right: 100px;
+  padding-left: 100px;
+}
