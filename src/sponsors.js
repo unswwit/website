@@ -19,7 +19,7 @@ class Sponsors extends React.Component {
                 </p>
 
                 {/* 600x300 */}
-                <h1>Principal Sponsors</h1>
+                <h1 className='subsponsor'>Principal Sponsors</h1>
                 <a href="https://www.telstra.com.au/">
                   <img
                     src={process.env.PUBLIC_URL + "/sponsors/telstra-large.png"}
@@ -33,7 +33,7 @@ class Sponsors extends React.Component {
 
 
                 {/* 300x150 */}
-                <h1>Major Sponsors</h1>
+                <h1 className='subsponsor'>Major Sponsors</h1>
                 <div id="majorContainer">
                     <a href="https://www.amazon.jobs/en">
                       <img
@@ -156,7 +156,7 @@ class Sponsors extends React.Component {
                 </div>
 
                 {/* 200x100 */}
-                <h1>Support Sponsors</h1>
+                <h1 className='subsponsor'>Support Sponsors</h1>
                 <a href="https://www.palantir.com/">
                   <img
                     src={process.env.PUBLIC_URL + "/sponsors/palantir-support.png"}
@@ -169,7 +169,7 @@ class Sponsors extends React.Component {
 
 
                 {/* 200x100 */}
-                <h1>In-Kind Sponsors</h1>
+                <h1 className='subsponsor'>In-Kind Sponsors</h1>
                 <a href="https://webapp.getqpay.com/login">
                   <img
                     src={process.env.PUBLIC_URL + "/sponsors/qpay-inkind.png"}
@@ -181,9 +181,9 @@ class Sponsors extends React.Component {
                 </a>
 
 
-                <h3 className='subheader'>{`Interested in partnering with us? Contact us at `}
-                    <a className='subheader' href="mailto:externals@unswwit.com">externals@unswwit.com</a>.
-                </h3>
+                <p className='subheader' style={{'font-size': '16px'}}>{`Interested in partnering with us? Contact us at `}
+                    <a className='subheader' style={{'font-size': '16px'}} href="mailto:externals@unswwit.com">externals@unswwit.com</a>.
+                </p>
             </div>
         );
     }
