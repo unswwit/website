@@ -8,25 +8,18 @@ class OurTeam extends Component {
     // TODO: Make Profiile Component, and use includes rather hardcoded html
     return (
       <div>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'></link>
         <div className="crop">
         {/* Cover Photo */}
-          <img
-            src={process.env.PUBLIC_URL + "/potraits/group.png"}
-            className="banner"
-            alt="banner"
-            resizeMode="contain"
-
-          />
-        </div>
-
-        {/* Main Title, and Subtitle Area */}
-        <div className="title_area">
-          <h1 className="centre">Meet Our Team!</h1>
-          <p className="subheader centre">
-            {`
-                        2020 Executive Team
-                    `}
-          </p>
+          {/* Main Title, and Subtitle Area */}
+          <div className="title_area">
+            <h1 className="centre">Meet Our Team!</h1>
+            <p className="subheader centre">
+              {`
+                          OUR 2020 EXECUTIVE TEAM
+                      `}
+            </p>
+          </div>
         </div>
         <div className="all_execs_section">
 
