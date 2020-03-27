@@ -8,7 +8,6 @@
     max-width: 90%;
     text-align: center;
     margin: auto;
-    display: block;
     height: 620px;
     margin-bottom: 100px;
 }
@@ -52,7 +51,7 @@ h2 {
   border-bottom: solid;
   border-color: rgb(188,199,209);
   border-width: 2px;
-  color: pink;
+  color: rgb(156,171,188);
 }
 
 input.formInput {
@@ -100,24 +99,71 @@ input.formInput {
 /*Style for the Emails is below*/
 
 .newEmails h2 {
-
+  font-weight: normal;
   margin-top: 100px;
-  color: green;
+  color: orange;
+  font-size: 30px;
+  margin-bottom: 40px;
 
 }
 
 .newEmails {
-  border-style: solid;
-  border-color: red;
-  border-width: 10px;
+  height: 1000px;
 }
 
-/*
-.newEmails {
-  margin-top: 100px;
-  padding-top: 200px;
-  background-color: purple;
+.newEmails div.dot {
+  height: 50px;
+  width: 50px;
+  background-color: salmon;
+  margin-bottom: 25px;
+}
+
+.newEmails h3 {
+  color: orange;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 24px;
+}
+
+.newEmails a {
+  color: grey;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
+
+
+
+.newEmails div.col2 {
+  margin-left: 27%;
+  width: 57%;
+  height: 450px;
+}
+
+.newEmails div.profile2 {
+  display: inline-block;
+  width: 50%;
+  padding: 30px;
+  float: none;
+  height: 200px;
+  overflow: none;
+}
+
+.newEmails div.col3 {
+  margin-left: 15%;
+  width: 80%;
+  height: 450px;
+}
+
+.newEmails div.profile3 {
+  display: inline-block;
+  width: 33.3%;
+  padding: 30px;
+  float: none;
+  height: 200px;
+  overflow: none;
+}
+
+.newEmails a {
   display: block;
-  height: 700px;
-
-}*/
+}

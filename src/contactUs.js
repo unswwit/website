@@ -40,65 +40,74 @@ class ContactUs extends React.Component {
 
                     </div>
 
-                    <div class = "newEmails">
-                      <h2 style={{textAlign: 'center'}}>Contact Our Team </h2>
-                    </div>
+                    <div className = "newEmails">
+                      <h2 style={{textAlign: 'center'}}>CONTACT OUR TEAM </h2>
 
-
-                    <div class="Emails">
-
-
-                        <div class='row'>
-                            <div class='col-sm-4' style={{'text-align': 'right'}}>
-                                <ul style={{'list-style': 'none'}}>
-                                    <li>Vivian Shen</li>
-                                    <li>Amanda Li</li>
-                                    <li>Kelly Liang</li>
-                                    <li>Elizabeth Zhong</li>
-                                </ul>
-                                <ul style={{'list-style': 'none'}}>
-                                    <li>Vivian Wong</li>
-                                    <li>Gabrielle Younes</li>
-                                    <li>Rhea Thomas</li>
-                                    <li>Alison Chin</li>
-                                    <li>Elicia Au Duong</li>
-                                    <li>Felicia Ee</li>
-
-                                </ul>
-                            </div>
-                            <div class='col-lg-2' style={{'text-align': 'left'}}>
-                                <ul style={{'list-style': 'none', 'padding-left': '5px'}}>
-                                    <li><a href="mailto:president@unswwit.com">president@unswwit.com</a></li>
-                                    <li><a href="mailto:vp@unswwit.com">vp@unswwit.com</a></li>
-                                    <li><a href="mailto:secretary@unswwit.com">@unswwit.com</a></li>
-                                    <li><a href="mailto:treasurer@unswwit.com">treasurer@unswwit.com</a></li>
-                                </ul>
-                                <ul style={{'list-style': 'none', 'padding-left': '5px'}}>
-                                    <li><a href="mailto:vivianwong@unswwit.com">vivianwong@unswwit.com</a></li>
-                                    <li><a href="mailto:gabriella@unswwit.com">gabrielle@unswwit.com</a></li>
-                                    <li><a href="mailto:rhea@unswwit.com">rhea@unswwit.com</a></li>
-                                    <li><a href="mailto:alison@unswwit.com">alison@unswwit.com</a></li>
-                                    <li><a href="mailto:elicia@unswwit.com">elicia@unswwit.com</a></li>
-                                    <li><a href="mailto:felicia@unswwit.com">felicia@unswwit.com</a></li>
-                                </ul>
-                            </div>
-                            <div class='col-sm-4' style={{'text-align': 'left', 'padding-top': '112px'}}>
-                                <ul style={{'list-style': 'none', 'padding-left': '100px'}}>
-                                    <li><a href="mailto:education@unswwit.com">education@unswwit.com</a></li>
-                                    <li><a href="mailto:events@unswwit.com">events@unswwit.com</a></li>
-                                    <li><a href="mailto:externals@unswwit.com">externals@unswwit.com</a></li>
-                                    <li><a href="mailto:hr@unswwit.com">hr@unswwit.com</a></li>
-                                    <li><a href="mailto:it@unswwit.com">it@unswwit.com</a></li>
-                                    <li><a href="mailto:marketing@unswwit.com">marketing@unswwit.com</a></li>
-                                </ul>
-                            </div>
-
+                      <div className = "col2">
+                        <div className = "profile2">
+                          <div class = 'dot'> </div>
+                          <h3> Vivian Shen </h3>
+                          <a href="mailto:president@unswwit.com">president@unswwit.com</a>
+                        </div>
+                        <div className = "profile2">
+                          <div class = 'dot'> </div>
+                          <h3> Amanda Li </h3>
+                          <a href="mailto:vp@unswwit.com">vp@unswwit.com</a>
                         </div>
 
-                </div>
+                        <div className = "profile2">
+                          <div class = 'dot'> </div>
+                          <h3> Kelly Liang </h3>
+                          <a href="mailto:secretary@unswwit.com">@unswwit.com</a>
+                        </div>
+                        <div className = "profile2">
+                          <div class = 'dot'> </div>
+                          <h3> Elizabeth Zhong </h3>
+                          <a href="mailto:treasurer@unswwit.com">treasurer@unswwit.com</a>
+                        </div>
+                      </div>
 
 
+                      <div className = "col3">
+                        <div className = "profile3">
+                          <div class = 'dot'> </div>
+                          <h3> Vivian Wong </h3>
+                          <a href="mailto:vivianwong@unswwit.com">vivianwong@unswwit.com</a>
+                          <a href="mailto:education@unswwit.com">education@unswwit.com</a>
+                        </div>
+                        <div className = "profile3">
+                          <div class = 'dot'> </div>
+                          <h3> Gabrielle Younes </h3>
+                          <a href="mailto:gabriella@unswwit.com">gabrielle@unswwit.com</a>
+                          <a href="mailto:events@unswwit.com">events@unswwit.com</a>
+                        </div>
+                        <div className = "profile3">
+                          <div class = 'dot'> </div>
+                          <h3> Rhea Thomas </h3>
+                          <a href="mailto:rhea@unswwit.com">rhea@unswwit.com</a>
+                          <a href="mailto:externals@unswwit.com">externals@unswwit.com</a>
+                        </div>
 
+                        <div className = "profile3">
+                          <div class = 'dot'> </div>
+                          <h3> Alison Chin </h3>
+                          <a href="mailto:alison@unswwit.com">alison@unswwit.com</a>
+                          <a href="mailto:hr@unswwit.com">hr@unswwit.com</a>
+                        </div>
+                        <div className = "profile3">
+                          <div class = 'dot'> </div>
+                          <h3> Elicia Au Duong </h3>
+                          <a href="mailto:elicia@unswwit.com">elicia@unswwit.com</a>
+                          <a href="mailto:it@unswwit.com">it@unswwit.com</a>
+                        </div>
+                        <div className = "profile3">
+                          <div class = 'dot'> </div>
+                          <h3> Felicia Ee </h3>
+                          <a href="mailto:felicia@unswwit.com">felicia@unswwit.com</a>
+                          <a href="mailto:marketing@unswwit.com">marketing@unswwit.com</a>
+                        </div>
+                      </div>
+                    </div>
 
             </div>
         );
