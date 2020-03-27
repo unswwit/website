@@ -14,15 +14,18 @@ class OurTeam extends Component {
           {/* Main Title, and Subtitle Area */}
           <div className="title_area">
             <h1 className="centre">Meet Our Team</h1>
-            <p className="subheader centre">
+          </div>
+        </div>
+
+        <div className="profile_section_heading">
+          <p className="subheader centre">
               {`
                           OUR 2020 EXECUTIVE TEAM
                       `}
-            </p>
-          </div>
+          </p>
         </div>
-        <div className="all_execs_section">
 
+        <div className="all_execs_section">
         {/* Row of Profiles */}
         <div className="section">
           {/* Individual Profile of an Exec */}
