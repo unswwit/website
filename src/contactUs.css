@@ -4,38 +4,91 @@
 */
 
 
+
+
 .form {
-    max-width: 80%;
+    max-width: 90%;
     text-align: center;
     margin: auto;
 }
 
 .formLeft {
     display: inline-block;
-    width: 50%;
+    width: 40%;
     padding: 50px;
-    height:500px;
+    height:550px;
     float:left;
-
-    border-style: solid;
 }
+
 .formRight {
     display: inline-block;
-    width: 50%;
-    height:500px;
-    padding: 12% 30px 10% 40px;
+    width: 60%;
+    height:550px;
+    padding: 0px;
+    padding-left: 20px;
     float:right;
+}
 
-    border-style: solid;
+.formLeft h2 {
+  font-family: Roboto, sans-serif;
+  font-size: 36px;
+  color: black;
+  text-align: left;
 }
 
 .formLeft form {
   float: left;
   text-align: left;
+  width: 100%;
 
 }
 
-.formInput {
-  color: blue;
+.formLeft textarea {
+  width: 100%;
+  border-style: none;
+  border-bottom: solid;
+  border-color: rgb(188,199,209);
+  border-width: 2px;
+  color: pink;
+}
 
+input.formInput {
+  color: rgb(156,171,188);
+  padding: 5px;
+  padding-left: 0px;
+  background-color: white;
+
+  border-style: none;
+  border-bottom: solid;
+  border-color: rgb(188,199,209);
+  border-width: 2px;
+
+  border-radius: 0px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.formLeft form input.button {
+  color: white;
+  background-color: rgb(86, 182, 255);
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 20px;
+  padding: 12px 10px 12px 10px;
+  width: 100px;
+  border-radius: 20px;
+}
+
+/* This changes the placeholder colour!! for forms. */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(156,171,188);
+  opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgb(156,171,188);
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgb(156,171,188);
 }

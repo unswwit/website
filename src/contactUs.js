@@ -28,14 +28,16 @@ class ContactUs extends React.Component {
                             <br/>
 
                             <br/>
-                            <textarea className = 'formInput' name="message" placeholder = 'Message' rows="5" style={{width:'200px', borderColor: 'orange', 'background-color': 'rgb(247, 235, 220)'}}></textarea>
+                            <textarea className = 'formInput' name="message" placeholder = 'Message' rows="5"></textarea>
                             <br/>
-                            <input type="submit" value="Send" class="button" style={{float: 'left', width: '100px'}} />
+                            <input type="submit" value="Submit" class="button" style={{float: 'left'}} />
                         </form>
                       </div>
 
                       <div className = 'formRight'>
-
+                      <img src={process.env.PUBLIC_URL + '/contact-image.png'} width = "100%" className="centre" alt="banner"
+                      resizeMode='cover'
+                      />
                       </div>
                     </div>
 
