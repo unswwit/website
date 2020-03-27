@@ -13,7 +13,7 @@ class OurTeam extends Component {
         {/* Cover Photo */}
           {/* Main Title, and Subtitle Area */}
           <div className="title_area">
-            <h1 className="centre">Meet Our Team!</h1>
+            <h1 className="centre">Meet Our Team</h1>
             <p className="subheader centre">
               {`
                           OUR 2020 EXECUTIVE TEAM
