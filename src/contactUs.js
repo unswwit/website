@@ -10,8 +10,6 @@ class ContactUs extends React.Component {
                 <h1 class="header">Contact Us</h1>
 
 
-
-                <div className = 'body'>
                     <div className = 'form'>
                       <div className = 'formLeft'>
 
@@ -35,18 +33,21 @@ class ContactUs extends React.Component {
                       </div>
 
                       <div className = 'formRight'>
-                      <img src={process.env.PUBLIC_URL + '/contact-image.png'} width = "100%" className="centre" alt="banner"
-                      resizeMode='cover'
+                      <img src={process.env.PUBLIC_URL + '/contact-image.png'} width = "100%" className="centre" alt="contact us image"
+                      resizeMode='contain'
                       />
                       </div>
+
+                    </div>
+
+                    <div class = "newEmails">
+                      <h2 style={{textAlign: 'center'}}>Contact Our Team </h2>
                     </div>
 
 
+                    <div class="Emails">
 
-                    <div class="col-lg-8">
-                        <p className='subheader' style={{textAlign: 'center'}}>
-                            <strong>Contact Our Team</strong>
-                        </p>
+
                         <div class='row'>
                             <div class='col-sm-4' style={{'text-align': 'right'}}>
                                 <ul style={{'list-style': 'none'}}>
@@ -93,7 +94,7 @@ class ContactUs extends React.Component {
                             </div>
 
                         </div>
-				    </div>
+
                 </div>
 
 
