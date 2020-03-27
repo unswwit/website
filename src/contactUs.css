@@ -1,0 +1,169 @@
+/* style for contact us page. So far:
+- the forms segment
+- the emails segment
+*/
+
+.form {
+    margin-top: 100px;
+    max-width: 90%;
+    text-align: center;
+    margin: auto;
+    height: 620px;
+    margin-bottom: 100px;
+}
+
+.formLeft {
+    display: inline-block;
+    width: 40%;
+    padding: 50px;
+    height: 100%;
+    float:left;
+}
+
+.formRight {
+    display: inline-block;
+    width: 60%;
+    padding: 0px;
+    float:right;
+    height: 100%;
+    padding-bottom: 0px;
+    overflow: hidden;
+}
+
+
+h2 {
+  font-family: Roboto, sans-serif;
+  font-size: 36px;
+  color: black;
+  text-align: left;
+}
+
+.formLeft form {
+  float: left;
+  text-align: left;
+  width: 100%;
+
+}
+
+.formLeft textarea {
+  width: 100%;
+  border-style: none;
+  border-bottom: solid;
+  border-color: rgb(188,199,209);
+  border-width: 2px;
+  color: rgb(156,171,188);
+}
+
+input.formInput {
+  color: rgb(156,171,188);
+  padding: 5px;
+  padding-left: 0px;
+  background-color: white;
+
+  border-style: none;
+  border-bottom: solid;
+  border-color: rgb(188,199,209);
+  border-width: 2px;
+
+  border-radius: 0px;
+  width: 100%;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+.formLeft form input.button {
+  color: white;
+  background-color: rgb(86, 182, 255);
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 20px;
+  padding: 12px 10px 12px 10px;
+  width: 100px;
+  border-radius: 20px;
+}
+
+/* This changes the placeholder colour!! for forms. */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(156,171,188);
+  opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgb(156,171,188);
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgb(156,171,188);
+}
+
+/*Style for the Emails is below*/
+
+.newEmails h2 {
+  font-weight: normal;
+  margin-top: 100px;
+  color: orange;
+  font-size: 30px;
+  margin-bottom: 40px;
+
+}
+
+.newEmails {
+  height: 1000px;
+}
+
+.newEmails div.dot {
+  height: 50px;
+  width: 50px;
+  background-color: salmon;
+  margin-bottom: 25px;
+}
+
+.newEmails h3 {
+  color: orange;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 24px;
+}
+
+.newEmails a {
+  color: grey;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
+
+
+
+.newEmails div.col2 {
+  margin-left: 27%;
+  width: 57%;
+  height: 450px;
+}
+
+.newEmails div.profile2 {
+  display: inline-block;
+  width: 50%;
+  padding: 30px;
+  float: none;
+  height: 200px;
+  overflow: none;
+}
+
+.newEmails div.col3 {
+  margin-left: 15%;
+  width: 80%;
+  height: 450px;
+}
+
+.newEmails div.profile3 {
+  display: inline-block;
+  width: 33.3%;
+  padding: 30px;
+  float: none;
+  height: 200px;
+  overflow: none;
+}
+
+.newEmails a {
+  display: block;
+}
