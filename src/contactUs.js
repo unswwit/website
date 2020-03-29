@@ -33,8 +33,8 @@ class ContactUs extends React.Component {
                       </div>
 
                       <div className = 'formRight'>
-                      <img src={process.env.PUBLIC_URL + '/contact-image.png'} width = "100%" className="centre" alt="contact us image"
-                      resizeMode='contain'
+                      <img src={process.env.PUBLIC_URL + '/contact-image.png'} width = "100%" className="centre"
+                      alt="contact us image" resizeMode='contain'
                       />
                       </div>
 
