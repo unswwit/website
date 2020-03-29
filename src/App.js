@@ -11,7 +11,6 @@ import ContactUs from "./contactUs"
 import Footer from './footer'
 import OurTeam from "./team"
 
-
 class App extends Component{ 
   render(){
   return (

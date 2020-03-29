@@ -2,7 +2,7 @@ h1 {
     font-family: Georgia;
     font-size: 30pt;
     font-weight: bold;
-    color: orange;
+    color:rgb(245,178,22);
 }
 
 h2 {
@@ -14,7 +14,7 @@ h2 {
 .title {
     font-family: Arial;
     font-size: 15pt;
-    font-weight: bold;   
+    font-weight: bold;
 }
 
 .header{
@@ -22,11 +22,13 @@ h2 {
     padding-bottom: 20px;
     text-align: center;
 }
+
 .subheader {
     font-family: Arial;
     font-size: 13pt;
     color: grey;
 }
+
 p {
     font-family: Arial;
     font-size: 10pt;
@@ -46,11 +48,11 @@ p {
 .button {
     font-family: Arial;
     font-weight: bold;
-    background-color: orange;
+    background-color:rgb(230, 165, 67);
     border-radius: 8px;
     border-style: none;
     color: white;
-    padding: 10px 32px;
+    padding: 10px 45px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -65,7 +67,7 @@ p {
 }
 
 .sponsorImg:hover {
-    cursor: pointer;        
+    cursor: pointer;
 }
 
 .column {
@@ -79,7 +81,7 @@ p {
 }
 
 .joinColumn {
-    
+
   column-count: 3;
   text-align: center;
   margin: 1em 0 !important;
@@ -117,7 +119,7 @@ p {
     width: 33.33%;
     padding: 5px;
 }
-  
+
 .row::after {
     content: "";
     clear: both;
@@ -125,6 +127,7 @@ p {
 }
 
 #majorContainer {
+    padding: 0px 175px 50px 175px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -146,19 +149,19 @@ p {
   text-decoration: none;
   float: right;
 }
+
 .nav-item{
-  padding: 5px;
   float:right;
   color: white;
-  padding: 10px 5px;
+  padding: 5px;
   text-decoration: none;
+  letter-spacing: 1.5px;
 }
 
 .nav-item a{
   color: white;
-  padding: 10px 5px;
+  padding: 10px 15px;
   text-decoration: none;
-
 }
 
 .banner{
@@ -172,15 +175,19 @@ p {
 }
 
 .btn-join{
-  position: absolute;
-  left:75%;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  font-size: 1.2vw;
+  display: table-cell;
+  float: right;
+  margin-right: 1vw;
 }
 
 div .headline{
-   text-align: right;
+   text-align: left;
    position: absolute;
-   top:40%;
-   left: 50%;
+   top: 30%;
+   left: 54vw;
 }
 
 .unite{
@@ -188,7 +195,6 @@ div .headline{
    float: center;
    padding-top: 50px ;
 }
-
 
 .row h2{
   color: orange;
@@ -226,7 +232,7 @@ div .headline{
   right: 12%;
   bottom: 24%;
   margin-left: 10px;
-  
+
 }
 
 .words span{
@@ -261,25 +267,39 @@ div .texts{
   filter: brightness(50%);
 }
 
-div .footer{
- color:orange;
- list-style: none;
- background-color: rgb(247, 235, 220);
- font-weight: bold;
- height: 250px;
+.footer-top {
+  margin: 0 auto;
 }
 
-.footer a{
-  color: orange;
-  float: right;
-  font-family: Arial;
-  font-size: 10pt;
-  margin-top: 10px;
+.footer-links {
+  list-style-type: none;
+  align: center;
+}
 
+.footer-item {
+  display: inline;
+  padding: 20px;
+  color: #0f4c81;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links {
+  margin: 20px auto;
+  padding: 0;
+  align-self: center;
+  width: 54%;
+}
+.container {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .btn-subscribe{
-  margin-left: 10px; 
+  margin-left: 10px;
   font-size: 10pt;
 
   border-radius: 5px;
@@ -294,12 +314,6 @@ div .logo{
   padding-right: 10px;
  }
 
-.icon li{
-  float: right;
-  padding: 0px 5px 0px;
-  
-}
-
 input{
   width: 200px;
   padding-right: 10px;
@@ -310,6 +324,18 @@ input{
 }
 
 h3 {
-margin-top: 0;
-} 
+  margin-top: 0;
+}
 
+.footer-copyright, a {
+  color: #0f4c81;
+}
+
+.footer-item a:hover {
+  color: #feb14b;
+  text-decoration: none;
+}
+
+#copyright {
+  padding: 0px;
+}

@@ -1,0 +1,69 @@
+/* this is used to add style to sponsors page and header */
+
+.sponsorHeader {  /* the 'box''*/
+  position: relative;
+  display: inline-block;
+}
+
+.sponsorHeader h1 { /*the text inside the box*/
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 45%; /* Adjust this value to move the positioned div up and down */
+
+  font-size:62px;
+  font-family: playfair display;
+  transform: scaleY(1.15);
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 8px;
+  width: 60%; /* Set the width of the positioned div */
+}
+
+p.subheader {
+  font-size: 22px;
+  color: grey;
+  padding: 100px 450px 100px 450px;
+
+  line-height: 30px;
+  letter-spacing: 2px;
+
+  font-family: Roboto;
+  font-weight: normal;
+}
+
+
+h1.subsponsor {
+  font-size: 30px;
+  letter-spacing: 2px;
+  
+  padding-top: 35px;
+  padding-bottom: 10px;
+
+  color: orange;
+  font-family: Roboto;
+  font-weight: normal;
+
+}
+
+.subheading {
+  margin-bottom: 4vw;
+  font-family: Roboto;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: rgb(245,178,22);
+}
+
+.majorContainer a img {
+  margin-bottom: 4vw;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.notLast {
+  margin-right: 5vw;
+}
+
