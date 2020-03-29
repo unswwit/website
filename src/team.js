@@ -55,7 +55,7 @@ class OurTeam extends Component {
                       {/* LinkedIn Icon Img */}
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
+                        src={process.env.PUBLIC_URL + "/linkedin.png"}
                         alt="LinkedIn Icon"
                       />
                     </a>
@@ -68,7 +68,7 @@ class OurTeam extends Component {
                     >
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_facebook.png"}
+                        src={process.env.PUBLIC_URL + "/facebook.png"}
                         alt="Facebook Icon"
                       />
                     </a>
@@ -79,7 +79,7 @@ class OurTeam extends Component {
                     >
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_email.png"}
+                        src={process.env.PUBLIC_URL + "/email.png"}
                         alt="Email Icon"
                       />
                     </a>
@@ -115,7 +115,7 @@ class OurTeam extends Component {
                       {/* LinkedIn Icon Img */}
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
+                        src={process.env.PUBLIC_URL + "/linkedin.png"}
                         alt="LinkedIn Icon"
                       />
                     </a>
@@ -128,7 +128,7 @@ class OurTeam extends Component {
                     >
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_facebook.png"}
+                        src={process.env.PUBLIC_URL + "/facebook.png"}
                         alt="Facebook Icon"
                       />
                     </a>
@@ -140,7 +140,7 @@ class OurTeam extends Component {
                     >
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_email.png"}
+                        src={process.env.PUBLIC_URL + "/email.png"}
                         alt="Email Icon"
                       />
                     </a>
@@ -177,7 +177,7 @@ class OurTeam extends Component {
                       {/* LinkedIn Icon Img */}
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
+                        src={process.env.PUBLIC_URL + "/linkedin.png"}
                         alt="LinkedIn Icon"
                       />
                     </a>
@@ -190,7 +190,7 @@ class OurTeam extends Component {
                     >
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_facebook.png"}
+                        src={process.env.PUBLIC_URL + "/facebook.png"}
                         alt="Facebook Icon"
                       />
                     </a>
@@ -201,7 +201,7 @@ class OurTeam extends Component {
                     >
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_email.png"}
+                        src={process.env.PUBLIC_URL + "/email.png"}
                         alt="Email Icon"
                       />
                     </a>
@@ -238,7 +238,7 @@ class OurTeam extends Component {
                       {/* LinkedIn Icon Img */}
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
+                        src={process.env.PUBLIC_URL + "/linkedin.png"}
                         alt="LinkedIn Icon"
                       />
                     </a>
@@ -251,7 +251,7 @@ class OurTeam extends Component {
                     >
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_facebook.png"}
+                        src={process.env.PUBLIC_URL + "/facebook.png"}
                         alt="Facebook Icon"
                       />
                     </a>
@@ -263,7 +263,7 @@ class OurTeam extends Component {
                     >
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_email.png"}
+                        src={process.env.PUBLIC_URL + "/email.png"}
                         alt="Email Icon"
                       />
                     </a>
@@ -305,7 +305,7 @@ class OurTeam extends Component {
                     {/* LinkedIn Icon Img */}
                     <img
                       className="icon"
-                      src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
+                      src={process.env.PUBLIC_URL + "/linkedin.png"}
                       alt="LinkedIn Icon"
                     />
                   </a>
@@ -318,7 +318,7 @@ class OurTeam extends Component {
                   >
                     <img
                       className="icon"
-                      src={process.env.PUBLIC_URL + "/icon_facebook.png"}
+                      src={process.env.PUBLIC_URL + "/facebook.png"}
                       alt="Facebook Icon"
                     />
                   </a>
@@ -330,7 +330,7 @@ class OurTeam extends Component {
                   >
                     <img
                       className="icon"
-                      src={process.env.PUBLIC_URL + "/icon_email.png"}
+                      src={process.env.PUBLIC_URL + "/email.png"}
                       alt="Email Icon"
                     />
                   </a>
@@ -367,7 +367,7 @@ class OurTeam extends Component {
                       {/* LinkedIn Icon Img */}
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
+                        src={process.env.PUBLIC_URL + "/linkedin.png"}
                         alt="LinkedIn Icon"
                       />
                     </a>
@@ -380,7 +380,7 @@ class OurTeam extends Component {
                     >
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_facebook.png"}
+                        src={process.env.PUBLIC_URL + "/facebook.png"}
                         alt="Facebook Icon"
                       />
                     </a>
@@ -392,7 +392,7 @@ class OurTeam extends Component {
                     >
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_email.png"}
+                        src={process.env.PUBLIC_URL + "/email.png"}
                         alt="Email Icon"
                       />
                     </a>
@@ -430,7 +430,7 @@ class OurTeam extends Component {
                       {/* LinkedIn Icon Img */}
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
+                        src={process.env.PUBLIC_URL + "/linkedin.png"}
                         alt="LinkedIn Icon"
                       />
                     </a>
@@ -443,7 +443,7 @@ class OurTeam extends Component {
                     >
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_facebook.png"}
+                        src={process.env.PUBLIC_URL + "/facebook.png"}
                         alt="Facebook Icon"
                       />
                     </a>
@@ -454,7 +454,7 @@ class OurTeam extends Component {
                     >
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_email.png"}
+                        src={process.env.PUBLIC_URL + "/email.png"}
                         alt="Email Icon"
                       />
                     </a>
@@ -492,7 +492,7 @@ class OurTeam extends Component {
                       {/* LinkedIn Icon Img */}
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
+                        src={process.env.PUBLIC_URL + "/linkedin.png"}
                         alt="LinkedIn Icon"
                       />
                     </a>
@@ -505,7 +505,7 @@ class OurTeam extends Component {
                     >
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_facebook.png"}
+                        src={process.env.PUBLIC_URL + "/facebook.png"}
                         alt="Facebook Icon"
                       />
                     </a>
@@ -517,7 +517,7 @@ class OurTeam extends Component {
                     >
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_email.png"}
+                        src={process.env.PUBLIC_URL + "/email.png"}
                         alt="Email Icon"
                       />
                     </a>
@@ -557,7 +557,7 @@ class OurTeam extends Component {
                       {/* LinkedIn Icon Img */}
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
+                        src={process.env.PUBLIC_URL + "/linkedin.png"}
                         alt="LinkedIn Icon"
                       />
                     </a>
@@ -570,7 +570,7 @@ class OurTeam extends Component {
                     >
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_facebook.png"}
+                        src={process.env.PUBLIC_URL + "/facebook.png"}
                         alt="Facebook Icon"
                       />
                     </a>
@@ -582,7 +582,7 @@ class OurTeam extends Component {
                     >
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_email.png"}
+                        src={process.env.PUBLIC_URL + "/email.png"}
                         alt="Email Icon"
                       />
                     </a>
@@ -619,7 +619,7 @@ class OurTeam extends Component {
                       {/* LinkedIn Icon Img */}
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
+                        src={process.env.PUBLIC_URL + "/linkedin.png"}
                         alt="LinkedIn Icon"
                       />
                     </a>
@@ -632,7 +632,7 @@ class OurTeam extends Component {
                     >
                       <img
                         className="icon"
-                        src={process.env.PUBLIC_URL + "/icon_facebook.png"}
+                        src={process.env.PUBLIC_URL + "/facebook.png"}
                         alt="Facebook Icon"
                       />
                     </a>
@@ -644,7 +644,7 @@ class OurTeam extends Component {
                     >
                         <img
                           className="icon"
-                          src={process.env.PUBLIC_URL + "/icon_email.png"}
+                          src={process.env.PUBLIC_URL + "/email.png"}
                           alt="Email Icon"
                         />
                       </a>
