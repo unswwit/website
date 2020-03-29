@@ -1,13 +1,19 @@
 import React from 'react'
 
 import "./contactUs.css";
+import "./sponsors.css";
 
 class ContactUs extends React.Component {
     render() {
         return (
             <div>
-                <img src={process.env.PUBLIC_URL + '/contact-header.jpg'} class="banner" alt="banner" style={{maxHeight: 768}}/>
+              <div className = 'sponsorHeader'>
+                <img src={process.env.PUBLIC_URL + '/contact-header.png'} width = "100%" className="" alt="banner"
+                resizeMode='contain'
+                />
+
                 <h1 class="header">Contact Us</h1>
+                </div>
 
 
                     <div className = 'form'>
