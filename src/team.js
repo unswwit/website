@@ -26,252 +26,255 @@ class OurTeam extends Component {
         </div>
 
         <div className="all_execs_section">
-        {/* Row of Profiles */}
-        <div className="section">
-          {/* Individual Profile of an Exec */}
-          <div>
-            <div class="profile">
-              <div class="profile_crop">
-                <img
-                  src={process.env.PUBLIC_URL + "/potraits/viv.png"}
-                  className="profile_img"
-                  alt="vivian-shen"
-                  resizeMode="contain"
-                />
-              </div>
-              {/* Profile Details */}
-              <div className="profile_details">
-                <p className="profile_text_name">Vivian Shen</p>
-                <p className="profile_text_position">President</p>
-                <p className="profile_degree">Data Science, 3rd Year</p>
-                {/* Icon Bar shoulddd be a horizontal row of icons */}
-                <div classname="icon_bar">
-                  {/* Linkedin Icon - target=_blank opens in new tab */}
-                  <a
-                    href="https://www.linkedin.com/in/vivian-shen-046110/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {/* LinkedIn Icon Img */}
-                    <img
-                      className="icon"
-                      src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
-                      alt="LinkedIn Icon"
-                    />
-                  </a>
+          {/* Row of Profiles */}
+          <div class="exec_row">
+            <div class="exec_col">
+              {/* Individual Profile of an Exec */}
+              <div class="profile">
+                <div class="profile_crop">
+                  <img
+                    src={process.env.PUBLIC_URL + "/potraits/viv.png"}
+                    className="profile_img"
+                    alt="vivian-shen"
+                    resizeMode="contain"
+                  />
+                </div>
+                {/* Profile Details */}
+                <div className="profile_details">
+                  <p className="profile_text_name">Vivian Shen</p>
+                  <p className="profile_text_position">President</p>
+                  <p className="profile_degree">Data Science, 3rd Year</p>
+                  {/* Icon Bar shoulddd be a horizontal row of icons */}
+                  <div classname="icon_bar">
+                    {/* Linkedin Icon - target=_blank opens in new tab */}
+                    <a
+                      href="https://www.linkedin.com/in/vivian-shen-046110/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {/* LinkedIn Icon Img */}
+                      <img
+                        className="icon"
+                        src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
+                        alt="LinkedIn Icon"
+                      />
+                    </a>
 
-                  {/* Facebook Icon */}
-                  <a
-                    href="https://www.facebook.com/vivian.shen.71619/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      className="icon"
-                      src={process.env.PUBLIC_URL + "/icon_facebook.png"}
-                      alt="Facebook Icon"
-                    />
-                  </a>
-                  <a
-                    href="mailto:president@unswwit.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      className="icon"
-                      src={process.env.PUBLIC_URL + "/icon_email.png"}
-                      alt="Email Icon"
-                    />
-                  </a>
+                    {/* Facebook Icon */}
+                    <a
+                      href="https://www.facebook.com/vivian.shen.71619/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        className="icon"
+                        src={process.env.PUBLIC_URL + "/icon_facebook.png"}
+                        alt="Facebook Icon"
+                      />
+                    </a>
+                    <a
+                      href="mailto:president@unswwit.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        className="icon"
+                        src={process.env.PUBLIC_URL + "/icon_email.png"}
+                        alt="Email Icon"
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
+                
+            <div className="exec_col">
+              <div class="profile">
+                <div class="profile_crop">
+                  <img
+                    src={process.env.PUBLIC_URL + "/potraits/amanda.JPG"}
+                    className="profile_img"
+                    alt="banner"
+                    resizeMode="contain"
+                  />
+                </div>
 
-            <div class="profile">
-              <div class="profile_crop">
-                <img
-                  src={process.env.PUBLIC_URL + "/potraits/amanda.JPG"}
-                  className="profile_img"
-                  alt="banner"
-                  resizeMode="contain"
-                />
-              </div>
+                <div className="profile_details">
+                  <p className="profile_text_name">Amanda Li</p>
+                  <p className="profile_text_position">Vice President</p>
+                  <p className="profile_degree">Software Engineering, 3rd Year</p>
 
-              <div className="profile_details">
-                <p className="profile_text_name">Amanda Li</p>
-                <p className="profile_text_position">Vice President</p>
-                <p className="profile_degree">Software Engineering, 3rd Year</p>
+                  {/* Icon Bar shoulddd be a horizontal row of icons */}
+                  <div classname="icon_bar">
+                    {/* Linkedin Icon - target=_blank opens in new tab */}
+                    <a
+                      href="https://www.linkedin.com/in/amanda-li-031199/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {/* LinkedIn Icon Img */}
+                      <img
+                        className="icon"
+                        src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
+                        alt="LinkedIn Icon"
+                      />
+                    </a>
 
-                {/* Icon Bar shoulddd be a horizontal row of icons */}
-                <div classname="icon_bar">
-                  {/* Linkedin Icon - target=_blank opens in new tab */}
-                  <a
-                    href="https://www.linkedin.com/in/amanda-li-031199/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {/* LinkedIn Icon Img */}
-                    <img
-                      className="icon"
-                      src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
-                      alt="LinkedIn Icon"
-                    />
-                  </a>
+                    {/* Facebook Icon */}
+                    <a
+                      href="https://www.facebook.com/amaandarin/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        className="icon"
+                        src={process.env.PUBLIC_URL + "/icon_facebook.png"}
+                        alt="Facebook Icon"
+                      />
+                    </a>
 
-                  {/* Facebook Icon */}
-                  <a
-                    href="https://www.facebook.com/amaandarin/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      className="icon"
-                      src={process.env.PUBLIC_URL + "/icon_facebook.png"}
-                      alt="Facebook Icon"
-                    />
-                  </a>
-
-                  <a
-                    href="mailto:vp@unswwit.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      className="icon"
-                      src={process.env.PUBLIC_URL + "/icon_email.png"}
-                      alt="Email Icon"
-                    />
-                  </a>
+                    <a
+                      href="mailto:vp@unswwit.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        className="icon"
+                        src={process.env.PUBLIC_URL + "/icon_email.png"}
+                        alt="Email Icon"
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
+          <div className="exec_row">    
+            <div className="exec_col">
+              <div class="profile">
+                <div class="profile_crop">
+                  <img
+                    src={process.env.PUBLIC_URL + "/potraits/kelly.png"}
+                    className="profile_img"
+                    alt="kelly-liang"
+                    resizeMode="contain"
+                  />
+                </div>
+                {/* Profile Details */}
+                <div className="profile_details">
+                  <p className="profile_text_name">Kelly Liang</p>
+                  <p className="profile_text_position">General Secretary</p>
+                  <p className="profile_degree">Commerce/Information System, 2nd Year</p>
+                  {/* Icon Bar shoulddd be a horizontal row of icons */}
+                  <div classname="icon_bar">
+                    {/* Linkedin Icon - target=_blank opens in new tab */}
+                    <a
+                      href="https://www.linkedin.com/in/kelly-liang-03877017b/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {/* LinkedIn Icon Img */}
+                      <img
+                        className="icon"
+                        src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
+                        alt="LinkedIn Icon"
+                      />
+                    </a>
 
-          <div>
-          <div class="profile">
-            <div class="profile_crop">
-              <img
-                src={process.env.PUBLIC_URL + "/potraits/kelly.png"}
-                className="profile_img"
-                alt="kelly-liang"
-                resizeMode="contain"
-              />
-            </div>
-            {/* Profile Details */}
-            <div className="profile_details">
-              <p className="profile_text_name">Kelly Liang</p>
-              <p className="profile_text_position">General Secretary</p>
-              <p className="profile_degree">Commerce/Information System, 2nd Year</p>
-              {/* Icon Bar shoulddd be a horizontal row of icons */}
-              <div classname="icon_bar">
-                {/* Linkedin Icon - target=_blank opens in new tab */}
-                <a
-                  href="https://www.linkedin.com/in/kelly-liang-03877017b/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {/* LinkedIn Icon Img */}
-                  <img
-                    className="icon"
-                    src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
-                    alt="LinkedIn Icon"
-                  />
-                </a>
-
-                {/* Facebook Icon */}
-                <a
-                  href="https://www.facebook.com/keleriter"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    className="icon"
-                    src={process.env.PUBLIC_URL + "/icon_facebook.png"}
-                    alt="Facebook Icon"
-                  />
-                </a>
-                <a
-                  href="mailto:secretary@unswwit.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    className="icon"
-                    src={process.env.PUBLIC_URL + "/icon_email.png"}
-                    alt="Email Icon"
-                  />
-                </a>
+                    {/* Facebook Icon */}
+                    <a
+                      href="https://www.facebook.com/keleriter"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        className="icon"
+                        src={process.env.PUBLIC_URL + "/icon_facebook.png"}
+                        alt="Facebook Icon"
+                      />
+                    </a>
+                    <a
+                      href="mailto:secretary@unswwit.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        className="icon"
+                        src={process.env.PUBLIC_URL + "/icon_email.png"}
+                        alt="Email Icon"
+                      />
+                    </a>
+                  </div>
+                </div>
+                {/* profile closing div */}
               </div>
             </div>
-            {/* profile closing div */}
-          </div>
-
-          <div class="profile">
-            <div class="profile_crop">
-              <img
-                src={process.env.PUBLIC_URL + "/potraits/elizabeth.JPG"}
-                className="profile_img"
-                alt="elizabeth-zhong"
-                resizeMode="contain"
-              />
-            </div>
-
-            <div className="profile_details">
-              <p className="profile_text_name">Elizabeth Zhong</p>
-              <p className="profile_text_position">Treasurer</p>
-              <p className="profile_degree">Software Engineering, 3rd Year</p>
-
-              {/* Icon Bar shoulddd be a horizontal row of icons */}
-              <div classname="icon_bar">
-                {/* Linkedin Icon - target=_blank opens in new tab */}
-                <a
-                  href="https://www.linkedin.com/in/elizabeth-zhong-561806160/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {/* LinkedIn Icon Img */}
+              
+            <div className="exec_col">
+              <div class="profile">
+                <div class="profile_crop">
                   <img
-                    className="icon"
-                    src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
-                    alt="LinkedIn Icon"
+                    src={process.env.PUBLIC_URL + "/potraits/elizabeth.JPG"}
+                    className="profile_img"
+                    alt="elizabeth-zhong"
+                    resizeMode="contain"
                   />
-                </a>
+                </div>
 
-                {/* Facebook Icon */}
-                <a
-                  href="https://www.facebook.com/elizabethzhong2"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    className="icon"
-                    src={process.env.PUBLIC_URL + "/icon_facebook.png"}
-                    alt="Facebook Icon"
-                  />
-                </a>
+                <div className="profile_details">
+                  <p className="profile_text_name">Elizabeth Zhong</p>
+                  <p className="profile_text_position">Treasurer</p>
+                  <p className="profile_degree">Software Engineering, 3rd Year</p>
 
-                <a
-                  href="mailto:treasurer@unswwit.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    className="icon"
-                    src={process.env.PUBLIC_URL + "/icon_email.png"}
-                    alt="Email Icon"
-                  />
-                </a>
+                  {/* Icon Bar shoulddd be a horizontal row of icons */}
+                  <div classname="icon_bar">
+                    {/* Linkedin Icon - target=_blank opens in new tab */}
+                    <a
+                      href="https://www.linkedin.com/in/elizabeth-zhong-561806160/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {/* LinkedIn Icon Img */}
+                      <img
+                        className="icon"
+                        src={process.env.PUBLIC_URL + "/icon_linkedin.png"}
+                        alt="LinkedIn Icon"
+                      />
+                    </a>
+
+                    {/* Facebook Icon */}
+                    <a
+                      href="https://www.facebook.com/elizabethzhong2"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        className="icon"
+                        src={process.env.PUBLIC_URL + "/icon_facebook.png"}
+                        alt="Facebook Icon"
+                      />
+                    </a>
+
+                    <a
+                      href="mailto:treasurer@unswwit.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        className="icon"
+                        src={process.env.PUBLIC_URL + "/icon_email.png"}
+                        alt="Email Icon"
+                      />
+                    </a>
+                  </div>
+                </div>
+                {/* profile closing div */}
               </div>
-
+              {/* kelly and liz div */}
             </div>
-            {/* profile closing div */}
           </div>
-        {/* kelly and liz div */}
-        </div>
         {/* section div */}
-        </div>
-
         
         <div className="section_subcommittee">
         <table>

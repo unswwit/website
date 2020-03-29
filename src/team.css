@@ -21,17 +21,12 @@
 
 /* same as img */
 .profile_img {
-  display: block;
-  border: 0.5px solid lightgray;
   background-size: cover;
-  position: relative;
-  max-width: 100%;
-  width: 100%;     
-  height: auto;
-  overflow: hidden;
-  top: 50%;     
-left: 50%;
-transform: translate( -50%, -50%);
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+  transform: translate( -15%, 0);
 }
 
 /* same as img */
@@ -46,8 +41,8 @@ transform: translate( -50%, -50%);
   float: none;
   background-size: cover;
   top: 50%;     
-left: 50%;
-transform: translate( -50%, -45%);
+  left: 50%;
+  transform: translate( -50%, -45%);
 }
 
 .title_area {
@@ -74,21 +69,25 @@ transform: translate( -50%, -45%);
 }
 
 .all_execs_section {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   align-content: center;
-  float: none;
-}
-
-.section {
-  display: flex;
-  flex-wrap: wrap;
-  /* Makes the columns (profile) be spaced evenly across screen size */
   justify-content: center;
-  align-content: center;
 }
 
+.exec_row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.exec_col {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
 
 .section_subcommittee {
   position: relative;
@@ -111,27 +110,26 @@ transform: translate( -50%, -45%);
   position: relative;
   padding: 20px; 
   display: inline-block;
-  vertical-align: middle;
-  float: none;
-  
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .profile_crop {
   position: relative;
-  width: 360px;  
-  height: 230px;
+  width: 15vw;  
+  height: 15vw;
   max-width: 100%;
   overflow: hidden;
-  align-content: center;
-  object-fit: contain; 
   border-radius: 50%;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
 }
 .profile_details {
-  margin: 20px 0px 70px 0px;
-  text-align: left;
-  line-height: 15px;
+  margin: 25px 0px 70px 0px;
+  text-align: center;
   align-content: center;
-  line-height: 15pt;
+  line-height: 13pt;
   justify-content: space-evenly;
 }
 
@@ -198,27 +196,28 @@ transform: translate( -50%, -45%);
   font-family: Arial;
   font-size: 20pt;
   color: orange;
-  font-weight: bold;
+  letter-spacing: 0.1vw;
 }
 
 .profile_text_position {
   position: relative;
   align-content: center;
   font-family: Arial;
-  font-size: 14pt;
-  color: orange;
+  font-size: 13pt;
+  color: rgb(26, 75, 131);
   font-weight: lighter;
+  letter-spacing: 0.1vw;
 }
 
 .profile_degree {
   position: relative;
   font-family: Arial;
-  font-size: 9pt;
-  color: orange;
-  font-style: italic;
+  font-size: 10pt;
+  color:lightslategray;
   word-wrap: break-word;
   white-space: initial;
   font-weight: lighter;
+  letter-spacing: 0.1vw;
 }
 
 
