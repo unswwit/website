@@ -1,10 +1,17 @@
 import React from 'react'
+import "./sponsors.css";
+
 class ContactUs extends React.Component {
     render() {
         return (
             <div>
-                <img src={process.env.PUBLIC_URL + '/contact-header.jpg'} class="banner" alt="banner" style={{maxHeight: 768}}/>
-                <h1 class="header">Contact Us</h1>
+                <div className = 'sponsorHeader'>
+                    <img src={process.env.PUBLIC_URL + '/contact-header.png'} width = "100%" className="" alt="banner"
+                        resizeMode='contain'
+                        />
+
+                    <h1 class="header">Contact Us</h1>
+                </div>
                 
                 <div class='row' style={{'padding': '0px 100px 100px '}}> 
                     <div class="col-md-4">
