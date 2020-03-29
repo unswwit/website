@@ -62,11 +62,7 @@ class Home extends Component{
 
 				{/*First collumn*/}
 				<div class="col-md-5">
-
-					<p class="description" style={{'font-size': '18px'}}>
-						It's never too late to get involved with WIT and upskill your technical and soft skills!
-					</p>
-
+					{/*It's never too late to get involved with WIT and upskill your technical and soft skills!*/}
 					<p class="description">
 						At WIT, our focus is on providing events that foster development 
 						catering to first to final years. Whether it’s personal, academic, 
