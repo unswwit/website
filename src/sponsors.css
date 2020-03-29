@@ -67,3 +67,11 @@ h1.subsponsor {
   margin-right: 5vw;
 }
 
+.subheader a {
+  font-size: 16px;
+}
+
+.subheader a:hover {
+  color: #feb14b;
+  text-decoration: none;
+}
