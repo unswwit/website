@@ -277,19 +277,18 @@ class OurTeam extends Component {
         {/* section div */}
         
         <div className="section_subcommittee">
-        <table>
-          <tr>
-            <th>
+          <div class="exec_row">
+            <div class="exec_col">
             <div className="profile_subcommittee"> 
               <div className="profile_crop">
                 <img
                   src={process.env.PUBLIC_URL + "/potraits/vivw.jpg"}
-                  className="profile_img_subcommittee_version"
+                  className="profile_img_subcommittee_version vivw_img"
                   alt="vivian-wong"
                   resizeMode="contain"
                 />
               </div>
-              <div className="profile_details_subcommittee">
+              <div className="profile_details">
                 <p className="profile_text_name">Vivian Wong</p>
                 <p className="profile_text_position">Education Executive</p>
                 <p className="profile_degree">Commerce/Actuarial Science, 2nd Year</p>
@@ -339,20 +338,19 @@ class OurTeam extends Component {
                 </p>
               </div>
             </div>
-            </th>
+            </div>
 
-            <th>
-
+            <div class="exec_col">
             <div className="profile_subcommittee"> 
               <div className="profile_crop">
                 <img
                   src={process.env.PUBLIC_URL + "/potraits/gabby.jpg"}
-                  className="profile_img_subcommittee_version"
+                  className="profile_img_subcommittee_version gab_img"
                   alt="gabrielle"
                   resizeMode="contain"
                 />
               </div>
-              <div className="profile_details_subcommittee">
+              <div className="profile_details">
                 <p className="profile_text_name">Gabrielle Younes</p>
                 <p className="profile_text_position">Events Executive</p>
                 <p className="profile_degree">Bioinformatic Engineering/Advanced Science, 2nd Year</p>
@@ -402,11 +400,11 @@ class OurTeam extends Component {
                 </p>
               </div>
             </div>
-            </th>
-          </tr>
-          <tr>
-
-            <th>
+            </div>
+          </div>
+          
+          <div class="exec_row">
+            <div class="exec_col">
             <div className="profile_subcommittee"> 
               <div className="profile_crop">
                 <img
@@ -416,7 +414,7 @@ class OurTeam extends Component {
                   resizeMode="contain"
                 />
               </div>
-              <div className="profile_details_subcommittee">
+              <div className="profile_details">
                 <p className="profile_text_name">Rhea Thomas</p>
                 <p className="profile_text_position">Externals Executive</p>
                 <p className="profile_degree">Information Systems, 2nd Year</p>
@@ -464,19 +462,20 @@ class OurTeam extends Component {
                 </p>
               </div>
             </div>
-            </th>
+            </div>
 
-            <th>
+          
+            <div class="exec_col">
             <div className="profile_subcommittee"> 
               <div className="profile_crop">
                 <img
                   src={process.env.PUBLIC_URL + "/potraits/alison.png"}
-                  className="profile_img_subcommittee_version"
+                  className="profile_img_subcommittee_version alison_img"
                   alt="alison-chin"
                   resizeMode="contain"
                 />
               </div>
-              <div className="profile_details_subcommittee">
+              <div className="profile_details">
                 <p className="profile_text_name">Alison Chin</p>
                 <p className="profile_text_position">Human Resources Executive</p>
                 <p className="profile_degree">Information Systems, 3rd Year</p>
@@ -526,22 +525,22 @@ class OurTeam extends Component {
                 </p>
               </div>
             </div>
-            </th>
-          </tr>
+            </div>
+          </div>
 
-          <tr>
-          <th>
+          <div class="exec_row">
+            <div class="exec_col">
             <div className="profile_subcommittee"> 
               <div className="profile_crop">
                 <img
                   src={process.env.PUBLIC_URL + "/potraits/felicia.png"}
-                  className="profile_img_subcommittee_version"
+                  className="profile_img_subcommittee_version fel_img"
                   alt="felicia-ee"
                   resizeMode="contain"
                 />
               </div>
 
-              <div className="profile_details_subcommittee">
+              <div className="profile_details">
                 <p className="profile_text_name">Felicia Ee</p>
                 <p className="profile_text_position">Marketing Executive</p>
                 <p className="profile_degree">Commerce/Software Engineering, 2nd Year</p>
@@ -591,18 +590,19 @@ class OurTeam extends Component {
                 </p>
               </div>
             </div>
-            </th>
-            <th>
+            </div>
+          
+            <div class="exec_col">
             <div className="profile_subcommittee"> 
               <div className="profile_crop">
                 <img
                   src={process.env.PUBLIC_URL + "/potraits/elicia.jpg"}
-                  className="profile_img_subcommittee_version"
+                  className="profile_img_subcommittee_version eli_img"
                   alt="elicia"
                   resizeMode="contain"
                 />
               </div>
-              <div className="profile_details_subcommittee">
+              <div className="profile_details">
                 <p className="profile_text_name">Elicia Au Duong</p>
                 <p className="profile_text_position">IT Executive</p>
                 <p className="profile_degree">Commerce/Computer Science, 2nd Year</p>
@@ -652,15 +652,14 @@ class OurTeam extends Component {
                 </p>
               </div>  
             </div>
-            </th>
+            </div>
           {/* </div> */}
-          </tr>
-          </table>
+          </div>
         </div>
       </div>
       <footer>
         <div className="footer_area"></div>
-        </footer>
+      </footer>
 
 {/* the very last diff */}
       </div>

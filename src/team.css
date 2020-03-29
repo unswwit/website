@@ -31,18 +31,34 @@
 
 /* same as img */
 .profile_img_subcommittee_version {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  overflow: hidden;
-  display: block;
-  /* vertical-align: middle; */
-  float: none;
   background-size: cover;
-  top: 50%;     
-  left: 50%;
-  transform: translate( -50%, -45%);
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+  transform: translate( -15%, 0);
+}
+
+.gab_img {
+  transform: translate( 0%, 0);
+}
+
+.vivw_img {
+  height: auto;
+  width: 120%;
+  transform: translate( -5%, -10%);
+}
+
+.alison_img {
+  transform: translate( -17%, 0);
+}
+
+.fel_img {
+  transform: translate( -12%, 0);
+}
+
+.eli_img {
+  transform: translate( -7%, 0%);
 }
 
 .title_area {
@@ -90,20 +106,10 @@
 }
 
 .section_subcommittee {
-  position: relative;
-  /* margin-left: 160px;
-  margin-right: 100px;
-  margin-bottom: 20px; */
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  /* Makes the columns (profile) be spaced evenly across screen size */
-  /* float: none; */
-  /* Makes the columns (profile) be spaced evenly across screen size */
-  justify-content: center;
   align-content: center;
-
+  justify-content: center;
 } 
+
  /* the parent -> same as .square */
 .profile {
   /* Space between when resizing */
@@ -134,34 +140,11 @@
 }
 
 .profile_subcommittee {
-  /* position: relative;
-  padding-bottom: 5%; 
-  justify-content: space-evenly;
-  display: inline-block;
-  float: none;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: left; */
-  /* margin: 15px 15px 0px 0px; */
-  /* margin: auto 0; */
-  position: relative;
-  width: inherit;  
-  height: auto;
-  padding: 20px; 
-  display: inline-flex;
-  vertical-align: middle;
-  float: none;
-}
-
-
-.profile_details_subcommittee {
-  margin: 20px 20px 70px 20px;
-  text-align: left;
-  line-height: 25px;
-  justify-content: space-evenly;
-  overflow: hidden;
-  align-content: center;
-  
+   position: relative;
+   padding: 20px; 
+   display: inline-block;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .icon_bar {
