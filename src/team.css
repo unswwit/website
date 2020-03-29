@@ -21,33 +21,44 @@
 
 /* same as img */
 .profile_img {
-  display: block;
-  border: 0.5px solid lightgray;
   background-size: cover;
-  position: relative;
-  max-width: 100%;
-  width: 100%;     
-  height: auto;
-  overflow: hidden;
-  top: 50%;     
-left: 50%;
-transform: translate( -50%, -50%);
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+  transform: translate( -15%, 0);
 }
 
 /* same as img */
 .profile_img_subcommittee_version {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  overflow: hidden;
-  display: block;
-  /* vertical-align: middle; */
-  float: none;
   background-size: cover;
-  top: 50%;     
-left: 50%;
-transform: translate( -50%, -45%);
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+  transform: translate( -15%, 0);
+}
+
+.gab_img {
+  transform: translate( 0%, 0);
+}
+
+.vivw_img {
+  height: auto;
+  width: 120%;
+  transform: translate( -5%, -10%);
+}
+
+.alison_img {
+  transform: translate( -17%, 0);
+}
+
+.fel_img {
+  transform: translate( -12%, 0);
+}
+
+.eli_img {
+  transform: translate( -7%, 0%);
 }
 
 .title_area {
@@ -74,96 +85,66 @@ transform: translate( -50%, -45%);
 }
 
 .all_execs_section {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   align-content: center;
-  float: none;
-}
-
-.section {
-  display: flex;
-  flex-wrap: wrap;
-  /* Makes the columns (profile) be spaced evenly across screen size */
   justify-content: center;
-  align-content: center;
 }
 
+.exec_row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.exec_col {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
 
 .section_subcommittee {
-  position: relative;
-  /* margin-left: 160px;
-  margin-right: 100px;
-  margin-bottom: 20px; */
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  /* Makes the columns (profile) be spaced evenly across screen size */
-  /* float: none; */
-  /* Makes the columns (profile) be spaced evenly across screen size */
-  justify-content: center;
   align-content: center;
-
+  justify-content: center;
 } 
+
  /* the parent -> same as .square */
 .profile {
   /* Space between when resizing */
   position: relative;
   padding: 20px; 
   display: inline-block;
-  vertical-align: middle;
-  float: none;
-  
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .profile_crop {
   position: relative;
-  width: 360px;  
-  height: 230px;
+  width: 16vw;  
+  height: 16vw;
   max-width: 100%;
   overflow: hidden;
-  align-content: center;
-  object-fit: contain; 
   border-radius: 50%;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
 }
 .profile_details {
-  margin: 20px 0px 70px 0px;
-  text-align: left;
-  line-height: 15px;
+  margin: 25px 0px 70px 0px;
+  text-align: center;
   align-content: center;
-  line-height: 15pt;
+  line-height: 13pt;
   justify-content: space-evenly;
 }
 
 .profile_subcommittee {
-  /* position: relative;
-  padding-bottom: 5%; 
-  justify-content: space-evenly;
-  display: inline-block;
-  float: none;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: left; */
-  /* margin: 15px 15px 0px 0px; */
-  /* margin: auto 0; */
-  position: relative;
-  width: inherit;  
-  height: auto;
-  padding: 20px; 
-  display: inline-flex;
-  vertical-align: middle;
-  float: none;
-}
-
-
-.profile_details_subcommittee {
-  margin: 20px 20px 70px 20px;
-  text-align: left;
-  line-height: 25px;
-  justify-content: space-evenly;
-  overflow: hidden;
-  align-content: center;
-  
+   position: relative;
+   padding: 20px; 
+   display: inline-block;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .icon_bar {
@@ -177,8 +158,8 @@ transform: translate( -50%, -45%);
 }
 
 .icon {
-  width: 15px;
-  height: 15px;
+  width: 25px;
+  height: 25px;
   border: 0;
   margin-right: 10px;
 }
@@ -198,27 +179,28 @@ transform: translate( -50%, -45%);
   font-family: Arial;
   font-size: 20pt;
   color: orange;
-  font-weight: bold;
+  letter-spacing: 0.1vw;
 }
 
 .profile_text_position {
   position: relative;
   align-content: center;
   font-family: Arial;
-  font-size: 14pt;
-  color: orange;
+  font-size: 13pt;
+  color: rgb(26, 75, 131);
   font-weight: lighter;
+  letter-spacing: 0.1vw;
 }
 
 .profile_degree {
   position: relative;
   font-family: Arial;
-  font-size: 9pt;
-  color: orange;
-  font-style: italic;
+  font-size: 10pt;
+  color:lightslategray;
   word-wrap: break-word;
   white-space: initial;
   font-weight: lighter;
+  letter-spacing: 0.1vw;
 }
 
 
