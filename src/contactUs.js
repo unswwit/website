@@ -64,7 +64,7 @@ class ContactUs extends React.Component {
                         <div className = "profile2">
                           <div class = 'dot'> </div>
                           <h3> Kelly Liang </h3>
-                          <a href="mailto:secretary@unswwit.com">@unswwit.com</a>
+                          <a href="mailto:secretary@unswwit.com">secretary@unswwit.com</a>
                         </div>
                         <div className = "profile2">
                           <div class = 'dot'> </div>
