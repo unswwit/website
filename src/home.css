@@ -16,11 +16,16 @@
     display: inline-block;
     width: 50%;
     height:440px;
-    text-align: justify;
     padding: 12% 30px 10% 40px;
     float: right;
     line-height:22px;
 }
+
+.uniteRight p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 .description {
     color: rgb(165,165,165);
     font-size: 15px;
