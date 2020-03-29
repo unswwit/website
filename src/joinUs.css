@@ -1,0 +1,77 @@
+/*adding style to the join us page and header */
+
+.joinUsHeader {  /* the 'box''*/
+  position: relative;
+  display: inline-block;
+}
+
+.joinUsHeader h1 { /*the text inside the box*/
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 45%; /* Adjust this value to move the positioned div up and down */
+
+  font-size:62px;
+  font-family: playfair display;
+  transform: scaleY(1.15);
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 8px;
+  width: 60%; /* Set the width of the positioned div */
+  color: rgb(245,178,22);
+}
+
+.joinUsBody {
+    max-width: 80%;
+    text-align: center;
+    margin: auto;
+    padding-top: 130px;
+    padding-bottom: 125px;
+    margin-bottom: 300px;
+}
+
+.googleMap {
+    display: inline-block;
+    width: 43%;
+    padding: 0px;
+    /*padding: 50px 50px 50px 0p;*/
+    height: 300px;
+    float:left;
+    object-fit: cover;
+    /*margin-right: 50px;*/
+}
+.joinUsRight {
+    display: inline-block;
+    width: 57%;
+    height: 300px;
+    text-align: left;
+    padding: 0px 10px 10% 10%;
+    float:right;
+}
+
+.joinUsRight h2 {
+  font-family: Roboto, sans-serif;
+  font-size: 26px;
+  line-height: 50px;
+  letter-spacing: 1.5px;
+  color: rgb(245,178,22);
+  font-weight: bold;
+}
+
+.joinButtons {  /*container for buttons */
+  position: relative;
+  display: inline-block;
+}
+
+.joinButtons a {
+  display: inline-block;
+  margin-right: 15px;
+  width: 60px;
+  height: 60px;
+  padding: 4px 4px 4px 4px;
+  margin-bottom: 6px;
+
+}

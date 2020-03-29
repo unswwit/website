@@ -1,10 +1,12 @@
 import React from 'react';
+
 import "./sponsors.css";
 
 class Sponsors extends React.Component {
     render() {
         return (
             <div className='centre'>
+                <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'></link>
                 <div className = 'sponsorHeader'>
                   <img src={process.env.PUBLIC_URL + '/sponsors-header.png'} width = "100%" className="" alt="banner"
                     resizeMode='contain'
@@ -14,7 +16,7 @@ class Sponsors extends React.Component {
                 </div>
                 <p className='subheader'>{`
                     Thank you to our sponsors for generously supporting our cause and
-                    collaborating with us to provide our students invaluable opportunities
+                    collaborating with us to provide our students invaluable opportunities.
                     `}
                 </p>
 
@@ -28,9 +30,6 @@ class Sponsors extends React.Component {
                     style={{'height': '300px', 'width': '600px'}}
                   />
                 </a>
-
-
-
 
                 {/* 300x150 */}
                 <h1 className='subsponsor'>Major Sponsors</h1>
@@ -179,8 +178,7 @@ class Sponsors extends React.Component {
                     style={{'height': '100px', 'width': '200px'}}
                   />
                 </a>
-
-
+    
                 <p className='subheader' style={{'font-size': '16px'}}>{`Interested in partnering with us? Contact us at `}
                     <a className='subheader' style={{'font-size': '16px'}} href="mailto:externals@unswwit.com">externals@unswwit.com</a>.
                 </p>

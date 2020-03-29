@@ -35,6 +35,7 @@ p.subheader {
   font-weight: normal;
 }
 
+
 h1.subsponsor {
   font-size: 30px;
   letter-spacing: 2px;
@@ -47,3 +48,22 @@ h1.subsponsor {
   font-weight: normal;
 
 }
+
+.subheading {
+  margin-bottom: 4vw;
+  font-family: Roboto;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: rgb(245,178,22);
+}
+
+.majorContainer a img {
+  margin-bottom: 4vw;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.notLast {
+  margin-right: 5vw;
+}
+

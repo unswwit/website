@@ -55,6 +55,24 @@ transform: translate( -50%, -45%);
   margin-bottom: 50px;
 }
 
+.title_area h1 {
+  font-family: playfair display;
+  font-size: 4vw;
+  transform: scaleY(1.15);
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 8px;
+  margin-top: 22vw;
+}
+
+.profile_section_heading p {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 2vw;
+  letter-spacing: 2px;
+  color: rgb(245,178,22);
+}
+
 .all_execs_section {
   display: flex;
   flex-wrap: wrap;
@@ -106,6 +124,7 @@ transform: translate( -50%, -45%);
   overflow: hidden;
   align-content: center;
   object-fit: contain; 
+  border-radius: 50%;
 }
 .profile_details {
   margin: 20px 0px 70px 0px;
@@ -215,4 +234,13 @@ table {
   border-collapse: separate;
   margin: 5pt;
   justify-content: center;
+}
+
+.crop {
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-image: url('/team-header.png');
+  background-position: center bottom 40%;
+  max-width: 100%;
 }
