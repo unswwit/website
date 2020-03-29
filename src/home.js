@@ -41,16 +41,18 @@ class Home extends Component{
 
 			<div class="stats" onScroll={this.handleScroll}>
 				<img src={process.env.PUBLIC_URL + './stats-background.png'} className="photo-1" alt="banner" resizeMode='contain'
-                		style={{width: '100vw'}}/>
-				<div class="number">
-					<span><CountUp end={10} duration={4}/></span>
-					<span><CountUp end={13} duration={4}/></span>
-					<span><CountUp end={753} duration={1.5}/></span>
-				</div>
-				<div class="words">
-					<span>Team Members</span>
-					<span>Sponsors</span>
-					<span>Members</span>
+                		style={{width: '100%'}}/>
+				<div class="stats-info">
+					<div class="number">
+						<span><CountUp end={10} duration={4}/></span>
+						<span><CountUp end={13} duration={4}/></span>
+						<span><CountUp end={753} duration={1.5}/></span>
+					</div>
+					<div class="words">
+						<span>Team Members</span>
+						<span>Sponsors</span>
+						<span>Members</span>
+					</div>
 				</div>
 			</div>
 
