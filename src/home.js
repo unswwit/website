@@ -44,7 +44,7 @@ class Home extends Component{
                 		style={{width: '100%'}}/>
 				<div class="stats-info">
 					<div class="number">
-						<span><CountUp end={10} duration={4}/></span>
+						<span><CountUp end={31} duration={3.5}/></span>
 						<span><CountUp end={13} duration={4}/></span>
 						<span><CountUp end={753} duration={1.5}/></span>
 					</div>
