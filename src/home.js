@@ -80,7 +80,7 @@ class Home extends Component{
 				{/*End of upcoming events area*/}
 
 				<div class="sponsors" >
-					<h1>OUR SPONSORS</h1>
+					<h2>OUR SPONSORS</h2>
 					<img src={process.env.PUBLIC_URL + './home-sponsors.png'} className="photo" alt="banner" resizeMode='contain'
 							style={{width: '65vw'}} />
 				</div>
