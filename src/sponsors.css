@@ -1,5 +1,4 @@
-/* this is used to add style to sponsors page and header */
-
+/* ---------------------------Sponsor page header-----------------------------*/
 /*Header image*/
 .sponsorHeader {
     background-image: url('/sponsors-header.png');
@@ -21,45 +20,37 @@
     text-transform: uppercase;
 }
 
+/*Subheading "Thank you message" & contact*/
 p.subheader {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12pt;
-  color: #313638;
-  opacity: 70%;
-  padding: 75px 400px;
-  letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12pt;
+    color: #313638;
+    opacity: 70%;
+    padding: 75px 400px;
+    letter-spacing: 2px;
 }
 
+/*Sponsor tier names*/
 h1.subsponsor {
-  font-size: 38pt;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-  padding: 35px 0px;
+    font-size: 38pt;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    padding: 35px 0px;
 }
 
-.subheading {
-  margin-bottom: 4vw;
-  font-family: Roboto;
-  letter-spacing: 3px;
-  font-weight: bold;
-  color: rgb(245,178,22);
-}
-
+/*Sponsor logos*/
 .majorContainer a img {
-  margin-bottom: 4vw;
-  padding-left: 10px;
-  padding-right: 10px;
+    margin-bottom: 4vw;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.notLast {
-  margin-right: 5vw;
-}
-
+/*Sponsor contact*/
 a.subheader {
-  font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .subheader a:hover {
-  color: #feb14b;
-  text-decoration: none;
+    color: #feb14b;
+    text-decoration: none;
 }
