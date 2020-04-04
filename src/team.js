@@ -20,17 +20,17 @@ class OurTeam extends Component {
             <div className="crop">
             {/* Cover Photo */}
             {/* Main Title, and Subtitle Area */}
-            <div className="title_area">
-                <h1 className="centre">Meet Our Team</h1>
-            </div>
-            </div>
+                <div className="title_area">
+                    <h1 className="centre">Meet Our Team</h1>
+                </div>
+                </div>
 
-            <div className="profile_section_heading">
-            <p class="team-heading">
-                {`
-                            OUR 2020 EXECUTIVE TEAM
-                        `}
-            </p>
+                <div className="profile_section_heading">
+                <p class="team-heading">
+                    {`
+                                OUR 2020 EXECUTIVE TEAM
+                            `}
+                </p>
             </div>
 
             <div className="all_execs_section">
