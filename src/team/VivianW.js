@@ -7,7 +7,7 @@ class VivianW extends Component {
                 <div className="profile_crop">
                     <img
                     src={process.env.PUBLIC_URL + "/potraits/vivw.jpg"}
-                    className="profile_img_subcommittee_version vivw_img"
+                    className="profile_img vivw_img"
                     alt="vivian-wong"
                     resizeMode="contain"
                     />

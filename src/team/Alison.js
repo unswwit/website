@@ -7,7 +7,7 @@ class Alison extends Component {
                 <div className="profile_crop">
                     <img
                     src={process.env.PUBLIC_URL + "/potraits/alison.png"}
-                    className="profile_img_subcommittee_version alison_img"
+                    className="profile_img alison_img"
                     alt="alison-chin"
                     resizeMode="contain"
                     />

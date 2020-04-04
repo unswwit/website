@@ -26,7 +26,7 @@ class OurTeam extends Component {
             </div>
 
             <div className="profile_section_heading">
-            <p className="subheader centre">
+            <p class="team-heading">
                 {`
                             OUR 2020 EXECUTIVE TEAM
                         `}
@@ -61,48 +61,46 @@ class OurTeam extends Component {
                         </div>
                     </div>
                 </div>
+
+                <div class="exec_row">
+                    <div class="exec_col">
+                        <div className="profile"> 
+                            <VivianW/>
+                        </div>
+                    </div>
+
+                    <div class="exec_col">
+                        <div className="profile"> 
+                            <Gabrielle/>
+                        </div>
+                    </div>
+                </div>
             
-                <div className="section_subcommittee">
-                    <div class="exec_row">
-                        <div class="exec_col">
-                            <div className="profile_subcommittee"> 
-                                <VivianW/>
-                            </div>
-                        </div>
-
-                        <div class="exec_col">
-                            <div className="profile_subcommittee"> 
-                                <Gabrielle/>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="exec_row">
-                        <div class="exec_col">
-                            <div className="profile_subcommittee"> 
-                                <Rhea/>
-                            </div>
-                        </div>
-
-                        <div class="exec_col">
-                            <div className="profile_subcommittee"> 
-                                <Alison/>
-                            </div>
+                <div class="exec_row">
+                    <div class="exec_col">
+                        <div className="profile"> 
+                            <Rhea/>
                         </div>
                     </div>
 
-                    <div class="exec_row">
-                        <div class="exec_col">
-                        <div className="profile_subcommittee"> 
-                            <Elicia/>
+                    <div class="exec_col">
+                        <div className="profile"> 
+                            <Alison/>
                         </div>
-                        </div>
+                    </div>
+                </div>
 
-                        <div class="exec_col">
-                        <div className="profile_subcommittee"> 
-                            <Felicia/>
-                        </div>
-                        </div>
+                <div class="exec_row">
+                    <div class="exec_col">
+                    <div className="profile"> 
+                        <Elicia/>
+                    </div>
+                    </div>
+
+                    <div class="exec_col">
+                    <div className="profile"> 
+                        <Felicia/>
+                    </div>
                     </div>
                 </div>
             </div>

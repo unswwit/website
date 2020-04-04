@@ -1,228 +1,169 @@
-/* this needs to be consistent with other pages */
-.banner {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  overflow: hidden;
-  object-fit: contain; 
-  align-content: center;
-  position: relative;
-  top: 50%;     
-  left: 50%;
-  transform: translate( -50%, -55%);
-}
-
+/*-----------------------------Team page header-------------------------------*/
+/*Header image*/
 .crop {
-  position: relative;
-  height: 700px;
-  max-width: 100%;
-  overflow: hidden;
+    background-image: url('/team-header.png');
+    background-position: center bottom 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
-/* same as img */
-.profile_img {
-  background-size: cover;
-  display: block;
-  margin: 0 auto;
-  height: 100%;
-  width: auto;
-  transform: translate( -15%, 0);
-}
-
-/* same as img */
-.profile_img_subcommittee_version {
-  background-size: cover;
-  display: block;
-  margin: 0 auto;
-  height: 100%;
-  width: auto;
-  transform: translate( -15%, 0);
-}
-
-.gab_img {
-  transform: translate( 0%, 0);
-}
-
-.vivw_img {
-  height: auto;
-  width: 120%;
-  transform: translate( -5%, -10%);
-}
-
-.alison_img {
-  transform: translate( -17%, 0);
-}
-
-.fel_img {
-  transform: translate( -12%, 0);
-}
-
-.eli_img {
-  transform: translate( -7%, 0%);
-}
-
-.title_area {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
+/*Heading title*/
 .title_area h1 {
-  font-family: playfair display;
-  font-size: 4vw;
-  transform: scaleY(1.15);
-  text-transform: uppercase;
-  font-weight: normal;
-  letter-spacing: 8px;
-  margin-top: 26vw;
+    font-family: 'Playfair Display', serif;
+    font-size: 5vw;
+    letter-spacing: 8px;
+    margin-top: 26vw;
+    text-transform: uppercase;
 }
 
-.profile_section_heading p {
-  font-family: Roboto;
-  font-weight: bold;
-  font-size: 2vw;
-  letter-spacing: 2px;
-  color: rgb(245,178,22);
-}
-
+/*---------------------------Executive team profiles--------------------------*/
+/*Executive team section*/
 .all_execs_section {
-  align-content: center;
-  justify-content: center;
+    align-content: center;
+    justify-content: center;
 }
 
 .exec_row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
 
 .exec_col {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    flex: 1;
 }
 
-.section_subcommittee {
-  align-content: center;
-  justify-content: center;
-} 
-
- /* the parent -> same as .square */
-.profile {
-  /* Space between when resizing */
-  position: relative;
-  padding: 20px; 
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
+/*Subtitle*/
+.team-heading {
+    color: #feb14b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30pt;
+    padding: 75px 0px;
+    text-align: center;
 }
 
+/*Executive profile images*/
 .profile_crop {
-  position: relative;
-  width: 16vw;  
-  height: 16vw;
-  max-width: 100%;
-  overflow: hidden;
-  border-radius: 50%;
-  object-fit: contain;
-  margin-left: auto;
-  margin-right: auto;
+    border-radius: 50%;
+    height: 16vw;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    object-fit: contain;
+    overflow: hidden;
+    position: relative;
+    width: 16vw; 
 }
+
+.profile_img {
+    background-size: cover;
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+    transform: translate( -15%, 0);
+    width: auto;
+}
+
+/*Transform executive profile images*/
+.gab_img {
+    transform: translate( 0%, 0);
+}
+
+.vivw_img {
+    height: auto;
+    transform: translate( -5%, -10%);
+    width: 120%;
+}
+
+.alison_img {
+    transform: translate( -17%, 0);
+}
+
+.eli_img {
+    transform: translate( -7%, 0%);
+}
+
+.fel_img {
+    transform: translate( -12%, 0);
+}
+
+/*Executive profile block*/
+.profile {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px; 
+    position: relative;
+}
+
+/*Executive profile details*/
 .profile_details {
-  margin: 25px 0px 70px 0px;
-  text-align: center;
-  align-content: center;
-  line-height: 13pt;
-  justify-content: space-evenly;
+    align-content: center;
+    justify-content: space-evenly;
+    line-height: 13pt;
+    margin: 25px 0px 70px 0px;
+    text-align: center;
 }
 
-.profile_subcommittee {
-   position: relative;
-   padding: 20px; 
-   display: inline-block;
-   margin-left: auto;
-   margin-right: auto;
-}
-
+/*Executive social media links*/
 .icon_bar {
-  width: 90px;
+    width: 100px;
 }
 
 .icon_bar a {
-  float: left;
-  width: 20%;
-  padding: 12px 0;
+    float: left;
+    padding: 12px 0;
+    width: 20%;
 }
 
-.icon {
-  width: 25px;
-  height: 25px;
-  border: 0;
-  margin-right: 10px;
+.icon {   
+    border: 0;
+    height: 25px;
+    margin-right: 20px;
+    width: 25px;
 }
 
-/* CSS for the different word styles in the profile description */
-
-.subheader {
-  font-family: Arial;
-  font-size: 13pt;
-  color: grey;
-  font-weight: bold;
-}
-
+/*Executive names*/
 .profile_text_name {
-  position: relative;
-  align-content: center;
-  font-family: Arial;
-  font-size: 20pt;
-  color: orange;
-  letter-spacing: 0.1vw;
+    align-content: center;
+    color: #feb14b;
+    font-family: 'Playfair Display', serif;
+    font-size: 24pt;
+    letter-spacing: 0.1vw;
+    position: relative;
 }
 
+/*Executive positions*/
 .profile_text_position {
-  position: relative;
-  align-content: center;
-  font-family: Arial;
-  font-size: 13pt;
-  color: rgb(26, 75, 131);
-  font-weight: lighter;
-  letter-spacing: 0.1vw;
+    align-content: center;
+    color:  #313638;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13pt;
+    font-weight: 400;
+    letter-spacing: 0.1vw;
+    padding-top: 10pt;
+    position: relative;
 }
 
+/*Executive degrees*/
 .profile_degree {
-  position: relative;
-  font-family: Arial;
-  font-size: 10pt;
-  color:lightslategray;
-  word-wrap: break-word;
-  white-space: initial;
-  font-weight: lighter;
-  letter-spacing: 0.1vw;
-}
-
-
-
-p {
-  font-family: Arial;
-  font-size: 7pt;
-  margin-top: 0;
-  color: orange;
-}
-
-table { 
-  border-collapse: separate;
-  margin: 5pt;
-  justify-content: center;
-}
-
-.crop {
-  background-size: cover;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-image: url('/team-header.png');
-  background-position: center bottom 40%;
-  max-width: 100%;
+    color: #313638;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10pt;   
+    font-weight: lighter;
+    letter-spacing: 0.1vw;
+    opacity: 70%;
+    position: relative;
+    white-space: initial;
+    word-wrap: break-word;
 }

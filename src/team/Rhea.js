@@ -7,7 +7,7 @@ class Rhea extends Component {
                 <div className="profile_crop">
                     <img
                     src={process.env.PUBLIC_URL + "/potraits/rhea.png"}
-                    className="profile_img_subcommittee_version"
+                    className="profile_img"
                     alt="rhea-thomas"
                     resizeMode="contain"
                     />

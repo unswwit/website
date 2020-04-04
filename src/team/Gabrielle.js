@@ -7,7 +7,7 @@ class Gabrielle extends Component {
                 <div className="profile_crop">
                     <img
                     src={process.env.PUBLIC_URL + "/potraits/gabby.jpg"}
-                    className="profile_img_subcommittee_version gab_img"
+                    className="profile_img gab_img"
                     alt="gabrielle"
                     resizeMode="contain"
                     />

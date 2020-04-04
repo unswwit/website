@@ -7,7 +7,7 @@ class Felicia extends Component {
                 <div className="profile_crop">
                     <img
                     src={process.env.PUBLIC_URL + "/potraits/felicia.png"}
-                    className="profile_img_subcommittee_version fel_img"
+                    className="profile_img fel_img"
                     alt="felicia-ee"
                     resizeMode="contain"
                     />

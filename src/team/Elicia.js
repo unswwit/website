@@ -1,15 +1,13 @@
 import React, { Component } from "react";
-import Alison from "./Alison";
 
-class Kelly extends Component {	 
+class Elicia extends Component {	 
 	render() {
 		return (
-            <div>
-                
+            <div>                
                 <div className="profile_crop">
                     <img
                     src={process.env.PUBLIC_URL + "/potraits/elicia.jpg"}
-                    className="profile_img_subcommittee_version eli_img"
+                    className="profile_img eli_img"
                     alt="elicia"
                     resizeMode="contain"
                     />
@@ -22,7 +20,6 @@ class Kelly extends Component {
                     <p>
                     {/* Icon Bar shoulddd be a horizontal row of icons */}
                     <div classname="icon_bar">
-                        {/* Linkedin Icon - target=_blank opens in new tab */}
                         <a
                         href="https://www.linkedin.com/in/eliciaauduong/"
                         target="_blank"
@@ -68,4 +65,4 @@ class Kelly extends Component {
 	}
 }
 
-export default Kelly;
+export default Elicia;
