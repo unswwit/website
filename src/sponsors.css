@@ -1,26 +1,24 @@
 /* this is used to add style to sponsors page and header */
 
-.sponsorHeader {  /* the 'box''*/
-  position: relative;
-  display: inline-block;
+/*Header image*/
+.sponsorHeader {
+    background-image: url('/sponsors-header.png');
+    background-position: center bottom 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
-.sponsorHeader h1 { /*the text inside the box*/
-  position: absolute;
-  z-index: 999;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  text-align: center;
-  top: 45%; /* Adjust this value to move the positioned div up and down */
-
-  font-size:62px;
-  font-family: playfair display;
-  transform: scaleY(1.15);
-  text-transform: uppercase;
-  font-weight: normal;
-  letter-spacing: 8px;
-  width: 60%; /* Set the width of the positioned div */
+/*Heading title*/
+.title_area h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5vw;
+    letter-spacing: 8px;
+    margin-top: 26vw;
+    text-transform: uppercase;
 }
 
 p.subheader {
