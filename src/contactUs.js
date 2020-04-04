@@ -7,48 +7,42 @@ class ContactUs extends React.Component {
     render() {
         return (
             <div>
-              <div className = 'sponsorHeader'>
-                <img src={process.env.PUBLIC_URL + '/contact-header.png'} width = "100%" className="" alt="banner"
-                resizeMode='contain'
-                />
 
-                <h1 class="header">Contact Us</h1>
-                </div>
+                <div className="contactHeader">
+                    {/* Cover Photo */}
+                    {/* Main Title, and Subtitle Area */}
+                        <div className="title_area">
+                            <h1 className="centre">Contact Us</h1>
+                        </div>
+                    </div>
 
 
                     <div className = 'form'>
-                      <div className = 'formLeft'>
+                        <h2 class="inquiry">Send Through a General Inquiry</h2>
+                        <div className = 'formLeft'>
+                            <form action="mailto:exec@unswwit.com" method="post" enctype="text/plain" className = 'formStyle'>
+                                <br/>
+                                <input className = 'formInput' type="text" name="name" placeholder = "Full Name"/>
+                                <br/>
+                                <br/>
+                                <input className = 'formInput' type="text" name="mail" placeholder = 'Email Address' />
+                                <br/>
+                                <br/>
+                                <textarea className = 'formInput' name="message" placeholder = 'Message' rows="5"></textarea>
+                                <br/>
+                                <input type="submit" value="Submit" class="button" style={{float: 'left'}} />
+                            </form>
+                        </div>
 
-                        <h2>Send Through a General Inquiry</h2>
-
-                        <form action="mailto:exec@unswwit.com" method="post" enctype="text/plain" className = 'formStyle'>
-
-                            <br/>
-                            <input className = 'formInput' type="text" name="name" placeholder = "Full Name"/>
-                            <br/>
-
-                            <br/>
-                            <input className = 'formInput' type="text" name="mail" placeholder = 'Email Address' />
-                            <br/>
-
-                            <br/>
-                            <textarea className = 'formInput' name="message" placeholder = 'Message' rows="5"></textarea>
-                            <br/>
-                            <input type="submit" value="Submit" class="button" style={{float: 'left'}} />
-                        </form>
-                      </div>
-
-                      <div className = 'formRight'>
-                      <img src={process.env.PUBLIC_URL + '/contact-image.png'} width = "100%" className="centre"
-                      alt="contact us" resizeMode='contain'
-                      />
-                      </div>
+                        <div className = 'formRight'>
+                            <img src={process.env.PUBLIC_URL + '/contact-image.png'} width = "100%" className="centre"
+                            alt="contact us" resizeMode='contain'
+                            />
+                        </div>
 
                     </div>
-
+                    <h2>CONTACT OUR TEAM</h2>
                     <div className = "newEmails">
-                      <h2 style={{textAlign: 'center'}}>CONTACT OUR TEAM </h2>
-
                       <div className = "col2">
                         <div className = "profile2">
                           <div class = 'dot'> </div>
