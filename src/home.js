@@ -45,13 +45,13 @@ class Home extends Component{
 				<div class="stats-info">
 					<div class="number">
 						<span><CountUp end={31} duration={3.5}/></span>
-						<span><CountUp end={13} duration={4}/></span>
-						<span><CountUp end={753} duration={1.5}/></span>
+						<span><CountUp end={15} duration={4}/></span>
+						<span><CountUp end={1799} duration={2}/></span>
 					</div>
 					<div class="words">
 						<span>Team Members</span>
 						<span>Sponsors</span>
-						<span>Members</span>
+						<span>Facebook Followers</span>
 					</div>
 				</div>
 			</div>
