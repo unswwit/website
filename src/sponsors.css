@@ -40,11 +40,21 @@ h1.subsponsor {
 }
 
 /*Sponsor logos*/
+#majorContainer {
+    padding: 0px 175px 50px 175px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
 .majorContainer a img {
     margin-bottom: 4vw;
     padding-left: 10px;
     padding-right: 10px;
+    
 }
+
 
 /*Sponsor contact*/
 a.subheader {

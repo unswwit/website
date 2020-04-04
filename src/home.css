@@ -10,6 +10,13 @@
 }
 
 /*Header title*/
+div .headline{
+    text-align: left;
+    position: absolute;
+    top: 30%;
+    left: 54vw;
+}
+
 .headline h1 {
     color: #feb14b;
     font-family: 'Playfair Display', serif;
@@ -23,6 +30,16 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 1.17vw;
     letter-spacing: 2px;
+}
+
+/*Join us button*/
+.btn-join{
+    font-weight: lighter;
+    letter-spacing: 2px;
+    font-size: 1.2vw;
+    display: table-cell;
+    float: right;
+    margin-right: 1vw;
 }
 
 /*-----------------------------Home page description--------------------------*/
@@ -80,6 +97,10 @@
     width: 100%;
 }
 
+.stats{
+    position: relative;
+}
+
 .number {
     display: inline-grid;
     grid-template-columns: 30% 30% 45%;
@@ -90,12 +111,14 @@
     right: 0;
     text-align: center;
     width: 60%;
+    bottom: 25%;
 }
 
 .number span {
     color: #feb14b;
     font-family: 'Montserrat', sans-serif;
     font-size: 75pt;
+    font-weight: 500;
     letter-spacing: 15px;
 }
 

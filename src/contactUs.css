@@ -62,7 +62,7 @@ input.formInput {
     padding: 5px;
     padding-left: 0px;
     opacity: 70%;
-    background-color: white;
+    background-color: #ffffff;
 
     border-style: none;
     border-bottom: solid;
@@ -76,12 +76,17 @@ input.formInput {
 }
 
 .formLeft form input.button {
-    color: white;
+    color: #ffffff;
     background-color: #e85f5c;
     text-align: center;
     margin-top: 20px;
     padding: 12px 10px 12px 10px;
     width: 120px;
+}
+
+form input.button:hover {
+    background-color: #feb14b;
+    color: #white;
 }
 
 /* This changes the placeholder colour!! for forms. */

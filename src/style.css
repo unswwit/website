@@ -17,12 +17,6 @@ h2 {
     text-align: center;
 }
 
-.title {
-    font-family: Arial;
-    font-size: 15pt;
-    font-weight: bold;
-}
-
 .header{
     padding-top: 50px;
     padding-bottom: 20px;
@@ -66,269 +60,77 @@ p {
 }
 
 .button:hover {
-    background-color: white;
-    color: orange;
+    background-color: #feb14b;
+    color: #ffffff;
 }
 
-.sponsorImg:hover {
-    cursor: pointer;
-}
-
-.column {
-  column-count: 3;
-  text-align: center;
-  /* FIXME: column top alignment */
-  /* display: inline-block; */
-  margin: 1em 0 !important;
-  vertical-align: top;
-  margin-top: 0;
-}
-
-.joinColumn {
-
-  column-count: 3;
-  text-align: center;
-  margin: 1em 0 !important;
-  vertical-align: top;
-  margin-top: 0;
-}
-
-.divider {
-    width:5px;
-    height:auto;
-    display:inline-block;
-}
-
-.principal {
-    display: inline-block;
-    max-width: 600px;
-    text-align: left;
-    /* text-justify: inter-word; */
-}
-
-.major {
-    display: inline-block;
-    width: 300px;
-    text-align: left;
-}
-
-.support {
-    display: inline-block;
-    max-width: 150px;
-    text-align: left;
-}
-
-.column {
-    float: left;
-    width: 33.33%;
-    padding: 5px;
-}
-
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-#majorContainer {
-    padding: 0px 175px 50px 175px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-end;
-}
-
+/*-----------------------------------Navbar-----------------------------------*/
 .bg-custom{
     background: #e85f5c;
     font-size: 10pt;
 }
 
 .nav{
-  height: 70px;
+    height: 70px;
 }
 
 .navbar-nav{
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  float: right;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    float: right;
 }
 
 .nav-item{
-  float:right;
-  color: white;
-  padding: 5px;
-  text-decoration: none;
-  letter-spacing: 1.5px;
+    float:right;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    letter-spacing: 1.5px;
 }
 
 .nav-item a{
-  color: white;
-  padding: 10px 15px;
-  text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
 }
 
-.banner{
-  max-height: 768px;
-  width: 100%;
-}
-
-.contain {
-  position: relative;
-  width: auto;
-}
-
-.btn-join{
-  font-weight: lighter;
-  letter-spacing: 2px;
-  font-size: 1.2vw;
-  display: table-cell;
-  float: right;
-  margin-right: 1vw;
-}
-
-div .headline{
-   text-align: left;
-   position: absolute;
-   top: 30%;
-   left: 54vw;
-}
-
-.unite{
-   text-align: center;
-   float: center;
-   padding-top: 50px ;
-}
-
-.row h2{
-  color: orange;
-}
-
-.stats{
-  position: relative;
-}
-
-.number{
-  position: absolute;
-  right: 10%;
-  bottom: 25%;
-}
-
-.number span{
-  padding: 20px;
-  font-size: 50pt;
-  font-weight: 500;
-  color: white;
-}
-
-.words{
-  position: absolute;
-  right: 12%;
-  bottom: 24%;
-  margin-left: 10px;
-
-}
-
-.words span{
-  padding: 0px 40px;
-  font-size: 9pt;
-  color: white;
-  font-size: 12pt;
-}
-
-.btn-sparc{
-  background-color: white;
-  color: orange;
-}
-
-.texts{
-  position: absolute;
-  float: right;
-  top: 60%;
-  right: 60%;
-  font-weight: bold;
-
-}
-
-div .texts{
-  text-align: right;
-  color: white;
-}
-
-.photo-1{
-  float: center;
-  filter: brightness(50%);
+/*----------------------------------Footer------------------------------------*/
+footer {
+    margin: 0;
+    padding: 0;
 }
 
 .footer-top {
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
 .footer-links {
-  list-style-type: none;
-  align: center;
+    list-style-type: none;
+    align: center;
+    margin: 20px auto;
+    padding: 0;
+    align-self: center;
+    width: 54%;
 }
 
 .footer-item {
-  display: inline;
-  padding: 20px;
-  color: #0f4c81;
-}
-
-footer {
-  margin: 0;
-  padding: 0;
-}
-
-.footer-links {
-  margin: 20px auto;
-  padding: 0;
-  align-self: center;
-  width: 54%;
-}
-.container {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.btn-subscribe{
-  margin-left: 10px;
-  font-size: 10pt;
-
-  border-radius: 5px;
-  padding: 7px 20px;
-}
-
-div .logo{
-  color:white;
-  background-color: orange;
-  font-weight: bold;
-  height: 50px;
-  padding-right: 10px;
- }
-
-input{
-  width: 200px;
-  padding-right: 10px;
-  border-width:2px;
-  border-color:orange;
-  border-radius: 5px;
-  background-color: rgb(247, 235, 220);
-}
-
-h3 {
-  margin-top: 0;
+    display: inline;
+    font-family: 'Montserrat', sans-serif;
+    padding: 16px;
+    color: #313638;
 }
 
 .footer-copyright, a {
-  color: #0f4c81;
+    color: #313638;
 }
 
 .footer-item a:hover {
-  color: #feb14b;
-  text-decoration: none;
+    color: #feb14b;
+    text-decoration: none;
 }
 
 #copyright {
-  padding: 0px;
+    padding: 0px;
 }
