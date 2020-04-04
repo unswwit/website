@@ -180,8 +180,8 @@ class Sponsors extends React.Component {
                   />
                 </a>
     
-                <p className='subheader' style={{'font-size': '16px'}}>{`Interested in partnering with us? Contact us at `}
-                    <a class='subheader' style={{'font-size': '16px'}} href="mailto:externals@unswwit.com">externals@unswwit.com</a>
+                <p class='subheader'>{`Interested in partnering with us? Contact us at `}
+                    <a class='subheader' href="mailto:externals@unswwit.com">externals@unswwit.com</a>
                 </p>
             </div>
         );

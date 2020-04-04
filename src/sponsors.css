@@ -29,8 +29,6 @@ p.subheader {
   color: #313638;
   opacity: 70%;
   padding: 75px 400px;
-
-  line-height: 28px;
   letter-spacing: 2px;
 }
 
@@ -59,8 +57,8 @@ h1.subsponsor {
   margin-right: 5vw;
 }
 
-.subheader a {
-  font-size: 16px;
+a.subheader {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .subheader a:hover {
