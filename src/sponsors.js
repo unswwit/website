@@ -2,6 +2,22 @@ import React from 'react';
 
 import "./sponsors.css";
 
+import Amazon from "./sponsors/Amazon";
+import Atlassian from "./sponsors/Atlassian";
+import Baraja from "./sponsors/Baraja";
+import Commonwealth from "./sponsors/Commonwealth";
+import Deloitte from "./sponsors/Deloitte";
+import DXC from "./sponsors/DXC";
+import EY from "./sponsors/EY";
+import Fairfax from "./sponsors/Fairfax";
+import Google from "./sponsors/Google";
+import LendLease from "./sponsors/Lendlease";
+import McGrathNicol from "./sponsors/McGrathNicol";
+import Palantir from "./sponsors/Palantir";
+import QPay from "./sponsors/QPay";
+import Quantium from "./sponsors/Quantium";
+import Telstra from "./sponsors/Telstra";
+
 class Sponsors extends React.Component {
     render() {
         return (
@@ -22,163 +38,41 @@ class Sponsors extends React.Component {
 
                 {/* 600x300 */}
                 <h1 className='subsponsor'>Principal Sponsors</h1>
-                <a href="https://www.telstra.com.au/">
-                  <img
-                    src={process.env.PUBLIC_URL + "/sponsors/telstra-large.png"}
-                    alt="Telstra"
-                    resizeMode="contain"
-                    style={{'height': '300px', 'width': '600px'}}
-                  />
-                </a>
+                <Telstra/>
 
                 {/* 300x150 */}
                 <h1 className='subsponsor'>Major Sponsors</h1>
                 <div id="majorContainer">
-                    <a href="https://www.amazon.jobs/en">
-                      <img
-                        src={process.env.PUBLIC_URL + "/sponsors/amazon-major.png"}
-                        alt="Amazon"
-                        resizeMode="contain"
-                        style={{'height': '150px', 'width': '300px'}}
-                      />
-                    </a>
-
-
-                    <a href="https://www.atlassian.com/">
-                      <img
-                        src={process.env.PUBLIC_URL + "/sponsors/atlassian-major.png"}
-                        alt="Atlassian"
-                        resizeMode="contain"
-                        style={{'height': '150px', 'width': '300px'}}
-                      />
-                    </a>
-
-                    <a href="https://www.baraja.com/careers/">
-                      <img
-                        src={process.env.PUBLIC_URL + "/sponsors/baraja-major.png"}
-                        alt="Baraja"
-                        resizeMode="contain"
-                        style={{'height': '150px', 'width': '300px'}}
-                      />
-                    </a>
+                    <Amazon/>
+                    <Atlassian/>
+                    <Baraja/>
                 </div>
 
                 <div id="majorContainer">
-                    <a href="https://www.commbank.com.au/about-us/careers.html">
-                      <img
-                        src={process.env.PUBLIC_URL + "/sponsors/cba-major.png"}
-                        alt="Commonwealth Bank"
-                        resizeMode="contain"
-                        style={{'height': '150px', 'width': '300px'}}
-                      />
-                    </a>
-
-                    <a href="https://www2.deloitte.com/us/en/pages/careers/topics/careers.html/">
-                      <img
-                        src={process.env.PUBLIC_URL + "/sponsors/deloitte-major.png"}
-                        alt="Delloite"
-                        resizeMode="contain"
-                        style={{'height': '150px', 'width': '300px'}}
-                      />
-                    </a>
-
-                    <a href="https://jobs.dxc.technology/">
-                      <img
-                        src={process.env.PUBLIC_URL + "/sponsors/dxc-major.png"}
-                        alt="DXC"
-                        resizeMode="contain"
-                        style={{'height': '150px', 'width': '300px'}}
-                      />
-                    </a>
+                    <Commonwealth/>
+                    <Deloitte/>
+                    <DXC/>
                 </div>
 
                 <div id="majorContainer">
-                    <a href="https://www.ey.com/en_au">
-                      <img
-                        src={process.env.PUBLIC_URL + "/sponsors/ey-major.png"}
-                        alt="EY"
-                        resizeMode="contain"
-                        style={{'height': '150px', 'width': '300px'}}
-                      />
-                    </a>
-
-                    <a href="https://www.nineforbrands.com.au/">
-                      <img
-                        src={process.env.PUBLIC_URL + "/sponsors/fairfax-major.png"}
-                        alt="Fairfax"
-                        resizeMode="contain"
-                        style={{'height': '150px', 'width': '300px'}}
-                      />
-                    </a>
-
-                    <a href="https://careers.google.com/">
-                      <img
-                        src={process.env.PUBLIC_URL + "/sponsors/google-major.png"}
-
-                        alt="Google"
-                        resizeMode="contain"
-                        style={{'height': '150px', 'width': '300px'}}
-                      />
-                    </a>
+                    <EY/>
+                    <Fairfax/>
+                    <Google/>
                 </div>
 
                 <div id="majorContainer">
-
-                    <a href="https://www.mcgrathnicol.com/">
-                      <img
-                        src={process.env.PUBLIC_URL + "/sponsors/mcgrathcicol-major.png"}
-
-                        alt="McGrathNicol"
-                        resizeMode="contain"
-                        style={{'height': '150px', 'width': '300px'}}
-                      />
-                    </a>
-
-                    <a href="https://quantium.com/">
-                      <img
-                        src={process.env.PUBLIC_URL + "/sponsors/quantium-major.png"}
-
-                        alt="Quantium"
-                        resizeMode="contain"
-                        style={{'height': '150px', 'width': '300px'}}
-                      />
-                    </a>
+                    <McGrathNicol/>
+                    <Quantium/>
                 </div>
 
-                {/* 200x100 */}
                 <h1 className='subsponsor'>Support Sponsors</h1>
-                <a href="https://www.lendlease.com/au/">
-                  <img
-                    src={process.env.PUBLIC_URL + "/sponsors/lendlease-support.png"}
-
-                    alt="Lendlease"
-                    resizeMode="contain"
-                    style={{'height': '100px', 'width': '200px'}}
-                  />
-                </a>
-
-                <a href="https://www.palantir.com/">
-                  <img
-                    src={process.env.PUBLIC_URL + "/sponsors/palantir-support.png"}
-
-                    alt="Palantir"
-                    resizeMode="contain"
-                    style={{'height': '100px', 'width': '200px'}}
-                  />
-                </a>
-
-
+                <div id="majorContainer">
+                    <LendLease/>
+                    <Palantir/>
+                </div>
                 {/* 200x100 */}
                 <h1 className='subsponsor'>In-Kind Sponsors</h1>
-                <a href="https://webapp.getqpay.com/login">
-                  <img
-                    src={process.env.PUBLIC_URL + "/sponsors/qpay-inkind.png"}
-
-                    alt="qPay"
-                    resizeMode="contain"
-                    style={{'height': '100px', 'width': '200px'}}
-                  />
-                </a>
+                <QPay/>
     
                 <p className='subheader'>{`Interested in partnering with us? Contact us at `}
                     <a class='subheader' href="mailto:externals@unswwit.com">externals@unswwit.com</a>

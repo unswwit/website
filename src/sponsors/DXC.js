@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
-class Atlassian extends Component {	 
+class Fairfax extends Component {	 
 	render() {
 		return (
-            <div>
-                <a href="https://www.atlassian.com/">
+            <div> 
+                <a href="https://jobs.dxc.technology/">
                       <img
-                        src={process.env.PUBLIC_URL + "/sponsors/atlassian-major.png"}
-                        alt="Atlassian"
+                        src={process.env.PUBLIC_URL + "/sponsors/dxc-major.png"}
+                        alt="DXC"
                         resizeMode="contain"
                         style={{'height': '150px', 'width': '300px'}}
                       />
@@ -17,4 +17,4 @@ class Atlassian extends Component {
 	}
 }
 
-export default Atlassian;
+export default Fairfax;

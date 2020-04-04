@@ -3,12 +3,15 @@ import React, { Component } from "react";
 class Amazon extends Component {	 
 	render() {
 		return (
-            <div className='subheader'>
-                <div className='major'>
-                    {/* <p>TODO: Amazon does not have a description yet.</p> */}
-                </div>
-                <br></br>
-                <a href="https://www.amazon.jobs/en" className="button" >Visit Amazon</a>
+            <div>
+                <a href="https://www.amazon.jobs/en">
+                      <img
+                        src={process.env.PUBLIC_URL + "/sponsors/amazon-major.png"}
+                        alt="Amazon"
+                        resizeMode="contain"
+                        style={{'height': '150px', 'width': '300px'}}
+                      />
+                </a>
             </div>
         );
 	}

@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 
-class Quantium extends Component {	 
+class Fairfax extends Component {	 
 	render() {
 		return (
-            <div className='subheader'>
-                <a href="https://quantium.com/">
+            <div> 
+                <a href="https://www.nineforbrands.com.au/">
                     <img
-                        src={process.env.PUBLIC_URL + "/sponsors/quantium-major.png"}
-
-                        alt="Quantium"
+                        src={process.env.PUBLIC_URL + "/sponsors/fairfax-major.png"}
+                        alt="Fairfax"
                         resizeMode="contain"
                         style={{'height': '150px', 'width': '300px'}}
                     />
@@ -18,4 +17,4 @@ class Quantium extends Component {
 	}
 }
 
-export default Quantium;
+export default Fairfax;

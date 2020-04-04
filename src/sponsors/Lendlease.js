@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 
-class QPay extends Component {	 
+class Lendlease extends Component {	 
 	render() {
 		return (
             <div>
-                <a href="https://webapp.getqpay.com/login">
+                <a href="https://www.lendlease.com/au/">
                     <img
-                        src={process.env.PUBLIC_URL + "/sponsors/qpay-inkind.png"}
+                        src={process.env.PUBLIC_URL + "/sponsors/lendlease-support.png"}
 
-                        alt="qPay"
+                        alt="Lendlease"
                         resizeMode="contain"
                         style={{'height': '100px', 'width': '200px'}}
                     />
@@ -18,4 +18,4 @@ class QPay extends Component {
 	}
 }
 
-export default QPay;
+export default Lendlease;
