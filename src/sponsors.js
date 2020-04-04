@@ -123,15 +123,6 @@ class Sponsors extends React.Component {
                 </div>
 
                 <div id="majorContainer">
-                    <a href="https://www.macquarie.com/au/personal">
-                      <img
-                        src={process.env.PUBLIC_URL + "/sponsors/macquarie-group-major.png"}
-
-                        alt="Macquarie Group"
-                        resizeMode="contain"
-                        style={{'height': '150px', 'width': '300px'}}
-                      />
-                    </a>
 
                     <a href="https://www.mcgrathnicol.com/">
                       <img
@@ -156,6 +147,16 @@ class Sponsors extends React.Component {
 
                 {/* 200x100 */}
                 <h1 className='subsponsor'>Support Sponsors</h1>
+                <a href="https://www.lendlease.com/au/">
+                  <img
+                    src={process.env.PUBLIC_URL + "/sponsors/lendlease-support.png"}
+
+                    alt="Lendlease"
+                    resizeMode="contain"
+                    style={{'height': '100px', 'width': '200px'}}
+                  />
+                </a>
+
                 <a href="https://www.palantir.com/">
                   <img
                     src={process.env.PUBLIC_URL + "/sponsors/palantir-support.png"}

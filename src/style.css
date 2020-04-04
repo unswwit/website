@@ -201,15 +201,6 @@ div .headline{
   color: orange;
 }
 
-.event1{
-  width:100%;
-}
-
-.event2{
-  width: 100%;
-  padding: 0px 50px;
-}
-
 .stats{
   position: relative;
 }
@@ -223,9 +214,8 @@ div .headline{
 .number span{
   padding: 20px;
   font-size: 50pt;
+  font-weight: 500;
   color: white;
-  font-family: Arial;
-  font-weight: bold;
 }
 
 .words{
@@ -240,7 +230,6 @@ div .headline{
   padding: 0px 40px;
   font-size: 9pt;
   color: white;
-  font-family: Arial;
   font-size: 12pt;
 }
 

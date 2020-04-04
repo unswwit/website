@@ -24,29 +24,21 @@
 }
 
 p.subheader {
-  font-size: 22px;
-  color: grey;
-  padding: 100px 450px 100px 450px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12pt;
+  color: #313638;
+  opacity: 70%;
+  padding: 75px 400px;
 
-  line-height: 30px;
+  line-height: 28px;
   letter-spacing: 2px;
-
-  font-family: Roboto;
-  font-weight: normal;
 }
 
-
 h1.subsponsor {
-  font-size: 30px;
-  letter-spacing: 2px;
-  
-  padding-top: 35px;
-  padding-bottom: 10px;
-
-  color: orange;
-  font-family: Roboto;
-  font-weight: normal;
-
+  font-size: 38pt;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  padding: 35px 0px;
 }
 
 .subheading {
