@@ -1,29 +1,27 @@
-/*adding style to the join us page and header */
-
-.joinUsHeader {  /* the 'box''*/
+/*------------------------------Join us header--------------------------------*/
+/*Header image*/
+.joinUsHeader {
+  background-image: url('/join-header.png');
+  background-position: center bottom 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  max-width: 100%;
+  overflow: hidden;
   position: relative;
-  display: inline-block;
 }
 
-.joinUsHeader h1 { /*the text inside the box*/
-  position: absolute;
-  z-index: 999;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  text-align: center;
-  top: 45%; /* Adjust this value to move the positioned div up and down */
-
-  font-size:62px;
-  font-family: playfair display;
-  transform: scaleY(1.15);
-  text-transform: uppercase;
-  font-weight: normal;
+/*Heading title*/
+.title_area h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 5vw;
   letter-spacing: 8px;
-  width: 60%; /* Set the width of the positioned div */
-  color: rgb(245,178,22);
+  margin-top: 26vw;
+  text-transform: uppercase;
 }
 
+/*-------------------------------Join us socials------------------------------*/
+/*Body block*/
 .joinUsBody {
     max-width: 80%;
     text-align: center;
@@ -33,16 +31,17 @@
     margin-bottom: 300px;
 }
 
+/*Google Map screenshot image*/
 .googleMap {
     display: inline-block;
     width: 43%;
     padding: 0px;
-    /*padding: 50px 50px 50px 0p;*/
     height: 300px;
     float:left;
     object-fit: cover;
-    /*margin-right: 50px;*/
 }
+
+/*Right side block*/
 .joinUsRight {
     display: inline-block;
     width: 57%;
@@ -52,20 +51,22 @@
     float:right;
 }
 
+/*Heading*/
 .joinUsRight h2 {
-  font-family: Roboto, sans-serif;
-  font-size: 26px;
-  line-height: 50px;
-  letter-spacing: 1.5px;
-  color: rgb(245,178,22);
-  font-weight: bold;
+    color: #feb14b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30pt;
+    text-transform: uppercase;
+    padding-bottom: 20px;
 }
 
-.joinButtons {  /*container for buttons */
+/*Container for buttons*/
+.joinButtons {
   position: relative;
   display: inline-block;
 }
 
+/*Social links*/
 .joinButtons a {
   display: inline-block;
   margin-right: 15px;
@@ -73,5 +74,4 @@
   height: 60px;
   padding: 4px 4px 4px 4px;
   margin-bottom: 6px;
-
 }

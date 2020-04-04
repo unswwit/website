@@ -12,43 +12,49 @@ class JoinUs extends React.Component {
 
         return (
             <div>
-              <div className = 'joinUsHeader'>
-                <img src={process.env.PUBLIC_URL + '/join-header.png'} width = "100%" className="centre" alt="banner"
-                resizeMode='cover'
-                />
-                <h1 className='centre'>Join Us</h1>
-              </div>
+                <div className="joinUsHeader">
+                    {/* Cover Photo */}
+                    {/* Main Title, and Subtitle Area */}
+                        <div className="title_area">
+                            <h1 className="centre">Join Us</h1>
+                        </div>
+                    </div>
+                <div className = 'joinUsBody'>
+                    <img src={process.env.PUBLIC_URL + '/join-us-map.png'} 
+                        width = "100%" 
+                        className="googleMap" 
+                        alt="map"
+                    />
+                    <div className = 'joinUsRight'>
+                    <h2>Connect with us</h2>
+                    <div className = 'joinButtons'>
+                        <a href={fbPageUrl}>
+                        <img src={process.env.PUBLIC_URL + '/facebook.png'} 
+                            title = 'Facebook Page' 
+                            alt="Facebook Page" 
+                            resizeMode='contain'
+                                style={{width:'100%', height:'100%'}} />
+                        </a>
+                        <a href={fbGroupUrl}>
+                        <img src={process.env.PUBLIC_URL + '/facebook-group.png'} title = 'Facebook Group' className="" alt="Facebook Group" resizeMode='contain'
+                                style={{width:'100%', height:'100%'}} />
+                        </a>
+                        <a href={linkedInUrl}>
+                        <img src={process.env.PUBLIC_URL + '/linkedin.png'} title = 'Linked-In' className="" alt="Linked-In" resizeMode='contain'
+                                style={{width:'100%', height:'100%'}} />
+                        </a>
+                        <a href={instagramUrl}>
+                        <img src={process.env.PUBLIC_URL + '/instagram.png'} title = 'Instagram' className="" alt="Instagram" resizeMode='contain'
+                                style={{width:'100%', height:'100%'}} />
+                        </a>
+                        <a href={spARCUrl}>
+                        <img src={process.env.PUBLIC_URL + '/sparc.png'} title = 'spARC' className="" alt="spARC" resizeMode='contain'
+                                style={{width:'100%', height:'100%'}} />
+                        </a>
+                    </div>
 
-              <div className = 'joinUsBody'>
-                <img src={process.env.PUBLIC_URL + '/join-us-map.png'} width = "100%" className="googleMap" alt="map"
-                />
-                <div className = 'joinUsRight'>
-                  <h2>Connect with us</h2>
-                  <div className = 'joinButtons'>
-                    <a href={fbPageUrl}>
-                      <img src={process.env.PUBLIC_URL + '/facebook.png'} title = 'Facebook Page' className="" alt="Facebook Page" resizeMode='contain'
-                            style={{width:'100%', height:'100%'}} />
-                    </a>
-                    <a href={fbGroupUrl}>
-                      <img src={process.env.PUBLIC_URL + '/facebook-group.png'} title = 'Facebook Group' className="" alt="Facebook Group" resizeMode='contain'
-                            style={{width:'100%', height:'100%'}} />
-                    </a>
-                    <a href={linkedInUrl}>
-                      <img src={process.env.PUBLIC_URL + '/linkedin.png'} title = 'Linked-In' className="" alt="Linked-In" resizeMode='contain'
-                            style={{width:'100%', height:'100%'}} />
-                    </a>
-                    <a href={instagramUrl}>
-                      <img src={process.env.PUBLIC_URL + '/instagram.png'} title = 'Instagram' className="" alt="Instagram" resizeMode='contain'
-                            style={{width:'100%', height:'100%'}} />
-                    </a>
-                    <a href={spARCUrl}>
-                      <img src={process.env.PUBLIC_URL + '/sparc.png'} title = 'spARC' className="" alt="spARC" resizeMode='contain'
-                            style={{width:'100%', height:'100%'}} />
-                    </a>
-                  </div>
-
+                    </div>
                 </div>
-              </div>
             </div>
 
         );
