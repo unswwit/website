@@ -44,12 +44,8 @@
 }
 
 /*Subtitle*/
-.team-heading {
-    color: #feb14b;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 30pt;
+h2.team-heading{
     padding: 75px 0px;
-    text-align: center;
 }
 
 /*Executive profile images*/

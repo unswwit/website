@@ -26,11 +26,11 @@ class OurTeam extends Component {
                 </div>
 
                 <div className="profile_section_heading">
-                <p class="team-heading">
+                <h2 class="team-heading">
                     {`
                                 OUR 2020 EXECUTIVE TEAM
                             `}
-                </p>
+                </h2>
             </div>
 
             <div className="all_execs_section">

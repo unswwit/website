@@ -9,9 +9,12 @@ h1 {
 }
 
 h2 {
-    font-family: Georgia;
-    font-size: 25pt;
-    font-weight: bold;
+    color: #feb14b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30pt;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    text-align: center;
 }
 
 .title {

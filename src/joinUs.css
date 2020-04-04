@@ -53,11 +53,7 @@
 
 /*Heading*/
 .joinUsRight h2 {
-    color: #feb14b;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 30pt;
-    text-transform: uppercase;
-    padding-bottom: 20px;
+    text-align: left;
 }
 
 /*Container for buttons*/
