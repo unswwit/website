@@ -1,7 +1,7 @@
 /*------------------------------Contact us header-----------------------------*/
 /*Header image*/
 .contactHeader {
-    background-image: url('/contact-header.png');
+    background-image: url('/contact-header-1.png');
     background-position: center bottom 40%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,7 +38,6 @@
     padding: 10px 20px;
     width: 40%;
     height: 100%;
-    float:left;
 }
 
 .formLeft form {
@@ -86,7 +85,7 @@ input.formInput {
 
 form input.button:hover {
     background-color: #feb14b;
-    color: #white;
+    color: #ffffff;
 }
 
 /* This changes the placeholder colour!! for forms. */
@@ -108,7 +107,6 @@ form input.button:hover {
     display: inline-block;
     width: 60%;
     padding: 10px 0px;
-    float:right;
     height: 100%;
     overflow: hidden;
 }
@@ -122,6 +120,12 @@ form input.button:hover {
     height: 50px;
     width: 50px;
     background-color: #e85f5c;
+    margin-bottom: 25px;
+}
+
+.newEmails img {
+    height: 50px;
+    width: 50px;
     margin-bottom: 25px;
 }
 

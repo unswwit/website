@@ -1,12 +1,13 @@
 /*-------------------------------Home page header-----------------------------*/
 /*Header image*/
 .contain {
-    background-image: url('/header.png');
+    background-image: url('/header-1.png');
     background-position: center bottom 40%;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     max-width: 100%;
+    background-color: #313638;
 }
 
 /*Header title*/
@@ -22,6 +23,7 @@ div .headline{
     font-family: 'Playfair Display', serif;
     font-size: 5.5vw;
     text-transform: uppercase;
+    letter-spacing: 5px;
 }
 
 /*Header subtitle*/

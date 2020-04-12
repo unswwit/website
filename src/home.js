@@ -40,7 +40,7 @@ class Home extends Component{
 
 				{/*Start of Statistics*/}
 				<div class="stats" onScroll={this.handleScroll}>
-					<img src={process.env.PUBLIC_URL + './stats-background.png'} className="stats-background" alt="banner" resizeMode='contain'/>
+					<img src={process.env.PUBLIC_URL + './stats-background-1.png'} className="stats-background" alt="banner" resizeMode='contain'/>
 					<div class="stats-info">
 						<div class="number">
 							<div>

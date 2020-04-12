@@ -66,7 +66,7 @@ p {
 
 /*-----------------------------------Navbar-----------------------------------*/
 .bg-custom{
-    background: #e85f5c;
+    background: #fff7ef;
     font-size: 10pt;
 }
 
@@ -75,7 +75,7 @@ p {
 }
 
 .navbar-nav{
-    color: white;
+    color: #313638;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     text-decoration: none;
@@ -84,18 +84,23 @@ p {
 
 .nav-item{
     float:right;
-    color: white;
+    color: #313638;
     padding: 5px;
     text-decoration: none;
     letter-spacing: 1.5px;
 }
 
 .nav-item a{
-    color: white;
+    color: #313638;
     padding: 10px 15px;
     text-decoration: none;
 }
 
+.nav-item a:hover{
+    color: #e85f5c;
+    padding: 10px 15px;
+    text-decoration: none;
+}
 /*----------------------------------Footer------------------------------------*/
 footer {
     margin: 0;
