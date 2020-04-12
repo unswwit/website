@@ -16,7 +16,7 @@ class Amanda extends Component {
                 <div className="profile_details">
                   <p className="profile_text_name">Amanda Li</p>
                   <p className="profile_text_position">Vice President</p>
-                  <p className="profile_degree">Software Engineering, 3rd Year</p>
+                  <p className="profile_degree">Software Engineering/Biomedical Engineering, 3rd Year</p>
 
                   {/* Icon Bar shoulddd be a horizontal row of icons */}
                   <div classname="icon_bar">

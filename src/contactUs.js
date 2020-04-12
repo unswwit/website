@@ -41,7 +41,7 @@ class ContactUs extends React.Component {
                         </div>
 
                     </div>
-                    <h2>CONTACT OUR TEAM</h2>
+                    <h2 class='contact-team'>CONTACT OUR TEAM</h2>
                     <div className = "newEmails">
                         <div className = "col2">
                             <div className = "profile2">

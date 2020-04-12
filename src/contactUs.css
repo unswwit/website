@@ -112,6 +112,9 @@ form input.button:hover {
 }
 
 /*Style for the Emails is below*/
+.contact-team {
+    margin-top: 50px;
+}
 .newEmails {
     height: 1000px;
 }

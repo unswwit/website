@@ -23,7 +23,7 @@ div .headline{
     font-family: 'Playfair Display', serif;
     font-size: 5.5vw;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
 }
 
 /*Header subtitle*/
@@ -31,7 +31,7 @@ div .headline{
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.17vw;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
 }
 
 /*Join us button*/
@@ -39,9 +39,8 @@ div .headline{
     font-weight: lighter;
     letter-spacing: 2px;
     font-size: 1.2vw;
-    display: table-cell;
     float: right;
-    margin-right: 1vw;
+    margin-right: 0.5vw;
 }
 
 /*-----------------------------Home page description--------------------------*/

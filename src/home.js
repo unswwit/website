@@ -74,7 +74,7 @@ class Home extends Component{
 					</div>
 					
 					<div class="event-1">
-							<img src={process.env.PUBLIC_URL + '/alumnight.jpg'} alt="banner"/>
+							<img src={process.env.PUBLIC_URL + '/games_night.jpg'} alt="banner"/>
 						</div>
 				</div>
 				{/*End of upcoming events area*/}
