@@ -1,3 +1,4 @@
+/*-------------------------------Blog post content-----------------------------*/
 .blog-content {
   width: 950px;
   text-align: center;
@@ -5,6 +6,7 @@
   margin-bottom: 6vw;
 }
 
+/*Blog title*/
 .blog-title {
   font-family: 'Playfair Display', serif;
   color: #feb14b;
@@ -16,6 +18,7 @@
   margin-bottom: 4vw;
 }
 
+/*Blog content*/
 .post {
   margin-bottom: 8vw;
   margin: auto;
@@ -36,6 +39,8 @@ p {
   font-weight: 500;
 }
 
+/*-------------------------------Author card-----------------------------*/
+
 .author {
   height: 170px;
   margin: auto;
@@ -43,6 +48,7 @@ p {
   margin-bottom: 6vw;
 }
 
+/*Author icon*/
 .authorLeft {
   display: inline-block;
   float: left;
@@ -57,6 +63,13 @@ p {
   width: 100%
 }
 
+.vivw_img {
+  height: auto;
+  transform: translate( -5%, -10%);
+  width: 120%;
+}
+
+/*Author details*/
 .authorRight {
   display: inline-block;
   float: right;
@@ -67,12 +80,6 @@ p {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   text-align: left;
-}
-
-.vivw_img {
-  height: auto;
-  transform: translate( -5%, -10%);
-  width: 120%;
 }
 
 .author-name {
