@@ -59,8 +59,8 @@ class FullBlogPosts extends Component {
                   </div>
                 </div>
                 <div class = "authorRight">
-                  <h3>Vivian Wong</h3>
-                  <h3 class = "position"> Education Executive </h3>
+                  <div class="title author-name">Vivian Wong</div>
+                  <div class = "position"> Education Executive </div>
                   <p> 20th May 2020 </p>
                 </div>
               </div>

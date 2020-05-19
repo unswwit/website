@@ -2,15 +2,14 @@
 import React, { Component } from "react";
 import "./style.css";
 import "./blogPosts.css";
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import FullBlogPosts from "./fullBlogPost"
 
 class BlogPosts extends Component {
   render() {
     return (
-        <div>
-          <Router>
-           <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet"/>
+            <div>
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet"/>
 
             {/*Start of Header*/}
             <div class="coverPhoto">
@@ -19,9 +18,10 @@ class BlogPosts extends Component {
                 </div>
             </div>
             {/*End of Header*/}
-
-            <NavLink to="/full-blog">
+           
             {/*Start of blog posts*/}
+            <Router>
+            <Link to="/blog-posts/1">
             <div class="blog-post" style={{marginTop: '10vw', marginBottom: '10vw'}}>
                 <table style={{ width: "911px", height: "325px"}}>
                 <tr>
@@ -57,11 +57,11 @@ class BlogPosts extends Component {
                 </tr>
                 </table>
             </div>
-            </NavLink>
+            </Link>
             {/*End of blog posts*/}
 
             <body>
-      				<Route path="/full-blog" component = {FullBlogPosts}/>
+      				<Route path="/blog-posts/1" component = {FullBlogPosts}/>
 
       			</body>
 

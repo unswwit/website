@@ -47,6 +47,11 @@ table {
     letter-spacing: 0.1vw;
     font-size: 24pt;
     font-family: Roboto;
+    text-decoration: none;
+}
+
+.heading:hover {
+    text-decoration: none;
 }
 
 .heading-2 {
@@ -55,5 +60,9 @@ table {
     font-size: 14pt;
     font-family: Roboto;
     font-weight: 300;
+}
+
+.heading-2:hover {
+    text-decoration: none;
 }
 
