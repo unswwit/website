@@ -1,25 +1,38 @@
-.blogTitle {
-  font-family: 'Playfair Dispaly', serif;
-  font-size: 5vw;
+.blog-content {
+  width: 950px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 6vw;
+}
+
+.blog-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 58px;
   letter-spacing: 8px;
   text-transform: uppercase;
   text-align: center;
   margin-top: 8vw;
-  margin-bottom: 3vw;
+  margin-bottom: 4vw;
 }
 
 .post {
-    margin: auto;
-    max-width: 65%;
-    margin-bottom: 8vw;
+  margin-bottom: 8vw;
+  margin: auto;
 }
 
-.post p {
-    color: #313638;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 11pt;
-    opacity: 70%;
-    text-align: justify;
+p {
+  color: #707070;
+  font-family: 'Roboto';
+  font-size: 14pt;
+  text-align: justify;
+}
+
+.post-content {
+  font-weight: 300;
+}
+
+.question {
+  font-weight: 500;
 }
 
 .author {
@@ -50,6 +63,12 @@
   padding: 0px 0px 0px 50px;
 
   width: 70%;
+}
+
+.vivw_img {
+  height: auto;
+  transform: translate( -5%, -10%);
+  width: 120%;
 }
 
 h3 {
