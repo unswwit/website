@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import "./style.css";
 import "./home.css";
 import "./fullBlogPost.css";
+import "./blogPosts.css";
 
 class FullBlogPosts extends Component {
     render() {
@@ -48,7 +49,16 @@ class FullBlogPosts extends Component {
 
               {/*for the blog post author*/}
               <div class = "author">
-                <div class = "authorLeft"> </div>
+                <div class = "authorLeft">
+                  <div> {/*note this div is necessary to formatting*/}
+                      <img
+                      src={process.env.PUBLIC_URL + "/potraits/kelly.png"}
+                      className="profile_img"
+                      alt="kelly-liang"
+                      resizeMode="contain"
+                      />
+                  </div>
+                </div>
                 <div class = "authorRight">
                   <h3> Blog Post Author </h3>
                   <h3 class = "position"> WIT Position if applicable </h3>

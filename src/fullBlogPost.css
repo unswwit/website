@@ -33,10 +33,14 @@
   display: inline-block;
   float: left;
   height: 150px;
-  background-color: salmon;
-  padding: 10px;
   width: 25%;
+}
 
+.authorLeft div {
+  border-radius: 50%;
+  height: 100%;
+  overflow: hidden;
+  width: 100%
 }
 
 .authorRight {
@@ -60,7 +64,7 @@ h3 {
 .position {
   margin-top: 30px;
   font-size: 1.2vw;
-  color: black;
+  color: #0F4C81;
 }
 
 .authorRight p {
