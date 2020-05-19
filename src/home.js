@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, NavLink } from "react-router-dom";
+import { BrowserRouter as NavLink } from "react-router-dom";
 import CountUp from 'react-countup';
 import "./home.css";
 

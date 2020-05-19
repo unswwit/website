@@ -1,0 +1,59 @@
+/*-------------------------------Blog posts page header-----------------------------*/
+/*Header image*/
+.coverPhoto {
+    background-image: url('/blog-header.png');
+    background-position: center bottom 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+/*Heading title*/
+.title h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5vw;
+    letter-spacing: 8px;
+    margin-top: 26vw;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+/*-------------------------------Blog post Landing Page-----------------------------*/
+/*Blog Details*/
+.author-pic {
+    border-radius: 50%;
+    height: 5vw;
+    overflow: hidden;
+    width: 5vw;
+    margin: 1vw;
+}
+
+table {
+    border: solid;
+    border-color: grey;
+    border-width: 2px;
+    margin: 0 auto;
+}
+
+.blog-preview {
+    padding: 2vw;
+}
+
+.heading {
+    color: #FEB14B;
+    letter-spacing: 0.1vw;
+    font-size: 24pt;
+    font-family: Roboto;
+}
+
+.heading-2 {
+    color: #707070;
+    letter-spacing: 0.1vw;
+    font-size: 14pt;
+    font-family: Roboto;
+    font-weight: 300;
+}
+

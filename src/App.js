@@ -10,6 +10,7 @@ import Sponsors from "./sponsors"
 import ContactUs from "./contactUs"
 import Footer from './footer'
 import OurTeam from "./team"
+import BlogPosts from "./blogPosts"
 
 class App extends Component{ 
   render(){
@@ -26,15 +27,16 @@ class App extends Component{
 						<li class="nav-item"><NavLink to="/">HOME</NavLink></li>
 						<li class="nav-item"><NavLink to="/our-team">TEAM</NavLink></li>
 						<li class="nav-item"><NavLink to="/sponsors">SPONSORS</NavLink></li>
+						<li class="nav-item"><NavLink to="/blog-posts">BLOG POSTS</NavLink></li>
 						<li class="nav-item"><NavLink to="/join-us">JOIN</NavLink></li>
 						<li class="nav-item"><NavLink to="/contact-us">CONTACT</NavLink></li>
 					</ul>
 				</div>
 			</nav>
-			
 			<body>
 				<Route exact path="/" component = {Home}/>
 				<Route path="/our-team" component = {OurTeam}/>
+				<Route path="/blog-posts" component = {BlogPosts}/>
 				<Route path="/join-us" component = {JoinUs}/>
 				<Route path="/sponsors" component = {Sponsors}/>
 				<Route path="/contact-us" component = {ContactUs}/>
