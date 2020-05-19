@@ -1,0 +1,23 @@
+.blogTitle {
+  font-family: 'Playfair Dispaly', serif;
+  font-size: 5vw;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 8vw;
+  margin-bottom: 3vw;
+}
+
+.post {
+    margin: auto;
+    max-width: 65%;
+    margin-bottom: 8vw;
+}
+
+.post p {
+    color: #313638;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11pt;
+    opacity: 70%;
+    text-align: justify;
+}

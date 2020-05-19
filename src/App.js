@@ -11,15 +11,16 @@ import ContactUs from "./contactUs"
 import Footer from './footer'
 import OurTeam from "./team"
 import BlogPosts from "./blogPosts"
+import FullBlogPosts from "./fullBlogPost"
 
-class App extends Component{ 
+class App extends Component{
   render(){
   return (
 	<div>
 		<Router>
 			<nav class="navbar navbar-expand-md navbar-dark bg-custom fixed-top justify-content-between">
 				<a class="navbar-brand" href="/">
-					<img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo" 
+					<img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo"
 						resizeMode='contain' style={{width: '35px'}} />
 				</a>
 				<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
@@ -30,6 +31,9 @@ class App extends Component{
 						<li class="nav-item"><NavLink to="/blog-posts">BLOG POSTS</NavLink></li>
 						<li class="nav-item"><NavLink to="/join-us">JOIN</NavLink></li>
 						<li class="nav-item"><NavLink to="/contact-us">CONTACT</NavLink></li>
+
+            {/*Remove the main link to full blog page after other links are finalised.*/}
+            <li class="nav-item"><NavLink to="/full-blog">FULL BLOG</NavLink></li>
 					</ul>
 				</div>
 			</nav>
@@ -40,6 +44,7 @@ class App extends Component{
 				<Route path="/join-us" component = {JoinUs}/>
 				<Route path="/sponsors" component = {Sponsors}/>
 				<Route path="/contact-us" component = {ContactUs}/>
+        <Route path="/full-blog" component = {FullBlogPosts}/>
 			</body>
 		</Router>
 	<div><Footer /></div>

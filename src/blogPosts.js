@@ -2,11 +2,14 @@
 import React, { Component } from "react";
 import "./style.css";
 import "./blogPosts.css";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import FullBlogPosts from "./fullBlogPost"
 
 class BlogPosts extends Component {
   render() {
     return (
         <div>
+          <Router>
            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet"/>
 
             {/*Start of Header*/}
@@ -17,6 +20,7 @@ class BlogPosts extends Component {
             </div>
             {/*End of Header*/}
 
+            <NavLink to="/full-blog">
             {/*Start of blog posts*/}
             <div class="blog-post" style={{marginTop: '10vw', marginBottom: '10vw'}}>
                 <table style={{ width: "911px", height: "325px"}}>
@@ -48,12 +52,20 @@ class BlogPosts extends Component {
                             </tr>
                         </td>
 
-                        
+
                     </tr>
                 </tr>
                 </table>
             </div>
+            </NavLink>
             {/*End of blog posts*/}
+
+            <body>
+      				<Route path="/full-blog" component = {FullBlogPosts}/>
+
+      			</body>
+
+          </Router>
         </div>
     );
   }
