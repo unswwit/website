@@ -21,3 +21,51 @@
     opacity: 70%;
     text-align: justify;
 }
+
+.author {
+  height: 170px;
+  margin: auto;
+  max-width: 40%;
+  margin-bottom: 6vw;
+}
+
+.authorLeft {
+  display: inline-block;
+  float: left;
+  height: 150px;
+  background-color: salmon;
+  padding: 10px;
+  width: 25%;
+
+}
+
+.authorRight {
+  display: inline-block;
+  float: right;
+  height: 170px;
+  padding: 0px 0px 0px 50px;
+
+  width: 70%;
+}
+
+h3 {
+  font-size: 1.8vw;
+  letter-spacing: 2px;
+  color: #feb14b;
+
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+}
+
+.position {
+  margin-top: 30px;
+  font-size: 1.2vw;
+  color: black;
+}
+
+.authorRight p {
+  font-family: 'Montserrat', sans-serif;
+  color: grey;
+  font-size: 1vw;
+  margin-top: 30px;
+}

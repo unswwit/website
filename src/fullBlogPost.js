@@ -46,8 +46,14 @@ class FullBlogPosts extends Component {
                     </p>
       				</div>
 
-              <div>
-
+              {/*for the blog post author*/}
+              <div class = "author">
+                <div class = "authorLeft"> </div>
+                <div class = "authorRight">
+                  <h3> Blog Post Author </h3>
+                  <h3 class = "position"> WIT Position if applicable </h3>
+                  <p> Date Published </p>
+                </div>
               </div>
               {/*End of blog posts*/}
           </div>
