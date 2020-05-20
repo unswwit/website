@@ -40,7 +40,6 @@ p {
 }
 
 /*-------------------------------Author card-----------------------------*/
-
 .author {
   height: 170px;
   margin: auto;
@@ -49,14 +48,14 @@ p {
 }
 
 /*Author icon*/
-.authorLeft {
+.author-left {
   display: inline-block;
   float: left;
   height: 150px;
   width: 25%;
 }
 
-.authorLeft div {
+.author-left div {
   border-radius: 50%;
   height: 100%;
   overflow: hidden;
@@ -70,7 +69,7 @@ p {
 }
 
 /*Author details*/
-.authorRight {
+.author-right {
   display: inline-block;
   float: right;
   padding: 0px 0px 0px 30px;
@@ -92,7 +91,7 @@ p {
   color: #0F4C81;
 }
 
-.authorRight p {
+.author-right p {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: #707070;

@@ -8,7 +8,7 @@ import "./blogPosts.css";
 class FullBlogPosts extends Component {
     render() {
       return (
-          <div>
+            <div>
               <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"/>
 
               {/*Start of Header*/}
@@ -48,7 +48,7 @@ class FullBlogPosts extends Component {
 
               {/*for the blog post author*/}
               <div class = "author">
-                <div class = "authorLeft">
+                <div class = "author-left">
                   <div> {/*note this div is necessary to formatting*/}
                     <img
                     src={process.env.PUBLIC_URL + "/potraits/vivw.jpg"}
@@ -58,14 +58,14 @@ class FullBlogPosts extends Component {
                     />
                   </div>
                 </div>
-                <div class = "authorRight">
+                <div class = "author-right">
                   <div class="title author-name">Vivian Wong</div>
                   <div class = "position"> Education Executive </div>
                   <p> 20th May 2020 </p>
                 </div>
               </div>
               {/*End of blog posts*/}
-          </div>
+            </div>
       );
     }
   }

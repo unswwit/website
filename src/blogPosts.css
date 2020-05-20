@@ -21,8 +21,8 @@
     text-align: center;
   }
 
-/*-------------------------------Blog post Landing Page-----------------------------*/
-/*Blog Details*/
+/*-------------------------------Blog post Preview-----------------------------*/
+/*Author circle crop*/
 .author-pic {
     border-radius: 50%;
     height: 5.5vw;
@@ -31,17 +31,14 @@
     margin: 1vw;
 }
 
+/*Author image*/
 .vivw_img {
     height: auto;
     transform: translate( -5%, -10%);
     width: 120%;
 }
 
-.pic-col {
-    background-color: black;
-    width: 5vw;
-}
-
+/*Post preview*/
 table {
     border: solid;
     border-color: grey;
