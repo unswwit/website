@@ -28,7 +28,8 @@
     height: 5.5vw;
     overflow: hidden;
     width: 5.5vw;
-    margin: 1vw;
+    margin-right: 1.5vw;
+    margin-left: 0px;
 }
 
 /*Author image*/
@@ -41,17 +42,17 @@
 /*Post preview*/
 table {
     border: solid;
-    border-color: grey;
-    border-width: 1px;
+    border-color: #a0a0a0;
+    border-width: 2px;
     margin: 0 auto;
 }
 
 .blog-preview {
-    padding: 1.5vw;
+    padding: 2vw;
 }
 
 .blog-details {
-    margin-top: 0.5vw;
+    margin-top: 1vw;
 }
 
 .heading {
