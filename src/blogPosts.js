@@ -23,7 +23,7 @@ class BlogPosts extends Component {
             <Router>
             <Link class="blog-link" to="/blog-posts/1">
             <div class="blog-post" style={{marginTop: '10vw', marginBottom: '10vw'}}>
-                <table style={{ width: "950px", height: "350px"}}>
+                <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
                 <tr>
                     <tr>
                         <td>
