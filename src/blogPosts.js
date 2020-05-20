@@ -2,8 +2,6 @@
 import React, { Component } from "react";
 import "./style.css";
 import "./blogPosts.css";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import FullBlogPosts from "./fullBlogPost";
 
 class BlogPosts extends Component {
   render() {
@@ -20,7 +18,6 @@ class BlogPosts extends Component {
             {/*End of Header*/}
            
             {/*Start of blog posts*/}
-            <Router>
             <div onClick={()=> window.open("/blog-posts/1", "_blank")} class="blog-post" style={{marginTop: "10vw", marginBottom: "10vw"}}>
                 <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
                 <tr>
@@ -64,8 +61,6 @@ class BlogPosts extends Component {
                 </table>
             </div>
             {/*End of blog posts*/}
-            <Route path="/blog-posts/1" component={FullBlogPosts}/>
-          </Router>
         </div>
     );
   }
