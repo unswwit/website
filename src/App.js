@@ -36,11 +36,11 @@ class App extends Component{
 			<body>
 				<Route exact path="/" component = {Home}/>
 				<Route path="/our-team" component = {OurTeam}/>
-				<Route path="/blog-posts" component = {BlogPosts}/>
+				<Route exact path="/blog-posts" component = {BlogPosts}/>
 				<Route path="/join-us" component = {JoinUs}/>
 				<Route path="/sponsors" component = {Sponsors}/>
 				<Route path="/contact-us" component = {ContactUs}/>
-				<Route path="/blog-posts-1" component={FullBlogPosts}/>
+				<Route path="/blog-posts/1" component={FullBlogPosts}/>
 			</body>
 		</Router>
 	<div><Footer /></div>

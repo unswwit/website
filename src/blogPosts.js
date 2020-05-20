@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import "./style.css";
 import "./blogPosts.css";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import FullBlogPosts from "./fullBlogPost";
 
 class BlogPosts extends Component {
@@ -21,8 +21,7 @@ class BlogPosts extends Component {
            
             {/*Start of blog posts*/}
             <Router>
-            {/*<Link class="blog-link" to="/blog-posts/1">*/}
-            <div onClick={()=> window.open("/blog-posts-1", "_blank")} class="blog-post" style={{marginTop: "10vw", marginBottom: "10vw"}}>
+            <div onClick={()=> window.open("/blog-posts/1", "_blank")} class="blog-post" style={{marginTop: "10vw", marginBottom: "10vw"}}>
                 <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
                 <tr>
                     <tr>
@@ -64,9 +63,8 @@ class BlogPosts extends Component {
                 </tr>
                 </table>
             </div>
-            {/*</Link>*/}
             {/*End of blog posts*/}
-            <Route path="/blog-posts-1" component={FullBlogPosts}/>
+            <Route path="/blog-posts/1" component={FullBlogPosts}/>
           </Router>
         </div>
     );
