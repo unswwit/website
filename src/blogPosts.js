@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import "./style.css";
 import "./blogPosts.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import FullBlogPosts from "./fullBlogPost"
+import FullBlogPosts from "./fullBlogPost";
 
 class BlogPosts extends Component {
   render() {
@@ -21,13 +21,13 @@ class BlogPosts extends Component {
            
             {/*Start of blog posts*/}
             <Router>
-            <Link class="blog-link" to={`/blog-posts/:1`}>
-            <div class="blog-post" style={{marginTop: '10vw', marginBottom: '10vw'}}>
+            {/*<Link class="blog-link" to="/blog-posts/1">*/}
+            <div onClick={()=> window.open("/blog-posts-1", "_blank")} class="blog-post" style={{marginTop: "10vw", marginBottom: "10vw"}}>
                 <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
                 <tr>
                     <tr>
                         <td>
-                            <img src={process.env.PUBLIC_URL + '/blog_preview.jpg'} alt="preview" style={{width:"550px", height: "350px"}}/>
+                            <img src={process.env.PUBLIC_URL + "/blog_preview.jpg"} alt="preview" style={{width:"550px", height: "350px"}}/>
                         </td>
 
                         <td class= "blog-preview">
@@ -43,16 +43,16 @@ class BlogPosts extends Component {
                                     </div>
                                 </td>
                                 <td style={{width: "200px"}}>
-                                    <div class='heading'>Vivian Wong</div>
-                                    <div class='subheading'>20/05/2020</div>
+                                    <div class="heading">Vivian Wong</div>
+                                    <div class="subheading">20/05/2020</div>
                                 </td>
                             </tr>
                             
                             <div class="blog-details">
-                                <div class='heading'>
+                                <div class="heading">
                                     Introducing: Silvia Lin, Senior Consultant of PWC and WIT Co-founder
                                 </div>
-                                <div class='subheading'>
+                                <div class="subheading">
                                     Learn more about our co-founder and now PWC Senior Consultant Silvia Lin and her journey into technology!
                                 </div>
                             </div>
@@ -64,9 +64,9 @@ class BlogPosts extends Component {
                 </tr>
                 </table>
             </div>
-            </Link>
+            {/*</Link>*/}
             {/*End of blog posts*/}
-            <Route path={`/blog-posts/:1`} component={FullBlogPosts}/>
+            <Route path="/blog-posts-1" component={FullBlogPosts}/>
           </Router>
         </div>
     );
