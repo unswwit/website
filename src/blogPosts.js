@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import "./style.css";
 import "./blogPosts.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import FullBlogPosts from "./fullBlogPost";
 
 class BlogPosts extends Component {
   render() {
@@ -65,7 +66,9 @@ class BlogPosts extends Component {
             </div>
             </Link>
             {/*End of blog posts*/}
-          </Router>
+         
+          <Route path="/blog-posts/1" component={FullBlogPosts}/>
+           </Router>
         </div>
     );
   }
