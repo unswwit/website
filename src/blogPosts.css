@@ -25,10 +25,21 @@
 /*Blog Details*/
 .author-pic {
     border-radius: 50%;
-    height: 5vw;
+    height: 5.5vw;
     overflow: hidden;
-    width: 5vw;
+    width: 5.5vw;
     margin: 1vw;
+}
+
+.vivw_img {
+    height: auto;
+    transform: translate( -5%, -10%);
+    width: 120%;
+}
+
+.pic-col {
+    background-color: black;
+    width: 5vw;
 }
 
 table {
@@ -39,30 +50,35 @@ table {
 }
 
 .blog-preview {
-    padding: 2vw;
+    padding: 1.5vw;
+}
+
+.blog-details {
+    margin-top: 0.5vw;
 }
 
 .heading {
     color: #FEB14B;
     letter-spacing: 0.1vw;
-    font-size: 24pt;
+    font-size: 16pt;
     font-family: Roboto;
     text-decoration: none;
+    margin-bottom: 10px;
 }
 
 .heading:hover {
     text-decoration: none;
 }
 
-.heading-2 {
+.subheading {
     color: #707070;
     letter-spacing: 0.1vw;
-    font-size: 14pt;
+    font-size: 11pt;
     font-family: Roboto;
     font-weight: 300;
 }
 
-.heading-2:hover {
+.blog-link:hover {
     text-decoration: none;
 }
 

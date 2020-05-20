@@ -21,35 +21,42 @@ class BlogPosts extends Component {
            
             {/*Start of blog posts*/}
             <Router>
-            <Link to="/blog-posts/1">
+            <Link class="blog-link" to="/blog-posts/1">
             <div class="blog-post" style={{marginTop: '10vw', marginBottom: '10vw'}}>
-                <table style={{ width: "911px", height: "325px"}}>
+                <table style={{ width: "950px", height: "350px"}}>
                 <tr>
                     <tr>
                         <td>
-                            <img src={process.env.PUBLIC_URL + '/blog_preview.jpg'} alt="preview" style={{width:"600px", height: "380px"}}/>
+                            <img src={process.env.PUBLIC_URL + '/blog_preview.jpg'} alt="preview" style={{width:"550px", height: "350px"}}/>
                         </td>
 
                         <td class= "blog-preview">
-                            <td>
-                                <div class="author-pic">
+                            <tr>
+                                <td>
+                                    <div class="author-pic">
                                     <img
-                                    src={process.env.PUBLIC_URL + "/potraits/kelly.png"}
-                                    className="profile_img"
-                                    alt="kelly-liang"
+                                    src={process.env.PUBLIC_URL + "/potraits/vivw.jpg"}
+                                    className="profile_img vivw_img"
+                                    alt="vivian-wong"
                                     resizeMode="contain"
                                     />
-                                </div>
-                            </td>
-
-                            <td>
-                                <div class='heading'>Author</div>
-                                <div class='heading-2'>Date Published</div>
-                            </td>
-                            <tr>
-                            <div class='heading'>Title</div>
-                            <div class='heading-2'>description</div>
+                                    </div>
+                                </td>
+                                <td style={{width: "200px"}}>
+                                    <div class='heading'>Vivian Wong</div>
+                                    <div class='subheading'>20/05/2020</div>
+                                </td>
                             </tr>
+                            
+                            <div class="blog-details">
+                                <div class='heading'>
+                                    Introducing: Silvia Lin, Senior Consultant of PWC and WIT Co-founder
+                                </div>
+                                <div class='subheading'>
+                                    Learn more about our co-founder and now PWC Senior Consultant Silvia Lin and her journey into technology!
+                                </div>
+                            </div>
+                               
                         </td>
 
 
@@ -61,9 +68,8 @@ class BlogPosts extends Component {
             {/*End of blog posts*/}
 
             <body>
-      				<Route path="/blog-posts/1" component = {FullBlogPosts}/>
-
-      			</body>
+      			<Route path="/blog-posts/1" component = {FullBlogPosts}/>
+      		</body>
 
           </Router>
         </div>
