@@ -10,7 +10,7 @@ import ContactUs from "./contactUs";
 import Footer from "./footer";
 import OurTeam from "./team";
 import BlogPosts from "./blogPosts";
-import FullBlogPosts from "./fullBlogPost";
+
 
 class App extends Component{
   render(){
@@ -36,11 +36,10 @@ class App extends Component{
 			<body>
 				<Route exact path="/" component = {Home}/>
 				<Route path="/our-team" component = {OurTeam}/>
-				<Route exact path="/blog-posts" component = {BlogPosts}/>
+				<Route path="/blog-posts" component = {BlogPosts}/>
 				<Route path="/join-us" component = {JoinUs}/>
 				<Route path="/sponsors" component = {Sponsors}/>
 				<Route path="/contact-us" component = {ContactUs}/>
-				<Route path="/blog-posts/1" component={FullBlogPosts}/>
 			</body>
 		</Router>
 	<div><Footer /></div>
