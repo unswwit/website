@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import logo from './logo.svg';
 import './App.css';
 import './style.css';
 import Home from "./home"
@@ -11,7 +10,6 @@ import ContactUs from "./contactUs"
 import Footer from './footer'
 import OurTeam from "./team"
 import BlogPosts from "./blogPosts"
-import FullBlogPosts from "./fullBlogPost"
 
 class App extends Component{
   render(){
@@ -31,9 +29,6 @@ class App extends Component{
 						<li class="nav-item"><NavLink to="/blog-posts">BLOG POSTS</NavLink></li>
 						<li class="nav-item"><NavLink to="/join-us">JOIN</NavLink></li>
 						<li class="nav-item"><NavLink to="/contact-us">CONTACT</NavLink></li>
-
-            {/*Remove the main link to full blog page after other links are finalised.*/}
-            <li class="nav-item"><NavLink to="/full-blog">FULL BLOG</NavLink></li>
 					</ul>
 				</div>
 			</nav>
@@ -44,7 +39,6 @@ class App extends Component{
 				<Route path="/join-us" component = {JoinUs}/>
 				<Route path="/sponsors" component = {Sponsors}/>
 				<Route path="/contact-us" component = {ContactUs}/>
-        <Route path="/full-blog" component = {FullBlogPosts}/>
 			</body>
 		</Router>
 	<div><Footer /></div>

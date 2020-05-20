@@ -21,7 +21,7 @@ class BlogPosts extends Component {
            
             {/*Start of blog posts*/}
             <Router>
-            <Link class="blog-link" to="/blog-posts/1">
+            <Link class="blog-link" to={`/blog-posts/:1`}>
             <div class="blog-post" style={{marginTop: '10vw', marginBottom: '10vw'}}>
                 <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
                 <tr>
@@ -66,11 +66,7 @@ class BlogPosts extends Component {
             </div>
             </Link>
             {/*End of blog posts*/}
-
-            <body>
-      			<Route path="/blog-posts/1" component = {FullBlogPosts}/>
-      		</body>
-
+            <Route path={`/blog-posts/:1`} component={FullBlogPosts}/>
           </Router>
         </div>
     );
