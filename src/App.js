@@ -11,6 +11,7 @@ import Footer from "./footer";
 import OurTeam from "./team";
 import BlogPosts from "./blogPosts";
 import FullBlogPosts from "./fullBlogPost";
+import Publications from "./publications";
 
 class App extends Component{
   render(){
@@ -30,6 +31,7 @@ class App extends Component{
 						<li class="nav-item"><NavLink to="/blog-posts">BLOG POSTS</NavLink></li>
 						<li class="nav-item"><NavLink to="/join-us">JOIN</NavLink></li>
 						<li class="nav-item"><NavLink to="/contact-us">CONTACT</NavLink></li>
+            <li class="nav-item"><NavLink to="/publications">PUBLICATIONS</NavLink></li>
 					</ul>
 				</div>
 			</nav>
@@ -40,7 +42,8 @@ class App extends Component{
 				<Route path="/join-us" component = {JoinUs}/>
 				<Route path="/sponsors" component = {Sponsors}/>
 				<Route path="/contact-us" component = {ContactUs}/>
-	  			<Route path="/blog-posts/1" component={FullBlogPosts}/>
+	  		<Route path="/blog-posts/1" component={FullBlogPosts}/>
+        <Route path="/publications" component={Publications}/>
 			</body>
 		</Router>
 	<div><Footer /></div>
