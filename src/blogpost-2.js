@@ -14,7 +14,7 @@ class FullBlogPosts extends Component {
               {/*Start of Header*/}
               <div class="coverPhoto">
                   <div class="title">
-                      <h1>Blog Posts #1</h1>
+                      <h1>Blog Posts #2</h1>
                   </div>
               </div>
 
@@ -22,27 +22,20 @@ class FullBlogPosts extends Component {
 
               {/*Start of blog post*/}
               <div class="blog-content">
-                <div><h3 class = "blog-title">Introducing: Silvia Lin, Senior Consultant of PWC and WIT Co-founder</h3></div>
+                <div><h3 class = "blog-title">Introducing: Professor Lisa Harvey Smith, Astrophysicist and Australia’s First Women In STEM Ambassador</h3></div>
 
                 <div class="post">
-                    <p class="post-content"> Silva’s passionate about three things: technology, solving problems, and educating women about the opportunities in technology. Her passions collide in her role as a senior consultant of the SuccessFactors Team at PwC Australia. With a keen understanding of her client’s strategic business objectives and the feasibility of system design, she thrives in creating solutions for clients that allow them to operate more efficiently.</p><br/>
+                    <p class="post-content">British-Australian astrophysicist Lisa Harvey Smith discovered her love of astronomy whilst homeschooling herself at the age 11. Soon after, she joined her first amateur astronomical society. Her love for astronomy, which she describes as “ridiculous” guided her educational pursuits. By age 26, she had already earned a Ph.D. in Radio Astronomy. Her work on the SKA Pathfinder telescope led to the discovery of tens of millions of new galaxies. And if solving the mysteries of the universe isn’t enough, in 2018, she was appointed the Australian Government Ambassador for Women in STEM.</p><br/>
 
-                    <p class="post-content">Let’s read what Silvia had to say about her journey into tech below </p>
+                    <p class="post-content">Dr. Harvey shares astronomical concepts with women in ways that are interesting and accessible. She explains her reason for being a science communicator and educator instead of a traditional teacher is because: “I wanted to use my creativity rather than teach in a confined setting – that’s what I love about science communication, the creative aspect. The challenge of breaking out of my science niche and cutting through the jargon and explaining these cool concepts. I find it challenging and engaging and I love watching people’s faces as the penny drops.”</p><br/>
 
-                    <p class="question"> 1) What sparked your interest to join the field of STEM? </p>
-                    <p class="post-content"> I definitely "stumbled" into the field of STEM, it was never an area quite popular in highschool when we are picking our future degrees. I was introduced to it as part of the Co-op program and just went with it since I didn't know what to do. Mind you I definitely struggled in my first year of studying tech, I definitely thought I was the odd one out, was struggling to understand basic concepts of SQL and was prepared to quit and leave it all behind. I definitely think the turning point was meeting Blair, who gave me a personalised presentation slides of why I/women should stay in tech and the Info systems support circle that really opened my eyes about the opportunities in tech. I definitely would not have lasted my first year of uni without any of them. Once you enter the industry you realise how many awesome opportunities there are, and that there is definitely a role for everyone regardless what background you come from. It's not just all coding, or all project management. There's a happy space for everyone.</p><br/>
+                    <p class="post-content">If Dr. Harvey had to be described in one word, it would be ambitious. When she’s not conducting astronomical research and sharing her love of astronomy with others, she’s advocating for women in the workplace. In her 10-year plan for Women in STEM, she urges the need to accelerate the pace of change in reducing the gender pay gap for women. In her address to the National Press Club in 2019, she warned that it will take more than 200 years to close the gap at the current rate of progress. Her research on unconscious bias in the workplace and her advocacy has already led to improvements in the hiring process. Companies are now removing gendered pronouns in applications so that more women will receive research grants and job opportunities.</p><br/>
 
-                    <p class="question">2) Please provide a short summary of your career journey so far:</p>
-                    <p class="post-content">I have been quite fortunate in working at several amazing places within the tech industry. I started off a planning and research analyst at the Reserve Bank of Australia, before trying out the Cyber security space in IAG. I then interned at PwC's Experience and Insights Team and gave a shot at strategy consulting at Deloitte's S&I team. I am now a senior consultant in PwC's Technology Consulting team, specifically in the SuccessFactors team.</p><br/>
+                    <p class="post-content">Currently, women make up only 17% of the STEM qualified population in Australia. Professor Harvey Smith advises that it is the responsibility of students, educators, parents, and businesses to encourage, promote, and raise awareness for all women in STEM. As an author for young children, her wish is for young girls to see smart and empowering female leaders involved in science and technology and feel a part of the STEM community. She urges, “Instead of asking girls what the colour of the flower is, ask how many flowers there are.” By encouraging young females to think mathematically and scientifically, she believes more females will seek careers in STEM and gender equity will become the norm.</p><br/>
 
-                    <p class="question">3) Where do you see yourself in the future (career wise)?</p>
-                    <p class="post-content">Absolutely no idea! I think over the years I have realised certain aspects I enjoy, and that is I like to help people and clearly see that my work is contributing to a good cause. I am always learning regardless where I end up, so I try not to aim for a "final destination", rather I think about what other areas I can learn from. I definitely do want to move to another country just to understand how the tech industry is like in another geographic region. </p><br/>
+                    <p class="post-content">Professor Lisa Harvey Smith shows us that successful females not only have love, determination and exploration for their own fields, but they also make time to encourage women in STEM.</p><br/>
 
-                    <p class="question">4) What do you love about your career now?</p>
-                    <p class="post-content"> I love how I get to try out a variety of roles and work with different industries. What was really interesting for me was that I was the second member of the SuccessFactors team alongside my director, and really I got to help build the team and work with some amazing people - Kudos to Lynsye. Everyday I am not stuck at a routine, yes sometimes certain days are tougher than others, but it certainly makes it enjoyable when you see the impact your work has to make your client's job run more efficiently and effectively and by extension helping support our society. </p><br/>
-
-                    <p class="question">5) Favourite Quote or Motto?</p>
-                    <p class="post-content">"Do it for yourself, not to prove to others" - Dr Carmen Leong</p>
+                    <p class="post-content">Professor Lisa Harvey Smith is currently the Professor of Practice at UNSW.</p><br/>
                 </div>
             </div>
 
@@ -59,9 +52,9 @@ class FullBlogPosts extends Component {
                   </div>
                 </div>
                 <div class = "author-right">
-                  <div class="title author-name">Vivian Wong</div>
+                  <div class="title author-name">Victoria Ruming and Elisa Sanjurjo</div>
                   <div class = "position"> Education Executive </div>
-                  <p> 20th May 2020 </p>
+                  <p> 26th May 2020 </p>
                 </div>
               </div>
               {/*End of blog posts*/}
