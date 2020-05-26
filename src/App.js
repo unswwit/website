@@ -11,6 +11,7 @@ import Footer from "./footer";
 import OurTeam from "./team";
 import BlogPosts from "./blogPosts";
 import FullBlogPosts from "./fullBlogPost";
+import blogPost2 from "./blogpost-2";
 
 class App extends Component{
   render(){
@@ -42,6 +43,7 @@ class App extends Component{
 					<Route path="/sponsors" component = {Sponsors}/>
 					<Route path="/contact-us" component = {ContactUs}/>
 					<Route path="/blog-posts/1" component={FullBlogPosts}/>
+					<Route path="/blog-posts/2" component={blogPost2}/>
 				</Switch>				
 			</body>
 		</Router>

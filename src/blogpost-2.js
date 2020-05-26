@@ -5,7 +5,7 @@ import "./home.css";
 import "./fullBlogPost.css";
 import "./blogPosts.css";
 
-class FullBlogPosts extends Component {
+class blogPost2 extends Component {
     render() {
       return (
             <div>
@@ -44,7 +44,7 @@ class FullBlogPosts extends Component {
                 <div class = "author-left">
                   <div> {/*note this div is necessary to formatting*/}
                     <img
-                    src={process.env.PUBLIC_URL + "/potraits/vivw.jpg"}
+                    src={process.env.PUBLIC_URL + "/potraits/elisa.jpg"}
                     className="profile_img vivw_img"
                     alt="vivian-wong"
                     resizeMode="contain"
@@ -53,8 +53,8 @@ class FullBlogPosts extends Component {
                 </div>
                 <div class = "author-right">
                   <div class="title author-name">Victoria Ruming and Elisa Sanjurjo</div>
-                  <div class = "position"> Education Executive </div>
-                  <p> 26th May 2020 </p>
+                  <div class = "position"> Education Team </div>
+                  <p> 27th May 2020 </p>
                 </div>
               </div>
               {/*End of blog posts*/}
@@ -62,4 +62,4 @@ class FullBlogPosts extends Component {
       );
     }
   }
-  export default FullBlogPosts;
+  export default blogPost2;
