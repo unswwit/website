@@ -113,11 +113,10 @@ footer {
 
 .footer-links {
     list-style-type: none;
-    align: center;
     margin: 20px auto;
     padding: 0;
     align-self: center;
-    width: 54%;
+    width: 65%;
 }
 
 .footer-item {

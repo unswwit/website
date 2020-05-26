@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import CountUp from 'react-countup';
 import "./home.css";
 
@@ -15,9 +15,9 @@ class Home extends Component{
 						<h1>Women In</h1>
 						<h1>Technology</h1>
 						<p> Empowering and inspiring the architects of change</p>
-						<NavLink to="/join-us">
+						<Link to="/join-us">
 							<button class="button btn-join">Join Us</button>
-						</NavLink>
+						</Link>
 					</div>
 				</div>
 				{/*End of Header*/}

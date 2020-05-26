@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Route, NavLink, Switch } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './style.css';
@@ -34,13 +34,15 @@ class App extends Component{
 				</div>
 			</nav>
 			<body>
-				<Route exact path="/" component = {Home}/>
-				<Route path="/our-team" component = {OurTeam}/>
-				<Route path="/blog-posts" component = {BlogPosts}/>
-				<Route path="/join-us" component = {JoinUs}/>
-				<Route path="/sponsors" component = {Sponsors}/>
-				<Route path="/contact-us" component = {ContactUs}/>
-	  			<Route path="/blog-posts/1" component={FullBlogPosts}/>
+				<Switch>
+					<Route exact path="/" component = {Home}/>
+					<Route path="/our-team" component = {OurTeam}/>
+					<Route exact path="/blog-posts" component = {BlogPosts}/>
+					<Route path="/join-us" component = {JoinUs}/>
+					<Route path="/sponsors" component = {Sponsors}/>
+					<Route path="/contact-us" component = {ContactUs}/>
+					<Route path="/blog-posts/1" component={FullBlogPosts}/>
+				</Switch>				
 			</body>
 		</Router>
 	<div><Footer /></div>

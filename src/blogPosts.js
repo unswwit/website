@@ -2,14 +2,12 @@
 import React, { Component } from "react";
 import "./style.css";
 import "./blogPosts.css";
-import { BrowserRouter as Router, Route,Link } from "react-router-dom";
-import FullBlogPosts from "./fullBlogPost";
+import { Link } from "react-router-dom";
 
 class BlogPosts extends Component {
   render() {
     return (
-            <div>
-            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet"/>
+        <div>
 
             {/*Start of Header*/}
             <div class="coverPhoto">
@@ -20,9 +18,9 @@ class BlogPosts extends Component {
             {/*End of Header*/}
            
             {/*Start of blog posts*/}
-            <Router>
-            <Link class="blog-link" target="_blank" to="/blog-posts/1">
+            <Link to="/blog-posts/1">
             <div class="blog-post" style={{marginTop: "10vw", marginBottom: "10vw"}}>
+                
                 <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
                 <tr>
                     <tr>
@@ -58,17 +56,12 @@ class BlogPosts extends Component {
                             </div>
                                
                         </td>
-
-
                     </tr>
                 </tr>
                 </table>
             </div>
             </Link>
             {/*End of blog posts*/}
-         
-          <Route path="/blog-posts/1" component={FullBlogPosts}/>
-           </Router>
         </div>
     );
   }
