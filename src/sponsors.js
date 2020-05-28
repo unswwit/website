@@ -7,9 +7,8 @@ import Atlassian from "./sponsors/Atlassian";
 import Baraja from "./sponsors/Baraja";
 import Commonwealth from "./sponsors/Commonwealth";
 import Deloitte from "./sponsors/Deloitte";
-import DXC from "./sponsors/DXC";
 import EY from "./sponsors/EY";
-import Fairfax from "./sponsors/Fairfax";
+import Nine from "./sponsors/Nine";
 import Google from "./sponsors/Google";
 import LendLease from "./sponsors/Lendlease";
 import McGrathNicol from "./sponsors/McGrathNicol";
@@ -45,23 +44,22 @@ class Sponsors extends React.Component {
                 <div id="majorContainer">
                     <Amazon/>
                     <Atlassian/>
-                    <Baraja/>
                 </div>
 
                 <div id="majorContainer">
+                    <Baraja/>
                     <Commonwealth/>
                     <Deloitte/>
-                    <DXC/>
                 </div>
 
                 <div id="majorContainer">
                     <EY/>
-                    <Fairfax/>
                     <Google/>
+                    <McGrathNicol/>
                 </div>
 
                 <div id="majorContainer">
-                    <McGrathNicol/>
+                    <Nine/>
                     <Quantium/>
                 </div>
 

@@ -12,7 +12,7 @@ class Footer extends Component{
                         <li class="footer-item"><a href="/">Home</a></li>
                         <li class="footer-item"><a href="/our-team">Team </a></li>
                         <li class="footer-item"><a href="/sponsors">Sponsors </a></li>
-                        <li class="footer-item"><a href="/blog-posts">Blog Posts </a></li>
+                        <li class="footer-item"><a href="/blog-posts">Blog </a></li>
                         <li class="footer-item"><a href="/join-us">Join </a></li>
                         <li class="footer-item"><a href="/contact-us">Contact</a></li>
                         <li class="footer-item"><a href="https://www.linkedin.com/company/unsw-women-in-technology"><img src={process.env.PUBLIC_URL + '/linkedin.png'} className="" alt="banner" resizeMode='contain'

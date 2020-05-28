@@ -169,7 +169,7 @@ div .headline{
 }
 
 /*Big event image size*/
-.event-1 > img {
+.event-1 img {
     object-fit: cover;
     width: 100%;
 }
@@ -181,7 +181,7 @@ div .headline{
 }
 
 /*Small event image size*/
-.event-2 > img {
+.event-2 img {
     object-fit: cover;
     width: 100%;
 }
