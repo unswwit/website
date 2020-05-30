@@ -1,22 +1,89 @@
 import React from 'react'
 
 import "./publications.css"
-import "./joinUs.css"
 
 class Publications extends React.Component {
     render() {
         return (
             <div>
-                <div className="joinUsHeader">
+                <div className="publicationsHeader">
                     {/* Cover Photo */}
                     {/* Main Title, and Subtitle Area */}
                         <div className="title_area">
                             <h1 className="centre">Publications</h1>
                         </div>
                 </div>
-                <div className = 'joinUsBody'>
-                    <p> text here </p>
+                <div className = "publicationsBody">
+                  {/*2020 articles*/}
 
+                    <h1>2020</h1>
+
+                    <div className = "row">
+
+                      <div className = "article">
+                        <div className = "defaultImage"> </div>
+                        <h2> Title </h2>
+                        <p> Date Published </p> {/*Change this to add functionality*/}
+                        <div className = "button">
+                          <h3> Read </h3>
+                        </div>
+                      </div>
+
+                      <div className = "article">
+                        <div className = "defaultImage"> </div>
+                        <h2> Title </h2>
+                        <p> Date Published </p> {/*Change this to add functionality*/}
+                        <div className = "button">
+                          <h3> Read </h3>
+                        </div>
+                      </div>
+
+                      <div className = "article">
+                        <div className = "defaultImage"> </div>
+                        <h2> Title </h2>
+                        <p> Date Published </p> {/*Change this to add functionality*/}
+                        <div className = "button">
+                          <h3> Read </h3>
+                        </div>
+                      </div>
+
+                    </div>
+
+
+                    {/*2019 articles*/}
+
+                      <h1>2019</h1>
+
+                      <div className = "row">
+
+                        <div className = "article">
+                          <div className = "defaultImage"> </div>
+                          <h2> Title </h2>
+                          <p> Date Published </p> {/*Change this to add functionality*/}
+                          <div className = "button">
+                            <h3> Read </h3>
+                          </div>
+                        </div>
+
+                        <div className = "article">
+                          <div className = "defaultImage"> </div>
+                          <h2> Title </h2>
+                          <p> Date Published </p> {/*Change this to add functionality*/}
+                          <div className = "button">
+                            <h3> Read </h3>
+                          </div>
+                        </div>
+
+                        <div className = "article">
+                          <div className = "defaultImage"> </div>
+                          <h2> Title </h2>
+                          <p> Date Published </p> {/*Change this to add functionality*/}
+                          <div className = "button">
+                            <h3> Read </h3>
+                          </div>
+                        </div>
+
+                      </div>
 
                 </div>
             </div>

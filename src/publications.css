@@ -1,0 +1,89 @@
+
+/*------------------------------Publications header--------------------------------*/
+/*Header image*/
+.publicationsHeader {
+  background-image: url('/join-header-1.png');
+  /* TODO: change above header image */
+  background-position: center bottom 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/*Heading title*/
+.title_area h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 5vw;
+  letter-spacing: 8px;
+  margin-top: 26vw;
+  text-transform: uppercase;
+}
+
+/*-------------------------------Join us socials------------------------------*/
+/*Body block*/
+.publicationsBody {
+    max-width: 65%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.row {
+  height: 500px;
+}
+
+/*Right side block*/
+.article {
+    display: inline-block;
+    width: 33.33%;
+    height: 500px;
+    text-align: left;
+    padding: 0px 10px 0px 10px;
+    /*border-width: 3px;
+    border-style: solid;
+    border-color: lightgrey;*/
+}
+
+.article h2 {
+  text-transform: capitalize;
+  text-align: left;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+  font-size: 3.3vw;
+}
+
+.article p {
+  font-size: 20px;
+  color: #313638;
+  font-family: 'Montserrat', sans-serif;
+  opacity: 70%;
+
+
+}
+
+.defaultImage {
+    background-image: url('/blog-header.png');
+    background-size: 500px 300px;
+    width: 100%;
+    display: inline-block;
+    height: 280px;
+    margin-bottom: 15px;
+}
+
+/*read only button, channge for functionality*/
+.button {
+  background-color: orange;
+  height: 40px;
+  width: 100px;
+  padding-left: 10%;
+}
+
+.button h3 {
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
