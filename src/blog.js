@@ -99,7 +99,7 @@ class Blog extends Component {
                                     Introducing: Professor Lisa Harvey Smith, Astrophysicist and Australia’s First Women In STEM Ambassador
                                 </div>
                                 <div class="subheading">
-                                    In our blog, we elaborate on Professor Harvey- Smith’s experiences, influential nature and numerous achievements proving that women in the tech industry are NOT to be underestimated 💪
+                                    We elaborate on Professor Harvey Smith’s experiences, influential nature and numerous achievements proving that women in the tech industry are NOT to be underestimated.
                                 </div>
                             </div>
 
@@ -144,7 +144,7 @@ class Blog extends Component {
                                     4 Lessons From Marissa Mayer's Life in Tech
                                 </div>
                                 <div class="subheading">
-                                    In this week’s blog we take a look at 4 lessons we can learn from her amazing life, and how she continues to redefine technology as we know it today.
+                                    Take a look at 4 lessons we can learn from Marissa's amazing life, and how she continues to redefine technology as we know it today.
                                 </div>
                             </div>
 
