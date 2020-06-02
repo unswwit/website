@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, NavLink, Switch } from "react-router-dom";
+import { HashRouter, Route, NavLink, Switch } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './style.css';
@@ -9,15 +9,15 @@ import Sponsors from "./sponsors";
 import ContactUs from "./contactUs";
 import Footer from "./footer";
 import OurTeam from "./team";
-import BlogPosts from "./blogPosts";
-import FullBlogPosts from "./fullBlogPost";
-import blogPost2 from "./blogpost-2";
+import Blog from "./blog";
+import blogPost1 from "./blog-post/blog-post-1";
+import blogPost2 from "./blog-post/blog-post-2";
 
 class App extends Component{
   render(){
   return (
 	<div>
-		<Router>
+		<HashRouter basename="/">
 			<nav class="navbar navbar-expand-md navbar-dark bg-custom fixed-top justify-content-between">
 				<a class="navbar-brand" href="/">
 					<img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo"
@@ -28,7 +28,7 @@ class App extends Component{
 						<li class="nav-item"><NavLink to="/">HOME</NavLink></li>
 						<li class="nav-item"><NavLink to="/our-team">TEAM</NavLink></li>
 						<li class="nav-item"><NavLink to="/sponsors">SPONSORS</NavLink></li>
-						<li class="nav-item"><NavLink to="/blog-posts">BLOG</NavLink></li>
+						<li class="nav-item"><NavLink to="/blog">BLOG</NavLink></li>
 						<li class="nav-item"><NavLink to="/join-us">JOIN</NavLink></li>
 						<li class="nav-item"><NavLink to="/contact-us">CONTACT</NavLink></li>
 					</ul>
@@ -38,15 +38,15 @@ class App extends Component{
 				<Switch>
 					<Route exact path="/" component = {Home}/>
 					<Route path="/our-team" component = {OurTeam}/>
-					<Route exact path="/blog-posts" component = {BlogPosts}/>
+					<Route exact path="/blog" component = {Blog}/>
 					<Route path="/join-us" component = {JoinUs}/>
 					<Route path="/sponsors" component = {Sponsors}/>
 					<Route path="/contact-us" component = {ContactUs}/>
-					<Route path="/blog-posts/1" component={FullBlogPosts}/>
-					<Route path="/blog-posts/2" component={blogPost2}/>
+					<Route path="/blog/1" component={blogPost1}/>
+					<Route path="/blog/2" component={blogPost2}/>
 				</Switch>				
 			</body>
-		</Router>
+		</HashRouter>
 	<div><Footer /></div>
 	</div>
   );

@@ -1,10 +1,10 @@
 //All necessary imports for this javascript
 import React, { Component } from "react";
 import "./style.css";
-import "./blogPosts.css";
+import "./blog.css";
 import { Link } from "react-router-dom";
 
-class BlogPosts extends Component {
+class Blog extends Component {
   render() {
     return (
         <div>
@@ -18,7 +18,7 @@ class BlogPosts extends Component {
             {/*End of Header*/}
            
             {/*Start of blog posts*/}
-            <Link to="/blog-posts/1">
+            <Link to="/blog/1">
             <div class="blog-post" style={{marginTop: "10vw", marginBottom: "10vw"}}>
                 
                 <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
@@ -62,7 +62,7 @@ class BlogPosts extends Component {
             </div>
             </Link>
             
-            <Link to="/blog-posts/2">
+            <Link to="/blog/2">
             <div class="blog-post" style={{marginTop: "10vw", marginBottom: "10vw"}}>
                 
                 <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
@@ -110,4 +110,4 @@ class BlogPosts extends Component {
     );
   }
 }
-export default BlogPosts;
+export default Blog;

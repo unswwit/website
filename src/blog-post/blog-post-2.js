@@ -1,9 +1,8 @@
 //All necessary imports for this javascript
 import React, { Component } from "react";
-import "./style.css";
-import "./home.css";
-import "./fullBlogPost.css";
-import "./blogPosts.css";
+import ".././style.css";
+import ".././home.css";
+import "./blog-post.css";
 
 class blogPost2 extends Component {
     render() {
@@ -14,7 +13,7 @@ class blogPost2 extends Component {
               {/*Start of Header*/}
               <div class="coverPhoto">
                   <div class="title">
-                      <h1>Blog Posts #2</h1>
+                      <h1>Blog Post #2</h1>
                   </div>
               </div>
 

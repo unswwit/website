@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React, { Component } from 'react';
 import "./sponsors.css";
 
 import Amazon from "./sponsors/Amazon";
@@ -8,16 +7,16 @@ import Baraja from "./sponsors/Baraja";
 import Commonwealth from "./sponsors/Commonwealth";
 import Deloitte from "./sponsors/Deloitte";
 import EY from "./sponsors/EY";
-import Nine from "./sponsors/Nine";
 import Google from "./sponsors/Google";
 import LendLease from "./sponsors/Lendlease";
 import McGrathNicol from "./sponsors/McGrathNicol";
+import Nine from "./sponsors/Nine";
 import Palantir from "./sponsors/Palantir";
 import QPay from "./sponsors/QPay";
 import Quantium from "./sponsors/Quantium";
 import Telstra from "./sponsors/Telstra";
 
-class Sponsors extends React.Component {
+class Sponsors extends Component {
     render() {
         return (
             <div className='centre'>
