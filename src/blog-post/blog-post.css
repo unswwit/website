@@ -39,6 +39,14 @@ p {
   font-weight: 500;
 }
 
+.list {
+  color: #707070;
+  font-family: 'Roboto';
+  font-size: 14pt;
+  text-align: justify;
+  font-weight: 300;
+}
+
 /*-------------------------------Author card-----------------------------*/
 .author {
   height: 170px;
