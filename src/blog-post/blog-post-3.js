@@ -29,19 +29,18 @@ class blogPost3 extends Component {
 
                     <p class="question">  Lesson 1: Computer Science is a form of Art </p><br/>
 
-                    <p class="post-content">Perhaps “art” is not the first thing that comes to our mind when considering technology.</p><br/>
+                    <p class="post-content">Perhaps “art” is not the first thing that comes to our mind when considering technology.</p>
 
-                    <p class="post-content">Yet this is what sparked Mayer’s interest in technology when she undertook a degree in Symbolic Systems at Stanford University. It involved exploring philosophy, linguistics, computer science and examining the complexity and depth in how people think and seeing how computers can reflect that same logic.
-</p><br/>
+                    <p class="post-content">Yet this is what sparked Mayer’s interest in technology when she undertook a degree in Symbolic Systems at Stanford University. It involved exploring philosophy, linguistics, computer science and examining the complexity and depth in how people think and seeing how computers can reflect that same logic.</p>
 
                     <p class="post-content">Mayer took this view to her tech projects, resulting in an impact in tech that goes beyond computers, and redefines the way people think.
 </p><br/>
 
                     <p class="question">Lesson 2: Feeling Confident Even When Feeling Unprepared </p><br/>
                     <p class="post-content"> Big decisions are daunting. Marissa Mayer was no stranger to feeling unprepared when making big decisions at certain stages of her life.
-</p><br/>
+</p>
                     <p class="post-content"> Mayer had a whopping 14 job offers lined up after finishing her studies from Stanford University. Each offer was diverse and exciting, but after weeks of anxiety, stress, and support from her mentors, she chose her life-changing role at Google, based on two things:
-                    </p> <br/>
+                    </p>
 
                     <ol>
                       <li class = "list"> Surrounding herself with smart, ambitious and like-minded people.</li>
@@ -75,17 +74,17 @@ class blogPost3 extends Component {
                 <div class = "author-left">
                   <div> {/*note this div is necessary to formatting*/}
                     <img
-                    src={process.env.PUBLIC_URL + "/potraits/elisa.jpg"}
+                    src={process.env.PUBLIC_URL + "/potraits/georgie.jpg"}
                     className="profile_img vivw_img"
-                    alt="vivian-wong"
+                    alt="Georgie Mansfield"
                     resizeMode="contain"
                     />
                   </div>
                 </div>
                 <div class = "author-right">
-                  <div class="title author-name">Victoria Ruming and Elisa Sanjurjo</div>
+                  <div class="title author-name">Georgie Mansfield</div>
                   <div class = "position"> Education Team </div>
-                  <p> 27th May 2020 </p>
+                  <p> 3rd June 2020 </p>
                 </div>
               </div>
               {/*End of blog posts*/}
