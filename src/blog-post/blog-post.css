@@ -54,7 +54,6 @@ p {
 /*Author icon*/
 .author-left {
   display: inline-block;
-  float: left;
   height: 150px;
   width: 25%;
 }
@@ -75,7 +74,6 @@ p {
 /*Author details*/
 .author-right {
   display: inline-block;
-  float: right;
   padding: 0px 0px 0px 30px;
   width: 70%;
   letter-spacing: 2px;
