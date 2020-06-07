@@ -52,13 +52,22 @@ table {
 }
 
 .blog-details {
-    margin-top: 1vw;
+    margin-bottom: 15px;
 }
 
 .heading {
     color: #FEB14B;
     letter-spacing: 0.1vw;
     font-size: 14pt;
+    font-family: Roboto;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.auth {
+    color: #FEB14B;
+    letter-spacing: 0.1vw;
+    font-size: 12pt;
     font-family: Roboto;
     text-decoration: none;
     margin-bottom: 10px;
@@ -71,12 +80,9 @@ table {
 .subheading {
     color: #707070;
     letter-spacing: 0.1vw;
-    font-size: 11pt;
+    font-size: 10pt;
     font-family: Roboto;
     font-weight: 300;
+    padding: 0;
+    margin: 0;
 }
-
-.blog-link:hover {
-    text-decoration: none;
-}
-

@@ -20,7 +20,7 @@ class Blog extends Component {
             {/*Start of blog posts*/}
 
             {/*blog post 1*/}
-            <Link to="/blog/1">
+            <Link to="/blog/1" style={{ textDecoration: 'none' }}>
             <div class="blog-post" style={{marginTop: "10vw", marginBottom: "10vw"}}>
 
                 <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
@@ -31,6 +31,14 @@ class Blog extends Component {
                         </td>
 
                         <td class= "blog-preview">
+                            <div class="blog-details">
+                                <div class="heading">
+                                    Introducing: Silvia Lin, Senior Consultant of PWC and WIT Co-founder
+                                </div>
+                                <div class="subheading">
+                                    Learn more about our co-founder and now PWC Senior Consultant Silvia Lin and her journey into technology!
+                                </div>
+                            </div>
                             <tr>
                                 <td>
                                     <div class="author-pic">
@@ -43,20 +51,10 @@ class Blog extends Component {
                                     </div>
                                 </td>
                                 <td style={{width: "200px"}}>
-                                    <div class="heading">Vivian Wong</div>
+                                    <div class="heading auth">Vivian Wong</div>
                                     <div class="subheading">20/05/2020</div>
                                 </td>
                             </tr>
-
-                            <div class="blog-details">
-                                <div class="heading">
-                                    Introducing: Silvia Lin, Senior Consultant of PWC and WIT Co-founder
-                                </div>
-                                <div class="subheading">
-                                    Learn more about our co-founder and now PWC Senior Consultant Silvia Lin and her journey into technology!
-                                </div>
-                            </div>
-
                         </td>
                     </tr>
                 </tr>
@@ -66,7 +64,7 @@ class Blog extends Component {
 
 
             {/*blog post 2*/}
-            <Link to="/blog/2">
+            <Link to="/blog/2" style={{ textDecoration: 'none' }}>
             <div class="blog-post" style={{marginTop: "10vw", marginBottom: "10vw"}}>
 
                 <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
@@ -77,6 +75,14 @@ class Blog extends Component {
                         </td>
 
                         <td class= "blog-preview">
+                            <div class="blog-details">
+                                <div class="heading">
+                                    Introducing: Professor Lisa Harvey Smith, Astrophysicist and Australia’s First Women In STEM Ambassador
+                                </div>
+                                <div class="subheading">
+                                    Explore Professor Harvey Smith’s experiences, influential nature and numerous achievements proving that women in the tech industry are NOT to be underestimated.
+                                </div>
+                            </div>
                             <tr>
                                 <td>
                                     <div class="author-pic">
@@ -89,20 +95,10 @@ class Blog extends Component {
                                     </div>
                                 </td>
                                 <td style={{width: "200px"}}>
-                                    <div class="heading">Victoria Ruming and Elisa Sanjurjo</div>
+                                    <div class="auth">Victoria Ruming and Elisa Sanjurjo</div>
                                     <div class="subheading">27/05/2020</div>
                                 </td>
                             </tr>
-
-                            <div class="blog-details">
-                                <div class="heading">
-                                    Introducing: Professor Lisa Harvey Smith, Astrophysicist and Australia’s First Women In STEM Ambassador
-                                </div>
-                                <div class="subheading">
-                                    We elaborate on Professor Harvey Smith’s experiences, influential nature and numerous achievements proving that women in the tech industry are NOT to be underestimated.
-                                </div>
-                            </div>
-
                         </td>
                     </tr>
                 </tr>
@@ -111,7 +107,7 @@ class Blog extends Component {
             </Link>
 
             {/*blog post 3*/}
-            <Link to="/blog/3">
+            <Link to="/blog/3" style={{ textDecoration: 'none' }}>
             <div class="blog-post" style={{marginTop: "10vw", marginBottom: "10vw"}}>
 
                 <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
@@ -122,6 +118,14 @@ class Blog extends Component {
                         </td>
 
                         <td class= "blog-preview">
+                            <div class="blog-details">
+                                <div class="heading">
+                                    4 Lessons From Marissa Mayer's Life in Tech
+                                </div>
+                                <div class="subheading">
+                                    Take a look at 4 lessons we can learn from Marissa's amazing life, and how she continues to redefine technology as we know it today.
+                                </div>
+                            </div>
                             <tr>
                                 <td>
                                     <div class="author-pic">
@@ -134,20 +138,10 @@ class Blog extends Component {
                                     </div>
                                 </td>
                                 <td style={{width: "200px"}}>
-                                    <div class="heading">Georgie Mansfield</div>
+                                    <div class="auth">Georgie Mansfield</div>
                                     <div class="subheading">03/06/2020</div>
                                 </td>
                             </tr>
-
-                            <div class="blog-details">
-                                <div class="heading">
-                                    4 Lessons From Marissa Mayer's Life in Tech
-                                </div>
-                                <div class="subheading">
-                                    Take a look at 4 lessons we can learn from Marissa's amazing life, and how she continues to redefine technology as we know it today.
-                                </div>
-                            </div>
-
                         </td>
                     </tr>
                 </tr>
