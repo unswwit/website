@@ -20,7 +20,7 @@ class blogPost3 extends Component {
 
               {/*Start of blog post*/}
               <div class="blog-content">
-                <div><h3 class = "blog-title">4 Lessons From Marissa Mayer's Life in Tech</h3></div>
+                <div><h2 class = "blog-title">4 Lessons From Marissa Mayer's Life in Tech</h2></div>
 
                 <div class="post">
                     <p class="post-content">High achiever, resilience, and persistence are not unknown to tech CEO Marissa Mayer. Mayer has an inspirational journey, from becoming the first female software engineer at Google while Google was still a start-up, the CEO of Yahoo! despite the criticism surrounding her, all the way to founding her own AI start-up. She has continually broken barriers in technology and has been the talk of the world. </p><br/>

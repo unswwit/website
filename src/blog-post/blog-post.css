@@ -8,12 +8,8 @@
 
 /*Blog title*/
 .blog-title {
-  font-family: 'Playfair Display', serif;
-  color: #feb14b;
-  font-size: 58px;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-  text-align: center;
+  font-size: 34pt;
+  letter-spacing: 4px; 
   margin-top: 8vw;
   margin-bottom: 4vw;
 }

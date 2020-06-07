@@ -21,10 +21,10 @@ class FullBlogPosts extends Component {
 
               {/*Start of blog post*/}
               <div class="blog-content">
-                <div><h3 class = "blog-title">Introducing: Silvia Lin, Senior Consultant of PWC and WIT Co-founder</h3></div>
+                <div><h2 class = "blog-title">Introducing: Silvia Lin, Senior Consultant of PWC and WIT Co-founder</h2></div>
             
                 <div class="post">
-                    <p class="post-content"> Silva’s passionate about three things: technology, solving problems, and educating women about the opportunities in technology. Her passions collide in her role as a senior consultant of the SuccessFactors Team at PwC Australia. With a keen understanding of her client’s strategic business objectives and the feasibility of system design, she thrives in creating solutions for clients that allow them to operate more efficiently.</p><br/>
+                    <p class="post-content"> Silvia’s passionate about three things: technology, solving problems, and educating women about the opportunities in technology. Her passions collide in her role as a senior consultant of the SuccessFactors Team at PwC Australia. With a keen understanding of her client’s strategic business objectives and the feasibility of system design, she thrives in creating solutions for clients that allow them to operate more efficiently.</p><br/>
 
                     <p class="post-content">Let’s read what Silvia had to say about her journey into tech below </p>
 
