@@ -1,7 +1,6 @@
 //All necessary imports for this javascript
 import React, { Component } from "react";
 import ".././style.css";
-import ".././home.css";
 import "./blog-post.css";
 
 class FullBlogPosts extends Component {

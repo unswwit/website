@@ -45,8 +45,7 @@ p {
 
 /*-------------------------------Author card-----------------------------*/
 .author {
-  height: 170px;
-  margin: auto;
+  margin: 0 auto;
   max-width: 40%;
   margin-bottom: 6vw;
 }
@@ -54,7 +53,7 @@ p {
 /*Author icon*/
 .author-left {
   display: inline-block;
-  height: 150px;
+  height: 140px;
   width: 25%;
 }
 
@@ -84,12 +83,15 @@ p {
 }
 
 .author-name {
+  font-family: 'Playfair Display', serif;
   font-size: 24pt;
+  margin: 0;
+  padding: 0;
 }
 
 .position {
-  margin-top: 15px;
-  font-size: 20pt;
+  margin-top: 5px;
+  font-size: 18pt;
   color: #0F4C81;
 }
 
@@ -98,5 +100,5 @@ p {
   font-weight: 400;
   color: #707070;
   font-size: 1vw;
-  margin-top: 15px;
+  margin-top: 10px;
 }
