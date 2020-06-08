@@ -70,6 +70,12 @@ p {
   width: 120%;
 }
 
+.vic_img {
+  height: auto;
+  transform: translate( -5%, -5%);
+  width: 120%;
+}
+
 /*Author details*/
 .author-right {
   display: inline-block;

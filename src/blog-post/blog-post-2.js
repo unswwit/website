@@ -50,7 +50,23 @@ class blogPost2 extends Component {
                   </div>
                 </div>
                 <div class = "author-right">
-                  <div class="title author-name">Victoria Ruming and Elisa Sanjurjo</div>
+                  <div class="title author-name">Elisa Sanjurjo</div>
+                  <div class = "position"> Education Team </div>
+                </div>
+              </div>
+              <div class = "author">
+                <div class = "author-left">
+                  <div> {/*note this div is necessary to formatting*/}
+                    <img
+                    src={process.env.PUBLIC_URL + "/potraits/victoria.jpg"}
+                    className="profile_img vic_img"
+                    alt="vivian-wong"
+                    resizeMode="contain"
+                    />
+                  </div>
+                </div>
+                <div class = "author-right">
+                  <div class="title author-name">Victoria Ruming</div>
                   <div class = "position"> Education Team </div>
                   <p> 27th May 2020 </p>
                 </div>

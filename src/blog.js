@@ -95,10 +95,24 @@ class Blog extends Component {
                                     </div>
                                 </td>
                                 <td style={{width: "200px"}}>
-                                    <div class="auth">Victoria Ruming and Elisa Sanjurjo</div>
-                                    <div class="subheading">27/05/2020</div>
+                                    <div class="auth">Elisa Sanjurjo</div>
+                                    
+                                </td>
+                                <td>
+                                    <div class="author-pic">
+                                    <img
+                                    src={process.env.PUBLIC_URL + "/potraits/victoria.jpg"}
+                                    className="profile_img vic_img"
+                                    alt="elisa-sanjurjo"
+                                    resizeMode="contain"
+                                    />
+                                    </div>
+                                </td>
+                                <td style={{width: "200px"}}>
+                                    <div class="auth">Victoria Ruming</div>
                                 </td>
                             </tr>
+                            <div class="subheading">27/05/2020</div>
                         </td>
                     </tr>
                 </tr>
