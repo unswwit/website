@@ -10,9 +10,11 @@ import ContactUs from "./contactUs";
 import Footer from "./footer";
 import OurTeam from "./team";
 import Blog from "./blog";
+
 import blogPost1 from "./blog-post/blog-post-1";
 import blogPost2 from "./blog-post/blog-post-2";
 import blogPost3 from "./blog-post/blog-post-3";
+import blogPost4 from "./blog-post/blog-post-4";
 
 class App extends Component{
   render(){
@@ -45,7 +47,8 @@ class App extends Component{
 					<Route path="/contact-us" component = {ContactUs}/>
 					<Route path="/blog/1" component={blogPost1}/>
 					<Route path="/blog/2" component={blogPost2}/>
-          <Route path="/blog/3" component={blogPost3}/>
+          			<Route path="/blog/3" component={blogPost3}/>
+					<Route path="/blog/4" component={blogPost4}/>
 				</Switch>
 			</body>
 		</HashRouter>

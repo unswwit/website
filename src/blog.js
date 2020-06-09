@@ -19,9 +19,53 @@ class Blog extends Component {
 
             {/*Start of blog posts*/}
 
+             {/*blog post 4*/}
+             <Link to="/blog/4" style={{ textDecoration: 'none' }}>
+            <div class="blog-post" style={{marginTop: "5vw", marginBottom: "5vw"}}>
+
+                <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
+                <tr>
+                    <tr>
+                        <td>
+                            <img src={process.env.PUBLIC_URL + "/blog_preview.jpg"} alt="preview" style={{width:"550px", height: "350px"}}/>
+                        </td>
+
+                        <td class= "blog-preview">
+                            <div class="blog-details">
+                                <div class="heading">
+                                Introducing: Syin Li Tan, Consultant at Deloitte
+                                </div>
+                                <div class="date">10/06/2020</div>
+                                <div class="subheading">
+                                    Another story to cover! Gain insights from Deloite consultant Syin Li Tan on her career-related thoughts and experiences!
+                                </div>
+                            </div>
+                            <tr>
+                                <td>
+                                <div class="author-pic">
+                                    <img
+                                    src={process.env.PUBLIC_URL + "/potraits/vivw.jpg"}
+                                    className="profile_img vivw_img"
+                                    alt="vivian-wong"
+                                    resizeMode="contain"
+                                    />
+                                    </div>
+                                </td>
+                                <td style={{width: "200px"}}>
+                                    <div class="heading auth">Vivian Wong</div>
+                                    
+                                </td>
+                            </tr>
+                        </td>
+                    </tr>
+                </tr>
+                </table>
+            </div>
+            </Link>
+
             {/*blog post 3*/}
             <Link to="/blog/3" style={{ textDecoration: 'none' }}>
-            <div class="blog-post" style={{marginTop: "10vw", marginBottom: "5vw"}}>
+            <div class="blog-post" style={{marginTop: "5vw", marginBottom: "5vw"}}>
 
                 <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
                 <tr>
