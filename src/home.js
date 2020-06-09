@@ -71,8 +71,8 @@ class Home extends Component{
 						<h1> EVENTS </h1>
 					</div>
 					<div class="event-2">
-						<a href="https://www.facebook.com/events/2611852555741449/">
-							<img src={process.env.PUBLIC_URL + '/tea-talks.png'} alt="banner"/>
+						<a href="https://www.facebook.com/events/854461765040428/">
+							<img src={process.env.PUBLIC_URL + '/witxnine.gif'} alt="banner"/>
 						</a>
 					</div>
 					
