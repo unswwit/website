@@ -7,8 +7,6 @@ class blogPost2 extends Component {
     render() {
       return (
             <div>
-              <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"/>
-
               {/*Start of Header*/}
               <div class="coverPhoto">
                   <div class="title">
@@ -20,7 +18,10 @@ class blogPost2 extends Component {
 
               {/*Start of blog post*/}
               <div class="blog-content">
-                <div><h2 class = "blog-title">Introducing: Professor Lisa Harvey Smith, Astrophysicist and Australia’s First Women In STEM Ambassador</h2></div>
+                <div>
+                  <h2 class = "blog-title">Introducing: Professor Lisa Harvey Smith, Astrophysicist and Australia’s First Women In STEM Ambassador</h2>
+                  <p class="date"> 27th May 2020 </p>
+                </div>
 
                 <div class="post">
                     <p class="post-content">British-Australian astrophysicist Lisa Harvey Smith discovered her love of astronomy whilst homeschooling herself at the age 11. Soon after, she joined her first amateur astronomical society. Her love for astronomy, which she describes as “ridiculous” guided her educational pursuits. By age 26, she had already earned a Ph.D. in Radio Astronomy. Her work on the SKA Pathfinder telescope led to the discovery of tens of millions of new galaxies. And if solving the mysteries of the universe isn’t enough, in 2018, she was appointed the Australian Government Ambassador for Women in STEM.</p><br/>
@@ -68,7 +69,6 @@ class blogPost2 extends Component {
                 <div class = "author-right">
                   <div class="title author-name">Victoria Ruming</div>
                   <div class = "position"> Education Team </div>
-                  <p> 27th May 2020 </p>
                 </div>
               </div>
               {/*End of blog posts*/}

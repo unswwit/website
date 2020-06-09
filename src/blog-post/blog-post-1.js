@@ -7,8 +7,6 @@ class FullBlogPosts extends Component {
     render() {
       return (
             <div>
-              <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"/>
-
               {/*Start of Header*/}
               <div class="coverPhoto">
                   <div class="title">
@@ -20,7 +18,10 @@ class FullBlogPosts extends Component {
 
               {/*Start of blog post*/}
               <div class="blog-content">
-                <div><h2 class = "blog-title">Introducing: Silvia Lin, Senior Consultant of PWC and WIT Co-founder</h2></div>
+                <div>
+                  <h2 class = "blog-title">Introducing: Silvia Lin, Senior Consultant of PWC and WIT Co-founder</h2>
+                  <p class="date"> 20th May 2020 </p>
+                </div>
             
                 <div class="post">
                     <p class="post-content"> Silvia’s passionate about three things: technology, solving problems, and educating women about the opportunities in technology. Her passions collide in her role as a senior consultant of the SuccessFactors Team at PwC Australia. With a keen understanding of her client’s strategic business objectives and the feasibility of system design, she thrives in creating solutions for clients that allow them to operate more efficiently.</p><br/>
@@ -59,7 +60,6 @@ class FullBlogPosts extends Component {
                 <div class = "author-right">
                   <div class="title author-name">Vivian Wong</div>
                   <div class = "position"> Education Executive </div>
-                  <p> 20th May 2020 </p>
                 </div>
               </div>
               {/*End of blog posts*/}

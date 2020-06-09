@@ -24,19 +24,19 @@ h2 {
 }
 
 .subheader {
-    font-family: Arial;
+    font-family: 'Montserrat', sans-serif;
     font-size: 13pt;
     color: grey;
 }
 
 p {
-    font-family: Arial;
+    font-family: 'Montserrat', sans-serif;
     font-size: 10pt;
     margin-top: 0;
 }
 
 .body_bold {
-    font-family: Arial;
+    font-family: 'Montserrat', sans-serif;
     font-size: 10pt;
     font-weight: bold;
 }
@@ -125,6 +125,11 @@ footer {
     padding: 16px;
     color: #313638;
 }
+
+.footer-copyright {
+    font-family: 'Montserrat', sans-serif;
+}
+
 
 .footer-copyright, a {
     color: #313638;

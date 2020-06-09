@@ -11,7 +11,6 @@
   font-size: 34pt;
   letter-spacing: 4px; 
   margin-top: 8vw;
-  margin-bottom: 4vw;
 }
 
 /*Blog content*/
@@ -22,9 +21,15 @@
 
 p {
   color: #707070;
-  font-family: 'Roboto';
-  font-size: 14pt;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12pt;
   text-align: justify;
+}
+
+p.date {
+  color: #313638;
+  text-align: center;
+  margin-bottom: 4vw;
 }
 
 .post-content {
@@ -37,8 +42,8 @@ p {
 
 .list {
   color: #707070;
-  font-family: 'Roboto';
-  font-size: 14pt;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12pt;
   text-align: justify;
   font-weight: 300;
 }
@@ -83,22 +88,22 @@ p {
   width: 70%;
   letter-spacing: 2px;
   color: #feb14b;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   text-align: left;
 }
 
 .author-name {
   font-family: 'Playfair Display', serif;
-  font-size: 24pt;
+  font-size: 20pt;
   margin: 0;
   padding: 0;
 }
 
 .position {
   margin-top: 5px;
-  font-size: 18pt;
-  color: #0F4C81;
+  font-size: 14pt;
+  color: #e85f5c;
 }
 
 .author-right p {

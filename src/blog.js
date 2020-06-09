@@ -19,8 +19,8 @@ class Blog extends Component {
 
             {/*Start of blog posts*/}
 
-            {/*blog post 1*/}
-            <Link to="/blog/1" style={{ textDecoration: 'none' }}>
+            {/*blog post 3*/}
+            <Link to="/blog/3" style={{ textDecoration: 'none' }}>
             <div class="blog-post" style={{marginTop: "10vw", marginBottom: "5vw"}}>
 
                 <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
@@ -33,26 +33,27 @@ class Blog extends Component {
                         <td class= "blog-preview">
                             <div class="blog-details">
                                 <div class="heading">
-                                    Introducing: Silvia Lin, Senior Consultant of PWC and WIT Co-founder
+                                    4 Lessons From Marissa Mayer's Life in Tech
                                 </div>
+                                <div class="date">03/06/2020</div>
                                 <div class="subheading">
-                                    Learn more about our co-founder and now PWC Senior Consultant Silvia Lin and her journey into technology!
+                                    Take a look at 4 lessons we can learn from Marissa's amazing life, and how she continues to redefine technology as we know it today.
                                 </div>
                             </div>
                             <tr>
                                 <td>
                                     <div class="author-pic">
                                     <img
-                                    src={process.env.PUBLIC_URL + "/potraits/vivw.jpg"}
+                                    src={process.env.PUBLIC_URL + "/potraits/georgie.jpg"}
                                     className="profile_img vivw_img"
-                                    alt="vivian-wong"
+                                    alt="Georgie Mansfield"
                                     resizeMode="contain"
                                     />
                                     </div>
                                 </td>
                                 <td style={{width: "200px"}}>
-                                    <div class="heading auth">Vivian Wong</div>
-                                    <div class="subheading">20/05/2020</div>
+                                    <div class="auth">Georgie Mansfield</div>
+                                    
                                 </td>
                             </tr>
                         </td>
@@ -61,7 +62,6 @@ class Blog extends Component {
                 </table>
             </div>
             </Link>
-
 
             {/*blog post 2*/}
             <Link to="/blog/2" style={{ textDecoration: 'none' }}>
@@ -79,6 +79,7 @@ class Blog extends Component {
                                 <div class="heading">
                                     Introducing: Professor Lisa Harvey Smith, Astrophysicist and Australia’s First Women In STEM Ambassador
                                 </div>
+                                <div class="date">27/05/2020</div>
                                 <div class="subheading">
                                     Explore Professor Harvey Smith’s experiences, influential nature and numerous achievements proving that women in the tech industry are NOT to be underestimated.
                                 </div>
@@ -112,7 +113,7 @@ class Blog extends Component {
                                     <div class="auth">Victoria Ruming</div>
                                 </td>
                             </tr>
-                            <div class="subheading">27/05/2020</div>
+                            
                         </td>
                     </tr>
                 </tr>
@@ -120,9 +121,9 @@ class Blog extends Component {
             </div>
             </Link>
 
-            {/*blog post 3*/}
-            <Link to="/blog/3" style={{ textDecoration: 'none' }}>
-            <div class="blog-post" style={{marginTop: "5vw", marginBottom: "5vw"}}>
+            {/*blog post 1*/}
+            <Link to="/blog/1" style={{ textDecoration: 'none' }}>
+            <div class="blog-post" style={{marginTop: "5vw", marginBottom: "10vw"}}>
 
                 <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
                 <tr>
@@ -134,26 +135,27 @@ class Blog extends Component {
                         <td class= "blog-preview">
                             <div class="blog-details">
                                 <div class="heading">
-                                    4 Lessons From Marissa Mayer's Life in Tech
+                                    Introducing: Silvia Lin, Senior Consultant of PWC and WIT Co-founder
                                 </div>
+                                <div class="date">20/05/2020</div>
                                 <div class="subheading">
-                                    Take a look at 4 lessons we can learn from Marissa's amazing life, and how she continues to redefine technology as we know it today.
+                                    Learn more about our co-founder and now PWC Senior Consultant Silvia Lin and her journey into technology!
                                 </div>
                             </div>
                             <tr>
                                 <td>
                                     <div class="author-pic">
                                     <img
-                                    src={process.env.PUBLIC_URL + "/potraits/georgie.jpg"}
+                                    src={process.env.PUBLIC_URL + "/potraits/vivw.jpg"}
                                     className="profile_img vivw_img"
-                                    alt="Georgie Mansfield"
+                                    alt="vivian-wong"
                                     resizeMode="contain"
                                     />
                                     </div>
                                 </td>
                                 <td style={{width: "200px"}}>
-                                    <div class="auth">Georgie Mansfield</div>
-                                    <div class="subheading">03/06/2020</div>
+                                    <div class="heading auth">Vivian Wong</div>
+                                    
                                 </td>
                             </tr>
                         </td>
@@ -162,7 +164,6 @@ class Blog extends Component {
                 </table>
             </div>
             </Link>
-
 
             {/*End of blog posts*/}
         </div>

@@ -58,8 +58,8 @@ table {
 .heading {
     color: #FEB14B;
     letter-spacing: 0.1vw;
-    font-size: 14pt;
-    font-family: Roboto;
+    font-size: 12pt;
+    font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     margin-bottom: 10px;
 }
@@ -67,8 +67,8 @@ table {
 .auth {
     color: #FEB14B;
     letter-spacing: 0.1vw;
-    font-size: 12pt;
-    font-family: Roboto;
+    font-size: 10pt;
+    font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     margin-bottom: 10px;
 }
@@ -81,8 +81,17 @@ table {
     color: #707070;
     letter-spacing: 0.1vw;
     font-size: 10pt;
-    font-family: Roboto;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 300;
+    padding: 0;
+    margin: 0;
+}
+
+.date {
+    color: #313638;
+    letter-spacing: 0.1vw;
+    font-size: 8pt;
+    font-family: 'Montserrat', sans-serif;
     padding: 0;
     margin: 0;
 }
