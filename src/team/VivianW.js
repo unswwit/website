@@ -36,7 +36,7 @@ class VivianW extends Component {
 
                     {/* Facebook Icon */}
                     <a
-                        href="https://www.facebook.com/lovefromviv"
+                        href="https://www.facebook.com/profile.php?id=100027563555266"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
