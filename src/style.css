@@ -96,6 +96,19 @@ p {
     text-decoration: none;
 }
 
+.dropdown-item {
+    padding: 5px;
+    letter-spacing: 1.5px;
+}
+
+.menuTitle {
+    color: #313638; 
+}
+
+.menuTitle:hover{
+    color: #e85f5c;
+}
+
 .nav-item a:hover{
     color: #e85f5c;
     padding: 10px 15px;
