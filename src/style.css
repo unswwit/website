@@ -96,12 +96,22 @@ p {
     text-decoration: none;
 }
 
-.dropdown-item {
-    padding: 5px;
-    letter-spacing: 1.5px;
+.dropdown-toggle{
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-.menuTitle {
+.dropdown-menu{
+    border-color: transparent;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+}
+
+.dropdown-item {
+    padding: 5px 0px;
+}
+
+.menuTitle{
     color: #313638; 
 }
 
