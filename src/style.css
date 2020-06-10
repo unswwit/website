@@ -68,6 +68,7 @@ p {
 .bg-custom{
     background: #fff7ef;
     font-size: 10pt;
+    padding: 0px;
 }
 
 .nav{
@@ -85,7 +86,7 @@ p {
 .nav-item{
     float:right;
     color: #313638;
-    padding: 5px;
+    padding: 15px 5px;
     text-decoration: none;
     letter-spacing: 1.5px;
 }
@@ -96,15 +97,13 @@ p {
     text-decoration: none;
 }
 
-.dropdown-toggle{
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
 .dropdown-menu{
     border-color: transparent;
     letter-spacing: 1.5px;
     font-size: 14px;
+    background-color: #fff7ef;
+    margin-top: 15px;
+    border-radius: 0px;
 }
 
 .dropdown-item {
@@ -113,6 +112,7 @@ p {
 
 .menuTitle{
     color: #313638; 
+    padding: 10px 15px;
 }
 
 .menuTitle:hover{
