@@ -10,6 +10,7 @@ import ContactUs from "./contactUs";
 import Footer from "./footer";
 import OurTeam from "./team";
 import Blog from "./blog";
+import MarketingArchive from "./marketingArchive"
 
 import blogPost1 from "./blog-post/blog-post-1";
 import blogPost2 from "./blog-post/blog-post-2";
@@ -32,6 +33,7 @@ class App extends Component{
 						<li class="nav-item"><NavLink to="/our-team">TEAM</NavLink></li>
 						<li class="nav-item"><NavLink to="/sponsors">SPONSORS</NavLink></li>
 						<li class="nav-item"><NavLink to="/blog">BLOG</NavLink></li>
+            <li class="nav-item"><NavLink to="/marketing-archive">MARKETING ARCHIVE</NavLink></li>
 						<li class="nav-item"><NavLink to="/join-us">JOIN</NavLink></li>
 						<li class="nav-item"><NavLink to="/contact-us">CONTACT</NavLink></li>
 					</ul>
@@ -42,6 +44,7 @@ class App extends Component{
 					<Route exact path="/" component = {Home}/>
 					<Route path="/our-team" component = {OurTeam}/>
 					<Route exact path="/blog" component = {Blog}/>
+          <Route exact path="/marketing-archive" component = {MarketingArchive}/>
 					<Route path="/join-us" component = {JoinUs}/>
 					<Route path="/sponsors" component = {Sponsors}/>
 					<Route path="/contact-us" component = {ContactUs}/>
