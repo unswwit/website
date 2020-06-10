@@ -1,7 +1,7 @@
 /*-------------------------------Marketing archive page header-----------------------------*/
 /*Header image*/
 .marketingCoverPhoto {
-    background-image: url('/marketing-header.jpg');
+    background-image: url('/marketing-header.png');
     background-position: center bottom 40%;
     background-repeat: no-repeat;
     background-size: cover;
