@@ -17,6 +17,21 @@ import blogPost3 from "./blog-post/blog-post-3";
 import blogPost4 from "./blog-post/blog-post-4";
 
 class App extends Component{
+  constructor(props) {
+	super(props)
+	this.state = {
+	showDD: false
+	}
+	this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e) {
+	this.setState({
+	  showDD: !this.state.showDD
+	})
+	e.preventDefault()
+  }
+
   render(){
   return (
 	<div>
@@ -31,7 +46,18 @@ class App extends Component{
 						<li class="nav-item"><NavLink to="/">HOME</NavLink></li>
 						<li class="nav-item"><NavLink to="/our-team">TEAM</NavLink></li>
 						<li class="nav-item"><NavLink to="/sponsors">SPONSORS</NavLink></li>
-						<li class="nav-item"><NavLink to="/blog">BLOG</NavLink></li>
+						<li class="nav-item">
+							<div class="dropdown" display="static" onMouseEnter={this.handleClick}>
+								<div class="dropdown-toggle">
+									<span class="menuTitle">RESOURCES</span>
+								</div>
+								<div class={this.state.showDD?'dropdown-menu show':'dropdown-menu'}>
+									<li><NavLink class="dropdown-item" to="/blog">BLOG</NavLink></li>
+									<li><NavLink class="dropdown-item" to="/blog">PUBLICATIONS</NavLink></li>
+									<li><NavLink class="dropdown-item" to="/blog">MARKETING ARCHIVES</NavLink></li>
+								</div>
+							</div>
+                        </li>
 						<li class="nav-item"><NavLink to="/join-us">JOIN</NavLink></li>
 						<li class="nav-item"><NavLink to="/contact-us">CONTACT</NavLink></li>
 					</ul>
