@@ -18,7 +18,6 @@ class Felicia extends Component {
                     <p className="profile_text_position">Marketing Executive</p>
                     <p className="profile_degree">Commerce/Software Engineering, 2nd Year</p>
 
-                    <p>
                     {/* Icon Bar shoulddd be a horizontal row of icons */}
                     <div classname="icon_bar">
                         {/* Linkedin Icon - target=_blank opens in new tab */}
@@ -60,7 +59,6 @@ class Felicia extends Component {
                         />
                         </a>
                     </div>
-                    </p>
                 </div>
             </div>
         );

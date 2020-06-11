@@ -16,7 +16,7 @@ class Rhea extends Component {
                     <p className="profile_text_name">Rhea Thomas</p>
                     <p className="profile_text_position">Externals Executive</p>
                     <p className="profile_degree">Information Systems, 2nd Year</p>
-                    <p>
+
                     {/* Icon Bar shoulddd be a horizontal row of icons */}
                     <div classname="icon_bar">
                         {/* Linkedin Icon - target=_blank opens in new tab */}
@@ -57,7 +57,6 @@ class Rhea extends Component {
                         />
                         </a>
                     </div>
-                    </p>
                 </div>
             </div>
         );
