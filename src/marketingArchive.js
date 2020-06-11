@@ -2,7 +2,6 @@
 import React, { Component } from "react";
 import "./style.css";
 import "./marketingArchive.css";
-import { Link } from "react-router-dom";
 
 class MarketingArchive extends Component {
   render() {
