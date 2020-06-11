@@ -1,6 +1,6 @@
 /*-------------------------------Marketing archive page header-----------------------------*/
 /*Header image*/
-.marketingCoverPhoto {
+.marketingCoverPhoto{
     background-image: url('/marketing-header.png');
     background-position: center bottom 40%;
     background-repeat: no-repeat;
@@ -24,6 +24,7 @@
 /*Intro paragraph*/
 p.intro {
   color: #707070;
+  padding-top: 150px;
   font-family: 'Montserrat', sans-serif;
   font-size: 12pt;
   text-align: center;
