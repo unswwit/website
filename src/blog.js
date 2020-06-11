@@ -19,8 +19,65 @@ class Blog extends Component {
 
             {/*Start of blog posts*/}
 
-             {/*blog post 4*/}
-             <Link to="/blog/4" style={{ textDecoration: 'none' }}>
+            {/*blog post 5*/}
+            <Link to="/blog/5" style={{ textDecoration: 'none' }}>
+            <div class="blog-post" style={{marginTop: "10vw", marginBottom: "5vw"}}>
+
+                <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
+                <tr>
+                    <tr>
+                        <td>
+                            <img src={process.env.PUBLIC_URL + "/blog_preview.jpg"} alt="preview" style={{width:"550px", height: "350px"}}/>
+                        </td>
+
+                        <td class= "blog-preview">
+                            <div class="blog-details">
+                                <div class="heading">
+                                Interview - Salina Jantarang
+                                </div>
+                                <div class="date">12/06/2020</div>
+                                <div class="subheading">
+                                    Explore Salina's research journey as PHD student in chemical engineering as well as advices about finding success in university and beyond
+                                </div>
+                            </div>
+                            <tr>
+                                <td>
+                                    <div class="author-pic">
+                                    <img
+                                    src={process.env.PUBLIC_URL + "/potraits/vivw.jpg"}
+                                    className="profile_img vivw_img"
+                                    alt="vivian-wong"
+                                    resizeMode="contain"
+                                    />
+                                    </div>
+                                </td>
+                                <td style={{width: "200px"}}>
+                                    <div class="auth">Vivian Wong</div>
+                                    
+                                </td>
+                                <td>
+                                    <div class="author-pic">
+                                    <img
+                                    src={process.env.PUBLIC_URL + "/potraits/victoria.jpg"}
+                                    className="profile_img vic_img"
+                                    alt="elisa-sanjurjo"
+                                    resizeMode="contain"
+                                    />
+                                    </div>
+                                </td>
+                                <td style={{width: "200px"}}>
+                                    <div class="auth">Victoria Ruming</div>
+                                </td>
+                            </tr>
+                        </td>
+                    </tr>
+                </tr>
+                </table>
+            </div>
+            </Link>
+
+            {/*blog post 4*/}
+            <Link to="/blog/4" style={{ textDecoration: 'none' }}>
             <div class="blog-post" style={{marginTop: "10vw", marginBottom: "5vw"}}>
 
                 <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
