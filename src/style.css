@@ -110,6 +110,10 @@ p {
     padding: 5px 0px;
 }
 
+.dropdown-item:hover {
+    background-color: #fff7ef;
+}
+
 .menuTitle{
     color: #313638; 
     padding: 10px 15px;
