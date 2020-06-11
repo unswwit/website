@@ -22,10 +22,10 @@ class App extends Component{
 	this.state = {
 	showDD: false
 	}
-	this.handleClick = this.handleClick.bind(this);
+	this.handleHover = this.handleHover.bind(this);
   }
 
-  handleClick(e) {
+  handleHover(e) {
 	this.setState({
 	  showDD: !this.state.showDD
 	})
@@ -46,7 +46,7 @@ class App extends Component{
 						<li class="nav-item"><NavLink to="/">HOME</NavLink></li>
 						<li class="nav-item"><NavLink to="/our-team">TEAM</NavLink></li>
 						<li class="nav-item"><NavLink to="/sponsors">SPONSORS</NavLink></li>
-						<li class="nav-item" onMouseEnter={this.handleClick} onMouseLeave={this.handleClick}>
+						<li class="nav-item" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
 							<div class="dropdown" display="static">
 								<div class="dropdown-toggle">
 									<span class="menuTitle">RESOURCES</span>
