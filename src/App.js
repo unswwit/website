@@ -39,7 +39,7 @@ class App extends Component{
 			<nav class="navbar navbar-expand-md navbar-dark bg-custom fixed-top justify-content-between">
 				<a class="navbar-brand" href="/">
 					<img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo"
-						resizeMode='contain' style={{width: '35px', marginLeft:  '10px', marginBottom: '5px', marginTop: '5px'}} />
+						resizeMode='contain' style={{width: '35px', marginLeft:  '15px', marginBottom: '5px', marginTop: '5px'}} />
 				</a>
 				<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
 					<ul class="navbar-nav ml-auto">
@@ -59,7 +59,7 @@ class App extends Component{
 							</div>
                         </li>
 						<li class="nav-item"><NavLink to="/join-us">JOIN</NavLink></li>
-						<li class="nav-item"><NavLink to="/contact-us">CONTACT</NavLink></li>
+						<li class="nav-item" style={{marginRight:"15px"}}><NavLink to="/contact-us">CONTACT</NavLink></li>
 					</ul>
 				</div>
 			</nav>
