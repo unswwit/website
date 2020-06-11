@@ -23,7 +23,7 @@ class blogPost5 extends Component {
                 </div>
 
                 <div class="post">
-                  <b>Introducing</b>
+                  <p class="question">Introducing</p>
                   
                   <p class="post-content">After high school, Salina Jantarang studied at the University of Sheffield (UK) and graduated in 2015 with a MEng in Chemical Engineering (First Class Honours). Afterwards, she enjoyed a placement in the Particles and Catalysis Research Group (PARTCAT) of UNSW, and continued with the group for her PhD programme from 2016 to 2020. The following interview outlines Salina’s journey, as well as advice about finding success in university and beyond.</p><br/>
                     
