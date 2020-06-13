@@ -38,10 +38,11 @@
 /*Right side block*/
 .article {
     display: inline-block;
-    width: 33.33%;
+    width: 29%;
     height: 500px;
     text-align: left;
-    padding: 0px 10px 0px 10px;
+    margin: 0px 2% 0px 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     /*border-width: 3px;
     border-style: solid;
     border-color: lightgrey;*/
