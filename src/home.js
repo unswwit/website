@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import CountUp from 'react-countup';
 import "./home.css";
 
@@ -15,9 +15,9 @@ class Home extends Component{
 						<h1>Women In</h1>
 						<h1>Technology</h1>
 						<p> Empowering and inspiring the architects of change</p>
-						<NavLink to="/join-us">
+						<Link to="/join-us">
 							<button class="button btn-join">Join Us</button>
-						</NavLink>
+						</Link>
 					</div>
 				</div>
 				{/*End of Header*/}
@@ -49,11 +49,11 @@ class Home extends Component{
 								<p>Team Members</p>
 							</div>
 							<div>
-								<span><CountUp end={15} duration={5}/></span>
+								<span><CountUp end={14} duration={5}/></span>
 								<p>Sponsors</p>
 							</div>
 							<div>
-								<span><CountUp end={1809} duration={5}/></span>
+								<span><CountUp end={1857} duration={5}/></span>
 								<p>Facebook Followers</p>
 							</div>
 						</div>
@@ -71,18 +71,22 @@ class Home extends Component{
 						<h1> EVENTS </h1>
 					</div>
 					<div class="event-2">
-						<img src={process.env.PUBLIC_URL + '/app-scratch.png'} alt="banner"  />
+						<a href="https://www.facebook.com/events/854461765040428/">
+							<img src={process.env.PUBLIC_URL + '/witxnine.gif'} alt="banner"/>
+						</a>
 					</div>
 					
 					<div class="event-1">
-							<img src={process.env.PUBLIC_URL + '/games_night.jpg'} alt="banner"/>
-						</div>
+						<a href="https://www.facebook.com/events/238521217422082/">
+							<img src={process.env.PUBLIC_URL + '/empowerment.png'} alt="banner"/>
+						</a>	
+					</div>
 				</div>
 				{/*End of upcoming events area*/}
 
 				<div class="sponsors" >
 					<h2>OUR SPONSORS</h2>
-					<img src={process.env.PUBLIC_URL + './home-sponsors.png'} className="photo" alt="banner" resizeMode='contain'
+					<img src={process.env.PUBLIC_URL + './sponsors-home.png'} className="photo" alt="banner" resizeMode='contain'
 							style={{width: '65vw'}} />
 				</div>
 

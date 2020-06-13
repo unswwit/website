@@ -1,0 +1,116 @@
+/*-------------------------------Blog post content-----------------------------*/
+.blog-content {
+  width: 950px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 6vw;
+}
+
+/*Blog title*/
+.blog-title {
+  font-size: 34pt;
+  letter-spacing: 4px; 
+  margin-top: 8vw;
+}
+
+/*Blog content*/
+.post {
+  margin-bottom: 8vw;
+  margin: auto;
+}
+
+p {
+  color: #707070;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12pt;
+  text-align: justify;
+}
+
+p.date {
+  color: #313638;
+  font-size: 10pt;
+  text-align: center;
+  margin-bottom: 4vw;
+}
+
+.post-content {
+  font-weight: 300;
+}
+
+.question {
+  font-weight: 500;
+}
+
+.list {
+  color: #707070;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12pt;
+  text-align: justify;
+  font-weight: 300;
+}
+
+/*-------------------------------Author card-----------------------------*/
+.author {
+  margin: 0 auto;
+  max-width: 40%;
+  margin-bottom: 6vw;
+}
+
+/*Author icon*/
+.author-left {
+  display: inline-block;
+  height: 140px;
+  width: 25%;
+}
+
+.author-left div {
+  border-radius: 50%;
+  height: 100%;
+  overflow: hidden;
+  width: 100%
+}
+
+.vivw_img {
+  height: auto;
+  transform: translate( -5%, -10%);
+  width: 120%;
+}
+
+.vic_img {
+  height: auto;
+  transform: translate( -5%, -5%);
+  width: 120%;
+}
+
+/*Author details*/
+.author-right {
+  display: inline-block;
+  padding: 0px 0px 0px 30px;
+  width: 70%;
+  letter-spacing: 2px;
+  color: #feb14b;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  text-align: left;
+}
+
+.author-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 20pt;
+  margin: 0;
+  padding: 0;
+}
+
+.position {
+  margin-top: 5px;
+  font-size: 14pt;
+  color: #e85f5c;
+}
+
+.author-right p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #707070;
+  font-size: 1vw;
+  margin-top: 10px;
+}

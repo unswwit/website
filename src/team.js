@@ -1,6 +1,5 @@
 //All necessary imports for this javascript
 import React, { Component } from "react";
-import "./style.css";
 import "./team.css";
 
 import Alison from "./team/Alison";

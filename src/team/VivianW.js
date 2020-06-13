@@ -17,7 +17,6 @@ class VivianW extends Component {
                     <p className="profile_text_position">Education Executive</p>
                     <p className="profile_degree">Commerce/Actuarial Science, 2nd Year</p>
 
-                    <p>
                     {/* Icon Bar shoulddd be a horizontal row of icons */}
                     <div classname="icon_bar">
                     {/* Linkedin Icon - target=_blank opens in new tab */}
@@ -36,7 +35,7 @@ class VivianW extends Component {
 
                     {/* Facebook Icon */}
                     <a
-                        href="https://www.facebook.com/lovefromviv"
+                        href="https://www.facebook.com/profile.php?id=100027563555266"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -59,7 +58,6 @@ class VivianW extends Component {
                         />
                     </a>
                     </div>
-                    </p>
                 </div>
             </div>
         );

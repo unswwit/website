@@ -84,10 +84,9 @@ div .headline{
 
 /*Right block text*/
 .description-right p {
-    color: #313638;
+    color: #313638B3;
     font-family: 'Montserrat', sans-serif;
     font-size: 11pt;
-    opacity: 70%;
     text-align: justify;    
 }
 
@@ -147,10 +146,9 @@ div .headline{
 
 /*Events description text*/
 .events-description p {
-    color: #313638;
+    color: #313638B3;
     font-family: 'Montserrat', sans-serif;
     font-size: 11pt;
-    opacity: 70%;
     padding: 20px;
     text-align: right;
 }
@@ -169,7 +167,7 @@ div .headline{
 }
 
 /*Big event image size*/
-.event-1 > img {
+.event-1 img {
     object-fit: cover;
     width: 100%;
 }
@@ -181,7 +179,7 @@ div .headline{
 }
 
 /*Small event image size*/
-.event-2 > img {
+.event-2 img {
     object-fit: cover;
     width: 100%;
 }

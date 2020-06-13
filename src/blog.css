@@ -1,0 +1,95 @@
+/*-------------------------------Blog posts page header-----------------------------*/
+/*Header image*/
+.coverPhoto {
+    background-image: url('/blog-header.png');
+    background-position: center bottom 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+/*Heading title*/
+.title h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5vw;
+    letter-spacing: 8px;
+    margin-top: 26vw;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+/*-------------------------------Blog post Preview-----------------------------*/
+/*Author circle crop*/
+.author-pic {
+    border-radius: 50%;
+    height: 5.5vw;
+    overflow: hidden;
+    width: 5.5vw;
+    margin-right: 1.5vw;
+    margin-left: 0px;
+}
+
+/*Author image*/
+.vivw_img {
+    height: auto;
+    transform: translate( -5%, -10%);
+    width: 120%;
+}
+
+/*Post preview*/
+table {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+}
+
+.blog-preview {
+    padding: 2vw;
+}
+
+.blog-details {
+    margin-bottom: 15px;
+}
+
+.heading {
+    color: #FEB14B;
+    letter-spacing: 0.1vw;
+    font-size: 12pt;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.auth {
+    color: #FEB14B;
+    letter-spacing: 0.1vw;
+    font-size: 10pt;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.heading:hover {
+    text-decoration: none;
+}
+
+.subheading {
+    color: #707070;
+    letter-spacing: 0.1vw;
+    font-size: 10pt;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+}
+
+.date {
+    color: #313638;
+    letter-spacing: 0.1vw;
+    font-size: 8pt;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+}

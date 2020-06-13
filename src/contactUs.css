@@ -51,16 +51,14 @@
     border-bottom: solid;
     border-color: #777b7c;
     border-width: 2px;
-    color: #313638;
-    opacity: 70%;
+    color: #777b7c;
     width: 100%;
 }
 
 input.formInput {
-    color: #313638;
+    color: #777b7c;
     padding: 5px;
     padding-left: 0px;
-    opacity: 70%;
     background-color: #ffffff;
 
     border-style: none;
@@ -141,12 +139,11 @@ form input.button:hover {
 }
 
 .newEmails a {
-    color: #313638;
+    color: #777b7c;
     display: block;
     font-family: 'Montserrat', sans-serif;
     font-size: 10pt;
     letter-spacing: 1.5px;
-    opacity: 70%;
     padding-bottom: 5px;
 }
 

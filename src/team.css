@@ -112,6 +112,9 @@ h2.team-heading{
 }
 
 /*Executive social media links*/
+.icon_bar {
+    align-content: center;
+}
 .icon {   
     border: 0;
     height: 25px;
@@ -130,6 +133,7 @@ h2.team-heading{
     font-size: 24pt;
     letter-spacing: 0.1vw;
     position: relative;
+    text-align: center;
 }
 
 /*Executive positions*/
@@ -142,17 +146,17 @@ h2.team-heading{
     letter-spacing: 0.1vw;
     padding-top: 10pt;
     position: relative;
+    text-align: center;
 }
 
 /*Executive degrees*/
 .profile_degree {
-    color: #313638;
     font-family: 'Montserrat', sans-serif;
     font-size: 10pt;   
     font-weight: lighter;
     letter-spacing: 0.1vw;
-    opacity: 70%;
     position: relative;
     white-space: initial;
     word-wrap: break-word;
+    text-align: center;
 }

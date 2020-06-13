@@ -24,19 +24,19 @@ h2 {
 }
 
 .subheader {
-    font-family: Arial;
+    font-family: 'Montserrat', sans-serif;
     font-size: 13pt;
     color: grey;
 }
 
 p {
-    font-family: Arial;
+    font-family: 'Montserrat', sans-serif;
     font-size: 10pt;
     margin-top: 0;
 }
 
 .body_bold {
-    font-family: Arial;
+    font-family: 'Montserrat', sans-serif;
     font-size: 10pt;
     font-weight: bold;
 }
@@ -68,6 +68,7 @@ p {
 .bg-custom{
     background: #fff7ef;
     font-size: 10pt;
+    padding: 0px;
 }
 
 .nav{
@@ -85,7 +86,7 @@ p {
 .nav-item{
     float:right;
     color: #313638;
-    padding: 5px;
+    padding: 20px 5px;
     text-decoration: none;
     letter-spacing: 1.5px;
 }
@@ -94,6 +95,32 @@ p {
     color: #313638;
     padding: 10px 15px;
     text-decoration: none;
+}
+
+.dropdown-menu{
+    border-color: transparent;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    background-color: #fff7ef;
+    margin-top: 15px;
+    border-radius: 0px;
+}
+
+.dropdown-item {
+    padding: 5px 0px;
+}
+
+.dropdown-item:hover {
+    background-color: #fff7ef;
+}
+
+.menuTitle{
+    color: #313638; 
+    padding: 10px 15px;
+}
+
+.menuTitle:hover{
+    color: #e85f5c;
 }
 
 .nav-item a:hover{
@@ -113,11 +140,10 @@ footer {
 
 .footer-links {
     list-style-type: none;
-    align: center;
     margin: 20px auto;
     padding: 0;
     align-self: center;
-    width: 54%;
+    width: 60%;
 }
 
 .footer-item {
@@ -126,6 +152,11 @@ footer {
     padding: 16px;
     color: #313638;
 }
+
+.footer-copyright {
+    font-family: 'Montserrat', sans-serif;
+}
+
 
 .footer-copyright, a {
     color: #313638;

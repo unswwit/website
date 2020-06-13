@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React, { Component } from 'react';
 import "./sponsors.css";
 
 import Amazon from "./sponsors/Amazon";
@@ -7,18 +6,17 @@ import Atlassian from "./sponsors/Atlassian";
 import Baraja from "./sponsors/Baraja";
 import Commonwealth from "./sponsors/Commonwealth";
 import Deloitte from "./sponsors/Deloitte";
-import DXC from "./sponsors/DXC";
 import EY from "./sponsors/EY";
-import Fairfax from "./sponsors/Fairfax";
 import Google from "./sponsors/Google";
 import LendLease from "./sponsors/Lendlease";
 import McGrathNicol from "./sponsors/McGrathNicol";
+import Nine from "./sponsors/Nine";
 import Palantir from "./sponsors/Palantir";
 import QPay from "./sponsors/QPay";
 import Quantium from "./sponsors/Quantium";
 import Telstra from "./sponsors/Telstra";
 
-class Sponsors extends React.Component {
+class Sponsors extends Component {
     render() {
         return (
             <div className='centre'>
@@ -45,23 +43,22 @@ class Sponsors extends React.Component {
                 <div id="majorContainer">
                     <Amazon/>
                     <Atlassian/>
-                    <Baraja/>
                 </div>
 
                 <div id="majorContainer">
+                    <Baraja/>
                     <Commonwealth/>
                     <Deloitte/>
-                    <DXC/>
                 </div>
 
                 <div id="majorContainer">
                     <EY/>
-                    <Fairfax/>
                     <Google/>
+                    <McGrathNicol/>
                 </div>
 
                 <div id="majorContainer">
-                    <McGrathNicol/>
+                    <Nine/>
                     <Quantium/>
                 </div>
 

@@ -17,7 +17,6 @@ class Elicia extends Component {
                     <p className="profile_text_position">Information Technology Executive</p>
                     <p className="profile_degree">Commerce/Computer Science, 2nd Year</p>
 
-                    <p>
                     {/* Icon Bar shoulddd be a horizontal row of icons */}
                     <div classname="icon_bar">
                         <a
@@ -58,7 +57,6 @@ class Elicia extends Component {
                             />
                         </a>
                     </div>
-                    </p>
                 </div>  
             </div>
         );
