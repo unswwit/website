@@ -3,6 +3,10 @@ import React, { Component } from "react";
 import "./style.css";
 import "./marketingArchive.css";
 
+import WCrushTan from "./initiatives/WCrushTan";
+import WCrushMayer from "./initiatives/WCrushMayer";
+import TechTrivia from "./initiatives/TechTrivia";
+
 class MarketingArchive extends Component {
   render() {
     return (
@@ -16,15 +20,51 @@ class MarketingArchive extends Component {
             </div>
             {/*End of Header*/}
 
-            {/*Start of text*/}
-            <div class="introParagraph">
-              <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie eu tellus sed facilisis. Aliquam eget interdum ipsum. Vivamus rutrum sapien velit, eget finibus enim pellentesque at. Ut sed felis nisi. Maecenas.</p>
+            <div id="parent">
+            {/*Left intiatives side bar*/}
+              <div id="side">
+                <div class="sideBar">
+                  {/*2020 title*/}
+                  <div class="yearSection">
+                    <p class="year">2020</p>
+                  </div>
+
+                  {/*List of 2020 intatives*/}
+                  <div class="initiatives">
+                    <p class="init">WIT Crush Wednesday</p>
+                    <br></br>
+                    <p class="init">Initiative 2</p>
+                    <br></br>
+                    <p class="init">Initiative 3</p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="grid">
+                {/*Image collage*/}
+                <div class="gallery">
+                  <div class="row">
+                      <WCrushTan/>
+                      <TechTrivia/>
+                  </div>
+                  <div class="row">
+                      <TechTrivia/>
+                      <WCrushMayer/>
+                  </div>
+                  <div class="row">
+                      <WCrushTan/>
+                      <TechTrivia/>
+                  </div>
+                  <div class="row">
+                      <TechTrivia/>
+                      <WCrushMayer/>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/*2020 section*/}
-            <div class="yearSection">
-              <p class="year">2020</p>
-            </div>
+
+
         </div>
     );
   }
