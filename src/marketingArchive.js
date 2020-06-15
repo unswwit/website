@@ -24,18 +24,15 @@ class MarketingArchive extends Component {
             {/*Left intiatives side bar*/}
               <div id="side">
                 <div class="sideBar">
-                  {/*2020 title*/}
-                  <div class="yearSection">
-                    <p class="year">2020</p>
-                  </div>
 
                   {/*List of 2020 intatives*/}
-                  <div class="initiatives">
-                    <p class="init">WIT Crush Wednesday</p>
+                  <div id="initiatives">
+                    <button class="init year active" onclick="filterSelection('2020')">2020</button>
+                    <button class="init" onclick="filterSelection('crush')">WIT Crush Wednesday</button>
                     <br></br>
-                    <p class="init">Initiative 2</p>
+                    <button class="init" onclick="filterSelection('init2')">Initiative 2</button>
                     <br></br>
-                    <p class="init">Initiative 3</p>
+                    <button class="init" onclick="filterSelection('init3')">Initiative 3</button>
                   </div>
                 </div>
               </div>
@@ -44,20 +41,20 @@ class MarketingArchive extends Component {
                 {/*Image collage*/}
                 <div class="gallery">
                   <div class="row">
-                      <WCrushTan/>
-                      <TechTrivia/>
+                      <div class="image crush"><WCrushTan/></div>
+                      <div class="image trivia"><TechTrivia/></div>
                   </div>
                   <div class="row">
-                      <TechTrivia/>
-                      <WCrushMayer/>
+                      <div class="image trivia"><TechTrivia/></div>
+                      <div class="image crush"><WCrushMayer/></div>
                   </div>
                   <div class="row">
-                      <WCrushTan/>
-                      <TechTrivia/>
+                      <div class="image crush"><WCrushTan/></div>
+                      <div class="image trivia"><TechTrivia/></div>
                   </div>
                   <div class="row">
-                      <TechTrivia/>
-                      <WCrushMayer/>
+                      <div class="image trivia"><TechTrivia/></div>
+                      <div class="image crush"><WCrushMayer/></div>
                   </div>
                 </div>
               </div>
