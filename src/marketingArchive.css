@@ -52,12 +52,12 @@ button.init {
   font-family: 'Montserrat', sans-serif;
   font-size: 12pt;
   text-align: center;
-  margin: auto;
   display: block;
   border: none;
   outline: none;
   background-color: white;
   width: 25vw;
+  padding-bottom: 15px;
 }
 
 /*button.init.active {
