@@ -24,14 +24,11 @@ class MarketingArchive extends Component {
             {/*Left intiatives side bar*/}
               <div id="side">
                 <div class="sideBar">
-
                   {/*List of 2020 intatives*/}
                   <div id="initiatives">
                     <button class="init year active" onclick="filterSelection('2020')">2020</button>
                     <button class="init" onclick="filterSelection('crush')">WIT Crush Wednesday</button>
-                    <br></br>
                     <button class="init" onclick="filterSelection('init2')">Initiative 2</button>
-                    <br></br>
                     <button class="init" onclick="filterSelection('init3')">Initiative 3</button>
                   </div>
                 </div>
