@@ -27,7 +27,7 @@ class Blog extends Component {
                 <tr>
                     <tr>
                         <td>
-                            <img src={process.env.PUBLIC_URL + "/blog_preview.jpg"} alt="preview" style={{width:"550px", height: "350px"}}/>
+                            <img src={process.env.PUBLIC_URL + "/blog-covers/06-fontaine-foxworth.png"} alt="preview" style={{width:"550px", height: "350px"}}/>
                         </td>
 
                         <td class= "blog-preview">
@@ -63,13 +63,13 @@ class Blog extends Component {
 
             {/*blog post 5*/}
             <Link to="/blog/5" style={{ textDecoration: 'none' }}>
-            <div class="blog-post" style={{marginTop: "10vw", marginBottom: "5vw"}}>
+            <div class="blog-post" style={{marginTop: "5vw", marginBottom: "5vw"}}>
 
                 <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
                 <tr>
                     <tr>
                         <td>
-                            <img src={process.env.PUBLIC_URL + "/blog_preview.jpg"} alt="preview" style={{width:"550px", height: "350px"}}/>
+                            <img src={process.env.PUBLIC_URL + "/blog-covers/05-salina-jantarang.png"} alt="preview" style={{width:"550px", height: "350px"}}/>
                         </td>
 
                         <td class= "blog-preview">
@@ -126,7 +126,7 @@ class Blog extends Component {
                 <tr>
                     <tr>
                         <td>
-                            <img src={process.env.PUBLIC_URL + "/blog_preview.jpg"} alt="preview" style={{width:"550px", height: "350px"}}/>
+                            <img src={process.env.PUBLIC_URL + "/blog-covers/04-syin-li-tan.png"} alt="preview" style={{width:"550px", height: "350px"}}/>
                         </td>
 
                         <td class= "blog-preview">
@@ -170,7 +170,7 @@ class Blog extends Component {
                 <tr>
                     <tr>
                         <td>
-                            <img src={process.env.PUBLIC_URL + "/blog_preview.jpg"} alt="preview" style={{width:"550px", height: "350px"}}/>
+                            <img src={process.env.PUBLIC_URL + "/blog-covers/03-marissa-mayer.png"} alt="preview" style={{width:"550px", height: "350px"}}/>
                         </td>
 
                         <td class= "blog-preview">
@@ -214,7 +214,7 @@ class Blog extends Component {
                 <tr>
                     <tr>
                         <td>
-                            <img src={process.env.PUBLIC_URL + "/blog_preview.jpg"} alt="preview" style={{width:"550px", height: "350px"}}/>
+                            <img src={process.env.PUBLIC_URL + "/blog-covers/02-lisa-harvey-smith.png"} alt="preview" style={{width:"550px", height: "350px"}}/>
                         </td>
 
                         <td class= "blog-preview">
@@ -272,7 +272,7 @@ class Blog extends Component {
                 <tr>
                     <tr>
                         <td>
-                            <img src={process.env.PUBLIC_URL + "/blog_preview.jpg"} alt="preview" style={{width:"550px", height: "350px"}}/>
+                            <img src={process.env.PUBLIC_URL + "/blog-covers/01-silvia-lin.png"} alt="preview" style={{width:"550px", height: "350px"}}/>
                         </td>
 
                         <td class= "blog-preview">
