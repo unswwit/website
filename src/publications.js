@@ -23,28 +23,28 @@ class Publications extends React.Component {
 
                       <div className = "article">
                         <div className = "dark"></div>
-                        <h2> Title </h2>
+                        <h2> Title Title </h2>
                         <p> Date Published </p> {/*Change this to add functionality*/}
                         <div className = "button">
-                          <h3> Read </h3>
+                          <h3> Read More </h3>
                         </div>
                       </div>
 
                       <div className = "article">
                       <div className = "dark"></div>
-                        <h2> Title </h2>
+                        <h2> Title Title </h2>
                         <p> Date Published </p> {/*Change this to add functionality*/}
                         <div className = "button">
-                          <h3> Read </h3>
+                          <h3> Read More </h3>
                         </div>
                       </div>
 
                       <div className = "article">
                         <div className = "dark"></div>
-                        <h2> Title </h2>
+                        <h2> Title Title </h2>
                         <p> Date Published </p> {/*Change this to add functionality*/}
                         <div className = "button">
-                          <h3> Read </h3>
+                          <h3> Read More </h3>
                         </div>
                       </div>
 
@@ -58,28 +58,28 @@ class Publications extends React.Component {
                       <div className = "row">
                         <div className = "dark"></div>
                         <div className = "article">
-                          <h2> Title </h2>
+                          <h2> Title Title </h2>
                           <p> Date Published </p> {/*Change this to add functionality*/}
                           <div className = "button">
-                            <h3> Read </h3>
+                            <h3> Read More </h3>
                           </div>
                         </div>
 
                         <div className = "article">
                           <div className = "dark"></div>
-                          <h2> Title </h2>
+                          <h2> Title Title </h2>
                           <p> Date Published </p> {/*Change this to add functionality*/}
                           <div className = "button">
-                            <h3> Read </h3>
+                            <h3> Read More </h3>
                           </div>
                         </div>
 
                         <div className = "article">
                         <div className = "dark"></div>
-                          <h2> Title </h2>
+                          <h2> Title Title </h2>
                           <p> Date Published </p> {/*Change this to add functionality*/}
                           <div className = "button">
-                            <h3> Read </h3>
+                            <h3> Read More </h3>
                           </div>
                         </div>
 
