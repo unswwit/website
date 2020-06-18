@@ -9,7 +9,7 @@ class Publications extends React.Component {
                 <div className="publicationsHeader">
                     {/* Cover Photo */}
                     {/* Main Title, and Subtitle Area */}
-                    <div class="overlay"></div>
+                    <div className="overlay"></div>
                         <div className="title_area">
                             <h1 className="centre">Publications</h1>
                         </div>
@@ -22,7 +22,7 @@ class Publications extends React.Component {
                     <div className = "row">
 
                       <div className = "article">
-                        <div className = "overlay"></div>
+                        <div className = "dark"></div>
                         <h2> Title </h2>
                         <p> Date Published </p> {/*Change this to add functionality*/}
                         <div className = "button">
@@ -31,6 +31,7 @@ class Publications extends React.Component {
                       </div>
 
                       <div className = "article">
+                      <div className = "dark"></div>
                         <h2> Title </h2>
                         <p> Date Published </p> {/*Change this to add functionality*/}
                         <div className = "button">
@@ -39,6 +40,7 @@ class Publications extends React.Component {
                       </div>
 
                       <div className = "article">
+                        <div className = "dark"></div>
                         <h2> Title </h2>
                         <p> Date Published </p> {/*Change this to add functionality*/}
                         <div className = "button">
@@ -54,7 +56,7 @@ class Publications extends React.Component {
                       <h1>2019</h1>
 
                       <div className = "row">
-
+                        <div className = "dark"></div>
                         <div className = "article">
                           <h2> Title </h2>
                           <p> Date Published </p> {/*Change this to add functionality*/}
@@ -64,6 +66,7 @@ class Publications extends React.Component {
                         </div>
 
                         <div className = "article">
+                          <div className = "dark"></div>
                           <h2> Title </h2>
                           <p> Date Published </p> {/*Change this to add functionality*/}
                           <div className = "button">
@@ -72,6 +75,7 @@ class Publications extends React.Component {
                         </div>
 
                         <div className = "article">
+                        <div className = "dark"></div>
                           <h2> Title </h2>
                           <p> Date Published </p> {/*Change this to add functionality*/}
                           <div className = "button">
