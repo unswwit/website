@@ -10,13 +10,14 @@ import ContactUs from "./contactUs";
 import Footer from "./footer";
 import OurTeam from "./team";
 import Blog from "./blog";
+import Publications from "./publications";
 
 import blogPost1 from "./blog-post/blog-post-1";
 import blogPost2 from "./blog-post/blog-post-2";
 import blogPost3 from "./blog-post/blog-post-3";
 import blogPost4 from "./blog-post/blog-post-4";
 import blogPost5 from "./blog-post/blog-post-5";
-import Publications from "./publications";
+import blogPost6 from "./blog-post/blog-post-6";
 
 class App extends Component{
   constructor(props) {
@@ -79,6 +80,7 @@ class App extends Component{
           <Route path="/blog/3" component={blogPost3}/>
 					<Route path="/blog/4" component={blogPost4}/>
 					<Route path="/blog/5" component={blogPost5}/>
+          <Route path="/blog/6" component={blogPost6}/>
 				</Switch>
 			</body>
 		</HashRouter>

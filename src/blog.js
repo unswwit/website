@@ -20,14 +20,56 @@ class Blog extends Component {
             {/*Start of blog posts*/}
 
             {/*blog post 5*/}
-            <Link to="/blog/5" style={{ textDecoration: 'none' }}>
+            <Link to="/blog/6" style={{ textDecoration: 'none' }}>
             <div class="blog-post" style={{marginTop: "10vw", marginBottom: "5vw"}}>
-                
+
                 <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
                 <tr>
                     <tr>
                         <td>
-                            <img src={process.env.PUBLIC_URL + "/blog_preview.jpg"} alt="preview" style={{width:"550px", height: "350px"}}/>
+                            <img src={process.env.PUBLIC_URL + "/blog-covers/06-fontaine-foxworth.png"} alt="preview" style={{width:"550px", height: "350px"}}/>
+                        </td>
+
+                        <td class= "blog-preview">
+                            <div class="blog-details">
+                                <div class="heading">
+                                Introducing: Fontaine Foxworth, Product Manager of Google
+                                </div>
+                                <div class="date">17/06/2020</div>
+                                <div class="subheading">Let’s read what Fontaine had to say about her journey into tech.</div>
+                            </div>
+                            <tr>
+                                <td>
+                                    <div class="author-pic">
+                                    <img
+                                    src={process.env.PUBLIC_URL + "/potraits/victoria.jpg"}
+                                    className="profile_img vivw_img"
+                                    alt="victoria-ruming"
+                                    resizeMode="contain"
+                                    />
+                                    </div>
+                                </td>
+                                <td style={{width: "200px"}}>
+                                    <div class="auth">Victoria Ruming</div>
+
+                                </td>
+                            </tr>
+                        </td>
+                    </tr>
+                </tr>
+                </table>
+            </div>
+            </Link>
+
+            {/*blog post 5*/}
+            <Link to="/blog/5" style={{ textDecoration: 'none' }}>
+            <div class="blog-post" style={{marginTop: "5vw", marginBottom: "5vw"}}>
+
+                <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
+                <tr>
+                    <tr>
+                        <td>
+                            <img src={process.env.PUBLIC_URL + "/blog-covers/05-salina-jantarang.png"} alt="preview" style={{width:"550px", height: "350px"}}/>
                         </td>
 
                         <td class= "blog-preview">
@@ -53,7 +95,7 @@ class Blog extends Component {
                                 </td>
                                 <td style={{width: "200px"}}>
                                     <div class="auth">Vivian Wong</div>
-                                    
+
                                 </td>
                                 <td>
                                     <div class="author-pic">
@@ -84,7 +126,7 @@ class Blog extends Component {
                 <tr>
                     <tr>
                         <td>
-                            <img src={process.env.PUBLIC_URL + "/blog_preview.jpg"} alt="preview" style={{width:"550px", height: "350px"}}/>
+                            <img src={process.env.PUBLIC_URL + "/blog-covers/04-syin-li-tan.png"} alt="preview" style={{width:"550px", height: "350px"}}/>
                         </td>
 
                         <td class= "blog-preview">
@@ -110,7 +152,7 @@ class Blog extends Component {
                                 </td>
                                 <td style={{width: "200px"}}>
                                     <div class="heading auth">Vivian Wong</div>
-                                    
+
                                 </td>
                             </tr>
                         </td>
@@ -128,7 +170,7 @@ class Blog extends Component {
                 <tr>
                     <tr>
                         <td>
-                            <img src={process.env.PUBLIC_URL + "/blog_preview.jpg"} alt="preview" style={{width:"550px", height: "350px"}}/>
+                            <img src={process.env.PUBLIC_URL + "/blog-covers/03-marissa-mayer.png"} alt="preview" style={{width:"550px", height: "350px"}}/>
                         </td>
 
                         <td class= "blog-preview">
@@ -154,7 +196,7 @@ class Blog extends Component {
                                 </td>
                                 <td style={{width: "200px"}}>
                                     <div class="auth">Georgie Mansfield</div>
-                                    
+
                                 </td>
                             </tr>
                         </td>
@@ -172,7 +214,7 @@ class Blog extends Component {
                 <tr>
                     <tr>
                         <td>
-                            <img src={process.env.PUBLIC_URL + "/blog_preview.jpg"} alt="preview" style={{width:"550px", height: "350px"}}/>
+                            <img src={process.env.PUBLIC_URL + "/blog-covers/02-lisa-harvey-smith.png"} alt="preview" style={{width:"550px", height: "350px"}}/>
                         </td>
 
                         <td class= "blog-preview">
@@ -198,7 +240,7 @@ class Blog extends Component {
                                 </td>
                                 <td style={{width: "200px"}}>
                                     <div class="auth">Elisa Sanjurjo</div>
-                                    
+
                                 </td>
                                 <td>
                                     <div class="author-pic">
@@ -214,7 +256,7 @@ class Blog extends Component {
                                     <div class="auth">Victoria Ruming</div>
                                 </td>
                             </tr>
-                            
+
                         </td>
                     </tr>
                 </tr>
@@ -230,7 +272,7 @@ class Blog extends Component {
                 <tr>
                     <tr>
                         <td>
-                            <img src={process.env.PUBLIC_URL + "/blog_preview.jpg"} alt="preview" style={{width:"550px", height: "350px"}}/>
+                            <img src={process.env.PUBLIC_URL + "/blog-covers/01-silvia-lin.png"} alt="preview" style={{width:"550px", height: "350px"}}/>
                         </td>
 
                         <td class= "blog-preview">
@@ -256,7 +298,7 @@ class Blog extends Component {
                                 </td>
                                 <td style={{width: "200px"}}>
                                     <div class="heading auth">Vivian Wong</div>
-                                    
+
                                 </td>
                             </tr>
                         </td>
