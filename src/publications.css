@@ -31,6 +31,8 @@
 }
 
 .row {
+  margin-top: 40px;
+  margin-bottom: 50px;
   height: 300px;
 }
 
@@ -51,6 +53,10 @@
     border-color: lightgrey;*/
 }
 
+.article:hover h2, .article:hover p, .article:hover .button {
+  visibility: visible;
+}
+
 .article h2 {
   text-transform: capitalize;
   text-align: left;
@@ -58,6 +64,7 @@
   margin-bottom: 0px;
   font-size: 3.3vw;
   display: inline-block;
+  visibility: hidden;
 }
 
 .article p {
@@ -66,7 +73,7 @@
   font-family: 'Montserrat', sans-serif;
   opacity: 70%;
   display: inline-block;
-
+  visibility: hidden;
 }
 
 /*read only button, channge for functionality*/
@@ -75,6 +82,7 @@
   height: 40px;
   width: 100px;
   padding-left: 10%;
+  visibility: hidden;
 }
 
 .button h3 {

@@ -9,6 +9,7 @@ class Publications extends React.Component {
                 <div className="publicationsHeader">
                     {/* Cover Photo */}
                     {/* Main Title, and Subtitle Area */}
+                    <div class="overlay"></div>
                         <div className="title_area">
                             <h1 className="centre">Publications</h1>
                         </div>
@@ -21,6 +22,7 @@ class Publications extends React.Component {
                     <div className = "row">
 
                       <div className = "article">
+                        <div className = "overlay"></div>
                         <h2> Title </h2>
                         <p> Date Published </p> {/*Change this to add functionality*/}
                         <div className = "button">
