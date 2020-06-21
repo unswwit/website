@@ -79,8 +79,8 @@ class App extends Component{
           			<Route path="/blog/3" component={blogPost3}/>
 					<Route path="/blog/4" component={blogPost4}/>
 					<Route path="/blog/5" component={blogPost5}/>
-          <Route path="/blog/6" component={blogPost6}/>
-          <Route path="/blog/7" component={blogPost7}/>
+          			<Route path="/blog/6" component={blogPost6}/>
+        			<Route path="/blog/7" component={blogPost7}/>
 				</Switch>
 			</body>
 		</HashRouter>

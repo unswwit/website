@@ -65,7 +65,7 @@ class Blog extends Component {
 
             {/*blog post 5*/}
             <Link to="/blog/6" style={{ textDecoration: 'none' }}>
-            <div class="blog-post" style={{marginTop: "10vw", marginBottom: "5vw"}}>
+            <div class="blog-post" style={{marginTop: "5vw", marginBottom: "5vw"}}>
 
                 <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
                 <tr>

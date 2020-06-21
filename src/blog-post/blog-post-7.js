@@ -36,7 +36,7 @@ class blogPost7 extends Component {
                   participants designed assistive technology to improve the lives of
                   Australians living with disabilities or functional impairments. The year prior, students
                    developed innovative solutions to create more livable cities
-                   in line with the theme, <b>Our Cities, Our Future</b>We use our hackathon
+                   in line with the theme, <b>Our Cities, Our Future</b>. We use our hackathon
                    themes to raise awareness and highlight the importance of these societal concerns.
                    </p><br/>
 
