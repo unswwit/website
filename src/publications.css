@@ -54,7 +54,7 @@
     background-image: url('/pub_mini.png');
     background-size: cover;
     display: inline-block;
-    width: 29%;
+    width: 230px;
     height: 300px;
     text-align: left;
     margin: 0px 2% 0px 2%;
@@ -114,6 +114,8 @@
   font-size: 9px;
   color: white;
   text-transform: uppercase;
-  display: inline-block;
+  margin-left: -12px;
   white-space: nowrap;
+  float: center;
+
 }
