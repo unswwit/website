@@ -32,8 +32,8 @@ class blogPost7 extends Component {
                   <p class="question">Hackathon Participants Make a Difference</p>
 
 
-                  <p class="post-content">Our 2019 WIT Hackathon theme of <b> Do with Digital </b>,
-                  participants designed assistive technology to improve the lives of
+                  <p class="post-content">Our 2019 WIT Hackathon theme, <b> Do with Digital </b>,
+                  challenged participants to design assistive technology to improve the lives of
                   Australians living with disabilities or functional impairments. The year prior, students
                    developed innovative solutions to create more livable cities
                    in line with the theme, <b>Our Cities, Our Future</b>. We use our hackathon
@@ -45,20 +45,10 @@ class blogPost7 extends Component {
                   <p class="question">The Most Vital Elements of Success</p>
 
 
-                  <p class="post-content">Former WIT Hackathon winning and runner up teams
-                  shared what contributed to their success and what they would have done differently.
-                  The following are the winning teams of WIT Hackathon 2017 and 2019.</p><br/>
-
-
-                  <p class="post-content">WIT 2019 Hackathon Winner</p><br/>
-
-                  <p class="question">First Place - Hungry Hakkers (Victor Tsang)</p><br/>
-                  <p class="question">Second Place- Team Nandos (Madeline Younes, Kai Feng)</p><br/>
-                  <p class="question">Third Place - Starks (Rahil Agrawal)</p><br/>
-
-                  <p class="post-content">WIT 2017 Hackathon Winner</p><br/>
-                  <p class="question">Second Place  (Christopher Shi)</p><br/>
-
+                  <p class="post-content">Former WIT Hackathon winners and runner up teams have shared
+                  what contributed to their success and what they would have done differently.  Here are
+                  some advice from WIT Hackathon winners Victor Tsang, Madeline Younes, Kai Feng, Rahil
+                  Agrawal and Christopher Shi.</p><br/>
 
 
                   <br/><ol class="list">
@@ -154,7 +144,8 @@ class blogPost7 extends Component {
                   Let’s look at the awesome ideas and products these teams developed
                   during the WIT Hackathon!</p><br/>
 
-                  <p class="post-content">In 2019, the first place winner (Hungry Hakkers)
+                  <p class="post-content">In 2019, the first place winner (Hungry Hakkers;
+                    Victor Tsang, Kevin Lou, Sebastian Hodge, Iris Chong, Christine Wu)
                   developed an application to help streamline caretakers' work in nursing
                   homes. Their goal was to prototype a solution that would be of minimal
                   cost and easy to use for the elderly, while also being the most convenient
@@ -163,15 +154,17 @@ class blogPost7 extends Component {
                   to call for assistance (food, water, hygiene, and emergencies) that had
                   the potential to work in tandem with already-existing technology.</p><br/>
 
-                  <p class="post-content">The 2019 second place winner (Team Nandos) designed a
+                  <p class="post-content">The 2019 second place winner (Team Nandos;
+                    Jovann Tjuandi, Kai Feng, Madeline Younes, Rebecca Tran) designed a
                   prototype to simulate everyday scenarios that allows people with autism to
                   become comfortable in everyday environments. Sharing a passion for
                   mental illness, the team members created the virtual reality prototype
                    to spread the message that mental health doesn't just affect the
                    health of the individual but it also affects them socially.</p><br/>
 
-                  <p class="post-content">The third place winner (Starks) in the 2019
-                  Hackathon came up with a filtering service to allow people to search
+                  <p class="post-content">The 2019 third place winner (Starks;
+                    Rahil Agrawal, Aditya Karia, Sushant Adhikari, Andrew Kaploun,
+                    Brittany Evat) came up with a filtering service to allow people to search
                    for establishments that have facilities to accommodate people
                    with various disabilities. With a shared passion for creating
                    a more inclusive world for those living with disabilities
@@ -179,7 +172,8 @@ class blogPost7 extends Component {
                    integration with AWS APIs and Health APIs so users could find
                    restaurants, companies, and other establishments that suit their needs. </p><br/>
 
-                  <p class="post-content">The winning team of the 2017 WIT Hackathon created
+                  <p class="post-content">The second place winning team of the 2017 WIT Hackathon
+                  (Christopher Shi, Mackenzie Alexander, Lena Albin, Vanessa Long) created
                    a predictive platform to help students discover their career pathways.
                    Team members were first-year students who wanted to discover what career
                    to pursue. So, they built something to help themselves and other students
@@ -187,7 +181,6 @@ class blogPost7 extends Component {
                    interviews, AI evaluates the interviews, and the platform provides students
                    with potential career pathways and opportunities. </p><br/>
 
-                  <br/>
                   <p class="post-content">We would like to share a special thanks to Victor
                   Tsang, Madeline Younes, Kai Feng, Rahil Agrawal and Christopher Shi
                   for helping with this blog post. As representatives of past winning
