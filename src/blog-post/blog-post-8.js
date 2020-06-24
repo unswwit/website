@@ -33,15 +33,7 @@ class blogPost8 extends Component {
                   <p>Let’s read what Fontaine had to say about her journey into tech below</p>
 
                   <ol class="list">
-                    <li class="question"> What sparked your interest to join the field of STEM?</li>
-                    <p class="post-content">I love the fact that technology is a skill that can be applied to almost any field. I like finding problems
-                    I care about and using my skills in technology to help make the world a better place.</p><br/>
-
-                    <li class="question"> Please provide a short summary of your career journey so far:</li>
-                    <p class="post-content">Since I studied Civil Engineering, I actually started off on a Construction site where I was the only woman!
-                    Since then, I've been working in Product Management, building lots of products in various fields, including fashion, data/analytics,
-                    mapping, and now blogging.</p><br/>
-
+                    
                     <li class="question">Where do you see yourself in the future (career wise)?</li>
                     <p class="post-content">My big passion in life is teaching people about EMOTIONS! I think I have a unique skill set in that I have
                     both deep technical understanding and an infinite passion for emotions. I want to bring those two together, and ultimately help people
