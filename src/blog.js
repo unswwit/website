@@ -19,6 +19,50 @@ class Blog extends Component {
 
             {/*Start of blog posts*/}
 
+            {/*blog post 8*/}
+            <Link to="/blog/8" style={{ textDecoration: 'none' }}>
+            <div class="blog-post" style={{marginTop: "10vw", marginBottom: "5vw"}}>
+
+                <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
+                <tr>
+                    <tr>
+                        <td>
+                            <img src={process.env.PUBLIC_URL + "/blog_preview.jpg"} alt="preview" style={{width:"550px", height: "350px"}}/>
+                        </td>
+
+                        <td class= "blog-preview">
+                            <div class="blog-details">
+                                <div class="heading">
+                                WIT Crush Wednesday - Dr Marguerite Evans-Galea
+                                </div>
+                                <div class="date">24/06/2020</div>
+                                <div class="subheading">Take a look at Dr Marguerite Evans-Galea's
+                                journey into STEM as well as advice for students who are interested in
+                                pursuing a career in STEM</div>
+                            </div>
+                            <tr>
+                                <td>
+                                    <div class="author-pic">
+                                    <img
+                                    src={process.env.PUBLIC_URL + "/potraits/vivw.jpg"}
+                                    className="profile_img vivw_img"
+                                    alt="vivian-wong"
+                                    resizeMode="contain"
+                                    />
+                                    </div>
+                                </td>
+                                <td style={{width: "200px"}}>
+                                    <div class="auth">Vivian Wong</div>
+
+                                </td>
+                            </tr>
+                        </td>
+                    </tr>
+                </tr>
+                </table>
+            </div>
+            </Link>
+
             {/*blog post 7*/}
             <Link to="/blog/7" style={{ textDecoration: 'none' }}>
             <div class="blog-post" style={{marginTop: "10vw", marginBottom: "5vw"}}>
