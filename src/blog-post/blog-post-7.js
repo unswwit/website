@@ -181,7 +181,6 @@ class blogPost7 extends Component {
                    interviews, AI evaluates the interviews, and the platform provides students
                    with potential career pathways and opportunities. </p><br/>
 
-                  <br/>
                   <p class="post-content">We would like to share a special thanks to Victor
                   Tsang, Madeline Younes, Kai Feng, Rahil Agrawal and Christopher Shi
                   for helping with this blog post. As representatives of past winning
