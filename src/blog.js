@@ -27,7 +27,7 @@ class Blog extends Component {
                 <tr>
                     <tr>
                         <td>
-                            <img src={process.env.PUBLIC_URL + "/blog_preview.jpg"} alt="preview" style={{width:"550px", height: "350px"}}/>
+                            <img src={process.env.PUBLIC_URL + "/blog-covers/08-marguerite-evans-galea.png"} alt="preview" style={{width:"550px", height: "350px"}}/>
                         </td>
 
                         <td class= "blog-preview">
@@ -65,13 +65,13 @@ class Blog extends Component {
 
             {/*blog post 7*/}
             <Link to="/blog/7" style={{ textDecoration: 'none' }}>
-            <div class="blog-post" style={{marginTop: "10vw", marginBottom: "5vw"}}>
+            <div class="blog-post" style={{marginTop: "5vw", marginBottom: "5vw"}}>
 
                 <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
                 <tr>
                     <tr>
                         <td>
-                            <img src={process.env.PUBLIC_URL + "/blog_preview.jpg"} alt="preview" style={{width:"550px", height: "350px"}}/>
+                            <img src={process.env.PUBLIC_URL + "/blog-covers/07-ace-your-hackathon.png"} alt="preview" style={{width:"550px", height: "350px"}}/>
                         </td>
 
                         <td class= "blog-preview">
