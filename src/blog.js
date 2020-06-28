@@ -19,9 +19,54 @@ class Blog extends Component {
 
             {/*Start of blog posts*/}
 
+            {/*blog post 9*/}
+            <Link to="/blog/9" style={{ textDecoration: 'none' }}>
+            <div class="blog-post" style={{marginTop: "10vw", marginBottom: "5vw"}}>
+
+                <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
+                <tr>
+                    <tr>
+                        <td>
+                            {/*TO BE CHANGED */}
+                            <img src={process.env.PUBLIC_URL + "/blog-covers/08-marguerite-evans-galea.png"} alt="preview" style={{width:"550px", height: "350px"}}/>
+                        </td>
+
+                        <td class= "blog-preview">
+                            <div class="blog-details">
+                                <div class="heading">
+                                What Are You REALLY Procrastinating?
+                                </div>
+                                <div class="date">29/06/2020</div>
+                                <div class="subheading">Inspired by Tim Urban’s TED Talk, 
+                                we look at challenging procrastination, and how it really exists in all of us, 
+                                even the non-procrastinators.</div>
+                            </div>
+                            <tr>
+                                <td>
+                                    <div class="author-pic">
+                                    <img
+                                    src={process.env.PUBLIC_URL + "/potraits/georgie.jpg"}
+                                    className="profile_img vivw_img"
+                                    alt="Georgie Mansfield"
+                                    resizeMode="contain"
+                                    />
+                                    </div>
+                                </td>
+                                <td style={{width: "200px"}}>
+                                    <div class="auth">Georgie Mansfield</div>
+
+                                </td>
+                            </tr>
+                        </td>
+                    </tr>
+                </tr>
+                </table>
+            </div>
+            </Link>
+
             {/*blog post 8*/}
             <Link to="/blog/8" style={{ textDecoration: 'none' }}>
-            <div class="blog-post" style={{marginTop: "10vw", marginBottom: "5vw"}}>
+            <div class="blog-post" style={{marginTop: "5vw", marginBottom: "5vw"}}>
 
                 <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
                 <tr>

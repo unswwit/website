@@ -13,6 +13,15 @@
   margin-top: 8vw;
 }
 
+/*Blog subtitle*/
+.blog-subtitle {
+  font-size: 12pt;
+  color: #313638;
+  text-align: center;
+  margin-bottom: 2vw;
+  font-style: italic;
+}
+
 /*Blog content*/
 .post {
   margin-bottom: 8vw;
@@ -24,6 +33,11 @@ p {
   font-family: 'Montserrat', sans-serif;
   font-size: 12pt;
   text-align: justify;
+}
+
+b {
+  color: #000000;
+  font-weight: bolder;
 }
 
 p.date {
@@ -47,6 +61,17 @@ p.date {
   font-size: 12pt;
   text-align: justify;
   font-weight: 300;
+}
+
+.super-emph {
+  font-size: 20pt;
+  font-weight: bolder;
+}
+
+.pic {
+  margin: 0 auto;
+  max-width: 40%;
+  margin-bottom: 4vw;
 }
 
 /*-------------------------------Author card-----------------------------*/
