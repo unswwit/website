@@ -22,7 +22,7 @@ class Footer extends Component{
                             <div class="col">
                                 <li class="footer-item"><a href="/blog-posts">Blog </a></li>
                                 <li class="footer-item"><a href="/blog-posts">Opportunities</a></li>
-                                <li class="footer-item"><a href="/blog-posts">Marketing Archive</a></li>
+                                <li class="footer-item"><a href="/blog-posts">Marketing Archives</a></li>
                             </div>
                             <div class="col socials">
                                 <div class="socials-subheading"><li class="footer-item">Follow our socials</li></div>
