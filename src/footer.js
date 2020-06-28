@@ -12,14 +12,14 @@ class Footer extends Component{
                             <li class="footer-item footer-logo"><img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo" 
                                 resizeMode='contain' style={{width: '100px'}} /></li>
                             </div>
-                            <div class="col">
+                            <div class="col footer-group-short">
                                 <li class="footer-item"><a href="/">Home</a></li>
                                 <li class="footer-item"><a href="/our-team">Team </a></li>
                                 <li class="footer-item"><a href="/sponsors">Sponsors </a></li>
                                 <li class="footer-item"><a href="/join-us">Join </a></li>
                                 <li class="footer-item"><a href="/contact-us">Contact</a></li>
                             </div>
-                            <div class="col">
+                            <div class="col footer-group-long">
                                 <li class="footer-item"><a href="/blog-posts">Blog </a></li>
                                 <li class="footer-item"><a href="/blog-posts">Opportunities</a></li>
                                 <li class="footer-item"><a href="/blog-posts">Marketing Archives</a></li>
