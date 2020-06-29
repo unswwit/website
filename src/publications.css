@@ -44,9 +44,9 @@
 }
 
 .row {
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 50px;
-  height: 300px;
+  height: auto;
 }
 
 /*Right side block*/
@@ -61,6 +61,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
     position: relative;
+    margin-top: 30px;
 }
 
 .article .dark {
