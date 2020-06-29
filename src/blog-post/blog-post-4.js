@@ -25,7 +25,7 @@ class blogPost4 extends Component {
                 <div class="post">
                     <p class="post-content">Syin Li Tan has all the hallmarks of a promising career at Deloitte Consulting in Australia. Upon graduating with a master’s degree in Information Systems from Monash University in 2017, she became a graduate in Deloitte Melbourne's Enterprise Applications (SAP) practice. Just 18 months later, Syin advanced to an SAP Consultant role, specializing in implementing SAP S/4HANA Project Systems. </p><br/>
                     <p class="post-content">Most young professionals don’t land their dream job right out of university. But before Deloitte welcomed Syin to their team, she had completed four internships for tech companies, earned awards for academic excellence, and volunteered as a photographer and musician. </p><br/>
-                    <p class="post-content">Let’s read what Syin had to say about her journey into tech below. </p><br/><br/>
+                    <p class="post-content">Let’s read what Syin had to say about her journey into tech below. </p><br/>
 
                     <p class="question">  What sparked your interest to join the field of STEM? </p>
                     <p class="post-content">Modern. Evergreen. Fast-paced. Constantly moving. That’s what drew me to the field of Technology!</p>
