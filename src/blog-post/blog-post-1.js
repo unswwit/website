@@ -5,8 +5,6 @@ import "./blog-post.css";
 import BlogTemplate from "./blogTemplate";
 
 class blogPost1 extends Component {
-
-
   render() {
     let blogContent = {
       0: ["post-content", "Silvia’s passionate about three things: technology, solving problems, and educating women about the opportunities in technology. Her passions collide in her role as a senior consultant of the SuccessFactors Team at PwC Australia. With a keen understanding of her client’s strategic business objectives and the feasibility of system design, she thrives in creating solutions for clients that allow them to operate more efficiently.","break"],
