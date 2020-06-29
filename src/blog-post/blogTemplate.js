@@ -33,11 +33,12 @@ class BlogTemplate extends Component {
                     {
                         Object.keys(this.props.content).map((key, index) => ( 
                             <div key={index}>
-                                ( (this.props.content[key][0] === "list" && this.props.content[key][2] === "start") ? <ol> : null }
+                               {// ( (this.props.content[key][0] === "list" && this.props.content[key][2] === "start") ? <ol> : null }
+                               }
                                 { this.props.content[key][0] === "list" ? 
                                     <li class="list">{this.props.content[key][1]}</li> : <p class={this.props.content[key][0]}>{this.props.content[key][1]}</p>
                                 }
-                                { this.props.content[key][2] === "end" ? </ol> : null }
+                                
                                 { this.props.content[key][2] === "break" ? <br/> : null }
                             </div>
                     ))}
