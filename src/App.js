@@ -16,6 +16,7 @@ import blogPost1 from "./blog-post/blog-post-1";
 import blogPost2 from "./blog-post/blog-post-2";
 import blogPost3 from "./blog-post/blog-post-3";
 import blogPost4 from "./blog-post/blog-post-4";
+import twentyTwenty from "./marketing-years/2020";
 
 class App extends Component{
   render(){
@@ -52,6 +53,7 @@ class App extends Component{
 					<Route path="/blog/2" component={blogPost2}/>
           			<Route path="/blog/3" component={blogPost3}/>
 					<Route path="/blog/4" component={blogPost4}/>
+          <Route path="/marketing-archive/2020" component={twentyTwenty}/>
 				</Switch>
 			</body>
 		</HashRouter>
