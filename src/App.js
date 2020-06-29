@@ -18,8 +18,6 @@ import blogPost4 from "./blog-post/blog-post-4";
 import blogPost5 from "./blog-post/blog-post-5";
 import blogPost6 from "./blog-post/blog-post-6";
 import blogPost7 from "./blog-post/blog-post-7";
-import blogPost8 from "./blog-post/blog-post-8";
-import blogPost9 from "./blog-post/blog-post-9";
 
 class App extends Component{
   constructor(props) {
@@ -51,7 +49,18 @@ class App extends Component{
 						<li class="nav-item"><NavLink to="/">HOME</NavLink></li>
 						<li class="nav-item"><NavLink to="/our-team">TEAM</NavLink></li>
 						<li class="nav-item"><NavLink to="/sponsors">SPONSORS</NavLink></li>
-						<li class="nav-item"><NavLink to="/blog">BLOG</NavLink></li>
+						<li class="nav-item" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
+							<div class="dropdown" display="static">
+								<div class="dropdown-toggle">
+									<span class="menuTitle">RESOURCES</span>
+								</div>
+								<div class= {this.state.showDD?'dropdown-menu show':'dropdown-menu'}>
+									<li class="dropdown-item"><NavLink to="/blog">BLOG</NavLink></li>
+									<li class="dropdown-item"><NavLink to="/blog">PUBLICATIONS</NavLink></li>
+									<li class="dropdown-item"><NavLink to="/blog">MARKETING ARCHIVES</NavLink></li>
+								</div>
+							</div>
+                        </li>
 						<li class="nav-item"><NavLink to="/join-us">JOIN</NavLink></li>
 						<li class="nav-item" style={{marginRight:"15px"}}><NavLink to="/contact-us">CONTACT</NavLink></li>
 					</ul>
@@ -72,8 +81,6 @@ class App extends Component{
 					<Route path="/blog/5" component={blogPost5}/>
                     <Route path="/blog/6" component={blogPost6}/>
 					<Route path="/blog/7" component={blogPost7}/>
-					<Route path="/blog/8" component={blogPost8}/>
-					<Route path="/blog/9" component={blogPost9}/>
 				</Switch>
 			</body>
 		</HashRouter>
