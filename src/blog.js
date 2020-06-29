@@ -28,7 +28,7 @@ class Blog extends Component {
                     <tr>
                         <td>
                             {/*TO BE CHANGED */}
-                            <img src={process.env.PUBLIC_URL + "/blog-covers/08-marguerite-evans-galea.png"} alt="preview" style={{width:"550px", height: "350px"}}/>
+                            <img src={process.env.PUBLIC_URL + "/blog-covers/09-procrastinating.png"} alt="preview" style={{width:"550px", height: "350px"}}/>
                         </td>
 
                         <td class= "blog-preview">
