@@ -45,7 +45,7 @@ class Home extends Component{
 					<div class="stats-info">
 						<div class="number">
 							<div>
-								<span><CountUp end={31} duration={5}/></span>
+								<span><CountUp end={30} duration={5}/></span>
 								<p>Team Members</p>
 							</div>
 							<div>
@@ -53,7 +53,7 @@ class Home extends Component{
 								<p>Sponsors</p>
 							</div>
 							<div>
-								<span><CountUp end={1857} duration={5}/></span>
+								<span><CountUp end={1950} duration={5}/></span>
 								<p>Facebook Followers</p>
 							</div>
 						</div>
@@ -71,14 +71,14 @@ class Home extends Component{
 						<h1> EVENTS </h1>
 					</div>
 					<div class="event-2">
-						<a href="https://www.facebook.com/events/854461765040428/">
-							<img src={process.env.PUBLIC_URL + '/witxnine.gif'} alt="banner"/>
+						<a href="https://www.facebook.com/events/208115483507235/">
+							<img src={process.env.PUBLIC_URL + '/tech-trivia-tournament.png'} alt="banner"/>
 						</a>
 					</div>
 					
 					<div class="event-1">
-						<a href="https://www.facebook.com/events/238521217422082/">
-							<img src={process.env.PUBLIC_URL + '/empowerment.png'} alt="banner"/>
+						<a href="https://www.facebook.com/events/882832525528439/">
+							<img src={process.env.PUBLIC_URL + '/sandbox.png'} alt="banner"/>
 						</a>	
 					</div>
 				</div>

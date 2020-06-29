@@ -2,16 +2,16 @@
 import React, { Component } from "react";
 import "./team.css";
 
-import Alison from "./team/Alison";
-import Amanda from "./team/Amanda";
-import Elicia from "./team/Elicia";
-import Elizabeth from "./team/Elizabeth";
-import Felicia from "./team/Felicia";
-import Gabrielle from "./team/Gabrielle";
-import Kelly from "./team/Kelly";
-import Rhea from "./team/Rhea";
-import VivianS from "./team/VivianS";
-import VivianW from "./team/VivianW";
+import Alison from "./Alison";
+import Amanda from "./Amanda";
+import Elicia from "./Elicia";
+import Elizabeth from "./Elizabeth";
+import Felicia from "./Felicia";
+import Gabrielle from "./Gabrielle";
+import Kelly from "./Kelly";
+import Rhea from "./Rhea";
+import VivianS from "./VivianS";
+import VivianW from "./VivianW";
 class OurTeam extends Component {
   render() {
     return (
