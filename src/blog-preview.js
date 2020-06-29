@@ -12,7 +12,7 @@ class BlogPreview extends Component {
 
             {/*blog post*/}
             <Link to={ "/blog/" + this.props.blogNo } style={{ textDecoration: 'none' }}>
-            <div class="blog-post" style={{marginTop:this.props.topMargin, marginBottom: "5vw"}}>
+            <div class="blog-post" style={{marginTop:this.props.topMargin, marginBottom:this.props.bottomMargin}}>
 
                 <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
                 <tr>
