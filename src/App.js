@@ -51,18 +51,7 @@ class App extends Component{
 						<li class="nav-item"><NavLink to="/">HOME</NavLink></li>
 						<li class="nav-item"><NavLink to="/our-team">TEAM</NavLink></li>
 						<li class="nav-item"><NavLink to="/sponsors">SPONSORS</NavLink></li>
-						<li class="nav-item" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
-							<div class="dropdown" display="static">
-								<div class="dropdown-toggle">
-									<span class="menuTitle">RESOURCES</span>
-								</div>
-								<div class= {this.state.showDD?'dropdown-menu show':'dropdown-menu'}>
-									<li class="dropdown-item"><NavLink to="/blog">BLOG</NavLink></li>
-									<li class="dropdown-item"><NavLink to="/blog">PUBLICATIONS</NavLink></li>
-									<li class="dropdown-item"><NavLink to="/blog">MARKETING ARCHIVES</NavLink></li>
-								</div>
-							</div>
-                        </li>
+						<li class="nav-item"><NavLink to="/blog">BLOG</NavLink></li>
 						<li class="nav-item"><NavLink to="/join-us">JOIN</NavLink></li>
 						<li class="nav-item" style={{marginRight:"15px"}}><NavLink to="/contact-us">CONTACT</NavLink></li>
 					</ul>
