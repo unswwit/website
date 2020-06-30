@@ -9,7 +9,6 @@ class WCrushTan extends Component {
                         src={process.env.PUBLIC_URL + "/initiatives/witcrush_tan.jpg"}
                         alt="Syin Li Tan"
                         resizeMode="contain"
-                        style={{'height': '22.5vw'}}
                       />
                 </a>
             </div>

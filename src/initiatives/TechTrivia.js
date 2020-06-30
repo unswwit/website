@@ -9,7 +9,6 @@ class TechTrivia extends Component {
 		                    src={process.env.PUBLIC_URL + "/initiatives/techtrivia.jpg"}
 		                    alt="Tech Trivia"
 		                    resizeMode="contain"
-		                    style={{'height': '22.5vw'}}
 	                    />
                 </a>
             </div>

@@ -9,7 +9,6 @@ class WCrushMayer extends Component {
                         src={process.env.PUBLIC_URL + "/initiatives/witcrush_mayer.png"}
                         alt="Marissa Mayer"
                         resizeMode="contain"
-                        style={{'height': '22.5vw'}}
                       />
                 </a>
             </div>
