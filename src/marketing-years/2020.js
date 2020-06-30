@@ -12,7 +12,6 @@ class twentyTwenty extends Component {
   render() {
     return (
         <div>
-
             {/*Start of Header*/}
             <div class="marketingCoverPhoto">
                 <div class="title">
@@ -23,43 +22,28 @@ class twentyTwenty extends Component {
 
             <div id="parent">
             {/*Left intiatives side bar*/}
-              <div id="side">
-                <div class="sideBar">
                   {/*List of 2020 intatives*/}
-                  <div id="initiatives">
-                    <button class="init year active" onclick="filterSelection('2020')">2020</button>
-                    <button class="init" onclick="filterSelection('crush')">WIT Crush Wednesday</button>
-                    <button class="init" onclick="filterSelection('init2')">Initiative 2</button>
-                    <button class="init" onclick="filterSelection('init3')">Initiative 3</button>
-                  </div>
-                </div>
-              </div>
+                  <div class="initiatives">
+                    <input type="radio" id="2020" name="categories" ></input>
+                    <label for="2020" id="side">2020</label>
+                    <input type="radio" id="crush" name="categories"></input>
+                    <label for="crush" id="side">WIT Crush Wednesday</label>
+                    <input type="radio" id="init2" name="categories"></input>
+                    <label for="init2" id="side">Intiative 2</label>
+                    <input type="radio" id="init3" name="categories"></input>
+                    <label for="init3" id="side">Initiative 3</label>
 
-              <div id="grid">
-                {/*Image collage*/}
-                <div class="gallery">
-                  <div class="row">
-                      <div class="image crush"><WCrushTan/></div>
-                      <div class="image trivia"><TechTrivia/></div>
+                    {/*Image collage*/}
+                    <ol class="grid" id="content">
+                      <li class="image crush"><WCrushTan/></li>
+                      <li class="image trivia"><TechTrivia/></li>
+                      <li class="image trivia"><TechTrivia/></li>
+                      <li class="image crush"><WCrushMayer/></li>
+                      <li class="image crush"><WCrushTan/></li>
+                      <li class="image trivia"><TechTrivia/></li>
+                    </ol>
                   </div>
-                  <div class="row">
-                      <div class="image trivia"><TechTrivia/></div>
-                      <div class="image crush"><WCrushMayer/></div>
-                  </div>
-                  <div class="row">
-                      <div class="image crush"><WCrushTan/></div>
-                      <div class="image trivia"><TechTrivia/></div>
-                  </div>
-                  <div class="row">
-                      <div class="image trivia"><TechTrivia/></div>
-                      <div class="image crush"><WCrushMayer/></div>
-                  </div>
-                </div>
-              </div>
             </div>
-
-
-
         </div>
     );
   }

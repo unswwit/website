@@ -1,70 +1,118 @@
 /*-------------------------------Size bar and image grid-----------------------------*/
 #parent {
-    display: flex;
+  display: table;
+  overflow-y: auto;
+  width: 100%;
+  vertical-align: top;
+  height: 100%;
 }
 
-#side {
-    width: 25vw;
+.initiatives:not(#content) {
+  width: 24vw;
+  justify-content: center;
+  box-shadow: 6px -2px 6px -4px #D3D3D3;
+  padding-top: 30px;
+  min-height: 400px;
 }
 
-#grid {
-    flex: 1;
+.grid {
+  display: table-cell;
+  width: 75vw;
+  margin-top: -240px;
+  margin-left: 22vw;
 }
 
 /*-------------------------------Left side bar-----------------------------*/
-div.sideBar {
-  padding: 30px 0;
-  box-shadow: 6px -2px 6px -4px #D3D3D3;
-  height: 100vw;
-  width: 25vw;
-}
-
-#initiatives {
-  margin: 0;
-}
 
 /*Intiative*/
-button.init {
-  color: #707070;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12pt;
-  text-align: center;
-  display: block;
-  border: none;
-  outline: none;
-  background-color: white;
-  width: 25vw;
-  padding-bottom: 15px;
+:root {
+  --white: #fff;
+  --yellow: #feb14b;
+  --grey: #707070;
 }
 
-/*button.init.active {
-  color: red;
-}*/
+.initiatives {
+  text-align: center;
+  margin: 0 35px;
+}
 
-/*Year sections*/
-button.year {
+.initiatives * {
+  display: block;
+}
+
+.initiatives label {
   font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 12pt;
+  color: #707070;
+  padding: 10px;
+  width: 20vw;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+label[for="2020"] {
   font-size: 32pt;
   color: #feb14b;
   font-weight: bold;
-  text-align: center;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.1s;
 }
 
+input[type="radio"] {
+    display:none;
+}
+
+.initiatives label:hover {
+  background: var(--yellow);
+  color: var(--white);
+}
+
+input[type="radio"][id="2020"]:checked + label {
+  background: var(--yellow);
+  color: var(--white);
+}
+
+input[type="radio"][id="crush"]:checked + label {
+  background: var(--grey);
+  color: var(--white);
+}
+input[type="radio"][id="crush"]:checked ~ .grid .trivia,
+input[type="radio"][id="crush"]:checked ~ .grid .init3 {
+  display: none;
+}
+
+input[type="radio"][id="init2"]:checked + label {
+  background: var(--grey);
+  color: var(--white);
+}
+input[type="radio"][id="init2"]:checked ~ .grid .crush,
+input[type="radio"][id="init2"]:checked ~ .grid .init3,
+input[type="radio"][id="init2"]:checked ~ .grid .trivia {
+  display: none;
+}
+
+input[type="radio"][id="init3"]:checked + label {
+  background: var(--grey);
+  color: var(--white);
+}
+input[type="radio"][id="init3"]:checked ~ .grid .crush,
+input[type="radio"][id="init3"]:checked ~ .grid .trivia  {
+  display: none;
+}
 /*-------------------------------Image grid gallery-----------------------------*/
-.gallery {
-    flex-wrap: wrap;
-    margin-left: 50px;
-    margin-top: 50px;
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-evenly;
 }
 
-.row a img {
-    margin-bottom: 45px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-
-.show {
-    display: inline-block;
+.grid .image img {
+  width: auto;
+  height: 24vw;
+  padding-bottom: 30px;
 }
