@@ -8,7 +8,6 @@ class Blog extends Component {
     render() {
         return (
             <div>
-
                 {/*Start of Header*/}
                 <div class="coverPhoto">
                     <div class="title">
@@ -23,14 +22,13 @@ class Blog extends Component {
                 <BlogPreview 
                 topMargin="10vw"
                 bottomMargin="5vw"
-                blogNo="9"
+                blogNo="10"
                 imgUrl="/blog-covers/09-procrastinating.png"
                 heading="Introducing: Lana King, Senior Consultant of Deloitte"
-                date="29/06/2020"
-                subheading="Inspired by Tim Urban’s TED Talk, 
-                we look at challenging procrastination, and how it really exists in all of us, 
-                even the non-procrastinators."
-                authors={{"georgie-mansfield":["/potraits/georgie.jpg", "Georgie Mansfield"]}}
+                date="1/07/2020"
+                subheading="Let's read about what Lana King has to say about her journey into tech."
+                authors={{"victoria-ruming":["/potraits/victoria.jpg", "Victoria Ruming"]}}
+                />    
                 />
 
                 {/*blog post 9*/}
