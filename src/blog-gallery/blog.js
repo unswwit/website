@@ -1,6 +1,6 @@
 //All necessary imports for this javascript
 import React, { Component } from "react";
-import "./style.css";
+import "../style.css";
 import "./blog.css";
 import BlogPreview from "./blog-preview";
 
@@ -19,9 +19,23 @@ class Blog extends Component {
 
                 {/*Start of blog posts*/}
 
-                {/*blog post 8*/}
+                {/*blog post 9*/}
                 <BlogPreview 
                 topMargin="10vw"
+                bottomMargin="5vw"
+                blogNo="9"
+                imgUrl="/blog-covers/09-procrastinating.png"
+                heading="What Are You REALLY Procrastinating?"
+                date="29/06/2020"
+                subheading="Inspired by Tim Urban’s TED Talk, 
+                we look at challenging procrastination, and how it really exists in all of us, 
+                even the non-procrastinators."
+                authors={{"georgie-mansfield":["/potraits/georgie.jpg", "Georgie Mansfield"]}}
+                />
+        
+                {/*blog post 8*/}
+                <BlogPreview 
+                topMargin="5vw"
                 bottomMargin="5vw"
                 blogNo="8"
                 imgUrl="/blog-covers/08-marguerite-evans-galea.png"

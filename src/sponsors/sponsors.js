@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import "./sponsors.css";
 
-import Amazon from "./sponsors/Amazon";
-import Atlassian from "./sponsors/Atlassian";
-import Baraja from "./sponsors/Baraja";
-import Commonwealth from "./sponsors/Commonwealth";
-import Deloitte from "./sponsors/Deloitte";
-import EY from "./sponsors/EY";
-import Google from "./sponsors/Google";
-import LendLease from "./sponsors/Lendlease";
-import McGrathNicol from "./sponsors/McGrathNicol";
-import Nine from "./sponsors/Nine";
-import Palantir from "./sponsors/Palantir";
-import QPay from "./sponsors/QPay";
-import Quantium from "./sponsors/Quantium";
-import Telstra from "./sponsors/Telstra";
+import Amazon from "./Amazon";
+import Atlassian from "./Atlassian";
+import Baraja from "./Baraja";
+import Commonwealth from "./Commonwealth";
+import Deloitte from "./Deloitte";
+import EY from "./EY";
+import Google from "./Google";
+import LendLease from "./Lendlease";
+import McGrathNicol from "./McGrathNicol";
+import Nine from "./Nine";
+import Palantir from "./Palantir";
+import QPay from "./QPay";
+import Quantium from "./Quantium";
+import Telstra from "./Telstra";
 
 class Sponsors extends Component {
     render() {
