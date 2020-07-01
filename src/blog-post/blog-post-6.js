@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ".././style.css";
 import "./blog-post.css";
+import AuthorCard from "./authorCard";
 
 class blogPost6 extends Component {
   //start webpage at the top
@@ -64,23 +65,11 @@ class blogPost6 extends Component {
 
           </div>
       </div>
+        
         {/*for the blog post author*/}
-        <div class = "author">
-          <div class = "author-left">
-            <div> {/*note this div is necessary to formatting*/}
-              <img
-              src={process.env.PUBLIC_URL + "/potraits/victoria.jpg"}
-              className="profile_img vivw_img"
-              alt="victoria-ruming"
-              resizeMode="contain"
-              />
-            </div>
-          </div>
-          <div class = "author-right">
-            <div class="title author-name">Victoria Ruming</div>
-            <div class = "position"> Education Team </div>
-          </div>
-        </div>
+        <AuthorCard 
+        authors={{"victoria-ruming":["/potraits/victoria.jpg", "profile_img vic_img", "Victoria Ruming","Education Team"]}} 
+        />
         {/*End of blog posts*/}
       </div>
     );
