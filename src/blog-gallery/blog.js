@@ -23,7 +23,7 @@ class Blog extends Component {
                 topMargin="10vw"
                 bottomMargin="5vw"
                 blogNo="10"
-                imgUrl="/blog-covers/09-procrastinating.png"
+                imgUrl="/blog-covers/10-lana-king.png"
                 heading="Introducing: Lana King, Senior Consultant of Deloitte"
                 date="01/07/2020"
                 subheading="Let's read about what Lana King has to say about her journey into tech."
