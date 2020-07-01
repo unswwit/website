@@ -25,10 +25,9 @@ class Blog extends Component {
                 blogNo="10"
                 imgUrl="/blog-covers/09-procrastinating.png"
                 heading="Introducing: Lana King, Senior Consultant of Deloitte"
-                date="1/07/2020"
+                date="01/07/2020"
                 subheading="Let's read about what Lana King has to say about her journey into tech."
                 authors={{"victoria-ruming":["/potraits/victoria.jpg", "Victoria Ruming"]}}
-                />    
                 />
 
                 {/*blog post 9*/}
