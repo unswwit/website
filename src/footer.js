@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { HashRouter } from "react-router-dom";
 import "./style.css";
 class Footer extends Component{
-    
 	render(){
 		return (
             <div>
@@ -16,16 +15,16 @@ class Footer extends Component{
                                 resizeMode='contain' style={{width: '100px'}} /></li>
                             </div>
                             <div class="col footer-group-short">
-                                <li class="footer-item"><Link to="/">Home</Link></li>
-                                <li class="footer-item"><Link to="/our-team">Team </Link></li>
-                                <li class="footer-item"><Link to="/sponsors">Sponsors </Link></li>
-                                <li class="footer-item"><Link to="/join-us">Join </Link></li>
-                                <li class="footer-item"><Link to="/contact-us">Contact </Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/">Home</Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/our-team">Team </Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/sponsors">Sponsors </Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/join-us">Join </Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/contact-us">Contact </Link></li>
                             </div>
                             <div class="col footer-group-long">
-                                <li class="footer-item"><Link to="/blog">Blog </Link></li>
-                                <li class="footer-item"><Link to="/blog">Opportunities</Link></li>
-                                <li class="footer-item"><Link to="/blog">Marketing Archives</Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/blog">Blog </Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/blog">Opportunities</Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/blog">Marketing Archives</Link></li>
                             </div>
                             <div class="col socials">
                                 <div class="socials-subheading"><li class="footer-item">Follow our socials</li></div>
