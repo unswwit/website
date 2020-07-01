@@ -17,7 +17,6 @@ class Alison extends Component {
                     <p className="profile_text_position">Human Resources Executive</p>
                     <p className="profile_degree">Information Systems, 3rd Year</p>
 
-                    <p>
                     {/* Icon Bar shoulddd be a horizontal row of icons */}
                     <div classname="icon_bar">
                         {/* Linkedin Icon - target=_blank opens in new tab */}
@@ -59,7 +58,6 @@ class Alison extends Component {
                         />
                         </a>
                     </div>
-                    </p>
                 </div>
             </div>
         );

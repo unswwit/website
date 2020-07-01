@@ -68,6 +68,7 @@ p {
 .bg-custom{
     background: #fff7ef;
     font-size: 10pt;
+    padding: 0px;
 }
 
 .nav{
@@ -85,7 +86,7 @@ p {
 .nav-item{
     float:right;
     color: #313638;
-    padding: 5px;
+    padding: 20px 5px;
     text-decoration: none;
     letter-spacing: 1.5px;
 }
@@ -94,6 +95,32 @@ p {
     color: #313638;
     padding: 10px 15px;
     text-decoration: none;
+}
+
+.dropdown-menu{
+    border-color: transparent;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    background-color: #fff7ef;
+    margin-top: 15px;
+    border-radius: 0px;
+}
+
+.dropdown-item {
+    padding: 5px 0px;
+}
+
+.dropdown-item:hover {
+    background-color: #fff7ef;
+}
+
+.menuTitle{
+    color: #313638; 
+    padding: 10px 15px;
+}
+
+.menuTitle:hover{
+    color: #e85f5c;
 }
 
 .nav-item a:hover{
@@ -105,6 +132,7 @@ p {
 footer {
     margin: 0;
     padding: 0;
+    background-color: #fff7ef;
 }
 
 .footer-top {
@@ -114,22 +142,44 @@ footer {
 .footer-links {
     list-style-type: none;
     margin: 20px auto;
-    padding: 0;
     align-self: center;
-    width: 60%;
+    padding: 6vw 0 3vw 0;
+    width: 75%;
 }
 
 .footer-item {
-    display: inline;
     font-family: 'Montserrat', sans-serif;
-    padding: 16px;
+    padding: 5px;
     color: #313638;
+    text-transform: uppercase;
+}
+
+.footer-group-short {
+    margin-right: 0px;
+}
+
+.footer-group-long {
+    margin-right: 90px;
+    width: 100%;
+}
+
+.row .col .footer-logo {
+    margin-top: 5%;    
+}
+.socials .footer-item {
+    display: inline;
+    padding: 7px;
 }
 
 .footer-copyright {
     font-family: 'Montserrat', sans-serif;
+    text-transform: none;
+    padding-bottom: 16px;
 }
 
+.socials-subheading {
+    padding-bottom: 10px;
+}
 
 .footer-copyright, a {
     color: #313638;
@@ -138,8 +188,4 @@ footer {
 .footer-item a:hover {
     color: #feb14b;
     text-decoration: none;
-}
-
-#copyright {
-    padding: 0px;
 }
