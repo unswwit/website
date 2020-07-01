@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import ".././marketingArchive.css";
 import "./year.css";
-import ".././style.css";
+import "../.././style.css";
 
 import WCrushTan from ".././initiatives/WCrushTan";
 import WCrushMayer from ".././initiatives/WCrushMayer";

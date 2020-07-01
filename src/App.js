@@ -10,13 +10,13 @@ import ContactUs from "./contactUs";
 import Footer from "./footer";
 import OurTeam from "./team";
 import Blog from "./blog";
-import MarketingArchive from "./marketingArchive"
+import MarketingArchive from "./marketing-archive/marketingArchive"
 
 import blogPost1 from "./blog-post/blog-post-1";
 import blogPost2 from "./blog-post/blog-post-2";
 import blogPost3 from "./blog-post/blog-post-3";
 import blogPost4 from "./blog-post/blog-post-4";
-import twentyTwenty from "./marketing-years/2020";
+import twentyTwenty from "./marketing-archive/marketing-years/2020";
 
 class App extends Component{
   render(){

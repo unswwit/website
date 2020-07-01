@@ -28,7 +28,7 @@
 :root {
   --white: #fff;
   --yellow: #feb14b;
-  --grey: #707070;
+  --grey: #313638;
 }
 
 .initiatives {
@@ -44,7 +44,7 @@
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   font-size: 12pt;
-  color: #707070;
+  color: #313638;
   padding: 10px;
   width: 20vw;
   line-height: normal;
