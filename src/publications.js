@@ -57,6 +57,8 @@ class Publications extends React.Component {
 
                       <div className = "row">
                         <div className = "dark"></div>
+                        <img src={process.env.PUBLIC_URL + './pub_mini.png'} alt="wit logo"
+              						resizeMode='contain' style={{width: '100px', height: '150px'}}/>
                         <div className = "article">
                           <h2> Title Title </h2>
                           <p> Date Published </p> {/*Change this to add functionality*/}
