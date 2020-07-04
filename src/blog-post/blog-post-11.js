@@ -25,7 +25,7 @@ class blogPost11 extends Component {
         <div class="blog-content">
           <div>
             <h2 class = "blog-title">AI in the Workplace</h2>
-            <p class = "date"> 3rd July 2020 </p>
+            <p class = "date"> 4th July 2020 </p>
           </div>
 
           <div class="post">
