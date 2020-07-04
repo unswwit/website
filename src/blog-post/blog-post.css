@@ -74,11 +74,11 @@ p.date {
   margin-bottom: 4vw;
 }
 
-a {
+.post-content a {
   text-decoration: underline;
 }
 
-a:hover{
+.post-content a:hover{
   color: #feb14b;
 }
 
