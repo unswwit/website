@@ -22,7 +22,7 @@ class Blog extends Component {
                 topMargin="10vw"
                 bottomMargin="5vw"
                 blogNo="11"
-                imgUrl="/blog-covers/10-lana-king.png"
+                imgUrl="/blog-covers/11-ai-jobs.png"
                 heading="AI in the Workplace"
                 date="04/07/2020"
                 subheading="Have you ever wondered 'Will AI take my Job?' 'How does AI function in the workplace?' 'Can AI make me Pizza'🍕🍕🍕 Well look no further, because this blog post answers your burning questions"
