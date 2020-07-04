@@ -15,7 +15,7 @@ class blogPost11 extends Component {
         {/*Start of Header*/}
         <div class="coverPhoto">
             <div class="title">
-                <h1>Blog Post #10</h1>
+                <h1>Blog Post #11</h1>
             </div>
         </div>
 
