@@ -1,32 +1,47 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import "./style.css";
 class Footer extends Component{
-
 	render(){
 		return (
             <div>
+                <HashRouter basename="/">
                 <footer>
                     <ul class="footer-links">
-                        <li class="footer-item"><img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo"
-                            resizeMode='contain' style={{width: '50px'}} /></li>
-                        <li class="footer-item"><a href="/">Home</a></li>
-                        <li class="footer-item"><a href="/our-team">Team </a></li>
-                        <li class="footer-item"><a href="/sponsors">Sponsors </a></li>
-                        <li class="footer-item"><a href="/blog-posts">Blog </a></li>
-                        <li class="footer-item"><a href="/join-us">Join </a></li>
-                        <li class="footer-item"><a href="/contact-us">Contact</a></li>
-                        <li class="footer-item"><a href="/publications">Publications</a></li>
-                        <li class="footer-item"><a href="https://www.linkedin.com/company/unsw-women-in-technology"><img src={process.env.PUBLIC_URL + '/linkedin.png'} className="" alt="banner" resizeMode='contain'
-                            style={{width:'25px', height:'25px'}} /></a></li>
-                        <li class="footer-item"><a href="https://www.facebook.com/unsw.wit/"><img src={process.env.PUBLIC_URL + '/facebook.png'} className="" alt="banner" resizeMode='contain'
-                            style={{width:'25px', height:'25px'}} /></a></li>
-                        <li class="footer-item"><a href="https://www.instagram.com/wit.unsw/"><img src={process.env.PUBLIC_URL + '/instagram.png'} className="" alt="banner" resizeMode='contain'
-                            style={{width:'25px', height:'25px'}} /></a></li>
+                        <div class="row">
+                            <div class="col">
+                            <li class="footer-item footer-logo"><img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo"
+                                resizeMode='contain' style={{width: '100px'}} /></li>
+                            </div>
+                            <div class="col footer-group-short">
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/">Home</Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/our-team">Team </Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/sponsors">Sponsors </Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/join-us">Join </Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/contact-us">Contact </Link></li>
+                            </div>
+                            <div class="col footer-group-long">
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/blog">Blog </Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/blog">Opportunities</Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/blog">Marketing Archives</Link></li>
+																<li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/publications">Publications</Link></li>
+                            </div>
+                            <div class="col socials">
+                                <div class="socials-subheading"><li class="footer-item">Follow our socials</li></div>
+                                <li class="footer-item"><a href="https://www.linkedin.com/company/unsw-women-in-technology"><img src={process.env.PUBLIC_URL + '/linkedin.png'} className="" alt="banner" resizeMode='contain'
+                                    style={{width:'35px', height:'35px'}} /></a></li>
+                                <li class="footer-item"><a href="https://www.facebook.com/unsw.wit/"><img src={process.env.PUBLIC_URL + '/facebook.png'} className="" alt="banner" resizeMode='contain'
+                                    style={{width:'35px', height:'35px'}} /></a></li>
+                                <li class="footer-item"><a href="https://www.instagram.com/wit.unsw/"><img src={process.env.PUBLIC_URL + '/instagram.png'} className="" alt="banner" resizeMode='contain'
+                                    style={{width:'35px', height:'35px'}} /></a></li>
+                            </div>
+                        </div>
                     </ul>
-                    <div class="footer-copyright text-center">Copyright © 2020 | <li class="footer-item" id="copyright"><a href="https://unswwit.com/">UNSW Women in Technology</a></li></div>
+                    <div class="footer-copyright text-center footer-item"><Link to="https://unswwit.com/">Copyright © 2020. UNSW Women in Technology</Link></div>
                 </footer>
+                </HashRouter>
             </div>
-
 		);
 
 	}

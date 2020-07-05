@@ -4,12 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './style.css';
 import Home from "./home";
-import JoinUs from "./joinUs";
-import Sponsors from "./sponsors";
-import ContactUs from "./contactUs";
+import JoinUs from "./join/joinUs";
+import Sponsors from "./sponsors/sponsors";
+import ContactUs from "./contact/contactUs";
 import Footer from "./footer";
-import OurTeam from "./team";
-import Blog from "./blog";
+import OurTeam from "./team/team";
+import Blog from "./blog-gallery/blog";
 import Publications from "./publications";
 
 import blogPost1 from "./blog-post/blog-post-1";
@@ -18,7 +18,10 @@ import blogPost3 from "./blog-post/blog-post-3";
 import blogPost4 from "./blog-post/blog-post-4";
 import blogPost5 from "./blog-post/blog-post-5";
 import blogPost6 from "./blog-post/blog-post-6";
-
+import blogPost7 from "./blog-post/blog-post-7";
+import blogPost8 from "./blog-post/blog-post-8";
+import blogPost9 from "./blog-post/blog-post-9";
+import blogPost10 from "./blog-post/blog-post-10";
 class App extends Component{
   constructor(props) {
 	super(props)
@@ -80,7 +83,11 @@ class App extends Component{
           <Route path="/blog/3" component={blogPost3}/>
 					<Route path="/blog/4" component={blogPost4}/>
 					<Route path="/blog/5" component={blogPost5}/>
-          <Route path="/blog/6" component={blogPost6}/>
+                    <Route path="/blog/6" component={blogPost6}/>
+					<Route path="/blog/7" component={blogPost7}/>
+					<Route path="/blog/8" component={blogPost8}/>
+					<Route path="/blog/9" component={blogPost9}/>
+					<Route path="/blog/10" component={blogPost10}/>
 				</Switch>
 			</body>
 		</HashRouter>

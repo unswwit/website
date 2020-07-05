@@ -1,7 +1,6 @@
 import React from 'react'
 
 import "./contactUs.css";
-import "./sponsors.css";
 
 class ContactUs extends React.Component {
     render() {
