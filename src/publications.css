@@ -51,57 +51,68 @@
 
 /*Right side block*/
 .article {
-    background-image: url('/pub_mini.png');
-    background-size: cover;
     display: inline-block;
     width: 230px;
     height: 300px;
-    text-align: left;
+    text-align: center;
     margin: 0px 2% 0px 2%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    text-align: center;
     position: relative;
     margin-top: 30px;
 }
 
-.article img {
-  height: 200px;
+.image_container {
+  position: relative;
+  z-index: 0;
+}
 
-    pointer-events: none;
-    position: absolute;
-    width: 100%;
+.article_img  {
     height: 100%;
-    z-index: -1;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
 }
 
 .article .dark {
   width: 100%;
-  height: 100%;
   /*background-color: #313638;  /*website overlay*/
   background-color: black;
   opacity: 0.5;
-  position: absolute;
-  visibility: hidden;
+
+
+  position: relative;
+  z-index: 3;
+  left: -50%;
+  /*visibility: hidden;*/
 }
 
 .article:hover h2, .article:hover .dark, .article:hover p, .article:hover .button {
   visibility: visible;
 }
 
+.text_container {
+  position: absolute;
+  left: 50%;
+  z-index: 2;
+  top: 70px;
+}
+
 .article h2 {
-  padding-top: 30%;
+  left: -50%;
   text-transform: capitalize;
-  text-align: left;
-  padding-bottom: 10px;
-  margin-bottom: 0px;
-  font-size: 2.4vw;
-  display: inline-block;
+  text-align: center;
+
+  font-size: 23px;
+  display: block;
   visibility: hidden;
   position: relative;
+
+
 }
 
 .article p {
   font-size: 15px;
+
   font-weight: bold;
   color: white;
   font-family: 'Montserrat', sans-serif;
@@ -109,6 +120,8 @@
   display: block;
   text-align: center;
   visibility: hidden;
+  float: center;
+  left: -50%;
   position: relative;
 }
 
@@ -118,6 +131,7 @@
   height: 30px;
   width: 120px;
   visibility: hidden;
+  left: -50%;
   position: relative;
 }
 
@@ -128,5 +142,6 @@
   margin-left: -12px;
   white-space: nowrap;
   float: center;
+
 
 }

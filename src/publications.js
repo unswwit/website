@@ -21,30 +21,49 @@ class Publications extends React.Component {
 
                     <div className = "row">
 
-                      <div className = "article">
-                        <div className = "dark"></div>
+                    <div className = "article">
+
+                      <div className = "image_container">
+                        <img src={process.env.PUBLIC_URL + './pub_mini.png'} alt="wit logo"
+                        resizeMode='contain'className = "article_img"/>
+                      </div>
+                      <div className = "text_container">
+                      <div className = "dark" > </div>
                         <h2> Title Title </h2>
-                        <p> Date Published </p> {/*Change this to add functionality*/}
+                        <p> Date Published </p>
                         <div className = "button">
                           <h3> Read More </h3>
                         </div>
                       </div>
+                    </div>
 
                       <div className = "article">
-                      <div className = "dark"></div>
-                        <h2> Title Title </h2>
-                        <p> Date Published </p> {/*Change this to add functionality*/}
-                        <div className = "button">
-                          <h3> Read More </h3>
+                        <div className = "dark" > </div>
+                        <div className = "image_container">
+                          <img src={process.env.PUBLIC_URL + './pub_mini.png'} alt="wit logo"
+                          resizeMode='contain'className = "article_img"/>
+                        </div>
+                        <div className = "text_container">
+                          <h2> Title Title </h2>
+                          <p> Date Published </p>
+                          <div className = "button">
+                            <h3> Read More </h3>
+                          </div>
                         </div>
                       </div>
 
                       <div className = "article">
-                        <div className = "dark"></div>
-                        <h2> Title Title </h2>
-                        <p> Date Published </p> {/*Change this to add functionality*/}
-                        <div className = "button">
-                          <h3> Read More </h3>
+                        <div className = "dark" > </div>
+                        <div className = "image_container">
+                          <img src={process.env.PUBLIC_URL + './pub_mini.png'} alt="wit logo"
+                          resizeMode='contain'className = "article_img"/>
+                        </div>
+                        <div className = "text_container">
+                          <h2> Title Title </h2>
+                          <p> Date Published </p>
+                          <div className = "button">
+                            <h3> Read More </h3>
+                          </div>
                         </div>
                       </div>
 
@@ -56,34 +75,54 @@ class Publications extends React.Component {
                       <h1>2019</h1>
 
                       <div className = "row">
-                        <div className = "dark"></div>
-                        <img src={process.env.PUBLIC_URL + './pub_mini.png'} alt="wit logo"
-              						resizeMode='contain' style={{width: '100px', height: '150px'}}/>
+
                         <div className = "article">
-                          <h2> Title Title </h2>
-                          <p> Date Published </p> {/*Change this to add functionality*/}
-                          <div className = "button">
-                            <h3> Read More </h3>
+                          <div className = "dark" > </div>
+                          <div className = "image_container">
+                            <img src={process.env.PUBLIC_URL + './pub_mini.png'} alt="wit logo"
+                            resizeMode='contain'className = "article_img"/>
+                          </div>
+                          <div className = "text_container">
+                            <h2> Title Title </h2>
+                            <p> Date Published </p>
+                            <div className = "button">
+                              <h3> Read More </h3>
+                            </div>
                           </div>
                         </div>
 
                         <div className = "article">
-                          <div className = "dark"></div>
-                          <h2> Title Title </h2>
-                          <p> Date Published </p> {/*Change this to add functionality*/}
-                          <div className = "button">
-                            <h3> Read More </h3>
+                          <div className = "dark" > </div>
+                          <div className = "image_container">
+                            <img src={process.env.PUBLIC_URL + './pub_mini.png'} alt="wit logo"
+                            resizeMode='contain'className = "article_img"/>
+                          </div>
+                          <div className = "text_container">
+                            <h2> Title Title </h2>
+                            <p> Date Published </p>
+                            <div className = "button">
+                              <h3> Read More </h3>
+                            </div>
                           </div>
                         </div>
 
+
+
                         <div className = "article">
-                        <div className = "dark"></div>
-                          <h2> Title Title </h2>
-                          <p> Date Published </p> {/*Change this to add functionality*/}
-                          <div className = "button">
-                            <h3> Read More </h3>
+                          <div className = "dark" > </div>
+                          <div className = "image_container">
+                            <img src={process.env.PUBLIC_URL + './pub_mini.png'} alt="wit logo"
+                            resizeMode='contain'className = "article_img"/>
+                          </div>
+                          <div className = "text_container">
+                            <h2> Title Title </h2>
+                            <p> Date Published </p>
+                            <div className = "button">
+                              <h3> Read More </h3>
+                            </div>
                           </div>
                         </div>
+
 
                       </div>
 
