@@ -22,12 +22,11 @@ class Publications extends React.Component {
                     <div className = "row">
 
                     <div className = "article">
-
+                      <div className = "dark" > </div>
                       <div className = "image_container">
                         <img src={process.env.PUBLIC_URL + './pub_mini.png'} alt="wit logo"
-                        resizeMode='contain'className = "article_img"/>
+                        className = "article_img"/>
                       </div>
-
                       <div className = "text_container">
                         <h2> Title Title </h2>
                         <p> Date Published </p>
@@ -35,14 +34,13 @@ class Publications extends React.Component {
                           <h3> Read More </h3>
                         </div>
                       </div>
-                      <div className = "dark" > </div>
                     </div>
 
                       <div className = "article">
                         <div className = "dark" > </div>
                         <div className = "image_container">
                           <img src={process.env.PUBLIC_URL + './pub_mini.png'} alt="wit logo"
-                          resizeMode='contain'className = "article_img"/>
+                          className = "article_img"/>
                         </div>
                         <div className = "text_container">
                           <h2> Title Title </h2>
@@ -57,7 +55,7 @@ class Publications extends React.Component {
                         <div className = "dark" > </div>
                         <div className = "image_container">
                           <img src={process.env.PUBLIC_URL + './pub_mini.png'} alt="wit logo"
-                          resizeMode='contain'className = "article_img"/>
+                          className = "article_img"/>
                         </div>
                         <div className = "text_container">
                           <h2> Title Title </h2>
@@ -81,7 +79,7 @@ class Publications extends React.Component {
                           <div className = "dark" > </div>
                           <div className = "image_container">
                             <img src={process.env.PUBLIC_URL + './pub_mini.png'} alt="wit logo"
-                            resizeMode='contain'className = "article_img"/>
+                            className = "article_img"/>
                           </div>
                           <div className = "text_container">
                             <h2> Title Title </h2>
@@ -96,7 +94,7 @@ class Publications extends React.Component {
                           <div className = "dark" > </div>
                           <div className = "image_container">
                             <img src={process.env.PUBLIC_URL + './pub_mini.png'} alt="wit logo"
-                            resizeMode='contain'className = "article_img"/>
+                            className = "article_img"/>
                           </div>
                           <div className = "text_container">
                             <h2> Title Title </h2>
@@ -113,7 +111,7 @@ class Publications extends React.Component {
                           <div className = "dark" > </div>
                           <div className = "image_container">
                             <img src={process.env.PUBLIC_URL + './pub_mini.png'} alt="wit logo"
-                            resizeMode='contain'className = "article_img"/>
+                            className = "article_img"/>
                           </div>
                           <div className = "text_container">
                             <h2> Title Title </h2>
