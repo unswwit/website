@@ -9,7 +9,7 @@
 /*Blog title*/
 .blog-title {
   font-size: 34pt;
-  letter-spacing: 4px; 
+  letter-spacing: 4px;
   margin-top: 8vw;
 }
 
@@ -72,6 +72,14 @@ p.date {
   margin: 0 auto;
   max-width: 40%;
   margin-bottom: 4vw;
+}
+
+.post-content a {
+  text-decoration: underline;
+}
+
+.post-content a:hover{
+  color: #feb14b;
 }
 
 /*-------------------------------Author card-----------------------------*/

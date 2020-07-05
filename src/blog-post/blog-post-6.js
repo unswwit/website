@@ -68,7 +68,7 @@ class blogPost6 extends Component {
         
         {/*for the blog post author*/}
         <AuthorCard 
-        authors={{"victoria-ruming":["/potraits/victoria.jpg", "profile_img vic_img", "Victoria Ruming","Education Team"]}} 
+        authors={{"victoria-ruming":["/potraits/victoria.jpg", "profile_img vivw_img", "Victoria Ruming","Education Team"]}} 
         />
         {/*End of blog posts*/}
       </div>
