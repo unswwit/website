@@ -79,11 +79,12 @@
   background-color: black;
   opacity: 0.5;
 
+  position: absolute;
+  top: 0;
+  height: 100%;
 
-  position: relative;
-  z-index: 3;
-  left: -50%;
-  /*visibility: hidden;*/
+  z-index: 1;
+  visibility: hidden;
 }
 
 .article:hover h2, .article:hover .dark, .article:hover p, .article:hover .button {

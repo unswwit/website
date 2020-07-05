@@ -27,14 +27,15 @@ class Publications extends React.Component {
                         <img src={process.env.PUBLIC_URL + './pub_mini.png'} alt="wit logo"
                         resizeMode='contain'className = "article_img"/>
                       </div>
+
                       <div className = "text_container">
-                      <div className = "dark" > </div>
                         <h2> Title Title </h2>
                         <p> Date Published </p>
                         <div className = "button">
                           <h3> Read More </h3>
                         </div>
                       </div>
+                      <div className = "dark" > </div>
                     </div>
 
                       <div className = "article">
