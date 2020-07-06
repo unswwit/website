@@ -18,112 +18,53 @@ class Publications extends React.Component {
                   {/*2020 articles*/}
 
                     <h1>2020</h1>
-
                     <div className = "row">
 
-                    <div className = "article">
-                      <div className = "dark" > </div>
-                      <div className = "image_container">
-                        <img src={process.env.PUBLIC_URL + './pub_mini.png'} alt="wit logo"
-                        className = "article_img"/>
-                      </div>
-                      <div className = "text_container">
-                        <h2> Title Title </h2>
-                        <p> Date Published </p>
-                        <div className = "button">
-                          <h3> Read More </h3>
-                        </div>
-                      </div>
-                    </div>
+                    <PubArticle
+                    imgUrl="./pub_mini.png"
+                    heading="Title Title"
+                    date="Today's Date"
+                    />
 
-                      <div className = "article">
-                        <div className = "dark" > </div>
-                        <div className = "image_container">
-                          <img src={process.env.PUBLIC_URL + './pub_mini.png'} alt="wit logo"
-                          className = "article_img"/>
-                        </div>
-                        <div className = "text_container">
-                          <h2> Title Title </h2>
-                          <p> Date Published </p>
-                          <div className = "button">
-                            <h3> Read More </h3>
-                          </div>
-                        </div>
-                      </div>
+                    <PubArticle
+                    imgUrl="./pub_mini.png"
+                    heading="Title Title"
+                    date="Today's Date"
+                    />
 
-                      <div className = "article">
-                        <div className = "dark" > </div>
-                        <div className = "image_container">
-                          <img src={process.env.PUBLIC_URL + './pub_mini.png'} alt="wit logo"
-                          className = "article_img"/>
-                        </div>
-                        <div className = "text_container">
-                          <h2> Title Title </h2>
-                          <p> Date Published </p>
-                          <div className = "button">
-                            <h3> Read More </h3>
-                          </div>
-                        </div>
-                      </div>
+                    <PubArticle
+                    imgUrl="./pub_mini.png"
+                    heading="Title Title"
+                    date="Today's Date"
+                    />
 
                     </div>
 
 
                     {/*2019 articles*/}
 
-                      <h1>2019</h1>
+                    <h1>2019</h1>
+                    <div class="row">
 
-                      <div className = "row">
+                    <PubArticle
+                    imgUrl="./pub_mini.png"
+                    heading="Title Title"
+                    date="Date Published"
+                    />
 
-                        <div className = "article">
-                          <div className = "dark" > </div>
-                          <div className = "image_container">
-                            <img src={process.env.PUBLIC_URL + './pub_mini.png'} alt="wit logo"
-                            className = "article_img"/>
-                          </div>
-                          <div className = "text_container">
-                            <h2> Title Title </h2>
-                            <p> Date Published </p>
-                            <div className = "button">
-                              <h3> Read More </h3>
-                            </div>
-                          </div>
-                        </div>
+                    <PubArticle
+                    imgUrl="./pub_mini.png"
+                    heading="Title Title"
+                    date="Date Published"
+                    />
 
-                        <div className = "article">
-                          <div className = "dark" > </div>
-                          <div className = "image_container">
-                            <img src={process.env.PUBLIC_URL + './pub_mini.png'} alt="wit logo"
-                            className = "article_img"/>
-                          </div>
-                          <div className = "text_container">
-                            <h2> Title Title </h2>
-                            <p> Date Published </p>
-                            <div className = "button">
-                              <h3> Read More </h3>
-                            </div>
-                          </div>
-                        </div>
+                    <PubArticle
+                    imgUrl="./pub_mini.png"
+                    heading="Title Title"
+                    date="Date Published"
+                    />
 
-
-
-                        <div className = "article">
-                          <div className = "dark" > </div>
-                          <div className = "image_container">
-                            <img src={process.env.PUBLIC_URL + './pub_mini.png'} alt="wit logo"
-                            className = "article_img"/>
-                          </div>
-                          <div className = "text_container">
-                            <h2> Title Title </h2>
-                            <p> Date Published </p>
-                            <div className = "button">
-                              <h3> Read More </h3>
-                            </div>
-                          </div>
-                        </div>
-
-
-                      </div>
+                    </div>
 
                 </div>
             </div>
