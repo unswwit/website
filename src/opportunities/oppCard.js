@@ -13,6 +13,7 @@ class OppCard extends Component {
                 Object.keys(this.props.details).map((key, index) => ( 
                     <div class="opp-post">
                     <table cellpadding="0" >
+                        <tr>
                             <tr>
                                 <td class= "opp-preview">
                                     <tr>
@@ -46,6 +47,7 @@ class OppCard extends Component {
                                     </div>
                                 </td>
                             </tr>
+                        </tr>
                     </table>
                     </div>
                 ))
