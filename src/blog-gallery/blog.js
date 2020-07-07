@@ -22,23 +22,23 @@ class Blog extends Component {
                 topMargin="10vw"
                 bottomMargin="5vw"
                 blogNo="12"
-                imgUrl="/blog_preview.jpg"
+                imgUrl="/blog-covers/12-maddie-mackey.png"
                 heading="WIT Crush Wednesday - Maddie Mackey"
                 date="08/07/2020"
-                subheading="Let's read about what Maddie Mackey has to say about her journey into tech"
+                subheading="Let's read about what Maddie Mackey has to say about her journey into tech."
                 authors={{"vivian-wong":["/potraits/vivw.jpg", "Vivian Wong"],"georgie-mansfield":["/potraits/georgie.jpg", "Georgie Mansfield"]}}
                 />
 
 
                 {/*blog post 11*/}
                 <BlogPreview
-                topMargin="10vw"
+                topMargin="5vw"
                 bottomMargin="5vw"
                 blogNo="11"
                 imgUrl="/blog-covers/11-ai-jobs.png"
                 heading="AI in the Workplace"
                 date="04/07/2020"
-                subheading="Have you ever wondered 'Will AI take my Job?' 'How does AI function in the workplace?' 'Can AI make me Pizza'🍕🍕🍕 Well look no further, because this blog post answers your burning questions"
+                subheading="Have you ever wondered 'Will AI take my Job?', 'How does AI function in the workplace?', 'Can AI make me Pizza?'🍕🍕🍕 Well look no further, because this blog post answers your burning questions."
                 authors={{"elisa-sanjurjo":["/potraits/elisa.jpg", "Elisa Sanjurjo"]}}
                 />
 
@@ -62,8 +62,7 @@ class Blog extends Component {
                 imgUrl="/blog-covers/09-procrastinating.png"
                 heading="What Are You REALLY Procrastinating?"
                 date="29/06/2020"
-                subheading="Inspired by Tim Urban’s TED Talk,
-                we look at challenging procrastination, and how it really exists in all of us,
+                subheading="Inspired by Tim Urban’s TED Talk, we look at challenging procrastination, and how it really exists in all of us,
                 even the non-procrastinators."
                 authors={{"georgie-mansfield":["/potraits/georgie.jpg", "Georgie Mansfield"]}}
                 />
@@ -76,8 +75,7 @@ class Blog extends Component {
                 imgUrl="/blog-covers/08-marguerite-evans-galea.png"
                 heading="WIT Crush Wednesday - Dr Marguerite Evans-Galea"
                 date="24/06/2020"
-                subheading="Take a look at Dr Marguerite Evans-Galea's journey into STEM as well as advice for students who are interested in
-                pursuing a career in STEM"
+                subheading="Take a look at Dr Marguerite Evans-Galea's journey into STEM as well as advice for students who are interested in pursuing a career in STEM."
                 authors={{"vivian-wong":["/potraits/vivw.jpg", "Vivian Wong"]}}
                 />
 

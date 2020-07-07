@@ -44,7 +44,7 @@ class blogPost12 extends Component {
             <p class="post-content">In high school I really enjoyed maths and science, and playing video
             games, so I jumped at the chance to learn programming. I love being able to solve real problems
             and create things from scratch with all the building blocks I need readily available through
-            just a computer.</p><br/><br/>
+            just a computer.</p><br/>
 
 
             <p class="question">Please provide a short summary of your career journey so far:</p>
@@ -56,14 +56,12 @@ class blogPost12 extends Component {
              and after one at Nine I was offered a position to stay on as a junior software engineer
              on 9Now's TV apps team, where I am now.</p><br/>
 
-            <p class="question">Where do you see yourself in the future (career wise)?</p><br/><br/>
-
-            <p class="post-content"><b>How Will AI Affect Job Loss and Growth?</b></p>
+            <p class="question">Where do you see yourself in the future (career wise)?</p>
 
             <p class="post-content">I look forward to continuing my career as a software engineer at Nine.
             I'm also passionate about equality in STEM, hoping to encourage and continue to advocate
             for equal opportunities for minorities. And if I ever get bored of tech, my backup plan
-            is to buy a shack out in the bush and write musicals. </p><br/><br/>
+            is to buy a shack out in the bush and write musicals. </p><br/>
 
             <p class="question">What do you love about your career now?</p>
 
@@ -82,7 +80,7 @@ class blogPost12 extends Component {
         </div>
         {/*for the blog post author*/}
         <AuthorCard
-        authors={{"vivian-wong":["/potraits/vivw.jpg", "profile_img vivw_img", "Vivian Wong", "Education Executive"], "georgie-mansfield":["/potraits/georgie.jpg", "profile_img vivw_img", "Vivian Wong", "Georgie Mansfield"]}}
+        authors={{"vivian-wong":["/potraits/vivw.jpg", "profile_img vivw_img", "Vivian Wong", "Education Executive"], "georgie-mansfield":["/potraits/georgie.jpg", "profile_img vivw_img", "Georgie Mansfield", "Education Team"]}}
         />
         {/*End of blog posts*/}
       </div>
