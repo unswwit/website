@@ -10,6 +10,7 @@ import ContactUs from "./contact/contactUs";
 import Footer from "./footer";
 import OurTeam from "./team/team";
 import Blog from "./blog-gallery/blog";
+import Publications from "./publications/publications";
 
 import blogPost1 from "./blog-post/blog-post-1";
 import blogPost2 from "./blog-post/blog-post-2";
@@ -61,7 +62,7 @@ class App extends Component{
 								</div>
 								<div class= {this.state.showDD?'dropdown-menu show':'dropdown-menu'}>
 									<li class="dropdown-item"><NavLink to="/blog">BLOG</NavLink></li>
-									<li class="dropdown-item"><NavLink to="/blog">PUBLICATIONS</NavLink></li>
+									<li class="dropdown-item"><NavLink to="/publications">PUBLICATIONS</NavLink></li>
 									<li class="dropdown-item"><NavLink to="/blog">MARKETING ARCHIVES</NavLink></li>
 								</div>
 							</div>
@@ -79,9 +80,10 @@ class App extends Component{
 					<Route path="/join-us" component = {JoinUs}/>
 					<Route path="/sponsors" component = {Sponsors}/>
 					<Route path="/contact-us" component = {ContactUs}/>
+          <Route path="/publications" component={Publications}/>
 					<Route path="/blog/1" component={blogPost1}/>
 					<Route path="/blog/2" component={blogPost2}/>
-          			<Route path="/blog/3" component={blogPost3}/>
+          <Route path="/blog/3" component={blogPost3}/>
 					<Route path="/blog/4" component={blogPost4}/>
 					<Route path="/blog/5" component={blogPost5}/>
                     <Route path="/blog/6" component={blogPost6}/>

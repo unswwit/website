@@ -9,9 +9,9 @@ class Footer extends Component{
                 <HashRouter basename="/">
                 <footer>
                     <ul class="footer-links">
-                        <div class="row">   
+                        <div class="row">
                             <div class="col">
-                            <li class="footer-item footer-logo"><img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo" 
+                            <li class="footer-item footer-logo"><img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo"
                                 resizeMode='contain' style={{width: '100px'}} /></li>
                             </div>
                             <div class="col footer-group-short">
@@ -25,6 +25,7 @@ class Footer extends Component{
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/blog">Blog </Link></li>
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/blog">Opportunities</Link></li>
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/blog">Marketing Archives</Link></li>
+																<li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/publications">Publications</Link></li>
                             </div>
                             <div class="col socials">
                                 <div class="socials-subheading"><li class="footer-item">Follow our socials</li></div>
