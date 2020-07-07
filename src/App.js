@@ -23,6 +23,9 @@ import blogPost9 from "./blog-post/blog-post-9";
 import blogPost10 from "./blog-post/blog-post-10";
 import blogPost11 from "./blog-post/blog-post-11";
 
+import Opportunities from "./opportunities/opportunities";
+
+
 class App extends Component{
   constructor(props) {
 	super(props)
@@ -53,6 +56,7 @@ class App extends Component{
 						<li class="nav-item"><NavLink to="/">HOME</NavLink></li>
 						<li class="nav-item"><NavLink to="/our-team">TEAM</NavLink></li>
 						<li class="nav-item"><NavLink to="/sponsors">SPONSORS</NavLink></li>
+						<li class="nav-item"><NavLink to="/opportunities">OPPORTUNITIES</NavLink></li>
 						<li class="nav-item" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
 							<div class="dropdown" display="static">
 								<div class="dropdown-toggle">
@@ -77,6 +81,7 @@ class App extends Component{
 					<Route exact path="/blog" component = {Blog}/>
 					<Route path="/join-us" component = {JoinUs}/>
 					<Route path="/sponsors" component = {Sponsors}/>
+					<Route path="/opportunities" component = {Opportunities}/>
 					<Route path="/contact-us" component = {ContactUs}/>
 					<Route path="/blog/1" component={blogPost1}/>
 					<Route path="/blog/2" component={blogPost2}/>
@@ -97,5 +102,3 @@ class App extends Component{
   );
 }
 }
-
-export default App;
