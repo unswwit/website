@@ -15,7 +15,7 @@ class blogPost12 extends Component {
         {/*Start of Header*/}
         <div class="coverPhoto">
             <div class="title">
-                <h1>Blog Post #11</h1>
+                <h1>Blog Post #12</h1>
             </div>
         </div>
 
@@ -24,59 +24,65 @@ class blogPost12 extends Component {
         {/*Start of blog post*/}
         <div class="blog-content">
           <div>
-            <h2 class = "blog-title">AI in the Workplace</h2>
-            <p class = "date"> 4th July 2020 </p>
+            <h2 class = "blog-title">WIT Crush Wednesday - Maddie Mackey</h2>
+            <p class = "date"> 8th July 2020 </p>
           </div>
 
           <div class="post">
-            <p class="post-content">“Will AI take my Job?” is one of the most googled questions on the
-            internet and probably a question many readers have considered themselves. However, I am here
-            to tell you the answer to that question, and the answer is… probably not. </p><br/>
+            <p class="post-content">“Maddie Mackey is a Junior Software Engineer at Nine. Not only
+            has Maddie been involved in amazing work placements including a position as an Associate
+            Software Developer at WiseTech Global, and a STEP intern at Google, but also also worked
+             on many of her own projects such as developing and programming a high-altitude weather
+             balloon that she undertook in Year 12, a medical booking system, and developing her own
+             “Hunger Games” mobile app. Maddie’s determination and passion for software development
+             has led her to become a tutor at Grok Learning and GPN (Girls Programming Network) where
+             she teaches and inspires other females to build their own software programs and pursue
+             careers in technology. </p><br/>
 
-            <p class="post-content">Why? Because Artificial Intelligence needs humans, and humans need AI.
-            AI is creating new industries, changing the way businesses work and changing what the workplace
-            looks like. However, it is not replacing people but helping people with their jobs.</p><br/><br/>
+             <p class="question">What sparked your interest to join the field of STEM?</p>
 
-            <p class="post-content"><b>So, what does AI in the workplace look like?</b></p>
+            <p class="post-content">In high school I really enjoyed maths and science, and playing video
+            games, so I jumped at the chance to learn programming. I love being able to solve real problems
+            and create things from scratch with all the building blocks I need readily available through
+            just a computer.</p><br/><br/>
 
-            <p class="post-content">AI is helping the medical industry to not only create new jobs and research
-            opportunities but to better the lives of people affected by diseases. <a href="https://sites.google.com/view/project-euphonia/">
-            Project Euphonia</a> at Google AI is giving people with Amyotrophic Lateral
-            Sclerosis (ALS) the ability to communicate and be understood.
-            After recording thousands of phrases of ALS patients at varying stages of their illness, the team has
-            trained voice recognition software to understand impaired speech and convert it into text. In the later
-            stages of ALS, it can be almost impossible to understand a person’s speech, and AI is giving them the
-            ability to communicate.  </p><br/>
 
-            <p class="post-content">This is where society can realize the outstanding benefits of AI. It can understand
-            humans when other humans can’t. It is able to process mass volumes of data at incredible speeds. It can drive
-            vehicles, predict eye disease and even make us pizza. But what it can’t do is learn in isolation and that’s why
-            this technology needs to be utilized for good.</p><br/><br/>
+            <p class="question">Please provide a short summary of your career journey so far:</p>
+
+            <p class="post-content">I grew up just outside of Canberra on a farm, and after attending
+            NCSS (National Computer Science Summer School) in senior high school and seeing some of the
+            amazing tech companies in Sydney, I was set on moving here for university. So I undertook
+             a Bachelor of IT at UTS, and graduated just last year. I did a few internships during uni,
+             and after one at Nine I was offered a position to stay on as a junior software engineer
+             on 9Now's TV apps team, where I am now.</p><br/>
+
+            <p class="question">Where do you see yourself in the future (career wise)?</p><br/><br/>
 
             <p class="post-content"><b>How Will AI Affect Job Loss and Growth?</b></p>
 
-            <p class="post-content">Gartner predicts that in 2020, 2.3 million new jobs in the health care, public sector,
-            and education sectors will be created by AI. At the same time, manufacturing jobs will be eliminated as a result
-            of AI, perhaps as many as 1.8 million jobs.</p><br/><br/>
+            <p class="post-content">I look forward to continuing my career as a software engineer at Nine.
+            I'm also passionate about equality in STEM, hoping to encourage and continue to advocate
+            for equal opportunities for minorities. And if I ever get bored of tech, my backup plan
+            is to buy a shack out in the bush and write musicals. </p><br/><br/>
 
-            <p class="post-content"><b>AI is Not All Powerful</b></p>
+            <p class="question">What do you love about your career now?</p>
 
-            <p class="post-content">Researchers at <a href="https://robohub.org/">RoboHub</a> at the University of Waterloo
-            said the biggest misconception among the public is that robots are far more capable than they are. The researchers
-            are trying to teach their robots to see and perceive the world like humans. In their opinion, AI works best in
-            environments that are controlled and predictable like the construction or manufacturing industry. Here AI can help
-            to reduce human error and make workplaces safer.</p><br/>
+            <p class="post-content">I enjoy the many learning opportunities and unique problems that
+            open up from developing a streaming service for such a wide range of devices and technologies.
+            While this can make work challenging, my team is always happy to help. I love my team's
+            keenness to share knowledge, and how the skills of each member are recognised regardless
+            of official titles. Our team banter also makes work lots of fun.</p><br/>
 
-            <p class="post-content">Humans are learning from AI, working with AI and understanding the benefits of AI. In the
-            Construction, Manufacturing, Food or Medical industry, AI can only succeed when partnered with humans. And that’s why…
-            AI is not going to take your job, and may in fact, create a new world of job possibilities.</p><br/>
+            <p class="question">Favourite Quote or Motto?</p>
+
+            <p class="post-content"><em>"Speak your truth even if your voice shakes."</em></p><br/>
 
 
           </div>
         </div>
         {/*for the blog post author*/}
         <AuthorCard
-        authors={{"elisa-sanjurjo":["/potraits/elisa.jpg", "profile_img vivw_img", "Elisa Sanjurjo", "Education team"]}}
+        authors={{"vivian-wong":["/potraits/vivw.jpg", "profile_img vivw_img", "Vivian Wong", "Education Executive"], "georgie-mansfield":["/potraits/georgie.jpg", "profile_img vivw_img", "Vivian Wong", "Georgie Mansfield"]}}
         />
         {/*End of blog posts*/}
       </div>
