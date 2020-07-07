@@ -6,6 +6,7 @@ import './style.css';
 import Home from "./home";
 import JoinUs from "./join/joinUs";
 import Sponsors from "./sponsors/sponsors";
+import Opportunities from "./opportunities/opportunities";
 import ContactUs from "./contact/contactUs";
 import Footer from "./footer";
 import OurTeam from "./team/team";
@@ -22,8 +23,6 @@ import blogPost8 from "./blog-post/blog-post-8";
 import blogPost9 from "./blog-post/blog-post-9";
 import blogPost10 from "./blog-post/blog-post-10";
 import blogPost11 from "./blog-post/blog-post-11";
-
-import Opportunities from "./opportunities/opportunities";
 
 
 class App extends Component{
@@ -102,3 +101,5 @@ class App extends Component{
   );
 }
 }
+
+export default App;
