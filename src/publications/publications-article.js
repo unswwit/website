@@ -1,9 +1,7 @@
 //All necessary imports for this javascript
 import React, { Component } from "react";
-import "./style.css";
+import ".././style.css";
 import "./publications.css";
-import { Link } from "react-router-dom";
-
 class PubArticle extends Component {
     render() {
         return (

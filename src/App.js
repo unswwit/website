@@ -10,7 +10,7 @@ import ContactUs from "./contact/contactUs";
 import Footer from "./footer";
 import OurTeam from "./team/team";
 import Blog from "./blog-gallery/blog";
-import Publications from "./publications";
+import Publications from "./publications/publications";
 
 import blogPost1 from "./blog-post/blog-post-1";
 import blogPost2 from "./blog-post/blog-post-2";

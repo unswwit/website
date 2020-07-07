@@ -2,7 +2,6 @@
 /*Header image*/
 .publicationsHeader {
   background-image: url('/publications-header.png');
-  /* TODO: change above header image */
   background-position: center bottom 40%;
   background-repeat: no-repeat;
   background-size: cover;
