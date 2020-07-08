@@ -15,57 +15,31 @@ class Publications extends React.Component {
                         </div>
                 </div>
                 <div className = "publicationsBody">
-                  {/*2020 articles*/}
+                    <img src={process.env.PUBLIC_URL + './pubs-soon.png'} resizeMode='contain' style={{width: '100%', marginBottom: '5px', marginTop: '5px'}} />
+                    {/* 2020 articles
 
                     <h1>2020</h1>
-                    <div className = "row">
+                        <div className = "row">
 
-                    <PubArticle
-                    imgUrl="./pub_mini.png"
-                    heading="Title Title"
-                    date="Today's Date"
-                    />
+                        <PubArticle
+                        imgUrl="./pub_mini.png"
+                        heading="Title Title"
+                        date="Today's Date"
+                        />
 
-                    <PubArticle
-                    imgUrl="./pub_mini.png"
-                    heading="Title Title"
-                    date="Today's Date"
-                    />
+                        <PubArticle
+                        imgUrl="./pub_mini.png"
+                        heading="Title Title"
+                        date="Today's Date"
+                        />
 
-                    <PubArticle
-                    imgUrl="./pub_mini.png"
-                    heading="Title Title"
-                    date="Today's Date"
-                    />
+                        <PubArticle
+                        imgUrl="./pub_mini.png"
+                        heading="Title Title"
+                        date="Today's Date"
+                        />
 
-                    </div>
-
-
-                    {/*2019 articles*/}
-
-                    <h1>2019</h1>
-                    <div class="row">
-
-                    <PubArticle
-                    imgUrl="./pub_mini.png"
-                    heading="Title Title"
-                    date="Date Published"
-                    />
-
-                    <PubArticle
-                    imgUrl="./pub_mini.png"
-                    heading="Title Title"
-                    date="Date Published"
-                    />
-
-                    <PubArticle
-                    imgUrl="./pub_mini.png"
-                    heading="Title Title"
-                    date="Date Published"
-                    />
-
-                    </div>
-
+                        </div> */}
                 </div>
             </div>
 
