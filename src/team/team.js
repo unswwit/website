@@ -110,81 +110,222 @@ class OurTeam extends Component {
             {/* Subcommittee section */}
             <hr style={{"width":"50%","height":"2px","backgroundColor":"#D3D3D3"}}/>
             <h2 class="team-heading" style={{"marginTop":"2vw"}}>OUR 2020 SUBCOMMITTEE TEAM</h2>
-            <h3 class="subcom-type">Education Team</h3>
             <div className="subcom_section">
+                <h3 class="subcom-type">Education Team</h3>
                 <div class="exec_row">
                     <div class="exec_col">
                         <div class="profile">
-                            <SubcomMember/>
+                            <SubcomMember
+                            name="Elisa Sanjurjo"
+                            degree=""
+                            picUrl=""/>
                         </div>
                     </div>
                         
                     <div className="exec_col">
                         <div class="profile">
-                            <Amanda/>
+                            <SubcomMember
+                            name="Georgie Mansfield"
+                            degree=""
+                            picUrl=""/>
                         </div>
                     </div>
 
                     <div className="exec_col">
                         <div class="profile">
-                            <Amanda/>
+                            <SubcomMember
+                            name="Victoria Ruming"
+                            degree=""
+                            picUrl=""/>
+                        </div>
+                    </div>
+                </div>
+               
+                <h3 class="subcom-type">Events Team</h3>
+                <div class="exec_row">
+                    <div class="exec_col">
+                        <div class="profile">
+                            <SubcomMember
+                            name="Ariane Notaras"
+                            degree=""
+                            picUrl=""/>
+                        </div>
+                    </div>
+                        
+                    <div className="exec_col">
+                        <div class="profile">
+                            <SubcomMember
+                            name="Jane Wang"
+                            degree=""
+                            picUrl=""/>
+                        </div>
+                    </div>
+
+                    <div className="exec_col">
+                        <div class="profile">
+                            <SubcomMember
+                            name="Justin Clarke"
+                            degree=""
+                            picUrl=""/>
                         </div>
                     </div>
                 </div>
 
-                <div className="exec_row">    
-                    <div className="exec_col">
+                <div class="exec_row">
+                    <div class="exec_col">
                         <div class="profile">
-                            <Kelly/>
+                            <SubcomMember
+                            name="Nishmi Kapoor"
+                            degree=""
+                            picUrl=""/>
                         </div>
                     </div>
+                        
+                    <div className="exec_col">
+                        <div class="profile">
+                            <SubcomMember
+                            name="Shirlee Salaria"
+                            degree=""
+                            picUrl=""/>
+                        </div>
+                    </div>
+
+                    <div className="exec_col">
+                        <div class="profile">
+                        </div>
+                    </div>
+                </div>
                 
+            <h3 class="subcom-type">Externals Team</h3>
+                <div class="exec_row">
+                    <div class="exec_col">
+                        <div class="profile">
+                            <SubcomMember
+                            name="Angeni Bai"
+                            degree=""
+                            picUrl=""/>
+                        </div>
+                    </div>
+                        
                     <div className="exec_col">
                         <div class="profile">
-                            <Elizabeth/>
+                            <SubcomMember
+                            name="Rue Teh"
+                            degree=""
+                            picUrl=""/>
+                        </div>
+                    </div>
+
+                    <div className="exec_col">
+                        <div class="profile">
+                            <SubcomMember
+                            name="Srija Mukherjee"
+                            degree=""
+                            picUrl=""/>
                         </div>
                     </div>
                 </div>
 
+                <h3 class="subcom-type">HR Team</h3>
                 <div class="exec_row">
                     <div class="exec_col">
-                        <div className="profile"> 
-                            <VivianW/>
+                        <div class="profile">
+                            <SubcomMember
+                            name="Claire Yu"
+                            degree=""
+                            picUrl=""/>
+                        </div>
+                    </div>
+                        
+                    <div className="exec_col">
+                        <div class="profile">
+                            <SubcomMember
+                            name="Victoria Yu"
+                            degree=""
+                            picUrl=""/>
                         </div>
                     </div>
 
+                    <div className="exec_col">
+                    </div>
+                </div>
+                
+                <h3 class="subcom-type">IT Team</h3>
+                <div class="exec_row">
                     <div class="exec_col">
-                        <div className="profile"> 
-                            <Gabrielle/>
+                        <div class="profile">
+                            <SubcomMember
+                            name="Alana Hua"
+                            degree=""
+                            picUrl=""/>
+                        </div>
+                    </div>
+                        
+                    <div className="exec_col">
+                        <div class="profile">
+                            <SubcomMember
+                            name="Chelsea Chaffey"
+                            degree=""
+                            picUrl=""/>
+                        </div>
+                    </div>
+
+                    <div className="exec_col">
+                        <div class="profile">
+                            <SubcomMember
+                            name="Gianfelix Goenawan"
+                            degree=""
+                            picUrl=""/>
                         </div>
                     </div>
                 </div>
-            
+                
                 <div class="exec_row">
-                    <div class="exec_col">
-                        <div className="profile"> 
-                            <Rhea/>
+                    <div className="exec_col">
+                        <div class="profile">
+                            <SubcomMember
+                            name="Lily Yang"
+                            degree=""
+                            picUrl=""/>
                         </div>
                     </div>
 
-                    <div class="exec_col">
-                        <div className="profile"> 
-                            <Alison/>
-                        </div>
+                    <div className="exec_col">
+                        <div class="profile"></div>
+                    </div>
+
+                    <div className="exec_col">
+                        <div class="profile"></div>
                     </div>
                 </div>
 
+                <h3 class="subcom-type">Marketing Team</h3>
                 <div class="exec_row">
                     <div class="exec_col">
-                    <div className="profile"> 
-                        <Elicia/>
+                        <div class="profile">
+                            <SubcomMember
+                            name="Anisa Islam"
+                            degree=""
+                            picUrl=""/>
+                        </div>
                     </div>
+                        
+                    <div className="exec_col">
+                        <div class="profile">
+                            <SubcomMember
+                            name="Connie Shi"
+                            degree=""
+                            picUrl=""/>
+                        </div>
                     </div>
 
-                    <div class="exec_col">
-                    <div className="profile"> 
-                        <Felicia/>
-                    </div>
+                    <div className="exec_col">
+                        <div class="profile">
+                            <SubcomMember
+                            name="Vy Kim Nguyen"
+                            degree=""
+                            picUrl=""/>
+                        </div>
                     </div>
                 </div>
             </div>

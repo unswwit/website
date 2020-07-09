@@ -15,7 +15,7 @@ class Subcom_member extends Component {
                 </div>
 
                 <div className="profile_details">
-                    <p className="subcom_profile_name">Elisa Sanjurjo</p>
+                    <p className="subcom_profile_name">{this.props.name}</p>
                     <p className="subcom_profile_degree">Degree, 2nd Year</p>
                 </div>
             </div>
