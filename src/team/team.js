@@ -126,7 +126,7 @@ class OurTeam extends Component {
                         <div class="profile">
                             <SubcomMember
                             name="Georgie Mansfield"
-                            degree=""
+                            degree="Chemical Engineering/Materials Science, 2nd year"
                             picUrl=""/>
                         </div>
                     </div>
@@ -185,7 +185,7 @@ class OurTeam extends Component {
                         <div class="profile">
                             <SubcomMember
                             name="Shirlee Salaria"
-                            degree=""
+                            degree="Commerce/Information Systems, 2nd year"
                             picUrl=""/>
                         </div>
                     </div>
@@ -211,7 +211,7 @@ class OurTeam extends Component {
                         <div class="profile">
                             <SubcomMember
                             name="Rue Teh"
-                            degree=""
+                            degree="Software Engineering, 2nd year"
                             picUrl=""/>
                         </div>
                     </div>
@@ -232,7 +232,7 @@ class OurTeam extends Component {
                         <div class="profile">
                             <SubcomMember
                             name="Claire Yu"
-                            degree=""
+                            degree="Commerce/Information System, 1st year"
                             picUrl=""/>
                         </div>
                     </div>
@@ -285,7 +285,7 @@ class OurTeam extends Component {
                         <div class="profile">
                             <SubcomMember
                             name="Lily Yang"
-                            degree=""
+                            degree="Computer Science/Environmental Engineering"
                             picUrl=""/>
                         </div>
                     </div>
@@ -314,7 +314,7 @@ class OurTeam extends Component {
                         <div class="profile">
                             <SubcomMember
                             name="Connie Shi"
-                            degree=""
+                            degree="Commerce/Information Systems"
                             picUrl=""/>
                         </div>
                     </div>
