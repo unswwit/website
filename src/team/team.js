@@ -12,6 +12,8 @@ import Kelly from "./Kelly";
 import Rhea from "./Rhea";
 import VivianS from "./VivianS";
 import VivianW from "./VivianW";
+import SubcomMember from "./subcom_member";
+
 class OurTeam extends Component {
   render() {
     return (
@@ -32,6 +34,7 @@ class OurTeam extends Component {
                 </h2>
             </div>
 
+            {/* Exec section */}
             <div className="all_execs_section">
                 <div class="exec_row">
                     <div class="exec_col">
@@ -103,6 +106,89 @@ class OurTeam extends Component {
                     </div>
                 </div>
             </div>
+            
+            {/* Subcommittee section */}
+            <hr style={{"width":"50%","height":"2px","backgroundColor":"#D3D3D3"}}/>
+            <h2 class="team-heading" style={{"marginTop":"2vw"}}>OUR 2020 SUBCOMMITTEE TEAM</h2>
+            <h3 class="subcom-type">Education Team</h3>
+            <div className="subcom_section">
+                <div class="exec_row">
+                    <div class="exec_col">
+                        <div class="profile">
+                            <SubcomMember/>
+                        </div>
+                    </div>
+                        
+                    <div className="exec_col">
+                        <div class="profile">
+                            <Amanda/>
+                        </div>
+                    </div>
+
+                    <div className="exec_col">
+                        <div class="profile">
+                            <Amanda/>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="exec_row">    
+                    <div className="exec_col">
+                        <div class="profile">
+                            <Kelly/>
+                        </div>
+                    </div>
+                
+                    <div className="exec_col">
+                        <div class="profile">
+                            <Elizabeth/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exec_row">
+                    <div class="exec_col">
+                        <div className="profile"> 
+                            <VivianW/>
+                        </div>
+                    </div>
+
+                    <div class="exec_col">
+                        <div className="profile"> 
+                            <Gabrielle/>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="exec_row">
+                    <div class="exec_col">
+                        <div className="profile"> 
+                            <Rhea/>
+                        </div>
+                    </div>
+
+                    <div class="exec_col">
+                        <div className="profile"> 
+                            <Alison/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exec_row">
+                    <div class="exec_col">
+                    <div className="profile"> 
+                        <Elicia/>
+                    </div>
+                    </div>
+
+                    <div class="exec_col">
+                    <div className="profile"> 
+                        <Felicia/>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            
             <footer>
                 <div className="footer_area"></div>
             </footer>

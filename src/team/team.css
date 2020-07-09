@@ -160,3 +160,13 @@ h2.team-heading{
     word-wrap: break-word;
     text-align: center;
 }
+
+/*---------------------------Subcommittee team profiles--------------------------*/
+/*Subcommittee team section*/
+.subcom-type {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    color: #feb14b;
+    margin-top: 2vw;
+    margin-bottom: 6vw;
+}
