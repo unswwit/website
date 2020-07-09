@@ -117,8 +117,10 @@ class OurTeam extends Component {
                         <div class="profile">
                             <SubcomMember
                             name="Elisa Sanjurjo"
-                            degree=""
-                            picUrl=""/>
+                            degree="Commerce/Science, 4th year"
+                            picUrl="/potraits/elisa.jpg"
+                            alt="elisa-sanjurjo"
+                            transform="vivw_img"/>
                         </div>
                     </div>
                         
@@ -127,7 +129,9 @@ class OurTeam extends Component {
                             <SubcomMember
                             name="Georgie Mansfield"
                             degree="Chemical Engineering/Materials Science, 2nd year"
-                            picUrl=""/>
+                            picUrl="/potraits/georgie.jpg"
+                            alt="georgie-mansfield"
+                            transform="vivw_img"/>
                         </div>
                     </div>
 
@@ -136,7 +140,9 @@ class OurTeam extends Component {
                             <SubcomMember
                             name="Victoria Ruming"
                             degree=""
-                            picUrl=""/>
+                            picUrl="/potraits/victoria.jpg"
+                            alt="victoria-ruming"
+                            transform="vivw_img"/>
                         </div>
                     </div>
                 </div>
@@ -148,7 +154,9 @@ class OurTeam extends Component {
                             <SubcomMember
                             name="Ariane Notaras"
                             degree=""
-                            picUrl=""/>
+                            picUrl="/potraits/ariane.jpg"
+                            alt="ariane-notaras"
+                            transform="ariane_img"/>
                         </div>
                     </div>
                         
@@ -156,8 +164,9 @@ class OurTeam extends Component {
                         <div class="profile">
                             <SubcomMember
                             name="Jane Wang"
-                            degree=""
-                            picUrl=""/>
+                            degree="Commerce/Information Systems, 2nd year"
+                            picUrl=""
+                            alt="jane-wang"/>
                         </div>
                     </div>
 
@@ -166,7 +175,8 @@ class OurTeam extends Component {
                             <SubcomMember
                             name="Justin Clarke"
                             degree=""
-                            picUrl=""/>
+                            picUrl=""
+                            alt="justin-clarke"/>
                         </div>
                     </div>
                 </div>
@@ -176,8 +186,9 @@ class OurTeam extends Component {
                         <div class="profile">
                             <SubcomMember
                             name="Nishmi Kapoor"
-                            degree=""
-                            picUrl=""/>
+                            degree="Commerce/Advanced Science, 2nd year"
+                            picUrl=""
+                            alt="nishimi-kapoor"/>
                         </div>
                     </div>
                         
@@ -186,12 +197,8 @@ class OurTeam extends Component {
                             <SubcomMember
                             name="Shirlee Salaria"
                             degree="Commerce/Information Systems, 2nd year"
-                            picUrl=""/>
-                        </div>
-                    </div>
-
-                    <div className="exec_col">
-                        <div class="profile">
+                            picUrl=""
+                            alt="shirlee-salaria"/>
                         </div>
                     </div>
                 </div>
@@ -202,8 +209,10 @@ class OurTeam extends Component {
                         <div class="profile">
                             <SubcomMember
                             name="Angeni Bai"
-                            degree=""
-                            picUrl=""/>
+                            degree="Computer Science, 1st year"
+                            picUrl="/potraits/angeni.jpg"
+                            alt="Angeni Bai"
+                            transform="angeni_img"/>
                         </div>
                     </div>
                         
@@ -212,7 +221,9 @@ class OurTeam extends Component {
                             <SubcomMember
                             name="Rue Teh"
                             degree="Software Engineering, 2nd year"
-                            picUrl=""/>
+                            picUrl="/potraits/rue.jpg"
+                            alt="rue-teh"
+                            transform="rue_img"/>
                         </div>
                     </div>
 
@@ -220,8 +231,10 @@ class OurTeam extends Component {
                         <div class="profile">
                             <SubcomMember
                             name="Srija Mukherjee"
-                            degree=""
-                            picUrl=""/>
+                            degree="Software Engineering, 1st year"
+                            picUrl="/potraits/srija.jpg"
+                            alt="srija-mukherjee"
+                            transform="srija_img"/>
                         </div>
                     </div>
                 </div>
@@ -233,7 +246,9 @@ class OurTeam extends Component {
                             <SubcomMember
                             name="Claire Yu"
                             degree="Commerce/Information System, 1st year"
-                            picUrl=""/>
+                            picUrl="/potraits/claire.jpg"
+                            alt="claire-yu"
+                            transform="claire_img"/>
                         </div>
                     </div>
                         
@@ -242,11 +257,9 @@ class OurTeam extends Component {
                             <SubcomMember
                             name="Victoria Yu"
                             degree=""
-                            picUrl=""/>
+                            picUrl=""
+                            alt="victoria-yu"/>
                         </div>
-                    </div>
-
-                    <div className="exec_col">
                     </div>
                 </div>
                 
@@ -256,8 +269,10 @@ class OurTeam extends Component {
                         <div class="profile">
                             <SubcomMember
                             name="Alana Hua"
-                            degree=""
-                            picUrl=""/>
+                            degree="Software Engineering/Biomedical Engineering, 3rd year"
+                            picUrl="/potraits/alana.jpg"
+                            alt="alana-hua"
+                            transform="alana_img"/>
                         </div>
                     </div>
                         
@@ -266,7 +281,9 @@ class OurTeam extends Component {
                             <SubcomMember
                             name="Chelsea Chaffey"
                             degree=""
-                            picUrl=""/>
+                            picUrl="/potraits/chelsea.jpg"
+                            alt="chelsea-chaffey"
+                            transform="chelsea_img"/>
                         </div>
                     </div>
 
@@ -274,8 +291,10 @@ class OurTeam extends Component {
                         <div class="profile">
                             <SubcomMember
                             name="Gianfelix Goenawan"
-                            degree=""
-                            picUrl=""/>
+                            degree="Computer Science/Commerce, 2nd year"
+                            picUrl="/potraits/gian.jpg"
+                            alt="gianfelix-goenawan"
+                            transform="gian_img"/>
                         </div>
                     </div>
                 </div>
@@ -285,17 +304,10 @@ class OurTeam extends Component {
                         <div class="profile">
                             <SubcomMember
                             name="Lily Yang"
-                            degree="Computer Science/Environmental Engineering"
-                            picUrl=""/>
+                            degree="Computer Science/Environmental Engineering, 1st year"
+                            picUrl=""
+                            alt="lily-yang"/>
                         </div>
-                    </div>
-
-                    <div className="exec_col">
-                        <div class="profile"></div>
-                    </div>
-
-                    <div className="exec_col">
-                        <div class="profile"></div>
                     </div>
                 </div>
 
@@ -305,8 +317,10 @@ class OurTeam extends Component {
                         <div class="profile">
                             <SubcomMember
                             name="Anisa Islam"
-                            degree=""
-                            picUrl=""/>
+                            degree="Media in Communications and Journalism, 1st year"
+                            picUrl="/potraits/anisa.jpg"
+                            alt="anisa-islam"
+                            transform="anisa_img"/>
                         </div>
                     </div>
                         
@@ -314,8 +328,10 @@ class OurTeam extends Component {
                         <div class="profile">
                             <SubcomMember
                             name="Connie Shi"
-                            degree="Commerce/Information Systems"
-                            picUrl=""/>
+                            degree="Commerce/Information Systems, 3rd year"
+                            picUrl="/potraits/connie.jpg"
+                            alt="connie-shi"
+                            transform="connie_img"/>
                         </div>
                     </div>
 
@@ -323,8 +339,9 @@ class OurTeam extends Component {
                         <div class="profile">
                             <SubcomMember
                             name="Vy Kim Nguyen"
-                            degree=""
-                            picUrl=""/>
+                            degree="Bioinformatics/Biomedical Engineering, 2nd year"
+                            picUrl=""
+                            alt="vy-kim-nguyen"/>
                         </div>
                     </div>
                 </div>

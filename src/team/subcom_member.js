@@ -7,16 +7,16 @@ class Subcom_member extends Component {
             <div>
                 <div className="profile_crop">
                     <img
-                    src={process.env.PUBLIC_URL + "/potraits/felicia.png"}
-                    className="profile_img fel_img"
-                    alt="felicia-ee"
+                    src={process.env.PUBLIC_URL + this.props.picUrl}
+                    className={"profile_img " + this.props.transform}
+                    alt={this.props.alt}
                     resizeMode="contain"
                     />
                 </div>
 
                 <div className="profile_details">
                     <p className="subcom_profile_name">{this.props.name}</p>
-                    <p className="subcom_profile_degree">Degree, 2nd Year</p>
+                    <p className="subcom_profile_degree">{this.props.degree}</p>
                 </div>
             </div>
         );

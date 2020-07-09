@@ -170,3 +170,64 @@ h2.team-heading{
     margin-top: 2vw;
     margin-bottom: 6vw;
 }
+
+/*Transform subcommittee profile images*/
+.alana_img {
+    height: auto;
+    transform: translate( -16%, -15%);
+    width: 150%;
+}
+
+.chelsea_img {
+    height: auto;
+    transform: translate( -14%, -0%);
+    width: 130%;
+}
+
+.gian_img {
+    height: auto;
+    transform: translate( 0%, 0%);
+    width: 100%;
+}
+
+.anisa_img {
+    height: auto;
+    transform: translate( -5%, 0%);
+    width: 120%;
+}
+
+.connie_img {
+    height: auto;
+    transform: translate( 0%, 0%);
+    width: 100%;
+}
+
+.claire_img {
+    height: auto;
+    transform: translate( -3%, -10%);
+    width: 120%;
+}
+
+.ariane_img {
+    height: auto;
+    transform: translate( -5%, -0%);
+    width: 110%;
+}
+
+.rue_img {
+    height: auto;
+    transform: translate( 0%, 0%);
+    width: 100%;
+}
+
+.angeni_img {
+    height: auto;
+    transform: translate( 1%, 0%);
+    width: 100%;
+}
+
+.srija_img {
+    height: auto;
+    transform: translate( -5%, 0%);
+    width: 110%;   
+}
