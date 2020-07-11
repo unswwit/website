@@ -167,91 +167,44 @@ h2.team-heading{
     font-family: 'Playfair Display', serif;
     text-align: center;
     color: #feb14b;
-    margin-top: 2vw;
-    margin-bottom: 6vw;
+    margin-top: 6vw;
+    margin-bottom: 3vw;
 }
 
-/*Transform subcommittee profile images*/
-.alana_img {
-    height: auto;
-    transform: translate( -16%, -15%);
-    width: 150%;
+/*Subcommittee names*/
+.subcom_profile_name {
+    font-family: 'Montserrat', sans-serif; 
+    color: #feb14b;
+    font-size: 18pt;
+    letter-spacing: 0.1vw;
+    position: relative;
+    font-weight: 500;
 }
 
-.chelsea_img {
-    height: auto;
-    transform: translate( -14%, -0%);
-    width: 130%;
+/*Subcommittee degrees*/
+.subcom_profile_degree {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11pt;   
+    letter-spacing: 0.1vw;
+    position: relative;
+    word-wrap: break-word;
+    text-align: left;
 }
 
-.gian_img {
-    height: auto;
-    transform: translate( 0%, 0%);
-    width: 100%;
+.subcom_row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 20%;
+    margin-right: auto;
+    width: 65%;
 }
 
-.anisa_img {
-    height: auto;
-    transform: translate( -5%, 0%);
-    width: 120%;
-}
-
-.connie_img {
-    height: auto;
-    transform: translate( 0%, 0%);
-    width: 100%;
-}
-
-.claire_img {
-    height: auto;
-    transform: translate( -3%, -10%);
-    width: 120%;
-}
-
-.ariane_img {
-    height: auto;
-    transform: translate( -5%, -0%);
-    width: 110%;
-}
-
-.rue_img {
-    height: auto;
-    transform: translate( 0%, 0%);
-    width: 100%;
-}
-
-.angeni_img {
-    height: auto;
-    transform: translate( 1%, 0%);
-    width: 100%;
-}
-
-.srija_img {
-    height: auto;
-    transform: translate( -5%, 0%);
-    width: 110%;   
-}
-
-.justin_img {
-    height: auto;
-    transform: translate( 0%, 0%);
-    width: 100%;   
-}
-
-.jane_img {
-    height: auto;
-    transform: translate( -3%, 0%);
-    width: 105%;   
-}
-
-.nishmi_img {
-    height: auto;
-    transform: translate( -3%, -5%);
-    width: 110%;   
-}
-
-.kim_img {
-    height: auto;
-    transform: translate( -2%, 0%);
-    width: 100%;   
+.subcom_col {
+    align-items: flex-start;
+    flex-basis: 100%;
+    height: 3.5vw;
+    display: inline-flexbox;
+    flex-direction: column;
+    flex: 1;
 }
