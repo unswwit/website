@@ -162,6 +162,11 @@ h2.team-heading{
 }
 
 /*---------------------------Subcommittee team profiles--------------------------*/
+.subcom_section {
+    align-content: center;
+    justify-content: center;
+}
+
 /*Subcommittee team section*/
 .subcom-type {
     font-family: 'Playfair Display', serif;
@@ -184,7 +189,7 @@ h2.team-heading{
 /*Subcommittee degrees*/
 .subcom_profile_degree {
     font-family: 'Montserrat', sans-serif;
-    font-size: 11pt;   
+    font-size: 12pt;   
     letter-spacing: 0.1vw;
     position: relative;
     word-wrap: break-word;
@@ -196,15 +201,21 @@ h2.team-heading{
     flex-direction: row;
     flex-wrap: wrap;
     margin-left: 20%;
-    margin-right: auto;
-    width: 65%;
+    width: 70%;
 }
 
 .subcom_col {
     align-items: flex-start;
-    flex-basis: 100%;
     height: 3.5vw;
-    display: inline-flexbox;
+    display: flexbox;
     flex-direction: column;
     flex: 1;
+    margin-right: 10%;
+}
+
+.subcom_longer_col {
+    align-items: flex-start;
+    flex-direction: column;
+    display: flexbox;
+    flex: 2;
 }
