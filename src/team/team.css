@@ -231,3 +231,27 @@ h2.team-heading{
     transform: translate( -5%, 0%);
     width: 110%;   
 }
+
+.justin_img {
+    height: auto;
+    transform: translate( 0%, 0%);
+    width: 100%;   
+}
+
+.jane_img {
+    height: auto;
+    transform: translate( -3%, 0%);
+    width: 105%;   
+}
+
+.nishmi_img {
+    height: auto;
+    transform: translate( -3%, -5%);
+    width: 110%;   
+}
+
+.kim_img {
+    height: auto;
+    transform: translate( -2%, 0%);
+    width: 100%;   
+}

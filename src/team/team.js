@@ -165,8 +165,9 @@ class OurTeam extends Component {
                             <SubcomMember
                             name="Jane Wang"
                             degree="Commerce/Information Systems, 2nd year"
-                            picUrl=""
-                            alt="jane-wang"/>
+                            picUrl="/potraits/jane.jpg"
+                            alt="jane-wang"
+                            transform="jane_img"/>
                         </div>
                     </div>
 
@@ -174,9 +175,10 @@ class OurTeam extends Component {
                         <div class="profile">
                             <SubcomMember
                             name="Justin Clarke"
-                            degree=""
-                            picUrl=""
-                            alt="justin-clarke"/>
+                            degree="Data Science and Decisions, 2nd year"
+                            picUrl="/potraits/justin.jpg"
+                            alt="justin-clarke"
+                            transform="justin_img"/>
                         </div>
                     </div>
                 </div>
@@ -187,8 +189,9 @@ class OurTeam extends Component {
                             <SubcomMember
                             name="Nishmi Kapoor"
                             degree="Commerce/Advanced Science, 2nd year"
-                            picUrl=""
-                            alt="nishimi-kapoor"/>
+                            picUrl="/potraits/nishmi.jpg"
+                            alt="nishimi-kapoor"
+                            transform="nishmi_img"/>
                         </div>
                     </div>
                         
@@ -340,8 +343,9 @@ class OurTeam extends Component {
                             <SubcomMember
                             name="Vy Kim Nguyen"
                             degree="Bioinformatics/Biomedical Engineering, 2nd year"
-                            picUrl=""
-                            alt="vy-kim-nguyen"/>
+                            picUrl="/potraits/kim.jpg"
+                            alt="vy-kim-nguyen"
+                            transform="kim_img"/>
                         </div>
                     </div>
                 </div>
