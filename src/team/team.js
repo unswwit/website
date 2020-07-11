@@ -108,7 +108,7 @@ class OurTeam extends Component {
             
             {/* Subcommittee section */}
             <hr style={{"width":"50%","height":"2px","backgroundColor":"#D3D3D3"}}/>
-            <h2 class="team-heading" style={{"marginTop":"2vw"}}>OUR 2020 SUBCOMMITTEE TEAM</h2>
+            <h2 class="team-heading" style={{"marginTop":"2vw","paddingBottom":"5px"}}>OUR 2020 SUBCOMMITTEE TEAM</h2>
             <div className="subcom_section">
                 <h3 class="subcom-type">Education Team</h3>
                 <div class="subcom_row">
