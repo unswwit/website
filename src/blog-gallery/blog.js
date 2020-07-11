@@ -21,6 +21,18 @@ class Blog extends Component {
                 <BlogPreview
                 topMargin="10vw"
                 bottomMargin="5vw"
+                blogNo="13"
+                imgUrl="/blog-covers/12-maddie-mackey.png"
+                heading="Upskill yourself in: MECHATRONICS"
+                date="13/07/2020"
+                subheading="Learn about this powerful and evolving field cranking out computer-controlled machines like robotics and autonomous-driving cars. Find out the tools and software used in this field, and if it’s for you! 🤔🤔"
+                authors={{"victoria-ruming":["/potraits/victoria.jpg", "Victoria Ruming"]}}
+                />
+                
+                {/*blog post 12*/}
+                <BlogPreview
+                topMargin="5vw"
+                bottomMargin="5vw"
                 blogNo="12"
                 imgUrl="/blog-covers/12-maddie-mackey.png"
                 heading="WIT Crush Wednesday - Maddie Mackey"
