@@ -22,7 +22,7 @@ class Blog extends Component {
                 topMargin="10vw"
                 bottomMargin="5vw"
                 blogNo="13"
-                imgUrl="/blog-covers/12-maddie-mackey.png"
+                imgUrl="/blog-covers/13-mechatronics.png"
                 heading="Upskill yourself in: MECHATRONICS"
                 date="13/07/2020"
                 subheading="Learn about this powerful and evolving field cranking out computer-controlled machines like robotics and autonomous-driving cars. Find out the tools and software used in this field, and if it’s for you! 🤔🤔"
