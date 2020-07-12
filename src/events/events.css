@@ -78,25 +78,25 @@ h2 {
     margin: 0;
 }
 
-ul {
+ul#links {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.event-link li {
+li.event-link {
     margin: 0 10px;
     float: right;
 }
 
-.class a {
+a.event {
     font-family: 'Montserrat', sans-serif;
     color: #e85f5c;
     letter-spacing: 0.1vw;
     font-size: 10pt;
 }
 
-.class a:hover {
+a:hover.event {
     font-family: 'Montserrat', sans-serif;
     color: #feb14b;
     letter-spacing: 0.1vw;

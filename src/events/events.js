@@ -25,7 +25,7 @@ class Events extends React.Component {
                                     <p class="event-summary">
                                     Hey you! 
                                     Uni got your head in the clouds? ☁️ Struggling to compute Amazon’s web services? 🤨Look no further because Cloudsoc x WIT’s intro to cloud computing event is here to answer your cloud questions! 😍This is a one time opportunity to delve into the world of cloud computing with an easy click of a link in our ZOOM Call!😯</p>
-                                    <ul>
+                                    <ul id="links">
                                         <li class="event-link">
                                             <a href="https://forms.gle/9MXNL2CZ7fmwPQ6B9" class ="event">Register</a>
                                         </li>
