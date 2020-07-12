@@ -64,7 +64,7 @@ class App extends Component{
 								<div class= {this.state.showDD?'dropdown-menu show':'dropdown-menu'}>
 									<li class="dropdown-item"><NavLink to="/blog">BLOG</NavLink></li>
 									<li class="dropdown-item"><NavLink to="/publications">PUBLICATIONS</NavLink></li>
-									<li class="dropdown-item"><NavLink to="/blog">MARKETING ARCHIVES</NavLink></li>
+									{/* <li class="dropdown-item"><NavLink to="/blog">MARKETING ARCHIVES</NavLink></li> */}
 								</div>
 							</div>
                         </li>
@@ -81,10 +81,10 @@ class App extends Component{
 					<Route path="/join-us" component = {JoinUs}/>
 					<Route path="/sponsors" component = {Sponsors}/>
 					<Route path="/contact-us" component = {ContactUs}/>
-          <Route path="/publications" component={Publications}/>
+         			<Route path="/publications" component={Publications}/>
 					<Route path="/blog/1" component={blogPost1}/>
 					<Route path="/blog/2" component={blogPost2}/>
-          <Route path="/blog/3" component={blogPost3}/>
+         	        <Route path="/blog/3" component={blogPost3}/>
 					<Route path="/blog/4" component={blogPost4}/>
 					<Route path="/blog/5" component={blogPost5}/>
                     <Route path="/blog/6" component={blogPost6}/>
@@ -92,9 +92,9 @@ class App extends Component{
 					<Route path="/blog/8" component={blogPost8}/>
 					<Route path="/blog/9" component={blogPost9}/>
 					<Route path="/blog/10" component={blogPost10}/>
-          <Route path="/blog/11" component={blogPost11}/>
-          <Route path="/blog/12" component={blogPost12}/>
-		  <Route path="/blog/13" component={blogPost13}/>
+					<Route path="/blog/11" component={blogPost11}/>
+					<Route path="/blog/12" component={blogPost12}/>
+					<Route path="/blog/13" component={blogPost13}/>
 				</Switch>
 			</body>
 		</HashRouter>
