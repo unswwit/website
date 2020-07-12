@@ -11,6 +11,7 @@ import Footer from "./footer";
 import OurTeam from "./team/team";
 import Blog from "./blog-gallery/blog";
 import Publications from "./publications/publications";
+import Events from "./events/events";
 
 import blogPost1 from "./blog-post/blog-post-1";
 import blogPost2 from "./blog-post/blog-post-2";
@@ -54,6 +55,7 @@ class App extends Component{
 				<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item"><NavLink to="/">HOME</NavLink></li>
+						<li class="nav-item"><NavLink to="/events">EVENTS</NavLink></li>
 						<li class="nav-item"><NavLink to="/our-team">TEAM</NavLink></li>
 						<li class="nav-item"><NavLink to="/sponsors">SPONSORS</NavLink></li>
 						<li class="nav-item" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
@@ -64,7 +66,7 @@ class App extends Component{
 								<div class= {this.state.showDD?'dropdown-menu show':'dropdown-menu'}>
 									<li class="dropdown-item"><NavLink to="/blog">BLOG</NavLink></li>
 									<li class="dropdown-item"><NavLink to="/publications">PUBLICATIONS</NavLink></li>
-									{/* <li class="dropdown-item"><NavLink to="/blog">MARKETING ARCHIVES</NavLink></li> */}
+									<li class="dropdown-item"><NavLink to="/blog">MARKETING ARCHIVES</NavLink></li>
 								</div>
 							</div>
                         </li>
@@ -76,6 +78,7 @@ class App extends Component{
 			<body>
 				<Switch>
 					<Route exact path="/" component = {Home}/>
+					<Route path="/events" component={Events}/>
 					<Route path="/our-team" component = {OurTeam}/>
 					<Route exact path="/blog" component = {Blog}/>
 					<Route path="/join-us" component = {JoinUs}/>
