@@ -148,7 +148,7 @@ class OurTeam extends Component {
                         
                     <div className="subcom_longer_col">
                         <div class="profile">
-                            <p className="subcom_profile_degree">???</p>
+                            <p className="subcom_profile_degree">Mechatronic Engineering/Biomedical Engineering, 2nd year</p>
                         </div>
                     </div>
                 </div>
@@ -163,7 +163,7 @@ class OurTeam extends Component {
                         
                     <div className="subcom_longer_col">
                         <div class="profile">
-                            <p className="subcom_profile_degree">???</p>
+                            <p className="subcom_profile_degree">Commerce(Finance)/Information Systems,</p>
                         </div>
                     </div>
                 </div>
@@ -234,7 +234,7 @@ class OurTeam extends Component {
                         
                     <div className="subcom_longer_col">
                         <div class="profile">
-                            <p className="subcom_profile_degreee">Computer Science, 1st year</p>
+                            <p className="subcom_profile_degree">Computer Science, 1st year</p>
                         </div>
                     </div>
                 </div>
@@ -248,7 +248,7 @@ class OurTeam extends Component {
                         
                     <div className="subcom_longer_col">
                         <div class="profile">
-                            <p className="subcom_profile_degreee">Software Engineering, 2nd year</p>
+                            <p className="subcom_profile_degree">Software Engineering, 2nd year</p>
                         </div>
                     </div>
                 </div>
@@ -262,7 +262,7 @@ class OurTeam extends Component {
                         
                     <div className="subcom_longer_col">
                         <div class="profile">
-                            <p className="subcom_profile_degreee">Software Engineering, 1st year</p>
+                            <p className="subcom_profile_degree">Software Engineering, 1st year</p>
                         </div>
                     </div>
                 </div>
@@ -277,7 +277,7 @@ class OurTeam extends Component {
                         
                     <div className="subcom_longer_col">
                         <div class="profile">
-                            <p className="subcom_profile_degreee">Commerce/Information System, 1st year</p>
+                            <p className="subcom_profile_degree">Commerce/Information System, 1st year</p>
                         </div>
                     </div>
                 </div>
@@ -291,7 +291,7 @@ class OurTeam extends Component {
                         
                     <div className="subcom_longer_col">
                         <div class="profile">
-                            <p className="subcom_profile_degreee">???</p>
+                            <p className="subcom_profile_degree">Information Systems, 2nd year</p>
                         </div>
                     </div>
                 </div>
@@ -307,7 +307,7 @@ class OurTeam extends Component {
                         
                     <div className="subcom_longer_col">
                         <div class="profile">
-                            <p className="subcom_profile_degreee">Software Engineering/Biomedical Engineering, 3rd year</p>
+                            <p className="subcom_profile_degree">Software Engineering/Biomedical Engineering, 3rd year</p>
                         </div>
                     </div>
                 </div>
@@ -321,7 +321,7 @@ class OurTeam extends Component {
                         
                     <div className="subcom_longer_col">
                         <div class="profile">
-                            <p className="subcom_profile_degreee">Computer Science, 1st year</p>
+                            <p className="subcom_profile_degree">Computer Science, 1st year</p>
                         </div>
                     </div>
                 </div>
@@ -335,7 +335,7 @@ class OurTeam extends Component {
                         
                     <div className="subcom_longer_col">
                         <div class="profile">
-                            <p className="subcom_profile_degreee">Computer Science/Commerce, 2nd year</p>
+                            <p className="subcom_profile_degree">Computer Science/Commerce, 2nd year</p>
                         </div>
                     </div>
                 </div>
@@ -349,7 +349,7 @@ class OurTeam extends Component {
                         
                     <div className="subcom_longer_col">
                         <div class="profile">
-                            <p className="subcom_profile_degreee">Computer Science/Environmental Engineering, 1st year</p>
+                            <p className="subcom_profile_degree">Computer Science/Environmental Engineering, 1st year</p>
                         </div>
                     </div>
                 </div>
@@ -364,7 +364,7 @@ class OurTeam extends Component {
                         
                     <div className="subcom_longer_col">
                         <div class="profile">
-                            <p className="subcom_profile_degreee">Media in Communications and Journalism, 1st year</p>
+                            <p className="subcom_profile_degree">Media in Communications and Journalism, 1st year</p>
                         </div>
                     </div>
                 </div>
@@ -378,7 +378,7 @@ class OurTeam extends Component {
                         
                     <div className="subcom_longer_col">
                         <div class="profile">
-                            <p className="subcom_profile_degreee">Commerce/Information Systems, 3rd year</p>
+                            <p className="subcom_profile_degree">Commerce/Information Systems, 3rd year</p>
                         </div>
                     </div>
                 </div>
@@ -392,7 +392,7 @@ class OurTeam extends Component {
                         
                     <div className="subcom_longer_col">
                         <div class="profile">
-                            <p className="subcom_profile_degreee">Bioinformatics/Biomedical Engineering, 2nd year</p>
+                            <p className="subcom_profile_degree">Bioinformatics/Biomedical Engineering, 2nd year</p>
                         </div>
                     </div>
                 </div>
