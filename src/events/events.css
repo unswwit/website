@@ -116,7 +116,7 @@ a:hover.event {
     box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
-img {
+img.event-images {
     max-width: 100%;
     height:auto;
 }
