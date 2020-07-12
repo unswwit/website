@@ -163,7 +163,7 @@ class OurTeam extends Component {
                         
                     <div className="subcom_longer_col">
                         <div class="profile">
-                            <p className="subcom_profile_degree">Commerce(Finance)/Information Systems,</p>
+                            <p className="subcom_profile_degree">Commerce(Finance)/Information Systems, 2nd year</p>
                         </div>
                     </div>
                 </div>
