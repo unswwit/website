@@ -20,7 +20,7 @@
   width: 75vw;
   margin-top: -240px;
   margin-left: 23vw;
-  margin-right: 23vw;
+  margin-right: 30vw;
 }
 
 /*-------------------------------Left side bar-----------------------------*/
@@ -115,13 +115,13 @@ input[type="radio"][id="mondaymot"]:checked ~ .grid .memes  {
 }
 
 .image img {
-  width: auto;
-  height: 23vw;
+  width: 24vw;
 }
 
 .grid li {
   padding-bottom: 15px;
   padding-right: 15px;
+
 }
 
 a.darken {
@@ -129,11 +129,22 @@ a.darken {
   position: relative;
   background: black;
   text-align: center;
+  width: 22.5vw;
+  height: 22.5vw;
+  overflow: hidden;
 }
 
 a.darken img {
   display: block;
   transition: all 0.3s linear;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 23vw;
+  width: auto;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
 }
 
 a.darken:hover img {
