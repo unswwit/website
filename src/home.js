@@ -49,11 +49,11 @@ class Home extends Component{
 								<p>Team Members</p>
 							</div>
 							<div>
-								<span><CountUp end={14} duration={5}/></span>
+								<span><CountUp end={15} duration={5}/></span>
 								<p>Sponsors</p>
 							</div>
 							<div>
-								<span><CountUp end={1950} duration={5}/></span>
+								<span><CountUp end={1976} duration={5}/></span>
 								<p>Facebook Followers</p>
 							</div>
 						</div>
