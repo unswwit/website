@@ -5,7 +5,6 @@ import "./content.css";
 import "../.././style.css";
 
 import WCW from "./wcw"
-import TechTrivia from "./tech-trivia"
 import Memes from "./memes"
 import MondayMotivation from "./monday-motivation"
 
@@ -35,7 +34,7 @@ class MarketingContent extends Component {
                     <label for="mondaymot" id="side">Monday Motivation</label>
 
                     {/*Image collage*/}
-                    <ol class="grid" id="content">
+                    <ol class="grid">
                       <Memes
                         fb="https://www.facebook.com/unsw.wit/photos/a.1570799533224922/2351398365165031/"
                         imgUrl="/initiatives/memes/cat.png"
@@ -58,12 +57,6 @@ class MarketingContent extends Component {
                         fb="https://www.facebook.com/unsw.wit/photos/a.1570799533224922/2344785135826354/"
                         imgUrl="/initiatives/wcw/lanaking.jpg"
                         alt="Lana King"
-                        date="01/07/2020"
-                      />
-                      <TechTrivia
-                        fb="https://www.facebook.com/events/208115483507235/"
-                        imgUrl="/initiatives/techtrivia.jpg"
-                        alt="Tech Trivia"
                         date="01/07/2020"
                       />
                       <WCW
