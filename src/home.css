@@ -34,15 +34,6 @@ div .headline{
     letter-spacing: 2.5px;
 }
 
-/*Join us button*/
-.btn-join{
-    font-weight: lighter;
-    letter-spacing: 2px;
-    font-size: 1.2vw;
-    float: right;
-    margin-right: 0.5vw;
-}
-
 /*-----------------------------Home page description--------------------------*/
 /*Description wrapper*/
 .description {
@@ -149,9 +140,28 @@ div .headline{
     color: #313638B3;
     font-family: 'Montserrat', sans-serif;
     font-size: 11pt;
-    padding: 20px;
+    
     text-align: right;
 }
+
+.events-description p#about {
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+.events-description a {
+    font-family: 'Montserrat', sans-serif;
+    text-align: right;
+    color: #e85f5c;
+    padding-right: 20px;
+}
+
+.events-description a:hover {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #feb14b;
+}
+
 
 /*Events title grid area*/
 .events-title {
