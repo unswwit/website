@@ -1,6 +1,6 @@
 import React from 'react'
 import "./publications.css"
-import PubArticle from "./publications-article"
+// import PubArticle from "./publications-article"
 
 class Publications extends React.Component {
     render() {
