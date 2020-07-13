@@ -23,7 +23,7 @@ import blogPost7 from "./blog-post/blog-post-7";
 import blogPost8 from "./blog-post/blog-post-8";
 import blogPost9 from "./blog-post/blog-post-9";
 import blogPost10 from "./blog-post/blog-post-10";
-import twentyTwenty from "./marketing-archive/marketing-years/2020";
+import MarketingContent from "./marketing-archive/marketing-content/content";
 class App extends Component{
   constructor(props) {
 	super(props)
@@ -90,7 +90,7 @@ class App extends Component{
 					<Route path="/blog/8" component={blogPost8}/>
 					<Route path="/blog/9" component={blogPost9}/>
 					<Route path="/blog/10" component={blogPost10}/>
-					<Route path="/marketing-archive/2020" component={twentyTwenty}/>
+					<Route path="/marketing-archive/content" component={MarketingContent}/>
 				</Switch>
 			</body>
 		</HashRouter>
