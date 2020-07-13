@@ -23,7 +23,7 @@ class MarketingArchive extends Component {
             </div>
 
             {/*2020 section*/}
-            <Link to="/marketing-archive/2020" style={{ textDecoration: 'none' }}>
+            <Link to="/marketing-archive/content" style={{ textDecoration: 'none' }}>
             <div class="yearSection">
               <p class="year">2020</p>
             </div>

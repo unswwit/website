@@ -19,7 +19,8 @@
   display: table-cell;
   width: 75vw;
   margin-top: -240px;
-  margin-left: 22vw;
+  margin-left: 23vw;
+  margin-right: 23vw;
 }
 
 /*-------------------------------Left side bar-----------------------------*/
@@ -81,38 +82,73 @@ input[type="radio"][id="crush"]:checked + label {
   color: var(--white);
 }
 input[type="radio"][id="crush"]:checked ~ .grid .trivia,
-input[type="radio"][id="crush"]:checked ~ .grid .init3 {
+input[type="radio"][id="crush"]:checked ~ .grid .mondaymot,
+input[type="radio"][id="crush"]:checked ~ .grid .memes {
   display: none;
 }
 
-input[type="radio"][id="init2"]:checked + label {
+input[type="radio"][id="memes"]:checked + label {
   background: var(--grey);
   color: var(--white);
 }
-input[type="radio"][id="init2"]:checked ~ .grid .crush,
-input[type="radio"][id="init2"]:checked ~ .grid .init3,
-input[type="radio"][id="init2"]:checked ~ .grid .trivia {
+input[type="radio"][id="memes"]:checked ~ .grid .crush,
+input[type="radio"][id="memes"]:checked ~ .grid .mondaymot,
+input[type="radio"][id="memes"]:checked ~ .grid .trivia {
   display: none;
 }
 
-input[type="radio"][id="init3"]:checked + label {
+input[type="radio"][id="mondaymot"]:checked + label {
   background: var(--grey);
   color: var(--white);
 }
-input[type="radio"][id="init3"]:checked ~ .grid .crush,
-input[type="radio"][id="init3"]:checked ~ .grid .trivia  {
+input[type="radio"][id="mondaymot"]:checked ~ .grid .crush,
+input[type="radio"][id="mondaymot"]:checked ~ .grid .trivia,
+input[type="radio"][id="mondaymot"]:checked ~ .grid .memes  {
   display: none;
 }
 /*-------------------------------Image grid gallery-----------------------------*/
 .grid {
   display: flex;
   flex-wrap: wrap;
-  align-content: stretch;
-  justify-content: space-evenly;
+  align-content: space-between;
+  justify-content: left;
 }
 
-.grid .image img {
+.image img {
   width: auto;
-  height: 24vw;
-  padding-bottom: 30px;
+  height: 23vw;
+}
+
+.grid li {
+  padding-bottom: 15px;
+  padding-right: 15px;
+}
+
+a.darken {
+  display: inline-block;
+  position: relative;
+  background: black;
+  text-align: center;
+}
+
+a.darken img {
+  display: block;
+  transition: all 0.3s linear;
+}
+
+a.darken:hover img {
+  opacity: 0.2;
+}
+
+a.darken div {
+  font-family: "Montserrat";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0);
+}
+
+a.darken:hover div {
+  color: rgba(255, 255, 255, 1);
 }
