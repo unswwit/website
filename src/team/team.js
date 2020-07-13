@@ -107,7 +107,6 @@ class OurTeam extends Component {
             </div>
             
             {/* Subcommittee section */}
-            <hr style={{"width":"50%","height":"2px","backgroundColor":"#D3D3D3"}}/>
             <h2 class="team-heading" style={{"marginTop":"2vw","paddingBottom":"5px"}}>OUR 2020 SUBCOMMITTEE TEAM</h2>
             <div className="subcom_section">
                 <h3 class="subcom-type">Education Team</h3>
@@ -267,7 +266,7 @@ class OurTeam extends Component {
                     </div>
                 </div>
 
-                <h3 class="subcom-type">HR Team</h3>
+                <h3 class="subcom-type">Human Resources Team</h3>
                 <div class="subcom_row">
                     <div class="subcom_col">
                         <div class="profile">
@@ -296,7 +295,7 @@ class OurTeam extends Component {
                     </div>
                 </div>
 
-                <h3 class="subcom-type">IT Team</h3>
+                <h3 class="subcom-type">Information Technology Team</h3>
                 
                 <div class="subcom_row">
                     <div class="subcom_col">
