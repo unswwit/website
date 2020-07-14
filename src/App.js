@@ -13,6 +13,8 @@ import Blog from "./blog-gallery/blog";
 import Publications from "./publications/publications";
 import Events from "./events/events";
 
+import MenuBtn from "./menuBtn";
+
 import blogPost1 from "./blog-post/blog-post-1";
 import blogPost2 from "./blog-post/blog-post-2";
 import blogPost3 from "./blog-post/blog-post-3";
@@ -72,6 +74,7 @@ class App extends Component{
                         </li>
 						<li class="nav-item"><NavLink to="/join-us">JOIN</NavLink></li>
 						<li class="nav-item" style={{marginRight:"15px"}}><NavLink to="/contact-us">CONTACT</NavLink></li>
+						<li class="nav-item"><MenuBtn style={{"paddingRight": "1px"}}/></li>
 					</ul>
 				</div>
 			</nav>
