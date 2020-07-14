@@ -10,6 +10,7 @@ import ContactUs from "./contact/contactUs";
 import Footer from "./footer";
 
 import MarketingArchive from "./marketing-archive/marketingArchive"
+import MarketingContent from "./marketing-archive/marketing-content/content";
 import OurTeam from "./team/team";
 import Blog from "./blog-gallery/blog";
 import Publications from "./publications/publications";
@@ -25,14 +26,10 @@ import blogPost7 from "./blog-post/blog-post-7";
 import blogPost8 from "./blog-post/blog-post-8";
 import blogPost9 from "./blog-post/blog-post-9";
 import blogPost10 from "./blog-post/blog-post-10";
-<<<<<<< HEAD
-import MarketingContent from "./marketing-archive/marketing-content/content";
-=======
 import blogPost11 from "./blog-post/blog-post-11";
 import blogPost12 from "./blog-post/blog-post-12";
 import blogPost13 from "./blog-post/blog-post-13";
 
->>>>>>> master
 class App extends Component{
   constructor(props) {
 	super(props)
