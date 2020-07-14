@@ -30,7 +30,7 @@ class blogPost14 extends Component {
 
           <div class="post">
             <p class="post-content">Hannah Beder is a Creative Technologist at the startup Creatable, a tech education company preparing young women for the future of work. She is extremely passionate about tech, education, and supporting young women in STEM fields. Before joining Creatable, she found time to volunteer at the Coder Academy and Code Like a Girl whilst being a software engineer at the Macquarie Group. Her passion for teaching began while she was completing a Computer Science degree at UNSW, where she found time to develop and teach an introductory course in computing to high school students and tutor her peers in Computer Science and Engineering.</p>
-            <p class="post-content">We’re excited to share a recent Q&A we had with Hannah about her career journey in STEM.</p><br/><br/>
+            <p class="post-content">We’re excited to share a recent Q&A we had with Hannah about her career journey in STEM.</p><br/>
 
             <p class="question">What sparked your interest to join the field of STEM?</p>
 
