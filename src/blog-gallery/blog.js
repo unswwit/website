@@ -15,11 +15,23 @@ class Blog extends Component {
                     </div>
                 </div>
                 {/*End of Header*/}
-
+              
                 {/*Start of blog posts*/}
-                {/*blog post 12*/}
+                {/*blog post 14*/}
                 <BlogPreview
                 topMargin="10vw"
+                bottomMargin="5vw"
+                blogNo="14"
+                imgUrl="/blog-covers/14-hannah-beder.png"
+                heading="Introducing: Hannah Beder, Creative Technologist at Creatable and NSW Young Woman of the Year 2020"
+                date="15/07/2020"
+                subheading="We’re excited to share a recent Q&A we had with Hannah about her career journey in STEM."
+                authors={{"vivian-wong":["/potraits/vivw.jpg", "Vivian Wong"]}}
+                />
+                
+                {/*blog post 13*/}
+                <BlogPreview
+                topMargin="5vw"
                 bottomMargin="5vw"
                 blogNo="13"
                 imgUrl="/blog-covers/13-mechatronics.png"
