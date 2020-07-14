@@ -8,6 +8,7 @@ import Commonwealth from "./Commonwealth";
 import Deloitte from "./Deloitte";
 import EY from "./EY";
 import Google from "./Google";
+import InsideSherpa from "./InsideSherpa";
 import LendLease from "./Lendlease";
 import McGrathNicol from "./McGrathNicol";
 import Nine from "./Nine";
@@ -69,8 +70,12 @@ class Sponsors extends Component {
                 </div>
                 {/* 200x100 */}
                 <h1 className='subsponsor'>In-Kind Sponsors</h1>
-                <QPay/>
-    
+                
+                <div id="majorContainer">
+                    <InsideSherpa/>
+                    <QPay/>
+                </div>
+            
                 <p className='subheader'>{`Interested in partnering with us? Contact us at `}
                     <a class='subheader' href="mailto:externals@unswwit.com">externals@unswwit.com</a>
                 </p>

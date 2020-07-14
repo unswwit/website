@@ -58,9 +58,15 @@ h1.subsponsor {
 /*Sponsor contact*/
 a.subheader {
     font-family: 'Montserrat', sans-serif;
+    font-size: 1vw;
 }
 
 .subheader a:hover {
     color: #feb14b;
     text-decoration: none;
+}
+
+p.subheader {
+    font-size: 1vw;
+    text-align: center;
 }

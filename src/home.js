@@ -15,9 +15,6 @@ class Home extends Component{
 						<h1>Women In</h1>
 						<h1>Technology</h1>
 						<p> Empowering and inspiring the architects of change</p>
-						<Link to="/join-us">
-							<button class="button btn-join">Join Us</button>
-						</Link>
 					</div>
 				</div>
 				{/*End of Header*/}
@@ -49,11 +46,11 @@ class Home extends Component{
 								<p>Team Members</p>
 							</div>
 							<div>
-								<span><CountUp end={14} duration={5}/></span>
+								<span><CountUp end={15} duration={5}/></span>
 								<p>Sponsors</p>
 							</div>
 							<div>
-								<span><CountUp end={1950} duration={5}/></span>
+								<span><CountUp end={1976} duration={5}/></span>
 								<p>Facebook Followers</p>
 							</div>
 						</div>
@@ -64,21 +61,21 @@ class Home extends Component{
 				{/*Start of Upcoming Events*/}
 				<div class="events">
 					<div class="events-description">
-						<p>
-							At WIT, our focus is on providing events that foster development catering to first to final years. Whether it's personal, academic, professional or social, we want our students to be the best version of themselves. As part of our aim, we also connect current and future students with alumni and industry sponsors to serve as role models to inspire.</p>
+						<p id="about">
+							At WIT, our focus is on providing events that foster development catering to first to final years. Whether it's personal, academic, professional or social, we want our students to be the best version of themselves. As part of our aim, we also connect current and future students with alumni and industry sponsors to serve as role models to inspire. </p>
+							<p><a href="https://unswwit.com/#/events" id="more-events">See More Events</a></p>
 					</div>
 					<div class="events-title">
 						<h1> EVENTS </h1>
 					</div>
 					<div class="event-2">
-						<a href="https://www.facebook.com/events/208115483507235/">
+						{/* <a href="https://www.facebook.com/events/208115483507235/">
 							<img src={process.env.PUBLIC_URL + '/tech-trivia-tournament.png'} alt="banner"/>
-						</a>
+						</a> */}
 					</div>
-					
 					<div class="event-1">
-						<a href="https://www.facebook.com/events/882832525528439/">
-							<img src={process.env.PUBLIC_URL + '/sandbox.png'} alt="banner"/>
+						<a href="https://www.facebook.com/events/913508185831961/">
+							<img src={process.env.PUBLIC_URL + '/event-covers/cloud-computing.jpg'} alt="banner"/>
 						</a>	
 					</div>
 				</div>

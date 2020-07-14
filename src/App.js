@@ -12,6 +12,8 @@ import Footer from "./footer";
 import MarketingArchive from "./marketing-archive/marketingArchive"
 import OurTeam from "./team/team";
 import Blog from "./blog-gallery/blog";
+import Publications from "./publications/publications";
+import Events from "./events/events";
 
 import blogPost1 from "./blog-post/blog-post-1";
 import blogPost2 from "./blog-post/blog-post-2";
@@ -23,7 +25,14 @@ import blogPost7 from "./blog-post/blog-post-7";
 import blogPost8 from "./blog-post/blog-post-8";
 import blogPost9 from "./blog-post/blog-post-9";
 import blogPost10 from "./blog-post/blog-post-10";
+<<<<<<< HEAD
 import MarketingContent from "./marketing-archive/marketing-content/content";
+=======
+import blogPost11 from "./blog-post/blog-post-11";
+import blogPost12 from "./blog-post/blog-post-12";
+import blogPost13 from "./blog-post/blog-post-13";
+
+>>>>>>> master
 class App extends Component{
   constructor(props) {
 	super(props)
@@ -52,6 +61,7 @@ class App extends Component{
 				<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item"><NavLink to="/">HOME</NavLink></li>
+						<li class="nav-item"><NavLink to="/events">EVENTS</NavLink></li>
 						<li class="nav-item"><NavLink to="/our-team">TEAM</NavLink></li>
 						<li class="nav-item"><NavLink to="/sponsors">SPONSORS</NavLink></li>
 						<li class="nav-item" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
@@ -74,15 +84,18 @@ class App extends Component{
 			<body>
 				<Switch>
 					<Route exact path="/" component = {Home}/>
+					<Route path="/events" component={Events}/>
 					<Route path="/our-team" component = {OurTeam}/>
 					<Route exact path="/blog" component = {Blog}/>
           			<Route exact path="/marketing-archive" component = {MarketingArchive}/>
+					<Route path="/marketing-archive/content" component={MarketingContent}/>
 					<Route path="/join-us" component = {JoinUs}/>
 					<Route path="/sponsors" component = {Sponsors}/>
 					<Route path="/contact-us" component = {ContactUs}/>
+         			<Route path="/publications" component={Publications}/>
 					<Route path="/blog/1" component={blogPost1}/>
 					<Route path="/blog/2" component={blogPost2}/>
-          			<Route path="/blog/3" component={blogPost3}/>
+         	        <Route path="/blog/3" component={blogPost3}/>
 					<Route path="/blog/4" component={blogPost4}/>
 					<Route path="/blog/5" component={blogPost5}/>
                     <Route path="/blog/6" component={blogPost6}/>
@@ -90,7 +103,9 @@ class App extends Component{
 					<Route path="/blog/8" component={blogPost8}/>
 					<Route path="/blog/9" component={blogPost9}/>
 					<Route path="/blog/10" component={blogPost10}/>
-					<Route path="/marketing-archive/content" component={MarketingContent}/>
+					<Route path="/blog/11" component={blogPost11}/>
+					<Route path="/blog/12" component={blogPost12}/>
+					<Route path="/blog/13" component={blogPost13}/>
 				</Switch>
 			</body>
 		</HashRouter>
