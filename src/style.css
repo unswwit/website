@@ -91,6 +91,13 @@ p {
     letter-spacing: 1.5px;
 }
 
+.nav-item-btn {
+    color: #313638;
+    padding-top: 22px;
+    display: absolute;
+    padding-right: 10px;
+}
+
 .nav-item a{
     color: #313638;
     padding: 10px 15px;
@@ -128,6 +135,39 @@ p {
     padding: 10px 15px;
     text-decoration: none;
 }
+
+/*-----------------------------------Menu-----------------------------------*/
+.menu-container {
+    position: fixed;
+    width: 100%;
+    background: #fff7ef;
+    opacity: 1;
+    color: #313638;
+    z-index: 1;
+}
+
+.menu-item {
+    color: #313638;
+    padding: 5px 35px;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.menu-item a:hover{
+    color: #e85f5c;
+    text-decoration: none;
+}
+
+.menu-bar {
+    float: none;
+}
+
+.menu-list {
+    padding-top: 4rem;
+}
+
 /*----------------------------------Footer------------------------------------*/
 footer {
     margin: 0;

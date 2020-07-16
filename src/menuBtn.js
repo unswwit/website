@@ -4,19 +4,22 @@ class MenuBtn extends React.Component {
     constructor(props) {
         super(props);
         this.state= {
-            open: this.props.open ? this.props.open:false,
-            color: this.props.color ? this.props.color:'black',
+            open: this.props.open,
         }
     }
 
     componentWillReceiveProps(nextProps){
         if(nextProps.open !== this.state.open){
-            this.setState({open:nextProps.open});
+            this.setState({
+                open:nextProps.open
+            });
         }
     }
 
     handleClick() {
-        this.setState({open:!this.state.open});
+        this.setState({
+            open:!this.state.open
+        });
     }
 
     render() {
@@ -24,17 +27,13 @@ class MenuBtn extends React.Component {
             container: {
                 height: '35px',
                 width: '35px',
-                display:'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
                 alignItems: 'center',
                 cursor: 'pointer',
-                padding: '4px',
             },
             line: {
                 height: '2px',
                 width: '20px',
-                background: this.state.color,
+                background: '#313638',
                 transition: 'all 0.2s ease',
             },
             lineTop: {
@@ -43,7 +42,7 @@ class MenuBtn extends React.Component {
                 marginBottom: '5px',
             },
             lineMiddle: {
-                opacity: this.state.open ? 0: 1,
+                opacity: this.state.open ? 0 : 1,
                 transform: this.state.open ? 'translateX(-16px)':'none',
             },
             lineBottom: {
@@ -55,8 +54,7 @@ class MenuBtn extends React.Component {
 
         return(
         <div style={styles.container} 
-            onClick={this.props.onClick ? this.props.onClick: 
-            ()=> {this.handleClick();}}>
+            onClick={this.props.onClick ? this.props.onClick: this.handleClick()}>
             <div style={{...styles.line,...styles.lineTop}}/>
             <div style={{...styles.line,...styles.lineMiddle}}/>
             <div style={{...styles.line,...styles.lineBottom}}/>
