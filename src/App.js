@@ -100,7 +100,7 @@ class App extends Component{
 									<div class= {this.state.showDD?'dropdown-menu show':'dropdown-menu'}>
 										<li class="dropdown-item"><NavLink to="/blog">BLOG</NavLink></li>
 										<li class="dropdown-item"><NavLink to="/publications">PUBLICATIONS</NavLink></li>
-										<li class="dropdown-item"><NavLink to="/blog">MARKETING ARCHIVES</NavLink></li>
+										{/*<li class="dropdown-item"><NavLink to="/marketing-archive">MARKETING ARCHIVES</NavLink></li>*/}
 									</div>
 								</div>
 							</li>

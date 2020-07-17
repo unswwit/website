@@ -9,7 +9,7 @@ class Footer extends Component{
                 <HashRouter basename="/">
                 <footer>
                     <ul class="footer-links">
-                        <div class="row">
+                        <div class="row grid-all-footer">
                             <div class="col">
                             <li class="footer-item footer-logo"><img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo"
                                 resizeMode='contain' style={{width: '100px'}} /></li>
