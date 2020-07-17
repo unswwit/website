@@ -9,25 +9,25 @@ class Footer extends Component{
                 <HashRouter basename="/">
                 <footer>
                     <ul class="footer-links">
-                        <div class="row">
+                        <div class="grid-footer-container row">
                             <div class="col">
-                            <li class="footer-item footer-logo"><img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo"
+                            <li class="footer-item footer-logo grid-footer-item"><img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo"
                                 resizeMode='contain' style={{width: '100px'}} /></li>
                             </div>
-                            <div class="col footer-group-short">
+                            <div class="col footer-group-short grid-item-footer">
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/">Home</Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/events">Events </Link></li>
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/our-team">Team </Link></li>
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/sponsors">Sponsors </Link></li>
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/join-us">Join </Link></li>
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/contact-us">Contact </Link></li>
                             </div>
-                            <div class="col footer-group-long">
+                            <div class="col footer-group-long grid-item-footer">
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/blog">Blog </Link></li>
-                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/blog">Opportunities</Link></li>
-                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/blog">Marketing Archives</Link></li>
-																<li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/publications">Publications</Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/publications">Publications</Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/marketing-archive">Marketing Archives</Link></li>
                             </div>
-                            <div class="col socials">
+                            <div class="col socials grid-footer-item">
                                 <div class="socials-subheading"><li class="footer-item">Follow our socials</li></div>
                                 <li class="footer-item"><a href="https://www.linkedin.com/company/unsw-women-in-technology"><img src={process.env.PUBLIC_URL + '/linkedin.png'} className="" alt="banner" resizeMode='contain'
                                     style={{width:'35px', height:'35px'}} /></a></li>

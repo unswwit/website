@@ -238,3 +238,12 @@ footer {
     color: #feb14b;
     text-decoration: none;
 }
+
+.grid-footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 0fr));
+}
+
+.grid-footer-item {
+    display: flex;
+}
