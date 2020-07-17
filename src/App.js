@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { HashRouter, Route, NavLink, Switch } from "react-router-dom";
+import DetectableOverflow from 'react-detectable-overflow';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './style.css';
@@ -36,9 +37,12 @@ class App extends Component{
 		this.state = {
 			showDD: false,
 			menuOpen:false,
+			btnVisible: 'none',
+			navVisible: 'block'
 		}
 		this.handleHover = this.handleHover.bind(this);
 		this.handleMenuClick = this.handleMenuClick.bind(this);
+		this.handleChange = this.handleChange.bind(this);
 	}  
 
 	handleMenuClick() {
@@ -54,23 +58,41 @@ class App extends Component{
 		e.preventDefault()
 	}
 
+	handleChange(isOverflowed) {
+		if (isOverflowed) {
+			this.setState({
+				btnVisible: 'block',
+				navVisible: 'none'
+			});
+			console.log("here");
+		}
+		/*
+		 else {
+			this.setState({
+				btnVisible: 'none',
+				navVisible: 'block'
+			});
+		}*/
+	
+	}
 	render() {
 	return (
 		<div>
 			<HashRouter basename="/">
 				<Menu open={this.state.menuOpen}/> 
+				<DetectableOverflow onChange={this.handleChange}>
 				<nav class="navbar navbar-expand-md navbar-dark bg-custom fixed-top justify-content-between">
 					<a class="navbar-brand" href="/">
 						<img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo"
-							resizeMode='contain' style={{width: '35px', marginLeft:  '15px', marginBottom: '5px', marginTop: '5px'}} />
+							resizemode='contain' style={{width: '35px', marginLeft:  '15px', marginBottom: '5px', marginTop: '5px'}} />
 					</a>
 					<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-						<ul class="navbar-nav ml-auto">
-							<li class="nav-item"><NavLink to="/">HOME</NavLink></li>
-							<li class="nav-item"><NavLink to="/events">EVENTS</NavLink></li>
-							<li class="nav-item"><NavLink to="/our-team">TEAM</NavLink></li>
-							<li class="nav-item"><NavLink to="/sponsors">SPONSORS</NavLink></li>
-							<li class="nav-item" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
+						<ul class="navbar-nav ml-auto" ref={(el) => {this.element = el}}>
+							<li class="nav-item" style={{'display':this.state.navVisible}}><NavLink to="/">HOME</NavLink></li>
+							<li class="nav-item" style={{'display':this.state.navVisible}}><NavLink to="/events">EVENTS</NavLink></li>
+							<li class="nav-item" style={{'display':this.state.navVisible}}><NavLink to="/our-team">TEAM</NavLink></li>
+							<li class="nav-item" style={{'display':this.state.navVisible}}><NavLink to="/sponsors">SPONSORS</NavLink></li>
+							<li class="nav-item" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover} style={{'display':this.state.navVisible}}>
 								<div class="dropdown" display="static">
 									<div class="dropdown-toggle">
 										<span class="menuTitle">RESOURCES</span>
@@ -82,13 +104,14 @@ class App extends Component{
 									</div>
 								</div>
 							</li>
-							<li class="nav-item"><NavLink to="/join-us">JOIN</NavLink></li>
-							<li class="nav-item" style={{marginRight:"15px"}}><NavLink to="/contact-us">CONTACT</NavLink></li>
-							<li class="nav-item-btn"><MenuBtn open={this.state.menuOpen} onClick={this.handleMenuClick}/></li>
+							<li class="nav-item" style={{'display':this.state.navVisible}}><NavLink to="/join-us">JOIN</NavLink></li>
+							<li class="nav-item" style={{marginRight:"15px", 'display':this.state.navVisible}}><NavLink to="/contact-us">CONTACT</NavLink></li>
+							<li class="nav-item-btn"><MenuBtn open={this.state.menuOpen} onClick={this.handleMenuClick} show={this.state.btnVisible}/></li>
 						</ul>
 					</div>
 				</nav>
-				<body>
+				</DetectableOverflow>
+				
 					<Switch>
 						<Route exact path="/" component = {Home}/>
 						<Route path="/events" component={Events}/>
@@ -112,7 +135,7 @@ class App extends Component{
 						<Route path="/blog/12" component={blogPost12}/>
 						<Route path="/blog/13" component={blogPost13}/>
 					</Switch>
-				</body>
+				
 			</HashRouter>
 		<div><Footer /></div>
 		</div>

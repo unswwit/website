@@ -10,7 +10,7 @@ class Menu extends Component{
             open: this.props.open,
             showDD: false,
         };
-        this.handleHover = this.handleHover.bind(this);
+        this.handleClick = this.handleClick.bind(this);
       }
         
     componentWillReceiveProps(nextProps){
@@ -19,7 +19,7 @@ class Menu extends Component{
         }
     }
       	
-	handleHover() {
+	handleClick() {
 		this.setState({
 		    showDD: !this.state.showDD
         })
@@ -27,33 +27,33 @@ class Menu extends Component{
      
     render(){
         return(
-          <div class="menu-container">
+          <div className="menu-container">
             {
               this.state.open ?
                 <div class="menu-list">
                     <ul class="navbar-nav menu-bar">
-                    <li class="menu-item"><NavLink to="/">HOME</NavLink></li>
-                    <li class="menu-item"><NavLink to="/events">EVENTS</NavLink></li>
-                    <li class="menu-item"><NavLink to="/our-team">TEAM</NavLink></li>
-                    <li class="menu-item"><NavLink to="/sponsors">SPONSORS</NavLink></li>
-                    <li class="menu-item" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
-                        <div class="dropdown">
-                            <div class="dropdown-toggle">
-                                <span class="menuTitle">RESOURCES</span>
+                        <div class="menu-box"><li class="menu-item"><NavLink to="/">HOME</NavLink></li></div>
+                        <div class="menu-box"><li class="menu-item"><NavLink to="/events">EVENTS</NavLink></li></div>
+                        <div class="menu-box"><li class="menu-item"><NavLink to="/our-team">TEAM</NavLink></li></div>
+                        <div class="menu-box"><li class="menu-item"><NavLink to="/sponsors">SPONSORS</NavLink></li></div>
+                        <div class="menu-box"><li class="menu-item" onClick={this.handleClick}>
+                            <div class="dropdown">
+                                <div class="dropdown-toggle">
+                                    <span class="menuTitle">RESOURCES</span>
+                                </div>
                             </div>
-                        </div>
-                        {
-                        this.state.showDD ?
-                        <div>
-                            <li class="menu-item"><NavLink to="/blog">BLOG</NavLink></li>
-                            <li class="menu-item"><NavLink to="/publications">PUBLICATIONS</NavLink></li>
-                            <li class="menu-item"><NavLink to="/blog">MARKETING ARCHIVES</NavLink></li>
-                        </div>:null
-                        }
-                    </li>
-                   
-                    <li class="menu-item"><NavLink to="/join-us">JOIN</NavLink></li>
-                    <li class="menu-item" style={{marginRight:"15px"}}><NavLink to="/contact-us">CONTACT</NavLink></li>
+                            {
+                            this.state.showDD ?
+                            <div>
+                                <div class="menu-box"><li class="menu-item"><NavLink to="/blog">BLOG</NavLink></li></div>
+                                <div class="menu-box"> <li class="menu-item"><NavLink to="/publications">PUBLICATIONS</NavLink></li></div>
+                                <div class="menu-box"> <li class="menu-item"><NavLink to="/blog">MARKETING ARCHIVES</NavLink></li></div>
+                            </div>:null
+                            }
+                        </li></div>
+                    
+                        <div class="menu-box"><li class="menu-item"><NavLink to="/join-us">JOIN</NavLink></li></div>
+                        <div class="menu-box"><li class="menu-item" style={{marginRight:"15px"}}><NavLink to="/contact-us">CONTACT</NavLink></li></div>
                     </ul>
                 </div>:null
             }
