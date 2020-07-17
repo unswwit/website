@@ -4,8 +4,6 @@ import { NavLink } from "react-router-dom";
 class Menu extends Component{
     constructor(props){
         super(props);
-        this.menuItems=['Home','Events','Team','Sponsors','Resources','Join','Contact'];
-        this.subMenu= ['Blog','Publications','Marketing Archives'];
         this.state={
             open: this.props.open,
             showDD: false,

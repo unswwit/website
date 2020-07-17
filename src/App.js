@@ -68,7 +68,6 @@ class App extends Component{
 				btnVisible: 'block',
 				navVisible: 'none'
 			});
-			console.log("here");
 		} else {
 			this.setState({
 				btnVisible: 'none',

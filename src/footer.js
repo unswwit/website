@@ -3,7 +3,39 @@ import { Link } from "react-router-dom";
 import { HashRouter } from "react-router-dom";
 import "./style.css";
 class Footer extends Component{
-	render(){
+    constructor(props){
+        super(props);
+        this.state = {
+            alignment: 'left'
+        };    
+        this.handleAlignment = this.handleAlignment.bind(this);  
+    }
+
+    componentDidMount() {
+        window.addEventListener('resize', this.handleAlignment);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleAlignment);
+    }
+
+    handleAlignment() {
+        var grid = document.querySelector('.grid-footer-container');
+        const gridComputedStyle = window.getComputedStyle(grid);
+        const numCol = gridComputedStyle.getPropertyValue("grid-template-columns").split(" ").length;
+        
+        if (numCol === 1 && this.state.alignment === 'left') {
+            this.setState({
+                alignment: 'center'
+            });
+        } else if (numCol === 2 && this.state.alignment === 'center') {
+            this.setState({
+                alignment: 'left'
+            });
+        }
+    }
+
+    render(){
 		return (
             <div>
                 <HashRouter basename="/">
@@ -14,7 +46,7 @@ class Footer extends Component{
                             <li class="footer-item footer-logo"><img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo"
                                 resizeMode='contain' style={{width: '6.5vw'}} /></li>
                             </div>
-                            <div class="grid-footer-container">
+                            <div class="grid-footer-container" style={{textAlign: this.state.alignment}}>
                                 <div>
                                     <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/">Home</Link></li>
                                     <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/events">Events </Link></li>
