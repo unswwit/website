@@ -5,7 +5,7 @@ class Events extends React.Component {
     render() {
         return (
             <div>
-                <div className="publicationsHeader">
+                <div className="events-header">
                     {/* Cover Photo */}
                     {/* Main Title, and Subtitle Area */}
                     <div className="overlay"></div>

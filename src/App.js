@@ -9,6 +9,9 @@ import JoinUs from "./join/joinUs";
 import Sponsors from "./sponsors/sponsors";
 import ContactUs from "./contact/contactUs";
 import Footer from "./footer";
+
+import MarketingArchive from "./marketing-archive/marketingArchive"
+import MarketingContent from "./marketing-archive/marketing-content/content";
 import OurTeam from "./team/team";
 import Blog from "./blog-gallery/blog";
 import Publications from "./publications/publications";
@@ -30,6 +33,7 @@ import blogPost10 from "./blog-post/blog-post-10";
 import blogPost11 from "./blog-post/blog-post-11";
 import blogPost12 from "./blog-post/blog-post-12";
 import blogPost13 from "./blog-post/blog-post-13";
+import blogPost14 from "./blog-post/blog-post-14";
 
 class App extends Component{
   	constructor(props) {
@@ -65,14 +69,12 @@ class App extends Component{
 				navVisible: 'none'
 			});
 			console.log("here");
-		}
-		/*
-		 else {
+		} else {
 			this.setState({
 				btnVisible: 'none',
 				navVisible: 'block'
 			});
-		}*/
+		}
 	
 	}
 	render() {
@@ -100,7 +102,7 @@ class App extends Component{
 									<div class= {this.state.showDD?'dropdown-menu show':'dropdown-menu'}>
 										<li class="dropdown-item"><NavLink to="/blog">BLOG</NavLink></li>
 										<li class="dropdown-item"><NavLink to="/publications">PUBLICATIONS</NavLink></li>
-										{/*<li class="dropdown-item"><NavLink to="/marketing-archive">MARKETING ARCHIVES</NavLink></li>*/}
+										<li class="dropdown-item"><NavLink to="/marketing-archive">MARKETING ARCHIVES</NavLink></li>
 									</div>
 								</div>
 							</li>
@@ -117,6 +119,8 @@ class App extends Component{
 						<Route path="/events" component={Events}/>
 						<Route path="/our-team" component = {OurTeam}/>
 						<Route exact path="/blog" component = {Blog}/>
+						<Route exact path="/marketing-archive" component = {MarketingArchive}/>
+					<Route path="/marketing-archive/content" component={MarketingContent}/>
 						<Route path="/join-us" component = {JoinUs}/>
 						<Route path="/sponsors" component = {Sponsors}/>
 						<Route path="/contact-us" component = {ContactUs}/>
@@ -134,6 +138,7 @@ class App extends Component{
 						<Route path="/blog/11" component={blogPost11}/>
 						<Route path="/blog/12" component={blogPost12}/>
 						<Route path="/blog/13" component={blogPost13}/>
+						<Route path="/blog/14" component={blogPost14}/>
 					</Switch>
 				
 			</HashRouter>

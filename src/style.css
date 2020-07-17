@@ -153,6 +153,7 @@ p {
     letter-spacing: 1.5px;
     text-transform: capitalize;
     cursor: pointer;
+    font-size: 12px;
 }
 
 .menu-item a:hover{
@@ -192,7 +193,7 @@ footer {
     list-style-type: none;
     margin: 20px auto;
     align-self: center;
-    padding: 3vw 0 0vw 0;
+    padding-top: 3vw;
     width: 73%;
 }
 
