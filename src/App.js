@@ -72,7 +72,8 @@ class App extends Component{
 		} else {
 			this.setState({
 				btnVisible: 'none',
-				navVisible: 'block'
+				navVisible: 'block',
+				menuOpen: false
 			});
 		}
 	

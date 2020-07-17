@@ -12,7 +12,7 @@ class Footer extends Component{
                         <div class="row grid-all-footer">
                             <div class="col">
                             <li class="footer-item footer-logo"><img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo"
-                                resizeMode='contain' style={{width: '100px'}} /></li>
+                                resizeMode='contain' style={{width: '6.5vw'}} /></li>
                             </div>
                             <div class="grid-footer-container">
                                 <div>
@@ -32,11 +32,11 @@ class Footer extends Component{
                             <div class="col socials">
                                 <div class="socials-subheading"><li class="footer-item">Follow our socials</li></div>
                                 <li class="footer-item"><a href="https://www.linkedin.com/company/unsw-women-in-technology"><img src={process.env.PUBLIC_URL + '/linkedin.png'} className="" alt="banner" resizeMode='contain'
-                                    style={{width:'35px', height:'35px'}} /></a></li>
+                                    style={{width:'2.3vw', height:'2.3vw'}} /></a></li>
                                 <li class="footer-item"><a href="https://www.facebook.com/unsw.wit/"><img src={process.env.PUBLIC_URL + '/facebook.png'} className="" alt="banner" resizeMode='contain'
-                                    style={{width:'35px', height:'35px'}} /></a></li>
+                                    style={{width:'2.3vw', height:'2.3vw'}} /></a></li>
                                 <li class="footer-item"><a href="https://www.instagram.com/wit.unsw/"><img src={process.env.PUBLIC_URL + '/instagram.png'} className="" alt="banner" resizeMode='contain'
-                                    style={{width:'35px', height:'35px'}} /></a></li>
+                                    style={{width:'2.3vw', height:'2.3vw'}} /></a></li>
                             </div>
                         </div>
                     </ul>

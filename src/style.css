@@ -144,6 +144,7 @@ p {
     opacity: 1;
     color: #313638;
     z-index: 1;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .menu-item {
@@ -183,6 +184,7 @@ footer {
     margin: 0;
     padding: 0;
     background-color: #fff7ef;
+    min-width: 100%;
 }
 
 .footer-top {
@@ -194,7 +196,7 @@ footer {
     margin: 20px auto;
     align-self: center;
     padding-top: 3vw;
-    width: 73%;
+    width: 77%;
 }
 
 .footer-item {
@@ -213,8 +215,8 @@ footer {
 
 .row .col .footer-logo {
     margin-top: 5%; 
-    width: 280px;
-    margin-left: 10%;
+    width: 350px;
+    margin-left: 7%;
 }
 
 .socials .footer-item {
@@ -249,4 +251,5 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     width: 45%;
+    margin-left: 1%;
 }
