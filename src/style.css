@@ -221,21 +221,26 @@ footer {
 
 .socials .footer-item {
     display: inline;
-    padding: 7px;
+    padding-right: 7px;
 }
 
 .socials {
     margin-left: 70px;
 }
 
-.footer-copyright {
-    font-family: 'Montserrat', sans-serif;
-    text-transform: none;
-    padding-bottom: 16px;
+.socials-subheading .footer-item {
+    padding: 0px;
 }
 
 .socials-subheading {
     padding-bottom: 10px;
+    margin-left: 7px;
+}
+
+.footer-copyright {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: none;
+    padding-bottom: 16px;
 }
 
 .footer-copyright, a {
