@@ -15,8 +15,20 @@ class Blog extends Component {
                     </div>
                 </div>
                 {/*End of Header*/}
-              
+
                 {/*Start of blog posts*/}
+                {/*blog post 15*/}
+                <BlogPreview
+                topMargin="10vw"
+                bottomMargin="5vw"
+                blogNo="15"
+                imgUrl="/blog-covers/15-zitni-handoo.png"
+                heading="A Journey in IT with Zitni Handoo"
+                date="19/07/2020"
+                subheading="In this blog post, we share our Q&A with Zitni, covering everything from her inspiration to study AI to the most challenging aspects of university life. Get ready to take some notes!"
+                authors={{"vivian-wong":["/potraits/vivw.jpg", "Vivian Wong"]}}
+                />
+
                 {/*blog post 14*/}
                 <BlogPreview
                 topMargin="10vw"
@@ -28,7 +40,7 @@ class Blog extends Component {
                 subheading="We’re excited to share a recent Q&A we had with Hannah about her career journey in STEM."
                 authors={{"vivian-wong":["/potraits/vivw.jpg", "Vivian Wong"]}}
                 />
-                
+
                 {/*blog post 13*/}
                 <BlogPreview
                 topMargin="5vw"
@@ -40,7 +52,7 @@ class Blog extends Component {
                 subheading="Learn about this powerful and evolving field cranking out computer-controlled machines like robotics and autonomous-driving cars. Find out the tools and software used in this field, and if it’s for you! 🤔🤔"
                 authors={{"victoria-ruming":["/potraits/victoria.jpg", "Victoria Ruming"]}}
                 />
-                
+
                 {/*blog post 12*/}
                 <BlogPreview
                 topMargin="5vw"
