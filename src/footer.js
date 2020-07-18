@@ -12,6 +12,7 @@ class Footer extends Component{
     }
 
     componentDidMount() {
+        window.addEventListener('load', this.handleAlignment);
         window.addEventListener('resize', this.handleAlignment);
     }
 
