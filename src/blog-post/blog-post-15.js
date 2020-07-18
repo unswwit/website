@@ -33,7 +33,7 @@ class blogPost15 extends Component {
             dreams big. She would love to use her knowledge of AI to contribute to solving
             problems like cyber attacks or diagnosing diseases. In this blog post, we share
             our Q&A with Zitni, covering everything from her inspiration to study AI to the
-            most challenging aspects of university life. Get ready to take some notes! </p>
+            most challenging aspects of university life. Get ready to take some notes! </p><br/>
             <ol class="list">
               <li class="question">What is your degree about?</li>
               <p class="post-content">I'm studying Information Technology, and my specialization
