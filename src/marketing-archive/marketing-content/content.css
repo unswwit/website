@@ -8,7 +8,7 @@
 }
 
 .initiatives:not(#content) {
-  width: 23vw;
+  width: 24vw;
   justify-content: center;
   box-shadow: 6px -2px 6px -4px #D3D3D3;
   padding-top: 30px;
