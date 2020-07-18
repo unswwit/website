@@ -34,7 +34,7 @@ class MarketingContent extends Component {
                     <label for="mondaymot" id="side">Monday Motivation</label>
 
                     {/*Image collage*/}
-                    <ol class="grid" id="content">
+                    <ol class="grid">
                       <Memes
                         fb="https://www.facebook.com/unsw.wit/photos/a.1570799533224922/2351398365165031/"
                         imgUrl="/initiatives/memes/cat.png"
@@ -50,7 +50,7 @@ class MarketingContent extends Component {
                       <Memes
                         fb="https://www.facebook.com/unsw.wit/posts/2346183109019890"
                         imgUrl="/initiatives/memes/dance.png"
-                        alt="Meme"
+                        alt="Memes"
                         date="03/07/2020"
                       />
                       <WCW
