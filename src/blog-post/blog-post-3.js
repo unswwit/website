@@ -76,7 +76,7 @@ class blogPost3 extends Component {
         
         {/*for the blog post author*/}
         <AuthorCard 
-        authors={{"vivian-wong":["/potraits/vivw.jpg", "profile_img vivw_img", "Vivian Wong", "Education Executive"]}} 
+        authors={{"georgie-mansfield":["/potraits/georgie.jpg", "profile_img vivw_img", "Georgie Mansfield", "Education Team"]}} 
         />
         {/*End of blog posts*/}
       </div>  

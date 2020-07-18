@@ -32,10 +32,22 @@
     width: 40%;
   }
 
+.year-section {
+  text-align: center;
+}
+
   /*Year sections*/
-  p.year {
+  p#year {
     font-family: 'Montserrat', sans-serif;
     font-size: 32pt;
+    color: #e85f5c;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 150px;
+  }
+
+  a#year:hover {
     color: #feb14b;;
     font-weight: bold;
     text-align: center;

@@ -6,6 +6,7 @@ import "./blog-post.css";
 class AuthorCard extends Component {
     render() {
       return (
+        
         <div>
           {/*for the blog post author*/}
           {

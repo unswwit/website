@@ -1,28 +1,32 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import "./style.css";
 class Footer extends Component{
-    
 	render(){
 		return (
             <div>
+                <HashRouter basename="/">
                 <footer>
                     <ul class="footer-links">
-                        <div class="row">   
+                        <div class="row">
                             <div class="col">
-                            <li class="footer-item footer-logo"><img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo" 
+                            <li class="footer-item footer-logo"><img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo"
                                 resizeMode='contain' style={{width: '100px'}} /></li>
                             </div>
                             <div class="col footer-group-short">
-                                <li class="footer-item"><a href="/">Home</a></li>
-                                <li class="footer-item"><a href="/our-team">Team </a></li>
-                                <li class="footer-item"><a href="/sponsors">Sponsors </a></li>
-                                <li class="footer-item"><a href="/join-us">Join </a></li>
-                                <li class="footer-item"><a href="/contact-us">Contact</a></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/">Home</Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/events">Events</Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/our-team">Team</Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/sponsors">Sponsors</Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/join-us">Join</Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/contact-us">Contact</Link></li>
                             </div>
                             <div class="col footer-group-long">
-                                <li class="footer-item"><a href="/blog-posts">Blog </a></li>
-                                <li class="footer-item"><a href="/blog-posts">Opportunities</a></li>
-                                <li class="footer-item"><a href="/blog-posts">Marketing Archives</a></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/blog">Blog </Link></li>
+                                {/* <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/blog">Opportunities</Link></li> */}
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/publications">Publications</Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/marketing-archive">Marketing Archives</Link></li>
                             </div>
                             <div class="col socials">
                                 <div class="socials-subheading"><li class="footer-item">Follow our socials</li></div>
@@ -35,10 +39,10 @@ class Footer extends Component{
                             </div>
                         </div>
                     </ul>
-                    <div class="footer-copyright text-center footer-item"><a href="https://unswwit.com/">Copyright © 2020. UNSW Women in Technology</a></div>
+                    <div class="footer-copyright text-center footer-item"><Link to="https://unswwit.com/">Copyright © 2020. UNSW Women in Technology</Link></div>
                 </footer>
+                </HashRouter>
             </div>
-            
 		);
 
 	}
