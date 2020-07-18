@@ -38,7 +38,7 @@ class Footer extends Component{
                             </div>
                         </div>
                     </ul>
-                    <div class="footer-copyright text-center bottom-footer-item"><Link to="https://unswwit.com/">Copyright © 2020. UNSW Women in Technology</Link></div>
+                    <div class="footer-copyright text-center bottom-footer-item"><Link to="/">Copyright © 2020. UNSW Women in Technology</Link></div>
                 </footer>
                 </HashRouter>
             </div>

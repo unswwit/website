@@ -250,6 +250,11 @@ footer {
     text-decoration: none;
 }
 
+.bottom-footer-item a:hover {
+    color: #feb14b;
+    text-decoration: none;
+}
+
 .grid-footer-container {
     display: flex;
     width: 70%;
