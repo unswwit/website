@@ -2,16 +2,7 @@
 import React, { Component } from "react";
 import "./team.css";
 
-import Alison from "./Alison";
-import Amanda from "./Amanda";
-import Elicia from "./Elicia";
-import Elizabeth from "./Elizabeth";
-import Felicia from "./Felicia";
-import Gabrielle from "./Gabrielle";
-import Kelly from "./Kelly";
-import Rhea from "./Rhea";
-import VivianS from "./VivianS";
-import VivianW from "./VivianW";
+import Execs from "./execs";
 import SubCom from "./subcom";
 
 class OurTeam extends Component {
@@ -37,73 +28,133 @@ class OurTeam extends Component {
             {/* Exec section */}
             <div className="all_execs_section">
                 <div class="exec_row">
-                    <div class="exec_col">
-                        <div class="profile">
-                            <VivianS/>
-                        </div>
-                    </div>
+                    <Execs
+                    imgUrl="/potraits/viv.png"
+                    class=""
+                    name="Vivian Shen"
+                    position="President"
+                    degree="Data Science"
+                    year="3rd"
+                    linkedin="vivian-shen-046110"
+                    fb="vivian.shen.71619"
+                    email="president"
+                    />
 
-                    <div className="exec_col">
-                        <div class="profile">
-                            <Amanda/>
-                        </div>
-                    </div>
+                    <Execs
+                    imgUrl="/potraits/amanda.JPG"
+                    class=""
+                    name="Amanda Li"
+                    position="Vice President"
+                    degree="Software Engineering/Biomedical Engineering"
+                    year="3rd"
+                    linkedin="amanda-li-031199"
+                    fb="amaandarin"
+                    email="vp"
+                    />
                 </div>
 
                 <div className="exec_row">
-                    <div className="exec_col">
-                        <div class="profile">
-                            <Kelly/>
-                        </div>
-                    </div>
+                    <Execs
+                    imgUrl="/potraits/kelly.png"
+                    class=""
+                    name="Kelly Liang"
+                    position="General Secretary"
+                    degree="Commerce/Information System"
+                    year="2nd"
+                    linkedin="kelly-liang-03877017b"
+                    fb="keleriter"
+                    email="secretary"
+                    />
 
-                    <div className="exec_col">
-                        <div class="profile">
-                            <Elizabeth/>
-                        </div>
-                    </div>
+                    <Execs
+                    imgUrl="/potraits/elizabeth.JPG"
+                    name="Elizabeth Zhong"
+                    class=""
+                    position="Treasurer"
+                    degree="Software Engineering"
+                    year="3rd"
+                    linkedin="elizabeth-zhong-561806160"
+                    fb="elizabethzhong2"
+                    email="treasurer"
+                    />
                 </div>
 
                 <div class="exec_row">
-                    <div class="exec_col">
-                        <div className="profile">
-                            <VivianW/>
-                        </div>
-                    </div>
+                    <Execs
+                    imgUrl="/potraits/vivw.jpg"
+                    name="Vivian Wong"
+                    class="vivw_img"
+                    position="Education Executive"
+                    degree="Commerce/Actuarial Science"
+                    year="2nd"
+                    linkedin="vivian-wong-75511b169"
+                    fb="profile.php?id=100027563555266"
+                    email="vivianwong"
+                    />
 
-                    <div class="exec_col">
-                        <div className="profile">
-                            <Gabrielle/>
-                        </div>
-                    </div>
+                    <Execs
+                    imgUrl="/potraits/gabby.jpg"
+                    name="Gabrielle Younes"
+                    class="gab_img"
+                    position="Events Executive"
+                    degree="Bioinformatic Engineering/Advanced Science"
+                    year="2nd"
+                    linkedin="gabrielle-younes-a05a70182"
+                    fb="profile.php?id=100017209069498"
+                    email="gabrielle"
+                    />
                 </div>
 
                 <div class="exec_row">
-                    <div class="exec_col">
-                        <div className="profile">
-                            <Rhea/>
-                        </div>
-                    </div>
+                    <Execs
+                    imgUrl="/potraits/rhea.png"
+                    name="Rhea Thomas"
+                    class=""
+                    position="Externals Executive"
+                    degree="Information Systems"
+                    year="2nd"
+                    linkedin="rhea-t-2400b113a"
+                    fb="profile.php?id=100013567812434"
+                    email="rhea"
+                    />
 
-                    <div class="exec_col">
-                        <div className="profile">
-                            <Alison/>
-                        </div>
-                    </div>
+                    <Execs
+                    imgUrl="/potraits/alison.png"
+                    name="Alison Chin"
+                    class=""
+                    position="Human Resources Executive"
+                    degree="Information Systems"
+                    year="3rd"
+                    linkedin="alison-chin-958581148"
+                    fb="alison.chin.52"
+                    email="alison"
+                    />
                 </div>
 
                 <div class="exec_row">
-                    <div class="exec_col">
-                    <div className="profile">
-                        <Elicia/>
-                    </div>
-                    </div>
+                    <Execs
+                    imgUrl="/potraits/elicia.jpg"
+                    name="Elicia Au Duong"
+                    class="eli_img"
+                    position="Information Technology Executive"
+                    degree="Commerce/Computer Science"
+                    year="2nd"
+                    linkedin="eliciaauduong"
+                    fb="eliciaauduong"
+                    email="elicia"
+                    />
 
-                    <div class="exec_col">
-                    <div className="profile">
-                        <Felicia/>
-                    </div>
-                    </div>
+                    <Execs
+                    imgUrl="/potraits/felicia.png"
+                    name="Felicia Ee"
+                    class=""
+                    position="Marketing Executive"
+                    degree="Commerce/Software Engineering"
+                    year="2nd"
+                    linkedin=""
+                    fb="profile.php?id=100015374733436"
+                    email="felicia"
+                    />
                 </div>
             </div>
 
