@@ -50,7 +50,7 @@ class MarketingContent extends Component {
                       <Memes
                         fb="https://www.facebook.com/unsw.wit/posts/2346183109019890"
                         imgUrl="/initiatives/memes/dance.png"
-                        alt="Meme"
+                        alt="Memes"
                         date="03/07/2020"
                       />
                       <WCW
