@@ -80,7 +80,6 @@ p {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     text-decoration: none;
-    float: right;
 }
 
 .nav-item{
@@ -94,7 +93,6 @@ p {
 .nav-item-btn {
     color: #313638;
     padding-top: 22px;
-    display: absolute;
     padding-right: 10px;
 }
 
@@ -187,7 +185,7 @@ footer {
     min-width: 100%;
 }
 
-.footer-links {
+.footer-all {
     list-style-type: none;
     margin: 1.4vw auto;
     padding: 4vw 0vw 2vw 0vw;
@@ -251,15 +249,25 @@ footer {
         flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     .footer-item {
         text-align: center;
-      
+        font-size: 1.5vw;
+    }
+    
+    .footer-logo {
+        margin-bottom: 2%;
     }
 
     .socials {
         margin-left: 0%;
+        margin-top: 1%;
+    }
+
+    .footer-all {
+        margin: 1.5vw auto 1vw auto;
     }
     
 }

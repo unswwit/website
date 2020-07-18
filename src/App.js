@@ -89,12 +89,12 @@ class App extends Component{
 							resizemode='contain' style={{width: '35px', marginLeft:  '15px', marginBottom: '5px', marginTop: '5px'}} />
 					</a>
 					<div class="navbar-collapse collapse w-100">
-						<ul class="navbar-nav ml-auto" ref={(el) => {this.element = el}}>
-							<li class="nav-item" style={{'display':this.state.navVisible}}><NavLink to="/">HOME</NavLink></li>
-							<li class="nav-item" style={{'display':this.state.navVisible}}><NavLink to="/events">EVENTS</NavLink></li>
-							<li class="nav-item" style={{'display':this.state.navVisible}}><NavLink to="/our-team">TEAM</NavLink></li>
-							<li class="nav-item" style={{'display':this.state.navVisible}}><NavLink to="/sponsors">SPONSORS</NavLink></li>
-							<li class="nav-item" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover} style={{'display':this.state.navVisible}}>
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item" style={{display:this.state.navVisible}}><NavLink to="/">HOME</NavLink></li>
+							<li class="nav-item" style={{display:this.state.navVisible}}><NavLink to="/events">EVENTS</NavLink></li>
+							<li class="nav-item" style={{display:this.state.navVisible}}><NavLink to="/our-team">TEAM</NavLink></li>
+							<li class="nav-item" style={{display:this.state.navVisible}}><NavLink to="/sponsors">SPONSORS</NavLink></li>
+							<li class="nav-item" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover} style={{display:this.state.navVisible}}>
 								<div class="dropdown" display="static">
 									<div class="dropdown-toggle">
 										<span class="menuTitle">RESOURCES</span>
@@ -106,11 +106,12 @@ class App extends Component{
 									</div>
 								</div>
 							</li>
-							<li class="nav-item" style={{'display':this.state.navVisible}}><NavLink to="/join-us">JOIN</NavLink></li>
-							<li class="nav-item" style={{marginRight:"15px", 'display':this.state.navVisible}}><NavLink to="/contact-us">CONTACT</NavLink></li>
+							<li class="nav-item" style={{display:this.state.navVisible}}><NavLink to="/join-us">JOIN</NavLink></li>
+							<li class="nav-item" style={{marginRight:"15px", display:this.state.navVisible}}><NavLink to="/contact-us">CONTACT</NavLink></li>
 							<li class="nav-item-btn"><MenuBtn open={this.state.menuOpen} onClick={this.handleMenuClick} show={this.state.btnVisible}/></li>
 						</ul>
 					</div>
+				
 				</nav>
 				</DetectableOverflow>
 				
@@ -140,7 +141,6 @@ class App extends Component{
 						<Route path="/blog/13" component={blogPost13}/>
 						<Route path="/blog/14" component={blogPost14}/>
 					</Switch>
-				
 			</HashRouter>
 		<div><Footer /></div>
 		</div>

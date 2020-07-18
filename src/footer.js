@@ -8,11 +8,11 @@ class Footer extends Component{
             <div>
                 <HashRouter basename="/">
                 <footer>
-                    <ul class="footer-links">
+                    <ul class="footer-all">
                         <div class="grid-footer-container">
                             <li class="col-width footer-item footer-logo"><img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo"
                                 resizeMode='contain' style={{width: '6.5vw'}} /></li>
-                            <div class="col-width">
+                            <div class="col-width footer-links">
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/">Home</Link></li>
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/events">Events </Link></li>
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/our-team">Team </Link></li>
@@ -20,7 +20,7 @@ class Footer extends Component{
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/join-us">Join </Link></li>
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/contact-us">Contact </Link></li>
                             </div>
-                            <div class="col-width">
+                            <div class="col-width footer-links">
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/blog">Blog </Link></li>
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/publications">Publications</Link></li>
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/marketing-archive">Marketing Archives</Link></li>
