@@ -19,15 +19,16 @@ class MarketingArchive extends Component {
 
             {/*Start of text*/}
             <div class="introParagraph">
-              <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie eu tellus sed facilisis. Aliquam eget interdum ipsum. Vivamus rutrum sapien velit, eget finibus enim pellentesque at. Ut sed felis nisi. Maecenas.</p>
+              <p class="intro">Check out all the creative posts our marketing team have been making in the marketing archive!</p>
             </div>
 
             {/*2020 section*/}
-            <Link to="/marketing-archive/content" style={{ textDecoration: 'none' }}>
+            
             <div class="yearSection">
-              <p class="year">2020</p>
+              <Link to="/marketing-archive/content" style={{ textDecoration: 'none' }}>
+              <p id="year"><a id="year">2020</a></p>
+              </Link>
             </div>
-            </Link>
         </div>
     );
   }

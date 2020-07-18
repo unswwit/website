@@ -15,12 +15,60 @@ class Blog extends Component {
                     </div>
                 </div>
                 {/*End of Header*/}
-
+              
                 {/*Start of blog posts*/}
+                {/*blog post 14*/}
+                <BlogPreview
+                topMargin="10vw"
+                bottomMargin="5vw"
+                blogNo="14"
+                imgUrl="/blog-covers/14-hannah-beder.png"
+                heading="Introducing: Hannah Beder, Creative Technologist at Creatable and NSW Young Woman of the Year 2020"
+                date="15/07/2020"
+                subheading="We’re excited to share a recent Q&A we had with Hannah about her career journey in STEM."
+                authors={{"vivian-wong":["/potraits/vivw.jpg", "Vivian Wong"]}}
+                />
+                
+                {/*blog post 13*/}
+                <BlogPreview
+                topMargin="5vw"
+                bottomMargin="5vw"
+                blogNo="13"
+                imgUrl="/blog-covers/13-mechatronics.png"
+                heading="Upskill yourself in: MECHATRONICS"
+                date="13/07/2020"
+                subheading="Learn about this powerful and evolving field cranking out computer-controlled machines like robotics and autonomous-driving cars. Find out the tools and software used in this field, and if it’s for you! 🤔🤔"
+                authors={{"victoria-ruming":["/potraits/victoria.jpg", "Victoria Ruming"]}}
+                />
+                
+                {/*blog post 12*/}
+                <BlogPreview
+                topMargin="5vw"
+                bottomMargin="5vw"
+                blogNo="12"
+                imgUrl="/blog-covers/12-maddie-mackey.png"
+                heading="WIT Crush Wednesday - Maddie Mackey"
+                date="08/07/2020"
+                subheading="Let's read about what Maddie Mackey has to say about her journey into tech."
+                authors={{"vivian-wong":["/potraits/vivw.jpg", "Vivian Wong"],"georgie-mansfield":["/potraits/georgie.jpg", "Georgie Mansfield"]}}
+                />
+
+
+                {/*blog post 11*/}
+                <BlogPreview
+                topMargin="5vw"
+                bottomMargin="5vw"
+                blogNo="11"
+                imgUrl="/blog-covers/11-ai-jobs.png"
+                heading="AI in the Workplace"
+                date="04/07/2020"
+                subheading="Have you ever wondered 'Will AI take my Job?', 'How does AI function in the workplace?', 'Can AI make me Pizza?'🍕🍕🍕 Well look no further, because this blog post answers your burning questions."
+                authors={{"elisa-sanjurjo":["/potraits/elisa.jpg", "Elisa Sanjurjo"]}}
+                />
 
                 {/*blog post 10*/}
-                <BlogPreview 
-                topMargin="10vw"
+                <BlogPreview
+                topMargin="5vw"
                 bottomMargin="5vw"
                 blogNo="10"
                 imgUrl="/blog-covers/10-lana-king.png"
@@ -31,34 +79,32 @@ class Blog extends Component {
                 />
 
                 {/*blog post 9*/}
-                <BlogPreview 
+                <BlogPreview
                 topMargin="5vw"
                 bottomMargin="5vw"
                 blogNo="9"
                 imgUrl="/blog-covers/09-procrastinating.png"
                 heading="What Are You REALLY Procrastinating?"
                 date="29/06/2020"
-                subheading="Inspired by Tim Urban’s TED Talk, 
-                we look at challenging procrastination, and how it really exists in all of us, 
+                subheading="Inspired by Tim Urban’s TED Talk, we look at challenging procrastination, and how it really exists in all of us,
                 even the non-procrastinators."
                 authors={{"georgie-mansfield":["/potraits/georgie.jpg", "Georgie Mansfield"]}}
                 />
-        
+
                 {/*blog post 8*/}
-                <BlogPreview 
+                <BlogPreview
                 topMargin="5vw"
                 bottomMargin="5vw"
                 blogNo="8"
                 imgUrl="/blog-covers/08-marguerite-evans-galea.png"
                 heading="WIT Crush Wednesday - Dr Marguerite Evans-Galea"
                 date="24/06/2020"
-                subheading="Take a look at Dr Marguerite Evans-Galea's journey into STEM as well as advice for students who are interested in
-                pursuing a career in STEM"
+                subheading="Take a look at Dr Marguerite Evans-Galea's journey into STEM as well as advice for students who are interested in pursuing a career in STEM."
                 authors={{"vivian-wong":["/potraits/vivw.jpg", "Vivian Wong"]}}
                 />
-                
+
                 {/*blog post 7*/}
-                <BlogPreview 
+                <BlogPreview
                 topMargin="5vw"
                 bottomMargin="5vw"
                 blogNo ="7"
@@ -68,25 +114,25 @@ class Blog extends Component {
                 subheading="Let's read what past WIT Hackathon winner has to say regarding their best tip to ace for your hackathon."
                 authors={{"vivian-wong":["/potraits/vivw.jpg", "Vivian Wong"]}}
                 />
-                
+
                 {/*blog post 6*/}
-                <BlogPreview 
+                <BlogPreview
                 topMargin="5vw"
                 bottomMargin="5vw"
-                blogNo = "6" 
-                imgUrl="/blog-covers/06-fontaine-foxworth.png" 
+                blogNo = "6"
+                imgUrl="/blog-covers/06-fontaine-foxworth.png"
                 heading="Introducing: Fontaine Foxworth, Product Manager of Google"
                 date="17/06/2020"
                 subheading="Let’s read what Fontaine had to say about her journey into tech."
                 authors={{"victoria-ruming":["/potraits/victoria.jpg","Victoria Ruming"]}}
                 />
-                
+
                 {/*blog post 5*/}
-                <BlogPreview 
+                <BlogPreview
                 topMargin="5vw"
                 bottomMargin="5vw"
                 blogNo = "5"
-                imgUrl="/blog-covers/05-salina-jantarang.png" 
+                imgUrl="/blog-covers/05-salina-jantarang.png"
                 heading="Interview - Salina Jantarang"
                 date="12/06/2020"
                 subheading="Explore Salina's research journey as PHD student in chemical engineering as well as advices about finding success in university and beyond"
@@ -94,7 +140,7 @@ class Blog extends Component {
                 />
 
                 {/*blog post 4*/}
-                <BlogPreview 
+                <BlogPreview
                 topMargin="5vw"
                 bottomMargin="5vw"
                 blogNo = "4"
@@ -106,7 +152,7 @@ class Blog extends Component {
                 />
 
                 {/*blog post 3*/}
-                <BlogPreview 
+                <BlogPreview
                 topMargin="5vw"
                 bottomMargin="5vw"
                 blogNo="3"
@@ -118,7 +164,7 @@ class Blog extends Component {
                 />
 
                 {/*blog post 2*/}
-                <BlogPreview 
+                <BlogPreview
                 topMargin="5vw"
                 bottomMargin="5vw"
                 blogNo="2"
@@ -130,7 +176,7 @@ class Blog extends Component {
                 />
 
                 {/*blog post 1*/}
-                <BlogPreview 
+                <BlogPreview
                 topMargin="5vw"
                 bottomMargin="10vw"
                 blogNo="1"

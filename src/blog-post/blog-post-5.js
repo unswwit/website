@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ".././style.css";
 import "./blog-post.css";
+import AuthorCard from "./authorCard";
 
 class blogPost5 extends Component {
   //start webpage at the top
@@ -64,40 +65,12 @@ class blogPost5 extends Component {
             <p class="question">10. What would you like the impact of your research to be?</p>
             <p class="post-content">I hope that the findings from my work would be beneficial for future researchers. With the ongoing efforts for a sustainable society, I hope that my work has made an impact.</p><br/> 
           </div>
-      </div>
+        </div>
+        
         {/*for the blog post author*/}
-        <div class = "author">
-          <div class = "author-left">
-            <div> {/*note this div is necessary to formatting*/}
-              <img
-              src={process.env.PUBLIC_URL + "/potraits/vivw.jpg"}
-              className="profile_img vivw_img"
-              alt="vivian-wong"
-              resizeMode="contain"
-              />
-            </div>
-          </div>
-          <div class = "author-right">
-            <div class="title author-name">Vivian Wong</div>
-            <div class = "position"> Education Executive </div>
-          </div>
-        </div>
-        <div class = "author">
-          <div class = "author-left">
-            <div> {/*note this div is necessary to formatting*/}
-              <img
-              src={process.env.PUBLIC_URL + "/potraits/victoria.jpg"}
-              className="profile_img vic_img"
-              alt="vivian-wong"
-              resizeMode="contain"
-              />
-            </div>
-          </div>
-          <div class = "author-right">
-            <div class="title author-name">Victoria Ruming</div>
-            <div class = "position"> Education Team </div>
-          </div>
-        </div>
+        <AuthorCard 
+        authors={{"vivian-wong":["/potraits/vivw.jpg", "profile_img vivw_img", "Vivian Wong", "Education Executive"], "victoria-ruming":["/potraits/victoria.jpg", "profile_img vic_img", "Victoria Ruming","Education Team"]}} 
+        />
         {/*End of blog posts*/}
       </div>
     );
