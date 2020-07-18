@@ -83,12 +83,12 @@ class App extends Component{
 			<HashRouter basename="/">
 				<Menu open={this.state.menuOpen}/> 
 				<DetectableOverflow onChange={this.handleChange}>
-				<nav class="navbar navbar-expand-md navbar-dark bg-custom fixed-top justify-content-between">
+				<nav class="navbar navbar-expand-md navbar-dark bg-custom fixed-top">
 					<a class="navbar-brand" href="/">
 						<img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo"
 							resizemode='contain' style={{width: '35px', marginLeft:  '15px', marginBottom: '5px', marginTop: '5px'}} />
 					</a>
-					<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+					<div class="navbar-collapse collapse w-100">
 						<ul class="navbar-nav ml-auto" ref={(el) => {this.element = el}}>
 							<li class="nav-item" style={{'display':this.state.navVisible}}><NavLink to="/">HOME</NavLink></li>
 							<li class="nav-item" style={{'display':this.state.navVisible}}><NavLink to="/events">EVENTS</NavLink></li>
