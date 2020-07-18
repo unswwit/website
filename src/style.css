@@ -94,6 +94,7 @@ p {
     color: #313638;
     padding-top: 22px;
     padding-right: 10px;
+    display: none;
 }
 
 .nav-item a{
@@ -134,6 +135,17 @@ p {
     text-decoration: none;
 }
 
+
+@media screen and (max-width: 800px) {
+    .nav-item {
+        display: none;
+    } 
+
+    .nav-item-btn {
+        display: block;
+    }
+}
+
 /*-----------------------------------Menu-----------------------------------*/
 .menu-container {
     position: fixed;
@@ -152,7 +164,7 @@ p {
     letter-spacing: 1.5px;
     text-transform: capitalize;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 2vw;
 }
 
 .menu-item a:hover{

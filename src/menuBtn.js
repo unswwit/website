@@ -29,7 +29,6 @@ class MenuBtn extends React.Component {
                 width: '35px',
                 alignItems: 'center',
                 cursor: 'pointer',
-                display: this.props.show,
             },
             line: {
                 height: '2px',
