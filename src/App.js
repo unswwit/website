@@ -16,6 +16,9 @@ import Blog from "./blog-gallery/blog";
 import Publications from "./publications/publications";
 import Events from "./events/events";
 
+import Menu from "./menu";
+import MenuBtn from "./menuBtn";
+
 import blogPost1 from "./blog-post/blog-post-1";
 import blogPost2 from "./blog-post/blog-post-2";
 import blogPost3 from "./blog-post/blog-post-3";
@@ -33,60 +36,69 @@ import blogPost14 from "./blog-post/blog-post-14";
 import blogPost15 from "./blog-post/blog-post-15";
 
 class App extends Component{
-  constructor(props) {
-	super(props)
-	this.state = {
-	showDD: false
+  	constructor(props) {
+		super(props);
+		this.state = {
+			showDD: false,
+			menuOpen:false,
+		}
+		this.handleHover = this.handleHover.bind(this);
+		this.handleMenuClick = this.handleMenuClick.bind(this);
+	}  
+
+	handleMenuClick() {
+		this.setState({
+			menuOpen:!this.state.menuOpen
+		});
 	}
-	this.handleHover = this.handleHover.bind(this);
-  }
-
-  handleHover(e) {
-	this.setState({
-	  showDD: !this.state.showDD
-	})
-	e.preventDefault()
-  }
-
-  render(){
-  return (
-	<div>
-		<HashRouter basename="/">
-			<nav class="navbar navbar-expand-md navbar-dark bg-custom fixed-top justify-content-between">
-				<a class="navbar-brand" href="/">
-					<img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo"
-						resizeMode='contain' style={{width: '35px', marginLeft:  '15px', marginBottom: '5px', marginTop: '5px'}} />
-				</a>
-				<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item"><NavLink to="/">HOME</NavLink></li>
-						<li class="nav-item"><NavLink to="/events">EVENTS</NavLink></li>
-						<li class="nav-item"><NavLink to="/our-team">TEAM</NavLink></li>
-						<li class="nav-item"><NavLink to="/sponsors">SPONSORS</NavLink></li>
-						<li class="nav-item" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
-							<div class="dropdown" display="static">
-								<div class="dropdown-toggle">
-									<span class="menuTitle">RESOURCES</span>
+	
+	handleHover(e) {
+		this.setState({
+		showDD: !this.state.showDD
+		})
+		e.preventDefault()
+	}
+	render() {
+	return (
+		<div>
+			<HashRouter basename="/">
+				<Menu open={this.state.menuOpen}/> 
+				<nav class="navbar navbar-expand-md navbar-dark bg-custom fixed-top">
+					<a class="navbar-brand" href="/">
+						<img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo"
+							resizemode='contain' style={{width: '35px', marginLeft:  '15px', marginBottom: '5px', marginTop: '5px'}} />
+					</a>
+					<div class="navbar-collapse collapse w-100">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item"><NavLink to="/">HOME</NavLink></li>
+							<li class="nav-item"><NavLink to="/events">EVENTS</NavLink></li>
+							<li class="nav-item"><NavLink to="/our-team">TEAM</NavLink></li>
+							<li class="nav-item"><NavLink to="/sponsors">SPONSORS</NavLink></li>
+							<li class="nav-item" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
+								<div class="dropdown" display="static">
+									<div class="dropdown-toggle">
+										<span class="menuTitle">RESOURCES</span>
+									</div>
+									<div class= {this.state.showDD?'dropdown-menu show':'dropdown-menu'}>
+										<li class="dropdown-item"><NavLink to="/blog">BLOG</NavLink></li>
+										<li class="dropdown-item"><NavLink to="/publications">PUBLICATIONS</NavLink></li>
+										<li class="dropdown-item"><NavLink to="/marketing-archive">MARKETING ARCHIVES</NavLink></li>
+									</div>
 								</div>
-								<div class= {this.state.showDD?'dropdown-menu show':'dropdown-menu'}>
-									<li class="dropdown-item"><NavLink to="/blog">BLOG</NavLink></li>
-									<li class="dropdown-item"><NavLink to="/publications">PUBLICATIONS</NavLink></li>
-									<li class="dropdown-item"><NavLink to="/marketing-archive">MARKETING ARCHIVE</NavLink></li>
-								</div>
-							</div>
-                        </li>
-						<li class="nav-item"><NavLink to="/join-us">JOIN</NavLink></li>
-						<li class="nav-item" style={{marginRight:"15px"}}><NavLink to="/contact-us">CONTACT</NavLink></li>
-					</ul>
-				</div>
-			</nav>
-			<body>
+							</li>
+							<li class="nav-item"><NavLink to="/join-us">JOIN</NavLink></li>
+							<li class="nav-item" style={{marginRight:"15px"}}><NavLink to="/contact-us">CONTACT</NavLink></li>
+						</ul>
+					</div>
+					<li class="nav-item-btn"><MenuBtn open={this.state.menuOpen} onClick={this.handleMenuClick}/></li>
+				</nav>
+				
 				<Switch>
 					<Route exact path="/" component = {Home}/>
 					<Route path="/events" component={Events}/>
 					<Route path="/our-team" component = {OurTeam}/>
 					<Route exact path="/blog" component = {Blog}/>
-          			<Route exact path="/marketing-archive" component = {MarketingArchive}/>
+					<Route exact path="/marketing-archive" component = {MarketingArchive}/>
 					<Route path="/marketing-archive/content" component={MarketingContent}/>
 					<Route path="/join-us" component = {JoinUs}/>
 					<Route path="/sponsors" component = {Sponsors}/>
@@ -106,14 +118,13 @@ class App extends Component{
 					<Route path="/blog/12" component={blogPost12}/>
 					<Route path="/blog/13" component={blogPost13}/>
 					<Route path="/blog/14" component={blogPost14}/>
-          <Route path="/blog/15" component={blogPost15}/>
+          			<Route path="/blog/15" component={blogPost15}/>
 				</Switch>
-			</body>
-		</HashRouter>
-	<div><Footer /></div>
-	</div>
-  );
-}
+		    </HashRouter>
+		<div><Footer /></div>
+		</div>
+  	);
+	}
 }
 
 export default App;
