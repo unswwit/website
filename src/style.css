@@ -167,12 +167,6 @@ p {
     font-size: 2vw;
 }
 
-.menu-item a:hover{
-    color: #e85f5c;
-    text-decoration: none;
-
-}
-
 .menu-box:hover {
     width: 92%;
     background-color: #fff0e1c1;
@@ -181,12 +175,20 @@ p {
     margin-right: auto;
 }
 
+.menu-box:hover .menu-item {
+    color: #e85f5c;
+}
+
 .menu-bar {
     float: none;
 }
 
 .menu-list {
     padding-top: 4rem;
+}
+
+.dropdown {
+    padding: 5px 0px;
 }
 
 /*----------------------------------Footer------------------------------------*/
