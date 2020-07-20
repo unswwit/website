@@ -1,5 +1,6 @@
 //All necessary imports for this javascript
 import React, { Component } from "react";
+
 import ".././style.css";
 import "./opportunities.css";
 import OppCard from "./oppCard.js";
@@ -44,7 +45,7 @@ class Opportunities extends Component {
 
                     <OppCard
                     details={{"Who's next?":[
-                        "/sponsors/google-major.png", 
+                        "logo-black.png", 
                         "TBA", 
                         "Coming Soon", 
                         "Ready for exciting opportunities? Stay tuned to WIT UNSW's opportunities page and events!",

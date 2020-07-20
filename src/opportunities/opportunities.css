@@ -22,7 +22,7 @@
   }
 
 /*-------------------------------Opportunities Preview-----------------------------*/
-/*Author circle crop*/
+/*Opportunities circle crop*/
 .opp-frame {
     border-radius: 50%;
     height: 5.5vw;
@@ -30,13 +30,14 @@
     width: 5.5vw;
     margin-right: 1.5vw;
     margin-left: 0px;
+    
 }
 
 /*Author image*/
 .opp-img {
-    height: auto;
-    transform: translate( 5%, 50%);
-    width: 95%;
+    max-width:100%;
+    max-height:100%;
+    transform: translate( 0%, 20%);
 }
 
 /*Opportunities preview*/
@@ -45,7 +46,7 @@ table {
     border-color: #a0a0a0;
     border-width: 2px;
     width: 350px;
-    height: 475px;
+    height: auto;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
@@ -110,4 +111,21 @@ table {
     font-weight: 300;
     text-align: right;
     margin-top: 10px;
+}
+
+
+/*-------------------------------Masonry grid Preview-----------------------------*/
+
+/* Masonry grid */
+.masonry {
+    transition: all .5s ease-in-out;
+    column-gap: 30px;
+    column-fill: initial;
+  }
+  
+/* Masonry item */
+.masonry .brick {
+margin-bottom: 30px;
+display: inline-block; /* Fix the misalignment of items */
+vertical-align: top; /* Keep the item on the very top */
 }
