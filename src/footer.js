@@ -17,6 +17,7 @@ class Footer extends Component{
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/events">Events </Link></li>
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/our-team">Team </Link></li>
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/sponsors">Sponsors </Link></li>
+                                <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/opportunities">Opportunities</Link></li>
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/join-us">Join </Link></li>
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/contact-us">Contact </Link></li>
                             </div>
