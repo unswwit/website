@@ -61,6 +61,19 @@ class App extends Component{
 		e.preventDefault()
 	}
 
+    updateMenu = () => {
+		if (window.innerWidth >= '1000' && this.state.menuOpen) {
+			this.handleMenuClick();
+		}
+    }
+
+    componentDidMount() {
+    	window.addEventListener('resize', this.updateMenu);
+    }
+    componentWillUnmount() {
+    	window.removeEventListener('resize', this.updateMenu);
+    }
+
 	render() {
 	return (
 		<div>
