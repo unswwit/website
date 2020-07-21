@@ -12,7 +12,7 @@ class Opportunities extends Component {
         <div>
 
             {/*Start of Header*/}
-            <div class="coverPhoto">
+            <div class="opportunities-header">
                 <div class="title">
                     <h1>Opportunities</h1>
                 </div>
@@ -49,7 +49,7 @@ class Opportunities extends Component {
                         "TBA", 
                         "Coming Soon", 
                         "Ready for exciting opportunities? Stay tuned to WIT UNSW's opportunities page and events!",
-                        "https://wit.unsw.com"
+                        "https://unswwit.com/"
                     ]}} 
                     />
 

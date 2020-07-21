@@ -1,7 +1,7 @@
 /*-------------------------------Blog posts page header-----------------------------*/
 /*Header image*/
-.coverPhoto {
-    background-image: url('/sponsors-header-1.png');
+.opportunities-header {
+    background-image: url('/opportunities-header.jfif');
     background-position: center bottom 40%;
     background-repeat: no-repeat;
     background-size: cover;
