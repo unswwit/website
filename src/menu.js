@@ -36,7 +36,7 @@ class Menu extends Component{
                         <NavLink class="menu-link"to="/sponsors" style={{textDecoration: "none"}}><div class="menu-box"><li class="menu-item">SPONSORS</li></div></NavLink>
                         <NavLink class="menu-link" to="/opportunities" style={{textDecoration: "none"}}><div class="menu-box"><li class="menu-item">OPPORTUNITIES</li></div></NavLink>
                         <div><li class="menu-item">
-                            <div class="menu-box dropdown" onClick={this.handleClick}>
+                            <div class="menu-box menu-dropdown" onClick={this.handleClick}>
                                 <div class="dropdown-toggle">
                                     <span class="menu-item menuTitle">RESOURCES</span>
                                 </div>
