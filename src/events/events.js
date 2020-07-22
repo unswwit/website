@@ -15,7 +15,9 @@ class Events extends React.Component {
                 </div>
                 <div className = "events-body">
                     <h2>UPCOMING EVENTS</h2>
+                    <p class="lookout">Keep a lookout here for our upcoming events!</p>
                     <div class="grid-container">
+                        {/* Make this into a component
                         <div class="upcoming">
                             <div>
                                 <img class="event-images" src={process.env.PUBLIC_URL + './event-covers/cloud-computing.jpg'} resizeMode='contain' alt="cloud computing"/>
@@ -35,10 +37,13 @@ class Events extends React.Component {
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                     <h2>PAST EVENTS</h2>
                     <div id="past-events" class="grid-container">
+                        <div class="grid-item">
+                            <img class="event-images" src={process.env.PUBLIC_URL + './event-covers/cloud-computing.jpg'} resizeMode='contain' alt="cloud computing"/>
+                        </div>
                         <div class="grid-item">
                             <img class="event-images" src={process.env.PUBLIC_URL + './event-covers/pitching.jpg'} resizeMode='contain' alt="pitching workshop"/>
                         </div>

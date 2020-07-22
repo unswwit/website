@@ -17,9 +17,46 @@ class Blog extends Component {
                 {/*End of Header*/}
 
                 {/*Start of blog posts*/}
-                {/*blog post 12*/}
+
+                {/*blog post 16*/}
                 <BlogPreview
                 topMargin="10vw"
+                bottomMargin="5vw"
+                blogNo="16"
+                imgUrl="/blog-covers/16-erica-joy-baker.png"
+                heading="Introducing Erica Joy Baker, Director of Engineering at GitHub"
+                date="22/07/2020"
+                subheading="Erica Baker is a unique role model and voice for women and minorities in tech. She’s a force to be reckoned with, and gives us all hope there will be a place for our skills, enthusiasm and ideas in whatever area of the tech field we choose."
+                authors={{"vivian-wong":["/potraits/vivw.jpg", "Vivian Wong"]}}
+                />
+
+                {/*blog post 15*/}
+                <BlogPreview
+                topMargin="5vw"
+                bottomMargin="5vw"
+                blogNo="15"
+                imgUrl="/blog-covers/15-zitni-handoo.png"
+                heading="A Journey in IT with Zitni Handoo"
+                date="19/07/2020"
+                subheading="In this blog post, we share our Q&A with Zitni, covering everything from her inspiration to study AI to the most challenging aspects of university life. Get ready to take some notes!"
+                authors={{"vivian-wong":["/potraits/vivw.jpg", "Vivian Wong"]}}
+                />
+
+                {/*blog post 14*/}
+                <BlogPreview
+                topMargin="5vw"
+                bottomMargin="5vw"
+                blogNo="14"
+                imgUrl="/blog-covers/14-hannah-beder.png"
+                heading="Introducing: Hannah Beder, Creative Technologist at Creatable and NSW Young Woman of the Year 2020"
+                date="15/07/2020"
+                subheading="We’re excited to share a recent Q&A we had with Hannah about her career journey in STEM."
+                authors={{"vivian-wong":["/potraits/vivw.jpg", "Vivian Wong"]}}
+                />
+
+                {/*blog post 13*/}
+                <BlogPreview
+                topMargin="5vw"
                 bottomMargin="5vw"
                 blogNo="13"
                 imgUrl="/blog-covers/13-mechatronics.png"
@@ -28,7 +65,7 @@ class Blog extends Component {
                 subheading="Learn about this powerful and evolving field cranking out computer-controlled machines like robotics and autonomous-driving cars. Find out the tools and software used in this field, and if it’s for you! 🤔🤔"
                 authors={{"victoria-ruming":["/potraits/victoria.jpg", "Victoria Ruming"]}}
                 />
-                
+
                 {/*blog post 12*/}
                 <BlogPreview
                 topMargin="5vw"

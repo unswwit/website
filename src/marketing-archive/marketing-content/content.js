@@ -62,7 +62,7 @@ class MarketingContent extends Component {
                       <MondayMotivation
                         fb="https://www.facebook.com/unsw.wit/posts/2346183109019890"
                         imgUrl="/initiatives/monday/dance.png"
-                        alt="Monday Motivation"
+                        alt="Monday Motivation
                         date="03/07/2020"
                       />
                       <WCW

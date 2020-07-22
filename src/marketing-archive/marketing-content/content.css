@@ -15,6 +15,7 @@
   min-height: 400px;
 }
 
+
 .grid {
   display: table-cell;
   width: 75vw;
@@ -80,7 +81,6 @@ input[type="radio"][id="crush"]:checked + label {
   background: var(--grey);
   color: var(--white);
 }
-input[type="radio"][id="crush"]:checked ~ .grid .trivia,
 input[type="radio"][id="crush"]:checked ~ .grid .mondaymot,
 input[type="radio"][id="crush"]:checked ~ .grid .memes {
   display: none;
@@ -91,8 +91,7 @@ input[type="radio"][id="memes"]:checked + label {
   color: var(--white);
 }
 input[type="radio"][id="memes"]:checked ~ .grid .crush,
-input[type="radio"][id="memes"]:checked ~ .grid .mondaymot,
-input[type="radio"][id="memes"]:checked ~ .grid .trivia {
+input[type="radio"][id="memes"]:checked ~ .grid .mondaymot {
   display: none;
 }
 
@@ -101,7 +100,6 @@ input[type="radio"][id="mondaymot"]:checked + label {
   color: var(--white);
 }
 input[type="radio"][id="mondaymot"]:checked ~ .grid .crush,
-input[type="radio"][id="mondaymot"]:checked ~ .grid .trivia,
 input[type="radio"][id="mondaymot"]:checked ~ .grid .memes  {
   display: none;
 }
@@ -121,6 +119,7 @@ input[type="radio"][id="mondaymot"]:checked ~ .grid .memes  {
 a.darken {
   display: inline-block;
   position: relative;
+  width: 100%;
   background: black;
   text-align: center;
   width: 21.9vw;
@@ -129,7 +128,6 @@ a.darken {
 }
 
 a.darken img {
-  display: block;
   transition: all 0.3s linear;
   position: absolute;
   left: 50%;

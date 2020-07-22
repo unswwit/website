@@ -1,0 +1,106 @@
+import React, { Component } from "react";
+import ".././style.css";
+import "./blog-post.css";
+import AuthorCard from "./authorCard";
+
+class blogPost15 extends Component {
+  //start webpage at the top
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
+  render() {
+    return (
+      <div>
+        {/*Start of Header*/}
+        <div class="coverPhoto">
+            <div class="title">
+                <h1>Blog Post #15</h1>
+            </div>
+        </div>
+
+        {/*End of Header*/}
+
+        {/*Start of blog post*/}
+        <div class="blog-content">
+          <div>
+            <h2 class = "blog-title">A Journey in IT with Zitni Handoo</h2>
+            <p class = "date">19th July 2020</p>
+          </div>
+
+          <div class="post">
+            <p class="post-content">Zitni, a final year IT masters student from India,
+            dreams big. She would love to use her knowledge of AI to contribute to solving
+            problems like cyber attacks or diagnosing diseases. In this blog post, we share
+            our Q&A with Zitni, covering everything from her inspiration to study AI to the
+            most challenging aspects of university life. Get ready to take some notes! </p><br/>
+            <ol class="list">
+              <li class="question">What is your degree about?</li>
+              <p class="post-content">I'm studying Information Technology, and my specialization
+              is Artificial Intelligence.The courses are mostly technical and involve lots of
+              coding, broadly covering major aspects of IT.</p><br/>
+
+              <li class="question">What inspired you to explore your topic?</li>
+              <p class="post-content">During my bachelor’s studies, I took up Artificial
+              Intelligence as one of my subjects. While studying it, I realized just how much I
+              was fascinated by it and how I wanted to explore the field in-depth. I've been a fan
+              of reading Sci-fi novels since I was a teenager, and I have read quite a bit with AI
+              in them. And again, I've never felt like it when it comes to any other subject that
+              I've studied. I just knew that my further studies had to be related to AI. AI is
+              literally going to be incorporated in almost every aspect of our lives in the years
+              to come. It has already begun and it’s only a matter of time before it starts booming
+              rapidly. </p><br/>
+
+              <li class="question">What skills are most important in order to successfully complete the degree?</li>
+              <p class="post-content">I believe that it's very important to be diligent in your studies,
+              and consistent hard and smart work is the key. Things can get overwhelming at times, and
+              that's alright. What's important is that we give our best and stay patient. Throughout the
+              degree, there will be various opportunities to interact with fellow students and work on
+              projects - so effective communication also plays a very important role. </p><br/>
+
+              <li class="question">What piece of advice would you give your younger self?</li>
+              <p class="post-content">I would tell my younger self to continue working without thinking of
+              the outcome and enjoy what you're studying. It's so important to enjoy what you do, and once
+              you do that, things will automatically fall into place.</p><br/>
+
+              <li class="question">How did you open opportunities to yourself?</li>
+              <p class="post-content">I attended all the lectures and interacted with the professors and
+              students to learn about opportunities. And I also actively took part in any volunteering
+              opportunities I learned about. During the second trimester, I volunteered for the RoboCup
+              event at the ICC and frankly, it was really amazing!</p><br/>
+
+              <li class="question">In your opinion, what are the most important skills needed in the workforce?</li>
+              <p class="post-content">Technical skills are important, like coding. In addition, various
+              soft skills are vital like good communication, teamwork, analytical abilities, problem solving,
+              management, and critical thinking.</p><br/>
+
+              <li class="question">What is your biggest eye-opening moment in recent years?</li>
+              <p class="post-content">The biggest eye opening moment was realizing that if I'm determined to
+              do something which I am passionate about, it will go a long way in helping me come over the obstacles
+              along the way. A lot of difficulties arise when pursuing a degree. But I realized that if there is any
+              moment where I'm not sure of what to do, I can seek comfort in knowing that I'm pursuing what I am
+              extremely passionate about, and continue working. This idea has been really eye-opening. You not only
+              tend to succeed in what you are pursuing; you start to believe in yourself in a way you've never
+              before.</p><br/>
+
+              <li class="question">What would you like the impact of your degree to be?</li>
+              <p class="post-content">The applications of AI are spreading far and wide - from driverless cars to
+              cybersecurity intelligence to virtual assistants. I'd like my education to serve the society in a
+              positive way - for example, maybe work to better disease diagnosis and medication to provide these
+              facilities to people anytime anywhere, or even security enhancement, where AI technology could be used
+              to understand and improve the cyber environment and help prevent attacks. Or maybe I could use this
+              technology for the agricultural sector, allowing farmers to know everything using their devices such
+              as detecting pests and predicting crop yields.</p><br/>
+            </ol>
+          </div>
+        </div>
+        {/*for the blog post author*/}
+        <AuthorCard
+        authors={{"vivian-wong":["/potraits/vivw.jpg", "profile_img vivw_img", "Vivian Wong","Education Executive"]}}
+        />
+        {/*End of blog posts*/}
+      </div>
+    );
+  }
+}
+export default blogPost15;
