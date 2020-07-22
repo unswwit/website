@@ -35,6 +35,18 @@ class MarketingContent extends Component {
 
                     {/*Image collage*/}
                     <ol class="grid" id="content">
+                      <MondayMotivation
+                        fb="https://www.facebook.com/unsw.wit/photos/a.1570799533224922/2348244162147118/"
+                        imgUrl="/initiatives/monday/pass.png"
+                        alt="Monday Motivation"
+                        date="07/20/2020"
+                      />
+                      <WCW
+                        fb="https://www.facebook.com/unsw.wit/photos/a.1570799533224922/2354984874806380/?type=3"
+                        imgUrl="/initiatives/wcw/hannahbeder.png"
+                        alt="Hannah Beder"
+                        date="15/07/2020"
+                      />
                       <Memes
                         fb="https://www.facebook.com/unsw.wit/photos/a.1570799533224922/2351398365165031/"
                         imgUrl="/initiatives/memes/cat.png"
@@ -47,10 +59,10 @@ class MarketingContent extends Component {
                         alt="Maddie Mackey"
                         date="08/07/2020"
                       />
-                      <Memes
+                      <MondayMotivation
                         fb="https://www.facebook.com/unsw.wit/posts/2346183109019890"
-                        imgUrl="/initiatives/memes/dance.png"
-                        alt="Meme"
+                        imgUrl="/initiatives/monday/dance.png"
+                        alt="Monday Motivation"
                         date="03/07/2020"
                       />
                       <WCW
