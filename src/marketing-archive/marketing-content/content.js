@@ -39,7 +39,7 @@ class MarketingContent extends Component {
                         fb="https://www.facebook.com/unsw.wit/photos/a.1570799533224922/2348244162147118/"
                         imgUrl="/initiatives/monday/pass.png"
                         alt="Monday Motivation"
-                        date="07/20/2020"
+                        date="20/07/2020"
                       />
                       <WCW
                         fb="https://www.facebook.com/unsw.wit/photos/a.1570799533224922/2354984874806380/?type=3"
@@ -62,7 +62,7 @@ class MarketingContent extends Component {
                       <MondayMotivation
                         fb="https://www.facebook.com/unsw.wit/posts/2346183109019890"
                         imgUrl="/initiatives/monday/dance.png"
-                        alt="Monday Motivation
+                        alt="Monday Motivation"
                         date="03/07/2020"
                       />
                       <WCW
