@@ -4,7 +4,7 @@ class Deloitte extends Component {
 	render() {
 		return (
             <div> 
-                <a href="https://www2.deloitte.com/us/en/pages/careers/topics/careers.html/">
+                <a href="https://www2.deloitte.com/au/en/careers/students.html">
                       <img
                         src={process.env.PUBLIC_URL + "/sponsors/deloitte-major.png"}
                         alt="Delloite"
