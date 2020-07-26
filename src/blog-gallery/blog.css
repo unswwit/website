@@ -40,11 +40,6 @@
 }
 
 /*Post preview*/
-table {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 0 auto;
-}
-
 .blog-preview {
     padding: 2vw;
 }
@@ -97,12 +92,25 @@ table {
 .blog-table {
     width: 65.849vw;
     height: 22.786vw;
+    display:table;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
 }
 
-@media screen and (max-width: 1000px) {
-    .blog-table {
-       width: 80vw;
-       height: 22.786vw;
+.left-col {
+    float: left;
+    width: 55%;
+}
+
+.right-col {
+    float: right;
+    width: 45%;
+}
+
+@media screen and (max-width: 800px) {
+    .left-col, .right-col {
+        width: 100%;
+        padding: 0;
     }
     
 }
