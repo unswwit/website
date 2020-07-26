@@ -136,7 +136,7 @@ p {
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .nav-item {
         display: none;
     } 
@@ -147,6 +147,7 @@ p {
 }
 
 /*-----------------------------------Menu-----------------------------------*/
+
 .menu-container {
     position: fixed;
     width: 100%;
@@ -187,7 +188,7 @@ p {
     padding-top: 4rem;
 }
 
-.dropdown {
+.menu-dropdown {
     padding: 5px 0px;
 }
 

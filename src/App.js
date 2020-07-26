@@ -6,6 +6,7 @@ import './style.css';
 import Home from "./home";
 import JoinUs from "./join/joinUs";
 import Sponsors from "./sponsors/sponsors";
+import Opportunities from "./opportunities/opportunities";
 import ContactUs from "./contact/contactUs";
 import Footer from "./footer";
 
@@ -34,6 +35,8 @@ import blogPost12 from "./blog-post/blog-post-12";
 import blogPost13 from "./blog-post/blog-post-13";
 import blogPost14 from "./blog-post/blog-post-14";
 import blogPost15 from "./blog-post/blog-post-15";
+import blogPost16 from "./blog-post/blog-post-16";
+
 
 class App extends Component{
   	constructor(props) {
@@ -58,6 +61,20 @@ class App extends Component{
 		})
 		e.preventDefault()
 	}
+
+    updateMenu = () => {
+		if (window.innerWidth >= '1000' && this.state.menuOpen) {
+			this.handleMenuClick();
+		}
+    }
+
+    componentDidMount() {
+    	window.addEventListener('resize', this.updateMenu);
+    }
+    componentWillUnmount() {
+    	window.removeEventListener('resize', this.updateMenu);
+    }
+
 	render() {
 	return (
 		<div>
@@ -74,6 +91,7 @@ class App extends Component{
 							<li class="nav-item"><NavLink to="/events">EVENTS</NavLink></li>
 							<li class="nav-item"><NavLink to="/our-team">TEAM</NavLink></li>
 							<li class="nav-item"><NavLink to="/sponsors">SPONSORS</NavLink></li>
+							<li class="nav-item"><NavLink to="/opportunities">OPPORTUNITIES</NavLink></li>
 							<li class="nav-item" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
 								<div class="dropdown" display="static">
 									<div class="dropdown-toggle">
@@ -102,6 +120,7 @@ class App extends Component{
 					<Route path="/marketing-archive/content" component={MarketingContent}/>
 					<Route path="/join-us" component = {JoinUs}/>
 					<Route path="/sponsors" component = {Sponsors}/>
+					<Route path="/opportunities" component = {Opportunities}/>
 					<Route path="/contact-us" component = {ContactUs}/>
          			<Route path="/publications" component={Publications}/>
 					<Route path="/blog/1" component={blogPost1}/>
@@ -119,6 +138,7 @@ class App extends Component{
 					<Route path="/blog/13" component={blogPost13}/>
 					<Route path="/blog/14" component={blogPost14}/>
           			<Route path="/blog/15" component={blogPost15}/>
+					<Route path="/blog/16" component={blogPost16}/>
 				</Switch>
 		    </HashRouter>
 		<div><Footer /></div>

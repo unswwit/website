@@ -17,9 +17,22 @@ class Blog extends Component {
                 {/*End of Header*/}
 
                 {/*Start of blog posts*/}
-                {/*blog post 15*/}
+
+                {/*blog post 16*/}
                 <BlogPreview
                 topMargin="10vw"
+                bottomMargin="5vw"
+                blogNo="16"
+                imgUrl="/blog-covers/16-erica-joy-baker.png"
+                heading="Introducing Erica Joy Baker, Director of Engineering at GitHub"
+                date="22/07/2020"
+                subheading="Erica Baker is a unique role model and voice for women and minorities in tech. She’s a force to be reckoned with, and gives us all hope there will be a place for our skills, enthusiasm and ideas in whatever area of the tech field we choose."
+                authors={{"vivian-wong":["/potraits/vivw.jpg", "Vivian Wong"]}}
+                />
+
+                {/*blog post 15*/}
+                <BlogPreview
+                topMargin="5vw"
                 bottomMargin="5vw"
                 blogNo="15"
                 imgUrl="/blog-covers/15-zitni-handoo.png"
