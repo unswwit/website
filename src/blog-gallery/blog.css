@@ -31,9 +31,9 @@
 
 .author-pic {
     border-radius: 50%;
-    height: 5.5vw;
+    height: 30px;
     overflow: hidden;
-    width: 5.5vw;
+    width: 30px;
     margin-right: 1.5vw;
     margin-left: 0px;
 }
@@ -102,7 +102,12 @@ table {
     padding: 30px;  
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
+    table {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 800px) {
     tr {
         display: flex;
         flex-wrap: wrap;
@@ -113,10 +118,9 @@ table {
         display: block;
         width: 100%;
     }
-
-    .author-row {
-        flex-wrap: nowrap;
-        width: 150px;
+    
+    table {
+        width: 95%;
     }
 
     .preview-pic {
