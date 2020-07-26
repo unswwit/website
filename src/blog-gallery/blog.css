@@ -90,11 +90,17 @@
 }
 
 .blog-table {
-    width: 65.849vw;
-    height: 22.786vw;
-    display:table;
+   /* width: 65.849vw;
+    height: 22.786vw;*/
+    width: 1000px;
+    height: 350px;
+    display: table;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 0 auto;
+}
+
+.blog-post {
+
 }
 
 .left-col {
@@ -105,6 +111,7 @@
 .right-col {
     float: right;
     width: 45%;
+    padding-left: 100px;
 }
 
 @media screen and (max-width: 800px) {

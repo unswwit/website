@@ -11,7 +11,7 @@ class Footer extends Component{
                     <ul class="footer-all">
                         <div class="grid-footer-container">
                             <li class="col-width footer-item footer-logo"><img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo"
-                                resizeMode='contain' style={{width: '6.5vw'}} /></li>
+                                resizeMode='contain' style={{width: '50px'}} /></li>
                             <div class="col-width footer-links">
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/">Home</Link></li>
                                 <li class="footer-item"><Link onClick={() => window.scrollTo(0, 0)} to="/events">Events </Link></li>
@@ -30,11 +30,11 @@ class Footer extends Component{
                                 <div class="socials-subheading"><li class="footer-item">Follow our socials</li></div>
                                 <div class="footer-item">
                                 <span class="footer-icons"><a href="https://www.linkedin.com/company/unsw-women-in-technology"><img src={process.env.PUBLIC_URL + '/linkedin.png'} className="" alt="banner" resizeMode='contain'
-                                    style={{width:'2.3vw', height:'2.3vw'}} /></a></span>
+                                    style={{width:'25px', height:'25px'}} /></a></span>
                                 <span class="footer-icons"><a href="https://www.facebook.com/unsw.wit/"><img src={process.env.PUBLIC_URL + '/facebook.png'} className="" alt="banner" resizeMode='contain'
-                                    style={{width:'2.3vw', height:'2.3vw'}} /></a></span>
+                                    style={{width:'25px', height:'25px'}} /></a></span>
                                 <span class="footer-icons"><a href="https://www.instagram.com/wit.unsw/"><img src={process.env.PUBLIC_URL + '/instagram.png'} className="" alt="banner" resizeMode='contain'
-                                    style={{width:'2.3vw', height:'2.3vw'}} /></a></span>
+                                    style={{width:'25px', height:'25px'}} /></a></span>
                                 </div>
                             </div>
                         </div>
