@@ -9,14 +9,13 @@ class BlogPreview extends Component {
         return (
             <div>
                 {/*Start of blog posts*/}
-                <Link to={ "/blog/" + this.props.blogNo } style={{ textDecoration: 'none' }}>
                 <div class="blog-post" style={{marginTop:this.props.topMargin, marginBottom:this.props.bottomMargin}}>
                     <div class="blog-table">
-                        <div class="blog-container">
-                            `<div class="left-col"> 
+                        <Link to={ "/blog/" + this.props.blogNo } style={{ textDecoration: 'none' }}>
+                            <div class="left-col"> 
                                 <img class="preview-pic" src={process.env.PUBLIC_URL + this.props.imgUrl} alt="preview" style={{width:"35.807vw", height: "22.786vw"}}/>
                             </div>
-                            <div class= "blog-preview right-col">
+                            <div class= "right-col">
                                 <div class="blog-details">
                                     <div class="heading">
                                     {this.props.heading}
@@ -24,6 +23,7 @@ class BlogPreview extends Component {
                                     <div class="date">{this.props.date}</div>
                                     <div class="subheading">{this.props.subheading}</div>
                                 </div>
+                                <div class="row-author">
                                 {
                                 Object.keys(this.props.authors).map((key, index) => ( 
                                     <td key={key}>
@@ -44,11 +44,12 @@ class BlogPreview extends Component {
                                     </td>
                                 ))
                                 }
-                            </div>`
-                        </div>
+                                </div>
+                            </div>
+                            
+                        </Link>
                     </div>
                 </div>
-                </Link>
                 {/*End of blog posts*/}
             </div>
         );
