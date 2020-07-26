@@ -2,6 +2,16 @@
 /*font-family: 'Playfair Display', serif;
 font-family: 'Montserrat', sans-serif;*/
 
+/*----------------------------------Header------------------------------------*/
+
+
+
+
+
+
+
+
+/*----------------------------------General------------------------------------*/
 h1 {
     color: #feb14b;
     font-family: 'Playfair Display', serif;
@@ -121,7 +131,7 @@ p {
 }
 
 .menuTitle{
-    color: #313638; 
+    color: #313638;
     padding: 10px 15px;
 }
 
@@ -139,7 +149,7 @@ p {
 @media screen and (max-width: 1000px) {
     .nav-item {
         display: none;
-    } 
+    }
 
     .nav-item-btn {
         display: block;
@@ -222,7 +232,7 @@ footer {
 }
 
 .footer-logo {
-    margin-top: 1%; 
+    margin-top: 1%;
 }
 
 .footer-icons {
@@ -276,7 +286,7 @@ footer {
         text-align: center;
         font-size: 1.8vw;
     }
-    
+
     .footer-copyright {
         font-size: 1.5vw;
     }
@@ -293,5 +303,5 @@ footer {
     .footer-all {
         margin: 1.5vw auto 1vw auto;
     }
-    
+
 }

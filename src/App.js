@@ -9,6 +9,7 @@ import Sponsors from "./sponsors/sponsors";
 import Opportunities from "./opportunities/opportunities";
 import ContactUs from "./contact/contactUs";
 import Footer from "./footer";
+import PageHeader from "./header";
 
 import MarketingArchive from "./marketing-archive/marketingArchive"
 import MarketingContent from "./marketing-archive/marketing-content/content";
@@ -47,14 +48,14 @@ class App extends Component{
 		}
 		this.handleHover = this.handleHover.bind(this);
 		this.handleMenuClick = this.handleMenuClick.bind(this);
-	}  
+	}
 
 	handleMenuClick() {
 		this.setState({
 			menuOpen:!this.state.menuOpen
 		});
 	}
-	
+
 	handleHover(e) {
 		this.setState({
 		showDD: !this.state.showDD
@@ -79,7 +80,7 @@ class App extends Component{
 	return (
 		<div>
 			<HashRouter basename="/">
-				<Menu open={this.state.menuOpen}/> 
+				<Menu open={this.state.menuOpen}/>
 				<nav class="navbar navbar-expand-md navbar-dark bg-custom fixed-top">
 					<a class="navbar-brand" href="/">
 						<img src={process.env.PUBLIC_URL + './logo-black.png'} className="photo" alt="wit logo"
@@ -110,7 +111,7 @@ class App extends Component{
 					</div>
 					<li class="nav-item-btn"><MenuBtn open={this.state.menuOpen} onClick={this.handleMenuClick}/></li>
 				</nav>
-				
+
 				<Switch>
 					<Route exact path="/" component = {Home}/>
 					<Route path="/events" component={Events}/>
