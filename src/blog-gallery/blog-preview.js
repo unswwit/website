@@ -13,7 +13,6 @@ class BlogPreview extends Component {
                 <div class="blog-post" style={{marginTop:this.props.topMargin, marginBottom:this.props.bottomMargin}}>
 
                     <table cellpadding="0">
-                    <tr>
                         <tr>
                             <td>
                                 <img class="preview-pic" src={process.env.PUBLIC_URL + this.props.imgUrl} alt="preview"/>
@@ -26,7 +25,7 @@ class BlogPreview extends Component {
                                     <div class="date">{this.props.date}</div>
                                     <div class="subheading">{this.props.subheading}</div>
                                 </div>
-                                <tr>
+                                <tr class="author-row">
                                 {
                                 Object.keys(this.props.authors).map((key) => ( 
                                     <td key={key}>
@@ -50,7 +49,6 @@ class BlogPreview extends Component {
                                 </tr>
                             </td>
                         </tr>
-                    </tr>
                     </table>
                 </div>
                 </Link>

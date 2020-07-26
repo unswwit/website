@@ -102,21 +102,7 @@ table {
     padding: 30px;  
 }
 
-/*
-@media only screen and (max-width: 800px) {   
-    .left-col {
-       display: inline-block;
-       width: 100%;
-       background-color: yellow;
-    }
-
-    .preview-pic {
-        width: 100%;
-        height: 100%;
-    }
-}
-*/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     tr {
         display: flex;
         flex-wrap: wrap;
@@ -126,6 +112,11 @@ table {
     td {
         display: block;
         width: 100%;
+    }
+
+    .author-row {
+        flex-wrap: nowrap;
+        width: 150px;
     }
 
     .preview-pic {
