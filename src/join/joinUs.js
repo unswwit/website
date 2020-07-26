@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PageHeader from ".././header";
 import "./joinUs.css"
 
 class JoinUs extends React.Component {
@@ -12,15 +12,13 @@ class JoinUs extends React.Component {
 
         return (
             <div>
-                <div className="joinUsHeader">
-                    {/* Cover Photo */}
-                    {/* Main Title, and Subtitle Area */}
-                        <div className="title_area">
-                            <h1 className="centre">Join Us</h1>
-                        </div>
-                    </div>
 
-                    
+            {/* Cover Photo */}
+            <PageHeader
+              imgUrl="/join-header-1.png"
+              title="Join Us"
+            />
+
                 <div className = 'joinUsBody'>
                     <img src={process.env.PUBLIC_URL + '/join-us-map.png'}
                         width = "100%"
@@ -79,5 +77,4 @@ class JoinUs extends React.Component {
         );
     }
 }
-
 export default JoinUs;

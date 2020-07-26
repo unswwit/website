@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PageHeader from ".././header";
 import "./contactUs.css";
 
 class ContactUs extends React.Component {
@@ -7,14 +7,11 @@ class ContactUs extends React.Component {
         return (
             <div>
 
-                <div className="contactHeader">
-                    {/* Cover Photo */}
-                    {/* Main Title, and Subtitle Area */}
-                        <div className="title_area">
-                            <h1 className="centre">Contact Us</h1>
-                        </div>
-                    </div>
-
+            {/* Cover Photo */}
+            <PageHeader
+              imgUrl="/contact-header-1.png"
+              title="Contact Us"
+            />
 
                     <div className = 'form'>
                         <h2 class="inquiry">Send Through a General Inquiry</h2>

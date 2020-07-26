@@ -16,14 +16,6 @@ class Blog extends Component {
               title="Blog Posts"
             />
 
-                {/*Start of Header*/}
-                <div class="coverPhoto">
-                    <div class="title">
-                        <h1>Blog Posts</h1>
-                    </div>
-                </div>
-                {/*End of Header*/}
-
                 {/*Start of blog posts*/}
 
                 {/*blog post 16*/}
