@@ -9,7 +9,6 @@ import Sponsors from "./sponsors/sponsors";
 import Opportunities from "./opportunities/opportunities";
 import ContactUs from "./contact/contactUs";
 import Footer from "./footer";
-import PageHeader from "./header";
 
 import MarketingArchive from "./marketing-archive/marketingArchive"
 import MarketingContent from "./marketing-archive/marketing-content/content";

@@ -1,18 +1,19 @@
 import React from 'react'
 import "./events.css"
+import PageHeader from ".././header";
 
 class Events extends React.Component {
     render() {
         return (
             <div>
-                <div className="events-header">
-                    {/* Cover Photo */}
-                    {/* Main Title, and Subtitle Area */}
-                    <div className="overlay"></div>
-                        <div className="title_area">
-                            <h1 className="centre">Events</h1>
-                        </div>
-                </div>
+
+            {/* Cover Photo */}
+            <PageHeader
+              imgUrl="/events-header.jfif"
+              title="Events"
+            />
+            {/* Main Title, and Subtitle Area */}
+
                 <div className = "events-body">
                     <h2>UPCOMING EVENTS</h2>
                     <p class="lookout">Keep a lookout here for our upcoming events!</p>
@@ -25,7 +26,7 @@ class Events extends React.Component {
                                     <p class="event-name">Navigating Cloud Computing with AWS</p>
                                     <p class="event-date">14th July 2020, 5-7 PM</p>
                                     <p class="event-summary">
-                                    Hey you! 
+                                    Hey you!
                                     Uni got your head in the clouds? ☁️ Struggling to compute Amazon’s web services? 🤨Look no further because Cloudsoc x WIT’s intro to cloud computing event is here to answer your cloud questions! 😍This is a one time opportunity to delve into the world of cloud computing with an easy click of a link in our ZOOM Call!😯</p>
                                     <ul id="links">
                                         <li class="event-link">
@@ -122,7 +123,7 @@ class Events extends React.Component {
                         <div class="grid-item">
                             <img class="event-images" src={process.env.PUBLIC_URL + './event-covers/00-logo-competition.png'} resizeMode='contain' alt="logo competition"/>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>

@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import "./team.css";
 
+import PageHeader from ".././header";
 import Execs from "./execs";
 import SubCom from "./subcom";
 
@@ -9,15 +10,14 @@ class OurTeam extends Component {
   render() {
     return (
         <div>
-            <div className="crop">
-            {/* Cover Photo */}
-            {/* Main Title, and Subtitle Area */}
-                <div className="title_area">
-                    <h1 className="centre">Meet Our Team</h1>
-                </div>
-                </div>
 
-                <div className="profile_section_heading">
+        {/* Cover Photo */}
+        <PageHeader
+          imgUrl="/team-header-1.png"
+          title="Meet Our Team"
+        />
+
+            <div className="profile_section_heading">
                 <h2 class="team-heading">
                     {`
                                 OUR 2020 EXECUTIVE TEAM
