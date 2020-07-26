@@ -93,3 +93,16 @@ table {
     padding: 0;
     margin: 0;
 }
+
+.blog-table {
+    width: 65.849vw;
+    height: 22.786vw;
+}
+
+@media screen and (max-width: 1000px) {
+    .blog-table {
+       width: 80vw;
+       height: 22.786vw;
+    }
+    
+}
