@@ -41,7 +41,7 @@
 
 /*Post preview*/
 .blog-details {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .heading {
@@ -73,7 +73,7 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     padding: 0;
-    margin: 0;
+    margin-bottom: 10px;
 }
 
 .date {
@@ -94,27 +94,30 @@
 }
 
 .left-col {
-    float: left;
-    width: 48%;
+    display: table-cell;
 }
 
 .right-col {
-    float: right;
-    width: 44.5%;
     vertical-align: middle;
     height: 100%;
-    padding: 2vw;
+    padding: 30px;
     display: table-cell;
 }
 
 .row-author {
     vertical-align: middle;
+    display: table-row;
 }
 
 @media screen and (max-width: 800px) {
-    .left-col, .right-col {
-        width: 100%;
-        padding: 0;
+   .blog-table {
+       width: 80vw;
+   }
+}
+
+@media screen and (max-width: 600px) {
+    .right-col {
+        float: none;
     }
     
 }

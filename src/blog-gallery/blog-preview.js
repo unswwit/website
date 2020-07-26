@@ -11,9 +11,10 @@ class BlogPreview extends Component {
                 {/*Start of blog posts*/}
                 <div class="blog-post" style={{marginTop:this.props.topMargin, marginBottom:this.props.bottomMargin}}>
                     <div class="blog-table">
+                        <div class="blog-row">
                         <Link to={ "/blog/" + this.props.blogNo } style={{ textDecoration: 'none' }}>
                             <div class="left-col"> 
-                                <img class="preview-pic" src={process.env.PUBLIC_URL + this.props.imgUrl} alt="preview" style={{width:"35.807vw", height: "22.786vw"}}/>
+                                <img class="preview-pic" src={process.env.PUBLIC_URL + this.props.imgUrl} alt="preview" style={{width:"550px", height: "350px"}}/>
                             </div>
                             <div class= "right-col">
                                 <div class="blog-details">
@@ -46,8 +47,8 @@ class BlogPreview extends Component {
                                 }
                                 </div>
                             </div>
-                            
                         </Link>
+                        </div>
                     </div>
                 </div>
                 {/*End of blog posts*/}
