@@ -31,9 +31,9 @@
 
 .author-pic {
     border-radius: 50%;
-    height: 30px;
+    height: 100px;
     overflow: hidden;
-    width: 30px;
+    width: 100px;
     margin-right: 1.5vw;
     margin-left: 0px;
 }
@@ -106,8 +106,18 @@ table {
     table {
         width: 90%;
     }
+    
+    .author-pic {
+        width: 50px;
+        height: 50px;
+    }
 }
+
 @media screen and (max-width: 800px) {
+    .blog-preview {
+        padding: 20px;
+    }
+
     tr {
         display: flex;
         flex-wrap: wrap;
