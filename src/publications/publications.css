@@ -22,7 +22,7 @@
 }
 
 /*CAN REMOVE ONCE OVERLAY FILES ARE ALL MERGED*/
-/* direct copy from what will be in style.css from other branch -- ask chelsea */
+/* direct copy from what will be in style.css from other branch */
 .overlay {    /* overlay on all header images*/
   position: absolute;
   top: 0;
@@ -141,6 +141,9 @@
   margin-left: -12px;
   white-space: nowrap;
   float: center;
+}
 
-
+.button a, .button a:hover {
+  text-decoration: none;
+  color: white;
 }
