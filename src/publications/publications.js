@@ -25,7 +25,7 @@ class Publications extends React.Component {
                     heading="Title Title"
                     date="Today's Date"
                     />
-
+                    {/*to be removed after pub
                     <PubArticle
                     imgUrl="./pub_mini.png"
                     heading="Title Title"
@@ -37,11 +37,11 @@ class Publications extends React.Component {
                     heading="Title Title"
                     date="Today's Date"
                     />
-
+                    */}
                     </div>
 
 
-                    {/*2019 articles*/}
+                    {/*2019 articles
 
                     <h1>2019</h1>
                     <div class="row">
@@ -65,6 +65,7 @@ class Publications extends React.Component {
                     />
 
                     </div>
+                    */}
 
                 </div>
             </div>
