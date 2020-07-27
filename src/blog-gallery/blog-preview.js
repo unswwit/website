@@ -12,11 +12,10 @@ class BlogPreview extends Component {
                 <Link to={ "/blog/" + this.props.blogNo } style={{ textDecoration: 'none' }}>
                 <div class="blog-post" style={{marginTop:this.props.topMargin, marginBottom:this.props.bottomMargin}}>
 
-                    <table cellpadding="0" style={{ width: "950px", height: "350px"}}>
-                    <tr>
+                    <table cellpadding="0">
                         <tr>
                             <td>
-                                <img src={process.env.PUBLIC_URL + this.props.imgUrl} alt="preview" style={{width:"550px", height: "350px"}}/>
+                                <img class="preview-pic" src={process.env.PUBLIC_URL + this.props.imgUrl} alt="preview"/>
                             </td>
                             <td class= "blog-preview">
                                 <div class="blog-details">
@@ -26,9 +25,9 @@ class BlogPreview extends Component {
                                     <div class="date">{this.props.date}</div>
                                     <div class="subheading">{this.props.subheading}</div>
                                 </div>
-                                <tr>
+                                <tr class="author-row">
                                 {
-                                Object.keys(this.props.authors).map((key, index) => ( 
+                                Object.keys(this.props.authors).map((key) => ( 
                                     <td key={key}>
                                         <td>
                                         <div class="author-pic">
@@ -50,7 +49,6 @@ class BlogPreview extends Component {
                                 </tr>
                             </td>
                         </tr>
-                    </tr>
                     </table>
                 </div>
                 </Link>

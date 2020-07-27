@@ -1,0 +1,131 @@
+/*-------------------------------Blog posts page header-----------------------------*/
+/*Header image*/
+.opportunities-header {
+    background-image: url('/opportunities-header.jfif');
+    background-position: center bottom 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+/*Heading title*/
+.title h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5vw;
+    letter-spacing: 8px;
+    margin-top: 26vw;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+/*-------------------------------Opportunities Preview-----------------------------*/
+/*Opportunities circle crop*/
+.opp-frame {
+    border-radius: 50%;
+    height: 5.5vw;
+    overflow: hidden;
+    width: 5.5vw;
+    margin-right: 1.5vw;
+    margin-left: 0px;
+    
+}
+
+/*Author image*/
+.opp-img {
+    max-width:100%;
+    max-height:100%;
+    transform: translate( 0%, 20%);
+}
+
+/*Opportunities preview*/
+table {
+    border: none;
+    border-color: #a0a0a0;
+    border-width: 2px;
+    width: 350px;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.opp-details {
+    margin-top: 1vw;
+}
+
+.opp-preview {
+    padding: 2vw;
+}
+
+.opp-post {
+    padding: 10px;
+}
+
+.heading {
+    color: #FEB14B;
+    letter-spacing: 0.1vw;
+    font-size: 14pt;
+    font-family: Roboto;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.job-position {
+    color: #313638;
+    letter-spacing: 0.1vw;
+    font-size: 14pt;
+    font-family: Roboto;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.heading:hover {
+    text-decoration: none;
+}
+
+.subheading {
+    color: #707070;
+    letter-spacing: 0.1vw;
+    font-size: 11pt;
+    font-family: Roboto;
+    font-weight: 300;
+}
+
+.blog-link:hover {
+    text-decoration: none;
+}
+
+.more-link {
+    color: #FEB14B;
+    letter-spacing: 0.05vw;
+    font-size: 11pt;
+    font-family: Roboto;
+    font-weight: 300;
+    text-align: right;
+    margin-top: 10px;
+}
+
+
+/*-------------------------------Masonry grid Preview-----------------------------*/
+
+/* Masonry grid */
+.masonry {
+    transition: all .5s ease-in-out;
+    column-gap: 30px;
+    column-fill: initial;
+  }
+  
+/* Masonry item */
+.masonry .brick {
+margin-bottom: 30px;
+display: inline-block; /* Fix the misalignment of items */
+vertical-align: top; /* Keep the item on the very top */
+}

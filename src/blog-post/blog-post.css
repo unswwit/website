@@ -51,6 +51,11 @@ p.date {
   font-weight: 300;
 }
 
+.post-heading {
+  color: #707070;
+  font-size: 24pt;
+}
+
 .question {
   font-weight: 500;
 }
@@ -72,6 +77,11 @@ p.date {
   margin: 0 auto;
   max-width: 40%;
   margin-bottom: 4vw;
+}
+
+img.floatRight {
+  float: right;
+  padding: 30px;
 }
 
 .post-content a {
