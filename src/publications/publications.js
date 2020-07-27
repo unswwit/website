@@ -1,6 +1,6 @@
 import React from 'react'
 import "./publications.css"
-// import PubArticle from "./publications-article"
+import PubArticle from "./publications-article"
 
 class Publications extends React.Component {
     render() {
@@ -15,16 +15,17 @@ class Publications extends React.Component {
                         </div>
                 </div>
                 <div className = "publicationsBody">
-                    <img src={process.env.PUBLIC_URL + './pubs-soon.png'} resizeMode='contain' style={{width: '100%', marginBottom: '5px', marginTop: '5px'}} alt="coming soon"/>
-                    {/* 2020 articles
+
+                    {/*2020 articles*/}
 
                     <h1>2020</h1>
                     <div className = "row">
 
                     <PubArticle
-                    imgUrl="./pub_mini.png"
-                    heading="Title Title"
-                    date="Today's Date"
+                    imgUrl="./publications/careers-guide.png"
+                    heading="Career's Guide"
+                    date="27/7/2020"
+                    url="https://issuu.com/womenintechnology/docs/wit_2020_careers_guide?fbclid=IwAR3RBADvuCd7KRAxeD4yK0USlDoQkVp05kY2SSYiYmjB2nZjBsI3xs_rX5c"
                     />
                     {/*to be removed after pub
                     <PubArticle
@@ -38,6 +39,8 @@ class Publications extends React.Component {
                     heading="Title Title"
                     date="Today's Date"
                     />
+
+                    <img src={process.env.PUBLIC_URL + './pubs-soon.png'} resizeMode='contain' style={{width: '100%', marginBottom: '5px', marginTop: '5px'}} alt="coming soon"/>
                     */}
                     </div>
 
