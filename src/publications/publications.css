@@ -100,22 +100,17 @@
   left: -50%;
   text-transform: capitalize;
   text-align: center;
-
   font-size: 23px;
   display: block;
   visibility: hidden;
   position: relative;
-
-
 }
 
 .article p {
   font-size: 15px;
-
   font-weight: bold;
   color: white;
   font-family: 'Montserrat', sans-serif;
-  opacity: 70%;
   display: block;
   text-align: center;
   visibility: hidden;
@@ -124,7 +119,7 @@
   position: relative;
 }
 
-/*read only button, channge for functionality*/
+/*read only button, change for functionality*/
 .button {
   background-color: orange;
   height: 30px;
