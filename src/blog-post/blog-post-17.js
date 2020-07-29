@@ -54,7 +54,8 @@ class blogPost17 extends Component {
           </p><br/><br/>
 
           <p class="question"> Favourite Quote or Motto? *</p>
-          <p class="post-content">When you want to succeed as bad as you want to breathe, then you will be successful - E. Thomas</p><br/><br/>
+          <p class="post-content">When you want to succeed as bad as you want to breathe, then you will be successful</p>
+          <p class="post-content">- E. Thomas</p><br/><br/>
           </div>
         </div>
         {/*for the blog post author*/}
