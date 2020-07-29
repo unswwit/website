@@ -31,9 +31,9 @@
 
 .author-pic {
     border-radius: 50%;
-    height: 90px;
+    height: 80px;
     overflow: hidden;
-    width: 90px;
+    width: 80px;
     margin-right: 1.5vw;
     margin-left: 0px;
 }
@@ -42,7 +42,6 @@
 .vivw_img {
     height: auto;
     transform: translate( -5%, -10%);
-    width: 120%;
 }
 
 /*Post preview*/
@@ -53,7 +52,7 @@
 .heading {
     color: #FEB14B;
     letter-spacing: 0.1vw;
-    font-size: 13pt;
+    font-size: 11pt;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     margin-bottom: 10px;
@@ -75,7 +74,7 @@
 .subheading {
     color: #707070;
     letter-spacing: 0.1vw;
-    font-size: 11pt;
+    font-size: 9pt;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     padding: 0;
@@ -85,7 +84,7 @@
 .date {
     color: #313638;
     letter-spacing: 0.1vw;
-    font-size: 9pt;
+    font-size: 7pt;
     font-family: 'Montserrat', sans-serif;
     padding: 0;
     margin: 0;
