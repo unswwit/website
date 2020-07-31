@@ -17,10 +17,20 @@ class Blog extends Component {
                 {/*End of Header*/}
 
                 {/*Start of blog posts*/}
+                <BlogPreview
+                topMargin="10vw"
+                bottomMargin="5vw"
+                blogNo="17"
+                imgUrl="/blog-covers/17-natasha-jones.png"
+                heading="Introducing: Natasha Jones, SAP Consultant at Deloitte"
+                date="29/07/2020"
+                subheading="This week, we join Natasha as she reflects on her journey through STEM, and how she has continued to strive for success."
+                authors={{"georgie-mansfield":["/potraits/georgie.jpg", " Georgie Mansfield"]}}
+                />
 
                 {/*blog post 16*/}
                 <BlogPreview
-                topMargin="10vw"
+                topMargin="5vw"
                 bottomMargin="5vw"
                 blogNo="16"
                 imgUrl="/blog-covers/16-erica-joy-baker.png"
