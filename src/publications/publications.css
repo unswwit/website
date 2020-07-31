@@ -33,7 +33,7 @@
   opacity: 0.5;
 }
 
-/*-------------------------------Join us socials------------------------------*/
+/*-------------------------------Publications structure------------------------------*/
 /*Body block*/
 .publicationsBody {
     max-width: 65%;
@@ -60,6 +60,8 @@
     margin-top: 30px;
     overflow: hidden;
 }
+
+/*-------------------------------Publications Article------------------------------*/
 
 .image_container {
   position: absolute;
