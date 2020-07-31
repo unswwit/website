@@ -103,12 +103,11 @@
   text-transform: capitalize;
   text-align: center;
 
-  font-size: 23px;
+  font-size: 21px;
   display: block;
   visibility: hidden;
   position: relative;
-
-
+  padding: 5px;
 }
 
 .article p {
