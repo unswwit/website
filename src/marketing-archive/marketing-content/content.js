@@ -72,7 +72,7 @@ class MarketingContent extends Component {
                         date="22/07/2020"
                       />
                       <MondayMotivation
-                        fb="https://www.facebook.com/unsw.wit/photos/a.1570799533224922/2348244162147118/"
+                        fb="https://www.facebook.com/unsw.wit/photos/a.1570799533224922/2358718497766351/"
                         imgUrl="/initiatives/monday/pass.png"
                         alt="This too shall pass"
                         date="20/07/2020"
