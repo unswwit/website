@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import "../.././style.css";
-import "./content.css";
+import "../marketing-content/content.css";
 
-class TechTrivia extends Component {
+class MondayMotivation extends Component {
     render() {
         return (
-            <li class="image trivia">
+            <li class="image mondaymot">
               <a href={this.props.fb} class="darken">
                 <img
                   src={process.env.PUBLIC_URL + this.props.imgUrl}
@@ -18,4 +18,4 @@ class TechTrivia extends Component {
         );
     }
 }
-export default TechTrivia;
+export default MondayMotivation;

@@ -1,21 +1,22 @@
 import React, { Component } from "react";
 import "../.././style.css";
-import "./content.css";
+import "../marketing-content/content.css";
 
-class MondayMotivation extends Component {
+class WCW extends Component {
     render() {
         return (
-            <li class="image mondaymot">
+            <li class="image crush">
               <a href={this.props.fb} class="darken">
+                <div class="message">{this.props.date}</div>
                 <img
                   src={process.env.PUBLIC_URL + this.props.imgUrl}
                   alt={this.props.alt}
                   resizeMode="contain"
                 />
-                <div class="message">{this.props.date}</div>
               </a>
+
             </li>
         );
     }
 }
-export default MondayMotivation;
+export default WCW;

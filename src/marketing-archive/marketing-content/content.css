@@ -19,7 +19,7 @@
 .grid {
   display: table-cell;
   width: 75vw;
-  margin-top: -240px;
+  margin-top: -340px;
   margin-left: 22.5vw;
 }
 
@@ -82,7 +82,9 @@ input[type="radio"][id="crush"]:checked + label {
   color: var(--white);
 }
 input[type="radio"][id="crush"]:checked ~ .grid .mondaymot,
-input[type="radio"][id="crush"]:checked ~ .grid .memes {
+input[type="radio"][id="crush"]:checked ~ .grid .memes,
+input[type="radio"][id="crush"]:checked ~ .grid .mascot,
+input[type="radio"][id="crush"]:checked ~ .grid .careers {
   display: none;
 }
 
@@ -91,7 +93,9 @@ input[type="radio"][id="memes"]:checked + label {
   color: var(--white);
 }
 input[type="radio"][id="memes"]:checked ~ .grid .crush,
-input[type="radio"][id="memes"]:checked ~ .grid .mondaymot {
+input[type="radio"][id="memes"]:checked ~ .grid .mondaymot,
+input[type="radio"][id="memes"]:checked ~ .grid .mascot,
+input[type="radio"][id="memes"]:checked ~ .grid .careers {
   display: none;
 }
 
@@ -100,7 +104,31 @@ input[type="radio"][id="mondaymot"]:checked + label {
   color: var(--white);
 }
 input[type="radio"][id="mondaymot"]:checked ~ .grid .crush,
-input[type="radio"][id="mondaymot"]:checked ~ .grid .memes  {
+input[type="radio"][id="mondaymot"]:checked ~ .grid .memes,
+input[type="radio"][id="mondaymot"]:checked ~ .grid .mascot,
+input[type="radio"][id="mondaymot"]:checked ~ .grid .careers   {
+  display: none;
+}
+
+input[type="radio"][id="mascot"]:checked + label {
+  background: var(--grey);
+  color: var(--white);
+}
+input[type="radio"][id="mascot"]:checked ~ .grid .crush,
+input[type="radio"][id="mascot"]:checked ~ .grid .memes,
+input[type="radio"][id="mascot"]:checked ~ .grid .mondaymot,
+input[type="radio"][id="mascot"]:checked ~ .grid .careers   {
+  display: none;
+}
+
+input[type="radio"][id="careers"]:checked + label {
+  background: var(--grey);
+  color: var(--white);
+}
+input[type="radio"][id="careers"]:checked ~ .grid .crush,
+input[type="radio"][id="careers"]:checked ~ .grid .memes,
+input[type="radio"][id="careers"]:checked ~ .grid .mondaymot,
+input[type="radio"][id="careers"]:checked ~ .grid .mascot  {
   display: none;
 }
 /*-------------------------------Image grid gallery-----------------------------*/

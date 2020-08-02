@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import "../.././style.css";
-import "./content.css";
+import "../marketing-content/content.css";
 
-class Memes extends Component {
+class Mascot extends Component {
     render() {
         return (
-            <li class="image memes">
+            <li class="image mascot">
               <a href={this.props.fb} class="darken">
                 <img
                   src={process.env.PUBLIC_URL + this.props.imgUrl}
@@ -18,4 +18,4 @@ class Memes extends Component {
         );
     }
 }
-export default Memes;
+export default Mascot;
