@@ -15,10 +15,25 @@ class Blog extends Component {
                     </div>
                 </div>
                 {/*End of Header*/}
-
+                
                 {/*Start of blog posts*/}
+
+                {/*blog post 18*/}
                 <BlogPreview
                 topMargin="10vw"
+                bottomMargin="5vw"
+                blogNo="18"
+                imgUrl="/blog-covers/18-which-degree-are-you.png"
+                heading="Which technology degrees are you?"
+                date="02/08/2020"
+                subheading="Software Engineering. Computer Science. Information Systems. The big 3 of technology degrees. With the ever-growing evolution of the technology sector, students with these degrees become more in-demand and relevant across all different industries. 
+                But what makes them unique? Which career paths can they lead to? Take the quiz below to find out which degree you are!"
+                authors={{"georgie-mansfield":["/potraits/georgie.jpg", " Georgie Mansfield"]}}
+                />
+
+                {/*blog post 17*/}
+                <BlogPreview
+                topMargin="5vw"
                 bottomMargin="5vw"
                 blogNo="17"
                 imgUrl="/blog-covers/17-natasha-jones.png"
