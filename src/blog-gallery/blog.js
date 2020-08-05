@@ -22,16 +22,26 @@ class Blog extends Component {
         <BlogPreview
           topMargin="10vw"
           bottomMargin="5vw"
+          blogNo="19"
+          imgUrl="/blog-covers/19-shatabdi-dey.png"
+          heading="Introducing : Shatabdi De, Web Developer at Nine Entertainment Co. "
+          date="05/08/2020"
+          subheading="We are excited to share a recent Q&A we had with Shatabdi about career journey in STEM!"
+          authors={{
+            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
+          }}
+        />
+        {/*blog post 18*/}
+        <BlogPreview
+          topMargin="5vw"
+          bottomMargin="5vw"
           blogNo="18"
           imgUrl="/blog-covers/18-which-degree-are-you.png"
           heading="Which technology degrees are you?"
           date="02/08/2020"
           subheading="Software Engineering. Computer Science. Information Systems. What makes these degrees unique? Which career paths can they lead to? Take the quiz to find out which degree you are!"
           authors={{
-            "georgie-mansfield": [
-              "/potraits/georgie.jpg",
-              " Georgie Mansfield",
-            ],
+            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield"],
           }}
         />
 
@@ -45,10 +55,7 @@ class Blog extends Component {
           date="29/07/2020"
           subheading="This week, we join Natasha as she reflects on her journey through STEM, and how she has continued to strive for success."
           authors={{
-            "georgie-mansfield": [
-              "/potraits/georgie.jpg",
-              " Georgie Mansfield",
-            ],
+            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield"],
           }}
         />
 

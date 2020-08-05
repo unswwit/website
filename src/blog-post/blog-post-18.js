@@ -24,7 +24,7 @@ class blogPost18 extends Component {
         {/*Start of blog post*/}
         <div class="blog-content">
           <div>
-            <h2 class="blog-title">Which technology degrees are you?</h2>
+            <h2 class="blog-title">Which technology degree are you?</h2>
             <p class="date">2nd August 2020</p>
           </div>
 
