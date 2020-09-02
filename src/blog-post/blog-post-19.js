@@ -3,7 +3,7 @@ import ".././style.css";
 import "./blog-post.css";
 import AuthorCard from "./authorCard";
 
-class blogPost18 extends Component {
+class blogPost19 extends Component {
   //start webpage at the top
   componentDidMount() {
     window.scrollTo(0, 0);
@@ -126,4 +126,4 @@ class blogPost18 extends Component {
     );
   }
 }
-export default blogPost18;
+export default blogPost19;
