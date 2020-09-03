@@ -72,11 +72,11 @@ class blogPost20 extends Component {
         {/*for the blog post author*/}
         <AuthorCard
           authors={{
-            "vivian-wong": [
-              "/potraits/vivw.jpg",
+            "georgie-mansfield": [
+              "/potraits/georgie.jpg",
               "profile_img vivw_img",
-              "Vivian Wong",
-              "Education Executive",
+              "Georgie Mansfield",
+              "Education Team",
             ],
           }}
         />
