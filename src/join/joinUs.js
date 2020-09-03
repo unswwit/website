@@ -1,5 +1,4 @@
 import React from 'react'
-
 import "./joinUs.css"
 
 class JoinUs extends React.Component {
@@ -15,7 +14,7 @@ class JoinUs extends React.Component {
                 <div className="joinUsHeader">
                     {/* Cover Photo */}
                     {/* Main Title, and Subtitle Area */}
-                    <div className="title_area">
+                    <div className="titleArea">
                         <h1 className="centre">Join Us</h1>
                     </div>
                 </div>

@@ -12,11 +12,11 @@
 }
 
 /*Heading title*/
-.title_area h1 {
+.titleArea h1 {
   font-family: 'Playfair Display', serif;
   font-size: 5vw;
   letter-spacing: 8px;
-  margin-top: 26vw;
+  margin-top: 22vw;
   text-transform: uppercase;
 }
 
@@ -104,10 +104,6 @@
     padding-bottom: 0px;
   }
 
-  .joinButtons {
-    padding: 0px 10px 0px 75px;
-  }
-
   .joinButtons a {
     height: 40px;
     width: 40px;
@@ -119,8 +115,15 @@
     height: 40vh;
   }
 
-  .title_area h1 {
-    font-size: 22px;
+  .titleArea {
+    margin-top: 15%;
+    height: 32vh;
+    padding: 0px;
   }
 
+  .titleArea h1 {
+    font-size: 22px;
+    text-align: center;
+    padding-top: 15%;
+  }
 }
