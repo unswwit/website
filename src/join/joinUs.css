@@ -33,22 +33,20 @@
 
 /*Google Map screenshot image*/
 .googleMap {
-    display: inline-block;
     width: 43%;
     padding: 0px;
     height: 300px;
-    float:left;
+    float: left;
     object-fit: cover;
 }
 
 /*Right side block*/
 .joinUsRight {
-    display: inline-block;
     width: 57%;
     height: 300px;
     text-align: left;
     padding: 0px 10px 10% 10%;
-    float:right;
+    float: right;
 }
 
 /*Heading*/
@@ -70,4 +68,48 @@
   height: 60px;
   padding: 4px 4px 4px 4px;
   margin-bottom: 6px;
+}
+
+/*-------------------------------Join us mobile------------------------------*/
+@media only screen and (max-width: 850px) {
+  /* For mobile phones: */
+  .joinUsRight {
+    float: none;
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .googleMap {
+    float: none;
+    width: 100%;
+  }
+
+  .joinUsBody {
+    width: 100%;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    margin-top: 50px;
+  }
+
+  .joinUsRight h2 {
+    font-size: 25px;
+  }
+
+  .joinButtons a {
+    height: 40px;
+    width: 40px;
+  }
+
+  .joinUsHeader {
+    margin: 0px;
+    padding: 0px;
+    height: 40vh;
+  }
+
+  .title_area h1 {
+    font-size: 22px;
+  }
+
 }
