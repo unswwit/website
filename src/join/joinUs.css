@@ -72,29 +72,40 @@
 
 /*-------------------------------Join us mobile------------------------------*/
 @media only screen and (max-width: 850px) {
-  /* For mobile phones: */
   .joinUsRight {
     float: none;
     width: 100%;
+    height: 150px;
     margin-top: 50px;
-    text-align: center;
   }
 
   .googleMap {
     float: none;
     width: 100%;
+    margin-bottom: 50px;
   }
 
   .joinUsBody {
-    width: 100%;
+    max-width: 100%;
     padding-bottom: 0px;
     padding-top: 0px;
     margin-bottom: 0px;
-    margin-top: 50px;
+    margin-top: 60px;
+  }
+
+  .joinUsRight {
+    padding: 0px;
+    height: 140px;
   }
 
   .joinUsRight h2 {
-    font-size: 25px;
+    font-size: 22px;
+    text-align: center;
+    padding-bottom: 0px;
+  }
+
+  .joinButtons {
+    padding: 0px 10px 0px 75px;
   }
 
   .joinButtons a {

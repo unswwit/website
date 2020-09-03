@@ -20,11 +20,6 @@ class JoinUs extends React.Component {
                     </div>
                 </div>
                 <div className = 'joinUsBody'>
-                    <img src={process.env.PUBLIC_URL + '/join-us-map.png'} 
-                        width = "100%" 
-                        className="googleMap" 
-                        alt="map"
-                    />
                     <div className = 'joinUsRight'>
                         <h2>Connect with us</h2>
                         <div className = 'joinButtons'>
@@ -70,6 +65,11 @@ class JoinUs extends React.Component {
                             </a>
                         </div>
                     </div>
+                    <img src={process.env.PUBLIC_URL + '/join-us-map.png'} 
+                        width = "100%" 
+                        className="googleMap" 
+                        alt="map"
+                    />
                 </div>
             </div>
 
