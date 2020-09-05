@@ -16,8 +16,19 @@
   font-family: 'Playfair Display', serif;
   font-size: 5vw;
   letter-spacing: 8px;
-  margin-top: 22vw;
+  margin: 0px;
   text-transform: uppercase;
+}
+
+.titleArea {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+  width: 50%;
+  height: 10%;
 }
 
 /*-------------------------------Join us socials------------------------------*/
@@ -76,7 +87,6 @@
     margin-top: 55px;
     height: 40vh;
     text-align: center;
-    position: relative;
   }
 
   .titleArea {
