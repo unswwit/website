@@ -150,3 +150,14 @@
     margin-right: 0px;
   }
 }
+
+/*-------------------------------Join us very small screen------------------------------*/
+@media only screen and (max-width: 260px) {
+  .joinButtons a {
+    display: block;
+  }
+
+  .joinUsRight {
+    height: 320px;
+  }
+}
