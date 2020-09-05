@@ -12,7 +12,7 @@
 }
 
 /*Heading title*/
-.titleArea h1 {
+.centre {
   font-family: 'Playfair Display', serif;
   font-size: 5vw;
   letter-spacing: 8px;
@@ -110,20 +110,25 @@
   }
 
   .joinUsHeader {
-    margin: 0px;
-    padding: 0px;
+    margin-top: 55px;
     height: 40vh;
+    text-align: center;
+    position: relative;
   }
 
   .titleArea {
-    margin-top: 15%;
-    height: 32vh;
-    padding: 0px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    width: 50%;
+    height: 10%;
   }
 
-  .titleArea h1 {
+  .centre {
     font-size: 22px;
-    text-align: center;
-    padding-top: 15%;
+    margin: 0px;
   }
 }
