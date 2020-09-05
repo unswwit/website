@@ -54,7 +54,7 @@ class JoinUs extends React.Component {
                                     style={{width:'100%', height:'100%'}} 
                                 />
                             </a>
-                            <a href={spARCUrl}>
+                            <a className="lastBtn" href={spARCUrl}>
                                 <img src={process.env.PUBLIC_URL + '/sparc.png'} 
                                     title = 'spARC'
                                     alt="spARC" 
