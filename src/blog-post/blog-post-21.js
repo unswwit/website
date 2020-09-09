@@ -115,6 +115,7 @@ class blogPost21 extends Component {
             <p class="post-content">
               Work hard but make time for yourself - hobbies, a casual job, spending time with family and friends.
             </p>
+            <br />
     
             <p class="question">
               Favourite Quote or Motto?
@@ -126,7 +127,7 @@ class blogPost21 extends Component {
             <br />
           </div>
         </div>
-        
+
         {/*for the blog post author*/}
         <AuthorCard
           authors={{

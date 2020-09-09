@@ -40,6 +40,7 @@ import blogPost17 from "./blog-post/blog-post-17";
 import blogPost18 from "./blog-post/blog-post-18";
 import blogPost19 from "./blog-post/blog-post-19";
 import blogPost20 from "./blog-post/blog-post-20";
+import blogPost21 from "./blog-post/blog-post-21";
 
 class App extends Component {
   constructor(props) {
@@ -200,6 +201,7 @@ class App extends Component {
             <Route path="/blog/18" component={blogPost18} />
             <Route path="/blog/19" component={blogPost19} />
             <Route path="/blog/20" component={blogPost20} />
+            <Route path="/blog/21" component={blogPost21} />
           </Switch>
         </HashRouter>
         <div>

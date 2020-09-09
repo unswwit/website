@@ -24,11 +24,11 @@ class Blog extends Component {
           bottomMargin="5vw"
           blogNo="21"
           imgUrl="/blog-covers/20-aneita-yang.png"
-          heading="Introducing : Aneita Yang, Product Manager At Atlassian"
-          date="02/09/2020"
-          subheading="Keep reading to learn more about Aneita’s philosophy, journey in STEM, and how computer science has constantly changed her perception!"
+          heading="Introducing Madeleine English, Consultant in Engineering at Asset Management at KPMG"
+          date="09/09/2020"
+          subheading="We are excited to share a recent Q&A we had with Madeleine regarding passion, journey into STEM as well as advice for students."
           authors={{
-            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield"],
+            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
           }}
         />
 
@@ -42,7 +42,7 @@ class Blog extends Component {
           date="02/09/2020"
           subheading="Keep reading to learn more about Aneita’s philosophy, journey in STEM, and how computer science has constantly changed her perception!"
           authors={{
-            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
+            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield"],
           }}
         />
 
