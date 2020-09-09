@@ -23,7 +23,7 @@ class Blog extends Component {
           topMargin="10vw"
           bottomMargin="5vw"
           blogNo="21"
-          imgUrl="/blog-covers/20-aneita-yang.png"
+          imgUrl="/blog-covers/21-madeleine-english.png"
           heading="Introducing Madeleine English, Consultant in Engineering at Asset Management at KPMG"
           date="09/09/2020"
           subheading="We are excited to share a recent Q&A we had with Madeleine regarding passion, journey into STEM as well as advice for students."
