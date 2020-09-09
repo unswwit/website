@@ -18,11 +18,11 @@ class Blog extends Component {
 
         {/*Start of blog posts*/}
 
-        {/*blog post 20*/}
-         <BlogPreview
+        {/*blog post 21*/}
+        <BlogPreview
           topMargin="10vw"
           bottomMargin="5vw"
-          blogNo="20"
+          blogNo="21"
           imgUrl="/blog-covers/20-aneita-yang.png"
           heading="Introducing : Aneita Yang, Product Manager At Atlassian"
           date="02/09/2020"
@@ -31,6 +31,21 @@ class Blog extends Component {
             "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield"],
           }}
         />
+
+        {/*blog post 20*/}
+         <BlogPreview
+          topMargin="5vw"
+          bottomMargin="5vw"
+          blogNo="20"
+          imgUrl="/blog-covers/20-aneita-yang.png"
+          heading="Introducing : Aneita Yang, Product Manager At Atlassian"
+          date="02/09/2020"
+          subheading="Keep reading to learn more about Aneita’s philosophy, journey in STEM, and how computer science has constantly changed her perception!"
+          authors={{
+            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
+          }}
+        />
+
         {/*blog post 19*/}
         <BlogPreview
           topMargin="5vw"
