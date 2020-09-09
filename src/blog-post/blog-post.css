@@ -102,8 +102,8 @@ img.floatRight {
 /*Author icon*/
 .author-left {
   display: inline-block;
-  height: 140px;
-  width: 25%;
+  width: 150px;
+  height: 150px;
 }
 
 .author-left div {
