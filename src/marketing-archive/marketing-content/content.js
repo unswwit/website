@@ -56,12 +56,12 @@ class MarketingContent extends Component {
                       <CareersGuide
                         fb="https://www.facebook.com/watch/?v=730456174163976"
                         imgUrl="/initiatives/careers/careers2020.png"
-                        alt="Studiers"
+                        alt="Careers Guide"
                         date="27/07/2020"
                       />
                       <Mascot
                         fb="https://www.facebook.com/unsw.wit/photos/a.1570799533224922/2361614684143399/"
-                        imgUrl="/initiatives/mascot/hoodie.png"
+                        imgUrl="/initiatives/mascot/hoodie.jpg"
                         alt="Hoodies"
                         date="24/07/2020"
                       />

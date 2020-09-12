@@ -23,26 +23,25 @@
     width: 40%;
   }
 
-.year-section {
+.yearSection {
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 200px;
 }
 
   /*Year sections*/
-  p#year {
+  p.year {
     font-family: 'Montserrat', sans-serif;
     font-size: 32pt;
     color: #e85f5c;
     font-weight: bold;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 150px;
+    padding: 10px 20px;
+    display: inline-block;
+    border: 3px solid #e85f5c;
   }
 
-  a#year:hover {
-    color: #feb14b;;
-    font-weight: bold;
-    text-align: center;
-    margin: auto;
-    padding-top: 150px;
-    padding-bottom: 150px;
+  p.year:hover {
+    color: #feb14b;
+    border-color: #feb14b;
   }
+
