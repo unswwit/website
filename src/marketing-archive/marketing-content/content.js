@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import ".././marketingArchive.css";
 import "./content.css";
 import "../.././style.css";
+import PageHeader from "../.././header";
 
 import WCW from "../initiatives/wcw"
 import Memes from "../initiatives/memes"
@@ -14,12 +15,11 @@ class MarketingContent extends Component {
   render() {
     return (
         <div>
-            {/*Start of Header*/}
-            <div class="marketingCoverPhoto">
-                <div class="title">
-                    <h1>Marketing Archive</h1>
-                </div>
-            </div>
+        {/* Cover Photo */}
+        <PageHeader
+          imgUrl="/marketing-header.png"
+          title="Marketing Archive"
+        />
             {/*End of Header*/}
 
             <div id="parent">
