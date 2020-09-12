@@ -3,19 +3,17 @@ import React, { Component } from "react";
 import ".././style.css";
 import "./marketingArchive.css";
 import { Link } from "react-router-dom";
+import PageHeader from ".././header";
 
 class MarketingArchive extends Component {
   render() {
     return (
         <div>
-
-            {/*Start of Header*/}
-            <div class="marketingCoverPhoto">
-                <div class="title">
-                    <h1>Marketing Archive</h1>
-                </div>
-            </div>
-            {/*End of Header*/}
+        {/* Cover Photo */}
+        <PageHeader
+          imgUrl="/marketing-header.png"
+          title="Marketing Archive"
+        />
 
             {/*Start of text*/}
             <div class="introParagraph">
@@ -23,7 +21,6 @@ class MarketingArchive extends Component {
             </div>
 
             {/*2020 section*/}
-            
             <div class="yearSection">
               <Link to="/marketing-archive/content" style={{ textDecoration: 'none' }}>
               <p class="year"><a class="year">2020</a></p>

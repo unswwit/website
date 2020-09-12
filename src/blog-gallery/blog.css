@@ -1,26 +1,3 @@
-/*-------------------------------Blog posts page header-----------------------------*/
-/*Header image*/
-.coverPhoto {
-    background-image: url('/blog-header.png');
-    background-position: center bottom 40%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    max-width: 100%;
-    overflow: hidden;
-    position: relative;
-  }
-  
-/*Heading title*/
-.title h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 5vw;
-    letter-spacing: 8px;
-    margin-top: 26vw;
-    text-transform: uppercase;
-    text-align: center;
-  }
-
 /*-------------------------------Blog post Preview-----------------------------*/
 /*Author circle crop*/
 
@@ -98,14 +75,14 @@ table {
 }
 
 .blog-preview {
-    padding: 30px;  
+    padding: 30px;
 }
 
 @media screen and (max-width: 1000px) {
     table {
         width: 90%;
     }
-    
+
     .author-pic {
         width: 50px;
         height: 50px;
@@ -122,12 +99,12 @@ table {
         flex-wrap: wrap;
         width: 100%;
     }
-    
+
     td {
         display: block;
         width: 100%;
     }
-    
+
     table {
         width: 95%;
     }

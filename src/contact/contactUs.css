@@ -1,24 +1,4 @@
-/*------------------------------Contact us header-----------------------------*/
-/*Header image*/
-.contactHeader {
-    background-image: url('/contact-header-1.png');
-    background-position: center bottom 40%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    max-width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-/*Heading title*/
-.title_area h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 5vw;
-    letter-spacing: 8px;
-    margin-top: 26vw;
-    text-transform: uppercase;
-}
+/*------------------------------Contact us body-----------------------------*/
 
 /*Form*/
 .form {
@@ -93,11 +73,11 @@ form input.button:hover {
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: #313638;
-    opacity: 70%; 
+    opacity: 70%;
 }
 ::-ms-input-placeholder { /* Microsoft Edge */
     color: #313638;
-    opacity: 70%; 
+    opacity: 70%;
 }
 
 /*Form image*/

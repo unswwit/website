@@ -2,24 +2,22 @@ import React, { Component } from "react";
 import ".././style.css";
 import "./blog-post.css";
 import AuthorCard from "./authorCard";
+import PageHeader from ".././header";
 
 class blogPost3 extends Component {
   //start webpage at the top
   componentDidMount() {
     window.scrollTo(0, 0);
-  }  
-  
+  }
+
   render() {
     return (
       <div>
-        {/*Start of Header*/}
-        <div class="coverPhoto">
-          <div class="title">
-              <h1>Blog Post #3</h1>
-          </div>
-        </div>
-
-        {/*End of Header*/}
+      {/* Cover Photo */}
+      <PageHeader
+        imgUrl="/blog-header.png"
+        title="Blog Post #3"
+      />
 
         {/*Start of blog post*/}
         <div class="blog-content">
@@ -73,13 +71,13 @@ class blogPost3 extends Component {
             <p class = "post-content">After her resignation at Yahoo!, Mayer began her own start-up Lumi Labs, a business that utilises AI to complete mundane tasks. Lumi Labs gave Mayer the perfect opportunity to reinvent her own success, building a business based on passion, embracing new opportunities with confidence, viewing computer science as art, taking scrutiny in her stride, and seeing for herself the daring side of reinventing. </p>
           </div>
         </div>
-        
+
         {/*for the blog post author*/}
-        <AuthorCard 
-        authors={{"georgie-mansfield":["/potraits/georgie.jpg", "profile_img vivw_img", "Georgie Mansfield", "Education Team"]}} 
+        <AuthorCard
+        authors={{"georgie-mansfield":["/potraits/georgie.jpg", "profile_img vivw_img", "Georgie Mansfield", "Education Team"]}}
         />
         {/*End of blog posts*/}
-      </div>  
+      </div>
     );
   }
 }

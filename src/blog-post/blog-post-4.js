@@ -2,24 +2,22 @@ import React, { Component } from "react";
 import ".././style.css";
 import "./blog-post.css";
 import AuthorCard from "./authorCard";
+import PageHeader from ".././header";
 
 class blogPost4 extends Component {
   //start webpage at the top
   componentDidMount() {
     window.scrollTo(0, 0);
-  }  
-  
+  }
+
   render() {
     return (
       <div>
-        {/*Start of Header*/}
-        <div class="coverPhoto">
-            <div class="title">
-                <h1>Blog Post #4</h1>
-            </div>
-        </div>
-
-        {/*End of Header*/}
+      {/* Cover Photo */}
+      <PageHeader
+        imgUrl="/blog-header.png"
+        title="Blog Post #4"
+      />
 
         {/*Start of blog post*/}
         <div class="blog-content">
@@ -44,20 +42,20 @@ class blogPost4 extends Component {
               <p class="question">Where do you see yourself in the future (career wise)?</p>
               <p class = "post-content">In the future, I hope to be seen as the “go-to person” for SAP Project Systems and other modules in finance and procurement. I also aspire to be a great manager of people and teams.</p>
               <br/><br/>
-              
+
               <p class = "question">What do you love about your career now?</p>
               <p class = "post-content">I love that I work with individuals who uphold integrity in their lives and work, and individuals who have ambition to constantly improve and achieve excellence.</p>
               <br/><br/>
 
-              <p class = "question">Favourite Quote or Motto?</p> 
+              <p class = "question">Favourite Quote or Motto?</p>
               <p class = "post-content">“Whatever you do, work at it with all your heart.</p>
               <br/><br/>
           </div>
       </div>
-        
+
         {/*for the blog post author*/}
-        <AuthorCard 
-        authors={{"vivian-wong":["/potraits/vivw.jpg", "profile_img vivw_img", "Vivian Wong", "Education Executive"]}} 
+        <AuthorCard
+        authors={{"vivian-wong":["/potraits/vivw.jpg", "profile_img vivw_img", "Vivian Wong", "Education Executive"]}}
         />
         {/*End of blog posts*/}
       </div>

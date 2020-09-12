@@ -2,24 +2,22 @@ import React, { Component } from "react";
 import ".././style.css";
 import "./blog-post.css";
 import AuthorCard from "./authorCard";
+import PageHeader from ".././header";
 
 class blogPost6 extends Component {
   //start webpage at the top
   componentDidMount() {
     window.scrollTo(0, 0);
   }
-  
+
   render() {
     return (
       <div>
-        {/*Start of Header*/}
-        <div class="coverPhoto">
-            <div class="title">
-                <h1>Blog Post #6</h1>
-            </div>
-        </div>
-
-        {/*End of Header*/}
+      {/* Cover Photo */}
+      <PageHeader
+        imgUrl="/blog-header.png"
+        title="Blog Post #6"
+      />
 
         {/*Start of blog post*/}
         <div class="blog-content">
@@ -65,10 +63,10 @@ class blogPost6 extends Component {
 
           </div>
       </div>
-        
+
         {/*for the blog post author*/}
-        <AuthorCard 
-        authors={{"victoria-ruming":["/potraits/victoria.jpg", "profile_img vivw_img", "Victoria Ruming","Education Team"]}} 
+        <AuthorCard
+        authors={{"victoria-ruming":["/potraits/victoria.jpg", "profile_img vivw_img", "Victoria Ruming","Education Team"]}}
         />
         {/*End of blog posts*/}
       </div>

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ".././style.css";
 import "./blog-post.css";
 import AuthorCard from "./authorCard";
+import PageHeader from ".././header";
 
 class blogPost14 extends Component {
   //start webpage at the top
@@ -12,14 +13,11 @@ class blogPost14 extends Component {
   render() {
     return (
       <div>
-        {/*Start of Header*/}
-        <div class="coverPhoto">
-            <div class="title">
-                <h1>Blog Post #14</h1>
-            </div>
-        </div>
-
-        {/*End of Header*/}
+      {/* Cover Photo */}
+      <PageHeader
+        imgUrl="/blog-header.png"
+        title="Blog Post #14"
+      />
 
         {/*Start of blog post*/}
         <div class="blog-content">
@@ -38,13 +36,13 @@ class blogPost14 extends Component {
 
             <p class="question">Please provide a short summary of your career journey so far:</p>
             <p class="post-content">During my studies I interned with Google in Sydney and Seattle, worked at an AI startup, and tutored many subjects at UNSW. I worked as a Software Engineer at Macquarie Group for two years after graduating, and recently took a new role as a Creative Technologist at a tech education company called Creatable. I’ve also kept teaching casually on the side with Code Like A Girl and Coder Academy!</p><br/>
-            
+
             <p class="question">Where do you see yourself in the future (career wise)?</p>
             <p class="post-content">I see myself making technology more accessible and exciting for young women, while exploring the ways that technology intersects with and enhances other industries and disciplines.</p><br/>
 
             <p class="question">What do you love about your career now?</p>
             <p class="post-content">I love that my career is now a genuine expression of who I am. I feel like I can be my best self when I’m using my skills to pursue my passions. Investing in the future of young women is engaging and the passion is infectious, I’ve never felt more supported by people who have watched me grow.</p><br/>
-              
+
             <p class="question">Why do you think it is important to empower women and increase their involvement in the STEM industry?</p>
             <p class="post-content">All roles will require some level of technical proficiency, whether that’s abstract skills like problem solving and ideation, or ‘hard skills’ like deeper computing literacy and specialised technical knowledge. The STEM industry is the future of work, and diversity begets more inclusive and creative solutions. It is imperative that women are able to have a hand in building the future they will inhabit.</p><br/>
 
@@ -56,7 +54,7 @@ class blogPost14 extends Component {
         {/*for the blog post author*/}
         <AuthorCard
         authors={{"vivian-wong":["/potraits/vivw.jpg", "profile_img vivw_img", "Vivian Wong","Education Executive"]}}
-        />   
+        />
         {/*End of blog posts*/}
       </div>
     );

@@ -1,15 +1,6 @@
 /*-------------------------------Marketing archive page header-----------------------------*/
 /*Header image*/
-.marketingCoverPhoto{
-    background-image: url('/marketing-header.png');
-    background-position: center bottom 40%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    max-width: 100%;
-    overflow: hidden;
-    position: relative;
-  }
+
 
 /*Heading title*/
 .title h1 {
@@ -53,3 +44,4 @@
     color: #feb14b;
     border-color: #feb14b;
   }
+

@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import ".././marketingArchive.css";
 import "./content.css";
 import "../.././style.css";
+import PageHeader from "../.././header";
 
 import WCW from "../initiatives/wcw"
 import Memes from "../initiatives/memes"
@@ -14,12 +15,11 @@ class MarketingContent extends Component {
   render() {
     return (
         <div>
-            {/*Start of Header*/}
-            <div class="marketingCoverPhoto">
-                <div class="title">
-                    <h1>Marketing Archive</h1>
-                </div>
-            </div>
+        {/* Cover Photo */}
+        <PageHeader
+          imgUrl="/marketing-header.png"
+          title="Marketing Archive"
+        />
             {/*End of Header*/}
 
             <div id="parent">
@@ -131,6 +131,15 @@ class MarketingContent extends Component {
                         alt="Marissa Mayer"
                         date="03/06/2020"
                       />
+
+                      <WCW
+                        fb="https://www.facebook.com/unsw.wit/photos/a.1570799533224922/2370444469927087/"
+                        imgUrl="/initiatives/wcw/shatabdidey.png"
+                        alt="Felicia Ee"
+                        date="8/5/2020"
+                      />
+
+
                     </ol>
                   </div>
             </div>

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ".././style.css";
 import "./blog-post.css";
 import AuthorCard from "./authorCard";
+import PageHeader from ".././header";
 
 class blogPost8 extends Component {
   //start webpage at the top
@@ -12,14 +13,11 @@ class blogPost8 extends Component {
   render() {
     return (
       <div>
-        {/*Start of Header*/}
-        <div class="coverPhoto">
-            <div class="title">
-                <h1>Blog Post #8</h1>
-            </div>
-        </div>
-
-        {/*End of Header*/}
+      {/* Cover Photo */}
+      <PageHeader
+        imgUrl="/blog-header.png"
+        title="Blog Post #8"
+      />
 
         {/*Start of blog post*/}
         <div class="blog-content">
@@ -85,8 +83,8 @@ class blogPost8 extends Component {
           </div>
         </div>
          {/*for the blog post author*/}
-         <AuthorCard 
-        authors={{"vivian-wong":["/potraits/vivw.jpg", "profile_img vivw_img", "Vivian Wong", "Education Executive"]}} 
+         <AuthorCard
+        authors={{"vivian-wong":["/potraits/vivw.jpg", "profile_img vivw_img", "Vivian Wong", "Education Executive"]}}
         />
         {/*End of blog posts*/}
       </div>

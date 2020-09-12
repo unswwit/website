@@ -1,25 +1,3 @@
-/*------------------------------Publications header--------------------------------*/
-/*Header image*/
-.publicationsHeader {
-  background-image: url('/publications-header.png');
-  background-position: center bottom 40%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  max-width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-/*Heading title*/
-.title_area h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 5vw;
-  letter-spacing: 8px;
-  margin-top: 26vw;
-  text-transform: uppercase;
-  position: relative;
-}
 
 /*CAN REMOVE ONCE OVERLAY FILES ARE ALL MERGED*/
 /* direct copy from what will be in style.css from other branch */

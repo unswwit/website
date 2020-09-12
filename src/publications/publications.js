@@ -1,19 +1,19 @@
 import React from 'react'
 import "./publications.css"
 import PubArticle from "./publications-article"
+import PageHeader from ".././header";
 
 class Publications extends React.Component {
     render() {
         return (
             <div>
-                <div className="publicationsHeader">
-                    {/* Cover Photo */}
-                    {/* Main Title, and Subtitle Area */}
-                    <div className="overlay"></div>
-                        <div className="title_area">
-                            <h1 className="centre">Publications</h1>
-                        </div>
-                </div>
+
+            {/* Cover Photo */}
+            <PageHeader
+              imgUrl="/publications-header.png"
+              title="Publications"
+            />
+
                 <div className = "publicationsBody">
 
                     {/*2020 articles*/}
@@ -22,11 +22,20 @@ class Publications extends React.Component {
                     <div className = "row">
 
                     <PubArticle
+                    imgUrl="./publications/first-year-guide.png"
+                    heading="First Year Guide"
+                    date="10/02/2020"
+                    url="https://issuu.com/womenintechnology/docs/first_year_guide"
+                    />
+
+                    <PubArticle
                     imgUrl="./publications/careers-guide.png"
                     heading="Careers Guide"
                     date="27/7/2020"
                     url="https://issuu.com/womenintechnology/docs/wit_2020_careers_guide?fbclid=IwAR3RBADvuCd7KRAxeD4yK0USlDoQkVp05kY2SSYiYmjB2nZjBsI3xs_rX5c"
                     />
+
+
 
                     {/*default publication:
                     <PubArticle
@@ -47,18 +56,6 @@ class Publications extends React.Component {
 
                     <h1>2019</h1>
                     <div class="row">
-
-                    <PubArticle
-                    imgUrl="./pub_mini.png"
-                    heading="Title Title"
-                    date="Date Published"
-                    />
-
-                    <PubArticle
-                    imgUrl="./pub_mini.png"
-                    heading="Title Title"
-                    date="Date Published"
-                    />
 
                     <PubArticle
                     imgUrl="./pub_mini.png"

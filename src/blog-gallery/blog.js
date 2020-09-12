@@ -3,18 +3,17 @@ import React, { Component } from "react";
 import "../style.css";
 import "./blog.css";
 import BlogPreview from "./blog-preview";
+import PageHeader from ".././header";
 
 class Blog extends Component {
   render() {
     return (
       <div>
-        {/*Start of Header*/}
-        <div class="coverPhoto">
-          <div class="title">
-            <h1>Blog Posts</h1>
-          </div>
-        </div>
-        {/*End of Header*/}
+        {/* Cover Photo */}
+        <PageHeader
+          imgUrl="/blog-header.png"
+          title="Blog Posts"
+        />
 
         {/*Start of blog posts*/}
 

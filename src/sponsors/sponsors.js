@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./sponsors.css";
+import PageHeader from ".././header";
 
 import Amazon from "./Amazon";
 import Atlassian from "./Atlassian";
@@ -21,14 +22,14 @@ class Sponsors extends Component {
     render() {
         return (
             <div className='centre'>
-                <div className="sponsorHeader">
-                {/* Cover Photo */}
-                {/* Main Title, and Subtitle Area */}
-                    <div className="title_area">
-                        <h1 className="centre">Sponsors</h1>
-                    </div>
-                </div>
-                
+
+            {/* Cover Photo */}
+            <PageHeader
+              imgUrl="/sponsors-header-1.png"
+              title="Sponsors"
+            />
+
+
                 <p className='subheader'>{`
                     Thank you to our sponsors for generously supporting our cause and
                     collaborating with us to provide our students invaluable opportunities.
@@ -70,12 +71,12 @@ class Sponsors extends Component {
                 </div>
                 {/* 200x100 */}
                 <h1 className='subsponsor'>In-Kind Sponsors</h1>
-                
+
                 <div id="majorContainer">
                     <InsideSherpa/>
                     <QPay/>
                 </div>
-            
+
                 <p className='subheader'>{`Interested in partnering with us? Contact us at `}
                     <a class='subheader' href="mailto:externals@unswwit.com">externals@unswwit.com</a>
                 </p>
