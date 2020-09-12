@@ -131,6 +131,15 @@ class MarketingContent extends Component {
                         alt="Marissa Mayer"
                         date="03/06/2020"
                       />
+
+                      <WCW
+                        fb="https://www.facebook.com/unsw.wit/photos/a.1570799533224922/2370444469927087/"
+                        imgUrl="/initiatives/wcw/shatabdidey.png"
+                        alt="Felicia Ee"
+                        date="8/5/2020"
+                      />
+
+
                     </ol>
                   </div>
             </div>
