@@ -1,6 +1,6 @@
 
 /*CAN REMOVE ONCE OVERLAY FILES ARE ALL MERGED*/
-/* direct copy from what will be in style.css from other branch -- ask chelsea */
+/* direct copy from what will be in style.css from other branch */
 .overlay {    /* overlay on all header images*/
   position: absolute;
   top: 0;
@@ -11,7 +11,7 @@
   opacity: 0.5;
 }
 
-/*-------------------------------Join us socials------------------------------*/
+/*-------------------------------Publications structure------------------------------*/
 /*Body block*/
 .publicationsBody {
     max-width: 65%;
@@ -29,7 +29,7 @@
 /*Right side block*/
 .article {
     display: inline-block;
-    width: 230px;
+    width: 212px;
     height: 300px;
     text-align: center;
     margin: 0px 14px 0px 14px;
@@ -38,6 +38,8 @@
     margin-top: 30px;
     overflow: hidden;
 }
+
+/*-------------------------------Publications Article------------------------------*/
 
 .image_container {
   position: absolute;
@@ -79,21 +81,17 @@
   text-transform: capitalize;
   text-align: center;
 
-  font-size: 23px;
+  font-size: 21px;
   display: block;
   visibility: hidden;
   position: relative;
-
-
+  padding: 5px;
 }
 
 .article p {
   font-size: 15px;
-
-  font-weight: bold;
   color: white;
   font-family: 'Montserrat', sans-serif;
-  opacity: 70%;
   display: block;
   text-align: center;
   visibility: hidden;
@@ -102,7 +100,7 @@
   position: relative;
 }
 
-/*read only button, channge for functionality*/
+/*read only button, change for functionality*/
 .button {
   background-color: orange;
   height: 30px;
@@ -119,6 +117,9 @@
   margin-left: -12px;
   white-space: nowrap;
   float: center;
+}
 
-
+.button a, .button a:hover {
+  text-decoration: none;
+  color: white;
 }

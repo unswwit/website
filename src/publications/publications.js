@@ -1,7 +1,7 @@
 import React from 'react'
 import "./publications.css"
+import PubArticle from "./publications-article"
 import PageHeader from ".././header";
-// import PubArticle from "./publications-article"
 
 class Publications extends React.Component {
     render() {
@@ -15,31 +15,60 @@ class Publications extends React.Component {
             />
 
                 <div className = "publicationsBody">
-                    <img src={process.env.PUBLIC_URL + './pubs-soon.png'} resizeMode='contain' style={{width: '100%', marginBottom: '5px', marginTop: '5px'}} alt="coming soon"/>
-                    {/* 2020 articles
+
+                    {/*2020 articles*/}
 
                     <h1>2020</h1>
-                        <div className = "row">
+                    <div className = "row">
 
-                        <PubArticle
-                        imgUrl="./pub_mini.png"
-                        heading="Title Title"
-                        date="Today's Date"
-                        />
+                    <PubArticle
+                    imgUrl="./publications/careers-guide.png"
+                    heading="Careers Guide"
+                    date="27/7/2020"
+                    url="https://issuu.com/womenintechnology/docs/wit_2020_careers_guide?fbclid=IwAR3RBADvuCd7KRAxeD4yK0USlDoQkVp05kY2SSYiYmjB2nZjBsI3xs_rX5c"
+                    />
 
-                        <PubArticle
-                        imgUrl="./pub_mini.png"
-                        heading="Title Title"
-                        date="Today's Date"
-                        />
+                    {/*default publication:
+                    <PubArticle
+                    imgUrl="./pub_mini.png"
+                    heading="Title Title"
+                    date="Today's Date"
+                    url=""
+                    />
 
-                        <PubArticle
-                        imgUrl="./pub_mini.png"
-                        heading="Title Title"
-                        date="Today's Date"
-                        />
+                    coming soon image:
+                    <img src={process.env.PUBLIC_URL + './pubs-soon.png'} resizeMode='contain' style={{width: '100%', marginBottom: '5px', marginTop: '5px'}} alt="coming soon"/>
 
-                        </div> */}
+                    */}
+                    </div>
+
+
+                    {/*2019 articles
+
+                    <h1>2019</h1>
+                    <div class="row">
+
+                    <PubArticle
+                    imgUrl="./pub_mini.png"
+                    heading="Title Title"
+                    date="Date Published"
+                    />
+
+                    <PubArticle
+                    imgUrl="./pub_mini.png"
+                    heading="Title Title"
+                    date="Date Published"
+                    />
+
+                    <PubArticle
+                    imgUrl="./pub_mini.png"
+                    heading="Title Title"
+                    date="Date Published"
+                    />
+
+                    </div>
+                    */}
+
                 </div>
             </div>
 

@@ -11,22 +11,20 @@
 
 /*Google Map screenshot image*/
 .googleMap {
-    display: inline-block;
     width: 43%;
     padding: 0px;
     height: 300px;
-    float:left;
+    float: left;
     object-fit: cover;
 }
 
 /*Right side block*/
 .joinUsRight {
-    display: inline-block;
     width: 57%;
     height: 300px;
     text-align: left;
     padding: 0px 10px 10% 10%;
-    float:right;
+    float: right;
 }
 
 /*Heading*/
@@ -48,4 +46,95 @@
   height: 60px;
   padding: 4px 4px 4px 4px;
   margin-bottom: 6px;
+}
+
+/*-------------------------------Join us ipad------------------------------*/
+@media only screen and (max-width: 1100px) {
+  .joinUsHeader {
+    margin-top: 55px;
+    height: 40vh;
+    text-align: center;
+  }
+
+  .titleArea {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    width: 50%;
+    height: 10%;
+  }
+
+  .centre {
+    font-size: 40px;
+    margin: 0px;
+  }
+}
+
+/*-------------------------------Join us mobile------------------------------*/
+@media only screen and (max-width: 850px) {
+  .joinUsRight {
+    float: none;
+    width: 100%;
+    height: 150px;
+    margin-top: 50px;
+  }
+
+  .googleMap {
+    float: none;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .joinUsBody {
+    max-width: 100%;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    margin-top: 60px;
+  }
+
+  .joinUsRight {
+    padding: 0px;
+    height: 140px;
+  }
+
+  .joinUsRight h2 {
+    font-size: 22px;
+    text-align: center;
+    padding-bottom: 0px;
+  }
+
+  .joinButtons {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .joinButtons a {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+  }
+
+  .centre {
+    font-size: 22px;
+  }
+
+  a.lastBtn {
+    margin-right: 0px;
+  }
+}
+
+/*-------------------------------Join us very small screen------------------------------*/
+@media only screen and (max-width: 260px) {
+  .joinButtons a {
+    display: block;
+  }
+
+  .joinUsRight {
+    height: 320px;
+  }
 }

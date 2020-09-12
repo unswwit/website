@@ -23,7 +23,8 @@ class PubArticle extends Component {
                     <p> {this.props.date} </p>
 
                     <div className = "button">
-                      <h3> Read More </h3>
+                      {/*<h3> Read More </h3>*/}
+                      <h3><a href={this.props.url}>Read More</a></h3>
                     </div>
                   </div>
                 </div>

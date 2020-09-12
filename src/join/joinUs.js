@@ -12,65 +12,62 @@ class JoinUs extends React.Component {
 
         return (
             <div>
-
-            {/* Cover Photo */}
-            <PageHeader
-              imgUrl="/join-header-1.png"
-              title="Join Us"
-            />
-
+              {/* Cover Photo */}
+              <PageHeader
+                imgUrl="/join-header-1.png"
+                title="Join Us"
+              />
                 <div className = 'joinUsBody'>
+                    <div className = 'joinUsRight'>
+                        <h2>Connect with us</h2>
+                        <div className = 'joinButtons'>
+                            <a href={fbPageUrl}>
+                                <img src={process.env.PUBLIC_URL + '/facebook.png'}
+                                    title = 'Facebook Page'
+                                    alt="Facebook Page"
+                                    resizeMode='contain'
+                                    style={{width:'100%', height:'100%'}}
+                                />
+                            </a>
+                            <a href={fbGroupUrl}>
+                                <img src={process.env.PUBLIC_URL + '/facebook-group.png'}
+                                    title = 'Facebook Group'
+                                    alt="Facebook Group"
+                                    resizeMode='contain'
+                                    style={{width:'100%', height:'100%'}}
+                                />
+                            </a>
+                            <a href={linkedInUrl}>
+                                <img src={process.env.PUBLIC_URL + '/linkedin.png'}
+                                    title = 'Linked-In'
+                                    alt="Linked-In"
+                                    resizeMode='contain'
+                                    style={{width:'100%', height:'100%'}}
+                                />
+                            </a>
+                            <a href={instagramUrl}>
+                                <img src={process.env.PUBLIC_URL + '/instagram.png'}
+                                    title = 'Instagram'
+                                    alt="Instagram"
+                                    resizeMode='contain'
+                                    style={{width:'100%', height:'100%'}}
+                                />
+                            </a>
+                            <a className="lastBtn" href={spARCUrl}>
+                                <img src={process.env.PUBLIC_URL + '/sparc.png'}
+                                    title = 'spARC'
+                                    alt="spARC"
+                                    resizeMode='contain'
+                                    style={{width:'100%', height:'100%'}}
+                                />
+                            </a>
+                        </div>
+                    </div>
                     <img src={process.env.PUBLIC_URL + '/join-us-map.png'}
                         width = "100%"
                         className="googleMap"
                         alt="map"
                     />
-                    <div className = 'joinUsRight'>
-                    <h2>Connect with us</h2>
-                    <div className = 'joinButtons'>
-                        <a href={fbPageUrl}>
-                            <img src={process.env.PUBLIC_URL + '/facebook.png'}
-                                title = 'Facebook Page'
-                                alt="Facebook Page"
-                                resizeMode='contain'
-                                style={{width:'100%', height:'100%'}}
-                            />
-                        </a>
-                        <a href={fbGroupUrl}>
-                            <img src={process.env.PUBLIC_URL + '/facebook-group.png'}
-                                title = 'Facebook Group'
-                                alt="Facebook Group"
-                                resizeMode='contain'
-                                style={{width:'100%', height:'100%'}}
-                            />
-                        </a>
-                        <a href={linkedInUrl}>
-                            <img src={process.env.PUBLIC_URL + '/linkedin.png'}
-                                title = 'Linked-In'
-                                alt="Linked-In"
-                                resizeMode='contain'
-                                style={{width:'100%', height:'100%'}}
-                            />
-                        </a>
-                        <a href={instagramUrl}>
-                            <img src={process.env.PUBLIC_URL + '/instagram.png'}
-                                title = 'Instagram'
-                                alt="Instagram"
-                                resizeMode='contain'
-                                style={{width:'100%', height:'100%'}}
-                            />
-                        </a>
-                        <a href={spARCUrl}>
-                            <img src={process.env.PUBLIC_URL + '/sparc.png'}
-                                title = 'spARC'
-                                alt="spARC"
-                                resizeMode='contain'
-                                style={{width:'100%', height:'100%'}}
-                            />
-                        </a>
-                    </div>
-
-                    </div>
                 </div>
             </div>
 
