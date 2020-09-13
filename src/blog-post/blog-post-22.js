@@ -88,41 +88,41 @@ class blogPost22 extends Component {
               </p><br />
 
               <p class="post-content">
-              <a href="https://www.vividsydney.com/">
-                Vivid
-              </a>&nbsp;
-              is arguably the most well-known light festival in Sydney, showcasing dozens of installations and projections every year.
+                <a href="https://www.vividsydney.com/">
+                  Vivid
+                </a>&nbsp;
+                is arguably the most well-known light festival in Sydney, showcasing dozens of installations and projections every year.
               </p><br />
 
               <p class="post-content">
-              <a href="https://www.unswilluminate.com/">
-                UNSW llluminate
-              </a>&nbsp;
-              has created works for Vivid, such as Celestial Pancake in 2019, a hanging audio-visual installment set to alternating colour palettes with an enveloping soundscape. The year prior, UNSW Illuminate created Synergy. This installment showcased a large plywood tree surrounded by ferns. As people wandered close to the ferns, they became illuminated and sent a pulsing light to the tree through its roots.
+                <a href="https://www.unswilluminate.com/">
+                  UNSW llluminate
+                </a>&nbsp;
+                has created works for Vivid, such as Celestial Pancake in 2019, a hanging audio-visual installment set to alternating colour palettes with an enveloping soundscape. The year prior, UNSW Illuminate created Synergy. This installment showcased a large plywood tree surrounded by ferns. As people wandered close to the ferns, they became illuminated and sent a pulsing light to the tree through its roots.
               </p>
 
               <div class="img-box outer-box">
-              <div class="inner-box">
-              <img
-              src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-3.jpg"}
-              alt="makeFashion-3"
-              resizeMode="contain"
-              />
-              <a href="https://www.vividsydney.com/event/light/celestial-pancake">
-                https://www.vividsydney.com/event/light/celestial-pancake 
-              </a>
-              </div>
+                <div class="inner-box">
+                <img
+                src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-3.jpg"}
+                alt="makeFashion-3"
+                resizeMode="contain"
+                />
+                <a href="https://www.vividsydney.com/event/light/celestial-pancake">
+                  https://www.vividsydney.com/event/light/celestial-pancake 
+                </a>
+                </div>
 
-              <div class="inner-box">
-              <img
-              src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-4.jpg"}
-              alt="makeFashion-4"
-              resizeMode="contain"
-              />
-              <a href="https://www.vividsydney.com/event/light/synergy">
-                https://www.vividsydney.com/event/light/synergy
-              </a>
-              </div>
+                <div class="inner-box">
+                  <img
+                  src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-4.jpg"}
+                  alt="makeFashion-4"
+                  resizeMode="contain"
+                  />
+                  <a href="https://www.vividsydney.com/event/light/synergy">
+                    https://www.vividsydney.com/event/light/synergy
+                  </a>
+                </div>
               </div>
 
               <br />
@@ -130,66 +130,68 @@ class blogPost22 extends Component {
               <br />
 
               <p class="post-content">
-              Art may incorporate exceptionally fine designs, which require precise carving or cutting. Laser-cutters are highly versatile pieces of technology that can assist with the creation of such artworks. As a result, artists can bring their designs to life quickly and effortlessly. Eric Standley, an artist from Virginia, USA, creates artworks from laser-cut paper. His work is multilayered, inspired by Gothic and Islamic architectural elements.
+                Art may incorporate exceptionally fine designs, which require precise carving or cutting. Laser-cutters are highly versatile pieces of technology that can assist with the creation of such artworks. As a result, artists can bring their designs to life quickly and effortlessly. Eric Standley, an artist from Virginia, USA, creates artworks from laser-cut paper. His work is multilayered, inspired by Gothic and Islamic architectural elements.
               </p>
 
               <div class="img-box">
-              <img
-              src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-5.jpg"}
-              alt="makeFashion-5"
-              resizeMode="contain"
-              />
-              <img
-              src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-6.jpg"}
-              alt="makeFashion-6"
-              resizeMode="contain"
-              />
-              <br />
-              <a href="http://www.eric-standley.com/#/eitheror-newmarch/">
-              http://www.eric-standley.com/#/eitheror-newmarch/
-              </a>
+                <img
+                src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-5.jpg"}
+                alt="makeFashion-5"
+                resizeMode="contain"
+                />
+
+                <img
+                src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-6.jpg"}
+                alt="makeFashion-6"
+                resizeMode="contain"
+                />
+                <br />
+
+                <a href="http://www.eric-standley.com/#/eitheror-newmarch/">
+                http://www.eric-standley.com/#/eitheror-newmarch/
+                </a>
               </div>
               <br />
+
               <p class="post-content">
               Laser-cutters may also be used to create artwork out of wood. Oakland-based artist Gabriel Schama uses such a technique to create faces, patterns and religious icons out of laser-cut wood layers.
               </p>
 
               <div class="img-box">
-              <img
-              src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-7.jpg"}
-              alt="makeFashion-7"
-              resizeMode="contain"
-              />
+                <img
+                src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-7.jpg"}
+                alt="makeFashion-7"
+                resizeMode="contain"
+                />
               </div>
-
               <br />
+
               <li class="question">Code-Generated Art</li>
               <br />
 
               <p class="post-content">
-              Art is often structured, geometric or otherwise mathematical in some form. As a result, a large variety of artworks may be generated from code. This technique takes some of the control away from the artist and gives it to a computer. As a result, artworks may feature a unique flair, one that may surprise both the audience and creators.
+                Art is often structured, geometric or otherwise mathematical in some form. As a result, a large variety of artworks may be generated from code. This technique takes some of the control away from the artist and gives it to a computer. As a result, artworks may feature a unique flair, one that may surprise both the audience and creators.
               </p><br />
 
 
               <p class="post-content">
-              Norwegian artist Espen Kluge created a program that produces vector-based images from photographs. The code selects pixels at semi-random, then draws lines in between them. The results are delightfully severely geometric and fragmented, bearing almost no resemblance to the original photograph.
+                Norwegian artist Espen Kluge created a program that produces vector-based images from photographs. The code selects pixels at semi-random, then draws lines in between them. The results are delightfully severely geometric and fragmented, bearing almost no resemblance to the original photograph.
               </p>
 
               <div class="img-box">
-              <img
-              src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-8.jpg"}
-              alt="makeFashion-8"
-              resizeMode="contain"
-              />
-              <br />
-              <a href="https://www.artnome.com/news/2019/7/24/generative-portraiture-of-espen-kluge">
-                https://www.artnome.com/news/2019/7/24/generative-portraiture-of-espen-kluge
-              </a>           
-              
+                <img
+                src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-8.jpg"}
+                alt="makeFashion-8"
+                resizeMode="contain"
+                />
+                <br />
+
+                <a href="https://www.artnome.com/news/2019/7/24/generative-portraiture-of-espen-kluge">
+                  https://www.artnome.com/news/2019/7/24/generative-portraiture-of-espen-kluge
+                </a> 
               </div>
             </ol>
             <br /> 
-
           </div>
         </div>
 
@@ -201,7 +203,8 @@ class blogPost22 extends Component {
             "profile_img vivw_img",
             "Vivian Wong",
             "Education Executive",
-          ],}}
+          ],
+        }}
         />
         {/*End of blog posts*/}
       </div>
