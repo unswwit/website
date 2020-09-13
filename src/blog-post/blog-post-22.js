@@ -48,6 +48,7 @@ class blogPost22 extends Component {
                 MakeFashion is an initiative launched in 2012, fusing fashion and technology on the runway. The MakeFashion community has produced over 100 outfits showcased at over 70 international events. New designs are launched every year at runway events in Calgary, Canada, such as Gamergirls, a pair of dresses that act as the screen of a playable arcade-style video game. Some outfits also fuse technology with tradition, such as Hagoromo, featuring an illuminated kimono that reacts to a hand-held fan motion sensor.
               </p><br />
 
+              <div class="img-box">
               <img
               src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-1.jpg"}
               alt="makeFashion-1"
@@ -59,6 +60,7 @@ class blogPost22 extends Component {
               alt="makeFashion-2"
               resizeMode="contain"
               />
+              </div>
 
 
 
@@ -77,17 +79,19 @@ class blogPost22 extends Component {
               UNSW llluminate has created works for Vivid, such as Celestial Pancake in 2019, a hanging audio-visual installment set to alternating colour palettes with an enveloping soundscape. The year prior, UNSW Illuminate created Synergy. This installment showcased a large plywood tree surrounded by ferns. As people wandered close to the ferns, they became illuminated and sent a pulsing light to the tree through its roots.
               </p><br />
 
+              <div class="img-box">
               <img
               src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-3.jpg"}
-              alt="makeFashion-1"
+              alt="makeFashion-3"
               resizeMode="contain"
               />
 
               <img
               src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-4.jpg"}
-              alt="makeFashion-2"
+              alt="makeFashion-4"
               resizeMode="contain"
               />
+              </div>
 
 
               <li class="question">Laser-Cutting</li>
@@ -97,28 +101,31 @@ class blogPost22 extends Component {
               Art may incorporate exceptionally fine designs, which require precise carving or cutting. Laser-cutters are highly versatile pieces of technology that can assist with the creation of such artworks. As a result, artists can bring their designs to life quickly and effortlessly. Eric Standley, an artist from Virginia, USA, creates artworks from laser-cut paper. His work is multilayered, inspired by Gothic and Islamic architectural elements.
               </p><br />
 
+              <div class="img-box">
               <img
               src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-5.jpg"}
-              alt="makeFashion-1"
+              alt="makeFashion-5"
               resizeMode="contain"
               />
 
               <img
               src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-6.jpg"}
-              alt="makeFashion-2"
+              alt="makeFashion-6"
               resizeMode="contain"
               />
+              </div>
 
               <p class="post-content">
               Laser-cutters may also be used to create artwork out of wood. Oakland-based artist Gabriel Schama uses such a technique to create faces, patterns and religious icons out of laser-cut wood layers.
               </p><br />
 
+              <div class="img-box">
               <img
               src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-7.jpg"}
-              alt="makeFashion-1"
+              alt="makeFashion-7"
               resizeMode="contain"
               />
-
+              </div>
 
 
               <li class="question">Code-Generated Art</li>
@@ -133,22 +140,16 @@ class blogPost22 extends Component {
               Norwegian artist Espen Kluge created a program that produces vector-based images from photographs. The code selects pixels at semi-random, then draws lines in between them. The results are delightfully severely geometric and fragmented, bearing almost no resemblance to the original photograph.
               </p><br />
 
+              <div class="img-box">
               <img
               src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-8.jpg"}
-              alt="makeFashion-2"
+              alt="makeFashion-8"
               resizeMode="contain"
               />
+              </div>
 
 
             </ol>
-
-            <img
-            src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-1.jpg"}
-            alt="makeFashion-1"
-            resizeMode="contain"
-            />
-
-
 
             <br /> <p class="post-content">
             How would you describe technology? Innovative? Practical? Nerdy? How about artistic? WIT’s upcoming blog post explores the relationship between art and technology, in which the combination of aesthetics and engineering can create spectacular creative works.
@@ -165,14 +166,8 @@ class blogPost22 extends Component {
 
         {/*for the blog post author*/}
         <AuthorCard
-          authors={{
-            "vivian-wong": [
-              "/potraits/vivw.jpg",
-              "profile_img vivw_img",
-              "Vivian Wong",
-              "Education Executive"
-            ],
-          }}
+        authors={{"victoria-ruming":["/potraits/victoria.jpg", "profile_img vivw_img", "Victoria Ruming","Education team"]}}
+        
         />
         {/*End of blog posts*/}
       </div>
