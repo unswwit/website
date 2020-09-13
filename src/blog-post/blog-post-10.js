@@ -27,7 +27,7 @@ class blogPost10 extends Component {
           </div>
 
           <div class="post">
-            <p class="post-content">Lana King is a Senior Consultant at Deloitte Australia, specialising in Enterprise Technology exploring how information technology resources and data are used across businesses and projects. King undertook a Bachelor of Science and Engineering at Monash University where she majored in Mechanical Engineering, Applied Mathematics, and Astrophysics. After completing her degree, she took a Summer Internship role at Deloitte which then provided her with the opportunity to become an analyst and then consultant. </p><br/
+            <p class="post-content">Lana King is a Senior Consultant at Deloitte Australia, specialising in Enterprise Technology exploring how information technology resources and data are used across businesses and projects. King undertook a Bachelor of Science and Engineering at Monash University where she majored in Mechanical Engineering, Applied Mathematics, and Astrophysics. After completing her degree, she took a Summer Internship role at Deloitte which then provided her with the opportunity to become an analyst and then consultant. </p><br/>
             
             <p class="question">What sparked your interest to join the field of STEM?</p>
             <p class="post-content">Growing up I always liked finding out how something worked, being able to pull it apart and put it back together. Studying engineering was the logical step for me and I loved the problem solving that came with it.</p><br/>
