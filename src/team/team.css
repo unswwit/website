@@ -92,6 +92,7 @@ h2.team-heading{
 /*Executive social media links*/
 .icon_bar {
     align-content: center;
+    
 }
 .icon {
     border: 0;
@@ -108,7 +109,7 @@ h2.team-heading{
     align-content: center;
     color: #feb14b;
     font-family: 'Playfair Display', serif;
-    font-size: 24pt;
+    font-size: 2vw;
     letter-spacing: 0.1vw;
     position: relative;
     text-align: center;
@@ -119,7 +120,7 @@ h2.team-heading{
     align-content: center;
     color:  #313638;
     font-family: 'Montserrat', sans-serif;
-    font-size: 13pt;
+    font-size: 1.3vw;
     font-weight: 400;
     letter-spacing: 0.1vw;
     padding-top: 10pt;
@@ -130,7 +131,7 @@ h2.team-heading{
 /*Executive degrees*/
 .profile_degree {
     font-family: 'Montserrat', sans-serif;
-    font-size: 10pt;
+    font-size: 1.3vw;
     font-weight: lighter;
     letter-spacing: 0.1vw;
     position: relative;
@@ -170,7 +171,7 @@ h2.team-heading{
 /*Subcommittee degrees*/
 .subcom_profile_degree {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1vw;
+    font-size: 1.3vw;
     letter-spacing: 0.1vw;
     position: relative;
     word-wrap: break-word;
@@ -189,7 +190,7 @@ h2.team-heading{
 
 .subcom_col {
     align-items: flex-start;
-    display: flexbox;
+    /*display: flexbox;*/
     flex-direction: column;
     flex: 1;
     margin-right: 5%;
@@ -198,11 +199,41 @@ h2.team-heading{
 .subcom_longer_col {
     align-items: flex-start;
     flex-direction: column;
-    display: flexbox;
     flex: 2;
 }
 
 .profile {
     margin: 15px;
     padding: 0;
+}
+
+/*---------------------------Mobile resizing--------------------------*/
+@media screen and (max-width: 800px) {
+    .team-heading {
+        font-size: 22px;
+    }
+
+    .subcom-type, .profile_text_name {
+        font-size: 20px;
+    }
+
+    .profile_text_position {
+        font-size: 18px;
+    }
+
+    .profile_degree,
+    .subcom_profile_degree, .subcom_profile_name {
+        font-size: 16px;
+    }
+
+    .profile_section_heading, .all_execs_section,
+    .subcom-section, .team-heading {
+        margin: 10px;
+    }
+    
+    .exec_row {
+        flex-direction: column;
+    }
+
+
 }
