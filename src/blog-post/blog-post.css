@@ -92,6 +92,12 @@ img.floatRight {
   color: #feb14b;
 }
 
+
+.blog-content img {
+  width: 500px;
+}
+
+
 /*-------------------------------Author card-----------------------------*/
 .author {
   margin: 0 auto;

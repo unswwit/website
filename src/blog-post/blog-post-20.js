@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ".././style.css";
 import "./blog-post.css";
 import AuthorCard from "./authorCard";
+import PageHeader from ".././header";
 
 class blogPost20 extends Component {
   //start webpage at the top
@@ -12,12 +13,11 @@ class blogPost20 extends Component {
   render() {
     return (
       <div>
-        {/*Start of Header*/}
-        <div class="coverPhoto">
-          <div class="title">
-            <h1>Blog Post #20</h1>
-          </div>
-        </div>
+      {/* Cover Photo */}
+      <PageHeader
+        imgUrl="/blog-header.png"
+        title="Blog Post #20"
+      />
 
         {/*End of Header*/}
 
@@ -32,7 +32,7 @@ class blogPost20 extends Component {
 
           <div class="post">
             <p class="post-content">
-            Aneita Yang  is product manager of Bitbucket Cloud at Atlassian, a program that allows teams to manage workflow from design to implementation as well as edit and deploy the code these teams are working on. Aneita has had fascinating experience in a variety of technological fields, including animation and visual effects at Animal Logic, an internship at a software engineer at Google where she developed new web tools for Google Drive, and cyber security as Product Manager of Identity at Atlassian, while also spreading her enthusiasm and passion for computer science as a tutor at UNSW. In her current role as Product Manager for BitBucket Cloud, Aneita has worked with international companies such as Microsoft, Amazon, JFrog, and SonarCloud in helping integrate BitBucket Cloud into their everyday operations. Keep reading to learn more about Aneita’s philosophy,  journey in STEM, and how computer science has constantly changed her perception! 
+            Aneita Yang  is product manager of Bitbucket Cloud at Atlassian, a program that allows teams to manage workflow from design to implementation as well as edit and deploy the code these teams are working on. Aneita has had fascinating experience in a variety of technological fields, including animation and visual effects at Animal Logic, an internship at a software engineer at Google where she developed new web tools for Google Drive, and cyber security as Product Manager of Identity at Atlassian, while also spreading her enthusiasm and passion for computer science as a tutor at UNSW. In her current role as Product Manager for BitBucket Cloud, Aneita has worked with international companies such as Microsoft, Amazon, JFrog, and SonarCloud in helping integrate BitBucket Cloud into their everyday operations. Keep reading to learn more about Aneita’s philosophy,  journey in STEM, and how computer science has constantly changed her perception!
             </p>
             <br />
 

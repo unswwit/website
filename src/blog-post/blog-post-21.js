@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ".././style.css";
 import "./blog-post.css";
 import AuthorCard from "./authorCard";
+import PageHeader from ".././header";
 
 class blogPost21 extends Component {
   //start webpage at the top
@@ -12,12 +13,11 @@ class blogPost21 extends Component {
   render() {
     return (
       <div>
-        {/*Start of Header*/}
-        <div class="coverPhoto">
-          <div class="title">
-            <h1>Blog Post #21</h1>
-          </div>
-        </div>
+      {/* Cover Photo */}
+      <PageHeader
+        imgUrl="/blog-header.png"
+        title="Blog Post #21"
+      />
 
         {/*End of Header*/}
 
@@ -25,7 +25,7 @@ class blogPost21 extends Component {
         <div class="blog-content">
           <div>
             <h2 class="blog-title">
-              Introducing Madeleine English, Consultant in Engineering at Asset Management at KPMG 
+              Introducing Madeleine English, Consultant in Engineering at Asset Management at KPMG
             </h2>
             <p class="date">9th September 2020</p>
           </div>
@@ -37,16 +37,16 @@ class blogPost21 extends Component {
             <br />
 
             <p class="question">
-              What sparked your interest to join the field of STEM? 
+              What sparked your interest to join the field of STEM?
             </p>
-           
+
             <p class="post-content">
               I always loved maths and science at school, and wanted to apply these disciplines in building a more sustainable future. Since starting my career however I've also come to really enjoy the people side of my job, working with clients and stakeholders to deliver the best value to communities.
             </p>
             <br />
-           
+
             <p class="question">
-              Please provide a short summary of your career journey so far: 
+              Please provide a short summary of your career journey so far:
             </p>
 
             <p class="post-content">
@@ -93,7 +93,7 @@ class blogPost21 extends Component {
             <p class="question">
               How have others inspired you at different periods throughout your career?
             </p>
- 
+
             <p class="post-content">
             I have been inspired by a range of different people throughout my career so far. My peers inspire me and also senior leaders both inside the organisations I've worked in and outside of these organisations. I take inspiration from those who demonstrate leadership, are passionate about what they do, and have a strong commitment to social and environmental ethics. I also really value mentoring and have been both a mentee and mentor in a number of cases, gaining valuable benefits from both sides.
             </p>
@@ -102,7 +102,7 @@ class blogPost21 extends Component {
             <p class="question">
               What are the hard and soft skills that you advised students who are interested in pursuing a similar career path (for internship/graduate role) to upskill on?
             </p>
-            
+
             <p class="post-content">
               Soft skills such as communication, time management and working in a team are really important skills to have in the workforce. The hard skills will come through your degree without really any further work. Coming into the workforce in a STEM career you are hired for your potential and problem solving capability which you would have gained through a STEM related degree. The soft skills are often what you are assessed on throughout graduate recruitment processes - typical questions in a graduate interview for a STEM related graduate role will relate to how you work in a team, how you have managed difficult conversations such as when someone didn't agree with you or how you manage your time. Such skills can be built up by casual work through your time at university (that doesn't need to be STEM related), plus getting involved in volunteering initiatives, university societies and other extracurricular activities.
             </p>
@@ -116,7 +116,7 @@ class blogPost21 extends Component {
               Work hard but make time for yourself - hobbies, a casual job, spending time with family and friends.
             </p>
             <br />
-    
+
             <p class="question">
               Favourite Quote or Motto?
             </p>

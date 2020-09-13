@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ".././style.css";
 import "./blog-post.css";
 import AuthorCard from "./authorCard";
+import PageHeader from ".././header";
 
 class blogPost19 extends Component {
   //start webpage at the top
@@ -12,12 +13,11 @@ class blogPost19 extends Component {
   render() {
     return (
       <div>
-        {/*Start of Header*/}
-        <div class="coverPhoto">
-          <div class="title">
-            <h1>Blog Post #19</h1>
-          </div>
-        </div>
+      {/* Cover Photo */}
+      <PageHeader
+        imgUrl="/blog-header.png"
+        title="Blog Post #19"
+      />
 
         {/*End of Header*/}
 
