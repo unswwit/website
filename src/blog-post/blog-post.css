@@ -1,6 +1,7 @@
 /*-------------------------------Blog post content-----------------------------*/
 .blog-content {
   width: 100%;
+  max-width: 950px;
   padding: 25px;
   text-align: center;
   margin: auto;
