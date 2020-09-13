@@ -96,8 +96,8 @@ img.floatRight {
 
 
 .blog-content img {
-  max-height: 450px;
-  max-width: 45%;
+  height: 300px;
+  max-width: 100%;
   padding: 20px;
 }
 
@@ -108,6 +108,22 @@ to ensure centering. Example: blog-post-22*/
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+.outer-box {
+  display: flex;
+}
+
+.inner-box {
+  flex: 50%;
+}
+
+a:hover {
+  color: #313638;
+}
+
+.img-box a {
+  font-size: 11pt;
 }
 
 
