@@ -16,10 +16,23 @@ class Blog extends Component {
         />
 
         {/*Start of blog posts*/}
+        {/*blog post 22*/}
+        <BlogPreview
+          topMargin="10vw"
+          bottomMargin="5vw"
+          blogNo="22"
+          imgUrl="/blog-covers/22-tech-and-art.png"
+          heading="4 Ways Technology is Changing how we make Art"
+          date="13/09/2020"
+          subheading="Technology is not all about maths and science. Technology can also be artistic, paving the way for new and exciting expressions of visual creativity. In doing so, artists, engineers and programmers may work together to bring fascinating creations to life. Here, we discuss four of the many ways in which technology may be fused with artistic creativity."
+          authors={{
+            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
+          }}
+        />
 
         {/*blog post 21*/}
         <BlogPreview
-          topMargin="10vw"
+          topMargin="5vw"
           bottomMargin="5vw"
           blogNo="21"
           imgUrl="/blog-covers/21-madeleine-english.png"
