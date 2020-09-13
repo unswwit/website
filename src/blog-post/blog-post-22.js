@@ -45,7 +45,10 @@ class blogPost22 extends Component {
               </p><br />
 
               <p class="post-content">
-                MakeFashion is an initiative launched in 2012, fusing fashion and technology on the runway. The MakeFashion community has produced over 100 outfits showcased at over 70 international events. New designs are launched every year at runway events in Calgary, Canada, such as Gamergirls, a pair of dresses that act as the screen of a playable arcade-style video game. Some outfits also fuse technology with tradition, such as Hagoromo, featuring an illuminated kimono that reacts to a hand-held fan motion sensor.
+                <a href="http://www.makefashion.ca/">
+                MakeFashion
+                </a>&nbsp;
+                 is an initiative launched in 2012, fusing fashion and technology on the runway. The MakeFashion community has produced over 100 outfits showcased at over 70 international events. New designs are launched every year at runway events in Calgary, Canada, such as Gamergirls, a pair of dresses that act as the screen of a playable arcade-style video game. Some outfits also fuse technology with tradition, such as Hagoromo, featuring an illuminated kimono that reacts to a hand-held fan motion sensor.
               </p>
 
               <div class="img-box outer-box">
@@ -85,11 +88,17 @@ class blogPost22 extends Component {
               </p><br />
 
               <p class="post-content">
-              Vivid is arguably the most well-known light festival in Sydney, showcasing dozens of installations and projections every year.
+              <a href="https://www.vividsydney.com/">
+                Vivid
+              </a>&nbsp;
+              is arguably the most well-known light festival in Sydney, showcasing dozens of installations and projections every year.
               </p><br />
 
               <p class="post-content">
-              UNSW llluminate has created works for Vivid, such as Celestial Pancake in 2019, a hanging audio-visual installment set to alternating colour palettes with an enveloping soundscape. The year prior, UNSW Illuminate created Synergy. This installment showcased a large plywood tree surrounded by ferns. As people wandered close to the ferns, they became illuminated and sent a pulsing light to the tree through its roots.
+              <a href="https://www.unswilluminate.com/">
+                UNSW llluminate
+              </a>&nbsp;
+              has created works for Vivid, such as Celestial Pancake in 2019, a hanging audio-visual installment set to alternating colour palettes with an enveloping soundscape. The year prior, UNSW Illuminate created Synergy. This installment showcased a large plywood tree surrounded by ferns. As people wandered close to the ferns, they became illuminated and sent a pulsing light to the tree through its roots.
               </p>
 
               <div class="img-box outer-box">
