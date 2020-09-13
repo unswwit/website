@@ -36,30 +36,28 @@ class blogPost6 extends Component {
 
             <p>Let’s read what Fontaine had to say about her journey into tech below</p>
 
-            <ol class="list">
-              <li class="question"> What sparked your interest to join the field of STEM?</li>
-              <p class="post-content">I love the fact that technology is a skill that can be applied to almost any field. I like finding problems
-              I care about and using my skills in technology to help make the world a better place.</p><br/>
+            <p class="question"> What sparked your interest to join the field of STEM?</p>
+            <p class="post-content">I love the fact that technology is a skill that can be applied to almost any field. I like finding problems
+            I care about and using my skills in technology to help make the world a better place.</p><br/>
 
-              <li class="question"> Please provide a short summary of your career journey so far:</li>
-              <p class="post-content">Since I studied Civil Engineering, I actually started off on a Construction site where I was the only woman!
-              Since then, I've been working in Product Management, building lots of products in various fields, including fashion, data/analytics,
-              mapping, and now blogging.</p><br/>
+            <p class="question"> Please provide a short summary of your career journey so far:</p>
+            <p class="post-content">Since I studied Civil Engineering, I actually started off on a Construction site where I was the only woman!
+            Since then, I've been working in Product Management, building lots of products in various fields, including fashion, data/analytics,
+            mapping, and now blogging.</p><br/>
 
-              <li class="question">Where do you see yourself in the future (career wise)?</li>
-              <p class="post-content">My big passion in life is teaching people about EMOTIONS! I think I have a unique skill set in that I have
-              both deep technical understanding and an infinite passion for emotions. I want to bring those two together, and ultimately help people
-              better understand themselves. Combining my love for emotions and technology could go in a million directions, but I'm hoping my next
-              role can either be around Mental Health or Ethics & Technology.</p><br/>
+            <p class="question">Where do you see yourself in the future (career wise)?</p>
+            <p class="post-content">My big passion in life is teaching people about EMOTIONS! I think I have a unique skill set in that I have
+            both deep technical understanding and an infinite passion for emotions. I want to bring those two together, and ultimately help people
+            better understand themselves. Combining my love for emotions and technology could go in a million directions, but I'm hoping my next
+            role can either be around Mental Health or Ethics & Technology.</p><br/>
 
-              <li class="question"> What do you love about your career now?</li>
-              <p class="post-content">As a product manager for a blogging platform, I love that I help people express themselves. I care deeply about
-              self-discovery and expression, and blogging is a great way for people to better understand themselves.</p><br/>
+            <p class="question"> What do you love about your career now?</p>
+            <p class="post-content">As a product manager for a blogging platform, I love that I help people express themselves. I care deeply about
+            self-discovery and expression, and blogging is a great way for people to better understand themselves.</p><br/>
 
-              <li class="question"> Favourite Quote or Motto?</li>
-              <p class="post-content">After my mom got cancer, my family's theme song became "I Hope You Dance", by Lee Ann Womack. It's a reminder to
-              get up and take advantage of life, rather than watching it pass by.</p><br/>
-            </ol>
+            <p class="question"> Favourite Quote or Motto?</p>
+            <p class="post-content">After my mom got cancer, my family's theme song became "I Hope You Dance", by Lee Ann Womack. It's a reminder to
+            get up and take advantage of life, rather than watching it pass by.</p><br/>
 
           </div>
       </div>
