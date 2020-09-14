@@ -197,6 +197,10 @@ input:focus::-webkit-input-placeholder {  /* Chrome */
         display: initial;
     }
 
+    .newEmails {
+        height: 1200px;
+    }
+
     .newEmails div.col2 {
         width: 90%;
         height: 450px;
@@ -205,11 +209,11 @@ input:focus::-webkit-input-placeholder {  /* Chrome */
     }
 
     .newEmails div.col3 {
-        margin-left: 0%;
         width: 90%;
         height: 450px;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 50px;
     }
 
     .newEmails div.profile3 {
@@ -249,4 +253,24 @@ input:focus::-webkit-input-placeholder {  /* Chrome */
         width: 100%;
         height: 350px;
     }
+}
+
+@media only screen and (max-width: 650px) {
+    .newEmails {
+        height: 2150px;
+    }
+
+    .newEmails div.profile3 {
+        width: 100%;
+    }
+
+    .newEmails div.profile2 {
+       width: 100%;
+    }
+
+    .newEmails div.col2 {
+        width: 90%;
+        height: 800px;
+    }
+
 }
