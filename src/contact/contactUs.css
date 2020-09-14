@@ -251,13 +251,13 @@ input:focus::-webkit-input-placeholder {  /* Chrome */
 @media only screen and (max-width: 910px) {
     .centre {
         width: 100%;
-        height: 350px;
+        height: 400px;
     }
 }
 
 @media only screen and (max-width: 650px) {
     .centre {
-        height: 260px;
+        height: 300px;
     }
 
     .newEmails {
@@ -287,5 +287,25 @@ input:focus::-webkit-input-placeholder {  /* Chrome */
 
     h3 {
         font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .centre {
+        height: 200px;
+    }
+
+    .newEmails {
+        height: 2400px;
+    }
+
+    .newEmails div.col2 {
+        height: 850px;
+    }
+
+    .form {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
