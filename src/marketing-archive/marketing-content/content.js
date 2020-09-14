@@ -42,6 +42,12 @@ class MarketingContent extends Component {
                     {/*Image collage*/}
                     <ol class="grid" id="content">
                       <Memes
+                        fb="https://www.facebook.com/unsw.wit/posts/2376522429319291"
+                        imgUrl="/initiatives/memes/smile.png"
+                        alt="Smile"
+                        date="14/08/2020"
+                      />
+                      <Memes
                         fb="https://www.facebook.com/unsw.wit/photos/a.1570799533224922/2365454317092769/?type=1&theater"
                         imgUrl="/initiatives/memes/studiers.png"
                         alt="Studiers"

@@ -6,7 +6,7 @@ class Mascot extends Component {
     render() {
         return (
             <li class="image mascot">
-              <a href={this.props.fb} class="darken">
+              <a href={this.props.fb} class="darken" target="_blank" rel="noopener noreferrer">
                 <img
                   src={process.env.PUBLIC_URL + this.props.imgUrl}
                   alt={this.props.alt}
