@@ -137,9 +137,10 @@ input:focus::-webkit-input-placeholder {  /* Chrome */
 }
 
 .newEmails div.col2 {
-    margin-left: 27%;
     width: 57%;
     height: 450px;
+    margin-left: 26%;
+    margin-right: auto;
 }
 
 .newEmails div.profile2 {
@@ -152,30 +153,37 @@ input:focus::-webkit-input-placeholder {  /* Chrome */
 }
 
 .newEmails div.col3 {
-    margin-left: 15%;
     width: 80%;
     height: 450px;
+    margin-left: 12%;
+    margin-right: auto;
 }
 
 .newEmails div.profile3 {
     display: inline-block;
-    width: 33.3%;
+    width: 33%;
     padding: 30px;
     float: none;
     height: 230px;
     overflow: none;
 }
 
-/*-------------------------------Join us mobile screen------------------------------*/
-
-@media only screen and (max-width: 900px) {
-    .centre {
-        width: 100%;
-        height: 350px;
-    }
+.line-break {
+    visibility: hidden;
 }
 
-@media only screen and (max-width: 800px) {
+/*-------------------------------Join us: different screen sizes ------------------------------*/
+@media only screen and (max-width: 1200px) {
+    .newEmails div.profile2 {
+        padding: 25px;
+    }
+
+    .newEmails div.profile3 {
+        padding: 25px;
+    }    
+}
+
+@media only screen and (max-width: 1000px) {
     .formRight {
         display: initial;
         float: none;
@@ -210,11 +218,35 @@ input:focus::-webkit-input-placeholder {  /* Chrome */
         padding: 30px;
         float: none;
         height: 200px;
-        overflow: none;
+        overflow-wrap: break-word;
+    }
+
+    .newEmails div.profile2 {
+        overflow-wrap: break-word;
     }
 
     hr.solid {
         border-top: 2px solid #bbb;
     }
-    
+
+    .line-break {
+        visibility: visible;
+    }
+
+    .newEmails img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .newEmails h3, a {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 910px) {
+    .centre {
+        width: 100%;
+        height: 350px;
+    }
 }

@@ -67,7 +67,7 @@ class ContactUs extends React.Component {
                         </div>
                     </div>
 
-                    <hr class="solid" width="90%"></hr>
+                    <hr class="line-break solid" width="90%"></hr>
                     <div className = "col3">
                         <div className = "profile3">
                             <img src={process.env.PUBLIC_URL + '/edu-icon.png'} alt="edu-icon"/>
