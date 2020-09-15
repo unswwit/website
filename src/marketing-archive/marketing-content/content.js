@@ -139,6 +139,12 @@ class MarketingContent extends Component {
                         date="8/5/2020"
                       />
 
+                      <MondayMotivation
+                        fb="https://www.facebook.com/unsw.wit/posts/2378857132419154"
+                        imgUrl="/initiatives/monday/selfcarereminder.png"
+                        alt="Self care is important!"
+                        date="8/17/2020"
+                      />
 
                     </ol>
                   </div>
