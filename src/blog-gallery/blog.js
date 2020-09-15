@@ -26,7 +26,7 @@ class Blog extends Component {
           date="13/09/2020"
           subheading="Technology is not all about maths and science. Technology can also be artistic, paving the way for new and exciting expressions of visual creativity. In doing so, artists, engineers and programmers may work together to bring fascinating creations to life. Here, we discuss four of the many ways in which technology may be fused with artistic creativity."
           authors={{
-            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
+            "victoria-ruming": ["/potraits/victoria.jpg", "Victoria Ruming"],
           }}
         />
 
