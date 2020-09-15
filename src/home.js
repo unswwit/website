@@ -85,7 +85,7 @@ class Home extends Component{
 				<div class="sponsors" >
 					<h2>OUR SPONSORS</h2>
 					<img src={process.env.PUBLIC_URL + './sponsors-home.png'} className="photo" alt="banner" resizeMode='contain'
-							style={{width: '65vw'}} />
+							/>
 				</div>
 
 			</body>

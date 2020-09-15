@@ -273,10 +273,73 @@ div .headline{
     width: 100%;
 }
 
+/*--------------Events Mobile Design-------------------*/
+
+@media only screen and (max-width: 850px) {
+
+  .events {
+      padding: 20px 0px;
+      max-width: 85%;
+      margin: 0 auto;
+
+      display: flex;
+      flex-flow: column;
+  }
+
+/* Use a Flexbox to switch positions of
+Title and Description. */
+  /*Events title - flexbox*/
+  .events-title {
+      text-align: center;
+      order: 1;
+  }
+
+  /*Events description text - flexbox*/
+  .events-description {
+    order: 2;
+  }
+
+  /*Events description text*/
+  .events-description p {
+      text-align: justify;
+  }
+  .events-description a {
+      text-align: justify;
+      padding-left: 20px;
+  }
+
+  /*Big event image area - flexbox*/
+  .event-1 {
+    order: 3;
+  }
+
+  /* Currently, mobile dev ignores "small event" area.*/
+
+}
+
 /*------------------------------Home page sponsors----------------------------*/
 /*Sponsors image position*/
 .sponsors {
     text-align: center;
     margin: auto;
-    padding-top: 20px;
+    padding-top: 0px;
+}
+
+.sponsers h1 {
+  
+}
+
+.sponsors img {
+  width: 100%;
+  max-width: 1000px;
+}
+
+/*--------------Sponsors Mobile Design-------------------*/
+
+@media only screen and (max-width: 850px) {
+
+  .sponsors img {
+    width: 100%;
+  }
+
 }
