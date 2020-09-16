@@ -85,10 +85,9 @@ table {
     width: 200px;
  }
 
-.author-section {
-    display: flex;
-    align-items: center;
-}
+ .author-section{ 
+    vertical-align: middle;
+ }
 
 @media screen and (max-width: 1000px) {
     table {
