@@ -1,6 +1,5 @@
 /*-------------------------------Blog post Preview-----------------------------*/
 /*Author circle crop*/
-
 .preview-pic {
     width: 35.807vw;
     height: 22.786vw;
@@ -73,6 +72,11 @@ table {
     height: 100%;
 }
 
+#preview-row {
+    display: flex;
+    align-items: center;
+}
+
 .blog-preview {
     padding: 30px;
 }
@@ -80,6 +84,11 @@ table {
 .author-name {
     width: 200px;
  }
+
+.author-section {
+    display: flex;
+    align-items: center;
+}
 
 @media screen and (max-width: 1000px) {
     table {
@@ -103,7 +112,6 @@ table {
     }
 
     tr {
-        display: flex;
         flex-wrap: wrap;
         justify-items: flex-start;
         align-items: flex-start;
