@@ -282,7 +282,7 @@ a:hover {
     float: none;
   }
 
-  p, li{
+  .blog-content p, .blog-content li {
     text-align: left;
   }
 }
