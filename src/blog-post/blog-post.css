@@ -6,6 +6,8 @@
   text-align: center;
   margin: auto;
   margin-bottom: 6vw;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 /*Blog title*/
@@ -13,6 +15,7 @@
   font-size: 34pt;
   letter-spacing: 4px;
   margin-top: 8vw;
+  
 }
 
 /*Blog subtitle*/
@@ -130,8 +133,10 @@ a:hover {
 /*-------------------------------Author card-----------------------------*/
 .author {
   margin: 0 auto;
-  max-width: 40%;
   margin-bottom: 6vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*Author icon*/
@@ -164,7 +169,6 @@ a:hover {
 .author-right {
   display: inline-block;
   padding: 0px 0px 0px 30px;
-  width: 70%;
   letter-spacing: 2px;
   color: #feb14b;
   font-family: 'Montserrat', sans-serif;
@@ -191,4 +195,37 @@ a:hover {
   color: #707070;
   font-size: 1vw;
   margin-top: 10px;
+}
+
+/*-------------------------------Blog mobile version-----------------------------*/
+@media only screen and (max-width: 600px) {
+  .blog-title {
+    font-size: 16.5pt;
+  }
+  
+  .blog-subtitle {
+    font-size: 12pt;
+  }
+
+  p {
+    font-size: 12pt;
+  }
+
+  .author {
+    flex-flow: column;
+    width: 100%;
+  }
+
+  .author-right {
+    text-align: center;
+    padding: 0px;
+  }
+
+  .author-name {
+    font-size: 16.5pt;
+  }
+
+  .position {
+    font-size: 12pt;
+  }
 }

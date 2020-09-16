@@ -8,11 +8,11 @@ class Publications extends React.Component {
         return (
             <div>
 
-            {/* Cover Photo */}
-            <PageHeader
-              imgUrl="/publications-header.png"
-              title="Publications"
-            />
+                {/* Cover Photo */}
+                <PageHeader
+                imgUrl="/publications-header.png"
+                title="Publications"
+                />
 
                 <div className = "publicationsBody">
 
@@ -35,8 +35,6 @@ class Publications extends React.Component {
                     url="https://issuu.com/womenintechnology/docs/wit_2020_careers_guide?fbclid=IwAR3RBADvuCd7KRAxeD4yK0USlDoQkVp05kY2SSYiYmjB2nZjBsI3xs_rX5c"
                     />
 
-
-
                     {/*default publication:
                     <PubArticle
                     imgUrl="./pub_mini.png"
@@ -47,7 +45,6 @@ class Publications extends React.Component {
 
                     coming soon image:
                     <img src={process.env.PUBLIC_URL + './pubs-soon.png'} resizeMode='contain' style={{width: '100%', marginBottom: '5px', marginTop: '5px'}} alt="coming soon"/>
-
                     */}
                     </div>
 
