@@ -281,5 +281,9 @@ a:hover {
   img.floatRight {
     float: none;
   }
+
+  p, li{
+    text-align: left;
+  }
 }
 

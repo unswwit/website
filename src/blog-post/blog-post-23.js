@@ -96,7 +96,8 @@ class blogPost23 extends Component {
               Favourite Quote or Motto?
             </p>
             <p class="post-content">
-              “None of us can know what we are capable of until we are tested.” -- Elizabeth Blackwell
+              “None of us can know what we are capable of until we are tested.” 
+              <br />- Elizabeth Blackwell
             </p>
             <br />
           </div>
