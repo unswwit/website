@@ -42,9 +42,6 @@ font-family: 'Montserrat', sans-serif;*/
 
 }
 
-
-
-
 /*----------------------------------General------------------------------------*/
 h1 {
     color: #feb14b;
@@ -141,13 +138,13 @@ p {
     display: none;
 }
 
-.nav-item a{
+.nav-item a {
     color: #313638;
     padding: 10px 15px;
     text-decoration: none;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     border-color: transparent;
     letter-spacing: 1.5px;
     font-size: 14px;
@@ -164,7 +161,7 @@ p {
     background-color: #fff7ef;
 }
 
-.menuTitle{
+.menuTitle {
     color: #313638;
     padding: 10px 15px;
 }
@@ -173,7 +170,7 @@ p {
     color: #e85f5c;
 }
 
-.nav-item a:hover{
+.nav-item a:hover {
     color: #e85f5c;
     padding: 10px 15px;
     text-decoration: none;

@@ -1,6 +1,5 @@
 /*-------------------------------Blog post Preview-----------------------------*/
 /*Author circle crop*/
-
 .preview-pic {
     width: 35.807vw;
     height: 22.786vw;
@@ -73,12 +72,21 @@ table {
     height: 100%;
 }
 
+#preview-row {
+    display: flex;
+    align-items: center;
+}
+
 .blog-preview {
     padding: 30px;
 }
 
 .author-name {
     width: 200px;
+ }
+
+ .author-section{ 
+    vertical-align: middle;
  }
 
 @media screen and (max-width: 1000px) {
@@ -103,7 +111,6 @@ table {
     }
 
     tr {
-        display: flex;
         flex-wrap: wrap;
         justify-items: flex-start;
         align-items: flex-start;
@@ -118,4 +125,18 @@ table {
         width: 100%;
         height: auto;
     }
+
+    .author-section {
+        padding-left: 10px;
+    }
 }
+
+@media screen and (max-width: 300px) {
+    .author-section {
+        display: flex;
+        align-items: center;
+        padding-left: 0px;
+        padding-bottom: 10px;
+    }
+}
+

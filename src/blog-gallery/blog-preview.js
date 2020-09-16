@@ -9,11 +9,10 @@ class BlogPreview extends Component {
         return (
             <div>
                 {/*Start of blog posts*/}
-                <Link to={ "/blog/" + this.props.blogNo } style={{ textDecoration: 'none' }}>
                 <div class="blog-post" style={{marginTop:this.props.topMargin, marginBottom:this.props.bottomMargin}}>
-
                     <table cellpadding="0">
-                        <tr>
+                    <Link to={ "/blog/" + this.props.blogNo } style={{ textDecoration: 'none'}}>
+                        <tr id="preview-row">
                             <td>
                                 <img class="preview-pic" src={process.env.PUBLIC_URL + this.props.imgUrl} alt="preview"/>
                             </td>
@@ -28,16 +27,16 @@ class BlogPreview extends Component {
                                 <tr class="author-row">
                                 {
                                 Object.keys(this.props.authors).map((key) => ( 
-                                    <td key={key}>
+                                    <td class="author-section" key={key}>
                                         <td>
-                                        <div class="author-pic">
-                                        <img
-                                        src={process.env.PUBLIC_URL + this.props.authors[key][0]}
-                                        className="profile_img vivw_img"
-                                        alt={key}
-                                        resizeMode="contain"
-                                        />
-                                        </div>
+                                            <div class="author-pic">
+                                                <img
+                                                src={process.env.PUBLIC_URL + this.props.authors[key][0]}
+                                                className="profile_img vivw_img"
+                                                alt={key}
+                                                resizeMode="contain"
+                                                />
+                                            </div>
                                         </td>
                                     
                                         <td class="author-name">
@@ -49,9 +48,9 @@ class BlogPreview extends Component {
                                 </tr>
                             </td>
                         </tr>
+                       </Link>
                     </table>
                 </div>
-                </Link>
                 {/*End of blog posts*/}
             </div>
         );
