@@ -21,9 +21,9 @@ class Blog extends Component {
           topMargin="10vw"
           bottomMargin="5vw"
           blogNo="23"
-          imgUrl="/blog-covers/22-tech-and-art.png"
-          heading="Introducing Danni Ovens, Forward Deployed Software Engineer4 Ways Technology is Changing how we make Art"
-          date="15/09/2020"
+          imgUrl="/blog-covers/23-danni-ovens.png"
+          heading="Introducing Danni Ovens, Forward Deployed Software Engineer"
+          date="16/09/2020"
           subheading="During her training at UNSW, she volunteered her time to share her technical know-how with fellow students and children through Code Create, Tutorial Demonstrator, and Code Like a Girl. Let’s dive into our interview with this rising star!"
           authors={{
             "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
