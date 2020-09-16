@@ -40,7 +40,7 @@ class BlogPreview extends Component {
                                         </div>
                                         </td>
                                     
-                                        <td style={{width: "200px"}}>
+                                        <td class="author-name">
                                             <div class="auth">{this.props.authors[key][1]}</div>
                                         </td>
                                     </td>
