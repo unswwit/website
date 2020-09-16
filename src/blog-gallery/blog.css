@@ -125,4 +125,18 @@ table {
         width: 100%;
         height: auto;
     }
+
+    .author-section {
+        padding-left: 10px;
+    }
 }
+
+@media screen and (max-width: 300px) {
+    .author-section {
+        display: flex;
+        align-items: center;
+        padding-left: 0px;
+        padding-bottom: 10px;
+    }
+}
+
