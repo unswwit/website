@@ -228,8 +228,9 @@ h2.team-heading{
     }
     
     .team-heading, .subcom_row {
-        width: 80%;
+        width: 98%;
         margin: 0 auto;
+        padding: 10px;
     }
 
     .subcom_row {
