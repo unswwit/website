@@ -6,7 +6,7 @@ class WCW extends Component {
     render() {
         return (
             <li class="image crush">
-              <a href={this.props.fb} class="darken">
+              <a href={this.props.fb} class="darken" target="_blank" rel="noopener noreferrer">
                 <div class="message">{this.props.date}</div>
                 <img
                   src={process.env.PUBLIC_URL + this.props.imgUrl}
