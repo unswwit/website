@@ -18,6 +18,27 @@ class Events extends React.Component {
                     <h2>UPCOMING EVENTS</h2>
                     <p class="lookout">Keep a lookout here for our upcoming events!</p>
                     <div class="grid-container">
+                        <div class="upcoming">
+                            <div>
+                                <img class="event-images" src={process.env.PUBLIC_URL + './event-covers/tech-talk-baraja.jpg'} resizeMode='contain' alt="tech talk with baraja"/>
+                                <div class="event-description">
+                                <p class="event-name">Tech Talk with Baraja</p>
+                                    <p class="event-date">24th September 2020, 5-6:30 PM</p>
+                                    <p class="event-summary">
+                                    Are you passionate about the world of tech and longing for an opportunity to connect with industry mentors doing exciting things in this space RIGHT NOW?
+                                    Luckily for you, UNSW Women in Technology is hosting an online event where representatives from the tech start-up Baraja, will have a chat with students about a whole range of topics from workplace culture, to graduate programs, diversity programs and an overview of Baraja’s self-driving cars and new LiDAR technology, which is making waves in AI.
+                                    Come along for this unmissable opportunity to build your network, learn about life at Baraja and have an exciting discussion about the ever changing world of tech.</p>
+                                    <ul id="links">
+                                        <li class="event-link">
+                                            <a href="https://forms.gle/9iiyhGs7GFPqPCeA9" class ="event">Register</a>
+                                        </li>
+                                        <li class="event-link">
+                                            <a href="https://www.facebook.com/events/1639137362919488/" class="event">Facebook</a>
+                                        </li>
+                                    </ul> 
+                                </div>
+                            </div>
+                        </div>
                         {/* Make this into a component
                         <div class="upcoming">
                             <div>
