@@ -6,10 +6,11 @@ class PageHeader extends Component {
     render() {
       return (
 
-        <div class="coverPhoto">
+        <div class="coverPhoto"> {/*style={{backgroundImage: process.env.PUBLIC_URL + this.props.imgUrl}}*/}
           {/*dark overlay*/}
           <div class="dark"></div>
           {/*header image*/}
+
           <img src={process.env.PUBLIC_URL + this.props.imgUrl} alt="blog-header"
           className = "cover_image"/>
           {/*text*/}

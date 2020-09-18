@@ -37,7 +37,7 @@ class Events extends React.Component {
                                         <li class="event-link">
                                             <a href="https://www.facebook.com/events/1639137362919488/" class="event">Facebook</a>
                                         </li>
-                                    </ul> 
+                                    </ul>
                                 </div>
                             </div>
                         </div>
