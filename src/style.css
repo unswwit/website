@@ -5,7 +5,7 @@ font-family: 'Montserrat', sans-serif;*/
 /*----------------------------------Header------------------------------------*/
 
 .coverPhoto {
-  height: 60vh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -24,7 +24,7 @@ font-family: 'Montserrat', sans-serif;*/
   opacity: 0.5;
   position: absolute;
   top: 0;
-  height: 60vh;
+  height: 100vh;
   z-index: 1;
 }
 
@@ -41,6 +41,20 @@ font-family: 'Montserrat', sans-serif;*/
   position: relative;
 
 }
+
+
+@media only screen and (max-width: 600px) {
+  .coverPhoto, .coverPhoto .dark {
+    height: 50vh;
+  }
+
+  .coverPhoto .title h1{
+    padding-top: 5vh;
+    font-size: 3.5vh;
+  }
+
+}
+
 
 /*----------------------------------General------------------------------------*/
 h1 {
