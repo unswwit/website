@@ -7,15 +7,15 @@ class PageHeader extends Component {
       return (
 
         <div class="coverPhoto">
-        {/*header image*/}
-        <div class="dark"></div>
-        <img src={process.env.PUBLIC_URL + this.props.imgUrl} alt="blog-header"
-        className = "cover_image"/>
-
-            <div class="title">
-                <h1>{this.props.title}</h1>
-            </div>
-
+          {/*dark overlay*/}
+          <div class="dark"></div>
+          {/*header image*/}
+          <img src={process.env.PUBLIC_URL + this.props.imgUrl} alt="blog-header"
+          className = "cover_image"/>
+          {/*text*/}
+          <div class="title">
+              <h1>{this.props.title}</h1>
+          </div>
         </div>
 
       );
