@@ -7,11 +7,11 @@ class AuthorCard extends Component {
     render() {
       return (
         
-        <div>
+        <div class="author-card">
           {/*for the blog post author*/}
           {
             Object.keys(this.props.authors).map((key, index) => ( 
-                <div key={index} class= "author">
+              <div key={index} class= "author">
                 <div class="author-left">
                   <div> {/*note this div is necessary to formatting*/}
                     <img

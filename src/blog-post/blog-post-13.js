@@ -29,11 +29,9 @@ class blogPost13 extends Component {
           <div class="post">
             <p class="post-content">Mechatronic engineering is a broad form of engineering, combining mechanical, electrical and software disciplines. This field provides the expertise to create computer-controlled machines such as robotics and autonomous systems, and microprocessor-based technologies. Harnessing these skills can lead to careers associated with robotics, automation, control system design, medical and assistive technology, human-machine interaction and more! </p><br/>
 
-            <p class="post-content">This blog post will cover the three principles of mechatronics engineering, including mechanical, electrical, and computing, with tools, software, and techniques for each.</p><br/><br/>
+            <p class="post-content">This blog post will cover the three principles of mechatronics engineering, including mechanical, electrical, and computing, with tools, software, and techniques for each.</p><br/>
 
-
-
-            <br/><h2 class="post-heading">Mechanical</h2>
+            <h2 class="post-heading">Mechanical</h2>
 
             <img class="floatRight"
                 src={process.env.PUBLIC_URL + "/blog-attachments/blog-13-mech.png"}
@@ -75,7 +73,7 @@ class blogPost13 extends Component {
               <li class="question">Gazebo</li>
               <p class="post-content">an open-source 3D robotics simulator. Using robust physics engines, high-quality graphics, and support code, this software can accurately and efficiently simulate populations of robots in complex environments.</p><br/>
 
-            </ul><br/>
+            </ul>
 
 
 
@@ -114,10 +112,7 @@ class blogPost13 extends Component {
 
               <li class="question">TINA</li>
               <p class="post-content">Executes DC, transient and frequency domain analysis with personalised result formatting. This software includes a virtual multimeter, allowing the user to probe circuit nodes. Additionally, microcontroller (MCU) simulation and RF network analysis are valuable in TINA 9.0. It facilitates the simulation, design, and real-time testing of hardware description language and mixed electronic circuits.</p><br/>
-            </ul><br/>
-
-
-
+            </ul>
 
             <br/><h2 class="post-heading">Computing</h2>
 

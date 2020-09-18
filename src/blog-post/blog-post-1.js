@@ -40,7 +40,7 @@ class blogPost1 extends Component {
                 <li class="question">Please provide a short summary of your career journey so far:</li>
                 <p class="post-content">I have been quite fortunate in working at several amazing places within the tech industry. I started off a planning and research analyst at the Reserve Bank of Australia, before trying out the Cyber security space in IAG. I then interned at PwC's Experience and Insights Team and gave a shot at strategy consulting at Deloitte's S&I team. I am now a senior consultant in PwC's Technology Consulting team, specifically in the SuccessFactors team.</p><br/>
 
-                <li class="question">3) Where do you see yourself in the future (career wise)?</li>
+                <li class="question">Where do you see yourself in the future (career wise)?</li>
                 <p class="post-content">Absolutely no idea! I think over the years I have realised certain aspects I enjoy, and that is I like to help people and clearly see that my work is contributing to a good cause. I am always learning regardless where I end up, so I try not to aim for a "final destination", rather I think about what other areas I can learn from. I definitely do want to move to another country just to understand how the tech industry is like in another geographic region. </p><br/>
 
                 <li class="question"> What do you love about your career now?</li>

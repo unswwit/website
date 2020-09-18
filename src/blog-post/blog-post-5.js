@@ -27,7 +27,6 @@ class blogPost5 extends Component {
           </div>
 
           <div class="post">
-            <p class="question">Introducing</p>
 
             <p class="post-content">After high school, Salina Jantarang studied at the University of Sheffield (UK) and graduated in 2015 with a MEng in Chemical Engineering (First Class Honours). Afterwards, she enjoyed a placement in the Particles and Catalysis Research Group (PARTCAT) of UNSW, and continued with the group for her PhD programme from 2016 to 2020. The following interview outlines Salina’s journey, as well as advice about finding success in university and beyond.</p><br/>
 
@@ -67,7 +66,7 @@ class blogPost5 extends Component {
 
         {/*for the blog post author*/}
         <AuthorCard
-        authors={{"vivian-wong":["/potraits/vivw.jpg", "profile_img vivw_img", "Vivian Wong", "Education Executive"], "victoria-ruming":["/potraits/victoria.jpg", "profile_img vic_img", "Victoria Ruming","Education Team"]}}
+        authors={{"vivian-wong":["/potraits/vivw.jpg", "profile_img vivw_img", "Vivian Wong", "Education Executive"], "victoria-ruming":["/potraits/victoria.jpg", "profile_img vivw_img", "Victoria Ruming","Education Team"]}}
         />
         {/*End of blog posts*/}
       </div>
