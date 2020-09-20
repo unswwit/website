@@ -85,6 +85,10 @@ class blogPost24 extends Component {
                 resizeMode="contain"
                 />
             </div>
+
+            <p class="post-content" style={{fontSize: "11pt"}}>
+            Professor Matthew Walker is a Professor of Neuroscience and Psychology at the University of California, Berkeley, and Founder and Director of the Center for Human Sleep Science.
+            </p><br />
           </div>
         </div>
 
