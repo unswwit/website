@@ -18,7 +18,31 @@ class Events extends React.Component {
                     <h2>UPCOMING EVENTS</h2>
                     <p class="lookout">Keep a lookout here for our upcoming events!</p>
                     <div class="grid-container">
-                        <div class="upcoming">
+
+                    <div class="upcoming">
+                        <div>
+                            <img class="event-images" src={process.env.PUBLIC_URL + './event-covers/ey-excel-workshop.jpg'} resizeMode='contain' alt="tech talk with baraja"/>
+                            <div class="event-description">
+                            <p class="event-name">WIT x EY: Excel How-To Workshop</p>
+                                <p class="event-date">21st September 2020, 3-5:00 PM</p>
+                                <p class="event-summary">
+                                WIT’s Excel “How To:’ Workshop will give UNSW students the opportunity to develop the essential skill of how to professionally use 📈 Excel 📈 In particular, sponsor representatives will discuss how they utilise Excel in a professional environment on a day-to-day basis 👩‍💼👩‍💼 Furthermore, students will learn a multitude of industry best practices, valuable shortcuts, arithmetic functions and conditional formatting, which are vital corporate skills.
+                                </p>
+                                <ul id="links">
+                                    <li class="event-link">
+                                        <a href="https://forms.gle/Sjz9vbCLyQnxx8Qy9" class ="event">Register</a>
+                                    </li>
+                                    <li class="event-link">
+                                        <a href="https://www.facebook.com/events/648872989089757/" class="event">Facebook</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="upcoming">
                             <div>
                                 <img class="event-images" src={process.env.PUBLIC_URL + './event-covers/tech-talk-baraja.jpg'} resizeMode='contain' alt="tech talk with baraja"/>
                                 <div class="event-description">
@@ -41,6 +65,10 @@ class Events extends React.Component {
                                 </div>
                             </div>
                         </div>
+
+
+
+
                         {/* Make this into a component
                         <div class="upcoming">
                             <div>
