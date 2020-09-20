@@ -16,9 +16,23 @@ class Blog extends Component {
         />
 
         {/*Start of blog posts*/}
-        {/*blog post 23*/}
+        {/*blog post 24*/}
         <BlogPreview
           topMargin="10vw"
+          bottomMargin="5vw"
+          blogNo="24"
+          imgUrl="/blog-covers/24-whywesleep.png"
+          heading="Sleep and Study"
+          date="20/09/2020"
+          subheading="Have you ever wondered what goes on in the mind while we sleep? Or how sleep can help your exam results? This blog post delves into the world of sleep and learning and how you can enhance not only your marks but your health through a good night's sleep."
+          authors={{
+            "elisa-sanjurjo": ["/potraits/elisa.jpg", "Elisa Sanjurjo"],
+          }}
+        />
+
+        {/*blog post 23*/}
+        <BlogPreview
+          topMargin="5vw"
           bottomMargin="5vw"
           blogNo="23"
           imgUrl="/blog-covers/23-danni-ovens.png"
