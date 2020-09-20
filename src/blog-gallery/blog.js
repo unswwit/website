@@ -24,7 +24,7 @@ class Blog extends Component {
           imgUrl="/blog-covers/24-whywesleep.png"
           heading="Sleep and Study"
           date="20/09/2020"
-          subheading="Have you ever wondered what goes on in the mind while we sleep? Or how Sleep can help your exam results? This blog post delves into the world of sleep and learning and how you can enhance not only your marks but your health through a good night's sleep."
+          subheading="Have you ever wondered what goes on in the mind while we sleep? Or how sleep can help your exam results? This blog post delves into the world of sleep and learning and how you can enhance not only your marks but your health through a good night's sleep."
           authors={{
             "elisa-sanjurjo": ["/potraits/elisa.jpg", "Elisa Sanjurjo"],
           }}
