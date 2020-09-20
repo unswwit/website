@@ -43,7 +43,7 @@ font-family: 'Montserrat', sans-serif;*/
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .coverPhoto, .coverPhoto .dark {
     height: 50vh;
   }
