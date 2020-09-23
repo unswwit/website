@@ -11,7 +11,7 @@ class Principal extends Component {
               src={process.env.PUBLIC_URL + this.props.details[key][1]}
               alt={key}
               resizeMode="contain"
-              style={{'height': '250px', 'width': '500px'}}
+              style={{'height': '200px', 'width': '400px'}}
             />
           </a>
         ))

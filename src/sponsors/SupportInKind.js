@@ -11,7 +11,7 @@ class SupportInKind extends Component {
               src={process.env.PUBLIC_URL + this.props.details[key][1]}
               alt={key}
               resizeMode="contain"
-              style={{'height': '100px', 'width': '200px'}}
+              style={{'height': '75px', 'width': '150px'}}
             />
           </a>
         ))
