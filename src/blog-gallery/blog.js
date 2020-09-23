@@ -16,16 +16,46 @@ class Blog extends Component {
         />
 
         {/*Start of blog posts*/}
-        {/*blog post 22*/}
+        {/*blog post 24*/}
         <BlogPreview
           topMargin="10vw"
+          bottomMargin="5vw"
+          blogNo="24"
+          imgUrl="/blog-covers/24-whywesleep.png"
+          heading="Sleep and Study"
+          date="20/09/2020"
+          subheading="Have you ever wondered what goes on in the mind while we sleep? Or how sleep can help your exam results? This blog post delves into the world of sleep and learning and how you can enhance not only your marks but your health through a good night's sleep."
+          authors={{
+            "elisa-sanjurjo": ["/potraits/elisa.jpg", "Elisa Sanjurjo"],
+          }}
+        />
+
+        {/*blog post 23*/}
+        <BlogPreview
+          topMargin="5vw"
+          bottomMargin="5vw"
+          blogNo="23"
+          imgUrl="/blog-covers/23-danni-ovens.png"
+          heading="Introducing Danni Ovens, Forward Deployed Software Engineer"
+          date="16/09/2020"
+          subheading="During her training at UNSW, she volunteered her time to share her technical know-how with fellow students and children through Code Create, Tutorial Demonstrator, and Code Like a Girl. Let’s dive into our interview with this rising star!"
+          authors={{
+            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
+          }}
+        />
+
+        {/*blog post 22*/}
+        <BlogPreview
+          topMargin="5vw"
           bottomMargin="5vw"
           blogNo="22"
           imgUrl="/blog-covers/22-tech-and-art.png"
           heading="4 Ways Technology is Changing how we make Art"
           date="13/09/2020"
           subheading="Technology is not all about maths and science. Technology can also be artistic, paving the way for new and exciting expressions of visual creativity. In doing so, artists, engineers and programmers may work together to bring fascinating creations to life. Here, we discuss four of the many ways in which technology may be fused with artistic creativity."
-          authors={{"victoria-ruming":["/potraits/victoria.jpg", "Victoria Ruming"]}}
+          authors={{
+            "victoria-ruming": ["/potraits/victoria.jpg", "Victoria Ruming"],
+          }}
         />
 
         {/*blog post 21*/}

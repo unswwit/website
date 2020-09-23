@@ -6,7 +6,7 @@ class PubArticle extends Component {
     render() {
         return (
             <div>
-                {/*start of publications article*/}
+                {/*Start of publications article*/}
 
                 <div className = "article">
                   <div className = "dark" > </div>

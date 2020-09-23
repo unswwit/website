@@ -23,8 +23,8 @@ class Home extends Component{
 				<div class="description">
 					<div class="description-left">
 						<h1>UNITE.
-						<br/> EMPOWER.
-						<br/> UPSKILL.</h1>
+						EMPOWER.
+						UPSKILL.</h1>
 					</div>
 					<div class="description-right">
 						<p>
@@ -77,15 +77,15 @@ class Home extends Component{
 					<div class="event-1">
 						<a href="https://www.facebook.com/events/913508185831961/">
 							<img src={process.env.PUBLIC_URL + '/event-covers/cloud-computing.jpg'} alt="banner"/>
-						</a>	
+						</a>
 					</div>
 				</div>
 				{/*End of upcoming events area*/}
 
-				<div class="sponsors" >
-					<h2>OUR SPONSORS</h2>
+				<div class="sponsors">
+					<h1>OUR SPONSORS</h1>
 					<img src={process.env.PUBLIC_URL + './sponsors-home.png'} className="photo" alt="banner" resizeMode='contain'
-							style={{width: '65vw'}} />
+							/>
 				</div>
 
 			</body>

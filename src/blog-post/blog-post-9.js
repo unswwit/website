@@ -29,8 +29,11 @@ class blogPost9 extends Component {
           </div>
 
           <div class="post">
-
-            <iframe title="Tim Urban’s TED Talk “Inside the Mind of a Master Procrastinator” " width="560" height="315" src="https://www.youtube.com/embed/arj7oStGLkU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="videoWrapper">
+              <iframe title="Tim Urban’s TED Talk “Inside the Mind of a Master Procrastinator” " width="560" height="315" src="https://www.youtube.com/embed/arj7oStGLkU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"
+              webkitallowfullscreen="true" 
+              mozallowfullscreen="true"></iframe>
+            </div>
 
             <br/><br/><p class="post-content">To be honest, I don’t consider myself a master
             procrastinator. I start an assignment and study the day we’re notified, and

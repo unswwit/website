@@ -2,16 +2,15 @@
 
 /*Form*/
 .form {
-    padding-top: 60px;
     text-align: center;
-    margin: auto;
-    height: 620px;
+    margin: 60px auto 0px auto;
     max-width: 80%;
 }
 
 .inquiry {
     padding-bottom: 50px;
 }
+
 /*Form left*/
 .formLeft {
     display: inline-block;
@@ -71,28 +70,33 @@ form input.button:hover {
     color: #313638;
     opacity: 70%; /* Firefox */
 }
+
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: #313638;
     opacity: 70%;
 }
+
 ::-ms-input-placeholder { /* Microsoft Edge */
     color: #313638;
     opacity: 70%;
 }
 
+input:focus::-webkit-input-placeholder {  /* Chrome */
+    color: #313638;
+}
+
 /*Form image*/
 .formRight {
-    display: inline-block;
-    width: 60%;
-    padding: 10px 0px;
-    height: 100%;
+    width: 50%;
     overflow: hidden;
+    float: right;
 }
 
 /*Style for the Emails is below*/
 .contact-team {
     margin-top: 50px;
 }
+
 .newEmails {
     height: 1000px;
 }
@@ -133,9 +137,10 @@ form input.button:hover {
 }
 
 .newEmails div.col2 {
-    margin-left: 27%;
     width: 57%;
     height: 450px;
+    margin-left: 26%;
+    margin-right: auto;
 }
 
 .newEmails div.profile2 {
@@ -148,16 +153,159 @@ form input.button:hover {
 }
 
 .newEmails div.col3 {
-    margin-left: 15%;
     width: 80%;
     height: 450px;
+    margin-left: 12%;
+    margin-right: auto;
 }
 
 .newEmails div.profile3 {
     display: inline-block;
-    width: 33.3%;
+    width: 33%;
     padding: 30px;
     float: none;
     height: 230px;
     overflow: none;
+}
+
+.line-break {
+    visibility: hidden;
+}
+
+/*-------------------------------Join us: different screen sizes ------------------------------*/
+@media only screen and (max-width: 1200px) {
+    .newEmails div.profile2 {
+        padding: 25px;
+    }
+
+    .newEmails div.profile3 {
+        padding: 25px;
+    }    
+}
+
+@media only screen and (max-width: 1000px) {
+    .formRight {
+        display: initial;
+        float: none;
+    }
+
+    .centre {
+        height: 100%;
+    }
+
+    .formLeft {
+        display: initial;
+    }
+
+    .newEmails {
+        height: 1200px;
+    }
+
+    .newEmails div.col2 {
+        width: 90%;
+        height: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .newEmails div.col3 {
+        width: 90%;
+        height: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+    }
+
+    .newEmails div.profile3 {
+        display: inline-block;
+        width: 50%;
+        padding: 30px;
+        float: none;
+        height: 200px;
+        overflow-wrap: break-word;
+    }
+
+    .newEmails div.profile2 {
+        overflow-wrap: break-word;
+    }
+
+    hr.solid {
+        border-top: 2px solid #bbb;
+    }
+
+    .line-break {
+        visibility: visible;
+    }
+
+    .newEmails img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .newEmails h3, a {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 910px) {
+    .centre {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .centre {
+        height: 300px;
+    }
+
+    .newEmails {
+        height: 2150px;
+    }
+
+    .newEmails div.profile3 {
+        width: 100%;
+    }
+
+    .newEmails div.profile2 {
+        width: 100%;
+    }
+
+    .newEmails div.col2 {
+        width: 90%;
+        height: 800px;
+    }
+
+    .newEmails a {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .centre {
+        height: 200px;
+    }
+
+    .newEmails {
+        height: 2400px;
+    }
+
+    .newEmails div.col2 {
+        height: 850px;
+    }
+
+    .form {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

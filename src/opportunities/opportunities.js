@@ -19,7 +19,7 @@ class Opportunities extends Component {
         />
 
             {/*Start of opportunities grid table*/}
-            <div style={{ margin:"125px"}}>
+            <div class="opp-grid">
 
                 <div class="container">
                     <OppCard
