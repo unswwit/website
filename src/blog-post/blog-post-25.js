@@ -39,45 +39,48 @@ class blogPost25 extends Component {
                             University to managing customer relationships and supply chain management at Deloitte.
                         </p><br/>
 
-                        <ol class="list">
-                            <li class="question">What sparked your interest to join the field of STEM?</li><br/>
+                        <p class="question">
+                            What sparked your interest to join the field of STEM?
+                        </p>
 
-                            <p class="post-content">
-                                I love that STEM allows  me to observe technological expansion happening in 
-                                this world as businesses shift to automation.
-                            </p><br/>
+                        <p class="post-content">
+                            I love that STEM allows  me to observe technological expansion happening in 
+                            this world as businesses shift to automation.
+                        </p><br/>
 
-                            <li class="question">Please provide a short summary of your career journey so 
-                            far:</li><br/>
+                        <p class="question">
+                            Please provide a short summary of your career journey so far:
+                        </p>
 
-                            <p class="post-content">
-                                I have gone from working in Science, both in academia and industry, to joining 
-                                Deloitte in Consulting. I have no regrets about doing so as the opportunities 
-                                I’ve had at Deloitte has helped me to develop skills that I wouldn’t have been 
-                                able to acquire in the academic field.  
-                            </p><br/>
+                        <p class="post-content">
+                            I have gone from working in Science, both in academia and industry, to joining 
+                            Deloitte in Consulting. I have no regrets about doing so as the opportunities 
+                            I’ve had at Deloitte has helped me to develop skills that I wouldn’t have been 
+                            able to acquire in the academic field.  
+                        </p><br/>
 
-                            <li class="question">Where do you see yourself in the future (career wise)?</li><br/>
+                        <p class="question">
+                            Where do you see yourself in the future (career wise)?
+                        </p>
 
-                            <p class="post-content">
-                                Looking into the future, I hope to become an industry leader within Consulting!
-                            </p><br/>
+                        <p class="post-content">
+                            Looking into the future, I hope to become an industry leader within Consulting!
+                        </p><br/>
 
-                            <li class="question">What do you love about your career now?</li><br/>
+                        <p class="question">What do you love about your career now?</p>
 
-                            <p class="post-content">
-                                I love that the opportunities at Deloitte never ends. At Deloitte, I get to own 
-                                my ideas and see, first-hand, the impact that my work has made when I work with 
-                                clients.
-                            </p><br/>
+                        <p class="post-content">
+                            I love that the opportunities at Deloitte never ends. At Deloitte, I get to own 
+                            my ideas and see, first-hand, the impact that my work has made when I work with 
+                            clients.
+                        </p><br/>
 
-                            <li class="question">Favourite Quote or Motto?</li><br/>
+                        <p class="question">Favourite Quote or Motto?</p>
 
-                            <p class="post-content">
-                                10 years from now, make sure that you can say you chose your life, you didn’t 
-                                settle for it.
-                            </p><br/>
-                        </ol>
+                        <p class="post-content">
+                            10 years from now, make sure that you can say you chose your life, you didn’t 
+                            settle for it.
+                        </p><br/>
 
                     </div>
                 </div>
