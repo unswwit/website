@@ -16,6 +16,19 @@ class Blog extends Component {
         />
 
         {/*Start of blog posts*/}
+        {/*blog post 25*/}
+        <BlogPreview
+          topMargin="10vw"
+          bottomMargin="5vw"
+          blogNo="25"
+          imgUrl="/blog-covers/25-cindy-russel-sia.png"
+          heading="Introducing: Cindy Russel Sia, Senior Consultant of Deloitte"
+          date="23/09/2020"
+          subheading="We are excited to share a recent Q&A we had with Cindy about her career journey in STEM"
+          authors={{
+            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield"],
+          }}
+        />
         {/*blog post 24*/}
         <BlogPreview
           topMargin="10vw"
