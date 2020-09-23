@@ -46,7 +46,7 @@ class MarketingContent extends Component {
                           fb="https://www.facebook.com/unsw.wit/posts/2378857132419154"
                           imgUrl="/initiatives/monday/selfcarereminder.png"
                           alt="Self care is important!"
-                          date="08/17/2020"
+                          date="17/08/2020"
                         />
                       <Memes
                         fb="https://www.facebook.com/unsw.wit/photos/a.1570799533224922/2365454317092769/?type=1&theater"
@@ -143,7 +143,7 @@ class MarketingContent extends Component {
                         fb="https://www.facebook.com/unsw.wit/photos/a.1570799533224922/2370444469927087/"
                         imgUrl="/initiatives/wcw/shatabdidey.png"
                         alt="Felicia Ee"
-                        date="08/5/2020"
+                        date="08/05/2020"
                       />
 
 
