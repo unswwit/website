@@ -155,14 +155,6 @@ require?
             Deki, Zhou, and Felicia have built something that makes every student’s life easier and more enriching at UNSW. Not many people leave that sort of legacy! Along the way, they developed their technical skills, overcome technical challenges, and explored their interests. And of course, this project showcases their skills in a unique way that will surely be attractive to many employers. On behalf of all UNSW students, thank you Deki, Zhou, and Felicia for volunteering your time to build something we love so much! We hope you will find the knowledge and support you need to reach all your LinkUp goals.
             </p>
 
-            <div class="img-box">
-                <img
-                src={process.env.PUBLIC_URL + "/blog-covers/26-linkup.png"}
-                alt="linkup"
-                resizeMode="contain"
-                />
-            </div>
-
           </div>
         </div>
 
