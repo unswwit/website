@@ -31,7 +31,7 @@ class Blog extends Component {
         />
         {/*blog post 25*/}
         <BlogPreview
-          topMargin="10vw"
+          topMargin="5vw"
           bottomMargin="5vw"
           blogNo="25"
           imgUrl="/blog-covers/25-cindy-russel-sia.png"
@@ -44,7 +44,7 @@ class Blog extends Component {
         />
         {/*blog post 24*/}
         <BlogPreview
-          topMargin="10vw"
+          topMargin="5vw"
           bottomMargin="5vw"
           blogNo="24"
           imgUrl="/blog-covers/24-whywesleep.png"
