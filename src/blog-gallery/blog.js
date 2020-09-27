@@ -16,6 +16,19 @@ class Blog extends Component {
         />
 
         {/*Start of blog posts*/}
+        {/*blog post 26*/}
+        <BlogPreview
+          topMargin="10vw"
+          bottomMargin="5vw"
+          blogNo="26"
+          imgUrl="/blog-covers/25-linkup.png"
+          heading="Personal Project Series #1: LinkUp"
+          date="27/09/2020"
+          subheading="In this blog post, we’ll be hearing from the founders of LinkUp! Perhaps you used LinkUp to discover WIT or other societies. Just like any great tool, it started with the recognition of a need, followed by a great idea. Let’s dive into our conversation with the three founders!"
+          authors={{
+            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
+          }}
+        />
         {/*blog post 25*/}
         <BlogPreview
           topMargin="10vw"
