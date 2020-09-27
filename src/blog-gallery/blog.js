@@ -21,7 +21,7 @@ class Blog extends Component {
           topMargin="10vw"
           bottomMargin="5vw"
           blogNo="26"
-          imgUrl="/blog-covers/25-linkup.png"
+          imgUrl="/blog-covers/26-linkup.png"
           heading="Personal Project Series #1: LinkUp"
           date="27/09/2020"
           subheading="In this blog post, we’ll be hearing from the founders of LinkUp! Perhaps you used LinkUp to discover WIT or other societies. Just like any great tool, it started with the recognition of a need, followed by a great idea. Let’s dive into our conversation with the three founders!"

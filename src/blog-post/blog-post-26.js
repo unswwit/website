@@ -4,7 +4,7 @@ import "./blog-post.css";
 import AuthorCard from "./authorCard";
 import PageHeader from ".././header";
 
-class blogPost24 extends Component {
+class blogPost26 extends Component {
   //start webpage at the top
   componentDidMount() {
     window.scrollTo(0, 0);
@@ -175,4 +175,4 @@ require?
     );
   }
 }
-export default blogPost24;
+export default blogPost26;
