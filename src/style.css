@@ -17,10 +17,10 @@ font-family: 'Montserrat', sans-serif;*/
   position: relative;
 }
 
+/*website overlay*/
 .coverPhoto .dark {
   width: 100%;
-  background-color: #313638;  /*website overlay*/
-  /*background-color: black;*/
+  background-color: #313638;
   opacity: 0.5;
   position: absolute;
   top: 0;
@@ -30,15 +30,14 @@ font-family: 'Montserrat', sans-serif;*/
 
 .coverPhoto .title {
   position: absolute;
-  left: 50%;
+  top: 0;
+  text-align: center;
+  width: 100%;
   z-index: 2;
-  top: 0px;
 }
 
 .coverPhoto .title h1 {
-  left: -50%;
   text-align: center;
-  position: relative;
 
 }
 
