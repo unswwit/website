@@ -5,7 +5,7 @@ import "./blog-post/blog-post.css";
 class PageHeader extends Component {
     render() {
       return (
-        <div class="coverPhoto"> {/*style={{backgroundImage: process.env.PUBLIC_URL + this.props.imgUrl}}*/}
+        <div class="coverPhoto"> 
           {/*dark overlay*/}
           <div class="dark"></div>
 
