@@ -170,10 +170,8 @@ div .headline{
 /*--------------Statistics Mobile Design-------------------*/
 
 @media only screen and (max-width: 1000px) {
-
   .number {
-      grid-template-columns: 25% 35% 45%;
-      place-items: top;
+      grid-template-columns: 25% 30% 45%;
       position: absolute;
       right: 0;
       width: 90%;
