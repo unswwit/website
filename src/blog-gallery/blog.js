@@ -16,9 +16,24 @@ class Blog extends Component {
         />
 
         {/*Start of blog posts*/}
-        {/*blog post 26*/}
+
+        {/*blog post 27*/}
         <BlogPreview
           topMargin="10vw"
+          bottomMargin="5vw"
+          blogNo="27"
+          imgUrl="/blog-covers/27-ankita-singh.png"
+          heading="Introducing: Ankita Singhm, PHD Student"
+          date="30/09/2020"
+          subheading="We are excited to share a recent Q&A we had with Ankita Singh regarding her journey in tech."
+          authors={{
+            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield"],
+          }}
+        />
+
+        {/*blog post 26*/}
+        <BlogPreview
+          topMargin="5vw"
           bottomMargin="5vw"
           blogNo="26"
           imgUrl="/blog-covers/26-linkup.png"
