@@ -11,7 +11,7 @@ class Major extends Component {
               src={process.env.PUBLIC_URL + this.props.details[key][1]}
               alt={key}
               resizeMode="contain"
-              style={{'height': '150px', 'width': '300px'}}
+              style={{'height': '125px', 'width': '250px'}}
             />
           </a>
         ))

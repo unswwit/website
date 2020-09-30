@@ -5,8 +5,9 @@ p.subheader {
     font-family: 'Montserrat', sans-serif;
     font-size: 12pt;
     color: #313638B3;
-    padding: 75px 400px;
     letter-spacing: 2px;
+    text-align: center;
+    margin-top: 50px;
 }
 
 /*----------------------------Sponsor page sponsors---------------------------*/
@@ -15,7 +16,10 @@ h1.subsponsor {
     font-size: 38pt;
     letter-spacing: 8px;
     text-transform: uppercase;
-    padding: 35px 0px;
+    margin-top: 100px;
+    margin-bottom: 45px;
+    text-align: center;
+    
 }
 
 /*Sponsor logos*/
@@ -38,7 +42,6 @@ h1.subsponsor {
 /*Sponsor contact*/
 a.subheader {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1vw;
 }
 
 .subheader a:hover {
@@ -46,7 +49,10 @@ a.subheader {
     text-decoration: none;
 }
 
-p.subheader {
-    font-size: 1vw;
-    text-align: center;
+#sponsors-body {
+    max-width: 70%;
+    margin: 0 auto;
+    margin-bottom: 10%;
+    margin-top: 5%;
 }
+
