@@ -97,10 +97,9 @@ class blogPost27 extends Component {
                         <p class="question">Favourite Quote or Motto?</p>
 
                         <p class="post-content">
-                            10 years from now, make sure that you can say you chose your life, you didn’t 
-                            settle for it.
-                        </p><br/><br/>
-
+                            If you never try, you'll never know what you are capable of.<br/>– John Barrow
+                        </p><br/>
+                 
                     </div>
                 </div>
 

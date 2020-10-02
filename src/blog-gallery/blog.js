@@ -23,7 +23,7 @@ class Blog extends Component {
           bottomMargin="5vw"
           blogNo="27"
           imgUrl="/blog-covers/27-ankita-singh.png"
-          heading="Introducing: Ankita Singhm, PHD Student"
+          heading="Introducing: Ankita Singh, PHD Student"
           date="30/09/2020"
           subheading="We are excited to share a recent Q&A we had with Ankita Singh regarding her journey in tech."
           authors={{
