@@ -24,7 +24,7 @@ class blogPost27 extends Component {
                 <div class="blog-content">
                     <div>
                         <h2 class="blog-title">
-                            Introducing: Ankita Singhm, PHD Student
+                            Introducing: Ankita Singh, PHD Student
                         </h2>
                         <p class="date">30th September 2020</p>
                     </div>
