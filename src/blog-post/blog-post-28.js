@@ -36,125 +36,173 @@ class blogPost28 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
-              In this blog post, we’ll be hearing from the founders of LinkUp! Perhaps you used LinkUp to discover WIT or other societies. Just like any great tool, it started with the recognition of a need, followed by a great idea. Let’s dive into our conversation with the three founders!
-            </p>
-            <br />
+            <ol class="list">
+              <li class="question">Can you tell us about yourself?</li>
+              <br /> <p class="post-content">
+                <strong>Vivian(V)</strong>: I'm Vivian, and I’m currently studying B. Data Science & Decisions (Computational Major). I am the current President of WIT and formerly the Treasurer of CSE Revue. I was a Google STEP Intern last summer, and I will be an Atlassian Data Science Intern this Summer.
+              </p>
 
-            <p class="post-content">
-              Hey, we’re Deki, Zhou, and Felicia, three UNSW 2nd year students who created LinkUp!
-            </p><br/>
+              <p class="post-content">
+                <strong>Amanda(A)</strong>: I’m Amanda, and I’m a third-year student studying Software and Biomedical Engineering. I’ve been a part of a few societies and Arc Volunteering. I am currently the VP for WIT and the Careers Director for EngSoc. I started applying for internships this year, and I’m interning at AI Australia as a Web Dev. This summer, I’ll be an Atlassian Software Developer Intern.
+              </p>
+              <br />
 
-            <p class="question">
-              Introduce yourself!
-            </p>
-            <p class="post-content">
-              <strong>Deki(D)</strong>: I’m a software engineering student that listens to one too many tech podcasts and enjoys playing Valorant.
-            </p>
-            <p class="post-content">
-              <strong>Zhou(Z)</strong>: Just your average 2nd-year Comp Sci student. Quiet and introverted. I enjoy cooking, video games, and watching anime in my spare time.
-            </p>
-            <p class="post-content">
-              <strong>Felicia(F)</strong>: I’m a Software Eng/Commerce student who loves baking, music (I play classical guitar), and graphic design - something I get to do a lot of as WIT’s Marketing Exec!
-            </p><br/>
+              <li class="question">How have you prepared for technical interviews?</li>
+              <br /> <p class="post-content">
+                V: I brushed up on common data structures and algorithms, including time and space complexities, using university resources from COMP2521, Medium articles and Youtube videos. I practiced by doing questions on websites such as HackerRank and LeetCode. Additionally, I browsed on Reddit and other forums to understand the interview process and what types of questions I might be asked for a specific interview. After I felt like I was prepared enough, I had a couple of our friends sit through mock technical interviews with me and give me feedback on my performance.
+              </p>
+              <p class="post-content">
+                A: I researched people's past experiences interviewing for the company and role, especially on forums like Reddit, Glassdoor and Quora. People often describe their interview process, how they found it (difficulty level) and what types of questions they were asked. I also knew that they would be assessing data structure and algorithms, so I revisited my COMP2521 notes.
+              </p>
+              <br />
 
-            <p class="question">
-              What is LinkUp?
-            </p>
-            <p class="post-content">
-            Z: It’s a uni event tracker to help find events happening at your uni.
-            </p>
-            <p class="post-content">F: By collating society events, we aim to help students find ‘their people’ in the student community, as well as help societies reach more students.</p><br/>
+              <li class="question">Where did you find practice questions? </li>
+              <br /> <p class="post-content">
+                V: I found many practice questions on HackerRank and Leetcode.
+              </p>
+              <p class="post-content">
+                A: Typical sites are HackerRank and Leetcode. HackerRank is great because it provides verified solutions in multiple languages and tagged topics and difficulty levels. Questions also have some test cases given. Additionally most companies use platforms like HackerRank for their coding test stages so it’s good to familiarise yourself with the setup. Another website you could try is InterviewBit. They have video tutorials on topics and hand-picked questions. You also get rated with a points system and if you excel you get referred to top-notch companies.
+              </p>
+              <br />
 
-            <p class="question">
-              What inspired you to create LinkUp?
-            </p>
-            <p class="post-content">D: I am actually from QLD, and when I first came to UNSW O-week I didn’t know anyone, so I was trying my best to go to every workshop/society stalls. However, finding events and workshops around campus was difficult and scattered over multiple mediums (UNSW website, Eventbrite, Facebook), and I wondered why there wasn’t an easier way to navigate events on campus.
-            </p><br/>
+              <li class="question">What was the structure of the technical interviews you completed?</li>
+              <br /> <p class="post-content">
+                V: The structure of technical interviews would differ depending on the company and role you've applied to. Today, we're going to go over the most common structure of technical interviews for a <b>software engineering role</b>.
+              </p>
+              <p class="post-content">
+                The typical interview is ~45 minutes long. We begin with self-introductions for the first ~5 minutes. Here's your opportunity to tell the interviewer a little bit about yourself, your motivations for applying to this role and what experiences you have (from other internships, hackathon, personal projects etc). Next we would spend the next 30-35 minutes answering technical questions and wrap-up with ~5 minutes of questions you would like to ask the interviewer.
+              </p>
+              <p class="post-content">
+                For the technical questions, you should expect to be given either 1 hard question or 2 easy-medium questions for you to CODE up in the 30-35 minutes. Following this, you will always be asked about the time and space complexity of your code. You should always begin by understanding the question asked. Spend the next 2-3 minutes asking any clarifying questions (addressing input/output types, asking how it might handle certain edge cases) and think of test cases and confirming their intended output. Then, you can think about your code implementation and verbalize how you intend to implement the code. After the interviewer has given you the 'green light' you should begin by choosing your coding language and start coding it up.
+              </p>
+              <p class="post-content">
+                A: I’ve only done 1 technical interview and it was actually 55 minutes and one part of a three hour session. There was a brief introduction (there was only one interviewer) and then we jumped into the problem-solving and ended off with around 5 minutes of questions for the interviewer too. Most people answer 2 - 3 questions (easy-medium difficulty). The platform used was CodePair which lets you and your interviewer collaboratively code. The interview gave one question at a time, I would code, test and then be asked ways to optimise my implementation based on space and time complexity.
+              </p>
+              <br />
 
-            <p class="question">
-            How did LinkUp become affiliated with Arc? How did you pitch your idea?
-            </p>
-            <p class="post-content">F: Arc actually reached out to us after seeing our posts on the UNSW Discussion Group! They loved how we were making it easier for students to be involved with uni life and offered their support. It was a great experience working with them.
-            </p><br/>
+              <li class="question">How did you test your code in your interviews?</li>
+              <br /> <p class="post-content">
+                V: For the technical interviews I sat, they were usually done on a whiteboard or on CoderPad. Either way, they don't let you 'run' your code. You can 'test' your code by thinking of edge cases and seeing how your code handles it, or how you can adjust your code to handle this case.
+              </p>
+              <p class="post-content">
+                A: My technical interview was online/virtual so I could actually run my code within the online coding platform but the testing process is the same - you would input test cases (consider edge cases and error cases if any) and compare the output.
+              </p>
+              <br />
 
-            <p class="question">
-            Who was on the founding team and what roles did you have allocated? After the project took off, were more people recruited to join the team?
-            </p>
-            <p class="post-content">D: LinkUp started off with me, Zhou and Felicia. I worked mainly on the frontend of the website while Zhou worked on backend and devops. Felicia was in charge of marketing. After a period of growth, yes, we did decide to recruit more members to help LinkUp become an even better product.
-            </p><br/>
+              <li class="question">What are some of the questions/topics you were asked?</li>
 
-            <p class="question">
-            Can you tell us about the process of building LinkUp? What time commitments did it
-require?
-            </p>
-            <p class="post-content">Z: Building LinkUp took a long time. The whole process involved splitting the project into iterations so it was easier to handle, and focused on building MVPs so we could iteratively improve them later on. We experimented with code and features and researched methods and solutions to our problem, which we defined earlier: finding events. We also talked a lot with each other before making decisions. A small part of the project was Googling and using Stack Overflow to find tutorials and code examples that we could use since we were relatively new to personal projects. In terms of time commitment, the project was very flexible and fit within our schedules. Some weeks we might have spent a few hours on it, and others felt like a full-time job (often when we had nothing else to do e.g,. summer holidays). We’ve probably spent well over a few hundred hours so far on LinkUp.
-            </p>
-            <p class="post-content">F: In terms of building our user base and reaching students, we focused on Facebook discussion groups as the easiest way to reach a large number of students.
-            </p><br/>
+              <div class="img-box outer-box">
+                <div class="inner-box">
+                  <img
+                  src={process.env.PUBLIC_URL + "/blog-attachments/blog-28-topics-1.jpg"}
+                  alt="techInterviews-1"
+                  resizeMode="contain"
+                  />
+                </div>
+              </div>
+              <br />
 
-            <p class="question">
-            What did you learn whilst creating LinkUp?
-            </p>
-            <p class="post-content">D: LinkUp consists of a small and dedicated team, so I learned how to work in a team and the importance of communication and time management to deploy features on time. I also learned to work with external parties to satisfy both Linkup’s needs and theirs.
-            </p>
-            <p class="post-content">Z: I learned how to use AWS to host our website, CDN and backend, how to write scripts to scrape websites using Python and set up continuous delivery for our repo. I also learned a bit of React so I could help out with the frontend.
-            </p>
-            <p class="post-content">F: I have definitely developed my teamwork and communication skills along the way, but I also realised how lucky we are at UNSW to have such an active and engaged student community. Society events are a huge part of the uni experience at UNSW, in comparison to other universities, and I’m really grateful for that. It would be amazing if LinkUp could help shape student communities in other unis as well.
-            </p>
 
-            <p class="question">
-            What are some of the challenges you faced while creating LinkUp?
-            </p>
-            <p class="post-content">Z: Probably encountering a bug or error and not being able to find a fix on Google. The best thing to do here is to take a break and refresh your mind for a while, so when you come back, you can take a different approach. Another challenge was finding the motivation to do the project. This might be different for everyone, but I found setting goals and thinking about the future helped me be more motivated in creating LinkUp.
-            </p><br/>
+              <p class="post-content">
+                V: Another thing you also want to be familiar with is the libraries of your chosen language eg. Python would have a number of existing functions. If you wanted to translate all the lower cases to upper cases you can use the inbuilt string.upper() to handle this instead of coding it up from scratch. This is important since it would tell the interviewer how well you know the language and it would also make your code <em>pythonic</em>, aligning with the Python style guides.
+              </p>
+              <p class="post-content">
+                A: I was told to revise on data structures and algorithms (not necessarily the names but how to apply them) before my interview. The questions I received were on manipulation of arrays, strings and binary.
+              </p>
+              <br />
 
-            <p class="question">
-            Who did you turn to for help along the way?
-            </p>
-            <p class="post-content">Z: Whenever we needed help, we would either Google it, ask our teammates for help, or ask questions in relevant coding communities available to us. Some supportive communities for asking coding related questions are CSESoc workshops, Pcsoc discord, r/learn programming, and other programming subreddits, a certain UNSW society discord, and plenty of others.
-            </p>
-            <p class="post-content">F: We also have talked to a wonderful mentor from UNSW Founders, who helped guide us and focus on our goals.
-            </p><br/>
 
-            <p class="question">
-            What has been the most rewarding part of creating LinkUp?
-            </p>
-            <p class="post-content">D: Seeing students using LinkUp and receiving feedback about how much it has helped them find events around campus will continue to be the most rewarding part of Linkup. Knowing that other people are also finding value in a project that you spent so much time and effort on will serve as a motivation to improve LinkUp continually.
-            </p>
-            <p class="post-content">Z: While creating LinkUp, I realised how rewarding a personal project can be and how much you can learn from the experience. Personal projects are completely different from course projects regarding how much control you have over your project. You get to choose your own teammates without any restrictions, have a flexible time commitment that fits in with your schedule, do something you are interested in, plus so many other things. Ultimately, this made it easier to learn the technologies required to build LinkUp and learn what we were interested in. I highly encourage everyone interested in software engineering to start a personal project for something that interests them. There is just so much you can learn from it.
-            </p>
-            <p class="post-content">F: Like Deki, for me, it’s knowing students are using the site and that we’re actually helping strengthen UNSW’s student community. Every time a student or society contacts us with questions or support, it’s super exciting and makes me want to do more.
-            </p><br/>
+              <li class="question">Which language did you use and how did you decide to use that language? </li>
+              <br /> <p class="post-content">
+                V: Code in the language you are most <b>comfortable</b> in. At UNSW most students would begin by learning C, which is arguably not the best language to sit your technical interviews in. However, if you feel that C is your strongest language, then by all means sit your interview in C. I sat my Google STEP interviews in C and passed, and I know many other UNSW students who did the same for their roles and got accepted too.
+              </p>
+              <p class="post-content">
+                A: I’ve been coding with Python for all my coding tests and technical interviews. It’s what I’m most comfortable with and there’s just some things (e.g. data structures) that are quicker and easier to implement in Python than C (even though C was my first language). For general software developer interviews, they usually choose questions that can be answered in a range of languages, so if you only know one language like C, that’s fine - it just might take longer to answer. However, if you are applying for a role with a specific language (e.g. C# Developer), then your coding tests will most likely require you to code in that language.
+              </p>
+              <br />
 
-            <p class="question">
-            What has been the initial impact of LinkUp? Have more students joined societies?
-            </p>
-            <p class="post-content">Z: So far we have had 7.7k users and 12k sessions. We’re not too sure of how much we impacted students joining societies, but it has certainly made it easier to find events to go to.
-            </p>
-            <p class="post-content">F: We’ve been impacted a lot by COVID, with many events being postponed or canceled. But, we’ve received a lot of positive feedback, so hopefully, as we move back on campus LinkUp can reach even more people.
-            </p><br/>
 
-            <p class="question">
-            What’s next for LinkUp? What are your plans and goals and will you be pursuing it after
-            </p>
-            <p class="post-content">Z: We hope more students will use LinkUp, so we’re planning to add many features to help make uni events better! We can’t say much yet, but you can expect ways to give feedback for an event and a voting system. We will still maintain it after graduation, depending on how much time we have, but don’t expect any major updates. This should be fine, though, as it doesn’t require much time to maintain.
-            </p><br/>
+              <li class="question">How did you communicate your thought process / code implementation to the interviewer?</li>
+              <br /> <p class="post-content">
+                V: You want to verbalise your thought process to the interview as you code. This is actually a lot harder than you think because we're not used to doing this. You should definitely take the chance to practice a couple of mock interviews with friends or at society events such as WIT where you can practice technical interviews with company representatives.
+              </p>
+              <p class="psot-content">
+                A: Even with uni exams, I tend to write my plan of attack in comments first (e.g. sort through this, loop through this then find this). So during the interview, I would also be saying it aloud too. Having those comments down just helps me target each step of solving the question one by one (e.g. first I have to sort, how do I sort, what’s the smartest way to sort).
+              </p>
+              <br />
 
-            <p class="question">
-            What advice would you give to other students who want to pursue a personal project?
-            </p>
-            <p class="post-content">D: If you have a personal project you are interested in, then I would say just start it. If you need help learning the frameworks or languages, there are so many great resources with my personal favourite being Youtube and Codecademy.
-            </p>
-            <p class="post-content">Z: Do something you’re interested in, go to relevant workshops, use your support (founders, CSESOC, WIT, etc,) and have fun.
-            </p>
-            <p class="post-content">F: Think about what you want to achieve and why, write down your goals, and celebrate every victory.
-            </p><br/>
 
-            <p class="post-content">
-            Deki, Zhou, and Felicia have built something that makes every student’s life easier and more enriching at UNSW. Not many people leave that sort of legacy! Along the way, they developed their technical skills, overcome technical challenges, and explored their interests. And of course, this project showcases their skills in a unique way that will surely be attractive to many employers. On behalf of all UNSW students, thank you Deki, Zhou, and Felicia for volunteering your time to build something we love so much! We hope you will find the knowledge and support you need to reach all your LinkUp goals.
-            </p>
+              <li class="question">What questions would you recommend asking the interviewer?</li>
+              <br /> <p class="post-content">
+                V: You should ask the interviewer about things you would want to know about the company. Instead of the cliched, "Tell me about your role" or "How are you enjoying your work", think about what you would want to know about the company/role before you go in.
+              </p>
+              <p class="post-content">
+                I’m pretty sure I asked the typical “What projects do you work on” but just because I was genuinely curious. I think it’s ok to start off by asking these things but not just filler questions - ask them if you actually want to know. That way, when they reply, there will be particular parts that interest you which you can ask more about. My interviewer was a backend developer but I’m more interested in frontend so I asked about how the different sides interacted, how tasks are separated/delegated, why he chose backend and difference between intern and grad application process.
+              </p>
+              <br />
 
+
+              <li class="question">Did you ever get a question you didn’t know how to answer? If yes, what did you do?</li>
+              <br /> <p class="post-content">
+                V: Yes definitely. In interviews, you should always expect to answer questions you have never seen or heard of. You just need to think about how you would try to solve this with what knowledge you have and push through. Something that worked for me was to begin by how I would solve it logically without code and then seeing how that would translate into code.
+              </p>
+              <p class="post-content">
+                A: Yes I have, even in coding tests. I got stuck at one point when he asked me how I would optimise my code in terms of space complexity. I threw around suggestions of ways I could change the data structure / algorithm I used. Not going to lie, I was stalling for time to think but also hoped bouncing ideas off him would help me see if I was going in the right direction. He actually gave me a hint to point me in the right direction, and I ended up getting it.
+              </p>
+              <br />
+
+
+              <li class="question">What were some of the differences between the interview process at different companies? </li>
+              <br /> <p class="post-content">
+                V: For a software engineering role, the interview process would differ in terms of number of interviews, assessment days as well as types of questions etc.
+              </p>
+              <p class="post-content">
+                Some companies such as Atassian would send through a HackerRank test to help filter out applicants before they get to proceed to a technical interview. Whereas other companies such as Facebook would go straight into technical interviews.
+              </p>
+              <p class="post-content">
+                For Canva, you get to pick if you want to sit through a back-end or front-end interview, and your interview questions would be specifically on these areas instead of the usual data structure and algorithm questions.
+              </p>
+              <p class="post-content">
+                Sometimes companies who don't have a Sydney office such as Jane Street would also fly you out to their office for a final assessment day (usually 3 consecutive interviews in one day).
+              </p>
+
+              <p class="post-content">
+                A: For Atlassian, you would also experience a final assessment day usually in office but online due to COVID this year with 3 interviews in a row (technical interview with a whiteboard interview and values interview).
+              </p>
+              <p class="post-content">
+                That being said, the interview processes do differ slightly for each company in terms of structure, format and questions. If the interview process is unclear, you should definitely clarify this with your HR point of contact.
+              </p>
+              <br />
+
+
+              <li class="question">What tips for success in technical interviews do you have for others?</li>
+              <br /> <p class="post-content">
+                &#10060; Don't leave it to the last minute - usually technical interviews aren't something you can prepare for the night before.
+              </p>
+              <p class="post-content">
+                &#10060; Don't begin your studies by working on the hard questions first, start at a level you're comfortable with and then work your way up.
+              </p>
+              <p class="post-content">
+                &#10060; If you encounter a problem you weren’t prepared for, don’t freak out and give up immediately. Talk it through and throw out any suggestions you have.
+              </p>
+              <p class="post-content">
+                &#10060; Don’t be discouraged if you don’t pass a technical interview. Companies often give you feedback if you reach this stage, and if not, ask the recruiter you’re in contact with. You can always do better next time.
+              </p>
+              <br />
+              <p class="post-content">
+                &#9989; Do practice beforehand - revise using COMP2521 materials, websites such as HackeRank and LeetCode.
+              </p>
+              <p class="post-content">
+                &#9989; Do your research on your company - mission, values, what types of questions you might be asked. Also make sure to come dressed appropriately!
+              </p>
+              <p class="post-content">
+                &#9989; Do ask your friends for help - mock interviews, understand concepts/questions
+              </p>
+              <p class="post-content">
+                &#9989; If you’re stuck (some test cases failing) and your interviewer offers help, listen to them - that was a point my interviewer mentioned in my feedback that he liked. Don’t be afraid of the interviewer, they’re there to help you along and they want to see you pass.
+              </p>
+              <br />
+            </ol>
           </div>
         </div>
 
