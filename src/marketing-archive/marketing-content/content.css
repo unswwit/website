@@ -1,26 +1,8 @@
 /*-------------------------------Size bar and image grid-----------------------------*/
 #parent {
-  display: table;
-  overflow-y: auto;
   width: 100%;
-  vertical-align: top;
   height: 100%;
-}
-
-.initiatives:not(#content) {
-  width: 24vw;
-  justify-content: center;
-  box-shadow: 6px -2px 6px -4px #D3D3D3;
-  padding-top: 30px;
-  min-height: 400px;
-}
-
-
-.grid {
-  display: table-cell;
-  width: 75vw;
-  margin-top: -340px;
-  margin-left: 22.5vw;
+  display: table;
 }
 
 /*-------------------------------Left side bar-----------------------------*/
@@ -34,11 +16,19 @@
 
 .initiatives {
   text-align: center;
-  margin: 0 35px;
 }
 
 .initiatives * {
   display: block;
+}
+
+#left-col {
+  display: table-cell;
+  vertical-align: top;
+  padding-top: 30px;
+  width: 24vw;
+  min-height: 400px;
+  box-shadow: 6px -2px 6px -4px #D3D3D3;
 }
 
 .initiatives label {
@@ -47,7 +37,7 @@
   font-size: 12pt;
   color: #313638;
   padding: 10px;
-  width: 20vw;
+  width: 100%;
   line-height: normal;
   cursor: pointer;
   transition: all 0.1s;
@@ -64,7 +54,7 @@ label[for="2020"] {
 }
 
 input[type="radio"] {
-    display:none;
+  display:none;
 }
 
 .initiatives label:hover {
@@ -81,6 +71,7 @@ input[type="radio"][id="crush"]:checked + label {
   background: var(--grey);
   color: var(--white);
 }
+
 input[type="radio"][id="crush"]:checked ~ .grid .mondaymot,
 input[type="radio"][id="crush"]:checked ~ .grid .memes,
 input[type="radio"][id="crush"]:checked ~ .grid .mascot,
@@ -92,6 +83,7 @@ input[type="radio"][id="memes"]:checked + label {
   background: var(--grey);
   color: var(--white);
 }
+
 input[type="radio"][id="memes"]:checked ~ .grid .crush,
 input[type="radio"][id="memes"]:checked ~ .grid .mondaymot,
 input[type="radio"][id="memes"]:checked ~ .grid .mascot,
@@ -103,6 +95,7 @@ input[type="radio"][id="mondaymot"]:checked + label {
   background: var(--grey);
   color: var(--white);
 }
+
 input[type="radio"][id="mondaymot"]:checked ~ .grid .crush,
 input[type="radio"][id="mondaymot"]:checked ~ .grid .memes,
 input[type="radio"][id="mondaymot"]:checked ~ .grid .mascot,
@@ -114,6 +107,7 @@ input[type="radio"][id="mascot"]:checked + label {
   background: var(--grey);
   color: var(--white);
 }
+
 input[type="radio"][id="mascot"]:checked ~ .grid .crush,
 input[type="radio"][id="mascot"]:checked ~ .grid .memes,
 input[type="radio"][id="mascot"]:checked ~ .grid .mondaymot,
@@ -125,23 +119,34 @@ input[type="radio"][id="careers"]:checked + label {
   background: var(--grey);
   color: var(--white);
 }
+
 input[type="radio"][id="careers"]:checked ~ .grid .crush,
 input[type="radio"][id="careers"]:checked ~ .grid .memes,
 input[type="radio"][id="careers"]:checked ~ .grid .mondaymot,
 input[type="radio"][id="careers"]:checked ~ .grid .mascot  {
   display: none;
 }
+
 /*-------------------------------Image grid gallery-----------------------------*/
+#right-col {
+  display: table-cell;
+}
+
+ol {
+  padding: 0px;
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
   align-content: stretch;
-  justify-content: left;
+  justify-content: center;
+  width: 100%;
+  padding: 30px 10px 0px 10px;
 }
 
 .grid li {
   padding: 12px;
-
 }
 
 a.darken {
@@ -182,4 +187,10 @@ a.darken div {
 
 a.darken:hover div {
   color: rgba(255, 255, 255, 1);
+}
+
+@media only screen and (max-width: 520px) {
+  .side {
+    font-size: 16pt;
+  }
 }
