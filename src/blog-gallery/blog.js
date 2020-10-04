@@ -17,9 +17,23 @@ class Blog extends Component {
 
         {/*Start of blog posts*/}
 
-        {/*blog post 27*/}
+        {/*blog post 28*/}
         <BlogPreview
           topMargin="10vw"
+          bottomMargin="5vw"
+          blogNo="28"
+          imgUrl="/blog-covers/28-technical-interviews.png"
+          heading="Technical Interview Walkthrough with Amanda Li and Vivian Shen (Part 1)"
+          date="4/10/2020"
+          subheading="In this Q&A, Vivian Shen and Amanda Li, the President and Vice President of WIT respectively, offer the useful advice they have gathered from their own experiences to help you succeed in your next technical interview."
+          authors={{
+            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
+          }}
+        />
+
+        {/*blog post 27*/}
+        <BlogPreview
+          topMargin="5vw"
           bottomMargin="5vw"
           blogNo="27"
           imgUrl="/blog-covers/27-ankita-singh.png"
