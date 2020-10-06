@@ -13,31 +13,22 @@ p.subheader {
 /*----------------------------Sponsor page sponsors---------------------------*/
 /*Sponsor tier names*/
 h1.subsponsor {
-    font-size: 38pt;
+    font-size: 33pt;
     letter-spacing: 8px;
     text-transform: uppercase;
     margin-top: 100px;
     margin-bottom: 45px;
     text-align: center;
-    
 }
 
 /*Sponsor logos*/
 #majorContainer {
-    padding: 0px 175px 50px 175px;
+    margin-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-end;
 }
-
-.majorContainer a img {
-    margin-bottom: 4vw;
-    padding-left: 10px;
-    padding-right: 10px;
-
-}
-
 
 /*Sponsor contact*/
 a.subheader {
@@ -56,3 +47,21 @@ a.subheader {
     margin-top: 5%;
 }
 
+
+.principal {
+    height: 175px;
+    width: 350px;
+    margin-bottom: 50px;
+}
+
+.major {
+    height: 125px;
+    width: 250px;
+    margin-bottom: 50px;
+}
+
+.support-inkind {
+    height: 75px;
+    width: 150px;
+    margin-bottom: 75px;
+}
