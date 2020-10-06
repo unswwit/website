@@ -49,19 +49,19 @@ a.subheader {
 
 
 .principal {
-    height: 175px;
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     margin-bottom: 50px;
 }
 
 .major {
-    height: 125px;
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     margin-bottom: 50px;
 }
 
 .support-inkind {
-    height: 75px;
-    width: 150px;
+    width: 100%;
+    max-width: 150px;
     margin-bottom: 75px;
 }

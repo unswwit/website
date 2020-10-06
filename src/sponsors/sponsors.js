@@ -162,6 +162,10 @@ class Sponsors extends Component {
                         <a class='subheader' href="mailto:externals@unswwit.com">externals@unswwit.com</a>
                     </p>
                 </div>
+                
+            <footer>
+                <div className="footer_area" style={{"marginTop":"8vw"}}></div>
+            </footer>
             </div>
         );
     }
