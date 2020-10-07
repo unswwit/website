@@ -26,7 +26,7 @@ class Events extends React.Component {
                             <p class="event-name">WIT x EY: Excel How-To Workshop</p>
                                 <p class="event-date">21st September 2020, 3-5:00 PM</p>
                                 <p class="event-summary">
-                                WIT’s Excel “How To:’ Workshop will give UNSW students the opportunity to develop the essential skill of how to professionally use 📈 Excel 📈 In particular, sponsor representatives will discuss how they utilise Excel in a professional environment on a day-to-day basis 👩‍💼👩‍💼 Furthermore, students will learn a multitude of industry best practices, valuable shortcuts, arithmetic functions and conditional formatting, which are vital corporate skills.
+                                WIT’s Excel “How To:’ Workshop will give UNSW students the opportunity to develop the essential skill of how to professionally use <span role="img" aria-label="graph">📈</span> Excel <span role="img" aria-label="graph">📈</span> In particular, sponsor representatives will discuss how they utilise Excel in a professional environment on a day-to-day basis <span role="img" aria-label="women">👩‍💼👩‍💼</span> Furthermore, students will learn a multitude of industry best practices, valuable shortcuts, arithmetic functions and conditional formatting, which are vital corporate skills.
                                 </p>
                                 <ul id="links">
                                     <li class="event-link">

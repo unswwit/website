@@ -130,7 +130,10 @@ class blogPost18 extends Component {
               <ol class="list" type="a">
                 <li>The challenge</li>
                 <br />
-                <li>Knowing you reached the bottom 🥳</li>
+                <li>
+                  Knowing you reached the bottom 
+                  <span role="img" aria-label="party">🥳</span>
+                </li>
                 <br />
                 <li>Finding out what’s at the bottom</li>
                 <br />
