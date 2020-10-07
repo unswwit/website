@@ -140,7 +140,7 @@ ol {
   display: flex;
   flex-wrap: wrap;
   align-content: stretch;
-  justify-content: center;
+  justify-content: left;
   width: 100%;
   padding: 30px 10px 0px 10px;
 }
