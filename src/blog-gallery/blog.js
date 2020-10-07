@@ -16,10 +16,24 @@ class Blog extends Component {
         />
 
         {/*Start of blog posts*/}
+        {/*blog post 29*/}
+        <BlogPreview
+          topMargin="10vw"
+          bottomMargin="5vw"
+          blogNo="29"
+          imgUrl="/blog-covers/29-davina-adisusila.png"
+          heading="Introducing Davina Adisusila, Engineering Team Lead at Eucalyptus
+          "
+          date="7/10/2020"
+          subheading="In this blog post, we learn about the experiences of Davina Adisusila, the Engineering Team Lead at Eucalyptus, as well as the some of the insights she has gained during her incredible journey."
+          authors={{
+            "victoria-ruming": ["/potraits/victoria.jpg", "Victoria Ruming"],
+          }}
+        />
 
         {/*blog post 28*/}
         <BlogPreview
-          topMargin="10vw"
+          topMargin="5vw"
           bottomMargin="5vw"
           blogNo="28"
           imgUrl="/blog-covers/28-technical-interviews.png"

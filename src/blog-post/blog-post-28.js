@@ -174,32 +174,31 @@ class blogPost28 extends Component {
               </p>
               <br />
 
-
               <li class="question">What tips for success in technical interviews do you have for others?</li>
               <br /> <p class="post-content">
-                &#10060; Don't leave it to the last minute - usually technical interviews aren't something you can prepare for the night before.
+                <span role="img" aria-label="red-cross">&#10060;</span> Don't leave it to the last minute - usually technical interviews aren't something you can prepare for the night before.
               </p>
               <p class="post-content">
-                &#10060; Don't begin your studies by working on the hard questions first, start at a level you're comfortable with and then work your way up.
+                <span role="img" aria-label="red-cross">&#10060;</span> Don't begin your studies by working on the hard questions first, start at a level you're comfortable with and then work your way up.
               </p>
               <p class="post-content">
-                &#10060; If you encounter a problem you weren’t prepared for, don’t freak out and give up immediately. Talk it through and throw out any suggestions you have.
+                <span role="img" aria-label="red-cross">&#10060;</span> If you encounter a problem you weren’t prepared for, don’t freak out and give up immediately. Talk it through and throw out any suggestions you have.
               </p>
               <p class="post-content">
-                &#10060; Don’t be discouraged if you don’t pass a technical interview. Companies often give you feedback if you reach this stage, and if not, ask the recruiter you’re in contact with. You can always do better next time.
+                <span role="img" aria-label="red-cross">&#10060;</span> Don’t be discouraged if you don’t pass a technical interview. Companies often give you feedback if you reach this stage, and if not, ask the recruiter you’re in contact with. You can always do better next time.
               </p>
               <br />
               <p class="post-content">
-                &#9989; Do practice beforehand - revise using COMP2521 materials, websites such as HackeRank and LeetCode.
+                <span role="img" aria-label="green-tick">&#9989;</span> Do practice beforehand - revise using COMP2521 materials, websites such as HackeRank and LeetCode.
               </p>
               <p class="post-content">
-                &#9989; Do your research on your company - mission, values, what types of questions you might be asked. Also make sure to come dressed appropriately!
+                <span role="img" aria-label="green-tick">&#9989;</span> Do your research on your company - mission, values, what types of questions you might be asked. Also make sure to come dressed appropriately!
               </p>
               <p class="post-content">
-                &#9989; Do ask your friends for help - mock interviews, understand concepts/questions
+                <span role="img" aria-label="green-tick">&#9989;</span> Do ask your friends for help - mock interviews, understand concepts/questions
               </p>
               <p class="post-content">
-                &#9989; If you’re stuck (some test cases failing) and your interviewer offers help, listen to them - that was a point my interviewer mentioned in my feedback that he liked. Don’t be afraid of the interviewer, they’re there to help you along and they want to see you pass.
+                <span role="img" aria-label="green-tick">&#9989;</span> If you’re stuck (some test cases failing) and your interviewer offers help, listen to them - that was a point my interviewer mentioned in my feedback that he liked. Don’t be afraid of the interviewer, they’re there to help you along and they want to see you pass.
               </p>
               <br />
             </ol>
