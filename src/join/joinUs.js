@@ -63,11 +63,15 @@ class JoinUs extends React.Component {
                             </a>
                         </div>
                     </div>
-                    <img src={process.env.PUBLIC_URL + '/join-us-map.png'}
-                        width = "100%"
-                        className="googleMap"
-                        alt="map"
-                    />
+                    <div class="googleMap">
+                        <iframe 
+                        title="google-maps" 
+                        width="100%" 
+                        height="300" 
+                        frameborder="0" 
+                        scrolling="no" 
+                        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=UNSW%20Sydney%20High%20St%20Kensington,%20NSW%202052%20Australia+(UNSW%20Sydney)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> 
+                    </div>                   
                 </div>
             </div>
 

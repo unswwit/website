@@ -151,8 +151,6 @@ class MarketingContent extends Component {
                         alt="Felicia Ee"
                         date="08/05/2020"
                       />
-
-
                     </ol>
                   </div>
             </div>
