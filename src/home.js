@@ -63,8 +63,9 @@ class Home extends Component{
 					<div class="events-description">
 						<p id="about">
 							At WIT, our focus is on providing events that foster development catering to first to final years. Whether it's personal, academic, professional or social, we want our students to be the best version of themselves. As part of our aim, we also connect current and future students with alumni and industry sponsors to serve as role models to inspire. </p>
-							<p><Link to="/events" style={{ textDecoration: 'none' }}><a id="more-events">See More Events</a>
-								</Link></p>
+							<p>
+								<Link to="/events" style={{ textDecoration: 'none' }}>See More Events</Link>
+							</p>
 					</div>
 					<div class="events-title">
 						<h1> EVENTS </h1>
