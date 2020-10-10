@@ -41,7 +41,24 @@ class MarketingContent extends Component {
 
                     {/*Image collage*/}
                     <ol class="grid" id="content">
-
+                      <WCW
+                        fb="https://www.facebook.com/unsw.wit/posts/2393647687606765"
+                        imgUrl="/initiatives/wcw/aneitayang.png"
+                        alt="Aneita Yang"
+                        date="2/09/2020"
+                      />
+                      <WCW
+                        fb="https://www.facebook.com/unsw.wit/photos/a.1570799533224922/2387231141581753/"
+                        imgUrl="/initiatives/wcw/yourcrush.png"
+                        alt="Who's your crush?"
+                        date="26/08/2020"
+                      />
+                      <MondayMotivation
+                        fb="https://www.facebook.com/unsw.wit/photos/a.1570799533224922/2385637025074498/"
+                        imgUrl="/initiatives/monday/doyourbest.jpg"
+                        alt="Do your best and forget the rest!"
+                        date="24/08/2020"
+                      />
                       <MondayMotivation
                           fb="https://www.facebook.com/unsw.wit/posts/2378857132419154"
                           imgUrl="/initiatives/monday/selfcarereminder.png"
