@@ -71,30 +71,32 @@ class blogPost30 extends Component {
               The typical technical interview is ~45 minutes long:
             </p>
             
-            <table class="post">
-              <tr>
-                <th>Time</th>
-                <th>Task</th>
-                <th>Comments</th>
-              </tr>
-              <tr style={{whiteSpace:"nowrap"}}>
-                <td class="post-content">5 min</td>
-                <td class="post-content">Self Introductions</td>
-                <td class="post-content">Motivations for applying to this company and this specific role.</td>
-              </tr>
-              <tr>
-                <td class="post-content">30-35 min</td>
-                <td class="post-content">Technical Questions</td>
-                <td class="post-content">Expect to be given either 1 hard question or 2 easy-medium questions 
-                  for you to CODE up. Always be asked about the time and space complexity 
-                  of your code</td>
-              </tr>
-              <tr>
-                <td class="post-content">5 min</td>
-                <td class="post-content">Questions to ask the interviewer</td>
-                <td class="post-content">What do you want to know about the company, internship/graduate training process, past intern/graduate projects? </td>
-              </tr>
-            </table>
+            <div style={{"overflow-x":"auto"}}>
+              <table class="post">
+                <tr>
+                  <th>Time</th>
+                  <th>Task</th>
+                  <th>Comments</th>
+                </tr>
+                <tr style={{whiteSpace:"nowrap"}}>
+                  <td class="post-content">5 min</td>
+                  <td class="post-content">Self Introductions</td>
+                  <td class="post-content">Motivations for applying to this company and this specific role.</td>
+                </tr>
+                <tr>
+                  <td class="post-content">30-35 min</td>
+                  <td class="post-content">Technical Questions</td>
+                  <td class="post-content">Expect to be given either 1 hard question or 2 easy-medium questions 
+                    for you to CODE up. Always be asked about the time and space complexity 
+                    of your code</td>
+                </tr>
+                <tr>
+                  <td class="post-content">5 min</td>
+                  <td class="post-content">Questions to ask the interviewer</td>
+                  <td class="post-content">What do you want to know about the company, internship/graduate training process, past intern/graduate projects? </td>
+                </tr>
+              </table>
+            </div>
             <br />
 
             <p class="post-content">
