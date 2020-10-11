@@ -170,25 +170,26 @@ class blogPost30 extends Component {
                 Pseudocode:
               </p> 
 
-              <p class="post-content">
+              <pre>
+                <code>
+                  For every element (call this i) in the array:
+                </code><br />              
+              <code style={{marginLeft: "3em"}}>
                 For every element (call this i) in the array:
-              </p> 
-              <p class="post-content" style={{marginLeft: "3em"}}>
-                For every element (call this i) in the array:
-              </p> 
-              <p class="post-content" style={{marginLeft: "6em"}}>
+              </code><br /> 
+              <code style={{marginLeft: "6em"}}>
                 For every element (call this j) in the array:
-              </p> 
-              <p class="post-content" style={{ marginLeft: "9em" }}>
+              </code><br /> 
+              <code style={{ marginLeft: "9em" }}>
                 If element i is the same as element j 
-              </p> 
-              <p class="post-content" style={{ marginLeft: "12em" }}>
+              </code><br /> 
+              <code style={{ marginLeft: "12em" }}>
                 We have found a duplicate 
-              </p> 
-              <p>
+              </code><br /> 
+              <code>
                 Otherwise, there are no duplicates 
-              </p>
-              <br />
+              </code><br /> 
+              </pre> <br />
 
               <p>
                 Brute Force:
