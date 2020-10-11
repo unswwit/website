@@ -135,19 +135,16 @@ a:hover {
   width: 100%;
 }
 
-
-th, td {
+.post th, .post td {
   padding: 10px;
   text-align: left;
 }
 
-th {
+.post th {
   background-color: #feb14b;
   color: white;
   font-weight: 500;
 }
-
-
 
 /*-------------------------------Author card-----------------------------*/
 .author {
