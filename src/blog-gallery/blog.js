@@ -16,6 +16,20 @@ class Blog extends Component {
         />
 
         {/*Start of blog posts*/}
+        {/*blog post 30*/}
+        <BlogPreview
+          topMargin="5vw"
+          bottomMargin="5vw"
+          blogNo="30"
+          imgUrl="/blog-covers/30-technical-interviews2.png"
+          heading="Technical Interview Walkthrough with Amanda Li and Vivian Shen (Part 2)"
+          date="11/10/2020"
+          subheading="In Part 2, Vivian and Amanda offer a comprehensive breakdown of a typical technical interview for software engineering, complete with tips and tricks for giving yourself the best possible chance of succeeding."
+          authors={{
+            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
+          }}
+        />
+
         {/*blog post 29*/}
         <BlogPreview
           topMargin="10vw"
