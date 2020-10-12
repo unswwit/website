@@ -42,7 +42,6 @@ class blogPost30 extends Component {
             <br />
 
             <p class="question">Technical Interview Step by Step Guide</p>
-            <br />
 
             <p class="post-content">
               <strong>Vivian(V)</strong>: I'm Vivian, and I’m a third-year studying B. Data Science & Decisions (Computational Major). 
@@ -254,6 +253,7 @@ class blogPost30 extends Component {
                         <code style={{ marginLeft: "9em" }}>seen[element] = True</code><br />
                     <code style={{ marginLeft: "3em" }}>return -1</code><br />
               </pre>
+              <br />
 
               <p class="post-content">
                 <strong>Use an algorithm - Floyd's Tortoise and Hare Cycle Detection Algorithm</strong>
@@ -296,9 +296,7 @@ class blogPost30 extends Component {
             <br />
 
             {/*part 6*/}
-            <p class="question">
-              6. Space & Time Complexity 
-            </p>
+            <li class="question">Space & Time Complexity</li>             
             <p class="post-content">
               The interviewer will then ask you to evaluate your code by analysing the amount of space your implementation uses and how long it takes to complete the program and produce an output. 
             </p>

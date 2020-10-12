@@ -67,7 +67,7 @@ class blogPost28 extends Component {
 
               <li class="question">What was the structure of the technical interviews you completed?</li>
               <br /> <p class="post-content">
-                V: The structure of technical interviews would differ depending on the company and role you've applied to. Today, we're going to go over the most common structure of technical interviews for a <b>software engineering role</b>.
+                V: The structure of technical interviews would differ depending on the company and role you've applied to. Today, we're going to go over the most common structure of technical interviews for a <strong>software engineering role</strong>.
               </p>
               <p class="post-content">
                 The typical interview is ~45 minutes long. We begin with self-introductions for the first ~5 minutes. Here's your opportunity to tell the interviewer a little bit about yourself, your motivations for applying to this role and what experiences you have (from other internships, hackathon, personal projects etc). Next we would spend the next 30-35 minutes answering technical questions and wrap-up with ~5 minutes of questions you would like to ask the interviewer.
