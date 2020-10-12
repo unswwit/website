@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { HashRouter, Route, NavLink, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
 import "./style.css";
 import Home from "./home";
 import JoinUs from "./join/joinUs";
@@ -46,10 +45,19 @@ import blogPost23 from "./blog-post/blog-post-23";
 import blogPost24 from "./blog-post/blog-post-24";
 import blogPost25 from "./blog-post/blog-post-25";
 import blogPost26 from "./blog-post/blog-post-26";
+import blogPost27 from "./blog-post/blog-post-27";
+import blogPost28 from "./blog-post/blog-post-28";
+import blogPost29 from "./blog-post/blog-post-29";
+import blogPost30 from "./blog-post/blog-post-30";
 
 class App extends Component {
   constructor(props) {
     super(props);
+    this.blogPosts = [blogPost1, blogPost2, blogPost3, blogPost4, blogPost5, blogPost6, 
+                      blogPost7, blogPost8, blogPost9, blogPost10, blogPost11, blogPost12,
+                      blogPost13, blogPost14, blogPost15, blogPost16, blogPost17, blogPost18, 
+                      blogPost19, blogPost20, blogPost21, blogPost22, blogPost23, blogPost24,
+                      blogPost25, blogPost26, blogPost27, blogPost28, blogPost29, blogPost30];
     this.state = {
       showDD: false,
       menuOpen: false,
@@ -80,6 +88,7 @@ class App extends Component {
   componentDidMount() {
     window.addEventListener("resize", this.updateMenu);
   }
+  
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateMenu);
   }
@@ -186,32 +195,7 @@ class App extends Component {
             <Route path="/opportunities" component={Opportunities} />
             <Route path="/contact-us" component={ContactUs} />
             <Route path="/publications" component={Publications} />
-            <Route path="/blog/1" component={blogPost1} />
-            <Route path="/blog/2" component={blogPost2} />
-            <Route path="/blog/3" component={blogPost3} />
-            <Route path="/blog/4" component={blogPost4} />
-            <Route path="/blog/5" component={blogPost5} />
-            <Route path="/blog/6" component={blogPost6} />
-            <Route path="/blog/7" component={blogPost7} />
-            <Route path="/blog/8" component={blogPost8} />
-            <Route path="/blog/9" component={blogPost9} />
-            <Route path="/blog/10" component={blogPost10} />
-            <Route path="/blog/11" component={blogPost11} />
-            <Route path="/blog/12" component={blogPost12} />
-            <Route path="/blog/13" component={blogPost13} />
-            <Route path="/blog/14" component={blogPost14} />
-            <Route path="/blog/15" component={blogPost15} />
-            <Route path="/blog/16" component={blogPost16} />
-            <Route path="/blog/17" component={blogPost17} />
-            <Route path="/blog/18" component={blogPost18} />
-            <Route path="/blog/19" component={blogPost19} />
-            <Route path="/blog/20" component={blogPost20} />
-            <Route path="/blog/21" component={blogPost21} />
-            <Route path="/blog/22" component={blogPost22} />
-            <Route path="/blog/23" component={blogPost23} />
-            <Route path="/blog/24" component={blogPost24} />
-            <Route path="/blog/25" component={blogPost25} />
-            <Route path="/blog/26" component={blogPost26} />
+            { this.blogPosts.map((object, i) => <Route path={"/blog/" + (i+1)} component={object} />) }
           </Switch>
         </HashRouter>
         <div>

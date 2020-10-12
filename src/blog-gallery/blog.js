@@ -16,9 +16,66 @@ class Blog extends Component {
         />
 
         {/*Start of blog posts*/}
-        {/*blog post 26*/}
+        {/*blog post 30*/}
         <BlogPreview
           topMargin="10vw"
+          bottomMargin="5vw"
+          blogNo="30"
+          imgUrl="/blog-covers/30-technical-interviews2.png"
+          heading="Technical Interview Walkthrough with Amanda Li and Vivian Shen (Part 2)"
+          date="11/10/2020"
+          subheading="In Part 2, Vivian and Amanda offer a comprehensive breakdown of a typical technical interview for software engineering, complete with tips and tricks for giving yourself the best possible chance of succeeding."
+          authors={{
+            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
+          }}
+        />
+
+        {/*blog post 29*/}
+        <BlogPreview
+          topMargin="5vw"
+          bottomMargin="5vw"
+          blogNo="29"
+          imgUrl="/blog-covers/29-davina-adisusila.png"
+          heading="Introducing Davina Adisusila, Engineering Team Lead at Eucalyptus
+          "
+          date="7/10/2020"
+          subheading="In this blog post, we learn about the experiences of Davina Adisusila, the Engineering Team Lead at Eucalyptus, as well as the some of the insights she has gained during her incredible journey."
+          authors={{
+            "victoria-ruming": ["/potraits/victoria.jpg", "Victoria Ruming"],
+          }}
+        />
+
+        {/*blog post 28*/}
+        <BlogPreview
+          topMargin="5vw"
+          bottomMargin="5vw"
+          blogNo="28"
+          imgUrl="/blog-covers/28-technical-interviews.png"
+          heading="Technical Interview Walkthrough with Amanda Li and Vivian Shen (Part 1)"
+          date="4/10/2020"
+          subheading="In this Q&A, Vivian Shen and Amanda Li, the President and Vice President of WIT respectively, offer the useful advice they have gathered from their own experiences to help you succeed in your next technical interview."
+          authors={{
+            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
+          }}
+        />
+
+        {/*blog post 27*/}
+        <BlogPreview
+          topMargin="5vw"
+          bottomMargin="5vw"
+          blogNo="27"
+          imgUrl="/blog-covers/27-ankita-singh.png"
+          heading="Introducing: Ankita Singh, PHD Student"
+          date="30/09/2020"
+          subheading="We are excited to share a recent Q&A we had with Ankita Singh regarding her journey in tech."
+          authors={{
+            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield"],
+          }}
+        />
+
+        {/*blog post 26*/}
+        <BlogPreview
+          topMargin="5vw"
           bottomMargin="5vw"
           blogNo="26"
           imgUrl="/blog-covers/26-linkup.png"

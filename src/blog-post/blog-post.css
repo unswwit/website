@@ -33,7 +33,8 @@
   margin: auto;
 }
 
-p {
+
+p, th, td {
   color: #707070;
   font-family: 'Montserrat', sans-serif;
   font-size: 12pt;
@@ -127,6 +128,22 @@ a:hover {
 
 .img-box a {
   font-size: 11pt;
+}
+
+.post table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.post th, .post td {
+  padding: 10px;
+  text-align: left;
+}
+
+.post th {
+  background-color: #feb14b;
+  color: white;
+  font-weight: 500;
 }
 
 /*-------------------------------Author card-----------------------------*/

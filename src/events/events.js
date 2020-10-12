@@ -21,19 +21,22 @@ class Events extends React.Component {
 
                     <div class="upcoming">
                         <div>
-                            <img class="event-images" src={process.env.PUBLIC_URL + './event-covers/ey-excel-workshop.jpg'} resizeMode='contain' alt="tech talk with baraja"/>
+                            <img class="event-images" src={process.env.PUBLIC_URL + './event-covers/23-oct-women-in-consulting.jpg'} resizeMode='contain' alt="tech talk with baraja"/>
                             <div class="event-description">
-                            <p class="event-name">WIT x EY: Excel How-To Workshop</p>
-                                <p class="event-date">21st September 2020, 3-5:00 PM</p>
+                            <p class="event-name">WIT x TAS x McGrathNicol: Women in Consulting</p>
+                                <p class="event-date">23rd October 2020, 2-3:00 PM</p>
                                 <p class="event-summary">
-                                WIT’s Excel “How To:’ Workshop will give UNSW students the opportunity to develop the essential skill of how to professionally use 📈 Excel 📈 In particular, sponsor representatives will discuss how they utilise Excel in a professional environment on a day-to-day basis 👩‍💼👩‍💼 Furthermore, students will learn a multitude of industry best practices, valuable shortcuts, arithmetic functions and conditional formatting, which are vital corporate skills.
+
+                                Do you want to know what it’s like for females in the consulting industry? <span role="img" aria-label="graph">👭👭</span> Are you familiar with the word, ‘consulting,’ but not too sure of what it actually entails? <span role="img" aria-label="graph">❓❓</span> Well lucky for you WIT and TAS has got you covered! <span role="img" aria-label="graph">🙏🙏</span>
+                                In this quick 1 hour workshop, representatives from prestigious <span role="img" aria-label="graph">✨</span>McGrathNicol<span role="img" aria-label="graph">✨</span> will provide you with an insightful summary, all about the various opportunities and avenues in consulting! <span role="img" aria-label="graph">💼💼</span> Additionally, this event will ensure that all of your burning questions about cybersecurity are answered! <span role="img" aria-label="graph">✔✔</span> So wait are you waiting for? Register now to unlock the consultant within you! <span role="img" aria-label="graph">❕❕</span>
+
                                 </p>
                                 <ul id="links">
                                     <li class="event-link">
-                                        <a href="https://forms.gle/Sjz9vbCLyQnxx8Qy9" class ="event">Register</a>
+                                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScI3aO8HgbOi6YqRxzPg_ZZ836kJmLPkDCrSOi7vvyXZZqdpg/viewform" class ="event">Register</a>
                                     </li>
                                     <li class="event-link">
-                                        <a href="https://www.facebook.com/events/648872989089757/" class="event">Facebook</a>
+                                        <a href="https://www.facebook.com/events/1009132526220068/" class="event">Facebook</a>
                                     </li>
                                 </ul>
                             </div>
@@ -44,22 +47,32 @@ class Events extends React.Component {
 
                     <div class="upcoming">
                             <div>
-                                <img class="event-images" src={process.env.PUBLIC_URL + './event-covers/tech-talk-baraja.jpg'} resizeMode='contain' alt="tech talk with baraja"/>
+                                <img class="event-images" src={process.env.PUBLIC_URL + './event-covers/31-oct-2020.jpg'} resizeMode='contain' alt="WIT x Nine: Data Analytics Competition"/>
                                 <div class="event-description">
-                                <p class="event-name">Tech Talk with Baraja</p>
-                                    <p class="event-date">24th September 2020, 5-6:30 PM</p>
+                                <p class="event-name">WIT x Nine: Data Analytics Competition</p>
+                                    <p class="event-date">31st October 2020, 9 AM-9 PM</p>
                                     <p class="event-summary">
-                                    Are you passionate about the world of tech and longing for an opportunity to connect with industry mentors doing exciting things in this space RIGHT NOW?
+                                    How do you say 'data'? Is it 'dae-ta' or 'daa-ta'? <span role="img" aria-label="graph">🤔❔❓</span> This is one of many interesting questions that our reps from Nine will answer for our first Data Analytics Competiton! Work in teams of 3-5 to prove your skills in R, SQL and Python for a chance to win some prizes!
+                                    Register NOW as a team or individual (to be placed in a team) to secure your spot! <span role="img" aria-label="graph">🔒</span>
+                                    </p>
+                                    <p class="event-summary">
+                                      <span role="img" aria-label="graph">🏆🏆🏆</span> PRIZES <span role="img" aria-label="graph">🏆🏆🏆</span>
+                                    </p>
+                                    <ul class="event-summary">
+                                      <li> First prize: $200 (plus coffee with CTO)</li>
+                                      <li> Second prize: $150 (plus resume check)</li>
+                                      <li> Third prize: $150</li>
+                                    </ul>
+                                    <p class="event-summary">
+                                    Please note that each team must have at least 1 female student. Also, to prepare yourself for the competition, mandatory attendance to the prep-workshop by at least one member of each team is required.
 
-                                    Luckily for you, UNSW Women in Technology is hosting an online event where representatives from the tech start-up Baraja, will have a chat with students about a whole range of topics from workplace culture, to graduate programs, diversity programs and an overview of Baraja’s self-driving cars and new LiDAR technology, which is making waves in AI.
-
-                                    Come along for this unmissable opportunity to build your network, learn about life at Baraja and have an exciting discussion about the ever changing world of tech.</p>
+                                    </p>
                                     <ul id="links">
                                         <li class="event-link">
-                                            <a href="https://forms.gle/9iiyhGs7GFPqPCeA9" class ="event">Register</a>
+                                            <a href="https://forms.gle/S4u2pRmTtsKQ6AVb6" class ="event">Register</a>
                                         </li>
                                         <li class="event-link">
-                                            <a href="https://www.facebook.com/events/1639137362919488/" class="event">Facebook</a>
+                                            <a href="https://www.facebook.com/events/2087909558012273" class="event">Facebook</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -93,6 +106,12 @@ class Events extends React.Component {
                     </div>
                     <h2>PAST EVENTS</h2>
                     <div id="past-events" class="grid-container">
+                        <div class="grid-item">
+                            <img class="event-images" src={process.env.PUBLIC_URL + './event-covers/ey-excel-workshop.jpg'} resizeMode='contain' alt="ey excel workshop"/>
+                        </div>
+                        <div class="grid-item">
+                            <img class="event-images" src={process.env.PUBLIC_URL + './event-covers/tech-talk-baraja.jpg'} resizeMode='contain' alt="tech talk with baraja"/>
+                        </div>
                         <div class="grid-item">
                             <img class="event-images" src={process.env.PUBLIC_URL + './event-covers/cloud-computing.jpg'} resizeMode='contain' alt="cloud computing"/>
                         </div>
