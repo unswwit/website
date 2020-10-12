@@ -61,7 +61,7 @@ class blogPost30 extends Component {
             <p class="post-content">
               The structure of technical interviews would differ depending on the company and role you've applied to, 
               so make sure you understand your own interview process. Today, we're going to go over the most common 
-              structure of technical interviews for a <strong>software engineering </strong>role. If you haven't already read our last 
+              structure of technical interviews for a <strong>software engineering role</strong>. If you haven't already read our last 
               blog post, you can do so here.
             </p>
             <br />
