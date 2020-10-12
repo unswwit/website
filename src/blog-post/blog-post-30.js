@@ -45,14 +45,14 @@ class blogPost30 extends Component {
             <br />
 
             <p class="post-content">
-              I'm Vivian, and I’m a third-year studying B. Data Science & Decisions (Computational Major). 
+              <strong>Vivian(V)</strong>: I'm Vivian, and I’m a third-year studying B. Data Science & Decisions (Computational Major). 
               I am the current President of WIT and I was a Google STEP Intern last summer, and I got offers 
               to be a Google SWE Intern and an Atlassian Data Science Intern this Summer.
             </p>
             <br />
 
             <p class="post-content">
-              I’m Amanda, and I’m a third-year student studying Software and Biomedical Engineering. I am 
+              <strong>Amanda(A)</strong>: I’m Amanda, and I’m a third-year student studying Software and Biomedical Engineering. I am 
               currently the VP for WIT and the Careers Director for EngSoc. I started applying for internships 
               this year, and I’m interning at AI Australia as a Web Dev. This summer, I’ll be an Atlassian Software 
               Developer Intern. 
@@ -62,7 +62,7 @@ class blogPost30 extends Component {
             <p class="post-content">
               The structure of technical interviews would differ depending on the company and role you've applied to, 
               so make sure you understand your own interview process. Today, we're going to go over the most common 
-              structure of technical interviews for a software engineering role. If you haven't already read our last 
+              structure of technical interviews for a <strong>software engineering </strong>role. If you haven't already read our last 
               blog post, you can do so here.
             </p>
             <br />
