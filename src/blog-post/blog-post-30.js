@@ -111,7 +111,6 @@ class blogPost30 extends Component {
               <p class="post-content">
                 Before you begin to code, you should always ask clarifying questions so that you have a holistic understanding of the question at hand.
               </p>
-              <br />
 
               <p class="post-content">
                 "Is our given input just a single array?": yes             
@@ -180,7 +179,7 @@ class blogPost30 extends Component {
                 For every element (call this j) in the array:
               </code><br /> 
               <code style={{ marginLeft: "6em" }}>
-                If element i is the same as element j 
+                If element i is the same as element j:
               </code><br /> 
               <code style={{ marginLeft: "9em" }}>
                 We have found a duplicate 
@@ -303,39 +302,30 @@ class blogPost30 extends Component {
             <p class="post-content">
               The interviewer will then ask you to evaluate your code by analysing the amount of space your implementation uses and how long it takes to complete the program and produce an output. 
             </p>
-            <br /> 
             <p class="post-content">
               printDupNaive uses O(1) space and has O(n^2) time complexity where n is the length of the array nums. 
             </p>
-            <br /> 
             <p class="post-content">
               printDupSort uses O(1) space and O(nlogn) time complexity.
             </p>
-            <br /> 
             <p class="post-content">
               printDupDict uses O(n) space for the dictionary and has O(n) time complexity.
             </p>
-            <br /> 
             <p class="post-content">
               printDupAlgo uses O(1) space and has O(n) time complexity.
             </p>
-            <br /> 
             <p class="post-content">
               printDupMaths uses O(1) space and has O(n) time complexity. 
             </p>
-            <br /> 
             <p class="post-content">
               All of our implementations have O(1) space complexity except for printDupDict because we only create variables that store integers or a single element. PrintDupDict has O(n) space complexity since we create a dictionary which in the worst-case scenario will store n values (having to loop through the whole array until we see a duplicate). 
             </p>
-            <br /> 
             <p class="post-content">
               PrintDupNaive has O(n^2) time complexity since there are two loops nested inside each other. Meanwhile, printDupSort has O(nlogn) time complexity due to the in-built, comparison-based sort function. The rest of the implementations have O(n) time complexity as they all use loops but none are nested. 
             </p>
-            <br /> 
             <p class="post-content">
               Revise/Enrol in COMP2521 for more information about space and time complexities. 
             </p>
-            <br /> 
             </ol>
           </div>
         </div>
