@@ -172,20 +172,17 @@ class blogPost30 extends Component {
                 Pseudocode:
               </p> 
 
-              <pre>
-                <code>
-                  For every element (call this i) in the array:
-                </code><br />              
-              <code style={{marginLeft: "3em"}}>
+              <pre>            
+              <code>
                 For every element (call this i) in the array:
               </code><br /> 
-              <code style={{marginLeft: "6em"}}>
+              <code style={{marginLeft: "3em"}}>
                 For every element (call this j) in the array:
               </code><br /> 
-              <code style={{ marginLeft: "9em" }}>
+              <code style={{ marginLeft: "6em" }}>
                 If element i is the same as element j 
               </code><br /> 
-              <code style={{ marginLeft: "12em" }}>
+              <code style={{ marginLeft: "9em" }}>
                 We have found a duplicate 
               </code><br /> 
               <code>
@@ -250,11 +247,11 @@ class blogPost30 extends Component {
               </p>
               <pre>
                   <code>def printDupSort(nums):</code> <br />
-                    <code style={{ marginLeft: "3em" }}>seen = {}</code><br />
+                    <code style={{ marginLeft: "3em" }}>seen = {"{}"} </code><br />
                     <code style={{ marginLeft: "3em" }}>for element in nums:</code><br />
                       <code style={{ marginLeft: "6em" }}>if element in seen.keys():</code><br />
                         <code style={{ marginLeft: "9em" }}>return element</code><br />
-                      <code style={{ marginLeft: "6em" }}>elsee:</code><br />
+                      <code style={{ marginLeft: "6em" }}>else:</code><br />
                         <code style={{ marginLeft: "9em" }}>seen[element] = True</code><br />
                     <code style={{ marginLeft: "3em" }}>return -1</code><br />
               </pre>
@@ -267,12 +264,11 @@ class blogPost30 extends Component {
                 Here, Floyd's Tortoise and Hare Cycle Detection Algorithm has two pointers that move at different speeds through the array until they both point to equal values. Let's say for every move our tortoise pointer makes, our hare pointer moves two times. We keep doing this until we have found a duplicated value. 
               </p>
               <pre>
-                <code>def printDupAlgo(nums)::</code><br />
+                <code>def printDupAlgo(nums):</code><br />
                 <code style={{ marginLeft: "3em" }}>tortoise = hare = nums[0]</code><br />
                 <code style={{ marginLeft: "3em" }}>while True:</code><br />
                   <code style={{ marginLeft: "6em" }}>tortoise = nums[tortoise]</code><br />
                   <code style={{ marginLeft: "6em" }}>hare = nums[nums[hare]]</code><br />
-                  <code style={{ marginLeft: "6em" }}>if tortoise == hare:</code><br />
                   <code style={{ marginLeft: "6em" }}>if tortoise == hare:</code><br />
                     <code style={{ marginLeft: "9em" }}>break</code><br /><br />
                 <code style={{ marginLeft: "3em" }}># Finding the duplicate value</code><br />
@@ -293,11 +289,10 @@ class blogPost30 extends Component {
             </p>
             <pre>
                 <code>def printDupMaths(nums):</code><br />
-                  <code style={{ marginLeft: "3em" }}>def printDupMaths(nums):</code><br />
                   <code style={{ marginLeft: "3em" }}>current_total = 0</code><br />
                   <code style={{ marginLeft: "3em" }}>for element in nums:</code><br />
                     <code style={{ marginLeft: "6em" }}>current_total += element</code><br />
-                <code style={{ marginLeft: "6em" }}>return expected_total - current_total</code><br />
+                  <code style={{ marginLeft: "3em" }}>return expected_total - current_total</code><br />
             </pre>
             <br />
 
