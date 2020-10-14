@@ -21,7 +21,7 @@ class Blog extends Component {
           topMargin="10vw"
           bottomMargin="5vw"
           blogNo="31"
-          imgUrl="/blog-covers/30-technical-interviews2.png"
+          imgUrl="/blog-covers/31-sophie-warner.png"
           heading="Introducing Sophie Warner, Tech Intern at National Australia Bank"
           date="14/10/2020"
           subheading="Here, we interview Sophie about her amazing journey and lessons she’s learnt along the way."

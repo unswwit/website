@@ -36,7 +36,9 @@ class blogPost30 extends Component {
             </p>
             <br />
 
-            <p class="question">What sparked your interest to join the field of STEM?</p>
+            <p class="question">
+              What sparked your interest to join the field of STEM?
+            </p>
 
             <p class="post-content">
               I always liked maths and physics in high school and saw engineering as the intersection of this which could be applied to a practical career. My year 12 physics teacher was absolutely amazing, she could calculate logs in her head would do a bunch of practical experiments, nearly electrocuting herself once.
@@ -46,7 +48,6 @@ class blogPost30 extends Component {
             <p class="question">
               Please provide a short summary of your career journey so far:
             </p>
-            <br />
 
             <p class="post-content">
               I came back from my gap year having no idea what engineering courses to enrol in, walked into a random office in the science building and ended up being enrolled in a fundamental computer science course. After growing up never being a particularly computer savvy person I absolutely loved the problem-solving aspect of it and changed degrees. A few years later I got my first internship at NAB which I am currently 8 months into and learning lots about cloud computing, system architecture, and security.
@@ -56,7 +57,6 @@ class blogPost30 extends Component {
             <p class="question">
               Where do you see yourself in the future (career wise)?
             </p>
-            <br />
 
             <p class="post-content">
               I'd love to move into a role where I can focus more heavily on design; where I'd be able to create the systems not just maintain them.
@@ -66,7 +66,6 @@ class blogPost30 extends Component {
             <p class="question">
               What do you love about your career now? 
             </p>
-            <br />
 
             <p class="post-content">
               There is always something more to learn. Every day I have touched a new part of the infrastructure or teach myself languages not covered in uni such as groovy or jsp.
@@ -76,10 +75,9 @@ class blogPost30 extends Component {
             <p class="question">
               Why do you think it is important to empower women and increase their involvement in the STEM industry?
             </p>
-            <br />
 
             <p class="post-content">
-              I feel like many women quash their traditional femininity in the workplace because it isn't professional. However, the more women join STEM the less I'll get scoffed at for not having seen Star Wars or not having a Discord account.<span>😊</span> 
+              I feel like many women quash their traditional femininity in the workplace because it isn't professional. However, the more women join STEM the less I'll get scoffed at for not having seen Star Wars or not having a Discord account.<span role="img" aria-label="smiley face">😊</span> 
             </p>
             <br />
 
@@ -99,6 +97,7 @@ class blogPost30 extends Component {
             <p class="post-content">
               They've helped show me the many varying journeys that can be taken to achieve your goals, and how those goals change along the way.
             </p>
+            <br />
 
             <p class="question">
               What are the hard and soft skills that you advised students who are interested in pursuing a similar career path (for internship/graduate role) to upskill on? 
