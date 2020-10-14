@@ -16,9 +16,23 @@ class Blog extends Component {
         />
 
         {/*Start of blog posts*/}
+        {/*blog post 31*/}
+         <BlogPreview
+          topMargin="10vw"
+          bottomMargin="5vw"
+          blogNo="31"
+          imgUrl="/blog-covers/30-technical-interviews2.png"
+          heading="Introducing Sophie Warner, Tech Intern at National Australia Bank"
+          date="14/10/2020"
+          subheading="Here, we interview Sophie about her amazing journey and lessons she’s learnt along the way."
+          authors={{
+            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield"],
+          }}
+        />
+
         {/*blog post 30*/}
         <BlogPreview
-          topMargin="10vw"
+          topMargin="5vw"
           bottomMargin="5vw"
           blogNo="30"
           imgUrl="/blog-covers/30-technical-interviews2.png"
