@@ -86,7 +86,6 @@ class blogPost32 extends Component {
             As users, we can now enjoy a more efficient transaction process, with real-time payments, easier access to credit, and a higher level of service. The banking sector, however, is facing a different story. Thousands of new and up and coming fintech start-ups are offering products and services that were traditionally encompassed by traditional players in the banking industry. While there will be losses in some areas, namely routine and easily automatable tasks, these will be recouped through a culture of innovation and collaboration. With most banks having a deep and thorough understanding of financial services, as well as generations of consumer trust, fintech companies are centered around employees from a background other than finance. Thus, a collaborative effort between the up and coming financial technology sector and the traditional finance industry will carve the future towards a more equitable, and accessible financial services industry.
             </p>
             <br />
-            <br />
           </div>
         </div>
         {/*for the blog post author*/}
@@ -95,7 +94,7 @@ class blogPost32 extends Component {
               "/potraits/jane-wang.png",
               "profile_img vivw_img",
               "Jane Wang",
-              "Event Team",
+              "Events Team",
             ],
         }} />
         {/*End of blog posts*/}
