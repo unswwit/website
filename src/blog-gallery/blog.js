@@ -16,9 +16,24 @@ class Blog extends Component {
         />
 
         {/*Start of blog posts*/}
-        {/*blog post 31*/}
+
+        {/*blog post 32*/}
          <BlogPreview
           topMargin="10vw"
+          bottomMargin="5vw"
+          blogNo="32"
+          imgUrl="/blog-covers/32-familiarising-fintech.png"
+          heading="Familiarising Fintech"
+          date="18/10/2020"
+          subheading="Have you ever wanted to learn more about the elusive world of fintech? Read more to find out about the intricate details of this commonly used buzzword!"
+          authors={{
+            "jane-wang": ["/potraits/jane-wang.png", "Jane Wang"],
+          }}
+        />
+
+        {/*blog post 31*/}
+         <BlogPreview
+          topMargin="5vw"
           bottomMargin="5vw"
           blogNo="31"
           imgUrl="/blog-covers/31-sophie-warner.png"

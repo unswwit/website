@@ -50,16 +50,17 @@ import blogPost28 from "./blog-post/blog-post-28";
 import blogPost29 from "./blog-post/blog-post-29";
 import blogPost30 from "./blog-post/blog-post-30";
 import blogPost31 from "./blog-post/blog-post-31";
+import blogPost32 from "./blog-post/blog-post-32";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.blogPosts = [blogPost1, blogPost2, blogPost3, blogPost4, blogPost5, blogPost6, 
+    this.blogPosts = [blogPost1, blogPost2, blogPost3, blogPost4, blogPost5, blogPost6,
                       blogPost7, blogPost8, blogPost9, blogPost10, blogPost11, blogPost12,
-                      blogPost13, blogPost14, blogPost15, blogPost16, blogPost17, blogPost18, 
+                      blogPost13, blogPost14, blogPost15, blogPost16, blogPost17, blogPost18,
                       blogPost19, blogPost20, blogPost21, blogPost22, blogPost23, blogPost24,
                       blogPost25, blogPost26, blogPost27, blogPost28, blogPost29, blogPost30,
-                      blogPost31];
+                      blogPost31, blogPost32];
     this.state = {
       showDD: false,
       menuOpen: false,
@@ -90,7 +91,7 @@ class App extends Component {
   componentDidMount() {
     window.addEventListener("resize", this.updateMenu);
   }
-  
+
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateMenu);
   }

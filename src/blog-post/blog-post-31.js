@@ -4,7 +4,7 @@ import "./blog-post.css";
 import AuthorCard from "./authorCard";
 import PageHeader from "../header";
 
-class blogPost30 extends Component {
+class blogPost31 extends Component {
   //start webpage at the top
   componentDidMount() {
     window.scrollTo(0, 0);
@@ -32,7 +32,7 @@ class blogPost30 extends Component {
 
           <div class="post">
             <p class="post-content">
-              Sophie’s journey began while studying Bioengineering and Biomedical engineering at UNSW, where she realised her love for computer, coding, and technology. Sophie’s journey has led her to Co-Founding Exolution, a tech start-up that aimed to make wearable robotics to reduce fatigue and increase activity for the elderly, projects in Real Skills Education, and now works as a tech intern at NAB. Here, we interview Sophie about her amazing journey and lessons she’s learnt along the way. 
+              Sophie’s journey began while studying Bioengineering and Biomedical engineering at UNSW, where she realised her love for computer, coding, and technology. Sophie’s journey has led her to Co-Founding Exolution, a tech start-up that aimed to make wearable robotics to reduce fatigue and increase activity for the elderly, projects in Real Skills Education, and now works as a tech intern at NAB. Here, we interview Sophie about her amazing journey and lessons she’s learnt along the way.
             </p>
             <br />
 
@@ -64,7 +64,7 @@ class blogPost30 extends Component {
             <br />
 
             <p class="question">
-              What do you love about your career now? 
+              What do you love about your career now?
             </p>
 
             <p class="post-content">
@@ -77,13 +77,13 @@ class blogPost30 extends Component {
             </p>
 
             <p class="post-content">
-              I feel like many women quash their traditional femininity in the workplace because it isn't professional. However, the more women join STEM the less I'll get scoffed at for not having seen Star Wars or not having a Discord account.<span role="img" aria-label="smiley face">😊</span> 
+              I feel like many women quash their traditional femininity in the workplace because it isn't professional. However, the more women join STEM the less I'll get scoffed at for not having seen Star Wars or not having a Discord account.<span role="img" aria-label="smiley face">😊</span>
             </p>
             <br />
 
             <p class="question">
               What are the challenging aspects of your career?
-            </p>   
+            </p>
 
             <p class="post-content">
               Keeping track of a million moving parts to find which one has a small fracture.
@@ -100,7 +100,7 @@ class blogPost30 extends Component {
             <br />
 
             <p class="question">
-              What are the hard and soft skills that you advised students who are interested in pursuing a similar career path (for internship/graduate role) to upskill on? 
+              What are the hard and soft skills that you advised students who are interested in pursuing a similar career path (for internship/graduate role) to upskill on?
             </p>
 
             <p class="post-content">
@@ -141,4 +141,4 @@ class blogPost30 extends Component {
     );
   }
 }
-export default blogPost30;
+export default blogPost31;
