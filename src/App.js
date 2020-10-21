@@ -51,7 +51,7 @@ import blogPost29 from "./blog-post/blog-post-29";
 import blogPost30 from "./blog-post/blog-post-30";
 import blogPost31 from "./blog-post/blog-post-31";
 import blogPost32 from "./blog-post/blog-post-32";
-import blogPost33 from "./blog-post/blog-post-32";
+import blogPost33 from "./blog-post/blog-post-33";
 
 class App extends Component {
   constructor(props) {

@@ -16,7 +16,7 @@ class blogPost33 extends Component {
         {/* Cover Photo */}
         <PageHeader
           imgUrl="/blog-header.png"
-          title="Blog Post #32"
+          title="Blog Post #33"
         />
 
         {/*End of Header*/}
@@ -25,7 +25,7 @@ class blogPost33 extends Component {
         <div class="blog-content">
           <div>
             <h2 class="blog-title">
-              Familiarising Fintech
+              WCW ~ ALL WIT Exec Team 2020
             </h2>
             <p class="date">21st October 2020</p>
           </div>
