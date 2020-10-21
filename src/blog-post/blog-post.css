@@ -299,7 +299,7 @@ a:hover {
     float: none;
   }
 
-  .blog-content p, .blog-content li {
+  .blog-content p:not(.date), .blog-content li {
     text-align: left;
   }
 }
