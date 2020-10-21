@@ -16,10 +16,23 @@ class Blog extends Component {
         />
 
         {/*Start of blog posts*/}
+        {/*blog post 33*/}
+        <BlogPreview
+          topMargin="10vw"
+          bottomMargin="5vw"
+          blogNo="33"
+          imgUrl="/blog-covers/33-execs-2020.png"
+          heading="WCW ~ ALL WIT Exec Team 2020"
+          date="21/10/2020"
+          subheading="For this week's WIT Crush Wednesday, we'll be hearing an exciting Q&A with 2020's WIT Exec Team!"
+          authors={{
+            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
+          }}
+        />
 
         {/*blog post 32*/}
          <BlogPreview
-          topMargin="10vw"
+          topMargin="5vw"
           bottomMargin="5vw"
           blogNo="32"
           imgUrl="/blog-covers/32-familiarising-fintech.png"
