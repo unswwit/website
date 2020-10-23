@@ -8,13 +8,15 @@ class BlogPreview extends Component {
     render() {
         return (
             <div>
-                {/*Start of blog posts*/}
+                {/*Start of blog post preview*/}
                 <div class="blog-post" style={{marginTop:this.props.topMargin, marginBottom:this.props.bottomMargin}}>
                     <table cellpadding="0">
                     <Link to={ "/blog/" + this.props.blogNo } style={{ textDecoration: 'none'}}>
                         <tr id="preview-row">
                             <td>
+                              <div class="preview-pic">
                                 <img class="preview-pic" src={process.env.PUBLIC_URL + this.props.imgUrl} alt="preview"/>
+                              </div>
                             </td>
                             <td class= "blog-preview">
                                 <div class="blog-details">
@@ -26,7 +28,7 @@ class BlogPreview extends Component {
                                 </div>
                                 <tr class="author-row">
                                 {
-                                Object.keys(this.props.authors).map((key) => ( 
+                                Object.keys(this.props.authors).map((key) => (
                                     <td class="author-section" key={key}>
                                         <td>
                                             <div class="author-pic">
@@ -38,7 +40,7 @@ class BlogPreview extends Component {
                                                 />
                                             </div>
                                         </td>
-                                    
+
                                         <td class="author-name">
                                             <div class="auth">{this.props.authors[key][1]}</div>
                                         </td>
@@ -51,7 +53,7 @@ class BlogPreview extends Component {
                        </Link>
                     </table>
                 </div>
-                {/*End of blog posts*/}
+                {/*End of blog post preview*/}
             </div>
         );
     }
