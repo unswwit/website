@@ -50,29 +50,34 @@ import blogPost28 from "./blog-post/blog-post-28";
 import blogPost29 from "./blog-post/blog-post-29";
 import blogPost30 from "./blog-post/blog-post-30";
 import blogPost31 from "./blog-post/blog-post-31";
-import blogPost32 from "./blog-post/blog-post-32";
-import blogPost33 from "./blog-post/blog-post-33";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.blogPosts = [blogPost1, blogPost2, blogPost3, blogPost4, blogPost5, blogPost6,
+    this.blogPosts = [blogPost1, blogPost2, blogPost3, blogPost4, blogPost5, blogPost6, 
                       blogPost7, blogPost8, blogPost9, blogPost10, blogPost11, blogPost12,
-                      blogPost13, blogPost14, blogPost15, blogPost16, blogPost17, blogPost18,
+                      blogPost13, blogPost14, blogPost15, blogPost16, blogPost17, blogPost18, 
                       blogPost19, blogPost20, blogPost21, blogPost22, blogPost23, blogPost24,
                       blogPost25, blogPost26, blogPost27, blogPost28, blogPost29, blogPost30,
-                      blogPost31, blogPost32, blogPost33];
+                      blogPost31];
     this.state = {
       showDD: false,
       menuOpen: false,
     };
     this.handleHover = this.handleHover.bind(this);
     this.handleMenuClick = this.handleMenuClick.bind(this);
+    this.handleMenuClickClose = this.handleMenuClickClose.bind(this);
   }
 
   handleMenuClick() {
     this.setState({
       menuOpen: !this.state.menuOpen,
+    });
+  }
+
+  handleMenuClickClose() {
+    this.setState({
+      menuOpen: true,
     });
   }
 
@@ -92,7 +97,7 @@ class App extends Component {
   componentDidMount() {
     window.addEventListener("resize", this.updateMenu);
   }
-
+  
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateMenu);
   }
@@ -120,7 +125,7 @@ class App extends Component {
             <div class="navbar-collapse collapse w-100">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <NavLink to="/">HOME</NavLink>
+                  <NavLink to="/" onClick={this.handleMenuClickClose}>HOME</NavLink>
                 </li>
                 <li class="nav-item">
                   <NavLink to="/events">EVENTS</NavLink>
