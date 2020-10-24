@@ -24,7 +24,7 @@ class Blog extends Component {
           imgUrl="/blog-covers/34-what-i-learnt-from-shadiyah-lim.png"
           heading="What I Learnt From Shadiyah Lim"
           date="25/10/2020"
-          subheading="In the latest blogpost, Angeni reflects on the key lessons from her Talk WIT Us episode with Shadiyah Lim, Innovation Advisory Consultant at AWS, who overcame current uncertainties and more!"
+          subheading="In the latest blog post, Angeni reflects on the key lessons from her Talk WIT Us episode with Shadiyah Lim, Innovation Advisory Consultant at AWS, who overcame current uncertainties and more!"
           authors={{
             "angenie-bai": ["/potraits/angenie-bai.jpg", "Angenie Bai"],
           }}
