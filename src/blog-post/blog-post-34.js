@@ -35,8 +35,6 @@ class blogPost34 extends Component {
             Co-hosting the very first Careers Deep Dive episode of our Talk WIT Us podcast, I was lucky enough to chat to Shadiyah Lim, an Innovation Advisory Consultant at AWS. Surprisingly, as we’d quickly learned, she hasn’t always been in the Digital Transformation industry. Shadiyah graduated with a communications and media studies degree, spent two years teaching English in South Korea, and began work as a writer before ever stepping foot into her current industry. Of course, she was bursting with experience and advice to share during our chat, but some amazing lessons stuck out.
             </p> <br /><br />
 
-
-
             <p class="question">
               It’s okay when things don’t go to plan.
             </p>
