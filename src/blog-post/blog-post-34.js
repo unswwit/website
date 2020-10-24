@@ -122,28 +122,28 @@ class blogPost34 extends Component {
 
             
             <div>
-              <a href="https://anchor.fm/unswwit/episodes/Episode-2-Careers-Deep-Dive---Digital-Transformation-w-Shadiyah-Lim-ekak30">
+              <a href="https://anchor.fm/unswwit/episodes/Episode-2-Careers-Deep-Dive---Digital-Transformation-w-Shadiyah-Lim-ekak30" target="_blank" rel="noopener noreferrer">
                 <img
                   className="img-general"
                   src={process.env.PUBLIC_URL + "/podcast-platforms/anchor-logo.png"}
                   alt="Anchor"
                   /> 
               </a>
-              <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy8zNTQxM2JkMC9wb2RjYXN0L3Jzcw/episode/NTIwMDU5N2YtMjg5NC00ZjEwLWE2NTItMWRiMDc4ZGU0Njc5?sa=X&ved=0CAUQkfYCahcKEwigtazP_szsAhUAAAAAHQAAAAAQAQ">
+              <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy8zNTQxM2JkMC9wb2RjYXN0L3Jzcw/episode/NTIwMDU5N2YtMjg5NC00ZjEwLWE2NTItMWRiMDc4ZGU0Njc5?sa=X&ved=0CAUQkfYCahcKEwigtazP_szsAhUAAAAAHQAAAAAQAQ" target="_blank" rel="noopener noreferrer">
                 <img
                   className="img-general"
                   src={process.env.PUBLIC_URL + "/podcast-platforms/google-podcasts-logo.png"}
                   alt="Google Podcasts"
                   /> 
               </a>
-              <a href="https://radiopublic.com/talk-wit-us-Ww3A3m/s1!284a5">
+              <a href="https://radiopublic.com/talk-wit-us-Ww3A3m/s1!284a5" target="_blank" rel="noopener noreferrer">
                 <img
                   className="img-general"
                   src={process.env.PUBLIC_URL + "/podcast-platforms/radiopublic-logo.png"}
                   alt="RadioPublic"
                   />  
               </a>
-              <a href="https://open.spotify.com/episode/1HAs2EMlXumfQzoaGMUpV8?si=isyEiUXwTBCqg5gLDwQiOg">
+              <a href="https://open.spotify.com/episode/1HAs2EMlXumfQzoaGMUpV8?si=isyEiUXwTBCqg5gLDwQiOg" target="_blank" rel="noopener noreferrer">
                 <img
                   className="img-general"
                   src={process.env.PUBLIC_URL + "/podcast-platforms/spotify-logo.png"}
