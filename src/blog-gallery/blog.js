@@ -16,9 +16,23 @@ class Blog extends Component {
         />
 
         {/*Start of blog posts*/}
-        {/*blog post 33*/}
+        {/*blog post 34*/}
         <BlogPreview
           topMargin="10vw"
+          bottomMargin="5vw"
+          blogNo="34"
+          imgUrl="/blog-covers/34-what-i-learnt-from-shadiyah-lim.png"
+          heading="What I Learnt From Shadiyah Lim"
+          date="25/10/2020"
+          subheading="In the latest blogpost, Angeni reflects on the key lessons from her Talk WIT Us episode with Shadiyah Lim, Innovation Advisory Consultant at AWS, who overcame current uncertainties and more!"
+          authors={{
+            "angenie-bai": ["/potraits/angenie-bai.jpg", "Angenie Bai"],
+          }}
+        />
+        
+        {/*blog post 33*/}
+        <BlogPreview
+          topMargin="5vw"
           bottomMargin="5vw"
           blogNo="33"
           imgUrl="/blog-covers/33-execs-2020.png"

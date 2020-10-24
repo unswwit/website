@@ -146,6 +146,16 @@ a:hover {
   font-weight: 500;
 }
 
+/*Used for pictures in blog 34*/
+.img-general {
+  width: 35%;
+  height: auto;
+  object-fit: contain;
+  margin: none;
+  padding: none;
+}
+
+
 /*-------------------------------Author card-----------------------------*/
 .author {
   margin: 0 auto;
@@ -303,4 +313,6 @@ a:hover {
     text-align: left;
   }
 }
+
+
 
