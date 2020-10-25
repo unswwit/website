@@ -10,6 +10,7 @@ import Memes from "../initiatives/memes"
 import MondayMotivation from "../initiatives/monday-motivation"
 import Mascot from "../initiatives/mascot"
 import CareersGuide from "../initiatives/careers-guide"
+import Other from "../initiatives/other"
 
 class MarketingContent extends Component {
   render() {
@@ -41,6 +42,24 @@ class MarketingContent extends Component {
 
                     {/*Image collage*/}
                     <ol class="grid" id="content">
+                      <Other
+                        fb="https://www.facebook.com/unsw.wit/posts/2417718931866307"
+                        imgUrl="/initiatives/other/twitch.png"
+                        alt="Twitch"
+                        date="1/10/2020"
+                      />
+                      <WCW
+                        fb="https://www.facebook.com/unsw.wit/posts/2417002581937942"
+                        imgUrl="/initiatives/wcw/ankitasingh.png"
+                        alt="Ankita Singh"
+                        date="30/09/2020"
+                      />
+                      <Other
+                        fb="https://www.facebook.com/unsw.wit/posts/2407199466251587"
+                        imgUrl="/initiatives/other/talkwitus.png"
+                        alt="Talk WIT us"
+                        date="18/09/2020"
+                      />
                       <WCW
                         fb="https://www.facebook.com/unsw.wit/posts/2393647687606765"
                         imgUrl="/initiatives/wcw/aneitayang.png"
