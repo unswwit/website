@@ -16,6 +16,21 @@ class Blog extends Component {
         />
 
         {/*Start of blog posts*/}
+        {/*blog post 35*/}
+        <BlogPreview
+          topMargin="10vw"
+          bottomMargin="5vw"
+          blogNo="35"
+          imgUrl="/blog-covers/34-what-i-learnt-from-shadiyah-lim.png"
+          heading="What I Learnt From Shadiyah Lim"
+          date="27/10/2020"
+          subheading="This week, we explore the interdisciplinary nature of technology, and the opportunities for a successful career with Calista Kusuma."
+          authors={{
+            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield",], 
+            "elisa-sanjurjo": ["/potraits/elisa.jpg", "Elisa Sanjurjo",],
+          }}
+        />
+
         {/*blog post 34*/}
         <BlogPreview
           topMargin="10vw"
