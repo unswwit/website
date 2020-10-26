@@ -33,11 +33,11 @@ p.intro {
 p.year {
   font-family: 'Montserrat', sans-serif;
   font-size: 32pt;
-  color: #e85f5c;
+  color: white;
+  background-color:#e85f5c;
   font-weight: bold;
   padding: 10px 20px;
   display: inline-block;
-  border: 3px solid #e85f5c;
 }
 
 p.year:hover {
