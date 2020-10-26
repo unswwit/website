@@ -18,34 +18,31 @@ class Events extends React.Component {
                     <h2>UPCOMING EVENTS</h2>
                     <p class="lookout">Keep a lookout here for our upcoming events!</p>
                     <div class="grid-container">
+                        <div class="upcoming">
+                            <div>
+                                <img class="event-images" src={process.env.PUBLIC_URL + './event-covers/23-oct-women-in-consulting.jpg'} resizeMode='contain' alt="tech talk with baraja"/>
+                                <div class="event-description">
+                                <p class="event-name">WIT x TAS x McGrathNicol: Women in Consulting</p>
+                                    <p class="event-date">23rd October 2020, 2-3:00 PM</p>
+                                    <p class="event-summary">
 
-                    <div class="upcoming">
-                        <div>
-                            <img class="event-images" src={process.env.PUBLIC_URL + './event-covers/23-oct-women-in-consulting.jpg'} resizeMode='contain' alt="tech talk with baraja"/>
-                            <div class="event-description">
-                            <p class="event-name">WIT x TAS x McGrathNicol: Women in Consulting</p>
-                                <p class="event-date">23rd October 2020, 2-3:00 PM</p>
-                                <p class="event-summary">
+                                    Do you want to know what it’s like for females in the consulting industry? <span role="img" aria-label="graph">👭👭</span> Are you familiar with the word, ‘consulting,’ but not too sure of what it actually entails? <span role="img" aria-label="graph">❓❓</span> Well lucky for you WIT and TAS has got you covered! <span role="img" aria-label="graph">🙏🙏</span>
+                                    In this quick 1 hour workshop, representatives from prestigious <span role="img" aria-label="graph">✨</span>McGrathNicol<span role="img" aria-label="graph">✨</span> will provide you with an insightful summary, all about the various opportunities and avenues in consulting! <span role="img" aria-label="graph">💼💼</span> Additionally, this event will ensure that all of your burning questions about cybersecurity are answered! <span role="img" aria-label="graph">✔✔</span> So wait are you waiting for? Register now to unlock the consultant within you! <span role="img" aria-label="graph">❕❕</span>
 
-                                Do you want to know what it’s like for females in the consulting industry? <span role="img" aria-label="graph">👭👭</span> Are you familiar with the word, ‘consulting,’ but not too sure of what it actually entails? <span role="img" aria-label="graph">❓❓</span> Well lucky for you WIT and TAS has got you covered! <span role="img" aria-label="graph">🙏🙏</span>
-                                In this quick 1 hour workshop, representatives from prestigious <span role="img" aria-label="graph">✨</span>McGrathNicol<span role="img" aria-label="graph">✨</span> will provide you with an insightful summary, all about the various opportunities and avenues in consulting! <span role="img" aria-label="graph">💼💼</span> Additionally, this event will ensure that all of your burning questions about cybersecurity are answered! <span role="img" aria-label="graph">✔✔</span> So wait are you waiting for? Register now to unlock the consultant within you! <span role="img" aria-label="graph">❕❕</span>
-
-                                </p>
-                                <ul id="links">
-                                    <li class="event-link">
-                                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScI3aO8HgbOi6YqRxzPg_ZZ836kJmLPkDCrSOi7vvyXZZqdpg/viewform" class ="event">Register</a>
-                                    </li>
-                                    <li class="event-link">
-                                        <a href="https://www.facebook.com/events/1009132526220068/" class="event">Facebook</a>
-                                    </li>
-                                </ul>
+                                    </p>
+                                    <ul id="links">
+                                        <li class="event-link">
+                                            <a href="https://docs.google.com/forms/d/e/1FAIpQLScI3aO8HgbOi6YqRxzPg_ZZ836kJmLPkDCrSOi7vvyXZZqdpg/viewform" class ="event">Register</a>
+                                        </li>
+                                        <li class="event-link">
+                                            <a href="https://www.facebook.com/events/1009132526220068/" class="event">Facebook</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-
-
-                    <div class="upcoming">
+                        <div class="upcoming">
                             <div>
                                 <img class="event-images" src={process.env.PUBLIC_URL + './event-covers/31-oct-2020.jpg'} resizeMode='contain' alt="WIT x Nine: Data Analytics Competition"/>
                                 <div class="event-description">
