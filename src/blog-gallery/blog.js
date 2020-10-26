@@ -16,10 +16,94 @@ class Blog extends Component {
         />
 
         {/*Start of blog posts*/}
+        {/*blog post 34*/}
+        <BlogPreview
+          topMargin="10vw"
+          bottomMargin="5vw"
+          blogNo="34"
+          imgUrl="/blog-covers/34-what-i-learnt-from-shadiyah-lim.png"
+          heading="What I Learnt From Shadiyah Lim"
+          date="25/10/2020"
+          subheading="In the latest blog post, Angeni reflects on the key lessons from her Talk WIT Us episode with Shadiyah Lim, Innovation Advisory Consultant at AWS, who overcame current uncertainties and more!"
+          authors={{
+            "angenie-bai": ["/potraits/angenie-bai.jpg", "Angenie Bai"],
+          }}
+        />
+        
+        {/*blog post 33*/}
+        <BlogPreview
+          topMargin="5vw"
+          bottomMargin="5vw"
+          blogNo="33"
+          imgUrl="/blog-covers/33-execs-2020.png"
+          heading="WCW ~ ALL WIT Exec Team 2020"
+          date="21/10/2020"
+          subheading="For this week's WIT Crush Wednesday, we'll be hearing an exciting Q&A with 2020's WIT Exec Team!"
+          authors={{
+            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
+          }}
+        />
+
+        {/*blog post 32*/}
+         <BlogPreview
+          topMargin="5vw"
+          bottomMargin="5vw"
+          blogNo="32"
+          imgUrl="/blog-covers/32-familiarising-fintech.png"
+          heading="Familiarising Fintech"
+          date="18/10/2020"
+          subheading="Have you ever wanted to learn more about the elusive world of fintech? Read more to find out about the intricate details of this commonly used buzzword!"
+          authors={{
+            "jane-wang": ["/potraits/jane-wang.png", "Jane Wang"],
+          }}
+        />
+
+        {/*blog post 31*/}
+         <BlogPreview
+          topMargin="5vw"
+          bottomMargin="5vw"
+          blogNo="31"
+          imgUrl="/blog-covers/31-sophie-warner.png"
+          heading="Introducing Sophie Warner, Tech Intern at National Australia Bank"
+          date="14/10/2020"
+          subheading="Here, we interview Sophie about her amazing journey and lessons she’s learnt along the way."
+          authors={{
+            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield"],
+          }}
+        />
+
+        {/*blog post 30*/}
+        <BlogPreview
+          topMargin="5vw"
+          bottomMargin="5vw"
+          blogNo="30"
+          imgUrl="/blog-covers/30-technical-interviews2.png"
+          heading="Technical Interview Walkthrough with Amanda Li and Vivian Shen (Part 2)"
+          date="11/10/2020"
+          subheading="In Part 2, Vivian and Amanda offer a comprehensive breakdown of a typical technical interview for software engineering, complete with tips and tricks for giving yourself the best possible chance of succeeding."
+          authors={{
+            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
+          }}
+        />
+
+        {/*blog post 29*/}
+        <BlogPreview
+          topMargin="5vw"
+          bottomMargin="5vw"
+          blogNo="29"
+          imgUrl="/blog-covers/29-davina-adisusila.png"
+          heading="Introducing Davina Adisusila, Engineering Team Lead at Eucalyptus
+          "
+          date="7/10/2020"
+          subheading="In this blog post, we learn about the experiences of Davina Adisusila, the Engineering Team Lead at Eucalyptus, as well as the some of the insights she has gained during her incredible journey."
+          authors={{
+            "victoria-ruming": ["/potraits/victoria.jpg", "Victoria Ruming"],
+          }}
+        />
 
         {/*blog post 28*/}
         <BlogPreview
-          topMargin="10vw"
+          topMargin="5vw"
           bottomMargin="5vw"
           blogNo="28"
           imgUrl="/blog-covers/28-technical-interviews.png"

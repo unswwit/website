@@ -129,6 +129,10 @@ table {
     .author-section {
         padding-left: 10px;
     }
+
+    .blog-details .date {
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 300px) {

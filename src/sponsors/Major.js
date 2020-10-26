@@ -7,11 +7,10 @@ class Major extends Component {
         {
         Object.keys(this.props.details).map((key, index) => ( 
           <a href= {this.props.details[key][0]}>
-            <img
+            <img class="major"
               src={process.env.PUBLIC_URL + this.props.details[key][1]}
               alt={key}
               resizeMode="contain"
-              style={{'height': '125px', 'width': '250px'}}
             />
           </a>
         ))

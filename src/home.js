@@ -50,7 +50,7 @@ class Home extends Component{
 								<p>Sponsors</p>
 							</div>
 							<div>
-								<span><CountUp end={1976} duration={5}/></span>
+								<span><CountUp end={2063} duration={5}/></span>
 								<p>Facebook Followers</p>
 							</div>
 						</div>
@@ -63,8 +63,9 @@ class Home extends Component{
 					<div class="events-description">
 						<p id="about">
 							At WIT, our focus is on providing events that foster development catering to first to final years. Whether it's personal, academic, professional or social, we want our students to be the best version of themselves. As part of our aim, we also connect current and future students with alumni and industry sponsors to serve as role models to inspire. </p>
-							<p><Link to="/events" style={{ textDecoration: 'none' }}><a id="more-events">See More Events</a>
-								</Link></p>
+							<p>
+								<Link to="/events" style={{ textDecoration: 'none' }}>See More Events</Link>
+							</p>
 					</div>
 					<div class="events-title">
 						<h1> EVENTS </h1>
@@ -75,8 +76,8 @@ class Home extends Component{
 						</a> */}
 					</div>
 					<div class="event-1">
-						<a href="https://www.facebook.com/events/913508185831961/">
-							<img src={process.env.PUBLIC_URL + '/event-covers/cloud-computing.jpg'} alt="banner"/>
+						<a href="https://www.facebook.com/events/2087909558012273">
+							<img src={process.env.PUBLIC_URL + './event-covers/31-oct-2020.jpg'} alt="Data Analytics Competition!"/>
 						</a>
 					</div>
 				</div>

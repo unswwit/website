@@ -75,7 +75,8 @@ input[type="radio"][id="crush"]:checked + label {
 input[type="radio"][id="crush"]:checked ~ .grid .mondaymot,
 input[type="radio"][id="crush"]:checked ~ .grid .memes,
 input[type="radio"][id="crush"]:checked ~ .grid .mascot,
-input[type="radio"][id="crush"]:checked ~ .grid .careers {
+input[type="radio"][id="crush"]:checked ~ .grid .careers,
+input[type="radio"][id="crush"]:checked ~ .grid .other {
   display: none;
 }
 
@@ -87,7 +88,8 @@ input[type="radio"][id="memes"]:checked + label {
 input[type="radio"][id="memes"]:checked ~ .grid .crush,
 input[type="radio"][id="memes"]:checked ~ .grid .mondaymot,
 input[type="radio"][id="memes"]:checked ~ .grid .mascot,
-input[type="radio"][id="memes"]:checked ~ .grid .careers {
+input[type="radio"][id="memes"]:checked ~ .grid .careers,
+input[type="radio"][id="memes"]:checked ~ .grid .other {
   display: none;
 }
 
@@ -99,7 +101,8 @@ input[type="radio"][id="mondaymot"]:checked + label {
 input[type="radio"][id="mondaymot"]:checked ~ .grid .crush,
 input[type="radio"][id="mondaymot"]:checked ~ .grid .memes,
 input[type="radio"][id="mondaymot"]:checked ~ .grid .mascot,
-input[type="radio"][id="mondaymot"]:checked ~ .grid .careers   {
+input[type="radio"][id="mondaymot"]:checked ~ .grid .careers,
+input[type="radio"][id="mondaymot"]:checked ~ .grid .other    {
   display: none;
 }
 
@@ -111,7 +114,8 @@ input[type="radio"][id="mascot"]:checked + label {
 input[type="radio"][id="mascot"]:checked ~ .grid .crush,
 input[type="radio"][id="mascot"]:checked ~ .grid .memes,
 input[type="radio"][id="mascot"]:checked ~ .grid .mondaymot,
-input[type="radio"][id="mascot"]:checked ~ .grid .careers   {
+input[type="radio"][id="mascot"]:checked ~ .grid .careers,
+input[type="radio"][id="mascot"]:checked ~ .grid .other    {
   display: none;
 }
 
@@ -123,7 +127,20 @@ input[type="radio"][id="careers"]:checked + label {
 input[type="radio"][id="careers"]:checked ~ .grid .crush,
 input[type="radio"][id="careers"]:checked ~ .grid .memes,
 input[type="radio"][id="careers"]:checked ~ .grid .mondaymot,
-input[type="radio"][id="careers"]:checked ~ .grid .mascot  {
+input[type="radio"][id="careers"]:checked ~ .grid .mascot,
+input[type="radio"][id="careers"]:checked ~ .grid .other  {
+  display: none;
+}
+
+input[type="radio"][id="other"]:checked + label {
+  background: var(--grey);
+  color: var(--white);
+}
+input[type="radio"][id="other"]:checked ~ .grid .crush,
+input[type="radio"][id="other"]:checked ~ .grid .memes,
+input[type="radio"][id="other"]:checked ~ .grid .mondaymot,
+input[type="radio"][id="other"]:checked ~ .grid .mascot, 
+input[type="radio"][id="other"]:checked ~ .grid .careers  {
   display: none;
 }
 

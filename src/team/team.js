@@ -13,7 +13,7 @@ class OurTeam extends Component {
 
         {/* Cover Photo */}
         <PageHeader
-          imgUrl="/team-header-1.png"
+          imgUrl="/team-header-1.jpg"
           title="Meet Our Team"
         />
 

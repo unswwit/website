@@ -29,14 +29,14 @@ h2.team-heading{
 /*Executive profile images*/
 .profile_crop {
     border-radius: 50%;
-    height: 16vw;
+    height: 250px;
+    width: 250px;
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
     object-fit: contain;
     overflow: hidden;
     position: relative;
-    width: 16vw;
 }
 
 .profile_img {
@@ -240,10 +240,14 @@ h2.team-heading{
         align-content: start;
     }
 
-    
     .subcom_profile_degree {
         overflow-wrap: break-word;
         word-break: break-word;
         hyphens: auto;
+    }
+
+    .profile_crop {
+        width: 200px;
+        height: 200px;
     }
 }
