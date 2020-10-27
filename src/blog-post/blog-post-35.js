@@ -25,14 +25,14 @@ class blogPost35 extends Component {
                 <div class="blog-content">
                     <div>
                         <h2 class="blog-title">
-                            What I Learnt From Shadiyah Lim
-            </h2>
+                            Introducing: Calista Kusuma, Information Systems and Marketing Student
+                        </h2>
                         <p class="date">27th October 2020</p>
                     </div>
 
                     <div class="post">
                         <p class="post-content">
-                            Calista Kusuma is a Marketing and Information Systems student at UNSW, passionate about finding new opportunities to grow and making an impact with those opportunities. Kusuma has had diverse experience, working with Boston Consulting Group, McKinsey & Co, and Bloomberg. She currently works as an Analytical journalist at The Smart Smart where she researches, interviews industry experts, and designs video content about critical issues in industries across the globe. Read more on how studying a technology driven degree and having a self- starter attitude can open doors for a successful career.
+                            Calista Kusuma is a Marketing and Information Systems student at UNSW, passionate about finding new opportunities to grow and making an impact with those opportunities. Kusuma has had diverse experience, being in programs with Boston Consulting Group, McKinsey & Co, and Bloomberg. She currently works as an Analytical journalist at The Smart Smart where she researches, interviews industry experts about critical issues in industries across the globe. Read more on how studying a technology driven degree and having a self- starter attitude can open doors for a successful career.
                         </p> <br /><br />
 
                         <p class="question">
