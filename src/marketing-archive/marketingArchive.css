@@ -41,6 +41,5 @@ p.year {
 }
 
 p.year:hover {
-  color: #feb14b;
-  border-color: #feb14b;
+  background-color: #feb14b;
 }

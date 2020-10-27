@@ -23,17 +23,6 @@
   display: block;
 }
 
-/*
-.initiatives:not(#content) {
-  display: inline-block;
-  vertical-align: top;
-  padding-top: 30px;
-  width: 24vw;
-  min-height: 400px;
-  box-shadow: 6px -2px 6px -4px #D3D3D3;
-}
-*/
-
 .initiatives label {
   font-family: 'Montserrat', sans-serif;
   text-align: center;

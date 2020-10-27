@@ -42,6 +42,18 @@ class MarketingContent extends Component {
                                                       
                     {/*Image collage*/}
                     <ol class="grid" id="content">
+                      <WCW
+                        fb="https://www.facebook.com/unsw.wit/posts/2427752177529649"
+                        imgUrl="/initiatives/wcw/sophiewarner.png"
+                        alt="Sophie Warner"
+                        date="14/10/2020"
+                      />
+                      <WCW
+                        fb="https://www.facebook.com/unsw.wit/posts/2422504541387746"
+                        imgUrl="/initiatives/wcw/davinaadisusila.jpg"
+                        alt="Davina Adisusila"
+                        date="7/10/2020"
+                      />
                       <Other
                         fb="https://www.facebook.com/unsw.wit/posts/2417718931866307"
                         imgUrl="/initiatives/other/twitch.png"
