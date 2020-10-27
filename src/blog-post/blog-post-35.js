@@ -25,8 +25,8 @@ class blogPost35 extends Component {
                 <div class="blog-content">
                     <div>
                         <h2 class="blog-title">
-                            What I Learnt From Shadiyah Lim
-            </h2>
+                            Introducing: Calista Kusuma, Information Systems and Marketing Student
+                        </h2>
                         <p class="date">27th October 2020</p>
                     </div>
 
