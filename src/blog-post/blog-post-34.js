@@ -147,13 +147,8 @@ class blogPost34 extends Component {
                   src={process.env.PUBLIC_URL + "/podcast-platforms/spotify-logo.png"}
                   alt="Spotify"
                   /> 
-              </a>
-              
+              </a> 
             </div>
-
-      
-
-            
           </div>
         </div>
         {/*for the blog post author*/}

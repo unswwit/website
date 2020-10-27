@@ -10,6 +10,7 @@ import Memes from "../initiatives/memes"
 import MondayMotivation from "../initiatives/monday-motivation"
 import Mascot from "../initiatives/mascot"
 import CareersGuide from "../initiatives/careers-guide"
+import Other from "../initiatives/other"
 
 class MarketingContent extends Component {
   render() {
@@ -18,7 +19,7 @@ class MarketingContent extends Component {
         {/* Cover Photo */}
         <PageHeader
           imgUrl="/marketing-header.png"
-          title="Marketing Archive"
+          title="Marketing Archives"
         />
             {/*End of Header*/}
 
@@ -27,20 +28,62 @@ class MarketingContent extends Component {
                   {/*List of 2020 intatives*/}
                   <div class="initiatives">
                     <input type="radio" id="2020" name="categories" ></input>
-                    <label for="2020" id="side">2020</label>
+                    <label for="2020" class="side">2020</label>
                     <input type="radio" id="crush" name="categories"></input>
-                    <label for="crush" id="side">WIT Crush Wednesday</label>
+                    <label for="crush" class="side">WIT Crush Wednesday</label>
                     <input type="radio" id="memes" name="categories"></input>
-                    <label for="memes" id="side">Memes</label>
+                    <label for="memes" class="side">Memes</label>
                     <input type="radio" id="mondaymot" name="categories"></input>
-                    <label for="mondaymot" id="side">Monday Motivation</label>
+                    <label for="mondaymot" class="side">Monday Motivation</label>
                     <input type="radio" id="mascot" name="categories"></input>
-                    <label for="mascot" id="side">Mascot</label>
+                    <label for="mascot" class="side">Mascot</label>
                     <input type="radio" id="careers" name="categories"></input>
-                    <label for="careers" id="side">Careers Guide</label>
+                    <label for="careers" class="side">Careers Guide</label>
 
                     {/*Image collage*/}
                     <ol class="grid" id="content">
+                      <WCW
+                        fb="https://www.facebook.com/unsw.wit/posts/2427752177529649"
+                        imgUrl="/initiatives/wcw/sophiewarner.png"
+                        alt="Sophie Warner"
+                        date="14/10/2020"
+                      />
+                      <WCW
+                        fb="https://www.facebook.com/unsw.wit/posts/2422504541387746"
+                        imgUrl="/initiatives/wcw/davinaadisusila.jpg"
+                        alt="Davina Adisusila"
+                        date="7/10/2020"
+                      />
+                      <Memes
+                        fb="https://www.facebook.com/unsw.wit/posts/2418739378430929"
+                        imgUrl="/initiatives/memes/fall-guys.png"
+                        alt="So...do you play Fall Guys?"
+                        date="2/10/2020"
+                      />
+                      <Other
+                        fb="https://www.facebook.com/unsw.wit/posts/2417718931866307"
+                        imgUrl="/initiatives/other/twitch.png"
+                        alt="Twitch"
+                        date="1/10/2020"
+                      />
+                      <WCW
+                        fb="https://www.facebook.com/unsw.wit/posts/2417002581937942"
+                        imgUrl="/initiatives/wcw/ankitasingh.png"
+                        alt="Ankita Singh"
+                        date="30/09/2020"
+                      />
+                      <Other
+                        fb="https://www.facebook.com/unsw.wit/posts/2407199466251587"
+                        imgUrl="/initiatives/other/talkwitus.png"
+                        alt="Talk WIT us"
+                        date="18/09/2020"
+                      />
+                      <Memes
+                        fb="https://www.facebook.com/unsw.wit/posts/2400816276889906"
+                        imgUrl="/initiatives/memes/buff-sad.png"
+                        alt="T3 is almost here"
+                        date="11/9/2020"
+                      />
                       <WCW
                         fb="https://www.facebook.com/unsw.wit/posts/2393647687606765"
                         imgUrl="/initiatives/wcw/aneitayang.png"

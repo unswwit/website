@@ -18,7 +18,6 @@ h2 {
 }
 
 .upcoming {
-    display: flex;
     box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
@@ -83,7 +82,6 @@ a:hover.event {
     text-decoration: none;
 }
 
-
 #past-events.grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -102,4 +100,34 @@ img.event-images {
 
 p.lookout {
     text-align: center;
+}
+
+@media only screen and (max-width: 650px) {
+    .events-body {
+        max-width: 90%;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .events-body {
+        max-width: 100%;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 20px;
+    }
+
+    #past-events.grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 20px;
+    }
 }
