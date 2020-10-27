@@ -32,7 +32,7 @@ class blogPost35 extends Component {
 
                     <div class="post">
                         <p class="post-content">
-                            Calista Kusuma is a Marketing and Information Systems student at UNSW, passionate about finding new opportunities to grow and making an impact with those opportunities. Kusuma has had diverse experience, working with Boston Consulting Group, McKinsey & Co, and Bloomberg. She currently works as an Analytical journalist at The Smart Smart where she researches, interviews industry experts, and designs video content about critical issues in industries across the globe. Read more on how studying a technology driven degree and having a self- starter attitude can open doors for a successful career.
+                            Calista Kusuma is a Marketing and Information Systems student at UNSW, passionate about finding new opportunities to grow and making an impact with those opportunities. Kusuma has had diverse experience, being in programs with Boston Consulting Group, McKinsey & Co, and Bloomberg. She currently works as an Analytical journalist at The Smart Smart where she researches, interviews industry experts about critical issues in industries across the globe. Read more on how studying a technology driven degree and having a self- starter attitude can open doors for a successful career.
                         </p> <br /><br />
 
                         <p class="question">
