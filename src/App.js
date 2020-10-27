@@ -52,6 +52,8 @@ import blogPost30 from "./blog-post/blog-post-30";
 import blogPost31 from "./blog-post/blog-post-31";
 import blogPost32 from "./blog-post/blog-post-32";
 import blogPost33 from "./blog-post/blog-post-33";
+import blogPost34 from "./blog-post/blog-post-34";
+import blogPost35 from "./blog-post/blog-post-35";
 
 class App extends Component {
   constructor(props) {
@@ -61,7 +63,7 @@ class App extends Component {
                       blogPost13, blogPost14, blogPost15, blogPost16, blogPost17, blogPost18,
                       blogPost19, blogPost20, blogPost21, blogPost22, blogPost23, blogPost24,
                       blogPost25, blogPost26, blogPost27, blogPost28, blogPost29, blogPost30,
-                      blogPost31, blogPost32, blogPost33];
+                      blogPost31, blogPost32, blogPost33, blogPost34, blogPost35];
     this.state = {
       showDD: false,
       menuOpen: false,
