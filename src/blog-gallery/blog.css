@@ -12,16 +12,6 @@
     overflow: hidden;
 }
 
-.blog-post {
-  padding-top: 5px;
-  transition: padding 0.5s ease;
-}
-
-.blog-post:hover {
-  padding-top: 0px;
-  padding-bottom: 5px;
-}
-
 .blog-post:hover .preview-pic img {
   -ms-transform: scale(1.5); /* IE 9 */
   -webkit-transform: scale(1.5); /* Safari 3-8 */

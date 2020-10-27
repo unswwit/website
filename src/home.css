@@ -257,6 +257,14 @@ div .headline{
 .event-1 img {
     object-fit: cover;
     width: 100%;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+}
+
+.event-1:hover img {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.03);
 }
 
 /*Small event grid area*/
