@@ -33,7 +33,7 @@ class Blog extends Component {
 
         {/*blog post 34*/}
         <BlogPreview
-          topMargin="10vw"
+          topMargin="5vw"
           bottomMargin="5vw"
           blogNo="34"
           imgUrl="/blog-covers/34-what-i-learnt-from-shadiyah-lim.png"
