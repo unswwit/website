@@ -39,7 +39,7 @@ class MarketingContent extends Component {
                     <label for="mascot" class="side">Mascot</label>
                     <input type="radio" id="careers" name="categories"></input>
                     <label for="careers" class="side">Careers Guide</label>
-                                                      
+
                     {/*Image collage*/}
                     <ol class="grid" id="content">
                       <WCW
@@ -53,6 +53,12 @@ class MarketingContent extends Component {
                         imgUrl="/initiatives/wcw/davinaadisusila.jpg"
                         alt="Davina Adisusila"
                         date="7/10/2020"
+                      />
+                      <Memes
+                        fb="https://www.facebook.com/unsw.wit/posts/2418739378430929"
+                        imgUrl="/initiatives/memes/fall-guys.png"
+                        alt="So...do you play Fall Guys?"
+                        date="2/10/2020"
                       />
                       <Other
                         fb="https://www.facebook.com/unsw.wit/posts/2417718931866307"
@@ -71,6 +77,12 @@ class MarketingContent extends Component {
                         imgUrl="/initiatives/other/talkwitus.png"
                         alt="Talk WIT us"
                         date="18/09/2020"
+                      />
+                      <Memes
+                        fb="https://www.facebook.com/unsw.wit/posts/2400816276889906"
+                        imgUrl="/initiatives/memes/buff-sad.png"
+                        alt="T3 is almost here"
+                        date="11/9/2020"
                       />
                       <WCW
                         fb="https://www.facebook.com/unsw.wit/posts/2393647687606765"
