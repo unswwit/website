@@ -1,23 +1,21 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-class SupportInKind extends Component {	 
-	render() {
-		return (
+class SupportInKind extends Component {
+  render() {
+    return (
       <div>
-        {
-        Object.keys(this.props.details).map((key, index) => ( 
-          <a href= {this.props.details[key][0]}>
-            <img class="support-inkind"
+        {Object.keys(this.props.details).map((key, index) => (
+          <a key={index} href={this.props.details[key][0]}>
+            <img
+              className="support-inkind"
               src={process.env.PUBLIC_URL + this.props.details[key][1]}
               alt={key}
-              resizeMode="contain"
             />
           </a>
-        ))
-        }
+        ))}
       </div>
     );
-	}
+  }
 }
 
 export default SupportInKind;

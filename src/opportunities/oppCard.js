@@ -9,34 +9,33 @@ class OppCard extends Component {
       <div>
         {/*for the blog post author*/}
         {Object.keys(this.props.details).map((key, index) => (
-          <div key={index} class="opp-post">
+          <div key={index} className="opp-post">
             <table cellpadding="0">
               <tr>
                 <tr>
-                  <td class="opp-preview">
+                  <td className="opp-preview">
                     <tr>
                       <td>
-                        <div class="opp-frame">
+                        <div className="opp-frame">
                           <img
                             src={process.env.PUBLIC_URL + this.props.details[key][0]}
                             className="opp-img"
                             alt={key}
-                            resizeMode="contain"
                           />
                         </div>
                       </td>
                       <td style={{ width: '200px' }}>
-                        <div class="heading">{key}</div>
-                        <div class="subheading">{this.props.details[key][1]}</div>
+                        <div className="heading">{key}</div>
+                        <div className="subheading">{this.props.details[key][1]}</div>
                       </td>
                     </tr>
 
-                    <div class="opp-details">
-                      <div class="job-position">{this.props.details[key][2]}</div>
+                    <div className="opp-details">
+                      <div className="job-position">{this.props.details[key][2]}</div>
 
-                      <div class="subheading">{this.props.details[key][3]}</div>
-                      <div class="more-link">
-                        <a class="more-link" href={this.props.details[key][4]}>
+                      <div className="subheading">{this.props.details[key][3]}</div>
+                      <div className="more-link">
+                        <a className="more-link" href={this.props.details[key][4]}>
 													More
                         </a>
                       </div>

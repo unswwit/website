@@ -14,8 +14,8 @@ class Opportunities extends Component {
         <PageHeader imgUrl="/opportunities-header.jfif" title="Opportunities" />
 
         {/*Start of opportunities grid table*/}
-        <div class="opp-grid">
-          <div class="container">
+        <div className="opp-grid">
+          <div className="container">
             <OppCard
               details={{
                 Telstra: [

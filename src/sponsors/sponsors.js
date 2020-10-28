@@ -141,7 +141,7 @@ class Sponsors extends Component {
 
           <p className="subheader">
             {`Interested in partnering with us? Contact us at `}
-            <a class="subheader" href="mailto:externals@unswwit.com">
+            <a className="subheader" href="mailto:externals@unswwit.com">
 							externals@unswwit.com
             </a>
           </p>
