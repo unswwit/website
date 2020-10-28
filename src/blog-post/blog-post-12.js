@@ -13,11 +13,11 @@ class blogPost12 extends Component {
   render() {
     return (
       <div>
-      {/* Cover Photo */}
-      <PageHeader
-        imgUrl="/blog-header.png"
-        title="Blog Post #12"
-      />
+        {/* Cover Photo */}
+        <PageHeader
+          imgUrl="/blog-header.png"
+          title="Blog Post #12"
+        />
 
         {/*Start of blog post*/}
         <div class="blog-content">
@@ -37,7 +37,7 @@ class blogPost12 extends Component {
              she teaches and inspires other females to build their own software programs and pursue
              careers in technology. </p><br/>
 
-             <p class="question">What sparked your interest to join the field of STEM?</p>
+            <p class="question">What sparked your interest to join the field of STEM?</p>
 
             <p class="post-content">In high school I really enjoyed maths and science, and playing video
             games, so I jumped at the chance to learn programming. I love being able to solve real problems
@@ -78,7 +78,7 @@ class blogPost12 extends Component {
         </div>
         {/*for the blog post author*/}
         <AuthorCard
-        authors={{"vivian-wong":["/potraits/vivw.jpg", "profile_img vivw_img", "Vivian Wong", "Education Executive"], "georgie-mansfield":["/potraits/georgie.jpg", "profile_img vivw_img", "Georgie Mansfield", "Education Team"]}}
+          authors={{"vivian-wong":["/potraits/vivw.jpg", "profile_img vivw_img", "Vivian Wong", "Education Executive"], "georgie-mansfield":["/potraits/georgie.jpg", "profile_img vivw_img", "Georgie Mansfield", "Education Team"]}}
         />
         {/*End of blog posts*/}
       </div>

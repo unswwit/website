@@ -1,109 +1,109 @@
 /*-------------------------------Blog posts page header-----------------------------*/
 /*Header image*/
 .coverPhoto {
-    background-image: url('/sponsors-header-1.png');
-    background-position: center bottom 40%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    max-width: 100%;
-    overflow: hidden;
-    position: relative;
-  }
-  
+	background-image: url('/sponsors-header-1.png');
+	background-position: center bottom 40%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	max-width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
 /*Heading title*/
 .title h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 5vw;
-    letter-spacing: 8px;
-    margin-top: 26vw;
-    text-transform: uppercase;
-    text-align: center;
-  }
+	font-family: 'Playfair Display', serif;
+	font-size: 5vw;
+	letter-spacing: 8px;
+	margin-top: 26vw;
+	text-transform: uppercase;
+	text-align: center;
+}
 
 /*-------------------------------Opportunities Preview-----------------------------*/
 /*Author circle crop*/
 .author-pic {
-    border-radius: 50%;
-    height: 5.5vw;
-    overflow: hidden;
-    width: 5.5vw;
-    margin-right: 1.5vw;
-    margin-left: 0px;
+	border-radius: 50%;
+	height: 5.5vw;
+	overflow: hidden;
+	width: 5.5vw;
+	margin-right: 1.5vw;
+	margin-left: 0px;
 }
 
 /*Author image*/
 .please-rename-me {
-    height: auto;
-    transform: translate( -5%, -10%);
-    width: 120%;
+	height: auto;
+	transform: translate(-5%, -10%);
+	width: 120%;
 }
 
 /*Opportunities preview*/
 table {
-    border: none;
-    border-color: #a0a0a0;
-    border-width: 2px;
-    margin: 0 auto;
+	border: none;
+	border-color: #a0a0a0;
+	border-width: 2px;
+	margin: 0 auto;
 }
 
 .main-table {
-    border: none;
+	border: none;
 }
 
 .opp-post {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    padding-bottom: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	padding-bottom: 10px;
 }
 
 .opp-details {
-    margin-top: 1vw;
+	margin-top: 1vw;
 }
 
 .opp-preview {
-    padding: 2vw;
+	padding: 2vw;
 }
 
 .heading {
-    color: #FEB14B;
-    letter-spacing: 0.1vw;
-    font-size: 14pt;
-    font-family: Roboto;
-    text-decoration: none;
-    margin-bottom: 10px;
+	color: #feb14b;
+	letter-spacing: 0.1vw;
+	font-size: 14pt;
+	font-family: Roboto;
+	text-decoration: none;
+	margin-bottom: 10px;
 }
 
 .job-position {
-    color: #313638;
-    letter-spacing: 0.1vw;
-    font-size: 14pt;
-    font-family: Roboto;
-    text-decoration: none;
-    margin-bottom: 10px;
+	color: #313638;
+	letter-spacing: 0.1vw;
+	font-size: 14pt;
+	font-family: Roboto;
+	text-decoration: none;
+	margin-bottom: 10px;
 }
 
 .heading:hover {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .subheading {
-    color: #707070;
-    letter-spacing: 0.1vw;
-    font-size: 11pt;
-    font-family: Roboto;
-    font-weight: 300;
+	color: #707070;
+	letter-spacing: 0.1vw;
+	font-size: 11pt;
+	font-family: Roboto;
+	font-weight: 300;
 }
 
 .blog-link:hover {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .more-link {
-    color: #FEB14B;
-    letter-spacing: 0.05vw;
-    font-size: 11pt;
-    font-family: Roboto;
-    font-weight: 300;
-    text-align: right;
-    margin-top: 10px;
+	color: #feb14b;
+	letter-spacing: 0.05vw;
+	font-size: 11pt;
+	font-family: Roboto;
+	font-weight: 300;
+	text-align: right;
+	margin-top: 10px;
 }

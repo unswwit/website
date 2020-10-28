@@ -60,7 +60,7 @@ class Blog extends Component {
         />
 
         {/*blog post 32*/}
-         <BlogPreview
+        <BlogPreview
           topMargin="5vw"
           bottomMargin="5vw"
           blogNo="32"
@@ -74,7 +74,7 @@ class Blog extends Component {
         />
 
         {/*blog post 31*/}
-         <BlogPreview
+        <BlogPreview
           topMargin="5vw"
           bottomMargin="5vw"
           blogNo="31"
@@ -227,7 +227,7 @@ class Blog extends Component {
         />
 
         {/*blog post 20*/}
-         <BlogPreview
+        <BlogPreview
           topMargin="5vw"
           bottomMargin="5vw"
           blogNo="20"

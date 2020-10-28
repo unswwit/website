@@ -8,7 +8,10 @@ class Home extends Component {
     return (
       <body>
         {/* Start of Header */}
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+        <meta
+          name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
         <div className="contain">
           <div className="headline">
             <h1>UNSW</h1>
@@ -22,18 +25,15 @@ class Home extends Component {
         {/* Start of Description */}
         <div className="description">
           <div className="description-left">
-            <h1>
-              UNITE.
-              EMPOWER.
-              UPSKILL.
-            </h1>
+            <h1>UNITE. EMPOWER. UPSKILL.</h1>
           </div>
           <div className="description-right">
             <p>
-              Formed in late 2016, we have grown to be a platform that empowers, unites and up-skills female
-              and male students alike that are passionate about our mission. Women in Technology (WIT)
-              aims to cultivate future leaders that are prepared to challenge the prejudices and bring
-              change into the industry while building a strong community where they can find lasting friendships and support.
+							Formed in late 2016, we have grown to be a platform that empowers, unites and up-skills
+							female and male students alike that are passionate about our mission. Women in Technology
+							(WIT) aims to cultivate future leaders that are prepared to challenge the prejudices and
+							bring change into the industry while building a strong community where they can find lasting
+							friendships and support.
             </p>
           </div>
         </div>
@@ -41,19 +41,30 @@ class Home extends Component {
 
         {/* Start of Statistics */}
         <div className="stats" onScroll={this.handleScroll}>
-          <img src={`${process.env.PUBLIC_URL}./stats-background-1.png`} className="stats-background" alt="banner" resizeMode="contain" />
+          <img
+            src={`${process.env.PUBLIC_URL}./stats-background-1.png`}
+            className="stats-background"
+            alt="banner"
+            resizeMode="contain"
+          />
           <div className="stats-info">
             <div className="number">
               <div>
-                <span><CountUp end={30} duration={5} /></span>
+                <span>
+                  <CountUp end={30} duration={5} />
+                </span>
                 <p>Team Members</p>
               </div>
               <div>
-                <span><CountUp end={15} duration={5} /></span>
+                <span>
+                  <CountUp end={15} duration={5} />
+                </span>
                 <p>Sponsors</p>
               </div>
               <div>
-                <span><CountUp end={2063} duration={5} /></span>
+                <span>
+                  <CountUp end={2063} duration={5} />
+                </span>
                 <p>Facebook Followers</p>
               </div>
             </div>
@@ -65,10 +76,15 @@ class Home extends Component {
         <div className="events">
           <div className="events-description">
             <p id="about">
-              At WIT, our focus is on providing events that foster development catering to first to final years. Whether it's personal, academic, professional or social, we want our students to be the best version of themselves. As part of our aim, we also connect current and future students with alumni and industry sponsors to serve as role models to inspire.
+							At WIT, our focus is on providing events that foster development catering to first to final
+							years. Whether it's personal, academic, professional or social, we want our students to be
+							the best version of themselves. As part of our aim, we also connect current and future
+							students with alumni and industry sponsors to serve as role models to inspire.
             </p>
             <p>
-              <Link to="/events" style={{ textDecoration: 'none' }}>See More Events</Link>
+              <Link to="/events" style={{ textDecoration: 'none' }}>
+								See More Events
+              </Link>
             </p>
           </div>
           <div className="events-title">
@@ -81,7 +97,10 @@ class Home extends Component {
           </div>
           <div className="event-1">
             <a href="https://www.facebook.com/events/2087909558012273">
-              <img src={`${process.env.PUBLIC_URL}./event-covers/31-oct-2020.jpg`} alt="Data Analytics Competition!" />
+              <img
+                src={`${process.env.PUBLIC_URL}./event-covers/31-oct-2020.jpg`}
+                alt="Data Analytics Competition!"
+              />
             </a>
           </div>
         </div>
@@ -96,9 +115,7 @@ class Home extends Component {
             resizeMode="contain"
           />
         </div>
-
       </body>
-
     );
   }
 }

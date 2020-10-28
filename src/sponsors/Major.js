@@ -1,23 +1,22 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-class Major extends Component {	 
-	render() {
-		return (
+class Major extends Component {
+  render() {
+    return (
       <div>
-        {
-        Object.keys(this.props.details).map((key, index) => ( 
-          <a href= {this.props.details[key][0]}>
-            <img class="major"
+        {Object.keys(this.props.details).map((key, index) => (
+          <a href={this.props.details[key][0]}>
+            <img
+              class="major"
               src={process.env.PUBLIC_URL + this.props.details[key][1]}
               alt={key}
               resizeMode="contain"
             />
           </a>
-        ))
-        }
+        ))}
       </div>
     );
-	}
+  }
 }
 
 export default Major;

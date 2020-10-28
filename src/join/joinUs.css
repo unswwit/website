@@ -1,123 +1,123 @@
 /*-------------------------------Join us socials------------------------------*/
 /*Body block*/
 .joinUsBody {
-    max-width: 80%;
-    text-align: center;
-    margin: auto;
-    padding-top: 130px;
-    padding-bottom: 125px;
-    margin-bottom: 300px;
+	max-width: 80%;
+	text-align: center;
+	margin: auto;
+	padding-top: 130px;
+	padding-bottom: 125px;
+	margin-bottom: 300px;
 }
 
 /*Google Map screenshot image*/
 .googleMap {
-    width: 43%;
-    padding: 0px;
-    height: 300px;
-    float: left;
-    object-fit: cover;
+	width: 43%;
+	padding: 0px;
+	height: 300px;
+	float: left;
+	object-fit: cover;
 }
 
 /*Right side block*/
 .joinUsRight {
-    width: 57%;
-    height: 300px;
-    text-align: left;
-    padding: 0px 10px 10% 10%;
-    float: right;
+	width: 57%;
+	height: 300px;
+	text-align: left;
+	padding: 0px 10px 10% 10%;
+	float: right;
 }
 
 /*Heading*/
 .joinUsRight h2 {
-    text-align: left;
+	text-align: left;
 }
 
 /*Container for buttons*/
 .joinButtons {
-  position: relative;
-  display: inline-block;
+	position: relative;
+	display: inline-block;
 }
 
 /*Social links*/
 .joinButtons a {
-  display: inline-block;
-  margin-right: 15px;
-  width: 60px;
-  height: 60px;
-  padding: 4px 4px 4px 4px;
-  margin-bottom: 6px;
+	display: inline-block;
+	margin-right: 15px;
+	width: 60px;
+	height: 60px;
+	padding: 4px 4px 4px 4px;
+	margin-bottom: 6px;
 }
 
 /*-------------------------------Join us ipad------------------------------*/
 @media only screen and (max-width: 1100px) {
-  .centre {
-    font-size: 40px;
-    margin: 0px;
-  }
+	.centre {
+		font-size: 40px;
+		margin: 0px;
+	}
 }
 
 /*-------------------------------Join us mobile------------------------------*/
 @media only screen and (max-width: 850px) {
-  .joinUsRight {
-    float: none;
-    width: 100%;
-    height: 150px;
-    margin-top: 50px;
-  }
+	.joinUsRight {
+		float: none;
+		width: 100%;
+		height: 150px;
+		margin-top: 50px;
+	}
 
-  .googleMap {
-    float: none;
-    width: 100%;
-    margin-bottom: 50px;
-  }
+	.googleMap {
+		float: none;
+		width: 100%;
+		margin-bottom: 50px;
+	}
 
-  .joinUsBody {
-    max-width: 100%;
-    padding-bottom: 0px;
-    padding-top: 0px;
-    margin-bottom: 0px;
-    margin-top: 60px;
-  }
+	.joinUsBody {
+		max-width: 100%;
+		padding-bottom: 0px;
+		padding-top: 0px;
+		margin-bottom: 0px;
+		margin-top: 60px;
+	}
 
-  .joinUsRight {
-    padding: 0px;
-    height: 140px;
-  }
+	.joinUsRight {
+		padding: 0px;
+		height: 140px;
+	}
 
-  .joinUsRight h2 {
-    font-size: 22px;
-    text-align: center;
-    padding-bottom: 0px;
-  }
+	.joinUsRight h2 {
+		font-size: 22px;
+		text-align: center;
+		padding-bottom: 0px;
+	}
 
-  .joinButtons {
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
-  }
+	.joinButtons {
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-  .joinButtons a {
-    height: 40px;
-    width: 40px;
-    margin-right: 10px;
-  }
+	.joinButtons a {
+		height: 40px;
+		width: 40px;
+		margin-right: 10px;
+	}
 
-  .centre {
-    font-size: 22px;
-  }
+	.centre {
+		font-size: 22px;
+	}
 
-  a.lastBtn {
-    margin-right: 0px;
-  }
+	a.lastBtn {
+		margin-right: 0px;
+	}
 }
 
 /*-------------------------------Join us very small screen------------------------------*/
 @media only screen and (max-width: 260px) {
-  .joinButtons a {
-    display: block;
-  }
+	.joinButtons a {
+		display: block;
+	}
 
-  .joinUsRight {
-    height: 320px;
-  }
+	.joinUsRight {
+		height: 320px;
+	}
 }

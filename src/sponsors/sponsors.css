@@ -2,76 +2,75 @@
 
 /*Subheading "Thank you message" & contact*/
 p.subheader {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12pt;
-    color: #313638B3;
-    letter-spacing: 2px;
-    text-align: center;
-    margin-top: 50px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12pt;
+	color: #313638B3;
+	letter-spacing: 2px;
+	text-align: center;
+	margin-top: 50px;
 }
 
 /*----------------------------Sponsor page sponsors---------------------------*/
 /*Sponsor tier names*/
 h1.subsponsor {
-    font-size: 33pt;
-    letter-spacing: 8px;
-    text-transform: uppercase;
-    margin-top: 100px;
-    margin-bottom: 45px;
-    text-align: center;
+	font-size: 33pt;
+	letter-spacing: 8px;
+	text-transform: uppercase;
+	margin-top: 100px;
+	margin-bottom: 45px;
+	text-align: center;
 }
 
 /*Sponsor logos*/
 #majorContainer {
-    margin-bottom: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-end;
+	margin-bottom: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: flex-end;
 }
 
 #majorContainer img {
-    transition: transform 0.5s ease;
+	transition: transform 0.5s ease;
 }
 
 #majorContainer img:hover {
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(1.09);
+	-ms-transform: scale(1.5); /* IE 9 */
+	-webkit-transform: scale(1.5); /* Safari 3-8 */
+	transform: scale(1.09);
 }
 
 /*Sponsor contact*/
 a.subheader {
-    font-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .subheader a:hover {
-    color: #feb14b;
-    text-decoration: none;
+	color: #feb14b;
+	text-decoration: none;
 }
 
 #sponsors-body {
-    max-width: 70%;
-    margin: 0 auto;
-    margin-bottom: 10%;
-    margin-top: 5%;
+	max-width: 70%;
+	margin: 0 auto;
+	margin-bottom: 10%;
+	margin-top: 5%;
 }
 
-
 .principal {
-    width: 100%;
-    max-width: 350px;
-    margin-bottom: 50px;
+	width: 100%;
+	max-width: 350px;
+	margin-bottom: 50px;
 }
 
 .major {
-    width: 100%;
-    max-width: 250px;
-    margin-bottom: 50px;
+	width: 100%;
+	max-width: 250px;
+	margin-bottom: 50px;
 }
 
 .support-inkind {
-    width: 100%;
-    max-width: 150px;
-    margin-bottom: 75px;
+	width: 100%;
+	max-width: 150px;
+	margin-bottom: 75px;
 }

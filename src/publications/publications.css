@@ -1,130 +1,134 @@
-
 /*CAN REMOVE ONCE OVERLAY FILES ARE ALL MERGED*/
 /* direct copy from what will be in style.css from other branch */
-.overlay {    /* overlay on all header images*/
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #313638;
-  opacity: 0.5;
+.overlay {
+	/* overlay on all header images*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #313638;
+	opacity: 0.5;
 }
 
 /*-------------------------------Publications structure------------------------------*/
 /*Body block*/
 .publicationsBody {
-    max-width: 65%;
-    margin: auto;
-    padding-top: 80px;
-    padding-bottom: 80px;
+	max-width: 65%;
+	margin: auto;
+	padding-top: 80px;
+	padding-bottom: 80px;
 }
 
 .row {
-  margin-top: 20px;
-  margin-bottom: 50px;
-  height: auto;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	height: auto;
 }
 
 /*Right side block*/
 .article {
-    display: inline-block;
-    width: 212px;
-    height: 300px;
-    text-align: center;
-    margin: 0px 14px 0px 14px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    position: relative;
-    margin-top: 30px;
-    overflow: hidden;
+	display: inline-block;
+	width: 212px;
+	height: 300px;
+	text-align: center;
+	margin: 0px 14px 0px 14px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	position: relative;
+	margin-top: 30px;
+	overflow: hidden;
 }
 
 /*-------------------------------Publications Article------------------------------*/
 
 .image_container {
-  position: absolute;
-  z-index: 0;
+	position: absolute;
+	z-index: 0;
 }
 
-.article_img  {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    position: relative;
+.article_img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	position: relative;
 }
 
 .article .dark {
-  width: 100%;
-  /*background-color: #313638;  /*website overlay*/
-  background-color: black;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  height: 100%;
-  z-index: 1;
-  visibility: hidden;
-  transition: opacity 0.5s ease;
+	width: 100%;
+	/*background-color: #313638;  /*website overlay*/
+	background-color: black;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	z-index: 1;
+	visibility: hidden;
+	transition: opacity 0.5s ease;
 }
 
-.article:hover h2, .article:hover .dark, .article:hover p, .article:hover .button {
-  visibility: visible;
+.article:hover h2,
+.article:hover .dark,
+.article:hover p,
+.article:hover .button {
+	visibility: visible;
 }
 
 .article:hover .dark {
-  opacity: 0.5;
+	opacity: 0.5;
 }
 
 .text_container {
-  position: absolute;
-  left: 50%;
-  z-index: 2;
-  top: 70px;
+	position: absolute;
+	left: 50%;
+	z-index: 2;
+	top: 70px;
 }
 
 .article h2 {
-  left: -50%;
-  text-transform: capitalize;
-  text-align: center;
+	left: -50%;
+	text-transform: capitalize;
+	text-align: center;
 
-  font-size: 21px;
-  display: block;
-  visibility: hidden;
-  position: relative;
-  padding: 5px;
+	font-size: 21px;
+	display: block;
+	visibility: hidden;
+	position: relative;
+	padding: 5px;
 }
 
 .article p {
-  font-size: 15px;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  display: block;
-  text-align: center;
-  visibility: hidden;
-  float: center;
-  left: -50%;
-  position: relative;
+	font-size: 15px;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	display: block;
+	text-align: center;
+	visibility: hidden;
+	float: center;
+	left: -50%;
+	position: relative;
 }
 
 /*read only button, change for functionality*/
 .button {
-  background-color: orange;
-  height: 30px;
-  width: 120px;
-  visibility: hidden;
-  left: -50%;
-  position: relative;
+	background-color: orange;
+	height: 30px;
+	width: 120px;
+	visibility: hidden;
+	left: -50%;
+	position: relative;
 }
 
 .button h3 {
-  font-size: 9px;
-  color: white;
-  text-transform: uppercase;
-  margin-left: -12px;
-  white-space: nowrap;
-  float: center;
+	font-size: 9px;
+	color: white;
+	text-transform: uppercase;
+	margin-left: -12px;
+	white-space: nowrap;
+	float: center;
 }
 
-.button a, .button a:hover {
-  text-decoration: none;
-  color: white;
+.button a,
+.button a:hover {
+	text-decoration: none;
+	color: white;
 }

@@ -10,11 +10,7 @@ class PageHeader extends Component {
         <div className="dark" />
 
         {/* header image */}
-        <img
-          src={process.env.PUBLIC_URL + this.props.imgUrl}
-          alt="blog-header"
-          className="cover_image"
-        />
+        <img src={process.env.PUBLIC_URL + this.props.imgUrl} alt="blog-header" className="cover_image" />
 
         {/* text */}
         <div className="title">
