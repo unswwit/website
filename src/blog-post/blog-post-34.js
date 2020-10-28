@@ -33,7 +33,7 @@ class blogPost34 extends Component {
           <div class="post">
             <p class="post-content">
             Co-hosting the very first Careers Deep Dive episode of our Talk WIT Us podcast, I was lucky enough to chat to Shadiyah Lim, an Innovation Advisory Consultant at AWS. Surprisingly, as we’d quickly learned, she hasn’t always been in the Digital Transformation industry. Shadiyah graduated with a communications and media studies degree, spent two years teaching English in South Korea, and began work as a writer before ever stepping foot into her current industry. Of course, she was bursting with experience and advice to share during our chat, but some amazing lessons stuck out.
-            </p> <br /><br />
+            </p><br />
 
             <p class="question">
               It’s okay when things don’t go to plan.
@@ -51,9 +51,7 @@ class blogPost34 extends Component {
             <p class="post-content">
               Her experience is a timely reminder that even when things don’t go to plan, there are other pathways to find. If Shadiyah had found a job directly after graduating, would she have found herself in South Korea, or with a successful career in the tech industry in Australia? Likewise, for us, we could discover new pathways that lead to something which we couldn’t have imagined otherwise.
             </p>
-            <br /><br />
-
-
+            <br />
 
             <p class="question">
               Don’t be afraid to put your hand up.
@@ -69,9 +67,7 @@ class blogPost34 extends Component {
             <p class="post-content">
               It’s easy to pre-empt failure and shy away from taking on the challenges we face. Shadiyah emphasised the need to ask the people around her for help when she was stuck, and the continual learning she undertook. It’s about looking at challenges with a growth mindset, because even when we do fail, we have gained important lessons, and these lessons have great power in helping us the next time we put our hands up.
             </p>
-            <br /><br />
-
-
+            <br />
 
             <p class="question">
               The future is at the intersection of business and technology. 
@@ -86,9 +82,7 @@ class blogPost34 extends Component {
             <p class="post-content">
               Coming from a more technical background myself, I’ve usually been interested in tech for its own sake. This opened my eyes to the fact that to a business, its greatest value is in its ability to help address its customers’ needs. In that sense, technology innovation can’t exist in its own bubble. Businesses and customers need to benefit from these innovations, and we can only achieve that with an understanding of both tech capabilities and business needs.
             </p>
-            <br /><br />
-
-
+            <br />
 
             <p class="question">
               Recruiters look for someone who can inspire a team.
@@ -105,9 +99,7 @@ class blogPost34 extends Component {
             <p class="post-content">
               This is a skill that can be developed by actively participating in teamwork, whether that be at uni or outside of it. Following her advice from earlier, putting your hand up to more challenges also creates more opportunities to solve problems alongside other people, and thus, the opportunity to inspire them as well.
             </p>
-            <br /><br />
-
-
+            <br />
 
             <p class="post-content">
               These lessons all add up to an overarching theme: that anything is possible with the right mindset and an openness to learn. Shadiyah embodied this attitude, and her energy was completely infectious. Particularly in the uncertainty of a global pandemic, this belief is more important than ever. With this in mind, the future holds opportunities for all of us, as long as we take the initiative to find them.
@@ -117,48 +109,46 @@ class blogPost34 extends Component {
             </p>
             <br />
             
-
-            
             <div>
               <a href="https://anchor.fm/unswwit/episodes/Episode-2-Careers-Deep-Dive---Digital-Transformation-w-Shadiyah-Lim-ekak30" target="_blank" rel="noopener noreferrer">
                 <img
                   className="img-general"
                   src={process.env.PUBLIC_URL + "/podcast-platforms/anchor-logo.png"}
                   alt="Anchor"
-                  /> 
+                /> 
               </a>
               <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy8zNTQxM2JkMC9wb2RjYXN0L3Jzcw/episode/NTIwMDU5N2YtMjg5NC00ZjEwLWE2NTItMWRiMDc4ZGU0Njc5?sa=X&ved=0CAUQkfYCahcKEwigtazP_szsAhUAAAAAHQAAAAAQAQ" target="_blank" rel="noopener noreferrer">
                 <img
                   className="img-general"
                   src={process.env.PUBLIC_URL + "/podcast-platforms/google-podcasts-logo.png"}
                   alt="Google Podcasts"
-                  /> 
+                /> 
               </a>
               <a href="https://radiopublic.com/talk-wit-us-Ww3A3m/s1!284a5" target="_blank" rel="noopener noreferrer">
                 <img
                   className="img-general"
                   src={process.env.PUBLIC_URL + "/podcast-platforms/radiopublic-logo.png"}
                   alt="RadioPublic"
-                  />  
+                />  
               </a>
               <a href="https://open.spotify.com/episode/1HAs2EMlXumfQzoaGMUpV8?si=isyEiUXwTBCqg5gLDwQiOg" target="_blank" rel="noopener noreferrer">
                 <img
                   className="img-general"
                   src={process.env.PUBLIC_URL + "/podcast-platforms/spotify-logo.png"}
                   alt="Spotify"
-                  /> 
+                /> 
               </a> 
             </div>
           </div>
         </div>
         {/*for the blog post author*/}
         <AuthorCard authors={{
-            "angenie-bai": [
-              "/potraits/angenie-bai.jpg",
-              "profile_img vivw_img",
-              "Angenie Bai",
-              "Externals Team",
-            ],
+          "angenie-bai": [
+            "/potraits/angenie-bai.jpg",
+            "profile_img vivw_img",
+            "Angenie Bai",
+            "Externals Team",
+          ],
         }} />
         {/*End of blog posts*/}
       </div>

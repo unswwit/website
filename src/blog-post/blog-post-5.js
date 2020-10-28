@@ -23,7 +23,7 @@ class blogPost5 extends Component {
         <div class="blog-content">
           <div>
             <h2 class = "blog-title">Interview - Salina Jantarang</h2>
-            <p class = "date"> 12th June 2020 </p>
+            <p class = "date">12th June 2020</p>
           </div>
 
           <div class="post">

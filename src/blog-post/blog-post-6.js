@@ -13,11 +13,11 @@ class blogPost6 extends Component {
   render() {
     return (
       <div>
-      {/* Cover Photo */}
-      <PageHeader
-        imgUrl="/blog-header.png"
-        title="Blog Post #6"
-      />
+        {/* Cover Photo */}
+        <PageHeader
+          imgUrl="/blog-header.png"
+          title="Blog Post #6"
+        />
 
         {/*Start of blog post*/}
         <div class="blog-content">
@@ -60,11 +60,11 @@ class blogPost6 extends Component {
             get up and take advantage of life, rather than watching it pass by.</p><br/>
 
           </div>
-      </div>
+        </div>
 
         {/*for the blog post author*/}
         <AuthorCard
-        authors={{"victoria-ruming":["/potraits/victoria.jpg", "profile_img vivw_img", "Victoria Ruming","Education Team"]}}
+          authors={{"victoria-ruming":["/potraits/victoria.jpg", "profile_img vivw_img", "Victoria Ruming","Education Team"]}}
         />
         {/*End of blog posts*/}
       </div>

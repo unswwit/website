@@ -13,11 +13,11 @@ class blogPost18 extends Component {
   render() {
     return (
       <div>
-      {/* Cover Photo */}
-      <PageHeader
-        imgUrl="/blog-header.png"
-        title="Blog Post #18"
-      />
+        {/* Cover Photo */}
+        <PageHeader
+          imgUrl="/blog-header.png"
+          title="Blog Post #18"
+        />
 
         {/*End of Header*/}
 

@@ -13,11 +13,11 @@ class blogPost22 extends Component {
   render() {
     return (
       <div>
-      {/* Cover Photo */}
-      <PageHeader
-        imgUrl="/blog-header.png"
-        title="Blog Post #22"
-      />
+        {/* Cover Photo */}
+        <PageHeader
+          imgUrl="/blog-header.png"
+          title="Blog Post #22"
+        />
 
         {/*End of Header*/}
 
@@ -52,29 +52,29 @@ class blogPost22 extends Component {
               </p>
 
               <div class="img-box outer-box">
-              <div class="inner-box">
-                <img
-                src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-1.jpg"}
-                alt="makeFashion-1"
-                resizeMode="contain"
-                />
-                <br />
-                <a href="http://www.makefashion.ca/projects/gamer-girls/">
+                <div class="inner-box">
+                  <img
+                    src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-1.jpg"}
+                    alt="makeFashion-1"
+                    resizeMode="contain"
+                  />
+                  <br />
+                  <a href="http://www.makefashion.ca/projects/gamer-girls/">
                   http://www.makefashion.ca/projects/gamer-girls/   
-                </a>
-              </div>
+                  </a>
+                </div>
 
-              <div class="inner-box">
-              <img
-              src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-2.jpg"}
-              alt="makeFashion-2"
-              resizeMode="contain"
-              />      
-              <br /> 	
-              <a href="http://www.makefashion.ca/projects/erina-kashihara/">
+                <div class="inner-box">
+                  <img
+                    src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-2.jpg"}
+                    alt="makeFashion-2"
+                    resizeMode="contain"
+                  />      
+                  <br /> 	
+                  <a href="http://www.makefashion.ca/projects/erina-kashihara/">
                 http://www.makefashion.ca/projects/erina-kashihara/
-              </a>
-              </div>
+                  </a>
+                </div>
              
               </div>
 
@@ -103,21 +103,21 @@ class blogPost22 extends Component {
 
               <div class="img-box outer-box">
                 <div class="inner-box">
-                <img
-                src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-3.jpg"}
-                alt="makeFashion-3"
-                resizeMode="contain"
-                />
-                <a href="https://www.vividsydney.com/event/light/celestial-pancake">
+                  <img
+                    src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-3.jpg"}
+                    alt="makeFashion-3"
+                    resizeMode="contain"
+                  />
+                  <a href="https://www.vividsydney.com/event/light/celestial-pancake">
                   https://www.vividsydney.com/event/light/celestial-pancake 
-                </a>
+                  </a>
                 </div>
 
                 <div class="inner-box">
                   <img
-                  src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-4.jpg"}
-                  alt="makeFashion-4"
-                  resizeMode="contain"
+                    src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-4.jpg"}
+                    alt="makeFashion-4"
+                    resizeMode="contain"
                   />
                   <a href="https://www.vividsydney.com/event/light/synergy">
                     https://www.vividsydney.com/event/light/synergy
@@ -135,15 +135,15 @@ class blogPost22 extends Component {
 
               <div class="img-box">
                 <img
-                src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-5.jpg"}
-                alt="makeFashion-5"
-                resizeMode="contain"
+                  src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-5.jpg"}
+                  alt="makeFashion-5"
+                  resizeMode="contain"
                 />
 
                 <img
-                src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-6.jpg"}
-                alt="makeFashion-6"
-                resizeMode="contain"
+                  src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-6.jpg"}
+                  alt="makeFashion-6"
+                  resizeMode="contain"
                 />
                 <br />
 
@@ -159,9 +159,9 @@ class blogPost22 extends Component {
 
               <div class="img-box">
                 <img
-                src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-7.jpg"}
-                alt="makeFashion-7"
-                resizeMode="contain"
+                  src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-7.jpg"}
+                  alt="makeFashion-7"
+                  resizeMode="contain"
                 />
               </div>
               <br />
@@ -180,9 +180,9 @@ class blogPost22 extends Component {
 
               <div class="img-box">
                 <img
-                src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-8.jpg"}
-                alt="makeFashion-8"
-                resizeMode="contain"
+                  src={process.env.PUBLIC_URL + "/blog-attachments/blog-22-fashion-8.jpg"}
+                  alt="makeFashion-8"
+                  resizeMode="contain"
                 />
                 <br />
 
@@ -197,7 +197,7 @@ class blogPost22 extends Component {
 
         {/*for the blog post author*/}
         <AuthorCard
-        authors={{"victoria-ruming":["/potraits/victoria.jpg", "profile_img vivw_img", "Victoria Ruming","Education team"]}}
+          authors={{"victoria-ruming":["/potraits/victoria.jpg", "profile_img vivw_img", "Victoria Ruming","Education team"]}}
         />
         {/*End of blog posts*/}
       </div>
