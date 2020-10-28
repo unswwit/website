@@ -23,7 +23,7 @@ class Blog extends Component {
           blogNo="35"
           imgUrl="/blog-covers/35-calista-kusuma.png"
           heading="Introducing: Calista Kusuma, Information Systems and Marketing Student"
-          date="27/10/2020"
+          date="28/10/2020"
           subheading="This week, we explore the interdisciplinary nature of technology, and the opportunities for a successful career with Calista Kusuma."
           authors={{
             "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield",], 

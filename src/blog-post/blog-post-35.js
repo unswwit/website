@@ -27,13 +27,13 @@ class blogPost35 extends Component {
                         <h2 class="blog-title">
                             Introducing: Calista Kusuma, Information Systems and Marketing Student
                         </h2>
-                        <p class="date">27th October 2020</p>
+                        <p class="date">28th October 2020</p>
                     </div>
 
                     <div class="post">
                         <p class="post-content">
                             Calista Kusuma is a Marketing and Information Systems student at UNSW, passionate about finding new opportunities to grow and making an impact with those opportunities. Kusuma has had diverse experience, being in programs with Boston Consulting Group, McKinsey & Co, and Bloomberg. She currently works as an Analytical journalist at The Smart Smart where she researches, interviews industry experts about critical issues in industries across the globe. Read more on how studying a technology driven degree and having a self- starter attitude can open doors for a successful career.
-                        </p> <br /><br />
+                        </p> <br />
 
                         <p class="question">
                             Why did you choose to pursue an information systems degree?
@@ -50,7 +50,7 @@ class blogPost35 extends Component {
                         <p class="post-content">
                             Overall, my information systems degree has enabled me to be well equipped for a tech-driven future, develop strong technical acumen through skills like Java and business analysis, and explore a range of career fields.
                         </p>
-                        <br /><br />
+                        <br />
 
                         <p class="question">
                             What skills do you think are important to continue to develop for your future career?
@@ -67,7 +67,7 @@ class blogPost35 extends Component {
                         <p class="post-content">
                             Finally, I think having some technological acumen is important in an increasingly digitized world. Whether this means having a technical skill like Java or Python, or being able to understand concepts like blockchain. Technological change has become a constant, and it's important to be aware of relevant trends and innovations for your industry.
                         </p>
-                        <br /><br />
+                        <br />
 
                         <p class="question">
                             What are some of the technical skills you learned in your information system degree?
@@ -80,9 +80,7 @@ class blogPost35 extends Component {
                         <p class="post-content">
                             Java is another key language that you learn. Java is a programming language that is intended to let app developers 'write once, run anywhere'. You use Java to build so many things- from mobile, desktop and web apps to video games. I love how there is an infinite amount of possibilities as to what you can create, and it's a great one to learn if you're considering a path in innovation.
                         </p>
-                        <br /><br />
-
-
+                        <br />
                     </div>
                 </div>
                 {/*for the blog post author*/}
