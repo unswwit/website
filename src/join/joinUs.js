@@ -23,7 +23,6 @@ class JoinUs extends React.Component {
                   src={process.env.PUBLIC_URL + '/facebook.png'}
                   title="Facebook Page"
                   alt="Facebook Page"
-                  resizeMode="contain"
                   style={{ width: '100%', height: '100%' }}
                 />
               </a>
@@ -32,7 +31,6 @@ class JoinUs extends React.Component {
                   src={process.env.PUBLIC_URL + '/facebook-group.png'}
                   title="Facebook Group"
                   alt="Facebook Group"
-                  resizeMode="contain"
                   style={{ width: '100%', height: '100%' }}
                 />
               </a>
@@ -41,7 +39,6 @@ class JoinUs extends React.Component {
                   src={process.env.PUBLIC_URL + '/linkedin.png'}
                   title="Linked-In"
                   alt="Linked-In"
-                  resizeMode="contain"
                   style={{ width: '100%', height: '100%' }}
                 />
               </a>
@@ -50,7 +47,6 @@ class JoinUs extends React.Component {
                   src={process.env.PUBLIC_URL + '/instagram.png'}
                   title="Instagram"
                   alt="Instagram"
-                  resizeMode="contain"
                   style={{ width: '100%', height: '100%' }}
                 />
               </a>
@@ -59,18 +55,17 @@ class JoinUs extends React.Component {
                   src={process.env.PUBLIC_URL + '/sparc.png'}
                   title="spARC"
                   alt="spARC"
-                  resizeMode="contain"
                   style={{ width: '100%', height: '100%' }}
                 />
               </a>
             </div>
           </div>
-          <div class="googleMap">
+          <div className="googleMap">
             <iframe
               title="google-maps"
               width="100%"
               height="300"
-              frameborder="0"
+              frameBorder="0"
               scrolling="no"
               src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=UNSW%20Sydney%20High%20St%20Kensington,%20NSW%202052%20Australia+(UNSW%20Sydney)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             />

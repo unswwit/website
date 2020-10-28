@@ -9,21 +9,19 @@ class ContactUs extends React.Component {
         {/* Cover Photo */}
         <PageHeader imgUrl="/contact-header-1.png" title="Contact Us" />
         <div className="form">
-          <h2 class="inquiry">Send Through a General Inquiry</h2>
+          <h2 className="inquiry">Send Through a General Inquiry</h2>
           <div className="formRight">
             <img
               src={process.env.PUBLIC_URL + '/contact-image.png'}
-              P
               width="90%"
               height="400px"
               className="centre"
               alt="contact us"
-              resizeMode="contain"
             />
           </div>
 
           <div className="formLeft">
-            <form action="mailto:exec@unswwit.com" method="post" enctype="text/plain" className="formStyle">
+            <form action="mailto:exec@unswwit.com" method="post" encType="text/plain" className="formStyle">
               <br />
               <input className="formInput" type="text" name="name" placeholder="Full Name" />
               <br />
@@ -33,12 +31,12 @@ class ContactUs extends React.Component {
               <br />
               <textarea className="formInput" name="message" placeholder="Message" rows="5" />
               <br />
-              <input type="submit" value="Submit" class="button" style={{ float: 'left' }} />
+              <input type="submit" value="Submit" className="button" style={{ float: 'left' }} />
             </form>
           </div>
         </div>
 
-        <h2 class="contact-team">CONTACT OUR TEAM</h2>
+        <h2 className="contact-team">CONTACT OUR TEAM</h2>
         <div className="newEmails">
           <div className="col2">
             <div className="profile2">
@@ -64,7 +62,7 @@ class ContactUs extends React.Component {
             </div>
           </div>
 
-          <hr class="line-break solid" width="90%" />
+          <hr className="line-break solid" width="90%" />
           <div className="col3">
             <div className="profile3">
               <img src={process.env.PUBLIC_URL + '/edu-icon.png'} alt="edu-icon" />
