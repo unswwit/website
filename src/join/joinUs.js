@@ -1,14 +1,16 @@
-import React from 'react';
-import PageHeader from '.././header';
-import './joinUs.css';
+import React from "react";
+import PageHeader from ".././header";
+import "./joinUs.css";
 
 class JoinUs extends React.Component {
   render() {
-    const spARCUrl = 'https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371W0xQAE';
-    const fbPageUrl = 'https://www.facebook.com/unsw.wit/';
-    const fbGroupUrl = 'https://www.facebook.com/groups/unswwit/';
-    const linkedInUrl = 'https://www.linkedin.com/company/unsw-women-in-technology/';
-    const instagramUrl = 'https://www.instagram.com/wit.unsw/';
+    const spARCUrl =
+      "https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371W0xQAE";
+    const fbPageUrl = "https://www.facebook.com/unsw.wit/";
+    const fbGroupUrl = "https://www.facebook.com/groups/unswwit/";
+    const linkedInUrl =
+      "https://www.linkedin.com/company/unsw-women-in-technology/";
+    const instagramUrl = "https://www.instagram.com/wit.unsw/";
 
     return (
       <div>
@@ -20,42 +22,42 @@ class JoinUs extends React.Component {
             <div className="joinButtons">
               <a href={fbPageUrl}>
                 <img
-                  src={process.env.PUBLIC_URL + '/facebook.png'}
+                  src={process.env.PUBLIC_URL + "/facebook.png"}
                   title="Facebook Page"
                   alt="Facebook Page"
-                  style={{ width: '100%', height: '100%' }}
+                  style={{ width: "100%", height: "100%" }}
                 />
               </a>
               <a href={fbGroupUrl}>
                 <img
-                  src={process.env.PUBLIC_URL + '/facebook-group.png'}
+                  src={process.env.PUBLIC_URL + "/facebook-group.png"}
                   title="Facebook Group"
                   alt="Facebook Group"
-                  style={{ width: '100%', height: '100%' }}
+                  style={{ width: "100%", height: "100%" }}
                 />
               </a>
               <a href={linkedInUrl}>
                 <img
-                  src={process.env.PUBLIC_URL + '/linkedin.png'}
+                  src={process.env.PUBLIC_URL + "/linkedin.png"}
                   title="Linked-In"
                   alt="Linked-In"
-                  style={{ width: '100%', height: '100%' }}
+                  style={{ width: "100%", height: "100%" }}
                 />
               </a>
               <a href={instagramUrl}>
                 <img
-                  src={process.env.PUBLIC_URL + '/instagram.png'}
+                  src={process.env.PUBLIC_URL + "/instagram.png"}
                   title="Instagram"
                   alt="Instagram"
-                  style={{ width: '100%', height: '100%' }}
+                  style={{ width: "100%", height: "100%" }}
                 />
               </a>
               <a className="lastBtn" href={spARCUrl}>
                 <img
-                  src={process.env.PUBLIC_URL + '/sparc.png'}
+                  src={process.env.PUBLIC_URL + "/sparc.png"}
                   title="spARC"
                   alt="spARC"
-                  style={{ width: '100%', height: '100%' }}
+                  style={{ width: "100%", height: "100%" }}
                 />
               </a>
             </div>

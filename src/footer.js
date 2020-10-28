@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Link, HashRouter } from 'react-router-dom';
+import React, { Component } from "react";
+import { Link, HashRouter } from "react-router-dom";
 
-import './style.css';
+import "./style.css";
 
 class Footer extends Component {
   render() {
@@ -16,60 +16,72 @@ class Footer extends Component {
                     src={`${process.env.PUBLIC_URL}./logo-black.png`}
                     className="photo"
                     alt="wit logo"
-                    style={{ width: '50px' }}
+                    style={{ width: "50px" }}
                   />
                 </li>
                 <div className="col-width footer-links">
                   <li className="footer-item">
                     <Link onClick={() => window.scrollTo(0, 0)} to="/">
-											Home
+                      Home
                     </Link>
                   </li>
                   <li className="footer-item">
                     <Link onClick={() => window.scrollTo(0, 0)} to="/events">
-											Events{' '}
+                      Events{" "}
                     </Link>
                   </li>
                   <li className="footer-item">
                     <Link onClick={() => window.scrollTo(0, 0)} to="/our-team">
-											Team{' '}
+                      Team{" "}
                     </Link>
                   </li>
                   <li className="footer-item">
                     <Link onClick={() => window.scrollTo(0, 0)} to="/sponsors">
-											Sponsors{' '}
+                      Sponsors{" "}
                     </Link>
                   </li>
                   <li className="footer-item">
-                    <Link onClick={() => window.scrollTo(0, 0)} to="/opportunities">
-											Opportunities
+                    <Link
+                      onClick={() => window.scrollTo(0, 0)}
+                      to="/opportunities"
+                    >
+                      Opportunities
                     </Link>
                   </li>
                   <li className="footer-item">
                     <Link onClick={() => window.scrollTo(0, 0)} to="/join-us">
-											Join{' '}
+                      Join{" "}
                     </Link>
                   </li>
                   <li className="footer-item">
-                    <Link onClick={() => window.scrollTo(0, 0)} to="/contact-us">
-											Contact{' '}
+                    <Link
+                      onClick={() => window.scrollTo(0, 0)}
+                      to="/contact-us"
+                    >
+                      Contact{" "}
                     </Link>
                   </li>
                 </div>
                 <div className="col-width footer-links">
                   <li className="footer-item">
                     <Link onClick={() => window.scrollTo(0, 0)} to="/blog">
-											Blog{' '}
+                      Blog{" "}
                     </Link>
                   </li>
                   <li className="footer-item">
-                    <Link onClick={() => window.scrollTo(0, 0)} to="/publications">
-											Publications
+                    <Link
+                      onClick={() => window.scrollTo(0, 0)}
+                      to="/publications"
+                    >
+                      Publications
                     </Link>
                   </li>
                   <li className="footer-item">
-                    <Link onClick={() => window.scrollTo(0, 0)} to="/marketing-archive">
-											Marketing Archives
+                    <Link
+                      onClick={() => window.scrollTo(0, 0)}
+                      to="/marketing-archive"
+                    >
+                      Marketing Archives
                     </Link>
                   </li>
                 </div>
@@ -84,7 +96,7 @@ class Footer extends Component {
                           src={`${process.env.PUBLIC_URL}/linkedin.png`}
                           className=""
                           alt="banner"
-                          style={{ width: '25px', height: '25px' }}
+                          style={{ width: "25px", height: "25px" }}
                         />
                       </a>
                     </span>
@@ -94,7 +106,7 @@ class Footer extends Component {
                           src={`${process.env.PUBLIC_URL}/facebook.png`}
                           className=""
                           alt="banner"
-                          style={{ width: '25px', height: '25px' }}
+                          style={{ width: "25px", height: "25px" }}
                         />
                       </a>
                     </span>
@@ -104,7 +116,7 @@ class Footer extends Component {
                           src={`${process.env.PUBLIC_URL}/instagram.png`}
                           className=""
                           alt="banner"
-                          style={{ width: '25px', height: '25px' }}
+                          style={{ width: "25px", height: "25px" }}
                         />
                       </a>
                     </span>

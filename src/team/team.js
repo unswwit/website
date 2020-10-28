@@ -1,10 +1,10 @@
 //All necessary imports for this javascript
-import React, { Component } from 'react';
-import './team.css';
+import React, { Component } from "react";
+import "./team.css";
 
-import PageHeader from '.././header';
-import Execs from './execs';
-import SubCom from './subcom';
+import PageHeader from ".././header";
+import Execs from "./execs";
+import SubCom from "./subcom";
 
 class OurTeam extends Component {
   render() {
@@ -14,9 +14,7 @@ class OurTeam extends Component {
         <PageHeader imgUrl="/team-header-1.jpg" title="Meet Our Team" />
 
         <div className="profile_section_heading">
-          <h2 className="team-heading">
-            {`OUR 2020 EXECUTIVE TEAM`}
-          </h2>
+          <h2 className="team-heading">{`OUR 2020 EXECUTIVE TEAM`}</h2>
         </div>
 
         {/* Exec section */}
@@ -153,59 +151,122 @@ class OurTeam extends Component {
         </div>
 
         {/* Subcommittee section */}
-        <h2 className="team-heading" style={{ marginTop: '2vw', paddingBottom: '5px' }}>
-					OUR 2020 SUBCOMMITTEE TEAM
+        <h2
+          className="team-heading"
+          style={{ marginTop: "2vw", paddingBottom: "5px" }}
+        >
+          OUR 2020 SUBCOMMITTEE TEAM
         </h2>
         <div className="subcom_section">
           <h3 className="subcom-type">Education Team</h3>
           <SubCom name="Elisa Sanjurjo" degree="Commerce/Science" year="4th" />
 
-          <SubCom name="Georgie Mansfield" degree="Chemical Engineering/Materials Science" year="2nd" />
+          <SubCom
+            name="Georgie Mansfield"
+            degree="Chemical Engineering/Materials Science"
+            year="2nd"
+          />
 
-          <SubCom name="Victoria Ruming" degree="Mechatronic Engineering/Biomedical Engineering" year="2nd" />
+          <SubCom
+            name="Victoria Ruming"
+            degree="Mechatronic Engineering/Biomedical Engineering"
+            year="2nd"
+          />
 
           <h3 className="subcom-type">Events Team</h3>
-          <SubCom name="Ariane Notaras" degree="Commerce(Finance)/Information Systems" year="2nd" />
+          <SubCom
+            name="Ariane Notaras"
+            degree="Commerce(Finance)/Information Systems"
+            year="2nd"
+          />
 
-          <SubCom name="Jane Wang" degree="Commerce/Information Systems" year="2nd" />
+          <SubCom
+            name="Jane Wang"
+            degree="Commerce/Information Systems"
+            year="2nd"
+          />
 
-          <SubCom name="Justin Clarke" degree="Data Science and Decisions" year="2nd" />
+          <SubCom
+            name="Justin Clarke"
+            degree="Data Science and Decisions"
+            year="2nd"
+          />
 
-          <SubCom name="Nishmi Kapoor" degree="Commerce/Advanced Sciences" year="2nd" />
+          <SubCom
+            name="Nishmi Kapoor"
+            degree="Commerce/Advanced Sciences"
+            year="2nd"
+          />
 
-          <SubCom name="Shirlee Salaria" degree="Commerce/Information Systems" year="2nd" />
+          <SubCom
+            name="Shirlee Salaria"
+            degree="Commerce/Information Systems"
+            year="2nd"
+          />
 
           <h3 className="subcom-type">Externals Team</h3>
           <SubCom name="Angeni Bai" degree="Computer Science" year="1st" />
 
           <SubCom name="Rue Teh" degree="Software Engineering" year="2nd" />
 
-          <SubCom name="Srija Mukherjee" degree="Software Engineering" year="1st" />
+          <SubCom
+            name="Srija Mukherjee"
+            degree="Software Engineering"
+            year="1st"
+          />
 
           <h3 className="subcom-type">Human Resources Team</h3>
-          <SubCom name="Claire Yu" degree="Commerce/Information System" year="1st" />
+          <SubCom
+            name="Claire Yu"
+            degree="Commerce/Information System"
+            year="1st"
+          />
 
           <SubCom name="Victoria Yu" degree="Information Systems" year="2nd" />
 
           <h3 className="subcom-type">Information Technology Team</h3>
-          <SubCom name="Alana Hua" degree="Software Engineering/Biomedical Engineering" year="3rd" />
+          <SubCom
+            name="Alana Hua"
+            degree="Software Engineering/Biomedical Engineering"
+            year="3rd"
+          />
 
           <SubCom name="Chelsea Chaffey" degree="Computer Science" year="1st" />
 
-          <SubCom name="Gianfelix Goenawan" degree="Computer Science/Commerce" year="2nd" />
+          <SubCom
+            name="Gianfelix Goenawan"
+            degree="Computer Science/Commerce"
+            year="2nd"
+          />
 
-          <SubCom name="Lily Yang" degree="Computer Science/Environmental Engineering" year="1st" />
+          <SubCom
+            name="Lily Yang"
+            degree="Computer Science/Environmental Engineering"
+            year="1st"
+          />
 
           <h3 className="subcom-type">Marketing Team</h3>
-          <SubCom name="Anisa Islam" degree="Media in Communications and Journalism" year="1st" />
+          <SubCom
+            name="Anisa Islam"
+            degree="Media in Communications and Journalism"
+            year="1st"
+          />
 
-          <SubCom name="Connie Shi" degree="Commerce/Information Systems" year="3rd" />
+          <SubCom
+            name="Connie Shi"
+            degree="Commerce/Information Systems"
+            year="3rd"
+          />
 
-          <SubCom name="Vy Kim Nguyen" degree="Bioinformatics/Biomedical Engineering" year="2nd" />
+          <SubCom
+            name="Vy Kim Nguyen"
+            degree="Bioinformatics/Biomedical Engineering"
+            year="2nd"
+          />
         </div>
 
         <footer>
-          <div className="footer_area" style={{ marginTop: '8vw' }} />
+          <div className="footer_area" style={{ marginTop: "8vw" }} />
         </footer>
       </div>
     );

@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import CountUp from 'react-countup';
-import './home.css';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import CountUp from "react-countup";
+import "./home.css";
 
 class Home extends Component {
   render() {
     return (
       <div>
-        {/* Start of Header */}      
+        {/* Start of Header */}
         <div className="contain">
           <div className="headline">
             <h1>UNSW</h1>
@@ -25,11 +25,13 @@ class Home extends Component {
           </div>
           <div className="description-right">
             <p>
-							Formed in late 2016, we have grown to be a platform that empowers, unites and up-skills
-							female and male students alike that are passionate about our mission. Women in Technology
-							(WIT) aims to cultivate future leaders that are prepared to challenge the prejudices and
-							bring change into the industry while building a strong community where they can find lasting
-							friendships and support.
+              Formed in late 2016, we have grown to be a platform that empowers,
+              unites and up-skills female and male students alike that are
+              passionate about our mission. Women in Technology (WIT) aims to
+              cultivate future leaders that are prepared to challenge the
+              prejudices and bring change into the industry while building a
+              strong community where they can find lasting friendships and
+              support.
             </p>
           </div>
         </div>
@@ -71,14 +73,16 @@ class Home extends Component {
         <div className="events">
           <div className="events-description">
             <p id="about">
-							At WIT, our focus is on providing events that foster development catering to first to final
-							years. Whether it's personal, academic, professional or social, we want our students to be
-							the best version of themselves. As part of our aim, we also connect current and future
-							students with alumni and industry sponsors to serve as role models to inspire.
+              At WIT, our focus is on providing events that foster development
+              catering to first to final years. Whether it's personal, academic,
+              professional or social, we want our students to be the best
+              version of themselves. As part of our aim, we also connect current
+              and future students with alumni and industry sponsors to serve as
+              role models to inspire.
             </p>
             <p>
-              <Link to="/events" style={{ textDecoration: 'none' }}>
-								See More Events
+              <Link to="/events" style={{ textDecoration: "none" }}>
+                See More Events
               </Link>
             </p>
           </div>

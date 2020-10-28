@@ -1,16 +1,16 @@
 //All necessary imports for this javascript
-import React, { Component } from 'react';
-import '.././marketingArchive.css';
-import './content.css';
-import '../.././style.css';
-import PageHeader from '../.././header';
+import React, { Component } from "react";
+import ".././marketingArchive.css";
+import "./content.css";
+import "../.././style.css";
+import PageHeader from "../.././header";
 
-import WCW from '../initiatives/wcw';
-import Memes from '../initiatives/memes';
-import MondayMotivation from '../initiatives/monday-motivation';
-import Mascot from '../initiatives/mascot';
-import CareersGuide from '../initiatives/careers-guide';
-import Other from '../initiatives/other';
+import WCW from "../initiatives/wcw";
+import Memes from "../initiatives/memes";
+import MondayMotivation from "../initiatives/monday-motivation";
+import Mascot from "../initiatives/mascot";
+import CareersGuide from "../initiatives/careers-guide";
+import Other from "../initiatives/other";
 
 class MarketingContent extends Component {
   render() {
@@ -26,27 +26,27 @@ class MarketingContent extends Component {
           <div className="initiatives">
             <input type="radio" id="2020" name="categories" />
             <label forhtml="2020" className="side">
-							2020
+              2020
             </label>
             <input type="radio" id="crush" name="categories" />
             <label forhtml="crush" className="side">
-							WIT Crush Wednesday
+              WIT Crush Wednesday
             </label>
             <input type="radio" id="memes" name="categories" />
             <label forhtml="memes" className="side">
-							Memes
+              Memes
             </label>
             <input type="radio" id="mondaymot" name="categories" />
             <label forhtml="mondaymot" className="side">
-							Monday Motivation
+              Monday Motivation
             </label>
             <input type="radio" id="mascot" name="categories" />
             <label forhtml="mascot" className="side">
-							Mascot
+              Mascot
             </label>
             <input type="radio" id="careers" name="categories" />
             <label forhtml="careers" className="side">
-							Careers Guide
+              Careers Guide
             </label>
 
             {/*Image collage*/}

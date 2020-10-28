@@ -1,7 +1,7 @@
 //All necessary imports for this javascript
-import React, { Component } from 'react';
-import '../style.css';
-import './team.css';
+import React, { Component } from "react";
+import "../style.css";
+import "./team.css";
 
 class SubCom extends Component {
   render() {
@@ -15,7 +15,9 @@ class SubCom extends Component {
 
         <div className="subcom_longer_col">
           <div className="profile">
-            <p className="subcom_profile_degree">{this.props.degree + ', ' + this.props.year + ' year'}</p>
+            <p className="subcom_profile_degree">
+              {this.props.degree + ", " + this.props.year + " year"}
+            </p>
           </div>
         </div>
       </div>

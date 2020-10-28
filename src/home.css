@@ -1,359 +1,359 @@
 /*-------------------------------Home page header-----------------------------*/
 /*Header image*/
 .contain {
-	background-image: url('/header-1.png');
-	background-position: center bottom 40%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 100vh;
-	max-width: 100%;
-	background-color: #313638;
+  background-image: url("/header-1.png");
+  background-position: center bottom 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  max-width: 100%;
+  background-color: #313638;
 }
 
 /*Header title*/
 div .headline {
-	text-align: left;
-	position: absolute;
-	top: 30%;
-	left: 54vw;
+  text-align: left;
+  position: absolute;
+  top: 30%;
+  left: 54vw;
 }
 
 .headline h1 {
-	color: #feb14b;
-	font-family: 'Playfair Display', serif;
-	font-size: 5.5vw;
-	text-transform: uppercase;
-	letter-spacing: 3px;
+  color: #feb14b;
+  font-family: "Playfair Display", serif;
+  font-size: 5.5vw;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 /*Header subtitle*/
 .headline p {
-	color: #ffffff;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 1.17vw;
-	letter-spacing: 2.5px;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.17vw;
+  letter-spacing: 2.5px;
 }
 
 /*-----------------------------Home page description--------------------------*/
 /*Description wrapper*/
 .description {
-	height: 500px;
-	margin: auto;
-	max-width: 80%;
+  height: 500px;
+  margin: auto;
+  max-width: 80%;
 }
 
 /*Description left block*/
 .description-left {
-	display: inline-block;
-	float: left;
-	height: 500px;
-	padding: 100px 50px 50px 0px;
-	width: 50%;
+  display: inline-block;
+  float: left;
+  height: 500px;
+  padding: 100px 50px 50px 0px;
+  width: 50%;
 }
 
 /*Left block text*/
 .description-left h1 {
-	color: #feb14b;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 78px;
-	font-size: 6.4vw;
+  color: #feb14b;
+  font-family: "Montserrat", sans-serif;
+  font-size: 78px;
+  font-size: 6.4vw;
 
-	font-weight: 600;
-	letter-spacing: 4px;
-	line-height: 100px;
-	padding: 0px, 0px, 50px, 200px;
-	text-align: right;
+  font-weight: 600;
+  letter-spacing: 4px;
+  line-height: 100px;
+  padding: 0px, 0px, 50px, 200px;
+  text-align: right;
 }
 
 /*Description right block*/
 .description-right {
-	display: inline-block;
-	float: right;
-	height: 500px;
-	line-height: 22px;
-	padding: 175px 0px 0px 50px;
-	width: 50%;
+  display: inline-block;
+  float: right;
+  height: 500px;
+  line-height: 22px;
+  padding: 175px 0px 0px 50px;
+  width: 50%;
 }
 
 /*Right block text*/
 .description-right p {
-	color: #313638B3;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 11pt;
-	text-align: justify;
+  color: #313638b3;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11pt;
+  text-align: justify;
 }
 
 /*--------------Responsive Mobile Design-------------------*/
 
 @media only screen and (max-width: 850px) {
-	.contain {
-		background-position: center bottom 40%;
-		height: 66vh;
-	}
+  .contain {
+    background-position: center bottom 40%;
+    height: 66vh;
+  }
 
-	/*Header title*/
-	div .headline {
-		position: absolute;
-		top: 20%;
-		left: 20vw;
-	}
-	.headline h1 {
-		font-size: 8vw;
-		text-transform: uppercase;
-		letter-spacing: 3px;
-	}
-	/*Header subtitle*/
-	.headline p {
-		font-size: 1.6vw;
-		letter-spacing: 2.5px;
-	}
+  /*Header title*/
+  div .headline {
+    position: absolute;
+    top: 20%;
+    left: 20vw;
+  }
+  .headline h1 {
+    font-size: 8vw;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  /*Header subtitle*/
+  .headline p {
+    font-size: 1.6vw;
+    letter-spacing: 2.5px;
+  }
 
-	.description-left {
-		width: 100%;
-		padding: 50px 0px 0px 0px;
-		height: auto;
-	}
-	.description-left h1 {
-		padding: 0px;
-		font-size: 11vw;
-		line-height: 90px;
-	}
-	.description-right {
-		width: 100%;
-		height: auto;
-		padding: 20px 0px 40px 0px;
-	}
+  .description-left {
+    width: 100%;
+    padding: 50px 0px 0px 0px;
+    height: auto;
+  }
+  .description-left h1 {
+    padding: 0px;
+    font-size: 11vw;
+    line-height: 90px;
+  }
+  .description-right {
+    width: 100%;
+    height: auto;
+    padding: 20px 0px 40px 0px;
+  }
 }
 
 /*---------------------------Home page statistics-----------------------------*/
 
 /*Background image*/
 .stats-background {
-	width: 100%;
-	height: 300px;
+  width: 100%;
+  height: 300px;
 }
 
 .stats {
-	position: relative;
+  position: relative;
 }
 
 .number {
-	display: inline-grid;
-	grid-template-columns: 30% 30% 45%;
-	left: 0;
-	margin: 0 auto;
-	place-items: center;
-	position: absolute;
-	right: 0;
-	text-align: center;
-	width: 60%;
-	bottom: 25%;
+  display: inline-grid;
+  grid-template-columns: 30% 30% 45%;
+  left: 0;
+  margin: 0 auto;
+  place-items: center;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 60%;
+  bottom: 25%;
 }
 
 .number span {
-	color: #feb14b;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 75pt;
-	font-weight: 500;
-	letter-spacing: 15px;
+  color: #feb14b;
+  font-family: "Montserrat", sans-serif;
+  font-size: 75pt;
+  font-weight: 500;
+  letter-spacing: 15px;
 }
 
 .number p {
-	color: #ffffff;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 14pt;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14pt;
 }
 
 /*--------------Statistics Mobile Design-------------------*/
 
 @media only screen and (max-width: 1000px) {
-	.number {
-		grid-template-columns: 25% 30% 45%;
-		position: absolute;
-		right: 0;
-		width: 90%;
-		bottom: 25%;
-	}
+  .number {
+    grid-template-columns: 25% 30% 45%;
+    position: absolute;
+    right: 0;
+    width: 90%;
+    bottom: 25%;
+  }
 
-	.number span {
-		letter-spacing: 15px;
-	}
-	.number p {
-		font-size: 2.0vw;
-	}
+  .number span {
+    letter-spacing: 15px;
+  }
+  .number p {
+    font-size: 2vw;
+  }
 }
 
 @media only screen and (max-width: 700px) {
-	.number span {
-		font-size: 14vw;
-		letter-spacing: 10px;
-	}
-	.number p {
-		font-size: 2.4vw;
-	}
+  .number span {
+    font-size: 14vw;
+    letter-spacing: 10px;
+  }
+  .number p {
+    font-size: 2.4vw;
+  }
 }
 
 /*-------------------------------Home page events-----------------------------*/
 /*Events block*/
 .events {
-	display: grid;
-	grid-template-columns: repeat(5, 20%);
-	grid-template-rows: 100px 110px auto auto;
-	padding: 100px 0px 0px 0px;
-	max-width: 80%;
-	margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: 100px 110px auto auto;
+  padding: 100px 0px 0px 0px;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 /*Events description grid area*/
 .events-description {
-	grid-area: 1 / 1 / 3 / 3;
+  grid-area: 1 / 1 / 3 / 3;
 }
 
 /*Events description text*/
 .events-description p {
-	color: #313638B3;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 11pt;
-	text-align: right;
+  color: #313638b3;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11pt;
+  text-align: right;
 }
 
 .events-description p#about {
-	padding: 20px;
-	padding-bottom: 0;
+  padding: 20px;
+  padding-bottom: 0;
 }
 
 .events-description a {
-	font-family: 'Montserrat', sans-serif;
-	text-align: right;
-	color: #e85f5c;
-	padding-right: 20px;
+  font-family: "Montserrat", sans-serif;
+  text-align: right;
+  color: #e85f5c;
+  padding-right: 20px;
 }
 
 .events-description a:hover {
-	font-family: 'Montserrat', sans-serif;
-	text-decoration: none;
-	color: #feb14b;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: #feb14b;
 }
 
 /*Events title grid area*/
 .events-title {
-	text-align: left;
-	grid-area: 1 / 3 / 2 / 6;
-	padding: 0 20px;
+  text-align: left;
+  grid-area: 1 / 3 / 2 / 6;
+  padding: 0 20px;
 }
 
 /*Big event image grid area*/
 .event-1 {
-	grid-area: 2 / 3 / 5 / 6;
-	padding: 20px;
+  grid-area: 2 / 3 / 5 / 6;
+  padding: 20px;
 }
 
 /*Big event image size*/
 .event-1 img {
-	object-fit: cover;
-	width: 100%;
-	transition: transform 0.5s ease;
-	overflow: hidden;
+  object-fit: cover;
+  width: 100%;
+  transition: transform 0.5s ease;
+  overflow: hidden;
 }
 
 .event-1:hover img {
-	-ms-transform: scale(1.5); /* IE 9 */
-	-webkit-transform: scale(1.5); /* Safari 3-8 */
-	transform: scale(1.03);
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.03);
 }
 
 /*Small event grid area*/
 .event-2 {
-	grid-area: 3 / 1 / 5 / 3;
-	padding: 20px;
+  grid-area: 3 / 1 / 5 / 3;
+  padding: 20px;
 }
 
 /*Small event image size*/
 .event-2 img {
-	object-fit: cover;
-	width: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
 /*--------------Events Mobile Design-------------------*/
 
 @media only screen and (max-width: 850px) {
-	.events {
-		padding: 20px 0px;
-		max-width: 85%;
-		margin: 0 auto;
+  .events {
+    padding: 20px 0px;
+    max-width: 85%;
+    margin: 0 auto;
 
-		display: flex;
-		flex-flow: column;
-	}
+    display: flex;
+    flex-flow: column;
+  }
 
-	/* Use a Flexbox to switch positions of
+  /* Use a Flexbox to switch positions of
 Title and Description. */
-	/*Events title - flexbox*/
-	.events-title {
-		text-align: center;
-		order: 1;
-	}
+  /*Events title - flexbox*/
+  .events-title {
+    text-align: center;
+    order: 1;
+  }
 
-	/*Events description text - flexbox*/
-	.events-description {
-		order: 2;
-	}
+  /*Events description text - flexbox*/
+  .events-description {
+    order: 2;
+  }
 
-	/*Events description text*/
-	.events-description p {
-		text-align: justify;
-	}
-	.events-description a {
-		text-align: justify;
-		padding-left: 20px;
-	}
+  /*Events description text*/
+  .events-description p {
+    text-align: justify;
+  }
+  .events-description a {
+    text-align: justify;
+    padding-left: 20px;
+  }
 
-	/*Big event image area - flexbox*/
-	.event-1 {
-		order: 3;
-	}
+  /*Big event image area - flexbox*/
+  .event-1 {
+    order: 3;
+  }
 
-	/* Currently, mobile dev ignores "small event" area.*/
+  /* Currently, mobile dev ignores "small event" area.*/
 }
 
 /*------------------------------Home page sponsors----------------------------*/
 /*Sponsors image position*/
 .sponsors {
-	text-align: center;
-	margin: auto;
-	padding: 0px 0px 30px 0px;
+  text-align: center;
+  margin: auto;
+  padding: 0px 0px 30px 0px;
 }
 
 .sponsors h1 {
-	padding-top: 90px;
-	font-size: 60px;
-	/*color: #feb14b;
+  padding-top: 90px;
+  font-size: 60px;
+  /*color: #feb14b;
   font-family: 'Playfair Display', serif;
   font-size: 5.5vw;
   text-transform: uppercase;
   letter-spacing: 3px;
 */
 
-	font-family: 'Montserrat', sans-serif;
-	font-size: 5.5vw;
-	font-size: 55px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 5.5vw;
+  font-size: 55px;
 
-	font-weight: 500;
-	letter-spacing: 3px;
-	line-height: 100px;
-	text-align: center;
+  font-weight: 500;
+  letter-spacing: 3px;
+  line-height: 100px;
+  text-align: center;
 }
 
 .sponsors img {
-	padding: 0px;
-	width: 100%;
-	max-width: 900px;
+  padding: 0px;
+  width: 100%;
+  max-width: 900px;
 }
 
 /*--------------Sponsors Mobile Design-------------------*/
 
 @media only screen and (max-width: 640px) {
-	.sponsors h1 {
-		font-size: 7.8vw;
-	}
+  .sponsors h1 {
+    font-size: 7.8vw;
+  }
 }

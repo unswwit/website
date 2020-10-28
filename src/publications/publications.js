@@ -1,7 +1,7 @@
-import React from 'react';
-import './publications.css';
-import PubArticle from './publications-article';
-import PageHeader from '.././header';
+import React from "react";
+import "./publications.css";
+import PubArticle from "./publications-article";
+import PageHeader from ".././header";
 
 class Publications extends React.Component {
   render() {

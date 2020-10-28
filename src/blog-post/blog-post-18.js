@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import '.././style.css';
-import './blog-post.css';
-import AuthorCard from './authorCard';
-import PageHeader from '.././header';
+import React, { Component } from "react";
+import ".././style.css";
+import "./blog-post.css";
+import AuthorCard from "./authorCard";
+import PageHeader from ".././header";
 
 class blogPost18 extends Component {
   //start webpage at the top
@@ -27,21 +27,22 @@ class blogPost18 extends Component {
 
           <div class="post">
             <p class="post-content">
-							Software Engineering. Computer Science. Information Systems. The big 3 of technology
-							degrees. With the ever-growing evolution of the technology sector, students with these
-							degrees become more in-demand and relevant across all different industries.
+              Software Engineering. Computer Science. Information Systems. The
+              big 3 of technology degrees. With the ever-growing evolution of
+              the technology sector, students with these degrees become more
+              in-demand and relevant across all different industries.
             </p>
             <br />
 
             <p class="post-content">
-							But what makes them unique? Which career paths can they lead to? Take the quiz below to find
-							out which degree you are!
+              But what makes them unique? Which career paths can they lead to?
+              Take the quiz below to find out which degree you are!
               <i>
-								And don’t forget to check out{' '}
+                And don’t forget to check out{" "}
                 <a href="https://issuu.com/womenintechnology/…/wit_2020_careers_guide">
-									WIT’s Career Guide
-                </a>{' '}
-								for more information!
+                  WIT’s Career Guide
+                </a>{" "}
+                for more information!
               </i>
             </p>
             <br />
@@ -59,19 +60,25 @@ class blogPost18 extends Component {
               </ol>
               <br />
 
-              <li class="question">You get home and realise you forgot your keys. Do you…</li>
+              <li class="question">
+                You get home and realise you forgot your keys. Do you…
+              </li>
               <br />
               <ol class="list" type="a">
                 <li>Climb in through the window?</li>
                 <br />
-                <li>Design a new system so that you aren’t locked out again?</li>
+                <li>
+                  Design a new system so that you aren’t locked out again?
+                </li>
                 <br />
                 <li>Call someone?</li>
                 <br />
               </ol>
               <br />
 
-              <li class="question">It’s 3am, you are most likely to be found...</li>
+              <li class="question">
+                It’s 3am, you are most likely to be found...
+              </li>
               <br />
               <ol class="list" type="a">
                 <li>Finishing something you forgot about</li>
@@ -96,7 +103,8 @@ class blogPost18 extends Component {
               <br />
 
               <li class="question">
-								You’re on a boat, and take a stop in the middle of the ocean. You decide to...
+                You’re on a boat, and take a stop in the middle of the ocean.
+                You decide to...
               </li>
               <br />
               <ol class="list" type="a">
@@ -104,22 +112,25 @@ class blogPost18 extends Component {
                 <br />
                 <li>Dive as deep as you can go</li>
                 <br />
-                <li>Stay on the boat, but suggest that you explore a bit more</li>
+                <li>
+                  Stay on the boat, but suggest that you explore a bit more
+                </li>
                 <br />
               </ol>
               <br />
 
               <li class="question">
-								Say that you choose to dive to the bottom, what interests you more?
+                Say that you choose to dive to the bottom, what interests you
+                more?
               </li>
               <br />
               <ol class="list" type="a">
                 <li>The challenge</li>
                 <br />
                 <li>
-									Knowing you reached the bottom
+                  Knowing you reached the bottom
                   <span role="img" aria-label="party">
-										🥳
+                    🥳
                   </span>
                 </li>
                 <br />
@@ -140,7 +151,9 @@ class blogPost18 extends Component {
               </ol>
               <br />
 
-              <li class="question">It’s interview time! You are most nervous about…</li>
+              <li class="question">
+                It’s interview time! You are most nervous about…
+              </li>
               <br />
               <ol class="list" type="a">
                 <li>The case interview!</li>
@@ -153,7 +166,8 @@ class blogPost18 extends Component {
               <br />
 
               <li class="question">
-								You’re talking to your friend, and they mispronounce a word. Do you..
+                You’re talking to your friend, and they mispronounce a word. Do
+                you..
               </li>
               <br />
               <ol class="list" type="a">
@@ -161,12 +175,18 @@ class blogPost18 extends Component {
                 <br />
                 <li>Correct them?</li>
                 <br />
-                <li>Don’t correct them, and now worry that it’s a new word you’ve never heard of?</li>
+                <li>
+                  Don’t correct them, and now worry that it’s a new word you’ve
+                  never heard of?
+                </li>
                 <br />
               </ol>
               <br />
 
-              <li class="question">You find yourself stranded on an island, you are most likely to...</li>
+              <li class="question">
+                You find yourself stranded on an island, you are most likely
+                to...
+              </li>
               <br />
               <ol class="list" type="a">
                 <li>Build a new life for yourself on the island</li>
@@ -174,8 +194,8 @@ class blogPost18 extends Component {
                 <li>Figure out how you are going to get off the island</li>
                 <br />
                 <li>
-									Use my ECON1101 Playconomics expertise to help me live a prosperous and economical
-									life on the island :)
+                  Use my ECON1101 Playconomics expertise to help me live a
+                  prosperous and economical life on the island :)
                 </li>
                 <br />
               </ol>
@@ -203,21 +223,25 @@ class blogPost18 extends Component {
             </p>
 
             <p class="post-content">
-							“Itching to learn skills that are practical and discover how cool computing is” sums you up
-							perfectly!
+              “Itching to learn skills that are practical and discover how cool
+              computing is” sums you up perfectly!
             </p>
 
             <p class="post-content">
-							Like Elizabeth (treasurer), you enjoy “combining your technical side and creative side to
-							have fun whilst being constantly challenged”. This is shown by your willingness to take on
-							the challenge of exploring unknown depths, understanding the breadth of concepts and issues,
-							and your innovative mind in the most complex situations!
+              Like Elizabeth (treasurer), you enjoy “combining your technical
+              side and creative side to have fun whilst being constantly
+              challenged”. This is shown by your willingness to take on the
+              challenge of exploring unknown depths, understanding the breadth
+              of concepts and issues, and your innovative mind in the most
+              complex situations!
             </p>
 
             <p class="post-content">
-							“The number one skill in Software Engineering is learning quickly and adapting” Arthur (WIT
-							member) says. An interviewer's interest in your problem-solving skills and ability to
-							logically think through a situation is more important than just getting the right answer.
+              “The number one skill in Software Engineering is learning quickly
+              and adapting” Arthur (WIT member) says. An interviewer's interest
+              in your problem-solving skills and ability to logically think
+              through a situation is more important than just getting the right
+              answer.
             </p>
             <br />
             <br />
@@ -227,24 +251,29 @@ class blogPost18 extends Component {
             </p>
 
             <p class="post-content">
-							As told by Gian (IT Subcommittee), “I am challenged to not only think logically but also
-							creatively in designing a software” and similarly, you’re drawn to computer science. You’re
-							amazing at the technical side of computing as well as inspired by the power of programming
-							and depth of knowledge that allows you to accomplish even the hardest of challenges.
+              As told by Gian (IT Subcommittee), “I am challenged to not only
+              think logically but also creatively in designing a software” and
+              similarly, you’re drawn to computer science. You’re amazing at the
+              technical side of computing as well as inspired by the power of
+              programming and depth of knowledge that allows you to accomplish
+              even the hardest of challenges.
             </p>
 
             <p class="post-content">
-							A pro-tip and resource from one of our student responses to help you ace your interviews: “I
-							recommended websites such as Leetcode and Hackerrank for practising when you prepare for
-							coding interviews”. Jiamin (WIT member) provides further wisdom in collaboration and seeing
-							your brilliant ideas through, “how we communicate our ideas drastically impacts the final
-							output and quality of the experience…take the initiative to suggest new ideas and compromise
-							or negotiate.”
+              A pro-tip and resource from one of our student responses to help
+              you ace your interviews: “I recommended websites such as Leetcode
+              and Hackerrank for practising when you prepare for coding
+              interviews”. Jiamin (WIT member) provides further wisdom in
+              collaboration and seeing your brilliant ideas through, “how we
+              communicate our ideas drastically impacts the final output and
+              quality of the experience…take the initiative to suggest new ideas
+              and compromise or negotiate.”
             </p>
 
             <p class="post-content">
-							You are career-driven, a quick-adapter, and know what you want to achieve in an environment
-							that is challenging, fun, and allows you to push your creativity!
+              You are career-driven, a quick-adapter, and know what you want to
+              achieve in an environment that is challenging, fun, and allows you
+              to push your creativity!
             </p>
             <br />
             <br />
@@ -254,45 +283,50 @@ class blogPost18 extends Component {
             </p>
 
             <p class="post-content">
-							“Being able to think logically through complex problems without relying on a specific
-							programming language or tool” is a great quality you’ve been able to develop. You love
-							combinations, blends, and like Rhea (External Relations Executive), you’ve achieved “the
-							perfect blend of information technology and commerce!”
+              “Being able to think logically through complex problems without
+              relying on a specific programming language or tool” is a great
+              quality you’ve been able to develop. You love combinations,
+              blends, and like Rhea (External Relations Executive), you’ve
+              achieved “the perfect blend of information technology and
+              commerce!”
             </p>
 
             <p class="post-content">
-							You have an amazing breadth of knowledge from these two disciplines ready to create
-							solutions, stay in control of complex issues, and with the wide range of career
-							possibilities, you’re set for success!
+              You have an amazing breadth of knowledge from these two
+              disciplines ready to create solutions, stay in control of complex
+              issues, and with the wide range of career possibilities, you’re
+              set for success!
             </p>
 
             <p class="post-content">
-							Alison’s (Human Resources Executive) pro-tip to get you interview-ready is “rather than the
-							knowledge there is more of interest from interviewers in looking at how you have managed to
-							apply these skills in the real world, whether that be through personal projects,
-							extra-curricular, or part-time roles.”
+              Alison’s (Human Resources Executive) pro-tip to get you
+              interview-ready is “rather than the knowledge there is more of
+              interest from interviewers in looking at how you have managed to
+              apply these skills in the real world, whether that be through
+              personal projects, extra-curricular, or part-time roles.”
             </p>
 
             <p class="post-content">
-							So go out there you go-getter, and keep exploring “technology, it’s ever-evolving nature and
-							how it disrupts the modern business landscape,” like Calista (WIT member).
-            </p>
-            <br />
-            <br />
-
-            <p class="post-content">
-							Thank you so much to the student responses that helped to put together this insightful, and
-							hopefully super fun blog post!
+              So go out there you go-getter, and keep exploring “technology,
+              it’s ever-evolving nature and how it disrupts the modern business
+              landscape,” like Calista (WIT member).
             </p>
             <br />
+            <br />
 
             <p class="post-content">
-							Interested in learning more about these degrees and looking for more advice about your
-							career? Check out{' '}
+              Thank you so much to the student responses that helped to put
+              together this insightful, and hopefully super fun blog post!
+            </p>
+            <br />
+
+            <p class="post-content">
+              Interested in learning more about these degrees and looking for
+              more advice about your career? Check out{" "}
               <a href="https://issuu.com/womenintechnology/…/wit_2020_careers_guide">
-								our careers guide
-              </a>{' '}
-							for more information.
+                our careers guide
+              </a>{" "}
+              for more information.
             </p>
             <br />
           </div>
@@ -300,12 +334,12 @@ class blogPost18 extends Component {
         {/*for the blog post author*/}
         <AuthorCard
           authors={{
-            'georgie-mansfield': [
-              '/potraits/georgie.jpg',
-              'profile_img vivw_img',
-              'Georgie Mansfield',
-              'Education Team'
-            ]
+            "georgie-mansfield": [
+              "/potraits/georgie.jpg",
+              "profile_img vivw_img",
+              "Georgie Mansfield",
+              "Education Team",
+            ],
           }}
         />
         {/*End of blog posts*/}

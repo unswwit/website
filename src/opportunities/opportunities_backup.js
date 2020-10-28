@@ -1,7 +1,7 @@
 //All necessary imports for this javascript
-import React, { Component } from 'react';
-import './style.css';
-import './opportunities.css';
+import React, { Component } from "react";
+import "./style.css";
+import "./opportunities.css";
 //import { Link } from "react-router-dom";
 
 class Opportunities extends Component {
@@ -17,7 +17,7 @@ class Opportunities extends Component {
         {/*End of Header*/}
 
         {/*Start of opportunities grid table*/}
-        <div style={{ margin: '125px' }}>
+        <div style={{ margin: "125px" }}>
           <table class="main-table" cellpadding="25">
             <tr>
               {/*This is row one with 3 sub tables*/}
@@ -33,7 +33,7 @@ class Opportunities extends Component {
                                 <img
                                   src={
                                     process.env.PUBLIC_URL +
-																		'/sponsors/amazon-major.png'
+                                    "/sponsors/amazon-major.png"
                                   }
                                   className="profile_img "
                                   alt="vivian-wong"
@@ -41,7 +41,7 @@ class Opportunities extends Component {
                                 />
                               </div>
                             </td>
-                            <td style={{ width: '200px' }}>
+                            <td style={{ width: "200px" }}>
                               <div class="heading">Company Name</div>
                               <div class="subheading">Published Date</div>
                             </td>
@@ -51,17 +51,18 @@ class Opportunities extends Component {
                             <div class="job-position">Job Position</div>
                             <div class="subheading">Description</div>
                             <div class="subheading">
-															Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-															sed do eiusmod tempor incididunt ut labore et dolore magna
-															aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-															ullamco laboris nisi
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit, sed do eiusmod tempor incididunt
+                              ut labore et dolore magna aliqua. Ut enim ad minim
+                              veniam, quis nostrud exercitation ullamco laboris
+                              nisi
                             </div>
                             <div class="more-link">
                               <a
                                 class="more-link"
                                 href="https://en.wikipedia.org/wiki/Lorem_ipsum"
                               >
-																More
+                                More
                               </a>
                             </div>
                           </div>
@@ -83,7 +84,7 @@ class Opportunities extends Component {
                                 <img
                                   src={
                                     process.env.PUBLIC_URL +
-																		'/sponsors/nine-major.png'
+                                    "/sponsors/nine-major.png"
                                   }
                                   className="profile_img "
                                   alt="vivian-wong"
@@ -91,7 +92,7 @@ class Opportunities extends Component {
                                 />
                               </div>
                             </td>
-                            <td style={{ width: '200px' }}>
+                            <td style={{ width: "200px" }}>
                               <div class="heading">Company Name</div>
                               <div class="subheading">Published Date</div>
                             </td>
@@ -101,17 +102,18 @@ class Opportunities extends Component {
                             <div class="job-position">Job Position</div>
                             <div class="subheading">Description</div>
                             <div class="subheading">
-															Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-															sed do eiusmod tempor incididunt ut labore et dolore magna
-															aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-															ullamco laboris nisi
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit, sed do eiusmod tempor incididunt
+                              ut labore et dolore magna aliqua. Ut enim ad minim
+                              veniam, quis nostrud exercitation ullamco laboris
+                              nisi
                             </div>
                             <div class="more-link">
                               <a
                                 class="more-link"
                                 href="https://en.wikipedia.org/wiki/Lorem_ipsum"
                               >
-																More
+                                More
                               </a>
                             </div>
                           </div>
@@ -133,7 +135,7 @@ class Opportunities extends Component {
                                 <img
                                   src={
                                     process.env.PUBLIC_URL +
-																		'/sponsors/quantium-major.png'
+                                    "/sponsors/quantium-major.png"
                                   }
                                   className="profile_img "
                                   alt="vivian-wong"
@@ -141,7 +143,7 @@ class Opportunities extends Component {
                                 />
                               </div>
                             </td>
-                            <td style={{ width: '200px' }}>
+                            <td style={{ width: "200px" }}>
                               <div class="heading">Company Name</div>
                               <div class="subheading">Published Date</div>
                             </td>
@@ -151,17 +153,18 @@ class Opportunities extends Component {
                             <div class="job-position">Job Position</div>
                             <div class="subheading">Description</div>
                             <div class="subheading">
-															Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-															sed do eiusmod tempor incididunt ut labore et dolore magna
-															aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-															ullamco laboris nisi
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit, sed do eiusmod tempor incididunt
+                              ut labore et dolore magna aliqua. Ut enim ad minim
+                              veniam, quis nostrud exercitation ullamco laboris
+                              nisi
                             </div>
                             <div class="more-link">
                               <a
                                 class="more-link"
                                 href="https://en.wikipedia.org/wiki/Lorem_ipsum"
                               >
-																More
+                                More
                               </a>
                             </div>
                           </div>
@@ -187,7 +190,7 @@ class Opportunities extends Component {
                                 <img
                                   src={
                                     process.env.PUBLIC_URL +
-																		'/sponsors/atlassian-major.png'
+                                    "/sponsors/atlassian-major.png"
                                   }
                                   className="profile_img "
                                   alt="vivian-wong"
@@ -195,7 +198,7 @@ class Opportunities extends Component {
                                 />
                               </div>
                             </td>
-                            <td style={{ width: '200px' }}>
+                            <td style={{ width: "200px" }}>
                               <div class="heading">Company Name</div>
                               <div class="subheading">Published Date</div>
                             </td>
@@ -205,17 +208,18 @@ class Opportunities extends Component {
                             <div class="job-position">Job Position</div>
                             <div class="subheading">Description</div>
                             <div class="subheading">
-															Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-															sed do eiusmod tempor incididunt ut labore et dolore magna
-															aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-															ullamco laboris nisi
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit, sed do eiusmod tempor incididunt
+                              ut labore et dolore magna aliqua. Ut enim ad minim
+                              veniam, quis nostrud exercitation ullamco laboris
+                              nisi
                             </div>
                             <div class="more-link">
                               <a
                                 class="more-link"
                                 href="https://en.wikipedia.org/wiki/Lorem_ipsum"
                               >
-																More
+                                More
                               </a>
                             </div>
                           </div>
@@ -237,7 +241,7 @@ class Opportunities extends Component {
                                 <img
                                   src={
                                     process.env.PUBLIC_URL +
-																		'/sponsors/baraja-major.png'
+                                    "/sponsors/baraja-major.png"
                                   }
                                   className="profile_img "
                                   alt="vivian-wong"
@@ -245,7 +249,7 @@ class Opportunities extends Component {
                                 />
                               </div>
                             </td>
-                            <td style={{ width: '200px' }}>
+                            <td style={{ width: "200px" }}>
                               <div class="heading">Company Name</div>
                               <div class="subheading">Published Date</div>
                             </td>
@@ -255,17 +259,18 @@ class Opportunities extends Component {
                             <div class="job-position">Job Position</div>
                             <div class="subheading">Description</div>
                             <div class="subheading">
-															Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-															sed do eiusmod tempor incididunt ut labore et dolore magna
-															aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-															ullamco laboris nisi
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit, sed do eiusmod tempor incididunt
+                              ut labore et dolore magna aliqua. Ut enim ad minim
+                              veniam, quis nostrud exercitation ullamco laboris
+                              nisi
                             </div>
                             <div class="more-link">
                               <a
                                 class="more-link"
                                 href="https://en.wikipedia.org/wiki/Lorem_ipsum"
                               >
-																More
+                                More
                               </a>
                             </div>
                           </div>
@@ -287,7 +292,7 @@ class Opportunities extends Component {
                                 <img
                                   src={
                                     process.env.PUBLIC_URL +
-																		'/sponsors/deloitte-major.png'
+                                    "/sponsors/deloitte-major.png"
                                   }
                                   className="profile_img "
                                   alt="vivian-wong"
@@ -295,7 +300,7 @@ class Opportunities extends Component {
                                 />
                               </div>
                             </td>
-                            <td style={{ width: '200px' }}>
+                            <td style={{ width: "200px" }}>
                               <div class="heading">Company Name</div>
                               <div class="subheading">Published Date</div>
                             </td>
@@ -305,17 +310,18 @@ class Opportunities extends Component {
                             <div class="job-position">Job Position</div>
                             <div class="subheading">Description</div>
                             <div class="subheading">
-															Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-															sed do eiusmod tempor incididunt ut labore et dolore magna
-															aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-															ullamco laboris nisi
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit, sed do eiusmod tempor incididunt
+                              ut labore et dolore magna aliqua. Ut enim ad minim
+                              veniam, quis nostrud exercitation ullamco laboris
+                              nisi
                             </div>
                             <div class="more-link">
                               <a
                                 class="more-link"
                                 href="https://en.wikipedia.org/wiki/Lorem_ipsum"
                               >
-																More
+                                More
                               </a>
                             </div>
                           </div>
@@ -341,7 +347,7 @@ class Opportunities extends Component {
                                 <img
                                   src={
                                     process.env.PUBLIC_URL +
-																		'/sponsors/dxc-major.png'
+                                    "/sponsors/dxc-major.png"
                                   }
                                   className="profile_img "
                                   alt="vivian-wong"
@@ -349,7 +355,7 @@ class Opportunities extends Component {
                                 />
                               </div>
                             </td>
-                            <td style={{ width: '200px' }}>
+                            <td style={{ width: "200px" }}>
                               <div class="heading">Company Name</div>
                               <div class="subheading">Published Date</div>
                             </td>
@@ -359,17 +365,18 @@ class Opportunities extends Component {
                             <div class="job-position">Job Position</div>
                             <div class="subheading">Description</div>
                             <div class="subheading">
-															Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-															sed do eiusmod tempor incididunt ut labore et dolore magna
-															aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-															ullamco laboris nisi
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit, sed do eiusmod tempor incididunt
+                              ut labore et dolore magna aliqua. Ut enim ad minim
+                              veniam, quis nostrud exercitation ullamco laboris
+                              nisi
                             </div>
                             <div class="more-link">
                               <a
                                 class="more-link"
                                 href="https://en.wikipedia.org/wiki/Lorem_ipsum"
                               >
-																More
+                                More
                               </a>
                             </div>
                           </div>
@@ -391,7 +398,7 @@ class Opportunities extends Component {
                                 <img
                                   src={
                                     process.env.PUBLIC_URL +
-																		'/sponsors/amazon-major.png'
+                                    "/sponsors/amazon-major.png"
                                   }
                                   className="profile_img "
                                   alt="vivian-wong"
@@ -399,7 +406,7 @@ class Opportunities extends Component {
                                 />
                               </div>
                             </td>
-                            <td style={{ width: '200px' }}>
+                            <td style={{ width: "200px" }}>
                               <div class="heading">Company Name</div>
                               <div class="subheading">Published Date</div>
                             </td>
@@ -409,17 +416,18 @@ class Opportunities extends Component {
                             <div class="job-position">Job Position</div>
                             <div class="subheading">Description</div>
                             <div class="subheading">
-															Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-															sed do eiusmod tempor incididunt ut labore et dolore magna
-															aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-															ullamco laboris nisi
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit, sed do eiusmod tempor incididunt
+                              ut labore et dolore magna aliqua. Ut enim ad minim
+                              veniam, quis nostrud exercitation ullamco laboris
+                              nisi
                             </div>
                             <div class="more-link">
                               <a
                                 class="more-link"
                                 href="https://en.wikipedia.org/wiki/Lorem_ipsum"
                               >
-																More
+                                More
                               </a>
                             </div>
                           </div>
@@ -441,7 +449,7 @@ class Opportunities extends Component {
                                 <img
                                   src={
                                     process.env.PUBLIC_URL +
-																		'/sponsors/amazon-major.png'
+                                    "/sponsors/amazon-major.png"
                                   }
                                   className="profile_img "
                                   alt="vivian-wong"
@@ -449,7 +457,7 @@ class Opportunities extends Component {
                                 />
                               </div>
                             </td>
-                            <td style={{ width: '200px' }}>
+                            <td style={{ width: "200px" }}>
                               <div class="heading">Company Name</div>
                               <div class="subheading">Published Date</div>
                             </td>
@@ -459,17 +467,18 @@ class Opportunities extends Component {
                             <div class="job-position">Job Position</div>
                             <div class="subheading">Description</div>
                             <div class="subheading">
-															Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-															sed do eiusmod tempor incididunt ut labore et dolore magna
-															aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-															ullamco laboris nisi
+                              Lorem ipsum dolor sit amet, consectetur
+                              adipisicing elit, sed do eiusmod tempor incididunt
+                              ut labore et dolore magna aliqua. Ut enim ad minim
+                              veniam, quis nostrud exercitation ullamco laboris
+                              nisi
                             </div>
                             <div class="more-link">
                               <a
                                 class="more-link"
                                 href="https://en.wikipedia.org/wiki/Lorem_ipsum"
                               >
-																More
+                                More
                               </a>
                             </div>
                           </div>

@@ -1,8 +1,8 @@
 //All necessary imports for this javascript
-import React, { Component } from 'react';
-import '../style.css';
-import './blog.css';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import "../style.css";
+import "./blog.css";
+import { Link } from "react-router-dom";
 
 class BlogPreview extends Component {
   render() {
@@ -11,10 +11,16 @@ class BlogPreview extends Component {
         {/*Start of blog post preview*/}
         <div
           className="blog-post"
-          style={{ marginTop: this.props.topMargin, marginBottom: this.props.bottomMargin }}
+          style={{
+            marginTop: this.props.topMargin,
+            marginBottom: this.props.bottomMargin,
+          }}
         >
           <table cellpadding="0">
-            <Link to={'/blog/' + this.props.blogNo} style={{ textDecoration: 'none' }}>
+            <Link
+              to={"/blog/" + this.props.blogNo}
+              style={{ textDecoration: "none" }}
+            >
               <tr id="preview-row">
                 <td>
                   <div className="preview-pic">
@@ -37,7 +43,10 @@ class BlogPreview extends Component {
                         <td>
                           <div className="author-pic">
                             <img
-                              src={process.env.PUBLIC_URL + this.props.authors[key][0]}
+                              src={
+                                process.env.PUBLIC_URL +
+                                this.props.authors[key][0]
+                              }
                               className="profile_img vivw_img"
                               alt={key}
                             />
@@ -45,7 +54,9 @@ class BlogPreview extends Component {
                         </td>
 
                         <td className="author-name">
-                          <div className="auth">{this.props.authors[key][1]}</div>
+                          <div className="auth">
+                            {this.props.authors[key][1]}
+                          </div>
                         </td>
                       </td>
                     ))}

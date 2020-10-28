@@ -1,7 +1,7 @@
 //All necessary imports for this javascript
-import React, { Component } from 'react';
-import '.././style.css';
-import './blog-post.css';
+import React, { Component } from "react";
+import ".././style.css";
+import "./blog-post.css";
 
 class AuthorCard extends Component {
   render() {
@@ -12,7 +12,7 @@ class AuthorCard extends Component {
           <div key={index} class="author">
             <div class="author-left">
               <div>
-                {' '}
+                {" "}
                 {/*note this div is necessary to formatting*/}
                 <img
                   src={process.env.PUBLIC_URL + this.props.authors[key][0]}

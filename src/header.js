@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import './style.css';
-import './blog-post/blog-post.css';
+import React, { Component } from "react";
+import "./style.css";
+import "./blog-post/blog-post.css";
 
 class PageHeader extends Component {
   render() {
@@ -10,7 +10,11 @@ class PageHeader extends Component {
         <div className="dark" />
 
         {/* header image */}
-        <img src={process.env.PUBLIC_URL + this.props.imgUrl} alt="blog-header" className="cover_image" />
+        <img
+          src={process.env.PUBLIC_URL + this.props.imgUrl}
+          alt="blog-header"
+          className="cover_image"
+        />
 
         {/* text */}
         <div className="title">
