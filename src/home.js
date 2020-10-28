@@ -6,12 +6,8 @@ import './home.css';
 class Home extends Component {
   render() {
     return (
-      <body>
-        {/* Start of Header */}
-        <meta
-          name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-        />
+      <div>
+        {/* Start of Header */}      
         <div className="contain">
           <div className="headline">
             <h1>UNSW</h1>
@@ -45,7 +41,6 @@ class Home extends Component {
             src={`${process.env.PUBLIC_URL}./stats-background-1.png`}
             className="stats-background"
             alt="banner"
-            resizeMode="contain"
           />
           <div className="stats-info">
             <div className="number">
@@ -112,10 +107,9 @@ class Home extends Component {
             src={`${process.env.PUBLIC_URL}./sponsors-home.png`}
             className="photo"
             alt="banner"
-            resizeMode="contain"
           />
         </div>
-      </body>
+      </div>
     );
   }
 }

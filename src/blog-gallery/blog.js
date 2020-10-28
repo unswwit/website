@@ -1,19 +1,16 @@
 //All necessary imports for this javascript
-import React, { Component } from "react";
-import "../style.css";
-import "./blog.css";
-import BlogPreview from "./blog-preview";
-import PageHeader from ".././header";
+import React, { Component } from 'react';
+import '../style.css';
+import './blog.css';
+import BlogPreview from './blog-preview';
+import PageHeader from '.././header';
 
 class Blog extends Component {
   render() {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader
-          imgUrl="/blog-header.png"
-          title="Blog Posts"
-        />
+        <PageHeader imgUrl="/blog-header.png" title="Blog Posts" />
 
         {/*Start of blog posts*/}
         {/*blog post 35*/}
@@ -26,8 +23,8 @@ class Blog extends Component {
           date="28/10/2020"
           subheading="This week, we explore the interdisciplinary nature of technology, and the opportunities for a successful career with Calista Kusuma."
           authors={{
-            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield",], 
-            "elisa-sanjurjo": ["/potraits/elisa.jpg", "Elisa Sanjurjo",],
+            'georgie-mansfield': [ '/potraits/georgie.jpg', 'Georgie Mansfield' ],
+            'elisa-sanjurjo': [ '/potraits/elisa.jpg', 'Elisa Sanjurjo' ]
           }}
         />
 
@@ -41,10 +38,10 @@ class Blog extends Component {
           date="25/10/2020"
           subheading="In the latest blog post, Angeni reflects on the key lessons from her Talk WIT Us episode with Shadiyah Lim, Innovation Advisory Consultant at AWS, who overcame current uncertainties and more!"
           authors={{
-            "angenie-bai": ["/potraits/angenie-bai.jpg", "Angenie Bai"],
+            'angenie-bai': [ '/potraits/angenie-bai.jpg', 'Angenie Bai' ]
           }}
         />
-        
+
         {/*blog post 33*/}
         <BlogPreview
           topMargin="5vw"
@@ -55,7 +52,7 @@ class Blog extends Component {
           date="21/10/2020"
           subheading="For this week's WIT Crush Wednesday, we'll be hearing an exciting Q&A with 2020's WIT Exec Team!"
           authors={{
-            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
+            'vivian-wong': [ '/potraits/vivw.jpg', 'Vivian Wong' ]
           }}
         />
 
@@ -69,7 +66,7 @@ class Blog extends Component {
           date="18/10/2020"
           subheading="Have you ever wanted to learn more about the elusive world of fintech? Read more to find out about the intricate details of this commonly used buzzword!"
           authors={{
-            "jane-wang": ["/potraits/jane-wang.png", "Jane Wang"],
+            'jane-wang': [ '/potraits/jane-wang.png', 'Jane Wang' ]
           }}
         />
 
@@ -83,7 +80,7 @@ class Blog extends Component {
           date="14/10/2020"
           subheading="Here, we interview Sophie about her amazing journey and lessons she’s learnt along the way."
           authors={{
-            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield"],
+            'georgie-mansfield': [ '/potraits/georgie.jpg', 'Georgie Mansfield' ]
           }}
         />
 
@@ -97,7 +94,7 @@ class Blog extends Component {
           date="11/10/2020"
           subheading="In Part 2, Vivian and Amanda offer a comprehensive breakdown of a typical technical interview for software engineering, complete with tips and tricks for giving yourself the best possible chance of succeeding."
           authors={{
-            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
+            'vivian-wong': [ '/potraits/vivw.jpg', 'Vivian Wong' ]
           }}
         />
 
@@ -112,7 +109,7 @@ class Blog extends Component {
           date="7/10/2020"
           subheading="In this blog post, we learn about the experiences of Davina Adisusila, the Engineering Team Lead at Eucalyptus, as well as the some of the insights she has gained during her incredible journey."
           authors={{
-            "victoria-ruming": ["/potraits/victoria.jpg", "Victoria Ruming"],
+            'victoria-ruming': [ '/potraits/victoria.jpg', 'Victoria Ruming' ]
           }}
         />
 
@@ -126,7 +123,7 @@ class Blog extends Component {
           date="4/10/2020"
           subheading="In this Q&A, Vivian Shen and Amanda Li, the President and Vice President of WIT respectively, offer the useful advice they have gathered from their own experiences to help you succeed in your next technical interview."
           authors={{
-            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
+            'vivian-wong': [ '/potraits/vivw.jpg', 'Vivian Wong' ]
           }}
         />
 
@@ -140,7 +137,7 @@ class Blog extends Component {
           date="30/09/2020"
           subheading="We are excited to share a recent Q&A we had with Ankita Singh regarding her journey in tech."
           authors={{
-            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield"],
+            'georgie-mansfield': [ '/potraits/georgie.jpg', 'Georgie Mansfield' ]
           }}
         />
 
@@ -154,7 +151,7 @@ class Blog extends Component {
           date="27/09/2020"
           subheading="In this blog post, we’ll be hearing from the founders of LinkUp! Perhaps you used LinkUp to discover WIT or other societies. Just like any great tool, it started with the recognition of a need, followed by a great idea. Let’s dive into our conversation with the three founders!"
           authors={{
-            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
+            'vivian-wong': [ '/potraits/vivw.jpg', 'Vivian Wong' ]
           }}
         />
         {/*blog post 25*/}
@@ -167,7 +164,7 @@ class Blog extends Component {
           date="23/09/2020"
           subheading="We are excited to share a recent Q&A we had with Cindy about her career journey in STEM"
           authors={{
-            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield"],
+            'georgie-mansfield': [ '/potraits/georgie.jpg', 'Georgie Mansfield' ]
           }}
         />
         {/*blog post 24*/}
@@ -180,7 +177,7 @@ class Blog extends Component {
           date="20/09/2020"
           subheading="Have you ever wondered what goes on in the mind while we sleep? Or how sleep can help your exam results? This blog post delves into the world of sleep and learning and how you can enhance not only your marks but your health through a good night's sleep."
           authors={{
-            "elisa-sanjurjo": ["/potraits/elisa.jpg", "Elisa Sanjurjo"],
+            'elisa-sanjurjo': [ '/potraits/elisa.jpg', 'Elisa Sanjurjo' ]
           }}
         />
 
@@ -194,7 +191,7 @@ class Blog extends Component {
           date="16/09/2020"
           subheading="During her training at UNSW, she volunteered her time to share her technical know-how with fellow students and children through Code Create, Tutorial Demonstrator, and Code Like a Girl. Let’s dive into our interview with this rising star!"
           authors={{
-            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
+            'vivian-wong': [ '/potraits/vivw.jpg', 'Vivian Wong' ]
           }}
         />
 
@@ -208,7 +205,7 @@ class Blog extends Component {
           date="13/09/2020"
           subheading="Technology is not all about maths and science. Technology can also be artistic, paving the way for new and exciting expressions of visual creativity. In doing so, artists, engineers and programmers may work together to bring fascinating creations to life. Here, we discuss four of the many ways in which technology may be fused with artistic creativity."
           authors={{
-            "victoria-ruming": ["/potraits/victoria.jpg", "Victoria Ruming"],
+            'victoria-ruming': [ '/potraits/victoria.jpg', 'Victoria Ruming' ]
           }}
         />
 
@@ -222,7 +219,7 @@ class Blog extends Component {
           date="09/09/2020"
           subheading="We are excited to share a recent Q&A we had with Madeleine regarding passion, journey into STEM as well as advice for students."
           authors={{
-            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
+            'vivian-wong': [ '/potraits/vivw.jpg', 'Vivian Wong' ]
           }}
         />
 
@@ -236,7 +233,7 @@ class Blog extends Component {
           date="02/09/2020"
           subheading="Keep reading to learn more about Aneita’s philosophy, journey in STEM, and how computer science has constantly changed her perception!"
           authors={{
-            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield"],
+            'georgie-mansfield': [ '/potraits/georgie.jpg', 'Georgie Mansfield' ]
           }}
         />
 
@@ -250,7 +247,7 @@ class Blog extends Component {
           date="05/08/2020"
           subheading="We are excited to share a recent Q&A we had with Shatabdi about career journey in STEM!"
           authors={{
-            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
+            'vivian-wong': [ '/potraits/vivw.jpg', 'Vivian Wong' ]
           }}
         />
         {/*blog post 18*/}
@@ -263,7 +260,7 @@ class Blog extends Component {
           date="02/08/2020"
           subheading="Software Engineering. Computer Science. Information Systems. What makes these degrees unique? Which career paths can they lead to? Take the quiz to find out which degree you are!"
           authors={{
-            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield"],
+            'georgie-mansfield': [ '/potraits/georgie.jpg', 'Georgie Mansfield' ]
           }}
         />
 
@@ -277,7 +274,7 @@ class Blog extends Component {
           date="29/07/2020"
           subheading="This week, we join Natasha as she reflects on her journey through STEM, and how she has continued to strive for success."
           authors={{
-            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield"],
+            'georgie-mansfield': [ '/potraits/georgie.jpg', 'Georgie Mansfield' ]
           }}
         />
 
@@ -290,7 +287,7 @@ class Blog extends Component {
           heading="Introducing Erica Joy Baker, Director of Engineering at GitHub"
           date="22/07/2020"
           subheading="Erica Baker is a unique role model and voice for women and minorities in tech. She’s a force to be reckoned with, and gives us all hope there will be a place for our skills, enthusiasm and ideas in whatever area of the tech field we choose."
-          authors={{ "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"] }}
+          authors={{ 'vivian-wong': [ '/potraits/vivw.jpg', 'Vivian Wong' ] }}
         />
 
         {/*blog post 15*/}
@@ -302,7 +299,7 @@ class Blog extends Component {
           heading="A Journey in IT with Zitni Handoo"
           date="19/07/2020"
           subheading="In this blog post, we share our Q&A with Zitni, covering everything from her inspiration to study AI to the most challenging aspects of university life. Get ready to take some notes!"
-          authors={{ "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"] }}
+          authors={{ 'vivian-wong': [ '/potraits/vivw.jpg', 'Vivian Wong' ] }}
         />
 
         {/*blog post 14*/}
@@ -314,7 +311,7 @@ class Blog extends Component {
           heading="Introducing: Hannah Beder, Creative Technologist at Creatable and NSW Young Woman of the Year 2020"
           date="15/07/2020"
           subheading="We’re excited to share a recent Q&A we had with Hannah about her career journey in STEM."
-          authors={{ "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"] }}
+          authors={{ 'vivian-wong': [ '/potraits/vivw.jpg', 'Vivian Wong' ] }}
         />
 
         {/*blog post 13*/}
@@ -327,7 +324,7 @@ class Blog extends Component {
           date="13/07/2020"
           subheading="Learn about this powerful and evolving field cranking out computer-controlled machines like robotics and autonomous-driving cars. Find out the tools and software used in this field, and if it’s for you! 🤔🤔"
           authors={{
-            "victoria-ruming": ["/potraits/victoria.jpg", "Victoria Ruming"],
+            'victoria-ruming': [ '/potraits/victoria.jpg', 'Victoria Ruming' ]
           }}
         />
 
@@ -341,8 +338,8 @@ class Blog extends Component {
           date="08/07/2020"
           subheading="Let's read about what Maddie Mackey has to say about her journey into tech."
           authors={{
-            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
-            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield"],
+            'vivian-wong': [ '/potraits/vivw.jpg', 'Vivian Wong' ],
+            'georgie-mansfield': [ '/potraits/georgie.jpg', 'Georgie Mansfield' ]
           }}
         />
 
@@ -356,7 +353,7 @@ class Blog extends Component {
           date="04/07/2020"
           subheading="Have you ever wondered 'Will AI take my Job?', 'How does AI function in the workplace?', 'Can AI make me Pizza?'🍕🍕🍕 Well look no further, because this blog post answers your burning questions."
           authors={{
-            "elisa-sanjurjo": ["/potraits/elisa.jpg", "Elisa Sanjurjo"],
+            'elisa-sanjurjo': [ '/potraits/elisa.jpg', 'Elisa Sanjurjo' ]
           }}
         />
 
@@ -370,7 +367,7 @@ class Blog extends Component {
           date="01/07/2020"
           subheading="Let's read about what Lana King has to say about her journey into tech."
           authors={{
-            "victoria-ruming": ["/potraits/victoria.jpg", "Victoria Ruming"],
+            'victoria-ruming': [ '/potraits/victoria.jpg', 'Victoria Ruming' ]
           }}
         />
 
@@ -385,7 +382,7 @@ class Blog extends Component {
           subheading="Inspired by Tim Urban’s TED Talk, we look at challenging procrastination, and how it really exists in all of us,
                 even the non-procrastinators."
           authors={{
-            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield"],
+            'georgie-mansfield': [ '/potraits/georgie.jpg', 'Georgie Mansfield' ]
           }}
         />
 
@@ -398,7 +395,7 @@ class Blog extends Component {
           heading="WIT Crush Wednesday - Dr Marguerite Evans-Galea"
           date="24/06/2020"
           subheading="Take a look at Dr Marguerite Evans-Galea's journey into STEM as well as advice for students who are interested in pursuing a career in STEM."
-          authors={{ "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"] }}
+          authors={{ 'vivian-wong': [ '/potraits/vivw.jpg', 'Vivian Wong' ] }}
         />
 
         {/*blog post 7*/}
@@ -410,7 +407,7 @@ class Blog extends Component {
           heading="How To Ace Your Hackathon"
           date="21/06/2020"
           subheading="Let's read what past WIT Hackathon winner has to say regarding their best tip to ace for your hackathon."
-          authors={{ "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"] }}
+          authors={{ 'vivian-wong': [ '/potraits/vivw.jpg', 'Vivian Wong' ] }}
         />
 
         {/*blog post 6*/}
@@ -423,7 +420,7 @@ class Blog extends Component {
           date="17/06/2020"
           subheading="Let’s read what Fontaine had to say about her journey into tech."
           authors={{
-            "victoria-ruming": ["/potraits/victoria.jpg", "Victoria Ruming"],
+            'victoria-ruming': [ '/potraits/victoria.jpg', 'Victoria Ruming' ]
           }}
         />
 
@@ -437,8 +434,8 @@ class Blog extends Component {
           date="12/06/2020"
           subheading="Explore Salina's research journey as PHD student in chemical engineering as well as advices about finding success in university and beyond"
           authors={{
-            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
-            "victoria-ruming": ["/potraits/victoria.jpg", "Victoria Ruming"],
+            'vivian-wong': [ '/potraits/vivw.jpg', 'Vivian Wong' ],
+            'victoria-ruming': [ '/potraits/victoria.jpg', 'Victoria Ruming' ]
           }}
         />
 
@@ -451,7 +448,7 @@ class Blog extends Component {
           heading="Introducing: Syin Li Tan, Consultant at Deloitte"
           date="10/06/2020"
           subheading="Another story to cover! Gain insights from Deloite consultant Syin Li Tan on her career-related thoughts and experiences!"
-          authors={{ "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"] }}
+          authors={{ 'vivian-wong': [ '/potraits/vivw.jpg', 'Vivian Wong' ] }}
         />
 
         {/*blog post 3*/}
@@ -464,7 +461,7 @@ class Blog extends Component {
           date="03/06/2020"
           subheading="Take a look at 4 lessons we can learn from Marissa's amazing life, and how she continues to redefine technology as we know it today."
           authors={{
-            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield"],
+            'georgie-mansfield': [ '/potraits/georgie.jpg', 'Georgie Mansfield' ]
           }}
         />
 
@@ -478,8 +475,8 @@ class Blog extends Component {
           date="27/05/2020"
           subheading="Explore Professor Harvey Smith’s experiences, influential nature and numerous achievements proving that women in the tech industry are NOT to be underestimated."
           authors={{
-            "elisa-sanjurjo": ["/potraits/elisa.jpg", "Elisa Sanjurjo"],
-            "victoria-ruming": ["/potraits/victoria.jpg", "Victoria Ruming"],
+            'elisa-sanjurjo': [ '/potraits/elisa.jpg', 'Elisa Sanjurjo' ],
+            'victoria-ruming': [ '/potraits/victoria.jpg', 'Victoria Ruming' ]
           }}
         />
 
@@ -492,7 +489,7 @@ class Blog extends Component {
           heading="Introducing: Silvia Lin, Senior Consultant of PWC and WIT Co-founder"
           date="20/05/2020"
           subheading="Learn more about our co-founder and now PWC Senior Consultant Silvia Lin and her journey into technology!"
-          authors={{ "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"] }}
+          authors={{ 'vivian-wong': [ '/potraits/vivw.jpg', 'Vivian Wong' ] }}
         />
         {/*End of blog posts*/}
       </div>

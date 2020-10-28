@@ -5,10 +5,10 @@ import './team.css';
 class Execs extends Component {
   render() {
     return (
-      <div class="exec_col">
-        <div class="profile">
+      <div className="exec_col">
+        <div className="profile">
           <div>
-            <div class="profile_crop">
+            <div className="profile_crop">
               <img
                 src={process.env.PUBLIC_URL + this.props.imgUrl}
                 className={'profile_img ' + this.props.class}
@@ -19,7 +19,7 @@ class Execs extends Component {
               <p className="profile_text_name">{this.props.name}</p>
               <p className="profile_text_position">{this.props.position}</p>
               <p className="profile_degree">{this.props.degree + ', ' + this.props.year + ' year'}</p>
-              <div classname="icon_bar">
+              <div className="icon_bar">
                 <a
                   href={'https://www.linkedin.com/in/' + this.props.linkedin + '/'}
                   target="_blank"

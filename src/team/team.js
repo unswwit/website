@@ -14,17 +14,17 @@ class OurTeam extends Component {
         <PageHeader imgUrl="/team-header-1.jpg" title="Meet Our Team" />
 
         <div className="profile_section_heading">
-          <h2 class="team-heading">
+          <h2 className="team-heading">
             {`OUR 2020 EXECUTIVE TEAM`}
           </h2>
         </div>
 
         {/* Exec section */}
         <div className="all_execs_section">
-          <div class="exec_row">
+          <div className="exec_row">
             <Execs
               imgUrl="/potraits/viv.png"
-              class=""
+              className=""
               name="Vivian Shen"
               position="President"
               degree="Data Science"
@@ -36,7 +36,7 @@ class OurTeam extends Component {
 
             <Execs
               imgUrl="/potraits/amanda.JPG"
-              class=""
+              className=""
               name="Amanda Li"
               position="Vice President"
               degree="Software Engineering/Biomedical Engineering"
@@ -50,7 +50,7 @@ class OurTeam extends Component {
           <div className="exec_row">
             <Execs
               imgUrl="/potraits/kelly.png"
-              class=""
+              className=""
               name="Kelly Liang"
               position="General Secretary"
               degree="Commerce/Information System"
@@ -63,7 +63,7 @@ class OurTeam extends Component {
             <Execs
               imgUrl="/potraits/elizabeth.JPG"
               name="Elizabeth Zhong"
-              class=""
+              className=""
               position="Treasurer"
               degree="Software Engineering"
               year="3rd"
@@ -73,11 +73,11 @@ class OurTeam extends Component {
             />
           </div>
 
-          <div class="exec_row">
+          <div className="exec_row">
             <Execs
               imgUrl="/potraits/vivw.jpg"
               name="Vivian Wong"
-              class="vivw_img"
+              className="vivw_img"
               position="Education Executive"
               degree="Commerce/Actuarial Science"
               year="2nd"
@@ -89,7 +89,7 @@ class OurTeam extends Component {
             <Execs
               imgUrl="/potraits/gabby.jpg"
               name="Gabrielle Younes"
-              class="gab_img"
+              className="gab_img"
               position="Events Executive"
               degree="Bioinformatic Engineering/Advanced Science"
               year="2nd"
@@ -99,11 +99,11 @@ class OurTeam extends Component {
             />
           </div>
 
-          <div class="exec_row">
+          <div className="exec_row">
             <Execs
               imgUrl="/potraits/rhea.png"
               name="Rhea Thomas"
-              class=""
+              className=""
               position="Externals Executive"
               degree="Information Systems"
               year="2nd"
@@ -115,7 +115,7 @@ class OurTeam extends Component {
             <Execs
               imgUrl="/potraits/alison.png"
               name="Alison Chin"
-              class=""
+              className=""
               position="Human Resources Executive"
               degree="Information Systems"
               year="3rd"
@@ -125,11 +125,11 @@ class OurTeam extends Component {
             />
           </div>
 
-          <div class="exec_row">
+          <div className="exec_row">
             <Execs
               imgUrl="/potraits/elicia.jpg"
               name="Elicia Au Duong"
-              class="eli_img"
+              className="eli_img"
               position="Information Technology Executive"
               degree="Commerce/Computer Science"
               year="2nd"
@@ -141,7 +141,7 @@ class OurTeam extends Component {
             <Execs
               imgUrl="/potraits/felicia.png"
               name="Felicia Ee"
-              class=""
+              className=""
               position="Marketing Executive"
               degree="Commerce/Software Engineering"
               year="2nd"
@@ -153,18 +153,18 @@ class OurTeam extends Component {
         </div>
 
         {/* Subcommittee section */}
-        <h2 class="team-heading" style={{ marginTop: '2vw', paddingBottom: '5px' }}>
+        <h2 className="team-heading" style={{ marginTop: '2vw', paddingBottom: '5px' }}>
 					OUR 2020 SUBCOMMITTEE TEAM
         </h2>
         <div className="subcom_section">
-          <h3 class="subcom-type">Education Team</h3>
+          <h3 className="subcom-type">Education Team</h3>
           <SubCom name="Elisa Sanjurjo" degree="Commerce/Science" year="4th" />
 
           <SubCom name="Georgie Mansfield" degree="Chemical Engineering/Materials Science" year="2nd" />
 
           <SubCom name="Victoria Ruming" degree="Mechatronic Engineering/Biomedical Engineering" year="2nd" />
 
-          <h3 class="subcom-type">Events Team</h3>
+          <h3 className="subcom-type">Events Team</h3>
           <SubCom name="Ariane Notaras" degree="Commerce(Finance)/Information Systems" year="2nd" />
 
           <SubCom name="Jane Wang" degree="Commerce/Information Systems" year="2nd" />
@@ -175,19 +175,19 @@ class OurTeam extends Component {
 
           <SubCom name="Shirlee Salaria" degree="Commerce/Information Systems" year="2nd" />
 
-          <h3 class="subcom-type">Externals Team</h3>
+          <h3 className="subcom-type">Externals Team</h3>
           <SubCom name="Angeni Bai" degree="Computer Science" year="1st" />
 
           <SubCom name="Rue Teh" degree="Software Engineering" year="2nd" />
 
           <SubCom name="Srija Mukherjee" degree="Software Engineering" year="1st" />
 
-          <h3 class="subcom-type">Human Resources Team</h3>
+          <h3 className="subcom-type">Human Resources Team</h3>
           <SubCom name="Claire Yu" degree="Commerce/Information System" year="1st" />
 
           <SubCom name="Victoria Yu" degree="Information Systems" year="2nd" />
 
-          <h3 class="subcom-type">Information Technology Team</h3>
+          <h3 className="subcom-type">Information Technology Team</h3>
           <SubCom name="Alana Hua" degree="Software Engineering/Biomedical Engineering" year="3rd" />
 
           <SubCom name="Chelsea Chaffey" degree="Computer Science" year="1st" />
@@ -196,7 +196,7 @@ class OurTeam extends Component {
 
           <SubCom name="Lily Yang" degree="Computer Science/Environmental Engineering" year="1st" />
 
-          <h3 class="subcom-type">Marketing Team</h3>
+          <h3 className="subcom-type">Marketing Team</h3>
           <SubCom name="Anisa Islam" degree="Media in Communications and Journalism" year="1st" />
 
           <SubCom name="Connie Shi" degree="Commerce/Information Systems" year="3rd" />
