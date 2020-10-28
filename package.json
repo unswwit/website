@@ -32,10 +32,13 @@
   "eslintConfig": {
     "extends": "react-app",
     "rules": {
-      "indent": ["error", 2],
+      "indent": [
+        "error",
+        2
+      ],
       "camelcase": "error",
-      "no-unused-vars":"error",
-      "no-use-before-define":"error"
+      "no-unused-vars": "error",
+      "no-use-before-define": "error"
     }
   },
   "browserslist": {
