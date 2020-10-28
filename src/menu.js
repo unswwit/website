@@ -11,9 +11,9 @@ class Menu extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.open !== this.state.open) {
-      this.setState({ open: nextProps.open });
+  componentDidUpdate(prevProps) {
+    if (prevProps.open !== this.props.open) {
+      this.setState({ open: this.props.open });
     }
   }
 
@@ -29,27 +29,27 @@ class Menu extends Component {
         {this.state.open ? (
           <div className="menu-list">
             <ul className="navbar-nav menu-bar">
-              <NavLink class="menu-link" to="/" style={{ textDecoration: 'none' }}>
+              <NavLink className="menu-link" to="/" style={{ textDecoration: 'none' }}>
                 <div className="menu-box">
                   <li className="menu-item">HOME</li>
                 </div>
               </NavLink>
-              <NavLink class="menu-link" to="/events" style={{ textDecoration: 'none' }}>
+              <NavLink className="menu-link" to="/events" style={{ textDecoration: 'none' }}>
                 <div className="menu-box">
                   <li className="menu-item">EVENTS</li>
                 </div>
               </NavLink>
-              <NavLink class="menu-link" to="/our-team" style={{ textDecoration: 'none' }}>
+              <NavLink className="menu-link" to="/our-team" style={{ textDecoration: 'none' }}>
                 <div className="menu-box">
                   <li className="menu-item">TEAM</li>
                 </div>
               </NavLink>
-              <NavLink class="menu-link" to="/sponsors" style={{ textDecoration: 'none' }}>
+              <NavLink className="menu-link" to="/sponsors" style={{ textDecoration: 'none' }}>
                 <div className="menu-box">
                   <li className="menu-item">SPONSORS</li>
                 </div>
               </NavLink>
-              <NavLink class="menu-link" to="/opportunities" style={{ textDecoration: 'none' }}>
+              <NavLink className="menu-link" to="/opportunities" style={{ textDecoration: 'none' }}>
                 <div className="menu-box">
                   <li className="menu-item">OPPORTUNITIES</li>
                 </div>
@@ -63,13 +63,13 @@ class Menu extends Component {
                   </div>
                   {this.state.showDD ? (
                     <div>
-                      <NavLink class="menu-link" to="/blog" style={{ textDecoration: 'none' }}>
+                      <NavLink className="menu-link" to="/blog" style={{ textDecoration: 'none' }}>
                         <div className="menu-box">
                           <li className="menu-item">BLOG</li>
                         </div>
                       </NavLink>
                       <NavLink
-                        class="menu-link"
+                        className="menu-link"
                         to="/publications"
                         style={{ textDecoration: 'none' }}
                       >
@@ -78,7 +78,7 @@ class Menu extends Component {
                         </div>
                       </NavLink>
                       <NavLink
-                        class="menu-link"
+                        className="menu-link"
                         to="/marketing-archive"
                         style={{ textDecoration: 'none' }}
                       >
@@ -91,12 +91,12 @@ class Menu extends Component {
                 </li>
               </div>
 
-              <NavLink class="menu-link" to="/join-us" style={{ textDecoration: 'none' }}>
+              <NavLink className="menu-link" to="/join-us" style={{ textDecoration: 'none' }}>
                 <div className="menu-box">
                   <li className="menu-item">JOIN</li>
                 </div>
               </NavLink>
-              <NavLink class="menu-link" to="/contact-us" style={{ textDecoration: 'none' }}>
+              <NavLink className="menu-link" to="/contact-us" style={{ textDecoration: 'none' }}>
                 <div className="menu-box">
                   <li className="menu-item" style={{ marginRight: '15px' }}>
 										CONTACT

@@ -23,34 +23,34 @@ class MarketingContent extends Component {
         <div id="parent">
           {/*Left intiatives side bar*/}
           {/*List of 2020 intatives*/}
-          <div class="initiatives">
+          <div className="initiatives">
             <input type="radio" id="2020" name="categories" />
-            <label for="2020" class="side">
+            <label forhtml="2020" className="side">
 							2020
             </label>
             <input type="radio" id="crush" name="categories" />
-            <label for="crush" class="side">
+            <label forhtml="crush" className="side">
 							WIT Crush Wednesday
             </label>
             <input type="radio" id="memes" name="categories" />
-            <label for="memes" class="side">
+            <label forhtml="memes" className="side">
 							Memes
             </label>
             <input type="radio" id="mondaymot" name="categories" />
-            <label for="mondaymot" class="side">
+            <label forhtml="mondaymot" className="side">
 							Monday Motivation
             </label>
             <input type="radio" id="mascot" name="categories" />
-            <label for="mascot" class="side">
+            <label forhtml="mascot" className="side">
 							Mascot
             </label>
             <input type="radio" id="careers" name="categories" />
-            <label for="careers" class="side">
+            <label forhtml="careers" className="side">
 							Careers Guide
             </label>
 
             {/*Image collage*/}
-            <ol class="grid" id="content">
+            <ol className="grid" id="content">
               <WCW
                 fb="https://www.facebook.com/unsw.wit/posts/2427752177529649"
                 imgUrl="/initiatives/wcw/sophiewarner.png"

@@ -5,10 +5,10 @@ import '../marketing-content/content.css';
 class Other extends Component {
   render() {
     return (
-      <li class="image other">
-        <a href={this.props.fb} class="darken" target="_blank" rel="noopener noreferrer">
-          <img src={process.env.PUBLIC_URL + this.props.imgUrl} alt={this.props.alt} resizeMode="contain" />
-          <div class="message">{this.props.date}</div>
+      <li className="image other">
+        <a href={this.props.fb} className="darken" target="_blank" rel="noopener noreferrer">
+          <img src={process.env.PUBLIC_URL + this.props.imgUrl} alt={this.props.alt} />
+          <div className="message">{this.props.date}</div>
         </a>
       </li>
     );

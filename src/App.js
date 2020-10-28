@@ -135,8 +135,8 @@ class App extends Component {
 	    <div>
 	      <HashRouter basename="/">
 	        <Menu open={this.state.menuOpen} />
-	        <nav class="navbar navbar-expand-md navbar-dark bg-custom fixed-top">
-	          <a class="navbar-brand" href="/">
+	        <nav className="navbar navbar-expand-md navbar-dark bg-custom fixed-top">
+	          <a className="navbar-brand" href="/">
 	            <img
 	              src={process.env.PUBLIC_URL + './logo-black.png'}
 	              className="photo"
@@ -149,50 +149,50 @@ class App extends Component {
 	              }}
 	            />
 	          </a>
-	          <div class="navbar-collapse collapse w-100">
-	            <ul class="navbar-nav ml-auto">
-	              <li class="nav-item">
+	          <div className="navbar-collapse collapse w-100">
+	            <ul className="navbar-nav ml-auto">
+	              <li className="nav-item">
 	                <NavLink to="/">HOME</NavLink>
 	              </li>
-	              <li class="nav-item">
+	              <li className="nav-item">
 	                <NavLink to="/events">EVENTS</NavLink>
 	              </li>
-	              <li class="nav-item">
+	              <li className="nav-item">
 	                <NavLink to="/our-team">TEAM</NavLink>
 	              </li>
-	              <li class="nav-item">
+	              <li className="nav-item">
 	                <NavLink to="/sponsors">SPONSORS</NavLink>
 	              </li>
-	              <li class="nav-item">
+	              <li className="nav-item">
 	                <NavLink to="/opportunities">OPPORTUNITIES</NavLink>
 	              </li>
-	              <li class="nav-item" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
-	                <div class="dropdown" display="static">
-	                  <div class="dropdown-toggle">
-	                    <span class="menuTitle">RESOURCES</span>
+	              <li className="nav-item" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
+	                <div className="dropdown" display="static">
+	                  <div className="dropdown-toggle">
+	                    <span className="menuTitle">RESOURCES</span>
 	                  </div>
-	                  <div class={this.state.showDD ? 'dropdown-menu show' : 'dropdown-menu'}>
-	                    <li class="dropdown-item">
+	                  <div className={this.state.showDD ? 'dropdown-menu show' : 'dropdown-menu'}>
+	                    <div className="dropdown-item">
 	                      <NavLink to="/blog">BLOG</NavLink>
-	                    </li>
-	                    <li class="dropdown-item">
+	                    </div>
+	                    <div className="dropdown-item">
 	                      <NavLink to="/publications">PUBLICATIONS</NavLink>
-	                    </li>
-	                    <li class="dropdown-item">
+	                    </div>
+	                    <div className="dropdown-item">
 	                      <NavLink to="/marketing-archive">MARKETING ARCHIVES</NavLink>
-	                    </li>
+	                    </div>
 	                  </div>
 	                </div>
 	              </li>
-	              <li class="nav-item">
+	              <li className="nav-item">
 	                <NavLink to="/join-us">JOIN</NavLink>
 	              </li>
-	              <li class="nav-item" style={{ marginRight: '15px' }}>
+	              <li className="nav-item" style={{ marginRight: '15px' }}>
 	                <NavLink to="/contact-us">CONTACT</NavLink>
 	              </li>
 	            </ul>
 	          </div>
-	          <li class="nav-item-btn">
+	          <li className="nav-item-btn">
 	            <MenuBtn open={this.state.menuOpen} onClick={this.handleMenuClick} />
 	          </li>
 	        </nav>
@@ -209,7 +209,7 @@ class App extends Component {
 	          <Route path="/opportunities" component={Opportunities} />
 	          <Route path="/contact-us" component={ContactUs} />
 	          <Route path="/publications" component={Publications} />
-	          {this.blogPosts.map((object, i) => <Route path={'/blog/' + (i + 1)} component={object} />)}
+	          {this.blogPosts.map((object, i) => <Route key={i} path={'/blog/' + (i + 1)} component={object} />)}
 	        </Switch>
 	      </HashRouter>
 	      <div>

@@ -9,7 +9,7 @@ class OppCard extends Component {
       <div>
         {/*for the blog post author*/}
         {Object.keys(this.props.details).map((key, index) => (
-          <div class="opp-post">
+          <div key={index} class="opp-post">
             <table cellpadding="0">
               <tr>
                 <tr>
