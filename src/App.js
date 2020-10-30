@@ -66,7 +66,6 @@ class App extends Component {
     };
     this.handleHover = this.handleHover.bind(this);
     this.handleMenuClick = this.handleMenuClick.bind(this);
-    this.handleMenuClickClose = this.handleMenuClickClose.bind(this);
   }
 
   handleMenuClick() {
@@ -75,11 +74,6 @@ class App extends Component {
     });
   }
 
-  handleMenuClickClose() {
-    this.setState({
-      menuOpen: true,
-    });
-  }
 
   handleHover(e) {
     this.setState({
@@ -106,7 +100,7 @@ class App extends Component {
     return (
       <div>
         <HashRouter basename="/">
-          <Menu open={this.state.menuOpen} />
+          <Menu open={this.state.menuOpen} handleMenuClick={this.handleMenuClick.bind(this)} />
           <nav class="navbar navbar-expand-md navbar-dark bg-custom fixed-top">
             <a class="navbar-brand" href="/">
               <img
@@ -125,7 +119,7 @@ class App extends Component {
             <div class="navbar-collapse collapse w-100">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <NavLink to="/" onClick={this.handleMenuClickClose}>HOME</NavLink>
+                  <NavLink to="/" >HOME</NavLink>
                 </li>
                 <li class="nav-item">
                   <NavLink to="/events">EVENTS</NavLink>
