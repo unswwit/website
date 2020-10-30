@@ -109,6 +109,7 @@ class App extends Component {
     });
   }
 
+
   handleHover(e) {
     this.setState({
       showDD: !this.state.showDD,
@@ -125,7 +126,7 @@ class App extends Component {
   componentDidMount() {
     window.addEventListener("resize", this.updateMenu);
   }
-
+  
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateMenu);
   }
@@ -134,6 +135,10 @@ class App extends Component {
     return (
       <div>
         <HashRouter basename="/">
+
+          <Menu open={this.state.menuOpen} handleMenuClick={this.handleMenuClick.bind(this)} />
+          <nav className="navbar navbar-expand-md navbar-dark bg-custom fixed-top">
+            <a className="navbar-brand" href="/">
           <Menu open={this.state.menuOpen} />
           <nav className="navbar navbar-expand-md navbar-dark bg-custom fixed-top">
             <a className="navbar-brand" href="/">

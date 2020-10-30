@@ -33,6 +33,7 @@ class Menu extends Component {
                 className="menu-link"
                 to="/"
                 style={{ textDecoration: "none" }}
+                onClick={this.props.handleMenuClick}
               >
                 <div className="menu-box">
                   <li className="menu-item">HOME</li>
@@ -42,6 +43,7 @@ class Menu extends Component {
                 className="menu-link"
                 to="/events"
                 style={{ textDecoration: "none" }}
+                onClick={this.props.handleMenuClick}
               >
                 <div className="menu-box">
                   <li className="menu-item">EVENTS</li>
@@ -51,6 +53,7 @@ class Menu extends Component {
                 className="menu-link"
                 to="/our-team"
                 style={{ textDecoration: "none" }}
+                onClick={this.props.handleMenuClick}
               >
                 <div className="menu-box">
                   <li className="menu-item">TEAM</li>
@@ -60,6 +63,7 @@ class Menu extends Component {
                 className="menu-link"
                 to="/sponsors"
                 style={{ textDecoration: "none" }}
+                onClick={this.props.handleMenuClick}
               >
                 <div className="menu-box">
                   <li className="menu-item">SPONSORS</li>
@@ -69,6 +73,7 @@ class Menu extends Component {
                 className="menu-link"
                 to="/opportunities"
                 style={{ textDecoration: "none" }}
+                onClick={this.props.handleMenuClick}
               >
                 <div className="menu-box">
                   <li className="menu-item">OPPORTUNITIES</li>
@@ -90,6 +95,7 @@ class Menu extends Component {
                         className="menu-link"
                         to="/blog"
                         style={{ textDecoration: "none" }}
+                        onClick={this.props.handleMenuClick}
                       >
                         <div className="menu-box">
                           <li className="menu-item">BLOG</li>
@@ -99,6 +105,7 @@ class Menu extends Component {
                         className="menu-link"
                         to="/publications"
                         style={{ textDecoration: "none" }}
+                        onClick={this.props.handleMenuClick}
                       >
                         <div className="menu-box">
                           <li className="menu-item">PUBLICATIONS</li>
@@ -108,6 +115,7 @@ class Menu extends Component {
                         className="menu-link"
                         to="/marketing-archive"
                         style={{ textDecoration: "none" }}
+                        onClick={this.props.handleMenuClick}
                       >
                         <div className="menu-box">
                           <li className="menu-item">MARKETING ARCHIVES</li>
@@ -122,6 +130,7 @@ class Menu extends Component {
                 className="menu-link"
                 to="/join-us"
                 style={{ textDecoration: "none" }}
+                onClick={this.props.handleMenuClick}
               >
                 <div className="menu-box">
                   <li className="menu-item">JOIN</li>
@@ -131,6 +140,7 @@ class Menu extends Component {
                 className="menu-link"
                 to="/contact-us"
                 style={{ textDecoration: "none" }}
+                onClick={this.props.handleMenuClick}
               >
                 <div className="menu-box">
                   <li className="menu-item" style={{ marginRight: "15px" }}>
