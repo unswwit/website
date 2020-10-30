@@ -15,7 +15,6 @@
   font-size: 34pt;
   letter-spacing: 4px;
   margin-top: 8vw;
-  
 }
 
 /*Blog subtitle*/
@@ -33,10 +32,11 @@
   margin: auto;
 }
 
-
-p, th, td {
+p,
+th,
+td {
   color: #707070;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12pt;
   text-align: justify;
 }
@@ -68,7 +68,7 @@ p.date {
 
 .list {
   color: #707070;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12pt;
   text-align: justify;
   font-weight: 300;
@@ -94,10 +94,9 @@ img.floatRight {
   text-decoration: underline;
 }
 
-.post-content a:hover{
+.post-content a:hover {
   color: #feb14b;
 }
-
 
 .blog-content img {
   height: 300px;
@@ -135,7 +134,8 @@ a:hover {
   width: 100%;
 }
 
-.post th, .post td {
+.post th,
+.post td {
   padding: 10px;
   text-align: left;
 }
@@ -144,6 +144,15 @@ a:hover {
   background-color: #feb14b;
   color: white;
   font-weight: 500;
+}
+
+/*Used for pictures in blog 34*/
+.img-general {
+  width: 35%;
+  height: auto;
+  object-fit: contain;
+  margin: none;
+  padding: none;
 }
 
 /*-------------------------------Author card-----------------------------*/
@@ -166,18 +175,18 @@ a:hover {
   border-radius: 50%;
   height: 100%;
   overflow: hidden;
-  width: 100%
+  width: 100%;
 }
 
 .vivw_img {
   height: auto;
-  transform: translate( -5%, -10%);
+  transform: translate(-5%, -10%);
   width: 120%;
 }
 
 .vic_img {
   height: auto;
-  transform: translate( -5%, -5%);
+  transform: translate(-5%, -5%);
   width: 120%;
 }
 
@@ -187,13 +196,13 @@ a:hover {
   padding: 0px 0px 0px 30px;
   letter-spacing: 2px;
   color: #feb14b;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   text-align: left;
 }
 
 .author-name {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 20pt;
   margin: 0;
   padding: 0;
@@ -206,7 +215,7 @@ a:hover {
 }
 
 .author-right p {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: #707070;
   font-size: 1vw;
@@ -229,7 +238,7 @@ a:hover {
     width: 100%;
     height: 100%;
   }
-  
+
   .pic {
     max-width: 70%;
   }
@@ -238,14 +247,14 @@ a:hover {
 @media only screen and (max-width: 700px) {
   .outer-box {
     flex-direction: column;
-  }   
+  }
 }
 
 @media only screen and (max-width: 600px) {
   .blog-title {
     font-size: 20pt;
   }
-  
+
   .post-heading {
     font-size: 18pt;
   }
@@ -278,7 +287,7 @@ a:hover {
 
   .blog-content img {
     height: auto;
-    padding: 5px;   
+    padding: 5px;
   }
 }
 
@@ -286,7 +295,7 @@ a:hover {
   .blog-title {
     font-size: 16.5pt;
   }
-  
+
   .post-heading {
     font-size: 16.5pt;
   }
@@ -299,8 +308,8 @@ a:hover {
     float: none;
   }
 
-  .blog-content p:not(.date), .blog-content li {
+  .blog-content p:not(.date),
+  .blog-content li {
     text-align: left;
   }
 }
-

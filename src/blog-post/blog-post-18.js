@@ -13,11 +13,8 @@ class blogPost18 extends Component {
   render() {
     return (
       <div>
-      {/* Cover Photo */}
-      <PageHeader
-        imgUrl="/blog-header.png"
-        title="Blog Post #18"
-      />
+        {/* Cover Photo */}
+        <PageHeader imgUrl="/blog-header.png" title="Blog Post #18" />
 
         {/*End of Header*/}
 
@@ -131,8 +128,10 @@ class blogPost18 extends Component {
                 <li>The challenge</li>
                 <br />
                 <li>
-                  Knowing you reached the bottom 
-                  <span role="img" aria-label="party">🥳</span>
+                  Knowing you reached the bottom
+                  <span role="img" aria-label="party">
+                    🥳
+                  </span>
                 </li>
                 <br />
                 <li>Finding out what’s at the bottom</li>
@@ -312,7 +311,6 @@ class blogPost18 extends Component {
               it’s ever-evolving nature and how it disrupts the modern business
               landscape,” like Calista (WIT member).
             </p>
-            <br />
             <br />
             <br />
 

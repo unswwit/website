@@ -50,16 +50,51 @@ import blogPost28 from "./blog-post/blog-post-28";
 import blogPost29 from "./blog-post/blog-post-29";
 import blogPost30 from "./blog-post/blog-post-30";
 import blogPost31 from "./blog-post/blog-post-31";
+import blogPost32 from "./blog-post/blog-post-32";
+import blogPost33 from "./blog-post/blog-post-33";
+import blogPost34 from "./blog-post/blog-post-34";
+import blogPost35 from "./blog-post/blog-post-35";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.blogPosts = [blogPost1, blogPost2, blogPost3, blogPost4, blogPost5, blogPost6, 
-                      blogPost7, blogPost8, blogPost9, blogPost10, blogPost11, blogPost12,
-                      blogPost13, blogPost14, blogPost15, blogPost16, blogPost17, blogPost18, 
-                      blogPost19, blogPost20, blogPost21, blogPost22, blogPost23, blogPost24,
-                      blogPost25, blogPost26, blogPost27, blogPost28, blogPost29, blogPost30,
-                      blogPost31];
+    this.blogPosts = [
+      blogPost1,
+      blogPost2,
+      blogPost3,
+      blogPost4,
+      blogPost5,
+      blogPost6,
+      blogPost7,
+      blogPost8,
+      blogPost9,
+      blogPost10,
+      blogPost11,
+      blogPost12,
+      blogPost13,
+      blogPost14,
+      blogPost15,
+      blogPost16,
+      blogPost17,
+      blogPost18,
+      blogPost19,
+      blogPost20,
+      blogPost21,
+      blogPost22,
+      blogPost23,
+      blogPost24,
+      blogPost25,
+      blogPost26,
+      blogPost27,
+      blogPost28,
+      blogPost29,
+      blogPost30,
+      blogPost31,
+      blogPost32,
+      blogPost33,
+      blogPost34,
+      blogPost35,
+    ];
     this.state = {
       showDD: false,
       menuOpen: false,
@@ -100,14 +135,17 @@ class App extends Component {
     return (
       <div>
         <HashRouter basename="/">
+
           <Menu open={this.state.menuOpen} handleMenuClick={this.handleMenuClick.bind(this)} />
-          <nav class="navbar navbar-expand-md navbar-dark bg-custom fixed-top">
-            <a class="navbar-brand" href="/">
+          <nav className="navbar navbar-expand-md navbar-dark bg-custom fixed-top">
+            <a className="navbar-brand" href="/">
+          <Menu open={this.state.menuOpen} />
+          <nav className="navbar navbar-expand-md navbar-dark bg-custom fixed-top">
+            <a className="navbar-brand" href="/">
               <img
                 src={process.env.PUBLIC_URL + "./logo-black.png"}
                 className="photo"
                 alt="wit logo"
-                resizemode="contain"
                 style={{
                   width: "35px",
                   marginLeft: "15px",
@@ -116,62 +154,62 @@ class App extends Component {
                 }}
               />
             </a>
-            <div class="navbar-collapse collapse w-100">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <NavLink to="/" >HOME</NavLink>
+            <div className="navbar-collapse collapse w-100">
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                  <NavLink to="/">HOME</NavLink>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <NavLink to="/events">EVENTS</NavLink>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <NavLink to="/our-team">TEAM</NavLink>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <NavLink to="/sponsors">SPONSORS</NavLink>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <NavLink to="/opportunities">OPPORTUNITIES</NavLink>
                 </li>
                 <li
-                  class="nav-item"
+                  className="nav-item"
                   onMouseEnter={this.handleHover}
                   onMouseLeave={this.handleHover}
                 >
-                  <div class="dropdown" display="static">
-                    <div class="dropdown-toggle">
-                      <span class="menuTitle">RESOURCES</span>
+                  <div className="dropdown" display="static">
+                    <div className="dropdown-toggle">
+                      <span className="menuTitle">RESOURCES</span>
                     </div>
                     <div
-                      class={
+                      className={
                         this.state.showDD
                           ? "dropdown-menu show"
                           : "dropdown-menu"
                       }
                     >
-                      <li class="dropdown-item">
+                      <div className="dropdown-item">
                         <NavLink to="/blog">BLOG</NavLink>
-                      </li>
-                      <li class="dropdown-item">
+                      </div>
+                      <div className="dropdown-item">
                         <NavLink to="/publications">PUBLICATIONS</NavLink>
-                      </li>
-                      <li class="dropdown-item">
+                      </div>
+                      <div className="dropdown-item">
                         <NavLink to="/marketing-archive">
                           MARKETING ARCHIVES
                         </NavLink>
-                      </li>
+                      </div>
                     </div>
                   </div>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <NavLink to="/join-us">JOIN</NavLink>
                 </li>
-                <li class="nav-item" style={{ marginRight: "15px" }}>
+                <li className="nav-item" style={{ marginRight: "15px" }}>
                   <NavLink to="/contact-us">CONTACT</NavLink>
                 </li>
               </ul>
             </div>
-            <li class="nav-item-btn">
+            <li className="nav-item-btn">
               <MenuBtn
                 open={this.state.menuOpen}
                 onClick={this.handleMenuClick}
@@ -198,7 +236,9 @@ class App extends Component {
             <Route path="/opportunities" component={Opportunities} />
             <Route path="/contact-us" component={ContactUs} />
             <Route path="/publications" component={Publications} />
-            { this.blogPosts.map((object, i) => <Route path={"/blog/" + (i+1)} component={object} />) }
+            {this.blogPosts.map((object, i) => (
+              <Route key={i} path={"/blog/" + (i + 1)} component={object} />
+            ))}
           </Switch>
         </HashRouter>
         <div>

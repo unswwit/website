@@ -27,10 +27,20 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prettier": "prettier --write src/"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "camelcase": "error",
+      "no-unused-vars": "error",
+      "no-use-before-define": "error"
+    }
   },
   "browserslist": {
     "production": [
@@ -46,6 +56,7 @@
   },
   "devDependencies": {
     "gh-pages": "^2.2.0",
+    "prettier": "2.1.2",
     "react-social-icons": "^4.1.0"
   }
 }

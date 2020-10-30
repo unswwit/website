@@ -1,253 +1,256 @@
 /*---------------------------Executive team profiles--------------------------*/
 /*Executive team section*/
 .all_execs_section {
-    align-content: center;
-    justify-content: center;
+  align-content: center;
+  justify-content: center;
 }
 
 .exec_row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 
 .exec_col {
-    display: flex;
-    flex-basis: 100%;
-    flex-direction: column;
-    flex: 1;
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  flex: 1;
 }
 
 /*Subtitle*/
-h2.team-heading{
-    padding: 75px 0px;
+h2.team-heading {
+  padding: 75px 0px;
 }
 
 /*Executive profile images*/
 .profile_crop {
-    border-radius: 50%;
-    height: 250px;
-    width: 250px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    object-fit: contain;
-    overflow: hidden;
-    position: relative;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+  position: relative;
 }
 
 .profile_img {
-    background-size: cover;
-    display: block;
-    height: 100%;
-    margin: 0 auto;
-    transform: translate( -15%, 0);
-    width: auto;
+  background-size: cover;
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+  transform: translate(-15%, 0);
+  width: auto;
 }
 
 /*Transform executive profile images*/
 .gab_img {
-    transform: translate( 0%, 0);
+  transform: translate(0%, 0);
 }
 
 .vivw_img {
-    height: auto;
-    transform: translate( -5%, -10%);
-    width: 120%;
+  height: auto;
+  transform: translate(-5%, -10%);
+  width: 120%;
 }
 
 .alison_img {
-    transform: translate( -17%, 0);
+  transform: translate(-17%, 0);
 }
 
 .eli_img {
-    transform: translate( -7%, 0%);
+  transform: translate(-7%, 0%);
 }
 
 .fel_img {
-    transform: translate( -12%, 0);
+  transform: translate(-12%, 0);
 }
 
 /*Executive profile block*/
 .profile {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-    position: relative;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  position: relative;
 }
 
 /*Executive profile details*/
 .profile_details {
-    align-content: center;
-    justify-content: space-evenly;
-    line-height: 13pt;
-    margin: 25px 0px 70px 0px;
-    text-align: center;
+  align-content: center;
+  justify-content: space-evenly;
+  line-height: 13pt;
+  margin: 25px 0px 70px 0px;
+  text-align: center;
 }
 
 /*Executive social media links*/
 .icon_bar {
-    align-content: center;
-    
+  align-content: center;
 }
 .icon {
-    border: 0;
-    height: 25px;
-    width: 25px;
-    margin: 0 auto;
-    margin-left: 10px;
-    margin-right: 10px;
-    align-self: center;
+  border: 0;
+  height: 25px;
+  width: 25px;
+  margin: 0 auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  align-self: center;
 }
 
 /*Executive names*/
 .profile_text_name {
-    align-content: center;
-    color: #feb14b;
-    font-family: 'Playfair Display', serif;
-    font-size: 2vw;
-    letter-spacing: 0.1vw;
-    position: relative;
-    text-align: center;
+  align-content: center;
+  color: #feb14b;
+  font-family: "Playfair Display", serif;
+  font-size: 2vw;
+  letter-spacing: 0.1vw;
+  position: relative;
+  text-align: center;
 }
 
 /*Executive positions*/
 .profile_text_position {
-    align-content: center;
-    color:  #313638;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.3vw;
-    font-weight: 400;
-    letter-spacing: 0.1vw;
-    padding-top: 10pt;
-    position: relative;
-    text-align: center;
+  align-content: center;
+  color: #313638;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3vw;
+  font-weight: 400;
+  letter-spacing: 0.1vw;
+  padding-top: 10pt;
+  position: relative;
+  text-align: center;
 }
 
 /*Executive degrees*/
 .profile_degree {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.3vw;
-    font-weight: lighter;
-    letter-spacing: 0.1vw;
-    position: relative;
-    white-space: initial;
-    word-wrap: break-word;
-    text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3vw;
+  font-weight: lighter;
+  letter-spacing: 0.1vw;
+  position: relative;
+  white-space: initial;
+  word-wrap: break-word;
+  text-align: center;
 }
 
 /*---------------------------Subcommittee team profiles--------------------------*/
 .subcom_section {
-    align-content: center;
-    justify-content: center;
+  align-content: center;
+  justify-content: center;
 }
 
 /*Subcommittee team section*/
 .subcom-type {
-    font-family: 'Playfair Display', serif;
-    text-align: center;
-    color: #feb14b;
-    margin-top: 6vw;
-    margin-bottom: 2vw;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  color: #feb14b;
+  margin-top: 6vw;
+  margin-bottom: 2vw;
 }
 
 /*Subcommittee names*/
 .subcom_profile_name {
-    font-family: 'Montserrat', sans-serif;
-    color: #feb14b;
-    font-size: 1.3vw;
-    letter-spacing: 0.1vw;
-    position: relative;
-    font-weight: 500;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    flex-shrink: 2;
+  font-family: "Montserrat", sans-serif;
+  color: #feb14b;
+  font-size: 1.3vw;
+  letter-spacing: 0.1vw;
+  position: relative;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  flex-shrink: 2;
 }
 
 /*Subcommittee degrees*/
 .subcom_profile_degree {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.3vw;
-    letter-spacing: 0.1vw;
-    position: relative;
-    word-wrap: break-word;
-    text-align: left;
-    margin: 0;
-    padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3vw;
+  letter-spacing: 0.1vw;
+  position: relative;
+  word-wrap: break-word;
+  text-align: left;
+  margin: 0;
+  padding: 0;
 }
 
 .subcom_row {
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;
-    width: 70%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 70%;
 }
 
 .subcom_col {
-    align-items: flex-start;
-    margin-right: 5%;
-    flex: 1;
+  align-items: flex-start;
+  margin-right: 5%;
+  flex: 1;
 }
 
 .subcom_longer_col {
-    align-items: flex-start;
-    flex: 2;
+  align-items: flex-start;
+  flex: 2;
 }
 
 .profile {
-    margin: 15px;
-    padding: 0;
+  margin: 15px;
+  padding: 0;
 }
 
 /*---------------------------Mobile resizing--------------------------*/
 @media screen and (max-width: 800px) {
-    .team-heading {
-        font-size: 24px;
-    }
+  .team-heading {
+    font-size: 24px;
+  }
 
-    .subcom-type, .profile_text_name {
-        font-size: 20px;
-    }
+  .subcom-type,
+  .profile_text_name {
+    font-size: 20px;
+  }
 
-    .profile_text_position {
-        font-size: 18px;
-    }
+  .profile_text_position {
+    font-size: 18px;
+  }
 
-    .profile_degree,
-    .subcom_profile_degree, .subcom_profile_name {
-        font-size: 16px;
-    }
+  .profile_degree,
+  .subcom_profile_degree,
+  .subcom_profile_name {
+    font-size: 16px;
+  }
 
-    .exec_row {
-        flex-direction: column;
-    }
-    
-    .team-heading, .subcom_section, .subcom_type {
-        width: 90%;
-        margin: 0 auto;
-    }
+  .exec_row {
+    flex-direction: column;
+  }
 
-    .subcom_row {
-        display: inline-grid;
-        width: 100%;
-        grid-template-columns: 90px auto;
-        grid-gap: 15px;
-        align-content: start;
-    }
+  .team-heading,
+  .subcom_section,
+  .subcom_type {
+    width: 90%;
+    margin: 0 auto;
+  }
 
-    .subcom_profile_degree {
-        overflow-wrap: break-word;
-        word-break: break-word;
-        hyphens: auto;
-    }
+  .subcom_row {
+    display: inline-grid;
+    width: 100%;
+    grid-template-columns: 90px auto;
+    grid-gap: 15px;
+    align-content: start;
+  }
 
-    .profile_crop {
-        width: 200px;
-        height: 200px;
-    }
+  .subcom_profile_degree {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  .profile_crop {
+    width: 200px;
+    height: 200px;
+  }
 }

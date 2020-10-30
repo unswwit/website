@@ -1,133 +1,132 @@
 /*-------------------------------Opportunities Preview-----------------------------*/
 /*Opportunities circle crop*/
 .opp-frame {
-    border-radius: 50%;
-    height: 5.5vw;
-    overflow: hidden;
-    width: 5.5vw;
-    margin-right: 1.5vw;
-    margin-left: 0px;
+  border-radius: 50%;
+  height: 5.5vw;
+  overflow: hidden;
+  width: 5.5vw;
+  margin-right: 1.5vw;
+  margin-left: 0px;
 }
 
 /*Author image*/
 .opp-img {
-    max-width:100%;
-    max-height:100%;
-    transform: translate( 0%, 20%);
+  max-width: 100%;
+  max-height: 100%;
+  transform: translate(0%, 20%);
 }
 
 /*Opportunities preview*/
 table {
-    border: none;
-    border-color: #a0a0a0;
-    border-width: 2px;
-    width: 350px;
-    height: auto;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border: none;
+  border-color: #a0a0a0;
+  border-width: 2px;
+  width: 350px;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .container {
-    display: flex;
-    align-items: stretch;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0px;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0px;
 }
 
 .opp-grid {
-    margin: 125px;
+  margin: 125px;
 }
 
 .opp-details {
-    margin-top: 1vw;
+  margin-top: 1vw;
 }
 
 .opp-preview {
-    padding: 2vw;
+  padding: 2vw;
 }
 
 .opp-post {
-    padding: 10px;
+  padding: 10px;
 }
 
 .heading {
-    color: #FEB14B;
-    letter-spacing: 0.1vw;
-    font-size: 14pt;
-    font-family: Roboto;
-    text-decoration: none;
-    margin-bottom: 10px;
+  color: #feb14b;
+  letter-spacing: 0.1vw;
+  font-size: 14pt;
+  font-family: Roboto;
+  text-decoration: none;
+  margin-bottom: 10px;
 }
 
 .job-position {
-    color: #313638;
-    letter-spacing: 0.1vw;
-    font-size: 14pt;
-    font-family: Roboto;
-    text-decoration: none;
-    margin-bottom: 10px;
+  color: #313638;
+  letter-spacing: 0.1vw;
+  font-size: 14pt;
+  font-family: Roboto;
+  text-decoration: none;
+  margin-bottom: 10px;
 }
 
 .heading:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .subheading {
-    color: #707070;
-    letter-spacing: 0.1vw;
-    font-size: 11pt;
-    font-family: Roboto;
-    font-weight: 300;
+  color: #707070;
+  letter-spacing: 0.1vw;
+  font-size: 11pt;
+  font-family: Roboto;
+  font-weight: 300;
 }
 
 .blog-link:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .more-link {
-    color: #FEB14B;
-    letter-spacing: 0.05vw;
-    font-size: 11pt;
-    font-family: Roboto;
-    font-weight: 300;
-    text-align: right;
-    margin-top: 10px;
+  color: #feb14b;
+  letter-spacing: 0.05vw;
+  font-size: 11pt;
+  font-family: Roboto;
+  font-weight: 300;
+  text-align: right;
+  margin-top: 10px;
 }
-
 
 /*-------------------------------Masonry grid Preview-----------------------------*/
 
 /* Masonry grid */
 .masonry {
-    transition: all .5s ease-in-out;
-    column-gap: 30px;
-    column-fill: initial;
-  }
+  transition: all 0.5s ease-in-out;
+  column-gap: 30px;
+  column-fill: initial;
+}
 
 /* Masonry item */
 .masonry .brick {
-margin-bottom: 30px;
-display: inline-block; /* Fix the misalignment of items */
-vertical-align: top; /* Keep the item on the very top */
+  margin-bottom: 30px;
+  display: inline-block; /* Fix the misalignment of items */
+  vertical-align: top; /* Keep the item on the very top */
 }
 
 /*-------------------------------Join us ipad------------------------------*/
 @media only screen and (max-width: 1100px) {
-    .opp-grid {
-        margin: 40px;
-    }
+  .opp-grid {
+    margin: 40px;
+  }
 }
 
 /*-------------------------------Join us mobile------------------------------*/
 @media only screen and (max-width: 850px) {
-    .opp-grid {
-        margin: 10px;
-    }
+  .opp-grid {
+    margin: 10px;
+  }
 }
 
 /*-------------------------------Join us very small screen------------------------------*/
 @media only screen and (max-width: 260px) {
-    .opp-grid {
-        margin: 5px;
-    }
+  .opp-grid {
+    margin: 5px;
+  }
 }

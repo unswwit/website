@@ -1,35 +1,35 @@
 /*-------------------------------Join us socials------------------------------*/
 /*Body block*/
 .joinUsBody {
-    max-width: 80%;
-    text-align: center;
-    margin: auto;
-    padding-top: 130px;
-    padding-bottom: 125px;
-    margin-bottom: 300px;
+  max-width: 80%;
+  text-align: center;
+  margin: auto;
+  padding-top: 130px;
+  padding-bottom: 125px;
+  margin-bottom: 300px;
 }
 
 /*Google Map screenshot image*/
 .googleMap {
-    width: 43%;
-    padding: 0px;
-    height: 300px;
-    float: left;
-    object-fit: cover;
+  width: 43%;
+  padding: 0px;
+  height: 300px;
+  float: left;
+  object-fit: cover;
 }
 
 /*Right side block*/
 .joinUsRight {
-    width: 57%;
-    height: 300px;
-    text-align: left;
-    padding: 0px 10px 10% 10%;
-    float: right;
+  width: 57%;
+  height: 300px;
+  text-align: left;
+  padding: 0px 10px 10% 10%;
+  float: right;
 }
 
 /*Heading*/
 .joinUsRight h2 {
-    text-align: left;
+  text-align: left;
 }
 
 /*Container for buttons*/
