@@ -139,9 +139,6 @@ class App extends Component {
           <Menu open={this.state.menuOpen} handleMenuClick={this.handleMenuClick.bind(this)} />
           <nav className="navbar navbar-expand-md navbar-dark bg-custom fixed-top">
             <a className="navbar-brand" href="/">
-          <Menu open={this.state.menuOpen} />
-          <nav className="navbar navbar-expand-md navbar-dark bg-custom fixed-top">
-            <a className="navbar-brand" href="/">
               <img
                 src={process.env.PUBLIC_URL + "./logo-black.png"}
                 className="photo"
