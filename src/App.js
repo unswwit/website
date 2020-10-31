@@ -157,6 +157,9 @@ class App extends Component {
                   <NavLink to="/">HOME</NavLink>
                 </li>
                 <li className="nav-item">
+                  <NavLink to="/blog">BLOG</NavLink>
+                </li>
+                <li className="nav-item">
                   <NavLink to="/events">EVENTS</NavLink>
                 </li>
                 <li className="nav-item">
@@ -164,9 +167,6 @@ class App extends Component {
                 </li>
                 <li className="nav-item">
                   <NavLink to="/sponsors">SPONSORS</NavLink>
-                </li>
-                <li className="nav-item">
-                  <NavLink to="/opportunities">OPPORTUNITIES</NavLink>
                 </li>
                 <li
                   className="nav-item"
@@ -185,7 +185,7 @@ class App extends Component {
                       }
                     >
                       <div className="dropdown-item">
-                        <NavLink to="/blog">BLOG</NavLink>
+                        <NavLink to="/opportunities">OPPORTUNITIES</NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/publications">PUBLICATIONS</NavLink>

@@ -41,6 +41,16 @@ class Menu extends Component {
               </NavLink>
               <NavLink
                 className="menu-link"
+                to="/blog"
+                style={{ textDecoration: "none" }}
+                onClick={this.props.handleMenuClick}
+              >
+                <div className="menu-box">
+                  <li className="menu-item">BLOG</li>
+                </div>
+              </NavLink>
+              <NavLink
+                className="menu-link"
                 to="/events"
                 style={{ textDecoration: "none" }}
                 onClick={this.props.handleMenuClick}
@@ -69,16 +79,7 @@ class Menu extends Component {
                   <li className="menu-item">SPONSORS</li>
                 </div>
               </NavLink>
-              <NavLink
-                className="menu-link"
-                to="/opportunities"
-                style={{ textDecoration: "none" }}
-                onClick={this.props.handleMenuClick}
-              >
-                <div className="menu-box">
-                  <li className="menu-item">OPPORTUNITIES</li>
-                </div>
-              </NavLink>
+              
               <div>
                 <li className="menu-item">
                   <div
@@ -93,12 +94,12 @@ class Menu extends Component {
                     <div>
                       <NavLink
                         className="menu-link"
-                        to="/blog"
+                        to="/opportunities"
                         style={{ textDecoration: "none" }}
                         onClick={this.props.handleMenuClick}
                       >
                         <div className="menu-box">
-                          <li className="menu-item">BLOG</li>
+                            <li className="menu-item">OPPORTUNITIES</li>
                         </div>
                       </NavLink>
                       <NavLink
