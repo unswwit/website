@@ -13,9 +13,23 @@ class Blog extends Component {
         <PageHeader imgUrl="/blog-header.png" title="Blog Posts" />
 
         {/*Start of blog posts*/}
-        {/*blog post 35*/}
+        {/*blog post 36*/}
         <BlogPreview
           topMargin="10vw"
+          bottomMargin="5vw"
+          blogNo="36"
+          imgUrl="/blog-covers/36-the-byte.png"
+          heading="The Small, the Powerful…The Byte"
+          date="1/11/2020"
+          subheading="The byte is an elemental component in every piece of technology that we use. So how is that relevant to us?"
+          authors={{
+            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield"],
+          }}
+        />
+
+        {/*blog post 35*/}
+        <BlogPreview
+          topMargin="5vw"
           bottomMargin="5vw"
           blogNo="35"
           imgUrl="/blog-covers/35-calista-kusuma.png"
