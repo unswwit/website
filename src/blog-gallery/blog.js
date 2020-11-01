@@ -18,7 +18,7 @@ class Blog extends Component {
           topMargin="10vw"
           bottomMargin="5vw"
           blogNo="36"
-          imgUrl="/blog-header.png"
+          imgUrl="/blog-covers/36-the-byte.png"
           heading="The Small, the Powerful…The Byte"
           date="1/11/2020"
           subheading="The byte is an elemental component in every piece of technology that we use. So how is that relevant to us?"
