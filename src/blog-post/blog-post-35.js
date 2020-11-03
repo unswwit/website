@@ -19,17 +19,17 @@ class blogPost35 extends Component {
         {/*End of Header*/}
 
         {/*Start of blog post*/}
-        <div class="blog-content">
+        <div className="blog-content">
           <div>
-            <h2 class="blog-title">
+            <h2 className="blog-title">
               Introducing: Calista Kusuma, Information Systems and Marketing
               Student
             </h2>
-            <p class="date">28th October 2020</p>
+            <p className="date">28th October 2020</p>
           </div>
 
-          <div class="post">
-            <p class="post-content">
+          <div className="post">
+            <p className="post-content">
               Calista Kusuma is a Marketing and Information Systems student at
               UNSW, passionate about finding new opportunities to grow and
               making an impact with those opportunities. Kusuma has had diverse
@@ -42,10 +42,10 @@ class blogPost35 extends Component {
               career.
             </p>{" "}
             <br />
-            <p class="question">
+            <p className="question">
               Why did you choose to pursue an information systems degree?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               I entered uni with a Bachelor of Commerce (International), not
               knowing what I wanted to do with my career. But I'd always been
               fascinated by technology, its ever-evolving nature and how it
@@ -61,7 +61,7 @@ class blogPost35 extends Component {
               career. So, I chose to change to a Commerce and Information
               Systems degree to explore my curiosities in-depth.
             </p>
-            <p class="post-content">
+            <p className="post-content">
               The differences between information systems and marketing are
               exactly what has made studying them together so enjoyable - I can
               be coding in one tutorial and researching Adidas' brand strategy
@@ -75,18 +75,18 @@ class blogPost35 extends Component {
               pairing- especially how learning information systems is a great
               choice in an increasingly digitized world.
             </p>
-            <p class="post-content">
+            <p className="post-content">
               Overall, my information systems degree has enabled me to be well
               equipped for a tech-driven future, develop strong technical acumen
               through skills like Java and business analysis, and explore a
               range of career fields.
             </p>
             <br />
-            <p class="question">
+            <p className="question">
               What skills do you think are important to continue to develop for
               your future career?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               I feel that self-motivation is an essential skill that sets people
               apart - no matter what career or industry you're in. YOU are the
               only person who can define your career and it's up to you seek out
@@ -99,7 +99,7 @@ class blogPost35 extends Component {
               also valuable to employers who are always looking for proactive
               candidates.
             </p>
-            <p class="post-content">
+            <p className="post-content">
               The ability to adapt to new situations, work under pressure and
               problem solve are also important skills. The business landscape is
               constantly changing, which means that you need to be prepared for
@@ -112,7 +112,7 @@ class blogPost35 extends Component {
               growing your ability to meet deadlines under pressure and adapt to
               unexpected circumstances.
             </p>
-            <p class="post-content">
+            <p className="post-content">
               Finally, I think having some technological acumen is important in
               an increasingly digitized world. Whether this means having a
               technical skill like Java or Python, or being able to understand
@@ -121,11 +121,11 @@ class blogPost35 extends Component {
               innovations for your industry.
             </p>
             <br />
-            <p class="question">
+            <p className="question">
               What are some of the technical skills you learned in your
               information system degree?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               SQL was the first language that I learnt in the degree. It stands
               for Structured Query Language and is the primary language used to
               interact with relational databases. SQL is in high-demand within
@@ -137,7 +137,7 @@ class blogPost35 extends Component {
               things like target market demographics and the effectiveness of an
               advertising campaign.
             </p>
-            <p class="post-content">
+            <p className="post-content">
               Java is another key language that you learn. Java is a programming
               language that is intended to let app developers 'write once, run
               anywhere'. You use Java to build so many things- from mobile,

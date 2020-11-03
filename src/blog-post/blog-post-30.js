@@ -19,17 +19,17 @@ class blogPost30 extends Component {
         {/*End of Header*/}
 
         {/*Start of blog post*/}
-        <div class="blog-content">
+        <div className="blog-content">
           <div>
-            <h2 class="blog-title">
+            <h2 className="blog-title">
               Technical Interview Walkthrough with Amanda Li and Vivian Shen
               (Part 2)
             </h2>
-            <p class="date">11th October 2020</p>
+            <p className="date">11th October 2020</p>
           </div>
 
-          <div class="post">
-            <p class="post-content">
+          <div className="post">
+            <p className="post-content">
               In Technical Interview Walkthrough Part 1, Vivian Shen and Amanda
               Li provided valuable insights into their own experiences regarding
               technical interviews, and the advice they have learned along the
@@ -41,9 +41,9 @@ class blogPost30 extends Component {
             </p>
             <br />
 
-            <p class="question">Technical Interview Step by Step Guide</p>
+            <p className="question">Technical Interview Step by Step Guide</p>
 
-            <p class="post-content">
+            <p className="post-content">
               <strong>Vivian(V)</strong>: I'm Vivian, and I’m a third-year
               studying B. Data Science & Decisions (Computational Major). I am
               the current President of WIT and I was a Google STEP Intern last
@@ -52,7 +52,7 @@ class blogPost30 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               <strong>Amanda(A)</strong>: I’m Amanda, and I’m a third-year
               student studying Software and Biomedical Engineering. I am
               currently the VP for WIT and the Careers Director for EngSoc. I
@@ -62,7 +62,7 @@ class blogPost30 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               The structure of technical interviews would differ depending on
               the company and role you've applied to, so make sure you
               understand your own interview process. Today, we're going to go
@@ -72,109 +72,111 @@ class blogPost30 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               The typical technical interview is ~45 minutes long:
             </p>
 
-            <div style={{ "overflow-x": "auto" }}>
-              <table class="post">
-                <tr>
-                  <th>Time</th>
-                  <th>Task</th>
-                  <th>Comments</th>
-                </tr>
-                <tr style={{ whiteSpace: "nowrap" }}>
-                  <td class="post-content">5 min</td>
-                  <td class="post-content">Self Introductions</td>
-                  <td class="post-content">
+            <div style={{ "overflowX": "auto" }}>
+              <table className="post">
+                <tbody>
+                  <tr>
+                    <th>Time</th>
+                    <th>Task</th>
+                    <th>Comments</th>
+                  </tr>
+                  <tr style={{ whiteSpace: "nowrap" }}>
+                    <td className="post-content">5 min</td>
+                    <td className="post-content">Self Introductions</td>
+                    <td className="post-content">
                     Motivations for applying to this company and this specific
                     role.
-                  </td>
-                </tr>
-                <tr>
-                  <td class="post-content">30-35 min</td>
-                  <td class="post-content">Technical Questions</td>
-                  <td class="post-content">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="post-content">30-35 min</td>
+                    <td className="post-content">Technical Questions</td>
+                    <td className="post-content">
                     Expect to be given either 1 hard question or 2 easy-medium
                     questions for you to CODE up. Always be asked about the time
                     and space complexity of your code
-                  </td>
-                </tr>
-                <tr>
-                  <td class="post-content">5 min</td>
-                  <td class="post-content">Questions to ask the interviewer</td>
-                  <td class="post-content">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="post-content">5 min</td>
+                    <td className="post-content">Questions to ask the interviewer</td>
+                    <td className="post-content">
                     What do you want to know about the company,
                     internship/graduate training process, past intern/graduate
                     projects?{" "}
-                  </td>
-                </tr>
+                    </td>
+                  </tr>
+                </tbody>
               </table>
             </div>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               Today's question is: Given an array, find the duplicate element
             </p>
             <br />
 
-            <ol class="list">
+            <ol className="list">
               {/*part 1*/}
-              <li class="question"> Clarify the question </li>
-              <p class="post-content">
+              <li className="question"> Clarify the question </li>
+              <p className="post-content">
                 Before you begin to code, you should always ask clarifying
                 questions so that you have a holistic understanding of the
                 question at hand.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 "Is our given input just a single array?": yes
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 "What type(s) are we expecting in our array?": positive integers
                 only
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 "What would the numbers look like in the array?": if the array
                 is n+1 size, it will have integers 1 and n (inclusive)
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 "What should our function return? Boolean? The duplicated
                 element?": return the value of the duplicated element or -1 if
                 no duplicate
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 "How many elements would the array be expected to contain?":
                 somewhere between 10-100 000 elements
               </p>
-              <p class="post-content">"Can we get an empty array?": No</p>
-              <p class="post-content">
+              <p className="post-content">"Can we get an empty array?": No</p>
+              <p className="post-content">
                 "Will our array always have one duplicate element?": Yes
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 "Will our array have more than one duplicate element?": No
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 "So if my array was [1,2,3,4,1,5,6,7,8,9] it would return 1
                 correct?": Yes
               </p>
               <br />
               {/*part 2*/}
-              <li class="question">Pick language</li>
-              <p class="post-content">
+              <li className="question">Pick language</li>
+              <p className="post-content">
                 Today we'll be coding in Python since it's the language we're
                 most comfortable programming in.
               </p>
               <br />
               {/*part 3*/}
-              <li class="question">Verbalise your coding strategy </li>
-              <p class="post-content">
+              <li className="question">Verbalise your coding strategy </li>
+              <p className="post-content">
                 Think about your code implementation and verbalize how you
                 intend to implement the code to the interviewer. After the
                 interviewer has given you the 'green light' you should begin by
                 choosing your coding language and start coding it up.
               </p>
               <br />
-              <p class="post-content">
+              <p className="post-content">
                 Begin by saying anything that comes to your mind. You can begin
                 by writing pseudocode (writing your implementation in English)
                 and then translating that line by line. You can also first find
@@ -182,7 +184,7 @@ class blogPost30 extends Component {
                 your implementation.
               </p>
               <br />
-              <p class="post-content">
+              <p className="post-content">
                 The brute force solution here would be to go through the array
                 (iterate) and for every element, go through every element in the
                 array to see if you can find a duplicate. We can do this by
@@ -190,8 +192,8 @@ class blogPost30 extends Component {
               </p>
               <br />
               {/*part 4*/}
-              <li class="question">Start coding</li>
-              <p class="post-content">Pseudocode:</p>
+              <li className="question">Start coding</li>
+              <p className="post-content">Pseudocode:</p>
               <pre>
                 <code>For every element (call this i) in the array:</code>
                 <br />
@@ -233,24 +235,24 @@ class blogPost30 extends Component {
               </pre>{" "}
               <br />
               {/*part 5*/}
-              <li class="question">Optimise as you see fit</li>
-              <p class="post-content">
+              <li className="question">Optimise as you see fit</li>
+              <p className="post-content">
                 If you can think of ways to optimise the solution by yourself
                 that's great! If not, always verbalise your thoughts so the
                 interviewer knows what you're thinking about and they might give
                 you a hint to point you in the right direction.
               </p>
               <br />
-              <p class="post-content">
+              <p className="post-content">
                 Usually, going through all the data structures and algorithms
                 you know and thinking about how they could be applied in this
                 situation would help.
               </p>
               <br />
-              <p class="post-content">
+              <p className="post-content">
                 <strong>Sort the array</strong>
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 We can begin by removing the nested loop by sorting our array
                 first. Sorting first allows us to only compare adjacent elements
                 as duplicates in a sorted list should be next to each other.
@@ -258,7 +260,7 @@ class blogPost30 extends Component {
                 time complexity.
               </p>
               <br />
-              <p class="post-content">
+              <p className="post-content">
                 Python has built-in functions and libraries so take advantage of
                 those instead of writing your own lengthy algorithms. If you are
                 coding in C for example and must sort by yourself, make sure to
@@ -282,10 +284,10 @@ class blogPost30 extends Component {
                 <code style={{ marginLeft: "3em" }}>return -1</code>
               </pre>
               <br />
-              <p class="post-content">
+              <p className="post-content">
                 <strong>Use a hashtable, dictionary or set</strong>
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 Alternatively, we can remove the nested loop by using a
                 hashtable, dictionary or set. These data structures only store
                 unique values. In Python, we can use a dictionary to store all
@@ -294,7 +296,7 @@ class blogPost30 extends Component {
                 be stored in ‘seen’ and hence we have found our duplicate.
               </p>
               <br />
-              <p class="post-content">
+              <p className="post-content">
                 Python has built-in functions and libraries so take advantage of
                 those instead of writing your own lengthy algorithms. If you are
                 coding in C for example and must sort by yourself, make sure to
@@ -321,13 +323,13 @@ class blogPost30 extends Component {
                 <br />
               </pre>
               <br />
-              <p class="post-content">
+              <p className="post-content">
                 <strong>
                   Use an algorithm - Floyd's Tortoise and Hare Cycle Detection
                   Algorithm
                 </strong>
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 Though not necessary, you can also use an existing algorithm to
                 help optimise your solutions. Here, Floyd's Tortoise and Hare
                 Cycle Detection Algorithm has two pointers that move at
@@ -378,10 +380,10 @@ class blogPost30 extends Component {
                 <br />
               </pre>
               <br />
-              <p class="post-content">
+              <p className="post-content">
                 <strong>Using maths</strong>
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 Not everything needs a complex algorithm, sometimes you can
                 solve it mathematically.
               </p>
@@ -403,30 +405,30 @@ class blogPost30 extends Component {
               </pre>
               <br />
               {/*part 6*/}
-              <li class="question">Space & Time Complexity</li>
-              <p class="post-content">
+              <li className="question">Space & Time Complexity</li>
+              <p className="post-content">
                 The interviewer will then ask you to evaluate your code by
                 analysing the amount of space your implementation uses and how
                 long it takes to complete the program and produce an output.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 printDupNaive uses O(1) space and has O(n^2) time complexity
                 where n is the length of the array nums.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 printDupSort uses O(1) space and O(nlogn) time complexity.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 printDupDict uses O(n) space for the dictionary and has O(n)
                 time complexity.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 printDupAlgo uses O(1) space and has O(n) time complexity.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 printDupMaths uses O(1) space and has O(n) time complexity.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 All of our implementations have O(1) space complexity except for
                 printDupDict because we only create variables that store
                 integers or a single element. PrintDupDict has O(n) space
@@ -434,14 +436,14 @@ class blogPost30 extends Component {
                 scenario will store n values (having to loop through the whole
                 array until we see a duplicate).
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 PrintDupNaive has O(n^2) time complexity since there are two
                 loops nested inside each other. Meanwhile, printDupSort has
                 O(nlogn) time complexity due to the in-built, comparison-based
                 sort function. The rest of the implementations have O(n) time
                 complexity as they all use loops but none are nested.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 Revise/Enrol in COMP2521 for more information about space and
                 time complexities.
               </p>

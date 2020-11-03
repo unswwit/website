@@ -17,14 +17,14 @@ class blogPost15 extends Component {
         <PageHeader imgUrl="/blog-header.png" title="Blog Post #15" />
 
         {/*Start of blog post*/}
-        <div class="blog-content">
+        <div className="blog-content">
           <div>
-            <h2 class="blog-title">A Journey in IT with Zitni Handoo</h2>
-            <p class="date">19th July 2020</p>
+            <h2 className="blog-title">A Journey in IT with Zitni Handoo</h2>
+            <p className="date">19th July 2020</p>
           </div>
 
-          <div class="post">
-            <p class="post-content">
+          <div className="post">
+            <p className="post-content">
               Zitni, a final year IT masters student from India, dreams big. She
               would love to use her knowledge of AI to contribute to solving
               problems like cyber attacks or diagnosing diseases. In this blog
@@ -34,16 +34,16 @@ class blogPost15 extends Component {
             </p>
             <br />
 
-            <p class="question">What is your degree about?</p>
-            <p class="post-content">
+            <p className="question">What is your degree about?</p>
+            <p className="post-content">
               I'm studying Information Technology, and my specialization is
               Artificial Intelligence.The courses are mostly technical and
               involve lots of coding, broadly covering major aspects of IT.
             </p>
             <br />
 
-            <p class="question">What inspired you to explore your topic?</p>
-            <p class="post-content">
+            <p className="question">What inspired you to explore your topic?</p>
+            <p className="post-content">
               During my bachelor’s studies, I took up Artificial Intelligence as
               one of my subjects. While studying it, I realized just how much I
               was fascinated by it and how I wanted to explore the field
@@ -58,11 +58,11 @@ class blogPost15 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What skills are most important in order to successfully complete
               the degree?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               I believe that it's very important to be diligent in your studies,
               and consistent hard and smart work is the key. Things can get
               overwhelming at times, and that's alright. What's important is
@@ -73,10 +73,10 @@ class blogPost15 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What piece of advice would you give your younger self?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               I would tell my younger self to continue working without thinking
               of the outcome and enjoy what you're studying. It's so important
               to enjoy what you do, and once you do that, things will
@@ -84,8 +84,8 @@ class blogPost15 extends Component {
             </p>
             <br />
 
-            <p class="question">How did you open opportunities to yourself?</p>
-            <p class="post-content">
+            <p className="question">How did you open opportunities to yourself?</p>
+            <p className="post-content">
               I attended all the lectures and interacted with the professors and
               students to learn about opportunities. And I also actively took
               part in any volunteering opportunities I learned about. During the
@@ -94,11 +94,11 @@ class blogPost15 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               In your opinion, what are the most important skills needed in the
               workforce?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               Technical skills are important, like coding. In addition, various
               soft skills are vital like good communication, teamwork,
               analytical abilities, problem solving, management, and critical
@@ -106,10 +106,10 @@ class blogPost15 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What is your biggest eye-opening moment in recent years?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               The biggest eye opening moment was realizing that if I'm
               determined to do something which I am passionate about, it will go
               a long way in helping me come over the obstacles along the way. A
@@ -123,10 +123,10 @@ class blogPost15 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What would you like the impact of your degree to be?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               The applications of AI are spreading far and wide - from
               driverless cars to cybersecurity intelligence to virtual
               assistants. I'd like my education to serve the society in a

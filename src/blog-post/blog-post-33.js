@@ -19,17 +19,17 @@ class blogPost33 extends Component {
         {/*End of Header*/}
 
         {/*Start of blog post*/}
-        <div class="blog-content">
+        <div className="blog-content">
           <div>
-            <h2 class="blog-title">WCW ~ ALL WIT Exec Team 2020</h2>
-            <p class="date">21st October 2020</p>
+            <h2 className="blog-title">WCW ~ ALL WIT Exec Team 2020</h2>
+            <p className="date">21st October 2020</p>
           </div>
 
-          <div class="post">
-            <p class="question">
+          <div className="post">
+            <p className="question">
               What sparked your interest to study a STEM degree?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               <strong>Amanda</strong>: I always knew I wanted to have a job that
               had both a creative and analytical/logical side and studying
               software was the perfect combination of the two, being able to
@@ -43,8 +43,8 @@ class blogPost33 extends Component {
             </p>
             <br />
 
-            <p class="question">Where do you see yourself in the future?</p>
-            <p class="post-content">
+            <p className="question">Where do you see yourself in the future?</p>
+            <p className="post-content">
               <strong>Elizabeth</strong>: In the near future (5 years or so) I
               still see myself working in a software engineering role hopefully
               doing something that is still challenging and something I can
@@ -59,10 +59,10 @@ class blogPost33 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What is your favourite aspect of being part of WIT Exec Team 2020
             </p>
-            <p class="post-content">
+            <p className="post-content">
               <strong>Vivian Wong</strong>: I loved how I could get involved in
               other portfolios, and I was part of the organising committee for
               Flagship events such as the WIT Hackathon, WIT Industry mentoring
@@ -78,10 +78,10 @@ class blogPost33 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               Who are your personal inspirations and heroes?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               <strong>Kelly</strong>: From a young age, I was always awed by my
               mother’s perseverance and diligence. As a first generation
               immigrant, she is the founder of her very own computer hardware
@@ -93,11 +93,11 @@ class blogPost33 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What is a piece of advice that you would give to your younger
               self?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               <strong>Gabby</strong>: Something that my younger self and current
               self constantly needs reminding is the importance of prioritising
               tasks and commitments, and to never forget to prioritise your
@@ -110,18 +110,18 @@ class blogPost33 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What was the greatest challenge you faced? How did you overcome
               this challenge?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               <strong>Rhea</strong>: Sometimes, our biggest battles are not with
               the outside world but within ourselves. As I slowly transition
               into the workforce, I cannot help but experience the “Imposter
               Syndrome”. With all this talent Among Us, I irrationally fear that
               others will suspect me as an Imposter.
             </p>
-            <p class="post-content">
+            <p className="post-content">
               However, I’m not alone. The only way to overcome feeling like a
               fraud is to recognise that you are not one. Don’t devalue your
               worth and undermine your experience - if you focus on your
@@ -129,11 +129,11 @@ class blogPost33 extends Component {
             </p>
             <br />
 
-            <p class="question">What’s a motto or quote you live by?</p>
-            <p class="post-content">
+            <p className="question">What’s a motto or quote you live by?</p>
+            <p className="post-content">
               <strong>Vivian Shen</strong>: Be the change you seek.
             </p>
-            <p class="post-content">
+            <p className="post-content">
               This is something I live by and I feel so strongly about. It
               really helps me stay focused, driven and create something that
               will add value and be a positive influence on people’s
@@ -143,10 +143,10 @@ class blogPost33 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               How do you stay inspired and creative? What drives you to succeed?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               <strong>Felicia</strong>: One of the best ways to stay inspired is
               to surround yourself with inspiring people! Any time I’ve got a
               creative block, I ask for advice and feedback to get a fresh
@@ -156,10 +156,10 @@ class blogPost33 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               How has technology influenced you in becoming who you are today?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               <strong>Elicia</strong>: Technology lies at the forefront of
               almost everything I do. Its influence lies in its power to connect
               people, information, and stories across the globe. From reading
@@ -171,11 +171,11 @@ class blogPost33 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What are some of the major changes happening to you and do you
               have any tips in adapting to change?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               <strong>Alison</strong>: Going into the final year of university,
               is a pretty daunting change with the realisation that one chapter
               is closing and the real adult chapter begins from here. Change is

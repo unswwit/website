@@ -17,14 +17,14 @@ class blogPost11 extends Component {
         <PageHeader imgUrl="/blog-header.png" title="Blog Post #11" />
 
         {/*Start of blog post*/}
-        <div class="blog-content">
+        <div className="blog-content">
           <div>
-            <h2 class="blog-title">AI in the Workplace</h2>
-            <p class="date"> 4th July 2020 </p>
+            <h2 className="blog-title">AI in the Workplace</h2>
+            <p className="date"> 4th July 2020 </p>
           </div>
 
-          <div class="post">
-            <p class="post-content">
+          <div className="post">
+            <p className="post-content">
               “Will AI take my Job?” is one of the most googled questions on the
               internet and probably a question many readers have considered
               themselves. However, I am here to tell you the answer to that
@@ -32,7 +32,7 @@ class blogPost11 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               Why? Because Artificial Intelligence needs humans, and humans need
               AI. AI is creating new industries, changing the way businesses
               work and changing what the workplace looks like. However, it is
@@ -41,11 +41,11 @@ class blogPost11 extends Component {
             <br />
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               <b>So, what does AI in the workplace look like?</b>
             </p>
 
-            <p class="post-content">
+            <p className="post-content">
               AI is helping the medical industry to not only create new jobs and
               research opportunities but to better the lives of people affected
               by diseases.{" "}
@@ -62,7 +62,7 @@ class blogPost11 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               This is where society can realize the outstanding benefits of AI.
               It can understand humans when other humans can’t. It is able to
               process mass volumes of data at incredible speeds. It can drive
@@ -73,11 +73,11 @@ class blogPost11 extends Component {
             <br />
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               <b>How Will AI Affect Job Loss and Growth?</b>
             </p>
 
-            <p class="post-content">
+            <p className="post-content">
               Gartner predicts that in 2020, 2.3 million new jobs in the health
               care, public sector, and education sectors will be created by AI.
               At the same time, manufacturing jobs will be eliminated as a
@@ -86,11 +86,11 @@ class blogPost11 extends Component {
             <br />
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               <b>AI is Not All Powerful</b>
             </p>
 
-            <p class="post-content">
+            <p className="post-content">
               Researchers at <a href="https://robohub.org/">RoboHub</a> at the
               University of Waterloo said the biggest misconception among the
               public is that robots are far more capable than they are. The
@@ -102,7 +102,7 @@ class blogPost11 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               Humans are learning from AI, working with AI and understanding the
               benefits of AI. In the Construction, Manufacturing, Food or
               Medical industry, AI can only succeed when partnered with humans.

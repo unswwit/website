@@ -19,17 +19,17 @@ class blogPost21 extends Component {
         {/*End of Header*/}
 
         {/*Start of blog post*/}
-        <div class="blog-content">
+        <div className="blog-content">
           <div>
-            <h2 class="blog-title">
+            <h2 className="blog-title">
               Introducing Madeleine English, Consultant in Engineering at Asset
               Management at KPMG
             </h2>
-            <p class="date">9th September 2020</p>
+            <p className="date">9th September 2020</p>
           </div>
 
-          <div class="post">
-            <p class="post-content">
+          <div className="post">
+            <p className="post-content">
               Madeleine English is a Consultant in Engineering at Asset
               Management in KPMG. She is passionate about solving complex client
               challenges with the delivery of sustainable and innovative
@@ -42,11 +42,11 @@ class blogPost21 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What sparked your interest to join the field of STEM?
             </p>
 
-            <p class="post-content">
+            <p className="post-content">
               I always loved maths and science at school, and wanted to apply
               these disciplines in building a more sustainable future. Since
               starting my career however I've also come to really enjoy the
@@ -55,11 +55,11 @@ class blogPost21 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               Please provide a short summary of your career journey so far:
             </p>
 
-            <p class="post-content">
+            <p className="post-content">
               I am a consultant at KPMG in the Engineering and Asset Management
               team. I’ve had 2.5 years of industry experience, at KPMG for a
               year and previously at AECOM in their water team as a civil
@@ -70,11 +70,11 @@ class blogPost21 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               Where do you see yourself in the future (career wise)?
             </p>
 
-            <p class="post-content">
+            <p className="post-content">
               In the future I see myself in a role more geared towards combating
               climate change and building a sustainable future. I maintain a
               long held interest in environmental justice and climate change,
@@ -85,9 +85,9 @@ class blogPost21 extends Component {
             </p>
             <br />
 
-            <p class="question">What do you love about your career now?</p>
+            <p className="question">What do you love about your career now?</p>
 
-            <p class="post-content">
+            <p className="post-content">
               I love the people that I work with in my current role at KPMG,
               there is an inclusive culture with friendly people from diverse
               backgrounds. There are also a wide range of career opportunities
@@ -97,12 +97,12 @@ class blogPost21 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               Why do you think it is important to empower women and increase
               their involvement in the STEM industry?
             </p>
 
-            <p class="post-content">
+            <p className="post-content">
               I think it's really important to have diverse teams building
               solutions together to get the best outcome for people &
               communities. STEM related industries are responsible for designing
@@ -122,23 +122,23 @@ class blogPost21 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What are the challenging aspects of your career?
             </p>
 
-            <p class="post-content">
+            <p className="post-content">
               As I'm early on in my career I am constantly learning. Being ok
               with not knowing everything all at once or straight away is ok but
               is something that I am sometimes challenged by.
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               How have others inspired you at different periods throughout your
               career?
             </p>
 
-            <p class="post-content">
+            <p className="post-content">
               I have been inspired by a range of different people throughout my
               career so far. My peers inspire me and also senior leaders both
               inside the organisations I've worked in and outside of these
@@ -150,13 +150,13 @@ class blogPost21 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What are the hard and soft skills that you advised students who
               are interested in pursuing a similar career path (for
               internship/graduate role) to upskill on?
             </p>
 
-            <p class="post-content">
+            <p className="post-content">
               Soft skills such as communication, time management and working in
               a team are really important skills to have in the workforce. The
               hard skills will come through your degree without really any
@@ -175,20 +175,20 @@ class blogPost21 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What is one piece of advice that you would give to your younger
               self back in university?
             </p>
 
-            <p class="post-content">
+            <p className="post-content">
               Work hard but make time for yourself - hobbies, a casual job,
               spending time with family and friends.
             </p>
             <br />
 
-            <p class="question">Favourite Quote or Motto?</p>
+            <p className="question">Favourite Quote or Motto?</p>
 
-            <p class="post-content">
+            <p className="post-content">
               Always make time for yourself, no matter how busy you are.
             </p>
             <br />

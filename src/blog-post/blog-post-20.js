@@ -19,16 +19,16 @@ class blogPost20 extends Component {
         {/*End of Header*/}
 
         {/*Start of blog post*/}
-        <div class="blog-content">
+        <div className="blog-content">
           <div>
-            <h2 class="blog-title">
+            <h2 className="blog-title">
               Introducing : Aneita Yang, Product Manager At Atlassian
             </h2>
-            <p class="date">2nd September 2020</p>
+            <p className="date">2nd September 2020</p>
           </div>
 
-          <div class="post">
-            <p class="post-content">
+          <div className="post">
+            <p className="post-content">
               Aneita Yang is product manager of Bitbucket Cloud at Atlassian, a
               program that allows teams to manage workflow from design to
               implementation as well as edit and deploy the code these teams are
@@ -47,11 +47,11 @@ class blogPost20 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What sparked your interest to join the field of STEM?
             </p>
 
-            <p class="post-content">
+            <p className="post-content">
               STEM wasn't really something that was promoted while I was at high
               school but I always had an interest in technology. Technology was
               everywhere and it had led to a lot of transformations in peoples'
@@ -61,11 +61,11 @@ class blogPost20 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               Please provide a short summary of your career journey so far.
             </p>
 
-            <p class="post-content">
+            <p className="post-content">
               After graduating from university, I joined Atlassian as a product
               manager. I worked on Bitbucket Cloud for close to 3 years before
               going on to join the Identity team. Despite originally planning to
@@ -75,18 +75,18 @@ class blogPost20 extends Component {
             </p>
             <br />
 
-            <p class="question">What do you love about your career now?</p>
+            <p className="question">What do you love about your career now?</p>
 
-            <p class="post-content">
+            <p className="post-content">
               Being able to work with different people from all around the
               business on challenging problems. The team around me helps me
               continually learn and grow.
             </p>
             <br />
 
-            <p class="question">Favourite Quote or Motto?</p>
+            <p className="question">Favourite Quote or Motto?</p>
 
-            <p class="post-content">Fail fast!</p>
+            <p className="post-content">Fail fast!</p>
             <br />
           </div>
         </div>

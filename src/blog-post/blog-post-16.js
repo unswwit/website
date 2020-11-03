@@ -17,18 +17,18 @@ class blogPost16 extends Component {
         <PageHeader imgUrl="/blog-header.png" title="Blog Post #16" />
 
         {/*Start of blog post*/}
-        <div class="blog-content">
+        <div className="blog-content">
           <div>
-            <h2 class="blog-title">
+            <h2 className="blog-title">
               Introducing Erica Joy Baker, Director of Engineering at GitHub
             </h2>
-            <p class="date">22nd July 2020</p>
+            <p className="date">22nd July 2020</p>
           </div>
 
-          <div class="post">
-            <p class="question">Summary of Career/notoriety</p>
+          <div className="post">
+            <p className="question">Summary of Career/notoriety</p>
 
-            <p class="post-content">
+            <p className="post-content">
               Erica Joy Baker has worked in impressive engineer and management
               roles at some of the world's top tech companies such as GitHub,
               Google, Slack and Microsoft but she is best known for her
@@ -37,9 +37,9 @@ class blogPost16 extends Component {
             <br />
             <br />
 
-            <p class="question">Path into Stem</p>
+            <p className="question">Path into Stem</p>
 
-            <p class="post-content">
+            <p className="post-content">
               Erica’s childhood was unique in many ways. Born in Germany to
               parents in the US Air Force, she moved frequently, living in many
               US states. While computers were primitive and novel during the
@@ -65,7 +65,7 @@ class blogPost16 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               Erica’s experience at the University of Miami was the first of
               many uncomfortable experiences she would have as a black woman
               working in tech. Whilst working at Google a decade after
@@ -86,9 +86,9 @@ class blogPost16 extends Component {
             <br />
             <br />
 
-            <p class="question">Career Success</p>
+            <p className="question">Career Success</p>
 
-            <p class="post-content">
+            <p className="post-content">
               In addition to Google, Erica has worked for other well known
               companies in Silicon Valley including GitHub, Slack, Patreon, and
               Microsoft. She’s come a long way since she began her career
@@ -98,16 +98,16 @@ class blogPost16 extends Component {
             <br />
             <br />
 
-            <p class="question">Advocacy</p>
+            <p className="question">Advocacy</p>
 
-            <p class="post-content">
+            <p className="post-content">
               Along with her commitment to excellence in her work, Erica is
               passionate about diversity and inclusion in STEM, by creating
               environments that are welcoming toward women and people of color.{" "}
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               As a coveted public speaker who has appeared on the TED stage,
               Erica embraces the opportunity to use her voice to start
               conversations about sexism and racism to propel change in the
@@ -124,7 +124,7 @@ class blogPost16 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               In addition to speaking on diversity and inclusion, Erica
               advocates expanding access to tech education. She has served as a
               tech mentor for Black Girls Who Code, served as a Diversity
@@ -133,7 +133,7 @@ class blogPost16 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               She has also used her online platform to advance inclusion and
               diversity in tech. Erica was behind #RealDiversityNumbers, a
               movement on Twitter to acquire retention numbers and lawsuits for
@@ -142,7 +142,7 @@ class blogPost16 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               Erica Baker is a unique role model and voice for women and
               minorities in tech. She’s a force to be reckoned with, and gives
               us all hope there will be a place for our skills, enthusiasm and

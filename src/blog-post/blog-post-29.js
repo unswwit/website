@@ -19,16 +19,16 @@ class blogPost29 extends Component {
         {/*End of Header*/}
 
         {/*Start of blog post*/}
-        <div class="blog-content">
+        <div className="blog-content">
           <div>
-            <h2 class="blog-title">
+            <h2 className="blog-title">
               Introducing Davina Adisusila, Engineering Team Lead at Eucalyptus
             </h2>
-            <p class="date">10th October 2020</p>
+            <p className="date">10th October 2020</p>
           </div>
 
-          <div class="post">
-            <p class="post-content">
+          <div className="post">
+            <p className="post-content">
               Davina Adisusila, a former UNSW Computer-Science student, has put
               her skills and knowledge to great use over the years. In the past,
               she interned as a software engineer at News Corp Australia and
@@ -41,10 +41,10 @@ class blogPost29 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What sparked your interest to join the field of STEM?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               Growing up I was really fascinated by Pixar's skill of evoking
               emotion and long lasting memories in its audiences through 3D
               animation. From there I started exploring the digital world, which
@@ -53,11 +53,11 @@ class blogPost29 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               Please provide a short summary of your career journey so far:
             </p>
 
-            <p class="post-content">
+            <p className="post-content">
               I studied Computer Science at UNSW and did multiple internships as
               a Software Developer at companies including Google and Atlassian.
               I continued on as a full time developer at Atlassian, working on
@@ -70,11 +70,11 @@ class blogPost29 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               Where do you see yourself in the future (career wise)?
             </p>
 
-            <p class="post-content">
+            <p className="post-content">
               I feel like I've changed a lot in the past few years, and I still
               have a lot to learn and grow into. So far I'm enjoying the
               management path of technical teams and am excited to see where it
@@ -82,21 +82,21 @@ class blogPost29 extends Component {
             </p>
             <br />
 
-            <p class="question">What do you love about your career now?</p>
+            <p className="question">What do you love about your career now?</p>
 
-            <p class="post-content">
+            <p className="post-content">
               My career has allowed me to build up skills and apply them in an
               area I really care about with is online healthcare. It's so
               rewarding to know that I am helping people in some way through
               software I've built or facilitated.
             </p>
 
-            <p class="question">
+            <p className="question">
               Why do you think it is important to empower women and increase
               their involvement in the STEM industry?
             </p>
 
-            <p class="post-content">
+            <p className="post-content">
               In the STEM industry, we build for a variety of people, and if the
               teams building these products aren't as diverse as its audience,
               we're never going to create the best solutions to really help
@@ -105,11 +105,11 @@ class blogPost29 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What are the challenging aspects of your career?
             </p>
 
-            <p class="post-content">
+            <p className="post-content">
               Imposter syndrome is a huge one and always kicks in every now and
               again. The nature of working in STEM involves facing new
               challenges, hard problems and many unknowns, and from that can
@@ -120,12 +120,12 @@ class blogPost29 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               How have others inspired you at different periods throughout your
               career?
             </p>
 
-            <p class="post-content">
+            <p className="post-content">
               There have been so many people throughout my journey that have
               been instrumental in shaping me today. From high school, through
               to university to working in the industry. The network in the
@@ -135,13 +135,13 @@ class blogPost29 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What are the hard and soft skills that you advised students who
               are interested in pursuing a similar career path (for
               internship/graduate role) to upskill on?
             </p>
 
-            <p class="post-content">
+            <p className="post-content">
               For those interested in becoming a software engineer, I would say
               foundational computer science skills are key. Learn how to learn.
               New technologies and frameworks pop up a lot, but if you have the
@@ -152,20 +152,20 @@ class blogPost29 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What is one piece of advice that you would give to your younger
               self back in university?
             </p>
 
-            <p class="post-content">
+            <p className="post-content">
               If you're not happy, change something. Only you can author your
               story.
             </p>
             <br />
 
-            <p class="question">Favourite Quote or Motto?</p>
+            <p className="question">Favourite Quote or Motto?</p>
 
-            <p class="post-content">
+            <p className="post-content">
               It's not how good you are, it's how good you want to be <br /> –
               Paul Arden
             </p>

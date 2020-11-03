@@ -13,9 +13,22 @@ class Blog extends Component {
         <PageHeader imgUrl="/blog-header.png" title="Blog Posts" />
 
         {/*Start of blog posts*/}
+        {/*blog post 37*/}
+           <BlogPreview
+          topMargin="10vw"
+          bottomMargin="5vw"
+          blogNo="37"
+          imgUrl="/blog-covers/37-tanzeem-syeda.png"
+          heading="Introducing Tanzeem Syeda, Software Engineer at WiseTech Global"
+          date="4/11/2020"
+          subheading="From achieving her first internship at 15-years-old, this week we feature Tanzeem Syeda and her incredible journey in tech."
+          authors={{
+            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield"],
+          }}
+        />
         {/*blog post 36*/}
         <BlogPreview
-          topMargin="10vw"
+          topMargin="5vw"
           bottomMargin="5vw"
           blogNo="36"
           imgUrl="/blog-covers/36-the-byte.png"

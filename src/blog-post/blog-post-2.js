@@ -17,17 +17,17 @@ class blogPost2 extends Component {
         <PageHeader imgUrl="/blog-header.png" title="Blog Post #2" />
 
         {/*Start of blog post*/}
-        <div class="blog-content">
+        <div className="blog-content">
           <div>
-            <h2 class="blog-title">
+            <h2 className="blog-title">
               Introducing: Professor Lisa Harvey Smith, Astrophysicist and
               Australia’s First Women In STEM Ambassador
             </h2>
-            <p class="date"> 27th May 2020 </p>
+            <p className="date"> 27th May 2020 </p>
           </div>
 
-          <div class="post">
-            <p class="post-content">
+          <div className="post">
+            <p className="post-content">
               British-Australian astrophysicist Lisa Harvey Smith discovered her
               love of astronomy whilst homeschooling herself at the age 11. Soon
               after, she joined her first amateur astronomical society. Her love
@@ -40,7 +40,7 @@ class blogPost2 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               Dr. Harvey shares astronomical concepts with women in ways that
               are interesting and accessible. She explains her reason for being
               a science communicator and educator instead of a traditional
@@ -53,7 +53,7 @@ class blogPost2 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               If Dr. Harvey had to be described in one word, it would be
               ambitious. When she’s not conducting astronomical research and
               sharing her love of astronomy with others, she’s advocating for
@@ -69,7 +69,7 @@ class blogPost2 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               Currently, women make up only 17% of the STEM qualified population
               in Australia. Professor Harvey Smith advises that it is the
               responsibility of students, educators, parents, and businesses to
@@ -84,14 +84,14 @@ class blogPost2 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               Professor Lisa Harvey Smith shows us that successful females not
               only have love, determination and exploration for their own
               fields, but they also make time to encourage women in STEM.
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               Professor Lisa Harvey Smith is currently the Professor of Practice
               at UNSW.
             </p>

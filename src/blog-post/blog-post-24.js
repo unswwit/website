@@ -19,14 +19,14 @@ class blogPost24 extends Component {
         {/*End of Header*/}
 
         {/*Start of blog post*/}
-        <div class="blog-content">
+        <div className="blog-content">
           <div>
-            <h2 class="blog-title">Sleep and Study</h2>
-            <p class="date">20th September 2020</p>
+            <h2 className="blog-title">Sleep and Study</h2>
+            <p className="date">20th September 2020</p>
           </div>
 
-          <div class="post">
-            <p class="post-content">
+          <div className="post">
+            <div className="post-content">
               In my time at university, I have learnt two things that most
               students have in common:
               <ol>
@@ -36,10 +36,10 @@ class blogPost24 extends Component {
                   all-nighter.
                 </li>
               </ol>
-            </p>
+            </div>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               And I believed that these two factors were just common aspects of
               university life. That was until I read{" "}
               <a
@@ -62,7 +62,7 @@ class blogPost24 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               When we sleep, we go through two distinct phases, the first being
               REM (Rapid-Eye-Movement) Sleep and NREM (Non-Rapid-Eye-Movement)
               Sleep. REM sleep fuels creativity. It is a time for our brain to
@@ -75,7 +75,7 @@ class blogPost24 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               However, memory consolidation occurs during NREM. In this phase,
               all the thoughts, ideas, and pieces of information we have stored
               in our short-term memory (stored in a region of the brain called
@@ -90,7 +90,7 @@ class blogPost24 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               Additionally, Dr Robert Stickgold, a researcher at Harvard Medical
               School, conducted a study in which students had to learn a visual
               memory task through repetition. One group of participants received
@@ -106,7 +106,7 @@ class blogPost24 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               To sleep 8+ hours the night before a big study day is proven to be
               incredibly efficient. In doing so, you are emptying and cleaning
               the slate for the short-term memory centre of the hippocampus to
@@ -116,7 +116,7 @@ class blogPost24 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
+            <div className="post-content">
               The KEY takeaways that I hope you have now gained are:
               <ul>
                 <li>
@@ -134,10 +134,10 @@ class blogPost24 extends Component {
                   good for you and it’s free!
                 </li>
               </ul>
-            </p>
+            </div>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               I have now learnt that sleep and study go hand in hand. This book
               has changed my life, and an all-nighter for me is the thing of the
               PAST. I hope I have persuaded you to get a full night of sleep.
@@ -145,18 +145,17 @@ class blogPost24 extends Component {
             </p>
             <br />
 
-            <div class="img-box">
+            <div className="img-box">
               <img
                 src={
                   process.env.PUBLIC_URL +
                   "/blog-attachments/blog-23-why-we-sleep.jpg"
                 }
                 alt="why-we-sleep"
-                resizeMode="contain"
               />
             </div>
 
-            <p class="post-content" style={{ fontSize: "11pt" }}>
+            <p className="post-content" style={{ fontSize: "11pt" }}>
               Professor Matthew Walker is a Professor of Neuroscience and
               Psychology at the University of California, Berkeley, and Founder
               and Director of the Center for Human Sleep Science.

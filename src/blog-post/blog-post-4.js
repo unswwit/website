@@ -17,16 +17,16 @@ class blogPost4 extends Component {
         <PageHeader imgUrl="/blog-header.png" title="Blog Post #4" />
 
         {/*Start of blog post*/}
-        <div class="blog-content">
+        <div className="blog-content">
           <div>
-            <h2 class="blog-title">
+            <h2 className="blog-title">
               Introducing: Syin Li Tan, Consultant at Deloitte
             </h2>
-            <p class="date"> 10th June 2020 </p>
+            <p className="date"> 10th June 2020 </p>
           </div>
 
-          <div class="post">
-            <p class="post-content">
+          <div className="post">
+            <p className="post-content">
               Syin Li Tan has all the hallmarks of a promising career at
               Deloitte Consulting in Australia. Upon graduating with a master’s
               degree in Information Systems from Monash University in 2017, she
@@ -36,7 +36,7 @@ class blogPost4 extends Component {
               Systems.{" "}
             </p>
             <br />
-            <p class="post-content">
+            <p className="post-content">
               Most young professionals don’t land their dream job right out of
               university. But before Deloitte welcomed Syin to their team, she
               had completed four internships for tech companies, earned awards
@@ -44,24 +44,24 @@ class blogPost4 extends Component {
               musician.{" "}
             </p>
             <br />
-            <p class="post-content">
+            <p className="post-content">
               Let’s read what Syin had to say about her journey into tech below.
             </p>
 
-            <p class="question">
+            <p className="question">
               {" "}
               What sparked your interest to join the field of STEM?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               Modern. Evergreen. Fast-paced. Constantly moving. That’s what drew
               me to the field of Technology!
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               Please provide a short summary of your career journey so far:
             </p>
-            <p class="post-content">
+            <p className="post-content">
               {" "}
               After completing my degree, I started at Deloitte as a Graduate in
               Deloitte’s Graduate Program where I was equipped with foundational
@@ -71,26 +71,26 @@ class blogPost4 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               Where do you see yourself in the future (career wise)?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               In the future, I hope to be seen as the “go-to person” for SAP
               Project Systems and other modules in finance and procurement. I
               also aspire to be a great manager of people and teams.
             </p>
             <br />
 
-            <p class="question">What do you love about your career now?</p>
-            <p class="post-content">
+            <p className="question">What do you love about your career now?</p>
+            <p className="post-content">
               I love that I work with individuals who uphold integrity in their
               lives and work, and individuals who have ambition to constantly
               improve and achieve excellence.
             </p>
             <br />
 
-            <p class="question">Favourite Quote or Motto?</p>
-            <p class="post-content">
+            <p className="question">Favourite Quote or Motto?</p>
+            <p className="post-content">
               “Whatever you do, work at it with all your heart.
             </p>
             <br />

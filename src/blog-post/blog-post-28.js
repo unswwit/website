@@ -19,17 +19,17 @@ class blogPost28 extends Component {
         {/*End of Header*/}
 
         {/*Start of blog post*/}
-        <div class="blog-content">
+        <div className="blog-content">
           <div>
-            <h2 class="blog-title">
+            <h2 className="blog-title">
               Technical Interview Walkthrough with Amanda Li and Vivian Shen
               (Part 1)
             </h2>
-            <p class="date">4th October 2020</p>
+            <p className="date">4th October 2020</p>
           </div>
 
-          <div class="post">
-            <p class="post-content">
+          <div className="post">
+            <p className="post-content">
               Technical interviews are an intimating, yet necessary aspect of
               the job-seeking process. They are crucial for helping recruiters
               understand a potential employee's set of practical skills and
@@ -41,17 +41,17 @@ class blogPost28 extends Component {
             </p>
             <br />
 
-            <ol class="list">
-              <li class="question">Can you tell us about yourself?</li>
+            <ol className="list">
+              <li className="question">Can you tell us about yourself?</li>
               <br />{" "}
-              <p class="post-content">
+              <p className="post-content">
                 <strong>Vivian(V)</strong>: I'm Vivian, and I’m currently
                 studying B. Data Science & Decisions (Computational Major). I am
                 the current President of WIT and formerly the Treasurer of CSE
                 Revue. I was a Google STEP Intern last summer, and I will be an
                 Atlassian Data Science Intern this Summer.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 <strong>Amanda(A)</strong>: I’m Amanda, and I’m a third-year
                 student studying Software and Biomedical Engineering. I’ve been
                 a part of a few societies and Arc Volunteering. I am currently
@@ -61,11 +61,11 @@ class blogPost28 extends Component {
                 Software Developer Intern.
               </p>
               <br />
-              <li class="question">
+              <li className="question">
                 How have you prepared for technical interviews?
               </li>
               <br />{" "}
-              <p class="post-content">
+              <p className="post-content">
                 V: I brushed up on common data structures and algorithms,
                 including time and space complexities, using university
                 resources from COMP2521, Medium articles and Youtube videos. I
@@ -77,7 +77,7 @@ class blogPost28 extends Component {
                 technical interviews with me and give me feedback on my
                 performance.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 A: I researched people's past experiences interviewing for the
                 company and role, especially on forums like Reddit, Glassdoor
                 and Quora. People often describe their interview process, how
@@ -86,12 +86,12 @@ class blogPost28 extends Component {
                 structure and algorithms, so I revisited my COMP2521 notes.
               </p>
               <br />
-              <li class="question">Where did you find practice questions? </li>
+              <li className="question">Where did you find practice questions? </li>
               <br />{" "}
-              <p class="post-content">
+              <p className="post-content">
                 V: I found many practice questions on HackerRank and Leetcode.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 A: Typical sites are HackerRank and Leetcode. HackerRank is
                 great because it provides verified solutions in multiple
                 languages and tagged topics and difficulty levels. Questions
@@ -103,18 +103,18 @@ class blogPost28 extends Component {
                 system and if you excel you get referred to top-notch companies.
               </p>
               <br />
-              <li class="question">
+              <li className="question">
                 What was the structure of the technical interviews you
                 completed?
               </li>
               <br />{" "}
-              <p class="post-content">
+              <p className="post-content">
                 V: The structure of technical interviews would differ depending
                 on the company and role you've applied to. Today, we're going to
                 go over the most common structure of technical interviews for a{" "}
                 <strong>software engineering role</strong>.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 The typical interview is ~45 minutes long. We begin with
                 self-introductions for the first ~5 minutes. Here's your
                 opportunity to tell the interviewer a little bit about yourself,
@@ -124,7 +124,7 @@ class blogPost28 extends Component {
                 technical questions and wrap-up with ~5 minutes of questions you
                 would like to ask the interviewer.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 For the technical questions, you should expect to be given
                 either 1 hard question or 2 easy-medium questions for you to
                 CODE up in the 30-35 minutes. Following this, you will always be
@@ -138,7 +138,7 @@ class blogPost28 extends Component {
                 interviewer has given you the 'green light' you should begin by
                 choosing your coding language and start coding it up.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 A: I’ve only done 1 technical interview and it was actually 55
                 minutes and one part of a three hour session. There was a brief
                 introduction (there was only one interviewer) and then we jumped
@@ -151,29 +151,29 @@ class blogPost28 extends Component {
                 on space and time complexity.
               </p>
               <br />
-              <li class="question">
+              <li className="question">
                 How did you test your code in your interviews?
               </li>
               <br />{" "}
-              <p class="post-content">
+              <p className="post-content">
                 V: For the technical interviews I sat, they were usually done on
                 a whiteboard or on CoderPad. Either way, they don't let you
                 'run' your code. You can 'test' your code by thinking of edge
                 cases and seeing how your code handles it, or how you can adjust
                 your code to handle this case.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 A: My technical interview was online/virtual so I could actually
                 run my code within the online coding platform but the testing
                 process is the same - you would input test cases (consider edge
                 cases and error cases if any) and compare the output.
               </p>
               <br />
-              <li class="question">
+              <li className="question">
                 What are some of the questions/topics you were asked?
               </li>
-              <div class="img-box outer-box">
-                <div class="inner-box">
+              <div className="img-box outer-box">
+                <div className="inner-box">
                   <img
                     src={
                       process.env.PUBLIC_URL +
@@ -185,7 +185,7 @@ class blogPost28 extends Component {
                 </div>
               </div>
               <br />
-              <p class="post-content">
+              <p className="post-content">
                 V: Another thing you also want to be familiar with is the
                 libraries of your chosen language eg. Python would have a number
                 of existing functions. If you wanted to translate all the lower
@@ -195,19 +195,19 @@ class blogPost28 extends Component {
                 the language and it would also make your code <em>pythonic</em>,
                 aligning with the Python style guides.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 A: I was told to revise on data structures and algorithms (not
                 necessarily the names but how to apply them) before my
                 interview. The questions I received were on manipulation of
                 arrays, strings and binary.
               </p>
               <br />
-              <li class="question">
+              <li className="question">
                 Which language did you use and how did you decide to use that
                 language?{" "}
               </li>
               <br />{" "}
-              <p class="post-content">
+              <p className="post-content">
                 V: Code in the language you are most <b>comfortable</b> in. At
                 UNSW most students would begin by learning C, which is arguably
                 not the best language to sit your technical interviews in.
@@ -216,7 +216,7 @@ class blogPost28 extends Component {
                 interviews in C and passed, and I know many other UNSW students
                 who did the same for their roles and got accepted too.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 A: I’ve been coding with Python for all my coding tests and
                 technical interviews. It’s what I’m most comfortable with and
                 there’s just some things (e.g. data structures) that are quicker
@@ -230,12 +230,12 @@ class blogPost28 extends Component {
                 to code in that language.
               </p>
               <br />
-              <li class="question">
+              <li className="question">
                 How did you communicate your thought process / code
                 implementation to the interviewer?
               </li>
               <br />{" "}
-              <p class="post-content">
+              <p className="post-content">
                 V: You want to verbalise your thought process to the interview
                 as you code. This is actually a lot harder than you think
                 because we're not used to doing this. You should definitely take
@@ -243,7 +243,7 @@ class blogPost28 extends Component {
                 or at society events such as WIT where you can practice
                 technical interviews with company representatives.
               </p>
-              <p class="psot-content">
+              <p className="psot-content">
                 A: Even with uni exams, I tend to write my plan of attack in
                 comments first (e.g. sort through this, loop through this then
                 find this). So during the interview, I would also be saying it
@@ -252,17 +252,17 @@ class blogPost28 extends Component {
                 sort, how do I sort, what’s the smartest way to sort).
               </p>
               <br />
-              <li class="question">
+              <li className="question">
                 What questions would you recommend asking the interviewer?
               </li>
               <br />{" "}
-              <p class="post-content">
+              <p className="post-content">
                 V: You should ask the interviewer about things you would want to
                 know about the company. Instead of the cliched, "Tell me about
                 your role" or "How are you enjoying your work", think about what
                 you would want to know about the company/role before you go in.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 I’m pretty sure I asked the typical “What projects do you work
                 on” but just because I was genuinely curious. I think it’s ok to
                 start off by asking these things but not just filler questions -
@@ -275,12 +275,12 @@ class blogPost28 extends Component {
                 application process.
               </p>
               <br />
-              <li class="question">
+              <li className="question">
                 Did you ever get a question you didn’t know how to answer? If
                 yes, what did you do?
               </li>
               <br />{" "}
-              <p class="post-content">
+              <p className="post-content">
                 V: Yes definitely. In interviews, you should always expect to
                 answer questions you have never seen or heard of. You just need
                 to think about how you would try to solve this with what
@@ -288,7 +288,7 @@ class blogPost28 extends Component {
                 me was to begin by how I would solve it logically without code
                 and then seeing how that would translate into code.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 A: Yes I have, even in coding tests. I got stuck at one point
                 when he asked me how I would optimise my code in terms of space
                 complexity. I threw around suggestions of ways I could change
@@ -299,59 +299,59 @@ class blogPost28 extends Component {
                 I ended up getting it.
               </p>
               <br />
-              <li class="question">
+              <li className="question">
                 What were some of the differences between the interview process
                 at different companies?{" "}
               </li>
               <br />{" "}
-              <p class="post-content">
+              <p className="post-content">
                 V: For a software engineering role, the interview process would
                 differ in terms of number of interviews, assessment days as well
                 as types of questions etc.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 Some companies such as Atassian would send through a HackerRank
                 test to help filter out applicants before they get to proceed to
                 a technical interview. Whereas other companies such as Facebook
                 would go straight into technical interviews.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 For Canva, you get to pick if you want to sit through a back-end
                 or front-end interview, and your interview questions would be
                 specifically on these areas instead of the usual data structure
                 and algorithm questions.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 Sometimes companies who don't have a Sydney office such as Jane
                 Street would also fly you out to their office for a final
                 assessment day (usually 3 consecutive interviews in one day).
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 A: For Atlassian, you would also experience a final assessment
                 day usually in office but online due to COVID this year with 3
                 interviews in a row (technical interview with a whiteboard
                 interview and values interview).
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 That being said, the interview processes do differ slightly for
                 each company in terms of structure, format and questions. If the
                 interview process is unclear, you should definitely clarify this
                 with your HR point of contact.
               </p>
               <br />
-              <li class="question">
+              <li className="question">
                 What tips for success in technical interviews do you have for
                 others?
               </li>
               <br />{" "}
-              <p class="post-content">
+              <p className="post-content">
                 <span role="img" aria-label="red-cross">
                   &#10060;
                 </span>{" "}
                 Don't leave it to the last minute - usually technical interviews
                 aren't something you can prepare for the night before.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 <span role="img" aria-label="red-cross">
                   &#10060;
                 </span>{" "}
@@ -359,7 +359,7 @@ class blogPost28 extends Component {
                 start at a level you're comfortable with and then work your way
                 up.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 <span role="img" aria-label="red-cross">
                   &#10060;
                 </span>{" "}
@@ -367,7 +367,7 @@ class blogPost28 extends Component {
                 out and give up immediately. Talk it through and throw out any
                 suggestions you have.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 <span role="img" aria-label="red-cross">
                   &#10060;
                 </span>{" "}
@@ -377,14 +377,14 @@ class blogPost28 extends Component {
                 do better next time.
               </p>
               <br />
-              <p class="post-content">
+              <p className="post-content">
                 <span role="img" aria-label="green-tick">
                   &#9989;
                 </span>{" "}
                 Do practice beforehand - revise using COMP2521 materials,
                 websites such as HackeRank and LeetCode.
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 <span role="img" aria-label="green-tick">
                   &#9989;
                 </span>{" "}
@@ -392,14 +392,14 @@ class blogPost28 extends Component {
                 of questions you might be asked. Also make sure to come dressed
                 appropriately!
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 <span role="img" aria-label="green-tick">
                   &#9989;
                 </span>{" "}
                 Do ask your friends for help - mock interviews, understand
                 concepts/questions
               </p>
-              <p class="post-content">
+              <p className="post-content">
                 <span role="img" aria-label="green-tick">
                   &#9989;
                 </span>{" "}

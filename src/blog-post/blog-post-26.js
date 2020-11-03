@@ -19,14 +19,14 @@ class blogPost26 extends Component {
         {/*End of Header*/}
 
         {/*Start of blog post*/}
-        <div class="blog-content">
+        <div className="blog-content">
           <div>
-            <h2 class="blog-title">Personal Project Series #1 - Link Up</h2>
-            <p class="date">27th September 2020</p>
+            <h2 className="blog-title">Personal Project Series #1 - Link Up</h2>
+            <p className="date">27th September 2020</p>
           </div>
 
-          <div class="post">
-            <p class="post-content">
+          <div className="post">
+            <p className="post-content">
               Apart from studying, attending lectures, completing internships,
               attending society events, hanging out with friends, and more, some
               students manage to complete incredible personal projects during
@@ -35,7 +35,7 @@ class blogPost26 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               In this blog post, we’ll be hearing from the founders of LinkUp!
               Perhaps you used LinkUp to discover WIT or other societies. Just
               like any great tool, it started with the recognition of a need,
@@ -44,43 +44,43 @@ class blogPost26 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               Hey, we’re Deki, Zhou, and Felicia, three UNSW 2nd year students
               who created LinkUp!
             </p>
             <br />
 
-            <p class="question">Introduce yourself!</p>
-            <p class="post-content">
+            <p className="question">Introduce yourself!</p>
+            <p className="post-content">
               <strong>Deki(D)</strong>: I’m a software engineering student that
               listens to one too many tech podcasts and enjoys playing Valorant.
             </p>
-            <p class="post-content">
+            <p className="post-content">
               <strong>Zhou(Z)</strong>: Just your average 2nd-year Comp Sci
               student. Quiet and introverted. I enjoy cooking, video games, and
               watching anime in my spare time.
             </p>
-            <p class="post-content">
+            <p className="post-content">
               <strong>Felicia(F)</strong>: I’m a Software Eng/Commerce student
               who loves baking, music (I play classical guitar), and graphic
               design - something I get to do a lot of as WIT’s Marketing Exec!
             </p>
             <br />
 
-            <p class="question">What is LinkUp?</p>
-            <p class="post-content">
+            <p className="question">What is LinkUp?</p>
+            <p className="post-content">
               Z: It’s a uni event tracker to help find events happening at your
               uni.
             </p>
-            <p class="post-content">
+            <p className="post-content">
               F: By collating society events, we aim to help students find
               ‘their people’ in the student community, as well as help societies
               reach more students.
             </p>
             <br />
 
-            <p class="question">What inspired you to create LinkUp?</p>
-            <p class="post-content">
+            <p className="question">What inspired you to create LinkUp?</p>
+            <p className="post-content">
               D: I am actually from QLD, and when I first came to UNSW O-week I
               didn’t know anyone, so I was trying my best to go to every
               workshop/society stalls. However, finding events and workshops
@@ -90,11 +90,11 @@ class blogPost26 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               How did LinkUp become affiliated with Arc? How did you pitch your
               idea?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               F: Arc actually reached out to us after seeing our posts on the
               UNSW Discussion Group! They loved how we were making it easier for
               students to be involved with uni life and offered their support.
@@ -102,12 +102,12 @@ class blogPost26 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               Who was on the founding team and what roles did you have
               allocated? After the project took off, were more people recruited
               to join the team?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               D: LinkUp started off with me, Zhou and Felicia. I worked mainly
               on the frontend of the website while Zhou worked on backend and
               devops. Felicia was in charge of marketing. After a period of
@@ -116,11 +116,11 @@ class blogPost26 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               Can you tell us about the process of building LinkUp? What time
               commitments did it require?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               Z: Building LinkUp took a long time. The whole process involved
               splitting the project into iterations so it was easier to handle,
               and focused on building MVPs so we could iteratively improve them
@@ -136,27 +136,27 @@ class blogPost26 extends Component {
               to do e.g,. summer holidays). We’ve probably spent well over a few
               hundred hours so far on LinkUp.
             </p>
-            <p class="post-content">
+            <p className="post-content">
               F: In terms of building our user base and reaching students, we
               focused on Facebook discussion groups as the easiest way to reach
               a large number of students.
             </p>
             <br />
 
-            <p class="question">What did you learn whilst creating LinkUp?</p>
-            <p class="post-content">
+            <p className="question">What did you learn whilst creating LinkUp?</p>
+            <p className="post-content">
               D: LinkUp consists of a small and dedicated team, so I learned how
               to work in a team and the importance of communication and time
               management to deploy features on time. I also learned to work with
               external parties to satisfy both Linkup’s needs and theirs.
             </p>
-            <p class="post-content">
+            <p className="post-content">
               Z: I learned how to use AWS to host our website, CDN and backend,
               how to write scripts to scrape websites using Python and set up
               continuous delivery for our repo. I also learned a bit of React so
               I could help out with the frontend.
             </p>
-            <p class="post-content">
+            <p className="post-content">
               F: I have definitely developed my teamwork and communication
               skills along the way, but I also realised how lucky we are at UNSW
               to have such an active and engaged student community. Society
@@ -166,10 +166,10 @@ class blogPost26 extends Component {
               communities in other unis as well.
             </p>
 
-            <p class="question">
+            <p className="question">
               What are some of the challenges you faced while creating LinkUp?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               Z: Probably encountering a bug or error and not being able to find
               a fix on Google. The best thing to do here is to take a break and
               refresh your mind for a while, so when you come back, you can take
@@ -180,8 +180,8 @@ class blogPost26 extends Component {
             </p>
             <br />
 
-            <p class="question">Who did you turn to for help along the way?</p>
-            <p class="post-content">
+            <p className="question">Who did you turn to for help along the way?</p>
+            <p className="post-content">
               Z: Whenever we needed help, we would either Google it, ask our
               teammates for help, or ask questions in relevant coding
               communities available to us. Some supportive communities for
@@ -189,16 +189,16 @@ class blogPost26 extends Component {
               discord, r/learn programming, and other programming subreddits, a
               certain UNSW society discord, and plenty of others.
             </p>
-            <p class="post-content">
+            <p className="post-content">
               F: We also have talked to a wonderful mentor from UNSW Founders,
               who helped guide us and focus on our goals.
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What has been the most rewarding part of creating LinkUp?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               D: Seeing students using LinkUp and receiving feedback about how
               much it has helped them find events around campus will continue to
               be the most rewarding part of Linkup. Knowing that other people
@@ -206,7 +206,7 @@ class blogPost26 extends Component {
               and effort on will serve as a motivation to improve LinkUp
               continually.
             </p>
-            <p class="post-content">
+            <p className="post-content">
               Z: While creating LinkUp, I realised how rewarding a personal
               project can be and how much you can learn from the experience.
               Personal projects are completely different from course projects
@@ -220,7 +220,7 @@ class blogPost26 extends Component {
               personal project for something that interests them. There is just
               so much you can learn from it.
             </p>
-            <p class="post-content">
+            <p className="post-content">
               F: Like Deki, for me, it’s knowing students are using the site and
               that we’re actually helping strengthen UNSW’s student community.
               Every time a student or society contacts us with questions or
@@ -228,16 +228,16 @@ class blogPost26 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What has been the initial impact of LinkUp? Have more students
               joined societies?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               Z: So far we have had 7.7k users and 12k sessions. We’re not too
               sure of how much we impacted students joining societies, but it
               has certainly made it easier to find events to go to.
             </p>
-            <p class="post-content">
+            <p className="post-content">
               F: We’ve been impacted a lot by COVID, with many events being
               postponed or canceled. But, we’ve received a lot of positive
               feedback, so hopefully, as we move back on campus LinkUp can reach
@@ -245,11 +245,11 @@ class blogPost26 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What’s next for LinkUp? What are your plans and goals and will you
               be pursuing it after
             </p>
-            <p class="post-content">
+            <p className="post-content">
               Z: We hope more students will use LinkUp, so we’re planning to add
               many features to help make uni events better! We can’t say much
               yet, but you can expect ways to give feedback for an event and a
@@ -260,27 +260,27 @@ class blogPost26 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What advice would you give to other students who want to pursue a
               personal project?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               D: If you have a personal project you are interested in, then I
               would say just start it. If you need help learning the frameworks
               or languages, there are so many great resources with my personal
               favourite being Youtube and Codecademy.
             </p>
-            <p class="post-content">
+            <p className="post-content">
               Z: Do something you’re interested in, go to relevant workshops,
               use your support (founders, CSESOC, WIT, etc,) and have fun.
             </p>
-            <p class="post-content">
+            <p className="post-content">
               F: Think about what you want to achieve and why, write down your
               goals, and celebrate every victory.
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               Deki, Zhou, and Felicia have built something that makes every
               student’s life easier and more enriching at UNSW. Not many people
               leave that sort of legacy! Along the way, they developed their

@@ -30,15 +30,15 @@
 .post {
   margin-bottom: 8vw;
   margin: auto;
+  color: #707070;
+  font-family: "Montserrat", sans-serif;
+  text-align: justify;
 }
 
 p,
 th,
 td {
-  color: #707070;
-  font-family: "Montserrat", sans-serif;
   font-size: 12pt;
-  text-align: justify;
 }
 
 b {

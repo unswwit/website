@@ -18,17 +18,17 @@ class blogPost1 extends Component {
         <PageHeader imgUrl="/blog-header.png" title="Blog Post #1" />
 
         {/*Start of blog post*/}
-        <div class="blog-content">
+        <div className="blog-content">
           <div>
-            <h2 class="blog-title">
+            <h2 className="blog-title">
               Introducing: Silvia Lin, Senior Consultant of PWC and WIT
               Co-founder
             </h2>
-            <p class="date"> 20th May 2020 </p>
+            <p className="date"> 20th May 2020 </p>
           </div>
 
-          <div class="post">
-            <p class="post-content">
+          <div className="post">
+            <p className="post-content">
               {" "}
               Silvia’s passionate about three things: technology, solving
               problems, and educating women about the opportunities in
@@ -40,16 +40,16 @@ class blogPost1 extends Component {
             </p>
             <br />
 
-            <p class="post-content">
+            <p className="post-content">
               Let’s read what Silvia had to say about her journey into tech
               below{" "}
             </p>
 
-            <ol class="list">
-              <li class="question">
+            <ol className="list">
+              <li className="question">
                 What sparked your interest to join the field of STEM?{" "}
               </li>
-              <p class="post-content">
+              <p className="post-content">
                 {" "}
                 I definitely "stumbled" into the field of STEM, it was never an
                 area quite popular in highschool when we are picking our future
@@ -71,10 +71,10 @@ class blogPost1 extends Component {
               </p>
               <br />
 
-              <li class="question">
+              <li className="question">
                 Please provide a short summary of your career journey so far:
               </li>
-              <p class="post-content">
+              <p className="post-content">
                 I have been quite fortunate in working at several amazing places
                 within the tech industry. I started off a planning and research
                 analyst at the Reserve Bank of Australia, before trying out the
@@ -86,10 +86,10 @@ class blogPost1 extends Component {
               </p>
               <br />
 
-              <li class="question">
+              <li className="question">
                 Where do you see yourself in the future (career wise)?
               </li>
-              <p class="post-content">
+              <p className="post-content">
                 Absolutely no idea! I think over the years I have realised
                 certain aspects I enjoy, and that is I like to help people and
                 clearly see that my work is contributing to a good cause. I am
@@ -101,8 +101,8 @@ class blogPost1 extends Component {
               </p>
               <br />
 
-              <li class="question"> What do you love about your career now?</li>
-              <p class="post-content">
+              <li className="question"> What do you love about your career now?</li>
+              <p className="post-content">
                 {" "}
                 I love how I get to try out a variety of roles and work with
                 different industries. What was really interesting for me was
@@ -117,8 +117,8 @@ class blogPost1 extends Component {
               </p>
               <br />
 
-              <li class="question">Favourite Quote or Motto?</li>
-              <p class="post-content">
+              <li className="question">Favourite Quote or Motto?</li>
+              <p className="post-content">
                 "Do it for yourself, not to prove to others" - Dr Carmen Leong
               </p>
             </ol>

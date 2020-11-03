@@ -6,11 +6,11 @@ import "./blog-post.css";
 class AuthorCard extends Component {
   render() {
     return (
-      <div class="author-card">
+      <div className="author-card">
         {/*for the blog post author*/}
         {Object.keys(this.props.authors).map((key, index) => (
-          <div key={index} class="author">
-            <div class="author-left">
+          <div key={index} className="author">
+            <div className="author-left">
               <div>
                 {" "}
                 {/*note this div is necessary to formatting*/}
@@ -21,9 +21,9 @@ class AuthorCard extends Component {
                 />
               </div>
             </div>
-            <div class="author-right">
-              <div class="title author-name">{this.props.authors[key][2]}</div>
-              <div class="position">{this.props.authors[key][3]}</div>
+            <div className="author-right">
+              <div className="title author-name">{this.props.authors[key][2]}</div>
+              <div className="position">{this.props.authors[key][3]}</div>
             </div>
           </div>
         ))}

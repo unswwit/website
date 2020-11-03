@@ -19,16 +19,16 @@ class blogPost23 extends Component {
         {/*End of Header*/}
 
         {/*Start of blog post*/}
-        <div class="blog-content">
+        <div className="blog-content">
           <div>
-            <h2 class="blog-title">
+            <h2 className="blog-title">
               Introducing Danni Ovens, Forward Deployed Software Engineer
             </h2>
-            <p class="date">16th September 2020</p>
+            <p className="date">16th September 2020</p>
           </div>
 
-          <div class="post">
-            <p class="post-content">
+          <div className="post">
+            <p className="post-content">
               As a 2020 UNSW Software Engineering Graduate, Danni Ovens has
               already followed her passion for software engineering to work for
               companies on three continents. From working as a software
@@ -43,10 +43,10 @@ class blogPost23 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What sparked your interest to join the field of STEM?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               Ever since I was a young girl, I always loved maths and science.
               Eventually when it became time to choose a degree it felt like the
               natural next step to explore engineering. In my first semester of
@@ -56,10 +56,10 @@ class blogPost23 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               Please provide a short summary of your career journey so far:
             </p>
-            <p class="post-content">
+            <p className="post-content">
               In my first year studying software engineering, I started tutoring
               at UNSW and tutored several subjects throughout my studies.
               Outside of uni I also volunteered with organisations like Code
@@ -70,8 +70,8 @@ class blogPost23 extends Component {
             </p>
             <br />
 
-            <p class="question">What do you love about your career now?</p>
-            <p class="post-content">
+            <p className="question">What do you love about your career now?</p>
+            <p className="post-content">
               I love the problem solving nature of software engineering, and I
               am so grateful to be able to do that every day! I love working
               with a team to understand and convert complex 'life-sized'
@@ -80,11 +80,11 @@ class blogPost23 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               Why do you think it is important to empower women and increase
               their involvement in the STEM industry?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               I believe everyone should feel a sense of belonging doing the work
               that they love doing. For me and many women out there, that place
               is in the STEM industry - but sadly many of these women feel
@@ -96,35 +96,35 @@ class blogPost23 extends Component {
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What are the challenging aspects of your career?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               The biggest challenge I've faced so far is the feeling that I have
               started 3 steps behind everyone else and I've had to learn to deal
               with the feeling that I need to prove myself as an engineer.
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               How have others inspired you at different periods throughout your
               career?
             </p>
-            <p class="post-content">
+            <p className="post-content">
               Seeing how others have overcome adversity to achieve their goals
               and pursue their passions is an incredible inspiration to me!
             </p>
             <br />
 
-            <p class="question">
+            <p className="question">
               What is one piece of advice that you would give to your younger
               self back in university?
             </p>
-            <p class="post-content">Be yourself and don't hold back!</p>
+            <p className="post-content">Be yourself and don't hold back!</p>
             <br />
 
-            <p class="question">Favourite Quote or Motto?</p>
-            <p class="post-content">
+            <p className="question">Favourite Quote or Motto?</p>
+            <p className="post-content">
               “None of us can know what we are capable of until we are tested.”
               <br />- Elizabeth Blackwell
             </p>
