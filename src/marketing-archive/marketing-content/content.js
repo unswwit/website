@@ -13,6 +13,11 @@ import CareersGuide from "../initiatives/careers-guide";
 import Other from "../initiatives/other";
 
 class MarketingContent extends Component {
+  //start webpage at the top
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+  
   render() {
     return (
       <div>
