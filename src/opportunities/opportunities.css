@@ -116,6 +116,11 @@ table {
   .opp-grid {
     margin: 40px;
   }
+
+  .opp-frame {
+    width: 8vw;
+    height: 8vw;
+  }
 }
 
 /*-------------------------------Join us mobile------------------------------*/
@@ -123,11 +128,21 @@ table {
   .opp-grid {
     margin: 10px;
   }
+
+  .opp-frame {
+    width: 12vw;
+    height: 12vw;
+  }
 }
 
 /*-------------------------------Join us very small screen------------------------------*/
 @media only screen and (max-width: 260px) {
   .opp-grid {
     margin: 5px;
+  }
+
+  .opp-frame {
+    width: 16vw;
+    height: 16vw;
   }
 }
