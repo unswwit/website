@@ -60,7 +60,7 @@ class Home extends Component {
               </div>
               <div>
                 <span>
-                  <CountUp end={2063} duration={5} />
+                  <CountUp end={2266} duration={4} />
                 </span>
                 <p>Facebook Followers</p>
               </div>
