@@ -61,10 +61,8 @@ class Sponsors extends Component {
                   "/sponsors/baraja-major.png",
                 ],
               }}
-            />
-          </div>
+            />       
 
-          <div id="majorContainer">
             <Major
               details={{
                 Commonwealth: [
@@ -88,9 +86,7 @@ class Sponsors extends Component {
                 EY: ["https://www.ey.com/en_au", "/sponsors/ey-major.png"],
               }}
             />
-          </div>
 
-          <div id="majorContainer">
             <Major
               details={{
                 Google: [
@@ -108,9 +104,7 @@ class Sponsors extends Component {
                 ],
               }}
             />
-          </div>
-
-          <div id="majorContainer">
+        
             <Major
               details={{
                 Nine: [

@@ -74,3 +74,21 @@ a.subheader {
   max-width: 150px;
   margin-bottom: 75px;
 }
+
+@media only screen and (max-width: 300px) {
+  h1.subsponsor {
+    font-size: 20pt;
+  }
+
+  p.subheader {
+    font-size: 13pt;
+  }
+
+  #sponsors-body {
+    max-width: 85%;
+  }
+
+  a.subheader {
+    font-size: 11pt;
+  }
+}
