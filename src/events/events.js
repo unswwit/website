@@ -1,16 +1,8 @@
 import React from 'react';
 import './events.css';
 import PageHeader from '.././header';
-import listReactFiles from 'list-react-files';
 
 function Events() {
-  const [ pastEvents, setPastEvents ] = React.useState(setEventUrls());
-
-  function setEventUrls() {
-    listReactFiles('./event-covers/past-events')
-      .then((files) => console.log(files));
-  }
-  
   return (
     <div>
       {/* Cover Photo */}
@@ -21,7 +13,7 @@ function Events() {
         <h2>UPCOMING EVENTS</h2>
         <p className="lookout">Keep a lookout here for our upcoming events!</p>
         <div className="grid-container">
-          <div className="upcoming">
+          {/*<div className="upcoming">            
             <div>
               <img
                 className="event-images"
@@ -86,7 +78,7 @@ function Events() {
               </div>
             </div>
           </div>
-
+     
           <div className="upcoming">
             <div>
               <img
@@ -144,9 +136,24 @@ function Events() {
               </div>
             </div>
           </div>
+        */}
         </div>
         <h2>PAST EVENTS</h2>
         <div id="past-events" className="grid-container">
+          <div className="grid-item">
+            <img
+              className="event-images"
+              src={process.env.PUBLIC_URL + './event-covers/23-oct-women-in-consulting.jpg'}
+              alt="tech talk with baraja"
+            />
+          </div>
+          <div className="grid-item">
+            <img
+              className="event-images"
+              src={process.env.PUBLIC_URL + './event-covers/31-oct-2020.jpg'}
+              alt="WIT x Nine: Data Analytics Competition"
+            />
+          </div>
           <div className="grid-item">
             <img
               className="event-images"
