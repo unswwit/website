@@ -12,7 +12,8 @@ p.subheader {
 
 /*----------------------------Sponsor page sponsors---------------------------*/
 /*Sponsor tier names*/
-h1.subsponsor {
+h2.subsponsor {
+  font-family: "Montserrat", sans-serif;
   font-size: 33pt;
   letter-spacing: 8px;
   text-transform: uppercase;
@@ -76,7 +77,7 @@ a.subheader {
 }
 
 @media only screen and (max-width: 300px) {
-  h1.subsponsor {
+  h2.subsponsor {
     font-size: 20pt;
   }
 
