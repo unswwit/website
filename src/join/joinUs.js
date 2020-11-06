@@ -11,6 +11,7 @@ class JoinUs extends React.Component {
     const linkedInUrl =
       "https://www.linkedin.com/company/unsw-women-in-technology/";
     const instagramUrl = "https://www.instagram.com/wit.unsw/";
+    const youtubeUrl = "https://www.youtube.com/channel/UCQ8PGe3P4ZuDSNCb9vCeTiw/videos/";
 
     return (
       <div>
@@ -52,11 +53,19 @@ class JoinUs extends React.Component {
                   style={{ width: "100%", height: "100%" }}
                 />
               </a>
-              <a className="lastBtn" href={spARCUrl}>
+              <a href={spARCUrl}>
                 <img
                   src={process.env.PUBLIC_URL + "/sparc.png"}
                   title="spARC"
                   alt="spARC"
+                  style={{ width: "100%", height: "100%" }}
+                />
+              </a>
+              <a className="lastBtn" href={youtubeUrl}>
+                <img
+                  src={process.env.PUBLIC_URL + "/youtube.png"}
+                  title="youtube"
+                  alt="youtube"
                   style={{ width: "100%", height: "100%" }}
                 />
               </a>
