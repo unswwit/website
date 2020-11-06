@@ -19,14 +19,14 @@ class PubArticle extends Component {
           </div>
 
           <div className="text_container">
-            <h2> {this.props.heading} </h2>
+            <h2>{this.props.heading}</h2>
 
-            <p> {this.props.date} </p>
+            <p>{this.props.date}</p>
 
-            <div className="button">
+            <div tabIndex={0} role="button" className="button">
               {/*<h3> Read More </h3>*/}
               <h3>
-                <a href={this.props.url}>Read More</a>
+                <a href={this.props.url} target="_blank" rel="noopener noreferrer">Read More</a>
               </h3>
             </div>
           </div>

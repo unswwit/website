@@ -12,6 +12,11 @@
 }
 
 /*-------------------------------Publications structure------------------------------*/
+/* Subheading */
+.publicationsBody h1 {
+  font-family: "Montserrat", sans-serif;
+}
+
 /*Body block*/
 .publicationsBody {
   max-width: 65%;
