@@ -22,59 +22,32 @@ class Events extends React.Component {
                   className="event-images"
                   src={
                     process.env.PUBLIC_URL +
-                    "./event-covers/23-oct-women-in-consulting.jpg"
+                    "./event-covers/personal-branding.jpg"
                   }
-                  alt="tech talk with baraja"
+                  alt="Personal Branding Workshop"
                 />
                 <div className="event-description">
                   <p className="event-name">
-                    WIT x TAS x McGrathNicol: Women in Consulting
+                    WIT x Forage presents: Personal Branding Workshop
                   </p>
-                  <p className="event-date">23rd October 2020, 2-3:00 PM</p>
+                  <p className="event-date">11th November 2020, 6-7:00 PM</p>
                   <p className="event-summary">
-                    Do you want to know what it’s like for females in the
-                    consulting industry?{" "}
+                    Are you interested in building your own personal brand, making valuable connections and conquering small talk? {" "}
                     <span role="img" aria-label="graph">
-                      👭👭
+                      🗣️
                     </span>{" "}
-                    Are you familiar with the word, ‘consulting,’ but not too
-                    sure of what it actually entails?{" "}
+                    Fear not, UNSW Women in Technology is collaborating with Forage (formerly InsideSherpa) to provide an insightful introduction into the tips and tricks involved in successful networking and personal branding. {" "}
+                    Don’t miss out on this opportunity to engage with our lovely industry representatives in developing the soft skills that will set you apart from the rest! {" "}
                     <span role="img" aria-label="graph">
-                      ❓❓
-                    </span>{" "}
-                    Well lucky for you WIT and TAS has got you covered!{" "}
-                    <span role="img" aria-label="graph">
-                      🙏🙏
+                      ✔️✔️
                     </span>
-                    In this quick 1 hour workshop, representatives from
-                    prestigious{" "}
-                    <span role="img" aria-label="graph">
-                      ✨
-                    </span>
-                    McGrathNicol
-                    <span role="img" aria-label="graph">
-                      ✨
-                    </span>{" "}
-                    will provide you with an insightful summary, all about the
-                    various opportunities and avenues in consulting!{" "}
-                    <span role="img" aria-label="graph">
-                      💼💼
-                    </span>{" "}
-                    Additionally, this event will ensure that all of your
-                    burning questions about cybersecurity are answered!{" "}
-                    <span role="img" aria-label="graph">
-                      ✔✔
-                    </span>{" "}
-                    So wait are you waiting for? Register now to unlock the
-                    consultant within you!{" "}
-                    <span role="img" aria-label="graph">
-                      ❕❕
-                    </span>
+                    So come along and learn to tell your story and kickstart your career!{" "}
+                    Please note this is a 𝗰𝗼𝗺𝗽𝘂𝗹𝘀𝗼𝗿𝘆 event for all WIT Empowerment Program Mentees
                   </p>
                   <ul id="links">
                     <li className="event-link">
                       <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLScI3aO8HgbOi6YqRxzPg_ZZ836kJmLPkDCrSOi7vvyXZZqdpg/viewform"
+                        href="https://forms.gle/VuFjVp6sTNGC5QT78"
                         className="event"
                       >
                         Register
@@ -82,78 +55,7 @@ class Events extends React.Component {
                     </li>
                     <li className="event-link">
                       <a
-                        href="https://www.facebook.com/events/1009132526220068/"
-                        className="event"
-                      >
-                        Facebook
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="upcoming">
-              <div>
-                <img
-                  className="event-images"
-                  src={
-                    process.env.PUBLIC_URL + "./event-covers/31-oct-2020.jpg"
-                  }
-                  alt="WIT x Nine: Data Analytics Competition"
-                />
-                <div className="event-description">
-                  <p className="event-name">
-                    WIT x Nine: Data Analytics Competition
-                  </p>
-                  <p className="event-date">31st October 2020, 9 AM-9 PM</p>
-                  <p className="event-summary">
-                    How do you say 'data'? Is it 'dae-ta' or 'daa-ta'?{" "}
-                    <span role="img" aria-label="graph">
-                      🤔❔❓
-                    </span>{" "}
-                    This is one of many interesting questions that our reps from
-                    Nine will answer for our first Data Analytics Competiton!
-                    Work in teams of 3-5 to prove your skills in R, SQL and
-                    Python for a chance to win some prizes! Register NOW as a
-                    team or individual (to be placed in a team) to secure your
-                    spot!{" "}
-                    <span role="img" aria-label="graph">
-                      🔒
-                    </span>
-                  </p>
-                  <p className="event-summary">
-                    <span role="img" aria-label="graph">
-                      🏆🏆🏆
-                    </span>{" "}
-                    PRIZES{" "}
-                    <span role="img" aria-label="graph">
-                      🏆🏆🏆
-                    </span>
-                  </p>
-                  <ul className="event-summary">
-                    <li> First prize: $200 (plus coffee with CTO)</li>
-                    <li> Second prize: $150 (plus resume check)</li>
-                    <li> Third prize: $150</li>
-                  </ul>
-                  <p className="event-summary">
-                    Please note that each team must have at least 1 female
-                    student. Also, to prepare yourself for the competition,
-                    mandatory attendance to the prep-workshop by at least one
-                    member of each team is required.
-                  </p>
-                  <ul id="links">
-                    <li className="event-link">
-                      <a
-                        href="https://forms.gle/S4u2pRmTtsKQ6AVb6"
-                        className="event"
-                      >
-                        Register
-                      </a>
-                    </li>
-                    <li className="event-link">
-                      <a
-                        href="https://www.facebook.com/events/2087909558012273"
+                        href="https://www.facebook.com/events/420097319005284/"
                         className="event"
                       >
                         Facebook
@@ -164,6 +66,7 @@ class Events extends React.Component {
               </div>
             </div>
           </div>
+
           <h2>PAST EVENTS</h2>
           <div id="past-events" className="grid-container">
             <div className="grid-item">
