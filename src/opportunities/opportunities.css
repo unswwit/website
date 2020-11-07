@@ -136,13 +136,13 @@ table {
 }
 
 /*-------------------------------Join us very small screen------------------------------*/
-@media only screen and (max-width: 260px) {
+@media only screen and (max-width: 300px) {
   .opp-grid {
     margin: 5px;
   }
 
   .opp-frame {
-    width: 16vw;
-    height: 16vw;
+    width: 17vw;
+    height: 17vw;
   }
 }
