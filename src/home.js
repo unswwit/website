@@ -95,7 +95,7 @@ class Home extends Component {
 						</a> */}
           </div>
           <div className="event-1">
-            <a href="">
+            <a href="https://www.facebook.com/events/420097319005284/">
               <img
                 src={`${process.env.PUBLIC_URL}./event-covers/personal-branding.jpg`}
                 alt="Personal Branding Workshop"
