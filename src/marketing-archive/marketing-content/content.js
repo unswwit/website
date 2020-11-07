@@ -30,27 +30,27 @@ class MarketingContent extends Component {
           {/*List of 2020 intatives*/}
           <div className="initiatives">
             <input type="radio" id="2020" name="categories" />
-            <label forhtml="2020" className="side">
+            <label htmlFor="2020" className="side">
               2020
             </label>
             <input type="radio" id="crush" name="categories" />
-            <label forhtml="crush" className="side">
+            <label htmlFor="crush" className="side">
               WIT Crush Wednesday
             </label>
             <input type="radio" id="memes" name="categories" />
-            <label forhtml="memes" className="side">
+            <label htmlFor="memes" className="side">
               Memes
             </label>
             <input type="radio" id="mondaymot" name="categories" />
-            <label forhtml="mondaymot" className="side">
+            <label htmlFor="mondaymot" className="side">
               Monday Motivation
             </label>
             <input type="radio" id="mascot" name="categories" />
-            <label forhtml="mascot" className="side">
+            <label htmlFor="mascot" className="side">
               Mascot
             </label>
             <input type="radio" id="careers" name="categories" />
-            <label forhtml="careers" className="side">
+            <label htmlFor="careers" className="side">
               Careers Guide
             </label>
 

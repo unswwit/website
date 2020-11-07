@@ -1,16 +1,15 @@
-import React from "react";
-import PageHeader from ".././header";
-import "./joinUs.css";
+import React from 'react';
+import PageHeader from '.././header';
+import './joinUs.css';
 
 class JoinUs extends React.Component {
   render() {
-    const spARCUrl =
-      "https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371W0xQAE";
-    const fbPageUrl = "https://www.facebook.com/unsw.wit/";
-    const fbGroupUrl = "https://www.facebook.com/groups/unswwit/";
-    const linkedInUrl =
-      "https://www.linkedin.com/company/unsw-women-in-technology/";
-    const instagramUrl = "https://www.instagram.com/wit.unsw/";
+    const spARCUrl = 'https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371W0xQAE';
+    const fbPageUrl = 'https://www.facebook.com/unsw.wit/';
+    const fbGroupUrl = 'https://www.facebook.com/groups/unswwit/';
+    const linkedInUrl = 'https://www.linkedin.com/company/unsw-women-in-technology/';
+    const instagramUrl = 'https://www.instagram.com/wit.unsw/';
+    const youtubeUrl = 'https://www.youtube.com/channel/UCQ8PGe3P4ZuDSNCb9vCeTiw/videos/';
 
     return (
       <div>
@@ -20,44 +19,52 @@ class JoinUs extends React.Component {
           <div className="joinUsRight">
             <h2>Connect with us</h2>
             <div className="joinButtons">
-              <a href={fbPageUrl}>
+              <a href={fbPageUrl} target="_blank" rel="noopener noreferrer">
                 <img
-                  src={process.env.PUBLIC_URL + "/facebook.png"}
+                  src={process.env.PUBLIC_URL + '/facebook.png'}
                   title="Facebook Page"
                   alt="Facebook Page"
-                  style={{ width: "100%", height: "100%" }}
+                  style={{ width: '100%', height: '100%' }}
                 />
               </a>
-              <a href={fbGroupUrl}>
+              <a href={fbGroupUrl} target="_blank" rel="noopener noreferrer">
                 <img
-                  src={process.env.PUBLIC_URL + "/facebook-group.png"}
+                  src={process.env.PUBLIC_URL + '/facebook-group.png'}
                   title="Facebook Group"
                   alt="Facebook Group"
-                  style={{ width: "100%", height: "100%" }}
+                  style={{ width: '100%', height: '100%' }}
                 />
               </a>
-              <a href={linkedInUrl}>
+              <a href={linkedInUrl} target="_blank" rel="noopener noreferrer">
                 <img
-                  src={process.env.PUBLIC_URL + "/linkedin.png"}
+                  src={process.env.PUBLIC_URL + '/linkedin.png'}
                   title="Linked-In"
                   alt="Linked-In"
-                  style={{ width: "100%", height: "100%" }}
+                  style={{ width: '100%', height: '100%' }}
                 />
               </a>
-              <a href={instagramUrl}>
+              <a href={instagramUrl} target="_blank" rel="noopener noreferrer">
                 <img
-                  src={process.env.PUBLIC_URL + "/instagram.png"}
+                  src={process.env.PUBLIC_URL + '/instagram.png'}
                   title="Instagram"
                   alt="Instagram"
-                  style={{ width: "100%", height: "100%" }}
+                  style={{ width: '100%', height: '100%' }}
                 />
               </a>
-              <a className="lastBtn" href={spARCUrl}>
+              <a href={spARCUrl} target="_blank" rel="noopener noreferrer">
                 <img
-                  src={process.env.PUBLIC_URL + "/sparc.png"}
+                  src={process.env.PUBLIC_URL + '/sparc.png'}
                   title="spARC"
                   alt="spARC"
-                  style={{ width: "100%", height: "100%" }}
+                  style={{ width: '100%', height: '100%' }}
+                />
+              </a>
+              <a className="lastBtn" href={youtubeUrl} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={process.env.PUBLIC_URL + '/youtube.png'}
+                  title="youtube"
+                  alt="youtube"
+                  style={{ width: '100%', height: '100%' }}
                 />
               </a>
             </div>

@@ -355,5 +355,24 @@ Title and Description. */
 @media only screen and (max-width: 640px) {
   .sponsors h1 {
     font-size: 7.8vw;
+    padding-top: 30px;
+  }
+
+  .description {
+    max-width: 85%;
+  }
+
+  .events-description p#about {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .event-1 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .events-description a {
+    padding: 0px;
   }
 }
