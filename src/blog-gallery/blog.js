@@ -13,9 +13,23 @@ class Blog extends Component {
         <PageHeader imgUrl="/blog-header.png" title="Blog Posts" />
 
         {/*Start of blog posts*/}
+        {/*blog post 38*/}
+        <BlogPreview
+          topMargin="10vw"
+          bottomMargin="5vw"
+          blogNo="38"
+          imgUrl="/blog-covers/38-exsight.png"
+          heading="WIT Personal Project Series - eXsight"
+          date="9/11/2020"
+          subheading="Join us on the second part of WIT's Personal Project Series, with start-up eXsight!"
+          authors={{
+            "srija-mukherjee": ["/potraits/srija.jpg", "Srija Mukherjee"],
+            "georgie-mansfield": ["/potraits/georgie.jpg", "Georgie Mansfield"],
+          }}
+        />
         {/*blog post 37*/}
            <BlogPreview
-          topMargin="10vw"
+          topMargin="5vw"
           bottomMargin="5vw"
           blogNo="37"
           imgUrl="/blog-covers/37-tanzeem-syeda.png"
