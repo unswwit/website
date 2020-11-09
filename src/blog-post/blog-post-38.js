@@ -103,7 +103,7 @@ class blogPost38 extends Component {
               "/potraits/srija.jpg",
               "profile_img vivw_img",
               "Srija Mukherjee",
-              "Externals team",
+              "Externals Team",
             ],
             'georgie-mansfield': [
               '/potraits/georgie.jpg',
