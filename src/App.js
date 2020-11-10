@@ -159,7 +159,7 @@ class App extends Component {
 
     return (
       <div>
-        <div class="loader loader-default is-active"></div>
+        <div className="loader loader-default is-active"></div>
         <HashRouter basename="/">
           <Menu
             open={this.state.menuOpen}
