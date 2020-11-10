@@ -280,8 +280,8 @@ footer {
   margin-top: 1%;
 }
 
-.footer-icons {
-  padding-right: 1vw;
+.socials .footer-icons {
+  padding: 0px 0.5vw;
 }
 
 .col-width {
@@ -290,6 +290,12 @@ footer {
 
 .socials {
   margin-left: 8%;
+}
+
+.socials .footer-item {
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-copyright {
