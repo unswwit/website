@@ -84,7 +84,9 @@ class blogPost15 extends Component {
             </p>
             <br />
 
-            <p className="question">How did you open opportunities to yourself?</p>
+            <p className="question">
+              How did you open opportunities to yourself?
+            </p>
             <p className="post-content">
               I attended all the lectures and interacted with the professors and
               students to learn about opportunities. And I also actively took

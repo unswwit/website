@@ -28,7 +28,7 @@ class Blog extends Component {
           }}
         />
         {/*blog post 37*/}
-           <BlogPreview
+        <BlogPreview
           topMargin="5vw"
           bottomMargin="5vw"
           blogNo="37"

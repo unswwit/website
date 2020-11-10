@@ -76,7 +76,7 @@ class blogPost30 extends Component {
               The typical technical interview is ~45 minutes long:
             </p>
 
-            <div style={{ "overflowX": "auto" }}>
+            <div style={{ overflowX: "auto" }}>
               <table className="post">
                 <tbody>
                   <tr>
@@ -88,26 +88,28 @@ class blogPost30 extends Component {
                     <td className="post-content">5 min</td>
                     <td className="post-content">Self Introductions</td>
                     <td className="post-content">
-                    Motivations for applying to this company and this specific
-                    role.
+                      Motivations for applying to this company and this specific
+                      role.
                     </td>
                   </tr>
                   <tr>
                     <td className="post-content">30-35 min</td>
                     <td className="post-content">Technical Questions</td>
                     <td className="post-content">
-                    Expect to be given either 1 hard question or 2 easy-medium
-                    questions for you to CODE up. Always be asked about the time
-                    and space complexity of your code
+                      Expect to be given either 1 hard question or 2 easy-medium
+                      questions for you to CODE up. Always be asked about the
+                      time and space complexity of your code
                     </td>
                   </tr>
                   <tr>
                     <td className="post-content">5 min</td>
-                    <td className="post-content">Questions to ask the interviewer</td>
                     <td className="post-content">
-                    What do you want to know about the company,
-                    internship/graduate training process, past intern/graduate
-                    projects?{" "}
+                      Questions to ask the interviewer
+                    </td>
+                    <td className="post-content">
+                      What do you want to know about the company,
+                      internship/graduate training process, past intern/graduate
+                      projects?{" "}
                     </td>
                   </tr>
                 </tbody>

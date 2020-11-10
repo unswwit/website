@@ -22,7 +22,9 @@ class AuthorCard extends Component {
               </div>
             </div>
             <div className="author-right">
-              <div className="title author-name">{this.props.authors[key][2]}</div>
+              <div className="title author-name">
+                {this.props.authors[key][2]}
+              </div>
               <div className="position">{this.props.authors[key][3]}</div>
             </div>
           </div>

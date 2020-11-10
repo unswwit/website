@@ -20,7 +20,9 @@ class blogPost27 extends Component {
         {/*Start of blog post*/}
         <div className="blog-content">
           <div>
-            <h2 className="blog-title">Introducing: Ankita Singh, PHD Student</h2>
+            <h2 className="blog-title">
+              Introducing: Ankita Singh, PHD Student
+            </h2>
             <p className="date">30th September 2020</p>
           </div>
 
