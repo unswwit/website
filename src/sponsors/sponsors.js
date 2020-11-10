@@ -61,7 +61,7 @@ class Sponsors extends Component {
                   "/sponsors/baraja-major.png",
                 ],
               }}
-            />       
+            />
 
             <Major
               details={{
@@ -104,7 +104,7 @@ class Sponsors extends Component {
                 ],
               }}
             />
-        
+
             <Major
               details={{
                 Nine: [

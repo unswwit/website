@@ -59,10 +59,9 @@ import blogPost36 from "./blog-post/blog-post-36";
 import blogPost37 from "./blog-post/blog-post-37";
 import blogPost38 from "./blog-post/blog-post-38";
 
-
 class App extends Component {
   state = {
-    loading: true
+    loading: true,
   };
 
   constructor(props) {
@@ -121,7 +120,6 @@ class App extends Component {
     });
   }
 
-
   handleHover(e) {
     this.setState({
       showDD: !this.state.showDD,
@@ -136,7 +134,7 @@ class App extends Component {
   };
 
   fakeRequest = () => {
-    return new Promise(resolve => setTimeout(() => resolve(), 2500));
+    return new Promise((resolve) => setTimeout(() => resolve(), 2500));
   };
 
   componentDidMount() {
@@ -144,12 +142,12 @@ class App extends Component {
     this.fakeRequest().then(() => {
       const el = document.querySelector(".loader");
       if (el) {
-        el.remove();  // removing the spinner element
+        el.remove(); // removing the spinner element
         this.setState({ loading: false }); // showing the app
       }
     });
   }
-  
+
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateMenu);
   }
@@ -163,8 +161,10 @@ class App extends Component {
       <div>
         <div class="loader loader-default is-active"></div>
         <HashRouter basename="/">
-
-          <Menu open={this.state.menuOpen} handleMenuClick={this.handleMenuClick.bind(this)} />
+          <Menu
+            open={this.state.menuOpen}
+            handleMenuClick={this.handleMenuClick.bind(this)}
+          />
           <nav className="navbar navbar-expand-md navbar-dark bg-custom fixed-top">
             <a className="navbar-brand" href="/">
               <img
@@ -272,4 +272,5 @@ class App extends Component {
       </div>
     );
   }
- } export default App;
+}
+export default App;

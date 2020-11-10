@@ -51,7 +51,9 @@ class blogPost5 extends Component {
             </p>
             <br />
 
-            <p className="question">What are the limitations of your research?</p>
+            <p className="question">
+              What are the limitations of your research?
+            </p>
             <p className="post-content">
               Relative to other conditions of CO2 conversion to methane,
               photothermal conditions and the number of catalysts tested have
@@ -122,7 +124,9 @@ class blogPost5 extends Component {
             </p>
             <br />
 
-            <p className="question">How did you open opportunities for yourself?</p>
+            <p className="question">
+              How did you open opportunities for yourself?
+            </p>
             <p className="post-content">
               I think that it’s important to be proactive with your goals,
               consistently work on improving skills, and be enthusiastic to

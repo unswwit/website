@@ -143,7 +143,9 @@ class blogPost26 extends Component {
             </p>
             <br />
 
-            <p className="question">What did you learn whilst creating LinkUp?</p>
+            <p className="question">
+              What did you learn whilst creating LinkUp?
+            </p>
             <p className="post-content">
               D: LinkUp consists of a small and dedicated team, so I learned how
               to work in a team and the importance of communication and time
@@ -180,7 +182,9 @@ class blogPost26 extends Component {
             </p>
             <br />
 
-            <p className="question">Who did you turn to for help along the way?</p>
+            <p className="question">
+              Who did you turn to for help along the way?
+            </p>
             <p className="post-content">
               Z: Whenever we needed help, we would either Google it, ask our
               teammates for help, or ask questions in relevant coding

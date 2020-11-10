@@ -26,7 +26,13 @@ class PubArticle extends Component {
             <div tabIndex={0} role="button" className="button">
               {/*<h3> Read More </h3>*/}
               <h3>
-                <a href={this.props.url} target="_blank" rel="noopener noreferrer">Read More</a>
+                <a
+                  href={this.props.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Read More
+                </a>
               </h3>
             </div>
           </div>

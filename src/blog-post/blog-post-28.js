@@ -86,7 +86,9 @@ class blogPost28 extends Component {
                 structure and algorithms, so I revisited my COMP2521 notes.
               </p>
               <br />
-              <li className="question">Where did you find practice questions? </li>
+              <li className="question">
+                Where did you find practice questions?{" "}
+              </li>
               <br />{" "}
               <p className="post-content">
                 V: I found many practice questions on HackerRank and Leetcode.
