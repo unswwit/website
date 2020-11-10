@@ -39,13 +39,12 @@ div .headline {
 .description {
   height: 500px;
   margin: auto;
-  max-width: 80%;
+  max-width: 85%;
 }
 
 /*Description left block*/
 .description-left {
   display: inline-block;
-  float: left;
   height: 500px;
   padding: 100px 50px 50px 0px;
   width: 50%;
@@ -55,20 +54,17 @@ div .headline {
 .description-left h1 {
   color: #feb14b;
   font-family: "Montserrat", sans-serif;
-  font-size: 78px;
-  font-size: 6.4vw;
+  font-size: 5.8vw;
 
   font-weight: 600;
   letter-spacing: 4px;
   line-height: 100px;
-  padding: 0px, 0px, 50px, 200px;
   text-align: right;
 }
 
 /*Description right block*/
 .description-right {
   display: inline-block;
-  float: right;
   height: 500px;
   line-height: 22px;
   padding: 175px 0px 0px 50px;
@@ -200,7 +196,7 @@ div .headline {
   grid-template-columns: repeat(5, 20%);
   grid-template-rows: 100px 110px auto auto;
   padding: 100px 0px 0px 0px;
-  max-width: 80%;
+  max-width: 85%;
   margin: 0 auto;
 }
 

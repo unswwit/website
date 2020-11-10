@@ -89,11 +89,13 @@ class Home extends Component {
           <div className="events-title">
             <h1> EVENTS </h1>
           </div>
+          {/* 
           <div className="event-2">
-            {/* <a href="https://www.facebook.com/events/208115483507235/">
+            <a href="https://www.facebook.com/events/208115483507235/">
 							<img src={process.env.PUBLIC_URL + '/tech-trivia-tournament.png'} alt="banner"/>
-						</a> */}
+						</a> 
           </div>
+          */}
           <div className="event-1">
             <a href="https://www.facebook.com/events/420097319005284/">
               <img
