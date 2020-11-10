@@ -76,7 +76,7 @@ a.subheader {
   margin-bottom: 75px;
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 400px) {
   h2.subsponsor {
     font-size: 20pt;
   }
