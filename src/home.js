@@ -95,10 +95,10 @@ class Home extends Component {
 						</a> */}
           </div>
           <div className="event-1">
-            <a href="https://www.facebook.com/events/2087909558012273">
+            <a href="https://www.facebook.com/events/420097319005284/">
               <img
-                src={`${process.env.PUBLIC_URL}./event-covers/31-oct-2020.jpg`}
-                alt="Data Analytics Competition!"
+                src={`${process.env.PUBLIC_URL}./event-covers/personal-branding.jpg`}
+                alt="Personal Branding Workshop"
               />
             </a>
           </div>

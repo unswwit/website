@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { HashRouter, Route, NavLink, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
+import "./loader.css";
 import Home from "./home";
 import JoinUs from "./join/joinUs";
 import Sponsors from "./sponsors/sponsors";
@@ -58,7 +59,12 @@ import blogPost36 from "./blog-post/blog-post-36";
 import blogPost37 from "./blog-post/blog-post-37";
 import blogPost38 from "./blog-post/blog-post-38";
 
+
 class App extends Component {
+  state = {
+    loading: true
+  };
+
   constructor(props) {
     super(props);
     this.blogPosts = [
@@ -129,8 +135,19 @@ class App extends Component {
     }
   };
 
+  fakeRequest = () => {
+    return new Promise(resolve => setTimeout(() => resolve(), 2500));
+  };
+
   componentDidMount() {
     window.addEventListener("resize", this.updateMenu);
+    this.fakeRequest().then(() => {
+      const el = document.querySelector(".loader");
+      if (el) {
+        el.remove();  // removing the spinner element
+        this.setState({ loading: false }); // showing the app
+      }
+    });
   }
   
   componentWillUnmount() {
@@ -138,8 +155,13 @@ class App extends Component {
   }
 
   render() {
+    if (this.state.loading) {
+      return null; //app is not ready (fake request is in process)
+    }
+
     return (
       <div>
+        <div class="loader loader-default is-active"></div>
         <HashRouter basename="/">
 
           <Menu open={this.state.menuOpen} handleMenuClick={this.handleMenuClick.bind(this)} />
@@ -250,6 +272,4 @@ class App extends Component {
       </div>
     );
   }
-}
-
-export default App;
+ } export default App;
