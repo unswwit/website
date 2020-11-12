@@ -16,6 +16,7 @@ import OurTeam from "./team/team";
 import Blog from "./blog-gallery/blog";
 import Publications from "./publications/publications";
 import Events from "./events/events";
+import Podcasts from "./podcasts/podcasts"
 
 import Menu from "./menu";
 import MenuBtn from "./menuBtn";
@@ -216,6 +217,9 @@ class App extends Component {
                         <NavLink to="/blog">BLOG</NavLink>
                       </div>
                       <div className="dropdown-item">
+                        <NavLink to="/podcasts">PODCASTS</NavLink>
+                      </div>
+                      <div className="dropdown-item">
                         <NavLink to="/publications">PUBLICATIONS</NavLink>
                       </div>
                       <div className="dropdown-item">
@@ -258,6 +262,7 @@ class App extends Component {
             />
             <Route path="/join-us" component={JoinUs} />
             <Route path="/sponsors" component={Sponsors} />
+            <Route path="/podcasts" component={Podcasts} />
             <Route path="/opportunities" component={Opportunities} />
             <Route path="/contact-us" component={ContactUs} />
             <Route path="/publications" component={Publications} />
