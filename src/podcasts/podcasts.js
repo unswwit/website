@@ -7,31 +7,30 @@ class Podcasts extends React.Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/contact-header-1.png" title="Podcasts" />
+        <PageHeader imgUrl="/podcast-header.jpg" title="Podcasts" />
 
-        <h2 className="contact-team">CONTACT OUR TEAM</h2>
-        <div className="newEmails">
-          <div className="col2">
-            <div className="profile2">
-              <img
-                src={process.env.PUBLIC_URL + "/pres-icon.png"}
-                alt="pres-icon"
-              />
-              <h3> Vivian Shen </h3>
-              <a href="mailto:president@unswwit.com">president@unswwit.com</a>
-            </div>
-            <div className="profile2">
-              <img
-                src={process.env.PUBLIC_URL + "/vp-icon.png"}
-                alt="vp-icon"
-              />
-              <h3> Amanda Li </h3>
-              <a href="mailto:vp@unswwit.com">vp@unswwit.com</a>
-            </div>
+        <div class="margin">
+          <div class="podcast-intro">
+            <img src={process.env.PUBLIC_URL + "/podcast-logo.png"} alt="podcast-logo"
+            className="podcast-logo"/>
+            <h2>Talk WIT Us</h2>
+            <p>Join us every Monday as we talk about tech, uni, and life, featuring
+            our wonderful WIT team and some special guests!</p>
+          </div>
 
-            
+          <div class="comments">
+            <h2> Comments </h2>
+            <div class="icons">
+              <img src={process.env.PUBLIC_URL + "/podcasts/podcast-breaker.png"} alt="breaker-icon"/>
+              <img src={process.env.PUBLIC_URL + "/podcasts/podcast-anchor.png"} alt="anchor-icon"/>
+              <img src={process.env.PUBLIC_URL + "/podcasts/podcast-google-podcasts.png"} alt="google-podcasts-icon"/>
+              <img src={process.env.PUBLIC_URL + "/podcasts/podcast-pocket-casts.png"} alt="pocket-casts-icon"/>
+              <img src={process.env.PUBLIC_URL + "/podcasts/podcast-radio-republic.png"} alt="radio-republic-icon"/>
+              <img src={process.env.PUBLIC_URL + "/podcasts/podcast-spotify.png"} alt="spotify-icon"/>
+            </div>
           </div>
         </div>
+
       </div>
     );
   }
