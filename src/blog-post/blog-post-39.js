@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import '.././style.css';
-import './blog-post.css';
-import AuthorCard from './authorCard';
-import PageHeader from '../header';
+import React, { Component } from "react";
+import ".././style.css";
+import "./blog-post.css";
+import AuthorCard from "./authorCard";
+import PageHeader from "../header";
 
 class blogPost39 extends Component {
   //start webpage at the top
@@ -30,13 +30,11 @@ class blogPost39 extends Component {
               How many times have you been in a lecture and struggled to write quickly enough? Or Missed 
               important details because you were busy writing something else?
             </p>
-            <br />
             <p className="post-content">
               While many lectures and presentations are recorded and shared with the attendees nowadays, 
               note-taking is still a necessity, so here we explore [introduce what the blog is teaching 
               people]
             </p>
-            <br />
             <p className="post-content">
               In every lecture and tutorial, students face the daunting task of extracting and remembering 
               the most important information and so note-taking can be an effective way to reinforce what 
@@ -44,14 +42,13 @@ class blogPost39 extends Component {
               information when you're hearing it for the first time, instead of spending more time reviewing 
               a recording of it.
             </p>
-            <br />
             <p className="post-content">
               <i>“Acquiring the habit of note-taking is a wonderfully complementary skill to that of listening.” 
               - Richard Branson, English business magnate, investor, and author. </i>
             </p>
             <br />
 
-            <p className="super-emph" style={{ color: 'black' }}>Do’s and Don’ts for Note Taking</p>
+            <p className="super-emph" style={{ color: "black" }}>Do’s and Don’ts for Note Taking</p>
             <p className="question">Tips to help you take notes effectively:</p>
             <p className="post-content">Do:</p>
             <ul className="list">
@@ -67,7 +64,7 @@ class blogPost39 extends Component {
               <li className="post-content">At the end of the lecture or meeting, summarize the main messages 
               into one to two sentences to reinforce your understanding of the material</li>
             </ul>
-            <p className="question">Things to avoid while note-taking.</p>
+            <p className="question">Things to avoid while note-taking:</p>
             <p className="post-content">Do not:</p>
             <ul className="list">
               <li className="post-content">Write down everything the lecturer/speaker says</li>
@@ -78,23 +75,21 @@ class blogPost39 extends Component {
             </ul>
             <br />
 
-            <p className="super-emph" style={{color:'black'}}>Tools for Note Taking</p>
+            <p className="super-emph" style={{color:"black"}}>Tools for Note Taking</p>
             <p className="post-content">
               Online note-taking and organizational tools such as Evernote and OneNote are popular and effective 
               ways for people note-taking to organize their notes, manage tasks, and archive the notes they’re 
               finished with. These programs allow users to gather notes and information in a variety of ways — from 
               traditional writing, audio, and video recordings to storing complete webpages.
             </p>
-            <br />
             
-            <p className="super-emph" style={{ color: 'black' }}>Popular Note Taking Methods</p>
+            <p className="super-emph" style={{ color: "black" }}>Popular Note Taking Methods</p>
             <p className="post-content">
               <b>Outline Method</b> - This method organizes information in a structured and logical manner and becomes an 
               excellent study guide. Use simple bullet points and hierarchy (have a main heading and bullet point 
               below the heading). Use top-level bullet points for the main points and lower level bullet points for 
               the details.
             </p>
-            <br />
             <p className="post-content">
               <b>Cornell Method</b> - Divide paper into 3 sections. On the top of your paper, you’ll have two columns with the 
               left one being the cue column and the right one being the notetaking column. Underneath the columns, you have 
@@ -102,18 +97,15 @@ class blogPost39 extends Component {
               notes. After class, you add questions or cues related to the summary bullet points on the right. Then, you 
               write a summary of the lecture below.
             </p>
-            <br />
             <p className="post-content">
               <b>Mind Map Method</b> - This method allows you to highlight important facts, show the structure of a subject and its 
               important individual parts, and ultimately, make new connections between ideas. It’s ideal for when you need to 
               think creatively. Write the topic at the center of a piece of paper. Then, add tree limbs with topics and subtopics. 
             </p>
-            <br />
             <p className="post-content">
               <b>Flow Method</b> - The goal of this method is to learn the material once while sitting in class. Create your mental image of 
               the subject on paper. Organize it spatially, including arrows to connect concepts and ideas.
             </p>
-            <br />
             <p className="post-content">
               <b>Charting Method</b> - This method is ideal when you’re learning about chronological events. Identify the topics that will be 
               covered in the lecture. Then, draw columns and write the headings based on the categories. During the lecture or tutorial,
