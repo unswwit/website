@@ -280,8 +280,8 @@ footer {
   margin-top: 1%;
 }
 
-.footer-icons {
-  padding-right: 1vw;
+.socials .footer-icons {
+  padding: 0px 0.5vw;
 }
 
 .col-width {
@@ -290,6 +290,12 @@ footer {
 
 .socials {
   margin-left: 8%;
+}
+
+.socials .footer-item {
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-copyright {
@@ -316,7 +322,7 @@ a {
 
 .grid-footer-container {
   display: flex;
-  width: 70%;
+  width: 80%;
   margin: 0px auto;
 }
 
@@ -339,6 +345,10 @@ a {
 
   .footer-logo {
     margin-bottom: 2%;
+  }
+
+  .footer-icons {
+    margin-right: 2vw;
   }
 
   .socials {

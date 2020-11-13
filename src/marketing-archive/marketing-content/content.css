@@ -36,7 +36,7 @@
   transition: all 0.1s;
 }
 
-label[for="2020"] {
+label[htmlFor="2020"] {
   font-size: 32pt;
   color: #feb14b;
   font-weight: bold;

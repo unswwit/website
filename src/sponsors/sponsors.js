@@ -20,7 +20,7 @@ class Sponsors extends Component {
           </p>
 
           {/* Principal Sponsors Area */}
-          <h1 className="subsponsor">Principal Sponsors</h1>
+          <h2 className="subsponsor">Principal Sponsors</h2>
           <div id="majorContainer">
             <Principal
               details={{
@@ -33,7 +33,7 @@ class Sponsors extends Component {
           </div>
 
           {/* Major Sponsors Area */}
-          <h1 className="subsponsor">Major Sponsors</h1>
+          <h2 className="subsponsor">Major Sponsors</h2>
 
           <div id="majorContainer">
             <Major
@@ -61,7 +61,7 @@ class Sponsors extends Component {
                   "/sponsors/baraja-major.png",
                 ],
               }}
-            />       
+            />
 
             <Major
               details={{
@@ -104,7 +104,7 @@ class Sponsors extends Component {
                 ],
               }}
             />
-        
+
             <Major
               details={{
                 Nine: [
@@ -125,7 +125,7 @@ class Sponsors extends Component {
           </div>
 
           {/* Support Sponsors Area */}
-          <h1 className="subsponsor">Support Sponsors</h1>
+          <h2 className="subsponsor">Support Sponsors</h2>
           <div id="majorContainer">
             <SupportInkind
               details={{
@@ -147,7 +147,7 @@ class Sponsors extends Component {
           </div>
 
           {/* InKind Sponsors Area */}
-          <h1 className="subsponsor">In-Kind Sponsors</h1>
+          <h2 className="subsponsor">In-Kind Sponsors</h2>
 
           <div id="majorContainer">
             <SupportInkind
@@ -176,10 +176,6 @@ class Sponsors extends Component {
             </a>
           </p>
         </div>
-
-        <footer>
-          <div className="footer_area" style={{ marginTop: "8vw" }} />
-        </footer>
       </div>
     );
   }

@@ -160,7 +160,9 @@ class blogPost7 extends Component {
               </p>
               <br />
 
-              <li className="question">Share knowledge between team members. </li>
+              <li className="question">
+                Share knowledge between team members.{" "}
+              </li>
               <p className="post-content">
                 Regardless of how tasks are divided, it’s important that members
                 stay abreast of developments amongst their team. One team
@@ -187,7 +189,9 @@ class blogPost7 extends Component {
               <br />
             </ul>
 
-            <p className="question">Examples of winning products and projects </p>
+            <p className="question">
+              Examples of winning products and projects{" "}
+            </p>
             <p className="post-content">
               The winning teams have certainly earned the right to advise others
               on how to have a successful hackathon experience. Let’s look at

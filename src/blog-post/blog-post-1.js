@@ -101,7 +101,10 @@ class blogPost1 extends Component {
               </p>
               <br />
 
-              <li className="question"> What do you love about your career now?</li>
+              <li className="question">
+                {" "}
+                What do you love about your career now?
+              </li>
               <p className="post-content">
                 {" "}
                 I love how I get to try out a variety of roles and work with

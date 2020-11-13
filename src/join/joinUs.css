@@ -25,6 +25,9 @@
   text-align: left;
   padding: 0px 10px 10% 10%;
   float: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*Heading*/
@@ -36,6 +39,7 @@
 .joinButtons {
   position: relative;
   display: inline-block;
+  width: 300px;
 }
 
 /*Social links*/

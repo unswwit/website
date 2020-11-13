@@ -75,7 +75,7 @@ class OurTeam extends Component {
             <Execs
               imgUrl="/potraits/vivw.jpg"
               name="Vivian Wong"
-              className="vivw_img"
+              class="vivw_img"
               position="Education Executive"
               degree="Commerce/Actuarial Science"
               year="2nd"
@@ -87,7 +87,7 @@ class OurTeam extends Component {
             <Execs
               imgUrl="/potraits/gabby.jpg"
               name="Gabrielle Younes"
-              className="gab_img"
+              class="gab_img"
               position="Events Executive"
               degree="Bioinformatic Engineering/Advanced Science"
               year="2nd"
@@ -127,7 +127,7 @@ class OurTeam extends Component {
             <Execs
               imgUrl="/potraits/elicia.jpg"
               name="Elicia Au Duong"
-              className="eli_img"
+              class="eli_img"
               position="Information Technology Executive"
               degree="Commerce/Computer Science"
               year="2nd"

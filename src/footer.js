@@ -16,7 +16,9 @@ class Footer extends Component {
                     src={`${process.env.PUBLIC_URL}./logo-black.png`}
                     className="photo"
                     alt="wit logo"
-                    style={{ width: "50px" }}
+                    style={{
+                      width: "50px",
+                    }}
                   />
                 </li>
                 <div className="col-width footer-links">
@@ -27,17 +29,17 @@ class Footer extends Component {
                   </li>
                   <li className="footer-item">
                     <Link onClick={() => window.scrollTo(0, 0)} to="/events">
-                      Events{" "}
+                      Events
                     </Link>
                   </li>
                   <li className="footer-item">
                     <Link onClick={() => window.scrollTo(0, 0)} to="/our-team">
-                      Team{" "}
+                      Team
                     </Link>
                   </li>
                   <li className="footer-item">
                     <Link onClick={() => window.scrollTo(0, 0)} to="/sponsors">
-                      Sponsors{" "}
+                      Sponsors
                     </Link>
                   </li>
                   <li className="footer-item">
@@ -50,7 +52,7 @@ class Footer extends Component {
                   </li>
                   <li className="footer-item">
                     <Link onClick={() => window.scrollTo(0, 0)} to="/join-us">
-                      Join{" "}
+                      Join
                     </Link>
                   </li>
                   <li className="footer-item">
@@ -58,14 +60,14 @@ class Footer extends Component {
                       onClick={() => window.scrollTo(0, 0)}
                       to="/contact-us"
                     >
-                      Contact{" "}
+                      Contact
                     </Link>
                   </li>
                 </div>
                 <div className="col-width footer-links">
                   <li className="footer-item">
                     <Link onClick={() => window.scrollTo(0, 0)} to="/blog">
-                      Blog{" "}
+                      Blog
                     </Link>
                   </li>
                   <li className="footer-item">
@@ -87,36 +89,105 @@ class Footer extends Component {
                 </div>
                 <div className="col-width socials">
                   <div className="socials-subheading">
-                    <li className="footer-item">Follow our socials</li>
+                    <li className="footer-item"> Follow our socials </li>
                   </div>
                   <div className="footer-item">
                     <span className="footer-icons">
-                      <a href="https://www.linkedin.com/company/unsw-women-in-technology">
+                      <a
+                        href="https://www.linkedin.com/company/unsw-women-in-technology"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <img
                           src={`${process.env.PUBLIC_URL}/linkedin.png`}
-                          className=""
-                          alt="banner"
-                          style={{ width: "25px", height: "25px" }}
+                          alt="linkedin link"
+                          style={{
+                            width: "25px",
+                            height: "25px",
+                          }}
                         />
                       </a>
                     </span>
                     <span className="footer-icons">
-                      <a href="https://www.facebook.com/unsw.wit/">
+                      <a
+                        href="https://www.facebook.com/unsw.wit/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <img
                           src={`${process.env.PUBLIC_URL}/facebook.png`}
-                          className=""
-                          alt="banner"
-                          style={{ width: "25px", height: "25px" }}
+                          alt="facebook link"
+                          style={{
+                            width: "25px",
+                            height: "25px",
+                          }}
                         />
                       </a>
                     </span>
                     <span className="footer-icons">
-                      <a href="https://www.instagram.com/wit.unsw/">
+                      <a
+                        href="https://www.instagram.com/wit.unsw/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <img
                           src={`${process.env.PUBLIC_URL}/instagram.png`}
-                          className=""
-                          alt="banner"
-                          style={{ width: "25px", height: "25px" }}
+                          alt="instagram link"
+                          style={{
+                            width: "25px",
+                            height: "25px",
+                          }}
+                        />
+                      </a>
+                    </span>
+                    <span className="footer-icons">
+                      <a
+                        className="lastBtn"
+                        href="https://www.youtube.com/channel/UCQ8PGe3P4ZuDSNCb9vCeTiw/featured"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src={`${process.env.PUBLIC_URL}/youtube.png`}
+                          alt="youtube link"
+                          style={{
+                            width: "25px",
+                            height: "25px",
+                          }}
+                        />
+                      </a>
+                    </span>
+                    <span className="footer-icons">
+                      <a
+                        className="lastBtn"
+                        href="https://www.twitch.tv/unswwit"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src={`${process.env.PUBLIC_URL}/twitch.png`}
+                          alt="twitch link"
+                          style={{
+                            width: "25px",
+                            height: "25px",
+                          }}
+                        />
+                      </a>
+                    </span>
+                    <span className="footer-icons">
+                      <a
+                        className="lastBtn"
+                        href="https://open.spotify.com/show/1iWagdei1mVoyzg8TqbB2P"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src={`${process.env.PUBLIC_URL}/spotify.png`}
+                          alt="spotify link"
+                          style={{
+                            width: "25px",
+                            height: "25px",
+                          }}
                         />
                       </a>
                     </span>
@@ -125,7 +196,7 @@ class Footer extends Component {
               </div>
             </ul>
             <div className="footer-copyright text-center bottom-footer-item">
-              <Link to="/">Copyright © 2020. UNSW Women in Technology</Link>
+              <Link to="/"> Copyright© 2020. UNSW Women in Technology </Link>
             </div>
           </footer>
         </HashRouter>

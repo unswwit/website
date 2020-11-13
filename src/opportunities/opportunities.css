@@ -1,4 +1,18 @@
 /*-------------------------------Opportunities Preview-----------------------------*/
+/* Subheadings */
+h2.oppSubheading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 33pt;
+  text-transform: uppercase;
+  margin-top: 8%;
+  margin-bottom: 4%;
+  text-align: center;
+}
+
+.oppLookout {
+  text-align: center;
+}
+
 /*Opportunities circle crop*/
 .opp-frame {
   border-radius: 50%;
@@ -35,7 +49,7 @@ table {
 }
 
 .opp-grid {
-  margin: 125px;
+  margin: 0 125px 125px 100px;
 }
 
 .opp-details {
@@ -133,16 +147,25 @@ table {
     width: 12vw;
     height: 12vw;
   }
+
+  h2.oppSubheading {
+    font-size: 20pt;
+  }
 }
 
 /*-------------------------------Join us very small screen------------------------------*/
-@media only screen and (max-width: 260px) {
+@media only screen and (max-width: 300px) {
   .opp-grid {
     margin: 5px;
   }
 
   .opp-frame {
-    width: 16vw;
-    height: 16vw;
+    width: 17vw;
+    height: 17vw;
+  }
+
+  h2.oppSubheading {
+    font-size: 12pt;
+    word-break: break-word;
   }
 }

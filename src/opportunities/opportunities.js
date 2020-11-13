@@ -13,7 +13,14 @@ class Opportunities extends Component {
         {/* Cover Photo */}
         <PageHeader imgUrl="/opportunities-header.jfif" title="Opportunities" />
 
-        {/*Start of opportunities grid table*/}
+        {/*start of active opportunies*/}
+        <h2 className="oppSubheading">Active Opportunities</h2>
+        <p className="oppLookout">
+          Keep a lookout here for upcoming opportunities!
+        </p>
+
+        {/*Start of past opportunities*/}
+        <h2 className="oppSubheading">Past Opportunities</h2>
         <div className="opp-grid">
           <div className="container">
             <OppCard
