@@ -59,6 +59,7 @@ import blogPost35 from "./blog-post/blog-post-35";
 import blogPost36 from "./blog-post/blog-post-36";
 import blogPost37 from "./blog-post/blog-post-37";
 import blogPost38 from "./blog-post/blog-post-38";
+import blogPost39 from "./blog-post/blog-post-39";
 
 class App extends Component {
   state = {
@@ -104,8 +105,9 @@ class App extends Component {
       blogPost34,
       blogPost35,
       blogPost36,
-      blogPost37,
+      blogPost37,    
       blogPost38,
+      blogPost39,
     ];
     this.state = {
       showDD: false,

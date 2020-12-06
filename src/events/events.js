@@ -10,9 +10,10 @@ function Events() {
       {/* Main Title, and Subtitle Area */}
       <div className="events-body">
         <h2>UPCOMING EVENTS</h2>
-        {/*<p className="lookout">Keep a lookout here for our upcoming events!</p>*/}
+        <p className="lookout">Keep a lookout here for our upcoming events!</p>
         <div className="grid-container">
           <div className="grid-container">
+            {/*
             <div className="upcoming">
               <div>
                 <img
@@ -69,10 +70,21 @@ function Events() {
                 </div>
               </div>
             </div>
+            */}
           </div>
         </div>
-        <h2>PAST EVENTS</h2>
+        <h2>PAST EVENTS</h2>     
         <div id="past-events" className="grid-container">
+          <div className="grid-item">
+            <img
+              className="event-images"
+              src={
+                process.env.PUBLIC_URL +
+                "./event-covers/personal-branding.jpg"
+              }
+              alt="Personal Branding Workshop"
+            />
+          </div>
           <div className="grid-item">
             <img
               className="event-images"

@@ -13,9 +13,22 @@ class Blog extends Component {
         <PageHeader imgUrl="/blog-header.png" title="Blog Posts" />
 
         {/*Start of blog posts*/}
-        {/*blog post 38*/}
+        {/*blog post 39*/}
         <BlogPreview
           topMargin="10vw"
+          bottomMargin="5vw"
+          blogNo="39"
+          imgUrl="/blog-covers/39-how-to-take-notes.png"
+          heading="How to Take Notes Effectively, Professionally, and Academically"
+          date="15/11/2020"
+          subheading="Taking notes is part of a uni student's everyday life. In this week's blog post we look at some of the best note-taking methods, and how to get the most out of your notes!"
+          authors={{
+            "vivian-wong": ["/potraits/vivw.jpg", "Vivian Wong"],
+          }}
+        />
+        {/*blog post 38*/}
+        <BlogPreview
+          topMargin="5vw"
           bottomMargin="5vw"
           blogNo="38"
           imgUrl="/blog-covers/38-exsight.png"
