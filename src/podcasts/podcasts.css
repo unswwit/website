@@ -22,3 +22,24 @@
   height: 40px;
   margin: 10px;
 }
+
+/* -- Podcast Panel Component -- */
+.panel {
+  width: 33%;
+  height: 450px;
+  padding: 20px;
+  border-style: solid;
+  border-color: grey;
+  display: inline-block;
+  overflow: hidden;
+
+  text-align: center;
+  margin: 0px 14px 0px 14px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-top: 30px;
+}
+
+.panel_img {
+  height: 200px;
+}
