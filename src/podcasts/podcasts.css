@@ -3,15 +3,33 @@
 }
 
 .podcast-intro {
+  height: 400px;
 
 }
 
 .podcast-logo {
-  height: 360px;
+  width: 38%;
+  display: inline-block;
+  float: left;
+}
+
+.podcast-intro .intro {
+  width: 54%;
+  display: inline-block;
+  float: right;
+  text-align: left;
+}
+
+.podcast-intro .intro h2 {
+  margin-top: 80px;
+  font-size: 70px;
+  font-weight: 400;
 }
 
 .comments {
-
+  border-bottom-width: medium;
+  border-bottom-color: darkgrey;
+  border-bottom-style: solid;
 }
 
 .icons {
@@ -22,6 +40,12 @@
   height: 40px;
   margin: 10px;
 }
+
+
+
+
+
+
 
 /* -- Podcast Panel Component -- */
 .panel {

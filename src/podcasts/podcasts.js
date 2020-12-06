@@ -11,12 +11,15 @@ class Podcasts extends React.Component {
         <PageHeader imgUrl="/podcast-header.jpg" title="Podcasts" />
 
         <div class="margin">
+
           <div class="podcast-intro">
             <img src={process.env.PUBLIC_URL + "/podcast-logo.png"} alt="podcast-logo"
             className="podcast-logo"/>
-            <h2>Talk WIT Us</h2>
-            <p>Join us every Monday as we talk about tech, uni, and life, featuring
-            our wonderful WIT team and some special guests!</p>
+            <div class='intro'>
+              <h2>Talk WIT Us</h2>
+              <p>Join us every Monday as we talk about tech, uni, and life, featuring
+              our wonderful WIT team and some special guests!</p>
+            </div>
           </div>
 
 
