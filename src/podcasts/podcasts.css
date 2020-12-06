@@ -26,24 +26,6 @@
   font-weight: 400;
 }
 
-.comments {
-  border-bottom-width: medium;
-  border-bottom-color: darkgrey;
-  border-bottom-style: solid;
-}
-
-.icons {
-
-}
-
-.icons img {
-  height: 40px;
-  margin: 10px;
-}
-
-
-
-
 
 
 
@@ -64,8 +46,46 @@
   padding: 15px;
 }
 
+.panel_text .panel_dated { /* not working?*/
+  color: #feb14b;
+}
+
 .panel_img {
   width: 100%;
-  height: 250px;
+  height: 300px;
   object-fit: cover;
+}
+
+
+
+/* -- Comments section -- */
+
+.comments {
+  margin-top: 60px;
+  border-bottom-width: 2px;
+  border-bottom-color: rgb(100,100,100);
+  border-bottom-style: solid;
+  overflow: hidden;
+}
+
+.comments h3 {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 300px;
+  letter-spacing: 3px;
+  width: 300px;
+  float: left;
+  color: rgb(100,100,100);
+  font-weight: 400px;
+}
+
+.icons {
+  display: inline-block;
+  float: right;
+}
+
+.icons img {
+  height: 40px;
+  margin: 10px;
 }

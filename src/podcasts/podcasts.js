@@ -46,14 +46,26 @@ class Podcasts extends React.Component {
           </div>
 
           <div class="comments">
-            <h2> Comments </h2>
+            <h3> Comments </h3>
             <div class="icons">
-              <img src={process.env.PUBLIC_URL + "/podcasts/podcast-breaker.png"} alt="breaker-icon"/>
+              <a href="https://www.breaker.audio/talk-wit-us">
+                <img src={process.env.PUBLIC_URL + "/podcasts/podcast-breaker.png"} alt="breaker-icon"/>
+              </a>
+              <a href="https://anchor.fm/unswwit">
               <img src={process.env.PUBLIC_URL + "/podcasts/podcast-anchor.png"} alt="anchor-icon"/>
+              </a>
+              <a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy8zNTQxM2JkMC9wb2RjYXN0L3Jzcw==">
               <img src={process.env.PUBLIC_URL + "/podcasts/podcast-google-podcasts.png"} alt="google-podcasts-icon"/>
+              </a>
+              <a href="https://pca.st/kzc50ug6">
               <img src={process.env.PUBLIC_URL + "/podcasts/podcast-pocket-casts.png"} alt="pocket-casts-icon"/>
+              </a>
+              <a href="https://radiopublic.com/talk-wit-us-Ww3A3m">
               <img src={process.env.PUBLIC_URL + "/podcasts/podcast-radio-republic.png"} alt="radio-republic-icon"/>
+              </a>
+              <a href="https://open.spotify.com/show/1iWagdei1mVoyzg8TqbB2P">
               <img src={process.env.PUBLIC_URL + "/podcasts/podcast-spotify.png"} alt="spotify-icon"/>
+              </a>
             </div>
           </div>
         </div>
