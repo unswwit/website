@@ -29,6 +29,13 @@ class Publications extends React.Component {
               url="https://issuu.com/womenintechnology/docs/wit_2020_careers_guide?fbclid=IwAR3RBADvuCd7KRAxeD4yK0USlDoQkVp05kY2SSYiYmjB2nZjBsI3xs_rX5c"
             />
 
+            <PubArticle
+              imgUrl="./publications/magazine-2020.png"
+              heading="WIT magazine 2020"
+              date="22/10/2020"
+              url="https://issuu.com/womenintechnology/docs/wit_magazine"
+            />
+
             {/*default publication:
                     <PubArticle
                     imgUrl="./pub_mini.png"
