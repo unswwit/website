@@ -31,7 +31,7 @@ class Execs extends Component {
                 >
                   <img
                     className="icon"
-                    src={process.env.PUBLIC_URL + "/linkedin.png"}
+                    src={process.env.PUBLIC_URL + "/icons/linkedin.png"}
                     alt="LinkedIn Icon"
                   />
                 </a>
@@ -42,7 +42,7 @@ class Execs extends Component {
                 >
                   <img
                     className="icon"
-                    src={process.env.PUBLIC_URL + "/facebook.png"}
+                    src={process.env.PUBLIC_URL + "/icons/facebook.png"}
                     alt="Facebook Icon"
                   />
                 </a>
@@ -53,7 +53,7 @@ class Execs extends Component {
                 >
                   <img
                     className="icon"
-                    src={process.env.PUBLIC_URL + "/email.png"}
+                    src={process.env.PUBLIC_URL + "/icons/email.png"}
                     alt="Email Icon"
                   />
                 </a>
