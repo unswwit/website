@@ -99,7 +99,7 @@ class Footer extends Component {
                         rel="noopener noreferrer"
                       >
                         <img
-                          src={`${process.env.PUBLIC_URL}/linkedin.png`}
+                          src={`${process.env.PUBLIC_URL}/icons/linkedin.png`}
                           alt="linkedin link"
                           style={{
                             width: "25px",
@@ -115,7 +115,7 @@ class Footer extends Component {
                         rel="noopener noreferrer"
                       >
                         <img
-                          src={`${process.env.PUBLIC_URL}/facebook.png`}
+                          src={`${process.env.PUBLIC_URL}/icons/facebook.png`}
                           alt="facebook link"
                           style={{
                             width: "25px",
@@ -131,7 +131,7 @@ class Footer extends Component {
                         rel="noopener noreferrer"
                       >
                         <img
-                          src={`${process.env.PUBLIC_URL}/instagram.png`}
+                          src={`${process.env.PUBLIC_URL}/icons/instagram.png`}
                           alt="instagram link"
                           style={{
                             width: "25px",
@@ -148,7 +148,7 @@ class Footer extends Component {
                         rel="noopener noreferrer"
                       >
                         <img
-                          src={`${process.env.PUBLIC_URL}/youtube.png`}
+                          src={`${process.env.PUBLIC_URL}/icons/youtube.png`}
                           alt="youtube link"
                           style={{
                             width: "25px",
@@ -165,7 +165,7 @@ class Footer extends Component {
                         rel="noopener noreferrer"
                       >
                         <img
-                          src={`${process.env.PUBLIC_URL}/twitch.png`}
+                          src={`${process.env.PUBLIC_URL}/icons/twitch.png`}
                           alt="twitch link"
                           style={{
                             width: "25px",
@@ -182,7 +182,7 @@ class Footer extends Component {
                         rel="noopener noreferrer"
                       >
                         <img
-                          src={`${process.env.PUBLIC_URL}/spotify.png`}
+                          src={`${process.env.PUBLIC_URL}/icons/spotify.png`}
                           alt="spotify link"
                           style={{
                             width: "25px",
