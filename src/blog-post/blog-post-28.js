@@ -14,7 +14,7 @@ class blogPost28 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/blog-header.png" title="Blog Post #28" />
+        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #28" />
 
         {/*End of Header*/}
 

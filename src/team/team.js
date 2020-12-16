@@ -11,7 +11,7 @@ class OurTeam extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/team-header-1.jpg" title="Meet Our Team" />
+        <PageHeader imgUrl="/headers/team-header-1.jpg" title="Meet Our Team" />
 
         <div className="profile_section_heading">
           <h2 className="team-heading">{`OUR 2020 EXECUTIVE TEAM`}</h2>
@@ -48,7 +48,6 @@ class OurTeam extends Component {
           <div className="exec_row">
             <Execs
               imgUrl="/potraits/kelly.png"
-              className=""
               name="Kelly Liang"
               position="General Secretary"
               degree="Commerce/Information System"
@@ -61,7 +60,6 @@ class OurTeam extends Component {
             <Execs
               imgUrl="/potraits/elizabeth.JPG"
               name="Elizabeth Zhong"
-              className=""
               position="Treasurer"
               degree="Software Engineering"
               year="3rd"
@@ -75,7 +73,7 @@ class OurTeam extends Component {
             <Execs
               imgUrl="/potraits/vivw.jpg"
               name="Vivian Wong"
-              class="vivw_img"
+              className="vivw_img"
               position="Education Executive"
               degree="Commerce/Actuarial Science"
               year="2nd"
@@ -87,7 +85,7 @@ class OurTeam extends Component {
             <Execs
               imgUrl="/potraits/gabby.jpg"
               name="Gabrielle Younes"
-              class="gab_img"
+              className="gab_img"
               position="Events Executive"
               degree="Bioinformatic Engineering/Advanced Science"
               year="2nd"
@@ -101,7 +99,6 @@ class OurTeam extends Component {
             <Execs
               imgUrl="/potraits/rhea.png"
               name="Rhea Thomas"
-              className=""
               position="Externals Executive"
               degree="Information Systems"
               year="2nd"
@@ -113,7 +110,6 @@ class OurTeam extends Component {
             <Execs
               imgUrl="/potraits/alison.png"
               name="Alison Chin"
-              className=""
               position="Human Resources Executive"
               degree="Information Systems"
               year="3rd"
@@ -127,7 +123,7 @@ class OurTeam extends Component {
             <Execs
               imgUrl="/potraits/elicia.jpg"
               name="Elicia Au Duong"
-              class="eli_img"
+              className="eli_img"
               position="Information Technology Executive"
               degree="Commerce/Computer Science"
               year="2nd"
@@ -139,7 +135,6 @@ class OurTeam extends Component {
             <Execs
               imgUrl="/potraits/felicia.png"
               name="Felicia Ee"
-              className=""
               position="Marketing Executive"
               degree="Commerce/Software Engineering"
               year="2nd"

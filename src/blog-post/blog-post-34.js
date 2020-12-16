@@ -14,7 +14,7 @@ class blogPost34 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/blog-header.png" title="Blog Post #34" />
+        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #34" />
 
         {/*End of Header*/}
 
@@ -190,7 +190,7 @@ class blogPost34 extends Component {
             </p>
             <br />
 
-            <div>
+            <div style={{ textAlign: "center" }}>
               <a
                 href="https://anchor.fm/unswwit/episodes/Episode-2-Careers-Deep-Dive---Digital-Transformation-w-Shadiyah-Lim-ekak30"
                 target="_blank"
@@ -200,7 +200,7 @@ class blogPost34 extends Component {
                   className="img-general"
                   src={
                     process.env.PUBLIC_URL +
-                    "/podcast-platforms/anchor-logo.png"
+                    "/blog-attachments/podcast-platforms/anchor-logo.png"
                   }
                   alt="Anchor"
                 />
@@ -214,7 +214,7 @@ class blogPost34 extends Component {
                   className="img-general"
                   src={
                     process.env.PUBLIC_URL +
-                    "/podcast-platforms/google-podcasts-logo.png"
+                    "/blog-attachments/podcast-platforms/google-podcasts-logo.png"
                   }
                   alt="Google Podcasts"
                 />
@@ -228,7 +228,7 @@ class blogPost34 extends Component {
                   className="img-general"
                   src={
                     process.env.PUBLIC_URL +
-                    "/podcast-platforms/radiopublic-logo.png"
+                    "/blog-attachments/podcast-platforms/radiopublic-logo.png"
                   }
                   alt="RadioPublic"
                 />
@@ -242,7 +242,7 @@ class blogPost34 extends Component {
                   className="img-general"
                   src={
                     process.env.PUBLIC_URL +
-                    "/podcast-platforms/spotify-logo.png"
+                    "/blog-attachments/podcast-platforms/spotify-logo.png"
                   }
                   alt="Spotify"
                 />

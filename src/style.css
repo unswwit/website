@@ -183,6 +183,7 @@ p {
 
 .menuTitle:hover {
   color: #e85f5c;
+  cursor: pointer;
 }
 
 .nav-item a:hover {

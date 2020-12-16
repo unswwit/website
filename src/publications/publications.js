@@ -8,7 +8,7 @@ class Publications extends React.Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/publications-header.png" title="Publications" />
+        <PageHeader imgUrl="/headers/publications-header.png" title="Publications" />
 
         <div className="publicationsBody">
           {/*2020 articles*/}

@@ -6,7 +6,7 @@ function Events() {
   return (
     <div>
       {/* Cover Photo */}
-      <PageHeader imgUrl="/events-header.jfif" title="Events" />
+      <PageHeader imgUrl="/headers/events-header.jfif" title="Events" />
       {/* Main Title, and Subtitle Area */}
       <div className="events-body">
         <h2>UPCOMING EVENTS</h2>

@@ -19,7 +19,7 @@ class JoinUs extends React.Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/join-header-1.png" title="Join Us" />
+        <PageHeader imgUrl="/headers/join-header-1.png" title="Join Us" />
         <div className="joinUsBody">
           <div className="joinUsRight">
             <h2>Connect with us</h2>

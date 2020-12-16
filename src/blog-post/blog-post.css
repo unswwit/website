@@ -98,7 +98,7 @@ img.floatRight {
   color: #feb14b;
 }
 
-.blog-content img {
+.blog-content img:not(.img-general) {
   height: 300px;
   max-width: 100%;
   padding: 20px;
@@ -146,13 +146,13 @@ a:hover {
   font-weight: 500;
 }
 
-/*Used for pictures in blog 34*/
+/* Used for pictures in blog 34 */
 .img-general {
   width: 35%;
   height: auto;
   object-fit: contain;
   margin: none;
-  padding: none;
+  padding: 15px;
 }
 
 /*-------------------------------Author card-----------------------------*/

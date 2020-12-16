@@ -1,7 +1,7 @@
 /*-------------------------------Home page header-----------------------------*/
 /*Header image*/
 .contain {
-  background-image: url("/header-1.png");
+  background-image: url("/headers/header-1.png");
   background-position: center bottom 40%;
   background-repeat: no-repeat;
   background-size: cover;

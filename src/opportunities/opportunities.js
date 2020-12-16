@@ -11,7 +11,7 @@ class Opportunities extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/opportunities-header.jfif" title="Opportunities" />
+        <PageHeader imgUrl="/headers/opportunities-header.jfif" title="Opportunities" />
 
         {/*start of active opportunies*/}
         <h2 className="oppSubheading">Active Opportunities</h2>
