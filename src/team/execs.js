@@ -11,8 +11,8 @@ class Execs extends Component {
             <div className="profile_crop">
               <img
                 src={process.env.PUBLIC_URL + this.props.imgUrl}
-                className={"profile_img " + this.props.class}
-                alt={this.props.alt}
+                className={"profile_img " + this.props.className}
+                alt={this.props.name}
               />
             </div>
             <div className="profile_details">
