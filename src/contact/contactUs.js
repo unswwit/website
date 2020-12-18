@@ -66,7 +66,7 @@ class ContactUs extends React.Component {
           <div className="col2">
             <div className="profile2">
               <img
-                src={process.env.PUBLIC_URL + "/pres-icon.png"}
+                src={process.env.PUBLIC_URL + "/icons/pres-icon.png"}
                 alt="pres-icon"
               />
               <h3> Vivian Shen </h3>
@@ -74,7 +74,7 @@ class ContactUs extends React.Component {
             </div>
             <div className="profile2">
               <img
-                src={process.env.PUBLIC_URL + "/vp-icon.png"}
+                src={process.env.PUBLIC_URL + "/icons/vp-icon.png"}
                 alt="vp-icon"
               />
               <h3> Amanda Li </h3>
@@ -83,7 +83,7 @@ class ContactUs extends React.Component {
 
             <div className="profile2">
               <img
-                src={process.env.PUBLIC_URL + "/sec-icon.png"}
+                src={process.env.PUBLIC_URL + "/icons/sec-icon.png"}
                 alt="sec-icon"
               />
               <h3> Kelly Liang </h3>
@@ -91,7 +91,7 @@ class ContactUs extends React.Component {
             </div>
             <div className="profile2">
               <img
-                src={process.env.PUBLIC_URL + "/tr-icon.png"}
+                src={process.env.PUBLIC_URL + "/icons/tr-icon.png"}
                 alt="tr-icon"
               />
               <h3> Elizabeth Zhong </h3>
@@ -103,7 +103,7 @@ class ContactUs extends React.Component {
           <div className="col3">
             <div className="profile3">
               <img
-                src={process.env.PUBLIC_URL + "/edu-icon.png"}
+                src={process.env.PUBLIC_URL + "/icons/edu-icon.png"}
                 alt="edu-icon"
               />
               <h3> Vivian Wong </h3>
@@ -112,7 +112,7 @@ class ContactUs extends React.Component {
             </div>
             <div className="profile3">
               <img
-                src={process.env.PUBLIC_URL + "/ev-icon.png"}
+                src={process.env.PUBLIC_URL + "/icons/ev-icon.png"}
                 alt="ev-icon"
               />
               <h3> Gabrielle Younes </h3>
@@ -121,7 +121,7 @@ class ContactUs extends React.Component {
             </div>
             <div className="profile3">
               <img
-                src={process.env.PUBLIC_URL + "/ex-icon.png"}
+                src={process.env.PUBLIC_URL + "/icons/ex-icon.png"}
                 alt="ex-icon"
               />
               <h3> Rhea Thomas </h3>
@@ -131,7 +131,7 @@ class ContactUs extends React.Component {
 
             <div className="profile3">
               <img
-                src={process.env.PUBLIC_URL + "/hr-icon.png"}
+                src={process.env.PUBLIC_URL + "/icons/hr-icon.png"}
                 alt="hr-icon"
               />
               <h3> Alison Chin </h3>
@@ -139,14 +139,14 @@ class ContactUs extends React.Component {
               <a href="mailto:hr@unswwit.com">hr@unswwit.com</a>
             </div>
             <div className="profile3">
-              <img src={process.env.PUBLIC_URL + "/it.png"} alt="it-icon" />
+              <img src={process.env.PUBLIC_URL + "/icons/it.png"} alt="it-icon" />
               <h3> Elicia Au Duong </h3>
               <a href="mailto:elicia@unswwit.com">elicia@unswwit.com</a>
               <a href="mailto:it@unswwit.com">it@unswwit.com</a>
             </div>
             <div className="profile3">
               <img
-                src={process.env.PUBLIC_URL + "/mark-icon.png"}
+                src={process.env.PUBLIC_URL + "/icons/mark-icon.png"}
                 alt="mark-icon"
               />
               <h3> Felicia Ee </h3>

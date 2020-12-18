@@ -26,7 +26,7 @@ class JoinUs extends React.Component {
             <div className="joinButtons">
               <a href={fbPageUrl} target="_blank" rel="noopener noreferrer">
                 <img
-                  src={process.env.PUBLIC_URL + "/facebook.png"}
+                  src={process.env.PUBLIC_URL + "/icons/facebook.png"}
                   title="Facebook Page"
                   alt="Facebook Page"
                   style={{ width: "100%", height: "100%" }}
@@ -34,7 +34,7 @@ class JoinUs extends React.Component {
               </a>
               <a href={fbGroupUrl} target="_blank" rel="noopener noreferrer">
                 <img
-                  src={process.env.PUBLIC_URL + "/facebook-group.png"}
+                  src={process.env.PUBLIC_URL + "/icons/facebook-group.png"}
                   title="Facebook Group"
                   alt="Facebook Group"
                   style={{ width: "100%", height: "100%" }}
@@ -42,7 +42,7 @@ class JoinUs extends React.Component {
               </a>
               <a href={linkedInUrl} target="_blank" rel="noopener noreferrer">
                 <img
-                  src={process.env.PUBLIC_URL + "/linkedin.png"}
+                  src={process.env.PUBLIC_URL + "/icons/linkedin.png"}
                   title="Linked-In"
                   alt="Linked-In"
                   style={{ width: "100%", height: "100%" }}
@@ -50,7 +50,7 @@ class JoinUs extends React.Component {
               </a>
               <a href={instagramUrl} target="_blank" rel="noopener noreferrer">
                 <img
-                  src={process.env.PUBLIC_URL + "/instagram.png"}
+                  src={process.env.PUBLIC_URL + "/icons/instagram.png"}
                   title="Instagram"
                   alt="Instagram"
                   style={{ width: "100%", height: "100%" }}
@@ -58,7 +58,7 @@ class JoinUs extends React.Component {
               </a>
               <a href={spARCUrl} target="_blank" rel="noopener noreferrer">
                 <img
-                  src={process.env.PUBLIC_URL + "/sparc.png"}
+                  src={process.env.PUBLIC_URL + "/icons/sparc.png"}
                   title="spARC"
                   alt="spARC"
                   style={{ width: "100%", height: "100%" }}
@@ -66,7 +66,7 @@ class JoinUs extends React.Component {
               </a>
               <a href={youtubeUrl} target="_blank" rel="noopener noreferrer">
                 <img
-                  src={process.env.PUBLIC_URL + "/youtube.png"}
+                  src={process.env.PUBLIC_URL + "/icons/youtube.png"}
                   title="youtube"
                   alt="youtube"
                   style={{ width: "100%", height: "100%" }}
@@ -74,7 +74,7 @@ class JoinUs extends React.Component {
               </a>
               <a href={twitchUrl} target="_blank" rel="noopener noreferrer">
                 <img
-                  src={process.env.PUBLIC_URL + "/twitch.png"}
+                  src={process.env.PUBLIC_URL + "/icons/twitch.png"}
                   title="twitch"
                   alt="twitch"
                   style={{ width: "100%", height: "100%" }}
@@ -82,7 +82,7 @@ class JoinUs extends React.Component {
               </a>
               <a href={spotifyUrl} target="_blank" rel="noopener noreferrer">
                 <img
-                  src={process.env.PUBLIC_URL + "/spotify.png"}
+                  src={process.env.PUBLIC_URL + "/icons/spotify.png"}
                   title="spotify"
                   alt="spotify"
                   style={{ width: "100%", height: "100%" }}

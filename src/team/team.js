@@ -264,7 +264,7 @@ function OurTeam() {
             year="3rd"
             linkedin="alison-chin-958581148"
             fb="alison.chin.52"
-            email="alison.c1697@gmail.com"
+            email="alison@unswwit.com"
           />
         </div>
 
@@ -278,7 +278,7 @@ function OurTeam() {
             year="2nd"
             linkedin="eliciaauduong"
             fb="eliciaauduong"
-            email="eliciaauduong@gmail.com"
+            email="elicia@unswwit.com"
           />
 
           <Execs
@@ -289,7 +289,7 @@ function OurTeam() {
             year="2nd"
             linkedin=""
             fb="profile.php?id=100015374733436"
-            email="feliciaee22@gmail.com"
+            email="felicia@unswwit.com"
           />
         </div>
       </div>
