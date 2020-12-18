@@ -102,7 +102,7 @@ input:focus::-webkit-input-placeholder {
 }
 
 .newEmails {
-  height: 1000px;
+  height: auto;
 }
 
 .newEmails div.dot {
@@ -133,6 +133,7 @@ input:focus::-webkit-input-placeholder {
   font-size: 10pt;
   letter-spacing: 1.5px;
   padding-bottom: 5px;
+  font-weight: lighter;
 }
 
 .newEmails a:hover {
@@ -142,7 +143,6 @@ input:focus::-webkit-input-placeholder {
 
 .newEmails div.col2 {
   width: 57%;
-  height: 450px;
   margin-left: 26%;
   margin-right: auto;
 }
@@ -152,13 +152,12 @@ input:focus::-webkit-input-placeholder {
   width: 50%;
   padding: 30px;
   float: none;
-  height: 200px;
   overflow: none;
 }
 
 .newEmails div.col3 {
   width: 80%;
-  height: 450px;
+  height: auto;
   margin-left: 12%;
   margin-right: auto;
 }
@@ -201,23 +200,17 @@ input:focus::-webkit-input-placeholder {
     display: initial;
   }
 
-  .newEmails {
-    height: 1200px;
-  }
-
   .newEmails div.col2 {
     width: 90%;
-    height: 450px;
     margin-left: auto;
     margin-right: auto;
   }
 
   .newEmails div.col3 {
     width: 90%;
-    height: 450px;
     margin-left: auto;
-    margin-right: auto;
     margin-top: 50px;
+    margin-bottom: 50px;
   }
 
   .newEmails div.profile3 {
@@ -225,7 +218,6 @@ input:focus::-webkit-input-placeholder {
     width: 50%;
     padding: 30px;
     float: none;
-    height: 200px;
     overflow-wrap: break-word;
   }
 
@@ -265,10 +257,6 @@ input:focus::-webkit-input-placeholder {
     height: 300px;
   }
 
-  .newEmails {
-    height: 2150px;
-  }
-
   .newEmails div.profile3 {
     width: 100%;
   }
@@ -279,7 +267,6 @@ input:focus::-webkit-input-placeholder {
 
   .newEmails div.col2 {
     width: 90%;
-    height: 800px;
   }
 
   .newEmails a {
@@ -298,14 +285,6 @@ input:focus::-webkit-input-placeholder {
 @media only screen and (max-width: 300px) {
   .centre {
     height: 200px;
-  }
-
-  .newEmails {
-    height: 2400px;
-  }
-
-  .newEmails div.col2 {
-    height: 850px;
   }
 
   .form {
