@@ -11,7 +11,7 @@ function OurTeam() {
   return (
     <div>
       {/* Cover Photo */}
-      <PageHeader imgUrl="/headers/team-header-1.jpg" title="Meet Our Team" />
+      <PageHeader imgUrl="/headers/2021-team-header.jpg" title="Meet Our Team" />
 
       <div className="profile_section_heading">
         <h2 className="team-heading">OUR 2021 EXECUTIVE TEAM</h2>
@@ -63,7 +63,7 @@ function OurTeam() {
             name="Connie Shi"
             className="exec_2021_img"
             position="Treasurer"
-            degree="Commerce and Information Systems Engineering"
+            degree="Commerce/Information Systems"
             year="4th"
             linkedin="connie-shi-6b709915b"
             fb="connie.shi3"
@@ -129,7 +129,7 @@ function OurTeam() {
             name="Alana Hua"
             className="exec_2021_img"
             position="Information Technology Executive"
-            degree="Software Engineering"
+            degree="Software/Biomedical Engineering"
             year="4th"
             linkedin="alana-hua-43a06b15a"
             fb="alana.hua.3"
@@ -152,7 +152,7 @@ function OurTeam() {
         <div className="exec_row">
           <Execs
             imgUrl="/potraits/2021-exec/georgie.jpg"
-            name="Georgie Helen Mansfield"
+            name="Georgie Mansfield"
             className="exec_2021_img"
             position="Education Executive"
             degree="Chemical Engineering and Materials Science"
@@ -220,18 +220,6 @@ function OurTeam() {
 
         <div className="exec_row">
           <Execs
-            imgUrl="/potraits/vivw.jpg"
-            name="Vivian Wong"
-            className="vivw_img"
-            position="Education Executive"
-            degree="Commerce/Actuarial Science"
-            year="2nd"
-            linkedin="vivian-wong-75511b169"
-            fb="profile.php?id=100027563555266"
-            email="vivianwong@unswwit.com"
-          />
-
-          <Execs
             imgUrl="/potraits/gabby.jpg"
             name="Gabrielle Younes"
             className="gab_img"
@@ -242,9 +230,7 @@ function OurTeam() {
             fb="profile.php?id=100017209069498"
             email="gabrielle@unswwit.com"
           />
-        </div>
 
-        <div className="exec_row">
           <Execs
             imgUrl="/potraits/rhea.png"
             name="Rhea Thomas"
@@ -255,7 +241,9 @@ function OurTeam() {
             fb="profile.php?id=100013567812434"
             email="rhea@unswwit.com"
           />
+        </div>
 
+        <div className="exec_row">   
           <Execs
             imgUrl="/potraits/alison.png"
             name="Alison Chin"
@@ -266,9 +254,7 @@ function OurTeam() {
             fb="alison.chin.52"
             email="alison@unswwit.com"
           />
-        </div>
 
-        <div className="exec_row">
           <Execs
             imgUrl="/potraits/elicia.jpg"
             name="Elicia Au Duong"
@@ -280,7 +266,9 @@ function OurTeam() {
             fb="eliciaauduong"
             email="elicia@unswwit.com"
           />
+        </div>
 
+        <div className="exec_row">   
           <Execs
             imgUrl="/potraits/felicia.png"
             name="Felicia Ee"
@@ -291,8 +279,20 @@ function OurTeam() {
             fb="profile.php?id=100015374733436"
             email="felicia@unswwit.com"
           />
+
+          <Execs
+            imgUrl="/potraits/vivw.jpg"
+            name="Vivian Wong"
+            className="vivw_img"
+            position="Education Executive"
+            degree="Commerce/Actuarial Science"
+            year="2nd"
+            linkedin="vivian-wong-75511b169"
+            fb="profile.php?id=100027563555266"
+            email="vivianwong@unswwit.com"
+          />
         </div>
-      </div>
+      </div>      
 
       {/* Subcommittee section */}
       <h2
