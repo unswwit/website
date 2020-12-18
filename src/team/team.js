@@ -28,8 +28,8 @@ function OurTeam() {
             degree="Commerce/Actuarial Science"
             year="3rd"
             linkedin="vivian-wong-75511b169"
-            fb="vivian.shen.71619"
-            email="vivianwong"
+            fb="profile.php?id=100027563555266"
+            email="vivianwong@unswwit.com"
           />
 
           <Execs
@@ -41,7 +41,7 @@ function OurTeam() {
             year="3rd"
             linkedin="gabrielle-younes-a05a70182"
             fb="profile.php?id=100017209069498"
-            email="gabrielle"
+            email="gabrielle@unswwit.com"
           />
         </div>
 
@@ -55,7 +55,7 @@ function OurTeam() {
             year="3rd"
             linkedin="victoria-yu-7a09001a3"
             fb="victoria.yu.75"
-            email="victoriayu"
+            email="victoriayu@unswwit.com"
           />
 
           <Execs
@@ -67,7 +67,7 @@ function OurTeam() {
             year="4th"
             linkedin="connie-shi-6b709915b"
             fb="connie.shi3"
-            email="connie"
+            email="connie@unswwit.com"
           />
         </div>
 
@@ -81,7 +81,7 @@ function OurTeam() {
             year="3rd"
             linkedin="jane-wang-a993b2168"
             fb="jauewang"
-            email="jane"
+            email="jane@unswwit.com"
           />
 
           <Execs
@@ -93,7 +93,7 @@ function OurTeam() {
             year="3rd"
             linkedin="nishmikapoor"
             fb="nishmi.kapoor"
-            email="nishmi"
+            email="nishmi@unswwit.com"
           />
         </div>
 
@@ -107,7 +107,7 @@ function OurTeam() {
             year="2nd"
             linkedin="srija-mukherjee"
             fb="srija.mukherjee.587"
-            email="srjia"
+            email="srjia@unswwit.com"
           />
 
           <Execs
@@ -119,7 +119,7 @@ function OurTeam() {
             year="2rd"
             linkedin="claire-yu-4bb2791a2"
             fb="profile.php?id=100017301277446"
-            email="claire"
+            email="claire@unswwit.com"
           />
         </div>
 
@@ -133,7 +133,7 @@ function OurTeam() {
             year="4th"
             linkedin="alana-hua-43a06b15a"
             fb="alana.hua.3"
-            email="alana"
+            email="alana@unswwit.com"
           />
 
           <Execs
@@ -145,7 +145,7 @@ function OurTeam() {
             year="3rd"
             linkedin="vykim-nguyen"
             fb="kim.vy.3"
-            email="kim"
+            email="kim@unswwit.com"
           />
         </div>
 
@@ -159,7 +159,7 @@ function OurTeam() {
             year="3rd"
             linkedin="georgina-mansfield"
             fb="georgie.mansfield.9"
-            email="georgie"
+            email="georgie@unswwit.com"
           />
         </div>       
       </div>
@@ -179,7 +179,7 @@ function OurTeam() {
             year="3rd"
             linkedin="vivian-shen-046110"
             fb="vivian.shen.71619"
-            email="president"
+            email="vivianshen046110@gmail.com"
           />
 
           <Execs
@@ -190,7 +190,7 @@ function OurTeam() {
             year="3rd"
             linkedin="amanda-li-031199"
             fb="amaandarin"
-            email="vp"
+            email="amandali031199@gmail.com"
           />
         </div>
 
@@ -203,7 +203,7 @@ function OurTeam() {
             year="2nd"
             linkedin="kelly-liang-03877017b"
             fb="keleriter"
-            email="secretary"
+            email="kellyliang156@gmail.com"
           />
 
           <Execs
@@ -214,7 +214,7 @@ function OurTeam() {
             year="3rd"
             linkedin="elizabeth-zhong-561806160"
             fb="elizabethzhong2"
-            email="treasurer"
+            email="elizabeth.zhong@hotmail.com"
           />
         </div>
 
@@ -228,7 +228,7 @@ function OurTeam() {
             year="2nd"
             linkedin="vivian-wong-75511b169"
             fb="profile.php?id=100027563555266"
-            email="vivianwong"
+            email="vivianwong@unswwit.com"
           />
 
           <Execs
@@ -240,7 +240,7 @@ function OurTeam() {
             year="2nd"
             linkedin="gabrielle-younes-a05a70182"
             fb="profile.php?id=100017209069498"
-            email="gabrielle"
+            email="gabrielle@unswwit.com"
           />
         </div>
 
@@ -253,7 +253,7 @@ function OurTeam() {
             year="2nd"
             linkedin="rhea-t-2400b113a"
             fb="profile.php?id=100013567812434"
-            email="rhea"
+            email="rhea@unswwit.com"
           />
 
           <Execs
@@ -264,7 +264,7 @@ function OurTeam() {
             year="3rd"
             linkedin="alison-chin-958581148"
             fb="alison.chin.52"
-            email="alison"
+            email="alison.c1697@gmail.com"
           />
         </div>
 
@@ -278,7 +278,7 @@ function OurTeam() {
             year="2nd"
             linkedin="eliciaauduong"
             fb="eliciaauduong"
-            email="elicia"
+            email="eliciaauduong@gmail.com"
           />
 
           <Execs
@@ -289,7 +289,7 @@ function OurTeam() {
             year="2nd"
             linkedin=""
             fb="profile.php?id=100015374733436"
-            email="felicia"
+            email="feliciaee22@gmail.com"
           />
         </div>
       </div>

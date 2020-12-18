@@ -116,7 +116,7 @@ class ContactUs extends React.Component {
                 alt="ev-icon"
               />
               <h3> Gabrielle Younes </h3>
-              <a href="mailto:gabriella@unswwit.com">gabrielle@unswwit.com</a>
+              <a href="mailto:gabrielle@unswwit.com">gabrielle@unswwit.com</a>
               <a href="mailto:events@unswwit.com">events@unswwit.com</a>
             </div>
             <div className="profile3">

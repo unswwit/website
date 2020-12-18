@@ -47,7 +47,7 @@ class Execs extends Component {
                   />
                 </a>
                 <a
-                  href={"mailto:" + this.props.email + "@unswwit.com"}
+                  href={"mailto:" + this.props.email}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
