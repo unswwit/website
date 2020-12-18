@@ -172,7 +172,7 @@ function OurTeam() {
       <div className="all_execs_section">
         <div className="exec_row">
           <Execs
-            imgUrl="/potraits/viv.png"
+            imgUrl="/potraits/viv.jpg"
             name="Vivian Shen"
             position="President"
             degree="Data Science"
@@ -196,7 +196,7 @@ function OurTeam() {
 
         <div className="exec_row">
           <Execs
-            imgUrl="/potraits/kelly.png"
+            imgUrl="/potraits/kelly.jpg"
             name="Kelly Liang"
             position="General Secretary"
             degree="Commerce/Information System"
@@ -232,7 +232,7 @@ function OurTeam() {
           />
 
           <Execs
-            imgUrl="/potraits/rhea.png"
+            imgUrl="/potraits/rhea.jpg"
             name="Rhea Thomas"
             position="Externals Executive"
             degree="Information Systems"
@@ -245,7 +245,7 @@ function OurTeam() {
 
         <div className="exec_row">   
           <Execs
-            imgUrl="/potraits/alison.png"
+            imgUrl="/potraits/alison.jpg"
             name="Alison Chin"
             position="Human Resources Executive"
             degree="Information Systems"
@@ -270,7 +270,7 @@ function OurTeam() {
 
         <div className="exec_row">   
           <Execs
-            imgUrl="/potraits/felicia.png"
+            imgUrl="/potraits/felicia.jpg"
             name="Felicia Ee"
             position="Marketing Executive"
             degree="Commerce/Software Engineering"
