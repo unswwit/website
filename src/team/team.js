@@ -116,7 +116,7 @@ function OurTeam() {
             className="exec_2021_img"
             position="Human Resources Executive"
             degree="Commerce/Information Systems"
-            year="2rd"
+            year="2nd"
             linkedin="claire-yu-4bb2791a2"
             fb="profile.php?id=100017301277446"
             email="claire@unswwit.com"
