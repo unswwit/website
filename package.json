@@ -11,6 +11,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.5.0",
+    "emailjs-com": "^2.6.4",
     "react": "^16.13.1",
     "react-bootstrap": "^1.2.2",
     "react-countup": "^4.3.3",
@@ -37,7 +38,13 @@
         "error",
         2
       ],
-      "quotes": ["error", "double", { "avoidEscape": true }],
+      "quotes": [
+        "error",
+        "double",
+        {
+          "avoidEscape": true
+        }
+      ],
       "camelcase": "error",
       "no-unused-vars": "error",
       "no-use-before-define": "error"
