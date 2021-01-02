@@ -123,6 +123,18 @@ input[type="radio"][id="career"]:checked ~ .blogPosts .innovation {
   display: none;
 }
 
+@media only screen and (max-width: 550px) {
+  .blogGallery label {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .blogGallery label {
+    width: 100%;
+  }
+}
+
 /*-------------------------------Blog post Preview-----------------------------*/
 /*Preview Image and Hover*/
 
