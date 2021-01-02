@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CountUp from "react-countup";
 import styles from "./home.module.css";
-import MailchimpSubscribe from "react-mailchimp-subscribe";
 import NewsletterForm from "./NewsletterForm";
 import { Modal, Backdrop, Fade } from "@material-ui/core";
 
@@ -134,17 +133,8 @@ const Home = () => {
           }}
         >
           <>
-            <Fade in={open}>
-              <MailchimpSubscribe
-                url={process.env.REACT_APP_MAILCHIMP_URL}
-                render={({ subscribe, status, message }) => (
-                  <NewsletterForm
-                    status={status}
-                    message={message}
-                    onValidated={formData => subscribe(formData)}
-                  />
-                )}
-              />
+            <Fade in={open}> 
+              <NewsletterForm />
             </Fade> 
           </>       
         </Modal>

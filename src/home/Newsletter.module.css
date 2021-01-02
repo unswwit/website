@@ -1,0 +1,87 @@
+/*--------------Newsletter sign up form-------------------*/
+form input {
+	margin: 10px auto;
+	display: block;
+	font-size: 1.3vw;
+	width: 100%;
+  
+  border-style: none;
+  border-bottom: solid;
+  border-color: #777b7c;
+  border-width: 2px;
+  padding: 5px;
+}
+
+form button {
+  background-color: #e85f5c;
+  color: #ffffff;
+	font-size: 1.3vw;
+	width: 100%;
+	margin: 20px auto;
+	border: none;
+	display: block;
+	padding: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.newsletterImg {
+	width: 40%;
+	object-fit: contain;
+}
+
+.paper {
+	background-color: white;
+	border-radius: 2;
+	padding: 10;
+	padding: 2vw 8vw;
+	width: 45%;
+	text-align: center;
+}
+
+.formTitle {
+	color: #feb14b;
+	font-size: 2.5vw;
+	font-family: "Montserrat", sans-serif;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+.formDescription {
+	color: #313638;
+	font-family: "Montserrat", sans-serif;
+	font-size: 12pt;
+}
+
+/*--------------Responsive Mobile Design-------------------*/
+@media only screen and (max-width: 1000px) {
+	.paper {
+		width: 70%;
+	}
+
+	form button {
+		font-size: 12pt;
+	}
+
+	.formTitle {
+		font-size: 14pt;
+  }
+  
+  form input {
+    font-size: 12pt;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+	.paper {
+		width: 90%;
+  }
+  
+	form button {
+		width: 100%;
+  }
+
+  form input {
+    font-size: 11pt;
+  }
+}

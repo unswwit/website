@@ -79,93 +79,7 @@ div .headline {
   text-align: justify;
 }
 
-/*--------------Newsletter sign up form-------------------*/
-.newsletterInput {
-  margin: 10px auto;
-  display: block;
-}
-
-.newsletterBtn {
-  color: #ffffff;
-  background-color: #e85f5c;
-  font-size: 1.3vw;
-  width: 50%;
-  margin: 20px auto;
-  border: none;
-  display: block;
-  padding: 10px;
-  letter-spacing: 3px;
-}
-
-.signUpForm span {
-  color:#e85f5c;
-  font-family: "Montserrat", sans-serif;
-}
-
-.signUpForm {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.newsletterImg {
-  width: 40%;
-  object-fit: contain;
-}
-
-.paper {
-  background-color: white;
-  border-radius: 2;
-  padding: 10;
-  padding: 2vw 8vw;
-  width: 45%;
-  text-align: center;
-}
-
-.formTitle {
-  color: #feb14b;
-  font-size: 2.5vw;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-.formDescription {
-  color: #313638;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12pt;
-}
-
-.subscribeBtn {
-  position: absolute;
-  right: 20%;
-  text-align: center;
-  width: 60%;
-  bottom: 37%;
-  color: #ffffff;
-  background-color:#e85f5c;
-  padding: 12px 10px 12px 10px;
-  border: none;
-  font-size: 2vw;
-  text-transform: uppercase;
-  border: none;
-  letter-spacing: 3px;
-}
-
 /*--------------Responsive Mobile Design-------------------*/
-@media only screen and (max-width: 1000px) {
-  .paper {
-    width: 70%;
-  }
-
-  .newsletterBtn {
-    font-size: 12pt;
-  }
-
-  .formTitle {
-    font-size: 14pt;
-  }
-}
 
 @media only screen and (max-width: 850px) {
   .contain {
@@ -204,15 +118,6 @@ div .headline {
     width: 100%;
     height: auto;
     padding: 20px 0px 40px 0px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .paper {
-    width: 80%;
-  }
-  .newsletterBtn {
-    width: 100%;
   }
 }
 
@@ -365,6 +270,34 @@ div .headline {
   width: 100%;
 }
 
+/*--------------Newsletter-------------------*/
+  .subscribeBtn {
+    position: absolute;
+    right: 20%;
+    text-align: center;
+    width: 60%;
+    bottom: 37%;
+    color: #ffffff;
+    background-color:#e85f5c;
+    padding: 12px 10px 12px 10px;
+    border: none;
+    font-size: 2vw;
+    text-transform: uppercase;
+    border: none;
+    letter-spacing: 3px;
+  }
+  
+  .signUpForm span {
+    color:#e85f5c;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .signUpForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
 /*--------------Events Mobile Design-------------------*/
 
 @media only screen and (max-width: 850px) {
