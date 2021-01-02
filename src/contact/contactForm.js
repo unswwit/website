@@ -25,7 +25,8 @@ function ContactForm() {
             alert("Your inquiry failed to send. Please try again");
           }
         );
-      e.target.reset();
+      setEmail("");
+      e.target.reset();      
     } else {
       alert("Please input a valid email");
     }
