@@ -36,7 +36,7 @@
   transition: all 0.1s;
 }
 
-label[htmlFor="2020"] {
+input[type="radio"][id="2020"] + label {
   font-size: 32pt;
   color: #feb14b;
   font-weight: bold;
@@ -50,7 +50,7 @@ input[type="radio"] {
   display: none;
 }
 
-.initiatives label:hover {
+.initiatives label:hover, #allPublications:hover {
   background: var(--yellow);
   color: var(--white);
 }

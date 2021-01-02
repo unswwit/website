@@ -29,8 +29,8 @@ class MarketingContent extends Component {
           {/*Left intiatives side bar*/}
           {/*List of 2020 intatives*/}
           <div className="initiatives">
-            <input type="radio" id="2020" name="categories" />
-            <label htmlFor="2020" className="side">
+            <input type="radio" id="2020" name="categories" defaultChecked />
+            <label id="allPublications" htmlFor="2020" className="side">
               2020
             </label>
             <input type="radio" id="crush" name="categories" />

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 class BlogPreview extends Component {
   render() {
     return (
-      <div>
+      <div className={this.props.category}>
         {/*Start of blog post preview*/}
         <div
           className="blog-post"
