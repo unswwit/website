@@ -1,5 +1,6 @@
 import React from "react";
 import PageHeader from ".././header";
+import ContactForm from "./contactForm";
 import "./contactUs.css";
 
 class ContactUs extends React.Component {
@@ -19,46 +20,9 @@ class ContactUs extends React.Component {
               alt="contact us"
             />
           </div>
-
           <div className="formLeft">
-            <form
-              action="mailto:exec@unswwit.com"
-              method="post"
-              encType="text/plain"
-              className="formStyle"
-            >
-              <br />
-              <input
-                className="formInput"
-                type="text"
-                name="name"
-                placeholder="Full Name"
-              />
-              <br />
-              <br />
-              <input
-                className="formInput"
-                type="text"
-                name="mail"
-                placeholder="Email Address"
-              />
-              <br />
-              <br />
-              <textarea
-                className="formInput"
-                name="message"
-                placeholder="Message"
-                rows="5"
-              />
-              <br />
-              <input
-                type="submit"
-                value="Submit"
-                className="button"
-                style={{ float: "left" }}
-              />
-            </form>
-          </div>
+            <ContactForm />    
+          </div>              
         </div>
 
         <h2 className="contact-team">CONTACT OUR TEAM</h2>
