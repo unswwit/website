@@ -30,15 +30,12 @@
   border-bottom: solid;
   border-color: #777b7c;
   border-width: 2px;
-  color: #777b7c;
   width: 100%;
 }
 
-input.formInput {
-  color: #777b7c;
+.formInput {
   padding: 5px;
   padding-left: 0px;
-  background-color: #ffffff;
 
   border-style: none;
   border-bottom: solid;
@@ -51,42 +48,22 @@ input.formInput {
   padding-bottom: 10px;
 }
 
-.formLeft form input.button {
+.submitButton {
   color: #ffffff;
   background-color: #e85f5c;
   text-align: center;
-  margin-top: 20px;
+  margin: 20px 0px 25px 0px;
   padding: 12px 10px 12px 10px;
   width: 120px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  float: left;
 }
 
 form input.button:hover {
   background-color: #feb14b;
   color: #ffffff;
-}
-
-/* This changes the placeholder colour!! for forms. */
-::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #313638;
-  opacity: 70%; /* Firefox */
-}
-
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #313638;
-  opacity: 70%;
-}
-
-::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #313638;
-  opacity: 70%;
-}
-
-input:focus::-webkit-input-placeholder {
-  /* Chrome */
-  color: #313638;
 }
 
 /*Form image*/
