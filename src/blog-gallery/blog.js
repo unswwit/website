@@ -47,7 +47,7 @@ class Blog extends Component {
           {/*blog post 39*/}
           <div className="blogPosts">
             <BlogPreview
-              topMargin="10vw"
+              topMargin="5vw"
               bottomMargin="5vw"
               blogNo="39"
               imgUrl="/blog-covers/39-how-to-take-notes.png"
