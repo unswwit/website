@@ -14,7 +14,7 @@ class Blog extends Component {
         <div className="blogGallery">
 
           {/*Start of blog categories*/}
-          <input type="radio" id="blogCateg" name="categories" />
+          <input type="radio" id="blogCateg" name="categories" defaultChecked />
           <label id="allBlogs" htmlFor="blogCateg" className="side">
           Categories
           </label>

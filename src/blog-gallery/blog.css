@@ -1,4 +1,9 @@
 /*-------------------------------Blog post Categories-----------------------------*/
+:root {
+  --white: #fff;
+  --yellow: #feb14b;
+  --grey: #313638;
+}
 
 .blogGallery {
   margin-top: 50px;
@@ -13,7 +18,7 @@
   font-family: "Montserrat", sans-serif;
   text-align: center;
   font-size: 12pt;
-  color: #313638;
+  color: var(--grey);
   padding: 10px;
   width: 50%;
   margin: 0 auto;
@@ -24,7 +29,7 @@
 
 input[type="radio"][id="blogCateg"] + label {
   font-size: 32pt;
-  color: #feb14b;
+  color: var(--yellow);
   font-weight: bold;
   margin-bottom: 20px;
   line-height: normal;
