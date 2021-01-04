@@ -286,7 +286,7 @@ div .headline {
     border: none;
     letter-spacing: 3px;
   }
-  
+
   .signUpForm span {
     color:#e85f5c;
     font-family: "Montserrat", sans-serif;
@@ -298,6 +298,38 @@ div .headline {
     justify-content: center;
   }
   
+/*--------------Newsletter Mobile Design-------------------*/
+@media only screen and (max-width: 1200px) {
+  .subscribeBtn {
+    font-size: 20pt;
+    width: 70%;
+    right: 15%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .subscribeBtn {
+    font-size: 16pt;
+    width: 70%;
+    right: 15%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .subscribeBtn {
+    bottom: 30%;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .subscribeBtn {
+    font-size: 14pt;
+    width: 80%;
+    bottom: 35%;
+    right: 10%;
+  }
+}
+
 /*--------------Events Mobile Design-------------------*/
 
 @media only screen and (max-width: 850px) {
@@ -351,17 +383,9 @@ Title and Description. */
 .sponsors h1 {
   padding-top: 90px;
   font-size: 60px;
-  /*color: #feb14b;
-  font-family: 'Playfair Display', serif;
-  font-size: 5.5vw;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-*/
-
   font-family: "Montserrat", sans-serif;
   font-size: 5.5vw;
   font-size: 55px;
-
   font-weight: 500;
   letter-spacing: 3px;
   line-height: 100px;

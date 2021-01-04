@@ -53,6 +53,18 @@ form button {
 	font-size: 12pt;
 }
 
+.msg-alert p {
+  font-size: 1.3vw;
+}
+
+.closeBtn {
+  float: right;
+}
+
+.closeSymbol {
+  color: var(--grey);
+}
+
 /*--------------Responsive Mobile Design-------------------*/
 @media only screen and (max-width: 1000px) {
 	.paper {
@@ -67,7 +79,7 @@ form button {
 		font-size: 14pt;
   }
   
-  form input {
+  form input, .msg-alert p {
     font-size: 12pt;
   }
 }
@@ -81,7 +93,7 @@ form button {
 		width: 100%;
   }
 
-  form input {
+  form input, .msg-alert p {
     font-size: 11pt;
   }
 }

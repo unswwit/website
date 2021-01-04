@@ -8,6 +8,10 @@ import { Modal, Backdrop, Fade } from "@material-ui/core";
 const Home = () => {
   const [open, setOpen] = React.useState(false);
 
+  const callbackModal = () => {
+    setOpen(false);
+  };
+
   return (
     <div>
       {/* Start of Header */}
@@ -134,7 +138,7 @@ const Home = () => {
         >
           <>
             <Fade in={open}> 
-              <NewsletterForm />
+              <NewsletterForm handleClose={callbackModal} />
             </Fade> 
           </>       
         </Modal>

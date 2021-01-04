@@ -9,7 +9,8 @@ function ContactForm() {
     e.preventDefault();
 
     // validating that the email is in the correct form
-    if (email.match(/.+@.+\..+/)) {
+    const validate = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (validate.test(email)) {
       emailjs
         .sendForm(
           process.env.REACT_APP_SERVICE_ID,
