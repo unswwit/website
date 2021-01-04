@@ -31,3 +31,9 @@
 #introDescription h2 {
 	text-align: left;
 }
+
+#episodes {
+	margin: 0 auto;
+	width: 80%;
+	margin-bottom: 50px;
+}

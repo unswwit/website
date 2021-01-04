@@ -1,6 +1,7 @@
 import React from "react";
 import PageHeader from "../header";
 import styles from "./Podcast.module.css";
+import Episode from "./Episode";
 
 const Podcast = () => {
   return (
@@ -18,12 +19,11 @@ const Podcast = () => {
           <p>
             Join us every Monday as we talk all about tech, uni, and life, featuring our wonderful WIT team and some special guests!
           </p>
-        </div>  
-        <div id={styles.episodes}>
-          
-        </div>    
-      </div>
-    
+        </div>         
+      </div>    
+      <div id={styles.episodes}>
+        <Episode title="Welcome" cover="podcast-covers/episode-1-cover.png" date="September 19 2020" description="Wit is thrilled" />
+      </div>    
     </>
   );
 };
