@@ -43,7 +43,7 @@ div .headline {
 }
 
 /*Description left block*/
-.description-left {
+.descriptionLeft {
   display: inline-block;
   height: 500px;
   padding: 100px 50px 50px 0px;
@@ -51,7 +51,7 @@ div .headline {
 }
 
 /*Left block text*/
-.description-left h1 {
+.descriptionLeft h1 {
   color: #feb14b;
   font-family: "Montserrat", sans-serif;
   font-size: 5.8vw;
@@ -63,7 +63,7 @@ div .headline {
 }
 
 /*Description right block*/
-.description-right {
+.descriptionRight {
   display: inline-block;
   height: 500px;
   line-height: 22px;
@@ -72,7 +72,7 @@ div .headline {
 }
 
 /*Right block text*/
-.description-right p {
+.descriptionRight p {
   color: #313638b3;
   font-family: "Montserrat", sans-serif;
   font-size: 11pt;
@@ -104,17 +104,17 @@ div .headline {
     letter-spacing: 2.5px;
   }
 
-  .description-left {
+  .descriptionLeft {
     width: 100%;
     padding: 50px 0px 0px 0px;
     height: auto;
   }
-  .description-left h1 {
+  .descriptionLeft h1 {
     padding: 0px;
     font-size: 11vw;
     line-height: 90px;
   }
-  .description-right {
+  .descriptionRight {
     width: 100%;
     height: auto;
     padding: 20px 0px 40px 0px;
@@ -124,7 +124,7 @@ div .headline {
 /*---------------------------Home page statistics-----------------------------*/
 
 /*Background image*/
-.stats-background {
+.statsBackground {
   width: 100%;
   height: 300px;
 }
@@ -195,79 +195,139 @@ div .headline {
   display: grid;
   grid-template-columns: repeat(5, 20%);
   grid-template-rows: 100px 110px auto auto;
-  padding: 100px 0px 0px 0px;
+  padding: 100px 0px 100px 0px;
   max-width: 85%;
   margin: 0 auto;
 }
 
 /*Events description grid area*/
-.events-description {
+.eventsDescription {
   grid-area: 1 / 1 / 3 / 3;
 }
 
 /*Events description text*/
-.events-description p {
+.eventsDescription p {
   color: #313638b3;
   font-family: "Montserrat", sans-serif;
   font-size: 11pt;
   text-align: right;
 }
 
-.events-description p#about {
+.eventsDescription p#about {
   padding: 20px;
   padding-bottom: 0;
 }
 
-.events-description a {
+.eventsDescription a {
   font-family: "Montserrat", sans-serif;
   text-align: right;
   color: #e85f5c;
   padding-right: 20px;
 }
 
-.events-description a:hover {
+.eventsDescription a:hover {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
   color: #feb14b;
 }
 
 /*Events title grid area*/
-.events-title {
+.eventsTitle {
   text-align: left;
   grid-area: 1 / 3 / 2 / 6;
   padding: 0 20px;
 }
 
 /*Big event image grid area*/
-.event-1 {
+.event1 {
   grid-area: 2 / 3 / 5 / 6;
   padding: 20px;
 }
 
 /*Big event image size*/
-.event-1 img {
+.event1 img {
   object-fit: cover;
   width: 100%;
   transition: transform 0.5s ease;
   overflow: hidden;
 }
 
-.event-1:hover img {
+.event1:hover img {
   -ms-transform: scale(1.5); /* IE 9 */
   -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.03);
 }
 
 /*Small event grid area*/
-.event-2 {
+.event2 {
   grid-area: 3 / 1 / 5 / 3;
   padding: 20px;
 }
 
 /*Small event image size*/
-.event-2 img {
+.event2 img {
   object-fit: cover;
   width: 100%;
+}
+
+/*--------------Newsletter-------------------*/
+  .subscribeBtn {
+    position: absolute;
+    right: 20%;
+    text-align: center;
+    width: 60%;
+    bottom: 37%;
+    color: #ffffff;
+    background-color:#e85f5c;
+    padding: 12px 10px 12px 10px;
+    border: none;
+    font-size: 2vw;
+    text-transform: uppercase;
+    border: none;
+    letter-spacing: 3px;
+  }
+
+  .signUpForm span {
+    color:#e85f5c;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .signUpForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+/*--------------Newsletter Mobile Design-------------------*/
+@media only screen and (max-width: 1200px) {
+  .subscribeBtn {
+    font-size: 20pt;
+    width: 70%;
+    right: 15%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .subscribeBtn {
+    font-size: 16pt;
+    width: 70%;
+    right: 15%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .subscribeBtn {
+    bottom: 30%;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .subscribeBtn {
+    font-size: 14pt;
+    width: 80%;
+    bottom: 35%;
+    right: 10%;
+  }
 }
 
 /*--------------Events Mobile Design-------------------*/
@@ -291,21 +351,21 @@ Title and Description. */
   }
 
   /*Events description text - flexbox*/
-  .events-description {
+  .eventsDescription {
     order: 2;
   }
 
   /*Events description text*/
-  .events-description p {
+  .eventsDescription p {
     text-align: justify;
   }
-  .events-description a {
+  .eventsDescription a {
     text-align: justify;
     padding-left: 20px;
   }
 
   /*Big event image area - flexbox*/
-  .event-1 {
+  .event1 {
     order: 3;
   }
 
@@ -323,17 +383,9 @@ Title and Description. */
 .sponsors h1 {
   padding-top: 90px;
   font-size: 60px;
-  /*color: #feb14b;
-  font-family: 'Playfair Display', serif;
-  font-size: 5.5vw;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-*/
-
   font-family: "Montserrat", sans-serif;
   font-size: 5.5vw;
   font-size: 55px;
-
   font-weight: 500;
   letter-spacing: 3px;
   line-height: 100px;
@@ -358,17 +410,17 @@ Title and Description. */
     max-width: 85%;
   }
 
-  .events-description p#about {
+  .eventsDescription p#about {
     padding-left: 0px;
     padding-right: 0px;
   }
 
-  .event-1 {
+  .event1 {
     padding-left: 0px;
     padding-right: 0px;
   }
 
-  .events-description a {
+  .eventsDescription a {
     padding: 0px;
   }
 }

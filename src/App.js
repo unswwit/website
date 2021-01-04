@@ -3,7 +3,7 @@ import { HashRouter, Route, NavLink, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import "./loader.css";
-import Home from "./home";
+import Home from "./home/home";
 import JoinUs from "./join/joinUs";
 import Sponsors from "./sponsors/sponsors";
 import Opportunities from "./opportunities/opportunities";
