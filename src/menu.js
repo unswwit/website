@@ -103,6 +103,16 @@ class Menu extends Component {
                       </NavLink>
                       <NavLink
                         className="menu-link"
+                        to="/podcast"
+                        style={{ textDecoration: "none" }}
+                        onClick={this.props.handleMenuClick}
+                      >
+                        <div className="menu-box">
+                          <li className="menu-item">PODCAST</li>
+                        </div>
+                      </NavLink>
+                      <NavLink
+                        className="menu-link"
                         to="/publications"
                         style={{ textDecoration: "none" }}
                         onClick={this.props.handleMenuClick}

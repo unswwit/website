@@ -16,6 +16,7 @@ import OurTeam from "./team/team";
 import Blog from "./blog-gallery/blog";
 import Publications from "./publications/publications";
 import Events from "./events/events";
+import Podcast from "./podcast/Podcast";
 
 import Menu from "./menu";
 import MenuBtn from "./menuBtn";
@@ -218,13 +219,18 @@ class App extends Component {
                         <NavLink to="/blog">BLOG</NavLink>
                       </div>
                       <div className="dropdown-item">
+                        <NavLink to="/podcast">
+                          PODCAST
+                        </NavLink>
+                      </div>
+                      <div className="dropdown-item">
                         <NavLink to="/publications">PUBLICATIONS</NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/marketing-archive">
                           MARKETING ARCHIVES
                         </NavLink>
-                      </div>
+                      </div>                      
                     </div>
                   </div>
                 </li>
@@ -262,6 +268,7 @@ class App extends Component {
             <Route path="/sponsors" component={Sponsors} />
             <Route path="/opportunities" component={Opportunities} />
             <Route path="/contact-us" component={ContactUs} />
+            <Route path="/podcast" component={Podcast} />
             <Route path="/publications" component={Publications} />
             {this.blogPosts.map((object, i) => (
               <Route key={i} path={"/blog/" + (i + 1)} component={object} />

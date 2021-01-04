@@ -1,0 +1,33 @@
+.logoContainer {
+	background-color: #FFF7EF;
+	border-radius: 50%;
+	height: 300px;
+	width: 300px;
+	margin: 50px 50px 50px 100px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.podcastLogo {
+	height: 300px;
+	width: 300px;
+	object-fit: contain;
+	padding-bottom: 35px;
+}
+
+#podcastIntroduction {
+	margin: 0 auto;
+	width: 80%;
+	display: flex;
+	align-items: center;
+}
+
+#introDescription {
+	width: 40%;
+	display: inline-block;
+}
+
+#introDescription h2 {
+	text-align: left;
+}

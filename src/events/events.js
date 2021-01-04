@@ -2,7 +2,7 @@ import React from "react";
 import "./events.css";
 import PageHeader from ".././header";
 
-function Events() {
+const Events = () => {
   return (
     <div>
       {/* Cover Photo */}
