@@ -6,6 +6,10 @@ import PageHeader from ".././header";
 import Execs from "./execs";
 import SubCom from "./subcom";
 
+// import { makeStyles } from "@material-ui/core/styles";
+// import Typography from "@material-ui/core/Typography";
+// import Slider from "@material-ui/core/Slider";
+
 function OurTeam() {
 
   return (
