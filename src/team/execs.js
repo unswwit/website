@@ -33,6 +33,7 @@ const Execs = (props) => {
                     href={socials[social]}
                     target="_blank"
                     rel="noopener noreferrer"
+                    key={social}
                   >
                     <img
                       className="icon"

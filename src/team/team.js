@@ -1,16 +1,42 @@
 //All necessary imports for this javascript
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./team.css";
 
-import PageHeader from ".././header";
+import PageHeader from "../header";
 import Execs from "./execs";
 import SubCom from "./subcom";
+
+import { firebase } from "../config/firebase";
 
 // import { makeStyles } from "@material-ui/core/styles";
 // import Typography from "@material-ui/core/Typography";
 // import Slider from "@material-ui/core/Slider";
 
 function OurTeam() {
+  const db = firebase.firestore();
+  const [execs, setExecs] = useState([]);
+  
+  useEffect(() => {
+    db.collection("teams").doc("2021").collection("execs").orderBy("index").get()
+      .then(querySnapshot => {
+        let execsTemp = [];
+        querySnapshot.forEach(doc => {
+          execsTemp.push(doc.data());
+        });
+
+        const result = execsTemp.reduce(function(result, _, index, execsTemp) {
+          if (index % 2 === 0)
+            result.push(execsTemp.slice(index, index + 2));
+          return result;
+        }, []);
+        console.log(result);
+        return result;
+      })
+      .then((result) => {
+        setExecs(result);
+        console.log(result);
+      });
+  }, [db]);
 
   return (
     <div>
@@ -24,148 +50,24 @@ function OurTeam() {
       {/* 2021 Exec section */}
       <div className="all_execs_section">
         <div className="exec_row">
-          <Execs
-            imgUrl="/potraits/2021-exec/viv_w.jpg"
-            name="Vivian Wong"
-            className="exec_2021_img"
-            position="Co-President"
-            degree="Commerce/Actuarial Science"
-            year="3rd"
-            linkedin="vivian-wong-75511b169"
-            fb="profile.php?id=100027563555266"
-            email="vivianwong@unswwit.com"
-          />
-
-          <Execs
-            imgUrl="/potraits/2021-exec/gabbie.jpg"
-            name="Gabrielle Younes"
-            className="exec_2021_img"
-            position="Co-President"
-            degree="Bioinformatic Engineering/Advanced Science"
-            year="3rd"
-            linkedin="gabrielle-younes-a05a70182"
-            fb="profile.php?id=100017209069498"
-            email="gabrielle@unswwit.com"
-          />
-        </div>
-
-        <div className="exec_row">
-          <Execs
-            imgUrl="/potraits/2021-exec/victoria.jpg"
-            name="Victoria Yu"
-            className="exec_2021_img"
-            position="General Secretary"
-            degree="Information Systems"
-            year="3rd"
-            linkedin="victoria-yu-7a09001a3"
-            fb="victoria.yu.75"
-            email="victoriayu@unswwit.com"
-          />
-
-          <Execs
-            imgUrl="/potraits/2021-exec/connie.jpg"
-            name="Connie Shi"
-            className="exec_2021_img"
-            position="Treasurer"
-            degree="Commerce/Information Systems"
-            year="4th"
-            linkedin="connie-shi-6b709915b"
-            fb="connie.shi3"
-            email="connie@unswwit.com"
-          />
-        </div>
-
-        <div className="exec_row">
-          <Execs
-            imgUrl="/potraits/2021-exec/jane.jpg"
-            name="Jane Wang"
-            className="exec_2021_img"
-            position="Co-events Executive"
-            degree="Commerce/Information Systems"
-            year="3rd"
-            linkedin="jane-wang-a993b2168"
-            fb="jauewang"
-            email="jane@unswwit.com"
-          />
-
-          <Execs
-            imgUrl="/potraits/2021-exec/nishmi.jpg"
-            name="Nishmi Kapoor"
-            className="exec_2021_img"
-            position="Co-events Executive"
-            degree="Commerce and Advanced Science"
-            year="3rd"
-            linkedin="nishmikapoor"
-            fb="nishmi.kapoor"
-            email="nishmi@unswwit.com"
-          />
-        </div>
-
-        <div className="exec_row">
-          <Execs
-            imgUrl="/potraits/2021-exec/srija.jpg"
-            name="Srija Mukherjee"
-            className="exec_2021_img"
-            position="Externals Executive"
-            degree="Software Engineering"
-            year="2nd"
-            linkedin="srija-mukherjee"
-            fb="srija.mukherjee.587"
-            email="srjia@unswwit.com"
-          />
-
-          <Execs
-            imgUrl="/potraits/2021-exec/claire.jpg"
-            name="Claire Yu"
-            className="exec_2021_img"
-            position="Human Resources Executive"
-            degree="Commerce/Information Systems"
-            year="2nd"
-            linkedin="claire-yu-4bb2791a2"
-            fb="profile.php?id=100017301277446"
-            email="claire@unswwit.com"
-          />
-        </div>
-
-        <div className="exec_row">
-          <Execs
-            imgUrl="/potraits/2021-exec/alana.jpg"
-            name="Alana Hua"
-            className="exec_2021_img"
-            position="Information Technology Executive"
-            degree="Software/Biomedical Engineering"
-            year="4th"
-            linkedin="alana-hua-43a06b15a"
-            fb="alana.hua.3"
-            email="alana@unswwit.com"
-          />
-
-          <Execs
-            imgUrl="/potraits/2021-exec/kim.jpg"
-            name="Vy Kim Nguyen"
-            className="exec_2021_img"
-            position="Marketing Executive"           
-            degree="Bioinformatics/Biomedical Engineering"         
-            year="3rd"
-            linkedin="vykim-nguyen"
-            fb="kim.vy.3"
-            email="kim@unswwit.com"
-          />
-        </div>
-
-        <div className="exec_row">
-          <Execs
-            imgUrl="/potraits/2021-exec/georgie.jpg"
-            name="Georgie Mansfield"
-            className="exec_2021_img"
-            position="Education Executive"
-            degree="Chemical Engineering and Materials Science"
-            year="3rd"
-            linkedin="georgina-mansfield"
-            fb="georgie.mansfield.9"
-            email="georgie@unswwit.com"
-          />
-        </div>       
+          {execs.map((row) => {
+            return <div className="exec_row">
+              {row.map((exec) => {              
+                return <Execs
+                  imgUrl={`/potraits/2021-exec/${exec.img}`}
+                  name={exec.name}
+                  className="exec_2021_img"
+                  position={exec.position}
+                  degree={exec.degree}
+                  year={exec.year}
+                  linkedin={exec.linkedin}
+                  fb={exec.facebook}
+                  email={exec.email}
+                />
+              })}
+            </div>
+          })}  
+        </div> 
       </div>
 
       <div className="profile_section_heading">

@@ -5,14 +5,15 @@ import "./style.css";
 
 const Footer = () => {
   const routes = {
-    Events: "/events",
-    Team: "/our-team",
-    Sponsors: "/sponsors",
-    Opportunities: "/opportunities",
-    Join: "/join",
-    Contact: "/contact-us",
-    Blog: "/blog",
-    Publications: "/publications",
+    "Home": "/",
+    "Events": "/events",
+    "Team": "/our-team",
+    "Sponsors": "/sponsors",
+    "Opportunities": "/opportunities",
+    "Join": "/join",
+    "Contact": "/contact-us",
+    "Blog": "/blog",
+    "Publications": "/publications",
     "Marketing Archives": "/marketing-archive"
   };
 
@@ -51,7 +52,7 @@ const Footer = () => {
                   <div key={col} className="col-width footer-links">
                     {col.map((route) => {
                       return ( 
-                        <li className="footer-item">
+                        <li className="footer-item" key={route}>
                           <Link onClick={() => window.scrollTo(0, 0)} to={routes[route]}>
                             {route}
                           </Link>
