@@ -1,7 +1,7 @@
 import React from "react";
 import PageHeader from "../header";
 import styles from "./Podcast.module.css";
-import Episode from "./Episode";
+import EpisodeTemplate from "./EpisodeTemplate";
 
 const Podcast = () => {
   return (
@@ -22,7 +22,7 @@ const Podcast = () => {
         </div>         
       </div>    
       <div id={styles.episodes}>
-        <Episode title="Welcome" cover="podcast-covers/episode-1-cover.png" date="September 19 2020" description="Wit is thrilled" />
+        <EpisodeTemplate title="Welcome" cover="podcast-covers/episode-1-cover.png" date="September 19 2020" description="Wit is thrilled" />
       </div>    
     </>
   );
