@@ -14,10 +14,14 @@ import { firebase } from "../config/firebase";
 
 function OurTeam() {
   const db = firebase.firestore();
+  const sectors = ["Events", "Externals", "Human Resources", "Education", "Marketing", "Information Technology"];
   const [execs, setExecs] = useState([]);
-  
+  const [subcommittee, setSubcommittee] = useState([]);
+  const [year, setYear] = useState(2021);
+
   useEffect(() => {
-    db.collection("teams").doc("2021").collection("execs").orderBy("index").get()
+    // set exec team
+    db.collection("teams").doc(year).collection("execs").orderBy("index").get()
       .then(querySnapshot => {
         let execsTemp = [];
         querySnapshot.forEach(doc => {
@@ -29,14 +33,27 @@ function OurTeam() {
             result.push(execsTemp.slice(index, index + 2));
           return result;
         }, []);
-        console.log(result);
         return result;
       })
       .then((result) => {
-        setExecs(result);
-        console.log(result);
+        setExecs(result);      
       });
-  }, [db]);
+
+    // set subcommittee team
+    db.collection("teams").doc(year).collection("subcommittee").get()
+      .then(querySnapshot => {
+        let subcomTemp = [];
+        querySnapshot.forEach((doc) => {
+          let member = doc.data();
+          member["id"] = doc.id();
+          subcomTemp.push(member);
+        });
+        return subcomTemp;
+      })
+      .then((result) => {
+        setSubcommittee(result);      
+      });
+  }, [db, year]);
 
   return (
     <div>
@@ -44,7 +61,7 @@ function OurTeam() {
       <PageHeader imgUrl="/headers/2021-team-header.jpg" title="Meet Our Team" />
 
       <div className="profile_section_heading">
-        <h2 className="team-heading">OUR 2021 EXECUTIVE TEAM</h2>
+        <h2 className="team-heading">OUR {year} EXECUTIVE TEAM</h2>
       </div>
 
       {/* Exec section */}
@@ -70,10 +87,33 @@ function OurTeam() {
         </div> 
       </div>
 
-      <div className="profile_section_heading">
-        <h2 className="team-heading">OUR 2020 EXECUTIVE TEAM</h2>
-      </div>
-
+      {year !== 2021 ?
+        <>
+          <h2
+            className="team-heading"
+            style={{ marginTop: "2vw", paddingBottom: "5px" }}
+          >
+          OUR {year} SUBCOMMITTEE TEAM
+          </h2>
+          <div className="subcom_section">
+            {sectors.map((sector) => {
+              return <div key={sector} >
+                <h3 className="subcom-type">{sector} Team</h3>
+                {subcommittee
+                  .filter((member) => member.team === sector)
+                  .map((member) => {         
+                    return  <SubCom 
+                      key={member.id}
+                      name={member.name} 
+                      degree={member.degree}
+                      year={member.year}
+                    />
+                  })}  
+              </div>     
+            })}   
+          </div>
+        </>
+        : null}
       {/* Exec section */}
       {/* <div className="all_execs_section">
         <div className="exec_row">
