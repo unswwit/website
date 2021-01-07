@@ -3,7 +3,7 @@
 /*Form*/
 .form {
   text-align: center;
-  margin: 60px auto 0px auto;
+  margin: 60px auto 10px auto;
   max-width: 80%;
 }
 
@@ -46,6 +46,7 @@
   width: 100%;
   margin-bottom: 15px;
   padding-bottom: 10px;
+  font-size: 12pt;
 }
 
 .submitButton {
@@ -74,7 +75,7 @@ form input.button:hover {
 }
 
 /*Style for the Emails is below*/
-.contact-team {
+.contactTeam {
   margin-top: 50px;
 }
 
@@ -137,6 +138,7 @@ form input.button:hover {
   height: auto;
   margin-left: 12%;
   margin-right: auto;
+  margin-bottom: 50px;
 }
 
 .newEmails div.profile3 {
@@ -148,7 +150,7 @@ form input.button:hover {
   overflow: none;
 }
 
-.line-break {
+.lineBreak {
   visibility: hidden;
 }
 
@@ -250,11 +252,11 @@ form input.button:hover {
     font-size: 16px;
   }
 
-  h2 {
+  .form h2 {
     font-size: 22px;
   }
 
-  h3 {
+  .form h3 {
     font-size: 20px;
   }
 }

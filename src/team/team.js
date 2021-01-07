@@ -1,4 +1,3 @@
-//All necessary imports for this javascript
 import React, { useEffect, useState } from "react";
 import "./team.css";
 
@@ -7,10 +6,7 @@ import Execs from "./execs";
 import SubCom from "./subcom";
 
 import { firebase } from "../config/firebase";
-
-// import { makeStyles } from "@material-ui/core/styles";
-// import Typography from "@material-ui/core/Typography";
-// import Slider from "@material-ui/core/Slider";
+import Timeline from "./Timeline";
 
 function OurTeam() {
   const db = firebase.firestore();
@@ -27,6 +23,10 @@ function OurTeam() {
     }
   }
 
+  const handleYear = (newYear) => {
+    setYear(newYear);
+  };
+
   useEffect(() => {
     // set exec team
     db
@@ -36,8 +36,10 @@ function OurTeam() {
       .orderBy("index").get()
       .then(querySnapshot => {
         let execsTemp = [];
-        querySnapshot.forEach(doc => {
-          execsTemp.push(doc.data());
+        querySnapshot.forEach(doc => {          
+          let member = doc.data();
+          member["id"] = doc.id;
+          execsTemp.push(member);
         });
 
         const result = execsTemp.reduce(function(result, _, index, execsTemp) {
@@ -67,7 +69,6 @@ function OurTeam() {
         return subcomTemp;
       })
       .then((result) => {
-        console.log(result);
         setSubcommittee(result);      
       });
   }, [db, year]);
@@ -77,7 +78,8 @@ function OurTeam() {
       {/* Cover Photo */}
       <PageHeader imgUrl="/headers/2021-team-header.jpg" title="Meet Our Team" />
 
-      <div onClick={() => setYear("2020")}>2020</div>
+      {/*<div onClick={() => setYear("2020")}>2020</div>*/}
+      <Timeline updateYear={handleYear} />
       <div className="profile_section_heading">
         <h2 className="team-heading">OUR {year} EXECUTIVE TEAM</h2>
       </div>
@@ -85,10 +87,11 @@ function OurTeam() {
       {/* Exec section */}
       <div className="all_execs_section">
         <div className="exec_row">
-          {execs.map((row) => {
-            return <div className="exec_row">
+          {execs.map((row, index) => {
+            return <div key={index} className="exec_row">
               {row.map((exec) => {              
                 return <Execs
+                  key={exec.id}
                   imgUrl={`/potraits/${year}-exec/${exec.img}`}
                   name={exec.name}
                   className={year === "2020" ? execToClassName[year][exec.name] : execToClassName[year]}
