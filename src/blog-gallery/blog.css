@@ -60,7 +60,7 @@ input[type="radio"][id="WITCrush"]:checked ~ .blogPosts .lifestyle,
 input[type="radio"][id="WITCrush"]:checked ~ .blogPosts .upskill,
 input[type="radio"][id="WITCrush"]:checked ~ .blogPosts .tech,
 input[type="radio"][id="WITCrush"]:checked ~ .blogPosts .innovation,
-input[type="radio"][id="WITCrush"]:checked ~ .blogPosts .career {
+input[type="radio"][id="WITCrush"]:checked ~ .blogPosts .careers {
   display: none;
 }
 
@@ -73,7 +73,7 @@ input[type="radio"][id="lifestyle"]:checked ~ .blogPosts .WITCrush,
 input[type="radio"][id="lifestyle"]:checked ~ .blogPosts .upskill,
 input[type="radio"][id="lifestyle"]:checked ~ .blogPosts .tech,
 input[type="radio"][id="lifestyle"]:checked ~ .blogPosts .innovation,
-input[type="radio"][id="lifestyle"]:checked ~ .blogPosts .career {
+input[type="radio"][id="lifestyle"]:checked ~ .blogPosts .careers {
   display: none;
 }
 
@@ -86,7 +86,7 @@ input[type="radio"][id="upskill"]:checked ~ .blogPosts .WITCrush,
 input[type="radio"][id="upskill"]:checked ~ .blogPosts .lifestyle,
 input[type="radio"][id="upskill"]:checked ~ .blogPosts .tech,
 input[type="radio"][id="upskill"]:checked ~ .blogPosts .innovation,
-input[type="radio"][id="upskill"]:checked ~ .blogPosts .career {
+input[type="radio"][id="upskill"]:checked ~ .blogPosts .careers {
   display: none;
 }
 
@@ -98,7 +98,7 @@ input[type="radio"][id="tech"]:checked ~ .blogPosts .WITCrush,
 input[type="radio"][id="tech"]:checked ~ .blogPosts .lifestyle,
 input[type="radio"][id="tech"]:checked ~ .blogPosts .upskill,
 input[type="radio"][id="tech"]:checked ~ .blogPosts .innovation,
-input[type="radio"][id="tech"]:checked ~ .blogPosts .career {
+input[type="radio"][id="tech"]:checked ~ .blogPosts .careers {
   display: none;
 }
 
@@ -111,20 +111,20 @@ input[type="radio"][id="innovation"]:checked ~ .blogPosts .WITCrush,
 input[type="radio"][id="innovation"]:checked ~ .blogPosts .lifestyle,
 input[type="radio"][id="innovation"]:checked ~ .blogPosts .upskill,
 input[type="radio"][id="innovation"]:checked ~ .blogPosts .tech,
-input[type="radio"][id="innovation"]:checked ~ .blogPosts .career {
+input[type="radio"][id="innovation"]:checked ~ .blogPosts .careers {
   display: none;
 }
 
-input[type="radio"][id="career"]:checked + label {
+input[type="radio"][id="careers"]:checked + label {
   background: var(--grey);
   color: var(--white);
 }
 
-input[type="radio"][id="career"]:checked ~ .blogPosts .WITCrush,
-input[type="radio"][id="career"]:checked ~ .blogPosts .lifestyle,
-input[type="radio"][id="career"]:checked ~ .blogPosts .upskill,
-input[type="radio"][id="career"]:checked ~ .blogPosts .tech,
-input[type="radio"][id="career"]:checked ~ .blogPosts .innovation {
+input[type="radio"][id="careers"]:checked ~ .blogPosts .WITCrush,
+input[type="radio"][id="careers"]:checked ~ .blogPosts .lifestyle,
+input[type="radio"][id="careers"]:checked ~ .blogPosts .upskill,
+input[type="radio"][id="careers"]:checked ~ .blogPosts .tech,
+input[type="radio"][id="careers"]:checked ~ .blogPosts .innovation {
   display: none;
 }
 

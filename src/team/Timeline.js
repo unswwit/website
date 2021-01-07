@@ -5,7 +5,7 @@ import "./team.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: 500,
+    width: 600,
     margin: "0 auto"
   },
   margin: {
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
 const TeamSlider = withStyles({
   root: {
     color: "#E85F5C",
-    height: 8,
+    height: 6,
   },
   thumb: {
     height: 24,
@@ -63,15 +63,10 @@ const Timeline = ({ updateYear }) => {
       label: "2021"
     },
     {
-      value: 50,
+      value: 0,
       scaledValue: 2020,
       label: "2020"
     },
-    {
-      value: 0,
-      scaledValue: 2019,
-      label: "2019"
-    }
   ];
 
   const valueToYear = {
@@ -85,7 +80,7 @@ const Timeline = ({ updateYear }) => {
       <TeamSlider 
         id="timeline"
         style={{fontSize: "50px"}}
-        step={50} 
+        step={100} 
         marks={marks}  
         valueLabelDisplay="off" 
         aria-label="timeline" 
