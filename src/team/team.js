@@ -17,11 +17,23 @@ function OurTeam() {
   const sectors = ["Events", "Externals", "Human Resources", "Education", "Marketing", "Information Technology"];
   const [execs, setExecs] = useState([]);
   const [subcommittee, setSubcommittee] = useState([]);
-  const [year, setYear] = useState(2021);
+  const [year, setYear] = useState("2021");
+  const execToClassName = {
+    2021 :"exec_2021_img",
+    2020: {
+      "Elicia Au Duong": "eli_img",
+      "Gabrielle Younes": "gab_img",   
+      "Vivian Wong": "vivw_img",   
+    }
+  }
 
   useEffect(() => {
     // set exec team
-    db.collection("teams").doc(year).collection("execs").orderBy("index").get()
+    db
+      .collection("teams")
+      .doc(year)
+      .collection("execs")
+      .orderBy("index").get()
       .then(querySnapshot => {
         let execsTemp = [];
         querySnapshot.forEach(doc => {
@@ -40,17 +52,22 @@ function OurTeam() {
       });
 
     // set subcommittee team
-    db.collection("teams").doc(year).collection("subcommittee").get()
+    db
+      .collection("teams")
+      .doc(year)
+      .collection("subcommittee")
+      .get()
       .then(querySnapshot => {
         let subcomTemp = [];
         querySnapshot.forEach((doc) => {
           let member = doc.data();
-          member["id"] = doc.id();
+          member["id"] = doc.id;
           subcomTemp.push(member);
         });
         return subcomTemp;
       })
       .then((result) => {
+        console.log(result);
         setSubcommittee(result);      
       });
   }, [db, year]);
@@ -60,6 +77,7 @@ function OurTeam() {
       {/* Cover Photo */}
       <PageHeader imgUrl="/headers/2021-team-header.jpg" title="Meet Our Team" />
 
+      <div onClick={() => setYear("2020")}>2020</div>
       <div className="profile_section_heading">
         <h2 className="team-heading">OUR {year} EXECUTIVE TEAM</h2>
       </div>
@@ -71,9 +89,9 @@ function OurTeam() {
             return <div className="exec_row">
               {row.map((exec) => {              
                 return <Execs
-                  imgUrl={`/potraits/2021-exec/${exec.img}`}
+                  imgUrl={`/potraits/${year}-exec/${exec.img}`}
                   name={exec.name}
-                  className="exec_2021_img"
+                  className={year === "2020" ? execToClassName[year][exec.name] : execToClassName[year]}
                   position={exec.position}
                   degree={exec.degree}
                   year={exec.year}
@@ -87,7 +105,7 @@ function OurTeam() {
         </div> 
       </div>
 
-      {year !== 2021 ?
+      {subcommittee.length ?
         <>
           <h2
             className="team-heading"
