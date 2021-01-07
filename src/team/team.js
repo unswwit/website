@@ -47,7 +47,7 @@ function OurTeam() {
         <h2 className="team-heading">OUR 2021 EXECUTIVE TEAM</h2>
       </div>
 
-      {/* 2021 Exec section */}
+      {/* Exec section */}
       <div className="all_execs_section">
         <div className="exec_row">
           {execs.map((row) => {
@@ -75,7 +75,7 @@ function OurTeam() {
       </div>
 
       {/* Exec section */}
-      <div className="all_execs_section">
+      {/* <div className="all_execs_section">
         <div className="exec_row">
           <Execs
             imgUrl="/potraits/viv.jpg"
@@ -198,9 +198,8 @@ function OurTeam() {
             email="vivianwong@unswwit.com"
           />
         </div>
-      </div>      
+      </div>    
 
-      {/* Subcommittee section */}
       <h2
         className="team-heading"
         style={{ marginTop: "2vw", paddingBottom: "5px" }}
@@ -313,7 +312,7 @@ function OurTeam() {
           degree="Bioinformatics/Biomedical Engineering"
           year="2nd"
         />
-      </div>
+      </div>*/}
 
       <footer>
         <div className="footer_area" style={{ marginTop: "8vw" }} />
