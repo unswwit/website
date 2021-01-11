@@ -6,7 +6,7 @@ import "./team.css";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: 600,
-    margin: "0 auto"
+    margin: "100px auto 0px auto"
   },
   margin: {
     height: theme.spacing(3),
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
 const TeamSlider = withStyles({
   root: {
     color: "#E85F5C",
-    height: 6,
+    height: 6,  
   },
   thumb: {
     height: 24,
@@ -70,8 +70,7 @@ const Timeline = ({ updateYear }) => {
   ];
 
   const valueToYear = {
-    0: "2019",
-    50: "2020",
+    0: "2020",
     100: "2021"
   }
 

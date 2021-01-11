@@ -78,7 +78,6 @@ function OurTeam() {
       {/* Cover Photo */}
       <PageHeader imgUrl="/headers/2021-team-header.jpg" title="Meet Our Team" />
 
-      {/*<div onClick={() => setYear("2020")}>2020</div>*/}
       <Timeline updateYear={handleYear} />
       <div className="profile_section_heading">
         <h2 className="team-heading">OUR {year} EXECUTIVE TEAM</h2>

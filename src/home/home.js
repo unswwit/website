@@ -67,7 +67,7 @@ const Home = () => {
             </div>
             <div>
               <span>
-                <CountUp end={2328} duration={4} />
+                <CountUp end={2343} duration={4} />
               </span>
               <p>Facebook Followers</p>
             </div>
