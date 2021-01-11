@@ -19,13 +19,7 @@ const Blog = () => {
       .get()
       .then(querySnapshot => {
         let blogsTemp = [];
-        querySnapshot.forEach(doc => {          
-          let member = doc.data();
-          console.log(member.date);
-          let date = member.date;
-          console.log(Date.parse(date.toDate().ToString("dd/MM/YYYY")));
-          blogsTemp.push();
-        });    
+        querySnapshot.forEach(doc => blogsTemp.push(doc.data()));    
         setBlogs(blogsTemp);      
       });
 
@@ -38,10 +32,9 @@ const Blog = () => {
         querySnapshot.forEach((doc) => {
           authorsTemp[doc.id] = doc.data();        
         });
-
         setAuthors(authorsTemp);
       });
-  }, [authors, blogs, db]);
+  }, [db]);
 
   return (
     <>

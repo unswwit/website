@@ -23,7 +23,7 @@ const Podcast = () => {
         });
         setEpisodes(tempEpisodes);
       });
-  }, [db, episodes]);
+  }, [db]);
 
   return (
     <>

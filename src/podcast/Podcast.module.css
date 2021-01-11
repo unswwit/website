@@ -1,3 +1,5 @@
+/*-------------------------------Podcast Previews-----------------------------*/
+
 .logoContainer {
 	background-color: #FFF7EF;
 	border-radius: 50%;
@@ -44,4 +46,22 @@
 #heading {
 	text-transform: initial;
 	letter-spacing: 1.5px;
+	font-size: 50px;
+	font-weight: 600;
+}
+
+.previewContainer .episodeCover {
+	transition: transform 0.5s ease;
+  height: 300px;
+	width: 300px;
+}
+
+.previewContainer:hover .episodeCover {
+	-ms-transform: scale(1.05); /* IE 9 */
+  -webkit-transform: scale(1.05); /* Safari 3-8 */
+	transform: scale(1.05);
+}
+
+.previewContainer:hover {
+	background-color: none;
 }
