@@ -33,7 +33,8 @@ function OurTeam() {
       .collection("teams")
       .doc(year)
       .collection("execs")
-      .orderBy("index").get()
+      .orderBy("index")
+      .get()
       .then(querySnapshot => {
         let execsTemp = [];
         querySnapshot.forEach(doc => {          
