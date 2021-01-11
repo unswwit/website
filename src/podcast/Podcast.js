@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PageHeader from "../header";
 import styles from "./Podcast.module.css";
 import EpisodeTemplate from "./EpisodeTemplate";
+import { firebase } from "../config/firebase";
 
 const Podcast = () => {
+  const db = firebase.firestore();
+  const [episodes, setEpisodes] = useState([]);
+  
+  useEffect(() => {
+    // set podcast episodes
+    db
+      .collection("podcast-previews")  
+      .orderBy("episode", "desc")
+      .get()
+      .then(querySnapshot => {
+        let tempEpisodes = [];
+        querySnapshot.forEach(doc => {          
+          let episode = doc.data();
+          episode["id"] = doc.id;
+          tempEpisodes.push(episode);
+        });
+        setEpisodes(tempEpisodes);
+      });
+  }, [db, episodes]);
+
   return (
     <>
       {/* Cover Photo */}
@@ -13,16 +34,25 @@ const Podcast = () => {
           <img className={styles.podcastLogo} src="/podcast-logos/talk-WIT-us-logo.png" alt="Talk WIT Us logo" />
         </div>
         <div id={styles.introDescription} >
-          <h2>
+          <h2 id={styles.heading}>
             Talk WIT Us
           </h2>
           <p>
-            Join us every Monday as we talk all about tech, uni, and life, featuring our wonderful WIT team and some special guests!
+            Join us each month as we talk all about tech, uni, and life, featuring our wonderful WIT team and some special guests!
           </p>
         </div>         
       </div>    
       <div id={styles.episodes}>
-        <EpisodeTemplate title="Welcome" cover="podcast-covers/episode-1-cover.png" date="September 19 2020" description="Wit is thrilled" />
+        {episodes.map((episode) => {
+          return <EpisodeTemplate 
+            key={episode.id} 
+            title={episode.title} 
+            cover={`podcast-covers/${episode.img}`} 
+            date={episode.date} 
+            description={episode.description} 
+          />
+        })}
+      
       </div>    
     </>
   );

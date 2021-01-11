@@ -239,8 +239,7 @@ const Blog = () => {
             bottomMargin="5vw"
             blogNo="29"
             imgUrl="/blog-covers/29-davina-adisusila.png"
-            heading="Introducing Davina Adisusila, Engineering Team Lead at Eucalyptus
-          "
+            heading="Introducing Davina Adisusila, Engineering Team Lead at Eucalyptus"
             date="7/10/2020"
             subheading="In this blog post, we learn about the experiences of Davina Adisusila, the Engineering Team Lead at Eucalyptus, as well as the some of the insights she has gained during her incredible journey."
             authors={{
@@ -389,7 +388,7 @@ const Blog = () => {
             bottomMargin="5vw"
             blogNo="19"
             imgUrl="/blog-covers/19-shatabdi-dey.png"
-            heading="Introducing : Shatabdi De, Web Developer at Nine Entertainment Co. "
+            heading="Introducing : Shatabdi De, Web Developer at Nine Entertainment Co."
             date="05/08/2020"
             subheading="We are excited to share a recent Q&A we had with Shatabdi about career journey in STEM!"
             authors={{
@@ -397,6 +396,7 @@ const Blog = () => {
             }}
             category="WITCrush"
           />
+
           {/*blog post 18*/}
           <BlogPreview
             topMargin="5vw"

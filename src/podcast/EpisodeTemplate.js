@@ -9,15 +9,25 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles({
   root: {
     maxWidth: 300,
-    height: 600
+    height: 600,
+    display: "inline-block",
+    margin: 20
   },
   media: {
     height: 300,
   },
   date: {
     textAlign: "center",
+    fontFamily: "Montserrat, sans-serif",
+    color: "#feb14b",
   },
   description: {
+    textAlign: "center",
+  },
+  title: {
+    fontFamily: "Playfair Display, serif",
+    fontSize: "20px",
+    fontWeight: "500",
     textAlign: "center",
   }
 });
@@ -37,7 +47,7 @@ export default function EpisodeTemplate({ cover, title, date, description }) {
           <Typography className={classes.date} variant="body2" color="textSecondary" component="p">
             {date}
           </Typography>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography className={classes.title} gutterBottom>
             {title}
           </Typography>
           <Typography className={classes.description} variant="body2" color="textSecondary" component="p">
