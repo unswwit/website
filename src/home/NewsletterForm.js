@@ -22,11 +22,13 @@ const NewsletterForm = ({ handleClose }) => {
       <IconButton aria-label="close newsletter subscribe form" className={styles.closeBtn}>
         <CloseIcon onClick={handleClose} className={styles.closeSymbol}/>
       </IconButton>      
-      <img
+      {/*<img
         src={`${process.env.PUBLIC_URL}./newsletter.png`}
         className={styles.newsletterImg}
         alt="newsletter"
-      />
+      />*/}
+      <br />
+      <br />
       <h1 className={styles.formTitle}>Newsletter</h1>
       <p className={styles.formDescription}>Stay up to date WIT us on the latest events and news</p>
       <form className="newsletter" action={process.env.REACT_APP_MAILCHIMP_URL} target="_blank" method="POST" novalidate>

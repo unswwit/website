@@ -1,15 +1,17 @@
 /*--------------Newsletter sign up form-------------------*/
 form input {
-	margin: 10px auto;
+	margin: 15px auto;
 	display: block;
-	font-size: 1.3vw;
+	font-size: 1.2vw;
 	width: 100%;
   
   border-style: none;
   border-bottom: solid;
   border-color: #777b7c;
   border-width: 2px;
-  padding: 5px;
+	padding: 5px;
+	font-family: "Montserrat", sans-serif;
+	width: 50%;
 }
 
 form button {
@@ -22,7 +24,8 @@ form button {
 	display: block;
 	padding: 10px;
   letter-spacing: 3px;
-  text-transform: uppercase;
+	text-transform: uppercase;
+	width: 50%;
 }
 
 .newsletterImg {
@@ -34,9 +37,8 @@ form button {
 	background-color: white;
 	border-radius: 2;
 	padding: 10;
-	padding: 2vw 8vw;
-	width: 45%;
-	text-align: center;
+	padding: 1vw 2vw 2vw 2vw;
+	width: 100%;
 }
 
 .formTitle {
@@ -45,12 +47,16 @@ form button {
 	font-family: "Montserrat", sans-serif;
 	letter-spacing: 3px;
 	text-transform: uppercase;
+	text-align: center;
 }
 
 .formDescription {
 	color: #313638;
 	font-family: "Montserrat", sans-serif;
 	font-size: 12pt;
+	margin-left: auto;
+	margin-right: auto;	
+	text-align: center;
 }
 
 .msg-alert p {
@@ -58,11 +64,12 @@ form button {
 }
 
 .closeBtn {
-  float: right;
+	float: right;
 }
 
 .closeSymbol {
-  color: #313638;
+	color: #313638;
+	text-align: right;
 }
 
 .subscribeError {
@@ -72,12 +79,13 @@ form button {
 
 /*--------------Responsive Mobile Design-------------------*/
 @media only screen and (max-width: 1000px) {
-	.paper {
-		width: 70%;
-	}
-
 	form button {
 		font-size: 12pt;
+		width: 75%;
+	}
+	
+	form input {
+		width: 75%;
 	}
 
 	.formTitle {
@@ -89,16 +97,12 @@ form button {
   }
 }
 
-@media only screen and (max-width: 600px) {
-	.paper {
-		width: 90%;
-  }
-  
-	form button {
-		width: 100%;
-  }
-
+@media only screen and (max-width: 600px) {  
   form input, .msg-alert p {
     font-size: 11pt;
-  }
+	}
+	
+	form input, .formDescription, form button {
+		width: 80%;
+	}
 }
