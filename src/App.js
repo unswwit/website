@@ -22,6 +22,8 @@ import Podcast from "./podcast/Podcast";
 import Menu from "./menu";
 import MenuBtn from "./menuBtn";
 
+import EpisodePage from "./podcast/EpisodePage";
+
 import blogPost1 from "./blog-post/blog-post-1";
 import blogPost2 from "./blog-post/blog-post-2";
 import blogPost3 from "./blog-post/blog-post-3";
@@ -269,7 +271,8 @@ class App extends Component {
             <Route path="/sponsors" component={Sponsors} />
             <Route path="/opportunities" component={Opportunities} />
             <Route path="/contact-us" component={ContactUs} />
-            <Route path="/podcast" component={Podcast} />
+            <Route exact path="/podcast" component={Podcast} />
+            <Route path="/podcast/:episode" render={(props) => (<EpisodePage {...props} />)} />
             <Route path="/publications" component={Publications} />
             {this.blogPosts.map((object, i) => (
               <Route key={i} path={"/blog/" + (i + 1)} component={object} />

@@ -12,6 +12,8 @@ const useStyles = makeStyles({
     height: 560,
     display: "inline-block",
     margin: 20,
+    borderRadius: 0,
+    boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
   },
   media: {
     height: 300,

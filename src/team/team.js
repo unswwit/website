@@ -5,11 +5,11 @@ import PageHeader from "../header";
 import Execs from "./execs";
 import SubCom from "./subcom";
 
-import { firebase } from "../config/firebase";
+import database from "../config/firebase";
 import Timeline from "./Timeline";
 
 function OurTeam() {
-  const db = firebase.firestore();
+  const db = database.firestore();
   const sectors = ["Events", "Externals", "Human Resources", "Education", "Marketing", "Information Technology"];
   const [execs, setExecs] = useState([]);
   const [subcommittee, setSubcommittee] = useState([]);
