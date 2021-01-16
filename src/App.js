@@ -272,7 +272,7 @@ class App extends Component {
             <Route path="/opportunities" component={Opportunities} />
             <Route path="/contact-us" component={ContactUs} />
             <Route exact path="/podcast" component={Podcast} />
-            <Route path="/podcast/:episode" render={(props) => (<EpisodePage {...props} />)} />
+            <Route path="/podcast/:episode" component={EpisodePage} />
             <Route path="/publications" component={Publications} />
             {this.blogPosts.map((object, i) => (
               <Route key={i} path={"/blog/" + (i + 1)} component={object} />

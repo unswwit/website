@@ -5,6 +5,9 @@ import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import PageHeader from "../header";
+import database from "../config/firebase";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,17 +21,75 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const EpisodePage = ({ title, date, overview, transcript, link }) => {
+const EpisodePage = (props) => {
   const classes = useStyles();
-	
+  const db = database.firestore();
+  const [episode, setEpisode] = useState({});
+  const [episodeNumber, setEpisodeNumber] = useState(0);
+  const [episodeNav, setEpisodeNav] = useState({
+    next: "",
+    prev: ""
+  })
+
+  // retrieve current episode content
+  const handleEpisodeNumber = () => {
+    let url = window.location.href.split("/");
+    const currEpisode = parseInt(url[url.length - 1]);
+    setEpisodeNumber(currEpisode);
+    return currEpisode;
+  };
+  
+  useEffect(() => {
+    const currEpisode = handleEpisodeNumber();
+
+    db
+      .collection("podcast-previews")
+      .where("episode", "==", currEpisode)
+      .get()
+      .then(querySnapshot => {
+        querySnapshot.forEach((doc) => {
+          setEpisode(doc.data());       
+        });           
+      });
+    
+    db
+      .collection("podcast-previews")
+      .where("episode", "==", currEpisode - 1)
+      .get()
+      .then(querySnapshot => {
+        querySnapshot.forEach((doc) => {
+          setEpisodeNav({ ...episodeNav, prev: doc.data()["title"] });  
+        });           
+      });
+
+    db
+      .collection("podcast-previews")
+      .where("episode", "==", currEpisode + 1)
+      .get()
+      .then(querySnapshot => {
+        querySnapshot.forEach((doc) => {
+          setEpisodeNav({ ...episodeNav, next: doc.data()["title"] });  
+        });           
+      });  
+  }, [db, episodeNumber]);
+
   return (
     <>
-      <h2>{title}</h2>
-      <p>{date}</p>
-      <iframe title={title} src={link} width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      {/*title, date, overview, transcript, link*/}
+      <PageHeader imgUrl="/headers/podcast-header.jpg" title={`Podcast Episode #${episodeNumber}`} />
+      
+      {/* Episode Navigation */}
+      <div>
+        {episodeNav.prev && <Link to={`/podcast/${episodeNumber - 1}`} onClick={() => handleEpisodeNumber()}>Previous Episode:{episodeNav.prev}</Link>}
+        {episodeNav.next && <Link to={`/podcast/${episodeNumber + 1}`} onClick={() => handleEpisodeNumber()}>Next Episode:{episodeNav.next}</Link>}        
+      </div>     
 
+      {/* Episode content */}
+      <h2>{episode.title}</h2>
+      <p>{episode.date}</p>
+      <iframe title={episode.title} src={episode.link} width="100%" height="232" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
       <h2>Overview</h2>
-      <p>{overview}</p>
+      <p>{episode.description}</p>
 
       <h2>Transcript</h2>
       <Accordion>
@@ -41,7 +102,7 @@ const EpisodePage = ({ title, date, overview, transcript, link }) => {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            {transcript}
+            {props.location.transcript}
           </Typography>
         </AccordionDetails>
       </Accordion>
