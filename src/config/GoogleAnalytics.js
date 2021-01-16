@@ -1,9 +1,9 @@
 import ReactGA from "react-ga";
 
-// Replace with your Google Analytics tracking ID
-const trackingId = process.env.REACT_APP_MEASUREMENT_ID; 
-ReactGA.initialize(trackingId);
-ReactGA.set({
-  // any data that is relevant to the user session
-  // that you would like to track with google analytics
-})
+const GoogleAnalytics = () => {
+  const trackingId = process.env.REACT_APP_MEASUREMENT_ID; // your google analytics id
+  ReactGA.initialize(trackingId);
+  ReactGA.pageview(window.location.pathname + window.location.search);
+};
+
+export default GoogleAnalytics;

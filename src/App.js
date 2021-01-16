@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "semantic-ui-css/semantic.min.css";
 import "./style.css";
 import "./loader.css";
+import GoogleAnalytics from "./config/GoogleAnalytics";
+
 import Home from "./home/home";
 import JoinUs from "./join/joinUs";
 import Sponsors from "./sponsors/sponsors";
@@ -144,6 +146,9 @@ class App extends Component {
   };
 
   componentDidMount() {
+    // google analytics
+    GoogleAnalytics();
+
     window.addEventListener("resize", this.updateMenu);
     this.fakeRequest().then(() => {
       const el = document.querySelector(".loader");
