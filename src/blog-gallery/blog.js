@@ -1,5 +1,5 @@
 //import React, { useState, useEffect } from "react";
-import React from "react";
+import React, { useState } from "react";
 import "../style.css";
 import "./blog.css";
 import BlogPreview from "./blog-preview";
@@ -8,7 +8,9 @@ import Chip from "@material-ui/core/Chip";
 //import database from "../config/firebase";
 
 const Blog = () => {
-  const categories = ["WIT Crush Wednesday", "Lifestyle", "Upskill", "Topical Technology", "Perception and Innovation", "Careers" ];
+  const categories = ["All", "WIT Crush Wednesday", "Lifestyle", "Upskill", "Topical Technology", "Perception and Innovation", "Careers" ];
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
   /*const db = database.firestore();
   
   const [blogs, setBlogs] = useState([]);
@@ -47,14 +49,35 @@ const Blog = () => {
 
         {/* Start of blog categories */}
         <div className="blogCategories">
-          {categories.map((category) => <Chip 
-            className="categoryChip" 
-            size="medium" 
-            label={category} 
-            style={{backgroundColor:"#313638", color: "white"}}
-          />)}
+          {categories.map((category) => {
+            if (selectedCategory === category) {
+              return <Chip 
+                className="categoryChip" 
+                size="medium" 
+                label={category} 
+                style={{
+                  backgroundColor: "#e85f5c", 
+                  color: "white",
+                  margin: "10px"
+                }}
+                onClick={() => setSelectedCategory(category)}
+              />
+            } else {
+              return <Chip 
+                className="categoryChip" 
+                size="medium" 
+                label={category} 
+                style={{
+                  backgroundColor: "#7F7F7F", 
+                  color: "white",
+                  margin: "10px"
+                }}
+                onClick={() => setSelectedCategory(category)}
+              />            
+            }
+          })}
         </div>      
-       
+        {/*
         <input type="radio" id="blogCateg" name="categories" defaultChecked />
         <label id="allBlogs" htmlFor="blogCateg" className="side">
         Categories
@@ -82,7 +105,7 @@ const Blog = () => {
         <input type="radio" id="careers" name="categories" />
         <label htmlFor="careers" className="side">
         Careers
-        </label>
+        </label>*/}
 
         {/*Start of blog posts*/}
         {/*blog post 39*/}
