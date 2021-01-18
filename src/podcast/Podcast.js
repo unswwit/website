@@ -47,12 +47,7 @@ const Podcast = () => {
         {episodes.map((episode) => {
           return <Link
             key={episode.id} 
-            to={{
-              pathname: "/podcast/" + episode.episode,
-              title: episode.title,
-              date: episode.date,
-              overview: episode.description,
-            }}
+            to={`/podcast/${episode.episode}`}
             style={{ textDecoration: "none" }}
           >
             <EpisodeTemplate 

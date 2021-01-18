@@ -54,21 +54,15 @@ const Home = () => {
         <div>
           <div className={styles.number}>
             <div>
-              <span>
-                <CountUp end={30} duration={5} />
-              </span>
+              <CountUp end={30} duration={5} />  
               <p>Team Members</p>
             </div>
             <div>
-              <span>
-                <CountUp end={15} duration={5} />
-              </span>
+              <CountUp end={15} duration={5} />
               <p>Sponsors</p>
             </div>
             <div>
-              <span>
-                <CountUp end={2343} duration={4} />
-              </span>
+              <CountUp end={2343} duration={4} />
               <p>Facebook Followers</p>
             </div>
           </div>

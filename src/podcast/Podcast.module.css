@@ -65,3 +65,14 @@
 .previewContainer:hover {
 	background-color: none;
 }
+
+/*-------------------------------Podcast Episode Page-----------------------------*/
+#episodeContainer {
+	width: 950px;
+	margin: auto;
+	padding: 25px;
+}
+
+#episodeDate {
+	text-align: center;
+}

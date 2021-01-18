@@ -37,7 +37,6 @@ div .headline {
 /*-----------------------------Home page description--------------------------*/
 /*Description wrapper*/
 .description {
-  height: 500px;
   margin: auto;
   max-width: 85%;
 }
@@ -45,8 +44,7 @@ div .headline {
 /*Description left block*/
 .descriptionLeft {
   display: inline-block;
-  height: 500px;
-  padding: 100px 50px 50px 0px;
+  padding: 100px 50px 100px 0px;
   width: 50%;
 }
 
@@ -65,7 +63,6 @@ div .headline {
 /*Description right block*/
 .descriptionRight {
   display: inline-block;
-  height: 500px;
   line-height: 22px;
   padding: 175px 0px 0px 50px;
   width: 50%;
@@ -93,11 +90,13 @@ div .headline {
     top: 20%;
     left: 20vw;
   }
+
   .headline h1 {
     font-size: 8vw;
     text-transform: uppercase;
     letter-spacing: 3px;
   }
+
   /*Header subtitle*/
   .headline p {
     font-size: 1.6vw;
@@ -138,12 +137,12 @@ div .headline {
   grid-template-columns: 30% 30% 45%;
   left: 0;
   margin: 0 auto;
-  place-items: center;
+  place-items: center center;
   position: absolute;
   right: 0;
   text-align: center;
   width: 60%;
-  bottom: 25%;
+  bottom: 30%;
 }
 
 .number span {
@@ -166,9 +165,7 @@ div .headline {
   .number {
     grid-template-columns: 25% 30% 45%;
     position: absolute;
-    right: 0;
     width: 90%;
-    bottom: 25%;
   }
 
   .number span {
@@ -181,11 +178,18 @@ div .headline {
 
 @media only screen and (max-width: 700px) {
   .number span {
-    font-size: 14vw;
-    letter-spacing: 10px;
+    font-size: 12.5vw;
+    letter-spacing: 8px;
   }
+
   .number p {
     font-size: 2.4vw;
+  }
+
+  .number {
+    bottom: 33%;
+    grid-template-columns: 28% 30% 45%;  
+    width: 90%;
   }
 }
 
@@ -312,16 +316,11 @@ div .headline {
     font-size: 16pt;
     width: 70%;
     right: 15%;
+    bottom: 38%;
   }
 }
 
-@media only screen and (max-width: 800px) {
-  .subscribeBtn {
-    bottom: 30%;
-  }
-}
-
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 400px) {
   .subscribeBtn {
     font-size: 14pt;
     width: 80%;
@@ -342,8 +341,7 @@ div .headline {
     flex-flow: column;
   }
 
-  /* Use a Flexbox to switch positions of
-Title and Description. */
+  /* Use a Flexbox to switch positions of Title and Description. */
   /*Events title - flexbox*/
   .events-title {
     text-align: center;
