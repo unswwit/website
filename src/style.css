@@ -42,6 +42,7 @@ font-family: 'Montserrat', sans-serif;*/
 
 .coverPhoto .title h1 {
   margin: 0px;
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 700px) {
@@ -49,7 +50,7 @@ font-family: 'Montserrat', sans-serif;*/
   .coverPhoto .dark,
   .coverPhoto .title,
   .cover_image {
-    height: 50vh;
+    height: 40vh;
   }
 
   .coverPhoto .title h1 {
@@ -183,6 +184,7 @@ p {
 
 .menuTitle:hover {
   color: #e85f5c;
+  cursor: pointer;
 }
 
 .nav-item a:hover {

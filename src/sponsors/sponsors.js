@@ -11,7 +11,7 @@ class Sponsors extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/sponsors-header-1.png" title="Sponsors" />
+        <PageHeader imgUrl="/headers/sponsors-header-1.png" title="Sponsors" />
 
         <div id="sponsors-body">
           <p className="subheader">

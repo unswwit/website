@@ -1,0 +1,78 @@
+/*-------------------------------Podcast Previews-----------------------------*/
+
+.logoContainer {
+	background-color: #FFF7EF;
+	border-radius: 50%;
+	height: 300px;
+	width: 300px;
+	margin: 50px 50px 50px 100px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.podcastLogo {
+	height: 300px;
+	width: 300px;
+	object-fit: contain;
+	padding-bottom: 35px;
+}
+
+#podcastIntroduction {
+	margin: 0 auto;
+	width: 80%;
+	display: flex;
+	align-items: center;
+}
+
+#introDescription {
+	width: 40%;
+	display: inline-block;
+}
+
+#introDescription h2 {
+	text-align: left;
+}
+
+#episodes {
+	margin: 0 auto;
+	width: 80%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+#heading {
+	text-transform: initial;
+	letter-spacing: 1.5px;
+	font-size: 50px;
+	font-weight: 600;
+}
+
+.previewContainer .episodeCover {
+	transition: transform 0.5s ease;
+  height: 300px;
+	width: 300px;
+}
+
+.previewContainer:hover .episodeCover {
+	-ms-transform: scale(1.05); /* IE 9 */
+  -webkit-transform: scale(1.05); /* Safari 3-8 */
+	transform: scale(1.05);
+}
+
+.previewContainer:hover {
+	background-color: none;
+}
+
+/*-------------------------------Podcast Episode Page-----------------------------*/
+#episodeContainer {
+	width: 950px;
+	margin: auto;
+	padding: 25px;
+}
+
+#episodeDate {
+	text-align: center;
+}

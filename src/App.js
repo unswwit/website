@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import { HashRouter, Route, NavLink, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "semantic-ui-css/semantic.min.css";
 import "./style.css";
 import "./loader.css";
-import Home from "./home";
+import GoogleAnalytics from "./config/GoogleAnalytics";
+
+import Home from "./home/home";
 import JoinUs from "./join/joinUs";
 import Sponsors from "./sponsors/sponsors";
 import Opportunities from "./opportunities/opportunities";
@@ -16,9 +19,12 @@ import OurTeam from "./team/team";
 import Blog from "./blog-gallery/blog";
 import Publications from "./publications/publications";
 import Events from "./events/events";
+//import Podcast from "./podcast/Podcast";
 
 import Menu from "./menu";
 import MenuBtn from "./menuBtn";
+
+//import EpisodePage from "./podcast/EpisodePage";
 
 import blogPost1 from "./blog-post/blog-post-1";
 import blogPost2 from "./blog-post/blog-post-2";
@@ -58,6 +64,7 @@ import blogPost35 from "./blog-post/blog-post-35";
 import blogPost36 from "./blog-post/blog-post-36";
 import blogPost37 from "./blog-post/blog-post-37";
 import blogPost38 from "./blog-post/blog-post-38";
+import blogPost39 from "./blog-post/blog-post-39";
 
 class App extends Component {
   state = {
@@ -103,8 +110,9 @@ class App extends Component {
       blogPost34,
       blogPost35,
       blogPost36,
-      blogPost37,
+      blogPost37,    
       blogPost38,
+      blogPost39,
     ];
     this.state = {
       showDD: false,
@@ -138,6 +146,9 @@ class App extends Component {
   };
 
   componentDidMount() {
+    // google analytics
+    GoogleAnalytics();
+
     window.addEventListener("resize", this.updateMenu);
     this.fakeRequest().then(() => {
       const el = document.querySelector(".loader");
@@ -215,6 +226,11 @@ class App extends Component {
                       <div className="dropdown-item">
                         <NavLink to="/blog">BLOG</NavLink>
                       </div>
+                      {/*<div className="dropdown-item">
+                        <NavLink to="/podcast">
+                          PODCAST
+                        </NavLink>
+                      </div>*/}
                       <div className="dropdown-item">
                         <NavLink to="/publications">PUBLICATIONS</NavLink>
                       </div>
@@ -222,7 +238,7 @@ class App extends Component {
                         <NavLink to="/marketing-archive">
                           MARKETING ARCHIVES
                         </NavLink>
-                      </div>
+                      </div>                      
                     </div>
                   </div>
                 </li>
@@ -260,6 +276,8 @@ class App extends Component {
             <Route path="/sponsors" component={Sponsors} />
             <Route path="/opportunities" component={Opportunities} />
             <Route path="/contact-us" component={ContactUs} />
+            {/*<Route exact path="/podcast" component={Podcast} />
+            <Route path="/podcast/:episode" component={EpisodePage} />*/}
             <Route path="/publications" component={Publications} />
             {this.blogPosts.map((object, i) => (
               <Route key={i} path={"/blog/" + (i + 1)} component={object} />

@@ -12,7 +12,7 @@ class PageHeader extends Component {
         {/* header image */}
         <img
           src={process.env.PUBLIC_URL + this.props.imgUrl}
-          alt="blog-header"
+          alt="header"
           className="cover_image"
         />
 

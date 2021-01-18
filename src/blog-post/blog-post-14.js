@@ -14,7 +14,7 @@ class blogPost14 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/blog-header.png" title="Blog Post #14" />
+        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #14" />
 
         {/*Start of blog post*/}
         <div className="blog-content">
@@ -123,7 +123,7 @@ class blogPost14 extends Component {
         <AuthorCard
           authors={{
             "vivian-wong": [
-              "/potraits/vivw.jpg",
+              "/potraits/2020-exec/vivw.jpg",
               "profile_img vivw_img",
               "Vivian Wong",
               "Education Executive",

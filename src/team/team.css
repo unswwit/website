@@ -1,3 +1,20 @@
+/*---------------------------Search filtering and loading--------------------------*/
+
+#timeline span {
+  font-size: 11pt;
+}
+
+#teamLoading {
+  color:#feb14b;  
+  margin-top: 15%;
+  margin-bottom: 10%;
+}
+
+#teamLoadingContainer {
+  display: flex;
+  justify-content: center;
+}
+
 /*---------------------------Executive team profiles--------------------------*/
 /*Executive team section*/
 .all_execs_section {
@@ -49,6 +66,12 @@ h2.team-heading {
 }
 
 /*Transform executive profile images*/
+.exec_2021_img {
+  transform: translate(-3%, -13%);
+  width: 105%;
+  height: auto;
+}
+
 .gab_img {
   transform: translate(0%, 0);
 }
@@ -152,6 +175,8 @@ h2.team-heading {
   color: #feb14b;
   margin-top: 6vw;
   margin-bottom: 2vw;
+  font-size: 2vw;
+  font-weight: 500;
 }
 
 /*Subcommittee names*/

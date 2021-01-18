@@ -10,7 +10,7 @@ class MarketingArchive extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/marketing-header.png" title="Marketing Archive" />
+        <PageHeader imgUrl="/headers/marketing-header.png" title="Marketing Archive" />
 
         {/*Start of text*/}
         <div className="introParagraph">
