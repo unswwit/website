@@ -1,5 +1,18 @@
+/*---------------------------Search filtering and loading--------------------------*/
+
 #timeline span {
   font-size: 11pt;
+}
+
+#teamLoading {
+  color:#feb14b;  
+  margin-top: 15%;
+  margin-bottom: 10%;
+}
+
+#teamLoadingContainer {
+  display: flex;
+  justify-content: center;
 }
 
 /*---------------------------Executive team profiles--------------------------*/
