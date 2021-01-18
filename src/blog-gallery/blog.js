@@ -4,9 +4,11 @@ import "../style.css";
 import "./blog.css";
 import BlogPreview from "./blog-preview";
 import PageHeader from ".././header";
+import Chip from "@material-ui/core/Chip";
 //import database from "../config/firebase";
 
 const Blog = () => {
+  const categories = ["WIT Crush Wednesday", "Lifestyle", "Upskill", "Topical Technology", "Perception and Innovation", "Careers" ];
   /*const db = database.firestore();
   
   const [blogs, setBlogs] = useState([]);
@@ -44,6 +46,15 @@ const Blog = () => {
       <div className="blogGallery">
 
         {/* Start of blog categories */}
+        <div className="blogCategories">
+          {categories.map((category) => <Chip 
+            className="categoryChip" 
+            size="medium" 
+            label={category} 
+            style={{backgroundColor:"#313638", color: "white"}}
+          />)}
+        </div>      
+       
         <input type="radio" id="blogCateg" name="categories" defaultChecked />
         <label id="allBlogs" htmlFor="blogCateg" className="side">
         Categories

@@ -5,6 +5,16 @@
   --grey: #313638;
 }
 
+.categoryChip {
+  text-transform: uppercase;
+  margin: 10px;
+}
+
+.blogCategories {
+  display: flex;
+  justify-content: center;
+}
+
 .blogGallery {
   margin-top: 50px;
 }
