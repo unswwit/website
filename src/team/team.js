@@ -42,10 +42,15 @@ function OurTeam() {
             result.push(tempExecs.slice(index, index + 2));
           return result;
         }, []);
+        console.log(result);
         setExecs(result);
 
         // add subcommittee
-        setSubcommittee(googleData[`${year} subcommittee`]["elements"]);
+        if (googleData.hasOwnProperty(`${year} subcommittee`)) {
+          setSubcommittee(googleData[`${year} subcommittee`]["elements"]);
+        } else {
+          setSubcommittee([]);
+        }
         setLoading(false);
       },
       simpleSheet: false
@@ -128,7 +133,7 @@ function OurTeam() {
                 {row.map((exec) => {              
                   return <Execs
                     key={exec.id}
-                    imgUrl={`/potraits/${year}-exec/${exec.img}`}
+                    imgUrl={exec.img ? `/potraits/${year}-exec/${exec.img}` : ""}
                     name={exec.name}
                     className={year === "2020" ? execToClassName[year][exec.name] : execToClassName[year]}
                     position={exec.position}

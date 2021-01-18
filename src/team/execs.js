@@ -13,20 +13,21 @@ const Execs = (props) => {
     <div className="exec_col">
       <div className="profile">
         <div>
-          <div className="profile_crop">
+          {props.imgUrl && <div className="profile_crop">
             <img
               src={process.env.PUBLIC_URL + props.imgUrl}
               className={"profile_img " + props.className}
               alt={props.name}
             />
-          </div>
+          </div>}
           <div className="profile_details">
             <p className="profile_text_name">{props.name}</p>
             <p className="profile_text_position">{props.position}</p>
-            <p className="profile_degree">
-              {props.degree + ", " + props.year + " year"}
-            </p>
-            <div className="icon_bar">
+            {props.degree && <p className="profile_degree">
+              {props.degree}
+              {props.year && ", " + props.year + " year"}
+            </p>}
+            {props.linkedin && <div className="icon_bar">
               {Object.keys(socials).map((social) => {
                 return (
                   <a
@@ -43,7 +44,7 @@ const Execs = (props) => {
                   </a>
                 )
               })}
-            </div>
+            </div>}
           </div>
         </div>
       </div>
