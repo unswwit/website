@@ -8,7 +8,7 @@ class BlogPreview extends Component {
   render() {
     return (
       <div className={this.props.category}>
-        {/*Start of blog post preview*/}
+        {/* Start of blog post preview */}
         <div
           className="blog-post"
           style={{

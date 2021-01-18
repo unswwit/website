@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import PageHeader from "../header";
 import styles from "./Podcast.module.css";
 import EpisodeTemplate from "./EpisodeTemplate";
-import { firebase } from "../config/firebase";
+import database from "../config/firebase";
+import { Link } from "react-router-dom";
 
 const Podcast = () => {
-  const db = firebase.firestore();
+  const db = database.firestore();
   const [episodes, setEpisodes] = useState([]);
   
   useEffect(() => {
@@ -44,13 +45,18 @@ const Podcast = () => {
       </div>    
       <div id={styles.episodes}>
         {episodes.map((episode) => {
-          return <EpisodeTemplate 
+          return <Link
             key={episode.id} 
-            title={episode.title} 
-            cover={`podcast-covers/${episode.img}`} 
-            date={episode.date} 
-            description={episode.description} 
-          />
+            to={`/podcast/${episode.episode}`}
+            style={{ textDecoration: "none" }}
+          >
+            <EpisodeTemplate 
+              title={episode.title} 
+              cover={`podcast-covers/${episode.img}`} 
+              date={episode.date} 
+              description={episode.description} 
+            />
+          </Link>
         })}
       
       </div>    

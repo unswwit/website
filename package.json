@@ -21,6 +21,7 @@
     "react-bootstrap": "^1.2.2",
     "react-countup": "^4.3.3",
     "react-dom": "^16.13.1",
+    "react-ga": "^3.3.0",
     "react-mailchimp-form": "^1.0.2",
     "react-native": "^0.63.2",
     "react-responsive-image": "^5.0.0",
@@ -28,7 +29,8 @@
     "react-scripts": "^3.4.3",
     "react-social-media-icons": "^1.1.0",
     "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^2.0.1"
+    "semantic-ui-react": "^2.0.1",
+    "tabletop": "^1.6.3"
   },
   "scripts": {
     "predeploy": "npm run build",

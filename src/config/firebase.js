@@ -12,8 +12,6 @@ var firebaseConfig = {
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-// Initialise Google analytics
-const analytics = firebase.analytics();
+let database = firebase.initializeApp(firebaseConfig);
 
-export { firebase, analytics };
+export default database;

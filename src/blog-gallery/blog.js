@@ -1,13 +1,14 @@
-//All necessary imports for this javascript
-import React, { useState, useEffect } from "react";
+//import React, { useState, useEffect } from "react";
+import React from "react";
 import "../style.css";
 import "./blog.css";
 import BlogPreview from "./blog-preview";
 import PageHeader from ".././header";
-import { firebase } from "../config/firebase";
+//import database from "../config/firebase";
 
 const Blog = () => {
-  const db = firebase.firestore();
+  /*const db = database.firestore();
+  
   const [blogs, setBlogs] = useState([]);
   const [authors, setAuthors] = useState({});
 
@@ -34,7 +35,7 @@ const Blog = () => {
         });
         setAuthors(authorsTemp);
       });
-  }, [db]);
+  }, [db]);*/
 
   return (
     <>
@@ -42,7 +43,7 @@ const Blog = () => {
       <PageHeader imgUrl="/headers/blog-header.png" title="Blog Posts" />
       <div className="blogGallery">
 
-        {/*Start of blog categories*/}
+        {/* Start of blog categories */}
         <input type="radio" id="blogCateg" name="categories" defaultChecked />
         <label id="allBlogs" htmlFor="blogCateg" className="side">
         Categories
