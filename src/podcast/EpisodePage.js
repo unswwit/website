@@ -36,7 +36,6 @@ const EpisodePage = (props) => {
   const handleEpisodeNumber = () => {
     let url = window.location.href.split("/");
     const currEpisode = parseInt(url[url.length - 1]);
-    console.log("here")
     setEpisodeNumber(currEpisode);
     return currEpisode;
   };
