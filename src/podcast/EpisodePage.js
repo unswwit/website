@@ -8,6 +8,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import PageHeader from "../header";
 import database from "../config/firebase";
 import { Link } from "react-router-dom";
+import styles from "./Podcast.module.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,6 +36,7 @@ const EpisodePage = (props) => {
   const handleEpisodeNumber = () => {
     let url = window.location.href.split("/");
     const currEpisode = parseInt(url[url.length - 1]);
+    console.log("here")
     setEpisodeNumber(currEpisode);
     return currEpisode;
   };
@@ -71,41 +73,42 @@ const EpisodePage = (props) => {
           setEpisodeNav({ ...episodeNav, next: doc.data()["title"] });  
         });           
       });  
-  }, [db, episodeNumber]);
+  }, [db, episodeNav, episodeNumber]);
 
   return (
     <>
-      {/*title, date, overview, transcript, link*/}
       <PageHeader imgUrl="/headers/podcast-header.jpg" title={`Podcast Episode #${episodeNumber}`} />
       
-      {/* Episode Navigation */}
-      <div>
-        {episodeNav.prev && <Link to={`/podcast/${episodeNumber - 1}`} onClick={() => handleEpisodeNumber()}>Previous Episode:{episodeNav.prev}</Link>}
-        {episodeNav.next && <Link to={`/podcast/${episodeNumber + 1}`} onClick={() => handleEpisodeNumber()}>Next Episode:{episodeNav.next}</Link>}        
-      </div>     
+      <div id={styles.episodeContainer}>
+        {/* Episode Navigation */}
+        <div>
+          {episodeNav.prev && <Link to={`/podcast/${episodeNumber - 1}`} onClick={() => handleEpisodeNumber()}>Previous Episode:{episodeNav.prev}</Link>}
+          {episodeNav.next && <Link to={`/podcast/${episodeNumber + 1}`} onClick={() => handleEpisodeNumber()}>Next Episode:{episodeNav.next}</Link>}        
+        </div>     
 
-      {/* Episode content */}
-      <h2>{episode.title}</h2>
-      <p>{episode.date}</p>
-      <iframe title={episode.title} src={episode.link} width="100%" height="232" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      <h2>Overview</h2>
-      <p>{episode.description}</p>
+        {/* Episode content */}
+        <h2>{episode.title}</h2>
+        <p id={styles.episodeDate}>{episode.date}</p>
+        <iframe title={episode.title} src={episode.link} width="100%" height="232" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <h2>Overview</h2>
+        <p>{episode.description}</p>
 
-      <h2>Transcript</h2>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography className={classes.heading}>View Transcript</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            {props.location.transcript}
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+        <h2>Transcript</h2>
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography className={classes.heading}>View Transcript</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              {props.location.transcript}
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+      </div>
     </>
   );
 }
