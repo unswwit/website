@@ -250,7 +250,7 @@ div .headline {
 
 /*Big event image size*/
 .event1 img {
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
   transition: transform 0.5s ease;
   overflow: hidden;
@@ -270,7 +270,7 @@ div .headline {
 
 /*Small event image size*/
 .event2 img {
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
 }
 

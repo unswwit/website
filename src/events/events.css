@@ -1,5 +1,4 @@
 /*------------------------------Publications header--------------------------------*/
-
 .events-body {
   max-width: 70%;
   margin: 0 auto;
@@ -100,6 +99,11 @@ img.event-images {
 
 p.lookout {
   text-align: center;
+}
+
+#eventResources {
+  text-transform: uppercase;
+  color: #e85f5c;
 }
 
 @media only screen and (max-width: 650px) {

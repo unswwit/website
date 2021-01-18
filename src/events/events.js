@@ -1,8 +1,15 @@
 import React from "react";
 import "./events.css";
 import PageHeader from ".././header";
+import Accordion from "@material-ui/core/Accordion";
+import AccordionDetails from "@material-ui/core/AccordionDetails";
+import AccordionSummary from "@material-ui/core/AccordionSummary";
+import Typography from "@material-ui/core/Typography";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-const Events = () => {
+function Events() {
+  const [expanded, setExpanded] = React.useState(false);
+
   return (
     <div>
       {/* Cover Photo */}
@@ -73,14 +80,30 @@ const Events = () => {
             */}
           </div>
         </div>
-        <h2>PAST EVENTS</h2>     
+        <h2>PAST EVENTS</h2>
+        <Accordion expanded={expanded} onChange={() => {setExpanded(!expanded)}} style={{marginBottom: "50px"}}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel4bh-content"
+            id="panel-header"
+          >
+            <Typography id="eventResources">Event Resources</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <iframe
+              title="event-resources"
+              src="https://drive.google.com/a/unswwit.com/embeddedfolderview?id=1zgocvaYesg7IBRYLvehAXb4Auu0Pl4Ef#grid"
+              style={{ width: "100%", height: "280px", border: "0" }}
+            ></iframe>
+          </AccordionDetails>
+        </Accordion>
+     
         <div id="past-events" className="grid-container">
           <div className="grid-item">
             <img
               className="event-images"
               src={
-                process.env.PUBLIC_URL +
-                "./event-covers/personal-branding.jpg"
+                process.env.PUBLIC_URL + "./event-covers/personal-branding.jpg"
               }
               alt="Personal Branding Workshop"
             />

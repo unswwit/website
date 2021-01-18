@@ -130,9 +130,9 @@ function OurTeam() {
           <div className="exec_row">
             {execs.map((row, index) => {
               return <div key={index} className="exec_row">
-                {row.map((exec) => {              
+                {row.map((exec, index) => {              
                   return <Execs
-                    key={exec.id}
+                    key={index}
                     imgUrl={exec.img ? `/potraits/${year}-exec/${exec.img}` : ""}
                     name={exec.name}
                     className={year === "2020" ? execToClassName[year][exec.name] : execToClassName[year]}
