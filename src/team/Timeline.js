@@ -5,8 +5,9 @@ import "./team.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: "70%",
-    margin: "100px auto 0px auto"
+    width: "60%",
+    margin: "0 auto",
+    marginTop: "7%"
   },
   margin: {
     height: theme.spacing(3),

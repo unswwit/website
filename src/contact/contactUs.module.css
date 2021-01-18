@@ -53,7 +53,7 @@
   color: #ffffff;
   background-color: #e85f5c;
   text-align: center;
-  margin: 20px 0px 25px 0px;
+  margin: 0px 0px 30px 0px;
   padding: 12px 10px 12px 10px;
   width: 120px;
   border: none;
@@ -77,10 +77,6 @@ form input.button:hover {
 /*Style for the Emails is below*/
 .contactTeam {
   margin-top: 50px;
-}
-
-.newEmails {
-  height: auto;
 }
 
 .newEmails div.dot {
@@ -252,8 +248,8 @@ form input.button:hover {
     font-size: 16px;
   }
 
-  .form h2 {
-    font-size: 22px;
+  .form h2, .contactTeam {
+    font-size: 30px;
   }
 
   .form h3 {
