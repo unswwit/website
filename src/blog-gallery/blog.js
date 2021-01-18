@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+//import React, { useState, useEffect } from "react";
+import React from "react";
 import "../style.css";
 import "./blog.css";
 import BlogPreview from "./blog-preview";
 import PageHeader from ".././header";
-import database from "../config/firebase";
+//import database from "../config/firebase";
 
 const Blog = () => {
-  const db = database.firestore();
+  /*const db = database.firestore();
+  
   const [blogs, setBlogs] = useState([]);
   const [authors, setAuthors] = useState({});
 
@@ -33,7 +35,7 @@ const Blog = () => {
         });
         setAuthors(authorsTemp);
       });
-  }, [db]);
+  }, [db]);*/
 
   return (
     <>
