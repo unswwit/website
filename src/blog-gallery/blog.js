@@ -24,7 +24,24 @@ const BootstrapTooltip = (props) => {
 }
 
 const Blog = () => {
-  const categories = ["All", "WIT Crush Wednesday", "Lifestyle", "Upskill", "Topical Technology", "Perception and Innovation", "Careers" ];
+  const categories = [
+    "All", 
+    "WIT Crush Wednesday", 
+    "Lifestyle", 
+    "Upskill", 
+    "Topical Technology", 
+    "Perception and Innovation", 
+    "Careers"
+  ];
+  const categoryDescriptions = {
+    "All": "Click here to see all the blog posts that we have posted!",
+    "WIT Crush Wednesday": "Each Wednesday, we post a blog sharing the interview, journey, and experience of inspiring women in tech. Click here to read their empowering stories!",
+    "Lifestyle": "Wondering how you can improve your lifestyle? Read some eye-opening content here!",
+    "Upskill": "Having the skill-set to perform your best is essential. Learn about ways that you can upskill yourself in these blogs!",
+    "Topical Technology": "In a fast-paced world, technology is making a growing impact in current events. Click here to read about tech in the news.",
+    "Perception and Innovation": "Our understanding of technology is readily evolving along with innovation that is arising in tech. Read more about new start-ups, understanding tech disciplines, and upcoming innovation in these blogs.",
+    "Careers": "Wondering what you can do to excel in your professional life? Read here for tips on acing interviews, performing your best, and making the most of career opportunities!"
+  }
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   /*const db = database.firestore();
@@ -67,7 +84,12 @@ const Blog = () => {
         <div className="blogCategories">
           {categories.map((category) => {
             const chipColour = selectedCategory === category ? "#e85f5c": "#7F7F7F";
-            return <BootstrapTooltip title="Add">
+            return <BootstrapTooltip title={
+              <>
+                <div className="tooltipTitle">{category}</div>
+                <p className="tooltipDescription">{categoryDescriptions[category]}</p>
+              </>
+            }>
               <Chip 
                 className="categoryChip"
                 size="medium" 
