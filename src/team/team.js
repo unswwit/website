@@ -42,7 +42,6 @@ function OurTeam() {
             result.push(tempExecs.slice(index, index + 2));
           return result;
         }, []);
-        console.log(result);
         setExecs(result);
 
         // add subcommittee
@@ -133,7 +132,7 @@ function OurTeam() {
                 {row.map((exec, index) => {              
                   return <Execs
                     key={index}
-                    imgUrl={exec.img ? `/potraits/${year}-exec/${exec.img}` : ""}
+                    imgUrl={exec.img !== "" ? `/potraits/${year}-exec/${exec.img}` : ""}
                     name={exec.name}
                     className={year === "2020" ? execToClassName[year][exec.name] : execToClassName[year]}
                     position={exec.position}
@@ -165,9 +164,9 @@ function OurTeam() {
                   <h3 className="subcom-type">{sector} Team</h3>
                   {subcommittee
                     .filter((member) => member.team === sector)
-                    .map((member) => {         
+                    .map((member, index) => {         
                       return  <SubCom 
-                        key={member.id}
+                        key={index}
                         name={member.name} 
                         degree={member.degree}
                         year={member.year}
