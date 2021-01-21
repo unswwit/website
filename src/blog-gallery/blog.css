@@ -12,6 +12,9 @@
 .blogCategories {
   display: flex;
   justify-content: center;
+  flex-flow: row wrap;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .blogGallery {

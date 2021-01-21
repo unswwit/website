@@ -1,11 +1,27 @@
 //import React, { useState, useEffect } from "react";
 import React, { useState } from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import "../style.css";
 import "./blog.css";
 import BlogPreview from "./blog-preview";
 import PageHeader from ".././header";
 import Chip from "@material-ui/core/Chip";
+import Tooltip from "@material-ui/core/Tooltip";
 //import database from "../config/firebase";
+
+const useStylesBootstrap = makeStyles((theme) => ({
+  arrow: {
+    color: theme.palette.common.black,
+  },
+  tooltip: {
+    backgroundColor: theme.palette.common.black,
+  },
+}));
+
+const BootstrapTooltip = (props) => {
+  const classes = useStylesBootstrap();
+  return <Tooltip arrow classes={classes} {...props} />;
+}
 
 const Blog = () => {
   const categories = ["All", "WIT Crush Wednesday", "Lifestyle", "Upskill", "Topical Technology", "Perception and Innovation", "Careers" ];
@@ -50,31 +66,20 @@ const Blog = () => {
         {/* Start of blog categories */}
         <div className="blogCategories">
           {categories.map((category) => {
-            if (selectedCategory === category) {
-              return <Chip 
-                className="categoryChip" 
+            const chipColour = selectedCategory === category ? "#e85f5c": "#7F7F7F";
+            return <BootstrapTooltip title="Add">
+              <Chip 
+                className="categoryChip"
                 size="medium" 
                 label={category} 
                 style={{
-                  backgroundColor: "#e85f5c", 
+                  backgroundColor: chipColour, 
                   color: "white",
-                  margin: "10px"
+                  margin: "5px",  
                 }}
                 onClick={() => setSelectedCategory(category)}
-              />
-            } else {
-              return <Chip 
-                className="categoryChip" 
-                size="medium" 
-                label={category} 
-                style={{
-                  backgroundColor: "#7F7F7F", 
-                  color: "white",
-                  margin: "10px"
-                }}
-                onClick={() => setSelectedCategory(category)}
-              />            
-            }
+              />    
+            </BootstrapTooltip>;              
           })}
         </div>      
         {/*
