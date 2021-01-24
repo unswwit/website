@@ -28,7 +28,7 @@ const Home = () => {
       {/* Start of Description */}
       <div className={styles.description}>
         <div className={styles.descriptionLeft}>
-          <h1>UNITE. EMPOWER. UPSKILL.</h1>
+          <h1>COLLABORATE. INSPIRE. CHANGE.</h1>
         </div>
         <div className={styles.descriptionRight}>
           <p>
@@ -62,7 +62,7 @@ const Home = () => {
               <p>Sponsors</p>
             </div>
             <div>
-              <CountUp end={2343} duration={4} />
+              <CountUp end={2375} duration={4} />
               <p>Facebook Followers</p>
             </div>
           </div>
