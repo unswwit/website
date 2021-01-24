@@ -6,7 +6,7 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-
+ 
 function Events() {
   const [expanded, setExpanded] = React.useState(false);
 
@@ -86,7 +86,7 @@ function Events() {
         </Accordion>
      
         <div id="past-events" className="grid-container">
-          <div className="grid-item">
+          {/*<div className="grid-item">
             <img
               className="event-images"
               src={
@@ -352,7 +352,7 @@ function Events() {
               }
               alt="logo competition"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
