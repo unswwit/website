@@ -17,58 +17,46 @@ function Events() {
       {/* Main Title, and Subtitle Area */}
       <div className="events-body">
         <h2>UPCOMING EVENTS</h2>
-        <p className="lookout">Keep a lookout here for our upcoming events!</p>
+        {/*<p className="lookout">Keep a lookout here for our upcoming events!</p>*/}
         <div className="grid-container">
-          <div className="grid-container">
-            {/*
+          <div className="grid-container">            
             <div className="upcoming">
               <div>
                 <img
                   className="event-images"
                   src={
                     process.env.PUBLIC_URL +
-                    "./event-covers/personal-branding.jpg"
+                    "./event-covers/2021/volunteer-drive.jpg"
                   }
-                  alt="Personal Branding Workshop"
+                  alt="Volunteer Drive"
                 />
                 <div className="event-description">
                   <p className="event-name">
-                    WIT x Forage presents: Personal Branding Workshop
+                    O-Week Volunteer Recruitment Drive
                   </p>
-                  <p className="event-date">11th November 2020, 6-7:00 PM</p>
+                  <p className="event-date">24th January 2020</p>
                   <p className="event-summary">
-                    Are you interested in building your own personal brand,
-                    making valuable connections and conquering small talk?{" "}
-                    <span role="img" aria-label="graph">
-                      🗣️
-                    </span>{" "}
-                    Fear not, UNSW Women in Technology is collaborating with
-                    Forage (formerly InsideSherpa) to provide an insightful
-                    introduction into the tips and tricks involved in successful
-                    networking and personal branding. Don’t miss out on this
-                    opportunity to engage with our lovely industry
-                    representatives in developing the soft skills that will set
-                    you apart from the rest!{" "}
-                    <span role="img" aria-label="graph">
-                      ✔️✔️
-                    </span>
-                    So come along and learn to tell your story and kickstart
-                    your career! Please note this is a 𝗰𝗼𝗺𝗽𝘂𝗹𝘀𝗼𝗿𝘆 event for all
-                    WIT Empowerment Program Mentees
+                    Want to get involved with WIT this year? Join us as a volunteer at our O-week stall!
+                    We are looking for ENTHUSIASTIC people who are PASSIONATE about technology and EAGER to help out first year students with their journey through university! All UNSW students from all degrees and backgrounds are welcome to sign up. More information will be provided to volunteers on our training day.
+                    Don't miss out on this opportunity to get involved with WIT, meet the team and make an impact on new students!                   
                   </p>
                   <ul id="links">
                     <li className="event-link">
                       <a
-                        href="https://forms.gle/VuFjVp6sTNGC5QT78"
+                        href="https://forms.gle/VE6pHZQozcMYo7Yo7"
                         className="event"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         Register
                       </a>
                     </li>
                     <li className="event-link">
                       <a
-                        href="https://www.facebook.com/events/420097319005284/"
-                        className="event"
+                        href="https://www.facebook.com/events/2084007355231321/"
+                        className="event"                       
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         Facebook
                       </a>
@@ -77,7 +65,6 @@ function Events() {
                 </div>
               </div>
             </div>
-            */}
           </div>
         </div>
         <h2>PAST EVENTS</h2>
