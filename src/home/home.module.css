@@ -91,7 +91,7 @@ div .headline {
     left: 20vw;
   }
 
-  .headline h1 {
+  .headline h1{
     font-size: 8vw;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -113,6 +113,17 @@ div .headline {
     font-size: 9vw;
     line-height: 90px;
   }
+
+  .eventsTitle {
+    padding: 0;
+    text-align: right;
+  }
+
+  .eventsTitle h1 {
+    font-size: 15vw;
+    text-align: right;
+  }
+
   .descriptionRight {
     width: 100%;
     height: auto;
@@ -318,6 +329,10 @@ div .headline {
     right: 15%;
     bottom: 38%;
   }
+
+  .event1 {
+    padding: 40px 0;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -343,8 +358,8 @@ div .headline {
 
   /* Use a Flexbox to switch positions of Title and Description. */
   /*Events title - flexbox*/
-  .events-title {
-    text-align: center;
+  .eventsTitle {
+    margin: 0 auto;
     order: 1;
   }
 
@@ -399,6 +414,10 @@ div .headline {
 /*--------------Sponsors Mobile Design-------------------*/
 
 @media only screen and (max-width: 640px) {
+  .headline p {
+    font-size: 2.5vw;
+  }
+  
   .sponsors h1 {
     font-size: 7.8vw;
     padding-top: 30px;
