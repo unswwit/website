@@ -19,7 +19,7 @@ import OurTeam from "./team/team";
 import Blog from "./blog-gallery/blog";
 import Publications from "./publications/publications";
 import Events from "./events/events";
-//import Podcast from "./podcast/Podcast";
+import Podcasts from "./podcasts/podcasts"
 
 import Menu from "./menu";
 import MenuBtn from "./menuBtn";
@@ -110,7 +110,7 @@ class App extends Component {
       blogPost34,
       blogPost35,
       blogPost36,
-      blogPost37,    
+      blogPost37,
       blogPost38,
       blogPost39,
     ];
@@ -232,13 +232,16 @@ class App extends Component {
                         </NavLink>
                       </div>*/}
                       <div className="dropdown-item">
+                        <NavLink to="/podcasts">PODCASTS</NavLink>
+                      </div>
+                      <div className="dropdown-item">
                         <NavLink to="/publications">PUBLICATIONS</NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/marketing-archive">
                           MARKETING ARCHIVES
                         </NavLink>
-                      </div>                      
+                      </div>
                     </div>
                   </div>
                 </li>
@@ -274,6 +277,7 @@ class App extends Component {
             />
             <Route path="/join-us" component={JoinUs} />
             <Route path="/sponsors" component={Sponsors} />
+            <Route path="/podcasts" component={Podcasts} />
             <Route path="/opportunities" component={Opportunities} />
             <Route path="/contact-us" component={ContactUs} />
             {/*<Route exact path="/podcast" component={Podcast} />
