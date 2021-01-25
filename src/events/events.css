@@ -94,7 +94,7 @@ a:hover.event {
 
 img.event-images {
   max-width: 100%;
-  height: auto;
+  object-fit: contain;
 }
 
 p.lookout {
