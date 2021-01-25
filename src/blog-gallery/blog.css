@@ -5,139 +5,46 @@
   --grey: #313638;
 }
 
+.categoryChip {
+  text-transform: uppercase;
+}
+
+.blogCategories {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.tooltipTitle {
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+.tooltipDescription {
+  font-size: 11px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
 .blogGallery {
   margin-top: 50px;
 }
 
-.blogGallery input, .blogGallery label {
-  display: block;
-  text-align: center;
+/*---------------------------Loading Sign--------------------------*/
+
+#blogsLoading {
+  color:#feb14b;  
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
-.blogGallery label {
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-  font-size: 12pt;
-  color: var(--grey);
-  padding: 10px;
-  width: 50%;
-  margin: 0 auto;
-  line-height: normal;
-  cursor: pointer;
-  transition: all 0.1s;
-}
-
-input[type="radio"][id="blogCateg"] + label {
-  font-size: 32pt;
-  color: var(--yellow);
-  font-weight: bold;
-  margin-bottom: 20px;
-  line-height: normal;
-  cursor: pointer;
-  transition: all 0.1s;
-}
-
-input[type="radio"] {
-  display: none;
-}
-
-.blogCategories label:hover, #allBlogs:hover {
-  background: var(--yellow);
-  color: var(--white);
-}
-
-input[type="radio"][id="blogCateg"]:checked + label {
-  background: var(--yellow);
-  color: var(--white);
-}
-
-input[type="radio"][id="WITCrush"]:checked + label {
-  background: var(--grey);
-  color: var(--white);
-}
-
-input[type="radio"][id="WITCrush"]:checked ~ .blogPosts .lifestyle,
-input[type="radio"][id="WITCrush"]:checked ~ .blogPosts .upskill,
-input[type="radio"][id="WITCrush"]:checked ~ .blogPosts .tech,
-input[type="radio"][id="WITCrush"]:checked ~ .blogPosts .innovation,
-input[type="radio"][id="WITCrush"]:checked ~ .blogPosts .careers {
-  display: none;
-}
-
-input[type="radio"][id="lifestyle"]:checked + label {
-  background: var(--grey);
-  color: var(--white);
-}
-
-input[type="radio"][id="lifestyle"]:checked ~ .blogPosts .WITCrush,
-input[type="radio"][id="lifestyle"]:checked ~ .blogPosts .upskill,
-input[type="radio"][id="lifestyle"]:checked ~ .blogPosts .tech,
-input[type="radio"][id="lifestyle"]:checked ~ .blogPosts .innovation,
-input[type="radio"][id="lifestyle"]:checked ~ .blogPosts .careers {
-  display: none;
-}
-
-input[type="radio"][id="upskill"]:checked + label {
-  background: var(--grey);
-  color: var(--white);
-}
-
-input[type="radio"][id="upskill"]:checked ~ .blogPosts .WITCrush,
-input[type="radio"][id="upskill"]:checked ~ .blogPosts .lifestyle,
-input[type="radio"][id="upskill"]:checked ~ .blogPosts .tech,
-input[type="radio"][id="upskill"]:checked ~ .blogPosts .innovation,
-input[type="radio"][id="upskill"]:checked ~ .blogPosts .careers {
-  display: none;
-}
-
-input[type="radio"][id="tech"]:checked + label {
-  background: var(--grey);
-  color: var(--white);
-}
-input[type="radio"][id="tech"]:checked ~ .blogPosts .WITCrush,
-input[type="radio"][id="tech"]:checked ~ .blogPosts .lifestyle,
-input[type="radio"][id="tech"]:checked ~ .blogPosts .upskill,
-input[type="radio"][id="tech"]:checked ~ .blogPosts .innovation,
-input[type="radio"][id="tech"]:checked ~ .blogPosts .careers {
-  display: none;
-}
-
-input[type="radio"][id="innovation"]:checked + label {
-  background: var(--grey);
-  color: var(--white);
-}
-
-input[type="radio"][id="innovation"]:checked ~ .blogPosts .WITCrush,
-input[type="radio"][id="innovation"]:checked ~ .blogPosts .lifestyle,
-input[type="radio"][id="innovation"]:checked ~ .blogPosts .upskill,
-input[type="radio"][id="innovation"]:checked ~ .blogPosts .tech,
-input[type="radio"][id="innovation"]:checked ~ .blogPosts .careers {
-  display: none;
-}
-
-input[type="radio"][id="careers"]:checked + label {
-  background: var(--grey);
-  color: var(--white);
-}
-
-input[type="radio"][id="careers"]:checked ~ .blogPosts .WITCrush,
-input[type="radio"][id="careers"]:checked ~ .blogPosts .lifestyle,
-input[type="radio"][id="careers"]:checked ~ .blogPosts .upskill,
-input[type="radio"][id="careers"]:checked ~ .blogPosts .tech,
-input[type="radio"][id="careers"]:checked ~ .blogPosts .innovation {
-  display: none;
-}
-
-@media only screen and (max-width: 550px) {
-  .blogGallery label {
-    width: 80%;
-  }
-}
-
-@media only screen and (max-width: 300px) {
-  .blogGallery label {
-    width: 100%;
-  }
+#blogLoadingContainer {
+  display: flex;
+  justify-content: center;
 }
 
 /*-------------------------------Blog post Preview-----------------------------*/
@@ -152,6 +59,10 @@ input[type="radio"][id="careers"]:checked ~ .blogPosts .innovation {
   height: 22.786vw;
   transition: transform 0.5s ease;
   overflow: hidden;
+}
+
+.blog-post {
+  margin: 5vw 0;
 }
 
 .blog-post:hover .preview-pic img {

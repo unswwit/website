@@ -11,12 +11,8 @@ class BlogPreview extends Component {
         {/* Start of blog post preview */}
         <div
           className="blog-post"
-          style={{
-            marginTop: this.props.topMargin,
-            marginBottom: this.props.bottomMargin,
-          }}
         >
-          <table cellpadding="0">
+          <table cellPadding="0">
             <Link
               to={"/blog/" + this.props.blogNo}
               style={{ textDecoration: "none" }}
