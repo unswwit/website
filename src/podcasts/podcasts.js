@@ -23,25 +23,25 @@ class Podcasts extends React.Component {
           </div>
 
 
-          <div class="panels">
-          <PodcastPanel
-            imgUrl="podcasts/episode-0.jpg"
-            date="September 19, 2020"
-            heading="Welcome to Talk WIT Us"
-            description="WIT is thrilled to reveal our new weekly podcast: Talk WIT Us! Join us every Monday as we talk all about tech, uni, and life, featuring our wonderful WIT team and some special guests! Tune in next Monday for our first episode, Chat and Chill."
-          />
-          <PodcastPanel
-            imgUrl="podcasts/episode-1.jpg"
-            date="September 21, 2020"
-            heading="Chat and Chill"
-            description="Welcome to episode one of Talk Wit Us: Chat and Chill! Join us as members of the WIT Executive and Subcommittee team engage in retrospective discussions on the extra-curricular that defined their time at university, personal development, and a guide to how to make the most of your time at university!"
-          />
-          <PodcastPanel
-            imgUrl="podcasts/episode-2.jpg"
-            date="September 29, 2020"
-            heading="Careers Deep Dive"
-            description="Not sure what to do with your life? Not sure what you can do with your life? The WIT Career Deep Dive sits down with successful women in the tech industry and uncovers the ins and outs of their daily work to demystify the opportunities that are available."
-          />
+          <div class="panel-container">
+            <PodcastPanel
+              imgUrl="podcasts/episode-0.jpg"
+              date="September 19, 2020"
+              heading="Welcome to Talk WIT Us"
+              description="WIT is thrilled to reveal our new weekly podcast: Talk WIT Us! Join us every Monday as we talk all about tech, uni, and life, featuring our wonderful WIT team and some special guests! Tune in next Monday for our first episode, Chat and Chill."
+            />
+            <PodcastPanel
+              imgUrl="podcasts/episode-1.jpg"
+              date="September 21, 2020"
+              heading="Chat and Chill"
+              description="Welcome to episode one of Talk Wit Us: Chat and Chill! Join us as members of the WIT Executive and Subcommittee team engage in retrospective discussions on the extra-curricular that defined their time at university, personal development, and a guide to how to make the most of your time at university!"
+            />
+            <PodcastPanel
+              imgUrl="podcasts/episode-2.jpg"
+              date="September 29, 2020"
+              heading="Careers Deep Dive"
+              description="Not sure what to do with your life? Not sure what you can do with your life? The WIT Career Deep Dive sits down with successful women in the tech industry and uncovers the ins and outs of their daily work to demystify the opportunities that are available."
+            />
 
           </div>
 

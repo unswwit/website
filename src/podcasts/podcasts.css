@@ -1,3 +1,5 @@
+/* --------------------- Page and Intro ----------------- */
+
 .margin {
   margin: 50px 200px 200px 200px;
 }
@@ -27,26 +29,34 @@
 }
 
 
+/* --------------------- Podcast Panel Component ----------------- */
 
-
-/* -- Podcast Panel Component -- */
-.panel {
-  width: 300px;
-  display: inline-block;
+.panel-container {
+  margin-top: 10px;
   overflow: hidden;
+  padding-bottom: 10px;
+}
 
+.panel {
+  /*display: flex;*/
+  float: left;
+  width: 30%;
   text-align: center;
-  margin: 0px 14px 0px 14px;
+  margin: 30px 1.5% 0px 1.5%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  /* -- TESTING --
+  display: inline-block;
   position: relative;
-  margin-top: 30px;
+  */
+/* -- TESTING END -- */
 }
 
 .panel_text {
   padding: 15px;
 }
 
-.panel_text .panel_dated { /* not working?*/
+.panel_text .panel_dated { /* not working??!*/
   color: #feb14b;
 }
 
@@ -58,7 +68,7 @@
 
 
 
-/* -- Comments section -- */
+/* -------------------- Comments section --------------- */
 
 .comments {
   margin-top: 60px;
