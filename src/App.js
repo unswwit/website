@@ -3,7 +3,7 @@ import { HashRouter, Route, NavLink, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "semantic-ui-css/semantic.min.css";
 import "./style.css";
-import "./loader.css";
+//import "./loader.css";
 import GoogleAnalytics from "./config/GoogleAnalytics";
 
 import Home from "./home/home";
@@ -67,9 +67,10 @@ import blogPost38 from "./blog-post/blog-post-38";
 import blogPost39 from "./blog-post/blog-post-39";
 
 class App extends Component {
+  /*
   state = {
     loading: true,
-  };
+  };*/
 
   constructor(props) {
     super(props);
@@ -141,22 +142,25 @@ class App extends Component {
     }
   };
 
+  /*
   fakeRequest = () => {
     return new Promise((resolve) => setTimeout(() => resolve(), 2500));
-  };
+  };*/
 
   componentDidMount() {
     // google analytics
     GoogleAnalytics();
 
+    
     window.addEventListener("resize", this.updateMenu);
+    /*
     this.fakeRequest().then(() => {
       const el = document.querySelector(".loader");
       if (el) {
         el.remove(); // removing the spinner element
         this.setState({ loading: false }); // showing the app
       }
-    });
+    });*/
   }
 
   componentWillUnmount() {
@@ -164,13 +168,14 @@ class App extends Component {
   }
 
   render() {
+    /*
     if (this.state.loading) {
       return null; //app is not ready (fake request is in process)
-    }
+    }*/
 
     return (
       <div>
-        <div className="loader loader-default is-active"></div>
+        {/*<div className="loader loader-default is-active"></div>*/}
         <HashRouter basename="/">
           <Menu
             open={this.state.menuOpen}
