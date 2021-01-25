@@ -52,7 +52,7 @@ div .headline {
 .descriptionLeft h1 {
   color: #feb14b;
   font-family: "Montserrat", sans-serif;
-  font-size: 5.8vw;
+  font-size: 5.5vw;
 
   font-weight: 600;
   letter-spacing: 4px;
@@ -110,7 +110,7 @@ div .headline {
   }
   .descriptionLeft h1 {
     padding: 0px;
-    font-size: 11vw;
+    font-size: 9vw;
     line-height: 90px;
   }
   .descriptionRight {
