@@ -90,13 +90,6 @@ const Home = () => {
         <div className={styles.eventsTitle}>
           <h1> EVENTS </h1>
         </div>
-        {/* 
-        <div className={styles.event2}>
-          <a href="https://www.facebook.com/events/208115483507235/">
-            <img src={process.env.PUBLIC_URL + '/tech-trivia-tournament.png'} alt="banner"/>
-          </a> 
-        </div>
-        */}
         <div className={styles.event1}>
           <a href="https://www.facebook.com/events/2084007355231321">
             <img
