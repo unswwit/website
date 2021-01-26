@@ -13,8 +13,9 @@ const MarketingContent = () => {
   const [content, setContent] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("All");
+
   const categories = {
-    "All": "", 
+    "All": "All", 
     "Careers Guide": "careers", 
     "Mascot": "mascot", 
     "Memes": "memes", 
