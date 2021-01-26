@@ -5,7 +5,7 @@
   display: table;
 }
 
-/*-------------------------------Left side bar-----------------------------*/
+/*-------------------------------Categories-----------------------------*/
 
 /*Intiative*/
 :root {
@@ -23,118 +23,15 @@
   display: block;
 }
 
-.initiatives label {
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-  font-size: 12pt;
-  color: #313638;
-  padding: 10px;
-  width: 50%;
-  margin: 0 auto;
-  line-height: normal;
-  cursor: pointer;
-  transition: all 0.1s;
+#contentLoading {
+  color: var(--yellow);  
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
-input[type="radio"][id="2020"] + label {
-  font-size: 32pt;
-  color: var(--yellow);
-  font-weight: bold;
-  margin-bottom: 20px;
-  line-height: normal;
-  cursor: pointer;
-  transition: all 0.1s;
-}
-
-input[type="radio"] {
-  display: none;
-}
-
-.initiatives label:hover, #allPublications:hover {
-  background: var(--yellow);
-  color: var(--white);
-}
-
-input[type="radio"][id="2020"]:checked + label {
-  background: var(--yellow);
-  color: var(--white);
-}
-
-input[type="radio"][id="crush"]:checked + label {
-  background: var(--grey);
-  color: var(--white);
-}
-
-input[type="radio"][id="crush"]:checked ~ .grid .mondaymot,
-input[type="radio"][id="crush"]:checked ~ .grid .memes,
-input[type="radio"][id="crush"]:checked ~ .grid .mascot,
-input[type="radio"][id="crush"]:checked ~ .grid .careers,
-input[type="radio"][id="crush"]:checked ~ .grid .other {
-  display: none;
-}
-
-input[type="radio"][id="memes"]:checked + label {
-  background: var(--grey);
-  color: var(--white);
-}
-
-input[type="radio"][id="memes"]:checked ~ .grid .crush,
-input[type="radio"][id="memes"]:checked ~ .grid .mondaymot,
-input[type="radio"][id="memes"]:checked ~ .grid .mascot,
-input[type="radio"][id="memes"]:checked ~ .grid .careers,
-input[type="radio"][id="memes"]:checked ~ .grid .other {
-  display: none;
-}
-
-input[type="radio"][id="mondaymot"]:checked + label {
-  background: var(--grey);
-  color: var(--white);
-}
-
-input[type="radio"][id="mondaymot"]:checked ~ .grid .crush,
-input[type="radio"][id="mondaymot"]:checked ~ .grid .memes,
-input[type="radio"][id="mondaymot"]:checked ~ .grid .mascot,
-input[type="radio"][id="mondaymot"]:checked ~ .grid .careers,
-input[type="radio"][id="mondaymot"]:checked ~ .grid .other {
-  display: none;
-}
-
-input[type="radio"][id="mascot"]:checked + label {
-  background: var(--grey);
-  color: var(--white);
-}
-
-input[type="radio"][id="mascot"]:checked ~ .grid .crush,
-input[type="radio"][id="mascot"]:checked ~ .grid .memes,
-input[type="radio"][id="mascot"]:checked ~ .grid .mondaymot,
-input[type="radio"][id="mascot"]:checked ~ .grid .careers,
-input[type="radio"][id="mascot"]:checked ~ .grid .other {
-  display: none;
-}
-
-input[type="radio"][id="careers"]:checked + label {
-  background: var(--grey);
-  color: var(--white);
-}
-
-input[type="radio"][id="careers"]:checked ~ .grid .crush,
-input[type="radio"][id="careers"]:checked ~ .grid .memes,
-input[type="radio"][id="careers"]:checked ~ .grid .mondaymot,
-input[type="radio"][id="careers"]:checked ~ .grid .mascot,
-input[type="radio"][id="careers"]:checked ~ .grid .other {
-  display: none;
-}
-
-input[type="radio"][id="other"]:checked + label {
-  background: var(--grey);
-  color: var(--white);
-}
-input[type="radio"][id="other"]:checked ~ .grid .crush,
-input[type="radio"][id="other"]:checked ~ .grid .memes,
-input[type="radio"][id="other"]:checked ~ .grid .mondaymot,
-input[type="radio"][id="other"]:checked ~ .grid .mascot,
-input[type="radio"][id="other"]:checked ~ .grid .careers {
-  display: none;
+#contentLoadingContainer {
+  display: flex;
+  justify-content: center;
 }
 
 /*-------------------------------Image grid gallery-----------------------------*/

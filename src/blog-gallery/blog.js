@@ -81,10 +81,10 @@ const Blog = () => {
               </>
             }>
               <Chip 
-                className="categoryChip"
                 size="medium" 
                 label={category} 
                 style={{
+                  textTransform: "uppercase",
                   backgroundColor: chipColour, 
                   color: "white",
                   margin: "5px",  

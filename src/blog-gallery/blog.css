@@ -5,10 +5,6 @@
   --grey: #313638;
 }
 
-.categoryChip {
-  text-transform: uppercase;
-}
-
 .blogCategories {
   display: flex;
   justify-content: center;
