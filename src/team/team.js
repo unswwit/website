@@ -6,12 +6,9 @@ import Execs from "./execs";
 import SubCom from "./subcom";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
-
-// import database from "../config/firebase";
 import Timeline from "./Timeline";
 
 function OurTeam() {
-  // const db = database.firestore();
   const sectors = ["Events", "Externals", "Human Resources", "Education", "Marketing", "Information Technology"];
   const [execs, setExecs] = useState([]);
   const [subcommittee, setSubcommittee] = useState([]);
@@ -54,51 +51,6 @@ function OurTeam() {
       },
       simpleSheet: false
     })
-    /*
-    // set exec team
-    db
-      .collection("teams")
-      .doc(year)
-      .collection("execs")
-      .orderBy("index")
-      .get()
-      .then(querySnapshot => {
-        let execsTemp = [];
-        querySnapshot.forEach(doc => {          
-          let member = doc.data();
-          member["id"] = doc.id;
-          execsTemp.push(member);
-        });
-
-        const result = execsTemp.reduce(function(result, _, index, execsTemp) {
-          if (index % 2 === 0)
-            result.push(execsTemp.slice(index, index + 2));
-          return result;
-        }, []);
-        return result;
-      })
-      .then((result) => {
-        setExecs(result);      
-      });
-
-    // set subcommittee team
-    db
-      .collection("teams")
-      .doc(year)
-      .collection("subcommittee")
-      .get()
-      .then(querySnapshot => {
-        let subcomTemp = [];
-        querySnapshot.forEach((doc) => {
-          let member = doc.data();
-          member["id"] = doc.id;
-          subcomTemp.push(member);
-        });
-        return subcomTemp;
-      })
-      .then((result) => {
-        setSubcommittee(result);      
-      });*/
   }, [year]);
 
   return (
