@@ -35,28 +35,30 @@ const Blog = () => {
   }
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [loading, setLoading] = useState(true);
-
   const [blogs, setBlogs] = useState([]);
-  const [authors, setAuthors] = useState({});
-
-  const handleAuthorDetails = (keys) => {
-    let authorDictionary = {};
-    keys.forEach((key) => {
-      const result = authors.filter((author) => {
-        return key === author.authors;
-      })[0];
-      authorDictionary[key] = [ `/potraits/${result.img}`, result.name];
-    })
-    return authorDictionary;
-  };
 
   useEffect(() => {
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: googleData => {   
         setLoading(false);   
-        setBlogs(googleData["blog-previews"]["elements"]);
-        setAuthors(googleData["blog-authors"]["elements"]);        
+
+        const blogOriginal = googleData["blog-previews"]["elements"];
+        let blogPreviews = googleData["blog-previews"]["elements"];
+        const authorList = googleData["blog-authors"]["elements"];    
+        blogOriginal.forEach((blogPreview, index) => {    
+          const tempAuthor = {};       
+          blogPreview
+            .authors
+            .split(",")
+            .forEach((authorKey) => {           
+              const result = authorList.filter((authorItem) => authorItem.authors === authorKey)[0];  
+              tempAuthor[authorKey] = [ `/potraits/${result.img}`, result.name];  
+            });
+          blogPreviews[index].authors = tempAuthor;
+        });
+
+        setBlogs(googleData["blog-previews"]["elements"]); 
       },
       simpleSheet: false
     });
@@ -111,7 +113,7 @@ const Blog = () => {
             .filter((blog) => (selectedCategory === "All" || 
                               (blog.category.split(",")).includes(selectedCategory) ||
                               ((blog.category.split(",")).includes("WCW") && selectedCategory === "WIT Crush Wednesday")))
-            .map((blog) => {           
+            .map((blog) => {     
               return <BlogPreview
                 key={blog.blogNo}
                 blogNo={blog.blogNo}
@@ -119,7 +121,7 @@ const Blog = () => {
                 heading={blog.heading}
                 date={blog.date}
                 subheading={blog.subheading}
-                authors={() => handleAuthorDetails(blog.authors.split(","))}
+                authors={blog.authors}
                 category={blog.category.split(",")}
               />
             })}
