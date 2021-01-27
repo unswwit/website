@@ -33,7 +33,7 @@ function OurTeam() {
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: googleData => {
         // add in execs
-        let tempExecs = googleData[`${year} execs`]["elements"];
+        let tempExecs = googleData["execs"]["elements"].filter((exec) => exec.yearJoined === year);
         const result = tempExecs.reduce(function(result, _, index, tempExecs) {
           if (index % 2 === 0)
             result.push(tempExecs.slice(index, index + 2));
@@ -42,11 +42,9 @@ function OurTeam() {
         setExecs(result);
 
         // add subcommittee
-        if (googleData.hasOwnProperty(`${year} subcommittee`)) {
-          setSubcommittee(googleData[`${year} subcommittee`]["elements"]);
-        } else {
-          setSubcommittee([]);
-        }
+        setSubcommittee(googleData["subcommittee"]["elements"].filter((subcom) => subcom.yearJoined === year));
+        
+        // stop loading
         setLoading(false);
       },
       simpleSheet: false
