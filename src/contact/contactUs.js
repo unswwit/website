@@ -67,16 +67,7 @@ class ContactUs extends React.Component {
           </div>
 
           <hr className={[styles.lineBreak, styles.solid].join(" ")} width="90%" />
-          <div className={styles.col3}>    
-            <div className={styles.profile3}>
-              <img
-                src={process.env.PUBLIC_URL + "/icons/edu-icon.png"}
-                alt="edu-icon"
-              />
-              <h3>Georgie Mansfield</h3>
-              <a href="mailto:georgie@unswwit.com">georgie@unswwit.com</a>
-              <a href="mailto:education@unswwit.com">education@unswwit.com</a>
-            </div>    
+          <div className={styles.col3}> 
             <div className={styles.profile3}>
               <img
                 src={process.env.PUBLIC_URL + "/icons/ev-icon.png"}
@@ -94,7 +85,16 @@ class ContactUs extends React.Component {
               <h3>Nishmi Kapoor</h3>
               <a href="mailto:nishmi@unswwit.com">nishmi@unswwit.com</a>
               <a href="mailto:events@unswwit.com">events@unswwit.com</a>
-            </div>         
+            </div>            
+            <div className={styles.profile3}>
+              <img
+                src={process.env.PUBLIC_URL + "/icons/edu-icon.png"}
+                alt="edu-icon"
+              />
+              <h3>Georgie Mansfield</h3>
+              <a href="mailto:georgie@unswwit.com">georgie@unswwit.com</a>
+              <a href="mailto:education@unswwit.com">education@unswwit.com</a>
+            </div>                
             <div className={styles.profile3}>
               <img
                 src={process.env.PUBLIC_URL + "/icons/ex-icon.png"}
