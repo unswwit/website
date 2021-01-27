@@ -46,12 +46,12 @@
 
 /*-------------------------------Publications Article------------------------------*/
 
-.image_container {
+.imageContainer {
   position: absolute;
   z-index: 0;
 }
 
-.article_img {
+.articleImg {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -82,7 +82,7 @@
   opacity: 0.5;
 }
 
-.text_container {
+.textContainer {
   position: absolute;
   left: 50%;
   z-index: 2;

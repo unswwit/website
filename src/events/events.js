@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./events.css";
 import PageHeader from ".././header";
 import Accordion from "@material-ui/core/Accordion";
@@ -9,6 +9,11 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 function Events() {
   const [expanded, setExpanded] = React.useState(false);
+  
+  //start webpage at the top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>

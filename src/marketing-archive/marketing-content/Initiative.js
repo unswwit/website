@@ -5,7 +5,7 @@ import "../marketing-content/content.css";
 class Initiative extends Component {
   render() {
     return (
-      <li className="image">
+      <li>
         <a
           href={this.props.fb}
           className="darken"

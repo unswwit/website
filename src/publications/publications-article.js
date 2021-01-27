@@ -1,45 +1,42 @@
 //All necessary imports for this javascript
 import React, { Component } from "react";
 import ".././style.css";
-import "./publications.css";
+import styles from "./publications.module.css";
+
 class PubArticle extends Component {
   render() {
     return (
-      <div>
-        {/*Start of publications article*/}
-
-        <div className="article">
-          <div className="dark"> </div>
-          <div className="image_container">
-            <img
-              src={process.env.PUBLIC_URL + this.props.imgUrl}
-              alt="wit logo"
-              className="article_img"
-            />
-          </div>
-
-          <div className="text_container">
-            <h2>{this.props.heading}</h2>
-
-            <p>{this.props.date}</p>
-
-            <div tabIndex={0} role="button" className="button">
-              {/*<h3> Read More </h3>*/}
-              <h3>
-                <a
-                  href={this.props.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Read More
-                </a>
-              </h3>
-            </div>
-          </div>
+      <div className={styles.article}>  
+        {/*Start of publications article*/}        
+        <div className={styles.dark}> </div>
+        <div className={styles.imageContainer}>
+          <img
+            src={process.env.PUBLIC_URL + this.props.imgUrl}
+            alt="wit logo"
+            className={styles.articleImg}
+          />
         </div>
 
-        {/*End of publications article*/}
-      </div>
+        <div className={styles.textContainer}>
+          <h2>{this.props.heading}</h2>
+
+          <p>{this.props.date}</p>
+
+          <div tabIndex={0} role="button" className={styles.button}>
+            {/*<h3> Read More </h3>*/}
+            <h3>
+              <a
+                href={this.props.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                  Read More
+              </a>
+            </h3>
+          </div>
+        </div>
+        {/*End of publications article*/}    
+      </div>       
     );
   }
 }
