@@ -88,7 +88,7 @@ const Home = () => {
           </p>
         </div>
         <div className={styles.eventsTitle}>
-          <h1> EVENTS </h1>
+          <h1>EVENTS</h1>
         </div>
         <div className={styles.event1}>
           <a href="https://www.facebook.com/events/2084007355231321">
