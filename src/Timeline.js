@@ -1,19 +1,9 @@
 import React from "react";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import Slider from "@material-ui/core/Slider";
+import styles from "./Timeline.module.css";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: "60%",
-    margin: "0 auto",
-    marginTop: "7%"
-  },
-  margin: {
-    height: theme.spacing(3),
-  },
-}));
-
-const TeamSlider = withStyles({
+const TimelineSlider = withStyles({
   root: {
     color: "#E85F5C",
     height: 6,  
@@ -52,16 +42,11 @@ const TeamSlider = withStyles({
   },
 })(Slider);
 
-
-const Timeline = ({ updateYear, marks, valueToYear }) => {
-  const classes = useStyles();
-  
+const Timeline = ({ updateYear, marks, valueToYear, page, step, margin }) => {
   return (
-    <div className={classes.root}>
-      <TeamSlider 
-        id="timeline"
-        style={{fontSize: "50px"}}
-        step={25} 
+    <div id={page === "teams" ? styles.teams : styles.events} style={{ "marginTop" : margin }}>
+      <TimelineSlider 
+        step={step} 
         marks={marks}  
         valueLabelDisplay="off" 
         aria-label="timeline" 

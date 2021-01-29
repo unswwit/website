@@ -95,7 +95,15 @@ function OurTeam() {
       <PageHeader imgUrl="/headers/2021-team-header.jpg" title="Meet Our Team" />
 
       {/* Timeline */}
-      <Timeline valueToYear={valueToYear} marks={marks} updateYear={handleYear} />
+      <Timeline 
+        margin={"7%"}
+        page={"teams"}
+        step={25}
+        valueToYear={valueToYear} 
+        marks={marks} 
+        updateYear={handleYear} 
+      />
+
       <div id="teamLoadingContainer">
         {loading && <CircularProgress
           variant="indeterminate"

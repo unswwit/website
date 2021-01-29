@@ -117,11 +117,10 @@ const Events = () => {
           </div>)
         }
         <h2>PAST EVENTS</h2>
-        <Accordion expanded={expanded} onChange={() => {setExpanded(!expanded)}} style={{marginBottom: "50px"}}>
+        <Accordion expanded={expanded} onChange={() => {setExpanded(!expanded)}}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel4bh-content"
-            id="panel-header"
           >
             <Typography id="eventResources">Event Resources</Typography>
           </AccordionSummary>
@@ -135,7 +134,14 @@ const Events = () => {
         </Accordion>
         
         {/* Timeline */}
-        <Timeline valueToYear={valueToYear} marks={marks} updateYear={handleYear} />
+        <Timeline 
+          margin={"3%"}
+          page={"events"}
+          step={100}
+          valueToYear={valueToYear} 
+          marks={marks} 
+          updateYear={handleYear} 
+        />
 
         <div id="eventsLoadingContainer">
           {loading && <CircularProgress
