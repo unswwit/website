@@ -1,4 +1,4 @@
-/*------------------------------Publications header--------------------------------*/
+/*------------------------------Upcoming Events--------------------------------*/
 .events-body {
   max-width: 70%;
   margin: 0 auto;
@@ -81,6 +81,7 @@ a:hover.event {
   text-decoration: none;
 }
 
+/*------------------------------Past Events--------------------------------*/
 #past-events.grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -106,6 +107,19 @@ p.lookout {
   color: #e85f5c;
 }
 
+/*---------------------------Loading Sign--------------------------*/
+#eventsLoading {
+  color:#feb14b;  
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#eventsLoadingContainer {
+  display: flex;
+  justify-content: center;
+}
+
+/*------------------------------Responsive Mobile Design--------------------------------*/
 @media only screen and (max-width: 650px) {
   .events-body {
     max-width: 90%;
