@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./events.css";
 import PageHeader from ".././header";
 import Accordion from "@material-ui/core/Accordion";
@@ -11,11 +11,11 @@ import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
 const Events = () => {
-  const [expanded, setExpanded] = React.useState(false);
-  const [events, setEvents] = React.useState([]);
-  const [year, setYear] = React.useState("2021");
-  const [upcomingEvents, setUpcomingEvents] = React.useState([]);
-  const [loading, setLoading] = React.useState(true);
+  const [expanded, setExpanded] = useState(false);
+  const [events, setEvents] = useState([]);
+  const [year, setYear] = useState("2021");
+  const [upcomingEvents, setUpcomingEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const marks = [
     {
