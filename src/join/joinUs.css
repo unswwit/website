@@ -91,7 +91,7 @@
 
   .joinUsRight {
     padding: 0px;
-    height: 140px;
+    height: 160px;
   }
 
   .joinUsRight h2 {
@@ -101,15 +101,17 @@
   }
 
   .joinButtons {
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
+    display: grid;
+    max-width: 60%;
+    grid-gap: 1rem;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .joinButtons a {
+    margin: auto;
     height: 40px;
     width: 40px;
-    margin-right: 10px;
   }
 
   .centre {
