@@ -93,7 +93,7 @@ const Home = () => {
         <div className={styles.event1}>
           <a href="https://www.facebook.com/events/2084007355231321">
             <img
-              src={`${process.env.PUBLIC_URL}./event-covers/2021/volunteer-drive.jpg`}
+              src={`${process.env.PUBLIC_URL}/event-covers/2021/01-volunteer-drive.jpg`}
               alt="Volunteer Drive"
             />
           </a>
