@@ -9,7 +9,6 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import Timeline from "../Timeline";
 
 function OurTeam() {
-  // const db = database.firestore();
   const sectors = ["Events", "Externals", "Human Resources", "Education", "Marketing", "Information Technology"];
   const [execs, setExecs] = useState([]);
   const [subcommittee, setSubcommittee] = useState([]);
@@ -76,7 +75,6 @@ function OurTeam() {
             result.push(tempExecs.slice(index, index + 2));
           return result;
         }, []);
-        console.log(result);
         setExecs(result);
 
         // add subcommittee
@@ -89,51 +87,6 @@ function OurTeam() {
       },
       simpleSheet: false
     })
-    /*
-    // set exec team
-    db
-      .collection("teams")
-      .doc(year)
-      .collection("execs")
-      .orderBy("index")
-      .get()
-      .then(querySnapshot => {
-        let execsTemp = [];
-        querySnapshot.forEach(doc => {          
-          let member = doc.data();
-          member["id"] = doc.id;
-          execsTemp.push(member);
-        });
-
-        const result = execsTemp.reduce(function(result, _, index, execsTemp) {
-          if (index % 2 === 0)
-            result.push(execsTemp.slice(index, index + 2));
-          return result;
-        }, []);
-        return result;
-      })
-      .then((result) => {
-        setExecs(result);      
-      });
-
-    // set subcommittee team
-    db
-      .collection("teams")
-      .doc(year)
-      .collection("subcommittee")
-      .get()
-      .then(querySnapshot => {
-        let subcomTemp = [];
-        querySnapshot.forEach((doc) => {
-          let member = doc.data();
-          member["id"] = doc.id;
-          subcomTemp.push(member);
-        });
-        return subcomTemp;
-      })
-      .then((result) => {
-        setSubcommittee(result);      
-      });*/
   }, [year]);
 
   return (
@@ -167,7 +120,7 @@ function OurTeam() {
                 {row.map((exec, index) => {              
                   return <Execs
                     key={index}
-                    imgUrl={exec.img ? `/potraits/${year}-exec/${exec.img}` : ""}
+                    imgUrl={exec.img !== "" ? `/potraits/${year}-exec/${exec.img}` : ""}
                     name={exec.name}
                     className={year === "2020" ? execToClassName[year][exec.name] : execToClassName[year]}
                     position={exec.position}
@@ -199,9 +152,9 @@ function OurTeam() {
                   <h3 className="subcom-type">{sector} Team</h3>
                   {subcommittee
                     .filter((member) => member.team === sector)
-                    .map((member) => {         
+                    .map((member, index) => {         
                       return  <SubCom 
-                        key={member.id}
+                        key={index}
                         name={member.name} 
                         degree={member.degree}
                         year={member.year}

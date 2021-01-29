@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import "../.././style.css";
 import "../marketing-content/content.css";
 
-class Memes extends Component {
+class Initiative extends Component {
   render() {
     return (
-      <li className="image memes">
+      <li>
         <a
           href={this.props.fb}
           className="darken"
@@ -22,4 +22,4 @@ class Memes extends Component {
     );
   }
 }
-export default Memes;
+export default Initiative;

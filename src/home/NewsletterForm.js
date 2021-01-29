@@ -21,12 +21,7 @@ const NewsletterForm = ({ handleClose }) => {
     <div className={styles.paper}>
       <IconButton aria-label="close newsletter subscribe form" className={styles.closeBtn}>
         <CloseIcon onClick={handleClose} className={styles.closeSymbol}/>
-      </IconButton>      
-      {/*<img
-        src={`${process.env.PUBLIC_URL}./newsletter.png`}
-        className={styles.newsletterImg}
-        alt="newsletter"
-      />*/}
+      </IconButton>     
       <br />
       <br />
       <h1 className={styles.formTitle}>Newsletter</h1>

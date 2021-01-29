@@ -19,7 +19,7 @@
 
 /*Body block*/
 .publicationsBody {
-  max-width: 65%;
+  max-width: 70%;
   margin: auto;
   padding-top: 80px;
   padding-bottom: 80px;
@@ -37,7 +37,7 @@
   width: 212px;
   height: 300px;
   text-align: center;
-  margin: 0px 14px 0px 14px;
+  margin: 0px 28px 0px 0px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   position: relative;
   margin-top: 30px;
@@ -46,12 +46,12 @@
 
 /*-------------------------------Publications Article------------------------------*/
 
-.image_container {
+.imageContainer {
   position: absolute;
   z-index: 0;
 }
 
-.article_img {
+.articleImg {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -82,7 +82,7 @@
   opacity: 0.5;
 }
 
-.text_container {
+.textContainer {
   position: absolute;
   left: 50%;
   z-index: 2;
@@ -121,15 +121,16 @@
   visibility: hidden;
   left: -50%;
   position: relative;
+  border-radius: 60px;
 }
 
 .button h3 {
   font-size: 9px;
   color: white;
   text-transform: uppercase;
-  margin-left: -12px;
   white-space: nowrap;
   float: center;
+  line-height: 30px;
 }
 
 .button a,

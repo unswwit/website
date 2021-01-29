@@ -3,7 +3,7 @@ import { HashRouter, Route, NavLink, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "semantic-ui-css/semantic.min.css";
 import "./style.css";
-import "./loader.css";
+//import "./loader.css";
 import GoogleAnalytics from "./config/GoogleAnalytics";
 
 import Home from "./home/home";
@@ -26,94 +26,14 @@ import MenuBtn from "./menuBtn";
 
 //import EpisodePage from "./podcast/EpisodePage";
 
-import blogPost1 from "./blog-post/blog-post-1";
-import blogPost2 from "./blog-post/blog-post-2";
-import blogPost3 from "./blog-post/blog-post-3";
-import blogPost4 from "./blog-post/blog-post-4";
-import blogPost5 from "./blog-post/blog-post-5";
-import blogPost6 from "./blog-post/blog-post-6";
-import blogPost7 from "./blog-post/blog-post-7";
-import blogPost8 from "./blog-post/blog-post-8";
-import blogPost9 from "./blog-post/blog-post-9";
-import blogPost10 from "./blog-post/blog-post-10";
-import blogPost11 from "./blog-post/blog-post-11";
-import blogPost12 from "./blog-post/blog-post-12";
-import blogPost13 from "./blog-post/blog-post-13";
-import blogPost14 from "./blog-post/blog-post-14";
-import blogPost15 from "./blog-post/blog-post-15";
-import blogPost16 from "./blog-post/blog-post-16";
-import blogPost17 from "./blog-post/blog-post-17";
-import blogPost18 from "./blog-post/blog-post-18";
-import blogPost19 from "./blog-post/blog-post-19";
-import blogPost20 from "./blog-post/blog-post-20";
-import blogPost21 from "./blog-post/blog-post-21";
-import blogPost22 from "./blog-post/blog-post-22";
-import blogPost23 from "./blog-post/blog-post-23";
-import blogPost24 from "./blog-post/blog-post-24";
-import blogPost25 from "./blog-post/blog-post-25";
-import blogPost26 from "./blog-post/blog-post-26";
-import blogPost27 from "./blog-post/blog-post-27";
-import blogPost28 from "./blog-post/blog-post-28";
-import blogPost29 from "./blog-post/blog-post-29";
-import blogPost30 from "./blog-post/blog-post-30";
-import blogPost31 from "./blog-post/blog-post-31";
-import blogPost32 from "./blog-post/blog-post-32";
-import blogPost33 from "./blog-post/blog-post-33";
-import blogPost34 from "./blog-post/blog-post-34";
-import blogPost35 from "./blog-post/blog-post-35";
-import blogPost36 from "./blog-post/blog-post-36";
-import blogPost37 from "./blog-post/blog-post-37";
-import blogPost38 from "./blog-post/blog-post-38";
-import blogPost39 from "./blog-post/blog-post-39";
-
 class App extends Component {
+  /*
   state = {
     loading: true,
-  };
+  };*/
 
   constructor(props) {
     super(props);
-    this.blogPosts = [
-      blogPost1,
-      blogPost2,
-      blogPost3,
-      blogPost4,
-      blogPost5,
-      blogPost6,
-      blogPost7,
-      blogPost8,
-      blogPost9,
-      blogPost10,
-      blogPost11,
-      blogPost12,
-      blogPost13,
-      blogPost14,
-      blogPost15,
-      blogPost16,
-      blogPost17,
-      blogPost18,
-      blogPost19,
-      blogPost20,
-      blogPost21,
-      blogPost22,
-      blogPost23,
-      blogPost24,
-      blogPost25,
-      blogPost26,
-      blogPost27,
-      blogPost28,
-      blogPost29,
-      blogPost30,
-      blogPost31,
-      blogPost32,
-      blogPost33,
-      blogPost34,
-      blogPost35,
-      blogPost36,
-      blogPost37,    
-      blogPost38,
-      blogPost39,
-    ];
     this.state = {
       showDD: false,
       menuOpen: false,
@@ -141,22 +61,24 @@ class App extends Component {
     }
   };
 
+  /*
   fakeRequest = () => {
     return new Promise((resolve) => setTimeout(() => resolve(), 2500));
-  };
+  };*/
 
   componentDidMount() {
     // google analytics
     GoogleAnalytics();
 
     window.addEventListener("resize", this.updateMenu);
+    /*
     this.fakeRequest().then(() => {
       const el = document.querySelector(".loader");
       if (el) {
         el.remove(); // removing the spinner element
         this.setState({ loading: false }); // showing the app
       }
-    });
+    });*/
   }
 
   componentWillUnmount() {
@@ -164,13 +86,14 @@ class App extends Component {
   }
 
   render() {
+    /*
     if (this.state.loading) {
       return null; //app is not ready (fake request is in process)
-    }
+    }*/
 
     return (
       <div>
-        <div className="loader loader-default is-active"></div>
+        {/*<div className="loader loader-default is-active"></div>*/}
         <HashRouter basename="/">
           <Menu
             open={this.state.menuOpen}
@@ -279,9 +202,13 @@ class App extends Component {
             {/*<Route exact path="/podcast" component={Podcast} />
             <Route path="/podcast/:episode" component={EpisodePage} />*/}
             <Route path="/publications" component={Publications} />
-            {this.blogPosts.map((object, i) => (
-              <Route key={i} path={"/blog/" + (i + 1)} component={object} />
-            ))}
+            {Array.from({length: 39}, (_, index) => index + 1).map((blogNo) => {
+              return <Route 
+                key={blogNo} 
+                path={"/blog/" + blogNo} 
+                component={require(`./blog-post/blog-post-${blogNo}`).default} 
+              />
+            })}
           </Switch>
         </HashRouter>
         <div>

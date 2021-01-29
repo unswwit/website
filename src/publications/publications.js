@@ -1,43 +1,55 @@
-import React from "react";
-import "./publications.css";
+import React, { useEffect, useState } from "react";
+import styles from "./publications.module.css";
 import PubArticle from "./publications-article";
 import PageHeader from ".././header";
+import Tabletop from "tabletop";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
-class Publications extends React.Component {
-  render() {
-    return (
-      <div>
-        {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/publications-header.png" title="Publications" />
+const Publications = () => {
+  const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-        <div className="publicationsBody">
-          {/*2020 articles*/}
+  useEffect(() => {
+    Tabletop.init({
+      key: process.env.REACT_APP_GOOGLE_SHEETS,
+      callback: googleData => {
+        setArticles(googleData["publications"]["elements"]);  
+        setLoading(false);
+      },
+      simpleSheet: false
+    })
+  }, []);
 
-          <h1>2020</h1>
-          <div className="row">
-            <PubArticle
-              imgUrl="./publications/first-year-guide.png"
-              heading="First Year Guide"
-              date="10/02/2020"
-              url="https://issuu.com/womenintechnology/docs/first_year_guide"
-            />
-            <PubArticle
-              imgUrl="./publications/careers-guide.png"
-              heading="Careers Guide"
-              date="27/7/2020"
-              url="https://issuu.com/womenintechnology/docs/wit_2020_careers_guide?fbclid=IwAR3RBADvuCd7KRAxeD4yK0USlDoQkVp05kY2SSYiYmjB2nZjBsI3xs_rX5c"
-            />
-            <PubArticle
-              imgUrl="./publications/magazine-2020.png"
-              heading="WIT magazine 2020"
-              date="22/10/2020"
-              url="https://issuu.com/womenintechnology/docs/wit_magazine"
-            />  
-          </div>
+  return (
+    <>
+      {/* Cover Photo */}
+      <PageHeader imgUrl="/headers/publications-header.png" title="Publications" />
+
+      <div className={styles.publicationsBody}>
+        {/*2020 articles*/}
+
+        <h1>2020</h1>
+        <div id="pubLoadingContainer">
+          {loading && <CircularProgress
+            variant="indeterminate"
+            size={50}
+            thickness={5}
+            id="pubLoading"
+          />}
+        </div>
+
+        <div className={styles.row}>
+          {articles.map((article) => <PubArticle
+            imgUrl={`./publications/${article.img}`}
+            heading={article.heading}
+            date={article.date}
+            url={article.url}
+          />
+          )}          
         </div>
       </div>
-    );
-  }
+    </>
+  );
 }
 
 export default Publications;

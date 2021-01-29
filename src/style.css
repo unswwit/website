@@ -56,6 +56,18 @@ font-family: 'Montserrat', sans-serif;*/
   .coverPhoto .title h1 {
     font-size: 3.5vh;
   }
+
+  .coverPhoto .title {
+    top: 25px;
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .coverPhoto .dark,
+  .coverPhoto .title,
+  .cover_image {
+    width: 114.5%;
+  }
 }
 
 /*----------------------------------General------------------------------------*/

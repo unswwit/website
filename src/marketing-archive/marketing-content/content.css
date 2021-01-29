@@ -5,7 +5,7 @@
   display: table;
 }
 
-/*-------------------------------Left side bar-----------------------------*/
+/*-------------------------------Categories-----------------------------*/
 
 /*Intiative*/
 :root {
@@ -23,118 +23,15 @@
   display: block;
 }
 
-.initiatives label {
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-  font-size: 12pt;
-  color: #313638;
-  padding: 10px;
-  width: 50%;
-  margin: 0 auto;
-  line-height: normal;
-  cursor: pointer;
-  transition: all 0.1s;
+#contentLoading {
+  color: var(--yellow);  
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
-input[type="radio"][id="2020"] + label {
-  font-size: 32pt;
-  color: var(--yellow);
-  font-weight: bold;
-  margin-bottom: 20px;
-  line-height: normal;
-  cursor: pointer;
-  transition: all 0.1s;
-}
-
-input[type="radio"] {
-  display: none;
-}
-
-.initiatives label:hover, #allPublications:hover {
-  background: var(--yellow);
-  color: var(--white);
-}
-
-input[type="radio"][id="2020"]:checked + label {
-  background: var(--yellow);
-  color: var(--white);
-}
-
-input[type="radio"][id="crush"]:checked + label {
-  background: var(--grey);
-  color: var(--white);
-}
-
-input[type="radio"][id="crush"]:checked ~ .grid .mondaymot,
-input[type="radio"][id="crush"]:checked ~ .grid .memes,
-input[type="radio"][id="crush"]:checked ~ .grid .mascot,
-input[type="radio"][id="crush"]:checked ~ .grid .careers,
-input[type="radio"][id="crush"]:checked ~ .grid .other {
-  display: none;
-}
-
-input[type="radio"][id="memes"]:checked + label {
-  background: var(--grey);
-  color: var(--white);
-}
-
-input[type="radio"][id="memes"]:checked ~ .grid .crush,
-input[type="radio"][id="memes"]:checked ~ .grid .mondaymot,
-input[type="radio"][id="memes"]:checked ~ .grid .mascot,
-input[type="radio"][id="memes"]:checked ~ .grid .careers,
-input[type="radio"][id="memes"]:checked ~ .grid .other {
-  display: none;
-}
-
-input[type="radio"][id="mondaymot"]:checked + label {
-  background: var(--grey);
-  color: var(--white);
-}
-
-input[type="radio"][id="mondaymot"]:checked ~ .grid .crush,
-input[type="radio"][id="mondaymot"]:checked ~ .grid .memes,
-input[type="radio"][id="mondaymot"]:checked ~ .grid .mascot,
-input[type="radio"][id="mondaymot"]:checked ~ .grid .careers,
-input[type="radio"][id="mondaymot"]:checked ~ .grid .other {
-  display: none;
-}
-
-input[type="radio"][id="mascot"]:checked + label {
-  background: var(--grey);
-  color: var(--white);
-}
-
-input[type="radio"][id="mascot"]:checked ~ .grid .crush,
-input[type="radio"][id="mascot"]:checked ~ .grid .memes,
-input[type="radio"][id="mascot"]:checked ~ .grid .mondaymot,
-input[type="radio"][id="mascot"]:checked ~ .grid .careers,
-input[type="radio"][id="mascot"]:checked ~ .grid .other {
-  display: none;
-}
-
-input[type="radio"][id="careers"]:checked + label {
-  background: var(--grey);
-  color: var(--white);
-}
-
-input[type="radio"][id="careers"]:checked ~ .grid .crush,
-input[type="radio"][id="careers"]:checked ~ .grid .memes,
-input[type="radio"][id="careers"]:checked ~ .grid .mondaymot,
-input[type="radio"][id="careers"]:checked ~ .grid .mascot,
-input[type="radio"][id="careers"]:checked ~ .grid .other {
-  display: none;
-}
-
-input[type="radio"][id="other"]:checked + label {
-  background: var(--grey);
-  color: var(--white);
-}
-input[type="radio"][id="other"]:checked ~ .grid .crush,
-input[type="radio"][id="other"]:checked ~ .grid .memes,
-input[type="radio"][id="other"]:checked ~ .grid .mondaymot,
-input[type="radio"][id="other"]:checked ~ .grid .mascot,
-input[type="radio"][id="other"]:checked ~ .grid .careers {
-  display: none;
+#contentLoadingContainer {
+  display: flex;
+  justify-content: center;
 }
 
 /*-------------------------------Image grid gallery-----------------------------*/
@@ -152,34 +49,38 @@ ol {
 }
 
 .grid li {
-  padding: 12px;
+  margin: 12px;
 }
 
 a.darken {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  background: black;
-  text-align: center;
   width: 21.9vw;
   height: 21.9vw;
-  transition: all 0.3s linear;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+a.darken:hover:after {
+  opacity: 1;
+}
+
+a.darken:after {
+  content:"\A";
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  position:absolute;
+  width:100%; height:100%;
+  top:0; left:0;
+  background:rgba(0,0,0,0.6);
+  opacity:0;
+  z-index: 1;
 }
 
 a.darken img {
-  transition: all 0.3s linear;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: auto;
-  width: 22vw;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-a.darken:hover img {
-  opacity: 0.2;
+  width: 100%;
+  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
 a.darken div {
@@ -189,6 +90,7 @@ a.darken div {
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgba(255, 255, 255, 0);
+  z-index: 2;
 }
 
 a.darken:hover div {

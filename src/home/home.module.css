@@ -39,20 +39,22 @@ div .headline {
 .description {
   margin: auto;
   max-width: 85%;
+  display: grid;
+  padding: 100px 0px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
 }
 
 /*Description left block*/
 .descriptionLeft {
-  display: inline-block;
-  padding: 100px 25px 100px 0px;
-  width: 62%;
+  grid-area: auto / span 1;
 }
 
 /*Left block text*/
 .descriptionLeft h1 {
   color: #feb14b;
   font-family: "Montserrat", sans-serif;
-  font-size: 5.8vw;
+  font-size: 4.5vw;
 
   font-weight: 600;
   letter-spacing: 4px;
@@ -62,10 +64,9 @@ div .headline {
 
 /*Description right block*/
 .descriptionRight {
-  display: inline-block;
   line-height: 22px;
-  padding: 175px 0px 0px 25px;
-  width: 38%;
+  padding-top: 20px;
+  grid-area: auto / span 1;
 }
 
 /*Right block text*/
@@ -74,50 +75,6 @@ div .headline {
   font-family: "Montserrat", sans-serif;
   font-size: 11pt;
   text-align: justify;
-}
-
-/*--------------Responsive Mobile Design-------------------*/
-
-@media only screen and (max-width: 850px) {
-  .contain {
-    background-position: center bottom 40%;
-    height: 66vh;
-  }
-
-  /*Header title*/
-  div .headline {
-    position: absolute;
-    top: 20%;
-    left: 20vw;
-  }
-
-  .headline h1 {
-    font-size: 8vw;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-  }
-
-  /*Header subtitle*/
-  .headline p {
-    font-size: 1.6vw;
-    letter-spacing: 2.5px;
-  }
-
-  .descriptionLeft {
-    width: 100%;
-    padding: 50px 0px 0px 0px;
-    height: auto;
-  }
-  .descriptionLeft h1 {
-    padding: 0px;
-    font-size: 11vw;
-    line-height: 90px;
-  }
-  .descriptionRight {
-    width: 100%;
-    height: auto;
-    padding: 20px 0px 40px 0px;
-  }
 }
 
 /*---------------------------Home page statistics-----------------------------*/
@@ -165,7 +122,7 @@ div .headline {
   .number {
     grid-template-columns: 25% 30% 45%;
     position: absolute;
-    width: 90%;
+    width: 85%;
   }
 
   .number span {
@@ -189,7 +146,7 @@ div .headline {
   .number {
     bottom: 33%;
     grid-template-columns: 28% 30% 45%;  
-    width: 90%;
+    width: 85%;
   }
 }
 
@@ -197,16 +154,18 @@ div .headline {
 /*Events block*/
 .events {
   display: grid;
-  grid-template-columns: repeat(5, 20%);
-  grid-template-rows: 100px 110px auto auto;
-  padding: 100px 0px 100px 0px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px auto;
+  grid-column-gap: 50px;
+  padding: 100px 0px;
   max-width: 85%;
   margin: 0 auto;
 }
 
 /*Events description grid area*/
 .eventsDescription {
-  grid-area: 1 / 1 / 3 / 3;
+  grid-area: auto / span 1;
+  padding-top: 10px;
 }
 
 /*Events description text*/
@@ -226,7 +185,6 @@ div .headline {
   font-family: "Montserrat", sans-serif;
   text-align: right;
   color: #e85f5c;
-  padding-right: 20px;
 }
 
 .eventsDescription a:hover {
@@ -238,14 +196,17 @@ div .headline {
 /*Events title grid area*/
 .eventsTitle {
   text-align: left;
-  grid-area: 1 / 3 / 2 / 6;
-  padding: 0 50px;
+  grid-area: 1 / 2;
+}
+
+.eventsTitle h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 55px;
 }
 
 /*Big event image grid area*/
 .event1 {
-  grid-area: 2 / 3 / 5 / 6;
-  padding: 0 50px;
+  grid-area: 2 / 2;
 }
 
 /*Big event image size*/
@@ -262,45 +223,33 @@ div .headline {
   transform: scale(1.03);
 }
 
-/*Small event grid area*/
-.event2 {
-  grid-area: 3 / 1 / 5 / 3;
-  padding: 20px;
-}
-
-/*Small event image size*/
-.event2 img {
-  object-fit: contain;
-  width: 100%;
-}
-
 /*--------------Newsletter-------------------*/
-  .subscribeBtn {
-    position: absolute;
-    right: 20%;
-    text-align: center;
-    width: 60%;
-    bottom: 37%;
-    color: #ffffff;
-    background-color:#e85f5c;
-    padding: 12px 10px 12px 10px;
-    border: none;
-    font-size: 2vw;
-    text-transform: uppercase;
-    border: none;
-    letter-spacing: 3px;
-  }
+.subscribeBtn {
+  position: absolute;
+  right: 20%;
+  text-align: center;
+  width: 60%;
+  bottom: 37%;
+  color: #ffffff;
+  background-color:#e85f5c;
+  padding: 12px 10px 12px 10px;
+  border: none;
+  font-size: 2vw;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 3px;
+}
 
-  .signUpForm span {
-    color:#e85f5c;
-    font-family: "Montserrat", sans-serif;
-  }
-  
-  .signUpForm {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.signUpForm span {
+  color:#e85f5c;
+  font-family: "Montserrat", sans-serif;
+}
+
+.signUpForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
   
 /*--------------Newsletter Mobile Design-------------------*/
 @media only screen and (max-width: 1200px) {
@@ -329,11 +278,36 @@ div .headline {
   }
 }
 
-/*--------------Events Mobile Design-------------------*/
+/*------------------------------Home page sponsors----------------------------*/
+/*Sponsors image position*/
+.sponsors {
+  text-align: center;
+  margin: auto;
+  padding: 100px 0px;
+  width: 85%;
+}
+
+.sponsors h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 55px;
+  letter-spacing: 3px;
+  line-height: 100px;
+  text-align: center;
+  margin: 0px;
+  line-height: normal;
+}
+
+.sponsors img {
+  margin-top: 50px;
+  width: 100%;
+  max-width: 900px;
+}
+
+/*--------------Responsive Mobile Design-------------------*/
 
 @media only screen and (max-width: 850px) {
   .events {
-    padding: 20px 0px;
+    padding: 50px 0px;
     max-width: 85%;
     margin: 0 auto;
 
@@ -343,20 +317,29 @@ div .headline {
 
   /* Use a Flexbox to switch positions of Title and Description. */
   /*Events title - flexbox*/
-  .events-title {
-    text-align: center;
+  .eventsTitle {
+    margin: 0 auto;
     order: 1;
+    padding-left: 0px;
+  }
+
+  .eventsTitle h1 {
+    text-align: center;
+    font-size: 9vw;
   }
 
   /*Events description text - flexbox*/
   .eventsDescription {
     order: 2;
+    padding: 0px;
   }
 
   /*Events description text*/
   .eventsDescription p {
     text-align: justify;
+    margin: 20px 0;
   }
+
   .eventsDescription a {
     text-align: justify;
     padding-left: 20px;
@@ -367,47 +350,72 @@ div .headline {
     order: 3;
   }
 
-  /* Currently, mobile dev ignores "small event" area.*/
-}
+  .contain {
+    background-position: center bottom 40%;
+    height: 66vh;
+  }
 
-/*------------------------------Home page sponsors----------------------------*/
-/*Sponsors image position*/
-.sponsors {
-  text-align: center;
-  margin: auto;
-  padding: 0px 0px 30px 0px;
-}
+  /*Header title*/
+  div .headline {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0; 
+    right: 0; 
+    margin: auto 15%; 
+    height: 63vh;
+  }
 
-.sponsors h1 {
-  padding-top: 90px;
-  font-size: 60px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 5.5vw;
-  font-size: 55px;
-  font-weight: 500;
-  letter-spacing: 3px;
-  line-height: 100px;
-  text-align: center;
-}
+  .headline h1{
+    font-size: 6vw;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
 
-.sponsors img {
-  padding: 0px;
-  width: 100%;
-  max-width: 900px;
-}
-
-/*--------------Sponsors Mobile Design-------------------*/
-
-@media only screen and (max-width: 640px) {
-  .sponsors h1 {
-    font-size: 7.8vw;
-    padding-top: 30px;
+  /*Header subtitle*/
+  .headline p {
+    font-size: 10pt;
+    letter-spacing: 2.5px;
   }
 
   .description {
     max-width: 85%;
+    display: block;
+    padding: 0px;
   }
 
+  .descriptionLeft {
+    width: 100%;
+    padding: 50px 0px 0px 0px;
+    height: auto;
+  }
+
+  .descriptionLeft h1 {
+    padding: 0px;
+    font-size: 9vw;
+    line-height: 90px;
+  }
+
+  .descriptionRight {
+    width: 100%;
+    height: auto;
+    padding: 20px 0px 50px 0px;
+  }
+  
+  .sponsors {
+    padding: 50px 0;
+  }
+
+  .sponsors h1 {
+    font-size: 9vw;
+  }
+
+  .sponsors img {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
   .eventsDescription p#about {
     padding-left: 0px;
     padding-right: 0px;
@@ -420,5 +428,9 @@ div .headline {
 
   .eventsDescription a {
     padding: 0px;
+  }
+
+  div .headline {
+    height: 58vh;
   }
 }
