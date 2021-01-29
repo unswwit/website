@@ -66,7 +66,7 @@ const Events = () => {
       {/* Main Title, and Subtitle Area */}
       <div className="events-body">
         <h2>UPCOMING EVENTS</h2>
-        {!upcomingEvents ? 
+        {!upcomingEvents.length ? 
           (<p className="lookout">Keep a lookout here for our upcoming events!</p>)
           :
           (<div className="grid-container">
