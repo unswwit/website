@@ -19,12 +19,11 @@ import OurTeam from "./team/team";
 import Blog from "./blog-gallery/blog";
 import Publications from "./publications/publications";
 import Events from "./events/events";
-//import Podcast from "./podcast/Podcast";
+import Podcast from "./podcast/Podcast";
+import EpisodePage from "./podcast/EpisodePage";
 
 import Menu from "./menu";
 import MenuBtn from "./menuBtn";
-
-//import EpisodePage from "./podcast/EpisodePage";
 
 class App extends Component {
   /*
@@ -149,11 +148,11 @@ class App extends Component {
                       <div className="dropdown-item">
                         <NavLink to="/blog">BLOG</NavLink>
                       </div>
-                      {/*<div className="dropdown-item">
+                      <div className="dropdown-item">
                         <NavLink to="/podcast">
                           PODCAST
                         </NavLink>
-                      </div>*/}
+                      </div>
                       <div className="dropdown-item">
                         <NavLink to="/publications">PUBLICATIONS</NavLink>
                       </div>
@@ -199,8 +198,8 @@ class App extends Component {
             <Route path="/sponsors" component={Sponsors} />
             <Route path="/opportunities" component={Opportunities} />
             <Route path="/contact-us" component={ContactUs} />
-            {/*<Route exact path="/podcast" component={Podcast} />
-            <Route path="/podcast/:episode" component={EpisodePage} />*/}
+            <Route exact path="/podcast" component={Podcast} />
+            <Route path="/podcast/:episode" component={EpisodePage} />
             <Route path="/publications" component={Publications} />
             {Array.from({length: 39}, (_, index) => index + 1).map((blogNo) => {
               return <Route 
