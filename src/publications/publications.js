@@ -29,12 +29,12 @@ const Publications = () => {
         {/*2020 articles*/}
 
         <h1>2020</h1>
-        <div id="pubLoadingContainer">
+        <div id={styles.pubLoadingContainer}>
           {loading && <CircularProgress
             variant="indeterminate"
             size={50}
             thickness={5}
-            id="pubLoading"
+            id={styles.pubLoading}
           />}
         </div>
 
