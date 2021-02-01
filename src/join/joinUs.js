@@ -20,6 +20,7 @@ class JoinUs extends React.Component {
     this.spotifyUrl = "https://open.spotify.com/show/1iWagdei1mVoyzg8TqbB2P";
   }
 
+  // hides the loading sign
   hideSpinner() { 
     this.setState({ loading: false });
   }

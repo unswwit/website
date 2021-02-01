@@ -36,6 +36,15 @@ const EpisodePage = (props) => {
   })*/
   const [transcript, setTranscript] = useState("");
   const [loading, setLoading] = useState(true);
+  const platforms = ["anchor", "radioRepublic", "google", "spotify", "breaker"];
+  const links = { 
+    anchor: "podcast-anchor.png",
+    radioRepublic: "podcast-radio-republic.png",
+    google: "podcast-google-podcasts.png",
+    spotify: "podcast-spotify.png",
+    breaker: "podcast-breaker.png",
+  };
+
 
   // retrieve current episode content
   const handleEpisodeNumber = () => {
@@ -96,6 +105,8 @@ const EpisodePage = (props) => {
         {/* Episode content */}
         <h2>{episode.title}</h2>
         <p id={styles.episodeDate}>{episode.date}</p>
+        
+        {/* Podcast Episode Audio Player */}
         <iframe 
           title={episode.title} 
           src={episode.link} 
@@ -105,9 +116,30 @@ const EpisodePage = (props) => {
           allowtransparency="true" 
           allow="encrypted-media"
         ></iframe>
+
+        {/* Podcast Episode Links */}
+        <div className={styles.platforms}>
+          {platforms.map((platform) => {
+            return <a
+              href={episode[platform]}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img 
+                className={styles.sourceLogos}
+                src={`${process.env.PUBLIC_URL}/podcast-logos/${links[platform]}`} 
+                alt={platform} 
+                width="25px" 
+                height="25px" 
+              />
+            </a>
+          })}
+        </div>
+      
         <h2>Overview</h2>
         <p>{episode.description}</p>
-
+             
+        {/* Podcast Episode Transcript */}
         {transcript !== "" && 
         <>
           <h2>Transcript</h2>
@@ -126,7 +158,7 @@ const EpisodePage = (props) => {
             </AccordionDetails>
           </Accordion>
 
-          <div class="sharethis-inline-share-buttons"></div>
+          {/* <div class="sharethis-inline-share-buttons"></div> */}
         </>}
       </div>}
     </>

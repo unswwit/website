@@ -11,6 +11,14 @@ const Podcast = () => {
   const db = database.firestore();
   const [episodes, setEpisodes] = useState([]);
   const [loading, setLoading] = useState(true);
+  const links = { 
+    anchor: ["podcast-anchor.png", "https://anchor.fm/unswwit"],
+    radioRepublic: ["podcast-radio-republic.png", "https://radiopublic.com/talk-wit-us-Ww3A3m"],
+    google: ["podcast-google-podcasts.png", "https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy8zNTQxM2JkMC9wb2RjYXN0L3Jzcw=="],
+    spotify: ["podcast-spotify.png", "https://open.spotify.com/show/1iWagdei1mVoyzg8TqbB2P"],
+    pocketCasts: ["podcast-pocket-casts.png", "https://pca.st/kzc50ug6"],
+    breaker: ["podcast-breaker.png", "https://www.breaker.audio/talk-wit-us"],
+  };
 
   useEffect(() => {
     Tabletop.init({
@@ -51,7 +59,22 @@ const Podcast = () => {
           </h2>
           <p>
             Join us each month as we talk all about tech, uni, and life, featuring our wonderful WIT team and some special guests!
-          </p>
+          </p>          
+          {Object.keys(links).map((link) => {
+            return <a
+              href={links[link][1]}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img 
+                className={styles.sourceLogos}
+                src={`${process.env.PUBLIC_URL}/podcast-logos/${links[link][0]}`} 
+                alt={link} 
+                width="25px" 
+                height="25px" 
+              />
+            </a>
+          })}
         </div>         
       </div>  
         

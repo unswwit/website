@@ -68,7 +68,7 @@
 
 /*-------------------------------Podcast Episode Page-----------------------------*/
 #episodeContainer {
-	width: 950px;
+	width: 70%;
 	margin: auto;
 	padding: 25px;
 }
@@ -86,4 +86,23 @@
   color:#feb14b;  
   margin-top: 10%;
   margin-bottom: 10%;
+}
+
+.sourceLogos {
+	margin-left: 1vw;
+}
+
+.platforms {
+	margin-top: 50px;
+	text-align: right;
+}
+
+@media only screen and (max-width: 800px) {
+	#episodeContainer {
+		width: 80%;
+	}	
+
+	#episodeContainer h2 {
+		font-size: 16.5pt;
+	}
 }
