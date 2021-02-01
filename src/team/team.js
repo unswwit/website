@@ -112,7 +112,6 @@ function OurTeam() {
           id="teamLoading"
         />}
       </div>
-    
           
       {!loading && 
       <>

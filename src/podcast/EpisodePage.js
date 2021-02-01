@@ -11,6 +11,7 @@ import ReactMarkdown from "react-markdown";
 import Tabletop from "tabletop";
 // import { Link } from "react-router-dom";
 import styles from "./Podcast.module.css";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,6 +35,7 @@ const EpisodePage = (props) => {
     prev: ""
   })*/
   const [transcript, setTranscript] = useState("");
+  const [loading, setLoading] = useState(true);
 
   // retrieve current episode content
   const handleEpisodeNumber = () => {
@@ -43,13 +45,21 @@ const EpisodePage = (props) => {
   };
   
   useEffect(() => {
+    setLoading(true);
     const currEpisodeNo = handleEpisodeNumber();
-    setTranscript(import(`./transcripts/podcast-episode-${currEpisodeNo}.md`));
     
-    fetch(require(`./transcripts/podcast-episode-${currEpisodeNo}.md`))
-      .then(response => response.text())
-      .then(response => setTranscript(response))
+    // importing transcript
+    let tempTranscript = "";
+    try {
+      tempTranscript = require(`./transcripts/podcast-episode-${currEpisodeNo}.md`);
+      fetch(tempTranscript)
+        .then(response => response.text())
+        .then(response => setTranscript(response))
+    } catch {
+      setTranscript("");
+    }
 
+    // importing podcast episode
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: googleData => {
@@ -57,47 +67,26 @@ const EpisodePage = (props) => {
           return episode.episodeNo === currEpisodeNo;
         })[0];
         setEpisode(currEpisode);
-        console.log(currEpisode);
+        setLoading(false);
       },
       simpleSheet: false
     })
-    /*
-    db
-      .collection("podcast-previews")
-      .where("episode", "==", currEpisode)
-      .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach((doc) => {
-          setEpisode(doc.data());       
-        });           
-      });
-    
-    db
-      .collection("podcast-previews")
-      .where("episode", "==", currEpisode - 1)
-      .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach((doc) => {
-          setEpisodeNav({ ...episodeNav, prev: doc.data()["title"] });  
-        });           
-      });
-
-    db
-      .collection("podcast-previews")
-      .where("episode", "==", currEpisode + 1)
-      .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach((doc) => {
-          setEpisodeNav({ ...episodeNav, next: doc.data()["title"] });  
-        });           
-      });  */
   }, [episodeNumber]);
 
   return (
     <>
       <PageHeader imgUrl="/headers/podcast-header.jpg" title={`Podcast Episode #${episodeNumber}`} />
       
-      <div id={styles.episodeContainer}>
+      {loading && <div id={styles.podcastLoadingContainer}>
+        <CircularProgress
+          variant="indeterminate"
+          size={50}
+          thickness={5}
+          id={styles.podcastLoading}
+        />
+      </div>}
+    
+      {!loading && <div id={styles.episodeContainer}>
         {/* Episode Navigation */}
         {/* <div>
           {episodeNav.prev && <Link to={`/podcast/${episodeNumber - 1}`} onClick={() => handleEpisodeNumber()}>Previous Episode:{episodeNav.prev}</Link>}
@@ -107,26 +96,39 @@ const EpisodePage = (props) => {
         {/* Episode content */}
         <h2>{episode.title}</h2>
         <p id={styles.episodeDate}>{episode.date}</p>
-        <iframe title={episode.title} src={episode.link} width="100%" height="232" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe 
+          title={episode.title} 
+          src={episode.link} 
+          width="100%" 
+          height="232" 
+          frameBorder="0" 
+          allowtransparency="true" 
+          allow="encrypted-media"
+        ></iframe>
         <h2>Overview</h2>
         <p>{episode.description}</p>
 
-        <h2>Transcript</h2>
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography className={classes.heading}>View Transcript</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              <ReactMarkdown children={`${transcript}`} />
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-      </div>
+        {transcript !== "" && 
+        <>
+          <h2>Transcript</h2>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography className={classes.heading}>View Transcript</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                <ReactMarkdown children={`${transcript}`} />
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+
+          <div class="sharethis-inline-share-buttons"></div>
+        </>}
+      </div>}
     </>
   );
 }

@@ -4,13 +4,24 @@ import styles from "./Podcast.module.css";
 import EpisodeTemplate from "./EpisodeTemplate";
 import database from "../config/firebase";
 import { Link } from "react-router-dom";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import Tabletop from "tabletop";
 
 const Podcast = () => {
   const db = database.firestore();
   const [episodes, setEpisodes] = useState([]);
-  
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    // set podcast episodes
+    Tabletop.init({
+      key: process.env.REACT_APP_GOOGLE_SHEETS,
+      callback: googleData => {
+        setEpisodes(googleData["podcast-episodes"]["elements"]);
+        setLoading(false);
+      },
+      simpleSheet: false
+    })
+    /*
     db
       .collection("podcast-previews")  
       .orderBy("episode", "desc")
@@ -23,7 +34,7 @@ const Podcast = () => {
           tempEpisodes.push(episode);
         });
         setEpisodes(tempEpisodes);
-      });
+      });*/
   }, [db]);
 
   return (
@@ -42,12 +53,22 @@ const Podcast = () => {
             Join us each month as we talk all about tech, uni, and life, featuring our wonderful WIT team and some special guests!
           </p>
         </div>         
-      </div>    
+      </div>  
+        
+      <div id={styles.podcastLoadingContainer}>
+        {loading && <CircularProgress
+          variant="indeterminate"
+          size={50}
+          thickness={5}
+          id={styles.podcastLoading}
+        />}
+      </div>
+
       <div id={styles.episodes}>
-        {episodes.map((episode) => {
+        {episodes.map((episode, index) => {
           return <Link
-            key={episode.id} 
-            to={`/podcast/${episode.episode}`}
+            key={index} 
+            to={`/podcast/${episode.episodeNo}`}
             style={{ textDecoration: "none" }}
           >
             <EpisodeTemplate 

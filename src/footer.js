@@ -15,12 +15,12 @@ const Footer = () => {
     "Blog": "/blog",
     "Publications": "/publications",
     "Marketing Archives": "/marketing-archive",
-    //"Podcast": "/podcast"
+    "Podcast": "/podcast"
   };
 
   const links = [
     ["Home", "Events", "Team", "Sponsors", "Opportunities", "Join", "Contact"], 
-    ["Blog", "Publications", "Marketing Archives"] //, "Podcast"]
+    ["Blog", "Publications", "Marketing Archives", "Podcast"]
   ];
 
   const socials = {

@@ -76,3 +76,14 @@
 #episodeDate {
 	text-align: center;
 }
+
+#podcastLoadingContainer {
+	display: flex;
+	justify-content: center;
+}
+
+#podcastLoading {
+  color:#feb14b;  
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
