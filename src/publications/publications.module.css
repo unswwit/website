@@ -138,3 +138,14 @@
   text-decoration: none;
   color: white;
 }
+
+/*-------------------------------Loading Sign-----------------------------*/
+#pubLoading {
+  color:#feb14b;  
+  margin-top: 10%;
+}
+
+#pubLoadingContainer {
+  display: flex;
+  justify-content: flex-start;
+}
