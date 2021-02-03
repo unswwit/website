@@ -137,10 +137,10 @@ const EpisodePage = (props) => {
         </div>
       
         <h2>Overview</h2>
-        <p>{episode.description}</p>
+        <p id={styles.overview}>{episode.description}</p>
              
         {/* Podcast Episode Transcript */}
-        {transcript !== "" && 
+        {false && 
         <>
           <h2>Transcript</h2>
           <Accordion>
@@ -156,10 +156,9 @@ const EpisodePage = (props) => {
                 <ReactMarkdown children={`${transcript}`} />
               </Typography>
             </AccordionDetails>
-          </Accordion>
-
-          {/* <div class="sharethis-inline-share-buttons"></div> */}
-        </>}
+          </Accordion>    
+          <div class="sharethis-inline-share-buttons"></div>     
+        </>}       
       </div>}
     </>
   );

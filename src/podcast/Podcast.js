@@ -3,7 +3,6 @@ import PageHeader from "../header";
 import styles from "./Podcast.module.css";
 import EpisodeTemplate from "./EpisodeTemplate";
 import database from "../config/firebase";
-import { Link } from "react-router-dom";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Tabletop from "tabletop";
 
@@ -24,7 +23,9 @@ const Podcast = () => {
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: googleData => {
-        setEpisodes(googleData["podcast-episodes"]["elements"]);
+        const unsorted = googleData["podcast-episodes"]["elements"];
+        const sortedEpisodes = unsorted.sort().reverse();
+        setEpisodes(sortedEpisodes);
         setLoading(false);
       },
       simpleSheet: false
@@ -59,22 +60,24 @@ const Podcast = () => {
           </h2>
           <p>
             Join us each month as we talk all about tech, uni, and life, featuring our wonderful WIT team and some special guests!
-          </p>          
-          {Object.keys(links).map((link) => {
-            return <a
-              href={links[link][1]}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img 
-                className={styles.sourceLogos}
-                src={`${process.env.PUBLIC_URL}/podcast-logos/${links[link][0]}`} 
-                alt={link} 
-                width="25px" 
-                height="25px" 
-              />
-            </a>
-          })}
+          </p>    
+          <div id={styles.platformContainer}>
+            {Object.keys(links).map((link) => {
+              return <a
+                href={links[link][1]}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img 
+                  className={styles.platformLogos}
+                  src={`${process.env.PUBLIC_URL}/podcast-logos/${links[link][0]}`} 
+                  alt={link} 
+                  width="25px" 
+                  height="25px" 
+                />
+              </a>
+            })}
+          </div> 
         </div>         
       </div>  
         
@@ -89,18 +92,14 @@ const Podcast = () => {
 
       <div id={styles.episodes}>
         {episodes.map((episode, index) => {
-          return <Link
-            key={index} 
-            to={`/podcast/${episode.episodeNo}`}
-            style={{ textDecoration: "none" }}
-          >
-            <EpisodeTemplate 
-              title={episode.title} 
-              cover={`podcast-covers/${episode.img}`} 
-              date={episode.date} 
-              description={episode.description} 
-            />
-          </Link>
+          return <EpisodeTemplate 
+            key={index}
+            episodeNo={episode.episodeNo}
+            title={episode.title} 
+            cover={`podcast-covers/${episode.img}`} 
+            date={episode.date} 
+            description={episode.description} 
+          />
         })}
       
       </div>    
