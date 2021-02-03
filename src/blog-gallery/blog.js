@@ -58,7 +58,7 @@ const Blog = () => {
           blogPreviews[index].authors = tempAuthor;
         });
 
-        setBlogs(googleData["blog-previews"]["elements"]); 
+        setBlogs(googleData["blog-previews"]["elements"].reverse()); 
       },
       simpleSheet: false
     });

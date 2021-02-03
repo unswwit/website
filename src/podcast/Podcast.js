@@ -24,7 +24,7 @@ const Podcast = () => {
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: googleData => {
         const unsorted = googleData["podcast-episodes"]["elements"];
-        const sortedEpisodes = unsorted.sort().reverse();
+        const sortedEpisodes = unsorted.reverse();
         setEpisodes(sortedEpisodes);
         setLoading(false);
       },

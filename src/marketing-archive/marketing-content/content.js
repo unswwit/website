@@ -28,7 +28,7 @@ const MarketingContent = () => {
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: googleData => {   
         setLoading(false);   
-        setContent(googleData["marketing-archives"]["elements"]);
+        setContent(googleData["marketing-archives"]["elements"].reverse());
       },
       simpleSheet: false
     });
