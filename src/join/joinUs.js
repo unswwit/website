@@ -1,6 +1,6 @@
 import React from "react";
 import PageHeader from ".././header";
-import "./joinUs.css";
+import styles from "./joinUs.module.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
 class JoinUs extends React.Component {
@@ -10,14 +10,17 @@ class JoinUs extends React.Component {
       loading: true,
     };
     this.hideSpinner = this.hideSpinner.bind(this);
-    this.spARCUrl = "https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371W0xQAE";
-    this.fbPageUrl = "https://www.facebook.com/unsw.wit/";
-    this.fbGroupUrl = "https://www.facebook.com/groups/unswwit/";
-    this.linkedInUrl = "https://www.linkedin.com/company/unsw-women-in-technology/";
-    this.instagramUrl = "https://www.instagram.com/wit.unsw/";
-    this.youtubeUrl = "https://www.youtube.com/channel/UCQ8PGe3P4ZuDSNCb9vCeTiw/videos/";
-    this.twitchUrl = "https://www.twitch.tv/unswwit";
-    this.spotifyUrl = "https://open.spotify.com/show/1iWagdei1mVoyzg8TqbB2P";
+
+    this.socials = {
+      spARC: ["https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371W0xQAE", "sparc.png"],
+      "Facebook Page": ["https://www.facebook.com/unsw.wit/", "facebook.png"],
+      "Facebook Group": ["https://www.facebook.com/groups/unswwit/", "facebook-group.png"],
+      LinkedIn: ["https://www.linkedin.com/company/unsw-women-in-technology/", "linkedin.png"],
+      Instagram: ["https://www.instagram.com/wit.unsw/", "instagram.png"],
+      Youtube: ["https://www.youtube.com/channel/UCQ8PGe3P4ZuDSNCb9vCeTiw/videos/", "youtube.png"],
+      Twitch: ["https://www.twitch.tv/unswwit", "twitch.png"],
+      Spotify: ["https://open.spotify.com/show/1iWagdei1mVoyzg8TqbB2P", "spotify.png"],
+    };
   }
 
   // hides the loading sign
@@ -30,83 +33,34 @@ class JoinUs extends React.Component {
       <div>
         {/* Cover Photo */}
         <PageHeader imgUrl="/headers/join-header-1.png" title="Join Us" />
-        <div className="joinUsBody">
-          <div className="joinUsRight">
+        <div className={styles.joinUsBody}>
+          <div className={styles.joinUsRight}>
             <h2>Connect with us</h2>
-            <div className="joinButtons">
-              <a href={this.fbPageUrl} target="_blank" rel="noopener noreferrer">
-                <img
-                  src={process.env.PUBLIC_URL + "/icons/facebook.png"}
-                  title="Facebook Page"
-                  alt="Facebook Page"
-                  style={{ width: "100%", height: "100%" }}
-                />
-              </a>
-              <a href={this.fbGroupUrl} target="_blank" rel="noopener noreferrer">
-                <img
-                  src={process.env.PUBLIC_URL + "/icons/facebook-group.png"}
-                  title="Facebook Group"
-                  alt="Facebook Group"
-                  style={{ width: "100%", height: "100%" }}
-                />
-              </a>
-              <a href={this.linkedInUrl} target="_blank" rel="noopener noreferrer">
-                <img
-                  src={process.env.PUBLIC_URL + "/icons/linkedin.png"}
-                  title="Linked-In"
-                  alt="Linked-In"
-                  style={{ width: "100%", height: "100%" }}
-                />
-              </a>
-              <a href={this.instagramUrl} target="_blank" rel="noopener noreferrer">
-                <img
-                  src={process.env.PUBLIC_URL + "/icons/instagram.png"}
-                  title="Instagram"
-                  alt="Instagram"
-                  style={{ width: "100%", height: "100%" }}
-                />
-              </a>
-              <a href={this.spARCUrl} target="_blank" rel="noopener noreferrer">
-                <img
-                  src={process.env.PUBLIC_URL + "/icons/sparc.png"}
-                  title="spARC"
-                  alt="spARC"
-                  style={{ width: "100%", height: "100%" }}
-                />
-              </a>
-              <a href={this.youtubeUrl} target="_blank" rel="noopener noreferrer">
-                <img
-                  src={process.env.PUBLIC_URL + "/icons/youtube.png"}
-                  title="youtube"
-                  alt="youtube"
-                  style={{ width: "100%", height: "100%" }}
-                />
-              </a>
-              <a href={this.twitchUrl} target="_blank" rel="noopener noreferrer">
-                <img
-                  src={process.env.PUBLIC_URL + "/icons/twitch.png"}
-                  title="twitch"
-                  alt="twitch"
-                  style={{ width: "100%", height: "100%" }}
-                />
-              </a>
-              <a href={this.spotifyUrl} target="_blank" rel="noopener noreferrer">
-                <img
-                  src={process.env.PUBLIC_URL + "/icons/spotify.png"}
-                  title="spotify"
-                  alt="spotify"
-                  style={{ width: "100%", height: "100%" }}
-                />
-              </a>
+            <div className={styles.joinButtons}>
+              {Object.keys(this.socials).map((social, index) => {
+                return <a 
+                  className={styles.joinLink}
+                  key={index}
+                  href={this.socials[social][0]} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={`${process.env.PUBLIC_URL}/icons/${this.socials[social][1]}`}
+                    alt={social}
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                </a>
+              })}
             </div>
           </div>
-          <div className="googleMap">
+          <div className={styles.googleMap}>
             {this.state.loading ? 
               (<CircularProgress
                 variant="indeterminate"
                 size={50}
                 thickness={5}
-                id="joinLoading"
+                id={styles.joinLoading}
               />) : null}
             <iframe
               onLoad={this.hideSpinner}
