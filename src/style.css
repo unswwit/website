@@ -3,6 +3,14 @@
 font-family: 'Montserrat', sans-serif;*/
 
 /*----------------------------------Header------------------------------------*/
+/*Heading title*/
+.headerTitle h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 5vw;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  text-align: center;
+}
 
 .coverPhoto {
   height: 100vh;
@@ -28,7 +36,7 @@ font-family: 'Montserrat', sans-serif;*/
   z-index: 1;
 }
 
-.coverPhoto .title {
+.coverPhoto .headerTitle {
   position: absolute;
   top: 0;
   text-align: center;
@@ -40,7 +48,7 @@ font-family: 'Montserrat', sans-serif;*/
   justify-content: center;
 }
 
-.coverPhoto .title h1 {
+.coverPhoto .headerTitle h1 {
   margin: 0px;
   font-weight: 500;
 }
@@ -48,16 +56,16 @@ font-family: 'Montserrat', sans-serif;*/
 @media only screen and (max-width: 700px) {
   .coverPhoto,
   .coverPhoto .dark,
-  .coverPhoto .title,
+  .coverPhoto .headerTitle,
   .cover_image {
     height: 40vh;
   }
 
-  .coverPhoto .title h1 {
+  .coverPhoto .headerTitle h1 {
     font-size: 3.5vh;
   }
 
-  .coverPhoto .title {
+  .coverPhoto .headerTitle {
     top: 25px;
   }
 }

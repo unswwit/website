@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../.././style.css";
-import "../marketing-content/content.css";
+import styles from "../marketing-content/content.module.css";
 
 class Initiative extends Component {
   render() {
@@ -8,7 +8,7 @@ class Initiative extends Component {
       <li>
         <a
           href={this.props.fb}
-          className="darken"
+          className={styles.darken}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -16,7 +16,7 @@ class Initiative extends Component {
             src={process.env.PUBLIC_URL + this.props.imgUrl}
             alt={this.props.alt}
           />
-          <div className="message">{this.props.date}</div>
+          <div className={styles.message}>{this.props.date}</div>
         </a>
       </li>
     );

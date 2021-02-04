@@ -1,7 +1,7 @@
 //All necessary imports for this javascript
 import React, { useEffect, useState } from "react";
-import ".././marketingArchive.css";
-import "./content.css";
+import ".././marketingArchive.module.css";
+import styles from "./content.module.css";
 import "../.././style.css";
 import PageHeader from "../.././header";
 import Chip from "@material-ui/core/Chip";
@@ -40,11 +40,11 @@ const MarketingContent = () => {
       <PageHeader imgUrl="/headers/marketing-header.png" title="Marketing Archives" />
       {/*End of Header*/}
 
-      <div id="parent">
+      <div id={styles.parent}>
         {/*List of initiatives*/}
-        <div className="initiatives">
+        <div className={styles.initiatives}>
           {/* Start of categories */}      
-          <div className="contentCategories">
+          <div className={styles.contentCategories}>
             {Object.keys(categories).sort().map((category) => {
               const chipColour = selectedCategory === categories[category] ? "#e85f5c": "#7F7F7F";
               return <Chip 
@@ -65,17 +65,17 @@ const MarketingContent = () => {
             })}
           </div>  
 
-          <div id="contentLoadingContainer">
+          <div id={styles.contentLoadingContainer}>
             {loading && <CircularProgress
               variant="indeterminate"
               size={50}
               thickness={5}
-              id="contentLoading"
+              id={styles.contentLoading}
             />}
           </div>
         
           {/*Image collage*/}
-          {!loading && <ol className="grid" id="content"> 
+          {!loading && <ol className={styles.grid} id={styles.content}> 
             {content
               .filter((picture) => selectedCategory === "All" || picture.category === selectedCategory)
               .map((content, index) => {   

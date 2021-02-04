@@ -17,7 +17,7 @@ class PageHeader extends Component {
         />
 
         {/* text */}
-        <div className="title">
+        <div className="headerTitle">
           <h1>{this.props.title}</h1>
         </div>
       </div>

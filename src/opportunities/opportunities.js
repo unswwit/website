@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import PageHeader from ".././header";
 
 import ".././style.css";
-import "./opportunities.css";
+import styles from "./opportunities.module.css";
 import OppCard from "./oppCard.js";
 
 class Opportunities extends Component {
@@ -14,15 +14,15 @@ class Opportunities extends Component {
         <PageHeader imgUrl="/headers/opportunities-header.jfif" title="Opportunities" />
 
         {/*start of active opportunies*/}
-        <h2 className="oppSubheading">Active Opportunities</h2>
-        <p className="oppLookout">
+        <h2 className={styles.oppSubheading}>Active Opportunities</h2>
+        <p className={styles.oppLookout}>
           Keep a lookout here for upcoming opportunities!
         </p>
 
         {/*Start of past opportunities*/}
-        <h2 className="oppSubheading">Past Opportunities</h2>
-        <div className="opp-grid">
-          <div className="container">
+        <h2 className={styles.oppSubheading}>Past Opportunities</h2>
+        <div className={styles.oppGrid}>
+          <div className={styles.container}>
             <OppCard
               details={{
                 Telstra: [

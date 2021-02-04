@@ -1,7 +1,7 @@
 //All necessary imports for this javascript
 import React, { Component } from "react";
 import ".././style.css";
-import "./opportunities.css";
+import styles from "./opportunities.module.css";
 
 class OppCard extends Component {
   render() {
@@ -9,44 +9,46 @@ class OppCard extends Component {
       <div>
         {/*for the blog post author*/}
         {Object.keys(this.props.details).map((key, index) => (
-          <div key={index} className="opp-post">
+          <div key={index} className={styles.oppPost}>
             <table cellpadding="0">
               <tr>
                 <tr>
-                  <td className="opp-preview">
+                  <td className={styles.oppPreview}>
                     <tr>
                       <td>
-                        <div className="opp-frame">
+                        <div className={styles.oppFrame}>
                           <img
                             src={
                               process.env.PUBLIC_URL +
                               this.props.details[key][0]
                             }
-                            className="opp-img"
+                            className={styles.oppImg}
                             alt={key}
                           />
                         </div>
                       </td>
                       <td style={{ width: "200px" }}>
-                        <div className="heading">{key}</div>
-                        <div className="subheading">
+                        <div className={styles.heading}>{key}</div>
+                        <div className={styles.subheading}>
                           {this.props.details[key][1]}
                         </div>
                       </td>
                     </tr>
 
-                    <div className="opp-details">
-                      <div className="job-position">
+                    <div className={styles.oppDetails}>
+                      <div className={styles.jobPosition}>
                         {this.props.details[key][2]}
                       </div>
 
-                      <div className="subheading">
+                      <div className={styles.subheading}>
                         {this.props.details[key][3]}
                       </div>
-                      <div className="more-link">
+                      <div className={styles.moreLink}>
                         <a
-                          className="more-link"
+                          className={styles.moreLink}
                           href={this.props.details[key][4]}
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           More
                         </a>
