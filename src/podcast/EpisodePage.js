@@ -116,6 +116,10 @@ const EpisodePage = (props) => {
           allowtransparency="true" 
           allow="encrypted-media"
         ></iframe>
+        <div>
+          <div class="sharethis-inline-reaction-buttons"></div>
+          <div class="sharethis-inline-share-buttons"></div>
+        </div>       
 
         {/* Podcast Episode Links */}
         <div className={styles.platforms}>
