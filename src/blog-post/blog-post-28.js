@@ -210,7 +210,7 @@ class blogPost28 extends Component {
               </li>
               <br />{" "}
               <p className="post-content">
-                V: Code in the language you are most <b>comfortable</b> in. At
+                V: Code in the language you are most <strong>comfortable</strong> in. At
                 UNSW most students would begin by learning C, which is arguably
                 not the best language to sit your technical interviews in.
                 However, if you feel that C is your strongest language, then by

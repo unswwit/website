@@ -15,8 +15,8 @@ class Sponsors extends Component {
 
         <div id="sponsors-body">
           <p className="subheader">
-            {`Thank you to our sponsors for generously supporting our cause and
-               collaborating with us to provide our students invaluable opportunities.`}
+            Thank you to our sponsors for generously supporting our cause and
+            collaborating with us to provide our students invaluable opportunities.
           </p>
 
           {/* Principal Sponsors Area */}
