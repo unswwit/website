@@ -6,12 +6,11 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import PageHeader from "../header";
-// import database from "../config/firebase";
 import ReactMarkdown from "react-markdown";
 import Tabletop from "tabletop";
-// import { Link } from "react-router-dom";
 import styles from "./Podcast.module.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import { InlineShareButtons } from "sharethis-reactjs";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
 
 const EpisodePage = (props) => {
   const classes = useStyles();
-  // const db = database.firestore();
   const [episode, setEpisode] = useState({});
   const [episodeNumber, setEpisodeNumber] = useState("0");
   /* const [episodeNav, setEpisodeNav] = useState({
@@ -44,7 +42,6 @@ const EpisodePage = (props) => {
     spotify: "podcast-spotify.png",
     breaker: "podcast-breaker.png",
   };
-
 
   // retrieve current episode content
   const handleEpisodeNumber = () => {
@@ -116,13 +113,59 @@ const EpisodePage = (props) => {
           allowtransparency="true" 
           allow="encrypted-media"
         ></iframe>
-        <div>
-          <div class="sharethis-inline-reaction-buttons"></div>
-          <div class="sharethis-inline-share-buttons"></div>
-        </div>       
+        {/*
+        <InlineReactionButtons
+          config={{
+            alignment: "left",  // alignment of buttons (left, center, right)
+            enabled: true,        // show/hide buttons (true, false)
+            language: "en",       // which language to use (see LANGUAGES)
+            // eslint-disable-next-line camelcase
+            min_count: 0,         // hide react counts less than min_count (INTEGER)
+            padding: 12,          // padding within buttons (INTEGER)
+            reactions: [          // which reactions to include (see REACTIONS)
+              "slight_smile",
+              "heart_eyes",
+              "laughing",
+              "astonished",
+              "sob",
+              "rage"
+            ],
+            size: 48,             // the size of each button (INTEGER)
+            spacing: 8,           // the spacing between buttons (INTEGER)
+
+            // OPTIONAL PARAMETERS
+            url: `unswwit.com/#/podcast/${episodeNumber}` // (defaults to current url)
+          }}
+        />*/}
+        <span>
+          
+        </span>
+        <InlineShareButtons        
+          config={{
+            alignment: "left",  // alignment of buttons (left, center, right)
+            color: "social",      // set the color of buttons (social, white)
+            enabled: true,        // show/hide buttons (true, false)
+            // eslint-disable-next-line camelcase
+            font_size: 16,        // font size for the buttons
+            labels: "null",        // button labels (cta, counts, null)
+            language: "en",       // which language to use (see LANGUAGES)
+            networks: [           // which networks to include (see SHARING NETWORKS)
+              "linkedin",
+              "facebook",
+              "twitter"
+            ],
+            padding: 12,          // padding within buttons (INTEGER)
+            radius: 4,            // the corner radius on each button (INTEGER)
+            // eslint-disable-next-line camelcase
+            show_total: true,
+            size: 40,             // the size of each button (INTEGER)
+
+            url: `unswwit.com/#/podcast/${episodeNumber}`, // (defaults to current url) 
+          }}
+        />     
 
         {/* Podcast Episode Links */}
-        <div className={styles.platforms}>
+        <span className={styles.platforms}>
           {platforms.map((platform) => {
             return <a
               href={episode[platform]}
@@ -138,7 +181,7 @@ const EpisodePage = (props) => {
               />
             </a>
           })}
-        </div>
+        </span>
       
         <h2>Overview</h2>
         <p id={styles.overview}>{episode.description}</p>
