@@ -91,7 +91,11 @@ const Home = () => {
           <h1>EVENTS</h1>
         </div>
         <div className={styles.event1}>
-          <a href="https://www.facebook.com/events/173871117458309">
+          <a 
+            href="https://www.facebook.com/events/173871117458309" 
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src={`${process.env.PUBLIC_URL}/event-covers/2021/02-WIT-X-MCIC-accessory-atelier.jpg`}
               alt="WIT x MCIC accessory atelier"
