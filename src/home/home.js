@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import CountUp from "react-countup";
 import styles from "./home.module.css";
@@ -7,6 +7,11 @@ import { Modal, Backdrop, Fade } from "@material-ui/core";
 
 const Home = () => {
   const [open, setOpen] = React.useState(false);
+
+  //start webpage at the top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const callbackModal = () => {
     setOpen(false);

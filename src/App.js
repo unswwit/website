@@ -21,7 +21,7 @@ import Publications from "./publications/publications";
 import Events from "./events/events";
 import Podcast from "./podcast/Podcast";
 import EpisodePage from "./podcast/EpisodePage";
-
+import NotFound from "./NotFound";
 import Menu from "./menu";
 import MenuBtn from "./menuBtn";
 
@@ -208,6 +208,7 @@ class App extends Component {
                 component={require(`./blog-post/blog-post-${blogNo}`).default} 
               />
             })}
+            <Route component={NotFound} />
           </Switch>
         </HashRouter>
         <div>
