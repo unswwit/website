@@ -9,7 +9,6 @@ import PageHeader from "../header";
 // import database from "../config/firebase";
 import ReactMarkdown from "react-markdown";
 import Tabletop from "tabletop";
-// import { Link } from "react-router-dom";
 import styles from "./Podcast.module.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
@@ -44,7 +43,6 @@ const EpisodePage = (props) => {
     spotify: "podcast-spotify.png",
     breaker: "podcast-breaker.png",
   };
-
 
   // retrieve current episode content
   const handleEpisodeNumber = () => {
@@ -157,8 +155,7 @@ const EpisodePage = (props) => {
               </Typography>
             </AccordionDetails>
           </Accordion>    
-          <div class="sharethis-inline-share-buttons"></div>     
-        </>}       
+        </>}         
       </div>}
     </>
   );
