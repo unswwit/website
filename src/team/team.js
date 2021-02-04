@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./team.css";
+import styles from "./team.module.css";
 
 import PageHeader from "../header";
 import Execs from "./execs";
@@ -15,11 +15,13 @@ function OurTeam() {
   const [year, setYear] = useState("2021");
   const [loading, setLoading] = useState(true);
   const execToClassName = {
-    2021 :"exec_2021_img",
+    2021 :"exec2021Img",
     2020: {
-      "Elicia Au Duong": "eli_img",
-      "Gabrielle Younes": "gab_img",   
-      "Vivian Wong": "vivw_img",   
+      "Elicia Au Duong": "eliImg",
+      "Gabrielle Younes": "gabImg",   
+      "Vivian Wong": "vivwImg", 
+      "Alison Chin": "alisonImg",
+      "Felicia Ee": "felImg"
     }
   }
 
@@ -102,32 +104,32 @@ function OurTeam() {
         updateYear={handleYear} 
       />
 
-      <div id="teamLoadingContainer">
+      <div id={styles.teamLoadingContainer}>
         {loading && <CircularProgress
           variant="indeterminate"
           size={50}
           thickness={5}
-          id="teamLoading"
+          id={styles.teamLoading}
         />}
       </div>
           
       {!loading && 
       <>
         {/* Exec section */}
-        <div className="profile_section_heading">
-          <h2 className="team-heading">OUR {year} EXECUTIVE TEAM</h2>
+        <div className={styles.profileSectionHeading}>
+          <h2 className={styles.teamHeading}>OUR {year} EXECUTIVE TEAM</h2>
         </div>      
         
-        <div className="all_execs_section">
-          <div className="exec_row">
+        <div className={styles.allExecsSection}>
+          <div className={styles.execRow}>
             {execs.map((row, index) => {
-              return <div key={index} className="exec_row">
+              return <div key={index} className={styles.execRow}>
                 {row.map((exec, index) => {              
                   return <Execs
                     key={index}
                     imgUrl={exec.img !== "" ? `/potraits/${year}-exec/${exec.img}` : ""}
                     name={exec.name}
-                    className={year === "2020" ? execToClassName[year][exec.name] : execToClassName[year]}
+                    className={year === "2020"? execToClassName[year][exec.name]: execToClassName[year]}
                     position={exec.position}
                     degree={exec.degree}
                     year={exec.year}
@@ -145,16 +147,16 @@ function OurTeam() {
         {subcommittee.length ?
           <>
             <h2
-              className="team-heading"
+              className={styles.teamHeading}
               style={{ marginTop: "2vw", paddingBottom: "5px" }}
             >
               OUR {year} SUBCOMMITTEE TEAM
             </h2>
 
-            <div className="subcom_section">
+            <div className={styles.subcomSection}>
               {sectors.map((sector) => {
                 return <div key={sector} >
-                  <h3 className="subcom-type">{sector} Team</h3>
+                  <h3 className={styles.subcomType}>{sector} Team</h3>
                   {subcommittee
                     .filter((member) => member.team === sector)
                     .map((member, index) => {         
@@ -173,7 +175,7 @@ function OurTeam() {
       </>
       }
       <footer>
-        <div className="footer_area" style={{ marginTop: "8vw" }} />
+        <div className={styles.footerArea} style={{ marginTop: "8vw" }} />
       </footer>
     </div>
   );

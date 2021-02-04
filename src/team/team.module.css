@@ -22,12 +22,12 @@
 
 /*---------------------------Executive team profiles--------------------------*/
 /*Executive team section*/
-.all_execs_section {
+.allExecsSection {
   align-content: center;
   justify-content: center;
 }
 
-.exec_row {
+.execRow {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -36,7 +36,7 @@
   width: 80%;
 }
 
-.exec_col {
+.execCol {
   display: flex;
   flex-basis: 100%;
   flex-direction: column;
@@ -44,12 +44,12 @@
 }
 
 /*Subtitle*/
-h2.team-heading {
+h2.teamHeading {
   padding: 75px 0px;
 }
 
 /*Executive profile images*/
-.profile_crop {
+.profileCrop {
   border-radius: 50%;
   height: 250px;
   width: 250px;
@@ -61,7 +61,7 @@ h2.team-heading {
   position: relative;
 }
 
-.profile_img {
+.profileImg {
   background-size: cover;
   display: block;
   height: 100%;
@@ -71,31 +71,31 @@ h2.team-heading {
 }
 
 /*Transform executive profile images*/
-.exec_2021_img {
+.exec2021Img {
   transform: translate(-3%, -13%);
   width: 105%;
   height: auto;
 }
 
-.gab_img {
+.gabImg {
   transform: translate(0%, 0);
 }
 
-.vivw_img {
+.vivwImg {
   height: auto;
   transform: translate(-5%, -10%);
   width: 120%;
 }
 
-.alison_img {
+.alisonImg {
   transform: translate(-17%, 0);
 }
 
-.eli_img {
+.eliImg {
   transform: translate(-7%, 0%);
 }
 
-.fel_img {
+.felImg {
   transform: translate(-12%, 0);
 }
 
@@ -109,7 +109,7 @@ h2.team-heading {
 }
 
 /*Executive profile details*/
-.profile_details {
+.profileDetails {
   align-content: center;
   justify-content: space-evenly;
   line-height: 13pt;
@@ -118,7 +118,7 @@ h2.team-heading {
 }
 
 /*Executive social media links*/
-.icon_bar {
+.iconBar {
   align-content: center;
 }
 .icon {
@@ -132,7 +132,7 @@ h2.team-heading {
 }
 
 /*Executive names*/
-.profile_text_name {
+.profileTextName {
   align-content: center;
   color: #feb14b;
   font-family: "Playfair Display", serif;
@@ -143,7 +143,7 @@ h2.team-heading {
 }
 
 /*Executive positions*/
-.profile_text_position {
+.profileTextPosition {
   align-content: center;
   color: #313638;
   font-family: "Montserrat", sans-serif;
@@ -156,7 +156,7 @@ h2.team-heading {
 }
 
 /*Executive degrees*/
-.profile_degree {
+.profileDegree {
   font-family: "Montserrat", sans-serif;
   font-size: 1.3vw;
   font-weight: lighter;
@@ -168,13 +168,13 @@ h2.team-heading {
 }
 
 /*---------------------------Subcommittee team profiles--------------------------*/
-.subcom_section {
+.subcomSection {
   align-content: center;
   justify-content: center;
 }
 
 /*Subcommittee team section*/
-.subcom-type {
+.subcomType {
   font-family: "Playfair Display", serif;
   text-align: center;
   color: #feb14b;
@@ -185,7 +185,7 @@ h2.team-heading {
 }
 
 /*Subcommittee names*/
-.subcom_profile_name {
+.subcomProfileName {
   font-family: "Montserrat", sans-serif;
   color: #feb14b;
   font-size: 1.3vw;
@@ -199,7 +199,7 @@ h2.team-heading {
 }
 
 /*Subcommittee degrees*/
-.subcom_profile_degree {
+.subcomProfileDegree {
   font-family: "Montserrat", sans-serif;
   font-size: 1.3vw;
   letter-spacing: 0.1vw;
@@ -210,20 +210,20 @@ h2.team-heading {
   padding: 0;
 }
 
-.subcom_row {
+.subcomRow {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
   width: 70%;
 }
 
-.subcom_col {
+.subcomCol {
   align-items: flex-start;
   margin-right: 5%;
   flex: 1;
 }
 
-.subcom_longer_col {
+.subcomLongerCol {
   align-items: flex-start;
   flex: 2;
 }
@@ -235,37 +235,37 @@ h2.team-heading {
 
 /*---------------------------Mobile resizing--------------------------*/
 @media screen and (max-width: 800px) {
-  .team-heading {
+  .teamHeading {
     font-size: 24px;
   }
 
-  .subcom-type,
-  .profile_text_name {
+  .subcomType,
+  .profileTextName {
     font-size: 20px;
   }
 
-  .profile_text_position {
+  .profileTextPosition {
     font-size: 18px;
   }
 
-  .profile_degree,
-  .subcom_profile_degree,
-  .subcom_profile_name {
+  .profileDegree,
+  .subcomProfileDegree,
+  .subcomProfileName {
     font-size: 16px;
   }
 
-  .exec_row {
+  .execRow {
     flex-direction: column;
   }
 
-  .team-heading,
-  .subcom_section,
-  .subcom_type {
+  .teamHeading,
+  .subcomSection,
+  .subcomType {
     width: 90%;
     margin: 0 auto;
   }
 
-  .subcom_row {
+  .subcomRow {
     display: inline-grid;
     width: 100%;
     grid-template-columns: 90px auto;
@@ -273,13 +273,13 @@ h2.team-heading {
     align-content: start;
   }
 
-  .subcom_profile_degree {
+  .subcomProfileDegree {
     overflow-wrap: break-word;
     word-break: break-word;
     hyphens: auto;
   }
 
-  .profile_crop {
+  .profileCrop {
     width: 200px;
     height: 200px;
   }

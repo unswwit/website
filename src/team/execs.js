@@ -1,6 +1,6 @@
 import React from "react";
 import "../style.css";
-import "./team.css";
+import styles from "./team.module.css";
 
 const Execs = (props) => {
   const socials = {
@@ -10,24 +10,24 @@ const Execs = (props) => {
   }
 
   return (
-    <div className="exec_col">
-      <div className="profile">
+    <div className={styles.execCol}>
+      <div className={styles.profile}>
         <div>
-          {props.imgUrl && <div className="profile_crop">
+          {props.imgUrl && <div className={styles.profileCrop}>
             <img
               src={process.env.PUBLIC_URL + props.imgUrl}
-              className={"profile_img " + props.className}
+              className={`${styles.profileImg} ${styles[props.className]}`}
               alt={props.name}
             />
           </div>}
-          <div className="profile_details">
-            <p className="profile_text_name">{props.name}</p>
-            <p className="profile_text_position">{props.position}</p>
-            {props.degree && <p className="profile_degree">
+          <div className={styles.profileDetails}>
+            <p className={styles.profileTextName}>{props.name}</p>
+            <p className={styles.profileTextPosition}>{props.position}</p>
+            {props.degree && <p className={styles.profileDegree}>
               {props.degree}
               {props.year && ", " + props.year + " year"}
             </p>}
-            {props.linkedin && <div className="icon_bar">
+            {props.linkedin && <div className={styles.iconBar}>
               {Object.keys(socials).map((social) => {
                 return (
                   <a
@@ -37,7 +37,7 @@ const Execs = (props) => {
                     key={social}
                   >
                     <img
-                      className="icon"
+                      className={styles.icon}
                       src={`${process.env.PUBLIC_URL}/icons/${social}.png`}
                       alt={social}
                     />
