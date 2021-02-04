@@ -18,6 +18,7 @@
 
 .upcoming {
   box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 
 .event-description {

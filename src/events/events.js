@@ -66,56 +66,62 @@ const Events = () => {
       {/* Main Title, and Subtitle Area */}
       <div className="events-body">
         <h2>UPCOMING EVENTS</h2>
-        {!upcomingEvents.length ? 
+        <div id="eventsLoadingContainer">
+          {loading && <CircularProgress
+            variant="indeterminate"
+            size={50}
+            thickness={5}
+            id="eventsLoading"
+          />}
+        </div>
+        {!loading && (!upcomingEvents.length ? 
           (<p className="lookout">Keep a lookout here for our upcoming events!</p>)
           :
-          (<div className="grid-container">
-            <div className="grid-container">            
-              {upcomingEvents.map((upcomingEvent, index) => {
-                return <div key={index} className="upcoming">
-                  <img
-                    className="event-images"
-                    src={
-                      process.env.PUBLIC_URL +
+          (<div className="grid-container">          
+            {upcomingEvents.map((upcomingEvent, index) => {
+              return <div key={index} className="upcoming">
+                <img
+                  className="event-images"
+                  src={
+                    process.env.PUBLIC_URL +
                       `/event-covers/2021/${upcomingEvent.img}`
-                    }
-                    alt={upcomingEvent.label}
-                  />
-                  <div className="event-description">
-                    <p className="event-name">{upcomingEvent.title}</p>
-                    {/* The date should be in the format of the following example: 24th January 2020 */}
-                    <p className="event-date">{upcomingEvent.date}</p>
-                    <p className="event-summary">
-                      {upcomingEvent.description}              
-                    </p>
-                    <ul id="links">
-                      <li className="event-link">
-                        <a
-                          href={upcomingEvent.registerLink}
-                          className="event"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
+                  }
+                  alt={upcomingEvent.label}
+                />
+                <div className="event-description">
+                  <p className="event-name">{upcomingEvent.title}</p>
+                  {/* The date should be in the format of the following example: 24th January 2020 */}
+                  <p className="event-date">{upcomingEvent.date}</p>
+                  <p className="event-summary">
+                    {upcomingEvent.description}              
+                  </p>
+                  <ul id="links">
+                    <li className="event-link">
+                      <a
+                        href={upcomingEvent.registerLink}
+                        className="event"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                           Register
-                        </a>
-                      </li>
-                      <li className="event-link">
-                        <a
-                          href={upcomingEvent.facebookLink}
-                          className="event"                       
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
+                      </a>
+                    </li>
+                    <li className="event-link">
+                      <a
+                        href={upcomingEvent.facebookLink}
+                        className="event"                       
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                           Facebook
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
-              })}
-            </div>
+              </div>
+            })}
           </div>)
-        }
+        )}
         <h2>PAST EVENTS</h2>
         <Accordion expanded={expanded} onChange={() => {setExpanded(!expanded)}}>
           <AccordionSummary
