@@ -1,16 +1,16 @@
 /*------------------------------Upcoming Events--------------------------------*/
-.events-body {
+.eventsBody {
   max-width: 70%;
   margin: 0 auto;
   margin-bottom: 10%;
 }
 
-.events-body h2 {
+.eventsBody h2 {
   margin-top: 8%;
   margin-bottom: 4%;
 }
 
-.grid-container {
+.gridContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   grid-gap: 20px;
@@ -21,12 +21,12 @@
   position: relative;
 }
 
-.event-description {
+.eventDescription {
   margin: 50px 30px;
   padding: 0;
 }
 
-.event-name {
+.eventName {
   color: #feb14b;
   font-family: "Playfair Display", serif;
   letter-spacing: 1pt;
@@ -35,7 +35,7 @@
   padding-bottom: 5px;
 }
 
-.event-date {
+.eventDate {
   color: #313638;
   letter-spacing: 0.1vw;
   font-size: 8pt;
@@ -44,7 +44,7 @@
   margin: 0;
 }
 
-.event-summary {
+.eventSummary {
   color: #707070;
   letter-spacing: 0.1vw;
   font-size: 10pt;
@@ -62,7 +62,7 @@ ul#links {
   padding: 0;
 }
 
-li.event-link {
+li.eventLink {
   margin: 0 10px;
   float: right;
 }
@@ -83,18 +83,18 @@ a:hover.event {
 }
 
 /*------------------------------Past Events--------------------------------*/
-#past-events.grid-container {
+#pastEvents.gridContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 20px;
 }
 
-.grid-item {
+.gridItem {
   display: flex;
   box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
-img.event-images {
+img.eventImages {
   max-width: 100%;
   object-fit: cover;
 }
@@ -122,11 +122,11 @@ p.lookout {
 
 /*------------------------------Responsive Mobile Design--------------------------------*/
 @media only screen and (max-width: 650px) {
-  .events-body {
+  .eventsBody {
     max-width: 90%;
   }
 
-  .grid-container {
+  .gridContainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     grid-gap: 20px;
@@ -134,17 +134,17 @@ p.lookout {
 }
 
 @media only screen and (max-width: 350px) {
-  .events-body {
+  .eventsBody {
     max-width: 100%;
   }
 
-  .grid-container {
+  .gridContainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 20px;
   }
 
-  #past-events.grid-container {
+  #pastEvents.gridContainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 20px;

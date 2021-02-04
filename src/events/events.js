@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./events.css";
+import styles from "./events.module.css";
 import PageHeader from ".././header";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
@@ -51,7 +51,8 @@ const Events = () => {
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: googleData => {
         setLoading(false);
-        setEvents(googleData["past-events"]["elements"].filter((event) => event.year === year));
+        const allEvents = googleData["past-events"]["elements"].filter((event) => event.year === year);
+        setEvents(allEvents.reverse());
         setUpcomingEvents(googleData["upcoming-events"]["elements"]);
       },
       simpleSheet: false
@@ -64,52 +65,52 @@ const Events = () => {
       {/* Cover Photo */}
       <PageHeader imgUrl="/headers/events-header.jfif" title="Events" />
       {/* Main Title, and Subtitle Area */}
-      <div className="events-body">
+      <div className={styles.eventsBody}>
         <h2>UPCOMING EVENTS</h2>
-        <div id="eventsLoadingContainer">
+        <div id={styles.eventsLoadingContainer}>
           {loading && <CircularProgress
             variant="indeterminate"
             size={50}
             thickness={5}
-            id="eventsLoading"
+            id={styles.eventsLoading}
           />}
         </div>
         {!loading && (!upcomingEvents.length ? 
-          (<p className="lookout">Keep a lookout here for our upcoming events!</p>)
+          (<p className={styles.lookout}>Keep a lookout here for our upcoming events!</p>)
           :
-          (<div className="grid-container">          
+          (<div className={styles.gridContainer}>          
             {upcomingEvents.map((upcomingEvent, index) => {
-              return <div key={index} className="upcoming">
+              return <div key={index} className={styles.upcoming}>
                 <img
-                  className="event-images"
+                  className={styles.eventImages}
                   src={
                     process.env.PUBLIC_URL +
                       `/event-covers/2021/${upcomingEvent.img}`
                   }
                   alt={upcomingEvent.label}
                 />
-                <div className="event-description">
-                  <p className="event-name">{upcomingEvent.title}</p>
+                <div className={styles.eventDescription}>
+                  <p className={styles.eventName}>{upcomingEvent.title}</p>
                   {/* The date should be in the format of the following example: 24th January 2020 */}
-                  <p className="event-date">{upcomingEvent.date}</p>
-                  <p className="event-summary">
+                  <p className={styles.eventDate}>{upcomingEvent.date}</p>
+                  <p className={styles.eventSummary}>
                     {upcomingEvent.description}              
                   </p>
-                  <ul id="links">
-                    <li className="event-link">
+                  <ul id={styles.links}>
+                    <li className={styles.eventLink}>
                       <a
                         href={upcomingEvent.registerLink}
-                        className="event"
+                        className={styles.event}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                           Register
                       </a>
                     </li>
-                    <li className="event-link">
+                    <li className={styles.eventLink}>
                       <a
                         href={upcomingEvent.facebookLink}
-                        className="event"                       
+                        className={styles.event}                      
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -128,7 +129,7 @@ const Events = () => {
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel4bh-content"
           >
-            <Typography id="eventResources">Event Resources</Typography>
+            <Typography id={styles.eventResources}>Event Resources</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <iframe
@@ -149,22 +150,22 @@ const Events = () => {
           updateYear={handleYear} 
         />
 
-        <div id="eventsLoadingContainer">
+        <div id={styles.eventsLoadingContainer}>
           {loading && <CircularProgress
             variant="indeterminate"
             size={50}
             thickness={5}
-            id="eventsLoading"
+            id={styles.eventsLoading}
           />}
         </div>
 
-        <div id="past-events" className="grid-container">
+        <div id={styles.pastEvents} className={styles.gridContainer}>
           {!loading && events.map((event, index) => {
             let eventLabel = event.img.split(".")[0].split("-");
             eventLabel.shift();
-            return <div key={index} className="grid-item">
+            return <div key={index} className={styles.gridItem}>
               <img
-                className="event-images"
+                className={styles.eventImages}
                 src={`${process.env.PUBLIC_URL}/event-covers/${year}/${event.img}`}
                 alt={eventLabel.join(" ")}
               />
