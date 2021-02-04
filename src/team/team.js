@@ -6,7 +6,7 @@ import Execs from "./execs";
 import SubCom from "./subcom";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import Timeline from "./Timeline";
+import Timeline from "../Timeline";
 
 function OurTeam() {
   const sectors = ["Events", "Externals", "Human Resources", "Education", "Marketing", "Information Technology"];
@@ -21,6 +21,42 @@ function OurTeam() {
       "Gabrielle Younes": "gab_img",   
       "Vivian Wong": "vivw_img",   
     }
+  }
+
+  const marks = [
+    {
+      value: 100,
+      scaledValue: 2021,
+      label: "2021"
+    },
+    {
+      value: 75,
+      scaledValue: 2020,
+      label: "2020"
+    },
+    {
+      value: 50,
+      scaledValue: 2019,
+      label: "2019"
+    },
+    {
+      value: 25,
+      scaledValue: 2018,
+      label: "2018"
+    },
+    {
+      value: 0,
+      scaledValue: 2017,
+      label: "2017"
+    },
+  ];
+
+  const valueToYear = {
+    0: "2017",
+    25: "2018",
+    50: "2019",
+    75: "2020",
+    100: "2021"
   }
 
   const handleYear = (newYear) => {
@@ -57,7 +93,15 @@ function OurTeam() {
       <PageHeader imgUrl="/headers/2021-team-header.jpg" title="Meet Our Team" />
 
       {/* Timeline */}
-      <Timeline updateYear={handleYear} />
+      <Timeline 
+        margin={"7%"}
+        page={"teams"}
+        step={25}
+        valueToYear={valueToYear} 
+        marks={marks} 
+        updateYear={handleYear} 
+      />
+
       <div id="teamLoadingContainer">
         {loading && <CircularProgress
           variant="indeterminate"
@@ -66,7 +110,6 @@ function OurTeam() {
           id="teamLoading"
         />}
       </div>
-    
           
       {!loading && 
       <>

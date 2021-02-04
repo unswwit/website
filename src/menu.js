@@ -101,7 +101,6 @@ class Menu extends Component {
                           <li className="menu-item">BLOG</li>
                         </div>
                       </NavLink>
-                      {/*
                       <NavLink
                         className="menu-link"
                         to="/podcast"
@@ -111,7 +110,7 @@ class Menu extends Component {
                         <div className="menu-box">
                           <li className="menu-item">PODCAST</li>
                         </div>
-                      </NavLink>*/}
+                      </NavLink>
                       <NavLink
                         className="menu-link"
                         to="/publications"

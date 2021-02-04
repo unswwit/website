@@ -1,19 +1,18 @@
 /*-------------------------------Podcast Previews-----------------------------*/
-
 .logoContainer {
 	background-color: #FFF7EF;
 	border-radius: 50%;
-	height: 300px;
-	width: 300px;
-	margin: 50px 50px 50px 100px;
+	height: 280px;
+	width: 280px;
+	margin: 50px 50px 50px 40px;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 }
 
 .podcastLogo {
-	height: 300px;
-	width: 300px;
+	height: 280px;
+	width: 280px;
 	object-fit: contain;
 	padding-bottom: 35px;
 }
@@ -23,6 +22,7 @@
 	width: 80%;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 
 #introDescription {
@@ -37,10 +37,10 @@
 #episodes {
 	margin: 0 auto;
 	width: 80%;
-	display: flex;
-	flex-flow: row wrap;
+  display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(320px, 350px));
 	justify-content: center;
-	margin-bottom: 50px;
+	padding: initial;
 }
 
 #heading {
@@ -68,11 +68,199 @@
 
 /*-------------------------------Podcast Episode Page-----------------------------*/
 #episodeContainer {
-	width: 950px;
+	width: 70%;
 	margin: auto;
 	padding: 25px;
 }
 
 #episodeDate {
 	text-align: center;
+}
+
+#podcastLoadingContainer {
+	display: flex;
+	justify-content: center;
+}
+
+#podcastLoading {
+  color:#feb14b;  
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.sourceLogos {
+	margin-left: 1vw;
+}
+
+.platformLogos {
+	margin-right: 1vw;
+}
+
+.platforms {
+	margin-top: 30px;
+	text-align: right;
+}
+
+/*-------------------------------Mobile Responsiveness-----------------------------*/
+
+@media only screen and (max-width: 880px) {
+	#episodes {
+		width: 100%;
+	}
+
+	.logoContainer {
+		margin: 50px 50px 50px 0px;
+	}
+
+	#introDescription {
+		width: 48%;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	#episodeContainer {
+		width: 80%;
+	}	
+
+	#episodeContainer h2 {
+		font-size: 16.5pt;
+	}
+	
+	#heading {
+		font-size: 40px;
+		margin-bottom: 0px;
+	}
+
+	.logoContainer {
+		height: 250px;
+		width: 250px;
+	}
+	
+	.podcastLogo {
+		height: 250px;
+		width: 250px;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	#episodes {
+		display: flex;
+		width: 65%;
+		flex-flow: row wrap;
+		margin: 0 auto;
+	}
+
+	.previewContainer .episodeCover {
+		width: 100%;
+		height: auto;
+		object-fit: contain;
+	}
+
+	.logoContainer {
+		height: 210px;
+		width: 210px;
+	}
+	
+	.podcastLogo {
+		height: 210px;
+		width: 210px;
+	}
+
+	#heading {
+		font-size: 25pt;
+	}
+
+	#introDescription {
+		width: 55%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.logoContainer {
+		height: 180px;
+		width: 180px;
+	}
+	
+	.podcastLogo {
+		height: 180px;
+		width: 180px;
+	}
+
+	#podcastIntroduction {
+		width: 90%;
+	}
+
+	.platformLogos {
+		margin-right: 2vw;
+	}
+
+	#episodes {
+		width: 95%;
+	}
+}
+
+@media only screen and (max-width: 500px) { 
+	#podcastIntroduction {
+		flex-direction: column;
+		margin-bottom: 20px;
+	}
+
+	#introDescription { 
+		width: 95%;
+	}
+
+	#introDescription p {
+		text-align: justify;
+	}
+
+	#introDescription h2 { 
+		text-align: center;
+	}
+
+	.logoContainer {
+		margin-right: 0px;
+		height: 200px;
+		width: 200px;
+	}
+	
+	#platformContainer {
+		text-align: center;
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.podcastLogo {
+		height: 200px;
+		width: 200px;
+	}
+
+	.platformLogos {
+		margin-right: 0;
+		width: 35px;
+		height: 35px;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.platforms {
+		text-align: center;
+		display: flex;
+		justify-content: space-around;
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
+
+	.platforms img {
+		margin-left: 0vw;
+	}
+
+	#overview {
+		text-align: justify;
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	#episodeContainer {
+		padding: 25px 0px;
+	}
 }
