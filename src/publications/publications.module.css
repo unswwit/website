@@ -143,9 +143,10 @@
 #pubLoading {
   color:#feb14b;  
   margin-top: 10%;
+  margin-bottom: 7%;
 }
 
 #pubLoadingContainer {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }

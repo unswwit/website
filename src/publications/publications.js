@@ -26,9 +26,7 @@ const Publications = () => {
       <PageHeader imgUrl="/headers/publications-header.png" title="Publications" />
 
       <div className={styles.publicationsBody}>
-        {/*2020 articles*/}
-
-        <h1>2020</h1>
+        {/*Loading Container*/}
         <div id={styles.pubLoadingContainer}>
           {loading && <CircularProgress
             variant="indeterminate"
@@ -37,16 +35,25 @@ const Publications = () => {
             id={styles.pubLoading}
           />}
         </div>
-
-        <div className={styles.row}>
-          {articles.map((article) => <PubArticle
-            imgUrl={`./publications/${article.img}`}
-            heading={article.heading}
-            date={article.date}
-            url={article.url}
-          />
-          )}          
-        </div>
+      
+        {/*Articles*/}
+        {!loading && Array.from({ length: 2 }, (_, i) => i + 2020)
+          .reverse()
+          .map((year) => {
+            return <div key={year}>
+              <h1>{year}</h1>  
+              <div className={styles.row}>
+                {articles.filter((article) => article.year === year.toString()).map((article, index) => <PubArticle
+                  key={index}
+                  imgUrl={`${process.env.PUBLIC_URL}/publications/${year}/${article.img}`}
+                  heading={article.heading}
+                  date={article.date}
+                  url={article.url}
+                />
+                )}          
+              </div>
+            </div>
+          })}       
       </div>
     </>
   );
