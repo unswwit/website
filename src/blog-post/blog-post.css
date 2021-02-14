@@ -190,6 +190,12 @@ a:hover {
   width: 120%;
 }
 
+.exec2021Img {
+  height: auto;
+  width: 115%;
+  transform: translate(-5%, -13%);
+}
+
 /*Author details*/
 .author-right {
   display: inline-block;
