@@ -56,7 +56,6 @@ class blogPost6 extends Component {
             <br />
 
             <p className="question">
-              {" "}
               Please provide a short summary of your career journey so far:
             </p>
             <p className="post-content">
