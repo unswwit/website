@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ".././style.css";
-import "./blog-post.css";
+import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from ".././header";
 
@@ -17,16 +17,16 @@ class blogPost4 extends Component {
         <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #4" />
 
         {/*Start of blog post*/}
-        <div className="blog-content">
+        <div className={styles.blogContent}>
           <div>
-            <h2 className="blog-title">
+            <h2 className={styles.blogTitle}>
               Introducing: Syin Li Tan, Consultant at Deloitte
             </h2>
-            <p className="date"> 10th June 2020 </p>
+            <p className={styles.date}> 10th June 2020 </p>
           </div>
 
-          <div className="post">
-            <p className="post-content">
+          <div className={styles.post}>
+            <p className={styles.postContent}>
               Syin Li Tan has all the hallmarks of a promising career at
               Deloitte Consulting in Australia. Upon graduating with a master’s
               degree in Information Systems from Monash University in 2017, she
@@ -36,7 +36,7 @@ class blogPost4 extends Component {
               Systems.{" "}
             </p>
             <br />
-            <p className="post-content">
+            <p className={styles.postContent}>
               Most young professionals don’t land their dream job right out of
               university. But before Deloitte welcomed Syin to their team, she
               had completed four internships for tech companies, earned awards
@@ -44,24 +44,24 @@ class blogPost4 extends Component {
               musician.{" "}
             </p>
             <br />
-            <p className="post-content">
+            <p className={styles.postContent}>
               Let’s read what Syin had to say about her journey into tech below.
             </p>
 
-            <p className="question">
+            <p className={styles.question}>
               {" "}
               What sparked your interest to join the field of STEM?
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               Modern. Evergreen. Fast-paced. Constantly moving. That’s what drew
               me to the field of Technology!
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               Please provide a short summary of your career journey so far:
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               {" "}
               After completing my degree, I started at Deloitte as a Graduate in
               Deloitte’s Graduate Program where I was equipped with foundational
@@ -71,26 +71,26 @@ class blogPost4 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               Where do you see yourself in the future (career wise)?
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               In the future, I hope to be seen as the “go-to person” for SAP
               Project Systems and other modules in finance and procurement. I
               also aspire to be a great manager of people and teams.
             </p>
             <br />
 
-            <p className="question">What do you love about your career now?</p>
-            <p className="post-content">
+            <p className={styles.question}>What do you love about your career now?</p>
+            <p className={styles.postContent}>
               I love that I work with individuals who uphold integrity in their
               lives and work, and individuals who have ambition to constantly
               improve and achieve excellence.
             </p>
             <br />
 
-            <p className="question">Favourite Quote or Motto?</p>
-            <p className="post-content">
+            <p className={styles.question}>Favourite Quote or Motto?</p>
+            <p className={styles.postContent}>
               “Whatever you do, work at it with all your heart.
             </p>
             <br />
@@ -101,8 +101,8 @@ class blogPost4 extends Component {
         <AuthorCard
           authors={{
             "vivian-wong": [
-              "/potraits/vivw.jpg",
-              "profile_img vivw_img",
+              "/potraits/blog-authors/vivw.jpg",
+              styles.vivwImg,
               "Vivian Wong",
               "Education Executive",
             ],

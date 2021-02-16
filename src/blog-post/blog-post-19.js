@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ".././style.css";
-import "./blog-post.css";
+import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from ".././header";
 
@@ -19,16 +19,16 @@ class blogPost19 extends Component {
         {/*End of Header*/}
 
         {/*Start of blog post*/}
-        <div className="blog-content">
+        <div className={styles.blogContent}>
           <div>
-            <h2 className="blog-title">
+            <h2 className={styles.blogTitle}>
               Introducing : Shatabdi De, Web Developer at Nine Entertainment Co.
             </h2>
-            <p className="date">5th August 2020</p>
+            <p className={styles.date}>5th August 2020</p>
           </div>
 
-          <div className="post">
-            <p className="post-content">
+          <div className={styles.post}>
+            <p className={styles.postContent}>
               Shatabdi De completed her Masters of IT at UNSW in 2011. Since
               then, she has had the opportunity to utilise creative and
               problem-solving skills, working with Nine Entertainment Co. as a
@@ -41,11 +41,11 @@ class blogPost19 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               What sparked your interest to join the field of STEM?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               Science and technology runs in my family, due to them I took up
               maths and science subjects at school. My favorite subject though
               was English. In university I was exposed to various aspects of
@@ -57,11 +57,11 @@ class blogPost19 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               Please provide a short summary of your career journey so far.
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               I started as a graduate engineer in Solentive. There I gained
               hands on experience in working with C# .Net, Javascript, SQL and
               other web technologies. I applied the concepts of Java learnt in
@@ -75,19 +75,19 @@ class blogPost19 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               Where do you see yourself in the future (career wise)?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               Not sure of this at the moment. Sometimes it’s worth trying
               different things to see where they lead you.
             </p>
             <br />
 
-            <p className="question">What do you love about your career now?</p>
+            <p className={styles.question}>What do you love about your career now?</p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               There’s always a new direction, something new to learn.
               Programming is quite creative, in the sense you are constantly
               problem solving and coming up with ideas and solutions. I love
@@ -98,9 +98,9 @@ class blogPost19 extends Component {
             </p>
             <br />
 
-            <p className="question">Favourite Quote or Motto?</p>
+            <p className={styles.question}>Favourite Quote or Motto?</p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               “Be like water making its way through cracks.” - Bruce Lee (This
               is a long quote, I’ve just put the first line.)
             </p>
@@ -112,7 +112,7 @@ class blogPost19 extends Component {
           authors={{
             "vivian-wong": [
               "/potraits/2020-exec/vivw.jpg",
-              "profile_img vivw_img",
+              styles.vivwImg,
               "Vivian Wong",
               "Education Executive",
             ],

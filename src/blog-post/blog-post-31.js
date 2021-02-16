@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ".././style.css";
-import "./blog-post.css";
+import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from "../header";
 
@@ -19,16 +19,16 @@ class blogPost31 extends Component {
         {/*End of Header*/}
 
         {/*Start of blog post*/}
-        <div className="blog-content">
+        <div className={styles.blogContent}>
           <div>
-            <h2 className="blog-title">
+            <h2 className={styles.blogTitle}>
               Introducing Sophie Warner, Tech Intern at National Australia Bank
             </h2>
-            <p className="date">14th October 2020</p>
+            <p className={styles.date}>14th October 2020</p>
           </div>
 
-          <div className="post">
-            <p className="post-content">
+          <div className={styles.post}>
+            <p className={styles.postContent}>
               Sophie’s journey began while studying Bioengineering and
               Biomedical engineering at UNSW, where she realised her love for
               computer, coding, and technology. Sophie’s journey has led her to
@@ -40,11 +40,11 @@ class blogPost31 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               What sparked your interest to join the field of STEM?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               I always liked maths and physics in high school and saw
               engineering as the intersection of this which could be applied to
               a practical career. My year 12 physics teacher was absolutely
@@ -53,11 +53,11 @@ class blogPost31 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               Please provide a short summary of your career journey so far:
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               I came back from my gap year having no idea what engineering
               courses to enrol in, walked into a random office in the science
               building and ended up being enrolled in a fundamental computer
@@ -69,32 +69,32 @@ class blogPost31 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               Where do you see yourself in the future (career wise)?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               I'd love to move into a role where I can focus more heavily on
               design; where I'd be able to create the systems not just maintain
               them.
             </p>
             <br />
 
-            <p className="question">What do you love about your career now?</p>
+            <p className={styles.question}>What do you love about your career now?</p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               There is always something more to learn. Every day I have touched
               a new part of the infrastructure or teach myself languages not
               covered in uni such as groovy or jsp.
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               Why do you think it is important to empower women and increase
               their involvement in the STEM industry?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               I feel like many women quash their traditional femininity in the
               workplace because it isn't professional. However, the more women
               join STEM the less I'll get scoffed at for not having seen Star
@@ -105,34 +105,34 @@ class blogPost31 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               What are the challenging aspects of your career?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               Keeping track of a million moving parts to find which one has a
               small fracture.
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               How have others inspired you at different periods throughout your
               career?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               They've helped show me the many varying journeys that can be taken
               to achieve your goals, and how those goals change along the way.
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               What are the hard and soft skills that you advised students who
               are interested in pursuing a similar career path (for
               internship/graduate role) to upskill on?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               Not only being able to talk in front of others but being able to
               talk about technical topics that you have pre-existing knowledge
               about in a professional way. So much of being a software engineer
@@ -141,12 +141,12 @@ class blogPost31 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               What is one piece of advice that you would give to your younger
               self back in university?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               Get involved in as many activities as possible, especially ones
               with a technical component. Once you graduate there aren't as many
               clubs that'll give you access to amazing resources and
@@ -154,9 +154,9 @@ class blogPost31 extends Component {
             </p>
             <br />
 
-            <p className="question">Favourite Quote or Motto?</p>
+            <p className={styles.question}>Favourite Quote or Motto?</p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               Katie Boland, Head of Front End Engineering at PWC gave this piece
               of advice for dealing with imposter syndrome: "Always carry a cup
               of tea so that when someone asks you a challenging question, you
@@ -170,7 +170,7 @@ class blogPost31 extends Component {
           authors={{
             "georgie-mansfield": [
               "/potraits/georgie.jpg",
-              "profile_img vivw_img",
+              styles.vivwImg,
               "Georgie Mansfield",
               "Education Team",
             ],

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ".././style.css";
-import "./blog-post.css";
+import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from ".././header";
 
@@ -17,14 +17,14 @@ class blogPost11 extends Component {
         <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #11" />
 
         {/*Start of blog post*/}
-        <div className="blog-content">
+        <div className={styles.blogContent}>
           <div>
-            <h2 className="blog-title">AI in the Workplace</h2>
-            <p className="date"> 4th July 2020 </p>
+            <h2 className={styles.blogTitle}>AI in the Workplace</h2>
+            <p className={styles.date}> 4th July 2020 </p>
           </div>
 
-          <div className="post">
-            <p className="post-content">
+          <div className={styles.post}>
+            <p className={styles.postContent}>
               “Will AI take my Job?” is one of the most googled questions on the
               internet and probably a question many readers have considered
               themselves. However, I am here to tell you the answer to that
@@ -32,7 +32,7 @@ class blogPost11 extends Component {
             </p>
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               Why? Because Artificial Intelligence needs humans, and humans need
               AI. AI is creating new industries, changing the way businesses
               work and changing what the workplace looks like. However, it is
@@ -41,11 +41,11 @@ class blogPost11 extends Component {
             <br />
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               <b>So, what does AI in the workplace look like?</b>
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               AI is helping the medical industry to not only create new jobs and
               research opportunities but to better the lives of people affected
               by diseases.{" "}
@@ -62,7 +62,7 @@ class blogPost11 extends Component {
             </p>
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               This is where society can realize the outstanding benefits of AI.
               It can understand humans when other humans can’t. It is able to
               process mass volumes of data at incredible speeds. It can drive
@@ -73,11 +73,11 @@ class blogPost11 extends Component {
             <br />
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               <b>How Will AI Affect Job Loss and Growth?</b>
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               Gartner predicts that in 2020, 2.3 million new jobs in the health
               care, public sector, and education sectors will be created by AI.
               At the same time, manufacturing jobs will be eliminated as a
@@ -86,11 +86,11 @@ class blogPost11 extends Component {
             <br />
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               <b>AI is Not All Powerful</b>
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               Researchers at <a href="https://robohub.org/">RoboHub</a> at the
               University of Waterloo said the biggest misconception among the
               public is that robots are far more capable than they are. The
@@ -102,7 +102,7 @@ class blogPost11 extends Component {
             </p>
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               Humans are learning from AI, working with AI and understanding the
               benefits of AI. In the Construction, Manufacturing, Food or
               Medical industry, AI can only succeed when partnered with humans.
@@ -117,7 +117,7 @@ class blogPost11 extends Component {
           authors={{
             "elisa-sanjurjo": [
               "/potraits/elisa.jpg",
-              "profile_img vivw_img",
+              styles.vivw_img,
               "Elisa Sanjurjo",
               "Education team",
             ],

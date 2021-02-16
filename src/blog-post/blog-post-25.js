@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ".././style.css";
-import "./blog-post.css";
+import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from ".././header";
 
@@ -18,16 +18,16 @@ class blogPost25 extends Component {
         {/*End of Header*/}
 
         {/*Start of blog post*/}
-        <div className="blog-content">
+        <div className={styles.blogContent}>
           <div>
-            <h2 className="blog-title">
+            <h2 className={styles.blogTitle}>
               Introducing: Cindy Russel Sia, Senior Consultant of Deloitte
             </h2>
-            <p className="date">23rd September 2020</p>
+            <p className={styles.date}>23rd September 2020</p>
           </div>
 
-          <div className="post">
-            <p className="post-content">
+          <div className={styles.post}>
+            <p className={styles.postContent}>
               Cindy Russel Sia is a Senior Consultant at Deloitte in Enterprise
               Technology. At university, Russell Sia undertook Human Biology.
               She has received numerous awards including Best Energy Project and
@@ -39,21 +39,21 @@ class blogPost25 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               What sparked your interest to join the field of STEM?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               I love that STEM allows me to observe technological expansion
               happening in this world as businesses shift to automation.
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               Please provide a short summary of your career journey so far:
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               I have gone from working in Science, both in academia and
               industry, to joining Deloitte in Consulting. I have no regrets
               about doing so as the opportunities I’ve had at Deloitte has
@@ -62,28 +62,28 @@ class blogPost25 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               Where do you see yourself in the future (career wise)?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               Looking into the future, I hope to become an industry leader
               within Consulting!
             </p>
             <br />
 
-            <p className="question">What do you love about your career now?</p>
+            <p className={styles.question}>What do you love about your career now?</p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               I love that the opportunities at Deloitte never ends. At Deloitte,
               I get to own my ideas and see, first-hand, the impact that my work
               has made when I work with clients.
             </p>
             <br />
 
-            <p className="question">Favourite Quote or Motto?</p>
+            <p className={styles.question}>Favourite Quote or Motto?</p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               10 years from now, make sure that you can say you chose your life,
               you didn’t settle for it.
             </p>
@@ -96,7 +96,7 @@ class blogPost25 extends Component {
           authors={{
             "georgie-mansfield": [
               "/potraits/georgie.jpg",
-              "profile_img vivw_img",
+              styles.vivwImg,
               "Georgie Mansfield",
               "Education Team",
             ],

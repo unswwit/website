@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ".././style.css";
-import "./blog-post.css";
+import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from ".././header";
 
@@ -19,14 +19,14 @@ class blogPost24 extends Component {
         {/*End of Header*/}
 
         {/*Start of blog post*/}
-        <div className="blog-content">
+        <div className={styles.blogContent}>
           <div>
-            <h2 className="blog-title">Sleep and Study</h2>
-            <p className="date">20th September 2020</p>
+            <h2 className={styles.blogTitle}>Sleep and Study</h2>
+            <p className={styles.date}>20th September 2020</p>
           </div>
 
-          <div className="post">
-            <div className="post-content">
+          <div className={styles.post}>
+            <div className={styles.postContent}>
               In my time at university, I have learnt two things that most
               students have in common:
               <ol>
@@ -39,7 +39,7 @@ class blogPost24 extends Component {
             </div>
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               And I believed that these two factors were just common aspects of
               university life. That was until I read{" "}
               <a
@@ -62,7 +62,7 @@ class blogPost24 extends Component {
             </p>
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               When we sleep, we go through two distinct phases, the first being
               REM (Rapid-Eye-Movement) Sleep and NREM (Non-Rapid-Eye-Movement)
               Sleep. REM sleep fuels creativity. It is a time for our brain to
@@ -75,7 +75,7 @@ class blogPost24 extends Component {
             </p>
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               However, memory consolidation occurs during NREM. In this phase,
               all the thoughts, ideas, and pieces of information we have stored
               in our short-term memory (stored in a region of the brain called
@@ -90,7 +90,7 @@ class blogPost24 extends Component {
             </p>
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               Additionally, Dr Robert Stickgold, a researcher at Harvard Medical
               School, conducted a study in which students had to learn a visual
               memory task through repetition. One group of participants received
@@ -106,7 +106,7 @@ class blogPost24 extends Component {
             </p>
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               To sleep 8+ hours the night before a big study day is proven to be
               incredibly efficient. In doing so, you are emptying and cleaning
               the slate for the short-term memory centre of the hippocampus to
@@ -116,7 +116,7 @@ class blogPost24 extends Component {
             </p>
             <br />
 
-            <div className="post-content">
+            <div className={styles.postContent}>
               The KEY takeaways that I hope you have now gained are:
               <ul>
                 <li>
@@ -137,7 +137,7 @@ class blogPost24 extends Component {
             </div>
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               I have now learnt that sleep and study go hand in hand. This book
               has changed my life, and an all-nighter for me is the thing of the
               PAST. I hope I have persuaded you to get a full night of sleep.
@@ -155,7 +155,7 @@ class blogPost24 extends Component {
               />
             </div>
 
-            <p className="post-content" style={{ fontSize: "11pt" }}>
+            <p className={styles.postContent} style={{ fontSize: "11pt" }}>
               Professor Matthew Walker is a Professor of Neuroscience and
               Psychology at the University of California, Berkeley, and Founder
               and Director of the Center for Human Sleep Science.
@@ -169,7 +169,7 @@ class blogPost24 extends Component {
           authors={{
             "elisa-sanjurjo": [
               "/potraits/elisa.jpg",
-              "profile_img vivw_img",
+              styles.vivw_img,
               "Elisa Sanjurjo",
               "Education team",
             ],
