@@ -21,7 +21,7 @@ import Publications from "./publications/publications";
 import Events from "./events/events";
 import Podcast from "./podcast/Podcast";
 import EpisodePage from "./podcast/EpisodePage";
-import NotFound from "./NotFound";
+import NotFound from "./not-found/NotFound";
 import Menu from "./menu";
 import MenuBtn from "./menuBtn";
 
