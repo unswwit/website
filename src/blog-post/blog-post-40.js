@@ -74,7 +74,7 @@ class blogPost39 extends Component {
         <AuthorCard
           authors={{
             "georgie-mansfield": [
-              "/potraits/2021-exec/georgie.jpg",
+              "/potraits/blog-authors/georgie2021.jpg",
               styles.exec2021Img,
               "Georgie Mansfield",
               "Education Executive"

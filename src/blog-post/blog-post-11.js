@@ -116,8 +116,8 @@ class blogPost11 extends Component {
         <AuthorCard
           authors={{
             "elisa-sanjurjo": [
-              "/potraits/elisa.jpg",
-              styles.vivw_img,
+              "/potraits/blog-authors/elisa.jpg",
+              styles.authorProfile,
               "Elisa Sanjurjo",
               "Education team",
             ],

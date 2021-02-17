@@ -50,7 +50,7 @@ class blogPost39 extends Component {
             </p>
             <br />
 
-            <p className="super-emph" style={{ color: "black" }}>
+            <p className={styles.superEmph} style={{ color: "black" }}>
 							Do’s and Don’ts for Note Taking
             </p>
             <p className={styles.question}>Tips to help you take notes effectively:</p>
@@ -87,7 +87,7 @@ class blogPost39 extends Component {
             </ul>
             <br />
 
-            <p className="super-emph" style={{ color: "black" }}>
+            <p className={styles.superEmph} style={{ color: "black" }}>
 							Tools for Note Taking
             </p>
             <p className={styles.postContent}>
@@ -97,7 +97,7 @@ class blogPost39 extends Component {
 							ways — from traditional writing, audio, and video recordings to storing complete webpages.
             </p>
 
-            <p className="super-emph" style={{ color: "black" }}>
+            <p className={styles.superEmph} style={{ color: "black" }}>
 							Popular Note Taking Methods
             </p>
             <p className={styles.postContent}>
@@ -143,8 +143,8 @@ class blogPost39 extends Component {
         <AuthorCard
           authors={{
             "vivian-wong": [
-              "/potraits/2020-exec/vivw.jpg",
-              styles.vivwImg,
+              "/potraits/blog-authors/vivw.jpg",
+              styles.authorProfile,
               "Vivian Wong",
               "Education Executive"
             ]

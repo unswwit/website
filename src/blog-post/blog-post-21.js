@@ -199,8 +199,8 @@ class blogPost21 extends Component {
         <AuthorCard
           authors={{
             "vivian-wong": [
-              "/potraits/2020-exec/vivw.jpg",
-              "profile_img vivw_img",
+              "/potraits/blog-authors/vivw.jpg",
+              styles.authorProfile,
               "Vivian Wong",
               "Education Executive",
             ],

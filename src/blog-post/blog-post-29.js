@@ -175,8 +175,8 @@ class blogPost29 extends Component {
         <AuthorCard
           authors={{
             "victoria-ruming": [
-              "/potraits/victoria.jpg",
-              styles.vivwImg,
+              "/potraits/blog-authors/victoria.jpg",
+              styles.authorProfile,
               "Victoria Ruming",
               "Education Team",
             ],

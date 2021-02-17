@@ -94,8 +94,8 @@ class blogPost20 extends Component {
         <AuthorCard
           authors={{
             "georgie-mansfield": [
-              "/potraits/georgie.jpg",
-              styles.vivwImg,
+              "/potraits/blog-authors/georgie.jpg",
+              styles.authorProfile,
               "Georgie Mansfield",
               "Education Team",
             ],

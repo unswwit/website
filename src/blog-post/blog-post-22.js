@@ -38,7 +38,7 @@ class blogPost22 extends Component {
             </p>
             <br />
 
-            <ol className="list">
+            <ol className={styles.list}>
               <li className={styles.question}>Tech-Infused Fashion</li>
               <br />
 
@@ -264,8 +264,8 @@ class blogPost22 extends Component {
         <AuthorCard
           authors={{
             "victoria-ruming": [
-              "/potraits/victoria.jpg",
-              styles.vivwImg,
+              "/potraits/blog-authors/victoria.jpg",
+              styles.authorProfile,
               "Victoria Ruming",
               "Education team",
             ],

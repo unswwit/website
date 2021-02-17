@@ -122,8 +122,8 @@ class blogPost32 extends Component {
         <AuthorCard
           authors={{
             "jane-wang": [
-              "/potraits/jane-wang.png",
-              styles.vivwImg,
+              "/potraits/blog-authors/jane-wang.png",
+              styles.authorProfile,
               "Jane Wang",
               "Events Team",
             ],

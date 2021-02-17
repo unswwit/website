@@ -90,8 +90,8 @@ class blogPost10 extends Component {
         <AuthorCard
           authors={{
             "victoria-ruming": [
-              "/potraits/victoria.jpg",
-              styles.vivw_img,
+              "/potraits/blog-authors/victoria.jpg",
+              styles.authorProfile,
               "Victoria Ruming",
               "Education team",
             ],

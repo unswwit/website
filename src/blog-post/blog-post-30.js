@@ -76,7 +76,7 @@ class blogPost30 extends Component {
               The typical technical interview is ~45 minutes long:
             </p>
 
-            <div style={{ overflowX: "auto" }}>
+            <div className={styles.tableContainer}>
               <table className={styles.post}>
                 <tbody>
                   <tr>
@@ -456,8 +456,8 @@ class blogPost30 extends Component {
         <AuthorCard
           authors={{
             "vivian-wong": [
-              "/potraits/2020-exec/vivw.jpg",
-              styles.vivwImg,
+              "/potraits/blog-authors/vivw.jpg",
+              styles.authorProfile,
               "Vivian Wong",
               "Education Executive",
             ],

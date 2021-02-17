@@ -100,7 +100,7 @@ p.date {
   justify-content: center;
 }
 
-/*for any image attachments that are centre aligned*/
+/*for any image attachment that is centre aligned*/
 .pic {
   margin: 0 auto;
   max-width: 40%;
@@ -126,43 +126,43 @@ img.floatRight {
 .blogContent img {
   max-width: 100%;
   object-fit: contain;
-  padding: 20px;
+  padding: 15px;
 }
 
-/* Shows images in 2 columns */
+/*Shows multiple images in 2 columns*/
 /* Example: blog-post-22 */
-.blogContent .imgBox {
-  width: 100%;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .outerBox {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  margin: 0 auto;
+}
+
+.smallContainer {
+  width: 70%;
 }
 
 .innerBox {
   max-width: 45%;
   flex: 50%;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
 }
 
 .innerBox img {
   height: auto;
   padding: 0px;
-  padding-bottom: 20px;
-}
-
-.imgBox a {
-  font-size: 11pt;
+  padding-bottom: 15px;
 }
 
 .post table {
   border-collapse: collapse;
   width: 100%;
+}
+
+.tableContainer {
+  overflow-x: auto;
 }
 
 .post th,
@@ -175,15 +175,6 @@ img.floatRight {
   background-color: #feb14b;
   color: white;
   font-weight: 500;
-}
-
-/* Used for pictures in blog 34 */
-.img-general {
-  width: 35%;
-  height: auto;
-  object-fit: contain;
-  margin: none;
-  padding: 15px;
 }
 
 /*-------------------------------Author card-----------------------------*/
@@ -209,15 +200,9 @@ img.floatRight {
   width: 100%;
 }
 
-.vivwImg {
+.authorProfile {
   height: auto;
   transform: translate(-5%, -10%);
-  width: 120%;
-}
-
-.vicImg {
-  height: auto;
-  transform: translate(-5%, -5%);
   width: 120%;
 }
 
@@ -275,15 +260,16 @@ img.floatRight {
     width: 100%;
     height: 100%;
   }
-
-  .pic, .innerBox {
-    max-width: 70%;
-  }
 }
 
 @media only screen and (max-width: 700px) {
   .outerBox {
     flex-direction: column;
+  }
+
+  .smallContainer {
+    width: 100%;
+    flex-direction: row;
   }
 }
 
@@ -329,6 +315,10 @@ img.floatRight {
 }
 
 @media only screen and (max-width: 400px) {
+  .smallContainer {
+    flex-direction: column;
+  }
+
   .blogTitle {
     font-size: 16.5pt;
   }

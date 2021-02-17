@@ -145,7 +145,7 @@ class blogPost24 extends Component {
             </p>
             <br />
 
-            <div className="img-box">
+            <div className={styles.pic}>
               <img
                 src={
                   process.env.PUBLIC_URL +
@@ -168,8 +168,8 @@ class blogPost24 extends Component {
         <AuthorCard
           authors={{
             "elisa-sanjurjo": [
-              "/potraits/elisa.jpg",
-              styles.vivw_img,
+              "/potraits/blog-authors/elisa.jpg",
+              styles.authorProfile,
               "Elisa Sanjurjo",
               "Education team",
             ],

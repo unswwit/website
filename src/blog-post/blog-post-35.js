@@ -153,14 +153,14 @@ class blogPost35 extends Component {
         <AuthorCard
           authors={{
             "georgie-mansfield": [
-              "/potraits/georgie.jpg",
-              styles.vivwImg,
+              "/potraits/blog-authors/georgie.jpg",
+              styles.authorProfile,
               "Georgie Mansfield",
               "Education Team",
             ],
             "elisa-sanjurjo": [
-              "/potraits/elisa.jpg",
-              styles.vivwImg,
+              "/potraits/blog-authors/elisa.jpg",
+              styles.authorProfile,
               "Elisa Sanjurjo",
               "Education team",
             ],

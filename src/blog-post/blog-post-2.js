@@ -104,13 +104,13 @@ class blogPost2 extends Component {
           authors={{
             "elisa-sanjurjo": [
               "/potraits/blog-authors/elisa.jpg",
-              styles.vivwImg,
+              styles.authorProfile,
               "Elisa Sanjurjo",
               "Education Team",
             ],
             "victoria-ruming": [
               "/potraits/blog-authors/victoria.jpg",
-              styles.vivwImg,
+              styles.authorProfile,
               "Victoria Ruming",
               "Education Team",
             ],

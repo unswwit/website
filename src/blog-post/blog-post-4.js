@@ -102,7 +102,7 @@ class blogPost4 extends Component {
           authors={{
             "vivian-wong": [
               "/potraits/blog-authors/vivw.jpg",
-              styles.vivwImg,
+              styles.authorProfile,
               "Vivian Wong",
               "Education Executive",
             ],
