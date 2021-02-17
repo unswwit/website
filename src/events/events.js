@@ -37,21 +37,24 @@ const Events = () => {
     100: "2021"
   }
 
+  // set the year on the events timeline
   const handleYear = (newYear) => {
     setYear(newYear);
   };
 
-  //start webpage at the top
+  // start webpage at the top
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  // set when to close the loading screen
   useEffect(() => {
     if (initialLoading && !loading) {
       setinitialLoading(false);
     }
   }, [initialLoading, loading])
-  
+
+  // load events
   useEffect(() => {
     setLoading(true);
 
