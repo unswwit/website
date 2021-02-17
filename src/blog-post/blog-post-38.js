@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ".././style.css";
-import "./blog-post.css";
+import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from "../header";
 
@@ -19,35 +19,35 @@ class blogPost38 extends Component {
         {/*End of Header*/}
 
         {/*Start of blog post*/}
-        <div className="blog-content">
+        <div className={styles.blogContent}>
           <div>
-            <h2 className="blog-title">
+            <h2 className={styles.blogTitle}>
               WIT Personal Project Series - eXsight{" "}
             </h2>
-            <p className="date">9th November 2020</p>
+            <p className={styles.date}>9th November 2020</p>
           </div>
 
-          <div className="post">
-            <p className="post-content">
+          <div className={styles.post}>
+            <p className={styles.postContent}>
               Apart from studying, attending lectures, completing internships,
               attending society events and hanging out with friends, some
               students manage to complete incredible personal projects during
               their time at uni! WIT will be shining the spotlight on the
               amazing personal projects students at UNSW have created.
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               This week, we continue our Personal Project Series with the winner
               of the prestigious 2018 Peter Ferrell Cup, the inspiring
               Co-Founder of the start-up eXsight! eXsight aims to help users who
               are suffering from colour blindness differentiate between commonly
               confused colours.
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               Without further ado, let’s get talking with Emma Casolin!
             </p>
             <br />
-            <p className="question">What inspired you to start eXsight?</p>
-            <p className="post-content">
+            <p className={styles.question}>What inspired you to start eXsight?</p>
+            <p className={styles.postContent}>
               My brother and other members of my family are colour blind, so I
               knew about the difficulties the condition can cause in everyday
               life. eXsight originally started as my Design and Technology major
@@ -56,10 +56,10 @@ class blogPost38 extends Component {
               blindness and help to make the world more accessible.
             </p>
             <br />
-            <p className="question">
+            <p className={styles.question}>
               Please tell us a little bit about your university experience
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               I’m studying a double degree (Advanced Science and Engineering)
               majoring in Psychology and Software Engineering. I previously
               majored in Aerospace Engineering, during which time I was a member
@@ -68,10 +68,10 @@ class blogPost38 extends Component {
               product, I want to use my Software Engineering degree to help.
             </p>
             <br />
-            <p className="question">
+            <p className={styles.question}>
               How did your university experience help you start eXsight?
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               Being at UNSW opened my eyes to the possibility of turning my
               small concept into a startup business. It also allowed me to meet
               Maggie (eXsight’s Co-Founder) and introduced me to opportunities
@@ -79,11 +79,11 @@ class blogPost38 extends Component {
               of this combined is what motivates me to continue eXsight.
             </p>
             <br />
-            <p className="question">
+            <p className={styles.question}>
               Can you tell us about the process of starting and building
               eXsight? What time commitments did it require?
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               Not only do we need to set aside time for building and developing
               our product, but we also need to devote time to marketing, as well
               as entering ourselves into events and workshops to both promote
@@ -92,10 +92,10 @@ class blogPost38 extends Component {
               order to manage other commitments.
             </p>
             <br />
-            <p className="question">
+            <p className={styles.question}>
               Who did you turn to for help along the way?
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               The UNSW Founders program was a major help throughout the entire
               process and eXsight would definitely not be where it is today, or
               even exist, without the help of the programs Maggie and I have
@@ -104,11 +104,11 @@ class blogPost38 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               What valuable lessons did you learn whilst developing eXsight?
               What skills did you pick up?{" "}
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               We learnt a lot about the importance of listening to your target
               market - neither Maggie nor I are colour blind, so we have to go
               by what people who are colour blind tell us about their
@@ -122,11 +122,11 @@ class blogPost38 extends Component {
               want to help each other out, and I really love that.
             </p>
             <br />
-            <p className="question">
+            <p className={styles.question}>
               What was the biggest challenge you faced whilst developing eXsight
               and how did you overcome it?
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               Probably having to drop our original idea in order to create
               something new that solved the problem better. It was really hard
               to put aside all the hard work we’d done and essentially start
@@ -136,11 +136,11 @@ class blogPost38 extends Component {
               business, is what helped us make the decision to pivot.
             </p>
             <br />
-            <p className="question">
+            <p className={styles.question}>
               What advice would you give to prospective students who wish to
               start their own technology projects?
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               I would highly recommend reaching out to existing startups and
               small businesses. From my experience, everyone is willing to help
               out and a lot of people will be willing to have a chat with you in
@@ -150,11 +150,11 @@ class blogPost38 extends Component {
               recommend trying to do it all on your own.
             </p>
             <br />
-            <p className="question">
+            <p className={styles.question}>
               What do you hope to be doing in future? What are your future plans
               for eXsight?
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               We’d like to have a working prototype of our new product working
               by the end of this year. Ultimately we’d really like to release a
               product that makes a difference in the world and makes life
@@ -163,7 +163,7 @@ class blogPost38 extends Component {
               expectation that everyone is accomodating for everyone.
             </p>
             <br />
-            <p className="post-content">
+            <p className={styles.postContent}>
               Increasing quality of life with a determination to help others is
               at the core of this inspiring start-up, and eXsight truly
               highlights the impact amazing Co-Founders Emma and Maggie are
@@ -179,14 +179,14 @@ class blogPost38 extends Component {
         <AuthorCard
           authors={{
             "srija-mukherjee": [
-              "/potraits/srija.jpg",
-              "profile_img vivw_img",
+              "/potraits/blog-authors/srija.jpg",
+              styles.authorProfile,
               "Srija Mukherjee",
               "Externals Team",
             ],
             "georgie-mansfield": [
-              "/potraits/georgie.jpg",
-              "profile_img vivw_img",
+              "/potraits/blog-authors/georgie.jpg",
+              styles.authorProfile,
               "Georgie Mansfield",
               "Education Team",
             ],

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ".././style.css";
-import "./blog-post.css";
+import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from ".././header";
 
@@ -17,15 +17,15 @@ class blogPost7 extends Component {
         <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #7" />
 
         {/*Start of blog post*/}
-        <div className="blog-content">
+        <div className={styles.blogContent}>
           <div>
-            <h2 className="blog-title">How to Ace Your Hackathon</h2>
-            <p className="date"> 21st June 2020 </p>
+            <h2 className={styles.blogTitle}>How to Ace Your Hackathon</h2>
+            <p className={styles.date}> 21st June 2020 </p>
           </div>
 
-          <div className="post">
-            <p className="question">What is a Hackathon?</p>
-            <p className="post-content">
+          <div className={styles.post}>
+            <p className={styles.question}>What is a Hackathon?</p>
+            <p className={styles.postContent}>
               Hackathons are opportunities for students to challenge themselves
               and showcase their skills by creating a technical product to
               resolve real world problems. Teams of 3-5 members are presented
@@ -34,8 +34,8 @@ class blogPost7 extends Component {
             </p>
             <br />
 
-            <p className="question">Hackathon Participants Make a Difference</p>
-            <p className="post-content">
+            <p className={styles.question}>Hackathon Participants Make a Difference</p>
+            <p className={styles.postContent}>
               Our 2019 WIT Hackathon theme, <strong> Do with Digital </strong>,
               challenged participants to design assistive technology to improve
               the lives of Australians living with disabilities or functional
@@ -45,13 +45,13 @@ class blogPost7 extends Component {
               themes to raise awareness and highlight the importance of these
               societal concerns.
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               Stay tuned for the theme of this year’s WIT Hackathon!
             </p>
             <br />
 
-            <p className="question">The Most Vital Elements of Success</p>
-            <p className="post-content">
+            <p className={styles.question}>The Most Vital Elements of Success</p>
+            <p className={styles.postContent}>
               Former WIT Hackathon winners and runner up teams have shared what
               contributed to their success and what they would have done
               differently. Here are some advice from WIT Hackathon winners
@@ -61,20 +61,20 @@ class blogPost7 extends Component {
             <br />
 
             <br />
-            <ol className="list">
-              <li className="question">
+            <ol className={styles.list}>
+              <li className={styles.question}>
                 A Strong Pitch drives your team to success
               </li>
-              <p className="post-content">
+              <p className={styles.postContent}>
                 <em>
                   Instead of focusing on how your solution works, consider what
                   the audience cares about and come up with a story that
                   introduces a problem and your solution.
-                </em>{" "}
+                </em>
                 -First Place, Hungry Hakkers
               </p>
 
-              <p className="post-content">
+              <p className={styles.postContent}>
                 Nearly all teams underestimated how long it takes to craft an
                 engaging pitch and to work through a live-demo. You should
                 identify your best public speakers at the start of the
@@ -88,11 +88,11 @@ class blogPost7 extends Component {
               </p>
               <br />
 
-              <li className="question">
+              <li className={styles.question}>
                 Generate and Research Project/Product Ideas Before the Hackathon
                 Begins.
               </li>
-              <p className="post-content">
+              <p className={styles.postContent}>
                 We were surprised to discover the winning teams did not prepare
                 for the Hackathon! However, they all agreed their Hackathon
                 experience would have been better if they had brainstormed and
@@ -100,17 +100,17 @@ class blogPost7 extends Component {
                 spending anywhere from 25-50 percent of their precious limited
                 time during a hackathon coming up with an idea, product
                 features, and value proposition, it’s no wonder they would
-                advise arriving with researched ideas.{" "}
+                advise arriving with researched ideas.
               </p>
               <br />
 
-              <li className="question">Technical Skills Are A Must</li>
-              <p className="post-content">
+              <li className={styles.question}>Technical Skills Are A Must</li>
+              <p className={styles.postContent}>
                 Teams also point to the necessity for technical knowledge in the
-                group.{" "}
+                group.
               </p>
 
-              <p className="post-content">
+              <p className={styles.postContent}>
                 As Hackathons have a technical focus, participants are usually
                 expected to build a technical prototype from the ground up. As a
                 result, every team should have at least one person who is
@@ -127,16 +127,16 @@ class blogPost7 extends Component {
               <br />
             </ol>
 
-            <p className="question">Other Pearls of Wisdom</p>
-            <p className="post-content">
+            <p className={styles.question}>Other Pearls of Wisdom</p>
+            <p className={styles.postContent}>
               Team members shared other pearls of wisdom that will make your
               Hackathon experience more enjoyable and productive.{" "}
             </p>
             <br />
 
-            <ul className="list">
-              <li className="question">Arrive ready to learn and have fun! </li>
-              <p className="post-content">
+            <ul className={styles.list}>
+              <li className={styles.question}>Arrive ready to learn and have fun! </li>
+              <p className={styles.postContent}>
                 While these teams earned top prizes in hackathons, they did not
                 set out to win. They felt that would put unnecessary pressure on
                 them. Instead, they all entered the Hackathons with the intent
@@ -144,10 +144,10 @@ class blogPost7 extends Component {
               </p>
               <br />
 
-              <li className="question">
-                Decide how to spend your time and divide responsibilities.{" "}
+              <li className={styles.question}>
+                Decide how to spend your time and divide responsibilities.
               </li>
-              <p className="post-content">
+              <p className={styles.postContent}>
                 Teams agreed that all members should be part of the idea
                 creation and research phase and found various ways to divide
                 other responsibilities based on team members’ strengths. Some
@@ -160,22 +160,22 @@ class blogPost7 extends Component {
               </p>
               <br />
 
-              <li className="question">
-                Share knowledge between team members.{" "}
+              <li className={styles.question}>
+                Share knowledge between team members.
               </li>
-              <p className="post-content">
+              <p className={styles.postContent}>
                 Regardless of how tasks are divided, it’s important that members
                 stay abreast of developments amongst their team. One team
                 recommended creating a Google Document where members can share
-                their knowledge and progress with other team members.{" "}
+                their knowledge and progress with other team members.
               </p>
               <br />
 
-              <li className="question">
+              <li className={styles.question}>
                 Time pressure is a real challenge, so arrive with strategies to
-                overcome it.{" "}
+                overcome it.
               </li>
-              <p className="post-content">
+              <p className={styles.postContent}>
                 All teams face challenges in hackathons, with time pressure
                 being the most commonly-cited challenge. Teams were particularly
                 surprised by how long it took to come up with a great idea and
@@ -189,17 +189,17 @@ class blogPost7 extends Component {
               <br />
             </ul>
 
-            <p className="question">
-              Examples of winning products and projects{" "}
+            <p className={styles.question}>
+              Examples of winning products and projects
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               The winning teams have certainly earned the right to advise others
               on how to have a successful hackathon experience. Let’s look at
               the awesome ideas and products these teams developed during the
               WIT Hackathon!
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               In 2019, the first place winner (Hungry Hakkers; Victor Tsang,
               Kevin Lou, Sebastian Hodge, Iris Chong, Christine Wu) developed an
               application to help streamline caretakers' work in nursing homes.
@@ -212,7 +212,7 @@ class blogPost7 extends Component {
               work in tandem with already-existing technology.
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               The 2019 second place winner (Team Nandos; Jovann Tjuandi, Kai
               Feng, Madeline Younes, Rebecca Tran) designed a prototype to
               simulate everyday scenarios that allows people with autism to
@@ -223,7 +223,7 @@ class blogPost7 extends Component {
               socially.
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               The 2019 third place winner (Starks; Rahil Agrawal, Aditya Karia,
               Sushant Adhikari, Andrew Kaploun, Brittany Evat) came up with a
               filtering service to allow people to search for establishments
@@ -232,10 +232,10 @@ class blogPost7 extends Component {
               world for those living with disabilities and diseases, the team
               created a filtering service using integration with AWS APIs and
               Health APIs so users could find restaurants, companies, and other
-              establishments that suit their needs.{" "}
+              establishments that suit their needs.
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               The second place winning team of the 2017 WIT Hackathon
               (Christopher Shi, Mackenzie Alexander, Lena Albin, Vanessa Long)
               created a predictive platform to help students discover their
@@ -244,15 +244,15 @@ class blogPost7 extends Component {
               help themselves and other students in the same situation. Students
               complete psychometric quizzes and video interviews, AI evaluates
               the interviews, and the platform provides students with potential
-              career pathways and opportunities.{" "}
+              career pathways and opportunities.
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               We would like to share a special thanks to Victor Tsang, Madeline
               Younes, Kai Feng, Rahil Agrawal and Christopher Shi for helping
               with this blog post. As representatives of past winning teams,
               your advice will allow future WIT Hackathon participants to have a
-              positive experience and create meaningful and relevant solutions.{" "}
+              positive experience and create meaningful and relevant solutions.
             </p>
             <br />
           </div>
@@ -261,8 +261,8 @@ class blogPost7 extends Component {
         <AuthorCard
           authors={{
             "vivian-wong": [
-              "/potraits/vivw.jpg",
-              "profile_img vivw_img",
+              "/potraits/blog-authors/vivw.jpg",
+              styles.authorProfile,
               "Vivian Wong",
               "Education Executive",
             ],

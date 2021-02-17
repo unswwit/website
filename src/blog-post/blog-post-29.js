@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ".././style.css";
-import "./blog-post.css";
+import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from "../header";
 
@@ -19,16 +19,16 @@ class blogPost29 extends Component {
         {/*End of Header*/}
 
         {/*Start of blog post*/}
-        <div className="blog-content">
+        <div className={styles.blogContent}>
           <div>
-            <h2 className="blog-title">
+            <h2 className={styles.blogTitle}>
               Introducing Davina Adisusila, Engineering Team Lead at Eucalyptus
             </h2>
-            <p className="date">10th October 2020</p>
+            <p className={styles.date}>10th October 2020</p>
           </div>
 
-          <div className="post">
-            <p className="post-content">
+          <div className={styles.post}>
+            <p className={styles.postContent}>
               Davina Adisusila, a former UNSW Computer-Science student, has put
               her skills and knowledge to great use over the years. In the past,
               she interned as a software engineer at News Corp Australia and
@@ -41,10 +41,10 @@ class blogPost29 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               What sparked your interest to join the field of STEM?
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               Growing up I was really fascinated by Pixar's skill of evoking
               emotion and long lasting memories in its audiences through 3D
               animation. From there I started exploring the digital world, which
@@ -53,11 +53,11 @@ class blogPost29 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               Please provide a short summary of your career journey so far:
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               I studied Computer Science at UNSW and did multiple internships as
               a Software Developer at companies including Google and Atlassian.
               I continued on as a full time developer at Atlassian, working on
@@ -70,11 +70,11 @@ class blogPost29 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               Where do you see yourself in the future (career wise)?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               I feel like I've changed a lot in the past few years, and I still
               have a lot to learn and grow into. So far I'm enjoying the
               management path of technical teams and am excited to see where it
@@ -82,21 +82,21 @@ class blogPost29 extends Component {
             </p>
             <br />
 
-            <p className="question">What do you love about your career now?</p>
+            <p className={styles.question}>What do you love about your career now?</p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               My career has allowed me to build up skills and apply them in an
               area I really care about with is online healthcare. It's so
               rewarding to know that I am helping people in some way through
               software I've built or facilitated.
             </p>
 
-            <p className="question">
+            <p className={styles.question}>
               Why do you think it is important to empower women and increase
               their involvement in the STEM industry?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               In the STEM industry, we build for a variety of people, and if the
               teams building these products aren't as diverse as its audience,
               we're never going to create the best solutions to really help
@@ -105,11 +105,11 @@ class blogPost29 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               What are the challenging aspects of your career?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               Imposter syndrome is a huge one and always kicks in every now and
               again. The nature of working in STEM involves facing new
               challenges, hard problems and many unknowns, and from that can
@@ -120,12 +120,12 @@ class blogPost29 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               How have others inspired you at different periods throughout your
               career?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               There have been so many people throughout my journey that have
               been instrumental in shaping me today. From high school, through
               to university to working in the industry. The network in the
@@ -135,13 +135,13 @@ class blogPost29 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               What are the hard and soft skills that you advised students who
               are interested in pursuing a similar career path (for
               internship/graduate role) to upskill on?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               For those interested in becoming a software engineer, I would say
               foundational computer science skills are key. Learn how to learn.
               New technologies and frameworks pop up a lot, but if you have the
@@ -152,20 +152,20 @@ class blogPost29 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               What is one piece of advice that you would give to your younger
               self back in university?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               If you're not happy, change something. Only you can author your
               story.
             </p>
             <br />
 
-            <p className="question">Favourite Quote or Motto?</p>
+            <p className={styles.question}>Favourite Quote or Motto?</p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               It's not how good you are, it's how good you want to be <br /> –
               Paul Arden
             </p>
@@ -175,8 +175,8 @@ class blogPost29 extends Component {
         <AuthorCard
           authors={{
             "victoria-ruming": [
-              "/potraits/victoria.jpg",
-              "profile_img vivw_img",
+              "/potraits/blog-authors/victoria.jpg",
+              styles.authorProfile,
               "Victoria Ruming",
               "Education Team",
             ],

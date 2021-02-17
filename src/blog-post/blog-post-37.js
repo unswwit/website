@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ".././style.css";
-import "./blog-post.css";
+import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from "../header";
 
@@ -19,16 +19,16 @@ class blogPost37 extends Component {
         {/*End of Header*/}
 
         {/*Start of blog post*/}
-        <div className="blog-content">
+        <div className={styles.blogContent}>
           <div>
-            <h2 className="blog-title">
+            <h2 className={styles.blogTitle}>
               Introducing Tanzeem Syeda, Software Engineer at WiseTech Global
             </h2>
-            <p className="date">4th November 2020</p>
+            <p className={styles.date}>4th November 2020</p>
           </div>
 
-          <div className="post">
-            <p className="post-content">
+          <div className={styles.post}>
+            <p className={styles.postContent}>
               Tanzeem’s journey is nothing short of impressive. Since beginning
               her first internship at Google when she was only 15, Tanzeem has
               continued to challenge herself, and continually worked to become
@@ -39,10 +39,10 @@ class blogPost37 extends Component {
               an impact.
             </p>
             <br />
-            <p className="question">
+            <p className={styles.question}>
               What sparked your interest to join the field of STEM?
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               When I was in Year 9, I chose a subject called Information
               Software Technology. My teacher could see how much I loved the
               subject and challenged me to start learning how to code. It was
@@ -55,10 +55,10 @@ class blogPost37 extends Component {
               Engineer.
             </p>
             <br />
-            <p className="question">
+            <p className={styles.question}>
               Please provide a short summary of your career journey so far:
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               I started my career in Technology at a very young age. I was 15
               when I secured an Internship at Google. I worked tirelessly to get
               this role and I was driven to make a difference for other
@@ -77,10 +77,10 @@ class blogPost37 extends Component {
               within the company or in the technology they use.
             </p>
             <br />
-            <p className="question">
+            <p className={styles.question}>
               Where do you see yourself in the future (career wise)?
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               My drive is to make an impact and create ripples of change around
               me. I have always been passionate about sharing my personal story
               to encourage other students that no matter what age, you can
@@ -91,8 +91,8 @@ class blogPost37 extends Component {
               ability.
             </p>
             <br />
-            <p className="question">What do you love about your career now?</p>
-            <p className="post-content">
+            <p className={styles.question}>What do you love about your career now?</p>
+            <p className={styles.postContent}>
               Too many things, but I will keep it short. What I love about my
               career is that it is always changing and evolving into something
               better. I love the idea of improving, whether that means personal
@@ -108,11 +108,11 @@ class blogPost37 extends Component {
               and making the most of all opportunities.
             </p>
             <br />
-            <p className="question">
+            <p className={styles.question}>
               Why do you think it is important to empower women and increase
               their involvement in the STEM industry?
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               This is so important! For so many years, women have been a
               minority in the STEM Industry. There have been so many instances,
               too many to count where I am the only woman in a meeting, in a
@@ -128,10 +128,10 @@ class blogPost37 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               What are the challenging aspects of your career?
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               I believe the hardest thing for me so far has been truly
               understanding what I want to do in my career, and stepping away
               from the pressure around me to specialise in certain technical
@@ -141,11 +141,11 @@ class blogPost37 extends Component {
               to slow down and enjoy the journey.
             </p>
             <br />
-            <p className="question">
+            <p className={styles.question}>
               How have others inspired you at different periods throughout your
               career?
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               At the beginning of my career, I always went to networking events
               to meet new people and just have simple conversations. I was
               always inspired by people’s courage and passion in what they did.
@@ -159,12 +159,12 @@ class blogPost37 extends Component {
               change and inspire you.
             </p>
             <br />
-            <p className="question">
+            <p className={styles.question}>
               What are the hard and soft skills that you advised students who
               are interested in pursuing a similar career path (for
               internship/graduate role) to upskill on?
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               Have a good balance of both hard and soft skills! In our rapidly
               growing industry, you have to know how to be technical but also
               know how to share and communicate your ideas. Both go hand in hand
@@ -172,21 +172,21 @@ class blogPost37 extends Component {
               embrace every role you get.
             </p>
             <br />
-            <p className="question">
+            <p className={styles.question}>
               What is one piece of advice that you would give to your younger
               self back in university?
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               Enjoy and embrace the process of learning. Education is a blessing
               that we often fail to recognise.
             </p>
             <br />
-            <p className="question">Favourite Quote or Motto?</p>
-            <p className="post-content">
+            <p className={styles.question}>Favourite Quote or Motto?</p>
+            <p className={styles.postContent}>
               You only regret the chances you do not take. If you don't do what
               you want to, how will you ever know what could have happened ?
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               Stay tuned! Tanzeem’s upcoming podcast will soon be released with
               more details about her amazing journey and how she achieved
               ambitious goals!
@@ -198,8 +198,8 @@ class blogPost37 extends Component {
         <AuthorCard
           authors={{
             "georgie-mansfield": [
-              "/potraits/georgie.jpg",
-              "profile_img vivw_img",
+              "/potraits/blog-authors/georgie.jpg",
+              styles.authorProfile,
               "Georgie Mansfield",
               "Education Team",
             ],

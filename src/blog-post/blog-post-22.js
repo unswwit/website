@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ".././style.css";
-import "./blog-post.css";
+import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from ".././header";
 
@@ -19,16 +19,16 @@ class blogPost22 extends Component {
         {/*End of Header*/}
 
         {/*Start of blog post*/}
-        <div className="blog-content">
+        <div className={styles.blogContent}>
           <div>
-            <h2 className="blog-title">
+            <h2 className={styles.blogTitle}>
               4 Ways Technology is Changing how we make Art
             </h2>
-            <p className="date">13th September 2020</p>
+            <p className={styles.date}>13th September 2020</p>
           </div>
 
-          <div className="post">
-            <p className="post-content">
+          <div className={styles.post}>
+            <p className={styles.postContent}>
               Technology is not all about maths and science. Technology can also
               be artistic, paving the way for new and exciting expressions of
               visual creativity. In doing so, artists, engineers and programmers
@@ -38,11 +38,11 @@ class blogPost22 extends Component {
             </p>
             <br />
 
-            <ol className="list">
-              <li className="question">Tech-Infused Fashion</li>
+            <ol className={styles.list}>
+              <li className={styles.question}>Tech-Infused Fashion</li>
               <br />
 
-              <p className="post-content">
+              <p className={styles.postContent}>
                 Fashion is one of the broadest and immediate forms of
                 self-expression, showcasing personality, individuality and
                 culture. Technology has fused with this powerful tool in recent
@@ -53,7 +53,7 @@ class blogPost22 extends Component {
               </p>
               <br />
 
-              <p className="post-content">
+              <p className={styles.postContent}>
                 <a href="http://www.makefashion.ca/">MakeFashion</a>&nbsp; is an
                 initiative launched in 2012, fusing fashion and technology on
                 the runway. The MakeFashion community has produced over 100
@@ -65,14 +65,14 @@ class blogPost22 extends Component {
                 illuminated kimono that reacts to a hand-held fan motion sensor.
               </p>
 
-              <div className="img-box outer-box">
-                <div className="inner-box">
+              <div className={styles.outerBox}>
+                <div className={styles.innerBox}>
                   <img
                     src={
                       process.env.PUBLIC_URL +
                       "/blog-attachments/blog-22-fashion-1.jpg"
                     }
-                    alt="makeFashion-1"
+                    alt="gamer girls"
                   />
                   <br />
                   <a href="http://www.makefashion.ca/projects/gamer-girls/">
@@ -80,13 +80,13 @@ class blogPost22 extends Component {
                   </a>
                 </div>
 
-                <div className="inner-box">
+                <div className={styles.innerBox}>
                   <img
                     src={
                       process.env.PUBLIC_URL +
                       "/blog-attachments/blog-22-fashion-2.jpg"
                     }
-                    alt="makeFashion-2"
+                    alt="Erina Kashihara"
                   />
                   <br />
                   <a href="http://www.makefashion.ca/projects/erina-kashihara/">
@@ -96,10 +96,10 @@ class blogPost22 extends Component {
               </div>
 
               <br />
-              <li className="question">Light Sculptures</li>
+              <li className={styles.question}>Light Sculptures</li>
               <br />
 
-              <p className="post-content">
+              <p className={styles.postContent}>
                 Sculpting is an extremely popular artistic medium that can be
                 found across the world and throughout the centuries. These days,
                 light sculptures have become especially popular, giving rise to
@@ -109,14 +109,14 @@ class blogPost22 extends Component {
               </p>
               <br />
 
-              <p className="post-content">
+              <p className={styles.postContent}>
                 <a href="https://www.vividsydney.com/">Vivid</a>&nbsp; is
                 arguably the most well-known light festival in Sydney,
                 showcasing dozens of installations and projections every year.
               </p>
               <br />
 
-              <p className="post-content">
+              <p className={styles.postContent}>
                 <a href="https://www.unswilluminate.com/">UNSW llluminate</a>
                 &nbsp; has created works for Vivid, such as Celestial Pancake in
                 2019, a hanging audio-visual installment set to alternating
@@ -127,39 +127,39 @@ class blogPost22 extends Component {
                 to the tree through its roots.
               </p>
 
-              <div className="img-box outer-box">
-                <div className="inner-box">
+              <div className={styles.outerBox}>
+                <div className={styles.innerBox}>
                   <img
                     src={
                       process.env.PUBLIC_URL +
                       "/blog-attachments/blog-22-fashion-3.jpg"
                     }
-                    alt="makeFashion-3"
+                    alt="Celestial Pancake"
                   />
-                  <a href="https://www.vividsydney.com/event/light/celestial-pancake">
+                  <a className={styles.sourceLink} href="https://www.vividsydney.com/event/light/celestial-pancake">
                     https://www.vividsydney.com/event/light/celestial-pancake
                   </a>
                 </div>
 
-                <div className="inner-box">
+                <div className={styles.innerBox}>
                   <img
                     src={
                       process.env.PUBLIC_URL +
                       "/blog-attachments/blog-22-fashion-4.jpg"
                     }
-                    alt="makeFashion-4"
+                    alt="Synergy"
                   />
-                  <a href="https://www.vividsydney.com/event/light/synergy">
+                  <a className={styles.sourceLink} href="https://www.vividsydney.com/event/light/synergy">
                     https://www.vividsydney.com/event/light/synergy
                   </a>
                 </div>
               </div>
 
               <br />
-              <li className="question">Laser-Cutting</li>
+              <li className={styles.question}>Laser-Cutting</li>
               <br />
 
-              <p className="post-content">
+              <p className={styles.postContent}>
                 Art may incorporate exceptionally fine designs, which require
                 precise carving or cutting. Laser-cutters are highly versatile
                 pieces of technology that can assist with the creation of such
@@ -170,52 +170,61 @@ class blogPost22 extends Component {
                 elements.
               </p>
 
-              <div className="img-box">
-                <img
-                  src={
-                    process.env.PUBLIC_URL +
-                    "/blog-attachments/blog-22-fashion-5.jpg"
-                  }
-                  alt="makeFashion-5"
-                />
-
-                <img
-                  src={
-                    process.env.PUBLIC_URL +
-                    "/blog-attachments/blog-22-fashion-6.jpg"
-                  }
-                  alt="makeFashion-6"
-                />
-                <br />
-
-                <a href="http://www.eric-standley.com/#/eitheror-newmarch/">
-                  http://www.eric-standley.com/#/eitheror-newmarch/
-                </a>
-              </div>
+              <div className={styles.outerBox}>
+                <div className={styles.innerBox}>
+                  <img
+                    src={
+                      process.env.PUBLIC_URL +
+                      "/blog-attachments/blog-22-fashion-5.jpg"
+                    }
+                    alt="Either/Or Newmarch"
+                  />
+                  <a className={styles.sourceLink} href="http://www.eric-standley.com/#/eitheror-newmarch/">
+                    http://www.eric-standley.com/#/eitheror-newmarch/
+                  </a>
+                </div>
+                
+                <div className={styles.innerBox}>
+                  <img
+                    src={
+                      process.env.PUBLIC_URL +
+                      "/blog-attachments/blog-22-fashion-6.jpg"
+                    }
+                    alt="Either/Or Newmarch"
+                  />
+                  <a className={styles.sourceLink} href="http://www.eric-standley.com/#/eitheror-newmarch/">
+                    http://www.eric-standley.com/#/eitheror-newmarch/
+                  </a>
+                </div>                 
+              </div>            
               <br />
+              
 
-              <p className="post-content">
+              <p className={styles.postContent}>
                 Laser-cutters may also be used to create artwork out of wood.
                 Oakland-based artist Gabriel Schama uses such a technique to
                 create faces, patterns and religious icons out of laser-cut wood
                 layers.
               </p>
 
-              <div className="img-box">
+              <div className={styles.pic}>
                 <img
                   src={
                     process.env.PUBLIC_URL +
                     "/blog-attachments/blog-22-fashion-7.jpg"
                   }
-                  alt="makeFashion-7"
+                  alt="Either/Or Newmarch"
                 />
+                <a className={styles.sourceLink} href="https://www.gabrielschama.com/2016lasercuts/2015/8/16/3ypxfq4rz6nd2mge4h27o2ohkpx480">
+                  https://www.gabrielschama.com/2016lasercuts/2015/8/16/3ypxfq4rz6nd2mge4h27o2ohkpx480
+                </a>               
               </div>
               <br />
 
-              <li className="question">Code-Generated Art</li>
+              <li className={styles.question}>Code-Generated Art</li>
               <br />
 
-              <p className="post-content">
+              <p className={styles.postContent}>
                 Art is often structured, geometric or otherwise mathematical in
                 some form. As a result, a large variety of artworks may be
                 generated from code. This technique takes some of the control
@@ -225,7 +234,7 @@ class blogPost22 extends Component {
               </p>
               <br />
 
-              <p className="post-content">
+              <p className={styles.postContent}>
                 Norwegian artist Espen Kluge created a program that produces
                 vector-based images from photographs. The code selects pixels at
                 semi-random, then draws lines in between them. The results are
@@ -233,20 +242,19 @@ class blogPost22 extends Component {
                 no resemblance to the original photograph.
               </p>
 
-              <div className="img-box">
+              <div className={styles.pic}>
                 <img
                   src={
                     process.env.PUBLIC_URL +
                     "/blog-attachments/blog-22-fashion-8.jpg"
                   }
-                  alt="makeFashion-8"
-                />
-                <br />
-
-                <a href="https://www.artnome.com/news/2019/7/24/generative-portraiture-of-espen-kluge">
+                  alt="Portraiture of Espen Kluge"
+                />  
+                <a className={styles.sourceLink} href="https://www.artnome.com/news/2019/7/24/generative-portraiture-of-espen-kluge">
                   https://www.artnome.com/news/2019/7/24/generative-portraiture-of-espen-kluge
-                </a>
+                </a>                
               </div>
+                      
             </ol>
             <br />
           </div>
@@ -256,8 +264,8 @@ class blogPost22 extends Component {
         <AuthorCard
           authors={{
             "victoria-ruming": [
-              "/potraits/victoria.jpg",
-              "profile_img vivw_img",
+              "/potraits/blog-authors/victoria.jpg",
+              styles.authorProfile,
               "Victoria Ruming",
               "Education team",
             ],

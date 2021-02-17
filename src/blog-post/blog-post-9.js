@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ".././style.css";
-import "./blog-post.css";
+import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from ".././header";
 
@@ -17,20 +17,20 @@ class blogPost9 extends Component {
         <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #9" />
 
         {/*Start of blog post*/}
-        <div className="blog-content">
+        <div className={styles.blogContent}>
           <div>
-            <h2 className="blog-title">
+            <h2 className={styles.blogTitle}>
               What Are You <em>Really</em> Procrastinating?
             </h2>
-            <p className="blog-subtitle">
+            <p className={styles.blogSubtitle}>
               Inspired by Tim Urban’s TED Talk “Inside the Mind of a Master
               Procrastinator”
             </p>
-            <p className="date"> 29th June 2020 </p>
+            <p className={styles.date}> 29th June 2020 </p>
           </div>
 
-          <div className="post">
-            <div className="videoWrapper">
+          <div className={styles.post}>
+            <div className={styles.videoWrapper}>
               <iframe
                 title="Tim Urban’s TED Talk “Inside the Mind of a Master Procrastinator” "
                 width="560"
@@ -46,7 +46,7 @@ class blogPost9 extends Component {
 
             <br />
             <br />
-            <p className="post-content">
+            <p className={styles.postContent}>
               To be honest, I don’t consider myself a master procrastinator. I
               start an assignment and study the day we’re notified, and although
               I leave the rest of the work until a couple of days before it’s
@@ -55,19 +55,19 @@ class blogPost9 extends Component {
             </p>
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               That’s all I really associated with procrastination with,
               assignments, bills, <b>deadlines.*</b>{" "}
             </p>
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               And then I watched Tim Urban’s TED Talk “Inside the Mind of a
               Master Procrastinator”.{" "}
             </p>
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               The talk begins with funny, light-hearted stories of the scary
               kind of procrastination, leaving the{" "}
               <b>
@@ -83,7 +83,7 @@ class blogPost9 extends Component {
             </p>
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               That’s when humour was pushed aside and the actual issue came
               through with this picture:{" "}
             </p>
@@ -99,14 +99,14 @@ class blogPost9 extends Component {
               />
             </div>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               This picture shows one box for every week in a 90-year life. When
               you really look at it, there’s not a lot. That’s the moment when
               as a 19-year-old, my life had never felt shorter.{" "}
             </p>
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               All I could see jumping out at me was 20% of my life, where I
               hadn’t learnt Hebrew, I hadn’t travelled to the Middle East again,
               and I hadn’t repainted my room. Things I said I would do, but
@@ -115,7 +115,7 @@ class blogPost9 extends Component {
             </p>
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               Now I knew why the Instant Gratification Monkey was so familiar
               satisfaction from a 90% exam result came much faster than learning
               a new language did. Completing something with a deadline could
@@ -123,19 +123,19 @@ class blogPost9 extends Component {
             </p>
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               For each and every one of us ‘life procrastinators’, these are the
               things that I remember in my peaks of procrastination:
             </p>
             <br />
 
-            <ol className="list">
-              <li className="question">
+            <ol className={styles.list}>
+              <li className={styles.question}>
                 Feel unmotivated? Remember that life calendar.
               </li>
               <br />
 
-              <p className="post-content">
+              <p className={styles.postContent}>
                 I panic every time I think of this. It’s not just the fact that
                 my life is put into a shocking and short reality, but the idea
                 of waking up one morning when I’m 60 and realising that I never
@@ -143,17 +143,17 @@ class blogPost9 extends Component {
               </p>
               <br />
 
-              <li className="question">
+              <li className={styles.question}>
                 Everyone has something they love. And that thing{" "}
-                <b className="super-emph">is</b> outside of uni.
+                <strong className={styles.superEmph}>is</strong> outside of uni.
               </li>
               <br />
 
-              <p className="post-content">
+              <p className={styles.postContent}>
                 Everyone is passionate about an activity!{" "}
               </p>
 
-              <p className="post-content">
+              <p className={styles.postContent}>
                 {" "}
                 Scrapbooking, finding new places to go, history, hiking,
                 cooking, reading, doesn’t matter what it is. Life is more than
@@ -165,15 +165,15 @@ class blogPost9 extends Component {
               </p>
               <br />
 
-              <p className="post-content">
+              <p className={styles.postContent}>
                 Your something-you-love doesn’t need to be something new, it
                 just needs to make you happy, and make you proud of it.
               </p>
               <br />
 
-              <li className="question">Goal setting</li>
+              <li className={styles.question}>Goal setting</li>
               <br />
-              <p className="post-content">
+              <p className={styles.postContent}>
                 {" "}
                 Every year I write 10 goals that I want to achieve. They’re
                 mostly academic goals, like getting a good WAM and applying for
@@ -188,7 +188,7 @@ class blogPost9 extends Component {
               <br />
             </ol>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               {" "}
               Since the first time I watched this TED Talk, I have tried to
               smash through goals, ambitions, and self-projects as quickly as I
@@ -207,7 +207,7 @@ class blogPost9 extends Component {
             </p>
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               {" "}
               No doubt, I’m still a procrastinator. I will always finish
               assignments the night before, keep leaving home 2 minutes before
@@ -217,7 +217,7 @@ class blogPost9 extends Component {
             </p>
             <br />
 
-            <p className="post-content"> I’m gonna make that 80% count. </p>
+            <p className={styles.postContent}> I’m gonna make that 80% count. </p>
             <br />
           </div>
         </div>
@@ -225,8 +225,8 @@ class blogPost9 extends Component {
         <AuthorCard
           authors={{
             "georgie-mansfield": [
-              "/potraits/georgie.jpg",
-              "profile_img vivw_img",
+              "/potraits/blog-authors/georgie.jpg",
+              styles.authorProfile,
               "Georgie Mansfield",
               "Education Team",
             ],

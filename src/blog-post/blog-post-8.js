@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ".././style.css";
-import "./blog-post.css";
+import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from ".././header";
 
@@ -17,23 +17,23 @@ class blogPost8 extends Component {
         <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #8" />
 
         {/*Start of blog post*/}
-        <div className="blog-content">
+        <div className={styles.blogContent}>
           <div>
-            <h2 className="blog-title">
+            <h2 className={styles.blogTitle}>
               WIT Crush Wednesday - Dr Marguerite Evans-Galea
             </h2>
-            <p className="date"> 24th June 2020 </p>
+            <p className={styles.date}> 24th June 2020 </p>
           </div>
 
-          <div className="post">
-            <p className="post-content">
+          <div className={styles.post}>
+            <p className={styles.postContent}>
               Dr. Marguerite Evans-Galea is one of Australia’s leading
               scientists, respected and known internationally for her research
               in cell and gene therapies.
             </p>
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               In a 2017 radio interview published by ABC Sunday Extra in 2017,
               Marguerite reflected on her path into STEM and the challenges
               women faced entering these professions. But STEM was not her first
@@ -47,7 +47,7 @@ class blogPost8 extends Component {
             </p>
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               Graduating with a Ph.D. in Molecular Biology from UNSW, Marguerite
               was enthusiastic to start her career in the US as a postdoctoral
               fellow at the University of Utah. Here, she really began to
@@ -64,7 +64,7 @@ class blogPost8 extends Component {
             </p>
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               After her postdoctoral work, Margarite began working at St Jude
               Children's Research Hospital in Memphis, Tennessee to pursue her
               passion for helping people, by developing current research to cure
@@ -84,7 +84,7 @@ class blogPost8 extends Component {
             </p>
             <br />
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               As Marguerite’s career has blossomed, she has devoted herself to
               inspiring more women and students into STEM. In 2017, she became
               the Executive Director for the Industry Mentoring Network for
@@ -109,8 +109,8 @@ class blogPost8 extends Component {
         <AuthorCard
           authors={{
             "vivian-wong": [
-              "/potraits/2020-exec/vivw.jpg",
-              "profile_img vivw_img",
+              "/potraits/blog-authors/vivw.jpg",
+              styles.authorProfile,
               "Vivian Wong",
               "Education Executive",
             ],

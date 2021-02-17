@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ".././style.css";
-import "./blog-post.css";
+import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from ".././header";
 
@@ -18,16 +18,16 @@ class blogPost27 extends Component {
         {/*End of Header*/}
 
         {/*Start of blog post*/}
-        <div className="blog-content">
+        <div className={styles.blogContent}>
           <div>
-            <h2 className="blog-title">
+            <h2 className={styles.blogTitle}>
               Introducing: Ankita Singh, PHD Student
             </h2>
-            <p className="date">30th September 2020</p>
+            <p className={styles.date}>30th September 2020</p>
           </div>
 
-          <div className="post">
-            <p className="post-content">
+          <div className={styles.post}>
+            <p className={styles.postContent}>
               Ankita Singh is a PhD student at UNSW where she is optimising
               analysis of rocks through techniques and concepts used by Harvard
               Medical School and the Netherlands Cancer Institute. Ankita began
@@ -40,11 +40,11 @@ class blogPost27 extends Component {
             <br />
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               What sparked your interest to join the field of STEM?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               Studying STEM gives us younger generations the chance to be the
               change we want to see in society. Whether it be addressing climate
               change, making government policies, or developing the self-driving
@@ -54,11 +54,11 @@ class blogPost27 extends Component {
             <br />
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               Please provide a short summary of your career journey so far:
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               I completed a Bachelor of Petroleum Engineering (Honours) in 2016
               at UNSW. During my Bachelor's degree, I have contributed immensely
               to the UNSW student community in the role of Peer mentor and
@@ -75,11 +75,11 @@ class blogPost27 extends Component {
             <br />
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               Where do you see yourself in the future (career wise)?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               I really believe that the more exposure one has to real-world
               problems, the better one can contribute to the community and think
               out-of-box. As I finish my doctoral studies, I aim to get a
@@ -91,9 +91,9 @@ class blogPost27 extends Component {
             <br />
             <br />
 
-            <p className="question">What do you love about your career now?</p>
+            <p className={styles.question}>What do you love about your career now?</p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               I absolutely love that I learn something new every day. As a
               doctoral student, you learn to never give up and tackle the same
               problem in so many different ways that it will amaze you how
@@ -107,11 +107,11 @@ class blogPost27 extends Component {
             <br />
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               What are the challenging aspects of your career?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               In the last few years, we have all witnessed that technology has
               developed and progressed at a lightning speed. From a business
               perspective, implementing some of these outstanding technologies
@@ -127,12 +127,12 @@ class blogPost27 extends Component {
             <br />
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               How have others inspired you at different periods throughout your
               career?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               My family is my biggest inspiration. My father taught me to never
               give up, my mother (a.k.a my superwoman) taught me to always hold
               my moral values and be accountable for my actions, and my younger
@@ -140,7 +140,7 @@ class blogPost27 extends Component {
               stronger person.
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               While at university, my Ph.D. supervisors inspired me at every
               step and took me by hand as a young 19-year old till today to
               imbibe those skills that will help me march ahead and be a great
@@ -154,20 +154,20 @@ class blogPost27 extends Component {
             <br />
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               What are the hard and soft skills that you advised students who
               are interested in pursuing a similar career path (for
               internship/graduate role) to upskill on?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               Be open. Communicate. Be Willing to Learn. Build those networks.
               Contribute wherever you can. Take risks and never sit back. You
               can grow only when things aren't the most comfortable for you. Be
               humble and keep your moral values.{" "}
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               It really doesn't matter what career you chose, you could be a
               great painter or an excellent engineer but without the drive and
               honesty... it's hard to keep up.
@@ -175,12 +175,12 @@ class blogPost27 extends Component {
             <br />
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               What is one piece of advice that you would give to your younger
               self back in university?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               Take it slow. You might not know the answers to all your questions
               but believe that whatever you deserve will eventually come to you
               at the right time. Until then, enjoy the ride and smile wide.
@@ -188,9 +188,9 @@ class blogPost27 extends Component {
             <br />
             <br />
 
-            <p className="question">Favourite Quote or Motto?</p>
+            <p className={styles.question}>Favourite Quote or Motto?</p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               If you never try, you'll never know what you are capable of.
               <br />– John Barrow
             </p>
@@ -202,8 +202,8 @@ class blogPost27 extends Component {
         <AuthorCard
           authors={{
             "georgie-mansfield": [
-              "/potraits/georgie.jpg",
-              "profile_img vivw_img",
+              "/potraits/blog-authors/georgie.jpg",
+              styles.authorProfile,
               "Georgie Mansfield",
               "Education Team",
             ],

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ".././style.css";
-import "./blog-post.css";
+import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from ".././header";
 
@@ -17,17 +17,17 @@ class blogPost14 extends Component {
         <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #14" />
 
         {/*Start of blog post*/}
-        <div className="blog-content">
+        <div className={styles.blogContent}>
           <div>
-            <h2 className="blog-title">
+            <h2 className={styles.blogTitle}>
               Introducing: Hannah Beder, Creative Technologist at Creatable and
               NSW Young Woman of the Year 2020
             </h2>
-            <p className="date"> 15th July 2020 </p>
+            <p className={styles.date}> 15th July 2020 </p>
           </div>
 
-          <div className="post">
-            <p className="post-content">
+          <div className={styles.post}>
+            <p className={styles.postContent}>
               Hannah Beder is a Creative Technologist at the startup Creatable,
               a tech education company preparing young women for the future of
               work. She is extremely passionate about tech, education, and
@@ -39,17 +39,17 @@ class blogPost14 extends Component {
               an introductory course in computing to high school students and
               tutor her peers in Computer Science and Engineering.
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               We’re excited to share a recent Q&A we had with Hannah about her
               career journey in STEM.
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               What sparked your interest to join the field of STEM?
             </p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               I fell into STEM by accident - I spent most of high school
               focusing on music and language, and I nearly went to music school!
               I didn't know what engineering really was, but I knew I didn't
@@ -59,10 +59,10 @@ class blogPost14 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               Please provide a short summary of your career journey so far:
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               During my studies I interned with Google in Sydney and Seattle,
               worked at an AI startup, and tutored many subjects at UNSW. I
               worked as a Software Engineer at Macquarie Group for two years
@@ -73,18 +73,18 @@ class blogPost14 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               Where do you see yourself in the future (career wise)?
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               I see myself making technology more accessible and exciting for
               young women, while exploring the ways that technology intersects
               with and enhances other industries and disciplines.
             </p>
             <br />
 
-            <p className="question">What do you love about your career now?</p>
-            <p className="post-content">
+            <p className={styles.question}>What do you love about your career now?</p>
+            <p className={styles.postContent}>
               I love that my career is now a genuine expression of who I am. I
               feel like I can be my best self when I’m using my skills to pursue
               my passions. Investing in the future of young women is engaging
@@ -93,11 +93,11 @@ class blogPost14 extends Component {
             </p>
             <br />
 
-            <p className="question">
+            <p className={styles.question}>
               Why do you think it is important to empower women and increase
               their involvement in the STEM industry?
             </p>
-            <p className="post-content">
+            <p className={styles.postContent}>
               All roles will require some level of technical proficiency,
               whether that’s abstract skills like problem solving and ideation,
               or ‘hard skills’ like deeper computing literacy and specialised
@@ -108,9 +108,9 @@ class blogPost14 extends Component {
             </p>
             <br />
 
-            <p className="question">Favourite Quote or Motto?</p>
+            <p className={styles.question}>Favourite Quote or Motto?</p>
 
-            <p className="post-content">
+            <p className={styles.postContent}>
               "Never let perfection get in the way of good enough". I know that
               sounds like a motto for people who want to slack off, but it has
               helped me course correct when I let perfectionism get in the way
@@ -123,8 +123,8 @@ class blogPost14 extends Component {
         <AuthorCard
           authors={{
             "vivian-wong": [
-              "/potraits/2020-exec/vivw.jpg",
-              "profile_img vivw_img",
+              "/potraits/blog-authors/vivw.jpg",
+              styles.authorProfile,
               "Vivian Wong",
               "Education Executive",
             ],
