@@ -33,6 +33,10 @@ div .headline {
   letter-spacing: 2.5px;
 }
 
+#loadingContainer {
+  width: 70vw;
+}
+
 /*-----------------------------Home page description--------------------------*/
 /*Description wrapper*/
 .description {

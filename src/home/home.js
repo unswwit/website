@@ -35,13 +35,9 @@ const Home = () => {
   return (
     <div>
       {sourceLoading ? (
-        <div id="loadingBackground">
-          <div id="willowLoadingContainer">
-            <div>
-              <img id="loadingWillow" src={`${process.env.PUBLIC_URL}/walkingWillow.gif`} alt="Loading Sign" />
-            </div>
-            <div id="loadingGround"></div>
-          </div>         
+        <div id="loadingBackground"> 
+          <img id="loadingWillow" src={`${process.env.PUBLIC_URL}/walkingWillow.gif`} alt="Loading Sign" />
+          <p>Loading...</p> 
         </div>
       )
         :

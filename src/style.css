@@ -10,6 +10,7 @@ font-family: 'Montserrat', sans-serif;*/
   width: 100vw;
   text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -19,28 +20,17 @@ font-family: 'Montserrat', sans-serif;*/
   width: 300px;
 }
 
-/*Animated ground*/
-#animatedGround {
-  position: absolute;
-  width: 100px;
-  height: 20px;
-  top: 62vh;
-  left: 41vw;
-  background-color: #313638;
-  border-radius: 50%;
-  animation: shadowChange 1.6s infinite 2s linear;
+#loadingBackground p{
+  overflow: hidden;
+  font-size: 18pt;
+  animation: typing 3s steps(34, end);
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
 }
 
-@keyframes shadowChange {
-  0% {
-    width: 100px;
-  }
-  50% {
-    width: 120px;
-  }
-  100% {
-    width: 100;
-  }
+@keyframes typing {
+  from { width: 0 }
+  to { width: 10em; }
 }
 
 /*----------------------------------Header------------------------------------*/
