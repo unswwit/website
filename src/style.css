@@ -1,13 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display&display=swap");
 /*font-family: 'Playfair Display', serif;
 font-family: 'Montserrat', sans-serif;*/
-/*----------------------------------Header------------------------------------*/
-.loadingBackground {
-  background-color: #fff7ef;
+/*----------------------------------Loading Screen------------------------------------*/
+#loadingBackground {
+  background: #fff7ef;
   height: 100vh;
   z-index: 2;
   position: absolute;
   width: 100vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#loadingWillow {
+  height: 300px;
+  width: 300px;
+}
+
+/*Animated ground*/
+#animatedGround {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  top: 62vh;
+  left: 41vw;
+  background-color: #313638;
+  border-radius: 50%;
+  animation: shadowChange 1.6s infinite 2s linear;
+}
+
+@keyframes shadowChange {
+  0% {
+    width: 100px;
+  }
+  50% {
+    width: 120px;
+  }
+  100% {
+    width: 100;
+  }
 }
 
 /*----------------------------------Header------------------------------------*/
