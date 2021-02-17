@@ -4,6 +4,7 @@ import CountUp from "react-countup";
 import styles from "./home.module.css";
 import NewsletterForm from "./NewsletterForm";
 import { Modal, Backdrop, Fade } from "@material-ui/core";
+import LoadingScreen from "../LoadingScreen";
 
 const Home = () => {
   const [open, setOpen] = React.useState(false);
@@ -35,10 +36,7 @@ const Home = () => {
   return (
     <div>
       {sourceLoading ? (
-        <div id="loadingBackground"> 
-          <img id="loadingWillow" src={`${process.env.PUBLIC_URL}/walkingWillow.gif`} alt="Loading Sign" />
-          <p>Loading...</p> 
-        </div>
+        <LoadingScreen />
       )
         :
         (<>

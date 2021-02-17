@@ -5,7 +5,7 @@ font-family: 'Montserrat', sans-serif;*/
 #loadingBackground {
   background: #fff7ef;
   height: 100vh;
-  z-index: 2;
+  z-index: 4;
   position: absolute;
   width: 100vw;
   text-align: center;
@@ -175,7 +175,7 @@ p {
   background: #fff7ef;
   font-size: 10pt;
   padding: 0px;
-  z-index: 1;
+  z-index: 3;
   position: absolute;
 }
 
@@ -255,7 +255,6 @@ p {
 }
 
 /*-----------------------------------Menu-----------------------------------*/
-
 .menu-container {
   position: fixed;
   width: 100%;
@@ -306,7 +305,7 @@ footer {
   padding: 0px;
   background-color: #fff7ef;
   min-width: 100%;
-  z-index: 1;
+  z-index: 3;
   position: absolute;
 }
 
