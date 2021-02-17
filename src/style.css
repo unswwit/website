@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display&display=swap");
 /*font-family: 'Playfair Display', serif;
 font-family: 'Montserrat', sans-serif;*/
+/*----------------------------------Header------------------------------------*/
+.loadingBackground {
+  background-color: #fff7ef;
+  height: 100vh;
+  z-index: 2;
+  position: absolute;
+  width: 100vw;
+}
 
 /*----------------------------------Header------------------------------------*/
 /*Heading title*/
@@ -144,6 +152,8 @@ p {
   background: #fff7ef;
   font-size: 10pt;
   padding: 0px;
+  z-index: 1;
+  position: absolute;
 }
 
 .nav {
@@ -273,6 +283,8 @@ footer {
   padding: 0px;
   background-color: #fff7ef;
   min-width: 100%;
+  z-index: 1;
+  position: absolute;
 }
 
 .footer-all {
