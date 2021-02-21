@@ -15,7 +15,8 @@ const Events = () => {
   const [events, setEvents] = useState([]);
   const [year, setYear] = useState("2021");
   const [upcomingEvents, setUpcomingEvents] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loadingPast, setLoadingPast] = useState(true);
+  const [loadingUpcoming, setLoadingUpcoming] = useState(true);
 
   const marks = [
     {
@@ -35,29 +36,32 @@ const Events = () => {
     100: "2021"
   }
 
+  // set the year for the events timeline
   const handleYear = (newYear) => {
     setYear(newYear);
   };
 
-  //start webpage at the top
+  // start webpage at the top
   useEffect(() => {
     window.scrollTo(0, 0);
+    setLoadingUpcoming(true);
   }, []);
 
+  // load events
   useEffect(() => {
-    setLoading(true);
+    setLoadingPast(true);
 
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: googleData => {
-        setLoading(false);
+        setLoadingPast(false);
+        setLoadingUpcoming(false);
         const allEvents = googleData["past-events"]["elements"].filter((event) => event.year === year);
         setEvents(allEvents.reverse());
         setUpcomingEvents(googleData["upcoming-events"]["elements"]);
       },
       simpleSheet: false
-    })
-   
+    })   
   }, [year]);
   
   return (
@@ -68,14 +72,14 @@ const Events = () => {
       <div className={styles.eventsBody}>
         <h2>UPCOMING EVENTS</h2>
         <div id={styles.eventsLoadingContainer}>
-          {loading && <CircularProgress
+          {loadingUpcoming && <CircularProgress
             variant="indeterminate"
             size={50}
             thickness={5}
             id={styles.eventsLoading}
           />}
         </div>
-        {!loading && (!upcomingEvents.length ? 
+        {!loadingUpcoming && (!upcomingEvents.length ? 
           (<p className={styles.lookout}>Keep a lookout here for our upcoming events!</p>)
           :
           (<div className={styles.gridContainer}>          
@@ -151,7 +155,7 @@ const Events = () => {
         />
 
         <div id={styles.eventsLoadingContainer}>
-          {loading && <CircularProgress
+          {loadingPast && <CircularProgress
             variant="indeterminate"
             size={50}
             thickness={5}
@@ -160,7 +164,7 @@ const Events = () => {
         </div>
 
         <div id={styles.pastEvents} className={styles.gridContainer}>
-          {!loading && events.map((event, index) => {
+          {!loadingPast && events.map((event, index) => {
             let eventLabel = event.img.split(".")[0].split("-");
             eventLabel.shift();
             return <div key={index} className={styles.gridItem}>

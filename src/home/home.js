@@ -97,13 +97,13 @@ const Home = () => {
         </div>
         <div className={styles.event1}>
           <a 
-            href="https://www.facebook.com/events/254834122828459" 
+            href="https://www.facebook.com/events/239175131031118/" 
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              src={`${process.env.PUBLIC_URL}/event-covers/2021/03-Chat-it-up-with-chatbot.gif`}
-              alt="Chat it up with chatbots"
+              src={`${process.env.PUBLIC_URL}/event-covers/2021/04-WIT-x-Digisoc-Trivia-Night.gif`}
+              alt="WIT x Digisoc: Trivia Night!"
             />
           </a>
         </div>

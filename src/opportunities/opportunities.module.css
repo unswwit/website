@@ -100,13 +100,17 @@ table {
 }
 
 .moreLink {
-  color: #feb14b;
+  color: #e85f5c;
   letter-spacing: 0.05vw;
   font-size: 11pt;
   font-family: Roboto;
   font-weight: 300;
   text-align: right;
   margin-top: 10px;
+}
+
+.moreLink:hover {
+  color: #feb14b;
 }
 
 /*-------------------------------Masonry grid Preview-----------------------------*/

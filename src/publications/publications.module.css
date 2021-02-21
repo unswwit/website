@@ -115,7 +115,7 @@
 
 /*read only button, change for functionality*/
 .button {
-  background-color: orange;
+  background-color:#e85f5c;
   height: 30px;
   width: 120px;
   visibility: hidden;
@@ -125,12 +125,14 @@
 }
 
 .button h3 {
-  font-size: 9px;
+  font-size: 10px;
+  font-weight: 500px;
   color: white;
   text-transform: uppercase;
   white-space: nowrap;
   float: center;
   line-height: 30px;
+  letter-spacing: 0.1vw;
 }
 
 .button a,
