@@ -118,7 +118,7 @@ class blogPost24 extends Component {
 
             <div className={styles.postContent}>
               The KEY takeaways that I hope you have now gained are:
-              <ul>
+              <ul className={styles.list}>
                 <li>
                   Before exams, aim to sleep for 8 hours! In doing so, you are
                   moving all your information from short term to long term

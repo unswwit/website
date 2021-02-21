@@ -41,8 +41,8 @@ class blogPost11 extends Component {
             <br />
             <br />
 
-            <p className={styles.postContent}>
-              <b>So, what does AI in the workplace look like?</b>
+            <p className={styles.question}>
+              So, what does AI in the workplace look like?
             </p>
 
             <p className={styles.postContent}>
@@ -73,8 +73,8 @@ class blogPost11 extends Component {
             <br />
             <br />
 
-            <p className={styles.postContent}>
-              <b>How Will AI Affect Job Loss and Growth?</b>
+            <p className={styles.question}>
+              How Will AI Affect Job Loss and Growth?
             </p>
 
             <p className={styles.postContent}>
@@ -86,8 +86,8 @@ class blogPost11 extends Component {
             <br />
             <br />
 
-            <p className={styles.postContent}>
-              <b>AI is Not All Powerful</b>
+            <p className={styles.question}>
+              AI is Not All Powerful
             </p>
 
             <p className={styles.postContent}>

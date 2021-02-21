@@ -53,7 +53,7 @@ const Blog = () => {
             .split(",")
             .forEach((authorKey) => {           
               const result = authorList.filter((authorItem) => authorItem.authors === authorKey)[0];  
-              tempAuthor[authorKey] = [ `/potraits/${result.img}`, result.name];  
+              tempAuthor[authorKey] = [ `/potraits/blog-authors/${result.img}`, result.name];  
             });
           blogPreviews[index].authors = tempAuthor;
         });

@@ -37,7 +37,8 @@
 
 p,
 th,
-td {
+td,
+div {
   font-size: 12pt;
 }
 

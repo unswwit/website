@@ -43,7 +43,7 @@ class BlogPreview extends Component {
                                 process.env.PUBLIC_URL +
                                 this.props.authors[key][0]
                               }
-                              className="profile_img vivw_img"
+                              className="blogAuthor"
                               alt={key}
                             />
                           </div>

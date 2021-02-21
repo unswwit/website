@@ -78,8 +78,9 @@
 }
 
 /*Author image*/
-.vivw_img {
+.blogAuthor {
   height: auto;
+  width: 120%;
   transform: translate(-5%, -10%);
 }
 
