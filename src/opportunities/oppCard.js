@@ -50,7 +50,7 @@ class OppCard extends Component {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          More
+                          Learn More
                         </a>
                       </div>
                     </div>
