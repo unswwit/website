@@ -46,29 +46,29 @@
 /*-------------------------------Blog post Preview-----------------------------*/
 /*Preview Image and Hover*/
 
-.blog-preview {
+.blogPreview {
   padding: 30px;
 }
 
-.preview-pic {
+.previewPic {
   width: 35.807vw;
   height: 22.786vw;
   transition: transform 0.5s ease;
   overflow: hidden;
 }
 
-.blog-post {
+.blogPost {
   margin: 5vw 0;
 }
 
-.blog-post:hover .preview-pic img {
+.blogPost:hover .preview-pic img {
   -ms-transform: scale(1.05); /* IE 9 */
   -webkit-transform: scale(1.05); /* Safari 3-8 */
   transform: scale(1.05);
 }
 
 /*Author circle crop*/
-.author-pic {
+.authorPic {
   border-radius: 50%;
   height: 80px;
   overflow: hidden;
@@ -85,7 +85,7 @@
 }
 
 /*Post preview*/
-.blog-details {
+.blogDetails {
   margin-bottom: 10px;
 }
 
@@ -136,12 +136,12 @@ table {
   height: 100%;
 }
 
-#preview-row {
+#previewRow {
   display: flex;
   align-items: center;
 }
 
-.author-section {
+.authorSection {
   vertical-align: middle;
   padding-right: 0.5vw;
 }
@@ -151,12 +151,12 @@ table {
     width: 90%;
   }
 
-  .author-name {
+  .authorName {
     width: auto;
     padding-left: 5px;
   }
 
-  .author-pic {
+  .authorPic {
     width: 50px;
     height: 50px;
     margin: 0 1.5vw;
@@ -164,7 +164,7 @@ table {
 }
 
 @media screen and (max-width: 800px) {
-  .blog-preview {
+  .blogPreview {
     padding: 20px;
   }
 
@@ -179,23 +179,23 @@ table {
     width: 95%;
   }
 
-  .preview-pic {
+  .previewPic {
     width: 100%;
     height: auto;
 
   }
 
-  .author-section {
+  .authorSection {
     padding-left: 10px;
   }
 
-  .blog-details .date {
+  .blogDetails .date {
     font-size: 12px;
   }
 }
 
 @media screen and (max-width: 300px) {
-  .author-section {
+  .authorSection {
     display: flex;
     align-items: center;
     padding-left: 0px;

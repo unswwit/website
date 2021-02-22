@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import "../style.css";
-import "./blog.css";
+import styles from "./blog.module.css";
 import BlogPreview from "./blog-preview";
 import PageHeader from ".././header";
 import Chip from "@material-ui/core/Chip";
@@ -68,16 +68,16 @@ const Blog = () => {
     <>
       {/* Cover Photo */}
       <PageHeader imgUrl="/headers/blog-header.png" title="Blog Posts" />
-      <div className="blogGallery">
+      <div className={styles.blogGallery}>
 
         {/* Start of blog categories */}
-        <div className="blogCategories">
+        <div className={styles.blogCategories}>
           {Object.keys(categoryDescriptions).sort().map((category) => {
             const chipColour = selectedCategory === category ? "#e85f5c": "#7F7F7F";
             return <BootstrapTooltip key={category} title={
               <>
-                <div className="tooltipTitle">{category}</div>
-                <p className="tooltipDescription">{categoryDescriptions[category]}</p>
+                <div className={styles.tooltipTitle}>{category}</div>
+                <p className={styles.tooltipDescription}>{categoryDescriptions[category]}</p>
               </>
             }>
               <Chip 
@@ -99,16 +99,16 @@ const Blog = () => {
         </div>  
 
         {/*Start of blog posts*/}
-        <div id="blogLoadingContainer">
+        <div id={styles.blogLoadingContainer}>
           {loading && <CircularProgress
             variant="indeterminate"
             size={50}
             thickness={5}
-            id="blogsLoading"
+            id={styles.blogsLoading}
           />}
         </div>
 
-        <div className="blogPosts">
+        <div className={styles.blogPosts}>
           {!loading && blogs
             .filter((blog) => (selectedCategory === "All" || 
                               (blog.category.split(",")).includes(selectedCategory) ||
@@ -124,8 +124,7 @@ const Blog = () => {
                 authors={blog.authors}
                 category={blog.category.split(",")}
               />
-            })}
-       
+            })}       
         </div>
         {/*End of blog posts*/}
       </div>

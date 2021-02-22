@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./sponsors.css";
+import styles from "./sponsors.module.css";
 import PageHeader from ".././header";
 
 import Principal from "./Principal";
@@ -13,15 +13,15 @@ class Sponsors extends Component {
         {/* Cover Photo */}
         <PageHeader imgUrl="/headers/sponsors-header-1.png" title="Sponsors" />
 
-        <div id="sponsors-body">
-          <p className="subheader">
+        <div id={styles.sponsorsBody}>
+          <p className={styles.subheader}>
             Thank you to our sponsors for generously supporting our cause and
             collaborating with us to provide our students invaluable opportunities.
           </p>
 
           {/* Principal Sponsors Area */}
-          <h2 className="subsponsor">Principal Sponsors</h2>
-          <div id="majorContainer">
+          <h2 className={styles.subsponsor}>Principal Sponsors</h2>
+          <div id={styles.majorContainer}>
             <Principal
               details={{
                 Telstra: [
@@ -33,9 +33,9 @@ class Sponsors extends Component {
           </div>
 
           {/* Major Sponsors Area */}
-          <h2 className="subsponsor">Major Sponsors</h2>
+          <h2 className={styles.subsponsor}>Major Sponsors</h2>
 
-          <div id="majorContainer">
+          <div id={styles.majorContainer}>
             <Major
               details={{
                 Amazon: [
@@ -125,8 +125,8 @@ class Sponsors extends Component {
           </div>
 
           {/* Support Sponsors Area */}
-          <h2 className="subsponsor">Support Sponsors</h2>
-          <div id="majorContainer">
+          <h2 className={styles.subsponsor}>Supporter Sponsors</h2>
+          <div id={styles.majorContainer}>
             <SupportInkind
               details={{
                 LendLease: [
@@ -147,9 +147,9 @@ class Sponsors extends Component {
           </div>
 
           {/* InKind Sponsors Area */}
-          <h2 className="subsponsor">In-Kind Sponsors</h2>
+          <h2 className={styles.subsponsor}>In-Kind Sponsors</h2>
 
-          <div id="majorContainer">
+          <div id={styles.majorContainer}>
             <SupportInkind
               details={{
                 InsideSherpa: [
@@ -169,9 +169,9 @@ class Sponsors extends Component {
             />
           </div>
 
-          <p className="subheader">
+          <p className={styles.subheader}>
             Interested in partnering with us? Contact us at{" "}
-            <a className="subheader" href="mailto:externals@unswwit.com">
+            <a className={styles.subheader} href="mailto:externals@unswwit.com">
               externals@unswwit.com
             </a>
           </p>

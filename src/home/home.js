@@ -33,7 +33,7 @@ const Home = () => {
       {/* Start of Description */}
       <div className={styles.description}>
         <div className={styles.descriptionLeft}>
-          <h1>COLLABORATE. INSPIRE. CHANGE.</h1>
+          <h1>COLLABORATE. INSPIRE. CHANGE.</h1>         
         </div>
         <div className={styles.descriptionRight}>
           <p>
@@ -97,13 +97,13 @@ const Home = () => {
         </div>
         <div className={styles.event1}>
           <a 
-            href="https://www.facebook.com/events/239175131031118/" 
+            href="https://www.facebook.com/events/862592581261860/" 
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              src={`${process.env.PUBLIC_URL}/event-covers/2021/04-WIT-x-Digisoc-Trivia-Night.gif`}
-              alt="WIT x Digisoc: Trivia Night!"
+              src={`${process.env.PUBLIC_URL}/event-covers/2021/05-linkedIn-photoshoot-meet-the execs.png`}
+              alt="LinkedIn photoshoot and meet the execs"
             />
           </a>
         </div>

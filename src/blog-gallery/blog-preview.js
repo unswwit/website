@@ -1,7 +1,7 @@
 //All necessary imports for this javascript
 import React, { Component } from "react";
 import "../style.css";
-import "./blog.css";
+import styles from "./blog.module.css";
 import { Link } from "react-router-dom";
 
 class BlogPreview extends Component {
@@ -10,47 +10,47 @@ class BlogPreview extends Component {
       <div className={this.props.category}>
         {/* Start of blog post preview */}
         <div
-          className="blog-post"
+          className={styles.blogPost}
         >
           <table cellPadding="0">
             <Link
               to={"/blog/" + this.props.blogNo}
               style={{ textDecoration: "none" }}
             >
-              <tr id="preview-row">
+              <tr id={styles.previewRow}>
                 <td>
-                  <div className="preview-pic">
+                  <div className={styles.previewPic}>
                     <img
-                      className="preview-pic"
+                      className={styles.previewPic}
                       src={process.env.PUBLIC_URL + this.props.imgUrl}
                       alt="preview"
                     />
                   </div>
                 </td>
-                <td className="blog-preview">
-                  <div className="blog-details">
-                    <div className="heading">{this.props.heading}</div>
-                    <div className="date">{this.props.date}</div>
-                    <div className="subheading">{this.props.subheading}</div>
+                <td className={styles.blogPreview}>
+                  <div className={styles.blogDetails}>
+                    <div className={styles.heading}>{this.props.heading}</div>
+                    <div className={styles.date}>{this.props.date}</div>
+                    <div className={styles.subheading}>{this.props.subheading}</div>
                   </div>
-                  <tr className="author-row">
+                  <tr className={styles.authorRow}>
                     {Object.keys(this.props.authors).map((key) => (
-                      <td className="author-section" key={key}>
+                      <td className={styles.authorSection} key={key}>
                         <td>
-                          <div className="author-pic">
+                          <div className={styles.authorPic}>
                             <img
                               src={
                                 process.env.PUBLIC_URL +
                                 this.props.authors[key][0]
                               }
-                              className="blogAuthor"
+                              className={styles.blogAuthor}
                               alt={key}
                             />
                           </div>
                         </td>
 
-                        <td className="author-name">
-                          <div className="auth">
+                        <td className={styles.authorName}>
+                          <div className={styles.auth}>
                             {this.props.authors[key][1]}
                           </div>
                         </td>

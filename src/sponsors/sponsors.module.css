@@ -50,7 +50,7 @@ a.subheader {
   text-decoration: none;
 }
 
-#sponsors-body {
+#sponsorsBody {
   max-width: 70%;
   margin: 0 auto;
   margin-bottom: 10%;
@@ -69,7 +69,7 @@ a.subheader {
   margin-bottom: 50px;
 }
 
-.support-inkind {
+.supportInkind {
   width: 100%;
   max-width: 150px;
   margin-bottom: 75px;
@@ -84,7 +84,7 @@ a.subheader {
     font-size: 13pt;
   }
 
-  #sponsors-body {
+  #sponsorsBody {
     max-width: 85%;
   }
 

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./sponsors.css";
 
 class Major extends Component {
   render() {
