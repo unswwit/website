@@ -130,7 +130,7 @@ class blogPost39 extends Component {
             </p>
             <p className={styles.postContent}>
 							The nature of viruses retaining their genetic makeup with slight variations allowed
-							scientists to distinguishdetermine between imported cases and cases caused by community
+							scientists to distinguish determine between imported cases and cases caused by community
 							transmission in the early waves of COVID-19.
             </p>
             <p className={styles.postContent}>It’s as simple as that.</p>
