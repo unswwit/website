@@ -102,7 +102,7 @@ const Home = () => {
             rel="noopener noreferrer"
           >
             <img
-              src={`${process.env.PUBLIC_URL}/event-covers/2021/05-linkedIn-photoshoot-meet-the execs.png`}
+              src={`${process.env.PUBLIC_URL}/event-covers/2021/04-linkedIn-photoshoot-meet-the execs.png`}
               alt="LinkedIn photoshoot and meet the execs"
             />
           </a>
