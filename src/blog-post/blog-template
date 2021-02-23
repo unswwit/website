@@ -1,0 +1,89 @@
+/*
+//All necessary imports for this javascript
+import React, { useEffect } from "react";
+import ".././style.css";
+import styles from "./blog-post.module.css";
+import AuthorCard from "./authorCard";
+import PageHeader from ".././header";
+import Tabletop from "tabletop";
+
+const BlogTemplate = () => {
+  const [blogNumber, setBlogNumber] = useEffect(1);
+
+  //start webpage at the top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
+  // retrieve current episode content
+  const handleBlogNumber = () => {
+    let url = window.location.href.split("/");
+    setBlogNumber(url[url.length - 1]);
+    return url[url.length - 1];
+  };
+
+  useEffect(() => {
+    setLoading(true);
+    const currEpisodeNo = handleEpisodeNumber();
+    
+    // importing transcript
+    let tempTranscript = "";
+    try {
+      tempTranscript = require(`./transcripts/podcast-episode-${currEpisodeNo}.md`);
+      fetch(tempTranscript)
+        .then(response => response.text())
+        .then(response => setTranscript(response))
+    } catch {
+      setTranscript("");
+    }
+
+    // importing podcast episode
+    Tabletop.init({
+      key: process.env.REACT_APP_GOOGLE_SHEETS,
+      callback: googleData => {
+        const currEpisode = googleData["podcast-episodes"]["elements"].filter((episode) => {
+          return episode.episodeNo === currEpisodeNo;
+        })[0];
+        setEpisode(currEpisode);
+        setLoading(false);
+      },
+      simpleSheet: false
+    })
+  }, [episodeNumber]);
+
+  return (
+    <div>*/
+{/* Cover Photo */}
+/*<PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #1" />*/
+
+{/*Start of blog post*/}/*
+      <div className={styles.blogContent}>
+        <div>
+          <h2 className={styles.blogTitle}>
+            
+          </h2>
+          <p className={styles.date}> 20th May 2020 </p>
+        </div>
+
+        <div className={styles.post}>
+  
+        </div>
+      </div>
+*/
+{/*for the blog post author*/}
+/*<AuthorCard
+        authors={{
+          "vivian-wong": [
+            "/potraits/blog-authors/vivw.jpg",
+            styles.authorProfile,
+            "Vivian Wong",
+            "Education Executive",
+          ],
+        }}
+      />*/
+{/*End of blog posts*/}
+/*</div>
+  );
+}
+export default BlogTemplate;
+*/
