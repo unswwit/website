@@ -1,0 +1,272 @@
+/*------------------------------Contact us body-----------------------------*/
+
+/*Form*/
+.form {
+  text-align: center;
+  margin: 60px auto 10px auto;
+  max-width: 80%;
+}
+
+.inquiry {
+  padding-bottom: 50px;
+}
+
+/*Form left*/
+.formLeft {
+  display: inline-block;
+  padding: 10px 20px;
+  width: 40%;
+  height: 100%;
+}
+
+.formLeft form {
+  float: left;
+  text-align: left;
+  width: 100%;
+}
+
+.formLeft textarea {
+  border-style: none;
+  border-bottom: solid;
+  border-color: #777b7c;
+  border-width: 2px;
+  width: 100%;
+}
+
+.formInput {
+  padding: 5px;
+  padding-left: 0px;
+
+  border-style: none;
+  border-bottom: solid;
+  border-color: #777b7c;
+  border-width: 2px;
+
+  border-radius: 0px;
+  width: 100%;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  font-size: 12pt;
+  font-family: "Montserrat", sans-serif;
+}
+
+.submitButton {
+  color: #ffffff;
+  background-color: #e85f5c;
+  text-align: center;
+  margin: 0px 0px 30px 0px;
+  padding: 12px 10px;
+  width: 120px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  float: left;
+  font-weight: 500;
+}
+
+form input.button:hover {
+  background-color: #feb14b;
+  color: #ffffff;
+}
+
+/*Form image*/
+.formRight {
+  width: 50%;
+  overflow: hidden;
+  float: right;
+}
+
+/*Style for the Emails is below*/
+.contactTeam {
+  margin-top: 50px;
+}
+
+.newEmails div.dot {
+  height: 50px;
+  width: 50px;
+  background-color: #e85f5c;
+  margin-bottom: 25px;
+}
+
+.newEmails img {
+  height: 50px;
+  width: 50px;
+  margin-bottom: 25px;
+}
+
+.newEmails h3 {
+  color: #feb14b;
+  font-family: "Playfair Display", serif;
+  font-size: 20pt;
+  font-weight: normal;
+  letter-spacing: 2.5px;
+}
+
+.newEmails a {
+  color: #777b7c;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10pt;
+  letter-spacing: 1.5px;
+  padding-bottom: 5px;
+  font-weight: lighter;
+}
+
+.newEmails a:hover {
+  color: #feb14b;
+  text-decoration: none;
+}
+
+.newEmails div.col2 {
+  width: 57%;
+  margin-left: 26%;
+  margin-right: auto;
+}
+
+.newEmails div.profile2 {
+  display: inline-block;
+  width: 50%;
+  padding: 30px;
+  float: none;
+  overflow: none;
+}
+
+.newEmails div.col3 {
+  width: 80%;
+  height: auto;
+  margin-left: 12%;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.newEmails div.profile3 {
+  display: inline-block;
+  width: 33%;
+  padding: 30px;
+  float: none;
+  height: 230px;
+  overflow: none;
+}
+
+.lineBreak {
+  visibility: hidden;
+}
+
+/*-------------------------------Join us: different screen sizes ------------------------------*/
+@media only screen and (max-width: 1200px) {
+  .newEmails div.profile2 {
+    padding: 25px;
+  }
+
+  .newEmails div.profile3 {
+    padding: 25px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .formRight {
+    display: initial;
+    float: none;
+  }
+
+  .centre {
+    height: 100%;
+  }
+
+  .formLeft {
+    display: initial;
+  }
+
+  .newEmails div.col2 {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .newEmails div.col3 {
+    width: 90%;
+    margin-left: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .newEmails div.profile3 {
+    display: inline-block;
+    width: 50%;
+    padding: 30px;
+    float: none;
+    overflow-wrap: break-word;
+  }
+
+  .newEmails div.profile2 {
+    overflow-wrap: break-word;
+  }
+
+  hr.solid {
+    border-top: 2px solid #bbb;
+  }
+
+  .line-break {
+    visibility: visible;
+  }
+
+  .newEmails img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .newEmails h3,
+  a {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 910px) {
+  .centre {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .centre {
+    height: 300px;
+  }
+
+  .newEmails div.profile3 {
+    width: 100%;
+  }
+
+  .newEmails div.profile2 {
+    width: 100%;
+  }
+
+  .newEmails div.col2 {
+    width: 90%;
+  }
+
+  .newEmails a {
+    font-size: 16px;
+  }
+
+  .form h2, .contactTeam {
+    font-size: 30px;
+  }
+
+  .form h3 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .centre {
+    height: 200px;
+  }
+
+  .form {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

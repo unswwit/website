@@ -1,87 +1,184 @@
-import React, { Component } from 'react';
-import "./sponsors.css";
+import React, { Component } from "react";
+import styles from "./sponsors.module.css";
+import PageHeader from ".././header";
 
-import Amazon from "./Amazon";
-import Atlassian from "./Atlassian";
-import Baraja from "./Baraja";
-import Commonwealth from "./Commonwealth";
-import Deloitte from "./Deloitte";
-import EY from "./EY";
-import Google from "./Google";
-import InsideSherpa from "./InsideSherpa";
-import LendLease from "./Lendlease";
-import McGrathNicol from "./McGrathNicol";
-import Nine from "./Nine";
-import Palantir from "./Palantir";
-import QPay from "./QPay";
-import Quantium from "./Quantium";
-import Telstra from "./Telstra";
+import Principal from "./Principal";
+import Major from "./Major";
+import SupportInkind from "./SupportInKind";
 
 class Sponsors extends Component {
-    render() {
-        return (
-            <div className='centre'>
-                <div className="sponsorHeader">
-                {/* Cover Photo */}
-                {/* Main Title, and Subtitle Area */}
-                    <div className="title_area">
-                        <h1 className="centre">Sponsors</h1>
-                    </div>
-                </div>
-                
-                <p className='subheader'>{`
-                    Thank you to our sponsors for generously supporting our cause and
-                    collaborating with us to provide our students invaluable opportunities.
-                    `}
-                </p>
+  render() {
+    return (
+      <div>
+        {/* Cover Photo */}
+        <PageHeader imgUrl="/headers/sponsors-header-1.png" title="Sponsors" />
 
-                {/* 600x300 */}
-                <h1 className='subsponsor'>Principal Sponsors</h1>
-                <Telstra/>
+        <div id={styles.sponsorsBody}>
+          <p className={styles.subheader}>
+            Thank you to our sponsors for generously supporting our cause and
+            collaborating with us to provide our students invaluable opportunities.
+          </p>
 
-                {/* 300x150 */}
-                <h1 className='subsponsor'>Major Sponsors</h1>
-                <div id="majorContainer">
-                    <Amazon/>
-                    <Atlassian/>
-                </div>
+          {/* Principal Sponsors Area */}
+          <h2 className={styles.subsponsor}>Principal Sponsors</h2>
+          <div id={styles.majorContainer}>
+            <Principal
+              details={{
+                Telstra: [
+                  "https://www.telstra.com.au/",
+                  "/sponsors/telstra-large.png",
+                ],
+              }}
+            />
+          </div>
 
-                <div id="majorContainer">
-                    <Baraja/>
-                    <Commonwealth/>
-                    <Deloitte/>
-                </div>
+          {/* Major Sponsors Area */}
+          <h2 className={styles.subsponsor}>Major Sponsors</h2>
 
-                <div id="majorContainer">
-                    <EY/>
-                    <Google/>
-                    <McGrathNicol/>
-                </div>
+          <div id={styles.majorContainer}>
+            <Major
+              details={{
+                Amazon: [
+                  "https://www.amazon.jobs/en",
+                  "/sponsors/amazon-major.png",
+                ],
+              }}
+            />
 
-                <div id="majorContainer">
-                    <Nine/>
-                    <Quantium/>
-                </div>
+            <Major
+              details={{
+                Atlassian: [
+                  "https://www.atlassian.com/",
+                  "/sponsors/atlassian-major.png",
+                ],
+              }}
+            />
 
-                <h1 className='subsponsor'>Support Sponsors</h1>
-                <div id="majorContainer">
-                    <LendLease/>
-                    <Palantir/>
-                </div>
-                {/* 200x100 */}
-                <h1 className='subsponsor'>In-Kind Sponsors</h1>
-                
-                <div id="majorContainer">
-                    <InsideSherpa/>
-                    <QPay/>
-                </div>
-            
-                <p className='subheader'>{`Interested in partnering with us? Contact us at `}
-                    <a class='subheader' href="mailto:externals@unswwit.com">externals@unswwit.com</a>
-                </p>
-            </div>
-        );
-    }
+            <Major
+              details={{
+                Baraja: [
+                  "https://www.baraja.com/careers/",
+                  "/sponsors/baraja-major.png",
+                ],
+              }}
+            />
+
+            <Major
+              details={{
+                Commonwealth: [
+                  "https://www.commbank.com.au/about-us/careers.html",
+                  "/sponsors/cba-major.png",
+                ],
+              }}
+            />
+
+            <Major
+              details={{
+                Deloitte: [
+                  "https://www2.deloitte.com/au/en/careers/students.html",
+                  "/sponsors/deloitte-major.png",
+                ],
+              }}
+            />
+
+            <Major
+              details={{
+                EY: ["https://www.ey.com/en_au", "/sponsors/ey-major.png"],
+              }}
+            />
+
+            <Major
+              details={{
+                Google: [
+                  "https://careers.google.com/",
+                  "/sponsors/google-major.png",
+                ],
+              }}
+            />
+
+            <Major
+              details={{
+                McGrathNicol: [
+                  "https://www.mcgrathnicol.com/",
+                  "/sponsors/mcgrathcicol-major.png",
+                ],
+              }}
+            />
+
+            <Major
+              details={{
+                Nine: [
+                  "https://www.nineforbrands.com.au/",
+                  "/sponsors/nine-major.png",
+                ],
+              }}
+            />
+
+            <Major
+              details={{
+                Quantium: [
+                  "https://quantium.com/",
+                  "/sponsors/quantium-major.png",
+                ],
+              }}
+            />
+          </div>
+
+          {/* Support Sponsors Area */}
+          <h2 className={styles.subsponsor}>Supporter Sponsors</h2>
+          <div id={styles.majorContainer}>
+            <SupportInkind
+              details={{
+                LendLease: [
+                  "https://www.lendlease.com/au/",
+                  "/sponsors/lendlease-support.png",
+                ],
+              }}
+            />
+
+            <SupportInkind
+              details={{
+                Palantir: [
+                  "https://www.palantir.com/",
+                  "/sponsors/palantir-support.png",
+                ],
+              }}
+            />
+          </div>
+
+          {/* InKind Sponsors Area */}
+          <h2 className={styles.subsponsor}>In-Kind Sponsors</h2>
+
+          <div id={styles.majorContainer}>
+            <SupportInkind
+              details={{
+                InsideSherpa: [
+                  "https://www.insidesherpa.com/",
+                  "/sponsors/inside-sherpa-inkind.png",
+                ],
+              }}
+            />
+
+            <SupportInkind
+              details={{
+                Telstra: [
+                  "https://webapp.getqpay.com/login",
+                  "/sponsors/qpay-inkind.png",
+                ],
+              }}
+            />
+          </div>
+
+          <p className={styles.subheader}>
+            Interested in partnering with us? Contact us at{" "}
+            <a className={styles.subheader} href="mailto:externals@unswwit.com">
+              externals@unswwit.com
+            </a>
+          </p>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Sponsors;

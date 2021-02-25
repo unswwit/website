@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import { HashRouter, Route, NavLink, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+import "semantic-ui-css/semantic.min.css";
 import "./style.css";
-import Home from "./home";
+//import "./loader.css";
+import GoogleAnalytics from "./config/GoogleAnalytics";
+
+import Home from "./home/home";
 import JoinUs from "./join/joinUs";
 import Sponsors from "./sponsors/sponsors";
 import Opportunities from "./opportunities/opportunities";
@@ -16,32 +19,18 @@ import OurTeam from "./team/team";
 import Blog from "./blog-gallery/blog";
 import Publications from "./publications/publications";
 import Events from "./events/events";
-
+import Podcast from "./podcast/Podcast";
+import EpisodePage from "./podcast/EpisodePage";
+import NotFound from "./not-found/NotFound";
 import Menu from "./menu";
 import MenuBtn from "./menuBtn";
 
-import blogPost1 from "./blog-post/blog-post-1";
-import blogPost2 from "./blog-post/blog-post-2";
-import blogPost3 from "./blog-post/blog-post-3";
-import blogPost4 from "./blog-post/blog-post-4";
-import blogPost5 from "./blog-post/blog-post-5";
-import blogPost6 from "./blog-post/blog-post-6";
-import blogPost7 from "./blog-post/blog-post-7";
-import blogPost8 from "./blog-post/blog-post-8";
-import blogPost9 from "./blog-post/blog-post-9";
-import blogPost10 from "./blog-post/blog-post-10";
-import blogPost11 from "./blog-post/blog-post-11";
-import blogPost12 from "./blog-post/blog-post-12";
-import blogPost13 from "./blog-post/blog-post-13";
-import blogPost14 from "./blog-post/blog-post-14";
-import blogPost15 from "./blog-post/blog-post-15";
-import blogPost16 from "./blog-post/blog-post-16";
-import blogPost17 from "./blog-post/blog-post-17";
-import blogPost18 from "./blog-post/blog-post-18";
-import blogPost19 from "./blog-post/blog-post-19";
-import blogPost20 from "./blog-post/blog-post-20";
-
 class App extends Component {
+  /*
+  state = {
+    loading: true,
+  };*/
+
   constructor(props) {
     super(props);
     this.state = {
@@ -71,25 +60,50 @@ class App extends Component {
     }
   };
 
+  /*
+  fakeRequest = () => {
+    return new Promise((resolve) => setTimeout(() => resolve(), 2500));
+  };*/
+
   componentDidMount() {
+    // google analytics
+    GoogleAnalytics();
+
     window.addEventListener("resize", this.updateMenu);
+    /*
+    this.fakeRequest().then(() => {
+      const el = document.querySelector(".loader");
+      if (el) {
+        el.remove(); // removing the spinner element
+        this.setState({ loading: false }); // showing the app
+      }
+    });*/
   }
+
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateMenu);
   }
 
   render() {
+    /*
+    if (this.state.loading) {
+      return null; //app is not ready (fake request is in process)
+    }*/
+
     return (
       <div>
+        {/*<div className="loader loader-default is-active"></div>*/}
         <HashRouter basename="/">
-          <Menu open={this.state.menuOpen} />
-          <nav class="navbar navbar-expand-md navbar-dark bg-custom fixed-top">
-            <a class="navbar-brand" href="/">
+          <Menu
+            open={this.state.menuOpen}
+            handleMenuClick={this.handleMenuClick.bind(this)}
+          />
+          <nav className="navbar navbar-expand-md navbar-dark bg-custom fixed-top">
+            <a className="navbar-brand" href="/">
               <img
                 src={process.env.PUBLIC_URL + "./logo-black.png"}
                 className="photo"
                 alt="wit logo"
-                resizemode="contain"
                 style={{
                   width: "35px",
                   marginLeft: "15px",
@@ -98,62 +112,67 @@ class App extends Component {
                 }}
               />
             </a>
-            <div class="navbar-collapse collapse w-100">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
+            <div className="navbar-collapse collapse w-100">
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
                   <NavLink to="/">HOME</NavLink>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <NavLink to="/events">EVENTS</NavLink>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <NavLink to="/our-team">TEAM</NavLink>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <NavLink to="/sponsors">SPONSORS</NavLink>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <NavLink to="/opportunities">OPPORTUNITIES</NavLink>
                 </li>
                 <li
-                  class="nav-item"
+                  className="nav-item"
                   onMouseEnter={this.handleHover}
                   onMouseLeave={this.handleHover}
                 >
-                  <div class="dropdown" display="static">
-                    <div class="dropdown-toggle">
-                      <span class="menuTitle">RESOURCES</span>
+                  <div className="dropdown" display="static">
+                    <div className="dropdown-toggle">
+                      <span className="menuTitle">RESOURCES</span>
                     </div>
                     <div
-                      class={
+                      className={
                         this.state.showDD
                           ? "dropdown-menu show"
                           : "dropdown-menu"
                       }
                     >
-                      <li class="dropdown-item">
+                      <div className="dropdown-item">
                         <NavLink to="/blog">BLOG</NavLink>
-                      </li>
-                      <li class="dropdown-item">
+                      </div>
+                      <div className="dropdown-item">
+                        <NavLink to="/podcast">
+                          PODCAST
+                        </NavLink>
+                      </div>
+                      <div className="dropdown-item">
                         <NavLink to="/publications">PUBLICATIONS</NavLink>
-                      </li>
-                      <li class="dropdown-item">
+                      </div>
+                      <div className="dropdown-item">
                         <NavLink to="/marketing-archive">
                           MARKETING ARCHIVES
                         </NavLink>
-                      </li>
+                      </div>                      
                     </div>
                   </div>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <NavLink to="/join-us">JOIN</NavLink>
                 </li>
-                <li class="nav-item" style={{ marginRight: "15px" }}>
+                <li className="nav-item" style={{ marginRight: "15px" }}>
                   <NavLink to="/contact-us">CONTACT</NavLink>
                 </li>
               </ul>
             </div>
-            <li class="nav-item-btn">
+            <li className="nav-item-btn">
               <MenuBtn
                 open={this.state.menuOpen}
                 onClick={this.handleMenuClick}
@@ -179,27 +198,17 @@ class App extends Component {
             <Route path="/sponsors" component={Sponsors} />
             <Route path="/opportunities" component={Opportunities} />
             <Route path="/contact-us" component={ContactUs} />
+            <Route exact path="/podcast" component={Podcast} />
+            <Route path="/podcast/:episode" component={EpisodePage} />
             <Route path="/publications" component={Publications} />
-            <Route path="/blog/1" component={blogPost1} />
-            <Route path="/blog/2" component={blogPost2} />
-            <Route path="/blog/3" component={blogPost3} />
-            <Route path="/blog/4" component={blogPost4} />
-            <Route path="/blog/5" component={blogPost5} />
-            <Route path="/blog/6" component={blogPost6} />
-            <Route path="/blog/7" component={blogPost7} />
-            <Route path="/blog/8" component={blogPost8} />
-            <Route path="/blog/9" component={blogPost9} />
-            <Route path="/blog/10" component={blogPost10} />
-            <Route path="/blog/11" component={blogPost11} />
-            <Route path="/blog/12" component={blogPost12} />
-            <Route path="/blog/13" component={blogPost13} />
-            <Route path="/blog/14" component={blogPost14} />
-            <Route path="/blog/15" component={blogPost15} />
-            <Route path="/blog/16" component={blogPost16} />
-            <Route path="/blog/17" component={blogPost17} />
-            <Route path="/blog/18" component={blogPost18} />
-            <Route path="/blog/19" component={blogPost19} />
-            <Route path="/blog/20" component={blogPost20} />
+            {Array.from({length: 42}, (_, index) => index + 1).map((blogNo) => {
+              return <Route 
+                key={blogNo} 
+                path={"/blog/" + blogNo} 
+                component={require(`./blog-post/blog-post-${blogNo}`).default} 
+              />
+            })}
+            <Route component={NotFound} />
           </Switch>
         </HashRouter>
         <div>
@@ -209,5 +218,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;

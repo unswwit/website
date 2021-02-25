@@ -1,299 +1,184 @@
-//All necessary imports for this javascript
-import React, { Component } from "react";
-import "./team.css";
+import React, { useEffect, useState } from "react";
+import styles from "./team.module.css";
 
+import PageHeader from "../header";
 import Execs from "./execs";
 import SubCom from "./subcom";
+import Tabletop from "tabletop";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import Timeline from "../Timeline";
 
-class OurTeam extends Component {
-  render() {
-    return (
-        <div>
-            <div className="crop">
-            {/* Cover Photo */}
-            {/* Main Title, and Subtitle Area */}
-                <div className="title_area">
-                    <h1 className="centre">Meet Our Team</h1>
-                </div>
-                </div>
-
-                <div className="profile_section_heading">
-                <h2 class="team-heading">
-                    {`
-                                OUR 2020 EXECUTIVE TEAM
-                            `}
-                </h2>
-            </div>
-
-            {/* Exec section */}
-            <div className="all_execs_section">
-                <div class="exec_row">
-                    <Execs
-                    imgUrl="/potraits/viv.png"
-                    class=""
-                    name="Vivian Shen"
-                    position="President"
-                    degree="Data Science"
-                    year="3rd"
-                    linkedin="vivian-shen-046110"
-                    fb="vivian.shen.71619"
-                    email="president"
-                    />
-
-                    <Execs
-                    imgUrl="/potraits/amanda.JPG"
-                    class=""
-                    name="Amanda Li"
-                    position="Vice President"
-                    degree="Software Engineering/Biomedical Engineering"
-                    year="3rd"
-                    linkedin="amanda-li-031199"
-                    fb="amaandarin"
-                    email="vp"
-                    />
-                </div>
-
-                <div className="exec_row">
-                    <Execs
-                    imgUrl="/potraits/kelly.png"
-                    class=""
-                    name="Kelly Liang"
-                    position="General Secretary"
-                    degree="Commerce/Information System"
-                    year="2nd"
-                    linkedin="kelly-liang-03877017b"
-                    fb="keleriter"
-                    email="secretary"
-                    />
-
-                    <Execs
-                    imgUrl="/potraits/elizabeth.JPG"
-                    name="Elizabeth Zhong"
-                    class=""
-                    position="Treasurer"
-                    degree="Software Engineering"
-                    year="3rd"
-                    linkedin="elizabeth-zhong-561806160"
-                    fb="elizabethzhong2"
-                    email="treasurer"
-                    />
-                </div>
-
-                <div class="exec_row">
-                    <Execs
-                    imgUrl="/potraits/vivw.jpg"
-                    name="Vivian Wong"
-                    class="vivw_img"
-                    position="Education Executive"
-                    degree="Commerce/Actuarial Science"
-                    year="2nd"
-                    linkedin="vivian-wong-75511b169"
-                    fb="profile.php?id=100027563555266"
-                    email="vivianwong"
-                    />
-
-                    <Execs
-                    imgUrl="/potraits/gabby.jpg"
-                    name="Gabrielle Younes"
-                    class="gab_img"
-                    position="Events Executive"
-                    degree="Bioinformatic Engineering/Advanced Science"
-                    year="2nd"
-                    linkedin="gabrielle-younes-a05a70182"
-                    fb="profile.php?id=100017209069498"
-                    email="gabrielle"
-                    />
-                </div>
-
-                <div class="exec_row">
-                    <Execs
-                    imgUrl="/potraits/rhea.png"
-                    name="Rhea Thomas"
-                    class=""
-                    position="Externals Executive"
-                    degree="Information Systems"
-                    year="2nd"
-                    linkedin="rhea-t-2400b113a"
-                    fb="profile.php?id=100013567812434"
-                    email="rhea"
-                    />
-
-                    <Execs
-                    imgUrl="/potraits/alison.png"
-                    name="Alison Chin"
-                    class=""
-                    position="Human Resources Executive"
-                    degree="Information Systems"
-                    year="3rd"
-                    linkedin="alison-chin-958581148"
-                    fb="alison.chin.52"
-                    email="alison"
-                    />
-                </div>
-
-                <div class="exec_row">
-                    <Execs
-                    imgUrl="/potraits/elicia.jpg"
-                    name="Elicia Au Duong"
-                    class="eli_img"
-                    position="Information Technology Executive"
-                    degree="Commerce/Computer Science"
-                    year="2nd"
-                    linkedin="eliciaauduong"
-                    fb="eliciaauduong"
-                    email="elicia"
-                    />
-
-                    <Execs
-                    imgUrl="/potraits/felicia.png"
-                    name="Felicia Ee"
-                    class=""
-                    position="Marketing Executive"
-                    degree="Commerce/Software Engineering"
-                    year="2nd"
-                    linkedin=""
-                    fb="profile.php?id=100015374733436"
-                    email="felicia"
-                    />
-                </div>
-            </div>
-
-            {/* Subcommittee section */}
-            <h2 class="team-heading" style={{"marginTop":"2vw","paddingBottom":"5px"}}>OUR 2020 SUBCOMMITTEE TEAM</h2>
-            <div className="subcom_section">
-                <h3 class="subcom-type">Education Team</h3>
-                <SubCom
-                name="Elisa Sanjurjo"
-                degree="Commerce/Science"
-                year="4th"
-                />
-
-                <SubCom
-                name="Georgie Mansfield"
-                degree="Chemical Engineering/Materials Science"
-                year="2nd"
-                />
-
-                <SubCom
-                name="Victoria Ruming"
-                degree="Mechatronic Engineering/Biomedical Engineering"
-                year="2nd"
-                />
-
-                <h3 class="subcom-type">Events Team</h3>
-                <SubCom
-                name="Ariane Notaras"
-                degree="Commerce(Finance)/Information Systems"
-                year="2nd"
-                />
-
-                <SubCom
-                name="Jane Wang"
-                degree="Commerce/Information Systems"
-                year="2nd"
-                />
-
-                <SubCom
-                name="Justin Clarke"
-                degree="Data Science and Decisions"
-                year="2nd"
-                />
-
-                <SubCom
-                name="Nishmi Kapoor"
-                degree="Commerce/Advanced Sciences"
-                year="2nd"
-                />
-
-                <SubCom
-                name="Shirlee Salaria"
-                degree="Commerce/Information Systems"
-                year="2nd"
-                />
-
-                <h3 class="subcom-type">Externals Team</h3>
-                <SubCom
-                name="Angeni Bai"
-                degree="Computer Science"
-                year="1st"
-                />
-
-                <SubCom
-                name="Rue Teh"
-                degree="Software Engineering"
-                year="2nd"
-                />
-
-                <SubCom
-                name="Srija Mukherjee"
-                degree="Software Engineering"
-                year="1st"
-                />
-
-                <h3 class="subcom-type">Human Resources Team</h3>
-                <SubCom
-                name="Claire Yu"
-                degree="Commerce/Information System"
-                year="1st"
-                />
-
-                <SubCom
-                name="Victoria Yu"
-                degree="Information Systems"
-                year="2nd"
-                />
-
-                <h3 class="subcom-type">Information Technology Team</h3>
-                <SubCom
-                name="Alana Hua"
-                degree="Software Engineering/Biomedical Engineering"
-                year="3rd"
-                />
-
-                <SubCom
-                name="Chelsea Chaffey"
-                degree="Computer Science"
-                year="1st"
-                />
-
-                <SubCom
-                name="Gianfelix Goenawan"
-                degree="Computer Science/Commerce"
-                year="2nd"
-                />
-
-                <SubCom
-                name="Lily Yang"
-                degree="Computer Science/Environmental Engineering"
-                year="1st"
-                />
-
-                <h3 class="subcom-type">Marketing Team</h3>
-                <SubCom
-                name="Anisa Islam"
-                degree="Media in Communications and Journalism"
-                year="1st"
-                />
-
-                <SubCom
-                name="Connie Shi"
-                degree="Commerce/Information Systems"
-                year="3rd"
-                />
-
-                <SubCom
-                name="Vy Kim Nguyen"
-                degree="Bioinformatics/Biomedical Engineering"
-                year="2nd"
-                />
-
-            </div>
-
-            <footer>
-                <div className="footer_area" style={{"marginTop":"8vw"}}></div>
-            </footer>
-        </div>
-    );
+function OurTeam() {
+  const sectors = ["Events", "Externals", "Human Resources", "Education", "Marketing", "Information Technology"];
+  const [execs, setExecs] = useState([]);
+  const [subcommittee, setSubcommittee] = useState([]);
+  const [year, setYear] = useState("2021");
+  const [loading, setLoading] = useState(true);
+  const execToClassName = {
+    2021 :"exec2021Img",
+    2020: {
+      "Elicia Au Duong": "eliImg",
+      "Gabrielle Younes": "gabImg",   
+      "Vivian Wong": "vivwImg", 
+      "Alison Chin": "alisonImg",
+      "Felicia Ee": "felImg"
+    }
   }
+
+  const marks = [
+    {
+      value: 100,
+      scaledValue: 2021,
+      label: "2021"
+    },
+    {
+      value: 75,
+      scaledValue: 2020,
+      label: "2020"
+    },
+    {
+      value: 50,
+      scaledValue: 2019,
+      label: "2019"
+    },
+    {
+      value: 25,
+      scaledValue: 2018,
+      label: "2018"
+    },
+    {
+      value: 0,
+      scaledValue: 2017,
+      label: "2017"
+    },
+  ];
+
+  const valueToYear = {
+    0: "2017",
+    25: "2018",
+    50: "2019",
+    75: "2020",
+    100: "2021"
+  }
+
+  const handleYear = (newYear) => {
+    setYear(newYear);
+  };
+
+  useEffect(() => {
+    setLoading(true);
+    Tabletop.init({
+      key: process.env.REACT_APP_GOOGLE_SHEETS,
+      callback: googleData => {
+        // add in execs
+        let tempExecs = googleData["execs"]["elements"].filter((exec) => exec.yearJoined === year);
+        const result = tempExecs.reduce(function(result, _, index, tempExecs) {
+          if (index % 2 === 0)
+            result.push(tempExecs.slice(index, index + 2));
+          return result;
+        }, []);
+        setExecs(result);
+
+        // add subcommittee
+        setSubcommittee(googleData["subcommittee"]["elements"].filter((subcom) => subcom.yearJoined === year));
+        
+        // stop loading
+        setLoading(false);
+      },
+      simpleSheet: false
+    })
+  }, [year]);
+
+  return (
+    <div>
+      {/* Cover Photo */}
+      <PageHeader imgUrl="/headers/2021-team-header.jpg" title="Meet Our Team" />
+
+      {/* Timeline */}
+      <Timeline 
+        margin={"7%"}
+        page={"teams"}
+        step={25}
+        valueToYear={valueToYear} 
+        marks={marks} 
+        updateYear={handleYear} 
+      />
+
+      <div id={styles.teamLoadingContainer}>
+        {loading && <CircularProgress
+          variant="indeterminate"
+          size={50}
+          thickness={5}
+          id={styles.teamLoading}
+        />}
+      </div>
+          
+      {!loading && 
+      <>
+        {/* Exec section */}
+        <div className={styles.profileSectionHeading}>
+          <h2 className={styles.teamHeading}>OUR {year} EXECUTIVE TEAM</h2>
+        </div>      
+        
+        <div className={styles.allExecsSection}>
+          <div className={styles.execRow}>
+            {execs.map((row, index) => {
+              return <div key={index} className={styles.execRow}>
+                {row.map((exec, index) => {              
+                  return <Execs
+                    key={index}
+                    imgUrl={exec.img !== "" ? `/potraits/${year}-exec/${exec.img}` : ""}
+                    name={exec.name}
+                    className={year === "2020"? execToClassName[year][exec.name]: execToClassName[year]}
+                    position={exec.position}
+                    degree={exec.degree}
+                    year={exec.year}
+                    linkedin={exec.linkedin}
+                    fb={exec.facebook}
+                    email={exec.email}
+                  />
+                })}
+              </div>
+            })}  
+          </div> 
+        </div>
+        
+        {/* Subcommittee section */}
+        {subcommittee.length ?
+          <>
+            <h2
+              className={styles.teamHeading}
+              style={{ marginTop: "2vw", paddingBottom: "5px" }}
+            >
+              OUR {year} SUBCOMMITTEE TEAM
+            </h2>
+
+            <div className={styles.subcomSection}>
+              {sectors.map((sector) => {
+                return <div key={sector} >
+                  <h3 className={styles.subcomType}>{sector} Team</h3>
+                  {subcommittee
+                    .filter((member) => member.team === sector)
+                    .map((member, index) => {         
+                      return  <SubCom 
+                        key={index}
+                        name={member.name} 
+                        degree={member.degree}
+                        year={member.year}
+                      />
+                    })}  
+                </div>     
+              })}   
+            </div>
+          </>
+          : null}
+      </>
+      }
+      <footer>
+        <div className={styles.footerArea} style={{ marginTop: "8vw" }} />
+      </footer>
+    </div>
+  );
 }
+
 export default OurTeam;

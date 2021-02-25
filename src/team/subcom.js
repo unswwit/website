@@ -1,25 +1,27 @@
 //All necessary imports for this javascript
 import React, { Component } from "react";
 import "../style.css";
-import "./team.css";
+import styles from "./team.module.css";
 
 class SubCom extends Component {
-    render() {
-        return (
-            <div class="subcom_row">
-                <div class="subcom_col">
-                    <div class="profile">
-                        <p className="subcom_profile_name">{this.props.name}</p>
-                    </div>
-                </div>
+  render() {
+    return (
+      <div className={styles.subcomRow}>
+        <div className={styles.subcomCol}>
+          <div className={styles.profile}>
+            <p className={styles.subcomProfileName}>{this.props.name}</p>
+          </div>
+        </div>
 
-                <div className="subcom_longer_col">
-                    <div class="profile">
-                        <p className="subcom_profile_degree">{this.props.degree + ", " + this.props.year + " year"}</p>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+        <div className={styles.subcomLongerCol}>
+          <div className={styles.profile}>
+            <p className={styles.subcomProfileDegree}>
+              {this.props.degree + ", " + this.props.year + " year"}
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 export default SubCom;
