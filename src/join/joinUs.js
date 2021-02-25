@@ -49,36 +49,6 @@ class JoinUs extends React.Component {
                   <img
                     src={`${process.env.PUBLIC_URL}/icons/${this.socials[social][1]}`}
                     alt={social}
-                  />
-                </a>
-              })}
-            </div>
-
-  // hides the loading sign
-  hideSpinner() { 
-    this.setState({ loading: false });
-  }
-
-  render() {
-    return (
-      <div>
-        {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/join-header-1.png" title="Join Us" />
-        <div className={styles.joinUsBody}>
-          <div className={styles.joinUsRight}>
-            <h2>Connect with us</h2>
-            <div className={styles.joinButtons}>
-              {Object.keys(this.socials).map((social, index) => {
-                return <a 
-                  className={styles.joinLink}
-                  key={index}
-                  href={this.socials[social][0]} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={`${process.env.PUBLIC_URL}/icons/${this.socials[social][1]}`}
-                    alt={social}
                     style={{ width: "100%", height: "100%" }}
                   />
                 </a>
