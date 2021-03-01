@@ -44,12 +44,13 @@ const useStyles = makeStyles({
   date: {
     textAlign: "center",
     fontFamily: "Montserrat, sans-serif",
-    color: "#feb14b"
+    color: "4f4f4f"
   },
   description: {
     textAlign: "justify",
     fontSize: 12,
-    fontFamily: "Montserrat, sans-serif"
+    fontFamily: "Montserrat, sans-serif",
+    color: "4f4f4f"
   },
   title: {
     fontFamily: "Playfair Display, serif",

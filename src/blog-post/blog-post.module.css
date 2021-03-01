@@ -30,7 +30,7 @@
 .post {
   margin-bottom: 8vw;
   margin: auto;
-  color: #707070;
+  color: #4f4f4f;
   font-family: "Montserrat", sans-serif;
   text-align: justify;
 }
@@ -58,29 +58,25 @@ p.date {
   margin-bottom: 4vw;
 }
 
-.postContent {
-  font-weight: 300;
-}
-
 /*Subheading in post content*/
 .postHeading {
-  color: #707070;
+  color: #4f4f4f;
   font-size: 24pt;
 }
 
 /*Interview questions*/
 .question {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 12pt;
 }
 
 /*Makes dot points and numbered points larger*/
 .list {
-  color: #707070;
+  color: #4f4f4f;
   font-family: "Montserrat", sans-serif;
   font-size: 12pt;
   text-align: justify;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /*To exaggerate words to be bigger and bolder*/

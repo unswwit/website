@@ -33,6 +33,7 @@
   margin: 0;
   padding: 0;
   padding-bottom: 5px;
+  font-size: 20px;
 }
 
 .eventDate {
@@ -45,11 +46,10 @@
 }
 
 .eventSummary {
-  color: #707070;
+  color: #4f4f4f;
   letter-spacing: 0.1vw;
   font-size: 10pt;
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;
   padding: 0;
   padding-bottom: 5px;
   margin-top: 10px;
@@ -60,6 +60,7 @@ ul#links {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  font-weight: 500;
 }
 
 li.eventLink {
@@ -106,6 +107,15 @@ p.lookout {
 #eventResources {
   text-transform: uppercase;
   color: #e85f5c;
+  flex-basis: 33.33%;
+  flex-shrink: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+#resourcesDescription {
+  font-family: "Montserrat", sans-serif;
+  color: #4f4f4f;
 }
 
 /*---------------------------Loading Sign--------------------------*/

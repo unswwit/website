@@ -90,20 +90,20 @@
 }
 
 .heading {
-  color: #feb14b;
-  letter-spacing: 0.1vw;
-  font-size: 11pt;
+  color: #313638;
+  font-size: 12pt;
+  font-weight: 500;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
   margin-bottom: 10px;
 }
 
 .auth {
-  color: #feb14b;
-  letter-spacing: 0.1vw;
+  color: #313638;
   font-size: 10pt;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .heading:hover {
@@ -111,19 +111,16 @@
 }
 
 .subheading {
-  color: #707070;
-  letter-spacing: 0.1vw;
-  font-size: 9pt;
+  color: #4f4f4f;
+  font-size: 10pt;
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;
   padding: 0;
   margin-bottom: 10px;
 }
 
 .date {
   color: #313638;
-  letter-spacing: 0.1vw;
-  font-size: 7pt;
+  font-size: 9pt;
   font-family: "Montserrat", sans-serif;
   padding: 0;
   margin: 0;

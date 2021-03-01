@@ -71,7 +71,7 @@ div .headline {
 
 /*Right block text*/
 .descriptionRight p {
-  color: #313638b3;
+  color: #4f4f4f;
   font-family: "Montserrat", sans-serif;
   font-size: 11pt;
   text-align: justify;
@@ -170,7 +170,7 @@ div .headline {
 
 /*Events description text*/
 .eventsDescription p {
-  color: #313638b3;
+  color: #4f4f4f;
   font-family: "Montserrat", sans-serif;
   font-size: 11pt;
   text-align: right;
@@ -221,6 +221,11 @@ div .headline {
   -ms-transform: scale(1.5); /* IE 9 */
   -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.03);
+}
+
+#seeMoreLink {
+  text-decoration: none;
+  font-weight: 500;
 }
 
 /*--------------Newsletter-------------------*/

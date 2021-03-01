@@ -67,7 +67,7 @@ const Home = () => {
               <p>Sponsors</p>
             </div>
             <div>
-              <CountUp end={2727} duration={4} />
+              <CountUp end={2733} duration={4} />
               <p>Facebook Followers</p>
             </div>
           </div>
@@ -87,7 +87,7 @@ const Home = () => {
             role models to inspire.
           </p>
           <p>
-            <Link to="/events" style={{ textDecoration: "none" }}>
+            <Link to="/events" id={styles.seeMoreLink}>
               See More Events
             </Link>
           </p>
