@@ -106,7 +106,17 @@ p.lookout {
 #eventResources {
   text-transform: uppercase;
   color: #e85f5c;
+  flex-basis: 33.33%;
+  flex-shrink: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
 }
+  
+#resourcesDescription {
+  font-family: "Montserrat", sans-serif;
+  color: #4f4f4f;
+}
+
 
 /*---------------------------Loading Sign--------------------------*/
 #eventsLoading {
