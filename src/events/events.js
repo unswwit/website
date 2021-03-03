@@ -134,6 +134,7 @@ const Events = () => {
             aria-controls="panel4bh-content"
           >
             <Typography id={styles.eventResources}>Event Resources</Typography>
+            <Typography id={styles.resourcesDescription}>Learning material used in past events</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <iframe

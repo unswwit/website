@@ -20,6 +20,7 @@ class JoinUs extends React.Component {
       Youtube: ["https://www.youtube.com/channel/UCQ8PGe3P4ZuDSNCb9vCeTiw/videos/", "youtube.png"],
       Twitch: ["https://www.twitch.tv/unswwit", "twitch.png"],
       Spotify: ["https://open.spotify.com/show/1iWagdei1mVoyzg8TqbB2P", "spotify.png"],
+      Discord: ["https://discord.gg/BWY4tzM326", "discord.png"]
     };
   }
 
