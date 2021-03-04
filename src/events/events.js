@@ -111,7 +111,7 @@ const Events = () => {
                           Register
                       </a>
                     </li>
-                    <li className={styles.eventLink}>
+                    {upcomingEvent.facebookLink && <li className={styles.eventLink}>
                       <a
                         href={upcomingEvent.facebookLink}
                         className={styles.event}                      
@@ -120,7 +120,7 @@ const Events = () => {
                       >
                           Facebook
                       </a>
-                    </li>
+                    </li>}
                   </ul>
                 </div>
               </div>
