@@ -131,6 +131,16 @@ p.lookout {
 }
 
 /*------------------------------Responsive Mobile Design--------------------------------*/
+@media only screen and (max-width: 750px) {
+  #resourcesDescription {
+    display: none;
+  }
+
+  #eventResources {
+    flex-basis: 100%;
+  }
+}
+
 @media only screen and (max-width: 650px) {
   .eventsBody {
     max-width: 90%;
