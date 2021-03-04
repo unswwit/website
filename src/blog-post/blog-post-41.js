@@ -161,7 +161,7 @@ class blogPost39 extends Component {
           authors={{
             "georgie-mansfield": [
               "/potraits/blog-authors/georgie2021.jpg",
-              styles.exec2021Img,
+              styles.authorProfile,
               "Georgie Mansfield",
               "Education Executive"
             ]
