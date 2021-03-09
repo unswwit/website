@@ -6,7 +6,11 @@ class Principal extends Component {
     return (
       <div>
         {Object.keys(this.props.details).map((key, index) => (
-          <a key={index} href={this.props.details[key][0]}>
+          <a 
+            key={index} 
+            href={this.props.details[key][0]} 
+            target="_blank" 
+            rel="noopener noreferrer">
             <img
               className="principal"
               src={process.env.PUBLIC_URL + this.props.details[key][1]}
