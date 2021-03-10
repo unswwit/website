@@ -67,7 +67,7 @@ const Home = () => {
               <p>Sponsors</p>
             </div>
             <div>
-              <CountUp end={2710} duration={4} />
+              <CountUp end={2767} duration={4} />
               <p>Facebook Followers</p>
             </div>
           </div>
@@ -97,13 +97,13 @@ const Home = () => {
         </div>
         <div className={styles.event1}>
           <a 
-            href="https://www.facebook.com/events/862592581261860/" 
+            href="https://facebook.com/events/344717670110372" 
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              src={`${process.env.PUBLIC_URL}/event-covers/2021/05-linkedIn-photoshoot-meet-the execs.png`}
-              alt="LinkedIn photoshoot and meet the execs"
+              src={`${process.env.PUBLIC_URL}/event-covers/2021/07-WIT-x-Accenture.png`}
+              alt="WIT x Accenture Present: Accessing Accenture"
             />
           </a>
         </div>
@@ -144,7 +144,7 @@ const Home = () => {
       <div className={styles.sponsors}>
         <h1>OUR SPONSORS</h1>
         <img
-          src={`${process.env.PUBLIC_URL}./sponsors-home.png`}
+          src={`${process.env.PUBLIC_URL}./sponsors-home-2021.png`}
           alt="banner"
         />
       </div>

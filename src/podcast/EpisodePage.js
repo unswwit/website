@@ -29,10 +29,6 @@ const EpisodePage = (props) => {
   // const db = database.firestore();
   const [episode, setEpisode] = useState({});
   const [episodeNumber, setEpisodeNumber] = useState("0");
-  /* const [episodeNav, setEpisodeNav] = useState({
-    next: "",
-    prev: ""
-  })*/
   const [transcript, setTranscript] = useState("");
   const [loading, setLoading] = useState(true);
   const platforms = ["anchor", "radioRepublic", "google", "spotify", "breaker"];
@@ -50,7 +46,7 @@ const EpisodePage = (props) => {
     setEpisodeNumber(url[url.length - 1]);
     return url[url.length - 1];
   };
-  
+
   useEffect(() => {
     setLoading(true);
     const currEpisodeNo = handleEpisodeNumber();
@@ -70,15 +66,25 @@ const EpisodePage = (props) => {
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: googleData => {
-        const currEpisode = googleData["podcast-episodes"]["elements"].filter((episode) => {
+        // redirect to 404 page if visiting an invalid podcast episode number in the url
+        const allEpisodes = googleData["podcast-episodes"]["elements"];
+        const podcastNo = parseInt(props.match.params.episode);
+        if (podcastNo < 0 || podcastNo > allEpisodes.length - 1) {
+          props.history.push("/404");
+        }
+
+        // load the page content for the current podcast episode
+        const currEpisode = allEpisodes.filter((episode) => {
           return episode.episodeNo === currEpisodeNo;
         })[0];
         setEpisode(currEpisode);
+
+        // hide the loading sign
         setLoading(false);
       },
       simpleSheet: false
     })
-  }, [episodeNumber]);
+  }, [episodeNumber, props.history, props.match.params.episode]);
 
   return (
     <>
@@ -94,12 +100,6 @@ const EpisodePage = (props) => {
       </div>}
     
       {!loading && <div id={styles.episodeContainer}>
-        {/* Episode Navigation */}
-        {/* <div>
-          {episodeNav.prev && <Link to={`/podcast/${episodeNumber - 1}`} onClick={() => handleEpisodeNumber()}>Previous Episode:{episodeNav.prev}</Link>}
-          {episodeNav.next && <Link to={`/podcast/${episodeNumber + 1}`} onClick={() => handleEpisodeNumber()}>Next Episode:{episodeNav.next}</Link>}        
-        </div> */} 
-
         {/* Episode content */}
         <h2>{episode.title}</h2>
         <p id={styles.episodeDate}>{episode.date}</p>
@@ -117,8 +117,9 @@ const EpisodePage = (props) => {
 
         {/* Podcast Episode Links */}
         <div className={styles.platforms}>
-          {platforms.map((platform) => {
+          {platforms.map((platform, index) => {
             return <a
+              key={index}
               href={episode[platform]}
               target="_blank"
               rel="noopener noreferrer"
