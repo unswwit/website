@@ -3,6 +3,7 @@ import ".././style.css";
 import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from "../header";
+import ShareBtns from "./ShareBtns";
 
 class blogPost30 extends Component {
   //start webpage at the top
@@ -25,7 +26,10 @@ class blogPost30 extends Component {
               Technical Interview Walkthrough with Amanda Li and Vivian Shen
               (Part 2)
             </h2>
-            <p className={styles.date}>October 11, 2020</p>
+            <div className={styles.blogDetails}>
+              <span className={styles.date}>October 11, 2020</span>
+              <span><ShareBtns /></span>
+            </div> 
           </div>
 
           <div className={styles.post}>

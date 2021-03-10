@@ -3,6 +3,7 @@ import ".././style.css";
 import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from ".././header";
+import ShareBtns from "./ShareBtns";
 
 class blogPost25 extends Component {
   //start webpage at the top
@@ -23,7 +24,10 @@ class blogPost25 extends Component {
             <h2 className={styles.blogTitle}>
               Introducing: Cindy Russel Sia, Senior Consultant of Deloitte
             </h2>
-            <p className={styles.date}>September 23, 2020</p>
+            <div className={styles.blogDetails}>
+              <span className={styles.date}>September 23, 2020</span>
+              <span><ShareBtns /></span>
+            </div> 
           </div>
 
           <div className={styles.post}>
