@@ -4,7 +4,7 @@ import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from "../header";
 
-class blogPost39 extends Component {
+class blogPost44 extends Component {
   //start webpage at the top
   componentDidMount() {
     window.scrollTo(0, 0);
@@ -144,4 +144,4 @@ class blogPost39 extends Component {
     );
   }
 }
-export default blogPost39;
+export default blogPost44;
