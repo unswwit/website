@@ -15,14 +15,13 @@ class blogPost32 extends Component {
       <div>
         {/* Cover Photo */}
         <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #32" />
-
         {/*End of Header*/}
 
         {/*Start of blog post*/}
         <div className={styles.blogContent}>
           <div>
             <h2 className={styles.blogTitle}>Familiarising Fintech</h2>
-            <p className={styles.date}>18th October 2020</p>
+            <p className={styles.date}>October 18, 2020</p>
           </div>
 
           <div className={styles.post}>

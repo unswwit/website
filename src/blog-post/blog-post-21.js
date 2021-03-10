@@ -25,7 +25,7 @@ class blogPost21 extends Component {
               Introducing Madeleine English, Consultant in Engineering at Asset
               Management at KPMG
             </h2>
-            <p className={styles.date}>9th September 2020</p>
+            <p className={styles.date}>September 9, 2020</p>
           </div>
 
           <div className={styles.post}>

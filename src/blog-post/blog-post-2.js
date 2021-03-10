@@ -23,7 +23,7 @@ class blogPost2 extends Component {
               Introducing: Professor Lisa Harvey Smith, Astrophysicist and
               Australia’s First Women In STEM Ambassador
             </h2>
-            <p className={styles.date}>27th May 2020</p>
+            <p className={styles.date}>May 27, 2020</p>
           </div>
 
           <div className={styles.post}>

@@ -20,7 +20,7 @@ class blogPost7 extends Component {
         <div className={styles.blogContent}>
           <div>
             <h2 className={styles.blogTitle}>How to Ace Your Hackathon</h2>
-            <p className={styles.date}> 21st June 2020 </p>
+            <p className={styles.date}>June 21, 2020 </p>
           </div>
 
           <div className={styles.post}>

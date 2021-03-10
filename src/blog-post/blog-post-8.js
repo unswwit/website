@@ -22,7 +22,7 @@ class blogPost8 extends Component {
             <h2 className={styles.blogTitle}>
               WIT Crush Wednesday - Dr Marguerite Evans-Galea
             </h2>
-            <p className={styles.date}> 24th June 2020 </p>
+            <p className={styles.date}>June 24, 2020 </p>
           </div>
 
           <div className={styles.post}>

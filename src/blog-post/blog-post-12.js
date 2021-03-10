@@ -20,7 +20,7 @@ class blogPost12 extends Component {
         <div className={styles.blogContent}>
           <div>
             <h2 className={styles.blogTitle}>WIT Crush Wednesday - Maddie Mackey</h2>
-            <p className={styles.date}> 8th July 2020 </p>
+            <p className={styles.date}>July 8, 2020 </p>
           </div>
 
           <div className={styles.post}>

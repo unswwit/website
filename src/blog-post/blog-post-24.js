@@ -22,7 +22,7 @@ class blogPost24 extends Component {
         <div className={styles.blogContent}>
           <div>
             <h2 className={styles.blogTitle}>Sleep and Study</h2>
-            <p className={styles.date}>20th September 2020</p>
+            <p className={styles.date}>September 20, 2020</p>
           </div>
 
           <div className={styles.post}>

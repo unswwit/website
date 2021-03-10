@@ -22,7 +22,7 @@ class blogPost34 extends Component {
         <div className={styles.blogContent}>
           <div>
             <h2 className={styles.blogTitle}>What I Learnt From Shadiyah Lim</h2>
-            <p className={styles.date}>25th October 2020</p>
+            <p className={styles.date}>October 25, 2020</p>
           </div>
 
           <div className={styles.post}>

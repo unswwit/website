@@ -25,7 +25,7 @@ class blogPost35 extends Component {
               Introducing: Calista Kusuma, Information Systems and Marketing
               Student
             </h2>
-            <p className={styles.date}>28th October 2020</p>
+            <p className={styles.date}>October 28, 2020</p>
           </div>
 
           <div className={styles.post}>

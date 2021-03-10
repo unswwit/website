@@ -24,7 +24,7 @@ class blogPost1 extends Component {
               Introducing: Silvia Lin, Senior Consultant of PWC and WIT
               Co-founder
             </h2>
-            <p className={styles.date}> 20th May 2020 </p>
+            <p className={styles.date}>May 20, 2020 </p>
           </div>
 
           <div className={styles.post}>

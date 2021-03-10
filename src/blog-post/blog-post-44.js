@@ -21,7 +21,7 @@ class blogPost44 extends Component {
         <div className={styles.blogContent}>
           <div>
             <h2 className={styles.blogTitle}>The Only Constant is Change</h2>
-            <p className={styles.date}>4th March 2021</p>
+            <p className={styles.date}>March 4, 2021</p>
           </div>
 
           <div className={styles.post}>

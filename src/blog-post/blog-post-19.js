@@ -24,7 +24,7 @@ class blogPost19 extends Component {
             <h2 className={styles.blogTitle}>
               Introducing : Shatabdi De, Web Developer at Nine Entertainment Co.
             </h2>
-            <p className={styles.date}>5th August 2020</p>
+            <p className={styles.date}>August 5, 2020</p>
           </div>
 
           <div className={styles.post}>

@@ -24,7 +24,7 @@ class blogPost17 extends Component {
             <h2 className={styles.blogTitle}>
               Introducing: Natasha Jones, SAP Consultant at Deloitte
             </h2>
-            <p className={styles.date}>29th July 2020</p>
+            <p className={styles.date}>July 29, 2020</p>
           </div>
 
           <div className={styles.post}>

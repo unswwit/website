@@ -24,7 +24,7 @@ class blogPost31 extends Component {
             <h2 className={styles.blogTitle}>
               Introducing Sophie Warner, Tech Intern at National Australia Bank
             </h2>
-            <p className={styles.date}>14th October 2020</p>
+            <p className={styles.date}>October 14, 2020</p>
           </div>
 
           <div className={styles.post}>

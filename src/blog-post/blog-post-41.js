@@ -21,7 +21,7 @@ class blogPost41 extends Component {
         <div className={styles.blogContent}>
           <div>
             <h2 className={styles.blogTitle}>Genomic Sequencing Explained</h2>
-            <p className={styles.date}>21st February 2021</p>
+            <p className={styles.date}>February 21, 2021</p>
           </div>
 
           <div className={styles.post}>

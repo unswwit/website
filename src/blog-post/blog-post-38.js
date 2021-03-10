@@ -24,7 +24,7 @@ class blogPost38 extends Component {
             <h2 className={styles.blogTitle}>
               WIT Personal Project Series - eXsight{" "}
             </h2>
-            <p className={styles.date}>9th November 2020</p>
+            <p className={styles.date}>November 9, 2020</p>
           </div>
 
           <div className={styles.post}>

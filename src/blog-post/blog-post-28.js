@@ -24,7 +24,7 @@ class blogPost28 extends Component {
               Technical Interview Walkthrough with Amanda Li and Vivian Shen
               (Part 1)
             </h2>
-            <p className={styles.date}>4th October 2020</p>
+            <p className={styles.date}>October 4, 2020</p>
           </div>
 
           <div className={styles.post}>

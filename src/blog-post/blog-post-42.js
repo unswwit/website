@@ -21,7 +21,7 @@ class blogPost42 extends Component {
         <div className={styles.blogContent}>
           <div>
             <h2 className={styles.blogTitle}>Introducing Edith Chow, Co-Founder of Aperture</h2>
-            <p className={styles.date}>24nd February 2021</p>
+            <p className={styles.date}>February 24, 2021</p>
           </div>
 
           <div className={styles.post}>

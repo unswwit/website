@@ -24,7 +24,7 @@ class blogPost20 extends Component {
             <h2 className={styles.blogTitle}>
               Introducing : Aneita Yang, Product Manager At Atlassian
             </h2>
-            <p className={styles.date}>2nd September 2020</p>
+            <p className={styles.date}>September 2, 2020</p>
           </div>
 
           <div className={styles.post}>

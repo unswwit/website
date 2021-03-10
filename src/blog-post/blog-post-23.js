@@ -24,7 +24,7 @@ class blogPost23 extends Component {
             <h2 className={styles.blogTitle}>
               Introducing Danni Ovens, Forward Deployed Software Engineer
             </h2>
-            <p className={styles.date}>16th September 2020</p>
+            <p className={styles.date}>September 16, 2020</p>
           </div>
 
           <div className={styles.post}>

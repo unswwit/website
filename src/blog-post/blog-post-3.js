@@ -22,7 +22,7 @@ class blogPost3 extends Component {
             <h2 className={styles.blogTitle}>
               4 Lessons From Marissa Mayer's Life in Tech
             </h2>
-            <p className={styles.date}> 3rd June 2020 </p>
+            <p className={styles.date}>June 3, 2020 </p>
           </div>
 
           <div className={styles.post}>

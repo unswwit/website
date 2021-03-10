@@ -22,7 +22,7 @@ class blogPost16 extends Component {
             <h2 className={styles.blogTitle}>
               Introducing Erica Joy Baker, Director of Engineering at GitHub
             </h2>
-            <p className={styles.date}>22nd July 2020</p>
+            <p className={styles.date}>July 22, 2020</p>
           </div>
 
           <div className={styles.post}>

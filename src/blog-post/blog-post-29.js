@@ -24,7 +24,7 @@ class blogPost29 extends Component {
             <h2 className={styles.blogTitle}>
               Introducing Davina Adisusila, Engineering Team Lead at Eucalyptus
             </h2>
-            <p className={styles.date}>10th October 2020</p>
+            <p className={styles.date}>October 10, 2020</p>
           </div>
 
           <div className={styles.post}>

@@ -24,7 +24,7 @@ class blogPost22 extends Component {
             <h2 className={styles.blogTitle}>
               4 Ways Technology is Changing how we make Art
             </h2>
-            <p className={styles.date}>13th September 2020</p>
+            <p className={styles.date}>September 13, 2020</p>
           </div>
 
           <div className={styles.post}>

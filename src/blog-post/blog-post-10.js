@@ -22,7 +22,7 @@ class blogPost10 extends Component {
             <h2 className={styles.blogTitle}>
               Introducing: Lana King, Senior Consultant of Deloitte
             </h2>
-            <p className={styles.date}> 1st July 2020 </p>
+            <p className={styles.date}>July 1, 2020</p>
           </div>
 
           <div className={styles.post}>

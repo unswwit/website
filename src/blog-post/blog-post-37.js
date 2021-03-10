@@ -24,7 +24,7 @@ class blogPost37 extends Component {
             <h2 className={styles.blogTitle}>
               Introducing Tanzeem Syeda, Software Engineer at WiseTech Global
             </h2>
-            <p className={styles.date}>4th November 2020</p>
+            <p className={styles.date}>November 4, 2020</p>
           </div>
 
           <div className={styles.post}>

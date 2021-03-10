@@ -23,7 +23,7 @@ class blogPost14 extends Component {
               Introducing: Hannah Beder, Creative Technologist at Creatable and
               NSW Young Woman of the Year 2020
             </h2>
-            <p className={styles.date}> 15th July 2020 </p>
+            <p className={styles.date}>July 15, 2020 </p>
           </div>
 
           <div className={styles.post}>

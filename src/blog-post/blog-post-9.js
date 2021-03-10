@@ -26,7 +26,7 @@ class blogPost9 extends Component {
               Inspired by Tim Urban’s TED Talk “Inside the Mind of a Master
               Procrastinator”
             </p>
-            <p className={styles.date}> 29th June 2020 </p>
+            <p className={styles.date}>June 29, 2020 </p>
           </div>
 
           <div className={styles.post}>

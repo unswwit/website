@@ -22,7 +22,7 @@ class blogPost6 extends Component {
             <h2 className={styles.blogTitle}>
               Introducing: Fontaine Foxworth, Product Manager of Google
             </h2>
-            <p className={styles.date}> 17th June 2020 </p>
+            <p className={styles.date}>June 17, 2020 </p>
           </div>
 
           <div className={styles.post}>

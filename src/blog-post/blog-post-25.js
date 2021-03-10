@@ -23,7 +23,7 @@ class blogPost25 extends Component {
             <h2 className={styles.blogTitle}>
               Introducing: Cindy Russel Sia, Senior Consultant of Deloitte
             </h2>
-            <p className={styles.date}>23rd September 2020</p>
+            <p className={styles.date}>September 23, 2020</p>
           </div>
 
           <div className={styles.post}>

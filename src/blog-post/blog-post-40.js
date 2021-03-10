@@ -21,7 +21,7 @@ class blogPost40 extends Component {
         <div className={styles.blogContent}>
           <div>
             <h2 className={styles.blogTitle}>Goals are like Soft Toys</h2>
-            <p className={styles.date}>14th February 2021</p>
+            <p className={styles.date}>February 14, 2021</p>
           </div>
 
           <div className={styles.post}>

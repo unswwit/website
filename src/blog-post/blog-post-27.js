@@ -23,7 +23,7 @@ class blogPost27 extends Component {
             <h2 className={styles.blogTitle}>
               Introducing: Ankita Singh, PHD Student
             </h2>
-            <p className={styles.date}>30th September 2020</p>
+            <p className={styles.date}>September 30, 2020</p>
           </div>
 
           <div className={styles.post}>
