@@ -59,14 +59,16 @@ a.subheader {
 
 .principal {
   width: 100%;
-  max-width: 250px;
+  max-width: 400px;
   padding: 15px;
 }
 
 .major {
   width: 100%;
-  max-width: 200px;
+  width: 220px;
+  max-height: 140px;
   padding: 15px;
+  object-fit: contain;
 }
 
 .supportInkind {
