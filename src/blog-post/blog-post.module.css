@@ -43,7 +43,6 @@
   text-align: justify;
 }
 
-span,
 p,
 th,
 td,
@@ -60,7 +59,7 @@ b {
   font-weight: bolder;
 }
 
-span.date {
+.blogDetails .date {
   color: #313638;
   font-size: 11pt;
 }
