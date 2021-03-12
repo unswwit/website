@@ -144,7 +144,7 @@ const Home = () => {
       <div className={styles.sponsors}>
         <h1>OUR SPONSORS</h1>
         <img
-          src={`${process.env.PUBLIC_URL}./sponsors-home-2021.png`}
+          src={`${process.env.PUBLIC_URL}./sponsors-home-2021-temp.png`}
           alt="banner"
         />
       </div>

@@ -6,7 +6,7 @@ const Sponsors = () => {
   const majorSponsors = {
     Accenture: [ "https://www.accenture.com/au-en", "accenture.png" ],
     Atlassian: [ "https://www.accenture.com/au-en", "atlassian-major.png" ],
-    Cba: [ "https://www.commbank.com.au/about-us/careers.html", "cba-major.png" ],
+    // Cba: [ "https://www.commbank.com.au/about-us/careers.html", "cba-major.png" ],
     Ey: [ "https://www.ey.com/en_au", "EY.gif" ],
     Fdm: [ "https://www.fdmgroup.com/en-au/au-home/", "fdm-group.png" ],
     Google: [ "https://careers.google.com/", "google-major.png" ],
