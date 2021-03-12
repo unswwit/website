@@ -47,7 +47,7 @@ class blogPost24 extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i>Why We Sleep</i>
+                <em>Why We Sleep</em>
               </a>{" "}
               by Matthew Walker. Before this book, I would drink an average of
               two cups of coffee a day and sleep around 7 hours per night. I led

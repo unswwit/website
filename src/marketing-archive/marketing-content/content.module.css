@@ -7,13 +7,6 @@
 
 /*-------------------------------Categories-----------------------------*/
 
-/*Intiative*/
-:root {
-  --white: #fff;
-  --yellow: #feb14b;
-  --grey: #313638;
-}
-
 .initiatives {
   text-align: center;
   margin-top: 50px;
