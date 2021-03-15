@@ -59,7 +59,7 @@ const Home = () => {
         <div>
           <div className={styles.number}>
             <div>
-              <CountUp end={30} duration={5} />  
+              <CountUp end={48} duration={5} />  
               <p>Team Members</p>
             </div>
             <div>
@@ -97,13 +97,13 @@ const Home = () => {
         </div>
         <div className={styles.event1}>
           <a 
-            href="https://www.facebook.com/unsw.wit/" 
+            href="https://www.facebook.com/events/727086634650316/" 
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              src={`${process.env.PUBLIC_URL}/event-covers/2021/05-international-womens-day.png`}
-              alt="International Women's Day Brunch"
+              src={`${process.env.PUBLIC_URL}/event-covers/2021/08-CBA-resume.png`}
+              alt="WIT x CBA: Resume Workshop"
             />
           </a>
         </div>
@@ -144,7 +144,7 @@ const Home = () => {
       <div className={styles.sponsors}>
         <h1>OUR SPONSORS</h1>
         <img
-          src={`${process.env.PUBLIC_URL}./sponsors-home.png`}
+          src={`${process.env.PUBLIC_URL}./sponsors-home-2021-temp.png`}
           alt="banner"
         />
       </div>

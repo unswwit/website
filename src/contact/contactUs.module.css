@@ -28,7 +28,7 @@
 .formLeft textarea {
   border-style: none;
   border-bottom: solid;
-  border-color: #777b7c;
+  border-color: var(--light-grey);
   border-width: 2px;
   width: 100%;
 }
@@ -39,7 +39,7 @@
 
   border-style: none;
   border-bottom: solid;
-  border-color: #777b7c;
+  border-color: var(--light-grey);
   border-width: 2px;
 
   border-radius: 0px;
@@ -103,7 +103,7 @@ form input.button:hover {
 }
 
 .newEmails a {
-  color: #777b7c;
+  color: var(--light-grey);
   display: block;
   font-family: "Montserrat", sans-serif;
   font-size: 10pt;
@@ -206,7 +206,7 @@ form input.button:hover {
     border-top: 2px solid #bbb;
   }
 
-  .line-break {
+  .lineBreak {
     visibility: visible;
   }
 

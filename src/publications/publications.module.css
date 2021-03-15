@@ -60,7 +60,6 @@
 
 .article .dark {
   width: 100%;
-  /*background-color: #313638;  /*website overlay*/
   background-color: black;
   opacity: 0;
   position: absolute;
