@@ -8,7 +8,7 @@ class ContactUs extends React.Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/contact-header-1.png" title="Contact Us" />
+        <PageHeader imgUrl="/headers/2021-exec-header.jpg" title="Contact Us" />
         <div className={styles.form}>
           <h2 className={styles.inquiry}>Send Through a General Inquiry</h2>
           <div className={styles.formRight}>
