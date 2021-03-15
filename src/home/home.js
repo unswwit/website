@@ -59,7 +59,7 @@ const Home = () => {
         <div>
           <div className={styles.number}>
             <div>
-              <CountUp end={48} duration={5} />  
+              <CountUp end={47} duration={5} />  
               <p>Team Members</p>
             </div>
             <div>
