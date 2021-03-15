@@ -17,7 +17,7 @@ const Sponsors = () => {
     Pwc: [ "https://www.pwc.com.au/", "pwc-logo-png-transparent.png" ],
     Quantium: [ "https://quantium.com/", "quantium-major.png" ],
     Resmed: [ "https://www.resmed.com.au/", "ResMed.jpg" ],
-    Telstra: [ "https://www.eucalyptus.vc/", "telstra-large.png" ]
+    Telstra: [ "https://www.telstra.com.au/", "telstra-large.png" ]
   };
   return (
     <div>
