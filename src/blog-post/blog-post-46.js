@@ -5,7 +5,7 @@ import AuthorCard from "./authorCard";
 import PageHeader from "../header";
 import ShareBtns from "./ShareBtns";
 
-class blogPost45 extends Component {
+class blogPost46 extends Component {
   //start webpage at the top
   componentDidMount() {
     window.scrollTo(0, 0);
@@ -166,4 +166,4 @@ class blogPost45 extends Component {
     );
   }
 }
-export default blogPost45;
+export default blogPost46;
