@@ -6,7 +6,7 @@ const Sponsors = () => {
   const majorSponsors = {
     Accenture: [ "https://www.accenture.com/au-en", "accenture.png" ],
     Atlassian: [ "https://www.accenture.com/au-en", "atlassian-major.png" ],
-    Cba: [ "https://www.commbank.com.au/about-us/careers.html", "cba-major.png" ],
+    // Cba: [ "https://www.commbank.com.au/about-us/careers.html", "cba-major.png" ],
     Ey: [ "https://www.ey.com/en_au", "EY.gif" ],
     Fdm: [ "https://www.fdmgroup.com/en-au/au-home/", "fdm-group.png" ],
     Google: [ "https://careers.google.com/", "google-major.png" ],
@@ -17,12 +17,12 @@ const Sponsors = () => {
     Pwc: [ "https://www.pwc.com.au/", "pwc-logo-png-transparent.png" ],
     Quantium: [ "https://quantium.com/", "quantium-major.png" ],
     Resmed: [ "https://www.resmed.com.au/", "ResMed.jpg" ],
-    Telstra: [ "https://www.eucalyptus.vc/", "telstra-large.png" ]
+    Telstra: [ "https://www.telstra.com.au/", "telstra-large.png" ]
   };
   return (
     <div>
       {/* Cover Photo */}
-      <PageHeader imgUrl="/headers/sponsors-header-1.png" title="Sponsors" />
+      <PageHeader imgUrl="/headers/sponsors-header-2.jpg" title="Sponsors" />
 
       <div id={styles.sponsorsBody}>
         <p className={styles.subheader}>

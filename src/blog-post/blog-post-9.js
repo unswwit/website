@@ -3,6 +3,7 @@ import ".././style.css";
 import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from ".././header";
+import ShareBtns from "./ShareBtns";
 
 class blogPost9 extends Component {
   //start webpage at the top
@@ -26,7 +27,10 @@ class blogPost9 extends Component {
               Inspired by Tim Urban’s TED Talk “Inside the Mind of a Master
               Procrastinator”
             </p>
-            <p className={styles.date}> 29th June 2020 </p>
+            <div className={styles.blogDetails}>
+              <span className={styles.date}>June 29, 2020</span>
+              <span><ShareBtns /></span>
+            </div> 
           </div>
 
           <div className={styles.post}>

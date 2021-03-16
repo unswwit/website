@@ -11,7 +11,7 @@
 
 /*Intro paragraph*/
 p.intro {
-  color: #707070;
+  color: var(--light-grey);
   padding-top: 150px;
   font-family: "Montserrat", sans-serif;
   font-size: 12pt;
