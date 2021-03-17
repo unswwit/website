@@ -11,14 +11,14 @@ class AuthorCard extends Component {
         {Object.keys(this.props.authors).map((key, index) => (
           <div key={index} className={styles.author}>
             <div className={styles.authorLeft}>
-              {this.props.authors[key][0] && <div>
+              <div>
                 {/*note this div is necessary to formatting*/}
                 <img
                   src={process.env.PUBLIC_URL + this.props.authors[key][0]}
                   className={this.props.authors[key][1]}
                   alt={key}
                 />
-              </div>}
+              </div>
             </div>
             <div className={styles.authorRight}>
               <div className={[styles.title, styles.authorName].join(" ")}>
