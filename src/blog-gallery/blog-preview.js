@@ -35,26 +35,21 @@ class BlogPreview extends Component {
                   </div>
                   <tr className={styles.authorRow}>
                     {Object.keys(this.props.authors).map((key) => (
-                      <td className={styles.authorSection} key={key}>
-                        <td>
-                          <div className={styles.authorPic}>
-                            <img
-                              src={
-                                process.env.PUBLIC_URL +
-                                this.props.authors[key][0]
-                              }
-                              className={styles.blogAuthor}
-                              alt={key}
-                            />
-                          </div>
-                        </td>
-
-                        <td className={styles.authorName}>
-                          <div className={styles.auth}>
-                            {this.props.authors[key][1]}
-                          </div>
-                        </td>
-                      </td>
+                      <div className={styles.authorSection} key={key}>
+                        <div className={styles.authorPic}>
+                          <img
+                            src={
+                              process.env.PUBLIC_URL +
+                              this.props.authors[key][0]
+                            }
+                            className={this.props.authors[key][0] === "/potraits/blog-authors/anon.png" ? styles.anonAuthor : styles.blogAuthor}
+                            alt={key}
+                          />
+                        </div>
+                        <div className={[styles.auth, styles.authorName].join(" ")}>
+                          {this.props.authors[key][1]}
+                        </div>
+                      </div>
                     ))}
                   </tr>
                 </td>

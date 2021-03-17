@@ -72,7 +72,25 @@ class blogPost47 extends Component {
               styles.authorProfile,
               "Georgie Mansfield",
               "Education Executive"
-            ]
+            ],
+            "chelsea-chaffey": [
+              "/potraits/blog-authors/anon.png",
+              styles.anonProfile,
+              "Chelsea Chaffey",
+              "Education team",
+            ],
+            "natalie-leroy": [
+              "/potraits/blog-authors/anon.png",
+              styles.anonProfile,
+              "Natalie Leroy",
+              "Education team",
+            ],
+            "erika-shi": [
+              "/potraits/blog-authors/anon.png",
+              styles.anonProfile,
+              "Erika Shi",
+              "Education team",
+            ],
           }}
         />
         {/*End of blog posts*/}

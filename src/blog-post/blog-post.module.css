@@ -192,7 +192,8 @@ img.floatRight {
 /*-------------------------------Author card-----------------------------*/
 .author {
   margin: 0 auto;
-  margin-bottom: 6vw;
+  margin-bottom: 4vw;
+  /*margin-bottom: 6vw;*/
   display: flex;
   align-items: center;
   width: 450px;
@@ -218,6 +219,10 @@ img.floatRight {
   width: 120%;
 }
 
+.anonProfile {
+  height: auto;
+  width: 100%;
+}
 /*Author details*/
 .authorRight {
   display: inline-block;
