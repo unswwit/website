@@ -91,7 +91,7 @@ const Events = () => {
                     process.env.PUBLIC_URL +
                       `/event-covers/2021/${upcomingEvent.img}`
                   }
-                  alt={upcomingEvent.label}
+                  alt={upcomingEvent.title}
                 />
                 <div className={styles.eventDescription}>
                   <p className={styles.eventName}>{upcomingEvent.title}</p>

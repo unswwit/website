@@ -59,7 +59,7 @@ const Home = () => {
         <div>
           <div className={styles.number}>
             <div>
-              <CountUp end={48} duration={5} />  
+              <CountUp end={47} duration={5} />  
               <p>Team Members</p>
             </div>
             <div>
@@ -67,7 +67,7 @@ const Home = () => {
               <p>Sponsors</p>
             </div>
             <div>
-              <CountUp end={2767} duration={4} />
+              <CountUp end={2781} duration={4} />
               <p>Facebook Followers</p>
             </div>
           </div>
@@ -97,13 +97,13 @@ const Home = () => {
         </div>
         <div className={styles.event1}>
           <a 
-            href="https://facebook.com/events/344717670110372" 
+            href="https://www.facebook.com/events/727086634650316/" 
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              src={`${process.env.PUBLIC_URL}/event-covers/2021/07-WIT-x-Accenture.png`}
-              alt="WIT x Accenture Present: Accessing Accenture"
+              src={`${process.env.PUBLIC_URL}/event-covers/2021/08-CBA-resume.png`}
+              alt="WIT x CBA: Resume Workshop"
             />
           </a>
         </div>
@@ -144,7 +144,7 @@ const Home = () => {
       <div className={styles.sponsors}>
         <h1>OUR SPONSORS</h1>
         <img
-          src={`${process.env.PUBLIC_URL}./sponsors-home-2021.png`}
+          src={`${process.env.PUBLIC_URL}./sponsors-home-2021-temp.png`}
           alt="banner"
         />
       </div>

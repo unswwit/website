@@ -33,7 +33,7 @@ class JoinUs extends React.Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/join-header-1.png" title="Join Us" />
+        <PageHeader imgUrl="/headers/join-header-2.jpg" title="Join Us" />
         <div className={styles.joinUsBody}>
           <div className={styles.joinUsRight}>
             <h2>Connect with us</h2>
