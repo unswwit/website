@@ -248,8 +248,7 @@ h2.teamHeading {
     font-size: 18px;
   }
 
-  .profileDegree,
-  .subcomProfileDegree {
+  .profileDegree {
     font-size: 16px;
   }
 
@@ -280,6 +279,7 @@ h2.teamHeading {
   }
 
   .subcomProfileName {
+    width: 140%;
     font-size: 11pt;
     overflow-wrap: break-word;
     hyphens: auto;
