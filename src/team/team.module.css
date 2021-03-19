@@ -266,7 +266,7 @@ h2.teamHeading {
   .subcomRow {
     display: inline-grid;
     width: 100%;
-    grid-template-columns: 90px auto;
+    grid-template-columns: 160px auto;
     grid-gap: 15px;
     align-content: start;
   }
@@ -288,5 +288,15 @@ h2.teamHeading {
   .profileCrop {
     width: 200px;
     height: 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .subcomRow {
+    display: inline-grid;
+    width: 100%;
+    grid-template-columns: 90px auto;
+    grid-gap: 15px;
+    align-content: start;
   }
 }
