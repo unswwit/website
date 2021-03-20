@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.bed56f80.chunk.css",
+    "main.css": "/static/css/main.20273bfd.chunk.css",
     "main.js": "/static/js/main.cd23c638.chunk.js",
     "main.js.map": "/static/js/main.cd23c638.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.0625ef8c.js",
@@ -9,10 +9,10 @@
     "static/js/2.b885d2fe.chunk.js": "/static/js/2.b885d2fe.chunk.js",
     "static/js/2.b885d2fe.chunk.js.map": "/static/js/2.b885d2fe.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.24338ea27e4abc35618edc2c81f714c3.js": "/precache-manifest.24338ea27e4abc35618edc2c81f714c3.js",
+    "precache-manifest.b7b175f53e1add582cb7863d9321155f.js": "/precache-manifest.b7b175f53e1add582cb7863d9321155f.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.054918a4.chunk.css.map": "/static/css/2.054918a4.chunk.css.map",
-    "static/css/main.bed56f80.chunk.css.map": "/static/css/main.bed56f80.chunk.css.map",
+    "static/css/main.20273bfd.chunk.css.map": "/static/css/main.20273bfd.chunk.css.map",
     "static/js/2.b885d2fe.chunk.js.LICENSE.txt": "/static/js/2.b885d2fe.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/static/media/outline-icons.ef60a4f6.woff",
     "static/media/podcast-episode-1.md": "/static/media/podcast-episode-1.c44f354d.md",
@@ -22,7 +22,7 @@
     "static/js/runtime-main.0625ef8c.js",
     "static/css/2.054918a4.chunk.css",
     "static/js/2.b885d2fe.chunk.js",
-    "static/css/main.bed56f80.chunk.css",
+    "static/css/main.20273bfd.chunk.css",
     "static/js/main.cd23c638.chunk.js"
   ]
 }
