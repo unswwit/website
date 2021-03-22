@@ -114,14 +114,10 @@ class blogPost48 extends Component {
             </p>
             <p className={styles.postContent}>
              I am grateful that I was given the opportunities and support to learn and succeed in various roles. 
-            </p>
-            <p className={styles.postContent}>
              Also I have met some amazing women throughout my career who have taught me that being a female in a male-oriented field, it’s important to stay confident and authentic.
             </p>
             <p className={styles.postContent}>
              My role model has been Indra Nooyi, the best advice from her has been:
-            </p>
-            <p className={styles.postContent}>
              To develop technical mastery at what you do. Create a reputation of being good at doing that particular thing.
             </p>
             <br />
