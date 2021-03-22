@@ -63,11 +63,11 @@ const Home = () => {
               <p>Team Members</p>
             </div>
             <div>
-              <CountUp end={15} duration={5} />
+              <CountUp end={20} duration={5} />
               <p>Sponsors</p>
             </div>
             <div>
-              <CountUp end={2781} duration={4} />
+              <CountUp end={2802} duration={4} />
               <p>Facebook Followers</p>
             </div>
           </div>
@@ -97,13 +97,13 @@ const Home = () => {
         </div>
         <div className={styles.event1}>
           <a 
-            href="https://www.facebook.com/events/727086634650316/" 
+            href="https://www.facebook.com/events/347419053657777" 
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              src={`${process.env.PUBLIC_URL}/event-covers/2021/08-CBA-resume.png`}
-              alt="WIT x CBA: Resume Workshop"
+              src={`${process.env.PUBLIC_URL}/event-covers/2021/09-telehealth.png`}
+              alt="WIT x Eucalyptus: Let's Talk Telehealth"
             />
           </a>
         </div>
