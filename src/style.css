@@ -1,6 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display&display=swap");
-/*font-family: 'Playfair Display', serif;
-font-family: 'Montserrat', sans-serif;*/
+/* Web fonts used:
+  font-family: 'Playfair Display', serif;
+  font-family: 'Montserrat', sans-serif;
+*/
+
+/*Web colours*/
+:root {
+  --white: #fff;
+  --yellow: #feb14b;
+  --light-yellow: #fff7ef;
+  --grey: #313638;
+  --light-grey: #4f4f4f;
+  --red: #e85f5c;
+}
+
 /*----------------------------------Loading Screen------------------------------------*/
 #loadingBackground {
   background: #fff7ef;

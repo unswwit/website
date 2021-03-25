@@ -26,18 +26,27 @@
   font-style: italic;
 }
 
+/* Date and share buttons */
+.blogDetails {
+  display: flex;
+  justify-content: space-between;  
+  align-items: flex-end;
+  margin-bottom: 3vw;
+}
+
 /*Blog content*/
 .post {
   margin-bottom: 8vw;
   margin: auto;
-  color: #707070;
+  color: var(--light-grey);
   font-family: "Montserrat", sans-serif;
   text-align: justify;
 }
 
 p,
 th,
-td {
+td,
+div {
   font-size: 12pt;
 }
 
@@ -50,21 +59,24 @@ b {
   font-weight: bolder;
 }
 
-p.date {
+.blogDetails .date {
   color: #313638;
-  font-size: 10pt;
-  text-align: center;
-  margin-bottom: 4vw;
+  font-size: 11pt;
 }
 
 .postContent {
   font-weight: 300;
 }
 
-/*Subheading in post content*/
+/*Heading in post content*/
 .postHeading {
-  color: #707070;
+  color: var(--light-grey);
   font-size: 24pt;
+}
+
+/*Subheading in post content*/
+.postSubheading {
+  text-decoration: underline;
 }
 
 /*Interview questions*/
@@ -75,7 +87,7 @@ p.date {
 
 /*Makes dot points and numbered points larger*/
 .list {
-  color: #707070;
+  color: var(--light-grey);
   font-family: "Montserrat", sans-serif;
   font-size: 12pt;
   text-align: justify;
@@ -180,7 +192,8 @@ img.floatRight {
 /*-------------------------------Author card-----------------------------*/
 .author {
   margin: 0 auto;
-  margin-bottom: 6vw;
+  margin-bottom: 4vw;
+  /*margin-bottom: 6vw;*/
   display: flex;
   align-items: center;
   width: 450px;
@@ -206,12 +219,10 @@ img.floatRight {
   width: 120%;
 }
 
-.exec2021Img {
+.anonProfile {
   height: auto;
-  width: 115%;
-  transform: translate(-5%, -13%);
+  width: 100%;
 }
-
 /*Author details*/
 .authorRight {
   display: inline-block;
@@ -239,7 +250,7 @@ img.floatRight {
 .authorRight p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: #707070;
+  color: var(--light-grey);
   font-size: 1vw;
   margin-top: 10px;
 }

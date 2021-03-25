@@ -3,8 +3,9 @@ import ".././style.css";
 import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from "../header";
+import ShareBtns from "./ShareBtns";
 
-class blogPost39 extends Component {
+class blogPost40 extends Component {
   //start webpage at the top
   componentDidMount() {
     window.scrollTo(0, 0);
@@ -21,7 +22,10 @@ class blogPost39 extends Component {
         <div className={styles.blogContent}>
           <div>
             <h2 className={styles.blogTitle}>Goals are like Soft Toys</h2>
-            <p className={styles.date}>14th February 2021</p>
+            <div className={styles.blogDetails}>
+              <span className={styles.date}>February 14, 2021</span>
+              <span><ShareBtns /></span>
+            </div> 
           </div>
 
           <div className={styles.post}>
@@ -75,7 +79,7 @@ class blogPost39 extends Component {
           authors={{
             "georgie-mansfield": [
               "/potraits/blog-authors/georgie2021.jpg",
-              styles.exec2021Img,
+              styles.authorProfile,
               "Georgie Mansfield",
               "Education Executive"
             ]
@@ -86,4 +90,4 @@ class blogPost39 extends Component {
     );
   }
 }
-export default blogPost39;
+export default blogPost40;

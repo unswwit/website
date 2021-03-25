@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./style.css";
-import "./blog-post/blog-post.css";
 
 class PageHeader extends Component {
   render() {

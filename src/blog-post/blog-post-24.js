@@ -3,6 +3,7 @@ import ".././style.css";
 import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from ".././header";
+import ShareBtns from "./ShareBtns";
 
 class blogPost24 extends Component {
   //start webpage at the top
@@ -22,7 +23,10 @@ class blogPost24 extends Component {
         <div className={styles.blogContent}>
           <div>
             <h2 className={styles.blogTitle}>Sleep and Study</h2>
-            <p className={styles.date}>20th September 2020</p>
+            <div className={styles.blogDetails}>
+              <span className={styles.date}>September 20, 2020</span>
+              <span><ShareBtns /></span>
+            </div> 
           </div>
 
           <div className={styles.post}>
@@ -47,7 +51,7 @@ class blogPost24 extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i>Why We Sleep</i>
+                <em>Why We Sleep</em>
               </a>{" "}
               by Matthew Walker. Before this book, I would drink an average of
               two cups of coffee a day and sleep around 7 hours per night. I led
@@ -118,7 +122,7 @@ class blogPost24 extends Component {
 
             <div className={styles.postContent}>
               The KEY takeaways that I hope you have now gained are:
-              <ul>
+              <ul className={styles.list}>
                 <li>
                   Before exams, aim to sleep for 8 hours! In doing so, you are
                   moving all your information from short term to long term

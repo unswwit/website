@@ -7,7 +7,7 @@ form input {
   
   border-style: none;
   border-bottom: solid;
-  border-color: #777b7c;
+  border-color: var(--light-grey);
   border-width: 2px;
 	padding: 5px;
 	font-family: "Montserrat", sans-serif;

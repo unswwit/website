@@ -24,7 +24,7 @@ const Home = () => {
       setCoverPhoto(img.src);
       setTimeout(() => {
         setSourceLoading(false);
-      }, 2000);
+      }, 1500);
     }
   }, [])  
 
@@ -54,7 +54,7 @@ const Home = () => {
           {/* Start of Description */}
           <div className={styles.description}>
             <div className={styles.descriptionLeft}>
-              <h1>COLLABORATE. INSPIRE. CHANGE.</h1>
+              <h1>COLLABORATE. INSPIRE. CHANGE.</h1>         
             </div>
             <div className={styles.descriptionRight}>
               <p>
@@ -80,18 +80,18 @@ const Home = () => {
             <div>
               <div className={styles.number}>
                 <div>
-                  <CountUp end={30} duration={5} />  
+                  <CountUp end={47} duration={5} />  
                   <p>Team Members</p>
                 </div>
                 <div>
-                  <CountUp end={15} duration={5} />
+                  <CountUp end={20} duration={5} />
                   <p>Sponsors</p>
                 </div>
                 <div>
-                  <CountUp end={2692} duration={4} />
+                  <CountUp end={2802} duration={4} />
                   <p>Facebook Followers</p>
                 </div>
-              </div>
+              </div>      
             </div>
           </div>
           {/* End of Statistics */}
@@ -100,16 +100,16 @@ const Home = () => {
           <div className={styles.events}>
             <div className={styles.eventsDescription}>
               <p id="about">
-              At WIT, our focus is on providing events that foster development
-              catering to first to final years. Whether it's personal, academic,
-              professional or social, we want our students to be the best
-              version of themselves. As part of our aim, we also connect current
-              and future students with alumni and industry sponsors to serve as
-              role models to inspire.
+            At WIT, our focus is on providing events that foster development
+            catering to first to final years. Whether it's personal, academic,
+            professional or social, we want our students to be the best
+            version of themselves. As part of our aim, we also connect current
+            and future students with alumni and industry sponsors to serve as
+            role models to inspire.
               </p>
               <p>
                 <Link to="/events" style={{ textDecoration: "none" }}>
-                See More Events
+              See More Events
                 </Link>
               </p>
             </div>
@@ -118,28 +118,28 @@ const Home = () => {
             </div>
             <div className={styles.event1}>
               <a 
-                href="https://www.facebook.com/events/254834122828459" 
+                href="https://www.facebook.com/events/347419053657777" 
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <img
-                  src={`${process.env.PUBLIC_URL}/event-covers/2021/03-Chat-it-up-with-chatbot.gif`}
-                  alt="Chat it up with chatbots"
+                  src={`${process.env.PUBLIC_URL}/event-covers/2021/09-telehealth.png`}
+                  alt="WIT x Eucalyptus: Let's Talk Telehealth"
                 />
               </a>
             </div>
           </div>
           {/* End of upcoming events area */}
-        
+      
           {/* Start of newsletter */}
           <div className={styles.stats}>
             <img
-              src={`${process.env.PUBLIC_URL}./stats-background-1.png`}
+              src={`${process.env.PUBLIC_URL}./newsletter-background.png`}
               className={styles.statsBackground}
               alt="banner"
             />
             <button className={styles.subscribeBtn} onClick={() => setOpen(true)}>
-            Subscribe to our newsletter
+          Subscribe to our newsletter
             </button>
             <Modal
               aria-labelledby="spring-modal-title"
@@ -165,7 +165,7 @@ const Home = () => {
           <div className={styles.sponsors}>
             <h1>OUR SPONSORS</h1>
             <img
-              src={`${process.env.PUBLIC_URL}./sponsors-home.png`}
+              src={`${process.env.PUBLIC_URL}./sponsors-home-2021-temp.png`}
               alt="banner"
             />
           </div>

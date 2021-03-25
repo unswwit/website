@@ -29,7 +29,8 @@ const Footer = () => {
     instagram: "https://www.instagram.com/wit.unsw/",
     youtube: "https://www.youtube.com/channel/UCQ8PGe3P4ZuDSNCb9vCeTiw/featured",
     twitch: "https://www.twitch.tv/unswwit",
-    spotify: "https://open.spotify.com/show/1iWagdei1mVoyzg8TqbB2P"
+    spotify: "https://open.spotify.com/show/1iWagdei1mVoyzg8TqbB2P",
+    discord: "https://discord.gg/BWY4tzM326",
   };
 
   return (

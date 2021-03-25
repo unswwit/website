@@ -62,8 +62,9 @@ const Podcast = () => {
             Join us each month as we talk all about tech, uni, and life, featuring our wonderful WIT team and some special guests!
           </p>    
           <div id={styles.platformContainer}>
-            {Object.keys(links).map((link) => {
+            {Object.keys(links).map((link, index) => {
               return <a
+                key={index}
                 href={links[link][1]}
                 target="_blank"
                 rel="noopener noreferrer"

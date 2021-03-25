@@ -84,12 +84,17 @@ div .headline {
 
 /*Background image*/
 .statsBackground {
-  width: 100%;
   height: 300px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .stats {
   position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .number {
@@ -120,7 +125,11 @@ div .headline {
 }
 
 /*--------------Statistics Mobile Design-------------------*/
-
+@media only screen and (max-width: 1200px) {
+  .number {
+    width: 70%;
+  }
+}
 @media only screen and (max-width: 1000px) {
   .number {
     grid-template-columns: 25% 30% 45%;
@@ -136,7 +145,7 @@ div .headline {
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
   .number span {
     font-size: 12.5vw;
     letter-spacing: 8px;
@@ -276,7 +285,6 @@ div .headline {
   .subscribeBtn {
     font-size: 14pt;
     width: 80%;
-    bottom: 35%;
     right: 10%;
   }
 }
@@ -294,7 +302,6 @@ div .headline {
   font-family: "Montserrat", sans-serif;
   font-size: 55px;
   letter-spacing: 3px;
-  line-height: 100px;
   text-align: center;
   margin: 0px;
   line-height: normal;
@@ -435,5 +442,11 @@ div .headline {
 
   div .headline {
     height: 58vh;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .number {
+    bottom: 40%;
   }
 }

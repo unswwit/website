@@ -63,7 +63,11 @@
 }
 
 .previewContainer:hover {
-	background-color: none;
+  background-color: none;
+}
+
+a:hover {
+  color: #313638;
 }
 
 /*-------------------------------Podcast Episode Page-----------------------------*/

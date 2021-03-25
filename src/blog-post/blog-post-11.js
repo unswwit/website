@@ -3,6 +3,7 @@ import ".././style.css";
 import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from ".././header";
+import ShareBtns from "./ShareBtns";
 
 class blogPost11 extends Component {
   //start webpage at the top
@@ -20,7 +21,11 @@ class blogPost11 extends Component {
         <div className={styles.blogContent}>
           <div>
             <h2 className={styles.blogTitle}>AI in the Workplace</h2>
-            <p className={styles.date}> 4th July 2020 </p>
+            <p className={styles.date}>July 4, 2020 </p>
+            <div className={styles.blogDetails}>
+              <span className={styles.date}>July 4, 2020</span>
+              <span><ShareBtns /></span>
+            </div> 
           </div>
 
           <div className={styles.post}>
@@ -41,8 +46,8 @@ class blogPost11 extends Component {
             <br />
             <br />
 
-            <p className={styles.postContent}>
-              <b>So, what does AI in the workplace look like?</b>
+            <p className={styles.question}>
+              So, what does AI in the workplace look like?
             </p>
 
             <p className={styles.postContent}>
@@ -73,8 +78,8 @@ class blogPost11 extends Component {
             <br />
             <br />
 
-            <p className={styles.postContent}>
-              <b>How Will AI Affect Job Loss and Growth?</b>
+            <p className={styles.question}>
+              How Will AI Affect Job Loss and Growth?
             </p>
 
             <p className={styles.postContent}>
@@ -86,8 +91,8 @@ class blogPost11 extends Component {
             <br />
             <br />
 
-            <p className={styles.postContent}>
-              <b>AI is Not All Powerful</b>
+            <p className={styles.question}>
+              AI is Not All Powerful
             </p>
 
             <p className={styles.postContent}>

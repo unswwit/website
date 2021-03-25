@@ -57,18 +57,16 @@ const Events = () => {
   // load events
   useEffect(() => {
     setLoading(true);
-
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: googleData => {
-        setLoading(false);
         const allEvents = googleData["past-events"]["elements"].filter((event) => event.year === year);
         setEvents(allEvents.reverse());
         setUpcomingEvents(googleData["upcoming-events"]["elements"]);
+        setLoading(false);
       },
       simpleSheet: false
-    })
-   
+    })   
   }, [year]);
   
   return (
