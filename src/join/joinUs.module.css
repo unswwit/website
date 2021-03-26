@@ -31,17 +31,24 @@
 }
 
 /*Heading*/
-.joinUsRight h2 {
-  text-align: left;
+.joinUsBody h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 33pt;
+  padding-top: 0px;
+  padding-bottom: 100px;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  text-align: center;
 }
 
 /*Container for buttons*/
 .joinButtons {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 1rem;
+  margin-top: 45px;
 }
 
 /*Social links*/
@@ -63,11 +70,39 @@
   margin: 20% auto auto auto;  
 }
 
+.descriptionHowto {
+  line-height: 22px;
+  padding-top: 50px;
+  padding-right: 250px;
+  padding-left: 250px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13pt;
+  text-align: justify;
+  color: #313638;
+}
+
+.descriptionHowto p {
+  color: #313638b3;
+}
+
+.link {
+  color: #e85f5c;
+}
+
+.link:hover {
+  color: #feb14b;
+}
+
 /*-------------------------------Join us ipad------------------------------*/
 @media only screen and (max-width: 1100px) {
   .centre {
     font-size: 40px;
     margin: 0px;
+  }
+  .descriptionHowto {
+    padding-top: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
   }
 }
 
@@ -94,9 +129,10 @@
     margin-bottom: 0px;
   }
 
-  .joinUsRight h2 {
-    font-size: 22px;
+  .joinUsBody h2 {
+    font-size: 22pt;
     text-align: center;
+    padding-top: 30px;
     padding-bottom: 0px;
   }
 
@@ -117,6 +153,17 @@
   a.lastBtn {
     margin-right: 0px;
   }
+
+  .descriptionHowto {
+    padding-top: 0px;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-size: 11pt;
+  }
+
+  .descriptionHowto p {
+    font-size: 10pt;
+  }
 }
 
 /*-------------------------------Join us very small screen------------------------------*/
@@ -126,6 +173,6 @@
   }
 
   .joinUsRight {
-    height: 320px;
+    height: 200px;
   }
 }
