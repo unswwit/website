@@ -1,7 +1,7 @@
 /*-------------------------------Join us socials------------------------------*/
 /*Body block*/
 .joinUsBody {
-  max-width: 100%;
+  max-width: 80%;
   text-align: center;
   margin: auto;
   padding-top: 50px;
@@ -11,8 +11,8 @@
 
 /*Google Map screenshot image*/
 .googleMap {
-  width: 42%;
-  padding-left: 150px;
+  width: 50%;
+  padding: 0px;
   height: 300px;
   float: left;
   object-fit: cover;
@@ -20,9 +20,8 @@
 
 /*Right side block*/
 .joinUsRight {
-  width: 58%;
-  text-align: left;
-  padding: 0px 5% 5% 0%;
+  width: 50%;
+  padding: 0px 0% 5% 0%;
   float: right;
   display: flex;
   flex-direction: column;
@@ -104,13 +103,6 @@
     margin: 0px;
   }
 
-  .googleMap {
-    padding-left: 100px;
-  }
-
-  .joinUsRight {
-    padding-right: 0%;
-  }
 }
 
 /*-------------------------------Join us mobile------------------------------*/
