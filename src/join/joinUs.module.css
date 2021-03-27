@@ -1,10 +1,10 @@
 /*-------------------------------Join us socials------------------------------*/
 /*Body block*/
 .joinUsBody {
-  max-width: 80%;
+  max-width: 100%;
   text-align: center;
   margin: auto;
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 100px;
   margin-bottom: 200px;
 }
@@ -12,7 +12,7 @@
 /*Google Map screenshot image*/
 .googleMap {
   width: 42%;
-  padding: 0px;
+  padding-left: 200px;
   height: 300px;
   float: left;
   object-fit: cover;
@@ -22,7 +22,7 @@
 .joinUsRight {
   width: 58%;
   text-align: left;
-  padding: 0px 10px 5% 5%;
+  padding: 0px 5% 5% 0%;
   float: right;
   display: flex;
   flex-direction: column;
@@ -70,6 +70,7 @@
   margin: 20% auto auto auto;  
 }
 
+/* Headings in how to join */
 .descriptionHowto {
   line-height: 22px;
   padding-top: 50px;
@@ -81,10 +82,12 @@
   color: #313638;
 }
 
+/* Body in how to join */
 .descriptionHowto p {
   color: #313638b3;
 }
 
+/* Links in how to join */
 .link {
   color: #e85f5c;
 }
@@ -100,9 +103,16 @@
     margin: 0px;
   }
   .descriptionHowto {
-    padding-top: 20px;
     padding-right: 100px;
     padding-left: 100px;
+  }
+
+  .googleMap {
+    padding-left: 100px;
+  }
+
+  .joinUsRight {
+    padding-right: 0%;
   }
 }
 
@@ -112,14 +122,16 @@
     float: none;
     width: 100%;
     height: 180px;
-    margin-top: 10px;
+    margin-top: 0px;
+    margin-bottom: 30px;
     padding: 0px;
   }
 
   .googleMap {
     float: none;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
+    padding-left: 0px;
   }
 
   .joinUsBody {
@@ -178,5 +190,9 @@
 
   .header {
     font-size: 20pt;
+  }
+
+  .googleMap {
+    padding-left: 0px;
   }
 }
