@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import PageHeader from ".././header";
 import styles from "./joinUs.module.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
@@ -35,8 +34,8 @@ class JoinUs extends React.Component {
       <div>
         {/* Cover Photo */}
         <PageHeader imgUrl="/headers/join-header-2.jpg" title="Join Us" />
+        <h2 className={styles.header}>Connect with us</h2>
         <div className={styles.joinUsBody}>
-          <h2>Connect with us</h2>
             <div className={styles.joinUsRight}>
               <div className={styles.joinButtons}>
                 {Object.keys(this.socials).map((social, index) => {
@@ -75,24 +74,34 @@ class JoinUs extends React.Component {
               />
             </div>
         </div>
-        <h2>How to join</h2>
+        <h2 className={styles.header}>How to join</h2>
         <div className={styles.descriptionHowto}>
           Interact through social media
           <p>
             Stay up to date with our latest events, blogs, podcasts, videos and streams 
             through connecting with us through our social media and&nbsp;
-            <Link to="https://www.facebook.com/groups/unswwit/" className={styles.link}>
+            <a 
+              href="https://www.facebook.com/groups/unswwit/" 
+              className={styles.link}
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
                 facebook group
-            </Link>
+            </a>
             .
           </p>
           Become a LinkedIn Alumni
           <p>
             For past and current executives, subcommittee members or speakers at WIT events, 
             our&nbsp;
-            <Link to="https://www.linkedin.com/groups/12373268/" className={styles.link}>
+            <a 
+              href="https://www.linkedin.com/groups/12373268/" 
+              className={styles.link}
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
               LinkedIn Alumni network
-            </Link>
+            </a>
             &nbsp;is available to provide advice and resources for our team to convey through 
             our platform. In joining our Alumni Network, you will also be notified of 
             new opportunities that will enable you to engage with our members.
@@ -101,9 +110,14 @@ class JoinUs extends React.Component {
           <p>
             Subcommittee recruitment is open at the beginning of 
             UNSW’s first academic term, in February each year, via our&nbsp;
-            <Link to="https://www.facebook.com/unsw.wit/" className={styles.link}>
+            <a 
+              href="https://www.facebook.com/unsw.wit/" 
+              className={styles.link}
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
               Facebook page
-            </Link>
+            </a>
             . To join, search for our subcommittee Facebook event and fill in the 
             registration form attached to the event. The application closing period 
             varies from year to year.
