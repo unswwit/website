@@ -73,20 +73,21 @@
 .descriptionHowto {
   line-height: 22px;
   padding-top: 50px;
-  padding-right: 250px;
-  padding-left: 250px;
   font-family: "Montserrat", sans-serif;
   font-size: 13pt;
   text-align: justify;
-  color: #313638;
+  color: var(--light-grey);
+  width: 80%;
+  margin: 0 auto;
 }
 
 .descriptionHowto p {
-  color: #313638b3;
+  color: var(--light-grey);
 }
 
 .link {
   color: #e85f5c;
+  text-decoration: underline;
 }
 
 .link:hover {
@@ -101,8 +102,6 @@
   }
   .descriptionHowto {
     padding-top: 20px;
-    padding-right: 100px;
-    padding-left: 100px;
   }
 }
 
@@ -156,9 +155,9 @@
 
   .descriptionHowto {
     padding-top: 0px;
-    padding-right: 50px;
-    padding-left: 50px;
     font-size: 11pt;
+    width: 80%;
+    margin: 0 auto;
   }
 
   .descriptionHowto p {
