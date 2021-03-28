@@ -67,7 +67,7 @@ class JoinUs extends React.Component {
               onLoad={this.hideSpinner}
               title="google-maps"
               width="100%"
-              height="300"
+              height="350"
               frameBorder="0"
               scrolling="no"
               src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=UNSW%20Sydney%20High%20St%20Kensington,%20NSW%202052%20Australia+(UNSW%20Sydney)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
