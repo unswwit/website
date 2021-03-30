@@ -113,7 +113,7 @@ const Home = () => {
       {/* Start of newsletter */}
       <div className={styles.stats}>
         <img
-          src={`${process.env.PUBLIC_URL}./stats-background-1.png`}
+          src={`${process.env.PUBLIC_URL}./newsletter-background.png`}
           className={styles.statsBackground}
           alt="banner"
         />
