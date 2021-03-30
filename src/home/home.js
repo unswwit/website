@@ -67,7 +67,7 @@ const Home = () => {
               <p>Sponsors</p>
             </div>
             <div>
-              <CountUp end={2802} duration={4} />
+              <CountUp end={2817} duration={4} />
               <p>Facebook Followers</p>
             </div>
           </div>
@@ -97,13 +97,13 @@ const Home = () => {
         </div>
         <div className={styles.event1}>
           <a 
-            href="https://www.facebook.com/events/347419053657777" 
+            href="https://www.facebook.com/events/509569410169834/" 
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              src={`${process.env.PUBLIC_URL}/event-covers/2021/09-telehealth.png`}
-              alt="WIT x Eucalyptus: Let's Talk Telehealth"
+              src={`${process.env.PUBLIC_URL}/event-covers/2021/12-hoodie.png`}
+              alt="WIT 2021 Hoodie Design Competition"
             />
           </a>
         </div>
