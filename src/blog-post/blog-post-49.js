@@ -137,7 +137,7 @@ class blogPost49 extends Component {
 							searching and searching, and it turns out you just needed another pair of eyes on the
 							problem. The ability to communicate your problem and explain what you know and what you're
 							stuck on is super useful as well- heck, you might even realise the solution as you're
-							explaining it to someone else <span role="img" aria-label="happy face">😆</span>.
+							explaining it to someone else. <span role="img" aria-label="happy face">😆</span>
             </p>
             <br />
 
