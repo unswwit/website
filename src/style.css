@@ -230,7 +230,7 @@ p {
 /*Making the navigation change colour on scroll*/
 .activeNav {
   background-color: #fff7ef;
-  transition: all .2s ease-in;
+  transition: background-color .2s ease-in;
 }
 
 .dropdown-toggle:after {
@@ -242,6 +242,10 @@ p {
 }
 
 .logo-black {
+  display: none;
+}
+
+.hiddenNav {
   display: none;
 }
 
