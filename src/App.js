@@ -13,7 +13,6 @@ import Opportunities from "./opportunities/opportunities";
 import ContactUs from "./contact/contactUs";
 import Footer from "./footer";
 
-import MarketingArchive from "./marketing-archive/marketingArchive";
 import MarketingContent from "./marketing-archive/marketing-content/content";
 import OurTeam from "./team/team";
 import Blog from "./blog-gallery/blog";
@@ -157,7 +156,7 @@ class App extends Component {
                         <NavLink to="/publications">PUBLICATIONS</NavLink>
                       </div>
                       <div className="dropdown-item">
-                        <NavLink to="/marketing-archive">
+                        <NavLink to="/marketing-archives">
                           MARKETING ARCHIVES
                         </NavLink>
                       </div>                      
@@ -187,11 +186,7 @@ class App extends Component {
             <Route exact path="/blog" component={Blog} />
             <Route
               exact
-              path="/marketing-archive"
-              component={MarketingArchive}
-            />
-            <Route
-              path="/marketing-archive/content"
+              path="/marketing-archives"
               component={MarketingContent}
             />
             <Route path="/join-us" component={JoinUs} />
