@@ -5,15 +5,15 @@
   text-align: center;
   margin: auto;
   padding-top: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
   margin-bottom: 200px;
 }
 
 /*Google Map screenshot image*/
 .googleMap {
   width: 50%;
+  height: 350px;
   padding: 0px;
-  height: 300px;
   float: left;
   object-fit: cover;
 }
