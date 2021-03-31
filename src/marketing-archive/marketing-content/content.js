@@ -16,11 +16,11 @@ const MarketingContent = () => {
 
   const categories = {
     "All": "All", 
-    "Careers Guide": "careers", 
-    "Mascot": "mascot", 
+    "Mascot": "mascot",
     "Memes": "memes", 
     "Monday Motivation": "monday", 
     "WIT Crush Wednesday": "wcw",
+    "Special Occasions": "special",
   };
 
   useEffect(() => {

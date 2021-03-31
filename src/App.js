@@ -13,7 +13,6 @@ import Opportunities from "./opportunities/opportunities";
 import ContactUs from "./contact/contactUs";
 import Footer from "./footer";
 
-import MarketingArchive from "./marketing-archive/marketingArchive";
 import MarketingContent from "./marketing-archive/marketing-content/content";
 import OurTeam from "./team/team";
 import Blog from "./blog-gallery/blog";
