@@ -1,16 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
 import CountUp from "react-countup";
 import styles from "./home.module.css";
 import NewsletterForm from "./NewsletterForm";
 import { Modal, Backdrop, Fade } from "@material-ui/core";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
   const [open, setOpen] = React.useState(false);
-
+  
   //start webpage at the top
   useEffect(() => {
-    window.scrollTo(0, 0);
+    Aos.init({ duration: 1300, once: true, anchorPlacement: "top-bottom", easing: "ease-in-out", offset: 20 });
   }, []);
 
   const callbackModal = () => {
@@ -21,7 +23,7 @@ const Home = () => {
     <div>
       {/* Start of Header */}
       <div className={styles.contain}>
-        <div className={styles.headline}>
+        <div data-aos="fade" className={styles.headline}>
           <h1>UNSW</h1>
           <h1>Women In</h1>
           <h1>Technology</h1>
@@ -31,7 +33,7 @@ const Home = () => {
       {/* End of Header */}
 
       {/* Start of Description */}
-      <div className={styles.description}>
+      <div data-aos="fade-right" className={styles.description}>
         <div className={styles.descriptionLeft}>
           <h1>COLLABORATE. INSPIRE. CHANGE.</h1>         
         </div>
@@ -57,7 +59,7 @@ const Home = () => {
           alt="banner"
         />
         <div>
-          <div className={styles.number}>
+          <div data-aos="fade" className={styles.number}>
             <div>
               <CountUp end={47} duration={5} />  
               <p>Team Members</p>
@@ -76,7 +78,7 @@ const Home = () => {
       {/* End of Statistics */}
 
       {/* Start of Upcoming Events */}
-      <div className={styles.events}>
+      <div data-aos="fade-left" data-aos-delay="150" className={styles.events}>
         <div className={styles.eventsDescription}>
           <p id="about">
             At WIT, our focus is on providing events that foster development
@@ -117,7 +119,7 @@ const Home = () => {
           className={styles.statsBackground}
           alt="banner"
         />
-        <button className={styles.subscribeBtn} onClick={() => setOpen(true)}>
+        <button data-aos="fade" className={styles.subscribeBtn} onClick={() => setOpen(true)}>
           Subscribe to our newsletter
         </button>
         <Modal
@@ -141,7 +143,7 @@ const Home = () => {
       </div>
       {/* End of Newsletter */}
 
-      <div className={styles.sponsors}>
+      <div data-aos="fade-up" className={styles.sponsors}>
         <h1>OUR SPONSORS</h1>
         <img
           src={`${process.env.PUBLIC_URL}./sponsors-home-2021-temp.png`}
