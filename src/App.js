@@ -185,11 +185,6 @@ class App extends Component {
             <Route path="/our-team" component={OurTeam} />
             <Route exact path="/blog" component={Blog} />
             <Route
-              exact
-              path="/marketing-archive"
-              component={MarketingArchive}
-            />
-            <Route
               path="/marketing-archive/content"
               component={MarketingContent}
             />

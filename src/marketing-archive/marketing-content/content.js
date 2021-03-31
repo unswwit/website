@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import ".././marketingArchive.module.css";
 import styles from "./content.module.css";
 import "../.././style.css";
+import Timeline from "../../Timeline";
 import PageHeader from "../.././header";
 import Chip from "@material-ui/core/Chip";
 import Initiative from "./Initiative";
@@ -13,7 +14,7 @@ const MarketingContent = () => {
   const [content, setContent] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("All");
-
+  const [year, setYear] = useState("2021");
   const categories = {
     "All": "All", 
     "Mascot": "mascot",
@@ -23,16 +24,28 @@ const MarketingContent = () => {
     "Special Occasions": "special",
   };
 
-  useEffect(() => {
-    Tabletop.init({
-      key: process.env.REACT_APP_GOOGLE_SHEETS,
-      callback: googleData => {   
-        setLoading(false);   
-        setContent(googleData["marketing-archives"]["elements"].reverse());
-      },
-      simpleSheet: false
-    });
-  },[selectedCategory]);
+  const marks = [
+    {
+      value: 100,
+      scaledValue: 2021,
+      label: "2021"
+    },
+    {
+      value: 0,
+      scaledValue: 2020,
+      label: "2020"
+    },
+  ];
+
+  const valueToYear = {
+    0: "2020",
+    100: "2021"
+  }
+
+  // set the year for the events timeline
+  const handleYear = (newYear) => {
+    setYear(newYear);
+  };  
 
   return (
     <>
@@ -73,7 +86,15 @@ const MarketingContent = () => {
               id={styles.contentLoading}
             />}
           </div>
-        
+          {/* Timeline */}
+          <Timeline 
+            margin={"3%"}
+            page={"events"}
+            step={100}
+            valueToYear={valueToYear} 
+            marks={marks} 
+            updateYear={handleYear} 
+         />
           {/*Image collage*/}
           {!loading && <ol className={styles.grid} id={styles.content}> 
             {content
