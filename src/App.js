@@ -36,9 +36,24 @@ class App extends Component {
     this.state = {
       showDD: false,
       menuOpen: false,
+      navBar: false,
     };
     this.handleHover = this.handleHover.bind(this);
     this.handleMenuClick = this.handleMenuClick.bind(this);
+    this.changeBackground = this.changeBackground.bind(this);
+  }
+
+  changeBackground() {
+    console.log(window.innerWidth > 1000)
+    if (window.scrollY >= 60 && window.innerWidth > 1000) {
+      this.setState({
+        navBar: true
+      });
+    } else {
+      this.setState({
+        navBar: false
+      });
+    }
   }
 
   handleMenuClick() {
@@ -70,6 +85,7 @@ class App extends Component {
     GoogleAnalytics();
 
     window.addEventListener("resize", this.updateMenu);
+    window.addEventListener("scroll", this.changeBackground);
     /*
     this.fakeRequest().then(() => {
       const el = document.querySelector(".loader");
@@ -82,6 +98,7 @@ class App extends Component {
 
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateMenu);
+    window.removeEventListener("scroll", this.changeBackground);
   }
 
   render() {
@@ -96,12 +113,12 @@ class App extends Component {
         <HashRouter basename="/">
           <Menu
             open={this.state.menuOpen}
-            handleMenuClick={this.handleMenuClick.bind(this)}
+            handleMenuClick={this.handleMenuClick}
           />
-          <nav className="navbar navbar-expand-md navbar-dark bg-custom fixed-top">
+          <nav className={this.state.navBar ? "navbar navbar-expand-md navbar-dark bg-custom activeNav fixed-top": "navbar navbar-expand-md navbar-dark bg-custom fixed-top"}>
             <a className="navbar-brand" href="/">
               <img
-                src={process.env.PUBLIC_URL + "./logo-black.png"}
+                src={this.state.navBar ? process.env.PUBLIC_URL + "./logo-black.png" : process.env.PUBLIC_URL + "./logo-white.png" }
                 className="photo"
                 alt="wit logo"
                 style={{
@@ -114,29 +131,29 @@ class App extends Component {
             </a>
             <div className="navbar-collapse collapse w-100">
               <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
+                <li className={this.state.navBar ? "nav-item active-nav-item":"nav-item"}>
                   <NavLink to="/">HOME</NavLink>
                 </li>
-                <li className="nav-item">
+                <li className={this.state.navBar ? "nav-item active-nav-item":"nav-item"}>
                   <NavLink to="/events">EVENTS</NavLink>
                 </li>
-                <li className="nav-item">
+                <li  className={this.state.navBar ? "nav-item active-nav-item":"nav-item"}>
                   <NavLink to="/our-team">TEAM</NavLink>
                 </li>
-                <li className="nav-item">
+                <li className={this.state.navBar ? "nav-item active-nav-item":"nav-item"}>
                   <NavLink to="/sponsors">SPONSORS</NavLink>
                 </li>
-                <li className="nav-item">
+                <li className={this.state.navBar ? "nav-item active-nav-item":"nav-item"}>
                   <NavLink to="/opportunities">OPPORTUNITIES</NavLink>
                 </li>
                 <li
-                  className="nav-item"
+                  className={this.state.navBar ? "nav-item active-nav-item":"nav-item"}
                   onMouseEnter={this.handleHover}
                   onMouseLeave={this.handleHover}
                 >
                   <div className="dropdown" display="static">
-                    <div className="dropdown-toggle">
-                      <span className="menuTitle">RESOURCES</span>
+                    <div className={this.state.navBar ? "dropdown-toggle active-nav-item":"dropdown-toggle"}>
+                      <span className="dropdown-title">RESOURCES</span>
                     </div>
                     <div
                       className={
@@ -164,10 +181,10 @@ class App extends Component {
                     </div>
                   </div>
                 </li>
-                <li className="nav-item">
+                <li className={this.state.navBar ? "nav-item active-nav-item":"nav-item"}>
                   <NavLink to="/join-us">JOIN</NavLink>
                 </li>
-                <li className="nav-item" style={{ marginRight: "15px" }}>
+                <li className={this.state.navBar ? "nav-item active-nav-item":"nav-item"} style={{ marginRight: "15px" }}>
                   <NavLink to="/contact-us">CONTACT</NavLink>
                 </li>
               </ul>

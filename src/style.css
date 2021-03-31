@@ -153,7 +153,7 @@ p {
 
 /*-----------------------------------Navbar-----------------------------------*/
 .bg-custom {
-  background: #fff7ef;
+  background: transparent;
   font-size: 10pt;
   padding: 0px;
 }
@@ -184,8 +184,8 @@ p {
   display: none;
 }
 
-.nav-item a {
-  color: #313638;
+.nav-item a, .dropdown-title {
+  color: white;
   padding: 10px 15px;
   text-decoration: none;
 }
@@ -201,6 +201,10 @@ p {
 
 .dropdown-item {
   padding: 5px 0px;
+}
+
+.dropdown-item a {
+  color: #313638;
 }
 
 .dropdown-item:hover {
@@ -223,9 +227,27 @@ p {
   text-decoration: none;
 }
 
+/*Making the navigation change colour on scroll*/
+.activeNav {
+  background-color: #fff7ef;
+  transition: all .2s ease-in;
+}
+
+.dropdown-toggle:after {
+  color: white;
+}
+
+.active-nav-item a, .active-nav-item span, .active-nav-item:after {
+  color: #313638;
+}
+
 @media screen and (max-width: 1000px) {
   .nav-item {
     display: none;
+  }
+
+  .bg-custom {
+    background-color: #fff7ef;
   }
 
   .nav-item-btn {
