@@ -13,11 +13,12 @@ import Tabletop from "tabletop";
 const MarketingContent = () => {
   const [content, setContent] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [year, setYear] = useState(2020);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [year, setYear] = useState("2021");
   const categories = {
     "All": "All", 
-    "Mascot": "mascot",
+    "Mascot": "mascot", 
     "Memes": "memes", 
     "Monday Motivation": "monday", 
     "WIT Crush Wednesday": "wcw",
@@ -98,15 +99,12 @@ const MarketingContent = () => {
           {/*Image collage*/}
           {!loading && <ol className={styles.grid} id={styles.content}> 
             {content
-              .filter((picture) => selectedCategory === "All" || picture.category === selectedCategory)
+              .filter((picture) => selectedCategory === "All" || picture.category.split(",").includes(selectedCategory))
               .map((content, index) => {   
                 return <Initiative
                   key={index}
                   fb={content.link}
-                  imgUrl={selectedCategory === "All" ? 
-                    `/initiatives/${content.category}/${content.img}`: 
-                    `/initiatives/${selectedCategory}/${content.img}`
-                  }
+                  imgUrl={`/initiatives/${year}/${content.img}`}
                   alt={content.label}
                   date={content.date} 
                 />

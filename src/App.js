@@ -156,7 +156,7 @@ class App extends Component {
                         <NavLink to="/publications">PUBLICATIONS</NavLink>
                       </div>
                       <div className="dropdown-item">
-                        <NavLink to="/marketing-archive">
+                        <NavLink to="/marketing-archives">
                           MARKETING ARCHIVES
                         </NavLink>
                       </div>                      
@@ -195,7 +195,7 @@ class App extends Component {
             <Route exact path="/podcast" component={Podcast} />
             <Route path="/podcast/:episode" component={EpisodePage} />
             <Route path="/publications" component={Publications} />
-            {Array.from({length: 48}, (_, index) => index + 1).map((blogNo) => {
+            {Array.from({length: 49}, (_, index) => index + 1).map((blogNo) => {
               return <Route 
                 key={blogNo} 
                 path={"/blog/" + blogNo} 
