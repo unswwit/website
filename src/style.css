@@ -241,13 +241,25 @@ p {
   color: #313638;
 }
 
-@media screen and (max-width: 1000px) {
+.logo-black {
+  display: none;
+}
+
+@media screen and (max-width: 1150px) {
   .nav-item {
     display: none;
   }
 
   .bg-custom {
     background-color: #fff7ef;
+  }
+
+  .photo {
+    display: none;
+  }
+
+  .logo-black {
+    display: block;
   }
 
   .nav-item-btn {

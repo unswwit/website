@@ -9,10 +9,20 @@ import "aos/dist/aos.css";
 
 const Home = () => {
   const [open, setOpen] = React.useState(false);
+  const [mobileView, setMobileView] = React.useState(false);
   
   //start webpage at the top
   useEffect(() => {
-    Aos.init({ duration: 1300, once: true, anchorPlacement: "top-bottom", easing: "ease-in-out", offset: 20 });
+    if (window.innerWidth <= "1150") {
+      setMobileView(true);
+    }
+    Aos.init({ 
+      duration: 1300, 
+      once: true, 
+      anchorPlacement: "top-bottom", 
+      easing: "ease-in-out", 
+      offset: 20 
+    });
   }, []);
 
   const callbackModal = () => {
@@ -33,7 +43,7 @@ const Home = () => {
       {/* End of Header */}
 
       {/* Start of Description */}
-      <div data-aos="fade-right" className={styles.description}>
+      <div data-aos={mobileView ? "fade": "fade-right"} className={styles.description}>
         <div className={styles.descriptionLeft}>
           <h1>COLLABORATE. INSPIRE. CHANGE.</h1>         
         </div>
@@ -78,7 +88,7 @@ const Home = () => {
       {/* End of Statistics */}
 
       {/* Start of Upcoming Events */}
-      <div data-aos="fade-left" data-aos-delay="150" className={styles.events}>
+      <div data-aos={mobileView ? "fade":"fade-left"} data-aos-delay="150" className={styles.events}>
         <div className={styles.eventsDescription}>
           <p id="about">
             At WIT, our focus is on providing events that foster development
@@ -143,7 +153,7 @@ const Home = () => {
       </div>
       {/* End of Newsletter */}
 
-      <div data-aos="fade-up" className={styles.sponsors}>
+      <div data-aos={mobileView ? "fade": "fade-up"} className={styles.sponsors}>
         <h1>OUR SPONSORS</h1>
         <img
           src={`${process.env.PUBLIC_URL}./sponsors-home-2021-temp.png`}

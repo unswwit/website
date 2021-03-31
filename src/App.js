@@ -44,8 +44,7 @@ class App extends Component {
   }
 
   changeBackground() {
-    console.log(window.innerWidth > 1000)
-    if (window.scrollY >= 60 && window.innerWidth > 1000) {
+    if (window.scrollY >= 60) {
       this.setState({
         navBar: true
       });
@@ -70,7 +69,7 @@ class App extends Component {
   }
 
   updateMenu = () => {
-    if (window.innerWidth >= "1000" && this.state.menuOpen) {
+    if (window.innerWidth >= "1150" && this.state.menuOpen) {
       this.handleMenuClick();
     }
   };
@@ -117,6 +116,17 @@ class App extends Component {
           />
           <nav className={this.state.navBar ? "navbar navbar-expand-md navbar-dark bg-custom activeNav fixed-top": "navbar navbar-expand-md navbar-dark bg-custom fixed-top"}>
             <a className="navbar-brand" href="/">
+              <img
+                src={process.env.PUBLIC_URL + "./logo-black.png"}
+                className="logo-black"
+                alt="wit logo"
+                style={{
+                  width: "35px",
+                  marginLeft: "15px",
+                  marginBottom: "5px",
+                  marginTop: "5px",
+                }}
+              />
               <img
                 src={this.state.navBar ? process.env.PUBLIC_URL + "./logo-black.png" : process.env.PUBLIC_URL + "./logo-white.png" }
                 className="photo"
