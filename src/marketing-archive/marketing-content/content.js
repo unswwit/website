@@ -15,7 +15,6 @@ const MarketingContent = () => {
   const [loading, setLoading] = useState(true);
   const [year, setYear] = useState(2020);
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [year, setYear] = useState("2021");
   const categories = {
     "All": "All", 
     "Mascot": "mascot", 
