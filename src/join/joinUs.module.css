@@ -105,7 +105,7 @@
 .accordionHeading {
   font-size: 14pt;
   font-family: "Montserrat", sans-serif;
-  color: #e85f5c;
+  color: var(--light-grey);
 }
 
 .accordionDetails {

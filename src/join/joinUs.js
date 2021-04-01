@@ -132,7 +132,7 @@ class JoinUs extends React.Component {
         <div className={styles.descriptionHowto}>
           <p>
             WIT has several specialised portfolios that you can join as a subcommittee member. 
-            Each portfolio is led by our executives. Hover over one of the portfolios to find out 
+            Each portfolio is led by our executives. Click one of the portfolios to find out 
             more about the portfolio.
           </p>
         </div>
