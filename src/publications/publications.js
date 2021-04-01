@@ -10,6 +10,9 @@ const Publications = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // scroll to top of page
+    window.scrollTo(0,0);
+    
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: googleData => {

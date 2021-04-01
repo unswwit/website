@@ -1,23 +1,26 @@
 //All necessary imports for this javascript
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import PageHeader from ".././header";
 
 import ".././style.css";
 import styles from "./opportunities.module.css";
 //import OppCard from "./oppCard.js";
 
-class Opportunities extends Component {
-  render() {
-    return (
-      <div>
-        {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/opportunities-header.jfif" title="Opportunities" />
+const Opportunities = () => {
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[]);
+  
+  return (
+    <div>
+      {/* Cover Photo */}
+      <PageHeader imgUrl="/headers/opportunities-header.jfif" title="Opportunities" />
 
-        {/*start of active opportunies*/}
-        <h2 className={styles.oppSubheading}>Active Opportunities</h2>
-        <p className={styles.oppLookout} style={{"marginBottom": "100px"}}>
-          Keep a lookout here for upcoming opportunities!
-          {/*
+      {/*start of active opportunies*/}
+      <h2 className={styles.oppSubheading}>Active Opportunities</h2>
+      <p className={styles.oppLookout} style={{ marginBottom: "100px" }}>
+				Keep a lookout here for upcoming opportunities!
+        {/*
           <OppCard
               details={{
                 CommonwealthBank: [
@@ -29,9 +32,9 @@ class Opportunities extends Component {
                 ],
               }}
             />*/}
-        </p>
-        {/*Start of past opportunities*/}
-        {/*
+      </p>
+      {/*Start of past opportunities*/}
+      {/*
         <h2 className={styles.oppSubheading}>Past Opportunities</h2>
         <div className={styles.oppGrid}>
           <div className={styles.container}>
@@ -60,9 +63,8 @@ class Opportunities extends Component {
             />
           </div>
         </div>*/}
-        {/*End of opportunities grid table*/}
-      </div>
-    );
-  }
-}
+      {/*End of opportunities grid table*/}
+    </div>
+  );
+};
 export default Opportunities;
