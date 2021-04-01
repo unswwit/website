@@ -29,8 +29,6 @@
 .coverPhoto {
   height: 100vh;
   overflow: hidden;
-  z-index: 3;
-  position: absolute;
 }
 
 .cover_image {
@@ -38,8 +36,6 @@
   overflow: hidden;
   width: 100%;
   object-fit: cover;
-  position: absolute;
-  z-index: 3;
 }
 
 /*website overlay*/
@@ -164,7 +160,7 @@ p {
   background: transparent;
   font-size: 10pt;
   padding: 0px;
-  z-index: 3;
+  z-index: 4;
 }
 
 .nav {
