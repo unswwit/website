@@ -84,7 +84,8 @@ class App extends Component {
 	// hide the navigation bar when a user is at the bottom of the page
 	hideNavBar() {
 	  const bottom = Math.ceil(window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight;
-	  if (bottom) {
+  
+	  if (bottom && document.documentElement.scrollTop !== 0) {
 	    this.setState({
 	      hideNav: true
 	    });
@@ -102,7 +103,6 @@ class App extends Component {
 	componentDidMount() {
 	  // google analytics
 	  GoogleAnalytics();
-
 	  window.addEventListener("resize", this.updateMenu);
 	  window.addEventListener("scroll", this.changeBackground);
 	  window.addEventListener("scroll", this.hideNavBar);
