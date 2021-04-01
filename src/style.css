@@ -14,38 +14,6 @@
   --red: #e85f5c;
 }
 
-/*----------------------------------Loading Screen------------------------------------*/
-#loadingBackground {
-  background: #fff7ef;
-  height: 100vh;
-  z-index: 5;
-  position: absolute;
-  width: 100vw;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#loadingWillow {
-  height: 300px;
-  width: 300px;
-}
-
-#loadingBackground p{
-  overflow: hidden;
-  font-size: 18pt;
-  animation: typing 2.5s steps(34, end);
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 10em; }
-}
-
 /*----------------------------------Header------------------------------------*/
 /*Heading title*/
 .headerTitle h1 {
@@ -54,11 +22,15 @@
   letter-spacing: 8px;
   text-transform: uppercase;
   text-align: center;
+  z-index: 3;
+  position: absolute;
 }
 
 .coverPhoto {
   height: 100vh;
   overflow: hidden;
+  z-index: 3;
+  position: absolute;
 }
 
 .cover_image {
@@ -67,6 +39,7 @@
   width: 100%;
   object-fit: cover;
   position: absolute;
+  z-index: 3;
 }
 
 /*website overlay*/
@@ -74,10 +47,10 @@
   width: 100%;
   background-color: #313638;
   opacity: 0.6;
-  position: absolute;
   top: 0;
   height: 100vh;
-  z-index: 1;
+  z-index: 3;
+  position: absolute;
 }
 
 .coverPhoto .headerTitle {
@@ -85,16 +58,19 @@
   top: 0;
   text-align: center;
   width: 100%;
-  z-index: 2;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 3;
+  position: absolute;
 }
 
 .coverPhoto .headerTitle h1 {
   margin: 0px;
   font-weight: 500;
+  z-index: 3;
+  position: absolute;
 }
 
 @media only screen and (max-width: 700px) {
@@ -189,7 +165,6 @@ p {
   font-size: 10pt;
   padding: 0px;
   z-index: 3;
-  position: absolute;
 }
 
 .nav {
@@ -305,7 +280,40 @@ p {
   }
 }
 
+/*----------------------------------Loading Screen------------------------------------*/
+#loadingBackground {
+  background: #fff7ef;
+  height: 100vh;
+  z-index: 5;
+  position: absolute;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#loadingWillow {
+  height: 300px;
+  width: 300px;
+}
+
+#loadingBackground p{
+  overflow: hidden;
+  font-size: 18pt;
+  animation: typing 2.5s steps(34, end);
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 10em; }
+}
+
 /*-----------------------------------Menu-----------------------------------*/
+
 .menu-container {
   position: fixed;
   width: 100%;
@@ -314,6 +322,8 @@ p {
   color: #313638;
   z-index: 3;
   box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  position: absolute;
 }
 
 .menu-item {
@@ -324,6 +334,8 @@ p {
   text-transform: capitalize;
   cursor: pointer;
   font-size: 16px;
+  z-index: 3;
+  position: absolute;
 }
 
 .menu-box:hover {
@@ -332,22 +344,32 @@ p {
   border-radius: 5px;
   margin-left: auto;
   margin-right: auto;
+  z-index: 3;
+  position: absolute;
 }
 
 .menu-box:hover .menu-item {
   color: #e85f5c;
+  z-index: 3;
+  position: absolute;
 }
 
 .menu-bar {
   float: none;
+  z-index: 3;
+  position: absolute;
 }
 
 .menu-list {
   padding-top: 4rem;
+  z-index: 3;
+  position: absolute;
 }
 
 .menu-dropdown {
   padding: 5px 0px;
+  z-index: 3;
+  position: absolute;
 }
 
 /*----------------------------------Footer------------------------------------*/
