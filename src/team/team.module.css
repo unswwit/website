@@ -1,0 +1,286 @@
+/*---------------------------Search filtering and loading--------------------------*/
+
+#timeline span {
+  font-size: 11pt;
+}
+
+#teamLoading {
+  color:#feb14b;  
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+#teamLoadingContainer {
+  display: flex;
+  justify-content: center;
+}
+
+#teamTimeLine {
+  margin-top: 7%;
+  width: 60%;
+}
+
+/*---------------------------Executive team profiles--------------------------*/
+/*Executive team section*/
+.allExecsSection {
+  align-content: center;
+  justify-content: center;
+}
+
+.execRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.execCol {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  flex: 1;
+}
+
+/*Subtitle*/
+h2.teamHeading {
+  padding: 75px 0px;
+}
+
+/*Executive profile images*/
+.profileCrop {
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+  position: relative;
+}
+
+.profileImg {
+  background-size: cover;
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+  transform: translate(-15%, 0);
+  width: auto;
+}
+
+/*Transform executive profile images*/
+.exec2021Img {
+  transform: translate(-3%, -13%);
+  width: 105%;
+  height: auto;
+}
+
+.gabImg {
+  transform: translate(0%, 0);
+}
+
+.vivwImg {
+  height: auto;
+  transform: translate(-5%, -10%);
+  width: 120%;
+}
+
+.alisonImg {
+  transform: translate(-17%, 0);
+}
+
+.eliImg {
+  transform: translate(-7%, 0%);
+}
+
+.felImg {
+  transform: translate(-12%, 0);
+}
+
+/*Executive profile block*/
+.profile {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  position: relative;
+}
+
+/*Executive profile details*/
+.profileDetails {
+  align-content: center;
+  justify-content: space-evenly;
+  line-height: 13pt;
+  margin: 25px 0px 70px 0px;
+  text-align: center;
+}
+
+/*Executive social media links*/
+.iconBar {
+  align-content: center;
+}
+.icon {
+  border: 0;
+  height: 25px;
+  width: 25px;
+  margin: 0 auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  align-self: center;
+}
+
+/*Executive names*/
+.profileTextName {
+  align-content: center;
+  color: #feb14b;
+  font-family: "Playfair Display", serif;
+  font-size: 2vw;
+  letter-spacing: 0.1vw;
+  position: relative;
+  text-align: center;
+}
+
+/*Executive positions*/
+.profileTextPosition {
+  align-content: center;
+  color: #313638;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3vw;
+  font-weight: 400;
+  letter-spacing: 0.1vw;
+  padding-top: 10pt;
+  position: relative;
+  text-align: center;
+}
+
+/*Executive degrees*/
+.profileDegree {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3vw;
+  font-weight: lighter;
+  letter-spacing: 0.1vw;
+  position: relative;
+  white-space: initial;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+/*---------------------------Subcommittee team profiles--------------------------*/
+.subcomSection {
+  align-content: center;
+  justify-content: center;
+}
+
+/*Subcommittee team section*/
+.subcomType {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  color: #feb14b;
+  margin-top: 6vw;
+  margin-bottom: 2vw;
+  font-size: 2vw;
+  font-weight: 500;
+}
+
+/*Subcommittee names*/
+.subcomProfileName {
+  font-family: "Montserrat", sans-serif;
+  color: #feb14b;
+  font-size: 1.3vw;
+  letter-spacing: 0.1vw;
+  position: relative;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  flex-shrink: 2;
+}
+
+/*Subcommittee degrees*/
+.subcomProfileDegree {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3vw;
+  letter-spacing: 0.1vw;
+  position: relative;
+  word-wrap: break-word;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.subcomRow {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.subcomCol {
+  align-items: flex-start;
+  margin-right: 5%;
+  flex: 1;
+}
+
+.subcomLongerCol {
+  align-items: flex-start;
+  flex: 2;
+}
+
+.profile {
+  margin: 15px;
+  padding: 0;
+}
+
+/*---------------------------Mobile resizing--------------------------*/
+@media screen and (max-width: 800px) {
+  .teamHeading {
+    font-size: 24px;
+  }
+
+  .subcomType,
+  .profileTextName {
+    font-size: 20px;
+  }
+
+  .profileTextPosition {
+    font-size: 18px;
+  }
+
+  .profileDegree,
+  .subcomProfileDegree,
+  .subcomProfileName {
+    font-size: 16px;
+  }
+
+  .execRow {
+    flex-direction: column;
+  }
+
+  .teamHeading,
+  .subcomSection,
+  .subcomType {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .subcomRow {
+    display: inline-grid;
+    width: 100%;
+    grid-template-columns: 90px auto;
+    grid-gap: 15px;
+    align-content: start;
+  }
+
+  .subcomProfileDegree {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  .profileCrop {
+    width: 200px;
+    height: 200px;
+  }
+}

@@ -1,0 +1,174 @@
+/*-------------------------------Opportunities Preview-----------------------------*/
+/* Subheadings */
+h2.oppSubheading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 33pt;
+  text-transform: uppercase;
+  margin-top: 8%;
+  margin-bottom: 4%;
+  text-align: center;
+}
+
+.oppLookout {
+  text-align: center;
+}
+
+/*Opportunities circle crop*/
+.oppFrame {
+  border-radius: 50%;
+  height: 5.5vw;
+  overflow: hidden;
+  width: 5.5vw;
+  margin-right: 1.5vw;
+  margin-left: 0px;
+}
+
+/*Author image*/
+.oppImg {
+  max-width: 100%;
+  max-height: 100%;
+  transform: translate(0%, 20%);
+}
+
+/*Opportunities preview*/
+table {
+  border: none;
+  border-color: #a0a0a0;
+  border-width: 2px;
+  width: 350px;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0px;
+}
+
+.oppGrid {
+  margin: 0 125px 125px 100px;
+}
+
+.oppDetails {
+  margin-top: 1vw;
+}
+
+.oppPreview {
+  padding: 2vw;
+  width: 100vw;
+}
+
+.oppPost {
+  padding: 10px;
+}
+
+.heading {
+  color: #feb14b;
+  letter-spacing: 0.1vw;
+  font-size: 14pt;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.jobPosition {
+  color: #313638;
+  letter-spacing: 0.1vw;
+  font-size: 14pt;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.heading:hover {
+  text-decoration: none;
+}
+
+.subheading {
+  color: var(--light-grey);
+  letter-spacing: 0.1vw;
+  font-size: 11pt;
+  font-family: "Montserrat", sans-serif;
+}
+
+.blogLink:hover {
+  text-decoration: none;
+}
+
+.moreLink {
+  color: #e85f5c;
+  letter-spacing: 0.05vw;
+  font-size: 11pt;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.moreLink:hover {
+  color: #feb14b;
+}
+
+/*-------------------------------Masonry grid Preview-----------------------------*/
+
+/* Masonry grid */
+.masonry {
+  transition: all 0.5s ease-in-out;
+  column-gap: 30px;
+  column-fill: initial;
+}
+
+/* Masonry item */
+.masonry .brick {
+  margin-bottom: 30px;
+  display: inline-block; /* Fix the misalignment of items */
+  vertical-align: top; /* Keep the item on the very top */
+}
+
+/*-------------------------------Join us ipad------------------------------*/
+@media only screen and (max-width: 1100px) {
+  .oppGrid {
+    margin: 40px;
+  }
+
+  .oppFrame {
+    width: 8vw;
+    height: 8vw;
+  }
+}
+
+/*-------------------------------Join us mobile------------------------------*/
+@media only screen and (max-width: 850px) {
+  .oppGrid {
+    margin: 10px;
+  }
+
+  .oppFrame {
+    width: 12vw;
+    height: 12vw;
+  }
+
+  h2.oppSubheading {
+    font-size: 20pt;
+  }
+}
+
+/*-------------------------------Join us very small screen------------------------------*/
+@media only screen and (max-width: 300px) {
+  .oppGrid {
+    margin: 5px;
+  }
+
+  .oppFrame {
+    width: 17vw;
+    height: 17vw;
+  }
+
+  h2.oppSubheading {
+    font-size: 12pt;
+    word-break: break-word;
+  }
+}

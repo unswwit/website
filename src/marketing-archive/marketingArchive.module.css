@@ -1,0 +1,42 @@
+/*-------------------------------Marketing archive page header-----------------------------*/
+/*Heading title*/
+.title h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 5vw;
+  letter-spacing: 8px;
+  margin-top: 26vw;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/*Intro paragraph*/
+p.intro {
+  color: var(--light-grey);
+  padding-top: 150px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12pt;
+  text-align: center;
+  margin: auto;
+  width: 40%;
+}
+
+.yearSection {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 200px;
+}
+
+/*Year sections*/
+p.year {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32pt;
+  color: white;
+  background-color: #e85f5c;
+  font-weight: bold;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+p.year:hover {
+  background-color: #feb14b;
+}

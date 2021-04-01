@@ -1,0 +1,436 @@
+/*-------------------------------Home page header-----------------------------*/
+/*Header image*/
+.contain {
+  background-image: url("/headers/header-1.png");
+  background-position: center bottom 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  max-width: 100%;
+  background-color: #313638;
+}
+
+/*Header title*/
+div .headline {
+  text-align: left;
+  position: absolute;
+  top: 30%;
+  left: 54vw;
+}
+
+.headline h1 {
+  color: #feb14b;
+  font-family: "Playfair Display", serif;
+  font-size: 5.5vw;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/*Header subtitle*/
+.headline p {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.17vw;
+  letter-spacing: 2.5px;
+}
+
+/*-----------------------------Home page description--------------------------*/
+/*Description wrapper*/
+.description {
+  margin: auto;
+  max-width: 85%;
+  display: grid;
+  padding: 100px 0px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+}
+
+/*Description left block*/
+.descriptionLeft {
+  grid-area: auto / span 1;
+}
+
+/*Left block text*/
+.descriptionLeft h1 {
+  color: #feb14b;
+  font-family: "Montserrat", sans-serif;
+  font-size: 4.5vw;
+
+  font-weight: 600;
+  letter-spacing: 4px;
+  line-height: 100px;
+  text-align: right;
+}
+
+/*Description right block*/
+.descriptionRight {
+  line-height: 22px;
+  padding-top: 20px;
+  grid-area: auto / span 1;
+}
+
+/*Right block text*/
+.descriptionRight p {
+  color: #313638b3;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11pt;
+  text-align: justify;
+}
+
+/*---------------------------Home page statistics-----------------------------*/
+
+/*Background image*/
+.statsBackground {
+  width: 100%;
+  height: 300px;
+}
+
+.stats {
+  position: relative;
+}
+
+.number {
+  display: inline-grid;
+  grid-template-columns: 30% 30% 45%;
+  left: 0;
+  margin: 0 auto;
+  place-items: center center;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 60%;
+  bottom: 30%;
+}
+
+.number span {
+  color: #feb14b;
+  font-family: "Montserrat", sans-serif;
+  font-size: 75pt;
+  font-weight: 500;
+  letter-spacing: 15px;
+}
+
+.number p {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14pt;
+}
+
+/*--------------Statistics Mobile Design-------------------*/
+
+@media only screen and (max-width: 1000px) {
+  .number {
+    grid-template-columns: 25% 30% 45%;
+    position: absolute;
+    width: 85%;
+  }
+
+  .number span {
+    letter-spacing: 15px;
+  }
+  .number p {
+    font-size: 2vw;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .number span {
+    font-size: 12.5vw;
+    letter-spacing: 8px;
+  }
+
+  .number p {
+    font-size: 2.4vw;
+  }
+
+  .number {
+    bottom: 33%;
+    grid-template-columns: 28% 30% 45%;  
+    width: 85%;
+  }
+}
+
+/*-------------------------------Home page events-----------------------------*/
+/*Events block*/
+.events {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px auto;
+  grid-column-gap: 50px;
+  padding: 100px 0px;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+/*Events description grid area*/
+.eventsDescription {
+  grid-area: auto / span 1;
+  padding-top: 10px;
+}
+
+/*Events description text*/
+.eventsDescription p {
+  color: #313638b3;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11pt;
+  text-align: right;
+}
+
+.eventsDescription p#about {
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+.eventsDescription a {
+  font-family: "Montserrat", sans-serif;
+  text-align: right;
+  color: #e85f5c;
+}
+
+.eventsDescription a:hover {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: #feb14b;
+}
+
+/*Events title grid area*/
+.eventsTitle {
+  text-align: left;
+  grid-area: 1 / 2;
+}
+
+.eventsTitle h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 55px;
+}
+
+/*Big event image grid area*/
+.event1 {
+  grid-area: 2 / 2;
+}
+
+/*Big event image size*/
+.event1 img {
+  object-fit: contain;
+  width: 100%;
+  transition: transform 0.5s ease;
+  overflow: hidden;
+}
+
+.event1:hover img {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.03);
+}
+
+/*--------------Newsletter-------------------*/
+.subscribeBtn {
+  position: absolute;
+  right: 20%;
+  text-align: center;
+  width: 60%;
+  bottom: 37%;
+  color: #ffffff;
+  background-color:#e85f5c;
+  padding: 12px 10px 12px 10px;
+  border: none;
+  font-size: 2vw;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 3px;
+}
+
+.signUpForm span {
+  color:#e85f5c;
+  font-family: "Montserrat", sans-serif;
+}
+
+.signUpForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+/*--------------Newsletter Mobile Design-------------------*/
+@media only screen and (max-width: 1200px) {
+  .subscribeBtn {
+    font-size: 20pt;
+    width: 70%;
+    right: 15%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .subscribeBtn {
+    font-size: 16pt;
+    width: 70%;
+    right: 15%;
+    bottom: 38%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .subscribeBtn {
+    font-size: 14pt;
+    width: 80%;
+    bottom: 35%;
+    right: 10%;
+  }
+}
+
+/*------------------------------Home page sponsors----------------------------*/
+/*Sponsors image position*/
+.sponsors {
+  text-align: center;
+  margin: auto;
+  padding: 100px 0px;
+  width: 85%;
+}
+
+.sponsors h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 55px;
+  letter-spacing: 3px;
+  line-height: 100px;
+  text-align: center;
+  margin: 0px;
+  line-height: normal;
+}
+
+.sponsors img {
+  margin-top: 50px;
+  width: 100%;
+  max-width: 900px;
+}
+
+/*--------------Responsive Mobile Design-------------------*/
+
+@media only screen and (max-width: 850px) {
+  .events {
+    padding: 50px 0px;
+    max-width: 85%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-flow: column;
+  }
+
+  /* Use a Flexbox to switch positions of Title and Description. */
+  /*Events title - flexbox*/
+  .eventsTitle {
+    margin: 0 auto;
+    order: 1;
+    padding-left: 0px;
+  }
+
+  .eventsTitle h1 {
+    text-align: center;
+    font-size: 9vw;
+  }
+
+  /*Events description text - flexbox*/
+  .eventsDescription {
+    order: 2;
+    padding: 0px;
+  }
+
+  /*Events description text*/
+  .eventsDescription p {
+    text-align: justify;
+    margin: 20px 0;
+  }
+
+  .eventsDescription a {
+    text-align: justify;
+    padding-left: 20px;
+  }
+
+  /*Big event image area - flexbox*/
+  .event1 {
+    order: 3;
+  }
+
+  .contain {
+    background-position: center bottom 40%;
+    height: 66vh;
+  }
+
+  /*Header title*/
+  div .headline {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0; 
+    right: 0; 
+    margin: auto 15%; 
+    height: 63vh;
+  }
+
+  .headline h1{
+    font-size: 6vw;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+
+  /*Header subtitle*/
+  .headline p {
+    font-size: 10pt;
+    letter-spacing: 2.5px;
+  }
+
+  .description {
+    max-width: 85%;
+    display: block;
+    padding: 0px;
+  }
+
+  .descriptionLeft {
+    width: 100%;
+    padding: 50px 0px 0px 0px;
+    height: auto;
+  }
+
+  .descriptionLeft h1 {
+    padding: 0px;
+    font-size: 9vw;
+    line-height: 90px;
+  }
+
+  .descriptionRight {
+    width: 100%;
+    height: auto;
+    padding: 20px 0px 50px 0px;
+  }
+  
+  .sponsors {
+    padding: 50px 0;
+  }
+
+  .sponsors h1 {
+    font-size: 9vw;
+  }
+
+  .sponsors img {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .eventsDescription p#about {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .event1 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .eventsDescription a {
+    padding: 0px;
+  }
+
+  div .headline {
+    height: 58vh;
+  }
+}
