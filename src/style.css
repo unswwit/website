@@ -18,7 +18,7 @@
 #loadingBackground {
   background: #fff7ef;
   height: 100vh;
-  z-index: 4;
+  z-index: 5;
   position: absolute;
   width: 100vw;
   text-align: center;
@@ -36,7 +36,7 @@
 #loadingBackground p{
   overflow: hidden;
   font-size: 18pt;
-  animation: typing 3s steps(34, end);
+  animation: typing 2.5s steps(34, end);
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
 }

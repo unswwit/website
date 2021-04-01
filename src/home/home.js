@@ -36,7 +36,7 @@ const Home = () => {
       setCoverPhoto(img.src);
       setTimeout(() => {
         setSourceLoading(false);
-      }, 1500);
+      }, 1000);
     }
   }, [])  
 
