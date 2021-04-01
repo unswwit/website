@@ -15,7 +15,7 @@ export default function ScrollUpBtn(props) {
     }
   };
 
-  const scrollStep = (props) => {
+  const scrollStep = () => {
     if (window.pageYOffset === 0) {
       clearInterval(intervalId);
     }
