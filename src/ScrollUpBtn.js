@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
-import styles from "./modules.css"
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import styles from "./ScrollUpBtn.module.css"
 
-export default function ScrollUpBtn() {
+export default function ScrollUpBtn(props) {
   const [isVisible, setIsVisible] = useState(false);
   const [intervalId, setintervalId] = useState(0);
 
@@ -17,7 +17,7 @@ export default function ScrollUpBtn() {
 
   const scrollStep = (props) => {
     if (window.pageYOffset === 0) {
-        clearInterval(intervalId);
+      clearInterval(intervalId);
     }
     window.scroll(0, window.pageYOffset - props.scrollStepInPx);
   }
@@ -32,9 +32,8 @@ export default function ScrollUpBtn() {
   }, []);
 
   return (
-    <button title='Scroll to top' className={styles.scrollUp}
-     onClick={scrollToTop}>
-    <KeyboardArrowUpIcon color="#ffffff" ></KeyboardArrowUpIcon>
+    <button className={styles.scrollUp} onClick={scrollToTop}>
+      <KeyboardArrowUpIcon fontSize="large" color="#ffffff" />
     </button>
   )
 }
