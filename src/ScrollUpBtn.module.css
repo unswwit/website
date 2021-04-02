@@ -1,6 +1,6 @@
 
 .scrollUp {
-	opacity: 0.8;
+	opacity: 1;
 	background-color: #e85f5c;
 	width: 50px;
 	height: 50px;
@@ -15,5 +15,5 @@
 }
 
 .scrollUp:hover {
-	opacity: 1;
+	opacity: 0.8;
 }
