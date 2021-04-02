@@ -8,6 +8,7 @@ import Chip from "@material-ui/core/Chip";
 import Initiative from "./Initiative";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Tabletop from "tabletop";
+import ScrollUpBtn from "../.././ScrollUpBtn.js"
 
 const MarketingContent = () => {
   const [content, setContent] = useState([]);
@@ -92,6 +93,7 @@ const MarketingContent = () => {
               })}
           </ol>}   
         </div>
+        <ScrollUpBtn/>
         {/*End of Initiatives*/}
       </div>
     </>

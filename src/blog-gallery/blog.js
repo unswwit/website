@@ -127,7 +127,7 @@ const Blog = () => {
               />
             })}       
         </div>
-        <ScrollUpBtn scrollStepInPx="50" delayInMs="16.66"/>
+        <ScrollUpBtn/>
         {/*End of blog posts*/}
       </div>
     </>
