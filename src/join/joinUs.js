@@ -136,6 +136,26 @@ class JoinUs extends React.Component {
             more about the portfolio.
           </p>
         </div>
+        <div className={styles.whatTo}>
+          <div className={styles.gridItem1}>
+            Education
+          </div>
+          <div className={styles.gridItem2}>
+            Events
+          </div>
+          <div className={styles.gridItem3}>
+            Externals
+          </div>
+          <div className={styles.gridItem4}>
+            HR
+          </div>
+          <div className={styles.gridItem5}>
+            IT
+          </div>
+          <div className={styles.gridItem6}>
+            Marketing
+          </div>
+        </div>
         <h2 className={styles.header}>FAQ</h2>
         <div className={styles.accordion}>
           <Accordion>
@@ -246,7 +266,7 @@ class JoinUs extends React.Component {
               <Typography id={styles.accordionHeading}>
                 <div className={styles.accordionHeading}>
                   <strong>
-                    I’m not in 1st year, can I still join as a Subcommittee member?
+                    I’m not in 1st year, can I still join as a subcommittee member?
                   </strong>
                 </div>
               </Typography>
