@@ -119,6 +119,10 @@
   background-color: #ffdfb4;
 }
 
+.desc {
+  font-size: 12pt;
+}
+
 .gridItem2 {
   display: flex;
   padding: 20px;

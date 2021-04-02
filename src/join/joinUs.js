@@ -13,8 +13,12 @@ class JoinUs extends React.Component {
     super();
     this.state = {
       loading: true,
+      isHover: false
     };
     this.hideSpinner = this.hideSpinner.bind(this);
+
+    this.onMouseEnterHandler = this.onMouseEnterHandler.bind(this);
+    this.onMouseLeaveHandler = this.onMouseLeaveHandler.bind(this);
 
     this.socials = {
       spARC: ["https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371W0xQAE", "sparc.png"],
@@ -32,6 +36,18 @@ class JoinUs extends React.Component {
   // hides the loading sign
   hideSpinner() { 
     this.setState({ loading: false });
+  }
+
+  onMouseEnterHandler() {
+    this.setState({
+        isHover: true
+    });
+  }
+
+  onMouseLeaveHandler() {
+    this.setState({
+        isHover: false
+    });
   }
 
   render() {
@@ -137,11 +153,31 @@ class JoinUs extends React.Component {
           </p>
         </div>
         <div className={styles.whatTo}>
-          <div className={styles.gridItem1}>
-            Education
+          <div className={styles.gridItem1} onMouseEnter={this.onMouseEnterHandler} onMouseLeave={this.onMouseLeaveHandler}>
+            {
+                this.state.isHover
+                    ? <div className={styles.desc}>
+                        Generates WIT’s online content including blog posts, videos, 
+                        podcasts and major publications such as WIT’s Careers Guide
+                        <br></br>
+                        <br></br>
+                        About bringing new ideas, upskilling, and empowering members 
+                        in a variety of avenues
+                      </div>
+                    : <div className={styles.gridItem1}>Education</div>
+            }
           </div>
-          <div className={styles.gridItem2}>
-            Events
+          <div className={styles.gridItem2} onMouseEnter={this.onMouseEnterHandler} onMouseLeave={this.onMouseLeaveHandler}>
+            {
+              this.state.isHover
+                ? <div className={styles.desc}>
+                    Organises and plans events that aligns with WIT and our sponsors’ interests
+                    <br></br>
+                    <br></br>
+                    Involves creating event run sheets, booking venues and organising catering
+                  </div>
+                : <div className={styles.gridItem2}>Events</div>
+            }
           </div>
           <div className={styles.gridItem3}>
             Externals
