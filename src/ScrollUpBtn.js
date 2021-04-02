@@ -5,7 +5,7 @@ import styles from "./ScrollUpBtn.module.css"
 export default function ScrollUpBtn() {
   const [isVisible, setIsVisible] = useState(false);
   
-  // Show button when page is scorlled upto given distance
+  // Show button when page is scrolled upto given distance
   const toggleVisibility = () => {
     if (window.pageYOffset >= 300) {
       setIsVisible(true);
@@ -14,18 +14,23 @@ export default function ScrollUpBtn() {
     }
   };
   
+  // Scrolls the page to the top
   const scrollToTop = () => {
-    window.scrollTo({top: 750, behavior: "smooth"});
+    const coverPhoto = document.getElementsByClassName("coverPhoto")[0].clientHeight;
+    window.scrollTo({top: coverPhoto - 15, behavior: "smooth"});
   }
 
   useEffect(() => {
     window.addEventListener("scroll", toggleVisibility);
+    return () => {
+      window.removeEventListener("scroll", toggleVisibility);
+    };
   }, []);
 
   return (
     <div>
       {isVisible &&
-        <button className={styles.scrollUp} onClick={() => scrollToTop()}>
+      <button className={styles.scrollUp} onClick={scrollToTop}>
         <KeyboardArrowUpIcon fontSize="large" color="#ffffff" />
       </button>
       }
