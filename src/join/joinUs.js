@@ -15,7 +15,7 @@ class JoinUs extends React.Component {
     super();
     this.state = {
       loading: true,
-      setOpen: false,
+      openNewsletter: false,
       clickedEdu: true,
       clickedEvents: true,
       clickedExt: true,
@@ -46,11 +46,11 @@ class JoinUs extends React.Component {
   }
 
   open() {
-    this.setState({ setOpen: true });
+    this.setState({ openNewsletter: true });
   }
 
   callbackModal() {
-    this.setState({ setOpen: false });
+    this.setState({  openNewsletter: false });
   }
 
   render() {
@@ -160,76 +160,76 @@ class JoinUs extends React.Component {
         {/* Portfolios grid */}
         <div className={styles.whatTo}>
           <div className={styles.edu} onClick= {() => this.setState({clickedEdu: !this.state.clickedEdu})}>
-          {
-            this.state.clickedEdu? 'Education' : 
-            <p className={styles.desc}>
+            {
+              this.state.clickedEdu? "Education" : 
+                <p className={styles.desc}>
               Generates WIT’s online content including blog posts, videos, podcasts and 
               major publications such as WIT’s Careers Guide 
-              <br />
-              <br />
+                  <br />
+                  <br />
               About bringing new ideas, upskilling, and empowering members in a variety of avenues
-            </p>
-          }          
+                </p>
+            }          
           </div>
           <div className={styles.events} onClick= {() => this.setState({clickedEvents: !this.state.clickedEvents})}>
-          {
-            this.state.clickedEvents? 'Events' : 
-            <p className={styles.desc}>
+            {
+              this.state.clickedEvents? "Events" : 
+                <p className={styles.desc}>
               Organises and plans events that aligns with WIT and our sponsors’ interests              
-              <br />
-              <br />
+                  <br />
+                  <br />
               Involves creating event run sheets, booking venues and organising catering
-            </p>
-          }                
+                </p>
+            }                
           </div>
           <div className={styles.externals} onClick= {() => this.setState({clickedExt: !this.state.clickedExt})}>
-          {
-            this.state.clickedExt? 'Externals' : 
-            <p className={styles.desc}>
+            {
+              this.state.clickedExt? "Externals" : 
+                <p className={styles.desc}>
               Maintains communication with our extensive network of sponsors            
-              <br />
-              <br />
+                  <br />
+                  <br />
               Involves collaborating with other portfolios to host a diverse range of events 
               and publications alongside external partners
-            </p>
-          }   
+                </p>
+            }   
           </div>
           <div className={styles.hr} onClick= {() => this.setState({clickedHr: !this.state.clickedHr})}>
-          {
-            this.state.clickedHr? 'HR' : 
-            <p className={styles.desc}>
+            {
+              this.state.clickedHr? "HR" : 
+                <p className={styles.desc}>
               In charge of ideating and actualising fun internal bonding events             
-              <br />
-              <br />
+                  <br />
+                  <br />
               Involved in fostering strong friendship and society culture, which is at the 
               heart of WIT
-            </p>
-          }   
+                </p>
+            }   
           </div>
           <div className={styles.it} onClick= {() => this.setState({clickedIt: !this.state.clickedIt})}>
-          {
-            this.state.clickedIt? 'IT' : 
-            <p className={styles.desc}>
+            {
+              this.state.clickedIt? "IT" : 
+                <p className={styles.desc}>
               Responsible for designing, updating and improving on WIT’s official website             
-              <br />
-              <br />
+                  <br />
+                  <br />
               Supports the creation of IT-related workshops, and events such as Hackathon and 
               WIT coding competition
-            </p>
-          }   
+                </p>
+            }   
           </div>
           <div className={styles.marketing} onClick= {() => this.setState({clickedMar: !this.state.clickedMar})}>
-          {
-            this.state.clickedMar? 'Marketing' : 
-            <p className={styles.desc}>
+            {
+              this.state.clickedMar? "Marketing" : 
+                <p className={styles.desc}>
               Responsible for managing WIT’s social media platforms and outreach 
               to the wider community            
-              <br />
-              <br />
+                  <br />
+                  <br />
               Involves creating fun posts, event photography, designing merchandise and 
               sending out newsletters
-            </p>
-          }   
+                </p>
+            }   
           </div>
         </div>
         {/* FAQ section */}
@@ -366,22 +366,23 @@ class JoinUs extends React.Component {
             Subscribe to our newsletter
           </button>
           <Modal
-          aria-labelledby="spring-modal-title"
-          aria-describedby="spring-modal-description"
-          className={styles.signUpForm}
-          onClose={ this.callbackModal }
-          closeAfterTransition
-          BackdropComponent={Backdrop}
-          BackdropProps={{
-            timeout: 500,
-          }}
-        >
-          <>
-            <Fade in={ this.open }> 
-              <NewsletterForm handleClose={ this.callbackModal } />
-            </Fade> 
-          </>       
-        </Modal>
+            aria-labelledby="spring-modal-title"
+            aria-describedby="spring-modal-description"
+            className={styles.signUpForm}
+            open={this.state.openNewsletter}
+            onClose={ this.callbackModal }
+            closeAfterTransition
+            BackdropComponent={Backdrop}
+            BackdropProps={{
+              timeout: 500,
+            }}
+          >
+            <>
+              <Fade in={ this.open }> 
+                <NewsletterForm handleClose={ this.callbackModal } />
+              </Fade> 
+            </>       
+          </Modal>
         </div>
         {/* End of Newsletter */}
       </div>

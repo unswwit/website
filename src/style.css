@@ -289,7 +289,7 @@ footer {
 
 .footer-all {
   list-style-type: none;
-  margin: 1.4vw auto;
+  margin: 0 auto 1.4vw auto;
   padding: 4vw 0vw 2vw 0vw;
 }
 
