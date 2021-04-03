@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import PageHeader from "../header";
 import styles from "./Podcast.module.css";
 import EpisodeTemplate from "./EpisodeTemplate";
-import database from "../config/firebase";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Tabletop from "tabletop";
 
