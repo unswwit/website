@@ -272,6 +272,14 @@
     font-size: 40px;
     margin: 0px;
   }
+
+  .whatTo {
+    max-width: 80%;
+  }
+
+  .desc {
+    font-size: 11pt;
+  }
 }
 
 /*-------------------------------Join us mobile------------------------------*/
@@ -335,6 +343,16 @@
     font-size: 10pt;
   }
 
+  .whatTo {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    max-width: 65%;
+  }
+
+  .desc {
+    font-size: 10pt;
+  }
+
   .accordion {
     padding-top: 0px;
   }
@@ -364,5 +382,11 @@
 
   .googleMap {
     padding-left: 0px;
+  }
+
+  .whatTo {
+    max-width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
