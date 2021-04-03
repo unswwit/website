@@ -95,6 +95,7 @@ class JoinUs extends React.Component {
             />
           </div>
         </div>
+        {/* How to join section */}
         <h2 className={styles.header}>How to join</h2>
         <div className={styles.descriptionHowto}>
           <strong>Interact through social media</strong>
@@ -144,6 +145,7 @@ class JoinUs extends React.Component {
             varies from year to year.
           </p>
         </div>
+        {/* What to join section */}
         <h2 className={styles.header}>What to join</h2>
         <div className={styles.descriptionHowto}>
           <p>
@@ -152,6 +154,7 @@ class JoinUs extends React.Component {
             more about the portfolio.
           </p>
         </div>
+        {/* Portfolios grid */}
         <div className={styles.whatTo}>
           <div className={styles.edu} onMouseEnter={this.onMouseEnterHandler} onMouseLeave={this.onMouseLeaveHandler}>
             {
@@ -192,6 +195,7 @@ class JoinUs extends React.Component {
             Marketing
           </div>
         </div>
+        {/* FAQ section */}
         <h2 className={styles.header}>FAQ</h2>
         <div className={styles.accordion}>
           <Accordion>

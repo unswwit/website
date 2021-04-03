@@ -96,6 +96,7 @@
   color: #feb14b;
 }
 
+/* Portfolios grid */
 .whatTo {
   max-width: 60%;
   margin: auto;
@@ -178,6 +179,7 @@
   background-color: #c0e5f3;
 }
 
+/* FAQ section */
 .accordion {
   padding-top: 50px;
   max-width: 80%;
