@@ -4,6 +4,7 @@ import styles from "./Podcast.module.css";
 import EpisodeTemplate from "./EpisodeTemplate";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Tabletop from "tabletop";
+import ScrollUpBtn from "../ScrollUpBtn.js"
 
 const Podcast = () => {
   const db = database.firestore();
@@ -101,8 +102,9 @@ const Podcast = () => {
             description={episode.description} 
           />
         })}
-      
+    
       </div>    
+      <ScrollUpBtn/>
     </>
   );
 };

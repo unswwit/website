@@ -9,6 +9,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Timeline from "../Timeline";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import ScrollUpBtn from ".././ScrollUpBtn.js"
 
 const Events = () => {
   const [expanded, setExpanded] = useState(false);
@@ -123,6 +124,7 @@ const Events = () => {
                     </li>}
                   </ul>
                 </div>
+                <ScrollUpBtn/>
               </div>
             })}
           </div>)
