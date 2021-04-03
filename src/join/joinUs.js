@@ -45,10 +45,12 @@ class JoinUs extends React.Component {
     this.setState({ loading: false });
   }
 
+  // open newsletter
   open() {
     this.setState({ openNewsletter: true });
   }
 
+  // close newsletter
   callbackModal() {
     this.setState({  openNewsletter: false });
   }
