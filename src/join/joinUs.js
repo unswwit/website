@@ -164,7 +164,7 @@ class JoinUs extends React.Component {
           <div className={styles.edu} onClick= {() => this.setState({clickedEdu: !this.state.clickedEdu})}>
             {
               this.state.clickedEdu? "Education" : 
-                <p className={styles.desc}>
+                <div className={styles.desc}>
                   <ul>
                     <li>
                       Generates WIT’s online content including blog posts, videos, podcasts and 
@@ -174,13 +174,13 @@ class JoinUs extends React.Component {
                       About bringing new ideas, upskilling, and empowering members in a variety of avenues
                     </li>
                   </ul>
-                </p>
+                </div>
             }          
           </div>
           <div className={styles.events} onClick= {() => this.setState({clickedEvents: !this.state.clickedEvents})}>
             {
               this.state.clickedEvents? "Events" : 
-                <p className={styles.desc}>
+                <div className={styles.desc}>
                   <ul>
                     <li>
                       Organises and plans events that aligns with WIT and our sponsors’ interests 
@@ -189,13 +189,13 @@ class JoinUs extends React.Component {
                       Involves creating event run sheets, booking venues and organising catering
                     </li>
                   </ul>
-                </p>
+                </div>
             }                
           </div>
           <div className={styles.externals} onClick= {() => this.setState({clickedExt: !this.state.clickedExt})}>
             {
               this.state.clickedExt? "Externals" : 
-                <p className={styles.desc}>
+                <div className={styles.desc}>
                   <ul>
                     <li>
                       Maintains communication with our extensive network of sponsors
@@ -205,13 +205,13 @@ class JoinUs extends React.Component {
                       and publications alongside external partners
                     </li>
                   </ul>
-                </p>
+                </div>
             }   
           </div>
           <div className={styles.hr} onClick= {() => this.setState({clickedHr: !this.state.clickedHr})}>
             {
               this.state.clickedHr? "HR" : 
-                <p className={styles.desc}>
+                <div className={styles.desc}>
                   <ul>
                     <li>
                       In charge of ideating and actualising fun internal bonding events 
@@ -221,13 +221,13 @@ class JoinUs extends React.Component {
                       heart of WIT
                     </li>
                   </ul>
-                </p>
+                </div>
             }   
           </div>
           <div className={styles.it} onClick= {() => this.setState({clickedIt: !this.state.clickedIt})}>
             {
               this.state.clickedIt? "IT" : 
-                <p className={styles.desc}>
+                <div className={styles.desc}>
                   <ul>
                     <li>
                       Responsible for designing, updating and improving on WIT’s official website
@@ -237,13 +237,13 @@ class JoinUs extends React.Component {
                       WIT coding competition
                     </li>
                   </ul>
-                </p>
+                </div>
             }   
           </div>
           <div className={styles.marketing} onClick= {() => this.setState({clickedMar: !this.state.clickedMar})}>
             {
               this.state.clickedMar? "Marketing" : 
-                <p className={styles.desc}>
+                <div className={styles.desc}>
                   <ul>
                     <li>
                       Responsible for managing WIT’s social media platforms and outreach 
@@ -254,7 +254,7 @@ class JoinUs extends React.Component {
                       sending out newsletters
                     </li>
                   </ul>
-                </p>
+                </div>
             }   
           </div>
         </div>
@@ -266,7 +266,7 @@ class JoinUs extends React.Component {
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel4bh-content"
             >
-              <Typography id={styles.accordionHeading}>
+              <Typography id={styles.accordionHeading} component={'span'}>
                 <div className={styles.accordionHeading}>
                   <strong>
                     Can non-female students apply for a subcommittee position?
@@ -286,7 +286,7 @@ class JoinUs extends React.Component {
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel4bh-content"
             >
-              <Typography id={styles.accordionHeading}>
+              <Typography id={styles.accordionHeading} component={'span'}>
                 <div className={styles.accordionHeading}>
                   <strong>
                   Do I need a tech background to join? 
@@ -306,7 +306,7 @@ class JoinUs extends React.Component {
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel4bh-content"
             >
-              <Typography id={styles.accordionHeading}>
+              <Typography id={styles.accordionHeading} component={'span'}>
                 <div className={styles.accordionHeading}>
                   <strong>
                     Do I need any prior experience in the portfolio that I applied?
@@ -326,7 +326,7 @@ class JoinUs extends React.Component {
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel4bh-content"
             >
-              <Typography id={styles.accordionHeading}>
+              <Typography id={styles.accordionHeading} component={'span'}>
                 <div className={styles.accordionHeading}>
                   <strong>
                     How can I make my application stand out?
@@ -346,7 +346,7 @@ class JoinUs extends React.Component {
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel4bh-content"
             >
-              <Typography id={styles.accordionHeading}>
+              <Typography id={styles.accordionHeading} component={'span'}>
                 <div className={styles.accordionHeading}>
                   <strong>
                     What is the time commitment like? 
@@ -366,7 +366,7 @@ class JoinUs extends React.Component {
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel4bh-content"
             >
-              <Typography id={styles.accordionHeading}>
+              <Typography id={styles.accordionHeading} component={'span'}>
                 <div className={styles.accordionHeading}>
                   <strong>
                     I’m not in 1st year, can I still join as a subcommittee member?
@@ -404,7 +404,7 @@ class JoinUs extends React.Component {
             }}
           >
             <>
-              <Fade in={ this.open }> 
+              <Fade> 
                 <NewsletterForm handleClose={ this.callbackModal } />
               </Fade> 
             </>       
