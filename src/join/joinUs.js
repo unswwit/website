@@ -163,11 +163,15 @@ class JoinUs extends React.Component {
             {
               this.state.clickedEdu? "Education" : 
                 <p className={styles.desc}>
-              Generates WIT’s online content including blog posts, videos, podcasts and 
-              major publications such as WIT’s Careers Guide 
-                  <br />
-                  <br />
-              About bringing new ideas, upskilling, and empowering members in a variety of avenues
+                  <ul>
+                    <li>
+                      Generates WIT’s online content including blog posts, videos, podcasts and 
+                      major publications such as WIT’s Careers Guide 
+                    </li>
+                    <li>
+                      About bringing new ideas, upskilling, and empowering members in a variety of avenues
+                    </li>
+                  </ul>
                 </p>
             }          
           </div>
@@ -175,10 +179,14 @@ class JoinUs extends React.Component {
             {
               this.state.clickedEvents? "Events" : 
                 <p className={styles.desc}>
-              Organises and plans events that aligns with WIT and our sponsors’ interests              
-                  <br />
-                  <br />
-              Involves creating event run sheets, booking venues and organising catering
+                  <ul>
+                    <li>
+                      Organises and plans events that aligns with WIT and our sponsors’ interests 
+                    </li>
+                    <li>
+                      Involves creating event run sheets, booking venues and organising catering
+                    </li>
+                  </ul>
                 </p>
             }                
           </div>
@@ -186,11 +194,15 @@ class JoinUs extends React.Component {
             {
               this.state.clickedExt? "Externals" : 
                 <p className={styles.desc}>
-              Maintains communication with our extensive network of sponsors            
-                  <br />
-                  <br />
-              Involves collaborating with other portfolios to host a diverse range of events 
-              and publications alongside external partners
+                  <ul>
+                    <li>
+                      Maintains communication with our extensive network of sponsors
+                    </li>
+                    <li>
+                      Involves collaborating with other portfolios to host a diverse range of events 
+                      and publications alongside external partners
+                    </li>
+                  </ul>
                 </p>
             }   
           </div>
@@ -198,11 +210,15 @@ class JoinUs extends React.Component {
             {
               this.state.clickedHr? "HR" : 
                 <p className={styles.desc}>
-              In charge of ideating and actualising fun internal bonding events             
-                  <br />
-                  <br />
-              Involved in fostering strong friendship and society culture, which is at the 
-              heart of WIT
+                  <ul>
+                    <li>
+                      In charge of ideating and actualising fun internal bonding events 
+                    </li>
+                    <li>
+                      Involved in fostering strong friendship and society culture, which is at the 
+                      heart of WIT
+                    </li>
+                  </ul>
                 </p>
             }   
           </div>
@@ -210,11 +226,15 @@ class JoinUs extends React.Component {
             {
               this.state.clickedIt? "IT" : 
                 <p className={styles.desc}>
-              Responsible for designing, updating and improving on WIT’s official website             
-                  <br />
-                  <br />
-              Supports the creation of IT-related workshops, and events such as Hackathon and 
-              WIT coding competition
+                  <ul>
+                    <li>
+                      Responsible for designing, updating and improving on WIT’s official website
+                    </li>
+                    <li>
+                      Supports the creation of IT-related workshops, and events such as Hackathon and 
+                      WIT coding competition
+                    </li>
+                  </ul>
                 </p>
             }   
           </div>
@@ -222,12 +242,16 @@ class JoinUs extends React.Component {
             {
               this.state.clickedMar? "Marketing" : 
                 <p className={styles.desc}>
-              Responsible for managing WIT’s social media platforms and outreach 
-              to the wider community            
-                  <br />
-                  <br />
-              Involves creating fun posts, event photography, designing merchandise and 
-              sending out newsletters
+                  <ul>
+                    <li>
+                      Responsible for managing WIT’s social media platforms and outreach 
+                      to the wider community  
+                    </li>
+                    <li>
+                      Involves creating fun posts, event photography, designing merchandise and 
+                      sending out newsletters
+                    </li>
+                  </ul>
                 </p>
             }   
           </div>
