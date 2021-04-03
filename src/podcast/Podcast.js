@@ -7,7 +7,6 @@ import Tabletop from "tabletop";
 import ScrollUpBtn from "../ScrollUpBtn.js"
 
 const Podcast = () => {
-  const db = database.firestore();
   const [episodes, setEpisodes] = useState([]);
   const [loading, setLoading] = useState(true);
   const links = { 
@@ -30,21 +29,7 @@ const Podcast = () => {
       },
       simpleSheet: false
     })
-    /*
-    db
-      .collection("podcast-previews")  
-      .orderBy("episode", "desc")
-      .get()
-      .then(querySnapshot => {
-        let tempEpisodes = [];
-        querySnapshot.forEach(doc => {          
-          let episode = doc.data();
-          episode["id"] = doc.id;
-          tempEpisodes.push(episode);
-        });
-        setEpisodes(tempEpisodes);
-      });*/
-  }, [db]);
+  }, []);
 
   return (
     <>
