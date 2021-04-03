@@ -7,18 +7,17 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import NewsletterForm from "./NewsletterForm";
+import { Modal, Backdrop, Fade } from "@material-ui/core";
 
 class JoinUs extends React.Component {
   constructor() {
     super();
     this.state = {
       loading: true,
-      isHover: false
+      setOpen: false,
     };
     this.hideSpinner = this.hideSpinner.bind(this);
-
-    this.onMouseEnterHandler = this.onMouseEnterHandler.bind(this);
-    this.onMouseLeaveHandler = this.onMouseLeaveHandler.bind(this);
 
     this.socials = {
       spARC: ["https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371W0xQAE", "sparc.png"],
@@ -36,18 +35,6 @@ class JoinUs extends React.Component {
   // hides the loading sign
   hideSpinner() { 
     this.setState({ loading: false });
-  }
-
-  onMouseEnterHandler() {
-    this.setState({
-        isHover: true
-    });
-  }
-
-  onMouseLeaveHandler() {
-    this.setState({
-        isHover: false
-    });
   }
 
   render() {
@@ -156,31 +143,11 @@ class JoinUs extends React.Component {
         </div>
         {/* Portfolios grid */}
         <div className={styles.whatTo}>
-          <div className={styles.edu} onMouseEnter={this.onMouseEnterHandler} onMouseLeave={this.onMouseLeaveHandler}>
-            {
-                this.state.isHover
-                    ? <div className={styles.desc}>
-                        Generates WIT’s online content including blog posts, videos, 
-                        podcasts and major publications such as WIT’s Careers Guide
-                        <br></br>
-                        <br></br>
-                        About bringing new ideas, upskilling, and empowering members 
-                        in a variety of avenues
-                      </div>
-                    : <div className={styles.edu}>Education</div>
-            }
+          <div className={styles.edu}>
+            Education
           </div>
-          <div className={styles.events} onMouseEnter={this.onMouseEnterHandler} onMouseLeave={this.onMouseLeaveHandler}>
-            {
-              this.state.isHover
-                ? <div className={styles.desc}>
-                    Organises and plans events that aligns with WIT and our sponsors’ interests
-                    <br></br>
-                    <br></br>
-                    Involves creating event run sheets, booking venues and organising catering
-                  </div>
-                : <div className={styles.events}>Events</div>
-            }
+          <div className={styles.events}>
+            Events
           </div>
           <div className={styles.externals}>
             Externals
@@ -318,6 +285,35 @@ class JoinUs extends React.Component {
             </AccordionDetails>
           </Accordion>
         </div>
+        {/* Start of newsletter */}
+        <div className={styles.stats}>
+          <img
+            src={`${process.env.PUBLIC_URL}./stats-background-1.png`}
+            className={styles.statsBackground}
+            alt="banner"
+          />
+          <button className={styles.subscribeBtn} onClick={() => this.setState ({setOpen: true})}>
+            Subscribe to our newsletter
+          </button>
+          <Modal
+          aria-labelledby="spring-modal-title"
+          aria-describedby="spring-modal-description"
+          className={styles.signUpForm}
+          onClose={() => this.setState ({setOpen: false})}
+          closeAfterTransition
+          BackdropComponent={Backdrop}
+          BackdropProps={{
+            timeout: 500,
+          }}
+        >
+          <>
+            <Fade> 
+              <NewsletterForm handleClose={() => this.setState ({setOpen: false})} />
+            </Fade> 
+          </>       
+        </Modal>
+        </div>
+        {/* End of Newsletter */}
       </div>
     );
   }

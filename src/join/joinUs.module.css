@@ -198,6 +198,73 @@
   color: var(--light-grey);
 }
 
+/*--------------Newsletter-------------------*/
+
+/*Background image*/
+.statsBackground {
+  width: 100%;
+  height: 300px;
+}
+
+.stats {
+  position: relative;
+}
+
+/*Newsletter content*/
+.subscribeBtn {
+  position: absolute;
+  right: 20%;
+  text-align: center;
+  width: 60%;
+  bottom: 37%;
+  color: #ffffff;
+  background-color:#e85f5c;
+  padding: 12px 10px 12px 10px;
+  border: none;
+  font-size: 2vw;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 3px;
+}
+
+.signUpForm span {
+  color:#e85f5c;
+  font-family: "Montserrat", sans-serif;
+}
+
+.signUpForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+/*--------------Newsletter Mobile Design-------------------*/
+@media only screen and (max-width: 1200px) {
+  .subscribeBtn {
+    font-size: 20pt;
+    width: 70%;
+    right: 15%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .subscribeBtn {
+    font-size: 16pt;
+    width: 70%;
+    right: 15%;
+    bottom: 38%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .subscribeBtn {
+    font-size: 14pt;
+    width: 80%;
+    bottom: 35%;
+    right: 10%;
+  }
+}
+
 /*-------------------------------Join us ipad------------------------------*/
 @media only screen and (max-width: 1100px) {
   .centre {
