@@ -10,7 +10,7 @@ const Footer = () => {
     "Team": "/our-team",
     "Sponsors": "/sponsors",
     "Opportunities": "/opportunities",
-    "Join": "/join",
+    "Join": "/join-us",
     "Contact": "/contact-us",
     "Blog": "/blog",
     "Publications": "/publications",
