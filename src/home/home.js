@@ -142,7 +142,7 @@ const Home = () => {
           BackdropComponent={Backdrop}
           BackdropProps={{
             timeout: 500,
-          }}
+          }} 
         >
           <>
             <Fade in={open}> 
