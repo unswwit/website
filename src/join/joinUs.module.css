@@ -371,7 +371,7 @@
 }
 
 /*-------------------------------Join us very small screen------------------------------*/
-@media only screen and (max-width: 260px) {
+@media only screen and (max-width: 355px) {
   .joinLink {
     display: block;
   }
