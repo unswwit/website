@@ -30,11 +30,12 @@ export default function ScrollUpBtn() {
 
   return (
     <div>
-      {isVisible &&
-      <button className={styles.scrollUp} onClick={scrollToTop}>
+      <button 
+        className={isVisible ? [styles.scrollUp,styles.showBtn].join(" "): [styles.scrollUp,styles.hideBtn].join(" ")} 
+        onClick={scrollToTop}
+      >
         <KeyboardArrowUpIcon fontSize="large" color="#ffffff" />
       </button>
-      }
     </div>
     
   )
