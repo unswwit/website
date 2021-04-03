@@ -309,7 +309,6 @@ class JoinUs extends React.Component {
           aria-labelledby="spring-modal-title"
           aria-describedby="spring-modal-description"
           className={styles.signUpForm}
-          open={ this.open }
           onClose={ this.callbackModal }
           closeAfterTransition
           BackdropComponent={Backdrop}
