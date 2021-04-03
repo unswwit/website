@@ -153,7 +153,7 @@ class JoinUs extends React.Component {
           </p>
         </div>
         <div className={styles.whatTo}>
-          <div className={styles.gridItem1} onMouseEnter={this.onMouseEnterHandler} onMouseLeave={this.onMouseLeaveHandler}>
+          <div className={styles.edu} onMouseEnter={this.onMouseEnterHandler} onMouseLeave={this.onMouseLeaveHandler}>
             {
                 this.state.isHover
                     ? <div className={styles.desc}>
@@ -164,10 +164,10 @@ class JoinUs extends React.Component {
                         About bringing new ideas, upskilling, and empowering members 
                         in a variety of avenues
                       </div>
-                    : <div className={styles.gridItem1}>Education</div>
+                    : <div className={styles.edu}>Education</div>
             }
           </div>
-          <div className={styles.gridItem2} onMouseEnter={this.onMouseEnterHandler} onMouseLeave={this.onMouseLeaveHandler}>
+          <div className={styles.events} onMouseEnter={this.onMouseEnterHandler} onMouseLeave={this.onMouseLeaveHandler}>
             {
               this.state.isHover
                 ? <div className={styles.desc}>
@@ -176,19 +176,19 @@ class JoinUs extends React.Component {
                     <br></br>
                     Involves creating event run sheets, booking venues and organising catering
                   </div>
-                : <div className={styles.gridItem2}>Events</div>
+                : <div className={styles.events}>Events</div>
             }
           </div>
-          <div className={styles.gridItem3}>
+          <div className={styles.externals}>
             Externals
           </div>
-          <div className={styles.gridItem4}>
+          <div className={styles.hr}>
             HR
           </div>
-          <div className={styles.gridItem5}>
+          <div className={styles.it}>
             IT
           </div>
-          <div className={styles.gridItem6}>
+          <div className={styles.marketing}>
             Marketing
           </div>
         </div>

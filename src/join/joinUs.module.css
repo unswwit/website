@@ -108,7 +108,7 @@
   color: black;
 }
 
-.gridItem1 {
+.edu {
   display: flex;
   padding: 20px;
   aspect-ratio: 1;
@@ -123,7 +123,7 @@
   font-size: 12pt;
 }
 
-.gridItem2 {
+.events {
   display: flex;
   padding: 20px;
   aspect-ratio: 1;
@@ -134,7 +134,7 @@
   background-color: #b4c9e8;
 }
 
-.gridItem3 {
+.externals {
   display: flex;
   padding: 20px;
   aspect-ratio: 1;
@@ -145,7 +145,7 @@
   background-color: #deb4b4;
 }
 
-.gridItem4 {
+.hr {
   display: flex;
   padding: 20px;
   aspect-ratio: 1;
@@ -156,7 +156,7 @@
   background-color: #aad9c2;
 }
 
-.gridItem5 {
+.it {
   display: flex;
   padding: 20px;
   aspect-ratio: 1;
@@ -167,7 +167,7 @@
   background-color: #dfc6ee;
 }
 
-.gridItem6 {
+.marketing {
   display: flex;
   padding: 20px;
   aspect-ratio: 1;
