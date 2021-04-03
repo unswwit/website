@@ -18,6 +18,8 @@ class JoinUs extends React.Component {
       setOpen: false,
     };
     this.hideSpinner = this.hideSpinner.bind(this);
+    this.open = this.open.bind(this);
+    this.callbackModal = this.callbackModal.bind(this);
 
     this.socials = {
       spARC: ["https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371W0xQAE", "sparc.png"],
@@ -35,6 +37,14 @@ class JoinUs extends React.Component {
   // hides the loading sign
   hideSpinner() { 
     this.setState({ loading: false });
+  }
+
+  open() {
+    this.setState({ setOpen: true });
+  }
+
+  callbackModal() {
+    this.setState({ setOpen: false });
   }
 
   render() {
@@ -292,14 +302,15 @@ class JoinUs extends React.Component {
             className={styles.statsBackground}
             alt="banner"
           />
-          <button className={styles.subscribeBtn} onClick={() => this.setState ({setOpen: true})}>
+          <button className={styles.subscribeBtn} onClick={ this.open }>
             Subscribe to our newsletter
           </button>
           <Modal
           aria-labelledby="spring-modal-title"
           aria-describedby="spring-modal-description"
           className={styles.signUpForm}
-          onClose={() => this.setState ({setOpen: false})}
+          open={ this.open }
+          onClose={ this.callbackModal }
           closeAfterTransition
           BackdropComponent={Backdrop}
           BackdropProps={{
@@ -307,8 +318,8 @@ class JoinUs extends React.Component {
           }}
         >
           <>
-            <Fade> 
-              <NewsletterForm handleClose={() => this.setState ({setOpen: false})} />
+            <Fade in={ this.open }> 
+              <NewsletterForm handleClose={ this.callbackModal } />
             </Fade> 
           </>       
         </Modal>
