@@ -19,8 +19,8 @@ const NewsletterForm = ({ handleClose }) => {
 
   return (
     <div className={styles.paper}>
-      <IconButton aria-label="close newsletter subscribe form" className={styles.closeBtn}>
-        <CloseIcon onClick={handleClose} className={styles.closeSymbol}/>
+      <IconButton aria-label="close newsletter subscribe form" onClick={handleClose} className={styles.closeBtn}>
+        <CloseIcon className={styles.closeSymbol}/>
       </IconButton>     
       <br />
       <br />
