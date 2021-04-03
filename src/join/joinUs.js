@@ -7,7 +7,7 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import NewsletterForm from "./NewsletterForm";
+import NewsletterForm from ".././home/NewsletterForm";
 import { Modal, Backdrop, Fade } from "@material-ui/core";
 
 class JoinUs extends React.Component {

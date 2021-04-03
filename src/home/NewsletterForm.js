@@ -26,7 +26,7 @@ const NewsletterForm = ({ handleClose }) => {
       <br />
       <h1 className={styles.formTitle}>Newsletter</h1>
       <p className={styles.formDescription}>Stay up to date WIT us on the latest events and news</p>
-      <form className="newsletter" action={process.env.REACT_APP_MAILCHIMP_URL} target="_blank" method="POST" novalidate>
+      <form className="newsletter" action={process.env.REACT_APP_MAILCHIMP_URL} target="_blank" method="POST" noValidate>
         <input
           aria-label="Email"
           aria-required="true"
