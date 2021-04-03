@@ -16,6 +16,12 @@ class JoinUs extends React.Component {
     this.state = {
       loading: true,
       setOpen: false,
+      clickedEdu: true,
+      clickedEvents: true,
+      clickedExt: true,
+      clickedHr: true,
+      clickedIt: true,
+      clickedMar: true,
     };
     this.hideSpinner = this.hideSpinner.bind(this);
     this.open = this.open.bind(this);
@@ -153,23 +159,77 @@ class JoinUs extends React.Component {
         </div>
         {/* Portfolios grid */}
         <div className={styles.whatTo}>
-          <div className={styles.edu}>
-            Education
+          <div className={styles.edu} onClick= {() => this.setState({clickedEdu: !this.state.clickedEdu})}>
+          {
+            this.state.clickedEdu? 'Education' : 
+            <p className={styles.desc}>
+              Generates WIT’s online content including blog posts, videos, podcasts and 
+              major publications such as WIT’s Careers Guide 
+              <br />
+              <br />
+              About bringing new ideas, upskilling, and empowering members in a variety of avenues
+            </p>
+          }          
           </div>
-          <div className={styles.events}>
-            Events
+          <div className={styles.events} onClick= {() => this.setState({clickedEvents: !this.state.clickedEvents})}>
+          {
+            this.state.clickedEvents? 'Events' : 
+            <p className={styles.desc}>
+              Organises and plans events that aligns with WIT and our sponsors’ interests              
+              <br />
+              <br />
+              Involves creating event run sheets, booking venues and organising catering
+            </p>
+          }                
           </div>
-          <div className={styles.externals}>
-            Externals
+          <div className={styles.externals} onClick= {() => this.setState({clickedExt: !this.state.clickedExt})}>
+          {
+            this.state.clickedExt? 'Externals' : 
+            <p className={styles.desc}>
+              Maintains communication with our extensive network of sponsors            
+              <br />
+              <br />
+              Involves collaborating with other portfolios to host a diverse range of events 
+              and publications alongside external partners
+            </p>
+          }   
           </div>
-          <div className={styles.hr}>
-            HR
+          <div className={styles.hr} onClick= {() => this.setState({clickedHr: !this.state.clickedHr})}>
+          {
+            this.state.clickedHr? 'HR' : 
+            <p className={styles.desc}>
+              In charge of ideating and actualising fun internal bonding events             
+              <br />
+              <br />
+              Involved in fostering strong friendship and society culture, which is at the 
+              heart of WIT
+            </p>
+          }   
           </div>
-          <div className={styles.it}>
-            IT
+          <div className={styles.it} onClick= {() => this.setState({clickedIt: !this.state.clickedIt})}>
+          {
+            this.state.clickedIt? 'IT' : 
+            <p className={styles.desc}>
+              Responsible for designing, updating and improving on WIT’s official website             
+              <br />
+              <br />
+              Supports the creation of IT-related workshops, and events such as Hackathon and 
+              WIT coding competition
+            </p>
+          }   
           </div>
-          <div className={styles.marketing}>
-            Marketing
+          <div className={styles.marketing} onClick= {() => this.setState({clickedMar: !this.state.clickedMar})}>
+          {
+            this.state.clickedMar? 'Marketing' : 
+            <p className={styles.desc}>
+              Responsible for managing WIT’s social media platforms and outreach 
+              to the wider community            
+              <br />
+              <br />
+              Involves creating fun posts, event photography, designing merchandise and 
+              sending out newsletters
+            </p>
+          }   
           </div>
         </div>
         {/* FAQ section */}
