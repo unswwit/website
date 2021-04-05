@@ -19,7 +19,6 @@ const MarketingContent = () => {
     "Memes": "memes", 
     "Monday Motivation": "monday", 
     "WIT Crush Wednesday": "wcw",
-    "Special Occasions": "special",
   };
 
   useEffect(() => {
