@@ -13,7 +13,6 @@ import Opportunities from "./opportunities/opportunities";
 import ContactUs from "./contact/contactUs";
 import Footer from "./footer";
 
-import MarketingArchive from "./marketing-archive/marketingArchive";
 import MarketingContent from "./marketing-archive/marketing-content/content";
 import OurTeam from "./team/team";
 import Blog from "./blog-gallery/blog";
@@ -247,8 +246,7 @@ class App extends Component {
 	          <Route path="/events" component={Events} />
 	          <Route path="/our-team" component={OurTeam} />
 	          <Route exact path="/blog" component={Blog} />
-	          <Route exact path="/marketing-archive" component={MarketingArchive} />
-	          <Route path="/marketing-archive/content" component={MarketingContent} />
+	          <Route path="/marketing-archives" component={MarketingContent} />
 	          <Route path="/join-us" component={JoinUs} />
 	          <Route path="/sponsors" component={Sponsors} />
 	          <Route path="/opportunities" component={Opportunities} />
