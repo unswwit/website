@@ -10,6 +10,7 @@ import Timeline from "../Timeline";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import LoadingScreen from "../LoadingScreen";
+import ScrollUpBtn from ".././ScrollUpBtn.js"
 
 const Events = () => {
   const [expanded, setExpanded] = useState(false);
@@ -184,6 +185,7 @@ const Events = () => {
                 </div>
               })} 
             </div>
+            <ScrollUpBtn/>
           </div>
         </>)}       
     </>

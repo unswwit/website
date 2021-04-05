@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import PageHeader from "../header";
 import styles from "./Podcast.module.css";
 import EpisodeTemplate from "./EpisodeTemplate";
-import database from "../config/firebase";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Tabletop from "tabletop";
+import ScrollUpBtn from "../ScrollUpBtn.js"
 
 const Podcast = () => {
-  const db = database.firestore();
   const [episodes, setEpisodes] = useState([]);
   const [loading, setLoading] = useState(true);
   const links = { 
@@ -33,21 +32,7 @@ const Podcast = () => {
       },
       simpleSheet: false
     })
-    /*
-    db
-      .collection("podcast-previews")  
-      .orderBy("episode", "desc")
-      .get()
-      .then(querySnapshot => {
-        let tempEpisodes = [];
-        querySnapshot.forEach(doc => {          
-          let episode = doc.data();
-          episode["id"] = doc.id;
-          tempEpisodes.push(episode);
-        });
-        setEpisodes(tempEpisodes);
-      });*/
-  }, [db]);
+  }, []);
 
   return (
     <>
@@ -105,8 +90,9 @@ const Podcast = () => {
             description={episode.description} 
           />
         })}
-      
+    
       </div>    
+      <ScrollUpBtn/>
     </>
   );
 };
