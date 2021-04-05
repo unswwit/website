@@ -220,7 +220,7 @@ class App extends Component {
 	                      <NavLink to="/publications">PUBLICATIONS</NavLink>
 	                    </div>
 	                    <div className="dropdown-item">
-	                      <NavLink to="/marketing-archive">MARKETING ARCHIVES</NavLink>
+	                      <NavLink to="/marketing-archive">MARKETING ARCHIVE</NavLink>
 	                    </div>
 	                  </div>
 	                </div>
@@ -246,7 +246,7 @@ class App extends Component {
 	          <Route path="/events" component={Events} />
 	          <Route path="/our-team" component={OurTeam} />
 	          <Route exact path="/blog" component={Blog} />
-	          <Route path="/marketing-archives" component={MarketingContent} />
+	          <Route path="/marketing-archive" component={MarketingContent} />
 	          <Route path="/join-us" component={JoinUs} />
 	          <Route path="/sponsors" component={Sponsors} />
 	          <Route path="/opportunities" component={Opportunities} />
