@@ -38,14 +38,14 @@ class blogPost51 extends Component {
             </p>
         
             <p className={styles.postContent}>
-            After the building of ENIAC was completed, the AI computer needed to be programmed to actually perform the 
-            calculations required. To do this, 6 women, Jean Jennings, Marlyn Wescoff, Ruth Lichterman, Betty Snyder, 
-            Frances Bilas, and Kay McNulty from the Computers were selected to the milestone project - programming the ENIAC. 
-            These women were given 3 months of intensive training on how to handle some of the IBM machines being used at the 
-            time, after which they were given a pile of wiring diagrams and as Kay Mauchly (nee. McNulty) recalls, they were 
-            simply told to “figure out how the machine works, and then figure out how to program it.” After an intense effort 
-            of hand-wiring, switches, cables, and differential equations, the programming of the ENIAC, and world’s first 
-            computer program was finally completed.
+              After the building of ENIAC was completed, the AI computer needed to be programmed to actually perform the 
+              calculations required. To do this, 6 women, Jean Jennings, Marlyn Wescoff, Ruth Lichterman, Betty Snyder, 
+              Frances Bilas, and Kay McNulty from the Computers were selected to the milestone project - programming the ENIAC. 
+              These women were given 3 months of intensive training on how to handle some of the IBM machines being used at the 
+              time, after which they were given a pile of wiring diagrams and as Kay Mauchly (nee. McNulty) recalls, they were 
+              simply told to “figure out how the machine works, and then figure out how to program it.” After an intense effort 
+              of hand-wiring, switches, cables, and differential equations, the programming of the ENIAC, and world’s first 
+              computer program was finally completed.
             </p>
 
             <p className={styles.postContent} style={{"textAlign":"center"}}>
