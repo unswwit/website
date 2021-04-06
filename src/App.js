@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { HashRouter, Route, NavLink, Switch } from "react-router-dom";
+import { HashRouter, Route, NavLink, Switch, Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "semantic-ui-css/semantic.min.css";
 import "./style.css";
@@ -263,7 +263,8 @@ class App extends Component {
 	              />
 	            );
 	          })}
-	          <Route component={NotFound} />
+	          <Route path="/404" component={NotFound} />
+            <Redirect to="/404" />
 	        </Switch>
 	      </HashRouter>
 	      <div>
