@@ -36,7 +36,6 @@ class blogPost51 extends Component {
               As WW2 progressed, the need for important calculations such as missile trajectories quickly grew, 
               and thus, the Electronic Numerical Integrator and Computer or ENIAC was built.
             </p>
-            <br />
         
             <p className={styles.postContent}>
             After the building of ENIAC was completed, the AI computer needed to be programmed to actually perform the 
@@ -48,10 +47,13 @@ class blogPost51 extends Component {
             of hand-wiring, switches, cables, and differential equations, the programming of the ENIAC, and world’s first 
             computer program was finally completed.
             </p>
-            <br />
 
             <p className={styles.postContent} style={{"textAlign":"center"}}>
-              <em>“We were sure this machine could do anything we wanted it to do.” – Marlyn Wescoff</em>
+              <b>
+                  <em>
+                      “We were sure this machine could do anything we wanted it to do.” – Marlyn Wescoff
+                  </em>
+              </b>
             </p> 
 
             <p className={styles.postContent}>
@@ -63,7 +65,7 @@ class blogPost51 extends Component {
               where a job previously taking over 40 hours for a person to complete, could be undertaken in less than a second 
               by the AI computer, the ENIAC.
             </p>
-            <br />
+
             <p className={styles.postContent}>
               While the effort and ground-breaking work undertaken by the women of ENIAC was so essential, their names quickly 
               became lost in history, until an undergraduate computer science student, Kathy Kleiman, began searching for a 
@@ -76,14 +78,12 @@ class blogPost51 extends Component {
               encourage us to take on challenges, to push ourselves, to have a willingness to learn new things, and to take on 
               the unknown.
             </p>
-            <br />
 
             <p className={styles.postContent}>
               The Women of ENIAC have left a remarkable legacy for all computer science students, the founding efforts of 
               an essential discipline, a willingness to learn, excitement of taking on challenges, pushing themselves, 
               working together, and a lesson of confidence in their work to all. 
             </p>
-            <br />
           </div>
         </div>
         {/*for the blog post author*/}
