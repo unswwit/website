@@ -123,7 +123,7 @@ class Menu extends Component {
                       </NavLink>
                       <NavLink
                         className="menu-link"
-                        to="/marketing-archives"
+                        to="/marketing-archive"
                         style={{ textDecoration: "none" }}
                         onClick={this.props.handleMenuClick}
                       >
