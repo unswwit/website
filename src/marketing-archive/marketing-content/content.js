@@ -6,7 +6,7 @@ import PageHeader from "../.././header";
 import Chip from "@material-ui/core/Chip";
 import Initiative from "./Initiative";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import ScrollUpBtn from "../.././components/ScrollUpBtn.js"
+import ScrollUpBtn from "../.././components/ScrollUpBtn"
 import Tabletop from "tabletop";
 
 const MarketingContent = () => {
