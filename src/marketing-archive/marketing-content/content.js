@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import ".././marketingArchive.module.css";
 import styles from "./content.module.css";
 import "../.././style.css";
 import PageHeader from "../.././header";
@@ -36,7 +35,7 @@ const MarketingContent = () => {
   return (
     <>
       {/* Cover Photo */}
-      <PageHeader imgUrl="/headers/marketing-header.png" title="Marketing Archives" />
+      <PageHeader imgUrl="/headers/marketing-header.jpg" title="Marketing Archive" />
       {/*End of Header*/}
 
       <div id={styles.parent}>
