@@ -47,7 +47,7 @@ class App extends Component {
 
   // change the background of the navigation bar based on scroll height
   changeBackground() {
-    if (window.scrollY >= 60) {
+    if (window.scrollY >= 60 || window.location.href.split("#")[1] === "/404") {
       this.setState({
         navBar: true
       });
@@ -102,6 +102,7 @@ class App extends Component {
 	  // google analytics
 	  GoogleAnalytics();
 
+	  window.addEventListener("hashchange", this.changeBackground);
 	  window.addEventListener("resize", this.updateMenu);
 	  window.addEventListener("scroll", this.changeBackground);
 	  window.addEventListener("scroll", this.hideNavBar);
@@ -118,6 +119,7 @@ class App extends Component {
 	componentWillUnmount() {
 	  window.removeEventListener("resize", this.updateMenu);
 	  window.removeEventListener("scroll", this.changeBackground);
+	  window.removeEventListener("hashchange", this.changeBackground);
 	  window.removeEventListener("scroll", this.hideNavBar);
 	}
 
@@ -264,7 +266,7 @@ class App extends Component {
 	            );
 	          })}
 	          <Route path="/404" component={NotFound} />
-            <Redirect to="/404" />
+              <Redirect to="/404" />
 	        </Switch>
 	      </HashRouter>
 	      <div>
