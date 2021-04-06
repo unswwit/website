@@ -14,7 +14,7 @@ const Footer = () => {
     "Contact": "/contact-us",
     "Blog": "/blog",
     "Publications": "/publications",
-    "Marketing Archives": "/marketing-archives",
+    "Marketing Archives": "/marketing-archive",
     "Podcast": "/podcast"
   };
 
