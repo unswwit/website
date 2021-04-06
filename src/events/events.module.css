@@ -160,6 +160,25 @@ p.lookout {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  li.eventButton {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  ul#links {
+    display: block;
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+
+  li.eventLink {
+    margin: 10px 0;
+  }
+}
+
 @media only screen and (max-width: 350px) {
   .eventsBody {
     max-width: 100%;
