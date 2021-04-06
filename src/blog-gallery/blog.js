@@ -8,7 +8,7 @@ import Chip from "@material-ui/core/Chip";
 import Tooltip from "@material-ui/core/Tooltip";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import ScrollUpBtn from "../ScrollUpBtn.js"
+import ScrollUpBtn from "../components/ScrollUpBtn.js"
 
 const useStylesBootstrap = makeStyles((theme) => ({
   arrow: {

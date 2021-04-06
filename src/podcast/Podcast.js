@@ -4,7 +4,7 @@ import styles from "./Podcast.module.css";
 import EpisodeTemplate from "./EpisodeTemplate";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Tabletop from "tabletop";
-import ScrollUpBtn from "../ScrollUpBtn.js"
+import ScrollUpBtn from "../components/ScrollUpBtn"
 
 const Podcast = () => {
   const [episodes, setEpisodes] = useState([]);
