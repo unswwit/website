@@ -156,7 +156,7 @@ class App extends Component {
                         <NavLink to="/publications">PUBLICATIONS</NavLink>
                       </div>
                       <div className="dropdown-item">
-                        <NavLink to="/marketing-archives">
+                        <NavLink to="/marketing-archive">
                           MARKETING ARCHIVES
                         </NavLink>
                       </div>                      
@@ -185,7 +185,7 @@ class App extends Component {
             <Route path="/our-team" component={OurTeam} />
             <Route exact path="/blog" component={Blog} />
             <Route
-              path="/marketing-archive/content"
+              path="/marketing-archive"
               component={MarketingContent}
             />
             <Route path="/join-us" component={JoinUs} />
