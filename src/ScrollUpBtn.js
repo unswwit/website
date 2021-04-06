@@ -1,40 +1,42 @@
 import React, { useEffect, useState } from "react";
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
-import styles from "./modules.css"
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import styles from "./ScrollUpBtn.module.css"
 
 export default function ScrollUpBtn() {
   const [isVisible, setIsVisible] = useState(false);
-  const [intervalId, setintervalId] = useState(0);
-
-  // Show button when page is scorlled upto given distance
+  
+  // Show button when page is scrolled upto given distance
   const toggleVisibility = () => {
-    if (window.pageYOffset >= 20) {
+    const coverPhoto = document.getElementsByClassName("coverPhoto")[0].clientHeight;
+    if (window.pageYOffset >= coverPhoto) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
     }
   };
-
-  const scrollStep = (props) => {
-    if (window.pageYOffset === 0) {
-        clearInterval(intervalId);
-    }
-    window.scroll(0, window.pageYOffset - props.scrollStepInPx);
-  }
   
-  const scrollToTop = (props) => {
-    let intervalId = setInterval(scrollStep.bind(ScrollUpBtn), props.delayInMs);
-    setintervalId(intervalId);
+  // Scrolls the page to the top
+  const scrollToTop = () => {
+    const coverPhoto = document.getElementsByClassName("coverPhoto")[0].clientHeight;
+    window.scrollTo({top: coverPhoto - 15, behavior: "smooth"});
   }
 
   useEffect(() => {
     window.addEventListener("scroll", toggleVisibility);
+    return () => {
+      window.removeEventListener("scroll", toggleVisibility);
+    };
   }, []);
 
   return (
-    <button title='Scroll to top' className={styles.scrolUp}
-     onClick={scrollToTop}>
-    <KeyboardArrowUpIcon color="#ffffff" ></KeyboardArrowUpIcon>
-    </button>
+    <div>
+      <button 
+        className={isVisible ? [styles.scrollUp,styles.showBtn].join(" "): [styles.scrollUp,styles.hideBtn].join(" ")} 
+        onClick={scrollToTop}
+      >
+        <KeyboardArrowUpIcon fontSize="large" color="#ffffff" />
+      </button>
+    </div>
+    
   )
 }

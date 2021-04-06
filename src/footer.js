@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, HashRouter } from "react-router-dom";
-
 import "./style.css";
 
 const Footer = () => {
@@ -10,11 +9,11 @@ const Footer = () => {
     "Team": "/our-team",
     "Sponsors": "/sponsors",
     "Opportunities": "/opportunities",
-    "Join": "/join",
+    "Join": "/join-us",
     "Contact": "/contact-us",
     "Blog": "/blog",
     "Publications": "/publications",
-    "Marketing Archives": "/marketing-archive",
+    "Marketing Archive": "/marketing-archive",
     "Podcast": "/podcast"
   };
 

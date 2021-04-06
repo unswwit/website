@@ -10,6 +10,7 @@ import Timeline from "../Timeline";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import AddToCalBtn from "./AddToCalBtn.js";
+import ScrollUpBtn from ".././ScrollUpBtn.js"
 
 const Events = () => {
   const [expanded, setExpanded] = useState(false);
@@ -62,7 +63,7 @@ const Events = () => {
         setUpcomingEvents(googleData["upcoming-events"]["elements"]);
       },
       simpleSheet: false
-    })
+    })   
   }, [year]);
   
   return (
@@ -134,6 +135,7 @@ const Events = () => {
                     </li>}
                   </ul>
                 </div>
+                <ScrollUpBtn/>
               </div>
             })}
           </div>)

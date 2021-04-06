@@ -8,7 +8,7 @@ import Chip from "@material-ui/core/Chip";
 import Tooltip from "@material-ui/core/Tooltip";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import ScrollUpBtn from "../ScrollUpBtn";
+import ScrollUpBtn from "../ScrollUpBtn.js"
 
 const useStylesBootstrap = makeStyles((theme) => ({
   arrow: {
@@ -127,9 +127,7 @@ const Blog = () => {
               />
             })}       
         </div>
-        <div className={styles.blogPosts}>  
-        </div>
-        <ScrollUpBtn scrollStepInPx="50" delayInMs="16.66"/>
+        <ScrollUpBtn/>
         {/*End of blog posts*/}
       </div>
     </>

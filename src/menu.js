@@ -85,7 +85,7 @@ class Menu extends Component {
                     className="menu-box menu-dropdown"
                     onClick={this.handleClick}
                   >
-                    <div className="dropdown-toggle">
+                    <div className="dropdown-toggle active-nav-item">
                       <span className="menu-item menuTitle">RESOURCES</span>
                     </div>
                   </div>

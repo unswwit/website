@@ -4,13 +4,25 @@ import CountUp from "react-countup";
 import styles from "./home.module.css";
 import NewsletterForm from "./NewsletterForm";
 import { Modal, Backdrop, Fade } from "@material-ui/core";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
   const [open, setOpen] = React.useState(false);
-
+  const [mobileView, setMobileView] = React.useState(false);
+  
   //start webpage at the top
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (window.innerWidth <= "1150") {
+      setMobileView(true);
+    }
+    Aos.init({ 
+      duration: 1300, 
+      once: true, 
+      anchorPlacement: "top-bottom", 
+      easing: "ease-in-out", 
+      offset: 20 
+    });
   }, []);
 
   const callbackModal = () => {
@@ -21,7 +33,7 @@ const Home = () => {
     <div>
       {/* Start of Header */}
       <div className={styles.contain}>
-        <div className={styles.headline}>
+        <div data-aos="fade" className={styles.headline}>
           <h1>UNSW</h1>
           <h1>Women In</h1>
           <h1>Technology</h1>
@@ -31,7 +43,7 @@ const Home = () => {
       {/* End of Header */}
 
       {/* Start of Description */}
-      <div className={styles.description}>
+      <div data-aos={mobileView ? "fade": "fade-right"} className={styles.description}>
         <div className={styles.descriptionLeft}>
           <h1>COLLABORATE. INSPIRE. CHANGE.</h1>         
         </div>
@@ -57,17 +69,17 @@ const Home = () => {
           alt="banner"
         />
         <div>
-          <div className={styles.number}>
+          <div data-aos="fade" className={styles.number}>
             <div>
               <CountUp end={47} duration={5} />  
               <p>Team Members</p>
             </div>
             <div>
-              <CountUp end={15} duration={5} />
+              <CountUp end={20} duration={5} />
               <p>Sponsors</p>
             </div>
             <div>
-              <CountUp end={2781} duration={4} />
+              <CountUp end={2817} duration={4} />
               <p>Facebook Followers</p>
             </div>
           </div>
@@ -76,7 +88,7 @@ const Home = () => {
       {/* End of Statistics */}
 
       {/* Start of Upcoming Events */}
-      <div className={styles.events}>
+      <div data-aos={mobileView ? "fade":"fade-left"} data-aos-delay="150" className={styles.events}>
         <div className={styles.eventsDescription}>
           <p id="about">
             At WIT, our focus is on providing events that foster development
@@ -97,13 +109,13 @@ const Home = () => {
         </div>
         <div className={styles.event1}>
           <a 
-            href="https://www.facebook.com/events/727086634650316/" 
+            href="https://www.facebook.com/events/509569410169834/" 
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              src={`${process.env.PUBLIC_URL}/event-covers/2021/08-CBA-resume.png`}
-              alt="WIT x CBA: Resume Workshop"
+              src={`${process.env.PUBLIC_URL}/event-covers/2021/12-hoodie.png`}
+              alt="WIT 2021 Hoodie Design Competition"
             />
           </a>
         </div>
@@ -113,11 +125,11 @@ const Home = () => {
       {/* Start of newsletter */}
       <div className={styles.stats}>
         <img
-          src={`${process.env.PUBLIC_URL}./stats-background-1.png`}
+          src={`${process.env.PUBLIC_URL}./newsletter-background.png`}
           className={styles.statsBackground}
           alt="banner"
         />
-        <button className={styles.subscribeBtn} onClick={() => setOpen(true)}>
+        <button data-aos="fade" className={styles.subscribeBtn} onClick={() => setOpen(true)}>
           Subscribe to our newsletter
         </button>
         <Modal
@@ -130,7 +142,7 @@ const Home = () => {
           BackdropComponent={Backdrop}
           BackdropProps={{
             timeout: 500,
-          }}
+          }} 
         >
           <>
             <Fade in={open}> 
@@ -141,7 +153,7 @@ const Home = () => {
       </div>
       {/* End of Newsletter */}
 
-      <div className={styles.sponsors}>
+      <div data-aos={mobileView ? "fade": "fade-up"} className={styles.sponsors}>
         <h1>OUR SPONSORS</h1>
         <img
           src={`${process.env.PUBLIC_URL}./sponsors-home-2021-temp.png`}
