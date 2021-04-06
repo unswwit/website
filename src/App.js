@@ -266,7 +266,7 @@ class App extends Component {
 	            );
 	          })}
 	          <Route path="/404" component={NotFound} />
-              <Redirect to="/404" />
+            <Redirect to="/404" />
 	        </Switch>
 	      </HashRouter>
 	      <div>
