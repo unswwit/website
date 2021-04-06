@@ -5,6 +5,7 @@ import styles from "./blog.module.css";
 import { Link } from "react-router-dom";
 
 class BlogPreview extends Component {
+  execs = ["/potraits/blog-authors/vivianw2021.jpg","/potraits/blog-authors/georgie2021.jpg"];
   render() {
     return (
       <div className={this.props.category}>
@@ -42,7 +43,7 @@ class BlogPreview extends Component {
                               process.env.PUBLIC_URL +
                               this.props.authors[key][0]
                             }
-                            className={this.props.authors[key][0] === "/potraits/blog-authors/anon.png" ? styles.anonAuthor : styles.blogAuthor}
+                            className={this.execs.includes(this.props.authors[key][0]) ? styles.execAuthor : styles.anonAuthor}
                             alt={key}
                           />
                         </div>

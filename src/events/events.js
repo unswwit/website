@@ -10,6 +10,7 @@ import Timeline from "../Timeline";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import AddToCalBtn from "./AddToCalBtn.js";
+import ScrollUpBtn from ".././ScrollUpBtn.js"
 
 const Events = () => {
   const [expanded, setExpanded] = useState(false);
@@ -62,7 +63,7 @@ const Events = () => {
         setUpcomingEvents(googleData["upcoming-events"]["elements"]);
       },
       simpleSheet: false
-    })
+    })   
   }, [year]);
   
   return (
@@ -101,17 +102,7 @@ const Events = () => {
                   <p className={styles.eventSummary}>
                     {upcomingEvent.description}              
                   </p>
-                  <ul id={styles.links}>
-                  <li className={styles.eventButton}>
-                      <AddToCalBtn 
-                        title={upcomingEvent.title} 
-                        description={upcomingEvent.description}
-                        location={upcomingEvent.location}
-                        startDate={upcomingEvent.start}
-                        endDate={upcomingEvent.end}
-                        duration={upcomingEvent.duration}
-                    ></AddToCalBtn>
-                    </li>    
+                  <ul id={styles.links}>                     
                     <li className={styles.eventLink}>
                       <a
                         href={upcomingEvent.registerLink}
@@ -132,8 +123,19 @@ const Events = () => {
                           Facebook
                       </a>
                     </li>}
+                    <li className={styles.eventButton}>
+                      <AddToCalBtn 
+                        title={upcomingEvent.title} 
+                        description={upcomingEvent.description}
+                        location={upcomingEvent.location}
+                        startDate={upcomingEvent.start}
+                        endDate={upcomingEvent.end}
+                        duration={upcomingEvent.duration}
+                      />
+                    </li>                     
                   </ul>
                 </div>
+                <ScrollUpBtn/>
               </div>
             })}
           </div>)

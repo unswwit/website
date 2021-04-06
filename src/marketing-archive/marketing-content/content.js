@@ -1,4 +1,3 @@
-//All necessary imports for this javascript
 import React, { useEffect, useState } from "react";
 import ".././marketingArchive.module.css";
 import styles from "./content.module.css";
@@ -7,16 +6,15 @@ import PageHeader from "../.././header";
 import Chip from "@material-ui/core/Chip";
 import Initiative from "./Initiative";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import ScrollUpBtn from "../.././ScrollUpBtn.js"
 import Tabletop from "tabletop";
 
 const MarketingContent = () => {
   const [content, setContent] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("All");
-
   const categories = {
     "All": "All", 
-    "Careers Guide": "careers", 
     "Mascot": "mascot", 
     "Memes": "memes", 
     "Monday Motivation": "monday", 
@@ -28,7 +26,8 @@ const MarketingContent = () => {
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: googleData => {   
         setLoading(false);   
-        setContent(googleData["marketing-archives"]["elements"].reverse());
+        const archive = googleData["marketing-archives"]["elements"].reverse()
+        setContent(archive.slice(2));
       },
       simpleSheet: false
     });
@@ -73,25 +72,22 @@ const MarketingContent = () => {
               id={styles.contentLoading}
             />}
           </div>
-        
           {/*Image collage*/}
           {!loading && <ol className={styles.grid} id={styles.content}> 
             {content
-              .filter((picture) => selectedCategory === "All" || picture.category === selectedCategory)
+              .filter((picture) => selectedCategory === "All" || picture.category.split(",").includes(selectedCategory))
               .map((content, index) => {   
                 return <Initiative
                   key={index}
                   fb={content.link}
-                  imgUrl={selectedCategory === "All" ? 
-                    `/initiatives/${content.category}/${content.img}`: 
-                    `/initiatives/${selectedCategory}/${content.img}`
-                  }
+                  imgUrl={`/initiatives/2020/${content.img}`}
                   alt={content.label}
                   date={content.date} 
                 />
               })}
           </ol>}   
         </div>
+        <ScrollUpBtn/>
         {/*End of Initiatives*/}
       </div>
     </>

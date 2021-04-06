@@ -60,16 +60,17 @@ ul#links {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: inline-flex;
+  justify-content: flex-end;
+  float: right;
 }
 
 li.eventLink {
   margin: 5px 10px;
-  float: right;
 }
 
 li.eventButton {
   margin: 10px 10px;
-  float: right;
   margin-top: 0px;
 }
 

@@ -248,9 +248,7 @@ h2.teamHeading {
     font-size: 18px;
   }
 
-  .profileDegree,
-  .subcomProfileDegree,
-  .subcomProfileName {
+  .profileDegree {
     font-size: 16px;
   }
 
@@ -268,19 +266,37 @@ h2.teamHeading {
   .subcomRow {
     display: inline-grid;
     width: 100%;
-    grid-template-columns: 90px auto;
+    grid-template-columns: 160px auto;
     grid-gap: 15px;
     align-content: start;
   }
 
   .subcomProfileDegree {
+    font-size: 11pt;
     overflow-wrap: break-word;
     word-break: break-word;
+    hyphens: auto;
+  }
+
+  .subcomProfileName {
+    width: 140%;
+    font-size: 11pt;
+    overflow-wrap: break-word;
     hyphens: auto;
   }
 
   .profileCrop {
     width: 200px;
     height: 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .subcomRow {
+    display: inline-grid;
+    width: 100%;
+    grid-template-columns: 90px auto;
+    grid-gap: 15px;
+    align-content: start;
   }
 }
