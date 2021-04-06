@@ -9,6 +9,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Timeline from "../Timeline";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import AddToCalBtn from "./AddToCalBtn.js";
 
 const Events = () => {
   const [expanded, setExpanded] = useState(false);
@@ -61,7 +62,7 @@ const Events = () => {
         setUpcomingEvents(googleData["upcoming-events"]["elements"]);
       },
       simpleSheet: false
-    })   
+    })
   }, [year]);
   
   return (
@@ -101,6 +102,16 @@ const Events = () => {
                     {upcomingEvent.description}              
                   </p>
                   <ul id={styles.links}>
+                  <li className={styles.eventButton}>
+                      <AddToCalBtn 
+                        title={upcomingEvent.title} 
+                        description={upcomingEvent.description}
+                        location={upcomingEvent.location}
+                        startDate={upcomingEvent.start}
+                        endDate={upcomingEvent.end}
+                        duration={upcomingEvent.duration}
+                    ></AddToCalBtn>
+                    </li>    
                     <li className={styles.eventLink}>
                       <a
                         href={upcomingEvent.registerLink}

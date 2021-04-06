@@ -63,8 +63,14 @@ ul#links {
 }
 
 li.eventLink {
-  margin: 0 10px;
+  margin: 5px 10px;
   float: right;
+}
+
+li.eventButton {
+  margin: 10px 10px;
+  float: right;
+  margin-top: 0px;
 }
 
 a.event {
