@@ -84,7 +84,7 @@
 }
 
 /*Author image*/
-.blogAuthor {
+.execAuthor {
   height: auto;
   width: 120%;
   transform: translate(-5%, -10%);
@@ -154,7 +154,9 @@ table {
 }
 
 .authorSection { 
-  padding-right: 0.5vw;  
+  padding-right: 0.5vw;
+  padding-top: 0.2vw;
+  padding-bottom: 0.2vw;  
   display: flex;
   align-items: center;
 }

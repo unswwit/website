@@ -162,8 +162,8 @@ class blogPost49 extends Component {
         <AuthorCard
           authors={{
             "natalie-leroy": [
-              "/potraits/blog-authors/anon.png",
-              styles.authorProfile,
+              "/potraits/blog-authors/natalie-leroy.png",
+              styles.anonProfile,
               "Natalie Leroy",
               "Education Team"
             ]
