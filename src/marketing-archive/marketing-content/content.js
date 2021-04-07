@@ -78,6 +78,17 @@ const MarketingContent = () => {
               />                
             })}
           </div>  
+    <div>
+      {/* Timeline */}
+      <Timeline 
+        margin={"7%"}
+        page={"teams"}
+        step={25}
+        valueToYear={valueToYear} 
+        marks={marks} 
+        updateYear={handleYear} 
+      />
+    </div>
 
           <div id={styles.contentLoadingContainer}>
             {loading && <CircularProgress
@@ -87,15 +98,7 @@ const MarketingContent = () => {
               id={styles.contentLoading}
             />}
           </div>
-          {/* Timeline */}
-          <Timeline 
-            margin={"3%"}
-            page={"marketingArchive"}
-            step={100}
-            valueToYear={valueToYear} 
-            marks={marks} 
-            updateYear={handleYear} 
-         />
+
           {/*Image collage*/}
           {!loading && <ol className={styles.grid} id={styles.content}> 
             {content
