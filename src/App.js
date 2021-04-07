@@ -148,9 +148,7 @@ class App extends Component {
                         <NavLink to="/blog">BLOG</NavLink>
                       </div>
                       <div className="dropdown-item">
-                        <NavLink to="/podcast">
-                          PODCAST
-                        </NavLink>
+                        <NavLink to="/podcast">PODCAST</NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/publications">PUBLICATIONS</NavLink>
@@ -159,7 +157,7 @@ class App extends Component {
                         <NavLink to="/marketing-archive">
                           MARKETING ARCHIVES
                         </NavLink>
-                      </div>                      
+                      </div>
                     </div>
                   </div>
                 </li>
@@ -184,10 +182,7 @@ class App extends Component {
             <Route path="/events" component={Events} />
             <Route path="/our-team" component={OurTeam} />
             <Route exact path="/blog" component={Blog} />
-            <Route
-              path="/marketing-archive"
-              component={MarketingContent}
-            />
+            <Route path="/marketing-archive" component={MarketingContent} />
             <Route path="/join-us" component={JoinUs} />
             <Route path="/sponsors" component={Sponsors} />
             <Route path="/opportunities" component={Opportunities} />
@@ -195,13 +190,19 @@ class App extends Component {
             <Route exact path="/podcast" component={Podcast} />
             <Route path="/podcast/:episode" component={EpisodePage} />
             <Route path="/publications" component={Publications} />
-            {Array.from({length: 49}, (_, index) => index + 1).map((blogNo) => {
-              return <Route 
-                key={blogNo} 
-                path={"/blog/" + blogNo} 
-                component={require(`./blog-post/blog-post-${blogNo}`).default} 
-              />
-            })}
+            {Array.from({ length: 49 }, (_, index) => index + 1).map(
+              (blogNo) => {
+                return (
+                  <Route
+                    key={blogNo}
+                    path={"/blog/" + blogNo}
+                    component={
+                      require(`./blog-post/blog-post-${blogNo}`).default
+                    }
+                  />
+                );
+              }
+            )}
             <Route component={NotFound} />
           </Switch>
         </HashRouter>

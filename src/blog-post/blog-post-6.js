@@ -25,8 +25,10 @@ class blogPost6 extends Component {
             </h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>June 17, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -85,7 +87,10 @@ class blogPost6 extends Component {
             </p>
             <br />
 
-            <p className={styles.question}> What do you love about your career now?</p>
+            <p className={styles.question}>
+              {" "}
+              What do you love about your career now?
+            </p>
             <p className={styles.postContent}>
               As a product manager for a blogging platform, I love that I help
               people express themselves. I care deeply about self-discovery and

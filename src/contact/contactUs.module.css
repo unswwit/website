@@ -250,7 +250,8 @@ form input.button:hover {
     font-size: 16px;
   }
 
-  .form h2, .contactTeam {
+  .form h2,
+  .contactTeam {
     font-size: 30px;
   }
 

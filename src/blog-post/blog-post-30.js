@@ -28,8 +28,10 @@ class blogPost30 extends Component {
             </h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>October 11, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -45,7 +47,9 @@ class blogPost30 extends Component {
             </p>
             <br />
 
-            <p className={styles.question}>Technical Interview Step by Step Guide</p>
+            <p className={styles.question}>
+              Technical Interview Step by Step Guide
+            </p>
 
             <p className={styles.postContent}>
               <strong>Vivian(V)</strong>: I'm Vivian, and I’m a third-year
@@ -154,7 +158,9 @@ class blogPost30 extends Component {
                 "How many elements would the array be expected to contain?":
                 somewhere between 10-100 000 elements
               </p>
-              <p className={styles.postContent}>"Can we get an empty array?": No</p>
+              <p className={styles.postContent}>
+                "Can we get an empty array?": No
+              </p>
               <p className={styles.postContent}>
                 "Will our array always have one duplicate element?": Yes
               </p>
@@ -174,7 +180,9 @@ class blogPost30 extends Component {
               </p>
               <br />
               {/*part 3*/}
-              <li className={styles.question}>Verbalise your coding strategy </li>
+              <li className={styles.question}>
+                Verbalise your coding strategy{" "}
+              </li>
               <p className={styles.postContent}>
                 Think about your code implementation and verbalize how you
                 intend to implement the code to the interviewer. After the

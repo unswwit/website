@@ -26,8 +26,10 @@ class blogPost25 extends Component {
             </h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>September 23, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -76,7 +78,9 @@ class blogPost25 extends Component {
             </p>
             <br />
 
-            <p className={styles.question}>What do you love about your career now?</p>
+            <p className={styles.question}>
+              What do you love about your career now?
+            </p>
 
             <p className={styles.postContent}>
               I love that the opportunities at Deloitte never ends. At Deloitte,

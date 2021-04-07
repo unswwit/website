@@ -33,7 +33,7 @@
 /*---------------------------Loading Sign--------------------------*/
 
 #blogsLoading {
-  color:#feb14b;  
+  color: #feb14b;
   margin-top: 10%;
   margin-bottom: 10%;
 }
@@ -153,8 +153,8 @@ table {
   align-items: center;
 }
 
-.authorSection { 
-  padding-right: 0.5vw;  
+.authorSection {
+  padding-right: 0.5vw;
   display: flex;
   align-items: center;
 }
@@ -196,7 +196,6 @@ table {
   .previewPic {
     width: 100%;
     height: auto;
-
   }
 
   .authorSection {
@@ -208,13 +207,12 @@ table {
   }
 }
 
-
 @media screen and (max-width: 500px) {
   .authorRow {
     display: grid;
     grid-template-columns: auto;
     row-gap: 2vw;
-  }  
+  }
 }
 
 @media screen and (max-width: 300px) {

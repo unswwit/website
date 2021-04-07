@@ -29,8 +29,10 @@ class blogPost9 extends Component {
             </p>
             <div className={styles.blogDetails}>
               <span className={styles.date}>June 29, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -221,7 +223,10 @@ class blogPost9 extends Component {
             </p>
             <br />
 
-            <p className={styles.postContent}> I’m gonna make that 80% count. </p>
+            <p className={styles.postContent}>
+              {" "}
+              I’m gonna make that 80% count.{" "}
+            </p>
             <br />
           </div>
         </div>

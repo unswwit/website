@@ -154,7 +154,7 @@ div .headline {
 
   .number {
     bottom: 33%;
-    grid-template-columns: 28% 30% 45%;  
+    grid-template-columns: 28% 30% 45%;
     width: 85%;
   }
 }
@@ -240,7 +240,7 @@ div .headline {
   width: 60%;
   bottom: 37%;
   color: #ffffff;
-  background-color:#e85f5c;
+  background-color: #e85f5c;
   padding: 12px 10px 12px 10px;
   border: none;
   font-size: 2vw;
@@ -250,7 +250,7 @@ div .headline {
 }
 
 .signUpForm span {
-  color:#e85f5c;
+  color: #e85f5c;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -259,7 +259,7 @@ div .headline {
   align-items: center;
   justify-content: center;
 }
-  
+
 /*--------------Newsletter Mobile Design-------------------*/
 @media only screen and (max-width: 1200px) {
   .subscribeBtn {
@@ -367,13 +367,13 @@ div .headline {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0; 
-    right: 0; 
-    margin: auto 15%; 
+    left: 0;
+    right: 0;
+    margin: auto 15%;
     height: 63vh;
   }
 
-  .headline h1{
+  .headline h1 {
     font-size: 6vw;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -408,7 +408,7 @@ div .headline {
     height: auto;
     padding: 20px 0px 50px 0px;
   }
-  
+
   .sponsors {
     padding: 50px 0;
   }

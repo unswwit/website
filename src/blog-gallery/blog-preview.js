@@ -9,9 +9,7 @@ class BlogPreview extends Component {
     return (
       <div className={this.props.category}>
         {/* Start of blog post preview */}
-        <div
-          className={styles.blogPost}
-        >
+        <div className={styles.blogPost}>
           <table cellPadding="0">
             <Link
               to={"/blog/" + this.props.blogNo}
@@ -31,7 +29,9 @@ class BlogPreview extends Component {
                   <div className={styles.blogDetails}>
                     <div className={styles.heading}>{this.props.heading}</div>
                     <div className={styles.date}>{this.props.date}</div>
-                    <div className={styles.subheading}>{this.props.subheading}</div>
+                    <div className={styles.subheading}>
+                      {this.props.subheading}
+                    </div>
                   </div>
                   <tr className={styles.authorRow}>
                     {Object.keys(this.props.authors).map((key) => (
@@ -42,11 +42,18 @@ class BlogPreview extends Component {
                               process.env.PUBLIC_URL +
                               this.props.authors[key][0]
                             }
-                            className={this.props.authors[key][0] === "/potraits/blog-authors/anon.png" ? styles.anonAuthor : styles.blogAuthor}
+                            className={
+                              this.props.authors[key][0] ===
+                              "/potraits/blog-authors/anon.png"
+                                ? styles.anonAuthor
+                                : styles.blogAuthor
+                            }
                             alt={key}
                           />
                         </div>
-                        <div className={[styles.auth, styles.authorName].join(" ")}>
+                        <div
+                          className={[styles.auth, styles.authorName].join(" ")}
+                        >
                           {this.props.authors[key][1]}
                         </div>
                       </div>

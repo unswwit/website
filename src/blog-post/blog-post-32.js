@@ -24,8 +24,10 @@ class blogPost32 extends Component {
             <h2 className={styles.blogTitle}>Familiarising Fintech</h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>October 18, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
