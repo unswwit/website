@@ -44,7 +44,7 @@ const TimelineSlider = withStyles({
 
 const Timeline = ({ updateYear, marks, valueToYear, page, step, margin }) => {
   return (
-    <div id={page === "teams" ? styles.teams : styles.events} style={{ "marginTop" : margin }}>
+    <div id={page === "teams" ? styles.teams : page === "events" ? styles.events : styles.marketingArchive} style={{ "marginTop" : margin }}>
       <TimelineSlider 
         step={step} 
         marks={marks}  
