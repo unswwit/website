@@ -33,6 +33,9 @@ class blogPost51 extends Component {
               In WW2, determining a missile’s trajectory in certain weather conditions was a calculation that would take up to 
               40 hours by hand. Being as tedious a calculation as it sounds, combined with a shortage of engineers, 
               approximately 100 women in the US were hired to perform this task. Their job title? “Computer”. 
+            </p>
+
+            <p className={styles.postContent}>
               As WW2 progressed, the need for important calculations such as missile trajectories quickly grew, 
               and thus, the Electronic Numerical Integrator and Computer or ENIAC was built.
             </p>
