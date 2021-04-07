@@ -78,17 +78,18 @@ const MarketingContent = () => {
               />                
             })}
           </div>  
-    <div>
-      {/* Timeline */}
-      <Timeline 
-        margin={"7%"}
-        page={"teams"}
-        step={25}
-        valueToYear={valueToYear} 
-        marks={marks} 
-        updateYear={handleYear} 
-      />
-    </div>
+          
+          <div>
+            {/* Timeline */}
+            <Timeline 
+              margin={"7%"}
+              page={"teams"}
+              step={25}
+              valueToYear={valueToYear} 
+              marks={marks} 
+              updateYear={handleYear} 
+            />
+          </div>
 
           <div id={styles.contentLoadingContainer}>
             {loading && <CircularProgress
