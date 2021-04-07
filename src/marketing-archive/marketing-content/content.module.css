@@ -1,3 +1,14 @@
+/*---------------------------Search filtering and loading--------------------------*/
+
+#timeline span {
+  font-size: 11pt;
+}
+
+#contentTimeLine {
+  margin-top: 7%;
+  width: 40%;
+}
+
 /*-------------------------------Size bar and image grid-----------------------------*/
 #parent {
   width: 100%;
@@ -26,6 +37,7 @@
   display: flex;
   justify-content: center;
 }
+
 
 /*-------------------------------Image grid gallery-----------------------------*/
 ol {

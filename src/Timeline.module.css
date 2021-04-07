@@ -6,7 +6,11 @@
 	width: 100%;
 }
 
-#teams, #events {
+#marketingArchive {
+	width: 60%;
+}
+
+#teams, #events, #marketingArchive {
 	margin: 0 auto;
 	margin-bottom: 2%;
 }

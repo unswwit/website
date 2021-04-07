@@ -24,6 +24,7 @@ const MarketingContent = () => {
     "Special Occasions": "special",
   };
 
+  // position of the marks on the timeline (i.e. 100 indicates that it's on the right end)
   const marks = [
     {
       value: 100,
@@ -89,7 +90,7 @@ const MarketingContent = () => {
           {/* Timeline */}
           <Timeline 
             margin={"3%"}
-            page={"events"}
+            page={"marketingArchive"}
             step={100}
             valueToYear={valueToYear} 
             marks={marks} 
