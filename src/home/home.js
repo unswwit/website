@@ -13,6 +13,7 @@ const Home = () => {
   
   //start webpage at the top
   useEffect(() => {
+    window.scrollTo(0,0);
     if (window.innerWidth <= "1150") {
       setMobileView(true);
     }

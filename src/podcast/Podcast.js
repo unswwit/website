@@ -28,6 +28,10 @@ const Podcast = () => {
   };
 
   useEffect(() => {
+    // start at the top of the page
+    window.scrollTo(0,0);
+
+    // load podcast episode previews
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: (googleData) => {
