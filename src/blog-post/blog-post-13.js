@@ -15,7 +15,7 @@ class blogPost13 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #13" />
+        <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Post #13" />
 
         {/*Start of blog post*/}
         <div className={styles.blogContent}>
@@ -56,7 +56,7 @@ class blogPost13 extends Component {
             <img
               className={styles.floatRight}
               src={
-                process.env.PUBLIC_URL + "/blog-attachments/blog-13-mech.png"
+                process.env.PUBLIC_URL + "/blog-attachments/blog-13-mech.jpg"
               }
               alt="Mechanical Logo"
             />
@@ -152,7 +152,7 @@ class blogPost13 extends Component {
             <img
               className={styles.floatRight}
               src={
-                process.env.PUBLIC_URL + "/blog-attachments/blog-13-elec.png"
+                process.env.PUBLIC_URL + "/blog-attachments/blog-13-elec.jpg"
               }
               alt="Electrical Logo"
             />
@@ -227,7 +227,7 @@ class blogPost13 extends Component {
             <img
               className={styles.floatRight}
               src={
-                process.env.PUBLIC_URL + "/blog-attachments/blog-13-comp.png"
+                process.env.PUBLIC_URL + "/blog-attachments/blog-13-comp.jpg"
               }
               alt="Computing logo"
             />

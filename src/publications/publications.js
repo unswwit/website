@@ -23,10 +23,7 @@ const Publications = () => {
   return (
     <>
       {/* Cover Photo */}
-      <PageHeader
-        imgUrl="/headers/publications-header.png"
-        title="Publications"
-      />
+      <PageHeader imgUrl="/headers/publications-header.jpg" title="Publications" />
 
       <div className={styles.publicationsBody}>
         {/*Loading Container*/}

@@ -6,7 +6,6 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import PageHeader from "../header";
-// import database from "../config/firebase";
 import ReactMarkdown from "react-markdown";
 import Tabletop from "tabletop";
 import styles from "./Podcast.module.css";
@@ -26,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
 
 const EpisodePage = (props) => {
   const classes = useStyles();
-  // const db = database.firestore();
   const [episode, setEpisode] = useState({});
   const [episodeNumber, setEpisodeNumber] = useState("0");
   const [transcript, setTranscript] = useState("");

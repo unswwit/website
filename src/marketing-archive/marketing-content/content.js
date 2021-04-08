@@ -1,13 +1,13 @@
-//All necessary imports for this javascript
 import React, { useEffect, useState } from "react";
 import styles from "./content.module.css";
 import "../.././style.css";
-import Timeline from "../../Timeline";
 import PageHeader from "../.././header";
 import Chip from "@material-ui/core/Chip";
 import Initiative from "./Initiative";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import ScrollUpBtn from "../.././components/ScrollUpBtn"
 import Tabletop from "tabletop";
+import Timeline from "../.././components/Timeline"
 
 const MarketingContent = () => {
   const [content, setContent] = useState([]);
@@ -20,7 +20,6 @@ const MarketingContent = () => {
     Memes: "memes",
     "Monday Motivation": "monday",
     "WIT Crush Wednesday": "wcw",
-    "Special Occasions": "special",
   };
 
   // position of the marks on the timeline (i.e. 100 indicates that it's on the right end)
@@ -67,8 +66,8 @@ const MarketingContent = () => {
     <>
       {/* Cover Photo */}
       <PageHeader
-        imgUrl="/headers/marketing-header.png"
-        title="Marketing Archives"
+        imgUrl="/headers/marketing-header.jpg"
+        title="Marketing Archive"
       />
       {/*End of Header*/}
 
@@ -150,6 +149,7 @@ const MarketingContent = () => {
             </ol>
           )}
         </div>
+        <ScrollUpBtn/>
         {/*End of Initiatives*/}
       </div>
     </>

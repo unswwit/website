@@ -8,6 +8,7 @@ import Chip from "@material-ui/core/Chip";
 import Tooltip from "@material-ui/core/Tooltip";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import ScrollUpBtn from "../components/ScrollUpBtn"
 
 const useStylesBootstrap = makeStyles((theme) => ({
   arrow: {
@@ -75,7 +76,7 @@ const Blog = () => {
   return (
     <>
       {/* Cover Photo */}
-      <PageHeader imgUrl="/headers/blog-header.png" title="Blog Posts" />
+      <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Posts" />
       <div className={styles.blogGallery}>
         {/* Start of blog categories */}
         <div className={styles.blogCategories}>
@@ -152,6 +153,7 @@ const Blog = () => {
                 );
               })}
         </div>
+        <ScrollUpBtn/>
         {/*End of blog posts*/}
       </div>
     </>

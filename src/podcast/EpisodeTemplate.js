@@ -15,24 +15,24 @@ const useStyles = makeStyles({
     margin: 20,
     borderRadius: 0,
     boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
-    ["@media (max-width:700px)"]: {
+    "@media (max-width:700px)": {
       // eslint-disable-line no-useless-computed-key
       maxWidth: "100%",
       height: 600,
     },
-    ["@media (max-width:600px)"]: {
+    "@media (max-width:600px)": {
       // eslint-disable-line no-useless-computed-key
       height: 680,
     },
-    ["@media (max-width:500px)"]: {
+    "@media (max-width:500px)": {
       // eslint-disable-line no-useless-computed-key
       height: 620,
     },
-    ["@media (max-width:450px)"]: {
+    "@media (max-width:450px)": {
       // eslint-disable-line no-useless-computed-key
       height: 600,
     },
-    ["@media (max-width:400px)"]: {
+    "@media (max-width:400px)": {
       // eslint-disable-line no-useless-computed-key
       height: 560,
     },
@@ -41,7 +41,7 @@ const useStyles = makeStyles({
     height: 300,
     width: 300,
     overflow: "hidden",
-    ["@media (max-width:700px)"]: {
+    "@media (max-width:700px)": {
       // eslint-disable-line no-useless-computed-key
       width: "100%",
       height: "initial",
@@ -69,7 +69,7 @@ const useStyles = makeStyles({
   },
   content: {
     height: "260px",
-    ["@media (max-width:700px)"]: {
+    "@media (max-width:700px)": {
       // eslint-disable-line no-useless-computed-key
       height: 300,
     },

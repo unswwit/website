@@ -1,26 +1,25 @@
 import React from "react";
 import { Link, HashRouter } from "react-router-dom";
-
 import "./style.css";
 
 const Footer = () => {
   const routes = {
-    Home: "/",
-    Events: "/events",
-    Team: "/our-team",
-    Sponsors: "/sponsors",
-    Opportunities: "/opportunities",
-    Join: "/join",
-    Contact: "/contact-us",
-    Blog: "/blog",
-    Publications: "/publications",
-    "Marketing Archives": "/marketing-archive",
-    Podcast: "/podcast",
+    "Home": "/",
+    "Events": "/events",
+    "Team": "/our-team",
+    "Sponsors": "/sponsors",
+    "Opportunities": "/opportunities",
+    "Join": "/join-us",
+    "Contact": "/contact-us",
+    "Blog": "/blog",
+    "Publications": "/publications",
+    "Marketing Archive": "/marketing-archive",
+    "Podcast": "/podcast"
   };
 
   const links = [
     ["Home", "Events", "Team", "Sponsors", "Opportunities", "Join", "Contact"],
-    ["Blog", "Publications", "Marketing Archives", "Podcast"],
+    ["Blog", "Publications", "Marketing Archive", "Podcast"],
   ];
 
   const socials = {

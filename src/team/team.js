@@ -6,7 +6,7 @@ import Execs from "./execs";
 import SubCom from "./subcom";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import Timeline from "../Timeline";
+import Timeline from "../components/Timeline";
 
 function OurTeam() {
   const sectors = [

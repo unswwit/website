@@ -217,6 +217,7 @@ img.floatRight {
   width: 100%;
 }
 
+/*Profile pictures*/
 .authorProfile {
   height: auto;
   transform: translate(-5%, -10%);
@@ -227,6 +228,7 @@ img.floatRight {
   height: auto;
   width: 100%;
 }
+
 /*Author details*/
 .authorRight {
   display: inline-block;

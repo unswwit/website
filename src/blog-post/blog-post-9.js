@@ -15,7 +15,7 @@ class blogPost9 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #9" />
+        <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Post #9" />
 
         {/*Start of blog post*/}
         <div className={styles.blogContent}>
@@ -98,7 +98,7 @@ class blogPost9 extends Component {
             <div className="pic">
               <img
                 src={
-                  process.env.PUBLIC_URL + "/blog-attachments/blog-9-box.png"
+                  process.env.PUBLIC_URL + "/blog-attachments/blog-9-box.jpg"
                 }
                 alt="boxes-of-life"
                 resizeMode="contain"
