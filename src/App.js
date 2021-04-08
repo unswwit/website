@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { HashRouter, Route, NavLink, Switch, Redirect } from "react-router-dom";
+import { loadReCaptcha } from 'react-recaptcha-google';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "semantic-ui-css/semantic.min.css";
 import "./style.css";
@@ -101,6 +102,8 @@ class App extends Component {
 	componentDidMount() {
 	  // google analytics
 	  GoogleAnalytics();
+	  // Inititalize ReCaptcha
+	  loadReCaptcha();
 
 	  window.addEventListener("hashchange", this.changeBackground);
 	  window.addEventListener("resize", this.updateMenu);
