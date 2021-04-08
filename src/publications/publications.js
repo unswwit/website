@@ -12,12 +12,12 @@ const Publications = () => {
   useEffect(() => {
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
-      callback: googleData => {
-        setArticles(googleData["publications"]["elements"]);  
+      callback: (googleData) => {
+        setArticles(googleData["publications"]["elements"]);
         setLoading(false);
       },
-      simpleSheet: false
-    })
+      simpleSheet: false,
+    });
   }, []);
 
   return (
@@ -28,35 +28,43 @@ const Publications = () => {
       <div className={styles.publicationsBody}>
         {/*Loading Container*/}
         <div id={styles.pubLoadingContainer}>
-          {loading && <CircularProgress
-            variant="indeterminate"
-            size={50}
-            thickness={5}
-            id={styles.pubLoading}
-          />}
+          {loading && (
+            <CircularProgress
+              variant="indeterminate"
+              size={50}
+              thickness={5}
+              id={styles.pubLoading}
+            />
+          )}
         </div>
-      
+
         {/*Articles*/}
-        {!loading && Array.from({ length: 2 }, (_, i) => i + 2020)
-          .reverse()
-          .map((year) => {
-            return <div key={year}>
-              <h1>{year}</h1>  
-              <div className={styles.row}>
-                {articles.filter((article) => article.year === year.toString()).map((article, index) => <PubArticle
-                  key={index}
-                  imgUrl={`${process.env.PUBLIC_URL}/publications/${year}/${article.img}`}
-                  heading={article.heading}
-                  date={article.date}
-                  url={article.url}
-                />
-                )}          
-              </div>
-            </div>
-          })}       
+        {!loading &&
+          Array.from({ length: 2 }, (_, i) => i + 2020)
+            .reverse()
+            .map((year) => {
+              return (
+                <div key={year}>
+                  <h1>{year}</h1>
+                  <div className={styles.row}>
+                    {articles
+                      .filter((article) => article.year === year.toString())
+                      .map((article, index) => (
+                        <PubArticle
+                          key={index}
+                          imgUrl={`${process.env.PUBLIC_URL}/publications/${year}/${article.img}`}
+                          heading={article.heading}
+                          date={article.date}
+                          url={article.url}
+                        />
+                      ))}
+                  </div>
+                </div>
+              );
+            })}
       </div>
     </>
   );
-}
+};
 
 export default Publications;

@@ -27,8 +27,10 @@ class blogPost20 extends Component {
             </h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>September 2, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -79,7 +81,9 @@ class blogPost20 extends Component {
             </p>
             <br />
 
-            <p className={styles.question}>What do you love about your career now?</p>
+            <p className={styles.question}>
+              What do you love about your career now?
+            </p>
 
             <p className={styles.postContent}>
               Being able to work with different people from all around the

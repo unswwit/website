@@ -11,11 +11,14 @@ class Opportunities extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/opportunities-header.jfif" title="Opportunities" />
+        <PageHeader
+          imgUrl="/headers/opportunities-header.jfif"
+          title="Opportunities"
+        />
 
         {/*start of active opportunies*/}
         <h2 className={styles.oppSubheading}>Active Opportunities</h2>
-        <p className={styles.oppLookout} style={{"marginBottom": "100px"}}>
+        <p className={styles.oppLookout} style={{ marginBottom: "100px" }}>
           Keep a lookout here for upcoming opportunities!
           {/*
           <OppCard

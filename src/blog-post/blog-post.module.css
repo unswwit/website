@@ -29,7 +29,7 @@
 /* Date and share buttons */
 .blogDetails {
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 3vw;
 }
@@ -127,11 +127,15 @@ img.floatRight {
   padding: 30px;
 }
 
-.postContent a, .outerBox a, .pic a {
+.postContent a,
+.outerBox a,
+.pic a {
   text-decoration: underline;
 }
 
-.postContent a:hover, .outerBox a:hover, .pic a:hover {
+.postContent a:hover,
+.outerBox a:hover,
+.pic a:hover {
   color: #feb14b;
 }
 
@@ -340,7 +344,8 @@ img.floatRight {
     font-size: 16.5pt;
   }
 
-  .pic, .innerBox {
+  .pic,
+  .innerBox {
     max-width: 100%;
   }
 
