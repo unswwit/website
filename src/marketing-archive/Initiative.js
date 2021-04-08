@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import "../.././style.css";
-import styles from "../marketing-content/content.module.css";
+import styles from "./content.module.css";
 
 class Initiative extends Component {
   render() {

@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styles from "./content.module.css";
-import "../.././style.css";
-import PageHeader from "../.././header";
+import PageHeader from "../header";
 import Chip from "@material-ui/core/Chip";
 import Initiative from "./Initiative";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import ScrollUpBtn from "../.././components/ScrollUpBtn"
+import ScrollUpBtn from "../components/ScrollUpBtn"
 import Tabletop from "tabletop";
-import Timeline from "../.././components/Timeline"
+import Timeline from "../components/Timeline"
 
 const MarketingContent = () => {
   const [content, setContent] = useState([]);
