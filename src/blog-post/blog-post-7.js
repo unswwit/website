@@ -15,7 +15,7 @@ class blogPost7 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #7" />
+        <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Post #7" />
 
         {/*Start of blog post*/}
         <div className={styles.blogContent}>
@@ -23,8 +23,10 @@ class blogPost7 extends Component {
             <h2 className={styles.blogTitle}>How to Ace Your Hackathon</h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>June 21, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -38,7 +40,9 @@ class blogPost7 extends Component {
             </p>
             <br />
 
-            <p className={styles.question}>Hackathon Participants Make a Difference</p>
+            <p className={styles.question}>
+              Hackathon Participants Make a Difference
+            </p>
             <p className={styles.postContent}>
               Our 2019 WIT Hackathon theme, <strong> Do with Digital </strong>,
               challenged participants to design assistive technology to improve
@@ -54,7 +58,9 @@ class blogPost7 extends Component {
             </p>
             <br />
 
-            <p className={styles.question}>The Most Vital Elements of Success</p>
+            <p className={styles.question}>
+              The Most Vital Elements of Success
+            </p>
             <p className={styles.postContent}>
               Former WIT Hackathon winners and runner up teams have shared what
               contributed to their success and what they would have done
@@ -139,7 +145,9 @@ class blogPost7 extends Component {
             <br />
 
             <ul className={styles.list}>
-              <li className={styles.question}>Arrive ready to learn and have fun! </li>
+              <li className={styles.question}>
+                Arrive ready to learn and have fun!{" "}
+              </li>
               <p className={styles.postContent}>
                 While these teams earned top prizes in hackathons, they did not
                 set out to win. They felt that would put unnecessary pressure on

@@ -15,7 +15,7 @@ class blogPost22 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #22" />
+        <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Post #22" />
 
         {/*End of Header*/}
 
@@ -27,8 +27,10 @@ class blogPost22 extends Component {
             </h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>September 13, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -140,7 +142,10 @@ class blogPost22 extends Component {
                     }
                     alt="Celestial Pancake"
                   />
-                  <a className={styles.sourceLink} href="https://www.vividsydney.com/event/light/celestial-pancake">
+                  <a
+                    className={styles.sourceLink}
+                    href="https://www.vividsydney.com/event/light/celestial-pancake"
+                  >
                     https://www.vividsydney.com/event/light/celestial-pancake
                   </a>
                 </div>
@@ -153,7 +158,10 @@ class blogPost22 extends Component {
                     }
                     alt="Synergy"
                   />
-                  <a className={styles.sourceLink} href="https://www.vividsydney.com/event/light/synergy">
+                  <a
+                    className={styles.sourceLink}
+                    href="https://www.vividsydney.com/event/light/synergy"
+                  >
                     https://www.vividsydney.com/event/light/synergy
                   </a>
                 </div>
@@ -183,11 +191,14 @@ class blogPost22 extends Component {
                     }
                     alt="Either/Or Newmarch"
                   />
-                  <a className={styles.sourceLink} href="http://www.eric-standley.com/#/eitheror-newmarch/">
+                  <a
+                    className={styles.sourceLink}
+                    href="http://www.eric-standley.com/#/eitheror-newmarch/"
+                  >
                     http://www.eric-standley.com/#/eitheror-newmarch/
                   </a>
                 </div>
-                
+
                 <div className={styles.innerBox}>
                   <img
                     src={
@@ -196,13 +207,15 @@ class blogPost22 extends Component {
                     }
                     alt="Either/Or Newmarch"
                   />
-                  <a className={styles.sourceLink} href="http://www.eric-standley.com/#/eitheror-newmarch/">
+                  <a
+                    className={styles.sourceLink}
+                    href="http://www.eric-standley.com/#/eitheror-newmarch/"
+                  >
                     http://www.eric-standley.com/#/eitheror-newmarch/
                   </a>
-                </div>                 
-              </div>            
+                </div>
+              </div>
               <br />
-              
 
               <p className={styles.postContent}>
                 Laser-cutters may also be used to create artwork out of wood.
@@ -219,9 +232,12 @@ class blogPost22 extends Component {
                   }
                   alt="Either/Or Newmarch"
                 />
-                <a className={styles.sourceLink} href="https://www.gabrielschama.com/2016lasercuts/2015/8/16/3ypxfq4rz6nd2mge4h27o2ohkpx480">
+                <a
+                  className={styles.sourceLink}
+                  href="https://www.gabrielschama.com/2016lasercuts/2015/8/16/3ypxfq4rz6nd2mge4h27o2ohkpx480"
+                >
                   https://www.gabrielschama.com/2016lasercuts/2015/8/16/3ypxfq4rz6nd2mge4h27o2ohkpx480
-                </a>               
+                </a>
               </div>
               <br />
 
@@ -253,12 +269,14 @@ class blogPost22 extends Component {
                     "/blog-attachments/blog-22-fashion-8.jpg"
                   }
                   alt="Portraiture of Espen Kluge"
-                />  
-                <a className={styles.sourceLink} href="https://www.artnome.com/news/2019/7/24/generative-portraiture-of-espen-kluge">
+                />
+                <a
+                  className={styles.sourceLink}
+                  href="https://www.artnome.com/news/2019/7/24/generative-portraiture-of-espen-kluge"
+                >
                   https://www.artnome.com/news/2019/7/24/generative-portraiture-of-espen-kluge
-                </a>                
+                </a>
               </div>
-                      
             </ol>
             <br />
           </div>
