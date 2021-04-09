@@ -8,11 +8,15 @@ import Initiative from "./Initiative";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../.././components/ScrollUpBtn"
 import Tabletop from "tabletop";
+import Pagination from "../../components/Pagination";
 
 const MarketingContent = () => {
   const [content, setContent] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(8);
+
   const categories = {
     "All": "All", 
     "Mascot": "mascot", 
@@ -32,6 +36,17 @@ const MarketingContent = () => {
       simpleSheet: false
     });
   },[selectedCategory]);
+
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = content.slice(indexOfFirstPost, indexOfLastPost);
+
+  // change page number & scroll to top when onClick called for pagination
+  const paginate = (pageNumber) => {
+    const coverPhoto = document.getElementsByClassName("coverPhoto")[0].clientHeight;
+    window.scrollTo({top: coverPhoto - 15, behavior: "smooth"});
+    setCurrentPage(pageNumber);
+  }
 
   return (
     <>
@@ -74,7 +89,7 @@ const MarketingContent = () => {
           </div>
           {/*Image collage*/}
           {!loading && <ol className={styles.grid} id={styles.content}> 
-            {content
+            {currentPosts
               .filter((picture) => selectedCategory === "All" || picture.category.split(",").includes(selectedCategory))
               .map((content, index) => {   
                 return <Initiative
@@ -88,6 +103,13 @@ const MarketingContent = () => {
           </ol>}   
         </div>
         <ScrollUpBtn/>
+        <Pagination
+          postsPerPage={postsPerPage}
+          totalPosts={content.length}
+          paginate={paginate}
+          page='marketing-archive'
+          currentPage={currentPage}
+        />
         {/*End of Initiatives*/}
       </div>
     </>

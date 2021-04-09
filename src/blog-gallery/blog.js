@@ -8,7 +8,8 @@ import Chip from "@material-ui/core/Chip";
 import Tooltip from "@material-ui/core/Tooltip";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import ScrollUpBtn from "../components/ScrollUpBtn"
+import ScrollUpBtn from "../components/ScrollUpBtn";
+import Pagination from "../components/Pagination";
 
 const useStylesBootstrap = makeStyles((theme) => ({
   arrow: {
@@ -37,6 +38,8 @@ const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [loading, setLoading] = useState(true);
   const [blogs, setBlogs] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(10);
 
   useEffect(() => {
     Tabletop.init({
@@ -63,7 +66,19 @@ const Blog = () => {
       },
       simpleSheet: false
     });
+    
   }, [selectedCategory]);
+
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = blogs.slice(indexOfFirstPost, indexOfLastPost);
+
+  // change page number & scroll to top when onClick called for pagination
+  const paginate = (pageNumber) => {
+    const coverPhoto = document.getElementsByClassName("coverPhoto")[0].clientHeight;
+    window.scrollTo({top: coverPhoto - 15, behavior: "smooth"});
+    setCurrentPage(pageNumber);
+  }
 
   return (
     <>
@@ -110,7 +125,7 @@ const Blog = () => {
         </div>
 
         <div className={styles.blogPosts}>
-          {!loading && blogs
+          {!loading && currentPosts
             .filter((blog) => (selectedCategory === "All" || 
                               (blog.category.split(",")).includes(selectedCategory) ||
                               ((blog.category.split(",")).includes("WCW") && selectedCategory === "WIT Crush Wednesday")))
@@ -128,6 +143,13 @@ const Blog = () => {
             })}       
         </div>
         <ScrollUpBtn/>
+        <Pagination
+          postsPerPage={postsPerPage}
+          totalPosts={blogs.length}
+          paginate={paginate}
+          page='blog'
+          currentPage={currentPage}
+        />
         {/*End of blog posts*/}
       </div>
     </>
