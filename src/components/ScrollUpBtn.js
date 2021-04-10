@@ -22,10 +22,8 @@ export default function ScrollUpBtn() {
   }
 
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility);
-    return () => {
-      window.removeEventListener("scroll", toggleVisibility);
-    };
+    window.addEventListener("scroll", toggleVisibility,  { passive: true });
+    return () => window.removeEventListener("scroll", toggleVisibility, { passive: true });
   }, []);
 
   return (
@@ -34,7 +32,7 @@ export default function ScrollUpBtn() {
         className={isVisible ? [styles.scrollUp,styles.showBtn].join(" "): [styles.scrollUp,styles.hideBtn].join(" ")} 
         onClick={scrollToTop}
       >
-        <KeyboardArrowUpIcon fontSize="large" color="#ffffff" />
+        <KeyboardArrowUpIcon fontSize="large" />
       </button>
     </div>
     

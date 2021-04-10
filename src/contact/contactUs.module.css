@@ -62,6 +62,7 @@
   letter-spacing: 1.5px;
   float: left;
   font-weight: 500;
+  font-size: 12pt;
 }
 
 form input.button:hover {

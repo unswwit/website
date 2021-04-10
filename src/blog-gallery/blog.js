@@ -45,6 +45,8 @@ const Blog = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
+    window.scrollTo(0,0);
+    
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: (googleData) => {

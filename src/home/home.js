@@ -13,6 +13,7 @@ const Home = () => {
   
   //start webpage at the top
   useEffect(() => {
+    window.scrollTo(0,0);
     if (window.innerWidth <= "1150") {
       setMobileView(true);
     }
@@ -79,7 +80,7 @@ const Home = () => {
               <p>Sponsors</p>
             </div>
             <div>
-              <CountUp end={2817} duration={4} />
+              <CountUp end={2824} duration={4} />
               <p>Facebook Followers</p>
             </div>
           </div>
