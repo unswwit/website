@@ -14,7 +14,7 @@ Either way, creativity is potentially a huge hurdle when it comes to technologic
 
 Vivian W: But as we look towards the future, will the value of creativity change with its context? One day, we may be able to side-step issues regarding communication through thought-transfer technology, where we may be able to share our direct thoughts before they are lost in translation. Additionally, as AI become more and more advanced, will it become possible to use machines to enhance our creativity?
 
-Victoria: On the other hand, it may be possible that creativity isn’t our limiting factor at all. 
+Victoria: On the other hand, it may be possible that creativity isn’t our limiting factor at all.
 
 So, assuming we have full creative freedom to do whatever we want with technology… then what?
 
