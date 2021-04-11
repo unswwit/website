@@ -30,6 +30,24 @@ class App extends Component {
     loading: true,
   };*/
 
+  highlightNav = {
+    activeStyle: {
+      color: "#e85f5c",
+      borderBottom: "solid",
+      borderBottomWidth: 3,
+      borderBottomColor: "#e85f5c",
+    },
+  };
+
+  highlightNoNav = {
+    activeStyle: {
+      fontWeight: "bold",
+      borderBottom: "solid",
+      borderBottomWidth: 1,
+      borderBottomColor: "white",
+    },
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -186,29 +204,11 @@ class App extends Component {
                   }
                 >
                   {this.state.navBar ? (
-                    <NavLink
-                      exact
-                      to="/"
-                      activeStyle={{
-                        color: "#e85f5c",
-                        borderBottom: "solid",
-                        borderBottomWidth: 3,
-                        borderBottomColor: "#e85f5c",
-                      }}
-                    >
+                    <NavLink exact to="/" {...this.highlightNav}>
                       HOME
                     </NavLink>
                   ) : (
-                    <NavLink
-                      exact
-                      to="/"
-                      activeStyle={{
-                        fontWeight: "bold",
-                        borderBottom: "solid",
-                        borderBottomWidth: 1,
-                        borderBottomColor: "white",
-                      }}
-                    >
+                    <NavLink exact to="/" {...this.highlightNoNav}>
                       HOME
                     </NavLink>
                   )}
@@ -219,29 +219,11 @@ class App extends Component {
                   }
                 >
                   {this.state.navBar ? (
-                    <NavLink
-                      exact
-                      to="/events"
-                      activeStyle={{
-                        color: "#e85f5c",
-                        borderBottom: "solid",
-                        borderBottomWidth: 3,
-                        borderBottomColor: "#e85f5c",
-                      }}
-                    >
+                    <NavLink exact to="/events" {...this.highlightNav}>
                       EVENTS
                     </NavLink>
                   ) : (
-                    <NavLink
-                      exact
-                      to="/events"
-                      activeStyle={{
-                        fontWeight: "bold",
-                        borderBottom: "solid",
-                        borderBottomWidth: 1,
-                        borderBottomColor: "white",
-                      }}
-                    >
+                    <NavLink exact to="/events" {...this.highlightNoNav}>
                       EVENTS
                     </NavLink>
                   )}
@@ -252,29 +234,11 @@ class App extends Component {
                   }
                 >
                   {this.state.navBar ? (
-                    <NavLink
-                      exact
-                      to="/our-team"
-                      activeStyle={{
-                        color: "#e85f5c",
-                        borderBottom: "solid",
-                        borderBottomWidth: 3,
-                        borderBottomColor: "#e85f5c",
-                      }}
-                    >
+                    <NavLink exact to="/our-team" {...this.highlightNav}>
                       TEAM
                     </NavLink>
                   ) : (
-                    <NavLink
-                      exact
-                      to="/our-team"
-                      activeStyle={{
-                        fontWeight: "bold",
-                        borderBottom: "solid",
-                        borderBottomWidth: 1,
-                        borderBottomColor: "white",
-                      }}
-                    >
+                    <NavLink exact to="/our-team" {...this.highlightNoNav}>
                       TEAM
                     </NavLink>
                   )}
@@ -285,29 +249,11 @@ class App extends Component {
                   }
                 >
                   {this.state.navBar ? (
-                    <NavLink
-                      exact
-                      to="/sponsors"
-                      activeStyle={{
-                        color: "#e85f5c",
-                        borderBottom: "solid",
-                        borderBottomWidth: 3,
-                        borderBottomColor: "#e85f5c",
-                      }}
-                    >
+                    <NavLink exact to="/sponsors" {...this.highlightNav}>
                       SPONSORS
                     </NavLink>
                   ) : (
-                    <NavLink
-                      exact
-                      to="/sponsors"
-                      activeStyle={{
-                        fontWeight: "bold",
-                        borderBottom: "solid",
-                        borderBottomWidth: 1,
-                        borderBottomColor: "white",
-                      }}
-                    >
+                    <NavLink exact to="/sponsors" {...this.highlightNoNav}>
                       SPONSORS
                     </NavLink>
                   )}
@@ -318,29 +264,11 @@ class App extends Component {
                   }
                 >
                   {this.state.navBar ? (
-                    <NavLink
-                      exact
-                      to="/opportunities"
-                      activeStyle={{
-                        color: "#e85f5c",
-                        borderBottom: "solid",
-                        borderBottomWidth: 3,
-                        borderBottomColor: "#e85f5c",
-                      }}
-                    >
+                    <NavLink exact to="/opportunities" {...this.highlightNav}>
                       OPPORTUNITIES
                     </NavLink>
                   ) : (
-                    <NavLink
-                      exact
-                      to="/opportunities"
-                      activeStyle={{
-                        fontWeight: "bold",
-                        borderBottom: "solid",
-                        borderBottomWidth: 1,
-                        borderBottomColor: "white",
-                      }}
-                    >
+                    <NavLink exact to="/opportunities" {...this.highlightNoNav}>
                       OPPORTUNITIES
                     </NavLink>
                   )}
@@ -407,29 +335,11 @@ class App extends Component {
                   }
                 >
                   {this.state.navBar ? (
-                    <NavLink
-                      exact
-                      to="/join-us"
-                      activeStyle={{
-                        color: "#e85f5c",
-                        borderBottom: "solid",
-                        borderBottomWidth: 3,
-                        borderBottomColor: "#e85f5c",
-                      }}
-                    >
+                    <NavLink exact to="/join-us" {...this.highlightNav}>
                       JOIN
                     </NavLink>
                   ) : (
-                    <NavLink
-                      exact
-                      to="/join-us"
-                      activeStyle={{
-                        fontWeight: "bold",
-                        borderBottom: "solid",
-                        borderBottomWidth: 1,
-                        borderBottomColor: "white",
-                      }}
-                    >
+                    <NavLink exact to="/join-us" {...this.highlightNoNav}>
                       JOIN
                     </NavLink>
                   )}
@@ -441,29 +351,11 @@ class App extends Component {
                   style={{ marginRight: "15px" }}
                 >
                   {this.state.navBar ? (
-                    <NavLink
-                      exact
-                      to="/contact-us"
-                      activeStyle={{
-                        color: "#e85f5c",
-                        borderBottom: "solid",
-                        borderBottomWidth: 3,
-                        borderBottomColor: "#e85f5c",
-                      }}
-                    >
+                    <NavLink exact to="/contact-us" {...this.highlightNav}>
                       CONTACT
                     </NavLink>
                   ) : (
-                    <NavLink
-                      exact
-                      to="/contact-us"
-                      activeStyle={{
-                        fontWeight: "bold",
-                        borderBottom: "solid",
-                        borderBottomWidth: 1,
-                        borderBottomColor: "white",
-                      }}
-                    >
+                    <NavLink exact to="/contact-us" {...this.highlightNoNav}>
                       CONTACT
                     </NavLink>
                   )}
