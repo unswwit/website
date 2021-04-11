@@ -181,11 +181,19 @@ class App extends Component {
 	            <ul className="navbar-nav ml-auto">
 	              <li className={this.state.navBar ? "nav-item active-nav-item" : "nav-item"}>
 					{this.state.navBar 
-				      ? <NavLink exact to="/" activeStyle={{color: "#e85f5c"}}>HOME</NavLink>
+				      ? <NavLink exact to="/" 
+					  	  activeStyle={{
+							color: "#e85f5c", 
+							borderBottom: "solid", 
+							borderBottomWidth: 3, 
+							borderBottomColor: "#e85f5c"}}
+						>
+						  HOME
+						</NavLink>
 					  : <NavLink exact to="/" 
 					  	  activeStyle={{
-						  fontWeight: "bold", 
-						  textDecorationLine: "underline"}}
+						  	fontWeight: "bold", 
+						  	textDecorationLine: "underline"}}
 						>
 						  HOME
 						</NavLink>
@@ -193,7 +201,15 @@ class App extends Component {
 	              </li>
 	              <li className={this.state.navBar ? "nav-item active-nav-item" : "nav-item"}>
 				  	{this.state.navBar 
-				      ? <NavLink exact to="/events" activeStyle={{color: "#e85f5c"}}>EVENTS</NavLink>
+				      ? <NavLink exact to="/events" 
+					  	  activeStyle={{
+							color: "#e85f5c", 
+							borderBottom: "solid", 
+							borderBottomWidth: 3, 
+							borderBottomColor: "#e85f5c"}}
+						>
+						  EVENTS
+						</NavLink>
 					  : <NavLink exact to="/events" 
 					  	  activeStyle={{
 						  fontWeight: "bold", 
@@ -205,7 +221,15 @@ class App extends Component {
 	              </li>
 	              <li className={this.state.navBar ? "nav-item active-nav-item" : "nav-item"}>
 				  	{this.state.navBar 
-				      ? <NavLink exact to="/our-team" activeStyle={{color: "#e85f5c"}}>TEAM</NavLink>
+				      ? <NavLink exact to="/our-team" 
+					  	  activeStyle={{
+					  	  color: "#e85f5c", 
+					  	  borderBottom: "solid", 
+					  	  borderBottomWidth: 3, 
+					  	  borderBottomColor: "#e85f5c"}}
+				 		>
+						  TEAM
+				  		</NavLink>
 					  : <NavLink exact to="/our-team" 
 					  	  activeStyle={{
 						  fontWeight: "bold", 
@@ -217,7 +241,15 @@ class App extends Component {
 	              </li>
 	              <li className={this.state.navBar ? "nav-item active-nav-item" : "nav-item"}>
 				  	{this.state.navBar 
-				      ? <NavLink exact to="/sponsors" activeStyle={{color: "#e85f5c"}}>SPONSORS</NavLink>
+				      ? <NavLink exact to="/sponsors" 
+					  	  activeStyle={{
+					  	  color: "#e85f5c", 
+					  	  borderBottom: "solid", 
+					  	  borderBottomWidth: 3, 
+					  	  borderBottomColor: "#e85f5c"}}
+				 		>
+						  SPONSORS
+				  		</NavLink>
 					  : <NavLink exact to="/sponsors" 
 					  	  activeStyle={{
 						  fontWeight: "bold", 
@@ -229,7 +261,15 @@ class App extends Component {
 	              </li>
 	              <li className={this.state.navBar ? "nav-item active-nav-item" : "nav-item"}>
 				  	{this.state.navBar 
-				      ? <NavLink exact to="/opportunities" activeStyle={{color: "#e85f5c"}}>OPPORTUNITIES</NavLink>
+				      ? <NavLink exact to="/opportunities" 
+					  	  activeStyle={{
+					  	  color: "#e85f5c", 
+					  	  borderBottom: "solid", 
+					  	  borderBottomWidth: 3, 
+					  	  borderBottomColor: "#e85f5c"}}
+				 		>
+						  OPPORTUNITIES
+				  		</NavLink>
 					  : <NavLink exact to="/opportunities" 
 					  	  activeStyle={{
 						  fontWeight: "bold", 
@@ -274,7 +314,15 @@ class App extends Component {
 	              </li>
 	              <li className={this.state.navBar ? "nav-item active-nav-item" : "nav-item"}>
 				  	{this.state.navBar 
-				      ? <NavLink exact to="/join-us" activeStyle={{color: "#e85f5c"}}>JOIN</NavLink>
+				      ? <NavLink exact to="/join-us" 
+					  	  activeStyle={{
+					  	  color: "#e85f5c", 
+					  	  borderBottom: "solid", 
+					  	  borderBottomWidth: 3, 
+					  	  borderBottomColor: "#e85f5c"}}
+				 		>
+						  JOIN
+				  		</NavLink>
 					  : <NavLink exact to="/join-us" 
 					  	  activeStyle={{
 						  fontWeight: "bold", 
@@ -288,8 +336,16 @@ class App extends Component {
 	                className={this.state.navBar ? "nav-item active-nav-item" : "nav-item"}
 	                style={{ marginRight: "15px" }}
 	              >
-					{this.state.navBar 
-				      ? <NavLink exact to="/contact-us" activeStyle={{color: "#e85f5c"}}>CONTACT</NavLink>
+				  	{this.state.navBar 
+				      ? <NavLink exact to="/contact-us" 
+					  	  activeStyle={{
+					  	  color: "#e85f5c", 
+					  	  borderBottom: "solid", 
+					  	  borderBottomWidth: 3, 
+					  	  borderBottomColor: "#e85f5c"}}
+				 		>
+						  CONTACT
+				  		</NavLink>
 					  : <NavLink exact to="/contact-us" 
 					  	  activeStyle={{
 						  fontWeight: "bold", 
