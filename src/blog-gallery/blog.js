@@ -33,7 +33,7 @@ const Blog = () => {
     "Topical Technology": "In a fast-paced world, technology is making a growing impact in current events. Click here to read about tech in the news.",
     "Perception and Innovation": "Our understanding of technology is readily evolving along with innovation that is arising in tech. Read more about new start-ups, understanding tech disciplines, and upcoming innovation in these blogs.",
     "Careers": "Wondering what you can do to excel in your professional life? Read here for tips on acing interviews, performing your best, and making the most of career opportunities!"
-  }
+  } 
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [loading, setLoading] = useState(true);
   const [blogs, setBlogs] = useState([]);

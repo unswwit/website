@@ -35,8 +35,7 @@ class App extends Component {
     this.state = {
       showDD: false,
       menuOpen: false,
-      navBar: false,
-      hideNav: false
+      navBar: false
     };
     this.navClass = "navbar navbar-expand-md navbar-dark bg-custom fixed-top";
     this.handleHover = this.handleHover.bind(this);
@@ -180,19 +179,64 @@ class App extends Component {
 	          <div className="navbar-collapse collapse w-100">
 	            <ul className="navbar-nav ml-auto">
 	              <li className={this.state.navBar ? "nav-item active-nav-item" : "nav-item"}>
-	                <NavLink to="/">HOME</NavLink>
+					{this.state.navBar 
+				      ? <NavLink exact to="/" activeStyle={{color: "#e85f5c"}}>HOME</NavLink>
+					  : <NavLink exact to="/" 
+					  	  activeStyle={{
+						  fontWeight: "bold", 
+						  textDecorationLine: "underline"}}
+						>
+						  HOME
+						</NavLink>
+					}
 	              </li>
 	              <li className={this.state.navBar ? "nav-item active-nav-item" : "nav-item"}>
-	                <NavLink to="/events">EVENTS</NavLink>
+				  	{this.state.navBar 
+				      ? <NavLink exact to="/events" activeStyle={{color: "#e85f5c"}}>EVENTS</NavLink>
+					  : <NavLink exact to="/events" 
+					  	  activeStyle={{
+						  fontWeight: "bold", 
+						  textDecorationLine: "underline"}}
+						>
+						  EVENTS
+						</NavLink>
+					}
 	              </li>
 	              <li className={this.state.navBar ? "nav-item active-nav-item" : "nav-item"}>
-	                <NavLink to="/our-team">TEAM</NavLink>
+				  	{this.state.navBar 
+				      ? <NavLink exact to="/our-team" activeStyle={{color: "#e85f5c"}}>TEAM</NavLink>
+					  : <NavLink exact to="/our-team" 
+					  	  activeStyle={{
+						  fontWeight: "bold", 
+						  textDecorationLine: "underline"}}
+						>
+						  TEAM
+						</NavLink>
+					}
 	              </li>
 	              <li className={this.state.navBar ? "nav-item active-nav-item" : "nav-item"}>
-	                <NavLink to="/sponsors">SPONSORS</NavLink>
+				  	{this.state.navBar 
+				      ? <NavLink exact to="/sponsors" activeStyle={{color: "#e85f5c"}}>SPONSORS</NavLink>
+					  : <NavLink exact to="/sponsors" 
+					  	  activeStyle={{
+						  fontWeight: "bold", 
+						  textDecorationLine: "underline"}}
+						>
+						  SPONSORS
+						</NavLink>
+					}
 	              </li>
 	              <li className={this.state.navBar ? "nav-item active-nav-item" : "nav-item"}>
-	                <NavLink to="/opportunities">OPPORTUNITIES</NavLink>
+				  	{this.state.navBar 
+				      ? <NavLink exact to="/opportunities" activeStyle={{color: "#e85f5c"}}>OPPORTUNITIES</NavLink>
+					  : <NavLink exact to="/opportunities" 
+					  	  activeStyle={{
+						  fontWeight: "bold", 
+						  textDecorationLine: "underline"}}
+						>
+						  OPPORTUNITIES
+						</NavLink>
+					}
 	              </li>
 	              <li
 	                className={this.state.navBar ? "nav-item active-nav-item" : "nav-item"}
@@ -213,28 +257,46 @@ class App extends Component {
 	                  </div>
 	                  <div className={this.state.showDD ? "dropdown-menu show" : "dropdown-menu"}>
 	                    <div className="dropdown-item">
-	                      <NavLink to="/blog">BLOG</NavLink>
+	                      <NavLink to="/blog" activeStyle={{color: "#e85f5c"}}>BLOG</NavLink>
 	                    </div>
 	                    <div className="dropdown-item">
-	                      <NavLink to="/podcast">PODCAST</NavLink>
+	                      <NavLink to="/podcast" activeStyle={{color: "#e85f5c"}}>PODCAST</NavLink>
 	                    </div>
 	                    <div className="dropdown-item">
-	                      <NavLink to="/publications">PUBLICATIONS</NavLink>
+	                      <NavLink to="/publications" activeStyle={{color: "#e85f5c"}}>PUBLICATIONS</NavLink>
 	                    </div>
 	                    <div className="dropdown-item">
-	                      <NavLink to="/marketing-archive">MARKETING ARCHIVE</NavLink>
+	                      <NavLink to="/marketing-archive" activeStyle={{color: "#e85f5c"}}>MARKETING ARCHIVE</NavLink>
 	                    </div>
 	                  </div>
 	                </div>
 	              </li>
 	              <li className={this.state.navBar ? "nav-item active-nav-item" : "nav-item"}>
-	                <NavLink to="/join-us">JOIN</NavLink>
+				  	{this.state.navBar 
+				      ? <NavLink exact to="/join-us" activeStyle={{color: "#e85f5c"}}>JOIN</NavLink>
+					  : <NavLink exact to="/join-us" 
+					  	  activeStyle={{
+						  fontWeight: "bold", 
+						  textDecorationLine: "underline"}}
+						>
+						  JOIN
+						</NavLink>
+					}
 	              </li>
 	              <li
 	                className={this.state.navBar ? "nav-item active-nav-item" : "nav-item"}
 	                style={{ marginRight: "15px" }}
 	              >
-	                <NavLink to="/contact-us">CONTACT</NavLink>
+					{this.state.navBar 
+				      ? <NavLink exact to="/contact-us" activeStyle={{color: "#e85f5c"}}>CONTACT</NavLink>
+					  : <NavLink exact to="/contact-us" 
+					  	  activeStyle={{
+						  fontWeight: "bold", 
+						  textDecorationLine: "underline"}}
+						>
+						  CONTACT
+						</NavLink>
+					}
 	              </li>
 	            </ul>
 	          </div>

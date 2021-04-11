@@ -12,7 +12,7 @@ import { Modal, Backdrop, Fade } from "@material-ui/core";
 
 class JoinUs extends React.Component {
   constructor() {
-    super();
+    super(); 
     this.state = {
       loading: true,
       openNewsletter: false,
