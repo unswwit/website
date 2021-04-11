@@ -204,7 +204,9 @@ class App extends Component {
                       to="/"
                       activeStyle={{
                         fontWeight: "bold",
-                        textDecorationLine: "underline",
+                        borderBottom: "solid",
+                        borderBottomWidth: 1,
+                        borderBottomColor: "white",
                       }}
                     >
                       HOME
@@ -235,7 +237,9 @@ class App extends Component {
                       to="/events"
                       activeStyle={{
                         fontWeight: "bold",
-                        textDecorationLine: "underline",
+                        borderBottom: "solid",
+                        borderBottomWidth: 1,
+                        borderBottomColor: "white",
                       }}
                     >
                       EVENTS
@@ -266,7 +270,9 @@ class App extends Component {
                       to="/our-team"
                       activeStyle={{
                         fontWeight: "bold",
-                        textDecorationLine: "underline",
+                        borderBottom: "solid",
+                        borderBottomWidth: 1,
+                        borderBottomColor: "white",
                       }}
                     >
                       TEAM
@@ -297,7 +303,9 @@ class App extends Component {
                       to="/sponsors"
                       activeStyle={{
                         fontWeight: "bold",
-                        textDecorationLine: "underline",
+                        borderBottom: "solid",
+                        borderBottomWidth: 1,
+                        borderBottomColor: "white",
                       }}
                     >
                       SPONSORS
@@ -328,7 +336,9 @@ class App extends Component {
                       to="/opportunities"
                       activeStyle={{
                         fontWeight: "bold",
-                        textDecorationLine: "underline",
+                        borderBottom: "solid",
+                        borderBottomWidth: 1,
+                        borderBottomColor: "white",
                       }}
                     >
                       OPPORTUNITIES
@@ -415,7 +425,9 @@ class App extends Component {
                       to="/join-us"
                       activeStyle={{
                         fontWeight: "bold",
-                        textDecorationLine: "underline",
+                        borderBottom: "solid",
+                        borderBottomWidth: 1,
+                        borderBottomColor: "white",
                       }}
                     >
                       JOIN
@@ -447,7 +459,9 @@ class App extends Component {
                       to="/contact-us"
                       activeStyle={{
                         fontWeight: "bold",
-                        textDecorationLine: "underline",
+                        borderBottom: "solid",
+                        borderBottomWidth: 1,
+                        borderBottomColor: "white",
                       }}
                     >
                       CONTACT
