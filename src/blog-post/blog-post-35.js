@@ -15,7 +15,7 @@ class blogPost35 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #35" />
+        <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Post #35" />
 
         {/*End of Header*/}
 
@@ -28,8 +28,10 @@ class blogPost35 extends Component {
             </h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>October 28, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>

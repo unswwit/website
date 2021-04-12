@@ -13,6 +13,7 @@ const Home = () => {
   
   //start webpage at the top
   useEffect(() => {
+    window.scrollTo(0,0);
     if (window.innerWidth <= "1150") {
       setMobileView(true);
     }
@@ -45,7 +46,7 @@ const Home = () => {
       {/* Start of Description */}
       <div data-aos={mobileView ? "fade": "fade-right"} className={styles.description}>
         <div className={styles.descriptionLeft}>
-          <h1>COLLABORATE. INSPIRE. CHANGE.</h1>         
+          <h1>COLLABORATE. INSPIRE. CHANGE.</h1>
         </div>
         <div className={styles.descriptionRight}>
           <p>
@@ -71,7 +72,7 @@ const Home = () => {
         <div>
           <div data-aos="fade" className={styles.number}>
             <div>
-              <CountUp end={47} duration={5} />  
+              <CountUp end={47} duration={5} />
               <p>Team Members</p>
             </div>
             <div>
@@ -79,7 +80,7 @@ const Home = () => {
               <p>Sponsors</p>
             </div>
             <div>
-              <CountUp end={2817} duration={4} />
+              <CountUp end={2824} duration={4} />
               <p>Facebook Followers</p>
             </div>
           </div>
@@ -93,10 +94,10 @@ const Home = () => {
           <p id="about">
             At WIT, our focus is on providing events that foster development
             catering to first to final years. Whether it's personal, academic,
-            professional or social, we want our students to be the best
-            version of themselves. As part of our aim, we also connect current
-            and future students with alumni and industry sponsors to serve as
-            role models to inspire.
+            professional or social, we want our students to be the best version
+            of themselves. As part of our aim, we also connect current and
+            future students with alumni and industry sponsors to serve as role
+            models to inspire.
           </p>
           <p>
             <Link to="/events" style={{ textDecoration: "none" }}>
@@ -108,8 +109,8 @@ const Home = () => {
           <h1>EVENTS</h1>
         </div>
         <div className={styles.event1}>
-          <a 
-            href="https://www.facebook.com/events/509569410169834/" 
+          <a
+            href="https://www.facebook.com/events/509569410169834/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -121,7 +122,7 @@ const Home = () => {
         </div>
       </div>
       {/* End of upcoming events area */}
-      
+
       {/* Start of newsletter */}
       <div className={styles.stats}>
         <img
@@ -145,10 +146,10 @@ const Home = () => {
           }} 
         >
           <>
-            <Fade in={open}> 
+            <Fade in={open}>
               <NewsletterForm handleClose={callbackModal} />
-            </Fade> 
-          </>       
+            </Fade>
+          </>
         </Modal>
       </div>
       {/* End of Newsletter */}
@@ -162,6 +163,6 @@ const Home = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Home;

@@ -6,8 +6,8 @@ import styles from "./publications.module.css";
 class PubArticle extends Component {
   render() {
     return (
-      <div className={styles.article}>  
-        {/*Start of publications article*/}        
+      <div className={styles.article}>
+        {/*Start of publications article*/}
         <div className={styles.dark}> </div>
         <div className={styles.imageContainer}>
           <img
@@ -30,13 +30,13 @@ class PubArticle extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                  Read More
+                Read More
               </a>
             </h3>
           </div>
         </div>
-        {/*End of publications article*/}    
-      </div>       
+        {/*End of publications article*/}
+      </div>
     );
   }
 }

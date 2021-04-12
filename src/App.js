@@ -11,9 +11,7 @@ import JoinUs from "./join/joinUs";
 import Sponsors from "./sponsors/sponsors";
 import Opportunities from "./opportunities/opportunities";
 import ContactUs from "./contact/contactUs";
-import Footer from "./footer";
-
-import MarketingContent from "./marketing-archive/marketing-content/content";
+import MarketingContent from "./marketing-archive/content";
 import OurTeam from "./team/team";
 import Blog from "./blog-gallery/blog";
 import Publications from "./publications/publications";
@@ -21,8 +19,10 @@ import Events from "./events/events";
 import Podcast from "./podcast/Podcast";
 import EpisodePage from "./podcast/EpisodePage";
 import NotFound from "./not-found/NotFound";
+
 import Menu from "./menu";
 import MenuBtn from "./menuBtn";
+import Footer from "./footer";
 
 class App extends Component {
   /*
