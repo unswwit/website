@@ -27,8 +27,10 @@ class blogPost37 extends Component {
             </h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>November 4, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -95,7 +97,9 @@ class blogPost37 extends Component {
               ability.
             </p>
             <br />
-            <p className={styles.question}>What do you love about your career now?</p>
+            <p className={styles.question}>
+              What do you love about your career now?
+            </p>
             <p className={styles.postContent}>
               Too many things, but I will keep it short. What I love about my
               career is that it is always changing and evolving into something

@@ -27,8 +27,10 @@ class blogPost28 extends Component {
             </h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>October 4, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -45,7 +47,9 @@ class blogPost28 extends Component {
             <br />
 
             <ol className={styles.list}>
-              <li className={styles.question}>Can you tell us about yourself?</li>
+              <li className={styles.question}>
+                Can you tell us about yourself?
+              </li>
               <br />{" "}
               <p className={styles.postContent}>
                 <strong>Vivian(V)</strong>: I'm Vivian, and I’m currently
@@ -213,13 +217,14 @@ class blogPost28 extends Component {
               </li>
               <br />{" "}
               <p className={styles.postContent}>
-                V: Code in the language you are most <strong>comfortable</strong> in. At
-                UNSW most students would begin by learning C, which is arguably
-                not the best language to sit your technical interviews in.
-                However, if you feel that C is your strongest language, then by
-                all means sit your interview in C. I sat my Google STEP
-                interviews in C and passed, and I know many other UNSW students
-                who did the same for their roles and got accepted too.
+                V: Code in the language you are most{" "}
+                <strong>comfortable</strong> in. At UNSW most students would
+                begin by learning C, which is arguably not the best language to
+                sit your technical interviews in. However, if you feel that C is
+                your strongest language, then by all means sit your interview in
+                C. I sat my Google STEP interviews in C and passed, and I know
+                many other UNSW students who did the same for their roles and
+                got accepted too.
               </p>
               <p className={styles.postContent}>
                 A: I’ve been coding with Python for all my coding tests and

@@ -22,11 +22,15 @@ class blogPost36 extends Component {
         {/*Start of blog post*/}
         <div className={styles.blogContent}>
           <div>
-            <h2 className={styles.blogTitle}>The Small, the Powerful…The Byte</h2>
+            <h2 className={styles.blogTitle}>
+              The Small, the Powerful…The Byte
+            </h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>November 1, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
