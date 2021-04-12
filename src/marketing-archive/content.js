@@ -45,8 +45,11 @@ const MarketingContent = () => {
     setYear(newYear);
   };
 
+  // scroll to top on load
+  useEffect(() => window.scrollTo(0,0), [])
+
+  // load archives
   useEffect(() => {
-    window.scrollTo(0,0);
     setLoading(true);
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
