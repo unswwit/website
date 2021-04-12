@@ -45,13 +45,13 @@ const Events = () => {
 
   // start webpage at the top
   useEffect(() => {
-    window.scrollTo(0, 0);
-    setLoadingUpcoming(true);
+    window.scrollTo(0,0);
   }, []);
 
   // load events
   useEffect(() => {
     setLoadingPast(true);
+    setLoadingUpcoming(true);
 
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,

@@ -70,6 +70,11 @@ class JoinUs extends React.Component {
     this.setState({  openNewsletter: false });
   }
 
+  // start at the top of the page
+  componentDidMount() {
+    window.scrollTo(0,0);
+  }
+
   render() {
     return (
       <div>

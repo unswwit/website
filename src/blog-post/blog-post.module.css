@@ -105,6 +105,16 @@ b {
   width: 100%;
 }
 
+/* Link to another page*/
+.link {
+  color: #e85f5c;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: #feb14b;
+}
+
 /*-------------------------------Blog post content (images and videos)-----------------------------*/
 /*container for embedding youtube videos*/
 .videoWrapper {
@@ -332,6 +342,18 @@ img.floatRight {
 }
 
 @media only screen and (max-width: 400px) {
+  .blogDetails span {
+    display: block;
+  }
+
+  .blogDetails span:last-child {
+    padding: 10px 0px;
+  }
+
+  .blogDetails {
+    display: block;
+  }
+
   .smallContainer {
     flex-direction: column;
   }

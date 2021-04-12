@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./sponsors.module.css";
 import PageHeader from ".././header";
 
@@ -19,6 +19,11 @@ const Sponsors = () => {
     Resmed: ["https://www.resmed.com.au/", "ResMed.jpg"],
     Telstra: ["https://www.telstra.com.au/", "telstra-large.png"],
   };
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, []);
+
   return (
     <div>
       {/* Cover Photo */}
