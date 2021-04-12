@@ -15,7 +15,7 @@ class blogPost47 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #47" />
+        <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Post #47" />
         {/*End of Header*/}
 
         {/*Start of blog post*/}
@@ -74,19 +74,19 @@ class blogPost47 extends Component {
               "Education Executive"
             ],
             "chelsea-chaffey": [
-              "/potraits/blog-authors/chelsea-chaffey.png",
+              "/potraits/blog-authors/chelsea-chaffey.jpg",
               styles.anonProfile,
               "Chelsea Chaffey",
               "Education team",
             ],
             "natalie-leroy": [
-              "/potraits/blog-authors/natalie-leroy.png",
+              "/potraits/blog-authors/natalie-leroy.jpg",
               styles.anonProfile,
               "Natalie Leroy",
               "Education team",
             ],
             "erika-shi": [
-              "/potraits/blog-authors/erika-shi.png",
+              "/potraits/blog-authors/erika-shi.jpg",
               styles.anonProfile,
               "Erika Shi",
               "Education team",

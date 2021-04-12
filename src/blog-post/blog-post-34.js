@@ -15,7 +15,7 @@ class blogPost34 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #34" />
+        <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Post #34" />
 
         {/*End of Header*/}
 
@@ -204,7 +204,7 @@ class blogPost34 extends Component {
                 <img                
                   src={
                     process.env.PUBLIC_URL +
-                    "/blog-attachments/podcast-platforms/anchor-logo.png"
+                    "/blog-attachments/podcast-platforms/anchor-logo.jpg"
                   }
                   alt="Anchor"
                 />
@@ -218,7 +218,7 @@ class blogPost34 extends Component {
                 <img                 
                   src={
                     process.env.PUBLIC_URL +
-                    "/blog-attachments/podcast-platforms/google-podcasts-logo.png"
+                    "/blog-attachments/podcast-platforms/google-podcasts-logo.jpg"
                   }
                   alt="Google Podcasts"
                 />
@@ -232,7 +232,7 @@ class blogPost34 extends Component {
                 <img
                   src={
                     process.env.PUBLIC_URL +
-                    "/blog-attachments/podcast-platforms/radiopublic-logo.png"
+                    "/blog-attachments/podcast-platforms/radiopublic-logo.jpg"
                   }
                   alt="RadioPublic"
                 />
@@ -246,7 +246,7 @@ class blogPost34 extends Component {
                 <img
                   src={
                     process.env.PUBLIC_URL +
-                    "/blog-attachments/podcast-platforms/spotify-logo.png"
+                    "/blog-attachments/podcast-platforms/spotify-logo.jpg"
                   }
                   alt="Spotify"
                 />

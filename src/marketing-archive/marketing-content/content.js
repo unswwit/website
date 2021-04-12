@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import ".././marketingArchive.module.css";
 import styles from "./content.module.css";
 import "../.././style.css";
 import PageHeader from "../.././header";
 import Chip from "@material-ui/core/Chip";
 import Initiative from "./Initiative";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import ScrollUpBtn from "../.././ScrollUpBtn.js"
+import ScrollUpBtn from "../.././components/ScrollUpBtn"
 import Tabletop from "tabletop";
 
 const MarketingContent = () => {
@@ -36,7 +35,7 @@ const MarketingContent = () => {
   return (
     <>
       {/* Cover Photo */}
-      <PageHeader imgUrl="/headers/marketing-header.png" title="Marketing Archives" />
+      <PageHeader imgUrl="/headers/marketing-header.jpg" title="Marketing Archive" />
       {/*End of Header*/}
 
       <div id={styles.parent}>

@@ -6,10 +6,11 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import Timeline from "../Timeline";
+import Timeline from "../components/Timeline";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import ScrollUpBtn from ".././ScrollUpBtn.js"
+import ScrollUpBtn from "../components/ScrollUpBtn"
+import AddToCalBtn from "./AddToCalBtn.js";
 
 const Events = () => {
   const [expanded, setExpanded] = useState(false);
@@ -101,7 +102,7 @@ const Events = () => {
                   <p className={styles.eventSummary}>
                     {upcomingEvent.description}              
                   </p>
-                  <ul id={styles.links}>
+                  <ul id={styles.links}>                     
                     <li className={styles.eventLink}>
                       <a
                         href={upcomingEvent.registerLink}
@@ -122,6 +123,16 @@ const Events = () => {
                           Facebook
                       </a>
                     </li>}
+                    <li className={styles.eventButton}>
+                      <AddToCalBtn 
+                        title={upcomingEvent.title} 
+                        description={upcomingEvent.description}
+                        location={upcomingEvent.location}
+                        startDate={upcomingEvent.start}
+                        endDate={upcomingEvent.end}
+                        duration={upcomingEvent.duration}
+                      />
+                    </li>                     
                   </ul>
                 </div>
                 <ScrollUpBtn/>
