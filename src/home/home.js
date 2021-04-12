@@ -32,7 +32,7 @@ const Home = () => {
   // control when to stop loading
   useEffect(() => {
     const img = new Image();
-    img.src = "/headers/header-1.png";
+    img.src = "/headers/header-1.jpg";
     img.onload = () => {     
       setCoverPhoto(img.src);
       setTimeout(() => {
@@ -136,7 +136,7 @@ const Home = () => {
                 rel="noopener noreferrer"
               >
                 <img
-                  src={`${process.env.PUBLIC_URL}/event-covers/2021/12-hoodie.png`}
+                  src={`${process.env.PUBLIC_URL}/event-covers/2021/12-WIT-hoodie-competition.png`}
                   alt="WIT 2021 Hoodie Design Competition"
                 />
               </a>
