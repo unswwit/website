@@ -34,6 +34,23 @@ div .headline {
   letter-spacing: 2.5px;
 }
 
+.headline button {
+  border: 1px solid #E85F5C;
+  /* box-sizing: border-box; */
+  background-color: #E85F5C;
+  padding: 6px 6px;
+}
+
+.headline a {
+  color: white; 
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+}
+
 /*-----------------------------Home page description--------------------------*/
 /*Description wrapper*/
 .description {
@@ -164,8 +181,12 @@ div .headline {
 
 /*Events description grid area*/
 .eventsDescription {
-  grid-area: auto / span 1;
-  padding-top: 10px;
+  /* grid-area: auto / span 1; */
+  /* padding-top: 10px; */
+  overflow: auto;
+  width: 100%; 
+  height: 100%; 
+  padding-bottom: 80px;
 }
 
 /*Events description text*/
@@ -185,7 +206,9 @@ div .headline {
   font-family: "Montserrat", sans-serif;
   text-align: right;
   color: #e85f5c;
+  float: left; 
 }
+
 
 .eventsDescription a:hover {
   font-family: "Montserrat", sans-serif;
@@ -202,17 +225,21 @@ div .headline {
 .eventsTitle h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 55px;
+  text-align: left;
 }
 
 /*Big event image grid area*/
 .event1 {
-  grid-area: 2 / 2;
+  /* grid-area: 2 / 2; */
+  height: 100; 
+  
 }
 
 /*Big event image size*/
 .event1 img {
   object-fit: contain;
   width: 100%;
+  height: 100%;
   transition: transform 0.5s ease;
   overflow: hidden;
 }
@@ -222,6 +249,162 @@ div .headline {
   -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.03);
 }
+
+.eventsDescription button {
+  border: 1px solid #E85F5C;
+  box-sizing: border-box;
+  background-color: white;
+  padding: 6px 6px;
+}
+
+/*---------------Slideshow-------------------*/
+
+/* .slider {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  overflow: hidden;
+} */
+
+.carousel {
+  text-align: center;
+  /* margin: auto; */
+  padding: 100px 50px;
+  /* width: 85%; */
+  position: relative;
+}
+
+/* .mySlides {display: none} */
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.eventsDescription .left {
+  width: 50%;
+  height: 100%;
+  float: left;
+  padding: 21px 15px 10px 80px;
+}
+
+.eventsDescription .left p#about {
+  padding: 20px;
+  padding-bottom: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.eventsDescription .right {
+  width: 50%;
+  height: 100%;
+  float: right;
+  padding: 10px 55px 10px 15px; 
+}
+
+.eventsDescription .right h1 {
+  text-align: left;
+  grid-area: 1 / 2;
+  font-family: "Montserrat", sans-serif;
+  font-size: 55px;
+}
+
+
+.right img {
+  object-fit: contain;
+  max-height: 100%;
+  max-width: 100%;
+  transition: transform 0.5s ease;
+  overflow: hidden;
+}
+
+.right a {
+  font-family: "Montserrat", sans-serif;
+  text-align: right;
+  color: #e85f5c;
+  float: left; 
+  height: 100%; 
+}
+
+.right:hover img {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.03);
+}
+
+.carousel .buttonBack {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+  border-right: 30px solid #313638;
+  border-left: 0;
+  padding: 0;
+  background-color: transparent;
+  outline: 0; 
+}
+
+.carousel .buttonNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+  border-left: 30px solid #313638;
+  border-right: 0;
+  padding: 0;
+  background-color: transparent;
+  outline: 0;
+}
+
+.buttonBack:disabled {
+  border-right: 30px solid #C4C4C4;
+}
+
+.buttonNext:disabled {
+  border-left: 30px solid #C4C4C4;
+}
+
+
+
+/* .home_publications__ncQSH img { */
+  /* margin-top: 50px; */
+  /* width: 50%; */
+  /* max-width: 500px; */
+  /* text-align: right; */
+  /* float: right; */
 
 /*--------------Newsletter-------------------*/
 .subscribeBtn {
@@ -303,6 +486,31 @@ div .headline {
   max-width: 900px;
 }
 
+/*--------------Publications-------------------*/
+.publications {
+  text-align: center;
+  margin: auto;
+  padding: 100px 0px;
+  width: 85%;
+}
+
+.publications h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 55px;
+  letter-spacing: 3px;
+  line-height: 100px;
+  text-align: center;
+  margin: 0px;
+  line-height: normal;
+}
+
+.publications img {
+  /* margin-top: 50px; */
+  width: 100%;
+  max-width: 900px;
+}
+
+
 /*--------------Responsive Mobile Design-------------------*/
 
 @media only screen and (max-width: 850px) {
@@ -310,7 +518,6 @@ div .headline {
     padding: 50px 0px;
     max-width: 85%;
     margin: 0 auto;
-
     display: flex;
     flex-flow: column;
   }
@@ -342,7 +549,7 @@ div .headline {
 
   .eventsDescription a {
     text-align: justify;
-    padding-left: 20px;
+    /* padding-left: 20px; */
   }
 
   /*Big event image area - flexbox*/
@@ -414,7 +621,7 @@ div .headline {
     margin-top: 20px;
   }
 }
-
+/* 
 @media only screen and (max-width: 640px) {
   .eventsDescription p#about {
     padding-left: 0px;
@@ -433,4 +640,71 @@ div .headline {
   div .headline {
     height: 58vh;
   }
+} */
+
+
+@media only screen and (max-width: 850px) {
+  .publications {
+    padding: 30px 0px;  
+  }
+
+  .publications h1 {
+    font-size: 9vw;
+    padding-bottom: 15px;
+  }
 }
+
+
+/* constant adjustment of text size for events/publications/podcasts part */
+
+@media only screen and (max-width: 946px) {
+  .eventsDescription .left p {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .carousel {
+    padding: 40px 0px;
+    max-width: 85%;
+    margin: 0 auto;
+  }
+
+  .eventsDescription .left {
+    padding: 0px 5px 0px 5px;
+    width: 60%; 
+  }
+  
+  .eventsDescription .right {
+    padding: 0px 5px 0px 5px; 
+    width: 40%;
+  }
+  
+  .eventsDescription .right h1 {
+    font-size: 5vw;
+  }
+
+  .right img {
+    object-fit: contain;
+    max-height: 100%;
+    max-width: 100%;
+  }
+  
+  .buttonBack {
+    display: none;
+  }
+
+  .buttonNext {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 700px) {
+  .eventsDescription .left p {
+    font-size: 10px;
+    margin-top: 7px; 
+  }
+}
+
+/* add height: 250px to both class=Homecarousel and class=Horizontal Slider, remove max-height from class=SlideInner */

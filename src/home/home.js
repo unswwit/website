@@ -1,16 +1,39 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CountUp from "react-countup";
 import styles from "./home.module.css";
 import NewsletterForm from "./NewsletterForm";
 import { Modal, Backdrop, Fade } from "@material-ui/core";
+import PubArticle from "../publications/publications-article";
+import Tabletop from "tabletop";
+import Slideshow from "./Slideshow.js"
 
 const Home = () => {
   const [open, setOpen] = React.useState(false);
+  const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // const last3articles = articles.reverse().slice(0, 3)
+  // // why does last3articles change depending on this
+  // console.log("NOT REVERSED:")
+  // console.log(last3articles)
+  // console.log("REVERSED:")
+  // console.log(articles.reverse().slice(0, 3))
 
   //start webpage at the top
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    Tabletop.init({
+      key: process.env.REACT_APP_GOOGLE_SHEETS,
+      callback: googleData => {
+        setArticles(googleData["publications"]["elements"]);  
+        setLoading(false);
+      },
+      simpleSheet: false
+    })
   }, []);
 
   const callbackModal = () => {
@@ -26,6 +49,11 @@ const Home = () => {
           <h1>Women In</h1>
           <h1>Technology</h1>
           <p> Empowering and inspiring the architects of change</p>
+          <button>           
+            <Link to="/join-us" style={{ textDecoration: "none"}}>
+              JOIN US
+            </Link>
+          </button>
         </div>
       </div>
       {/* End of Header */}
@@ -33,7 +61,7 @@ const Home = () => {
       {/* Start of Description */}
       <div className={styles.description}>
         <div className={styles.descriptionLeft}>
-          <h1>COLLABORATE. INSPIRE. CHANGE.</h1>         
+          <h1>COLLABORATE. EMPOWER. UPSKILL.</h1>         
         </div>
         <div className={styles.descriptionRight}>
           <p>
@@ -75,8 +103,13 @@ const Home = () => {
       </div>
       {/* End of Statistics */}
 
-      {/* Start of Upcoming Events */}
-      <div className={styles.events}>
+      {/* Start of Upcoming Events / Latest blog / Latest podcast */}
+       
+      <div className={styles.carousel}>
+        <Slideshow />
+      </div>
+
+      {/* <div className={styles.events}>
         <div className={styles.eventsDescription}>
           <p id="about">
             At WIT, our focus is on providing events that foster development
@@ -87,9 +120,11 @@ const Home = () => {
             role models to inspire.
           </p>
           <p>
-            <Link to="/events" style={{ textDecoration: "none" }}>
-              See More Events
-            </Link>
+            <button>
+              <Link to="/events" style={{ textDecoration: "none"}}>
+                see more events
+              </Link>
+            </button>
           </p>
         </div>
         <div className={styles.eventsTitle}>
@@ -107,9 +142,36 @@ const Home = () => {
             />
           </a>
         </div>
-      </div>
+      </div> */}
       {/* End of upcoming events area */}
       
+      {/* Start of Publications */}
+      <div className={styles.publications}>
+        <h1>PUBLICATIONS</h1>
+
+         {/*Recent 3 Articles*/}
+          <div className={styles.articles}>
+            {!loading && articles.reverse().slice(0, 3).map((article, index) => 
+                <PubArticle
+                key={index}
+                imgUrl={`${process.env.PUBLIC_URL}/publications/${article.year}/${article.img}`}
+                heading={article.heading}
+                date={article.date}
+                url={article.url}
+              />
+            )}
+          </div>
+      </div>
+      {/* End of Publications */}
+
+      <div className={styles.sponsors}>
+        <h1>OUR SPONSORS</h1>
+        <img
+          src={`${process.env.PUBLIC_URL}./sponsors-home-2021-temp.png`}
+          alt="banner"
+        />
+      </div>
+
       {/* Start of newsletter */}
       <div className={styles.stats}>
         <img
@@ -141,13 +203,6 @@ const Home = () => {
       </div>
       {/* End of Newsletter */}
 
-      <div className={styles.sponsors}>
-        <h1>OUR SPONSORS</h1>
-        <img
-          src={`${process.env.PUBLIC_URL}./sponsors-home-2021-temp.png`}
-          alt="banner"
-        />
-      </div>
     </div>
   );
 }

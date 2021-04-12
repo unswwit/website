@@ -151,3 +151,21 @@
   display: flex;
   justify-content: center;
 }
+
+/* ------------ Responsive mobile design ------------ */
+
+@media only screen and (max-width: 850px) {
+  
+  .article{
+    margin: 15px 15px;
+    width: 178px;
+    height: 250px;
+  }
+
+  .article .dark {
+    margin: 15px 15px;
+    width: 178px;
+    height: 250px;
+  }
+  
+}
