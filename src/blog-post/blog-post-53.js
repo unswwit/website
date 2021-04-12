@@ -154,7 +154,7 @@ class blogPost53 extends Component {
             <p className={styles.question}>
               What are the hard and soft skills that you would advise students
               who are interested in pursuing a similar career path (for
-              internship/graduate role) to upskill on?{" "}
+              internship/graduate role) to upskill on?
             </p>
             <p className={styles.postContent}>
               Knowing how to ask questions is a very important soft skill to
