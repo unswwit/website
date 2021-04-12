@@ -104,10 +104,10 @@ const Home = () => {
       {/* End of Statistics */}
 
       {/* Start of Upcoming Events / Latest blog / Latest podcast */}
-       
+{/*        
       <div className={styles.carousel}>
         <Slideshow />
-      </div>
+      </div> */}
 
       {/* <div className={styles.events}>
         <div className={styles.eventsDescription}>
