@@ -177,6 +177,7 @@ class blogPost52 extends Component {
               intensifies, we will continue to unlock the potential for
               computing to change our world.
             </p>
+            <br />
 
             <p className={styles.postContent}>
               <em>
