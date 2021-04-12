@@ -6,11 +6,12 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import Timeline from "../Timeline";
+import Timeline from "../components/Timeline";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import LoadingScreen from "../LoadingScreen";
-import ScrollUpBtn from ".././ScrollUpBtn.js"
+import ScrollUpBtn from "../components/ScrollUpBtn"
+import AddToCalBtn from "./AddToCalBtn.js";
 
 const Events = () => {
   const [expanded, setExpanded] = useState(false);
@@ -24,19 +25,19 @@ const Events = () => {
     {
       value: 100,
       scaledValue: 2021,
-      label: "2021"
+      label: "2021",
     },
     {
       value: 0,
       scaledValue: 2020,
-      label: "2020"
+      label: "2020",
     },
   ];
 
   const valueToYear = {
     0: "2020",
-    100: "2021"
-  }
+    100: "2021",
+  };
 
   // set the year on the events timeline
   const handleYear = (newYear) => {
@@ -61,15 +62,17 @@ const Events = () => {
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: googleData => {
-        const allEvents = googleData["past-events"]["elements"].filter((event) => event.year === year);
+        const allEvents = googleData["past-events"]["elements"].filter(
+          (event) => event.year === year
+        );
         setEvents(allEvents.reverse());
         setUpcomingEvents(googleData["upcoming-events"]["elements"]);
         setLoading(false);
       },
-      simpleSheet: false
-    })   
+      simpleSheet: false,
+    });
   }, [year]);
-  
+
   return (
     <>
       {initialLoading ? (<LoadingScreen />) 
@@ -109,7 +112,7 @@ const Events = () => {
                       <p className={styles.eventSummary}>
                         {upcomingEvent.description}              
                       </p>
-                      <ul id={styles.links}>
+                      <ul id={styles.links}>                     
                         <li className={styles.eventLink}>
                           <a
                             href={upcomingEvent.registerLink}
@@ -117,21 +120,32 @@ const Events = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            Register
+                          Register
                           </a>
                         </li>
-                        <li className={styles.eventLink}>
+                        {upcomingEvent.facebookLink && <li className={styles.eventLink}>
                           <a
                             href={upcomingEvent.facebookLink}
                             className={styles.event}                      
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            Facebook
+                          Facebook
                           </a>
-                        </li>
+                        </li>}
+                        <li className={styles.eventButton}>
+                          <AddToCalBtn 
+                            title={upcomingEvent.title} 
+                            description={upcomingEvent.description}
+                            location={upcomingEvent.location}
+                            startDate={upcomingEvent.start}
+                            endDate={upcomingEvent.end}
+                            duration={upcomingEvent.duration}
+                          />
+                        </li>                     
                       </ul>
                     </div>
+                    <ScrollUpBtn/>
                   </div>
                 })}
               </div>)
@@ -190,6 +204,6 @@ const Events = () => {
         </>)}       
     </>
   );
-}
+};
 
 export default Events;

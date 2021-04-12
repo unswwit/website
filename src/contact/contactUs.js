@@ -25,13 +25,13 @@ const ContactUs = () => {
           />
         </div>
         <div className={styles.formLeft}>
-          <ContactForm />    
-        </div>              
+          <ContactForm />
+        </div>
       </div>
 
       <h2 className={styles.contactTeam}>CONTACT OUR TEAM</h2>
       <div className={styles.newEmails}>
-        <div className={styles.col2}>           
+        <div className={styles.col2}>
           <div className={styles.profile2}>
             <img
               src={process.env.PUBLIC_URL + "/icons/pres-icon.png"}
@@ -70,8 +70,11 @@ const ContactUs = () => {
           </div>
         </div>
 
-        <hr className={[styles.lineBreak, styles.solid].join(" ")} width="90%" />
-        <div className={styles.col3}> 
+        <hr
+          className={[styles.lineBreak, styles.solid].join(" ")}
+          width="90%"
+        />
+        <div className={styles.col3}>
           <div className={styles.profile3}>
             <img
               src={process.env.PUBLIC_URL + "/icons/ev-icon.png"}
@@ -80,7 +83,7 @@ const ContactUs = () => {
             <h3>Jane Wang</h3>
             <a href="mailto:jane@unswwit.com">jane@unswwit.com</a>
             <a href="mailto:events@unswwit.com">events@unswwit.com</a>
-          </div>   
+          </div>
           <div className={styles.profile3}>
             <img
               src={process.env.PUBLIC_URL + "/icons/ev-icon.png"}
@@ -89,7 +92,7 @@ const ContactUs = () => {
             <h3>Nishmi Kapoor</h3>
             <a href="mailto:nishmi@unswwit.com">nishmi@unswwit.com</a>
             <a href="mailto:events@unswwit.com">events@unswwit.com</a>
-          </div>            
+          </div>
           <div className={styles.profile3}>
             <img
               src={process.env.PUBLIC_URL + "/icons/edu-icon.png"}
@@ -98,7 +101,7 @@ const ContactUs = () => {
             <h3>Georgie Mansfield</h3>
             <a href="mailto:georgie@unswwit.com">georgie@unswwit.com</a>
             <a href="mailto:education@unswwit.com">education@unswwit.com</a>
-          </div>                
+          </div>
           <div className={styles.profile3}>
             <img
               src={process.env.PUBLIC_URL + "/icons/ex-icon.png"}
@@ -118,10 +121,22 @@ const ContactUs = () => {
             <a href="mailto:hr@unswwit.com">hr@unswwit.com</a>
           </div>
           <div className={styles.profile3}>
-            <img src={process.env.PUBLIC_URL + "/icons/it.png"} alt="it-icon" />
+            <img
+              src={process.env.PUBLIC_URL + "/icons/it.png"}
+              alt="it-icon"
+            />
             <h3>Alana Hua</h3>
             <a href="mailto:alana@unswwit.com">alana@unswwit.com</a>
             <a href="mailto:it@unswwit.com">it@unswwit.com</a>
+          </div>
+          <div className={styles.profile3}>
+            <img
+              src={process.env.PUBLIC_URL + "/icons/mark-icon.png"}
+              alt="mark-icon"
+            />
+            <h3>Vy Kim Nguyen</h3>
+            <a href="mailto:kim@unswwit.com">Kim@unswwit.com</a>
+            <a href="mailto:marketing@unswwit.com">marketing@unswwit.com</a>
           </div>
           <div className={styles.profile3}>
             <img

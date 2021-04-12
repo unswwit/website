@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { HashRouter, Route, NavLink, Switch } from "react-router-dom";
+import { HashRouter, Route, NavLink, Switch, Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "semantic-ui-css/semantic.min.css";
 import "./style.css";
@@ -11,10 +11,7 @@ import JoinUs from "./join/joinUs";
 import Sponsors from "./sponsors/sponsors";
 import Opportunities from "./opportunities/opportunities";
 import ContactUs from "./contact/contactUs";
-import Footer from "./footer";
-
-import MarketingArchive from "./marketing-archive/marketingArchive";
-import MarketingContent from "./marketing-archive/marketing-content/content";
+import MarketingContent from "./marketing-archive/content";
 import OurTeam from "./team/team";
 import Blog from "./blog-gallery/blog";
 import Publications from "./publications/publications";
@@ -22,8 +19,10 @@ import Events from "./events/events";
 import Podcast from "./podcast/Podcast";
 import EpisodePage from "./podcast/EpisodePage";
 import NotFound from "./not-found/NotFound";
+
 import Menu from "./menu";
 import MenuBtn from "./menuBtn";
+import Footer from "./footer";
 
 class App extends Component {
   /*
@@ -48,7 +47,7 @@ class App extends Component {
 
   // change the background of the navigation bar based on scroll height
   changeBackground() {
-    if (window.scrollY >= 60) {
+    if (window.scrollY >= 60 || window.location.href.split("#")[1] === "/404") {
       this.setState({
         navBar: true
       });
@@ -103,6 +102,8 @@ class App extends Component {
 	componentDidMount() {
 	  // google analytics
 	  GoogleAnalytics();
+
+	  window.addEventListener("hashchange", this.changeBackground);
 	  window.addEventListener("resize", this.updateMenu);
 	  window.addEventListener("scroll", this.changeBackground);
 	  window.addEventListener("scroll", this.hideNavBar);
@@ -119,6 +120,7 @@ class App extends Component {
 	componentWillUnmount() {
 	  window.removeEventListener("resize", this.updateMenu);
 	  window.removeEventListener("scroll", this.changeBackground);
+	  window.removeEventListener("hashchange", this.changeBackground);
 	  window.removeEventListener("scroll", this.hideNavBar);
 	}
 
@@ -221,7 +223,7 @@ class App extends Component {
 	                      <NavLink to="/publications">PUBLICATIONS</NavLink>
 	                    </div>
 	                    <div className="dropdown-item">
-	                      <NavLink to="/marketing-archive">MARKETING ARCHIVES</NavLink>
+	                      <NavLink to="/marketing-archive">MARKETING ARCHIVE</NavLink>
 	                    </div>
 	                  </div>
 	                </div>
@@ -247,8 +249,7 @@ class App extends Component {
 	          <Route path="/events" component={Events} />
 	          <Route path="/our-team" component={OurTeam} />
 	          <Route exact path="/blog" component={Blog} />
-	          <Route exact path="/marketing-archive" component={MarketingArchive} />
-	          <Route path="/marketing-archive/content" component={MarketingContent} />
+	          <Route path="/marketing-archive" component={MarketingContent} />
 	          <Route path="/join-us" component={JoinUs} />
 	          <Route path="/sponsors" component={Sponsors} />
 	          <Route path="/opportunities" component={Opportunities} />
@@ -256,7 +257,7 @@ class App extends Component {
 	          <Route exact path="/podcast" component={Podcast} />
 	          <Route path="/podcast/:episode" component={EpisodePage} />
 	          <Route path="/publications" component={Publications} />
-	          {Array.from({ length: 49 }, (_, index) => index + 1).map((blogNo) => {
+	          {Array.from({ length: 52 }, (_, index) => index + 1).map((blogNo) => {
 	            return (
 	              <Route
 	                key={blogNo}
@@ -265,7 +266,8 @@ class App extends Component {
 	              />
 	            );
 	          })}
-	          <Route component={NotFound} />
+	          <Route path="/404" component={NotFound} />
+	          <Redirect to="/404" />
 	        </Switch>
 	      </HashRouter>
 	      <div>

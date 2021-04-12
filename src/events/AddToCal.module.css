@@ -1,0 +1,23 @@
+.componentStyles {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 0 0 30px;
+}
+
+.link {
+	font-family: "Montserrat", sans-serif;
+	color: #ffffff;
+	letter-spacing: 0.1vw;
+	font-size: 10pt;
+	text-decoration: none;
+	display: block;
+	text-align: centre;
+	padding: 6px;
+}
+
+@media only screen and (max-width: 600px) {
+  .componentStyles {
+    padding: 0;
+  }
+}

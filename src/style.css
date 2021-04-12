@@ -434,12 +434,12 @@ a {
 }
 
 .footer-item a:hover {
-  color: #feb14b;
+  color: var(--red);
   text-decoration: none;
 }
 
 .bottom-footer-item a:hover {
-  color: #feb14b;
+  color: var(--red);
   text-decoration: none;
 }
 
