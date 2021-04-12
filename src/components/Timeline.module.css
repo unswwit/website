@@ -1,19 +1,24 @@
 #teams {
-	width: 60%;
+  width: 60%;
 }
 
 #events {
-	width: 100%;
+  width: 100%;
 }
 
-#teams, #events {
-	margin: 0 auto;
-	margin-bottom: 2%;
+#marketingArchive {
+  width: 60%;
+}
+
+#teams,
+#events,
+#marketingArchive {
+  margin: 0 auto;
+  margin-bottom: 2%;
 }
 
 @media screen and (max-width: 650px) {
-	#events {
-		width: 85%;
-	}
+  #events {
+    width: 85%;
+  }
 }
-
