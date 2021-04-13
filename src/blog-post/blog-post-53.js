@@ -52,6 +52,7 @@ class blogPost53 extends Component {
               discuss our interview with Gabrielle on her passion for technology
               and journey to where she is today.
             </p>
+            <br />
 
             <p className={styles.question}>
               What sparked your interest to join the field of STEM?
@@ -62,6 +63,7 @@ class blogPost53 extends Component {
               development, and robotics. I found I enjoyed the logical way of
               thinking and using it to work through the challenges.
             </p>
+            <br />
 
             <p className={styles.question}>
               Please provide a short summary of your career journey so far.
@@ -77,6 +79,7 @@ class blogPost53 extends Component {
               position on the Chrome OS Essential Apps team which is where I am
               now!
             </p>
+            <br />
 
             <p className={styles.question}>
               Where do you see yourself in the future (career wise)?
@@ -90,6 +93,7 @@ class blogPost53 extends Component {
               others reach their full potential, like what my teammates and
               mentors are doing for me now.
             </p>
+            <br />
 
             <p className={styles.question}>
               What do you love about your career now?
@@ -102,6 +106,7 @@ class blogPost53 extends Component {
               each other. It's a space in which I feel safe and encouraged to be
               myself.
             </p>
+            <br />
 
             <p className={styles.question}>
               Why do you think it is important to empower women and increase
@@ -122,6 +127,7 @@ class blogPost53 extends Component {
               not belonging or not being the right kind of person for the job or
               careers.
             </p>
+            <br />
 
             <p className={styles.question}>
               What are the challenging aspects of your career?
@@ -135,6 +141,7 @@ class blogPost53 extends Component {
               that we're all human and that we've all earned our place here, one
               way or another.
             </p>
+            <br />
 
             <p className={styles.question}>
               How have others inspired you at different periods throughout your
@@ -150,6 +157,7 @@ class blogPost53 extends Component {
               trying. I want to give people the encouragement they need to take
               that first step because that can be the hardest part.
             </p>
+            <br />
 
             <p className={styles.question}>
               What are the hard and soft skills that you would advise students
@@ -169,6 +177,7 @@ class blogPost53 extends Component {
               code) and see how data structures and algorithms can be used to
               solve it.
             </p>
+            <br />
 
             <p className={styles.question}>
               What is one piece of advice that you would give to your younger
@@ -178,14 +187,15 @@ class blogPost53 extends Component {
               Believe in yourself. It's cheesy, but it's important. It'll give
               you more strength than you thought you had.
             </p>
+            <br />
 
             <p className={styles.question}>Favourite quote or motto?</p>
             <p className={styles.postContent}>
               "I think it's perfectly acceptable and rather admirable to be
               moderately delusional" - Matther Gray Gubler
-              <br />
-							A reminder to stay quirky!
+              <br />A reminder to stay quirky!
             </p>
+            <br />
           </div>
         </div>
         {/*for the blog post author*/}
