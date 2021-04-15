@@ -13,12 +13,12 @@ const Home = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // const last3articles = articles.reverse().slice(0, 3)
-  // // why does last3articles change depending on this
-  // console.log("NOT REVERSED:")
-  // console.log(last3articles)
-  // console.log("REVERSED:")
-  // console.log(articles.reverse().slice(0, 3))
+  const last3articles = articles.reverse().slice(0, 3);
+  // why does last3articles change depending on this
+  // console.log("NOT REVERSED:");
+  // console.log(last3articles);
+  // console.log("REVERSED:");
+  console.log(articles.reverse().slice(0, 3));
 
   //start webpage at the top
   useEffect(() => {
@@ -104,10 +104,11 @@ const Home = () => {
       {/* End of Statistics */}
 
       {/* Start of Upcoming Events / Latest blog / Latest podcast */}
-{/*        
+      
       <div className={styles.carousel}>
         <Slideshow />
-      </div> */}
+      </div>
+  
 
       {/* <div className={styles.events}>
         <div className={styles.eventsDescription}>
@@ -150,17 +151,31 @@ const Home = () => {
         <h1>PUBLICATIONS</h1>
 
          {/*Recent 3 Articles*/}
+         <div className={styles.articlesDiv}>
           <div className={styles.articles}>
-            {!loading && articles.reverse().slice(0, 3).map((article, index) => 
-                <PubArticle
-                key={index}
-                imgUrl={`${process.env.PUBLIC_URL}/publications/${article.year}/${article.img}`}
-                heading={article.heading}
-                date={article.date}
-                url={article.url}
-              />
-            )}
+              {!loading && last3articles.map((article, index) => 
+                <div className={styles.homeArticles}> 
+                  <PubArticle
+                    key={index}
+                    imgUrl={`${process.env.PUBLIC_URL}/publications/${article.year}/${article.img}`}
+                    heading={article.heading}
+                    date={article.date}
+                    url={article.url}
+                  />
+                </div>
+                 
+              )}
+            </div>
+         </div>
+          
+          <div className={styles.eventsDescription}>
+            <button>
+              <Link to="/publications" style={{ textDecoration: "none"}}>
+                see more publications
+              </Link>
+            </button>
           </div>
+          
       </div>
       {/* End of Publications */}
 

@@ -36,9 +36,8 @@ div .headline {
 
 .headline button {
   border: 1px solid #E85F5C;
-  /* box-sizing: border-box; */
   background-color: #E85F5C;
-  padding: 6px 6px;
+  padding: 11px 11px;
 }
 
 .headline a {
@@ -186,6 +185,7 @@ div .headline {
   overflow: auto;
   width: 100%; 
   height: 100%; 
+  /* height: auto; */
   padding-bottom: 80px;
 }
 
@@ -259,13 +259,6 @@ div .headline {
 
 /*---------------Slideshow-------------------*/
 
-/* .slider {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  margin: 0 auto;
-  overflow: hidden;
-} */
 
 .carousel {
   text-align: center;
@@ -334,7 +327,6 @@ div .headline {
   font-size: 55px;
 }
 
-
 .right img {
   object-fit: contain;
   max-height: 100%;
@@ -397,7 +389,13 @@ div .headline {
   border-left: 30px solid #C4C4C4;
 }
 
-
+.titleMobile h1 {
+  display: none;
+  text-align: center;
+  grid-area: 1 / 2;
+  font-family: "Montserrat", sans-serif;
+  font-size: 55px;
+}
 
 /* .home_publications__ncQSH img { */
   /* margin-top: 50px; */
@@ -466,7 +464,8 @@ div .headline {
 .sponsors {
   text-align: center;
   margin: auto;
-  padding: 100px 0px;
+  padding-top: 20px;
+  padding-bottom: 100px; 
   width: 85%;
 }
 
@@ -490,7 +489,7 @@ div .headline {
 .publications {
   text-align: center;
   margin: auto;
-  padding: 100px 0px;
+  /* padding: 100px 0px; */
   width: 85%;
 }
 
@@ -510,6 +509,15 @@ div .headline {
   max-width: 900px;
 }
 
+.publications .articlesDiv {
+  margin-top: 50px;
+  margin-bottom: 40px; 
+}
+
+.publications .homeArticles {
+  padding: 0px 30px 0px 30px; 
+  display: inline-block;
+}
 
 /*--------------Responsive Mobile Design-------------------*/
 
@@ -536,16 +544,17 @@ div .headline {
   }
 
   /*Events description text - flexbox*/
-  .eventsDescription {
+  /* .eventsDescription {
     order: 2;
     padding: 0px;
-  }
+    height: 400px;
+  } */
 
   /*Events description text*/
-  .eventsDescription p {
+  /* .eventsDescription p {
     text-align: justify;
     margin: 20px 0;
-  }
+  } */
 
   .eventsDescription a {
     text-align: justify;
@@ -573,6 +582,10 @@ div .headline {
     height: 63vh;
   }
 
+  .headline button {
+    padding: 8px 8px;
+  }
+
   .headline h1{
     font-size: 6vw;
     text-transform: uppercase;
@@ -583,6 +596,10 @@ div .headline {
   .headline p {
     font-size: 10pt;
     letter-spacing: 2.5px;
+  }
+
+  .headline a {
+    font-size: 12px;
   }
 
   .description {
@@ -643,19 +660,130 @@ div .headline {
 } */
 
 
+@media only screen and (max-width: 1065px) {
+  .publications .homeArticles {
+    padding: 15px 15px 15px 15px; 
+    display: inline-block;
+  }
+}
+
 @media only screen and (max-width: 850px) {
   .publications {
-    padding: 30px 0px;  
+    padding-top: 0px;  
+    padding-bottom: 30px;  
   }
 
   .publications h1 {
     font-size: 9vw;
-    padding-bottom: 15px;
+    /* padding-bottom: 15px; */
   }
+
+  .publications .articlesDiv {
+    margin-top: 15px; 
+  }
+
 }
 
+@media only screen and (max-width: 990px) {
+  .sponsors {
+    padding: 100px 0;
+  }
 
-/* constant adjustment of text size for events/publications/podcasts part */
+  .carousel {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* max-width: 85%;
+    margin: 0; */
+    width: 100%; 
+  }
+
+  .eventsDescription {
+    order: 2;
+    padding: 0px;
+    height: auto;
+    max-width: 70%; 
+    margin: auto; 
+    padding: 5px;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content:center; */
+  }
+
+  .eventsDescription .left {
+    padding: 0px 5px 0px 5px;
+    width: 85%; 
+    height: auto;
+    float: none;
+    margin: auto; 
+  }
+
+  .left p {
+    margin: 20px 0;
+    text-align: justify;
+  }
+  
+  .eventsDescription .right {
+    padding: 0px 5px 0px 5px; 
+    width: 85%; 
+    height: auto; 
+    float: none; 
+    margin: auto; 
+  }
+  
+  .eventsDescription .right h1 {
+    font-size: 5vw;
+    text-align: center;
+    display: none; 
+  }
+
+  .right img {
+    object-fit: contain;
+    /* max-height: 50%;
+    max-width: 50%; */
+  }
+
+  .right a {
+    /* padding-left: 20px; */
+    height: auto;
+    text-align: center;
+  }
+  
+  .buttonBack {
+    /* display: none; */
+    margin-left: 35px; 
+  }
+
+  .buttonNext {
+    /* display: none; */
+    margin-right: 35px; 
+  }
+
+  .titleMobile h1 {
+    display: contents;
+    font-size: 9vw;
+    padding-top: 50px; 
+  }
+  
+  .dot {
+    display: contents; 
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+}
+/* 
+@media only screen and (max-width: 700px) {
+  .eventsDescription .left p {
+    font-size: 10px;
+    margin-top: 7px; 
+  }
+} */
+
+
+/* adjusting font size of carousel description  */
 
 @media only screen and (max-width: 946px) {
   .eventsDescription .left p {
@@ -663,48 +791,99 @@ div .headline {
   }
 }
 
-@media only screen and (max-width: 850px) {
-  .carousel {
-    padding: 40px 0px;
-    max-width: 85%;
-    margin: 0 auto;
+@media only screen and (max-width: 500x) {
+  .eventsDescription .left p {
+    font-size: 12px;
+  }
+}
+
+/* adjusting button size and position */
+@media only screen and (max-width: 650px) {
+  .carousel .buttonBack {
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    border-right: 24px solid #313638;
+    margin-left: 25px; 
   }
 
-  .eventsDescription .left {
-    padding: 0px 5px 0px 5px;
-    width: 60%; 
+  .carousel .buttonNext {
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    border-left: 24px solid #313638;
+    margin-right: 25px; 
+  }
+
+  .carousel .buttonBack:disabled {
+    border-right: 25px solid #C4C4C4;
   }
   
-  .eventsDescription .right {
-    padding: 0px 5px 0px 5px; 
-    width: 40%;
+  .carousel .buttonNext:disabled {
+    border-left: 25px solid #C4C4C4;
   }
   
-  .eventsDescription .right h1 {
-    font-size: 5vw;
+
+}
+
+@media only screen and (max-width: 650px) {
+  .carousel .buttonBack {
+    margin-left: 13px; 
   }
 
-  .right img {
-    object-fit: contain;
-    max-height: 100%;
-    max-width: 100%;
-  }
-  
-  .buttonBack {
-    display: none;
+  .carousel .buttonNext {
+    margin-right: 13px; 
   }
 
-  .buttonNext {
-    display: none;
-  }
+}
 
+/* .test2 {
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+} */
+
+.test {
+  height: 100%; 
+}
+
+@media only screen and (max-width: 990px) {
+  .test {
+    height: 840px;
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+  }
+  .test2 {
+    height: auto; 
+  }
 }
 
 @media only screen and (max-width: 700px) {
-  .eventsDescription .left p {
-    font-size: 10px;
-    margin-top: 7px; 
+  .test {
+    height: 670px;
+    /* padding-bottom: 0;  */
+    /* width: 100%; */
+  }
+
+  .carousel {
+    /* padding-right: 0; 
+    padding-left: 0; 
+    padding-bottom: 40px; */
+    padding: 40px 0; 
+  }
+  
+}
+
+@media only screen and (max-width: 550px) {
+  .test {
+    height: 600px;
+    /* width: 100%; */
   }
 }
+/* 
+.test {
+  display: contents; 
+} */
+
+
 
 /* add height: 250px to both class=Homecarousel and class=Horizontal Slider, remove max-height from class=SlideInner */
