@@ -667,23 +667,6 @@ div .headline {
   }
 }
 
-@media only screen and (max-width: 850px) {
-  .publications {
-    padding-top: 0px;  
-    padding-bottom: 30px;  
-  }
-
-  .publications h1 {
-    font-size: 9vw;
-    /* padding-bottom: 15px; */
-  }
-
-  .publications .articlesDiv {
-    margin-top: 15px; 
-  }
-
-}
-
 @media only screen and (max-width: 990px) {
   .sponsors {
     padding: 100px 0;
@@ -760,7 +743,7 @@ div .headline {
 
   .titleMobile h1 {
     display: contents;
-    font-size: 9vw;
+    font-size: 55px;
     padding-top: 50px; 
   }
   
@@ -781,6 +764,30 @@ div .headline {
     margin-top: 7px; 
   }
 } */
+
+
+@media only screen and (max-width: 850px) {
+  .publications {
+    padding-top: 0px;  
+    padding-bottom: 30px;  
+  }
+
+  .publications h1 {
+    font-size: 9vw;
+    /* padding-bottom: 15px; */
+  }
+
+  .publications .articlesDiv {
+    margin-top: 15px; 
+  }
+
+  .titleMobile h1 {
+    display: contents;
+    font-size: 9vw;
+    padding-top: 50px; 
+  }
+
+}
 
 
 /* adjusting font size of carousel description  */
