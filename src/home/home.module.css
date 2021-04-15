@@ -797,34 +797,9 @@ div .headline {
   }
 }
 
-/* adjusting button size and position */
-@media only screen and (max-width: 650px) {
-  .carousel .buttonBack {
-    border-top: 13px solid transparent;
-    border-bottom: 13px solid transparent;
-    border-right: 24px solid #313638;
-    margin-left: 25px; 
-  }
 
-  .carousel .buttonNext {
-    border-top: 13px solid transparent;
-    border-bottom: 13px solid transparent;
-    border-left: 24px solid #313638;
-    margin-right: 25px; 
-  }
 
-  .carousel .buttonBack:disabled {
-    border-right: 25px solid #C4C4C4;
-  }
-  
-  .carousel .buttonNext:disabled {
-    border-left: 25px solid #C4C4C4;
-  }
-  
-
-}
-
-@media only screen and (max-width: 650px) {
+/* @media only screen and (max-width: 650px) {
   .carousel .buttonBack {
     margin-left: 13px; 
   }
@@ -833,7 +808,7 @@ div .headline {
     margin-right: 13px; 
   }
 
-}
+} */
 
 /* .test2 {
   display: flex;
@@ -870,13 +845,60 @@ div .headline {
     padding-bottom: 40px; */
     padding: 40px 0; 
   }
+
+  .carousel .buttonBack {
+    margin-left: 50px; 
+  }
+  
+  .carousel .buttonNext {
+    margin-right: 50px;
+  }
+
+  .carousel .buttonBack:disabled {
+    margin-left: 50px; 
+  }
+  
+  .carousel .buttonNext:disabled {
+    margin-right: 50px;
+  }
   
 }
+
+
+/* adjusting button size and position
+@media only screen and (max-width: 650px) {
+
+  
+} */
 
 @media only screen and (max-width: 550px) {
   .test {
     height: 600px;
     /* width: 100%; */
+  }
+
+  .carousel .buttonBack {
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    border-right: 24px solid #313638;
+    margin-left: 30px; 
+  }
+
+  .carousel .buttonNext {
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    border-left: 24px solid #313638;
+    margin-right: 30px; 
+  }
+
+  .carousel .buttonBack:disabled {
+    border-right: 24px solid #C4C4C4;
+    margin-left: 30px; 
+  }
+  
+  .carousel .buttonNext:disabled {
+    border-left: 24px solid #C4C4C4;
+    margin-right: 30px; 
   }
 }
 /* 
