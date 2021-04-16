@@ -50,6 +50,10 @@ div .headline {
   letter-spacing: 0.1em;
 }
 
+.headline a:hover {
+  color: white;
+}
+
 /*-----------------------------Home page description--------------------------*/
 /*Description wrapper*/
 .description {
