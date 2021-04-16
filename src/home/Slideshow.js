@@ -1,10 +1,10 @@
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, DotGroup, Dot } from "pure-react-carousel";
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from "pure-react-carousel";
 import React from "react";
 // import { Divider } from "semantic-ui-react";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import styles from "./home.module.css";
 import { Link } from "react-router-dom";
-import { stringifyUrl } from "query-string";
+//import { stringifyUrl } from "query-string";
 
 const Slideshow = () => (
   // put props into here 
