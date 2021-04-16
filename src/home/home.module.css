@@ -520,13 +520,20 @@ div .headline {
 }
 
 .publications .articlesDiv {
-  margin-top: 50px;
+  margin-top: 7f0px;
   margin-bottom: 40px; 
 }
 
-.publications .homeArticles {
-  padding: 0px 30px 0px 30px; 
-  display: inline-block;
+.articles {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.homeArticles div {
+  margin: 0;
 }
 
 /*--------------Responsive Mobile Design-------------------*/
@@ -711,7 +718,7 @@ div .headline {
     order: 2;
     padding: 0px;
     height: auto;
-    max-width: 70%; 
+    max-width: 90%; 
     margin: auto; 
     padding: 5px;
     /* display: flex; */
@@ -801,9 +808,9 @@ div .headline {
   }
 }
 
-@media only screen and (max-width: 500x) {
-  .eventsDescription .left p {
-    font-size: 12px;
+@media only screen and (max-width: 500px) {
+  .eventsDescription {
+    max-width: 80%; 
   }
 }
 
