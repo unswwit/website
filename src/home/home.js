@@ -150,31 +150,31 @@ const Home = () => {
       <div className={styles.publications}>
         <h1>PUBLICATIONS</h1>
 
-         {/*Recent 3 Articles*/}
-         <div className={styles.articlesDiv}>
+        {/*Recent 3 Articles*/}
+        <div className={styles.articlesDiv}>
           <div className={styles.articles}>
-              {!loading && last3articles.map((article, index) => 
-                <div className={styles.homeArticles}> 
-                  <PubArticle
-                    key={index}
-                    imgUrl={`${process.env.PUBLIC_URL}/publications/${article.year}/${article.img}`}
-                    heading={article.heading}
-                    date={article.date}
-                    url={article.url}
-                  />
-                </div>
+            {!loading && last3articles.map((article, index) => 
+              <div className={styles.homeArticles}> 
+                <PubArticle
+                  key={index}
+                  imgUrl={`${process.env.PUBLIC_URL}/publications/${article.year}/${article.img}`}
+                  heading={article.heading}
+                  date={article.date}
+                  url={article.url}
+                />
+              </div>
                  
-              )}
-            </div>
-         </div>
-          
-          <div className={styles.eventsDescription}>
-            <button>
-              <Link to="/publications" style={{ textDecoration: "none"}}>
-                see more publications
-              </Link>
-            </button>
+            )}
           </div>
+        </div>
+          
+        <div className={styles.eventsDescription}>
+          <button>
+            <Link to="/publications" style={{ textDecoration: "none"}}>
+                see more publications
+            </Link>
+          </button>
+        </div>
           
       </div>
       {/* End of Publications */}

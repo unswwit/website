@@ -14,7 +14,7 @@
 div .headline {
   text-align: left;
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 54vw;
 }
 
@@ -209,13 +209,6 @@ div .headline {
   float: left; 
 }
 
-
-.eventsDescription a:hover {
-  font-family: "Montserrat", sans-serif;
-  text-decoration: none;
-  color: #feb14b;
-}
-
 /*Events title grid area*/
 .eventsTitle {
   text-align: left;
@@ -251,10 +244,23 @@ div .headline {
 }
 
 .eventsDescription button {
-  border: 1px solid #E85F5C;
+  border: 1.5px solid #E85F5C;
   box-sizing: border-box;
   background-color: white;
   padding: 6px 6px;
+}
+
+.eventsDescription button:hover {
+  border: 1.5px solid #db3d3b;
+  background-color: #fff7f7;
+}
+
+.eventsDescription a {
+  font-weight: 500;
+}
+
+.eventsDescription a:hover {
+  color: #E85F5C;
 }
 
 /*---------------Slideshow-------------------*/
