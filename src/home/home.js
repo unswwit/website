@@ -7,6 +7,7 @@ import { Modal, Backdrop, Fade } from "@material-ui/core";
 import PubArticle from "../publications/publications-article";
 import Tabletop from "tabletop";
 import Slideshow from "./Slideshow.js"
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 const Home = () => {
   const [open, setOpen] = React.useState(false);
@@ -26,6 +27,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
+    setLoading(true);
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: googleData => {
@@ -153,6 +155,12 @@ const Home = () => {
         {/*Recent 3 Articles*/}
         <div className={styles.articlesDiv}>
           <div className={styles.articles}>
+            {loading && <CircularProgress
+              variant="indeterminate"
+              size={50}
+              thickness={5}
+              id={styles.publicationsLoading}
+            />}
             {!loading && last3articles.map((article, index) => 
               <div className={styles.homeArticles}> 
                 <PubArticle

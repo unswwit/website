@@ -182,7 +182,6 @@ div .headline {
 .eventsDescription {
   /* grid-area: auto / span 1; */
   /* padding-top: 10px; */
-  overflow: auto;
   width: 100%; 
   height: 100%; 
   /* height: auto; */
@@ -264,7 +263,6 @@ div .headline {
 }
 
 /*---------------Slideshow-------------------*/
-
 
 .carousel {
   text-align: center;
@@ -492,6 +490,12 @@ div .headline {
 }
 
 /*--------------Publications-------------------*/
+#publicationsLoading {
+  color:#feb14b;  
+  margin-top: 7%;
+  margin-bottom: 8%;
+}
+
 .publications {
   text-align: center;
   margin: auto;
