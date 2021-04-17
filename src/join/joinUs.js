@@ -123,6 +123,7 @@ class JoinUs extends React.Component {
             />
           </div>
         </div>
+
         {/* How to join section */}
         <h2 className={styles.header}>How to join</h2>
         <div className={styles.descriptionHowto}>
@@ -173,6 +174,7 @@ class JoinUs extends React.Component {
             varies from year to year.
           </p>
         </div>
+
         {/* What to join section */}
         <h2 className={styles.header}>What to join</h2>
         <div className={styles.descriptionHowto}>
@@ -182,9 +184,10 @@ class JoinUs extends React.Component {
             more about the portfolio.
           </p>
         </div>
+
         {/* Portfolios grid */}
         <div className={styles.whatTo}>
-          <div className={styles.edu} onClick= {() => this.setState({clickedEdu: !this.state.clickedEdu})}>
+          <div className={styles.edu} onClick={() => this.setState({clickedEdu: !this.state.clickedEdu})}>
             {
               this.state.clickedEdu? "Education" : 
                 <div className={styles.desc}>
@@ -200,7 +203,7 @@ class JoinUs extends React.Component {
                 </div>
             }          
           </div>
-          <div className={styles.events} onClick= {() => this.setState({clickedEvents: !this.state.clickedEvents})}>
+          <div className={styles.events} onClick={() => this.setState({clickedEvents: !this.state.clickedEvents})}>
             {
               this.state.clickedEvents? "Events" : 
                 <div className={styles.desc}>
@@ -215,7 +218,7 @@ class JoinUs extends React.Component {
                 </div>
             }                
           </div>
-          <div className={styles.externals} onClick= {() => this.setState({clickedExt: !this.state.clickedExt})}>
+          <div className={styles.externals} onClick={() => this.setState({clickedExt: !this.state.clickedExt})}>
             {
               this.state.clickedExt? "Externals" : 
                 <div className={styles.desc}>
@@ -231,7 +234,7 @@ class JoinUs extends React.Component {
                 </div>
             }   
           </div>
-          <div className={styles.hr} onClick= {() => this.setState({clickedHr: !this.state.clickedHr})}>
+          <div className={styles.hr} onClick={() => this.setState({clickedHr: !this.state.clickedHr})}>
             {
               this.state.clickedHr? "HR" : 
                 <div className={styles.desc}>
@@ -247,7 +250,7 @@ class JoinUs extends React.Component {
                 </div>
             }   
           </div>
-          <div className={styles.it} onClick= {() => this.setState({clickedIt: !this.state.clickedIt})}>
+          <div className={styles.it} onClick={() => this.setState({clickedIt: !this.state.clickedIt})}>
             {
               this.state.clickedIt? "IT" : 
                 <div className={styles.desc}>
@@ -263,7 +266,7 @@ class JoinUs extends React.Component {
                 </div>
             }   
           </div>
-          <div className={styles.marketing} onClick= {() => this.setState({clickedMar: !this.state.clickedMar})}>
+          <div className={styles.marketing} onClick={() => this.setState({clickedMar: !this.state.clickedMar})}>
             {
               this.state.clickedMar? "Marketing" : 
                 <div className={styles.desc}>
@@ -281,7 +284,8 @@ class JoinUs extends React.Component {
             }   
           </div>
         </div>
-        {/* FAQ section */}
+
+        {/* Start FAQ section */}
         <h2 className={styles.header}>FAQ</h2>
         <div className={styles.accordion}>
           <Accordion>
@@ -289,7 +293,7 @@ class JoinUs extends React.Component {
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel4bh-content"
             >
-              <Typography id={styles.accordionHeading} component={'span'}>
+              <Typography id={styles.accordionHeading} component="span">
                 <div className={styles.accordionHeading}>
                   <strong>
                     Can non-female students apply for a subcommittee position?
@@ -309,7 +313,7 @@ class JoinUs extends React.Component {
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel4bh-content"
             >
-              <Typography id={styles.accordionHeading} component={'span'}>
+              <Typography id={styles.accordionHeading} component={"span"}>
                 <div className={styles.accordionHeading}>
                   <strong>
                   Do I need a tech background to join? 
@@ -329,7 +333,7 @@ class JoinUs extends React.Component {
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel4bh-content"
             >
-              <Typography id={styles.accordionHeading} component={'span'}>
+              <Typography id={styles.accordionHeading} component={"span"}>
                 <div className={styles.accordionHeading}>
                   <strong>
                     Do I need any prior experience in the portfolio that I applied?
@@ -349,7 +353,7 @@ class JoinUs extends React.Component {
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel4bh-content"
             >
-              <Typography id={styles.accordionHeading} component={'span'}>
+              <Typography id={styles.accordionHeading} component={"span"}>
                 <div className={styles.accordionHeading}>
                   <strong>
                     How can I make my application stand out?
@@ -369,7 +373,7 @@ class JoinUs extends React.Component {
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel4bh-content"
             >
-              <Typography id={styles.accordionHeading} component={'span'}>
+              <Typography id={styles.accordionHeading} component={"span"}>
                 <div className={styles.accordionHeading}>
                   <strong>
                     What is the time commitment like? 
@@ -389,7 +393,7 @@ class JoinUs extends React.Component {
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel4bh-content"
             >
-              <Typography id={styles.accordionHeading} component={'span'}>
+              <Typography id={styles.accordionHeading} component={"span"}>
                 <div className={styles.accordionHeading}>
                   <strong>
                     I’m not in 1st year, can I still join as a subcommittee member?
@@ -404,6 +408,8 @@ class JoinUs extends React.Component {
             </AccordionDetails>
           </Accordion>
         </div>
+        {/* End of FAQ section */}
+        
         {/* Start of newsletter */}
         <div className={styles.stats}>
           <img
