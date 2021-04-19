@@ -319,7 +319,7 @@ class App extends Component {
                         <NavLink
                           to="/blog"
                           activeStyle={{ color: "#e85f5c" }}
-                          isActive={this.inResources}
+                          openResources={this.state.inResources}
                         >
                           BLOG
                         </NavLink>
@@ -328,7 +328,7 @@ class App extends Component {
                         <NavLink
                           to="/podcast"
                           activeStyle={{ color: "#e85f5c" }}
-													isActive={this.inResources}
+													openResources={this.state.inResources}
                         >
                           PODCAST
                         </NavLink>
@@ -337,7 +337,7 @@ class App extends Component {
                         <NavLink
                           to="/publications"
                           activeStyle={{ color: "#e85f5c" }}
-													isActive={this.inResources}
+													openResources={this.state.inResources}
                         >
                           PUBLICATIONS
                         </NavLink>
@@ -346,7 +346,7 @@ class App extends Component {
                         <NavLink
                           to="/marketing-archive"
                           activeStyle={{ color: "#e85f5c" }}
-													isActive={this.inResources}
+													openResources={this.state.inResources}
                         >
                           MARKETING ARCHIVE
                         </NavLink>
