@@ -55,12 +55,14 @@ class App extends Component {
       menuOpen: false,
       navBar: false,
       hideNav: false,
+      inResources: false,
     };
     this.navClass = "navbar navbar-expand-md navbar-dark bg-custom fixed-top";
     this.handleHover = this.handleHover.bind(this);
     this.handleMenuClick = this.handleMenuClick.bind(this);
     this.changeBackground = this.changeBackground.bind(this);
     this.hideNavBar = this.hideNavBar.bind(this);
+    this.openResources = this.openResources.bind(this);
   }
 
   // change the background of the navigation bar based on scroll height
@@ -112,6 +114,10 @@ class App extends Component {
         hideNav: false,
       });
     }
+  }
+
+  openResources() {
+    this.setState({ inResources: true });
   }
   /*
   fakeRequest = () => {
@@ -288,7 +294,17 @@ class App extends Component {
                           : "dropdown-toggle"
                       }
                     >
-                      <span className="dropdown-title">RESOURCES</span>
+                      <span
+                        className={
+                          this.state.inResources
+                            ? this.state.navBar
+															? "dropdown-title open-resources-nav"
+															: "dropdown-title open-resources-nonav"
+                            : "dropdown-title"
+                        }
+                      >
+                        RESOURCES
+                      </span>
                     </div>
                     <div
                       className={
@@ -297,8 +313,14 @@ class App extends Component {
                           : "dropdown-menu"
                       }
                     >
-                      <div className="dropdown-item">
-                        <NavLink to="/blog" activeStyle={{ color: "#e85f5c" }}>
+                      <div
+                        className="dropdown-item"
+                      >
+                        <NavLink
+                          to="/blog"
+                          activeStyle={{ color: "#e85f5c" }}
+                          isActive={this.inResources}
+                        >
                           BLOG
                         </NavLink>
                       </div>
@@ -306,6 +328,7 @@ class App extends Component {
                         <NavLink
                           to="/podcast"
                           activeStyle={{ color: "#e85f5c" }}
+													isActive={this.inResources}
                         >
                           PODCAST
                         </NavLink>
@@ -314,6 +337,7 @@ class App extends Component {
                         <NavLink
                           to="/publications"
                           activeStyle={{ color: "#e85f5c" }}
+													isActive={this.inResources}
                         >
                           PUBLICATIONS
                         </NavLink>
@@ -322,6 +346,7 @@ class App extends Component {
                         <NavLink
                           to="/marketing-archive"
                           activeStyle={{ color: "#e85f5c" }}
+													isActive={this.inResources}
                         >
                           MARKETING ARCHIVE
                         </NavLink>
