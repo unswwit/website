@@ -47,48 +47,27 @@ class JoinUs extends React.Component {
       spARC: [
         "https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371W0xQAE",
         "sparc.png",
-        "Sparc description.",
       ],
-      "Facebook Page": [
-        "https://www.facebook.com/unsw.wit/",
-        "facebook.png",
-        "Facebook description.",
-      ],
+      "Facebook Page": ["https://www.facebook.com/unsw.wit/", "facebook.png"],
       "Facebook Group": [
         "https://www.facebook.com/groups/unswwit/",
         "facebook-group.png",
-        "Facebook Group description.",
       ],
       LinkedIn: [
         "https://www.linkedin.com/company/unsw-women-in-technology/",
         "linkedin.png",
-        "LinkedIn description.",
       ],
-      Instagram: [
-        "https://www.instagram.com/wit.unsw/",
-        "instagram.png",
-        "Instagram description.",
-      ],
+      Instagram: ["https://www.instagram.com/wit.unsw/", "instagram.png"],
       Youtube: [
         "https://www.youtube.com/channel/UCQ8PGe3P4ZuDSNCb9vCeTiw/videos/",
         "youtube.png",
-        "Youtube description.",
       ],
-      Twitch: [
-        "https://www.twitch.tv/unswwit",
-        "twitch.png",
-        "Twitch description.",
-      ],
+      Twitch: ["https://www.twitch.tv/unswwit", "twitch.png"],
       Spotify: [
         "https://open.spotify.com/show/1iWagdei1mVoyzg8TqbB2P",
         "spotify.png",
-        "Spotify description.",
       ],
-      Discord: [
-        "https://discord.gg/BWY4tzM326",
-        "discord.png",
-        "Discord description.",
-      ],
+      Discord: ["https://discord.gg/BWY4tzM326", "discord.png"],
     };
   }
 
@@ -126,13 +105,10 @@ class JoinUs extends React.Component {
                     rel="noopener noreferrer"
                   >
                     <BootstrapTooltip
-                      // key={category}
+                      key={social}
                       title={
                         <>
                           <div className={styles.tooltipTitle}>{social}</div>
-                          <p className={styles.tooltipDescription}>
-                            {this.socials[social][2]}
-                          </p>
                         </>
                       }
                     >
@@ -181,7 +157,7 @@ class JoinUs extends React.Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              facebook group
+              Facebook group
             </a>
             .
           </p>
