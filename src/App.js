@@ -11,7 +11,7 @@ import JoinUs from "./join/joinUs";
 import Sponsors from "./sponsors/sponsors";
 import Opportunities from "./opportunities/opportunities";
 import ContactUs from "./contact/contactUs";
-import MarketingContent from "./marketing-archive/marketing-content/content";
+import MarketingContent from "./marketing-archive/content";
 import OurTeam from "./team/team";
 import Blog from "./blog-gallery/blog";
 import Publications from "./publications/publications";
@@ -256,7 +256,7 @@ class App extends Component {
 	          <Route exact path="/podcast" component={Podcast} />
 	          <Route path="/podcast/:episode" component={EpisodePage} />
 	          <Route path="/publications" component={Publications} />
-	          {Array.from({ length: 51 }, (_, index) => index + 1).map((blogNo) => {
+	          {Array.from({ length: 53 }, (_, index) => index + 1).map((blogNo) => {
 	            return (
 	              <Route
 	                key={blogNo}
@@ -266,7 +266,7 @@ class App extends Component {
 	            );
 	          })}
 	          <Route path="/404" component={NotFound} />
-            <Redirect to="/404" />
+	          <Redirect to="/404" />
 	        </Switch>
 	      </HashRouter>
 	      <div>

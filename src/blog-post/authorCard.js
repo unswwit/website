@@ -24,7 +24,9 @@ class AuthorCard extends Component {
               <div className={[styles.title, styles.authorName].join(" ")}>
                 {this.props.authors[key][2]}
               </div>
-              <div className={styles.position}>{this.props.authors[key][3]}</div>
+              <div className={styles.position}>
+                {this.props.authors[key][3]}
+              </div>
             </div>
           </div>
         ))}

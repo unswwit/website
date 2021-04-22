@@ -86,6 +86,11 @@ class JoinUs extends React.Component {
     this.setState({ openNewsletter: false });
   }
 
+  // start at the top of the page
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <div>
@@ -143,6 +148,7 @@ class JoinUs extends React.Component {
             />
           </div>
         </div>
+
         {/* How to join section */}
         <h2 className={styles.header}>How to join</h2>
         <div className={styles.descriptionHowto}>
@@ -195,6 +201,7 @@ class JoinUs extends React.Component {
             period varies from year to year.
           </p>
         </div>
+
         {/* What to join section */}
         <h2 className={styles.header}>What to join</h2>
         <div className={styles.descriptionHowto}>
@@ -204,6 +211,7 @@ class JoinUs extends React.Component {
             one of the portfolios to find out more about the portfolio.
           </p>
         </div>
+
         {/* Portfolios grid */}
         <div className={styles.whatTo}>
           <div
@@ -342,7 +350,8 @@ class JoinUs extends React.Component {
             )}
           </div>
         </div>
-        {/* FAQ section */}
+
+        {/* Start FAQ section */}
         <h2 className={styles.header}>FAQ</h2>
         <div className={styles.accordion}>
           <Accordion>
@@ -464,6 +473,8 @@ class JoinUs extends React.Component {
             </AccordionDetails>
           </Accordion>
         </div>
+        {/* End of FAQ section */}
+
         {/* Start of newsletter */}
         <div className={styles.stats}>
           <img

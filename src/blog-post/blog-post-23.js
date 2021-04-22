@@ -27,8 +27,10 @@ class blogPost23 extends Component {
             </h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>September 16, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -74,7 +76,9 @@ class blogPost23 extends Component {
             </p>
             <br />
 
-            <p className={styles.question}>What do you love about your career now?</p>
+            <p className={styles.question}>
+              What do you love about your career now?
+            </p>
             <p className={styles.postContent}>
               I love the problem solving nature of software engineering, and I
               am so grateful to be able to do that every day! I love working
@@ -124,7 +128,9 @@ class blogPost23 extends Component {
               What is one piece of advice that you would give to your younger
               self back in university?
             </p>
-            <p className={styles.postContent}>Be yourself and don't hold back!</p>
+            <p className={styles.postContent}>
+              Be yourself and don't hold back!
+            </p>
             <br />
 
             <p className={styles.question}>Favourite Quote or Motto?</p>
