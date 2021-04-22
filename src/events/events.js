@@ -11,6 +11,7 @@ import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../components/ScrollUpBtn"
 import AddToCalBtn from "./AddToCalBtn.js";
+import { Link } from "react-router-dom";
 
 const Events = () => {
   const [expanded, setExpanded] = useState(false);
@@ -182,11 +183,16 @@ const Events = () => {
             let eventLabel = event.img.split(".")[0].split("-");
             eventLabel.shift();
             return <div key={index} className={styles.gridItem}>
+              <Link
+              to={"/event-recaps/event-recap-1"}
+              style={{ textDecoration: "none" }}
+            >
               <img
                 className={styles.eventImages}
                 src={`${process.env.PUBLIC_URL}/event-covers/${year}/${event.img}`}
                 alt={eventLabel.join(" ")}
               />
+              </Link>
             </div>
           })} 
         </div>  

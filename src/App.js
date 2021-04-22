@@ -16,6 +16,7 @@ import OurTeam from "./team/team";
 import Blog from "./blog-gallery/blog";
 import Publications from "./publications/publications";
 import Events from "./events/events";
+import eventRecap1 from "./events/event-recaps/2021/event-recap-1";
 import Podcast from "./podcast/Podcast";
 import EpisodePage from "./podcast/EpisodePage";
 import NotFound from "./not-found/NotFound";
@@ -246,6 +247,7 @@ class App extends Component {
 	        <Switch>
 	          <Route exact path="/" component={Home} />
 	          <Route path="/events" component={Events} />
+			  <Route path="/event-recaps/event-recap-1" component={eventRecap1} />
 	          <Route path="/our-team" component={OurTeam} />
 	          <Route exact path="/blog" component={Blog} />
 	          <Route path="/marketing-archive" component={MarketingContent} />
