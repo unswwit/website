@@ -44,7 +44,7 @@ class JoinUs extends React.Component {
     this.callbackModal = this.callbackModal.bind(this);
 
     this.socials = {
-      spARC: [
+      spArc: [
         "https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371W0xQAE",
         "sparc.png",
       ],
