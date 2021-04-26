@@ -115,7 +115,7 @@ const Home = () => {
             rel="noopener noreferrer"
           >
             <img
-              src={`${process.env.PUBLIC_URL}/event-covers/2021/12-hoodie.png`}
+              src={`${process.env.PUBLIC_URL}/event-covers/2021/12-WIT-hoodie-competition.png`}
               alt="WIT 2021 Hoodie Design Competition"
             />
           </a>
