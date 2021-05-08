@@ -186,12 +186,12 @@ p {
 
 .nav-item a, .dropdown-title {
   color: white;
-  padding: 10px 15px;
+  padding: 18px 15px;
   text-decoration: none;
 }
 
 .dropdown-menu {
-  border-color: transparent;
+  border-color: #fff7ef;
   letter-spacing: 1.5px;
   font-size: 14px;
   background-color: #fff7ef;
@@ -223,7 +223,7 @@ p {
 
 .nav-item a:hover {
   color: #e85f5c;
-  padding: 10px 15px;
+  padding: 18px 15px;
   text-decoration: none;
 }
 
