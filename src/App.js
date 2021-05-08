@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { HashRouter, Route, NavLink, Switch } from "react-router-dom";
+import { HashRouter, Route, NavLink, Switch, Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "semantic-ui-css/semantic.min.css";
 import "./style.css";
@@ -11,10 +11,7 @@ import JoinUs from "./join/joinUs";
 import Sponsors from "./sponsors/sponsors";
 import Opportunities from "./opportunities/opportunities";
 import ContactUs from "./contact/contactUs";
-import Footer from "./footer";
-
-import MarketingArchive from "./marketing-archive/marketingArchive";
-import MarketingContent from "./marketing-archive/marketing-content/content";
+import MarketingContent from "./marketing-archive/content";
 import OurTeam from "./team/team";
 import Blog from "./blog-gallery/blog";
 import Publications from "./publications/publications";
@@ -22,8 +19,10 @@ import Events from "./events/events";
 import Podcast from "./podcast/Podcast";
 import EpisodePage from "./podcast/EpisodePage";
 import NotFound from "./not-found/NotFound";
+
 import Menu from "./menu";
 import MenuBtn from "./menuBtn";
+import Footer from "./footer";
 
 class App extends Component {
   /*
@@ -31,22 +30,60 @@ class App extends Component {
     loading: true,
   };*/
 
+  highlightNav = {
+    activeStyle: {
+      color: "#e85f5c",
+      borderBottom: "solid",
+      borderBottomWidth: 3,
+      borderBottomColor: "#e85f5c",
+    },
+  };
+
+  highlightNoNav = {
+    activeStyle: {
+      fontWeight: "bold",
+      borderBottom: "solid",
+      borderBottomWidth: 1,
+      borderBottomColor: "white",
+    },
+  };
+
   constructor(props) {
     super(props);
     this.state = {
       showDD: false,
       menuOpen: false,
+      navBar: false,
+      hideNav: false,
     };
+    this.navClass = "navbar navbar-expand-md navbar-dark bg-custom fixed-top";
     this.handleHover = this.handleHover.bind(this);
     this.handleMenuClick = this.handleMenuClick.bind(this);
+    this.changeBackground = this.changeBackground.bind(this);
+    this.hideNavBar = this.hideNavBar.bind(this);
   }
 
+  // change the background of the navigation bar based on scroll height
+  changeBackground() {
+    if (window.scrollY >= 60 || window.location.href.split("#")[1] === "/404") {
+      this.setState({
+        navBar: true,
+      });
+    } else {
+      this.setState({
+        navBar: false,
+      });
+    }
+  }
+
+  // open and close menu
   handleMenuClick() {
     this.setState({
       menuOpen: !this.state.menuOpen,
     });
   }
 
+  // show and hide drop down on hover
   handleHover(e) {
     this.setState({
       showDD: !this.state.showDD,
@@ -54,11 +91,28 @@ class App extends Component {
     e.preventDefault();
   }
 
+  // close the menu if the screen is being resized
   updateMenu = () => {
-    if (window.innerWidth >= "1000" && this.state.menuOpen) {
+    if (window.innerWidth >= "1150" && this.state.menuOpen) {
       this.handleMenuClick();
     }
   };
+
+  // hide the navigation bar when a user is at the bottom of the page
+  hideNavBar() {
+    const bottom =
+      Math.ceil(window.innerHeight + window.scrollY) >=
+      document.documentElement.scrollHeight;
+    if (bottom) {
+      this.setState({
+        hideNav: true,
+      });
+    } else {
+      this.setState({
+        hideNav: false,
+      });
+    }
+  }
 
   /*
   fakeRequest = () => {
@@ -69,7 +123,10 @@ class App extends Component {
     // google analytics
     GoogleAnalytics();
 
+    window.addEventListener("hashchange", this.changeBackground);
     window.addEventListener("resize", this.updateMenu);
+    window.addEventListener("scroll", this.changeBackground);
+    window.addEventListener("scroll", this.hideNavBar);
     /*
     this.fakeRequest().then(() => {
       const el = document.querySelector(".loader");
@@ -82,6 +139,9 @@ class App extends Component {
 
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateMenu);
+    window.removeEventListener("scroll", this.changeBackground);
+    window.removeEventListener("hashchange", this.changeBackground);
+    window.removeEventListener("scroll", this.hideNavBar);
   }
 
   render() {
@@ -96,12 +156,37 @@ class App extends Component {
         <HashRouter basename="/">
           <Menu
             open={this.state.menuOpen}
-            handleMenuClick={this.handleMenuClick.bind(this)}
+            handleMenuClick={this.handleMenuClick}
           />
-          <nav className="navbar navbar-expand-md navbar-dark bg-custom fixed-top">
+          <nav
+            className={
+              this.state.navBar
+                ? this.state.hideNav
+                  ? this.navClass + " activeNav hiddenNav"
+                  : this.navClass + " activeNav"
+                : this.state.hideNav
+                ? this.navClass + " hiddenNav"
+                : this.navClass
+            }
+          >
             <a className="navbar-brand" href="/">
               <img
                 src={process.env.PUBLIC_URL + "./logo-black.png"}
+                className="logo-black"
+                alt="wit logo"
+                style={{
+                  width: "35px",
+                  marginLeft: "15px",
+                  marginBottom: "5px",
+                  marginTop: "5px",
+                }}
+              />
+              <img
+                src={
+                  this.state.navBar
+                    ? process.env.PUBLIC_URL + "./logo-black.png"
+                    : process.env.PUBLIC_URL + "./logo-white.png"
+                }
                 className="photo"
                 alt="wit logo"
                 style={{
@@ -114,29 +199,108 @@ class App extends Component {
             </a>
             <div className="navbar-collapse collapse w-100">
               <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <NavLink to="/">HOME</NavLink>
-                </li>
-                <li className="nav-item">
-                  <NavLink to="/events">EVENTS</NavLink>
-                </li>
-                <li className="nav-item">
-                  <NavLink to="/our-team">TEAM</NavLink>
-                </li>
-                <li className="nav-item">
-                  <NavLink to="/sponsors">SPONSORS</NavLink>
-                </li>
-                <li className="nav-item">
-                  <NavLink to="/opportunities">OPPORTUNITIES</NavLink>
+                <li
+                  className={
+                    this.state.navBar ? "nav-item active-nav-item" : "nav-item"
+                  }
+                >
+                  {this.state.navBar ? (
+                    <NavLink exact to="/" {...this.highlightNav}>
+                      HOME
+                    </NavLink>
+                  ) : (
+                    <NavLink exact to="/" {...this.highlightNoNav}>
+                      HOME
+                    </NavLink>
+                  )}
                 </li>
                 <li
-                  className="nav-item"
+                  className={
+                    this.state.navBar ? "nav-item active-nav-item" : "nav-item"
+                  }
+                >
+                  {this.state.navBar ? (
+                    <NavLink exact to="/events" {...this.highlightNav}>
+                      EVENTS
+                    </NavLink>
+                  ) : (
+                    <NavLink exact to="/events" {...this.highlightNoNav}>
+                      EVENTS
+                    </NavLink>
+                  )}
+                </li>
+                <li
+                  className={
+                    this.state.navBar ? "nav-item active-nav-item" : "nav-item"
+                  }
+                >
+                  {this.state.navBar ? (
+                    <NavLink exact to="/our-team" {...this.highlightNav}>
+                      TEAM
+                    </NavLink>
+                  ) : (
+                    <NavLink exact to="/our-team" {...this.highlightNoNav}>
+                      TEAM
+                    </NavLink>
+                  )}
+                </li>
+                <li
+                  className={
+                    this.state.navBar ? "nav-item active-nav-item" : "nav-item"
+                  }
+                >
+                  {this.state.navBar ? (
+                    <NavLink exact to="/sponsors" {...this.highlightNav}>
+                      SPONSORS
+                    </NavLink>
+                  ) : (
+                    <NavLink exact to="/sponsors" {...this.highlightNoNav}>
+                      SPONSORS
+                    </NavLink>
+                  )}
+                </li>
+                <li
+                  className={
+                    this.state.navBar ? "nav-item active-nav-item" : "nav-item"
+                  }
+                >
+                  {this.state.navBar ? (
+                    <NavLink exact to="/opportunities" {...this.highlightNav}>
+                      OPPORTUNITIES
+                    </NavLink>
+                  ) : (
+                    <NavLink exact to="/opportunities" {...this.highlightNoNav}>
+                      OPPORTUNITIES
+                    </NavLink>
+                  )}
+                </li>
+                <li
+                  className={
+                    this.state.navBar ? "nav-item active-nav-item" : "nav-item"
+                  }
                   onMouseEnter={this.handleHover}
+                  NULL
                   onMouseLeave={this.handleHover}
                 >
                   <div className="dropdown" display="static">
-                    <div className="dropdown-toggle">
-                      <span className="menuTitle">RESOURCES</span>
+                    <div
+                      className={
+                        this.state.navBar
+                          ? "dropdown-toggle active-nav-item"
+                          : "dropdown-toggle"
+                      }
+                    >
+                      <span>
+                        {this.state.navBar ? (
+                          <NavLink to="/resources" {...this.highlightNav}>
+                            RESOURCES
+                          </NavLink>
+                        ) : (
+                          <NavLink to="/resources" {...this.highlightNoNav}>
+                            RESOURCES
+                          </NavLink>
+                        )}
+                      </span>
                     </div>
                     <div
                       className={
@@ -146,29 +310,70 @@ class App extends Component {
                       }
                     >
                       <div className="dropdown-item">
-                        <NavLink to="/blog">BLOG</NavLink>
+                        <NavLink
+                          to="/resources/blog"
+                          activeStyle={{ color: "#e85f5c" }}
+                        >
+                          BLOG
+                        </NavLink>
                       </div>
                       <div className="dropdown-item">
-                        <NavLink to="/podcast">
+                        <NavLink
+                          to="/resources/podcast"
+                          activeStyle={{ color: "#e85f5c" }}
+                        >
                           PODCAST
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
-                        <NavLink to="/publications">PUBLICATIONS</NavLink>
+                        <NavLink
+                          to="/resources/publications"
+                          activeStyle={{ color: "#e85f5c" }}
+                        >
+                          PUBLICATIONS
+                        </NavLink>
                       </div>
                       <div className="dropdown-item">
-                        <NavLink to="/marketing-archive">
-                          MARKETING ARCHIVES
+                        <NavLink
+                          to="/resources/marketing-archive"
+                          activeStyle={{ color: "#e85f5c" }}
+                        >
+                          MARKETING ARCHIVE
                         </NavLink>
-                      </div>                      
+                      </div>
                     </div>
                   </div>
                 </li>
-                <li className="nav-item">
-                  <NavLink to="/join-us">JOIN</NavLink>
+                <li
+                  className={
+                    this.state.navBar ? "nav-item active-nav-item" : "nav-item"
+                  }
+                >
+                  {this.state.navBar ? (
+                    <NavLink exact to="/join-us" {...this.highlightNav}>
+                      JOIN
+                    </NavLink>
+                  ) : (
+                    <NavLink exact to="/join-us" {...this.highlightNoNav}>
+                      JOIN
+                    </NavLink>
+                  )}
                 </li>
-                <li className="nav-item" style={{ marginRight: "15px" }}>
-                  <NavLink to="/contact-us">CONTACT</NavLink>
+                <li
+                  className={
+                    this.state.navBar ? "nav-item active-nav-item" : "nav-item"
+                  }
+                  style={{ marginRight: "15px" }}
+                >
+                  {this.state.navBar ? (
+                    <NavLink exact to="/contact-us" {...this.highlightNav}>
+                      CONTACT
+                    </NavLink>
+                  ) : (
+                    <NavLink exact to="/contact-us" {...this.highlightNoNav}>
+                      CONTACT
+                    </NavLink>
+                  )}
                 </li>
               </ul>
             </div>
@@ -184,31 +389,30 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/events" component={Events} />
             <Route path="/our-team" component={OurTeam} />
-            <Route exact path="/blog" component={Blog} />
-            <Route
-              exact
-              path="/marketing-archive"
-              component={MarketingArchive}
-            />
-            <Route
-              path="/marketing-archive/content"
-              component={MarketingContent}
-            />
+            <Route exact path="/resources/blog" component={Blog} />
+            <Route path="/resources/marketing-archive" component={MarketingContent} />
             <Route path="/join-us" component={JoinUs} />
             <Route path="/sponsors" component={Sponsors} />
             <Route path="/opportunities" component={Opportunities} />
             <Route path="/contact-us" component={ContactUs} />
-            <Route exact path="/podcast" component={Podcast} />
-            <Route path="/podcast/:episode" component={EpisodePage} />
-            <Route path="/publications" component={Publications} />
-            {Array.from({length: 49}, (_, index) => index + 1).map((blogNo) => {
-              return <Route 
-                key={blogNo} 
-                path={"/blog/" + blogNo} 
-                component={require(`./blog-post/blog-post-${blogNo}`).default} 
-              />
-            })}
-            <Route component={NotFound} />
+            <Route exact path="/resources/podcast" component={Podcast} />
+            <Route path="/resources/podcast/:episode" component={EpisodePage} />
+            <Route path="/resources/publications" component={Publications} />
+            {Array.from({ length: 54 }, (_, index) => index + 1).map(
+              (blogNo) => {
+                return (
+                  <Route
+                    key={blogNo}
+                    path={"/resources/blog/" + blogNo}
+                    component={
+                      require(`./blog-post/blog-post-${blogNo}`).default
+                    }
+                  />
+                );
+              }
+            )}
+            <Route path="/404" component={NotFound} />
+            <Redirect to="/404" />
           </Switch>
         </HashRouter>
         <div>

@@ -29,7 +29,7 @@
 /* Date and share buttons */
 .blogDetails {
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 3vw;
 }
@@ -105,6 +105,16 @@ b {
   width: 100%;
 }
 
+/* Link to another page*/
+.link {
+  color: #e85f5c;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: #feb14b;
+}
+
 /*-------------------------------Blog post content (images and videos)-----------------------------*/
 /*container for embedding youtube videos*/
 .videoWrapper {
@@ -127,11 +137,15 @@ img.floatRight {
   padding: 30px;
 }
 
-.postContent a, .outerBox a, .pic a {
+.postContent a,
+.outerBox a,
+.pic a {
   text-decoration: underline;
 }
 
-.postContent a:hover, .outerBox a:hover, .pic a:hover {
+.postContent a:hover,
+.outerBox a:hover,
+.pic a:hover {
   color: #feb14b;
 }
 
@@ -213,6 +227,7 @@ img.floatRight {
   width: 100%;
 }
 
+/*Profile pictures*/
 .authorProfile {
   height: auto;
   transform: translate(-5%, -10%);
@@ -223,6 +238,7 @@ img.floatRight {
   height: auto;
   width: 100%;
 }
+
 /*Author details*/
 .authorRight {
   display: inline-block;
@@ -326,6 +342,18 @@ img.floatRight {
 }
 
 @media only screen and (max-width: 400px) {
+  .blogDetails span {
+    display: block;
+  }
+
+  .blogDetails span:last-child {
+    padding: 10px 0px;
+  }
+
+  .blogDetails {
+    display: block;
+  }
+
   .smallContainer {
     flex-direction: column;
   }
@@ -338,7 +366,8 @@ img.floatRight {
     font-size: 16.5pt;
   }
 
-  .pic, .innerBox {
+  .pic,
+  .innerBox {
     max-width: 100%;
   }
 

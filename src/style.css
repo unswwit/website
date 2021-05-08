@@ -62,7 +62,7 @@
 
 .coverPhoto .headerTitle h1 {
   margin: 0px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 700px) {
@@ -153,7 +153,7 @@ p {
 
 /*-----------------------------------Navbar-----------------------------------*/
 .bg-custom {
-  background: #fff7ef;
+  background: transparent;
   font-size: 10pt;
   padding: 0px;
 }
@@ -184,14 +184,14 @@ p {
   display: none;
 }
 
-.nav-item a {
-  color: #313638;
-  padding: 10px 15px;
+.nav-item a, .dropdown-title {
+  color: white;
+  padding: 18px 15px;
   text-decoration: none;
 }
 
 .dropdown-menu {
-  border-color: transparent;
+  border-color: #fff7ef;
   letter-spacing: 1.5px;
   font-size: 14px;
   background-color: #fff7ef;
@@ -201,6 +201,10 @@ p {
 
 .dropdown-item {
   padding: 5px 0px;
+}
+
+.dropdown-item a {
+  color: #313638;
 }
 
 .dropdown-item:hover {
@@ -219,13 +223,47 @@ p {
 
 .nav-item a:hover {
   color: #e85f5c;
-  padding: 10px 15px;
+  padding: 18px 15px;
   text-decoration: none;
 }
 
-@media screen and (max-width: 1000px) {
+/*Making the navigation change colour on scroll*/
+.activeNav {
+  background-color: #fff7ef;
+  transition: background-color .2s ease-in;
+}
+
+.dropdown-toggle:after {
+  color: white;
+}
+
+.active-nav-item a, .active-nav-item span, .active-nav-item:after {
+  color: #313638;
+}
+
+.logo-black {
+  display: none;
+}
+
+.hiddenNav {
+  display: none;
+}
+
+@media screen and (max-width: 1150px) {
   .nav-item {
     display: none;
+  }
+
+  .bg-custom {
+    background-color: #fff7ef;
+  }
+
+  .photo {
+    display: none;
+  }
+
+  .logo-black {
+    display: block;
   }
 
   .nav-item-btn {
@@ -289,7 +327,7 @@ footer {
 
 .footer-all {
   list-style-type: none;
-  margin: 1.4vw auto;
+  margin: 0 auto 1.4vw auto;
   padding: 4vw 0vw 2vw 0vw;
 }
 
@@ -343,12 +381,12 @@ a {
 }
 
 .footer-item a:hover {
-  color: #feb14b;
+  color: var(--red);
   text-decoration: none;
 }
 
 .bottom-footer-item a:hover {
-  color: #feb14b;
+  color: var(--red);
   text-decoration: none;
 }
 

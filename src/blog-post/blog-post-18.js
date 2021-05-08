@@ -15,18 +15,22 @@ class blogPost18 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #18" />
+        <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Post #18" />
 
         {/*End of Header*/}
 
         {/*Start of blog post*/}
         <div className={styles.blogContent}>
           <div>
-            <h2 className={styles.blogTitle}>Which technology degree are you?</h2>
+            <h2 className={styles.blogTitle}>
+              Which technology degree are you?
+            </h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>August 2, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -94,7 +98,9 @@ class blogPost18 extends Component {
               </ol>
               <br />
 
-              <li className={styles.question}>Project-wise you would manage:</li>
+              <li className={styles.question}>
+                Project-wise you would manage:
+              </li>
               <br />
               <ol className={styles.list} type="a">
                 <li>Product</li>
@@ -205,7 +211,9 @@ class blogPost18 extends Component {
               </ol>
               <br />
 
-              <li className={styles.question}>You walk over a sewer grate, do you…</li>
+              <li className={styles.question}>
+                You walk over a sewer grate, do you…
+              </li>
               <br />
               <ol className={styles.list} type="a">
                 <li>Hold your phone tighter?</li>

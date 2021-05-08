@@ -15,16 +15,20 @@ class blogPost12 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #12" />
+        <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Post #12" />
 
         {/*Start of blog post*/}
         <div className={styles.blogContent}>
           <div>
-            <h2 className={styles.blogTitle}>WIT Crush Wednesday - Maddie Mackey</h2>
+            <h2 className={styles.blogTitle}>
+              WIT Crush Wednesday - Maddie Mackey
+            </h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>July 8, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -85,7 +89,9 @@ class blogPost12 extends Component {
             </p>
             <br />
 
-            <p className={styles.question}>What do you love about your career now?</p>
+            <p className={styles.question}>
+              What do you love about your career now?
+            </p>
 
             <p className={styles.postContent}>
               I enjoy the many learning opportunities and unique problems that

@@ -85,7 +85,7 @@ class Menu extends Component {
                     className="menu-box menu-dropdown"
                     onClick={this.handleClick}
                   >
-                    <div className="dropdown-toggle">
+                    <div className="dropdown-toggle active-nav-item">
                       <span className="menu-item menuTitle">RESOURCES</span>
                     </div>
                   </div>
@@ -93,7 +93,7 @@ class Menu extends Component {
                     <div>
                       <NavLink
                         className="menu-link"
-                        to="/blog"
+                        to="/resources/blog"
                         style={{ textDecoration: "none" }}
                         onClick={this.props.handleMenuClick}
                       >
@@ -103,7 +103,7 @@ class Menu extends Component {
                       </NavLink>
                       <NavLink
                         className="menu-link"
-                        to="/podcast"
+                        to="/resources/podcast"
                         style={{ textDecoration: "none" }}
                         onClick={this.props.handleMenuClick}
                       >
@@ -113,7 +113,7 @@ class Menu extends Component {
                       </NavLink>
                       <NavLink
                         className="menu-link"
-                        to="/publications"
+                        to="/resources/publications"
                         style={{ textDecoration: "none" }}
                         onClick={this.props.handleMenuClick}
                       >
@@ -123,7 +123,7 @@ class Menu extends Component {
                       </NavLink>
                       <NavLink
                         className="menu-link"
-                        to="/marketing-archive"
+                        to="/resources/marketing-archive"
                         style={{ textDecoration: "none" }}
                         onClick={this.props.handleMenuClick}
                       >

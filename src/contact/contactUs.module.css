@@ -62,6 +62,7 @@
   letter-spacing: 1.5px;
   float: left;
   font-weight: 500;
+  font-size: 12pt;
 }
 
 form input.button:hover {
@@ -250,7 +251,8 @@ form input.button:hover {
     font-size: 16px;
   }
 
-  .form h2, .contactTeam {
+  .form h2,
+  .contactTeam {
     font-size: 30px;
   }
 

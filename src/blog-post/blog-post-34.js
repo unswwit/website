@@ -15,18 +15,22 @@ class blogPost34 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #34" />
+        <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Post #34" />
 
         {/*End of Header*/}
 
         {/*Start of blog post*/}
         <div className={styles.blogContent}>
           <div>
-            <h2 className={styles.blogTitle}>What I Learnt From Shadiyah Lim</h2>
+            <h2 className={styles.blogTitle}>
+              What I Learnt From Shadiyah Lim
+            </h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>October 25, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -44,7 +48,9 @@ class blogPost34 extends Component {
             </p>
             <br />
 
-            <p className={styles.question}>It’s okay when things don’t go to plan.</p>
+            <p className={styles.question}>
+              It’s okay when things don’t go to plan.
+            </p>
 
             <p className={styles.postContent}>
               <em>
@@ -87,7 +93,9 @@ class blogPost34 extends Component {
             </p>
             <br />
 
-            <p className={styles.question}>Don’t be afraid to put your hand up.</p>
+            <p className={styles.question}>
+              Don’t be afraid to put your hand up.
+            </p>
 
             <p className={styles.postContent}>
               <em>
@@ -201,10 +209,10 @@ class blogPost34 extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img                
+                <img
                   src={
                     process.env.PUBLIC_URL +
-                    "/blog-attachments/podcast-platforms/anchor-logo.png"
+                    "/blog-attachments/podcast-platforms/anchor-logo.jpg"
                   }
                   alt="Anchor"
                 />
@@ -215,10 +223,10 @@ class blogPost34 extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img                 
+                <img
                   src={
                     process.env.PUBLIC_URL +
-                    "/blog-attachments/podcast-platforms/google-podcasts-logo.png"
+                    "/blog-attachments/podcast-platforms/google-podcasts-logo.jpg"
                   }
                   alt="Google Podcasts"
                 />
@@ -232,7 +240,7 @@ class blogPost34 extends Component {
                 <img
                   src={
                     process.env.PUBLIC_URL +
-                    "/blog-attachments/podcast-platforms/radiopublic-logo.png"
+                    "/blog-attachments/podcast-platforms/radiopublic-logo.jpg"
                   }
                   alt="RadioPublic"
                 />
@@ -246,7 +254,7 @@ class blogPost34 extends Component {
                 <img
                   src={
                     process.env.PUBLIC_URL +
-                    "/blog-attachments/podcast-platforms/spotify-logo.png"
+                    "/blog-attachments/podcast-platforms/spotify-logo.jpg"
                   }
                   alt="Spotify"
                 />

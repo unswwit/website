@@ -15,7 +15,7 @@ class blogPost32 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #32" />
+        <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Post #32" />
         {/*End of Header*/}
 
         {/*Start of blog post*/}
@@ -24,8 +24,10 @@ class blogPost32 extends Component {
             <h2 className={styles.blogTitle}>Familiarising Fintech</h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>October 18, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -125,7 +127,7 @@ class blogPost32 extends Component {
         <AuthorCard
           authors={{
             "jane-wang": [
-              "/potraits/blog-authors/jane-wang.png",
+              "/potraits/blog-authors/jane-wang.jpg",
               styles.authorProfile,
               "Jane Wang",
               "Events Team",

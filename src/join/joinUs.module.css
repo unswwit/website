@@ -4,25 +4,24 @@
   max-width: 80%;
   text-align: center;
   margin: auto;
-  padding-top: 130px;
-  padding-bottom: 125px;
-  margin-bottom: 300px;
+  padding-top: 50px;
+  padding-bottom: 150px;
+  margin-bottom: 200px;
 }
 
 /*Google Map screenshot image*/
 .googleMap {
-  width: 42%;
+  width: 50%;
+  height: 350px;
   padding: 0px;
-  height: 300px;
   float: left;
   object-fit: cover;
 }
 
 /*Right side block*/
 .joinUsRight {
-  width: 58%;
-  text-align: left;
-  padding: 0px 10px 5% 5%;
+  width: 50%;
+  padding: 0px 0% 5% 0%;
   float: right;
   display: flex;
   flex-direction: column;
@@ -31,17 +30,24 @@
 }
 
 /*Heading*/
-.joinUsRight h2 {
-  text-align: left;
+.header {
+  font-family: "Montserrat", sans-serif;
+  font-size: 33pt;
+  padding-top: 50px;
+  padding-bottom: 0px;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  text-align: center;
 }
 
 /*Container for buttons*/
 .joinButtons {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 1rem;
+  margin-top: 45px;
 }
 
 /*Social links*/
@@ -57,10 +63,226 @@
   height: 100%;
 }
 
+/*Social Tooltip Styles*/
+.tooltipTitle {
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  margin: 10px 0;
+}
+
+.tooltipDescription {
+  font-size: 11px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
 /* Loading sign */
 #joinLoading {
-  color:#feb14b;
-  margin: 20% auto auto auto;  
+  color: #feb14b;
+  margin: 20% auto auto auto;
+}
+
+/*-------------------------------How to section------------------------------*/
+
+/* Headings in how to join */
+.descriptionHowto {
+  line-height: 22px;
+  padding-top: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13pt;
+  text-align: justify;
+  color: var(--light-grey);
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Body in how to join */
+.descriptionHowto p {
+  color: var(--light-grey);
+}
+
+/* Links in how to join */
+.link {
+  color: #e85f5c;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: #feb14b;
+}
+
+/* Portfolios grid */
+.whatTo {
+  max-width: 70%;
+  margin: auto;
+  margin-top: 50px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 2rem;
+  color: black;
+}
+
+.edu {
+  display: flex;
+  padding: 20px;
+  aspect-ratio: 1;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16pt;
+  background-color: #ffdfb4;
+}
+
+.desc {
+  font-size: 12pt;
+  text-align: left;
+  margin-right: 5%;
+  justify-content: center;
+  align-items: center;
+}
+
+.events {
+  display: flex;
+  padding: 20px;
+  aspect-ratio: 1;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16pt;
+  background-color: #b4c9e8;
+}
+
+.externals {
+  display: flex;
+  padding: 20px;
+  aspect-ratio: 1;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16pt;
+  background-color: #deb4b4;
+}
+
+.hr {
+  display: flex;
+  padding: 20px;
+  aspect-ratio: 1;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16pt;
+  background-color: #aad9c2;
+}
+
+.it {
+  display: flex;
+  padding: 20px;
+  aspect-ratio: 1;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16pt;
+  background-color: #dfc6ee;
+}
+
+.marketing {
+  display: flex;
+  padding: 20px;
+  aspect-ratio: 1;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16pt;
+  background-color: #c0e5f3;
+}
+
+/*-------------------------------FAQ Section------------------------------*/
+.accordion {
+  padding-top: 50px;
+  max-width: 80%;
+  margin: auto;
+  padding-bottom: 100px;
+}
+
+.accordionHeading {
+  font-size: 14pt;
+  font-family: "Montserrat", sans-serif;
+  color: var(--light-grey);
+}
+
+.accordionDetails {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13pt;
+  color: var(--light-grey);
+}
+
+/*-------------------------------Newsletter------------------------------*/
+
+/*Background image*/
+.statsBackground {
+  width: 100%;
+  height: 300px;
+}
+
+.stats {
+  position: relative;
+}
+
+/*Newsletter content*/
+.subscribeBtn {
+  position: absolute;
+  right: 20%;
+  text-align: center;
+  width: 60%;
+  bottom: 37%;
+  color: #ffffff;
+  background-color: #e85f5c;
+  padding: 12px 10px 12px 10px;
+  border: none;
+  font-size: 2vw;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 3px;
+}
+
+.signUpForm span {
+  color: #e85f5c;
+  font-family: "Montserrat", sans-serif;
+}
+
+.signUpForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*--------------Newsletter Mobile Design-------------------*/
+@media only screen and (max-width: 1200px) {
+  .subscribeBtn {
+    font-size: 20pt;
+    width: 70%;
+    right: 15%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .subscribeBtn {
+    font-size: 16pt;
+    width: 70%;
+    right: 15%;
+    bottom: 38%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .subscribeBtn {
+    font-size: 14pt;
+    width: 80%;
+    bottom: 35%;
+    right: 10%;
+  }
 }
 
 /*-------------------------------Join us ipad------------------------------*/
@@ -68,6 +290,14 @@
   .centre {
     font-size: 40px;
     margin: 0px;
+  }
+
+  .whatTo {
+    max-width: 85%;
+  }
+
+  .desc {
+    font-size: 11pt;
   }
 }
 
@@ -77,14 +307,16 @@
     float: none;
     width: 100%;
     height: 180px;
-    margin-top: 10px;
+    margin-top: 0px;
+    margin-bottom: 30px;
     padding: 0px;
   }
 
   .googleMap {
     float: none;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
+    padding-left: 0px;
   }
 
   .joinUsBody {
@@ -94,10 +326,11 @@
     margin-bottom: 0px;
   }
 
-  .joinUsRight h2 {
-    font-size: 22px;
+  .header {
+    font-size: 22pt;
     text-align: center;
-    padding-bottom: 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   .joinButtons {
@@ -117,15 +350,62 @@
   a.lastBtn {
     margin-right: 0px;
   }
+
+  .descriptionHowto {
+    padding-top: 0px;
+    font-size: 11pt;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .descriptionHowto p {
+    font-size: 10pt;
+  }
+
+  .whatTo {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    max-width: 70%;
+  }
+
+  .desc {
+    font-size: 10pt;
+  }
+
+  .accordion {
+    padding-top: 0px;
+  }
+
+  .accordionHeading {
+    font-size: 11pt;
+  }
+
+  .accordionDetails {
+    font-size: 10pt;
+  }
 }
 
 /*-------------------------------Join us very small screen------------------------------*/
-@media only screen and (max-width: 260px) {
+@media only screen and (max-width: 355px) {
   .joinLink {
     display: block;
   }
 
   .joinUsRight {
-    height: 320px;
+    height: 200px;
+  }
+
+  .header {
+    font-size: 20pt;
+  }
+
+  .googleMap {
+    padding-left: 0px;
+  }
+
+  .whatTo {
+    max-width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
