@@ -15,7 +15,7 @@ class blogPost38 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #38" />
+        <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Post #38" />
 
         {/*End of Header*/}
 
@@ -27,8 +27,10 @@ class blogPost38 extends Component {
             </h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>November 9, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -50,7 +52,9 @@ class blogPost38 extends Component {
               Without further ado, let’s get talking with Emma Casolin!
             </p>
             <br />
-            <p className={styles.question}>What inspired you to start eXsight?</p>
+            <p className={styles.question}>
+              What inspired you to start eXsight?
+            </p>
             <p className={styles.postContent}>
               My brother and other members of my family are colour blind, so I
               knew about the difficulties the condition can cause in everyday

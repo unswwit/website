@@ -15,16 +15,20 @@ class blogPost15 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #15" />
+        <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Post #15" />
 
         {/*Start of blog post*/}
         <div className={styles.blogContent}>
           <div>
-            <h2 className={styles.blogTitle}>A Journey in IT with Zitni Handoo</h2>
+            <h2 className={styles.blogTitle}>
+              A Journey in IT with Zitni Handoo
+            </h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>July 19, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -46,7 +50,9 @@ class blogPost15 extends Component {
             </p>
             <br />
 
-            <p className={styles.question}>What inspired you to explore your topic?</p>
+            <p className={styles.question}>
+              What inspired you to explore your topic?
+            </p>
             <p className={styles.postContent}>
               During my bachelor’s studies, I took up Artificial Intelligence as
               one of my subjects. While studying it, I realized just how much I

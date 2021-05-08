@@ -63,11 +63,26 @@
   height: 100%;
 }
 
+/*Social Tooltip Styles*/
+.tooltipTitle {
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  margin: 10px 0;
+}
+
+.tooltipDescription {
+  font-size: 11px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
 /* Loading sign */
 #joinLoading {
-  color:#feb14b;
-  margin: 20% auto auto auto;  
+  color: #feb14b;
+  margin: 20% auto auto auto;
 }
+
+/*-------------------------------How to section------------------------------*/
 
 /* Headings in how to join */
 .descriptionHowto {
@@ -183,7 +198,7 @@
   background-color: #c0e5f3;
 }
 
-/* FAQ section */
+/*-------------------------------FAQ Section------------------------------*/
 .accordion {
   padding-top: 50px;
   max-width: 80%;
@@ -203,7 +218,7 @@
   color: var(--light-grey);
 }
 
-/*--------------Newsletter-------------------*/
+/*-------------------------------Newsletter------------------------------*/
 
 /*Background image*/
 .statsBackground {
@@ -223,7 +238,7 @@
   width: 60%;
   bottom: 37%;
   color: #ffffff;
-  background-color:#e85f5c;
+  background-color: #e85f5c;
   padding: 12px 10px 12px 10px;
   border: none;
   font-size: 2vw;
@@ -233,7 +248,7 @@
 }
 
 .signUpForm span {
-  color:#e85f5c;
+  color: #e85f5c;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -242,7 +257,7 @@
   align-items: center;
   justify-content: center;
 }
-  
+
 /*--------------Newsletter Mobile Design-------------------*/
 @media only screen and (max-width: 1200px) {
   .subscribeBtn {

@@ -15,18 +15,22 @@ class blogPost26 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #26" />
+        <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Post #26" />
 
         {/*End of Header*/}
 
         {/*Start of blog post*/}
         <div className={styles.blogContent}>
           <div>
-            <h2 className={styles.blogTitle}>Personal Project Series #1 - Link Up</h2>
+            <h2 className={styles.blogTitle}>
+              Personal Project Series #1 - Link Up
+            </h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>September 27, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -83,7 +87,9 @@ class blogPost26 extends Component {
             </p>
             <br />
 
-            <p className={styles.question}>What inspired you to create LinkUp?</p>
+            <p className={styles.question}>
+              What inspired you to create LinkUp?
+            </p>
             <p className={styles.postContent}>
               D: I am actually from QLD, and when I first came to UNSW O-week I
               didn’t know anyone, so I was trying my best to go to every

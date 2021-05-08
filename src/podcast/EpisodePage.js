@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular,
     textTransform: "uppercase",
-    color: "#e85f5c",		
+    color: "#e85f5c",
   },
 }));
 
@@ -30,7 +30,7 @@ const EpisodePage = (props) => {
   const [transcript, setTranscript] = useState("");
   const [loading, setLoading] = useState(true);
   const platforms = ["anchor", "radioRepublic", "google", "spotify", "breaker"];
-  const links = { 
+  const links = {
     anchor: "podcast-anchor.png",
     radioRepublic: "podcast-radio-republic.png",
     google: "podcast-google-podcasts.png",
@@ -48,14 +48,14 @@ const EpisodePage = (props) => {
   useEffect(() => {
     setLoading(true);
     const currEpisodeNo = handleEpisodeNumber();
-    
+
     // importing transcript
     let tempTranscript = "";
     try {
       tempTranscript = require(`./transcripts/podcast-episode-${currEpisodeNo}.md`);
       fetch(tempTranscript)
-        .then(response => response.text())
-        .then(response => setTranscript(response))
+        .then((response) => response.text())
+        .then((response) => setTranscript(response));
     } catch {
       setTranscript("");
     }
@@ -63,7 +63,7 @@ const EpisodePage = (props) => {
     // importing podcast episode
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
-      callback: googleData => {
+      callback: (googleData) => {
         // redirect to 404 page if visiting an invalid podcast episode number in the url
         const allEpisodes = googleData["podcast-episodes"]["elements"];
         const podcastNo = parseInt(props.match.params.episode);
@@ -80,84 +80,96 @@ const EpisodePage = (props) => {
         // hide the loading sign
         setLoading(false);
       },
-      simpleSheet: false
-    })
+      simpleSheet: false,
+    });
   }, [episodeNumber, props.history, props.match.params.episode]);
 
   return (
     <>
-      <PageHeader imgUrl="/headers/podcast-header.jpg" title={`Podcast Episode #${episodeNumber}`} />
-      
-      {loading && <div id={styles.podcastLoadingContainer}>
-        <CircularProgress
-          variant="indeterminate"
-          size={50}
-          thickness={5}
-          id={styles.podcastLoading}
-        />
-      </div>}
-    
-      {!loading && <div id={styles.episodeContainer}>
-        {/* Episode content */}
-        <h2>{episode.title}</h2>
-        <p id={styles.episodeDate}>{episode.date}</p>
-        
-        {/* Podcast Episode Audio Player */}
-        <iframe 
-          title={episode.title} 
-          src={episode.link} 
-          width="100%" 
-          height="232" 
-          frameBorder="0" 
-          allowtransparency="true" 
-          allow="encrypted-media"
-        ></iframe>   
+      <PageHeader
+        imgUrl="/headers/podcast-header.jpg"
+        title={`Podcast Episode #${episodeNumber}`}
+      />
 
-        {/* Podcast Episode Links */}
-        <div className={styles.platforms}>
-          {platforms.map((platform, index) => {
-            return <a
-              key={index}
-              href={episode[platform]}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img 
-                className={styles.sourceLogos}
-                src={`${process.env.PUBLIC_URL}/podcast-logos/${links[platform]}`} 
-                alt={platform} 
-                width="25px" 
-                height="25px" 
-              />
-            </a>
-          })}
+      {loading && (
+        <div id={styles.podcastLoadingContainer}>
+          <CircularProgress
+            variant="indeterminate"
+            size={50}
+            thickness={5}
+            id={styles.podcastLoading}
+          />
         </div>
-      
-        <h2>Overview</h2>
-        <p id={styles.overview}>{episode.description}</p>
-             
-        {/* Podcast Episode Transcript */}
-        {false && 
-        <>
-          <h2>Transcript</h2>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Typography className={classes.heading}>View Transcript</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                <ReactMarkdown children={`${transcript}`} />
-              </Typography>
-            </AccordionDetails>
-          </Accordion>    
-        </>}         
-      </div>}
+      )}
+
+      {!loading && (
+        <div id={styles.episodeContainer}>
+          {/* Episode content */}
+          <h2>{episode.title}</h2>
+          <p id={styles.episodeDate}>{episode.date}</p>
+
+          {/* Podcast Episode Audio Player */}
+          <iframe
+            title={episode.title}
+            src={episode.link}
+            width="100%"
+            height="232"
+            frameBorder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+          ></iframe>
+
+          {/* Podcast Episode Links */}
+          <div className={styles.platforms}>
+            {platforms.map((platform, index) => {
+              return (
+                <a
+                  key={index}
+                  href={episode[platform]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    className={styles.sourceLogos}
+                    src={`${process.env.PUBLIC_URL}/podcast-logos/${links[platform]}`}
+                    alt={platform}
+                    width="25px"
+                    height="25px"
+                  />
+                </a>
+              );
+            })}
+          </div>
+
+          <h2>Overview</h2>
+          <p id={styles.overview}>{episode.description}</p>
+
+          {/* Podcast Episode Transcript */}
+          {false && (
+            <>
+              <h2>Transcript</h2>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography className={classes.heading}>
+                    View Transcript
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    <ReactMarkdown children={`${transcript}`} />
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            </>
+          )}
+        </div>
+      )}
     </>
   );
-}
+};
 
 export default EpisodePage;

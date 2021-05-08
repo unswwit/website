@@ -15,7 +15,7 @@ class blogPost33 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #33" />
+        <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Post #33" />
 
         {/*End of Header*/}
 
@@ -25,8 +25,10 @@ class blogPost33 extends Component {
             <h2 className={styles.blogTitle}>WCW ~ ALL WIT Exec Team 2020</h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>October 21, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -47,7 +49,9 @@ class blogPost33 extends Component {
             </p>
             <br />
 
-            <p className={styles.question}>Where do you see yourself in the future?</p>
+            <p className={styles.question}>
+              Where do you see yourself in the future?
+            </p>
             <p className={styles.postContent}>
               <strong>Elizabeth</strong>: In the near future (5 years or so) I
               still see myself working in a software engineering role hopefully
@@ -133,7 +137,9 @@ class blogPost33 extends Component {
             </p>
             <br />
 
-            <p className={styles.question}>What’s a motto or quote you live by?</p>
+            <p className={styles.question}>
+              What’s a motto or quote you live by?
+            </p>
             <p className={styles.postContent}>
               <strong>Vivian Shen</strong>: Be the change you seek.
             </p>
