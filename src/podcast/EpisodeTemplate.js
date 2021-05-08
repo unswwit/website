@@ -90,7 +90,7 @@ export default function EpisodeTemplate({
       <CardActionArea
         className={[classes.click, styles.previewContainer].join(" ")}
       >
-        <Link to={`/podcast/${episodeNo}`} style={{ textDecoration: "none" }}>
+        <Link to={`/resources/podcast/${episodeNo}`} style={{ textDecoration: "none" }}>
           <div className={classes.media}>
             <img
               alt="podcast episode cover"

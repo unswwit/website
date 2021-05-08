@@ -11,10 +11,10 @@ const Footer = () => {
     "Opportunities": "/opportunities",
     "Join": "/join-us",
     "Contact": "/contact-us",
-    "Blog": "/blog",
-    "Publications": "/publications",
-    "Marketing Archive": "/marketing-archive",
-    "Podcast": "/podcast"
+    "Blog": "/resources/blog",
+    "Publications": "/resources/publications",
+    "Marketing Archive": "/resources/marketing-archive",
+    "Podcast": "/resources/podcast"
   };
 
   const links = [

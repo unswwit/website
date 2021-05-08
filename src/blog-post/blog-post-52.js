@@ -183,7 +183,7 @@ class blogPost52 extends Component {
               <em>
                 *Read more about bits and bytes in our&nbsp;
                 <a
-                  href="https://unswwit.com/#/blog/36"
+                  href="https://unswwit.com/#/resources/blog/36"
                   className={styles.link}
                   target="_blank"
                   rel="noopener noreferrer"
