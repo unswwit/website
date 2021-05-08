@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { HashRouter, Route, NavLink, Switch, Redirect } from "react-router-dom";
+import {
+  HashRouter,
+  Route,
+  NavLink,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "semantic-ui-css/semantic.min.css";
 import "./style.css";
@@ -55,14 +61,12 @@ class App extends Component {
       menuOpen: false,
       navBar: false,
       hideNav: false,
-      inResources: false,
     };
     this.navClass = "navbar navbar-expand-md navbar-dark bg-custom fixed-top";
     this.handleHover = this.handleHover.bind(this);
     this.handleMenuClick = this.handleMenuClick.bind(this);
     this.changeBackground = this.changeBackground.bind(this);
     this.hideNavBar = this.hideNavBar.bind(this);
-    this.openResources = this.openResources.bind(this);
   }
 
   // change the background of the navigation bar based on scroll height
@@ -116,9 +120,6 @@ class App extends Component {
     }
   }
 
-  openResources() {
-    this.setState({ inResources: true });
-  }
   /*
   fakeRequest = () => {
     return new Promise((resolve) => setTimeout(() => resolve(), 2500));
@@ -284,6 +285,7 @@ class App extends Component {
                     this.state.navBar ? "nav-item active-nav-item" : "nav-item"
                   }
                   onMouseEnter={this.handleHover}
+                  NULL
                   onMouseLeave={this.handleHover}
                 >
                   <div className="dropdown" display="static">
@@ -294,16 +296,16 @@ class App extends Component {
                           : "dropdown-toggle"
                       }
                     >
-                      <span
-                        className={
-                          this.state.inResources
-                            ? this.state.navBar
-															? "dropdown-title open-resources-nav"
-															: "dropdown-title open-resources-nonav"
-                            : "dropdown-title"
-                        }
-                      >
-                        RESOURCES
+                      <span>
+                        {this.state.navBar ? (
+                          <NavLink to="/resources" {...this.highlightNav}>
+                            RESOURCES
+                          </NavLink>
+                        ) : (
+                          <NavLink to="/resources" {...this.highlightNoNav}>
+                            RESOURCES
+                          </NavLink>
+                        )}
                       </span>
                     </div>
                     <div
@@ -313,40 +315,34 @@ class App extends Component {
                           : "dropdown-menu"
                       }
                     >
-                      <div
-                        className="dropdown-item"
-                      >
+                      <div className="dropdown-item">
                         <NavLink
-                          to="/blog"
+                          to="/resources/blog"
                           activeStyle={{ color: "#e85f5c" }}
-                          openResources={this.state.inResources}
                         >
                           BLOG
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink
-                          to="/podcast"
+                          to="/resources/podcast"
                           activeStyle={{ color: "#e85f5c" }}
-													openResources={this.state.inResources}
                         >
                           PODCAST
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink
-                          to="/publications"
+                          to="/resources/publications"
                           activeStyle={{ color: "#e85f5c" }}
-													openResources={this.state.inResources}
                         >
                           PUBLICATIONS
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink
-                          to="/marketing-archive"
+                          to="/resources/marketing-archive"
                           activeStyle={{ color: "#e85f5c" }}
-													openResources={this.state.inResources}
                         >
                           MARKETING ARCHIVE
                         </NavLink>
@@ -399,21 +395,21 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/events" component={Events} />
             <Route path="/our-team" component={OurTeam} />
-            <Route exact path="/blog" component={Blog} />
-            <Route path="/marketing-archive" component={MarketingContent} />
+            <Route exact path="/resources/blog" component={Blog} />
+            <Route path="/resources/marketing-archive" component={MarketingContent} />
             <Route path="/join-us" component={JoinUs} />
             <Route path="/sponsors" component={Sponsors} />
             <Route path="/opportunities" component={Opportunities} />
             <Route path="/contact-us" component={ContactUs} />
-            <Route exact path="/podcast" component={Podcast} />
-            <Route path="/podcast/:episode" component={EpisodePage} />
-            <Route path="/publications" component={Publications} />
+            <Route exact path="/resources/podcast" component={Podcast} />
+            <Route path="/resources/podcast/:episode" component={EpisodePage} />
+            <Route path="/resources/publications" component={Publications} />
             {Array.from({ length: 50 }, (_, index) => index + 1).map(
               (blogNo) => {
                 return (
                   <Route
                     key={blogNo}
-                    path={"/blog/" + blogNo}
+                    path={"/resources/blog/" + blogNo}
                     component={
                       require(`./blog-post/blog-post-${blogNo}`).default
                     }
