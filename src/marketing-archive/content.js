@@ -112,7 +112,7 @@ const MarketingContent = () => {
             <Timeline
               margin={"2%"}
               page={"marketing"}
-              step={25}
+              step={100}
               valueToYear={valueToYear}
               marks={marks}
               updateYear={handleYear}
