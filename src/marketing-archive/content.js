@@ -18,7 +18,6 @@ const MarketingContent = () => {
     Mascot: "mascot",
     Memes: "memes",
     "Monday Motivation": "monday",
-    "Special Occasions": "special",
     "WIT Crush Wednesday": "wcw",
   };
 
