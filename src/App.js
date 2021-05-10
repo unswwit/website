@@ -279,7 +279,6 @@ class App extends Component {
                     this.state.navBar ? "nav-item active-nav-item" : "nav-item"
                   }
                   onMouseEnter={this.handleHover}
-                  NULL
                   onMouseLeave={this.handleHover}
                 >
                   <div className="dropdown" display="static">
