@@ -19,6 +19,7 @@ const MarketingContent = () => {
     Memes: "memes",
     "Monday Motivation": "monday",
     "WIT Crush Wednesday": "wcw",
+    "Special Occasions": "special",
   };
 
   // position of the marks on the timeline (i.e. 100 indicates that it's on the right end)
