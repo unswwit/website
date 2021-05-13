@@ -32,7 +32,7 @@ class App extends Component {
 
   highlightNav = {
     activeStyle: {
-      color: "#e85f5c",
+      fontWeight: "500",
       borderBottom: "solid",
       borderBottomWidth: 3,
       borderBottomColor: "#e85f5c",
@@ -41,7 +41,7 @@ class App extends Component {
 
   highlightNoNav = {
     activeStyle: {
-      fontWeight: "bold",
+      fontWeight: "500",
       borderBottom: "solid",
       borderBottomWidth: 1,
       borderBottomColor: "white",
@@ -165,8 +165,8 @@ class App extends Component {
                   ? this.navClass + " activeNav hiddenNav"
                   : this.navClass + " activeNav"
                 : this.state.hideNav
-                ? this.navClass + " hiddenNav"
-                : this.navClass
+                  ? this.navClass + " hiddenNav"
+                  : this.navClass
             }
           >
             <a className="navbar-brand" href="/">
@@ -389,6 +389,7 @@ class App extends Component {
             <Route path="/events" component={Events} />
             <Route path="/our-team" component={OurTeam} />
             <Route exact path="/resources/blog" component={Blog} />
+            <Route exact path="/resources" component={Blog} />
             <Route path="/resources/marketing-archive" component={MarketingContent} />
             <Route path="/join-us" component={JoinUs} />
             <Route path="/sponsors" component={Sponsors} />
