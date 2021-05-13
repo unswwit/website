@@ -110,7 +110,7 @@ const Home = () => {
         </div>
         <div className={styles.event1}>
           <a 
-            href="https://www.facebook.com/unsw.wit/"  
+            href="https://www.facebook.com/events/499135944615837/"  
             target="_blank"
             rel="noopener noreferrer"
           >
