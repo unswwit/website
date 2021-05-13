@@ -15,7 +15,7 @@ class blogPost11 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #11" />
+        <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Post #11" />
 
         {/*Start of blog post*/}
         <div className={styles.blogContent}>
@@ -24,8 +24,10 @@ class blogPost11 extends Component {
             <p className={styles.date}>July 4, 2020 </p>
             <div className={styles.blogDetails}>
               <span className={styles.date}>July 4, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -91,9 +93,7 @@ class blogPost11 extends Component {
             <br />
             <br />
 
-            <p className={styles.question}>
-              AI is Not All Powerful
-            </p>
+            <p className={styles.question}>AI is Not All Powerful</p>
 
             <p className={styles.postContent}>
               Researchers at <a href="https://robohub.org/">RoboHub</a> at the

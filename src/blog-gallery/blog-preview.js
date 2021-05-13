@@ -5,16 +5,15 @@ import styles from "./blog.module.css";
 import { Link } from "react-router-dom";
 
 class BlogPreview extends Component {
+  execs = ["/potraits/blog-authors/vivianw2021.jpg","/potraits/blog-authors/georgie2021.jpg"];
   render() {
     return (
       <div className={this.props.category}>
         {/* Start of blog post preview */}
-        <div
-          className={styles.blogPost}
-        >
+        <div className={styles.blogPost}>
           <table cellPadding="0">
             <Link
-              to={"/blog/" + this.props.blogNo}
+              to={"/resources/blog/" + this.props.blogNo}
               style={{ textDecoration: "none" }}
             >
               <tr id={styles.previewRow}>
@@ -31,30 +30,29 @@ class BlogPreview extends Component {
                   <div className={styles.blogDetails}>
                     <div className={styles.heading}>{this.props.heading}</div>
                     <div className={styles.date}>{this.props.date}</div>
-                    <div className={styles.subheading}>{this.props.subheading}</div>
+                    <div className={styles.subheading}>
+                      {this.props.subheading}
+                    </div>
                   </div>
                   <tr className={styles.authorRow}>
                     {Object.keys(this.props.authors).map((key) => (
-                      <td className={styles.authorSection} key={key}>
-                        <td>
-                          <div className={styles.authorPic}>
-                            <img
-                              src={
-                                process.env.PUBLIC_URL +
-                                this.props.authors[key][0]
-                              }
-                              className={styles.blogAuthor}
-                              alt={key}
-                            />
-                          </div>
-                        </td>
-
-                        <td className={styles.authorName}>
-                          <div className={styles.auth}>
-                            {this.props.authors[key][1]}
-                          </div>
-                        </td>
-                      </td>
+                      <div className={styles.authorSection} key={key}>
+                        <div className={styles.authorPic}>
+                          <img
+                            src={
+                              process.env.PUBLIC_URL +
+                              this.props.authors[key][0]
+                            }
+                            className={this.execs.includes(this.props.authors[key][0]) ? styles.execAuthor : styles.anonAuthor}
+                            alt={key}
+                          />
+                        </div>
+                        <div
+                          className={[styles.auth, styles.authorName].join(" ")}
+                        >
+                          {this.props.authors[key][1]}
+                        </div>
+                      </div>
                     ))}
                   </tr>
                 </td>

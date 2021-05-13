@@ -114,7 +114,7 @@
 
 /*read only button, change for functionality*/
 .button {
-  background-color:#e85f5c;
+  background-color: #e85f5c;
   height: 30px;
   width: 120px;
   visibility: hidden;
@@ -142,7 +142,7 @@
 
 /*-------------------------------Loading Sign-----------------------------*/
 #pubLoading {
-  color:#feb14b;  
+  color: #feb14b;
   margin-top: 10%;
   margin-bottom: 7%;
 }

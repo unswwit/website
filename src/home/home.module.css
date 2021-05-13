@@ -1,7 +1,7 @@
 /*-------------------------------Home page header-----------------------------*/
 /*Header image*/
 .contain {
-  background-image: url("/headers/header-1.png");
+  background-image: url("/headers/header-1.jpg");
   background-position: center bottom 40%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -101,12 +101,17 @@ div .headline {
 
 /*Background image*/
 .statsBackground {
-  width: 100%;
   height: 300px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .stats {
   position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .number {
@@ -137,7 +142,11 @@ div .headline {
 }
 
 /*--------------Statistics Mobile Design-------------------*/
-
+@media only screen and (max-width: 1200px) {
+  .number {
+    width: 70%;
+  }
+}
 @media only screen and (max-width: 1000px) {
   .number {
     grid-template-columns: 25% 30% 45%;
@@ -153,7 +162,7 @@ div .headline {
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
   .number span {
     font-size: 12.5vw;
     letter-spacing: 8px;
@@ -165,7 +174,7 @@ div .headline {
 
   .number {
     bottom: 33%;
-    grid-template-columns: 28% 30% 45%;  
+    grid-template-columns: 28% 30% 45%;
     width: 85%;
   }
 }
@@ -420,7 +429,7 @@ div .headline {
   width: 60%;
   bottom: 37%;
   color: #ffffff;
-  background-color:#e85f5c;
+  background-color: #e85f5c;
   padding: 12px 10px 12px 10px;
   border: none;
   font-size: 2vw;
@@ -430,7 +439,7 @@ div .headline {
 }
 
 .signUpForm span {
-  color:#e85f5c;
+  color: #e85f5c;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -439,7 +448,7 @@ div .headline {
   align-items: center;
   justify-content: center;
 }
-  
+
 /*--------------Newsletter Mobile Design-------------------*/
 @media only screen and (max-width: 1200px) {
   .subscribeBtn {
@@ -462,7 +471,6 @@ div .headline {
   .subscribeBtn {
     font-size: 14pt;
     width: 80%;
-    bottom: 35%;
     right: 10%;
   }
 }
@@ -481,7 +489,6 @@ div .headline {
   font-family: "Montserrat", sans-serif;
   font-size: 55px;
   letter-spacing: 3px;
-  line-height: 100px;
   text-align: center;
   margin: 0px;
   line-height: normal;
@@ -597,9 +604,9 @@ div .headline {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0; 
-    right: 0; 
-    margin: auto 15%; 
+    left: 0;
+    right: 0;
+    margin: auto 15%;
     height: 63vh;
   }
 
@@ -646,7 +653,7 @@ div .headline {
     height: auto;
     padding: 20px 0px 50px 0px;
   }
-  
+
   .sponsors {
     padding: 50px 0;
   }
@@ -937,3 +944,10 @@ div .headline {
 
 
 /* add height: 250px to both class=Homecarousel and class=Horizontal Slider, remove max-height from class=SlideInner */
+
+
+@media only screen and (max-width: 500px) {
+  .number {
+    bottom: 40%;
+  }
+}
