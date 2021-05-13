@@ -14,7 +14,7 @@
 div .headline {
   text-align: left;
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 54vw;
 }
 
@@ -48,6 +48,10 @@ div .headline {
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.1em;
+}
+
+.headline a:hover {
+  color: white;
 }
 
 /*-----------------------------Home page description--------------------------*/
@@ -182,7 +186,6 @@ div .headline {
 .eventsDescription {
   /* grid-area: auto / span 1; */
   /* padding-top: 10px; */
-  overflow: auto;
   width: 100%; 
   height: 100%; 
   /* height: auto; */
@@ -207,13 +210,6 @@ div .headline {
   text-align: right;
   color: #e85f5c;
   float: left; 
-}
-
-
-.eventsDescription a:hover {
-  font-family: "Montserrat", sans-serif;
-  text-decoration: none;
-  color: #feb14b;
 }
 
 /*Events title grid area*/
@@ -251,14 +247,26 @@ div .headline {
 }
 
 .eventsDescription button {
-  border: 1px solid #E85F5C;
+  border: 1.5px solid #E85F5C;
   box-sizing: border-box;
   background-color: white;
   padding: 6px 6px;
 }
 
-/*---------------Slideshow-------------------*/
+.eventsDescription button:hover {
+  border: 1.5px solid #db3d3b;
+  background-color: #fff7f7;
+}
 
+.eventsDescription a {
+  font-weight: 500;
+}
+
+.eventsDescription a:hover {
+  color: #E85F5C;
+}
+
+/*---------------Slideshow-------------------*/
 
 .carousel {
   text-align: center;
@@ -486,6 +494,12 @@ div .headline {
 }
 
 /*--------------Publications-------------------*/
+#publicationsLoading {
+  color:#feb14b;  
+  margin-top: 7%;
+  margin-bottom: 8%;
+}
+
 .publications {
   text-align: center;
   margin: auto;
@@ -510,13 +524,20 @@ div .headline {
 }
 
 .publications .articlesDiv {
-  margin-top: 50px;
+  margin-top: 7f0px;
   margin-bottom: 40px; 
 }
 
-.publications .homeArticles {
-  padding: 0px 30px 0px 30px; 
-  display: inline-block;
+.articles {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.homeArticles div {
+  margin: 0;
 }
 
 /*--------------Responsive Mobile Design-------------------*/
@@ -684,7 +705,7 @@ div .headline {
     order: 2;
     padding: 0px;
     height: auto;
-    max-width: 70%; 
+    max-width: 90%; 
     margin: auto; 
     padding: 5px;
     /* display: flex; */
@@ -798,9 +819,9 @@ div .headline {
   }
 }
 
-@media only screen and (max-width: 500x) {
-  .eventsDescription .left p {
-    font-size: 12px;
+@media only screen and (max-width: 500px) {
+  .eventsDescription {
+    max-width: 80%; 
   }
 }
 

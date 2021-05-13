@@ -7,6 +7,7 @@ import { Modal, Backdrop, Fade } from "@material-ui/core";
 import PubArticle from "../publications/publications-article";
 import Tabletop from "tabletop";
 import Slideshow from "./Slideshow.js"
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 const Home = () => {
   const [open, setOpen] = React.useState(false);
@@ -18,7 +19,6 @@ const Home = () => {
   // console.log("NOT REVERSED:");
   // console.log(last3articles);
   // console.log("REVERSED:");
-  console.log(articles.reverse().slice(0, 3));
 
   //start webpage at the top
   useEffect(() => {
@@ -26,6 +26,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
+    setLoading(true);
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: googleData => {
@@ -150,31 +151,36 @@ const Home = () => {
       <div className={styles.publications}>
         <h1>PUBLICATIONS</h1>
 
-         {/*Recent 3 Articles*/}
-         <div className={styles.articlesDiv}>
+        {/*Recent 3 Articles*/}
+        <div className={styles.articlesDiv}>
           <div className={styles.articles}>
-              {!loading && last3articles.map((article, index) => 
-                <div className={styles.homeArticles}> 
-                  <PubArticle
-                    key={index}
-                    imgUrl={`${process.env.PUBLIC_URL}/publications/${article.year}/${article.img}`}
-                    heading={article.heading}
-                    date={article.date}
-                    url={article.url}
-                  />
-                </div>
+            {loading && <CircularProgress
+              variant="indeterminate"
+              size={50}
+              thickness={5}
+              id={styles.publicationsLoading}
+            />}
+            {!loading && last3articles.map((article, index) => 
+              <div className={styles.homeArticles} key={index}> 
+                <PubArticle                 
+                  imgUrl={`${process.env.PUBLIC_URL}/publications/${article.year}/${article.img}`}
+                  heading={article.heading}
+                  date={article.date}
+                  url={article.url}
+                />
+              </div>
                  
-              )}
-            </div>
-         </div>
-          
-          <div className={styles.eventsDescription}>
-            <button>
-              <Link to="/publications" style={{ textDecoration: "none"}}>
-                see more publications
-              </Link>
-            </button>
+            )}
           </div>
+        </div>
+          
+        <div className={styles.eventsDescription}>
+          <button>
+            <Link to="/publications" style={{ textDecoration: "none"}}>
+                see more publications
+            </Link>
+          </button>
+        </div>
           
       </div>
       {/* End of Publications */}
