@@ -16,12 +16,7 @@ const Home = () => {
   const [mobileView, setMobileView] = React.useState(false);
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  const last3articles = articles.reverse().slice(0, 3);
-// why does last3articles change depending on this
-// console.log("NOT REVERSED:");
-// console.log(last3articles);
-// console.log("REVERSED:");
+  const last3articles = articles.slice(1, 4);
 
 //start webpage at the top
   useEffect(() => {
@@ -118,14 +113,13 @@ const Home = () => {
       {/* End of Statistics */}
 
       {/* Start of Upcoming Events / Latest blog / Latest podcast */}
-      
       <div data-aos={mobileView ? "fade":"fade-left"} data-aos-delay="150" className={styles.carousel}>
         <Slideshow />
       </div>
   
       
       {/* Start of Publications */}
-      <div className={styles.publications}>
+      <div data-aos={mobileView ? "fade":"fade-right"} data-aos-delay="150" className={styles.publications}>
         <h1>PUBLICATIONS</h1>
 
         {/*Recent 3 Articles*/}
@@ -153,7 +147,7 @@ const Home = () => {
           
         <div className={styles.eventsDescription}>
           <button>
-            <Link to="/publications" style={{ textDecoration: "none"}}>
+            <Link to="/resources/publications" style={{ textDecoration: "none"}}>
                 see more publications
             </Link>
           </button>
@@ -161,14 +155,6 @@ const Home = () => {
           
       </div>
       {/* End of Publications */}
-
-      <div className={styles.sponsors}>
-        <h1>OUR SPONSORS</h1>
-        <img
-          src={`${process.env.PUBLIC_URL}./sponsors-home-2021-temp.png`}
-          alt="banner"
-        />
-      </div>
 
       {/* Start of newsletter */}
       <div className={styles.stats}>

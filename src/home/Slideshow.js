@@ -1,32 +1,19 @@
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from "pure-react-carousel";
 import React from "react";
-// import { Divider } from "semantic-ui-react";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import styles from "./home.module.css";
 import { Link } from "react-router-dom";
-//import { stringifyUrl } from "query-string";
 
 const Slideshow = () => (
-  // put props into here 
   <CarouselProvider
-    className={styles.test}
+    className={styles.slide_component}
     naturalSlideWidth={1340}
     naturalSlideHeight={400}
-    // naturalSlideWidth={1340}
-    // naturalSlideHeight={700}
-
-    // when media les sthan 910 
-    // naturalSlideWidth={907}
-    // naturalSlideHeight={600}
-    // naturalSlideWidth={718}
-    // naturalSlideHeight={400}
     totalSlides={3}
   >
-    {/* <div className={styles.carousel}> */}
-    {/* try to move around the divs  */}
-    <Slider className={styles.test} classNameTray={styles.test} classNameTrayWrap={styles.test}>
+    <Slider className={styles.slide_component} classNameTray={styles.slide_component} classNameTrayWrap={styles.slide_component}>
       <Slide index={0} innerClassName={styles}>
-        <div className={styles.test}>
+        <div className={styles.slide_component}>
           <div className={styles.eventsDescription}>
             <div className={styles.titleMobile}>
               <h1>EVENTS</h1>
@@ -50,38 +37,36 @@ const Slideshow = () => (
             </div>   
             <div className={styles.right}>
               <h1>EVENTS</h1>
-              {/* <div className={styles.event1}> */}
               <a 
-                href="https://www.facebook.com/events/727086634650316/" 
+                href="https://fb.me/e/1N800n55X" 
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <img 
-                  src={`${process.env.PUBLIC_URL}/event-covers/2021/08-CBA-resume.png`}
-                  alt="WIT x CBA: Resume Workshop"
+                  src={`${process.env.PUBLIC_URL}/event-covers/2021/13-Intro-to-VMWare.jpg`}
+                  alt="WIT x VMWare: Intro to VMWare"
                 />
               </a>
-              {/* </div> */}
             </div>    
           </div>
         </div>
       </Slide>
-      <Slide className={styles.test}>
-        <div className={styles.test}>
+      <Slide className={styles.slide_component}>
+        <div className={styles.slide_component}>
           <div className={styles.eventsDescription}>
             <div className={styles.titleMobile}>
               <h1>BLOGS</h1>
             </div>
             <div className={styles.left}>
               <p id="about">
-                WIT posts blogs twice a week featuring advice from industry connections, the latest trends 
+                WIT posts blogs twice a week featuring advice from industry connections, the laslide_component trends 
                 in technology and study tips. We aim to inspire students to learn more about the world around 
                 them, outside of university. These blogs include a weekly #WITCrushWednesday feature, where we 
-                highlight some of the latest and greatest pioneering women, who are making an impact in STEM. 
+                highlight some of the laslide_component and greaslide_component pioneering women, who are making an impact in STEM. 
               </p>
               <p>
                 <button>
-                  <Link to="/blog" style={{ textDecoration: "none"}}>
+                  <Link to="resources/blog" style={{ textDecoration: "none"}}>
                       see more blog posts
                   </Link>
                 </button>
@@ -90,13 +75,13 @@ const Slideshow = () => (
             <div className={styles.right}>
               <h1>BLOGS</h1>
               <a 
-                href="https://unswwit.com/#/blog/46" 
+                href="https://unswwit.com/#/resources/blog/54" 
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <img
-                  src={`${process.env.PUBLIC_URL}/blog-covers/46-vaccine.png`}
-                  alt="Blog 46"
+                  src={`${process.env.PUBLIC_URL}/blog-covers/54-lina-kim.png`}
+                  alt="Blog 54"
                 />
               </a>
             </div>
@@ -104,8 +89,8 @@ const Slideshow = () => (
         </div>
           
       </Slide>
-      <Slide className={styles.test} index={2}>
-        <div className={styles.test}>
+      <Slide className={styles.slide_component} index={2}>
+        <div className={styles.slide_component}>
           <div className={styles.eventsDescription}>
             <div className={styles.titleMobile}>
               <h1>PODCASTS</h1>
@@ -118,7 +103,7 @@ const Slideshow = () => (
               </p>
               <p>
                 <button>
-                  <Link to="/podcast" style={{ textDecoration: "none"}}>
+                  <Link to="resources/podcast" style={{ textDecoration: "none"}}>
                       see more episodes
                   </Link>
                 </button>
@@ -128,7 +113,7 @@ const Slideshow = () => (
             <div className={styles.right}>
               <h1>PODCASTS</h1>
               <a 
-                href="https://unswwit.com/#/podcast/6" 
+                href="https://unswwit.com/#/resources/podcast/6" 
                 target="_blank"
                 rel="noopener noreferrer"
               >

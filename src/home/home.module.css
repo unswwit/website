@@ -547,6 +547,10 @@ div .headline {
   margin: 0;
 }
 
+.slide_component {
+  height: 100%; 
+}
+
 /*--------------Responsive Mobile Design-------------------*/
 
 @media only screen and (max-width: 850px) {
@@ -759,15 +763,15 @@ div .headline {
     text-align: center;
   }
   
-  .buttonBack {
-    /* display: none; */
+  /* .buttonBack {
+    display: none;
     margin-left: 35px; 
   }
 
   .buttonNext {
-    /* display: none; */
+    display: none;
     margin-right: 35px; 
-  }
+  } */
 
   .titleMobile h1 {
     display: contents;
@@ -832,43 +836,17 @@ div .headline {
   }
 }
 
-
-
-/* @media only screen and (max-width: 650px) {
-  .carousel .buttonBack {
-    margin-left: 13px; 
-  }
-
-  .carousel .buttonNext {
-    margin-right: 13px; 
-  }
-
-} */
-
-/* .test2 {
-  display: flex;
-  flex-direction: column;
-  height: 100%; 
-} */
-
-.test {
-  height: 100%; 
-}
-
 @media only screen and (max-width: 990px) {
-  .test {
+  .slide_component {
     height: 840px;
     display: flex;
     flex-direction: column;
     /* width: 100%; */
   }
-  .test2 {
-    height: auto; 
-  }
 }
 
 @media only screen and (max-width: 700px) {
-  .test {
+  .slide_component {
     height: 670px;
     /* padding-bottom: 0;  */
     /* width: 100%; */
@@ -882,11 +860,11 @@ div .headline {
   }
 
   .carousel .buttonBack {
-    margin-left: 50px; 
+    margin-left: 25px; 
   }
   
   .carousel .buttonNext {
-    margin-right: 50px;
+    margin-right: 25px;
   }
 
   .carousel .buttonBack:disabled {
@@ -907,7 +885,7 @@ div .headline {
 } */
 
 @media only screen and (max-width: 550px) {
-  .test {
+  .slide_component {
     height: 600px;
     /* width: 100%; */
   }
@@ -916,28 +894,28 @@ div .headline {
     border-top: 13px solid transparent;
     border-bottom: 13px solid transparent;
     border-right: 24px solid #313638;
-    margin-left: 30px; 
+    margin-left: 20px; 
   }
 
   .carousel .buttonNext {
     border-top: 13px solid transparent;
     border-bottom: 13px solid transparent;
     border-left: 24px solid #313638;
-    margin-right: 30px; 
+    margin-right: 20px; 
   }
 
   .carousel .buttonBack:disabled {
     border-right: 24px solid #C4C4C4;
-    margin-left: 30px; 
+    margin-left: 20px; 
   }
   
   .carousel .buttonNext:disabled {
     border-left: 24px solid #C4C4C4;
-    margin-right: 30px; 
+    margin-right: 20px; 
   }
 }
 /* 
-.test {
+.slide_component {
   display: contents; 
 } */
 
