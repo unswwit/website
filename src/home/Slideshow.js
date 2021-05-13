@@ -59,10 +59,10 @@ const Slideshow = () => (
             </div>
             <div className={styles.left}>
               <p id="about">
-                WIT posts blogs twice a week featuring advice from industry connections, the laslide_component trends 
+                WIT posts blogs twice a week featuring advice from industry connections, the latest trends 
                 in technology and study tips. We aim to inspire students to learn more about the world around 
                 them, outside of university. These blogs include a weekly #WITCrushWednesday feature, where we 
-                highlight some of the laslide_component and greaslide_component pioneering women, who are making an impact in STEM. 
+                highlight some of the latest and greatest pioneering women, who are making an impact in STEM. 
               </p>
               <p>
                 <button>
