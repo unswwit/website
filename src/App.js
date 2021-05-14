@@ -389,7 +389,9 @@ class App extends Component {
             <Route path="/events" component={Events} />
             <Route path="/our-team" component={OurTeam} />
             <Route exact path="/resources/blog" component={Blog} />
-            <Route exact path="/resources" component={Blog} />
+            <Route exact path="/resources">
+              <Redirect to="/resources/blog" />
+            </Route>
             <Route path="/resources/marketing-archive" component={MarketingContent} />
             <Route path="/join-us" component={JoinUs} />
             <Route path="/sponsors" component={Sponsors} />
@@ -411,6 +413,20 @@ class App extends Component {
                 );
               }
             )}
+            {/*Redirect old blog links to new blog links*/}
+            {Array.from({ length: 54 }, (_, index) => index + 1).map(
+              (blogNo) => {
+                return (
+                  <Route path={"/blog/" + blogNo}>
+                    <Redirect to={"/resources/blog/" + blogNo} />
+                  </Route>
+                );
+              }
+            )}
+            <Route exact path="/blog">
+              <Redirect to="/resources/blog" />
+            </Route>
+            {/*Error page*/}
             <Route path="/404" component={NotFound} />
             <Redirect to="/404" />
           </Switch>
