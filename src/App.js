@@ -411,7 +411,7 @@ class App extends Component {
             {Array.from({ length: 54 }, (_, index) => index + 1).map(
               (blogNo) => {
                 return (
-                  <Route path={"/blog/" + blogNo}>
+                  <Route key={blogNo} path={"/blog/" + blogNo}>
                     <Redirect to={"/resources/blog/" + blogNo} />
                   </Route>
                 );
