@@ -48,6 +48,12 @@ class App extends Component {
     },
   };
 
+  highlightDD = {
+    activeStyle: {
+      fontWeight: "500",
+    },
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -309,34 +315,22 @@ class App extends Component {
                       }
                     >
                       <div className="dropdown-item">
-                        <NavLink
-                          to="/resources/blog"
-                          activeStyle={{ color: "#e85f5c" }}
-                        >
+                        <NavLink to="/resources/blog" {...this.highlightDD}>
                           BLOG
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
-                        <NavLink
-                          to="/resources/podcast"
-                          activeStyle={{ color: "#e85f5c" }}
-                        >
+                        <NavLink to="/resources/podcast" {...this.highlightDD}>
                           PODCAST
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
-                        <NavLink
-                          to="/resources/publications"
-                          activeStyle={{ color: "#e85f5c" }}
-                        >
+                        <NavLink to="/resources/publications" {...this.highlightDD}>
                           PUBLICATIONS
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
-                        <NavLink
-                          to="/resources/marketing-archive"
-                          activeStyle={{ color: "#e85f5c" }}
-                        >
+                        <NavLink to="/resources/marketing-archive" {...this.highlightDD}>
                           MARKETING ARCHIVE
                         </NavLink>
                       </div>
