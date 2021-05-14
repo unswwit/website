@@ -8,7 +8,8 @@ import Chip from "@material-ui/core/Chip";
 import Tooltip from "@material-ui/core/Tooltip";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import ScrollUpBtn from "../components/ScrollUpBtn"
+import ScrollUpBtn from "../components/ScrollUpBtn";
+import SearchBar from "../components/BlogSearchBar";
 
 const useStylesBootstrap = makeStyles((theme) => ({
   arrow: {
@@ -119,7 +120,9 @@ const Blog = () => {
               );
             })}
         </div>
-
+        {/*Start of search bar for blog posts */}
+        <SearchBar/>
+        
         {/*Start of blog posts*/}
         <div id={styles.blogLoadingContainer}>
           {loading && (
