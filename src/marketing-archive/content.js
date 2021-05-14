@@ -19,6 +19,7 @@ const MarketingContent = () => {
     Memes: "memes",
     "Monday Motivation": "monday",
     "WIT Crush Wednesday": "wcw",
+    "Special Occasions": "special",
   };
 
   // position of the marks on the timeline (i.e. 100 indicates that it's on the right end)
@@ -111,7 +112,7 @@ const MarketingContent = () => {
             <Timeline
               margin={"2%"}
               page={"marketing"}
-              step={25}
+              step={100}
               valueToYear={valueToYear}
               marks={marks}
               updateYear={handleYear}
