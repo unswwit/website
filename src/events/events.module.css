@@ -103,19 +103,16 @@ a:hover.event {
   grid-gap: 20px;
 }
 
-.gridItem {
+img.eventImages {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
           box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
-}
-
-img.eventImages {
-  max-width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 p.lookout {
