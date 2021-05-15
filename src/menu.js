@@ -7,8 +7,10 @@ class Menu extends Component {
     this.state = {
       open: this.props.open,
       showDD: false,
+      showDDAbout: false,
     };
     this.handleClick = this.handleClick.bind(this);
+    this.handleClickAbout = this.handleClickAbout.bind(this);
   }
 
   componentDidUpdate(prevProps) {
@@ -20,6 +22,12 @@ class Menu extends Component {
   handleClick() {
     this.setState({
       showDD: !this.state.showDD,
+    });
+  }
+
+  handleClickAbout() {
+    this.setState({
+      showDDAbout: !this.state.showDDAbout,
     });
   }
 
@@ -39,6 +47,62 @@ class Menu extends Component {
                   <li className="menu-item">HOME</li>
                 </div>
               </NavLink>
+              <div>
+                <li className="menu-item">
+                  <div
+                    className="menu-box menu-dropdown"
+                    onClick={this.handleClickAbout}
+                  >
+                    <div className="dropdown-toggle active-nav-item">
+                      <span className="menu-item menuTitle">ABOUT US</span>
+                    </div>
+                  </div>
+                  {this.state.showDDAbout ? (
+                    <div>
+                      <NavLink
+                        className="menu-link"
+                        to="/resources/blog"
+                        style={{ textDecoration: "none" }}
+                        onClick={this.props.handleMenuClick}
+                      >
+                        <div className="menu-box">
+                          <li className="menu-item">(OUR STORY)</li>
+                        </div>
+                      </NavLink>
+                      <NavLink
+                        className="menu-link"
+                        to="/about/sponsors"
+                        style={{ textDecoration: "none" }}
+                        onClick={this.props.handleMenuClick}
+                      >
+                        <div className="menu-box">
+                          <li className="menu-item">OUR SPONSORS</li>
+                        </div>
+                      </NavLink>
+                      <NavLink
+                        className="menu-link"
+                        to="/about/our-team"
+                        style={{ textDecoration: "none" }}
+                        onClick={this.props.handleMenuClick}
+                      >
+                        <div className="menu-box">
+                          <li className="menu-item">MEET OUR TEAM</li>
+                        </div>
+                      </NavLink>
+                      <NavLink
+                        className="menu-link"
+                        to="/about/contact-us"
+                        style={{ textDecoration: "none" }}
+                        onClick={this.props.handleMenuClick}
+                      >
+                        <div className="menu-box">
+                          <li className="menu-item">CONTACT US</li>
+                        </div>
+                      </NavLink>
+                    </div>
+                  ) : null}
+                </li>
+              </div>
               <NavLink
                 className="menu-link"
                 to="/events"
@@ -47,26 +111,6 @@ class Menu extends Component {
               >
                 <div className="menu-box">
                   <li className="menu-item">EVENTS</li>
-                </div>
-              </NavLink>
-              <NavLink
-                className="menu-link"
-                to="/our-team"
-                style={{ textDecoration: "none" }}
-                onClick={this.props.handleMenuClick}
-              >
-                <div className="menu-box">
-                  <li className="menu-item">TEAM</li>
-                </div>
-              </NavLink>
-              <NavLink
-                className="menu-link"
-                to="/sponsors"
-                style={{ textDecoration: "none" }}
-                onClick={this.props.handleMenuClick}
-              >
-                <div className="menu-box">
-                  <li className="menu-item">SPONSORS</li>
                 </div>
               </NavLink>
               <NavLink
@@ -144,18 +188,6 @@ class Menu extends Component {
               >
                 <div className="menu-box">
                   <li className="menu-item">JOIN</li>
-                </div>
-              </NavLink>
-              <NavLink
-                className="menu-link"
-                to="/contact-us"
-                style={{ textDecoration: "none" }}
-                onClick={this.props.handleMenuClick}
-              >
-                <div className="menu-box">
-                  <li className="menu-item">
-                    CONTACT
-                  </li>
                 </div>
               </NavLink>
             </ul>
