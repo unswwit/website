@@ -103,7 +103,7 @@ a:hover.event {
 
 img.eventImages {
   max-width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 p.lookout {
