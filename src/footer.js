@@ -6,11 +6,11 @@ const Footer = () => {
   const routes = {
     "Home": "/",
     "Events": "/events",
-    "Team": "/about/our-team",
-    "Sponsors": "/about/sponsors",
     "Opportunities": "/opportunities",
     "Join": "/join-us",
-    "Contact": "/about/contact-us",
+    "Our Sponsors": "/about/sponsors",
+    "Meet Our Team": "/about/our-team",
+    "Contact Us": "/about/contact-us",
     "Blog": "/resources/blog",
     "Publications": "/resources/publications",
     "Marketing Archive": "/resources/marketing-archive",
@@ -18,7 +18,8 @@ const Footer = () => {
   };
 
   const links = [
-    ["Home", "Events", "Team", "Sponsors", "Opportunities", "Join", "Contact"],
+    ["Home", "Events", "Opportunities", "Join"],
+    ["(Our Story)", "Our Sponsors", "Meet Our Team", "Contact Us"],
     ["Blog", "Publications", "Marketing Archive", "Podcast"],
   ];
 
