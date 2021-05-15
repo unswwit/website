@@ -58,7 +58,7 @@ const Footer = () => {
                         <li className="footer-item" key={route}>
                           <Link
                             onClick={() => window.scrollTo(0, 0)}
-                            to={routes[route]}
+                            to={routes[route] || "/"}
                           >
                             {route}
                           </Link>
