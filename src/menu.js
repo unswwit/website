@@ -48,7 +48,6 @@ class Menu extends Component {
                 </div>
               </NavLink>
               <div>
-                <li className="menu-item">
                   <div
                     className="menu-box menu-dropdown"
                     onClick={this.handleClickAbout}
@@ -101,7 +100,6 @@ class Menu extends Component {
                       </NavLink>
                     </div>
                   ) : null}
-                </li>
               </div>
               <NavLink
                 className="menu-link"
@@ -124,7 +122,6 @@ class Menu extends Component {
                 </div>
               </NavLink>
               <div>
-                <li className="menu-item">
                   <div
                     className="menu-box menu-dropdown"
                     onClick={this.handleClick}
@@ -177,7 +174,6 @@ class Menu extends Component {
                       </NavLink>
                     </div>
                   ) : null}
-                </li>
               </div>
 
               <NavLink
