@@ -103,7 +103,7 @@ a:hover.event {
 
 img.eventImages {
   max-width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 p.lookout {
@@ -137,6 +137,12 @@ p.lookout {
 }
 
 /*------------------------------Responsive Mobile Design--------------------------------*/
+@media only screen and (max-width: 885px) {
+  #pastEvents.gridContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media only screen and (max-width: 750px) {
   #resourcesDescription {
     display: none;
