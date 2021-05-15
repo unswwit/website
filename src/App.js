@@ -58,12 +58,14 @@ class App extends Component {
     super(props);
     this.state = {
       showDD: false,
+      showDDAbout: false,
       menuOpen: false,
       navBar: false,
       hideNav: false,
     };
     this.navClass = "navbar navbar-expand-md navbar-dark bg-custom fixed-top";
     this.handleHover = this.handleHover.bind(this);
+    this.handleHoverAbout = this.handleHoverAbout.bind(this);
     this.handleMenuClick = this.handleMenuClick.bind(this);
     this.changeBackground = this.changeBackground.bind(this);
     this.hideNavBar = this.hideNavBar.bind(this);
@@ -89,10 +91,18 @@ class App extends Component {
     });
   }
 
-  // show and hide drop down on hover
+  // show and hide drop down on hover (Resources)
   handleHover(e) {
     this.setState({
       showDD: !this.state.showDD,
+    });
+    e.preventDefault();
+  }
+
+  // show and hide drop down on hover (About)
+  handleHoverAbout(e) {
+    this.setState({
+      showDDAbout: !this.state.showDDAbout,
     });
     e.preventDefault();
   }
@@ -224,6 +234,63 @@ class App extends Component {
                   className={
                     this.state.navBar ? "nav-item active-nav-item" : "nav-item"
                   }
+                  onMouseEnter={this.handleHoverAbout}
+                  onMouseLeave={this.handleHoverAbout}
+                >
+                  <div className="dropdown" display="static">
+                    <div
+                      className={
+                        this.state.navBar
+                          ? "dropdown-toggle active-nav-item"
+                          : "dropdown-toggle"
+                      }
+                    >
+                      <span>
+                        {this.state.navBar ? (
+                          <NavLink to="/about" {...this.highlightNav}>
+                            ABOUT US
+                          </NavLink>
+                        ) : (
+                          <NavLink to="/about" {...this.highlightNoNav}>
+                            ABOUT US
+                          </NavLink>
+                        )}
+                      </span>
+                    </div>
+                    <div
+                      className={
+                        this.state.showDDAbout
+                          ? "dropdown-menu show"
+                          : "dropdown-menu"
+                      }
+                    >
+                      <div className="dropdown-item">
+                        <NavLink to="/resources/blog" {...this.highlightDD}>
+                          (OUR STORY)
+                        </NavLink>
+                      </div>
+                      <div className="dropdown-item">
+                        <NavLink to="/about/sponsors" {...this.highlightDD}>
+                          OUR SPONSORS
+                        </NavLink>
+                      </div>
+                      <div className="dropdown-item">
+                        <NavLink to="/about/our-team" {...this.highlightDD}>
+                          MEET OUR TEAM
+                        </NavLink>
+                      </div>
+                      <div className="dropdown-item">
+                        <NavLink to="/about/contact-us" {...this.highlightDD}>
+                          CONTACT US
+                        </NavLink>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  className={
+                    this.state.navBar ? "nav-item active-nav-item" : "nav-item"
+                  }
                 >
                   {this.state.navBar ? (
                     <NavLink exact to="/events" {...this.highlightNav}>
@@ -232,36 +299,6 @@ class App extends Component {
                   ) : (
                     <NavLink exact to="/events" {...this.highlightNoNav}>
                       EVENTS
-                    </NavLink>
-                  )}
-                </li>
-                <li
-                  className={
-                    this.state.navBar ? "nav-item active-nav-item" : "nav-item"
-                  }
-                >
-                  {this.state.navBar ? (
-                    <NavLink exact to="/our-team" {...this.highlightNav}>
-                      TEAM
-                    </NavLink>
-                  ) : (
-                    <NavLink exact to="/our-team" {...this.highlightNoNav}>
-                      TEAM
-                    </NavLink>
-                  )}
-                </li>
-                <li
-                  className={
-                    this.state.navBar ? "nav-item active-nav-item" : "nav-item"
-                  }
-                >
-                  {this.state.navBar ? (
-                    <NavLink exact to="/sponsors" {...this.highlightNav}>
-                      SPONSORS
-                    </NavLink>
-                  ) : (
-                    <NavLink exact to="/sponsors" {...this.highlightNoNav}>
-                      SPONSORS
                     </NavLink>
                   )}
                 </li>
@@ -341,6 +378,7 @@ class App extends Component {
                   className={
                     this.state.navBar ? "nav-item active-nav-item" : "nav-item"
                   }
+                  style={{ marginRight: "15px" }}
                 >
                   {this.state.navBar ? (
                     <NavLink exact to="/join-us" {...this.highlightNav}>
@@ -349,22 +387,6 @@ class App extends Component {
                   ) : (
                     <NavLink exact to="/join-us" {...this.highlightNoNav}>
                       JOIN
-                    </NavLink>
-                  )}
-                </li>
-                <li
-                  className={
-                    this.state.navBar ? "nav-item active-nav-item" : "nav-item"
-                  }
-                  style={{ marginRight: "15px" }}
-                >
-                  {this.state.navBar ? (
-                    <NavLink exact to="/contact-us" {...this.highlightNav}>
-                      CONTACT
-                    </NavLink>
-                  ) : (
-                    <NavLink exact to="/contact-us" {...this.highlightNoNav}>
-                      CONTACT
                     </NavLink>
                   )}
                 </li>
@@ -381,16 +403,19 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/events" component={Events} />
-            <Route path="/our-team" component={OurTeam} />
+            <Route exact path="/about">
+              <Redirect to="/resources/blog" />
+            </Route>            
+            <Route path="/about/our-team" component={OurTeam} />
             <Route exact path="/resources/blog" component={Blog} />
             <Route exact path="/resources">
               <Redirect to="/resources/blog" />
             </Route>
             <Route path="/resources/marketing-archive" component={MarketingContent} />
             <Route path="/join-us" component={JoinUs} />
-            <Route path="/sponsors" component={Sponsors} />
+            <Route path="/about/sponsors" component={Sponsors} />
             <Route path="/opportunities" component={Opportunities} />
-            <Route path="/contact-us" component={ContactUs} />
+            <Route path="/about/contact-us" component={ContactUs} />
             <Route exact path="/resources/podcast" component={Podcast} />
             <Route path="/resources/podcast/:episode" component={EpisodePage} />
             <Route path="/resources/publications" component={Publications} />
