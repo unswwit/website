@@ -18,7 +18,7 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
   const last3articles = articles.slice(1, 4);
 
-//start webpage at the top
+  //start webpage at the top
   useEffect(() => {
     window.scrollTo(0,0);
     if (window.innerWidth <= "1150") {
@@ -31,6 +31,7 @@ const Home = () => {
       easing: "ease-in-out", 
       offset: 20 
     });
+   
   }, []);
 
   useEffect(() => {
@@ -104,7 +105,7 @@ const Home = () => {
               <p>Sponsors</p>
             </div>
             <div>
-              <CountUp end={2824} duration={4} />
+              <CountUp end={2841} duration={4} />
               <p>Facebook Followers</p>
             </div>
           </div>
@@ -117,7 +118,6 @@ const Home = () => {
         <Slideshow />
       </div>
   
-      
       {/* Start of Publications */}
       <div data-aos={mobileView ? "fade":"fade-right"} data-aos-delay="150" className={styles.publications}>
         <h1>PUBLICATIONS</h1>
@@ -154,7 +154,15 @@ const Home = () => {
         </div>
           
       </div>
-      {/* End of Publications */}
+      {/* End of Publications */}     
+
+      <div data-aos={mobileView ? "fade": "fade-left"} data-aos-delay="150" className={styles.sponsors}>
+        <h1>OUR SPONSORS</h1>
+        <img
+          src={`${process.env.PUBLIC_URL}./sponsors-home-2021-temp.png`}
+          alt="banner"
+        />
+      </div>
 
       {/* Start of newsletter */}
       <div className={styles.stats}>
@@ -162,7 +170,7 @@ const Home = () => {
           src={`${process.env.PUBLIC_URL}./newsletter-background.png`}
           className={styles.statsBackground}
           alt="banner"
-        />
+          />
         <button data-aos="fade" className={styles.subscribeBtn} onClick={() => setOpen(true)}>
           Subscribe to our newsletter
         </button>
@@ -186,14 +194,6 @@ const Home = () => {
         </Modal>
       </div>
       {/* End of Newsletter */}
-
-      <div data-aos={mobileView ? "fade": "fade-up"} className={styles.sponsors}>
-        <h1>OUR SPONSORS</h1>
-        <img
-          src={`${process.env.PUBLIC_URL}./sponsors-home-2021-temp.png`}
-          alt="banner"
-        />
-      </div>
     </div>
   );
 };
