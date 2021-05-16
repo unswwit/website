@@ -109,7 +109,7 @@ class App extends Component {
 
   // close the menu if the screen is being resized
   updateMenu = () => {
-    if (window.innerWidth >= "900" && this.state.menuOpen) {
+    if (window.innerWidth >= "950" && this.state.menuOpen) {
       this.handleMenuClick();
     }
   };
@@ -382,11 +382,11 @@ class App extends Component {
                 >
                   {this.state.navBar ? (
                     <NavLink exact to="/join-us" {...this.highlightNav}>
-                      JOIN
+                      JOIN US
                     </NavLink>
                   ) : (
                     <NavLink exact to="/join-us" {...this.highlightNoNav}>
-                      JOIN
+                      JOIN US
                     </NavLink>
                   )}
                 </li>
