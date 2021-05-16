@@ -24,6 +24,15 @@ import Menu from "./menu";
 import MenuBtn from "./menuBtn";
 import Footer from "./footer";
 
+import HistoryIcon from '@material-ui/icons/History';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
+import LocalPhoneIcon from '@material-ui/icons/LocalPhone';
+import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
+import LibraryMusicIcon from '@material-ui/icons/LibraryMusic';
+import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
+import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
+
 class App extends Component {
   /*
   state = {
@@ -266,21 +275,25 @@ class App extends Component {
                     >
                       <div className="dropdown-item">
                         <NavLink to="/resources/blog" {...this.highlightDD}>
+                        <HistoryIcon fontSize="small" style={{marginRight: "10px"}} />
                           (OUR STORY)
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/about/sponsors" {...this.highlightDD}>
+                        <FavoriteBorderIcon fontSize="small" style={{marginRight: "10px"}} />
                           OUR SPONSORS
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/about/our-team" {...this.highlightDD}>
+                        <PeopleOutlineIcon fontSize="small" style={{marginRight: "10px"}} />
                           OUR TEAM
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/about/contact-us" {...this.highlightDD}>
+                        <LocalPhoneIcon fontSize="small" style={{marginRight: "10px"}} />
                           CONTACT US
                         </NavLink>
                       </div>
@@ -353,21 +366,25 @@ class App extends Component {
                     >
                       <div className="dropdown-item">
                         <NavLink to="/resources/blog" {...this.highlightDD}>
+                        <LibraryBooksIcon fontSize="small" style={{marginRight: "10px"}} />
                           BLOG
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/resources/podcast" {...this.highlightDD}>
+                        <LibraryMusicIcon fontSize="small" style={{marginRight: "10px"}} />
                           PODCAST
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/resources/publications" {...this.highlightDD}>
+                        <PictureAsPdfIcon fontSize="small" style={{marginRight: "10px"}} />
                           PUBLICATIONS
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/resources/marketing-archive" {...this.highlightDD}>
+                        <PhotoLibraryIcon fontSize="small" style={{marginRight: "10px"}} />
                           MARKETING ARCHIVE
                         </NavLink>
                       </div>
