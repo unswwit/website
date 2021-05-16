@@ -152,12 +152,6 @@ p.lookout {
 }
 
 /*------------------------------Responsive Mobile Design--------------------------------*/
-@media only screen and (max-width: 885px) {
-  #pastEvents.gridContainer {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-  }
-}
 
 @media only screen and (max-width: 750px) {
   #resourcesDescription {
