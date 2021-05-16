@@ -139,7 +139,7 @@ class Menu extends Component {
                         onClick={this.props.handleMenuClick}
                       >
                         <div className="menu-box">
-                          <li className="menu-item">BLOG</li>
+                          <li className="menu-item">BLOG POSTS</li>
                         </div>
                       </NavLink>
                       <NavLink

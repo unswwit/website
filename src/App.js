@@ -360,14 +360,14 @@ class App extends Component {
                     <div
                       className={
                         this.state.showDD
-                          ? "dropdown-menu show"
+                          ? "dropdown-menu resDD show"
                           : "dropdown-menu"
                       }
                     >
                       <div className="dropdown-item">
                         <NavLink to="/resources/blog" {...this.highlightDD}>
                         <LibraryBooksIcon fontSize="small" style={{marginRight: "10px"}} />
-                          BLOG
+                          BLOG POSTS
                         </NavLink>
                       </div>
                       <div className="dropdown-item">

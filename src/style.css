@@ -195,12 +195,28 @@ p {
   letter-spacing: 1.5px;
   font-size: 14px;
   background-color: #fff7ef;
-  margin-top: 15px;
-  border-radius: 0px;
+  margin-top: 25px;
+  border-radius: 25px;
+}
+
+.dropdown-menu::after {
+  content: ' ';
+  border-style: solid;
+  border-width: 0 .5em .8em .5em;
+  border-color: transparent;
+  position: absolute;
+  right: 68px;
+  top: -.7em;
+  border-bottom-color: #fff7ef;
+}
+
+.resDD::after {
+  right: 100px;
 }
 
 .dropdown-item {
   padding: 5px 0px;
+  border-radius: 25px;
 }
 
 .dropdown-item a {
