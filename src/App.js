@@ -269,7 +269,9 @@ class App extends Component {
                     <div
                       className={
                         this.state.showDDAbout
-                          ? "dropdown-menu show"
+                          ? this.state.navBar
+                            ? "dropdown-menu show"
+                            : "dropdown-menu transparent show"
                           : "dropdown-menu"
                       }
                     >
@@ -360,7 +362,9 @@ class App extends Component {
                     <div
                       className={
                         this.state.showDD
-                          ? "dropdown-menu resDD show"
+                          ? this.state.navBar
+                            ? "dropdown-menu show"
+                            : "dropdown-menu transparent resDD show"
                           : "dropdown-menu"
                       }
                     >
