@@ -109,7 +109,7 @@ class App extends Component {
 
   // close the menu if the screen is being resized
   updateMenu = () => {
-    if (window.innerWidth >= "1150" && this.state.menuOpen) {
+    if (window.innerWidth >= "900" && this.state.menuOpen) {
       this.handleMenuClick();
     }
   };

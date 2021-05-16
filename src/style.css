@@ -249,7 +249,7 @@ p {
   display: none;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 900px) {
   .nav-item {
     display: none;
   }
