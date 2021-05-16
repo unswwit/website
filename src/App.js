@@ -276,7 +276,7 @@ class App extends Component {
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/about/our-team" {...this.highlightDD}>
-                          MEET OUR TEAM
+                          OUR TEAM
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
