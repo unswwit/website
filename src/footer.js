@@ -12,15 +12,15 @@ const Footer = () => {
     "Our Team": "/about/our-team",
     "Contact Us": "/about/contact-us",
     "Blog": "/resources/blog",
+    "Podcast": "/resources/podcast",
     "Publications": "/resources/publications",
     "Marketing Archive": "/resources/marketing-archive",
-    "Podcast": "/resources/podcast"
   };
 
   const links = [
     ["Home", "Events", "Opportunities", "Join Us"],
     ["(Our Story)", "Our Sponsors", "Our Team", "Contact Us"],
-    ["Blog", "Publications", "Marketing Archive", "Podcast"],
+    ["Blog", "Podcast", "Publications", "Marketing Archive"],
   ];
 
   const socials = {
