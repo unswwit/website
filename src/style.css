@@ -196,7 +196,7 @@ p {
   font-size: 14px;
   background-color: #fff7ef;
   margin-top: 15px;
-  border-radius: 0px;
+  border-radius: 0px 0px 10px 10px;
 }
 
 .transparent {
