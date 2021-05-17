@@ -1,4 +1,10 @@
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from "pure-react-carousel";
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  ButtonBack,
+  ButtonNext,
+} from "pure-react-carousel";
 import React, { useEffect, useState } from "react";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import styles from "./home.module.css";
@@ -61,50 +67,51 @@ const Slideshow = () => {
                   </button>
                 </p>
               </div>
-              {firstUpcomingEvent.length ?
-              (<div>
-              {firstEvent.map((firstUpcomingEvent, index) => (
-                <div className={styles.right} key={index}>
-                  <h1>EVENTS</h1>
+              {firstUpcomingEvent.length ? (
+                <div>
+                  {firstEvent.map((firstUpcomingEvent, index) => (
+                    <div className={styles.right} key={index}>
+                      <h1>EVENTS</h1>
 
-                  <a
-                    href={firstUpcomingEvent.facebookLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src={
-                        process.env.PUBLIC_URL +
-                        `/event-covers/2021/${firstUpcomingEvent.img}`
-                      }
-                      alt={firstUpcomingEvent.title}
-                    />
-                  </a>
+                      <a
+                        href={firstUpcomingEvent.facebookLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src={
+                            process.env.PUBLIC_URL +
+                            `/event-covers/2021/${firstUpcomingEvent.img}`
+                          }
+                          alt={firstUpcomingEvent.title}
+                        />
+                      </a>
+                    </div>
+                  ))}
                 </div>
-              ))}
-              </div>) 
-              :
-              (<div>
-                {lastEvent.map((latestEvent, index) => (
-                  <div className={styles.right} key={index}>
-                    <h1>EVENTS</h1>
-  
-                    <a
-                      href={latestEvent.facebookLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        src={
-                          process.env.PUBLIC_URL +
-                          `/event-covers/2021/${latestEvent.img}`
-                        }
-                        alt={latestEvent.title}
-                      />
-                    </a>
-                  </div>
-                ))}
-                </div>)}
+              ) : (
+                <div>
+                  {lastEvent.map((latestEvent, index) => (
+                    <div className={styles.right} key={index}>
+                      <h1>EVENTS</h1>
+
+                      <a
+                        href={latestEvent.facebookLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src={
+                            process.env.PUBLIC_URL +
+                            `/event-covers/2021/${latestEvent.img}`
+                          }
+                          alt={latestEvent.title}
+                        />
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </Slide>
