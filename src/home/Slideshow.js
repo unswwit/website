@@ -7,9 +7,11 @@ import Tabletop from "tabletop";
 
 const Slideshow = () => {
   const [firstUpcomingEvent, setFirstUpcomingEvent] = useState([]);
+  const [latestEvent, setLatestEvent] = useState([]);
   const [latestBlog, setLatestBlog] = useState([]);
   const [latestPodcast, setLatestPodcast] = useState([]);
   const firstEvent = firstUpcomingEvent.slice(0, 1);
+  const lastEvent = latestEvent.slice(0, 1);
   const lastBlog = latestBlog.slice(0, 1);
   const lastPodcast = latestPodcast.slice(0, 1);
   useEffect(() => {
@@ -17,6 +19,7 @@ const Slideshow = () => {
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: (googleData) => {
         setFirstUpcomingEvent(googleData["upcoming-events"]["elements"]);
+        setLatestEvent(googleData["past-events"]["elements"].reverse());
         setLatestBlog(googleData["blog-previews"]["elements"].reverse());
         setLatestPodcast(googleData["podcast-episodes"]["elements"].reverse());
       },
@@ -58,6 +61,8 @@ const Slideshow = () => {
                   </button>
                 </p>
               </div>
+              {firstUpcomingEvent.length ?
+              (<div>
               {firstEvent.map((firstUpcomingEvent, index) => (
                 <div className={styles.right} key={index}>
                   <h1>EVENTS</h1>
@@ -77,6 +82,29 @@ const Slideshow = () => {
                   </a>
                 </div>
               ))}
+              </div>) 
+              :
+              (<div>
+                {lastEvent.map((latestEvent, index) => (
+                  <div className={styles.right} key={index}>
+                    <h1>EVENTS</h1>
+  
+                    <a
+                      href={latestEvent.facebookLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={
+                          process.env.PUBLIC_URL +
+                          `/event-covers/2021/${latestEvent.img}`
+                        }
+                        alt={latestEvent.title}
+                      />
+                    </a>
+                  </div>
+                ))}
+                </div>)}
             </div>
           </div>
         </Slide>
