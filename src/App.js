@@ -24,14 +24,14 @@ import Menu from "./menu";
 import MenuBtn from "./menuBtn";
 import Footer from "./footer";
 
-import HistoryIcon from '@material-ui/icons/History';
+import ChromeReaderModeOutlinedIcon from '@material-ui/icons/ChromeReaderModeOutlined';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
-import LocalPhoneIcon from '@material-ui/icons/LocalPhone';
-import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
-import LibraryMusicIcon from '@material-ui/icons/LibraryMusic';
-import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
-import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
+import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
+import InsertDriveFileOutlinedIcon from '@material-ui/icons/InsertDriveFileOutlined';
+import HeadsetMicOutlinedIcon from '@material-ui/icons/HeadsetMicOutlined';
+import LocalPrintshopOutlinedIcon from '@material-ui/icons/LocalPrintshopOutlined';
+import ImageOutlinedIcon from '@material-ui/icons/ImageOutlined';
 
 class App extends Component {
   /*
@@ -277,7 +277,7 @@ class App extends Component {
                     >
                       <div className="dropdown-item">
                         <NavLink to="/resources/blog" {...this.highlightDD}>
-                        <HistoryIcon fontSize="small" style={{marginRight: "10px"}} />
+                        <ChromeReaderModeOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
                           (OUR STORY)
                         </NavLink>
                       </div>
@@ -295,7 +295,7 @@ class App extends Component {
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/about/contact-us" {...this.highlightDD}>
-                        <LocalPhoneIcon fontSize="small" style={{marginRight: "10px"}} />
+                        <PhoneOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
                           CONTACT US
                         </NavLink>
                       </div>
@@ -370,25 +370,25 @@ class App extends Component {
                     >
                       <div className="dropdown-item">
                         <NavLink to="/resources/blog" {...this.highlightDD}>
-                        <LibraryBooksIcon fontSize="small" style={{marginRight: "10px"}} />
+                        <InsertDriveFileOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
                           BLOG POSTS
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/resources/podcast" {...this.highlightDD}>
-                        <LibraryMusicIcon fontSize="small" style={{marginRight: "10px"}} />
+                        <HeadsetMicOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
                           PODCAST
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/resources/publications" {...this.highlightDD}>
-                        <PictureAsPdfIcon fontSize="small" style={{marginRight: "10px"}} />
+                        <LocalPrintshopOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
                           PUBLICATIONS
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/resources/marketing-archive" {...this.highlightDD}>
-                        <PhotoLibraryIcon fontSize="small" style={{marginRight: "10px"}} />
+                        <ImageOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
                           MARKETING ARCHIVE
                         </NavLink>
                       </div>
