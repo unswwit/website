@@ -1,10 +1,29 @@
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from "pure-react-carousel";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import styles from "./home.module.css";
 import { Link } from "react-router-dom";
+import Tabletop from "tabletop";
 
-const Slideshow = () => (
+const Slideshow = () => {
+  const [firstUpcomingEvent, setFirstUpcomingEvent] = useState([]);
+  const [latestBlog, setLatestBlog] = useState([]);
+  const [latestPodcast, setLatestPodcast] = useState([]);
+  const firstEvent = firstUpcomingEvent.slice(0, 1);
+  const lastBlog = latestBlog.slice(0,1);
+  const lastPodcast = latestPodcast.slice(0,1);
+  useEffect(() => {
+    Tabletop.init({
+      key: process.env.REACT_APP_GOOGLE_SHEETS,
+      callback: googleData => {
+        setFirstUpcomingEvent(googleData["upcoming-events"]["elements"]);  
+        setLatestBlog(googleData["blog-previews"]["elements"].reverse());
+        setLatestPodcast(googleData["podcast-episodes"]["elements"].reverse());
+      },
+      simpleSheet: false
+    })
+  }, []);
+  return (
   <CarouselProvider
     className={styles.slide_component}
     naturalSlideWidth={1340}
@@ -35,19 +54,24 @@ const Slideshow = () => (
                 </button>
               </p>
             </div>   
-            <div className={styles.right}>
+            {firstEvent.map((firstUpcomingEvent, index) => 
+            <div className={styles.right} key={index}>
               <h1>EVENTS</h1>
+              
               <a 
-                href="https://fb.me/e/1N800n55X" 
+                href={firstUpcomingEvent.facebookLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <img 
-                  src={`${process.env.PUBLIC_URL}/event-covers/2021/13-Intro-to-VMWare.jpg`}
-                  alt="WIT x VMWare: Intro to VMWare"
+                  src={process.env.PUBLIC_URL +
+                    `/event-covers/2021/${firstUpcomingEvent.img}`}
+                  alt={firstUpcomingEvent.title}
                 />
               </a>
+              
             </div>    
+            )}
           </div>
         </div>
       </Slide>
@@ -72,19 +96,22 @@ const Slideshow = () => (
                 </button>
               </p>
             </div>
-            <div className={styles.right}>
+            {lastBlog.map((latestBlog, index) => 
+            <div className={styles.right} key={index}>
               <h1>BLOGS</h1>
               <a 
-                href="https://unswwit.com/#/resources/blog/54" 
+                href={`https://unswwit.com/#/resources/blog/${latestBlog.blogNo}`} 
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <img
-                  src={`${process.env.PUBLIC_URL}/blog-covers/54-lina-kim.png`}
-                  alt="Blog 54"
+                  src={process.env.PUBLIC_URL +
+                    `/blog-covers/${latestBlog.img}`}
+                  alt={`Blog ${latestBlog.blogNo}`}
                 />
               </a>
             </div>
+            )}
           </div>
         </div>
           
@@ -109,20 +136,22 @@ const Slideshow = () => (
                 </button>
               </p>
             </div>
-              
-            <div className={styles.right}>
+            {lastPodcast.map((latestPodcast, index) => 
+            <div className={styles.right} key={index}>
               <h1>PODCASTS</h1>
               <a 
-                href="https://unswwit.com/#/resources/podcast/6" 
+                href={`https://unswwit.com/#/resources/podcast/${latestPodcast.episodeNo}`} 
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <img
-                  src={`${process.env.PUBLIC_URL}/podcast-covers/episode-6-cover.png`}
-                  alt="Podcast Episode 6"
+                  src={process.env.PUBLIC_URL +
+                    `/podcast-covers/${latestPodcast.img}`}
+                  alt={`Podcast Episode ${latestPodcast.episodeNo}`}
                 />
               </a>
             </div>
+            )}
           </div>
         </div>
       </Slide>
@@ -130,6 +159,7 @@ const Slideshow = () => (
     <ButtonBack className={styles.buttonBack}></ButtonBack>
     <ButtonNext className={styles.buttonNext}></ButtonNext>
   </CarouselProvider>
-);
+  );
+};
 
 export default Slideshow;
