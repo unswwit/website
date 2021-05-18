@@ -147,7 +147,7 @@ h2.oppSubheading {
   }
 }
 
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 400px) {
   h2.oppSubheading {
     font-size: 12pt;
     word-break: break-word;
