@@ -9,7 +9,7 @@ const Opportunities = () => {
   const [opportunities, setOpportunities] = useState(true);
 
   useEffect(() => {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
   }, []);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const Opportunities = () => {
       simpleSheet: false,
     });
   }, []);
-  
+
   return (
     <div>
       {/* Cover Photo */}
@@ -36,73 +36,84 @@ const Opportunities = () => {
       {/*start of active opportunies*/}
       <h2 className={styles.oppSubheading}>Active Opportunities</h2>
       <div id={styles.oppLoadingContainer}>
-          {loading && (
-            <CircularProgress
-              variant="indeterminate"
-              size={50}
-              thickness={5}
-              id={styles.oppLoading}
-            />
-          )}
-        </div>
-      {!loading && (!opportunities.length ? 
-          (<div className={styles.oppBody}><p className={styles.oppLookout}>Keep a lookout here for upcoming opportunities!</p></div>)
-          :
-          (<div className={styles.oppBody}>
+        {loading && (
+          <CircularProgress
+            variant="indeterminate"
+            size={50}
+            thickness={5}
+            id={styles.oppLoading}
+          />
+        )}
+      </div>
+      {!loading &&
+        (!opportunities.length ? (
+          <div className={styles.oppBody}>
+            <p className={styles.oppLookout}>
+              Keep a lookout here for upcoming opportunities!
+            </p>
+          </div>
+        ) : (
+          <div className={styles.oppBody}>
             <p className={styles.head}>
-              Here are all the links to all current career opportunities available ranging from internships
-              to graduate roles. Bookmark this page and check back regularly to be the first to know about
+              Here are all the links to all current career opportunities
+              available ranging from internships to graduate roles. Bookmark
+              this page and check back regularly to be the first to know about
               job opportunies!
             </p>
             <p className={styles.head}>
               If you would like to make a listing, please contact us at&nbsp;
-              <a
-                  href="mailto:externals@unswwit.com"
-                  className={styles.link}
-                >
-                  externals@unswwit.com
-                </a>
-                .
+              <a href="mailto:externals@unswwit.com" className={styles.link}>
+                externals@unswwit.com
+              </a>
+              .
             </p>
-          <div className={styles.oppGridContainer}>          
-            {opportunities.map((individualOpportunity, index) => {
-              return <div key={index} className={styles.oppGridItems}>
-                <img
-                  className={styles.oppImg}
-                  src={
-                    process.env.PUBLIC_URL +
-                      `/sponsors/2021/${individualOpportunity.img}`
-                  }
-                  alt={individualOpportunity.companyName}
-                />
-                <div className={styles.oppDesc}>
-                  <p className={styles.oppTypeAndLocation}>{individualOpportunity.type}</p>
-                  {/* The type should be in the format of the following example: Graduate Role */}
-                  <p className={styles.jobPosition}>{individualOpportunity.position}</p>
-                  {/* The position should be in the format of the following example: Front End Developer */}
-                  <p className={styles.oppTypeAndLocation}>{individualOpportunity.location}</p>
-                  <p className={styles.oppSummary}>
-                    Applications close: {individualOpportunity.closeDate}              
-                  </p>
-                  <p className={styles.oppSummary}>
-                    {individualOpportunity.summary}              
-                  </p>
-                    <p style={{textAlign: "right"}}>
-                      <a
-                        href={individualOpportunity.link}
-                        className={styles.moreLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+            <div className={styles.oppGridContainer}>
+              {opportunities.map((individualOpportunity, index) => {
+                return (
+                  <div key={index} className={styles.oppGridItems}>
+                    <img
+                      className={styles.oppImg}
+                      src={
+                        process.env.PUBLIC_URL +
+                        `/sponsors/2021/${individualOpportunity.img}`
+                      }
+                      alt={individualOpportunity.companyName}
+                    />
+                    <div className={styles.oppDesc}>
+                      <p className={styles.oppTypeAndLocation}>
+                        {individualOpportunity.type}
+                      </p>
+                      {/* The type should be in the format of the following example: Graduate Role */}
+                      <p className={styles.jobPosition}>
+                        {individualOpportunity.position}
+                      </p>
+                      {/* The position should be in the format of the following example: Front End Developer */}
+                      <p className={styles.oppTypeAndLocation}>
+                        {individualOpportunity.location}
+                      </p>
+                      <p className={styles.oppSummary}>
+                        Applications close: {individualOpportunity.closeDate}
+                      </p>
+                      <p className={styles.oppSummary}>
+                        {individualOpportunity.summary}
+                      </p>
+                      <p style={{ textAlign: "right" }}>
+                        <a
+                          href={individualOpportunity.link}
+                          className={styles.moreLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           Learn More
-                      </a>
-                    </p>
-                </div>
-              </div>
-            })}
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-          </div>)
-        )}
+        ))}
     </div>
   );
 };
