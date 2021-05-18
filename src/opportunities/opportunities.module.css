@@ -9,69 +9,80 @@ h2.oppSubheading {
   text-align: center;
 }
 
+.head {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12pt;
+  color: #313638b3;
+  text-align: justify;
+}
+
+.link {
+  color: #e85f5c;
+}
+
+.link:hover {
+  color: #feb14b;
+}
+
 .oppLookout {
   text-align: center;
-}
-
-/*Opportunities circle crop*/
-.oppFrame {
-  border-radius: 50%;
-  height: 5.5vw;
-  overflow: hidden;
-  width: 5.5vw;
-  margin-right: 1.5vw;
-  margin-left: 0px;
-}
-
-/*Author image*/
-.oppImg {
-  max-width: 100%;
-  max-height: 100%;
-  transform: translate(0%, 20%);
-}
-
-/*Opportunities preview*/
-table {
-  border: none;
-  border-color: #a0a0a0;
-  border-width: 2px;
-  width: 350px;
-  height: auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.container {
-  display: flex;
-  align-items: stretch;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0px;
-}
-
-.oppGrid {
-  margin: 0 125px 125px 100px;
-}
-
-.oppDetails {
-  margin-top: 1vw;
-}
-
-.oppPreview {
-  padding: 2vw;
-  width: 100vw;
-}
-
-.oppPost {
-  padding: 10px;
-}
-
-.heading {
-  color: #feb14b;
-  letter-spacing: 0.1vw;
-  font-size: 14pt;
   font-family: "Montserrat", sans-serif;
-  text-decoration: none;
-  margin-bottom: 10px;
+  font-size: 12pt;
+}
+
+.oppBody {
+  max-width: 70%;
+  margin: 0 auto;
+  margin-bottom: 10%;
+}
+
+.oppGridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 20px;
+  margin-top: 50px;
+}
+
+.oppGridItems {
+  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.oppDesc {
+  margin: 50px 30px;
+  padding: 0;
+}
+
+.oppTypeAndLocation {
+  color: #feb14b;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 1pt;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.oppSummary {
+  color: var(--light-grey);
+  letter-spacing: 0.07vw;
+  font-size: 10pt;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  padding: 0;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.oppImg {
+  object-fit: scale-down;
+  display: block;
+  margin: 0 auto;
+  width: 350px;
+  height: 150px;
+  transform: translate(0%, 20%);
 }
 
 .jobPosition {
@@ -79,23 +90,8 @@ table {
   letter-spacing: 0.1vw;
   font-size: 14pt;
   font-family: "Montserrat", sans-serif;
-  text-decoration: none;
+  text-align: center;
   margin-bottom: 10px;
-}
-
-.heading:hover {
-  text-decoration: none;
-}
-
-.subheading {
-  color: var(--light-grey);
-  letter-spacing: 0.1vw;
-  font-size: 11pt;
-  font-family: "Montserrat", sans-serif;
-}
-
-.blogLink:hover {
-  text-decoration: none;
 }
 
 .moreLink {
@@ -104,7 +100,6 @@ table {
   font-size: 11pt;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  text-align: right;
   margin-top: 10px;
 }
 
@@ -112,63 +107,59 @@ table {
   color: #feb14b;
 }
 
-/*-------------------------------Masonry grid Preview-----------------------------*/
-
-/* Masonry grid */
-.masonry {
-  transition: all 0.5s ease-in-out;
-  column-gap: 30px;
-  column-fill: initial;
+/*---------------------------Loading Sign--------------------------*/
+#oppLoading {
+  color: #feb14b;
+  margin-top: 5%;
+  margin-bottom: 3%;
 }
 
-/* Masonry item */
-.masonry .brick {
-  margin-bottom: 30px;
-  display: inline-block; /* Fix the misalignment of items */
-  vertical-align: top; /* Keep the item on the very top */
+#oppLoadingContainer {
+  display: flex;
+  justify-content: center;
 }
 
-/*-------------------------------Join us ipad------------------------------*/
-@media only screen and (max-width: 1100px) {
-  .oppGrid {
-    margin: 40px;
-  }
-
-  .oppFrame {
-    width: 8vw;
-    height: 8vw;
-  }
-}
-
-/*-------------------------------Join us mobile------------------------------*/
-@media only screen and (max-width: 850px) {
-  .oppGrid {
-    margin: 10px;
-  }
-
-  .oppFrame {
-    width: 12vw;
-    height: 12vw;
-  }
-
+/*-------------------------------Responsive mobile design------------------------------*/
+@media only screen and (max-width: 750px) {
   h2.oppSubheading {
     font-size: 20pt;
   }
+
+  .head, .oppLookout {
+    font-size: 11pt;
+  }
 }
 
-/*-------------------------------Join us very small screen------------------------------*/
-@media only screen and (max-width: 300px) {
-  .oppGrid {
-    margin: 5px;
+@media only screen and (max-width: 640px) {
+  .oppBody {
+    max-width: 90%;
   }
 
-  .oppFrame {
-    width: 17vw;
-    height: 17vw;
+  .head, .oppLookout {
+    max-width: 70%;
+    margin: 0 auto;
   }
 
+  .oppGridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
   h2.oppSubheading {
     font-size: 12pt;
     word-break: break-word;
+  }
+
+  .oppBody {
+    max-width: 100%;
+  }
+
+  .oppGridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
   }
 }

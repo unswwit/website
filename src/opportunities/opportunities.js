@@ -1,14 +1,28 @@
-//All necessary imports for this javascript
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import PageHeader from ".././header";
-
-import ".././style.css";
 import styles from "./opportunities.module.css";
-//import OppCard from "./oppCard.js";
+import Tabletop from "tabletop";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 const Opportunities = () => {
+  const [loading, setLoading] = useState(true);
+  const [opportunities, setOpportunities] = useState(true);
+
   useEffect(() => {
     window.scrollTo(0,0);
+  }, []);
+
+  useEffect(() => {
+    setLoading(true);
+
+    Tabletop.init({
+      key: process.env.REACT_APP_GOOGLE_SHEETS,
+      callback: (googleData) => {
+        setLoading(false);
+        setOpportunities(googleData["opportunities"]["elements"]);
+      },
+      simpleSheet: false,
+    });
   }, []);
   
   return (
@@ -21,53 +35,75 @@ const Opportunities = () => {
 
       {/*start of active opportunies*/}
       <h2 className={styles.oppSubheading}>Active Opportunities</h2>
-      <p className={styles.oppLookout} style={{ marginBottom: "100px" }}>
-        Keep a lookout here for upcoming opportunities!
-        {/*
-        <OppCard
-            details={{
-              CommonwealthBank: [
-                "/sponsors/2020/telstra-large.png",
-                "7 July 2020",
-                "Summer Vacationer",
-                "Do you know that by being a Summer Vacationer at Telstra you could be considered for early offers and join the Graduate Program as soon as you graduate? Telstra will guide and support you on your journey, as you see what is possible in your career. Applications for Telstra’s Summer Vacation Program start July 7. Don’t miss out on this opportunity! #TeamTelstra #TelstraSummerVac",
-                "https://www.youtube.com/watch?v=4R6Vy7QOgKA&t=4s  ",
-              ],
-            }}
-          />*/}
-      </p>
-      {/*Start of past opportunities*/}
-      {/*
-      <h2 className={styles.oppSubheading}>Past Opportunities</h2>
-      <div className={styles.oppGrid}>
-        <div className={styles.container}>
-          <OppCard
-            details={{
-              Telstra: [
-                "/sponsors/2020/telstra-large.png",
-                "7 July 2020",
-                "Summer Vacationer",
-                "Do you know that by being a Summer Vacationer at Telstra you could be considered for early offers and join the Graduate Program as soon as you graduate? Telstra will guide and support you on your journey, as you see what is possible in your career. Applications for Telstra’s Summer Vacation Program start July 7. Don’t miss out on this opportunity! #TeamTelstra #TelstraSummerVac",
-                "https://www.youtube.com/watch?v=4R6Vy7QOgKA&t=4s  ",
-              ],
-            }}
-          />
-
-          <OppCard
-            details={{
-              EY: [
-                "/sponsors/2020/ey-major.png",
-                "7 July 2020",
-                "Breaking Down Barriers Program",
-                "When – Tuesday 21st July  Where – Virtual  Time – 10am – 12:30pm. Register at the link below!",
-                "https://globaleysurvey.ey.com/jfe/form/SV_43pqDbzTEfL4Lbf ",
-              ],
-            }}
-          />
+      <div id={styles.oppLoadingContainer}>
+          {loading && (
+            <CircularProgress
+              variant="indeterminate"
+              size={50}
+              thickness={5}
+              id={styles.oppLoading}
+            />
+          )}
         </div>
-      </div>*/}
-      {/*End of opportunities grid table*/}
+      {!loading && (!opportunities.length ? 
+          (<div className={styles.oppBody}><p className={styles.oppLookout}>Keep a lookout here for upcoming opportunities!</p></div>)
+          :
+          (<div className={styles.oppBody}>
+            <p className={styles.head}>
+              Here are all the links to all current career opportunities available ranging from internships
+              to graduate roles. Bookmark this page and check back regularly to be the first to know about
+              job opportunies!
+            </p>
+            <p className={styles.head}>
+              If you would like to make a listing, please contact us at&nbsp;
+              <a
+                  href="mailto:externals@unswwit.com"
+                  className={styles.link}
+                >
+                  externals@unswwit.com
+                </a>
+                .
+            </p>
+          <div className={styles.oppGridContainer}>          
+            {opportunities.map((individualOpportunity, index) => {
+              return <div key={index} className={styles.oppGridItems}>
+                <img
+                  className={styles.oppImg}
+                  src={
+                    process.env.PUBLIC_URL +
+                      `/sponsors/2021/${individualOpportunity.img}`
+                  }
+                  alt={individualOpportunity.companyName}
+                />
+                <div className={styles.oppDesc}>
+                  <p className={styles.oppTypeAndLocation}>{individualOpportunity.type}</p>
+                  {/* The type should be in the format of the following example: Graduate Role */}
+                  <p className={styles.jobPosition}>{individualOpportunity.position}</p>
+                  {/* The position should be in the format of the following example: Front End Developer */}
+                  <p className={styles.oppTypeAndLocation}>{individualOpportunity.location}</p>
+                  <p className={styles.oppSummary}>
+                    Applications close: {individualOpportunity.closeDate}              
+                  </p>
+                  <p className={styles.oppSummary}>
+                    {individualOpportunity.summary}              
+                  </p>
+                    <p style={{textAlign: "right"}}>
+                      <a
+                        href={individualOpportunity.link}
+                        className={styles.moreLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                          Learn More
+                      </a>
+                    </p>
+                </div>
+              </div>
+            })}
+          </div>
+          </div>)
+        )}
     </div>
   );
-}
+};
 export default Opportunities;
