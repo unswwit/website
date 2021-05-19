@@ -39,7 +39,7 @@ h2.oppSubheading {
 .oppGridContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 50px;
   margin-top: 50px;
 }
 
@@ -143,7 +143,6 @@ h2.oppSubheading {
   .oppGridContainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    grid-gap: 20px;
   }
 }
 
@@ -160,6 +159,5 @@ h2.oppSubheading {
   .oppGridContainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 20px;
   }
 }
