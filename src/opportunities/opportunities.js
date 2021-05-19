@@ -69,44 +69,45 @@ const Opportunities = () => {
             <div className={styles.oppGridContainer}>
               {opportunities.map((individualOpportunity, index) => {
                 return (
-                  <a href={individualOpportunity.link} 
+                  <a
+                    href={individualOpportunity.link}
                     target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.oppGridItems}>
-                  <div key={index} >
-                    
-                    <img
-                      className={styles.oppImg}
-                      src={
-                        process.env.PUBLIC_URL +
-                        `/sponsors/2021/${individualOpportunity.img}`
-                      }
-                      alt={individualOpportunity.companyName}
-                    />
-                    {/* The image name could be found in the "public/sponsors/2021" folder */}
-                    <div className={styles.oppDesc}>
-                      <p className={styles.oppTypeAndLocation}>
-                        {individualOpportunity.type}
-                      </p>
-                      {/* The type should be in the format of the following example: Graduate Role */}
-                      <p className={styles.jobPosition}>
-                        {individualOpportunity.position}
-                      </p>
-                      {/* The position should be in the format of the following example: Front End Developer */}
-                      <p className={styles.oppTypeAndLocation}>
-                        {individualOpportunity.location}
-                      </p>
-                      <p className={styles.oppSummary}>
-                        Applications close: {individualOpportunity.closeDate}
-                      {/* The position should be in the format of the following example: 01/01/2021 */}
-                      </p>
-                      <p className={styles.oppSummary}>
-                        {individualOpportunity.summary}
-                      </p>
+                    rel="noopener noreferrer"
+                    className={styles.oppGridItems}
+                    key={index}
+                  >
+                    <div>
+                      <img
+                        className={styles.oppImg}
+                        src={
+                          process.env.PUBLIC_URL +
+                          `/sponsors/2021/${individualOpportunity.img}`
+                        }
+                        alt={individualOpportunity.companyName}
+                      />
+                      {/* The image name could be found in the "public/sponsors/2021" folder */}
+                      <div className={styles.oppDesc}>
+                        <p className={styles.oppTypeAndLocation}>
+                          {individualOpportunity.type}
+                        </p>
+                        {/* The type should be in the format of the following example: Graduate Role */}
+                        <p className={styles.jobPosition}>
+                          {individualOpportunity.position}
+                        </p>
+                        {/* The position should be in the format of the following example: Front End Developer */}
+                        <p className={styles.oppTypeAndLocation}>
+                          {individualOpportunity.location}
+                        </p>
+                        <p className={styles.oppSummary}>
+                          Applications close: {individualOpportunity.closeDate}
+                          {/* The position should be in the format of the following example: 01/01/2021 */}
+                        </p>
+                        <p className={styles.oppSummary}>
+                          {individualOpportunity.summary}
+                        </p>
+                      </div>
                     </div>
-                   
-                  </div>
-                   </a>
+                  </a>
                 );
               })}
             </div>
