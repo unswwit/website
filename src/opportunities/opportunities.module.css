@@ -1,13 +1,4 @@
 /*-------------------------------Opportunities Preview-----------------------------*/
-/* Subheadings */
-h2.oppSubheading {
-  font-family: "Montserrat", sans-serif;
-  font-size: 33pt;
-  text-transform: uppercase;
-  
-  margin-bottom: 4%;
-  text-align: center;
-}
 
 .head {
   font-family: "Montserrat", sans-serif;
@@ -63,7 +54,7 @@ h2.oppSubheading {
   padding: 0;
   padding-bottom: 5px;
   text-align: center;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .oppSummary {
@@ -89,9 +80,9 @@ h2.oppSubheading {
 
 .jobPosition {
   color: #313638;
-  letter-spacing: 0.1vw;
-  font-size: 14pt;
-  font-family: "Montserrat", sans-serif;
+  font-size: 16pt;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
   text-align: center;
   margin-bottom: 10px;
 }
