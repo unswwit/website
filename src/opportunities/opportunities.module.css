@@ -141,3 +141,10 @@ h2.oppSubheading {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
+
+@media only screen and (max-width: 350px) {
+  .oppImg {
+    width: 250px;
+    height: 150px;
+  }
+}
