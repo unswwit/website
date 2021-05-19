@@ -99,16 +99,6 @@ const Opportunities = () => {
                       <p className={styles.oppSummary}>
                         {individualOpportunity.summary}
                       </p>
-                      <p style={{ textAlign: "right" }}>
-                        <a
-                          href={individualOpportunity.link}
-                          className={styles.moreLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Learn More
-                        </a>
-                      </p>
                     </div>
                   </div>
                 );

@@ -94,19 +94,6 @@ h2.oppSubheading {
   margin-bottom: 10px;
 }
 
-.moreLink {
-  color: #e85f5c;
-  letter-spacing: 0.05vw;
-  font-size: 11pt;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  margin-top: 10px;
-}
-
-.moreLink:hover {
-  color: #feb14b;
-}
-
 /*---------------------------Loading Sign--------------------------*/
 #oppLoading {
   color: #feb14b;
