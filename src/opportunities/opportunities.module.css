@@ -2,13 +2,16 @@
 
 .head {
   font-family: "Montserrat", sans-serif;
-  font-size: 12pt;
+  font-size: 14px;
+  font-weight: 400;
   color: #313638b3;
   text-align: justify;
+  letter-spacing: 0.1em;
 }
 
 .link {
-  color: #e85f5c;
+  color: #313638;
+  font-weight: 500;
 }
 
 .link:hover {
@@ -55,12 +58,13 @@
   padding-bottom: 5px;
   text-align: center;
   font-weight: 500;
+  font-size: 12px;
 }
 
 .oppSummary {
   color: var(--light-grey);
-  letter-spacing: 0.07vw;
-  font-size: 10pt;
+  letter-spacing: 0.05em;
+  font-size: 11px;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   padding: 0;
@@ -80,7 +84,7 @@
 
 .jobPosition {
   color: #313638;
-  font-size: 16pt;
+  font-size: 20px;
   font-family: "Playfair Display", serif;
   font-weight: 500;
   text-align: center;
