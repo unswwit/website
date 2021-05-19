@@ -69,7 +69,12 @@ const Opportunities = () => {
             <div className={styles.oppGridContainer}>
               {opportunities.map((individualOpportunity, index) => {
                 return (
-                  <div key={index} className={styles.oppGridItems}>
+                  <a href={individualOpportunity.link} 
+                    target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.oppGridItems}>
+                  <div key={index} >
+                    
                     <img
                       className={styles.oppImg}
                       src={
@@ -99,7 +104,9 @@ const Opportunities = () => {
                         {individualOpportunity.summary}
                       </p>
                     </div>
+                   
                   </div>
+                   </a>
                 );
               })}
             </div>

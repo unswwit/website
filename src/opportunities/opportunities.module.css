@@ -45,8 +45,9 @@ h2.oppSubheading {
 }
 
 .oppGridItems {
-  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
+  display: block;
   position: relative;
+  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
 .oppDesc {
@@ -120,7 +121,7 @@ h2.oppSubheading {
   }
 
   .head, .oppLookout {
-    max-width: 70%;
+    max-width: 80%;
     margin: 0 auto;
   }
 
