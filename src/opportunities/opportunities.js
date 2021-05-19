@@ -33,8 +33,7 @@ const Opportunities = () => {
         title="Opportunities"
       />
 
-      {/*start of active opportunies*/}
-      <h2 className={styles.oppSubheading}>Active Opportunities</h2>
+      {/*start of opportunies*/}
       <div id={styles.oppLoadingContainer}>
         {loading && (
           <CircularProgress

@@ -4,7 +4,7 @@ h2.oppSubheading {
   font-family: "Montserrat", sans-serif;
   font-size: 33pt;
   text-transform: uppercase;
-  margin-top: 8%;
+  
   margin-bottom: 4%;
   text-align: center;
 }
@@ -34,6 +34,7 @@ h2.oppSubheading {
   max-width: 70%;
   margin: 0 auto;
   margin-bottom: 10%;
+  margin-top: 4%;
 }
 
 .oppGridContainer {
@@ -108,10 +109,6 @@ h2.oppSubheading {
 
 /*-------------------------------Responsive mobile design------------------------------*/
 @media only screen and (max-width: 750px) {
-  h2.oppSubheading {
-    font-size: 20pt;
-  }
-
   .head, .oppLookout {
     font-size: 11pt;
   }
@@ -134,11 +131,6 @@ h2.oppSubheading {
 }
 
 @media only screen and (max-width: 400px) {
-  h2.oppSubheading {
-    font-size: 12pt;
-    word-break: break-word;
-  }
-
   .oppBody {
     max-width: 100%;
   }
