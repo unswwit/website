@@ -16,6 +16,8 @@ const MarketingContent = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(8);
+  // const [indexOfLastPost, setIndexOfLastPost] = useState(currentPage * postsPerPage);
+  // const [indexOfFirstPost, setIndexOfFirstPost] = useState(indexOfLastPost - postsPerPage);
 
   const categories = {
     "All": "All", 
@@ -37,9 +39,13 @@ const MarketingContent = () => {
     });
   },[selectedCategory]);
 
-  const indexOfLastPost = currentPage * postsPerPage;
+  // setIndexOfLastPost(currentPage * postsPerPage);
+  // setIndexOfFirstPost(indexOfLastPost - postsPerPage);
+  //indexOfLastPost = currentPage * postsPerPage; 
+  const indexOfLastPost = Math.min(8, content
+    .filter((picture) => selectedCategory === "All" || picture.category.split(",").includes(selectedCategory)));
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = content.slice(indexOfFirstPost, indexOfLastPost);
+  setContent(content.slice(indexOfFirstPost, indexOfLastPost));
 
   // change page number & scroll to top when onClick called for pagination
   const paginate = (pageNumber) => {
@@ -73,7 +79,12 @@ const MarketingContent = () => {
                 }}
                 onClick={() => {
                   setLoading(true);
-                  setSelectedCategory(categories[category]);                
+                  setSelectedCategory(categories[category]);
+                  setCurrentPage(1);
+                  //setIndexOfLastPost(Math.min(8, content
+                  //  .filter((picture) => selectedCategory === "All" || picture.category.split(",").includes(selectedCategory))));
+                  //setIndexOfFirstPost(indexOfLastPost-postsPerPage);
+                  setContent(content.slice(indexOfFirstPost, indexOfLastPost));             
                 }}
               />                
             })}
@@ -89,7 +100,7 @@ const MarketingContent = () => {
           </div>
           {/*Image collage*/}
           {!loading && <ol className={styles.grid} id={styles.content}> 
-            {currentPosts
+            {content
               .filter((picture) => selectedCategory === "All" || picture.category.split(",").includes(selectedCategory))
               .map((content, index) => {   
                 return <Initiative
@@ -101,8 +112,8 @@ const MarketingContent = () => {
                 />
               })}
           </ol>}   
-        </div>
-        <ScrollUpBtn/>
+        </div>  
+
         <Pagination
           postsPerPage={postsPerPage}
           totalPosts={content.length}
@@ -110,6 +121,7 @@ const MarketingContent = () => {
           page='marketing-archive'
           currentPage={currentPage}
         />
+        <ScrollUpBtn/>
         {/*End of Initiatives*/}
       </div>
     </>

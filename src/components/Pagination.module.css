@@ -17,13 +17,22 @@ li.pagination {
     box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
 }
 
+.pagination a.disabled {
+    opacity: 0.5;
+    color:rgba(105, 105, 105, 0.918);
+    cursor: default;
+}
+
 /* Current page item */
 .pagination a.active {
     background-color: #e85f5c;
     color: white;
 }
 
-.pagination a:hover:not(.active) {
+/* hover */
+.pagination a:hover:not(.active, .disabled) {
     background-color: #feb14b;;
     color: white;
 }
+
+

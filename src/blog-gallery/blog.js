@@ -39,7 +39,7 @@ const Blog = () => {
   const [loading, setLoading] = useState(true);
   const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(10);
+  const [postsPerPage] = useState(5);
 
   useEffect(() => {
     Tabletop.init({
@@ -69,9 +69,10 @@ const Blog = () => {
     
   }, [selectedCategory]);
 
-  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfLastPost = currentPage * postsPerPage ;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = blogs.slice(indexOfFirstPost, indexOfLastPost);
+
 
   // change page number & scroll to top when onClick called for pagination
   const paginate = (pageNumber) => {
@@ -107,7 +108,8 @@ const Blog = () => {
                 }}
                 onClick={() => {
                   setLoading(true);
-                  setSelectedCategory(category);                
+                  setSelectedCategory(category);  
+                  setCurrentPage(1);              
                 }}
               />    
             </BootstrapTooltip>;              
@@ -142,14 +144,16 @@ const Blog = () => {
               />
             })}       
         </div>
-        <ScrollUpBtn/>
         <Pagination
           postsPerPage={postsPerPage}
-          totalPosts={blogs.length}
+          totalPosts={blogs.filter((blog) => (selectedCategory === "All" || 
+          (blog.category.split(",")).includes(selectedCategory) ||
+          ((blog.category.split(",")).includes("WCW") && selectedCategory === "WIT Crush Wednesday"))).length}
           paginate={paginate}
           page='blog'
           currentPage={currentPage}
         />
+        <ScrollUpBtn/>
         {/*End of blog posts*/}
       </div>
     </>
