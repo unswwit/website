@@ -10,6 +10,8 @@ import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../components/ScrollUpBtn";
 import SearchBar from "../components/BlogSearchBar";
+import Announcer from '../components/announcer';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const useStylesBootstrap = makeStyles((theme) => ({
   arrow: {
@@ -23,6 +25,17 @@ const useStylesBootstrap = makeStyles((theme) => ({
 const BootstrapTooltip = (props) => {
   const classes = useStylesBootstrap();
   return <Tooltip arrow classes={classes} {...props} />;
+};
+
+const filterBlogs = (blogs, query) => {
+  if (!query) {
+      return blogs;
+  }
+
+  return blogs.filter((blog) => {
+      const blogName = blog.name.toLowerCase();
+      return blogName.includes(query);
+  });
 };
 
 const Blog = () => {
@@ -44,6 +57,11 @@ const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [loading, setLoading] = useState(true);
   const [blogs, setBlogs] = useState([]);
+
+  const { search } = window.location;
+  const query = new URLSearchParams(search).get('s');
+  const [searchQuery, setSearchQuery] = useState(query || '');
+  const filteredBlogs = filterBlogs(blogs, searchQuery);
 
   useEffect(() => {
     window.scrollTo(0,0);
@@ -121,7 +139,34 @@ const Blog = () => {
             })}
         </div>
         {/*Start of search bar for blog posts */}
-        <SearchBar/>
+        <Router>
+            <div className="App">
+                <Announcer
+                    message={`${filteredBlogs.length} posts`}
+                />
+                <SearchBar
+                    searchQuery={searchQuery}
+                    setSearchQuery={setSearchQuery}
+                />
+                <ul>
+                    {filteredBlogs
+                      .map((blog) => {
+                        return (
+                          <BlogPreview
+                            key={blog.blogNo}
+                            blogNo={blog.blogNo}
+                            imgUrl={`/blog-covers/${blog.img}`}
+                            heading={blog.heading}
+                            date={blog.date}
+                            subheading={blog.subheading}
+                            authors={blog.authors}
+                            category={blog.category.split(",")}
+                          />
+                        );
+                        })}
+                </ul>
+            </div>
+        </Router>
         
         {/*Start of blog posts*/}
         <div id={styles.blogLoadingContainer}>
