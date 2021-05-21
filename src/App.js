@@ -19,6 +19,7 @@ import Events from "./events/events";
 import Podcast from "./podcast/Podcast";
 import EpisodePage from "./podcast/EpisodePage";
 import NotFound from "./not-found/NotFound";
+import OurStory from "./our-story/our-story";
 
 import Menu from "./menu";
 import MenuBtn from "./menuBtn";
@@ -276,9 +277,9 @@ class App extends Component {
                       }
                     >
                       <div className="dropdown-item">
-                        <NavLink to="/resources/blog" {...this.highlightDD}>
+                        <NavLink to="/about/our-story" {...this.highlightDD}>
                         <ChromeReaderModeOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
-                          (OUR STORY)
+                          OUR STORY
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
@@ -424,9 +425,11 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/events" component={Events} />
+            {/*When user clicks on About tab, the page will be redirected to Our Story*/}
             <Route exact path="/about">
-              <Redirect to="/resources/blog" />
+              <Redirect to="/about/our-story" />
             </Route>            
+            <Route exact path="/about/our-story" component={OurStory} />
             <Route path="/about/our-team" component={OurTeam} />
             <Route exact path="/resources/blog" component={Blog} />
             <Route exact path="/resources">
