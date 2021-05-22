@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import styles from "./content.module.css";
 import "../.././style.css";
 import PageHeader from "../.././header";
@@ -8,6 +9,21 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../.././components/ScrollUpBtn"
 import Tabletop from "tabletop";
 import Timeline from "../.././components/Timeline"
+import Tooltip from "@material-ui/core/Tooltip";
+
+const useStylesBootstrap = makeStyles((theme) => ({
+  arrow: {
+    color: theme.palette.common.black,
+  },
+  tooltip: {
+    backgroundColor: theme.palette.common.black,
+  },
+}));
+
+const BootstrapTooltip = (props) => {
+  const classes = useStylesBootstrap();
+  return <Tooltip arrow classes={classes} {...props} />;
+};
 
 const MarketingContent = () => {
   const [content, setContent] = useState([]);
@@ -20,6 +36,21 @@ const MarketingContent = () => {
     Memes: "memes",
     "Monday Motivation": "monday",
     "WIT Crush Wednesday": "wcw",
+    "Special Occasions": "special",
+  };
+
+  const categoryDescriptions = {
+    All: "Click here to see all the marketing posts that we have posted!",
+    Mascot:
+      "Trying to procrastinate, or failing to stop yourself from doing so? Look no more because our cute mascot Willow is here to support you during your studies!",
+    Memes:
+      "Searching for something to giggle about? Click here for some relatable content!",
+    "Monday Motivation":
+      "Click here for some study motivation to help boost that WAM!",
+    "WIT Crush Wednesday":
+      "Each Wednesday, we share a post about some inspiring women in tech. Click here to read their empowering stories!",
+    "Special Occasions":
+      "Celebrate special occasions with our friendly mascot, Willow!",
   };
 
   // position of the marks on the timeline (i.e. 100 indicates that it's on the right end)
@@ -76,7 +107,7 @@ const MarketingContent = () => {
         <div className={styles.initiatives}>
           {/* Start of categories */}
           <div className={styles.contentCategories}>
-            {Object.keys(categories)
+            {Object.keys(categoryDescriptions)
               .sort()
               .map((category) => {
                 const chipColour =
@@ -84,6 +115,17 @@ const MarketingContent = () => {
                     ? "#e85f5c"
                     : "#7F7F7F";
                 return (
+                  <BootstrapTooltip
+                    key={category}
+                    title={
+                      <>
+                        <div className={styles.tooltipTitle}>{category}</div>
+                        <p className={styles.tooltipDescription}>
+                          {categoryDescriptions[category]}
+                        </p>
+                      </>
+                    }
+                  >
                   <Chip
                     key={category}
                     size="medium"
@@ -99,6 +141,7 @@ const MarketingContent = () => {
                       setSelectedCategory(categories[category]);
                     }}
                   />
+                </BootstrapTooltip>
                 );
               })}
           </div>
