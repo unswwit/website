@@ -60,12 +60,12 @@ class Menu extends Component {
                     <div>
                       <NavLink
                         className="menu-link"
-                        to="/resources/blog"
+                        to="/about/our-story"
                         style={{ textDecoration: "none" }}
                         onClick={this.props.handleMenuClick}
                       >
                         <div className="menu-box">
-                          <li className="menu-item">(OUR STORY)</li>
+                          <li className="menu-item">OUR STORY</li>
                         </div>
                       </NavLink>
                       <NavLink

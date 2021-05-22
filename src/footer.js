@@ -9,6 +9,7 @@ const Footer = () => {
     "Opportunities": "/opportunities",
     "Join Us": "/join-us",
     "Our Sponsors": "/about/sponsors",
+    "Our Story": "/about/our-story",
     "Our Team": "/about/our-team",
     "Contact Us": "/about/contact-us",
     "Blog Posts": "/resources/blog",
@@ -19,7 +20,7 @@ const Footer = () => {
 
   const links = [
     ["Home", "Events", "Opportunities", "Join Us"],
-    ["(Our Story)", "Our Sponsors", "Our Team", "Contact Us"],
+    ["Our Story", "Our Sponsors", "Our Team", "Contact Us"],
     ["Blog Posts", "Podcast", "Publications", "Marketing Archive"],
   ];
 
