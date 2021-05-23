@@ -9,6 +9,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../components/ScrollUpBtn"
+import LoadingScreen from "../LoadingScreen";
 
 const useStylesBootstrap = makeStyles((theme) => ({
   arrow: {
@@ -43,6 +44,21 @@ const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [loading, setLoading] = useState(true);
   const [blogs, setBlogs] = useState([]);
+  const [initialLoading, setinitialLoading] = React.useState(true);
+  const [sourceLoading, setSourceLoading] = React.useState(true);
+  const [coverPhoto, setCoverPhoto] = React.useState(null);
+
+  // control when to stop loading
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/headers/header-1.jpg";
+    img.onload = () => {     
+      setCoverPhoto(img.src);
+      setTimeout(() => {
+        setSourceLoading(false);
+      }, 1000);
+    }
+  }, [])  
 
   // scroll to top on load
   useEffect(() => {
@@ -80,7 +96,12 @@ const Blog = () => {
   }, [selectedCategory]);
 
   return (
-    <>
+    <div>
+    {sourceLoading ? (
+      <LoadingScreen />
+    )
+      :
+      (<>
       {/* Cover Photo */}
       <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Posts" />
       <div className={styles.blogGallery}>
@@ -162,7 +183,8 @@ const Blog = () => {
         <ScrollUpBtn/>
         {/*End of blog posts*/}
       </div>
-    </>
+    </>)}
+    </div>
   );
 };
 
