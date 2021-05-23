@@ -18,7 +18,7 @@ const AddToCalBtn = (props) => {
   const AddToCalendarDropdown = AddToCalendarHOC(Button, Dropdown);
 
   return (
-    <AddToCalendarDropdown
+    <AddToCalendarDropdown 
       className={styles.componentStyles}
       buttonText="ADD TO CALENDAR"
       event={event}
