@@ -7,6 +7,7 @@ import SubCom from "./subcom";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Timeline from "../components/Timeline";
+import LoadingScreen from "../LoadingScreen";
 
 function OurTeam() {
   const sectors = [
@@ -21,6 +22,10 @@ function OurTeam() {
   const [subcommittee, setSubcommittee] = useState([]);
   const [year, setYear] = useState("2021");
   const [loading, setLoading] = useState(true);
+  const [initialLoading, setinitialLoading] = React.useState(true);
+  const [sourceLoading, setSourceLoading] = React.useState(true);
+  const [coverPhoto, setCoverPhoto] = React.useState(null);
+
   const execToClassName = {
     2021: "exec2021Img",
     2020: {
@@ -102,116 +107,135 @@ function OurTeam() {
     });
   }, [year]);
 
+  // control when to stop loading
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/headers/header-1.jpg";
+    img.onload = () => {     
+      setCoverPhoto(img.src);
+      setTimeout(() => {
+        setSourceLoading(false);
+      }, 1000);
+    }
+  }, [])  
+
   return (
     <div>
-      {/* Cover Photo */}
-      <PageHeader
-        imgUrl="/headers/2021-team-header.jpg"
-        title="Meet Our Team"
-      />
+    {sourceLoading ? (
+      <LoadingScreen />
+    )
+      :
+      (
+      <div>
+        {/* Cover Photo */}
+        <PageHeader
+          imgUrl="/headers/2021-team-header.jpg"
+          title="Meet Our Team"
+        />
 
-      {/* Timeline */}
-      <Timeline
-        margin={"7%"}
-        page={"teams"}
-        step={25}
-        valueToYear={valueToYear}
-        marks={marks}
-        updateYear={handleYear}
-      />
+        {/* Timeline */}
+        <Timeline
+          margin={"7%"}
+          page={"teams"}
+          step={25}
+          valueToYear={valueToYear}
+          marks={marks}
+          updateYear={handleYear}
+        />
 
-      <div id={styles.teamLoadingContainer}>
-        {loading && (
-          <CircularProgress
-            variant="indeterminate"
-            size={50}
-            thickness={5}
-            id={styles.teamLoading}
-          />
-        )}
-      </div>
+        <div id={styles.teamLoadingContainer}>
+          {loading && (
+            <CircularProgress
+              variant="indeterminate"
+              size={50}
+              thickness={5}
+              id={styles.teamLoading}
+            />
+          )}
+        </div>
 
-      {!loading && (
-        <>
-          {/* Exec section */}
-          <div className={styles.profileSectionHeading}>
-            <h2 className={styles.teamHeading}>OUR {year} EXECUTIVE TEAM</h2>
-          </div>
-
-          <div className={styles.allExecsSection}>
-            <div className={styles.execRow}>
-              {execs.map((row, index) => {
-                return (
-                  <div key={index} className={styles.execRow}>
-                    {row.map((exec, index) => {
-                      return (
-                        <Execs
-                          key={index}
-                          imgUrl={
-                            exec.img !== ""
-                              ? `/potraits/${year}-exec/${exec.img}`
-                              : ""
-                          }
-                          name={exec.name}
-                          className={
-                            year === "2020"
-                              ? execToClassName[year][exec.name]
-                              : execToClassName[year]
-                          }
-                          position={exec.position}
-                          degree={exec.degree}
-                          year={exec.year}
-                          linkedin={exec.linkedin}
-                          fb={exec.facebook}
-                          email={exec.email}
-                        />
-                      );
-                    })}
-                  </div>
-                );
-              })}
+        {!loading && (
+          <>
+            {/* Exec section */}
+            <div className={styles.profileSectionHeading}>
+              <h2 className={styles.teamHeading}>OUR {year} EXECUTIVE TEAM</h2>
             </div>
-          </div>
 
-          {/* Subcommittee section */}
-          {subcommittee.length ? (
-            <>
-              <h2
-                className={styles.teamHeading}
-                style={{ marginTop: "2vw", paddingBottom: "5px" }}
-              >
-                OUR {year} SUBCOMMITTEE TEAM
-              </h2>
-
-              <div className={styles.subcomSection}>
-                {sectors.map((sector) => {
+            <div className={styles.allExecsSection}>
+              <div className={styles.execRow}>
+                {execs.map((row, index) => {
                   return (
-                    <div key={sector}>
-                      <h3 className={styles.subcomType}>{sector} Team</h3>
-                      {subcommittee
-                        .filter((member) => member.team === sector)
-                        .map((member, index) => {
-                          return (
-                            <SubCom
-                              key={index}
-                              name={member.name}
-                              degree={member.degree}
-                              year={member.year}
-                            />
-                          );
-                        })}
+                    <div key={index} className={styles.execRow}>
+                      {row.map((exec, index) => {
+                        return (
+                          <Execs
+                            key={index}
+                            imgUrl={
+                              exec.img !== ""
+                                ? `/potraits/${year}-exec/${exec.img}`
+                                : ""
+                            }
+                            name={exec.name}
+                            className={
+                              year === "2020"
+                                ? execToClassName[year][exec.name]
+                                : execToClassName[year]
+                            }
+                            position={exec.position}
+                            degree={exec.degree}
+                            year={exec.year}
+                            linkedin={exec.linkedin}
+                            fb={exec.facebook}
+                            email={exec.email}
+                          />
+                        );
+                      })}
                     </div>
                   );
                 })}
               </div>
-            </>
-          ) : null}
-        </>
-      )}
-      <footer>
-        <div className={styles.footerArea} style={{ marginTop: "8vw" }} />
-      </footer>
-    </div>
+            </div>
+
+            {/* Subcommittee section */}
+            {subcommittee.length ? (
+              <>
+                <h2
+                  className={styles.teamHeading}
+                  style={{ marginTop: "2vw", paddingBottom: "5px" }}
+                >
+                  OUR {year} SUBCOMMITTEE TEAM
+                </h2>
+
+                <div className={styles.subcomSection}>
+                  {sectors.map((sector) => {
+                    return (
+                      <div key={sector}>
+                        <h3 className={styles.subcomType}>{sector} Team</h3>
+                        {subcommittee
+                          .filter((member) => member.team === sector)
+                          .map((member, index) => {
+                            return (
+                              <SubCom
+                                key={index}
+                                name={member.name}
+                                degree={member.degree}
+                                year={member.year}
+                              />
+                            );
+                          })}
+                      </div>
+                    );
+                  })}
+                </div>
+              </>
+            ) : null}
+          </>
+        )}
+        <footer>
+          <div className={styles.footerArea} style={{ marginTop: "8vw" }} />
+        </footer>
+      </div>
+    )}</div>
   );
 }
 
