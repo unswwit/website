@@ -16,7 +16,7 @@ const Home = () => {
   const [mobileView, setMobileView] = React.useState(false);
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
-  const last3articles = articles.slice(1, 4);
+  const last3articles = articles.slice(0, 3);
 
   //start webpage at the top
   useEffect(() => {
@@ -39,7 +39,7 @@ const Home = () => {
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: googleData => {
-        setArticles(googleData["publications"]["elements"]);  
+        setArticles(googleData["publications"]["elements"].reverse());  
         setLoading(false);
       },
       simpleSheet: false
