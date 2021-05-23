@@ -96,7 +96,7 @@ const Events = () => {
                   index={index}
                 />)  
             })}
-          <ScrollUpBtn/>
+            <ScrollUpBtn/>
           </div>)
         )}
         <h2>PAST EVENTS</h2>
