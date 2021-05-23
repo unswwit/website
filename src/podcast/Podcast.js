@@ -4,7 +4,8 @@ import styles from "./Podcast.module.css";
 import EpisodeTemplate from "./EpisodeTemplate";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Tabletop from "tabletop";
-import ScrollUpBtn from "../components/ScrollUpBtn"
+import ScrollUpBtn from "../components/ScrollUpBtn";
+import LoadingScreen from "../LoadingScreen";
 
 const Podcast = () => {
   const [episodes, setEpisodes] = useState([]);
@@ -26,6 +27,21 @@ const Podcast = () => {
     pocketCasts: ["podcast-pocket-casts.png", "https://pca.st/kzc50ug6"],
     breaker: ["podcast-breaker.png", "https://www.breaker.audio/talk-wit-us"],
   };
+  const [initialLoading, setinitialLoading] = React.useState(true);
+  const [sourceLoading, setSourceLoading] = React.useState(true);
+  const [coverPhoto, setCoverPhoto] = React.useState(null);
+
+  // control when to stop loading
+  useEffect(() => {
+    const img = new Image();
+      img.src = "/headers/header-1.jpg";
+      img.onload = () => {     
+        setCoverPhoto(img.src);
+        setTimeout(() => {
+          setSourceLoading(false);
+        }, 1000);
+      }
+  }, [])  
 
   useEffect(() => {
     // start at the top of the page
@@ -45,6 +61,12 @@ const Podcast = () => {
   }, []);
 
   return (
+    <div>
+    {sourceLoading ? (
+      <LoadingScreen />
+    )
+      :
+      (
     <>
       {/* Cover Photo */}
       <PageHeader imgUrl="/headers/podcast-header.jpg" title="Podcast" />
@@ -113,6 +135,7 @@ const Podcast = () => {
       </div>    
       <ScrollUpBtn/>
     </>
+  )}</div>
   );
 };
 export default Podcast;
