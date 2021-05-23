@@ -57,7 +57,7 @@ const Opportunities = () => {
               Here are all the links to all current career opportunities
               available ranging from internships to graduate roles. Bookmark
               this page and check back regularly to be the first to know about
-              job opportunies!
+              job opportunities!
             </p>
             <p className={styles.head}>
               If you would like to make a listing, please contact us at&nbsp;
