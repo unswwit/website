@@ -39,7 +39,7 @@
 
 .oppGridContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   grid-gap: 50px;
   margin-top: 50px;
 }
@@ -83,7 +83,7 @@
   object-fit: scale-down;
   display: block;
   margin: 0 auto;
-  width: 350px;
+  width: 250px;
   height: 150px;
   transform: translate(0%, 20%);
 }
