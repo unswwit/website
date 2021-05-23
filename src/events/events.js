@@ -10,7 +10,7 @@ import Timeline from "../components/Timeline";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../components/ScrollUpBtn"
-import AddToCalBtn from "./AddToCalBtn.js";
+import UpcomingEvent from "./UpcomingEvent.js";
 
 const Events = () => {
   const [expanded, setExpanded] = useState(false);
@@ -62,7 +62,7 @@ const Events = () => {
           (event) => event.year === year
         );
         setEvents(allEvents.reverse());
-        setUpcomingEvents(googleData["upcoming-events"]["elements"]);
+        setUpcomingEvents(googleData["upcoming-events-test"]["elements"]);
       },
       simpleSheet: false,
     });
@@ -90,58 +90,13 @@ const Events = () => {
           :
           (<div className={styles.gridContainer}>          
             {upcomingEvents.map((upcomingEvent, index) => {
-              return <div key={index} className={styles.upcoming}>
-                <img
-                  className={styles.eventImages}
-                  src={
-                    process.env.PUBLIC_URL +
-                      `/event-covers/2021/${upcomingEvent.img}`
-                  }
-                  alt={upcomingEvent.title}
-                />
-                <div className={styles.eventDescription}>
-                  <p className={styles.eventName}>{upcomingEvent.title}</p>
-                  {/* The date should be in the format of the following example: 24th January 2020 */}
-                  <p className={styles.eventDate}>{upcomingEvent.date}</p>
-                  <p className={styles.eventSummary}>
-                    {upcomingEvent.description}              
-                  </p>
-                  <ul id={styles.links}>                     
-                    <li className={styles.eventLink}>
-                      <a
-                        href={upcomingEvent.registerLink}
-                        className={styles.event}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                          Register
-                      </a>
-                    </li>
-                    {upcomingEvent.facebookLink && <li className={styles.eventLink}>
-                      <a
-                        href={upcomingEvent.facebookLink}
-                        className={styles.event}                      
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                          Facebook
-                      </a>
-                    </li>}
-                    <li className={styles.eventButton}>
-                      <AddToCalBtn 
-                        title={upcomingEvent.title} 
-                        description={upcomingEvent.description}
-                        location={upcomingEvent.location}
-                        startDate={upcomingEvent.start}
-                        endDate={upcomingEvent.end}
-                        duration={upcomingEvent.duration}
-                      />
-                    </li>                     
-                  </ul>
-                </div>
-                <ScrollUpBtn/>
-              </div>
+              return(
+                <UpcomingEvent
+                  upcomingEvent={upcomingEvent}
+                  index={index}
+                />)  
             })}
+          <ScrollUpBtn/>
           </div>)
         )}
         <h2>PAST EVENTS</h2>

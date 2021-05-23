@@ -1,6 +1,6 @@
 /*------------------------------Upcoming Events--------------------------------*/
 .eventsBody {
-  max-width: 70%;
+  max-width: 80%;
   margin: 0 auto;
   margin-bottom: 10%;
 }
@@ -12,7 +12,7 @@
 
 .gridContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-gap: 20px;
 }
 
@@ -27,20 +27,27 @@
 }
 
 .eventName {
-  color: #feb14b;
+  color: #000000;
   font-family: "Playfair Display", serif;
+  font-size: 28px;
+  text-align: center;
   letter-spacing: 1pt;
   margin: 0;
-  padding: 0;
   padding-bottom: 5px;
+  padding-top: 5px;
 }
 
 .eventDate {
-  color: #313638;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #FEB14B;
   letter-spacing: 0.1vw;
-  font-size: 8pt;
-  padding: 0;
   padding-bottom: 5px;
+  padding-top: 5px;
   margin: 0;
 }
 
@@ -49,11 +56,12 @@
   letter-spacing: 0.1vw;
   font-size: 10pt;
   font-family: "Montserrat", sans-serif;
+  text-align: center;
   font-weight: 300;
   padding: 0;
   padding-bottom: 5px;
-  margin-top: 10px;
-  margin: 0;
+  margin: 10px, 0;
+  margin-top: 20px;
 }
 
 ul#links {
@@ -61,17 +69,34 @@ ul#links {
   margin: 0;
   padding: 0;
   display: inline-flex;
-  justify-content: flex-end;
-  float: right;
+  text-align: center;
 }
 
 li.eventLink {
-  margin: 5px 10px;
+  margin: 10px 0px;
+  margin-right: 5px;
+  margin-bottom: 0px;
 }
 
 li.eventButton {
   margin: 10px 10px;
-  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.regButton {
+	border: none;
+	width: 150px;
+	height: 36px;
+	background-color: #e85f5c;
+	box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
+
+	font-family: "Montserrat", sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 15px;
+	letter-spacing: 0.05em;
+	color: #ffffff;
 }
 
 a.event {
