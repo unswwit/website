@@ -46,8 +46,8 @@ const Opportunities = () => {
       </div>
       {!loading &&
         (!opportunities.length ? (
-          <div className={styles.oppBody}>
-            <p className={styles.oppLookout}>
+          <div className={styles.oppLookout}>
+            <p className={styles.lookoutSize}>
               Keep a lookout here for upcoming opportunities!
             </p>
           </div>

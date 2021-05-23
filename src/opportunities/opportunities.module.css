@@ -18,17 +18,23 @@
   color: #feb14b;
 }
 
-.oppLookout {
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12pt;
-}
-
 .oppBody {
   max-width: 70%;
   margin: 0 auto;
   margin-bottom: 10%;
   margin-top: 4%;
+}
+
+.oppLookout {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 auto;
+  padding: 100px 0;
+  max-width: 70%;
+}
+
+.lookoutSize {
+  font-size: 12pt;
 }
 
 .oppGridContainer {
@@ -105,17 +111,21 @@
 
 /*-------------------------------Responsive mobile design------------------------------*/
 @media only screen and (max-width: 750px) {
-  .head, .oppLookout {
+  .head, .lookoutSize {
     font-size: 10pt;
+  }
+
+  .oppLookout {
+    padding: 50px 0;
   }
 }
 
 @media only screen and (max-width: 640px) {
-  .oppBody {
+  .oppBody, .oppLookout {
     max-width: 90%;
   }
 
-  .head, .oppLookout {
+  .head {
     max-width: 80%;
     margin: 0 auto;
   }
@@ -135,6 +145,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
+
+  .lookoutSize {
+    font-size: 9pt;
+  }
+
 }
 
 @media only screen and (max-width: 350px) {
