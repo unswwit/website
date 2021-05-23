@@ -2,14 +2,38 @@ import React, { useEffect } from "react";
 import PageHeader from ".././header";
 import ContactForm from "./contactForm";
 import styles from "./contactUs.module.css";
+import LoadingScreen from "../LoadingScreen";
 
 const ContactUs = () => {
+
+  const [initialLoading, setinitialLoading] = React.useState(true);
+  const [sourceLoading, setSourceLoading] = React.useState(true);
+  const [coverPhoto, setCoverPhoto] = React.useState(null);
+
+  // control when to stop loading
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/headers/header-1.jpg";
+    img.onload = () => {     
+      setCoverPhoto(img.src);
+      setTimeout(() => {
+        setSourceLoading(false);
+      }, 1000);
+    }
+  }, [])  
+
   // scroll to top of page
   useEffect(() => {
     window.scrollTo(0,0);
   }, []);
 
   return (
+    <div>
+    {sourceLoading ? (
+      <LoadingScreen />
+    )
+      :
+      (
     <div>
       {/* Cover Photo */}
       <PageHeader imgUrl="/headers/2021-exec-header.jpg" title="Contact Us" />
@@ -149,6 +173,8 @@ const ContactUs = () => {
           </div>           
         </div>
       </div>
+    </div>
+    )}
     </div>
   );
 
