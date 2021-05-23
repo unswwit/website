@@ -15,14 +15,14 @@ const Pagination = ({ postsPerPage, totalPosts, paginate, page, currentPage }) =
   const middle = maxPages/2;
   const [displayPages, setDisplayPages] = useState([1, 2, 3, 4, 5, '...', pageNumbers.length]);
 
-  // getting the hyperlink to page that the pagination is applied to e.g. blog
-  const href = '!#/' + page;
+  // getting the hyperlink to page that the pagination is applied to e.g. /resources/blog
+  const href = '#/resources/' + page;
   let next = currentPage+1;
   if (currentPage === Math.ceil(totalPosts / postsPerPage)) {
     next = Math.ceil(totalPosts / postsPerPage);
   }
 
-  let prev = currentPage-1;
+  let prev = currentPage - 1;
   if (currentPage === 1) {
     prev = 1;
   }
@@ -37,21 +37,32 @@ const Pagination = ({ postsPerPage, totalPosts, paginate, page, currentPage }) =
         displayPages.push(i);
       }
     }
+    renderPages()
+  }
+
+  const renderPages = () => {
+    return <nav>
+      {displayPages.map(number => (
+          <li key={number} className={styles.pagination}>
+            <a onClick={() => paginate(number)} href={href} className={currentPage === number ? [styles.active] : styles.pagination}>
+              {number}
+            </a>
+          </li>
+        ))}
+    </nav>
   }
 
   if (pageNumbers.length > maxPages) {
     const displayPages = [1, 2, 3, '...'];
-    displayPages.push(pageNumbers.length);
+    setDisplayPages(displayPages.push(pageNumbers.length));
+    renderPages()
     return <nav>
       <ul className='pagination justify-content-center'>
         <li class={styles.pagination}>
             <a onClick={() => paginate(prev)} className={prev === currentPage ? [styles.disabled] : styles.pagination} href={href}>Previous </a>
         </li>
         {displayPages.map(number => (
-          <li key={number} className={styles.pagination}>
-            <a onClick={() => paginate(number), changePage(number)} href={href} className={currentPage === number ? [styles.active] : styles.pagination}>
-              {number}
-            </a>
+          <li key={number} className={styles.pagination} onClick={changePage(number)}>
           </li>
         ))}
         <li class={styles.pagination}>
