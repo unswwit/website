@@ -118,16 +118,15 @@ p.lookout {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
-  
+
 #resourcesDescription {
   font-family: "Montserrat", sans-serif;
   color: #4f4f4f;
 }
 
-
 /*---------------------------Loading Sign--------------------------*/
 #eventsLoading {
-  color:#feb14b;  
+  color: #feb14b;
   margin-top: 5%;
   margin-bottom: 3%;
 }

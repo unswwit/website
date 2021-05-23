@@ -15,16 +15,20 @@ class blogPost13 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #13" />
+        <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Post #13" />
 
         {/*Start of blog post*/}
         <div className={styles.blogContent}>
           <div>
-            <h2 className={styles.blogTitle}>Upskill yourself in: MECHATRONICS</h2>
+            <h2 className={styles.blogTitle}>
+              Upskill yourself in: MECHATRONICS
+            </h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>July 13, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -52,7 +56,7 @@ class blogPost13 extends Component {
             <img
               className={styles.floatRight}
               src={
-                process.env.PUBLIC_URL + "/blog-attachments/blog-13-mech.png"
+                process.env.PUBLIC_URL + "/blog-attachments/blog-13-mech.jpg"
               }
               alt="Mechanical Logo"
             />
@@ -148,7 +152,7 @@ class blogPost13 extends Component {
             <img
               className={styles.floatRight}
               src={
-                process.env.PUBLIC_URL + "/blog-attachments/blog-13-elec.png"
+                process.env.PUBLIC_URL + "/blog-attachments/blog-13-elec.jpg"
               }
               alt="Electrical Logo"
             />
@@ -223,7 +227,7 @@ class blogPost13 extends Component {
             <img
               className={styles.floatRight}
               src={
-                process.env.PUBLIC_URL + "/blog-attachments/blog-13-comp.png"
+                process.env.PUBLIC_URL + "/blog-attachments/blog-13-comp.jpg"
               }
               alt="Computing logo"
             />

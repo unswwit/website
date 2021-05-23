@@ -15,7 +15,7 @@ class blogPost50 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #50" />
+        <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Post #50" />
         {/*End of Header*/}
 
         {/*Start of blog post*/}
@@ -122,7 +122,7 @@ class blogPost50 extends Component {
         <AuthorCard
           authors={{
             "natalie-leroy": [
-              "/potraits/blog-authors/natalie-leroy.png",
+              "/potraits/blog-authors/natalie-leroy.jpg",
               styles.anonProfile,
               "Natalie Leroy",
               "Education Team"

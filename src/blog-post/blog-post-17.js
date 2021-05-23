@@ -15,7 +15,7 @@ class blogPost17 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #17" />
+        <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Post #17" />
 
         {/*End of Header*/}
 
@@ -27,8 +27,10 @@ class blogPost17 extends Component {
             </h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>July 29, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -82,7 +84,10 @@ class blogPost17 extends Component {
             </p>
             <br />
 
-            <p className={styles.question}> What do you love about your career now?</p>
+            <p className={styles.question}>
+              {" "}
+              What do you love about your career now?
+            </p>
             <p className={styles.postContent}>
               I enjoy consulting, designing and delivering transformative
               solutions that help businesses improve their internal processes

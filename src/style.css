@@ -62,7 +62,7 @@
 
 .coverPhoto .headerTitle h1 {
   margin: 0px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 700px) {
@@ -186,12 +186,12 @@ p {
 
 .nav-item a, .dropdown-title {
   color: white;
-  padding: 10px 15px;
+  padding: 18px 15px;
   text-decoration: none;
 }
 
 .dropdown-menu {
-  border-color: transparent;
+  border-color: #fff7ef;
   letter-spacing: 1.5px;
   font-size: 14px;
   background-color: #fff7ef;
@@ -223,7 +223,7 @@ p {
 
 .nav-item a:hover {
   color: #e85f5c;
-  padding: 10px 15px;
+  padding: 18px 15px;
   text-decoration: none;
 }
 
@@ -381,12 +381,12 @@ a {
 }
 
 .footer-item a:hover {
-  color: #feb14b;
+  color: var(--red);
   text-decoration: none;
 }
 
 .bottom-footer-item a:hover {
-  color: #feb14b;
+  color: var(--red);
   text-decoration: none;
 }
 
@@ -427,6 +427,6 @@ a {
   }
 
   .footer-all {
-    margin: 1.5vw auto 1vw auto;
+    margin: 0vw auto 1vw auto;
   }
 }

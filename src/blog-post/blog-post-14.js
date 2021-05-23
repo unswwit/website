@@ -15,7 +15,7 @@ class blogPost14 extends Component {
     return (
       <div>
         {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/blog-header.png" title="Blog Post #14" />
+        <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Post #14" />
 
         {/*Start of blog post*/}
         <div className={styles.blogContent}>
@@ -26,8 +26,10 @@ class blogPost14 extends Component {
             </h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>July 15, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -87,7 +89,9 @@ class blogPost14 extends Component {
             </p>
             <br />
 
-            <p className={styles.question}>What do you love about your career now?</p>
+            <p className={styles.question}>
+              What do you love about your career now?
+            </p>
             <p className={styles.postContent}>
               I love that my career is now a genuine expression of who I am. I
               feel like I can be my best self when I’m using my skills to pursue
