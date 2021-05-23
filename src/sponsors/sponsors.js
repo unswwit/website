@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import styles from "./sponsors.module.css";
 import PageHeader from ".././header";
+import LoadingScreen from "../LoadingScreen";
 
 const Sponsors = () => {
   const majorSponsors = {
@@ -20,68 +21,91 @@ const Sponsors = () => {
     Telstra: ["https://www.telstra.com.au/", "telstra-large.png"],
   };
 
+  const [initialLoading, setinitialLoading] = React.useState(true);
+  const [sourceLoading, setSourceLoading] = React.useState(true);
+  const [coverPhoto, setCoverPhoto] = React.useState(null);
+
   useEffect(() => {
     window.scrollTo(0,0);
   }, []);
 
+  // control when to stop loading
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/headers/header-1.jpg";
+    img.onload = () => {     
+      setCoverPhoto(img.src);
+      setTimeout(() => {
+        setSourceLoading(false);
+      }, 1000);
+    }
+  }, [])  
+
   return (
     <div>
-      {/* Cover Photo */}
-      <PageHeader imgUrl="/headers/sponsors-header-2.jpg" title="Sponsors" />
+    {sourceLoading ? (
+      <LoadingScreen />
+    )
+      :
+      (
+      <div>
+        {/* Cover Photo */}
+        <PageHeader imgUrl="/headers/sponsors-header-2.jpg" title="Sponsors" />
 
-      <div id={styles.sponsorsBody}>
-        <p className={styles.subheader}>
-          Thank you to our sponsors for generously supporting our cause and
-          collaborating with us to provide our students invaluable
-          opportunities.
-        </p>
+        <div id={styles.sponsorsBody}>
+          <p className={styles.subheader}>
+            Thank you to our sponsors for generously supporting our cause and
+            collaborating with us to provide our students invaluable
+            opportunities.
+          </p>
 
-        {/* Principal Sponsors Area */}
-        <h2 className={styles.subsponsor}>Principal Sponsors</h2>
-        <div id={styles.majorContainer}>
-          <a
-            href="https://www.eucalyptus.vc/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className={styles.principal}
-              src={process.env.PUBLIC_URL + "/sponsors/2021/euc-logo.png"}
-              alt="Eucalyptus"
-            />
-          </a>
+          {/* Principal Sponsors Area */}
+          <h2 className={styles.subsponsor}>Principal Sponsors</h2>
+          <div id={styles.majorContainer}>
+            <a
+              href="https://www.eucalyptus.vc/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className={styles.principal}
+                src={process.env.PUBLIC_URL + "/sponsors/2021/euc-logo.png"}
+                alt="Eucalyptus"
+              />
+            </a>
+          </div>
+
+          {/* Major Sponsors Area */}
+          <h2 className={styles.subsponsor}>Major Sponsors</h2>
+
+          <div id={styles.majorContainer}>
+            {Object.keys(majorSponsors)
+              .sort()
+              .map((key, index) => (
+                <a
+                  key={index}
+                  href={majorSponsors[key][0]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    className={styles.major}
+                    src={`${process.env.PUBLIC_URL}/sponsors/2021/${majorSponsors[key][1]}`}
+                    alt={key}
+                  />
+                </a>
+              ))}
+          </div>
+
+          <p className={styles.subheader}>
+            Interested in partnering with us? Contact us at{" "}
+            <a className={styles.subheader} href="mailto:externals@unswwit.com">
+              externals@unswwit.com
+            </a>
+          </p>
         </div>
-
-        {/* Major Sponsors Area */}
-        <h2 className={styles.subsponsor}>Major Sponsors</h2>
-
-        <div id={styles.majorContainer}>
-          {Object.keys(majorSponsors)
-            .sort()
-            .map((key, index) => (
-              <a
-                key={index}
-                href={majorSponsors[key][0]}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className={styles.major}
-                  src={`${process.env.PUBLIC_URL}/sponsors/2021/${majorSponsors[key][1]}`}
-                  alt={key}
-                />
-              </a>
-            ))}
-        </div>
-
-        <p className={styles.subheader}>
-          Interested in partnering with us? Contact us at{" "}
-          <a className={styles.subheader} href="mailto:externals@unswwit.com">
-            externals@unswwit.com
-          </a>
-        </p>
       </div>
-    </div>
+    )}</div>
   );
 };
 
