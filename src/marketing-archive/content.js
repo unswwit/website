@@ -7,12 +7,16 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../components/ScrollUpBtn"
 import Tabletop from "tabletop";
 import Timeline from "../components/Timeline"
+import LoadingScreen from "../LoadingScreen";
 
 const MarketingContent = () => {
   const [content, setContent] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [initialLoading, setinitialLoading] = useState(true);
   const [year, setYear] = useState("2021");
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [sourceLoading, setSourceLoading] = React.useState(true);
+  const [coverPhoto, setCoverPhoto] = React.useState(null);
   const categories = {
     All: "All",
     Mascot: "mascot",
@@ -45,6 +49,18 @@ const MarketingContent = () => {
     setYear(newYear);
   };
 
+  // control when to stop loading
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/headers/header-1.jpg";
+    img.onload = () => {     
+      setCoverPhoto(img.src);
+      setTimeout(() => {
+        setSourceLoading(false);
+      }, 1000);
+    }
+  }, [])  
+
   // scroll to top on load
   useEffect(() => window.scrollTo(0,0), [])
 
@@ -66,96 +82,102 @@ const MarketingContent = () => {
   }, [selectedCategory, year]);
 
   return (
-    <>
-      {/* Cover Photo */}
-      <PageHeader
-        imgUrl="/headers/marketing-header.jpg"
-        title="Marketing Archive"
-      />
-      {/*End of Header*/}
+    <div>
+      {sourceLoading ? (
+        <LoadingScreen />
+      )
+        :
+        (<>
+        {/* Cover Photo */}
+        <PageHeader
+          imgUrl="/headers/marketing-header.jpg"
+          title="Marketing Archive"
+        />
+        {/*End of Header*/}
 
-      <div id={styles.parent}>
-        {/*List of initiatives*/}
-        <div className={styles.initiatives}>
-          {/* Start of categories */}
-          <div className={styles.contentCategories}>
-            {Object.keys(categories)
-              .sort()
-              .map((category) => {
-                const chipColour =
-                  selectedCategory === categories[category]
-                    ? "#e85f5c"
-                    : "#7F7F7F";
-                return (
-                  <Chip
-                    key={category}
-                    size="medium"
-                    label={category}
-                    style={{
-                      textTransform: "uppercase",
-                      backgroundColor: chipColour,
-                      color: "white",
-                      margin: "5px",
-                    }}
-                    onClick={() => {
-                      setLoading(true);
-                      setSelectedCategory(categories[category]);
-                    }}
-                  />
-                );
-              })}
-          </div>
-
-          <div>
-            {/* Timeline */}
-            <Timeline
-              margin={"2%"}
-              page={"marketing"}
-              step={25}
-              valueToYear={valueToYear}
-              marks={marks}
-              updateYear={handleYear}
-            />
-          </div>
-
-          <div id={styles.contentLoadingContainer}>
-            {loading && (
-              <CircularProgress
-                variant="indeterminate"
-                size={50}
-                thickness={5}
-                id={styles.contentLoading}
-              />
-            )}
-          </div>
-
-          {/*Image collage*/}
-          {!loading && (
-            <ol className={styles.grid} id={styles.content}>
-              {content
-                .filter(
-                  (picture) =>
-                    selectedCategory === "All" ||
-                    picture.category.split(",").includes(selectedCategory)
-                )
-                .map((content, index) => {
+        <div id={styles.parent}>
+          {/*List of initiatives*/}
+          <div className={styles.initiatives}>
+            {/* Start of categories */}
+            <div className={styles.contentCategories}>
+              {Object.keys(categories)
+                .sort()
+                .map((category) => {
+                  const chipColour =
+                    selectedCategory === categories[category]
+                      ? "#e85f5c"
+                      : "#7F7F7F";
                   return (
-                    <Initiative
-                      key={index}
-                      fb={content.link}
-                      imgUrl={`/initiatives/${year}/${content.img}`}
-                      alt={content.label}
-                      date={content.date}
+                    <Chip
+                      key={category}
+                      size="medium"
+                      label={category}
+                      style={{
+                        textTransform: "uppercase",
+                        backgroundColor: chipColour,
+                        color: "white",
+                        margin: "5px",
+                      }}
+                      onClick={() => {
+                        setLoading(true);
+                        setSelectedCategory(categories[category]);
+                      }}
                     />
                   );
                 })}
-            </ol>
-          )}
+            </div>
+
+            <div>
+              {/* Timeline */}
+              <Timeline
+                margin={"2%"}
+                page={"marketing"}
+                step={25}
+                valueToYear={valueToYear}
+                marks={marks}
+                updateYear={handleYear}
+              />
+            </div>
+
+            <div id={styles.contentLoadingContainer}>
+              {loading && (
+                <CircularProgress
+                  variant="indeterminate"
+                  size={50}
+                  thickness={5}
+                  id={styles.contentLoading}
+                />
+              )}
+            </div>
+
+            {/*Image collage*/}
+            {!loading && (
+              <ol className={styles.grid} id={styles.content}>
+                {content
+                  .filter(
+                    (picture) =>
+                      selectedCategory === "All" ||
+                      picture.category.split(",").includes(selectedCategory)
+                  )
+                  .map((content, index) => {
+                    return (
+                      <Initiative
+                        key={index}
+                        fb={content.link}
+                        imgUrl={`/initiatives/${year}/${content.img}`}
+                        alt={content.label}
+                        date={content.date}
+                      />
+                    );
+                  })}
+              </ol>
+            )}
+          </div>
+          <ScrollUpBtn/>
+          {/*End of Initiatives*/}
         </div>
-        <ScrollUpBtn/>
-        {/*End of Initiatives*/}
-      </div>
-    </>
+      </>)} 
+    </div>
   );
 };
 export default MarketingContent;
