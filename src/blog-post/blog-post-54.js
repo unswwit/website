@@ -186,6 +186,13 @@ class blogPost54 extends Component {
             ],
           }}
         />
+
+        {/*Bottom Share Buttons*/}
+        <div className={styles.shareContent}>
+        <p className={styles.shareTextPosition}>Share this blog post</p>
+          <ShareBtns/>
+        </div>
+
         {/*End of blog posts*/}
       </div>
     );

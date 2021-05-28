@@ -271,6 +271,59 @@ img.floatRight {
   margin-top: 10px;
 }
 
+
+/*---------------------------------Bottom ShareBtns-------------------------------*/
+
+.shareTextPosition {
+  align-content: center;
+  color: #313638;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3vw;
+  font-weight: 500;
+  letter-spacing: 0.1vw;
+  padding-top: 10pt;
+  position: relative;
+  text-align: justify;
+  margin-bottom: 0.75vw;
+}
+
+.shareContent {
+  width: 100%;
+  max-width: 950px;
+  padding: 25px;
+  text-align: justify;
+  margin: auto;
+  margin-bottom: vw;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/*-------------------------------More From WIT cards------------------------------*/
+
+.moreFromWITTextPosition {
+  align-content: center;
+  color: #313638;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3vw;
+  font-weight: 500;
+  letter-spacing: 0.1vw;
+  padding-top: 10pt;
+  position: relative;
+  text-align: justify;
+  margin-bottom: 0.75vw;
+}
+
+.moreFromWITContent {
+  width: 100%;
+  max-width: 950px;
+  padding: 25px;
+  text-align: justify;
+  margin: auto;
+  margin-bottom: 3vw;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
 /*-------------------------------Blog mobile version-----------------------------*/
 @media only screen and (max-width: 800px) {
   .videoWrapper {

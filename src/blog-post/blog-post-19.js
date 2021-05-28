@@ -11,7 +11,19 @@ class blogPost19 extends Component {
     window.scrollTo(0, 0);
   }
 
+  constructor(props) {
+    super(props);
+    var arr = window.location.href.split("/");
+    this.state = {blogNumber: parseInt(arr[arr.length-1])};
+  }
+
+  
+
   render() {
+    
+    // Print out blog Number (Debug, TODO Remove)
+    console.log(this.state.blogNumber);
+
     return (
       <div>
         {/* Cover Photo */}
@@ -126,6 +138,19 @@ class blogPost19 extends Component {
             ],
           }}
         />
+
+        {/*Bottom Share Buttons*/}
+        <div className={styles.shareContent}>
+        <p className={styles.shareTextPosition}>Share this blog post</p>
+          <ShareBtns/>
+        </div>
+
+        {/*More from WIT section*/}
+        <div className={styles.moreFromWITContent}>
+        <p className={styles.moreFromWITTextPosition}>More from WIT</p>
+          <ShareBtns/>
+        </div>
+
         {/*End of blog posts*/}
       </div>
     );
