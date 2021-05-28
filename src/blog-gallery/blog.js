@@ -11,6 +11,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../components/ScrollUpBtn";
 /*import Pagination from "../components/Pagination";*/
 import Pagination from '@material-ui/lab/Pagination';
+import { useStateWithCallbackLazy } from 'use-state-with-callback';
 
 const useStylesBootstrap = makeStyles((theme) => ({
   arrow: {
@@ -42,26 +43,29 @@ const Blog = () => {
     Careers:
       "Wondering what you can do to excel in your professional life? Read here for tips on acing interviews, performing your best, and making the most of career opportunities!",
   };
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useStateWithCallbackLazy("All");
   const [loading, setLoading] = useState(true);
   // current page number
-  // const [currentPage, setCurrentPage] = useState(1);
+  //const [currentPage, setCurrentPage] = useState(1);
   // all blog posts
   const [blogs, setBlogs] = useState([]);
   const postsPerPage = 5;
   // all the posts of the selected category
-  const [selectedPosts, setSelectedPosts] = useState([]);
+  const [selectedPosts, setSelectedPosts] = useStateWithCallbackLazy([]);
   // the posts displayed on the current page
-  const [currentPosts, setCurrentPosts] = useState([]);
+  const [currentPosts, setCurrentPosts] = useStateWithCallbackLazy([]);
 
   useEffect(() => {
     window.scrollTo(0,0);
   },[])
 
-  useEffect(() => {
-    setSelectedPosts(blogs.filter((blog) => (selectedCategory === "All" || 
-    (blog.category.split(",")).includes(selectedCategory) || ((blog.category.split(",")).includes("WCW") && selectedCategory === "WIT Crush Wednesday"))))
-  }, [blogs, selectedCategory])
+const filterBlogs = () => {
+    
+    const filteredBlogs = blogs.filter((blog) => (selectedCategory === "All" || (blog.category.split(",")).includes(selectedCategory) 
+    || ((blog.category.split(",")).includes("WCW") && selectedCategory === "WIT Crush Wednesday")))
+    setSelectedPosts(filteredBlogs, () => paginate(1));
+    
+  }
 
   useEffect(() => {    
     Tabletop.init({
@@ -98,10 +102,10 @@ const Blog = () => {
 
   // change page number & scroll to top when onClick called for pagination
   const paginate = (pageNumber) => {
-    // setCurrentPage(pageNumber)
+    //setCurrentPage(pageNumber)
     /*const indexOfLastPost = currentPage * postsPerPage ;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;*/
-    setCurrentPosts(selectedPosts.slice((pageNumber - 1) * postsPerPage, pageNumber * postsPerPage));
+    setCurrentPosts(selectedPosts.slice((pageNumber - 1) * postsPerPage, pageNumber * postsPerPage), () => setLoading(false));
   }
 
   return (
@@ -138,8 +142,8 @@ const Blog = () => {
                       margin: "5px",
                     }}
                     onClick={() => {
-                      setSelectedCategory(category);
-                      setCurrentPosts(selectedPosts.slice(0, postsPerPage));
+                      setLoading(true);
+                      setSelectedCategory(category, () => filterBlogs());
                     }}
                   />
                 </BootstrapTooltip>
