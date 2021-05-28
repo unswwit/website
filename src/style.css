@@ -82,6 +82,18 @@
   }
 }
 
+@media only screen and (max-width: 400px) {
+  .coverPhoto .headerTitle h1 {
+    font-size: 3vh;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .coverPhoto .headerTitle h1 {
+    font-size: 2.5vh;
+  }
+}
+
 @media only screen and (max-width: 318px) {
   .coverPhoto {
     position: relative;
@@ -427,6 +439,6 @@ a {
   }
 
   .footer-all {
-    margin: 1.5vw auto 1vw auto;
+    margin: 0vw auto 1vw auto;
   }
 }
