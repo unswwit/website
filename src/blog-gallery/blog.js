@@ -11,7 +11,6 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../components/ScrollUpBtn";
 /*import Pagination from "../components/Pagination";*/
 import Pagination from '@material-ui/lab/Pagination';
-import { useStateWithCallbackLazy } from 'use-state-with-callback';
 
 const useStylesBootstrap = makeStyles((theme) => ({
   arrow: {
@@ -43,7 +42,7 @@ const Blog = () => {
     Careers:
       "Wondering what you can do to excel in your professional life? Read here for tips on acing interviews, performing your best, and making the most of career opportunities!",
   };
-  const [selectedCategory, setSelectedCategory] = useStateWithCallbackLazy("All");
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [loading, setLoading] = useState(true);
   // current page number
   //const [currentPage, setCurrentPage] = useState(1);
@@ -51,20 +50,19 @@ const Blog = () => {
   const [blogs, setBlogs] = useState([]);
   const postsPerPage = 5;
   // all the posts of the selected category
-  const [selectedPosts, setSelectedPosts] = useStateWithCallbackLazy([]);
+  const [selectedPosts, setSelectedPosts] = useState([]);
   // the posts displayed on the current page
-  const [currentPosts, setCurrentPosts] = useStateWithCallbackLazy([]);
+  const [currentPosts, setCurrentPosts] = useState([]);
 
   useEffect(() => {
     window.scrollTo(0,0);
   },[])
 
-const filterBlogs = () => {
-    
-    const filteredBlogs = blogs.filter((blog) => (selectedCategory === "All" || (blog.category.split(",")).includes(selectedCategory) 
-    || ((blog.category.split(",")).includes("WCW") && selectedCategory === "WIT Crush Wednesday")))
-    setSelectedPosts(filteredBlogs, () => paginate(1));
-    
+  const filterBlogs = (category) => {
+    const filteredBlogs = blogs.filter((blog) => (category === "All" || (blog.category.split(",")).includes(category) 
+    || ((blog.category.split(",")).includes("WCW") && category === "WIT Crush Wednesday")));
+    setSelectedPosts(filteredBlogs);
+    setCurrentPosts(filteredBlogs.slice(0, postsPerPage));
   }
 
   useEffect(() => {    
@@ -105,7 +103,7 @@ const filterBlogs = () => {
     //setCurrentPage(pageNumber)
     /*const indexOfLastPost = currentPage * postsPerPage ;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;*/
-    setCurrentPosts(selectedPosts.slice((pageNumber - 1) * postsPerPage, pageNumber * postsPerPage), () => setLoading(false));
+    setCurrentPosts(selectedPosts.slice((pageNumber - 1) * postsPerPage, pageNumber * postsPerPage));
   }
 
   return (
@@ -142,8 +140,8 @@ const filterBlogs = () => {
                       margin: "5px",
                     }}
                     onClick={() => {
-                      setLoading(true);
-                      setSelectedCategory(category, () => filterBlogs());
+                      setSelectedCategory(category);
+                      filterBlogs(category);
                     }}
                   />
                 </BootstrapTooltip>
