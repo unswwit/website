@@ -9,7 +9,8 @@ import Tooltip from "@material-ui/core/Tooltip";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../components/ScrollUpBtn";
-import Pagination from "../components/Pagination";
+/*import Pagination from "../components/Pagination";*/
+import Pagination from '@material-ui/lab/Pagination';
 
 const useStylesBootstrap = makeStyles((theme) => ({
   arrow: {
@@ -43,13 +44,24 @@ const Blog = () => {
   };
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [loading, setLoading] = useState(true);
+  // current page number
+  // const [currentPage, setCurrentPage] = useState(1);
+  // all blog posts
   const [blogs, setBlogs] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(5);
+  const postsPerPage = 5;
+  // all the posts of the selected category
+  const [selectedPosts, setSelectedPosts] = useState([]);
+  // the posts displayed on the current page
+  const [currentPosts, setCurrentPosts] = useState([]);
 
   useEffect(() => {
     window.scrollTo(0,0);
   },[])
+
+  useEffect(() => {
+    setSelectedPosts(blogs.filter((blog) => (selectedCategory === "All" || 
+    (blog.category.split(",")).includes(selectedCategory) || ((blog.category.split(",")).includes("WCW") && selectedCategory === "WIT Crush Wednesday"))))
+  }, [blogs, selectedCategory])
 
   useEffect(() => {    
     Tabletop.init({
@@ -74,23 +86,22 @@ const Blog = () => {
           blogPreviews[index].authors = tempAuthor;
         });
 
-        setBlogs(googleData["blog-previews"]["elements"].reverse());
+        const tempBlogs = googleData["blog-previews"]["elements"].reverse();
+        setBlogs(tempBlogs);
+        setCurrentPosts(tempBlogs.slice(0, postsPerPage));
+        setSelectedPosts(tempBlogs);
       },
       simpleSheet: false,
     });
     
-  }, [selectedCategory]);
-
-  const indexOfLastPost = currentPage * postsPerPage ;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = blogs.slice(indexOfFirstPost, indexOfLastPost);
-
+  }, []);
 
   // change page number & scroll to top when onClick called for pagination
   const paginate = (pageNumber) => {
-    const coverPhoto = document.getElementsByClassName("coverPhoto")[0].clientHeight;
-    window.scrollTo({top: coverPhoto - 15, behavior: "smooth"});
-    setCurrentPage(pageNumber);
+    // setCurrentPage(pageNumber)
+    /*const indexOfLastPost = currentPage * postsPerPage ;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;*/
+    setCurrentPosts(selectedPosts.slice((pageNumber - 1) * postsPerPage, pageNumber * postsPerPage));
   }
 
   return (
@@ -127,8 +138,8 @@ const Blog = () => {
                       margin: "5px",
                     }}
                     onClick={() => {
-                      setLoading(true);
                       setSelectedCategory(category);
+                      setCurrentPosts(selectedPosts.slice(0, postsPerPage));
                     }}
                   />
                 </BootstrapTooltip>
@@ -150,9 +161,6 @@ const Blog = () => {
 
         <div className={styles.blogPosts}>
           {!loading && currentPosts
-            .filter((blog) => (selectedCategory === "All" || 
-                              (blog.category.split(",")).includes(selectedCategory) ||
-                              ((blog.category.split(",")).includes("WCW") && selectedCategory === "WIT Crush Wednesday")))
             .map((blog) => {     
               return <BlogPreview
                 key={blog.blogNo}
@@ -166,14 +174,9 @@ const Blog = () => {
               />
             })}       
         </div>
-        <Pagination
-          postsPerPage={postsPerPage}
-          totalPosts={blogs.filter((blog) => (selectedCategory === "All" || 
-          (blog.category.split(",")).includes(selectedCategory) ||
-          ((blog.category.split(",")).includes("WCW") && selectedCategory === "WIT Crush Wednesday"))).length}
-          paginate={paginate}
-          page='blog'
-          currentPage={currentPage}
+        <Pagination 
+          count={Math.ceil(selectedPosts.length/postsPerPage)} 
+          onChange={(_, pageNumber) => paginate(pageNumber)} 
         />
         <ScrollUpBtn/>
         {/*End of blog posts*/}
