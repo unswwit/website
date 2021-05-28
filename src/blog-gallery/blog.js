@@ -9,7 +9,6 @@ import Tooltip from "@material-ui/core/Tooltip";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../components/ScrollUpBtn";
-/*import Pagination from "../components/Pagination";*/
 import Pagination from '@material-ui/lab/Pagination';
 
 const useStylesBootstrap = makeStyles((theme) => ({
@@ -44,8 +43,6 @@ const Blog = () => {
   };
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [loading, setLoading] = useState(true);
-  // current page number
-  //const [currentPage, setCurrentPage] = useState(1);
   // all blog posts
   const [blogs, setBlogs] = useState([]);
   const postsPerPage = 5;
@@ -58,6 +55,7 @@ const Blog = () => {
     window.scrollTo(0,0);
   },[])
 
+  // filter blogs by a selected category
   const filterBlogs = (category) => {
     const filteredBlogs = blogs.filter((blog) => (category === "All" || (blog.category.split(",")).includes(category) 
     || ((blog.category.split(",")).includes("WCW") && category === "WIT Crush Wednesday")));
@@ -98,11 +96,8 @@ const Blog = () => {
     
   }, []);
 
-  // change page number & scroll to top when onClick called for pagination
+  // change the current page number 
   const paginate = (pageNumber) => {
-    //setCurrentPage(pageNumber)
-    /*const indexOfLastPost = currentPage * postsPerPage ;
-    const indexOfFirstPost = indexOfLastPost - postsPerPage;*/
     setCurrentPosts(selectedPosts.slice((pageNumber - 1) * postsPerPage, pageNumber * postsPerPage));
   }
 
