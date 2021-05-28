@@ -43,6 +43,8 @@ h2.subsponsor {
 /*Sponsor contact*/
 a.subheader {
   font-family: "Montserrat", sans-serif;
+  color: #313638;
+  font-weight: 500;
 }
 
 .subheader a:hover {
@@ -76,7 +78,6 @@ a.subheader {
   max-width: 150px;
   margin-bottom: 75px;
 }
-
 
 @media only screen and (max-width: 600px) {
   #sponsorsBody {

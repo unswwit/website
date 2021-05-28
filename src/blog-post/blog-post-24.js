@@ -25,8 +25,10 @@ class blogPost24 extends Component {
             <h2 className={styles.blogTitle}>Sleep and Study</h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>September 20, 2020</span>
-              <span><ShareBtns /></span>
-            </div> 
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>

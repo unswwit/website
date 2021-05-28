@@ -25,8 +25,10 @@ class blogPost3 extends Component {
             </h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>June 3, 2020</span>
-              <span><ShareBtns /></span>
-            </div>   
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
           </div>
 
           <div className={styles.post}>
@@ -47,7 +49,6 @@ class blogPost3 extends Component {
             </p>
             <br />
             <p className={styles.question}>
-              
               Lesson 1: Computer Science is a form of Art
             </p>
             <br />
@@ -73,13 +74,11 @@ class blogPost3 extends Component {
             </p>
             <br />
             <p className={styles.postContent}>
-              
               Big decisions are daunting. Marissa Mayer was no stranger to
               feeling unprepared when making big decisions at certain stages of
               her life.
             </p>
             <p className={styles.postContent}>
-              
               Mayer had a whopping 14 job offers lined up after finishing her
               studies from Stanford University. Each offer was diverse and
               exciting, but after weeks of anxiety, stress, and support from her
@@ -87,13 +86,12 @@ class blogPost3 extends Component {
               things:
             </p>
             <ol>
-              <li className={styles.list}>                
+              <li className={styles.list}>
                 Surrounding herself with smart, ambitious and like-minded
                 people.
               </li>
               <br />
               <li className={styles.list}>
-                
                 Pursuing a role that she didn’t feel totally prepared for, a
                 role that would challenge her, pushing her out of her comfort
                 zone, thus allowing her to grow personally and professionally.

@@ -6,7 +6,7 @@ import styles from "./Timeline.module.css";
 const TimelineSlider = withStyles({
   root: {
     color: "#E85F5C",
-    height: 6,  
+    height: 6,
   },
   thumb: {
     height: 24,
@@ -16,25 +16,25 @@ const TimelineSlider = withStyles({
     marginTop: -8,
     marginLeft: -12,
     "&:focus, &:hover, &$active": {
-      boxShadow: "inherit"
-    }
+      boxShadow: "inherit",
+    },
   },
   active: {},
   track: {
     height: 8,
-    borderRadius: 4
+    borderRadius: 4,
   },
   rail: {
     backgroundColor: "#E85F5C",
     height: 8,
-    borderRadius: 4
+    borderRadius: 4,
   },
   mark: {
     backgroundColor: "#E85F5C",
     height: 15,
     width: 1.5,
     marginTop: -3,
-    fontSize: 20
+    fontSize: 20,
   },
   markActive: {
     opacity: 1,
@@ -44,17 +44,26 @@ const TimelineSlider = withStyles({
 
 const Timeline = ({ updateYear, marks, valueToYear, page, step, margin }) => {
   return (
-    <div id={page === "teams" ? styles.teams : styles.events} style={{ "marginTop" : margin }}>
-      <TimelineSlider 
-        step={step} 
-        marks={marks}  
-        valueLabelDisplay="off" 
-        aria-label="timeline" 
-        defaultValue={100} 
-        onChange={(_, value) => updateYear(valueToYear[value])}  
+    <div
+      id={
+        page === "teams"
+          ? styles.teams
+          : page === "events"
+          ? styles.events
+          : styles.marketingArchive
+      }
+      style={{ marginTop: margin }}
+    >
+      <TimelineSlider
+        step={step}
+        marks={marks}
+        valueLabelDisplay="off"
+        aria-label="timeline"
+        defaultValue={100}
+        onChange={(_, value) => updateYear(valueToYear[value])}
       />
     </div>
   );
-}
+};
 
 export default Timeline;
