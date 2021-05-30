@@ -4,11 +4,17 @@ import styles from "./Podcast.module.css";
 import EpisodeTemplate from "./EpisodeTemplate";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Tabletop from "tabletop";
-import ScrollUpBtn from "../components/ScrollUpBtn"
+import ScrollUpBtn from "../components/ScrollUpBtn";
+import PaginationComp from "../components/Pagination";
 
 const Podcast = () => {
   const [episodes, setEpisodes] = useState([]);
   const [loading, setLoading] = useState(true);
+  // set how many posts to view per page
+  const postsPerPage = 10;
+  // the posts displayed on the current page
+  const [currentPosts, setCurrentPosts] = useState([]);
+
   const links = {
     anchor: ["podcast-anchor.png", "https://anchor.fm/unswwit"],
     radioRepublic: [
@@ -38,11 +44,17 @@ const Podcast = () => {
         const unsorted = googleData["podcast-episodes"]["elements"];
         const sortedEpisodes = unsorted.reverse();
         setEpisodes(sortedEpisodes);
+        setCurrentPosts(sortedEpisodes)
         setLoading(false);
       },
       simpleSheet: false
     })
   }, []);
+
+  // called when pagination item clicked to slice the correct amount of posts for viewing
+  const paginate = (pageNumber) => {
+    setCurrentPosts(episodes.slice((pageNumber - 1) * postsPerPage, pageNumber * postsPerPage));
+  }
 
   return (
     <>
@@ -97,7 +109,7 @@ const Podcast = () => {
       </div>
 
       <div id={styles.episodes}>
-        {episodes.map((episode, index) => {
+        {currentPosts.map((episode, index) => {
           return (
             <EpisodeTemplate
               key={index}
@@ -109,8 +121,13 @@ const Podcast = () => {
             />
           );
         })}
-    
-      </div>    
+      </div>  
+
+      <PaginationComp 
+        totalPages={Math.ceil(currentPosts.length/postsPerPage)} 
+        paginate={paginate}
+      />
+        
       <ScrollUpBtn/>
     </>
   );

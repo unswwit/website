@@ -1,31 +1,43 @@
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Pagination from "@material-ui/lab/Pagination";
+import PaginationItem from "@material-ui/lab/PaginationItem";
 
-import React from 'react';
-import styles from './Pagination.module.css';
+const PaginationComp = ({totalPages, paginate}) => {
+  const useStyles = makeStyles((theme) => ({
+    root: {
+        marginBottom: theme.spacing(4),
+        padding: "2px 2px",
+        display: 'flex',
+        justifyContent: 'center',
+        '& .Mui-selected': {
+          backgroundColor: '#e85f5c',
+          color: 'white',
+         },
+    },
+    pagItem: {
+      backgroundColor: 'transparent',
+      color:'#676767',
+      '&:hover:not(.selected)': {
+        backgroundColor: '#feb14b',
+        color: 'white',
+     },
+    },
+  })); 
 
-const Pagination = ({ postsPerPage, totalPosts, paginate, page, currentPage }) => {
-  const pageNumbers = [];
-
-  for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
-    // gives us correct amount of page numbers
-    pageNumbers.push(i);
-  }
-
-  // getting the hyperlink to page that the pagination is applied to e.g. blog
-  const href = '!#/resources' + page;
+  const classes = useStyles();
 
   return (
-    <nav>
-      <ul className='pagination justify-content-center'>
-        {pageNumbers.map(number => (
-          <li key={number} className={styles.pagination}>
-            <a onClick={() => paginate(number)} href={href} className={currentPage === number ? [styles.active] : styles.pagination}>
-              {number}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <div className={classes.root}>
+    <Pagination 
+      className={classes.root} 
+      renderItem={(item)=> <PaginationItem {...item} 
+                  className={classes.pagItem}/>}
+      count={totalPages} 
+      onChange={(_, pageNumber) => paginate(pageNumber)} 
+    />
+    </div>
   );
 };
 
-export default Pagination;
+export default PaginationComp;

@@ -9,7 +9,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../components/ScrollUpBtn";
-import Pagination from '@material-ui/lab/Pagination';
+import PaginationComp from "../components/Pagination";
 
 const useStylesBootstrap = makeStyles((theme) => ({
   arrow: {
@@ -45,8 +45,9 @@ const Blog = () => {
   const [loading, setLoading] = useState(true);
   // all blog posts
   const [blogs, setBlogs] = useState([]);
-  const postsPerPage = 5;
-  // all the posts of the selected category
+  // set how many posts to view per page
+  const postsPerPage = 10;
+  // all the posts of the selected filter category
   const [selectedPosts, setSelectedPosts] = useState([]);
   // the posts displayed on the current page
   const [currentPosts, setCurrentPosts] = useState([]);
@@ -96,7 +97,7 @@ const Blog = () => {
     
   }, []);
 
-  // change the current page number 
+  // called when pagination item clicked to slice the correct amount of posts for viewing
   const paginate = (pageNumber) => {
     setCurrentPosts(selectedPosts.slice((pageNumber - 1) * postsPerPage, pageNumber * postsPerPage));
   }
@@ -155,7 +156,6 @@ const Blog = () => {
             />
           )}
         </div>
-
         <div className={styles.blogPosts}>
           {!loading && currentPosts
             .map((blog) => {     
@@ -171,9 +171,9 @@ const Blog = () => {
               />
             })}       
         </div>
-        <Pagination 
-          count={Math.ceil(selectedPosts.length/postsPerPage)} 
-          onChange={(_, pageNumber) => paginate(pageNumber)} 
+        <PaginationComp 
+          totalPages={Math.ceil(selectedPosts.length/postsPerPage)} 
+          paginate={paginate}
         />
         <ScrollUpBtn/>
         {/*End of blog posts*/}
