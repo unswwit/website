@@ -4,7 +4,6 @@ import PageHeader from "../header";
 import Chip from "@material-ui/core/Chip";
 import Initiative from "./Initiative";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import ScrollUpBtn from "../components/ScrollUpBtn"
 import Tabletop from "tabletop";
 import Timeline from "../components/Timeline";
 import PaginationComp from "../components/Pagination";
@@ -75,7 +74,7 @@ const MarketingContent = () => {
   }, [year]);
 
   // filter content by selected category
-  const filterContent = (category) => {
+  const filterContent = (selectedCategory) => {
     const filteredContent = content.filter(
       (picture) => selectedCategory === "All" || picture.category.split(",").includes(selectedCategory));
     setSelectedPosts(filteredContent);
@@ -172,7 +171,6 @@ const MarketingContent = () => {
           totalPages={Math.ceil(selectedPosts.length/postsPerPage)} 
           paginate={paginate}
         />
-        <ScrollUpBtn/>
         {/*End of Initiatives*/}
       </div>
     </>

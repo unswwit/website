@@ -5,7 +5,8 @@ import EpisodeTemplate from "./EpisodeTemplate";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Tabletop from "tabletop";
 import ScrollUpBtn from "../components/ScrollUpBtn";
-import PaginationComp from "../components/Pagination";
+// TO UNCOMMENT WHEN REACH > 8 PODCASTS
+// import PaginationComp from "../components/Pagination";
 
 const Podcast = () => {
   const [episodes, setEpisodes] = useState([]);
@@ -122,11 +123,11 @@ const Podcast = () => {
           );
         })}
       </div>  
-
-      <PaginationComp 
+      {/* TO UNCOMMENT WHEN REACH > 8 PODCASTS */ }
+      {/*<PaginationComp 
         totalPages={Math.ceil(currentPosts.length/postsPerPage)} 
         paginate={paginate}
-      />
+      />*/}
         
       <ScrollUpBtn/>
     </>
