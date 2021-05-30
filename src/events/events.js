@@ -11,6 +11,8 @@ import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../components/ScrollUpBtn"
 import UpcomingEvent from "./UpcomingEvent.js";
+import ScrollMenu from 'react-horizontal-scrolling-menu';
+import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 
 const Events = () => {
   const [expanded, setExpanded] = useState(false);
