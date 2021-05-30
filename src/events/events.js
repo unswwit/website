@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./events.module.css";
 import PageHeader from ".././header";
-import Accordion from "@material-ui/core/Accordion";
-import AccordionDetails from "@material-ui/core/AccordionDetails";
-import AccordionSummary from "@material-ui/core/AccordionSummary";
-import Typography from "@material-ui/core/Typography";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Timeline from "../components/Timeline";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
@@ -14,7 +9,6 @@ import AddToCalBtn from "./AddToCalBtn.js";
 import { Link } from "react-router-dom";
 
 const Events = () => {
-  const [expanded, setExpanded] = useState(false);
   const [events, setEvents] = useState([]);
   const [year, setYear] = useState("2021");
   const [upcomingEvents, setUpcomingEvents] = useState([]);
@@ -153,29 +147,6 @@ const Events = () => {
             </div>
           ))}
         <h2>PAST EVENTS</h2>
-        <Accordion
-          expanded={expanded}
-          onChange={() => {
-            setExpanded(!expanded);
-          }}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel4bh-content"
-          >
-            <Typography id={styles.eventResources}>Event Resources</Typography>
-            <Typography id={styles.resourcesDescription}>
-              Learning material used in past events
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <iframe
-              title="event-resources"
-              src="https://drive.google.com/a/unswwit.com/embeddedfolderview?id=1zgocvaYesg7IBRYLvehAXb4Auu0Pl4Ef#grid"
-              style={{ width: "100%", height: "280px", border: "0" }}
-            ></iframe>
-          </AccordionDetails>
-        </Accordion>
 
         {/* Timeline */}
         <Timeline
@@ -206,7 +177,7 @@ const Events = () => {
               return (
                 <div key={index} className={styles.gridItem}>
                   <Link
-                    to={"/event-recaps/event-recap-1"}
+                    to={`/event-recaps/${year}/${event.eventNumber}`}
                     style={{ textDecoration: "none" }}
                   >
                     <img

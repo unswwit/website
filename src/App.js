@@ -16,7 +16,7 @@ import OurTeam from "./team/team";
 import Blog from "./blog-gallery/blog";
 import Publications from "./publications/publications";
 import Events from "./events/events";
-import eventRecap1 from "./events/event-recaps/2021/event-recap-1";
+import EventRecapPage from "./events/event-recaps/template";
 import Podcast from "./podcast/Podcast";
 import EpisodePage from "./podcast/EpisodePage";
 import NotFound from "./not-found/NotFound";
@@ -166,8 +166,8 @@ class App extends Component {
                   ? this.navClass + " activeNav hiddenNav"
                   : this.navClass + " activeNav"
                 : this.state.hideNav
-                  ? this.navClass + " hiddenNav"
-                  : this.navClass
+                ? this.navClass + " hiddenNav"
+                : this.navClass
             }
           >
             <a className="navbar-brand" href="/">
@@ -388,11 +388,17 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/events" component={Events} />
-			<Route path="/event-recaps/event-recap-1" component={eventRecap1} />
+            <Route
+              path="/event-recaps/:year/:eventNumber"
+              component={EventRecapPage}
+            />
             <Route path="/our-team" component={OurTeam} />
             <Route exact path="/resources/blog" component={Blog} />
             <Route exact path="/resources" component={Blog} />
-            <Route path="/resources/marketing-archive" component={MarketingContent} />
+            <Route
+              path="/resources/marketing-archive"
+              component={MarketingContent}
+            />
             <Route path="/join-us" component={JoinUs} />
             <Route path="/sponsors" component={Sponsors} />
             <Route path="/opportunities" component={Opportunities} />
