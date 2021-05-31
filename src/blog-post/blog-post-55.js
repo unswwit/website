@@ -41,6 +41,7 @@ class blogPost55 extends Component {
               virus, with over 4 million doses administered to Australians by
               the end of May 2021.
             </p>
+            <br />
 
             <p className={styles.postContent}>
               You may have heard of the companies involved in this vaccine
@@ -48,6 +49,7 @@ class blogPost55 extends Component {
               that the umbrella these companies sit under is that of
               <em style={{ fontWeight: 500 }}> biotechnology</em>?
             </p>
+            <br />
 
             <p className={styles.postContent}>
               Over the past decade, the biotech world has advanced faster than
@@ -57,10 +59,12 @@ class blogPost55 extends Component {
               environmental. And while you’ve probably heard of the term, you
               may be a bit fuzzy on exactly what biotechnologists get up to.
             </p>
+            <br />
 
             <p className={styles.postContent}>
               It’s time to demystify the exciting realm of biotechnology!!
             </p>
+            <br />
 
             <p className={styles.question}>So, what is biotech?</p>
 
@@ -70,6 +74,7 @@ class blogPost55 extends Component {
               for a particular use. Australia is now home to a thriving network
               of over 470 biotech companies.
             </p>
+            <br />
 
             <p className={styles.postContent}>
               When you think of biotechnology, images of news stories such as
@@ -79,6 +84,7 @@ class blogPost55 extends Component {
               years, such as crop breeding and antibiotics, are also examples of
               biotechnology.
             </p>
+            <br />
 
             <p className={styles.postContent}>
               Biochemical engineer and UNSW A/Prof Christopher Marquis, when
@@ -89,6 +95,7 @@ class blogPost55 extends Component {
               biofuels as just a few of the biotechnology innovations that have
               made enormous impacts on humanity.”
             </p>
+            <br />
 
             <p className={styles.question}>
               Current applications and key fields of research
@@ -104,6 +111,7 @@ class blogPost55 extends Component {
               biosensors for diagnostic purposes.The possibilities really are
               endless!
             </p>
+            <br />
 
             <p className={styles.postContent}>
               Many types of modern biotechnology rely on DNA technology.
@@ -116,6 +124,7 @@ class blogPost55 extends Component {
               providing sustainable improvements in health, agriculture and
               environment for the 21st century.”
             </p>
+            <br />
 
             <p className={styles.question}>Why is biotech so important?</p>
 
@@ -131,6 +140,7 @@ class blogPost55 extends Component {
               nor readied for widespread use and manufactured at scale on this
               timescale.
             </p>
+            <br />
 
             <p className={styles.postContent}>
               However, as we’ve seen with the recent coronavirus vaccines,
@@ -139,17 +149,21 @@ class blogPost55 extends Component {
               potential to provide tremendous benefits to society, biotechnology
               can also have negative or unintended consequences.
             </p>
+            <br />
 
             <p className={styles.postContent}>
               As we move into an increasingly biotechnology-driven world, we
               must embrace new ideas whilst also considering the future impact
               of our technologies.
             </p>
+            <br />
 
             <p className={styles.postContent}>
               I think you’ll agree that biotech really is something to be
               excited about!
             </p>
+            <br />
+            
           </div>
         </div>
         {/*for the blog post author*/}
