@@ -77,14 +77,22 @@ const Opportunities = () => {
                     key={index}
                   >
                     <div>
-                      <img
+                      {(individualOpportunity.img.length ? (<img
                         className={styles.oppImg}
                         src={
                           process.env.PUBLIC_URL +
                           `/sponsors/2021/${individualOpportunity.img}`
                         }
                         alt={individualOpportunity.companyName}
-                      />
+                      />) : (<img
+                        className={styles.oppImg}
+                        src={
+                          process.env.PUBLIC_URL +
+                          `/opportunities/${individualOpportunity.notSponsorImg}`
+                        }
+                        alt={individualOpportunity.companyName}
+                      />))}
+                      
                       {/* The image name could be found in the "public/sponsors/2021" folder */}
                       <div className={styles.oppDesc}>
                         <p className={styles.oppTypeAndLocation}>
@@ -98,10 +106,11 @@ const Opportunities = () => {
                         <p className={styles.oppTypeAndLocation}>
                           {individualOpportunity.location}
                         </p>
-                        <p className={styles.oppSummary}>
+                        {individualOpportunity.closeDate.length ? (                        <p className={styles.oppSummary}>
                           Applications close: {individualOpportunity.closeDate}
                           {/* The position should be in the format of the following example: 01/01/2021 */}
-                        </p>
+                        </p>) : (<p className={styles.oppSummary}>
+                        </p>)}
                         <p className={styles.oppSummary}>
                           {individualOpportunity.summary}
                         </p>
