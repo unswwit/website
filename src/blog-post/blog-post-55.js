@@ -47,7 +47,7 @@ class blogPost55 extends Component {
               You may have heard of the companies involved in this vaccine
               research, such as Moderna, Novavax, and Pfizer. But did you know
               that the umbrella these companies sit under is that of
-              <em style={{ fontWeight: 500 }}> biotechnology</em>?
+              <em className={styles.question}> biotechnology</em>?
             </p>
             <br />
 
