@@ -97,7 +97,7 @@ const Opportunities = () => {
                         />
                       )}
 
-                      {/* The image name could be found in the "public/sponsors/2021" folder */}
+                      {/* The image name could be found in the "public/sponsors/2021" folder or add it to "public/opportunities" folder */}
                       <div className={styles.oppDesc}>
                         <p className={styles.oppTypeAndLocation}>
                           {individualOpportunity.type}
@@ -114,7 +114,7 @@ const Opportunities = () => {
                           <p className={styles.oppSummary}>
                             Applications close:{" "}
                             {individualOpportunity.closeDate}
-                            {/* The position should be in the format of the following example: 01/01/2021 */}
+                            {/* The close date should be in the format of the following example: 01/01/2021 */}
                           </p>
                         ) : (
                           <p className={styles.oppSummary}></p>
