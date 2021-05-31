@@ -139,7 +139,6 @@ class blogPost55 extends Component {
               potential to provide tremendous benefits to society, biotechnology
               can also have negative or unintended consequences.
             </p>
-            <br />
 
             <p className={styles.postContent}>
               As we move into an increasingly biotechnology-driven world, we
