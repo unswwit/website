@@ -23,10 +23,13 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#E85F5C",
   },
   year: {
-    flex: 0.1,
+    flex: 1,
   },
   verticallyCenterContent: {
     margin: "auto 0"
+  },
+  history: {
+    flex: 6
   }
 }));
 
@@ -49,7 +52,7 @@ export default function OppositeContentTimeline() {
             <TimelineDot className={classes.timelineDot} />
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent>
+          <TimelineContent className={classes.history}>
             <p className={styles.timelineContent}>
               <ul>
                 <li>
@@ -64,7 +67,7 @@ export default function OppositeContentTimeline() {
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent>
+          <TimelineOppositeContent className={classes.history}>
             <p className={styles.timelineContent}>
               <ul>
                 <li>
@@ -100,11 +103,11 @@ export default function OppositeContentTimeline() {
             </Paper>
           </TimelineOppositeContent>
           <TimelineSeparator className={styles.timelineSeparator}>
-           <TimelineConnector />
+            <TimelineConnector />
             <TimelineDot className={classes.timelineDot} />
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent>
+          <TimelineContent className={classes.history}>
             <p className={styles.timelineContent}>
               <ul>
                 <li>
@@ -120,7 +123,7 @@ export default function OppositeContentTimeline() {
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent>
+          <TimelineOppositeContent className={classes.history}>
             <p className={styles.timelineContent}>
               <ul>
                 <li>Our student base grew to 1400+ members.</li>
@@ -159,7 +162,7 @@ export default function OppositeContentTimeline() {
             <TimelineDot className={classes.timelineDot} />
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent> 
+          <TimelineContent className={classes.history}> 
             <p className={styles.timelineContent}>
               <ul>
                 <li>

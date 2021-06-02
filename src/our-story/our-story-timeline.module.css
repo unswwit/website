@@ -6,6 +6,7 @@
   text-align: justify;
   color: var(--light-grey);
   padding-top: 20px;
+  margin: auto 0;
 }
 
 .yearContent{
