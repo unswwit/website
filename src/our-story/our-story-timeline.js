@@ -8,13 +8,28 @@ import TimelineContent from "@material-ui/lab/TimelineContent";
 import TimelineDot from "@material-ui/lab/TimelineDot";
 import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent";
 import Paper from "@material-ui/core/Paper";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(theme => ({
+  paper: {
+    padding: "6px 16px"
+  },
+  secondaryTail: {
+    backgroundColor: theme.palette.secondary.main
+  },
+  verticallyCenterContent: {
+    margin: "auto 0"
+  }
+}));
 
 export default function OppositeContentTimeline() {
+  const classes = useStyles();
   return (
     <React.Fragment>
       <Timeline align="alternate">
         <TimelineItem>
-          <TimelineOppositeContent style={{ flex: 0.1 }}>
+          <TimelineOppositeContent style={{ flex: 0.1 }} className={classes.verticalCenter}
+          align="right">
             <Paper
               elevation={2}
               className={styles.paperComponent}
@@ -28,7 +43,7 @@ export default function OppositeContentTimeline() {
               className={styles.timelineDot}
               style={{ backgroundColor: "#FEB14B" }}
             />
-            <TimelineConnector className={styles.timelineConnector}/>
+            <TimelineConnector className={classes.tranparentConnector} className={styles.timelineConnector}/>
           </TimelineSeparator>
           <TimelineContent>
             <p className={styles.timelineContent}>
@@ -45,7 +60,7 @@ export default function OppositeContentTimeline() {
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent>
+          <TimelineOppositeContent className={classes.verticalCenter}>
             <p className={styles.timelineContent}>
               <ul>
                 <li>
@@ -62,7 +77,7 @@ export default function OppositeContentTimeline() {
               className={styles.timelineDot}
               style={{ backgroundColor: "#FEB14B" }}
             />
-            <TimelineConnector className={styles.timelineConnector}/>
+            <TimelineConnector className={classes.tranparentConnector} className={styles.timelineConnector}/>
           </TimelineSeparator>
           <TimelineContent style={{ flex: 0.1 }}>
             <Paper
@@ -75,7 +90,7 @@ export default function OppositeContentTimeline() {
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent style={{ flex: 0.1 }}>
+          <TimelineOppositeContent className={classes.verticalCenter}style={{ flex: 0.1 }}>
             <Paper
               elevation={2}
               className={styles.paperComponent}
@@ -89,7 +104,7 @@ export default function OppositeContentTimeline() {
               className={styles.timelineDot}
               style={{ backgroundColor: "#FEB14B" }}
             />
-            <TimelineConnector className={styles.timelineConnector}/>
+            <TimelineConnector className={classes.tranparentConnector} />
           </TimelineSeparator>
           <TimelineContent>
             <p className={styles.timelineContent}>
@@ -107,7 +122,7 @@ export default function OppositeContentTimeline() {
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent>
+          <TimelineOppositeContent className={classes.verticalCenter}>
             <p className={styles.timelineContent}>
               <ul>
                 <li>Our student base grew to 1400+ members.</li>
@@ -123,7 +138,7 @@ export default function OppositeContentTimeline() {
               className={styles.timelineDot}
               style={{ backgroundColor: "#FEB14B" }}
             />
-            <TimelineConnector className={styles.timelineConnector}/>
+            <TimelineConnector className={classes.tranparentConnector}/>
           </TimelineSeparator>
           <TimelineContent style={{ flex: 0.1 }}>
             <Paper
@@ -136,7 +151,7 @@ export default function OppositeContentTimeline() {
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent style={{ flex: 0.1 }}>
+          <TimelineOppositeContent className={classes.verticalCenter} style={{ flex: 0.1 }}>
             <Paper
               elevation={2}
               className={styles.paperComponent}
@@ -150,7 +165,7 @@ export default function OppositeContentTimeline() {
               className={styles.timelineDot}
               style={{ backgroundColor: "#FEB14B" }}
             />
-            <TimelineConnector className={styles.timelineConnector}/>
+            <TimelineConnector className={classes.tranparentConnector}/>
           </TimelineSeparator>
           <TimelineContent>
             <p className={styles.timelineContent}>
