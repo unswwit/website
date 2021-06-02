@@ -9,7 +9,7 @@ h2.oppSubheading {
 }
 
 /*--- Our Mission ---*/
-.ourmissionContent {
+.ourMissionContent {
   line-height: 22px;
   padding-top: 25px;
   padding-right: 270px;
@@ -22,7 +22,7 @@ h2.oppSubheading {
   word-wrap: break-word;
 }
 
-.ourmissionImg {
+.ourMissionImg {
   float: right;
   width: 420px;
   height: 230px;
@@ -33,24 +33,29 @@ h2.oppSubheading {
 }
 
 /*--- Our Mascot ---*/
-.ourmascotContent {
+.ourMascotSection {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.ourMascotContent {
   line-height: 22px;
   padding-top: 25px;
-  padding-left:500px;
   font-family: "Montserrat", sans-serif;
   font-size: 14pt;
   text-align: justify;
   color: var(--light-grey);
-  width: 75%;
-  margin: 0 auto;
 }
 
-.ourmascotImg {
-  float: left;
-  width: 375px;
-  height: 254px;
-  padding-left:180px;
+.ourMascotImg {
   padding-top:30px;
+  padding-right: 25px;
+}
+
+.ourMascotImg img {
+  object-fit: contain;
+  width: 100%;
 }
 
 /*--- Link to see Willow's cute photoshoot ---*/
@@ -77,8 +82,7 @@ h2.oppSubheading {
 
 .ourStory {
   margin-bottom: 8vw;
-  margin: auto;
   color: var(--light-grey);
   font-family: "Montserrat", sans-serif;
-  text-align: left;
+  text-align: justify;
 }
