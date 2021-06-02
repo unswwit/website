@@ -1,0 +1,85 @@
+/*--- Our Story ---*/
+h2.oppSubheading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 33pt;
+  text-transform: uppercase;
+  margin-top: 8%;
+  margin-bottom: 0.25%;
+  text-align: center;
+}
+
+/*--- Our Mission ---*/
+.ourmissionContent {
+  line-height: 22px;
+  padding-top: 25px;
+  padding-right: 270px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14pt;
+  text-align: justify;
+  color: var(--light-grey);
+  margin: 0 auto;
+  width:75%;
+  word-wrap: break-word;
+}
+
+.ourmissionImg {
+  float: right;
+  width: 420px;
+  height: 230px;
+  padding-left:10px;
+  padding-right:140px;
+  padding-top:29px;
+  opacity: 0.66;
+  object-fit: fill;
+}
+
+/*--- Our Mascot ---*/
+.ourmascotContent {
+  line-height: 22px;
+  padding-top: 25px;
+  padding-left:500px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14pt;
+  text-align: justify;
+  color: var(--light-grey);
+  width: 75%;
+  margin: 0 auto;
+}
+
+.ourmascotImg {
+  float: left;
+  width: 375px;
+  height: 254px;
+  padding-left:180px;
+  padding-top:30px;
+}
+
+/*--- Link to see Willow's cute photoshoot ---*/
+.link {
+  color: #e85f5c;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: #feb14b;
+}
+
+/*--- Our History ---*/
+.ourhistoryContent {
+  line-height: 22px;
+  padding-top: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14pt;
+  text-align: justify;
+  color: var(--light-grey);
+  width: 75%;
+  margin: 0 auto;
+}
+
+.ourStory {
+  margin-bottom: 8vw;
+  margin: auto;
+  color: var(--light-grey);
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}

@@ -1,0 +1,42 @@
+/*--- Timeline Content ---*/
+.timelineContent {
+  line-height: 22px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14pt;
+  padding-top:30px;
+  text-align: justify;
+  color: var(--light-grey);
+  margin: 0 auto;
+}
+
+.yearContent{
+  line-height: 22px;
+  font-family: "Montserrat", sans-serif;
+  padding-left:30px;
+  font-size: 14pt;
+  text-align: justify;
+  color: #FFFFFF;
+  margin: 0 auto;
+}
+
+.paperComponent{
+  margin-top:35px;
+  padding:10px 10px;
+}
+
+.timelineDot{
+  background-color:#FEB14B;
+  margin-top:20px;
+}
+
+.timelineSeparator{
+  color:#C4C4C4;
+  height:30px;
+  margin-top:20px;
+}
+
+.timelineConnector{
+  color:#C4C4C4;
+  height:30px;
+  margin-top:20px;
+}
