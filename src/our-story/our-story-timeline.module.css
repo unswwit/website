@@ -5,6 +5,7 @@
   font-size: 14pt;
   text-align: justify;
   color: var(--light-grey);
+  padding-top: 20px;
 }
 
 .yearContent{

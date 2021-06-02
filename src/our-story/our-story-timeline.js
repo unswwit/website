@@ -20,11 +20,14 @@ const useStyles = makeStyles(theme => ({
   },
   paper: {
     padding: "10px 10px",
-    backgroundColor: "#E85F5C"
+    backgroundColor: "#E85F5C",
   },
   year: {
     flex: 0.1,
   },
+  verticallyCenterContent: {
+    margin: "auto 0"
+  }
 }));
 
 export default function OppositeContentTimeline() {
@@ -42,6 +45,7 @@ export default function OppositeContentTimeline() {
             </Paper>
           </TimelineOppositeContent>
           <TimelineSeparator className={styles.timelineSeparator}>
+            <TimelineConnector />
             <TimelineDot className={classes.timelineDot} />
             <TimelineConnector />
           </TimelineSeparator>
@@ -73,6 +77,7 @@ export default function OppositeContentTimeline() {
             </p>
           </TimelineOppositeContent>
           <TimelineSeparator className={styles.timelineSeparator}>
+            <TimelineConnector />
             <TimelineDot className={classes.timelineDot} />
             <TimelineConnector />
           </TimelineSeparator>
@@ -95,9 +100,8 @@ export default function OppositeContentTimeline() {
             </Paper>
           </TimelineOppositeContent>
           <TimelineSeparator className={styles.timelineSeparator}>
-            <TimelineDot
-              className={classes.timelineDot}
-            />
+           <TimelineConnector />
+            <TimelineDot className={classes.timelineDot} />
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
@@ -128,6 +132,7 @@ export default function OppositeContentTimeline() {
             </p>
           </TimelineOppositeContent>
           <TimelineSeparator className={styles.timelineSeparator}>
+            <TimelineConnector />
             <TimelineDot className={classes.timelineDot} />
             <TimelineConnector />
           </TimelineSeparator>
@@ -150,9 +155,8 @@ export default function OppositeContentTimeline() {
             </Paper>
           </TimelineOppositeContent>
           <TimelineSeparator className={styles.timelineSeparator}>
-            <TimelineDot
-              className={classes.timelineDot}
-            />
+            <TimelineConnector />
+            <TimelineDot className={classes.timelineDot} />
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent> 
