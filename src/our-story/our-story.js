@@ -21,7 +21,7 @@ const OurStory = () => {
           src={process.env.PUBLIC_URL + "/our-story/our-mission.jpg"}
           alt="our mission"
           width="85%"
-          height="140%"
+          height="160%"
           object-fit="fill"
         />
         <br />
