@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styles from "./sponsors.module.css";
 import PageHeader from ".././header";
 import { Modal, Backdrop, Fade } from "@material-ui/core";
-import sponsorsModal  from "./sponsorsModal";
+import NewsletterForm  from "./sponsorsModal";
 
 
 const Sponsors = () => {
@@ -154,7 +154,7 @@ const Sponsors = () => {
         >
           <>
             <Fade in={open}>
-              <sponsorsModal  handleClose={callbackModal} />
+              <NewsletterForm  handleClose={callbackModal} />
             </Fade>
           </>
         </Modal>
