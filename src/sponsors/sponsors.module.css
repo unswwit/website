@@ -121,5 +121,13 @@ a.subheader {
   text-align: left;
 }
 
+.paper {
+  background-color: white;
+  border-radius: 2;
+  padding: 10;
+  padding: 1vw 2vw 2vw 2vw;
+  width: 100%;
+}
+
 
 
