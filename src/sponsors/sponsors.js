@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styles from "./sponsors.module.css";
 import PageHeader from ".././header";
 import { Modal, Backdrop, Fade } from "@material-ui/core";
-import NewsletterForm from "../home/NewsletterForm";
+import sponsorsModal from "./sponsorsModal";
 
 
 const Sponsors = () => {
@@ -137,12 +137,9 @@ const Sponsors = () => {
           </a>
         </p>
       </div>
-    {/*
-      {/* Start of Modal
+    
+      {/* Start of Modal */}
       <div className={styles.stats}>
-      <button data-aos="fade" className={styles.subscribeBtn} onClick={() => setOpen(true)}>
-          Subscribe to our newsletter
-        </button>
         <Modal
           aria-labelledby="spring-modal-title"
           aria-describedby="spring-modal-description"
@@ -157,12 +154,13 @@ const Sponsors = () => {
         >
           <>
             <Fade in={open}>
-              <NewsletterForm handleClose={callbackModal} />
+              <sponsorsModal handleClose={callbackModal} />
             </Fade>
           </>
         </Modal>
       </div>
       {/* End of Modal */}
+
 
     </div>
   );
