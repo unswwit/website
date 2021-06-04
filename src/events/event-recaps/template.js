@@ -49,6 +49,9 @@ const EventRecapPage = (props) => {
     });
   }, [props.match.params.eventNumber, props.match.params.year, props.history]);
 
+  
+  console.log(event);
+
   return (
     <>
       <PageHeader imgUrl="/headers/events-header.jfif" title={`Events`} />
@@ -85,10 +88,10 @@ const EventRecapPage = (props) => {
             </span>
           </div>
 
-          <p id={styles.description}>{event.description}</p>
+          <p className={styles.description}>{event.description}</p>
 
           <img
-            src={process.env.PUBLIC_URL + `/event-covers/2021/${event.img}`}
+            src={process.env.PUBLIC_URL + `/event-covers/${event.year}/${event.img}`}
             alt="header"
             className={styles.eventCoverImage}
           />
