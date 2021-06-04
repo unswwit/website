@@ -35,19 +35,22 @@
 }
 
 #episodes {
-  margin: 0 auto;
   width: 80%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 350px));
   justify-content: center;
   padding: initial;
+  margin-right: auto;
+  margin-left: auto; 
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 
 #heading {
   text-transform: initial;
   letter-spacing: 1.5px;
   font-size: 50px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .previewContainer .episodeCover {
@@ -110,6 +113,7 @@ a:hover {
 @media only screen and (max-width: 880px) {
   #episodes {
     width: 100%;
+    margin-bottom: 30px; 
   }
 
   .logoContainer {
@@ -151,8 +155,8 @@ a:hover {
     display: flex;
     width: 65%;
     flex-flow: row wrap;
-    margin: 0 auto;
-  }
+    margin-bottom: 20px;
+}
 
   .previewContainer .episodeCover {
     width: 100%;
@@ -227,7 +231,7 @@ a:hover {
     width: 200px;
   }
 
-  #platformContainer {
+  .platformContainer {
     text-align: center;
     display: flex;
     justify-content: space-around;
