@@ -7,7 +7,7 @@ import Tabletop from "tabletop";
 import ScrollUpBtn from "../components/ScrollUpBtn"
 
 const Podcast = () => {
-  const [episodes, setEpisodes] = useState([]);
+  const [episodes, setEpisodes] = useState([]); 
   const [loading, setLoading] = useState(true);
   const links = {
     anchor: ["podcast-anchor.png", "https://anchor.fm/unswwit"],
@@ -97,7 +97,7 @@ const Podcast = () => {
       </div>
 
       <div id={styles.episodes}>
-        {episodes.map((episode, index) => {
+        {episodes.slice(0, 3).reverse().map((episode, index) => {
           return (
             <EpisodeTemplate
               key={index}
@@ -109,8 +109,8 @@ const Podcast = () => {
             />
           );
         })}
-    
       </div>    
+      
       <ScrollUpBtn/>
     </>
   );
