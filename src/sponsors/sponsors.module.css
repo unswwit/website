@@ -98,3 +98,28 @@ a.subheader {
     font-size: 11pt;
   }
 }
+
+/*----------------------------Sponsor page modal---------------------------*/
+
+.sponsorType {
+  color: #feb14b;
+  font-size: 2.5vw;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: left;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.sponsorDescription {
+  color: #313638;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12pt;
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: left;
+}
+
+
+
