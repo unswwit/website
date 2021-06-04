@@ -1,8 +1,13 @@
 import React, { useEffect } from "react";
 import styles from "./sponsors.module.css";
 import PageHeader from ".././header";
+import { Modal, Backdrop, Fade } from "@material-ui/core";
+import NewsletterForm from "../home/NewsletterForm";
+
 
 const Sponsors = () => {
+  const [open, setOpen] = React.useState(false);
+
   const majorSponsors = {
     // website, img, type, description
     Accenture: ["https://www.accenture.com/au-en", 
@@ -69,6 +74,10 @@ const Sponsors = () => {
     window.scrollTo(0,0);
   }, []);
 
+  const callbackModal = () => {
+    setOpen(false);
+  };
+
   return (
     <div>
       {/* Cover Photo */}
@@ -104,18 +113,20 @@ const Sponsors = () => {
           {Object.keys(majorSponsors)
             .sort()
             .map((key, index) => (
+              /*
               <a
                 key={index}
                 href={majorSponsors[key][0]}
                 target="_blank"
                 rel="noopener noreferrer"
-              >
+              >*/
                 <img
                   className={styles.major}
                   src={`${process.env.PUBLIC_URL}/sponsors/2021/${majorSponsors[key][1]}`}
                   alt={key}
+                  onClick={() => setOpen(true)}
                 />
-              </a>
+              //</a>
             ))}
         </div>
 
@@ -126,6 +137,33 @@ const Sponsors = () => {
           </a>
         </p>
       </div>
+    {/*
+      {/* Start of Modal
+      <div className={styles.stats}>
+      <button data-aos="fade" className={styles.subscribeBtn} onClick={() => setOpen(true)}>
+          Subscribe to our newsletter
+        </button>
+        <Modal
+          aria-labelledby="spring-modal-title"
+          aria-describedby="spring-modal-description"
+          className={styles.signUpForm}
+          open={open}
+          onClose={() => setOpen(false)}
+          closeAfterTransition
+          BackdropComponent={Backdrop}
+          BackdropProps={{
+            timeout: 500,
+          }} 
+        >
+          <>
+            <Fade in={open}>
+              <NewsletterForm handleClose={callbackModal} />
+            </Fade>
+          </>
+        </Modal>
+      </div>
+      {/* End of Modal */}
+
     </div>
   );
 };
