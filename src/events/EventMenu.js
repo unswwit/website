@@ -7,24 +7,30 @@ import UpcomingEvent from "./UpcomingEvent.js";
 
 const EventMenu = (events) => {
 
-    // One item component
-    const MenuItem = ({upcomingEvent, selected}) => {
-        return (
-            <UpcomingEvent
-                upcomingEvent={upcomingEvent}
-                index={index}
-            />)
-    };
-
+    
     // All items component
-    export const Menu = (events) =>   
+    const MenuItem = ({text, selected}) => {
+        return <div
+          className={`menu-item ${selected ? 'active' : ''}`}
+          >{text}</div>;
+      };
+      
+      // All items component
+      // Important! add unique key
+      export const Menu = (events, selected) =>
+        list.map(el => {
+          const {name} = el;
+      
+          return <MenuItem text={name} key={name} selected={selected} />;
+        });
+
+    const Menu = () =>   
         events.map((upcomingEvent, index) => {
         return(
             <UpcomingEvent
-            upcomingEvent={upcomingEvent}
-            index={index}
-            selected={selected}
-        />)  
+                upcomingEvent={upcomingEvent}
+                index={index}
+            />)  
     });
 
     const ArrowLeft = () => {
@@ -39,16 +45,16 @@ const EventMenu = (events) => {
         );
     };
 
-    const [state, setState] = useState({ selected: 0 });
+    /*const [state, setState] = useState({ selected: 0 });
 
     onSelect = key => {
         setState({ selected: key });
     }
     
-    const { selected } = state;
+    const { selected } = state;*/
 
         // Create menu from items
-    const menu = Menu(events, selected);
+    const menu = Menu();
     
         return (
           <div className={styles.gridContainer}>
@@ -56,8 +62,6 @@ const EventMenu = (events) => {
               data={menu}
               arrowLeft={ArrowLeft}
               arrowRight={ArrowRight}
-              selected={selected}
-              onSelect={this.onSelect}
             />
           </div>
         );

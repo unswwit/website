@@ -13,6 +13,7 @@ import ScrollUpBtn from "../components/ScrollUpBtn"
 import UpcomingEvent from "./UpcomingEvent.js";
 import ScrollMenu from 'react-horizontal-scrolling-menu';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
+import EventMenu from "./EventMenu"
 
 const Events = () => {
   const [expanded, setExpanded] = useState(false);
@@ -90,16 +91,9 @@ const Events = () => {
         {!loadingUpcoming && (!upcomingEvents.length ? 
           (<p className={styles.lookout}>Keep a lookout here for our upcoming events!</p>)
           :
-          (<div className={styles.gridContainer}>          
-            {upcomingEvents.map((upcomingEvent, index) => {
-              return(
-                <UpcomingEvent
-                  upcomingEvent={upcomingEvent}
-                  index={index}
-                />)  
-            })}
-            <ScrollUpBtn/>
-          </div>)
+          (<EventMenu
+              events={upcomingEvents}
+          />)
         )}
         <h2>PAST EVENTS</h2>
         <Accordion
