@@ -5,7 +5,7 @@ import IconButton from "@material-ui/core/IconButton";
 
 const SponsorsModal = ({ handleClose }) => {
 
-  const majorSponsors = {
+  const Sponsors = {
     // website, img, type, description
     Accenture: ["https://www.accenture.com/au-en", 
                 "accenture.png", 
@@ -77,20 +77,20 @@ const SponsorsModal = ({ handleClose }) => {
       </IconButton>     
       <br />
       <br />
-      {Object.keys(majorSponsors)
+      {Object.keys(Sponsors)
             .sort()
             .map((key, index) => (
               <>
                 <img className={styles.sponsorImage}
-                  src={`${process.env.PUBLIC_URL}/sponsors/2021/${majorSponsors[key][1]}`}
+                  src={`${process.env.PUBLIC_URL}/sponsors/2021/${Sponsors[key][1]}`}
                   alt={key}
                 />
                 <h1 className={styles.sponsorType}>MAJOR SPONSOR</h1>
                 <div className={styles.inLine}>
                   <p className={styles.sponsorWebsite}>Website: </p>
-                  <a className={styles.sponsorLink} href={majorSponsors[key][0]} target="_blank" rel="noopener noreferrer">{majorSponsors[key][0]}</a>
+                  <a className={styles.sponsorLink} href={Sponsors[key][0]} target="_blank" rel="noopener noreferrer">{majorSponsors[key][0]}</a>
                 </div>
-                <p className={styles.sponsorDescription}>{majorSponsors[key][3]} </p>
+                <p className={styles.sponsorDescription}>{Sponsors[key][3]} </p>
               </>
             ))}
       
