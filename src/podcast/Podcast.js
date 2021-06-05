@@ -9,10 +9,10 @@ import ScrollUpBtn from "../components/ScrollUpBtn";
 // import PaginationComp from "../components/Pagination";
 
 const Podcast = () => {
-  const [episodes, setEpisodes] = useState([]);
+  //const [episodes, setEpisodes] = useState([]);
   const [loading, setLoading] = useState(true);
   // set how many posts to view per page
-  const postsPerPage = 9;
+  //const postsPerPage = 9;
   // the posts displayed on the current page
   const [currentPosts, setCurrentPosts] = useState([]);
 
@@ -44,7 +44,7 @@ const Podcast = () => {
       callback: (googleData) => {
         const unsorted = googleData["podcast-episodes"]["elements"];
         const sortedEpisodes = unsorted.reverse();
-        setEpisodes(sortedEpisodes);
+        //setEpisodes(sortedEpisodes);
         setCurrentPosts(sortedEpisodes)
         setLoading(false);
       },
@@ -52,10 +52,12 @@ const Podcast = () => {
     })
   }, []);
 
+  /*
   // called when pagination item clicked to slice the correct amount of posts for viewing
   const paginate = (pageNumber) => {
     setCurrentPosts(episodes.slice((pageNumber - 1) * postsPerPage, pageNumber * postsPerPage));
   }
+  */
 
   return (
     <>
