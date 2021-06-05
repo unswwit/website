@@ -25,7 +25,7 @@ h2.oppSubheading {
 
 .ourMissionImg {
   width: 690px;
-  padding-top: 25px;
+  padding-top: 30px;
   padding-left: 25px;
 }
 
@@ -76,7 +76,7 @@ h2.oppSubheading {
 }
 
 .ourHistoryContent {
-  padding-top: 25px;
+  padding-bottom: 25px;
   line-height: 22px;
   font-size: 14pt;
   color: var(--light-grey);
@@ -89,6 +89,46 @@ h2.oppSubheading {
 }
 
 /*--- Our Story big tablet version ---*/
+@media only screen and (max-width: 1200px) {
+  .ourMissionContent {
+    font-size: 11pt;
+  }
+
+  .ourMissionImg {
+    width: 820px;
+  }
+
+  .ourMascotContent {
+    font-size: 11pt;
+  }
+
+  .ourHistoryContent {
+    font-size: 11pt;
+  }
+}
+
 /*--- Our Story tablet version ---*/
+@media only screen and (max-width: 1005px) {
+  .ourMissionSection {
+    flex-direction: column;
+  }
+
+  .ourMascotSection {
+    flex-direction: column;
+  }
+
+  .ourMissionImg {
+    margin-left:170px;
+    width: 250px;
+    padding-top: 30px;
+  }
+
+  .ourMascotImg {
+    margin-left:95px;
+    width:450px;
+  }
+}
+
 /*--- Our Story mobile version ---*/
+
 /*--- Our Story small mobile version ---*/

@@ -22,3 +22,26 @@
 .timelineSeparator {
   color: #c4c4c4;
 }
+
+/*--- Our Story big tablet version ---*/
+@media only screen and (max-width: 1200px) {
+  .timelineContent {
+    font-size: 11pt;
+    padding-top:10px;
+  }
+
+  .yearContent {
+    font-size:11pt;
+    padding-left: 47px;
+  }
+}
+
+/*--- Our Story tablet version ---*/
+@media only screen and (max-width: 1005px) {
+  .timelineContent {
+    padding-top:25px;
+  }
+}
+
+/*--- Our Story mobile version ---*/
+/*--- Our Story small mobile version ---*/
