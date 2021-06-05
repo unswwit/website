@@ -16,34 +16,36 @@ const OurStory = () => {
       {/*Start of Our Story*/}
       {/*Start of Our Mission*/}
       <h2 className={styles.oppSubheading}>Our Mission</h2>
-      <span className={styles.ourMissionImg}>
-        <img
-          src={process.env.PUBLIC_URL + "/our-story/our-mission.jpg"}
-          alt="Our Mission"
-        />
-        <br />
-      </span>
-      <div className={styles.ourStory}>
-        <p className={styles.ourMissionContent}>
-          Formed in 2016, UNSW Women in Technology (WIT) is currently a network
-          of over 2800 students that aims to collaborate, empower, and up-skill
-          female and males students within STEM to encourage diversity within
-          the technology industry.
-        </p>
-        <p className={styles.ourMissionContent}>
-          At WIT, we are proud of being able to provide opportunities that
-          develop all students' professional and technical skills. Whether it's
-          personal, academic, or social, we want our members to become the best
-          version of themselves.
-        </p>
-        <p className={styles.ourMissionContent}>
-          Our society captures a diverse range of disciplines, enabling us to
-          inspire students from various backgrounds by providing them with a
-          variety of events and multimedia resources such as blogs, podcasts,
-          videos, guides to succeeding professionally and within uni,
-          hackathons, course revision workshops, professional development
-          workshops, and so much more!
-        </p>
+      <div className={styles.ourMissionSection}>
+      <div className={styles.ourMissionImg}>
+          <img
+            src={process.env.PUBLIC_URL + "/our-story/our-mission.jpg"}
+            alt="WIT Our Mission Image"
+          />
+          <br />
+        </div>
+        <div className={styles.ourStory}>
+          <p className={styles.ourMissionContent}>
+            Formed in 2016, UNSW Women in Technology (WIT) is currently a
+            network of over 2800 students that aims to collaborate, empower, and
+            up-skill female and males students within STEM to encourage
+            diversity within the technology industry.
+          </p>
+          <p className={styles.ourMissionContent}>
+            At WIT, we are proud of being able to provide opportunities that
+            develop all students' professional and technical skills. Whether
+            it's personal, academic, or social, we want our members to become
+            the best version of themselves.
+          </p>
+          <p className={styles.ourMissionContent}>
+            Our society captures a diverse range of disciplines, enabling us to
+            inspire students from various backgrounds by providing them with a
+            variety of events and multimedia resources such as blogs, podcasts,
+            videos, guides to succeeding professionally and within uni,
+            hackathons, course revision workshops, professional development
+            workshops, and so much more!
+          </p>
+        </div>
       </div>
       {/*Start of Our Mascot*/}
       <h2 className={styles.oppSubheading}>Our Mascot</h2>
@@ -88,26 +90,30 @@ const OurStory = () => {
       {/*End of Our Mascot*/}
       {/*Start of Our History*/}
       <h2 className={styles.oppSubheading}>Our History</h2>
-      <p className={styles.ourhistoryContent}>
-        Women in Technology was founded by UNSW STEM students, Silvia Lin and
-        her co-founders Rachel Lin, Emily Chen, Anushka Dutt, Chelsea Leung,
-        Karen Huang and Kris Mansfield.
-      </p>
-      <p className={styles.ourhistoryContent}>
-        The vision which sparked WIT was to empower and unite female students
-        studying technology disciplines by providing a platform to share
-        experiences and knowledge. They were passionate about wanting to ensure
-        that young women were better informed about the opportunities within
-        technology and had a network to support them. The team’s goals were
-        centralised around breaking the stereotypes of the tech industry and
-        forming a close-knit community where they could provide support for each
-        other, both in pursuing a career in tech and developing themselves as
-        individuals.
-      </p>
-      <p className={styles.ourhistoryContent}>
-        Today, WIT continues to uphold their vision and grow with many more
-        upcoming initiatives to come.
-      </p>
+      <div className={styles.ourHistorySection}>
+      <div className={styles.ourStory}>
+        <p className={styles.ourHistoryContent}>
+          Women in Technology was founded by UNSW STEM students, Silvia Lin and
+          her co-founders Rachel Lin, Emily Chen, Anushka Dutt, Chelsea Leung,
+          Karen Huang and Kris Mansfield.
+        </p>
+        <p className={styles.ourHistoryContent}>
+          The vision which sparked WIT was to empower and unite female students
+          studying technology disciplines by providing a platform to share
+          experiences and knowledge. They were passionate about wanting to
+          ensure that young women were better informed about the opportunities
+          within technology and had a network to support them. The team’s goals
+          were centralised around breaking the stereotypes of the tech industry
+          and forming a close-knit community where they could provide support
+          for each other, both in pursuing a career in tech and developing
+          themselves as individuals.
+        </p>
+        <p className={styles.ourHistoryContent}>
+          Today, WIT continues to uphold their vision and grow with many more
+          upcoming initiatives to come.
+        </p>
+        </div>
+      </div>
       {/*Start of timeline*/}
       <Timeline />
       {/*End of timeline*/}
