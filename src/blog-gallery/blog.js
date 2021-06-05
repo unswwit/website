@@ -47,6 +47,8 @@ const Blog = () => {
   const [blogs, setBlogs] = useState([]);
   // set how many posts to view per page
   const postsPerPage = 10;
+  // current page number
+  const [currentPage, setCurrentPage] = useState(1);
   // all the posts of the selected filter category
   const [selectedPosts, setSelectedPosts] = useState([]);
   // the posts displayed on the current page
@@ -62,6 +64,7 @@ const Blog = () => {
     || ((blog.category.split(",")).includes("WCW") && category === "WIT Crush Wednesday")));
     setSelectedPosts(filteredBlogs);
     setCurrentPosts(filteredBlogs.slice(0, postsPerPage));
+    setCurrentPage(1);
   }
 
   useEffect(() => {    
@@ -99,6 +102,7 @@ const Blog = () => {
 
   // called when pagination item clicked to slice the correct amount of posts for viewing
   const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
     setCurrentPosts(selectedPosts.slice((pageNumber - 1) * postsPerPage, pageNumber * postsPerPage));
   }
 
@@ -174,6 +178,7 @@ const Blog = () => {
         <PaginationComp 
           totalPages={Math.ceil(selectedPosts.length/postsPerPage)} 
           paginate={paginate}
+          page={currentPage}
         />
         <ScrollUpBtn/>
         {/*End of blog posts*/}

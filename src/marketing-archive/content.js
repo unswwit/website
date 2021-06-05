@@ -19,6 +19,8 @@ const MarketingContent = () => {
   const [selectedPosts, setSelectedPosts] = useState([]);
   // the posts displayed on the current page
   const [currentPosts, setCurrentPosts] = useState([]);
+  // current page number
+  const [currentPage, setCurrentPage] = useState(1);
 
   const categories = {
     All: "All",
@@ -79,11 +81,13 @@ const MarketingContent = () => {
       (picture) => selectedCategory === "All" || picture.category.split(",").includes(selectedCategory));
     setSelectedPosts(filteredContent);
     setCurrentPosts(filteredContent.slice(0, postsPerPage));
+    setCurrentPage(1);
   }
 
   // called when pagination item clicked to slice the correct amount of posts for viewing
   const paginate = (pageNumber) => {
     setCurrentPosts(selectedPosts.slice((pageNumber - 1) * postsPerPage, pageNumber * postsPerPage));
+    setCurrentPage(pageNumber);
   }
 
   return (
@@ -170,6 +174,7 @@ const MarketingContent = () => {
         <PaginationComp 
           totalPages={Math.ceil(selectedPosts.length/postsPerPage)} 
           paginate={paginate}
+          page={currentPage}
         />
         {/*End of Initiatives*/}
       </div>
