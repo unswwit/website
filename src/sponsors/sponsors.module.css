@@ -108,16 +108,17 @@ a.subheader {
   letter-spacing: 3px;
   text-transform: uppercase;
   text-align: left;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 200px;
+  margin-top: 60px;
+  margin-right: 200px;
 }
 
 .sponsorDescription {
   color: #313638;
   font-family: "Montserrat", sans-serif;
   font-size: 12pt;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 200px;
+  margin-right: 200px;
   text-align: left;
 }
 
@@ -139,5 +140,27 @@ a.subheader {
   
 }
 
+.sponsorLink {
+  display: inline;
+  color: #e85f5c;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12pt;
+  margin: 0;
+  text-align: left;
+  text-decoration: underline;
+}
+
+.sponsorWebsite {
+  color: #313638;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12pt;
+  margin-left: 200px;
+  margin-right: 5px;
+  text-align: left;
+}
+
+.inLine p{
+  display: inline-block;
+}
 
 
