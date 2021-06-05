@@ -18,35 +18,40 @@ const useStyles = makeStyles((theme) => ({
   timelineDot: {
     backgroundColor: "#FEB14B",
   },
-  paperOne: { // 2016 card
+  paperOne: {
+    // 2016 card
     padding: "10px 10px",
     backgroundColor: "#E85F5C",
-    width:"150px",
-    marginTop:"25px",
+    width: "150px",
+    marginTop: "25px",
   },
-  paperTwo: { // 2017 card
+  paperTwo: {
+    // 2017 card
     padding: "10px 10px",
     backgroundColor: "#E85F5C",
-    width:"150px",
-    marginTop:"25px",
+    width: "150px",
+    marginTop: "25px",
   },
-  paperThree: { // 2018 card
+  paperThree: {
+    // 2018 card
     padding: "10px 10px",
     backgroundColor: "#E85F5C",
-    width:"150px",
-    marginTop:"45px",
+    width: "150px",
+    marginTop: "45px",
   },
-  paperFour: { // 2019 card
+  paperFour: {
+    // 2019 card
     padding: "10px 10px",
     backgroundColor: "#E85F5C",
-    width:"150px",
-    marginTop:"25px",
+    width: "150px",
+    marginTop: "25px",
   },
-  paperFive: { // 2020 card 
+  paperFive: {
+    // 2020 card
     padding: "10px 10px",
     backgroundColor: "#E85F5C",
-    width:"150px",
-    marginTop:"65px",
+    width: "150px",
+    marginTop: "65px",
   },
   year: {
     flex: 1,
