@@ -93,17 +93,17 @@ const Sponsors = () => {
         {/* Principal Sponsors Area */}
         <h2 className={styles.subsponsor}>Principal Sponsors</h2>
         <div id={styles.majorContainer}>
-          <a
+          {/*<a
             href="https://www.eucalyptus.vc/"
             target="_blank"
             rel="noopener noreferrer"
-          >
+          >*/}
             <img
               className={styles.principal}
               src={process.env.PUBLIC_URL + "/sponsors/2021/euc-logo.png"}
               alt="Eucalyptus"
+              onClick={() => setOpen(true)}
             />
-          </a>
         </div>
 
         {/* Major Sponsors Area */}
@@ -139,11 +139,10 @@ const Sponsors = () => {
       </div>
     
       {/* Start of Modal */}
-      <div className={styles.stats}>
+      <div>
         <Modal
           aria-labelledby="spring-modal-title"
           aria-describedby="spring-modal-description"
-          className={styles.signUpForm}
           open={open}
           onClose={() => setOpen(false)}
           closeAfterTransition
