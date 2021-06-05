@@ -9,15 +9,16 @@
   margin: auto 0;
 }
 
-.yearContent{
+.yearContent {
   line-height: 22px;
   font-family: "Montserrat", sans-serif;
-  padding-left:30px;
+  padding-left: 45px;
   font-size: 14pt;
-  color: #FFFFFF;
+  text-align: justify;
+  color: #ffffff;
   margin: 0 auto;
 }
 
-.timelineSeparator{
-  color:#C4C4C4;
+.timelineSeparator {
+  color: #c4c4c4;
 }

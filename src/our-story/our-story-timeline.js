@@ -10,27 +10,53 @@ import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent";
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles(theme => ({
-  root:{
-    width: "80%",
-    margin: "0 auto"
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: "84%",
+    margin: "0 auto",
   },
   timelineDot: {
     backgroundColor: "#FEB14B",
   },
-  paper: {
+  paperOne: { // 2016 card
     padding: "10px 10px",
     backgroundColor: "#E85F5C",
+    width:"150px",
+    marginTop:"25px",
+  },
+  paperTwo: { // 2017 card
+    padding: "10px 10px",
+    backgroundColor: "#E85F5C",
+    width:"150px",
+    marginTop:"25px",
+  },
+  paperThree: { // 2018 card
+    padding: "10px 10px",
+    backgroundColor: "#E85F5C",
+    width:"150px",
+    marginTop:"45px",
+  },
+  paperFour: { // 2019 card
+    padding: "10px 10px",
+    backgroundColor: "#E85F5C",
+    width:"150px",
+    marginTop:"25px",
+  },
+  paperFive: { // 2020 card 
+    padding: "10px 10px",
+    backgroundColor: "#E85F5C",
+    width:"150px",
+    marginTop:"65px",
   },
   year: {
     flex: 1,
   },
   verticallyCenterContent: {
-    margin: "auto 0"
+    margin: "auto 0",
   },
   history: {
-    flex: 6
-  }
+    flex: 6,
+  },
 }));
 
 export default function OppositeContentTimeline() {
@@ -40,10 +66,7 @@ export default function OppositeContentTimeline() {
       <Timeline className={classes.root} align="alternate">
         <TimelineItem>
           <TimelineOppositeContent className={classes.year}>
-            <Paper
-              elevation={2}
-              className={classes.paper}
-            >
+            <Paper elevation={2} className={classes.paperOne}>
               <p className={styles.yearContent}>2016</p>
             </Paper>
           </TimelineOppositeContent>
@@ -85,20 +108,14 @@ export default function OppositeContentTimeline() {
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent className={classes.year}>
-            <Paper
-              elevation={2}
-              className={classes.paper}
-            >
+            <Paper elevation={2} className={classes.paperTwo}>
               <p className={styles.yearContent}>2017</p>
             </Paper>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
           <TimelineOppositeContent className={classes.year}>
-            <Paper
-              elevation={2}
-              className={classes.paper}
-            >
+            <Paper elevation={2} className={classes.paperThree}>
               <p className={styles.yearContent}>2018</p>
             </Paper>
           </TimelineOppositeContent>
@@ -140,20 +157,14 @@ export default function OppositeContentTimeline() {
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent className={classes.year}>
-            <Paper
-              elevation={2}
-              className={classes.paper}
-            >
+            <Paper elevation={2} className={classes.paperFour}>
               <p className={styles.yearContent}>2019</p>
             </Paper>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
           <TimelineOppositeContent className={classes.year}>
-            <Paper
-              elevation={2}
-              className={classes.paper}
-            >
+            <Paper elevation={2} className={classes.paperFive}>
               <p className={styles.yearContent}>2020</p>
             </Paper>
           </TimelineOppositeContent>
@@ -162,7 +173,7 @@ export default function OppositeContentTimeline() {
             <TimelineDot className={classes.timelineDot} />
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent className={classes.history}> 
+          <TimelineContent className={classes.history}>
             <p className={styles.timelineContent}>
               <ul>
                 <li>
