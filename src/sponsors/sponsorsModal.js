@@ -3,7 +3,7 @@ import styles from "./sponsors.module.css";
 import CloseIcon from "@material-ui/icons/Close";
 import IconButton from "@material-ui/core/IconButton";
 
-const sponsorsModal = ({ handleClose }) => {
+const SponsorsModal = ({ handleClose }) => {
 
   const majorSponsors = {
     // website, img, type, description
@@ -98,4 +98,4 @@ const sponsorsModal = ({ handleClose }) => {
   );
 };
 
-export default sponsorsModal;
+export default SponsorsModal;
