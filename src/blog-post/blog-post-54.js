@@ -4,6 +4,8 @@ import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from "../header";
 import ShareBtns from "./ShareBtns";
+import Tabletop from "tabletop";
+import BlogPreview from "../blog-gallery/blog-preview";
 
 class blogPost54 extends Component {
   //start webpage at the top
@@ -11,7 +13,52 @@ class blogPost54 extends Component {
     window.scrollTo(0, 0);
   }
 
+  constructor() {
+    super();
+    this.state = {
+      currentBlogNo : 0,
+      currentBlog : '',
+      previousBlogs : []
+    }
+  }
+
   render() {
+    var currBlogNo = parseInt(String(this.props.match.url).split("/").reverse()[0])
+    Tabletop.init({
+      key: process.env.REACT_APP_GOOGLE_SHEETS,
+      callback: (googleData) => {
+
+        const blogOriginal = googleData["blog-previews"]["elements"];
+        let blogPreviews = googleData["blog-previews"]["elements"];
+        const authorList = googleData["blog-authors"]["elements"];
+        blogOriginal.forEach((blogPreview, index) => {
+          const tempAuthor = {};
+          blogPreview.authors.split(",").forEach((authorKey) => {
+            const result = authorList.filter(
+              (authorItem) => authorItem.authors === authorKey
+            )[0];
+            tempAuthor[authorKey] = [
+              `/potraits/blog-authors/${result.img}`,
+              result.name,
+            ];
+          });
+          blogPreviews[index].authors = tempAuthor;
+        });
+
+        var lastTwoBlogPreviews = blogPreviews.slice(currBlogNo-3, currBlogNo-1);
+        this.setState(
+          {
+            previousBlogs : lastTwoBlogPreviews,
+            currentBlog : blogPreviews[currBlogNo-1],
+            currentBlogNo : currBlogNo
+          }
+        )
+        console.log(this.state);
+      },
+      simpleSheet: false,
+    });
+
+
     return (
       <div>
         {/* Cover Photo */}
@@ -191,6 +238,28 @@ class blogPost54 extends Component {
         <div className={styles.shareContent}>
         <p className={styles.shareTextPosition}>Share this blog post</p>
           <ShareBtns/>
+        </div>
+
+        {/*More From WIT Section*/}
+        <div className={styles.moreFromWITContent}>
+        <p className={styles.moreFromWITTextPosition}>More From WIT</p>
+          {
+            this.state.previousBlogs
+              .map((blog) => {
+                return (
+                  <BlogPreview
+                    key={blog.blogNo}
+                    blogNo={blog.blogNo}
+                    imgUrl={`/blog-covers/${blog.img}`}
+                    heading={blog.heading}
+                    date={blog.date}
+                    subheading={blog.subheading}
+                    authors={blog.authors}
+                    category={blog.category.split(",")}
+                  />
+                );
+              })}
+        
         </div>
 
         {/*End of blog posts*/}
