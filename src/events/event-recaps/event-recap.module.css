@@ -42,6 +42,35 @@
   text-decoration: none;
 }
 
+/* Embedded YouTube Video */
+.embeddedVideo {
+  align-content: center;
+}
+
+.responsiveIframe{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+.responsiveIframe iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.iframeWrapper {
+  width: 90%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3vw;
+}
+
+
+
 /* Description */
 .description {
   text-align: justify;
@@ -49,7 +78,7 @@
 
 /* Cover image */
 .eventCoverImage {
-  width: 95%;
+  width: 90%;
   height: auto;
   margin-left: auto;
   margin-right: auto;

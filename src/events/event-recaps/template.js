@@ -14,6 +14,7 @@ const EventRecapPage = (props) => {
   const [event, setEvent] = useState({});
   const [loading, setLoading] = useState(true);
   const [hasResources, setHasResources] = useState(false);
+  const [hasEmbeddedVideo, setHasEmbeddedVideo] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -30,6 +31,7 @@ const EventRecapPage = (props) => {
 
         if (allEvents.length <= 0 || currEventNumber > allEvents.length) {
           props.history.push("/404");
+          return;
         }
 
         // load the page content for the current event
@@ -44,12 +46,15 @@ const EventRecapPage = (props) => {
         if (currEvent.resourcesFolderID) {
           setHasResources(true);
         }
+
+        if (currEvent.youtubeVideoID) {
+          setHasEmbeddedVideo(true);
+        }
       },
       simpleSheet: false,
     });
   }, [props.match.params.eventNumber, props.match.params.year, props.history]);
 
-  
   console.log(event);
 
   return (
@@ -88,14 +93,37 @@ const EventRecapPage = (props) => {
             </span>
           </div>
 
+          {/* YouTube Embedded Video */}
+          <div
+            className={styles.iframeWrapper}
+            style={hasEmbeddedVideo ? {} : { display: "none" }}
+          >
+            <div className={styles.responsiveIframe}>
+              <iframe
+                src={`https://youtube.com/embed/${event.youtubeVideoID}?autoplay=0`}
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen="true"
+                title="video"
+                className={styles.embeddedVideo}
+              />
+            </div>
+          </div>
+
+          {/* Event Description */}
           <p className={styles.description}>{event.description}</p>
 
+          {/* Cover Image */}
           <img
-            src={process.env.PUBLIC_URL + `/event-covers/${event.year}/${event.img}`}
+            src={
+              process.env.PUBLIC_URL +
+              `/event-covers/${event.year}/${event.img}`
+            }
             alt="header"
             className={styles.eventCoverImage}
           />
 
+          {/* Event Resources Accordion */}
           <div
             className={styles.accordionWrapper}
             style={hasResources ? {} : { display: "none" }}
