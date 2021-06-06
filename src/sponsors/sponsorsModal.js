@@ -99,7 +99,7 @@ const SponsorsModal = ({ handleClose, sponsorName}) => {
                 <h1 className={styles.sponsorType}>MAJOR SPONSOR</h1>
                 <div className={styles.inLine}>
                   <p className={styles.sponsorWebsite}>Website: </p>
-                  <a className={styles.sponsorLink} href={sponsors[key][1]} target="_blank" rel="noopener noreferrer">{sponsors[sponsorName][1]}</a>
+                  <a className={styles.sponsorLink} href={sponsors[key][1]} target="_blank" rel="noopener noreferrer">{sponsors[key][1]}</a>
                 </div>
                 <p className={styles.sponsorDescription}>{sponsors[key][4]} </p>
               </>
