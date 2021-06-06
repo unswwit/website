@@ -20,6 +20,13 @@ const Sponsors = () => {
     Telstra: ["https://www.telstra.com.au/", "telstra-large.png"],
   };
 
+  const affiliations = {
+    Arc: ["https://www.arc.unsw.edu.au/", "arc.png"],
+    "Business School": ["https://www.unsw.edu.au/business/", "business_school.png"],
+    "School of CSE": ["https://www.unsw.edu.au/engineering/computer-science-and-engineering", "cse.png"],
+    "Women and Girls in Engineering": ["https://www.unsw.edu.au/engineering/student-life/women-engineering", "women_girls_eng.png"],
+  };
+
   useEffect(() => {
     window.scrollTo(0,0);
   }, []);
@@ -68,6 +75,28 @@ const Sponsors = () => {
                 <img
                   className={styles.major}
                   src={`${process.env.PUBLIC_URL}/sponsors/2021/${majorSponsors[key][1]}`}
+                  alt={key}
+                />
+              </a>
+            ))}
+        </div>
+
+        {/* Affiliations Area */}
+        <h2 className={styles.subsponsor}>Affiliations</h2>
+
+        <div id={styles.majorContainer}>
+          {Object.keys(affiliations)
+            .sort()
+            .map((key, index) => (
+              <a
+                key={index}
+                href={affiliations[key][0]}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  className={styles.affiliations}
+                  src={`${process.env.PUBLIC_URL}/affiliations/${affiliations[key][1]}`}
                   alt={key}
                 />
               </a>
