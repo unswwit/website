@@ -24,13 +24,13 @@ const SponsorsModal = ({ handleClose, sponsorName}) => {
           "https://www.atlassian.com/au-en", 
           "atlassian-major.png", 
           "MAJOR", 
-          "More information will be added shortly!"
+          "More information will be added shortly! Check out the above website for now for more information about our sponsor!"
           ],
       //Appian: ["Appian",
           //"", 
           //"", 
           //"MAJOR", 
-          //"More information will be added shortly!"
+          //"More information will be added shortly! Check out the above website for now for more information about our sponsor!"
       //],
       //Amstelveen: ["Amstelveen",
           //"https://amstelveen.com/", 
@@ -39,10 +39,10 @@ const SponsorsModal = ({ handleClose, sponsorName}) => {
           //"Amstelveen is a specialist provider of risk, assurance, performance, and technology expertise, operating across numerous business sectors. At our core, we work with our clients to help them make risk-informed strategic choices and raise the bar in risk and compliance; like by building a new risk strategy, performing project technology reviews, or helping them drive digital transformation. Our strong relationships with our clients are reflected in their continued trust in the delivery of our work and our rapid growth, with Amstelveen making AFR’s Fast Starters lists in FY18 and FY19!"
           //],
       Commonwealth: ["Commonwealth Bank (CBA)",
-          "https://www.commbank.com.au", 
+          "https://www.commbank.com.au/about-us/careers.html", 
           "cba-major.png", 
           "MAJOR", 
-          "More information will be added shortly!"
+          "More information will be added shortly! Check out the above website for now for more information about our sponsor!"
           ],
       EY: ["EY",
           "https://www.ey.com/en_au", 
@@ -51,7 +51,7 @@ const SponsorsModal = ({ handleClose, sponsorName}) => {
           "Your ambition is as bold as ours. To solve the world’s toughest problems. To ask questions that have never been asked before. To innovate, to grow, to learn, to lead, to belong bringing out the best in yourself and in others. Here at EY, you’ll build the tech skillsets and growth mindsets to become the leader you want to be. We’ll provide the culture, the tech, the teams, the scale, the learning and the relationships for you to personalise your career. You’ll learn and innovate here while asking better questions to seek better answers and building a better working world. Together. It’s yours to build."
           ],
       Fdm: ["FDM Group",
-          "https://www.fdmgroup.com/en-au/", 
+          "https://www.fdmgroup.com/en-au/au-home/", 
           "fdm-group.png",
           "MAJOR",
           "FDM Group launches careers in tech! We recruit tech potential from all disciplines, train our grads with the skills and knowledge they need, and deploy them out to big name clients as FDM tech consultants to deliver on real world tech solutions. Fast track your tech specialisation with paid training, gain two years experience with a major brand company and then choose your own adventure - with huge demand for tech skills and experience, you choose where you go next!"
@@ -114,7 +114,7 @@ const SponsorsModal = ({ handleClose, sponsorName}) => {
           "https://www.telstra.com.au/", 
           "telstra-large.png",
           "MAJOR",
-          "More information will be added shortly!"
+          "More information will be added shortly! Check out the above website for now for more information about our sponsor!"
          ],
       //VMware: ["VMware",
            //"",
@@ -130,7 +130,7 @@ const SponsorsModal = ({ handleClose, sponsorName}) => {
       </IconButton>     
       <br />
       <br />
-      <>
+      <div className={styles.textBlock}>
                 <img className={styles.sponsorImage}
                   src={`${process.env.PUBLIC_URL}/sponsors/2021/${sponsors[key][2]}`}
                   alt={key}
@@ -141,7 +141,7 @@ const SponsorsModal = ({ handleClose, sponsorName}) => {
                   <a className={styles.sponsorLink} href={sponsors[key][1]} target="_blank" rel="noopener noreferrer">{sponsors[key][1]}</a>
                 </div>
                 <p className={styles.sponsorDescription}>{sponsors[key][4]} </p>
-              </>
+        </div>
     </div>
   );
 };

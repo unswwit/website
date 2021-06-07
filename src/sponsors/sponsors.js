@@ -21,13 +21,13 @@ const Sponsors = () => {
           "https://www.atlassian.com/au-en", 
           "atlassian-major.png", 
           "MAJOR", 
-          "More information will be added shortly!"
+          "More information will be added shortly! Check out the above website for now for more information about our sponsor!"
           ],
       //Appian: ["Appian",
           //"", 
           //"", 
           //"MAJOR", 
-          //"More information will be added shortly!"
+          //"More information will be added shortly! Check out the above website for now for more information about our sponsor!"
       //],
       //Amstelveen: ["Amstelveen",
           //"https://amstelveen.com/", 
@@ -39,7 +39,7 @@ const Sponsors = () => {
           "https://www.commbank.com.au/about-us/careers.html", 
           "cba-major.png", 
           "MAJOR", 
-          "More information will be added shortly!"
+          "More information will be added shortly! Check out the above website for now for more information about our sponsor!"
           ],
       EY: ["EY",
           "https://www.ey.com/en_au", 
@@ -111,7 +111,7 @@ const Sponsors = () => {
           "https://www.telstra.com.au/", 
           "telstra-large.png",
           "MAJOR",
-          "More information will be added shortly!"
+          "More information will be added shortly! Check out the above website for now for more information about our sponsor!"
          ],
       //VMware: ["VMware",
            //"",

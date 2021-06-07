@@ -108,9 +108,7 @@ a.subheader {
   letter-spacing: 3px;
   text-transform: uppercase;
   text-align: left;
-  margin-left: 10%;
   margin-top: 60px;
-  margin-right: 10%;
   margin-bottom: 20px;
 }
 
@@ -118,8 +116,7 @@ a.subheader {
   color: #313638;
   font-family: "Montserrat", sans-serif;
   font-size: 12pt;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-top: 2%;
   text-align: justify;
   margin-bottom: 100px;
 }
@@ -150,7 +147,7 @@ a.subheader {
   font-family: "Montserrat", sans-serif;
   font-size: 12pt;
   margin: 0;
-  margin-right: 10%;
+  margin-bottom: 0px;
   text-align: justify;
   text-decoration: underline;
 }
@@ -159,8 +156,8 @@ a.subheader {
   color: #313638;
   font-family: "Montserrat", sans-serif;
   font-size: 12pt;
-  margin-left: 10%;
   margin-right: 1%;
+  margin-bottom: 0px;
   text-align: justify;
   display: inline-block;
 }
@@ -181,6 +178,11 @@ a.subheader {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.textBlock {
+  padding: 5rem;
+  overflow-wrap: break-word;
 }
 
 
