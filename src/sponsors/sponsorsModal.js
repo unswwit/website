@@ -11,7 +11,13 @@ const SponsorsModal = ({ handleClose, sponsorName}) => {
   // props doesn't work rn temp thing
   const key = sponsorName;
   const sponsors = {
-    // name, website, img, type, description
+      // name, website, img, type, description
+      Eucalyptus: ["Eucalyptus",
+          "https://www.eucalyptus.vc/",
+          "euc-logo.png",
+          "principal",
+          "Eucalyptus is a pioneer in telehealth, making a significant mark on the industry through their house of online healthcare brands. This fast growing startup has built a patient-centric technology platform that powers Pilot (a medical health navigator for men), Kin (subscription service delivering the contraceptive pill to your door and services for the fertility journey), Software (personalised skincare) and Normal (sexual wellness)."
+          ],
       Accenture: ["Accenture",
           "https://www.accenture.com/au-en", 
           "accenture.png", 
@@ -20,24 +26,28 @@ const SponsorsModal = ({ handleClose, sponsorName}) => {
           ],
       Atlassian: ["Atlassian",
           "https://www.atlassian.com/au-en", 
-          "atlassian-logo.png", 
+          "atlassian-major.png", 
           "major", 
           "More information will be added shortly!"
           ],
-      Amstelveen: ["Amstelveen",
-          "https://amstelveen.com/", 
-          "Amstelveen_Logo_Colour.eps", 
-          "major", 
-          "Amstelveen is a specialist provider of risk, assurance, performance, and technology expertise, operating across numerous business sectors. At our core, we work with our clients to help them make risk-informed strategic choices and raise the bar in risk and compliance; like by building a new risk strategy, performing project technology reviews, or helping them drive digital transformation. Our strong relationships with our clients are reflected in their continued trust in the delivery of our work and our rapid growth, with Amstelveen making AFR’s Fast Starters lists in FY18 and FY19!"
-          ],
+      //Appian: ["Appian",
+          //"", 
+          //"", 
+          //"major", 
+          //"More information will be added shortly!"
+      //],
+      //Amstelveen: ["Amstelveen",
+          //"https://amstelveen.com/", 
+          //"Amstelveen_Logo_Colour.eps", 
+          //"major", 
+          //"Amstelveen is a specialist provider of risk, assurance, performance, and technology expertise, operating across numerous business sectors. At our core, we work with our clients to help them make risk-informed strategic choices and raise the bar in risk and compliance; like by building a new risk strategy, performing project technology reviews, or helping them drive digital transformation. Our strong relationships with our clients are reflected in their continued trust in the delivery of our work and our rapid growth, with Amstelveen making AFR’s Fast Starters lists in FY18 and FY19!"
+          //],
       Commonwealth: ["Commonwealth Bank (CBA)",
           "https://www.commbank.com.au/about-us/careers.html", 
           "cba-major.png", 
           "major", 
           "More information will be added shortly!"
           ],
-      // Atlassian: ["https://www.accenture.com/au-en", "atlassian-major.png"],
-      // Cba: [ "https://www.commbank.com.au/about-us/careers.html", "cba-major.png" ],
       EY: ["EY",
           "https://www.ey.com/en_au", 
           "EY.gif",
@@ -116,7 +126,6 @@ const SponsorsModal = ({ handleClose, sponsorName}) => {
            //"",
            //""
           //],
-      // Telstra: ["https://www.telstra.com.au/", "telstra-large.png"],
   };
 
 
