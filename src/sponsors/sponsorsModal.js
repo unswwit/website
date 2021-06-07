@@ -127,8 +127,6 @@ const SponsorsModal = ({ handleClose, sponsorName}) => {
            //""
           //],
   };
-
-
   return (
     <div className={styles.paper}>
       <IconButton aria-label="close newsletter subscribe form" onClick={handleClose} className={styles.closeBtn}>
@@ -148,10 +146,6 @@ const SponsorsModal = ({ handleClose, sponsorName}) => {
                 </div>
                 <p className={styles.sponsorDescription}>{sponsors[key][4]} </p>
               </>
-
-              
-
-              
     </div>
   );
 };

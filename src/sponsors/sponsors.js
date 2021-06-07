@@ -218,8 +218,6 @@ const Sponsors = () => {
         </Modal>
       </div>
       {/* End of Modal */}
-
-
     </div>
   );
 };
