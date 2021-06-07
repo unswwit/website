@@ -5,10 +5,6 @@ import IconButton from "@material-ui/core/IconButton";
 
 
 const SponsorsModal = ({ handleClose, sponsorName}) => {
-  //const key = {sponsorName};
-  //console.log("key is " + key);
-  //console.log(props.sponsorName);
-  // props doesn't work rn temp thing
   const key = sponsorName;
   const sponsors = {
       // name, website, img, type, description
@@ -43,7 +39,7 @@ const SponsorsModal = ({ handleClose, sponsorName}) => {
           //"Amstelveen is a specialist provider of risk, assurance, performance, and technology expertise, operating across numerous business sectors. At our core, we work with our clients to help them make risk-informed strategic choices and raise the bar in risk and compliance; like by building a new risk strategy, performing project technology reviews, or helping them drive digital transformation. Our strong relationships with our clients are reflected in their continued trust in the delivery of our work and our rapid growth, with Amstelveen making AFR’s Fast Starters lists in FY18 and FY19!"
           //],
       Commonwealth: ["Commonwealth Bank (CBA)",
-          "https://www.commbank.com.au/about-us/careers.html", 
+          "https://www.commbank.com.au", 
           "cba-major.png", 
           "MAJOR", 
           "More information will be added shortly!"
@@ -55,7 +51,7 @@ const SponsorsModal = ({ handleClose, sponsorName}) => {
           "Your ambition is as bold as ours. To solve the world’s toughest problems. To ask questions that have never been asked before. To innovate, to grow, to learn, to lead, to belong bringing out the best in yourself and in others. Here at EY, you’ll build the tech skillsets and growth mindsets to become the leader you want to be. We’ll provide the culture, the tech, the teams, the scale, the learning and the relationships for you to personalise your career. You’ll learn and innovate here while asking better questions to seek better answers and building a better working world. Together. It’s yours to build."
           ],
       Fdm: ["FDM Group",
-          "https://www.fdmgroup.com/en-au/au-home/", 
+          "https://www.fdmgroup.com/en-au/", 
           "fdm-group.png",
           "MAJOR",
           "FDM Group launches careers in tech! We recruit tech potential from all disciplines, train our grads with the skills and knowledge they need, and deploy them out to big name clients as FDM tech consultants to deliver on real world tech solutions. Fast track your tech specialisation with paid training, gain two years experience with a major brand company and then choose your own adventure - with huge demand for tech skills and experience, you choose where you go next!"
