@@ -159,7 +159,7 @@ const Home = () => {
       <div data-aos={mobileView ? "fade": "fade-left"} data-aos-delay="150" className={styles.sponsors}>
         <h1>OUR SPONSORS</h1>
         <img
-          src={`${process.env.PUBLIC_URL}./sponsors-home-2021-temp.png`}
+          src={`${process.env.PUBLIC_URL}./sponsors-home-2021.png`}
           alt="banner"
         />
       </div>
