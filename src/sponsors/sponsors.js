@@ -18,7 +18,7 @@ const Sponsors = () => {
           "Accenture is a Fortune 500 company that offers Strategy, Consulting, Interactive, Operational and technological solutions and services across 19 industries and over 200 cities around the world. The company offers its management consulting services in customer relationship management, finance and enterprise performance, operations, risk management, strategy, and talent and organization service areas. Accenture is focused on bringing together talent, applying industry expertise, diverse skill sets and next-generation technology to each business challenge, to produce solutions that drive change in the lives of their clients and communities."
           ],
       Atlassian: ["Atlassian",
-          "https://www.atlassian.com/", 
+          "https://www.atlassian.com/au-en", 
           "atlassian-logo.png", 
           "major", 
           "More information will be added shortly!"
@@ -30,12 +30,8 @@ const Sponsors = () => {
           "Amstelveen is a specialist provider of risk, assurance, performance, and technology expertise, operating across numerous business sectors. At our core, we work with our clients to help them make risk-informed strategic choices and raise the bar in risk and compliance; like by building a new risk strategy, performing project technology reviews, or helping them drive digital transformation. Our strong relationships with our clients are reflected in their continued trust in the delivery of our work and our rapid growth, with Amstelveen making AFR’s Fast Starters lists in FY18 and FY19!"
           ],
       Commonwealth: ["Commonwealth Bank (CBA)",
-          "https://www.commbank.com.au/", 
-<<<<<<< Updated upstream
-          "", 
-=======
-          "image", 
->>>>>>> Stashed changes
+          "https://www.commbank.com.au/about-us/careers.html", 
+          "cba-major.png", 
           "major", 
           "More information will be added shortly!"
           ],
