@@ -31,7 +31,11 @@ const Sponsors = () => {
           ],
       Commonwealth: ["Commonwealth Bank (CBA)",
           "https://www.commbank.com.au/", 
+<<<<<<< Updated upstream
           "", 
+=======
+          "image", 
+>>>>>>> Stashed changes
           "major", 
           "More information will be added shortly!"
           ],
