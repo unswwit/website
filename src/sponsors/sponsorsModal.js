@@ -8,12 +8,6 @@ const SponsorsModal = ({ handleClose, sponsorName}) => {
   const key = sponsorName;
   const sponsors = {
       // name, website, img, type, description
-      Eucalyptus: ["Eucalyptus",
-          "https://www.eucalyptus.vc/",
-          "euc-logo.png",
-          "PRINCIPAL",
-          "Eucalyptus is a pioneer in telehealth, making a significant mark on the industry through their house of online healthcare brands. This fast growing startup has built a patient-centric technology platform that powers Pilot (a medical health navigator for men), Kin (subscription service delivering the contraceptive pill to your door and services for the fertility journey), Software (personalised skincare) and Normal (sexual wellness)."
-          ],
       Accenture: ["Accenture",
           "https://www.accenture.com/au-en", 
           "accenture.png", 
@@ -26,23 +20,35 @@ const SponsorsModal = ({ handleClose, sponsorName}) => {
           "MAJOR", 
           "More information will be added shortly! Check out the above website for now for more information about our sponsor!"
           ],
-      //Appian: ["Appian",
-          //"", 
-          //"", 
-          //"MAJOR", 
-          //"More information will be added shortly! Check out the above website for now for more information about our sponsor!"
-      //],
-      //Amstelveen: ["Amstelveen",
-          //"https://amstelveen.com/", 
-          //"Amstelveen_Logo_Colour.eps", 
-          //"MAJOR", 
-          //"Amstelveen is a specialist provider of risk, assurance, performance, and technology expertise, operating across numerous business sectors. At our core, we work with our clients to help them make risk-informed strategic choices and raise the bar in risk and compliance; like by building a new risk strategy, performing project technology reviews, or helping them drive digital transformation. Our strong relationships with our clients are reflected in their continued trust in the delivery of our work and our rapid growth, with Amstelveen making AFR’s Fast Starters lists in FY18 and FY19!"
-          //],
+      Appian: ["Appian",
+          "https://appian.com/", 
+          "appian_2021.jpg", 
+          "MAJOR", 
+          "Appian helps organisations build apps and workflows rapidly, with a low-code automation platform. Combining people, technologies, and data in a single workflow, Appian can help companies maximise their resources and improve business results. Our employees create opportunities to drive hands-on impact both with our customers and throughout the organisation, which creates an environment where meaningful work is met with career growth and opportunity. "
+      ],
+      Amstelveen: ["Amstelveen",
+          "https://amstelveen.com/", 
+          "Amstelveen_notchecked.png", 
+          "MAJOR", 
+          "Amstelveen is a specialist provider of risk, assurance, performance, and technology expertise, operating across numerous business sectors. At our core, we work with our clients to help them make risk-informed strategic choices and raise the bar in risk and compliance; like by building a new risk strategy, performing project technology reviews, or helping them drive digital transformation. Our strong relationships with our clients are reflected in their continued trust in the delivery of our work and our rapid growth, with Amstelveen making AFR’s Fast Starters lists in FY18 and FY19!"
+          ],
       Commonwealth: ["Commonwealth Bank (CBA)",
           "https://www.commbank.com.au/about-us/careers.html", 
-          "cba-major.png", 
+          "2021_commbank.jpg", 
           "MAJOR", 
           "More information will be added shortly! Check out the above website for now for more information about our sponsor!"
+          ],
+      Canva: ["Canva",
+          "https://www.canva.com/en_au/",
+          "canva_notchecked.png",
+          "IN-KIND",
+          "More information will be added shortly! Check out the above website for now for more information about our sponsor!"
+          ],
+      Eucalyptus: ["Eucalyptus",
+          "https://www.eucalyptus.vc/",
+          "euc-logo.png",
+          "PRINCIPAL",
+          "Eucalyptus is a pioneer in telehealth, making a significant mark on the industry through their house of online healthcare brands. This fast growing startup has built a patient-centric technology platform that powers Pilot (a medical health navigator for men), Kin (subscription service delivering the contraceptive pill to your door and services for the fertility journey), Software (personalised skincare) and Normal (sexual wellness)."
           ],
       EY: ["EY",
           "https://www.ey.com/en_au", 
@@ -74,12 +80,12 @@ const SponsorsModal = ({ handleClose, sponsorName}) => {
           "MAJOR",
           "McGrathNicol is a specialist Advisory and Restructuring firm.  Their experts work with corporates, banks, law firms, private companies and government across all industry sectors and business sizes to deliver valuable advice and high-quality outcomes.  McGrathNicol’s Technology team specialise in complex forensic investigations, time critical cybersecurity incident response activities and helping our clients to design strategies and implement frameworks to mitigate digital and information risk.  To gain insight into the type of work they do, check out their Technology virtual experience at Forage."
           ],
-      //Microsoft: ["Microsoft",
-          //"", 
-          //"",
-          //"",
-          //""
-          //],
+      Microsoft: ["Microsoft",
+          "https://www.microsoft.com/en-au", 
+          "microsoft_notchecked.png",
+          "MAJOR",
+          "More information will be added shortly! Check out the above website for now for more information about our sponsor!"
+          ],
       Nine: ["Nine",
           "https://www.nineforbrands.com.au/", 
           "nine-major.png",
@@ -116,12 +122,12 @@ const SponsorsModal = ({ handleClose, sponsorName}) => {
           "MAJOR",
           "More information will be added shortly! Check out the above website for now for more information about our sponsor!"
          ],
-      //VMware: ["VMware",
-           //"",
-           //"",
-           //"",
-           //""
-          //],
+      VMware: ["VMware",
+           "https://www.vmware.com/au.html",
+           "VMware-Logo.png",
+           "MAJOR",
+           "VMware provides the essential software foundation for customers’ digital transformations. We help customers move to the cloud – and back if they want to. We are at the forefront of the industry with breakthrough innovations in IoT, machine learning, blockchain, 5G and other emerging technologies which will take us through the next century. We are committed to solving our customers toughest challenges whilst making a positive global impact and using tech for good to benefit our people and our planet."
+          ],
   };
   return (
     <div className={styles.paper}>
