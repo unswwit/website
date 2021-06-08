@@ -183,7 +183,6 @@ const Sponsors = () => {
                 onClick={() => {
                   setOpen(true);
                   setCurrSponsor(key);
-
                 }}
               />
               //</a>
@@ -229,7 +228,7 @@ const Sponsors = () => {
         >
           <>
             <Fade in={open}>
-              <SponsorsModal  handleClose={callbackModal} sponsorName={currSponsor}/>
+              <SponsorsModal handleClose={callbackModal} sponsorName={currSponsor}/>
             </Fade>
           </>
         </Modal>
