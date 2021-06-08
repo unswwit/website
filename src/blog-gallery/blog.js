@@ -8,7 +8,8 @@ import Chip from "@material-ui/core/Chip";
 import Tooltip from "@material-ui/core/Tooltip";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import ScrollUpBtn from "../components/ScrollUpBtn"
+import ScrollUpBtn from "../components/ScrollUpBtn";
+import PaginationComp from "../components/Pagination";
 
 const useStylesBootstrap = makeStyles((theme) => ({
   arrow: {
@@ -42,11 +43,29 @@ const Blog = () => {
   };
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [loading, setLoading] = useState(true);
+  // all blog posts
   const [blogs, setBlogs] = useState([]);
+  // set how many posts to view per page
+  const postsPerPage = 10;
+  // current page number
+  const [currentPage, setCurrentPage] = useState(1);
+  // all the posts of the selected filter category
+  const [selectedPosts, setSelectedPosts] = useState([]);
+  // the posts displayed on the current page
+  const [currentPosts, setCurrentPosts] = useState([]);
 
   useEffect(() => {
     window.scrollTo(0,0);
   },[])
+
+  // filter blogs by a selected category
+  const filterBlogs = (category) => {
+    const filteredBlogs = blogs.filter((blog) => (category === "All" || (blog.category.split(",")).includes(category) 
+    || ((blog.category.split(",")).includes("WCW") && category === "WIT Crush Wednesday")));
+    setSelectedPosts(filteredBlogs);
+    setCurrentPosts(filteredBlogs.slice(0, postsPerPage));
+    setCurrentPage(1);
+  }
 
   useEffect(() => {    
     Tabletop.init({
@@ -71,11 +90,21 @@ const Blog = () => {
           blogPreviews[index].authors = tempAuthor;
         });
 
-        setBlogs(googleData["blog-previews"]["elements"].reverse());
+        const tempBlogs = googleData["blog-previews"]["elements"].reverse();
+        setBlogs(tempBlogs);
+        setCurrentPosts(tempBlogs.slice(0, postsPerPage));
+        setSelectedPosts(tempBlogs);
       },
       simpleSheet: false,
     });
-  }, [selectedCategory]);
+    
+  }, []);
+
+  // called when pagination item clicked to slice the correct amount of posts for viewing
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    setCurrentPosts(selectedPosts.slice((pageNumber - 1) * postsPerPage, pageNumber * postsPerPage));
+  }
 
   return (
     <>
@@ -111,8 +140,8 @@ const Blog = () => {
                       margin: "5px",
                     }}
                     onClick={() => {
-                      setLoading(true);
                       setSelectedCategory(category);
+                      filterBlogs(category);
                     }}
                   />
                 </BootstrapTooltip>
@@ -131,32 +160,26 @@ const Blog = () => {
             />
           )}
         </div>
-
         <div className={styles.blogPosts}>
-          {!loading &&
-            blogs
-              .filter(
-                (blog) =>
-                  selectedCategory === "All" ||
-                  blog.category.split(",").includes(selectedCategory) ||
-                  (blog.category.split(",").includes("WCW") &&
-                    selectedCategory === "WIT Crush Wednesday")
-              )
-              .map((blog) => {
-                return (
-                  <BlogPreview
-                    key={blog.blogNo}
-                    blogNo={blog.blogNo}
-                    imgUrl={`/blog-covers/${blog.img}`}
-                    heading={blog.heading}
-                    date={blog.date}
-                    subheading={blog.subheading}
-                    authors={blog.authors}
-                    category={blog.category.split(",")}
-                  />
-                );
-              })}
+          {!loading && currentPosts
+            .map((blog) => {     
+              return <BlogPreview
+                key={blog.blogNo}
+                blogNo={blog.blogNo}
+                imgUrl={`/blog-covers/${blog.img}`}
+                heading={blog.heading}
+                date={blog.date}
+                subheading={blog.subheading}
+                authors={blog.authors}
+                category={blog.category.split(",")}
+              />
+            })}       
         </div>
+        <PaginationComp 
+          totalPages={Math.ceil(selectedPosts.length/postsPerPage)} 
+          paginate={paginate}
+          page={currentPage}
+        />
         <ScrollUpBtn/>
         {/*End of blog posts*/}
       </div>
