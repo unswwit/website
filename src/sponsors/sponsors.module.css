@@ -124,7 +124,6 @@ a.subheader {
 .paper {
   background-color: white;
   border-radius: 2;
-  padding: 10;
   padding: 1vw 2vw 2vw 2vw;
   width: 100%;
   height: auto;
@@ -196,11 +195,16 @@ a.subheader {
 }
 
 .closeSymbol {
-  color: #313638;
+  color: #060707;
   text-align: right;
   overflow: hidden;
   position: fixed;
 }
 
+@media only screen and (max-width: 280px) {
+  .sponsorImage {
+    max-width: 220px;
+  }
+}
 
 
