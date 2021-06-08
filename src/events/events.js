@@ -107,7 +107,7 @@ const Events = () => {
                     {upcomingEvent.description}              
                   </p>
                   <ul id={styles.links}>                     
-                    <li className={styles.eventLink}>
+                    {upcomingEvent.registerLink && <li className={styles.eventLink}>
                       <a
                         href={upcomingEvent.registerLink}
                         className={styles.event}
@@ -116,7 +116,7 @@ const Events = () => {
                       >
                           Register
                       </a>
-                    </li>
+                    </li>}
                     {upcomingEvent.facebookLink && <li className={styles.eventLink}>
                       <a
                         href={upcomingEvent.facebookLink}
