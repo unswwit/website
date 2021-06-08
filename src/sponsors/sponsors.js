@@ -212,7 +212,7 @@ const Sponsors = () => {
       </div>
     
       {/* Start of Modal */}
-      <div className={styles.stats}>
+      <div className={styles.modalContainer}>
         <Modal
           className={styles.modal}
           aria-labelledby="spring-modal-title"
