@@ -150,7 +150,7 @@ const SponsorsModal = ({ handleClose, sponsorName }) => {
   };
   return (
     <div className={styles.paper}>
-      <IconButton aria-label="close sponsors modal" onClick={handleClose} className={styles.closeBtn}>
+      <IconButton aria-label="close sponsors modal" onClick={handleClose} style={{"padding":"30px"}} className={styles.closeBtn}>
         <CloseIcon className={styles.closeSymbol} />
       </IconButton>
       <br />

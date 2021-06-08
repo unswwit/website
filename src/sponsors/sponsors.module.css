@@ -195,10 +195,16 @@ a.subheader {
 }
 
 .closeSymbol {
-  color: #060707;
+  color: #313638;
   text-align: right;
   overflow: hidden;
   position: fixed;
+}
+
+@media only screen and (max-width: 400px) {
+  .sponsorImage {
+    max-width: 200px;
+  }
 }
 
 @media only screen and (max-width: 280px) {
