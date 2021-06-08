@@ -129,6 +129,9 @@ a.subheader {
   height: auto;
   vertical-align: middle;
   padding-bottom: 50px;
+  max-height: 80%;
+  overflow-y: scroll;
+
 }
 
 .sponsorImage {
@@ -194,13 +197,6 @@ a.subheader {
 .closeSymbol {
   color: #313638;
   text-align: right;
-}
-
-@media only screen and (max-width: 600px) {
-  .paper {
-    height: 80%;
-    overflow-y: scroll;
-  }
 }
 
 @media only screen and (max-width: 400px) {
