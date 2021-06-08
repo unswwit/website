@@ -129,6 +129,9 @@ a.subheader {
   height: auto;
   vertical-align: middle;
   padding-bottom: 50px;
+  max-height: 80%;
+  overflow-y: scroll;
+
 }
 
 .sponsorImage {
@@ -162,11 +165,11 @@ a.subheader {
   display: inline-block;
 }
 
-.inLine p{
+.inLine p {
   display: inline-block;
 }
 
-.stats {
+.modalContainer {
   position: relative;
   overflow: hidden;
   display: flex;
@@ -175,12 +178,9 @@ a.subheader {
 }
 
 .modal {
-  display: block;
+  display: flex;
   align-items: center;
   justify-content: center;
-  overflow-y: scroll;
-  margin-top: 5%;
-  margin-bottom: 5%;
 }
 
 .textBlock {
@@ -197,8 +197,6 @@ a.subheader {
 .closeSymbol {
   color: #313638;
   text-align: right;
-  overflow: hidden;
-  position: fixed;
 }
 
 @media only screen and (max-width: 400px) {
