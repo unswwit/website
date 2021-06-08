@@ -176,14 +176,30 @@ a.subheader {
 }
 
 .modal {
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
+  overflow-y: scroll;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 .textBlock {
   padding: 5rem;
   overflow-wrap: break-word;
+}
+
+.closeBtn {
+  float: right;
+  overflow: hidden;
+  position: fixed;
+}
+
+.closeSymbol {
+  color: #313638;
+  text-align: right;
+  overflow: hidden;
+  position: fixed;
 }
 
 

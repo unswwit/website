@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import styles from "./sponsors.module.css";
 import PageHeader from ".././header";
 import { Modal, Backdrop, Fade } from "@material-ui/core";
+import { Button } from 'semantic-ui-react';
 import SponsorsModal  from "./sponsorsModal";
 
 
@@ -219,6 +220,7 @@ const Sponsors = () => {
           aria-describedby="spring-modal-description"
           open={open}
           onClose={() => setOpen(false)}
+          trigger={<Button>Scrolling Content Modal</Button>}
           closeAfterTransition
           BackdropComponent={Backdrop}
           BackdropProps={{
