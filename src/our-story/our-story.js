@@ -4,6 +4,7 @@ import ".././style.css";
 import styles from "./our-story.module.css";
 import Timeline from "./our-story-timeline.js";
 
+// Start at the top of the page 
 const OurStory = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -20,7 +21,7 @@ const OurStory = () => {
       <div className={styles.ourMissionImg}>
           <img
             src={process.env.PUBLIC_URL + "/our-story/our-mission.jpg"}
-            alt="WIT Our Mission Image"
+            alt="Our Mission Image"
           />
           <br />
         </div>
@@ -116,6 +117,10 @@ const OurStory = () => {
       </div>
       {/*Start of timeline*/}
       <Timeline />
+      <p className={styles.ourHistoryContent}>
+        </p>
+      <p className={styles.ourHistoryContent}>
+        </p>
       {/*End of timeline*/}
       {/*End of Our History*/}
     </div>
