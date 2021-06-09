@@ -53,7 +53,7 @@ a.subheader {
 }
 
 #sponsorsBody {
-  max-width: 70%;
+  max-width: 80%;
   margin: 0 auto;
   margin-bottom: 10%;
   margin-top: 5%;
@@ -98,3 +98,117 @@ a.subheader {
     font-size: 11pt;
   }
 }
+
+/*----------------------------Sponsor page modal---------------------------*/
+
+.sponsorType {
+  color: #feb14b;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: left;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.sponsorDescription {
+  color: #313638;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12pt;
+  margin-top: 2%;
+  text-align: justify;
+  margin-bottom: 100px;
+}
+
+.paper {
+  background-color: white;
+  border-radius: 2;
+  padding: 1vw 2vw 2vw 2vw;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  padding-bottom: 50px;
+  max-height: 80%;
+  overflow-y: scroll;
+
+}
+
+.sponsorImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 120px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.sponsorLink {
+  display: inline;
+  color: #e85f5c;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12pt;
+  margin: 0;
+  margin-bottom: 0px;
+  text-align: justify;
+  text-decoration: underline;
+}
+
+.sponsorWebsite {
+  color: #313638;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+  margin-right: 1%;
+  margin-bottom: 0px;
+  text-align: justify;
+  display: inline-block;
+}
+
+.inLine p {
+  display: inline-block;
+}
+
+.modalContainer {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textBlock {
+  padding: 3rem;
+  overflow-wrap: break-word;
+}
+
+.closeBtn {
+  float: right;
+  overflow: hidden;
+  position: fixed;
+}
+
+.closeSymbol {
+  color: #313638;
+  text-align: right;
+}
+
+@media only screen and (max-width: 400px) {
+  .sponsorImage {
+    max-width: 200px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .sponsorImage {
+    max-width: 220px;
+  }
+}
+
+
