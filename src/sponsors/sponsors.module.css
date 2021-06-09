@@ -83,7 +83,6 @@ a.subheader {
 .supportInkind {
   width: 100%;
   max-width: 150px;
-  margin-bottom: 75px;
 }
 
 @media only screen and (max-width: 1415px) {
