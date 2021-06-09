@@ -8,7 +8,7 @@ import SponsorsModal  from "./sponsorsModal";
 
 const Sponsors = () => {
   const [open, setOpen] = React.useState(false);
-  const [currSponsor, setCurrSponsor] = React.useState(0);
+  const [currSponsor, setCurrSponsor] = React.useState("");
 
   const sponsors = {
     // name, website, img, type, description
@@ -273,7 +273,11 @@ const Sponsors = () => {
         >
           <>
             <Fade in={open}>
-              <SponsorsModal sponsors={sponsors} handleClose={callbackModal} sponsorName={currSponsor}/>
+              <SponsorsModal 
+                sponsors={sponsors} 
+                handleClose={callbackModal} 
+                sponsorName={currSponsor}
+              />
             </Fade>
           </>
         </Modal>
