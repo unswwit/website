@@ -47,15 +47,15 @@
   align-content: center;
 }
 
-.responsiveIframe{
+.responsiveIframe {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; 
+  padding-bottom: 56.25%;
   height: 0;
 }
-.responsiveIframe iframe{
+.responsiveIframe iframe {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -68,8 +68,6 @@
   margin-right: auto;
   margin-bottom: 3vw;
 }
-
-
 
 /* Description */
 .description {
@@ -85,6 +83,50 @@
   margin-top: 3vw;
   margin-bottom: 3vw;
   display: block;
+}
+
+/* Event Image Gallery Wrapper */
+.imageGalleryWrapper {
+  width: 90%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3vw;
+  margin-bottom: 9vw;
+  display: block;
+}
+
+/* react-awesome-slider (Image Gallery) style override */
+.awssld__content > img,
+.awssld__content > video {
+  -o-object-fit: scale-down !important;
+  object-fit: scale-down !important;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff7ef;
+}
+
+.awssld {
+  --organic-arrow-thickness: 4px;
+  --organic-arrow-height: 40px;
+  --slider-height-percentage: 60%;
+  --loader-bar-color: #feb14b;
+  --loader-bar-height: 6px;
+  --control-button-width: 10%;
+  --control-button-height: 25%;
+  --control-button-opacity: 0.5;
+  --control-button-hover-opacity: 0.75;
+  --control-button-background: transparent;
+  --transition-bezier: cubic-bezier(0.5, 0.075, 0.25, 0.95);
+  --slider-transition-duration: 200ms;
+  --organic-arrow-color: #6a6a6a;
+  --organic-arrow-border-radius: 0;
+  --control-bullet-color: #6a6a6a;
+  --control-bullet-active-color: #6a6a6a;
+  --content-background-color: #2f2f2f;
 }
 
 /* Event Resources Accordion */

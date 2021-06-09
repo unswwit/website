@@ -22,6 +22,7 @@
     "query-string": "^6.13.8",
     "react": "^16.13.1",
     "react-add-to-calendar-hoc": "^1.0.10",
+    "react-awesome-slider": "^4.1.0",
     "react-bootstrap": "^1.2.2",
     "react-countup": "^4.3.3",
     "react-dom": "^16.13.1",
