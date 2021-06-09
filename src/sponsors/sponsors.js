@@ -47,12 +47,26 @@ const Sponsors = () => {
       "MAJOR", 
       "Amstelveen is a specialist provider of risk, assurance, performance, and technology expertise, operating across numerous business sectors. At our core, we work with our clients to help them make risk-informed strategic choices and raise the bar in risk and compliance; like by building a new risk strategy, performing project technology reviews, or helping them drive digital transformation. Our strong relationships with our clients are reflected in their continued trust in the delivery of our work and our rapid growth, with Amstelveen making AFR’s Fast Starters lists in FY18 and FY19!"
     ],
+    Canva: [
+      "Canva",
+      "https://www.canva.com/en_au/",
+      "canva_notchecked.png",
+      "IN-KIND",
+      "More information will be added shortly! Check out the above website for now for more information about our sponsor!"
+    ],
     Commonwealth: 
     ["Commonwealth Bank (CBA)",
       "https://www.commbank.com.au/about-us/careers.html", 
       "2021_commbank.jpg", 
       "MAJOR", 
       "More information will be added shortly! Check out the above website for now for more information about our sponsor!"
+    ],
+    Eucalyptus: [
+      "Eucalyptus",
+      "https://www.eucalyptus.vc/",
+      "euc-logo.png",
+      "PRINCIPAL",
+      "Eucalyptus is a pioneer in telehealth, making a significant mark on the industry through their house of online healthcare brands. This fast growing startup has built a patient-centric technology platform that powers Pilot (a medical health navigator for men), Kin (subscription service delivering the contraceptive pill to your door and services for the fertility journey), Software (personalised skincare) and Normal (sexual wellness)."
     ],
     EY: [
       "EY",
@@ -162,7 +176,6 @@ const Sponsors = () => {
   };
 
   return (
-    console.log(currSponsor),
     <div>
       {/* Cover Photo */}
       <PageHeader imgUrl="/headers/sponsors-header-2.jpg" title="Sponsors" />
@@ -177,20 +190,21 @@ const Sponsors = () => {
         {/* Principal Sponsors Area */}
         <h2 className={styles.subsponsor}>Principal Sponsors</h2>
         <div id={styles.majorContainer}>
-          {/*<a
-            href="https://www.eucalyptus.vc/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >*/}
-          <img
-            className={styles.principal}
-            src={process.env.PUBLIC_URL + "/sponsors/2021/euc-logo.png"}
-            alt="Eucalyptus"
-            onClick={() => {
-              setOpen(true)
-              setCurrSponsor("Eucalyptus");
-            }}
-          />
+          {Object.keys(sponsors)
+            .sort()
+            .filter((key) => sponsors[key][3] === "PRINCIPAL")
+            .map((key, _) => (
+              <img
+                className={styles.principal}
+                src={`${process.env.PUBLIC_URL}/sponsors/2021/${sponsors[key][2]}`}
+                alt={key}
+                onClick={() => {
+                  setOpen(true);
+                  setCurrSponsor(key);
+                }}
+                key={key}
+              />
+            ))}
         </div>
 
         {/* Major Sponsors Area */}
@@ -199,14 +213,8 @@ const Sponsors = () => {
         <div id={styles.majorContainer}>
           {Object.keys(sponsors)
             .sort()
-            .map((key, index) => (
-              /*
-              <a
-                key={index}
-                href={sponsors[key][1]}
-                target="_blank"
-                rel="noopener noreferrer"
-              >*/
+            .filter((key) => sponsors[key][3] === "MAJOR")
+            .map((key, _) => (
               <img
                 className={styles.major}
                 src={`${process.env.PUBLIC_URL}/sponsors/2021/${sponsors[key][2]}`}
@@ -215,23 +223,29 @@ const Sponsors = () => {
                   setOpen(true);
                   setCurrSponsor(key);
                 }}
+                key={key}
               />
-              //</a>
             ))}
         </div>
 
         {/* In-Kind Sponsors Area */}
         <h2 className={styles.subsponsor}>In-Kind Sponsors</h2>
         <div id={styles.majorContainer}>
-          <img
-            className={styles.supportInkind}
-            src={process.env.PUBLIC_URL + "/sponsors/2021/canva_notchecked.png"}
-            alt="Canva"
-            onClick={() => {
-              setOpen(true)
-              setCurrSponsor("Canva");
-            }}
-          />
+          {Object.keys(sponsors)
+            .sort()
+            .filter((key) => sponsors[key][3] === "IN-KIND")
+            .map((key, _) => (
+              <img
+                className={styles.supportInKind}
+                src={`${process.env.PUBLIC_URL}/sponsors/2021/${sponsors[key][2]}`}
+                alt={key}
+                onClick={() => {
+                  setOpen(true);
+                  setCurrSponsor(key);
+                }}
+                key={key}
+              />
+            ))}
         </div>
 
         <p className={styles.subheader}>
