@@ -230,6 +230,7 @@ const Sponsors = () => {
                 />
               </a>
             ))}
+        </div>
 
         <p className={styles.subheader}>
           Interested in partnering with us? Contact us at{" "}
