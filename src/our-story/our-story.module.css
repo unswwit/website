@@ -119,14 +119,14 @@ h2.oppSubheading {
   }
 
   .ourMissionImg {
-    margin-left: 185px;
+    margin-left: 200px;
     width: 220px;
     padding-top: 15px;
     flex-direction: column-reverse;
   }
 
   .ourMascotImg {
-    margin-left: 155px;
+    margin-left: 157px;
     width: 350px;
     padding-top: 15px;
   }
@@ -153,15 +153,28 @@ h2.oppSubheading {
   }
 
   .ourMissionImg {
-    margin-left: 50px;
+    margin-left: 60px;
     width: 180px;
     padding-top: 15px;
   }
 
   .ourMascotImg {
-    margin-left: 23px;
+    margin-left: 45px;
     width: 250px;
     padding-top: 15px;
   }
 }
 
+/*--- Our Story small mobile version ---*/
+@media only screen and (max-width: 280px) {
+  .ourMissionImg {
+    margin-left: 37px;
+    width: 180px;
+  }
+
+  .ourMascotImg {
+    margin-left: 25px;
+    width: 250px;
+    padding-top: 15px;
+  }
+}

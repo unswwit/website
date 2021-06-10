@@ -24,8 +24,12 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#E85F5C",
     width: "150px",
     marginTop: "23px",
-    [theme.breakpoints.down('md')]: {
-      marginTop:"53px",
+    [theme.breakpoints.between('sm','md')]: {
+      marginTop:"45px",
+    },
+    [theme.breakpoints.down('sm')]: {
+      marginTop:"210px",
+      width: "50px",
     },
   },
   paperTwo: {
@@ -34,8 +38,12 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#E85F5C",
     width: "150px",
     marginTop: "23px",
-    [theme.breakpoints.down('md')]: {
-      marginTop:"67px",
+    [theme.breakpoints.between('sm','md')]: {
+      marginTop:"45px",
+    },
+    [theme.breakpoints.down('sm')]: {
+      marginTop: "285px",
+      width: "50px",
     },
   },
   paperThree: {
@@ -44,8 +52,12 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#E85F5C",
     width: "150px",
     marginTop: "45px",
-    [theme.breakpoints.down('md')]: {
-      marginTop:"85px",
+    [theme.breakpoints.between('sm','md')]: {
+      marginTop:"65px",
+    },
+    [theme.breakpoints.down('sm')]: {
+      marginTop:"365px",
+      width: "50px",
     },
   },
   paperFour: {
@@ -54,8 +66,12 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#E85F5C",
     width: "150px",
     marginTop: "23px",
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.between('sm','md')]: {
       marginTop:"44px",
+    },
+    [theme.breakpoints.down('sm')]: {
+      marginTop:"220px",
+      width: "50px",
     },
   },
   paperFive: {
@@ -64,18 +80,28 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#E85F5C",
     width: "150px",
     marginTop: "66px",
-    [theme.breakpoints.down('md')]: {
-      marginTop:"140px",
+    [theme.breakpoints.between('sm','md')]: {
+      marginTop:"110px",
+    },
+    [theme.breakpoints.down('sm')]: {
+      marginTop:"595px",
+      width: "50px",
     },
   },
   year: {
     flex: 1,
+    [theme.breakpoints.down('sm')]: {
+      width: "35%",
+    },
   },
   verticallyCenterContent: {
     margin: "auto 0",
   },
   history: {
     flex: 6,
+    [theme.breakpoints.down('sm')]: {
+      width: "40%",
+    },
   },
 }));
 
