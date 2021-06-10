@@ -101,7 +101,7 @@ const Home = () => {
               <p>Team Members</p>
             </div>
             <div>
-              <CountUp end={20} duration={5} />
+              <CountUp end={22} duration={5} />
               <p>Sponsors</p>
             </div>
             <div>
