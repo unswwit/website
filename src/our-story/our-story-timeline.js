@@ -23,14 +23,14 @@ const useStyles = makeStyles((theme) => ({
     padding: "10px 10px",
     backgroundColor: "#E85F5C",
     width: "150px",
-    marginTop: "25px",
+    marginTop: "23px",
   },
   paperTwo: {
     // 2017 card
     padding: "10px 10px",
     backgroundColor: "#E85F5C",
     width: "150px",
-    marginTop: "25px",
+    marginTop: "23px",
   },
   paperThree: {
     // 2018 card
@@ -44,14 +44,14 @@ const useStyles = makeStyles((theme) => ({
     padding: "10px 10px",
     backgroundColor: "#E85F5C",
     width: "150px",
-    marginTop: "25px",
+    marginTop: "23px",
   },
   paperFive: {
     // 2020 card
     padding: "10px 10px",
     backgroundColor: "#E85F5C",
     width: "150px",
-    marginTop: "65px",
+    marginTop: "66px",
   },
   year: {
     flex: 1,
