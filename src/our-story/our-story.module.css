@@ -110,37 +110,58 @@ h2.oppSubheading {
 /*--- Our Story tablet version ---*/
 @media only screen and (max-width: 1005px) {
   .ourMissionSection {
-    flex-direction: column;
+    flex-direction:column;
+    width: 84%;
   }
-
   .ourMascotSection {
-    flex-direction: column;
+    flex-direction:column;
+    width:84%;
   }
 
   .ourMissionImg {
-    margin-left: 170px;
-    width: 250px;
-    padding-top: 30px;
+    margin-left: 185px;
+    width: 220px;
+    padding-top: 15px;
+    flex-direction: column-reverse;
   }
 
   .ourMascotImg {
-    margin-left: 95px;
-    width: 450px;
+    margin-left: 155px;
+    width: 350px;
+    padding-top: 15px;
   }
 }
 
 /*--- Our Story mobile version ---*/
-@media only screen and (max-width: 1005px) {
+@media only screen and (max-width: 400px) {
+  h2.oppSubheading {
+    margin-top:10%;
+    font-size: 23pt;
+    text-transform: uppercase;
+  }
+  
+  .ourMissionContent {
+    font-size: 10pt;
+  }
+
+  .ourMascotContent {
+    font-size: 10pt;
+  }
+
+  .ourHistoryContent {
+    font-size: 10pt;
+  }
+
   .ourMissionImg {
-    margin-left: 40px;
-    width: 200px;
+    margin-left: 50px;
+    width: 180px;
     padding-top: 15px;
   }
 
   .ourMascotImg {
-    margin-left: 20px;
-    width: 280px;
+    margin-left: 23px;
+    width: 250px;
     padding-top: 15px;
   }
 }
-/*--- Our Story small mobile version ---*/
+
