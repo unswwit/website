@@ -21,7 +21,7 @@ class blogPost57 extends Component {
         {/*Start of blog post*/}
         <div className={styles.blogContent}>
           <div>
-            <h2 className={styles.blogTitle}>S(c)ent From the Past</h2>
+            <h2 className={styles.blogTitle}>S(cent) From the Past</h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>June 10, 2021</span>
               <span>
