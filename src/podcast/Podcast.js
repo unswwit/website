@@ -97,7 +97,7 @@ const Podcast = () => {
       </div>
 
       <div id={styles.episodes}>
-        {episodes.slice(0, 3).reverse().map((episode, index) => {
+        {episodes.map((episode, index) => {
           return (
             <EpisodeTemplate
               key={index}

@@ -10,6 +10,8 @@ import ReactMarkdown from "react-markdown";
 import Tabletop from "tabletop";
 import styles from "./Podcast.module.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import EpisodeTemplate from "./EpisodeTemplate.js"; 
+import ShareBtns from "../blog-post/ShareBtns";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,8 +25,25 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// const [episodes, setEpisodes] = useState([]);
+
+// useEffect(() => {
+//   // load podcast episode previews
+//   Tabletop.init({
+//     key: process.env.REACT_APP_GOOGLE_SHEETS,
+//     callback: (googleData) => {
+//       const unsorted = googleData["podcast-episodes"]["elements"];
+//       const sortedEpisodes = unsorted.reverse();
+//       setEpisodes(sortedEpisodes);
+//       setLoading(false);
+//     },
+//     simpleSheet: false
+//   })
+// }, []);
+
 const EpisodePage = (props) => {
   const classes = useStyles();
+  const [episodes, setEpisodes] = useState([]);
   const [episode, setEpisode] = useState({});
   const [episodeNumber, setEpisodeNumber] = useState("0");
   const [transcript, setTranscript] = useState("");
@@ -37,7 +56,7 @@ const EpisodePage = (props) => {
     spotify: "podcast-spotify.png",
     breaker: "podcast-breaker.png",
   };
-
+  
   // retrieve current episode content
   const handleEpisodeNumber = () => {
     let url = window.location.href.split("/");
@@ -76,6 +95,11 @@ const EpisodePage = (props) => {
           return episode.episodeNo === currEpisodeNo;
         })[0];
         setEpisode(currEpisode);
+
+        // load podcast episode previews
+        // const unsorted = googleData["podcast-episodes"]["elements"];
+        const sortedEpisodes = allEpisodes.reverse().slice(0, 3);
+        setEpisodes(sortedEpisodes);
 
         // hide the loading sign
         setLoading(false);
@@ -166,6 +190,33 @@ const EpisodePage = (props) => {
               </Accordion>
             </>
           )}
+          
+          <p className={styles.subHeading}>Share this episode</p>
+          <div className={styles.shareButtons}>
+            <span>
+              <ShareBtns />
+            </span>
+          </div>
+          
+          <p className={styles.subHeading}>More From WIT</p>
+          <div className={styles.seeMoreEpisodes}>
+            {episodes.map((episode, index) => {
+              return (
+                <div className={styles.podcastContainer}> 
+                  <EpisodeTemplate
+                    className={styles.podcastContainer}
+                    key={index}
+                    episodeNo={episode.episodeNo}
+                    title={episode.title}
+                    cover={`podcast-covers/${episode.img}`}
+                    date={episode.date}
+                    description={episode.description}
+                  />
+                </div>
+              );
+            })} 
+          </div>
+      
         </div>
       )}
     </>
