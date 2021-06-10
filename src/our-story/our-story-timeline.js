@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#E85F5C",
     width: "150px",
     marginTop: "23px",
+    [theme.breakpoints.down('md')]: {
+      marginTop:"53px",
+    },
   },
   paperTwo: {
     // 2017 card
@@ -31,6 +34,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#E85F5C",
     width: "150px",
     marginTop: "23px",
+    [theme.breakpoints.down('md')]: {
+      marginTop:"67px",
+    },
   },
   paperThree: {
     // 2018 card
@@ -38,6 +44,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#E85F5C",
     width: "150px",
     marginTop: "45px",
+    [theme.breakpoints.down('md')]: {
+      marginTop:"85px",
+    },
   },
   paperFour: {
     // 2019 card
@@ -45,6 +54,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#E85F5C",
     width: "150px",
     marginTop: "23px",
+    [theme.breakpoints.down('md')]: {
+      marginTop:"44px",
+    },
   },
   paperFive: {
     // 2020 card
@@ -52,6 +64,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#E85F5C",
     width: "150px",
     marginTop: "66px",
+    [theme.breakpoints.down('md')]: {
+      marginTop:"140px",
+    },
   },
   year: {
     flex: 1,
