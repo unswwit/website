@@ -118,17 +118,29 @@ h2.oppSubheading {
   }
 
   .ourMissionImg {
-    margin-left:170px;
+    margin-left: 170px;
     width: 250px;
     padding-top: 30px;
   }
 
   .ourMascotImg {
-    margin-left:95px;
-    width:450px;
+    margin-left: 95px;
+    width: 450px;
   }
 }
 
 /*--- Our Story mobile version ---*/
+@media only screen and (max-width: 1005px) {
+  .ourMissionImg {
+    margin-left: 40px;
+    width: 200px;
+    padding-top: 15px;
+  }
 
+  .ourMascotImg {
+    margin-left: 20px;
+    width: 280px;
+    padding-top: 15px;
+  }
+}
 /*--- Our Story small mobile version ---*/
