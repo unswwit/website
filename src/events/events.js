@@ -196,7 +196,7 @@ const Events = () => {
               let eventLabel = event.img.split(".")[0].split("-");
               eventLabel.shift();
               return (
-                <div key={index} className={styles.gridItem}>
+                <div key={index}>
                   <img
                     className={styles.eventImages}
                     src={`${process.env.PUBLIC_URL}/event-covers/${year}/${event.img}`}

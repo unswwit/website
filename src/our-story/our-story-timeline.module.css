@@ -1,0 +1,47 @@
+/*--- Timeline Content ---*/
+.timelineContent {
+  line-height: 22px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14pt;
+  text-align: justify;
+  color: var(--light-grey);
+  padding-top: 20px;
+  margin: auto 0;
+}
+
+.yearContent {
+  line-height: 22px;
+  font-family: "Montserrat", sans-serif;
+  padding-left: 45px;
+  font-size: 14pt;
+  text-align: justify;
+  color: #ffffff;
+  margin: 0 auto;
+}
+
+.timelineSeparator {
+  color: #c4c4c4;
+}
+
+/*--- Our Story big tablet version ---*/
+@media only screen and (max-width: 1200px) {
+  .timelineContent {
+    font-size: 11pt;
+    padding-top: 10px;
+  }
+
+  .yearContent {
+    font-size: 11pt;
+    padding-left: 47px;
+  }
+}
+
+/*--- Our Story tablet version ---*/
+@media only screen and (max-width: 1005px) {
+  .timelineContent {
+    padding-top: 40px;
+  }
+}
+
+/*--- Our Story mobile version ---*/
+/*--- Our Story small mobile version ---*/
