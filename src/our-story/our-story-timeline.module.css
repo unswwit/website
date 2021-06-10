@@ -44,4 +44,13 @@
 }
 
 /*--- Our Story mobile version ---*/
-/*--- Our Story small mobile version ---*/
+@media only screen and (max-width: 900px) {
+  .yearContent {
+    padding-left: 3px;
+    font-size:10pt;
+  }
+
+  .timelineContent {
+    font-size:10pt;
+  }
+}
