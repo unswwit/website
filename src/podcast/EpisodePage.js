@@ -191,6 +191,7 @@ const EpisodePage = (props) => {
             </>
           )}
           
+          {/* Share buttons */}
           <p className={styles.subHeading}>Share this episode</p>
           <div className={styles.shareButtons}>
             <span>
@@ -198,6 +199,7 @@ const EpisodePage = (props) => {
             </span>
           </div>
           
+          {/* See more episodes */}
           <p className={styles.subHeading}>More From WIT</p>
           <div className={styles.seeMoreEpisodes}>
             {episodes.map((episode, index) => {
