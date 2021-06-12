@@ -146,9 +146,7 @@ a:hover {
 }
 
 /*-------------------------------Mobile Responsiveness-----------------------------*/
-
 @media only screen and (max-width: 1270px) {
-
   .seeMoreEpisodes {
     display: flex; 
     flex-flow: row wrap;
@@ -173,7 +171,6 @@ a:hover {
     margin-right: auto;
     margin-left: auto;
   }
-
 }
 
 @media only screen and (max-width: 880px) {
@@ -192,9 +189,6 @@ a:hover {
 }
 
 @media only screen and (max-width: 800px) {
-  /* .seeMoreEpisodes {
-    width: 95%;
-  } */
   #episodeContainer {
     width: 80%;
   }

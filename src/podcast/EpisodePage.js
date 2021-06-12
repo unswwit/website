@@ -91,16 +91,28 @@ const EpisodePage = (props) => {
         }
 
         // load the page content for the current podcast episode
-        const currEpisode = allEpisodes.filter((episode) => {
-          return episode.episodeNo === currEpisodeNo;
+        var episodeIndex = 0;
+        const currEpisode = allEpisodes.filter((episode, index) => {
+          if (episode.episodeNo === currEpisodeNo) {
+            episodeIndex = index;
+            return true;
+          } else {
+            return false;
+          }
         })[0];
         setEpisode(currEpisode);
 
         // load podcast episode previews
-        // const unsorted = googleData["podcast-episodes"]["elements"];
-        const sortedEpisodes = allEpisodes.reverse().slice(0, 3);
-        setEpisodes(sortedEpisodes);
-
+        if (episodeIndex < 3) {
+          let sortedEpisodes = allEpisodes.slice(0, episodeIndex).reverse();
+          const additionalEpisodes = allEpisodes.slice(episodeIndex + 1, episodeIndex + 4 - sortedEpisodes.length);
+          sortedEpisodes = [...additionalEpisodes, ...sortedEpisodes];
+          setEpisodes(sortedEpisodes);
+        } else {
+          let sortedEpisodes = allEpisodes.slice(episodeIndex - 3, episodeIndex).reverse();
+          setEpisodes(sortedEpisodes);
+        }
+       
         // hide the loading sign
         setLoading(false);
       },
@@ -204,7 +216,7 @@ const EpisodePage = (props) => {
           <div className={styles.seeMoreEpisodes}>
             {episodes.map((episode, index) => {
               return (
-                <div className={styles.podcastContainer}> 
+                <div key={index} className={styles.podcastContainer}> 
                   <EpisodeTemplate
                     className={styles.podcastContainer}
                     key={index}
