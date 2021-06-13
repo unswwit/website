@@ -5,7 +5,6 @@ import { Modal, Backdrop, Fade } from "@material-ui/core";
 import { Button } from "semantic-ui-react";
 import SponsorsModal  from "./sponsorsModal";
 
-
 const Sponsors = () => {
   const [open, setOpen] = React.useState(false);
   const [currSponsor, setCurrSponsor] = React.useState("");
