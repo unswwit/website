@@ -54,6 +54,13 @@ const Sponsors = () => {
       "IN-KIND",
       "More information will be added shortly! Check out the above website for now for more information about our sponsor!"
     ],
+    Cochlear: [
+      "Cochlear",
+      "https://www.cochlear.com/au/en/home",
+      "cochlear.png",
+      "SUPPORTER",
+      "Cochlear’s mission is to help people hear and be heard. As the global leader in implantable hearing solutions, Cochlear is dedicated to helping people with moderate to profound hearing loss experience a life full of hearing. We aim to give people the best lifelong hearing experience and access to innovative future technologies. We collaborate with the industry’s best clinical, research and support networks. That’s why more people choose Cochlear than any other hearing implant company. Learn and grow with us as we tackle the most complex challenges in helping people to Hear Now. And Always."
+    ],
     Commonwealth: 
     ["Commonwealth Bank (CBA)",
       "https://www.commbank.com.au/about-us/careers.html", 
@@ -217,6 +224,26 @@ const Sponsors = () => {
             .map((key, _) => (
               <img
                 className={styles.major}
+                src={`${process.env.PUBLIC_URL}/sponsors/2021/${sponsors[key][2]}`}
+                alt={key}
+                onClick={() => {
+                  setOpen(true);
+                  setCurrSponsor(key);
+                }}
+                key={key}
+              />
+            ))}
+        </div>
+
+        {/* Supporter Sponsors Area */}
+        <h2 className={styles.subsponsor}>Supporter Sponsors</h2>
+        <div id={styles.majorContainer}>
+          {Object.keys(sponsors)
+            .sort()
+            .filter((key) => sponsors[key][3] === "SUPPORTER")
+            .map((key, _) => (
+              <img
+                className={styles.supportInKind}
                 src={`${process.env.PUBLIC_URL}/sponsors/2021/${sponsors[key][2]}`}
                 alt={key}
                 onClick={() => {
