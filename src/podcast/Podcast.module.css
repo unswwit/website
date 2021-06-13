@@ -88,10 +88,10 @@ a:hover {
   width: 110%; 
 }
 
-.seeMoreEpisodes {
+.previews {
   width: 113%;
   display: grid; 
-  grid-template-columns: repeat(auto-fill, minmax(310px, 315px));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 320px));
   padding: initial;
   margin-right: auto;
   margin-left: auto; 
@@ -146,8 +146,8 @@ a:hover {
 }
 
 /*-------------------------------Mobile Responsiveness-----------------------------*/
-@media only screen and (max-width: 1270px) {
-  .seeMoreEpisodes {
+@media only screen and (max-width: 1285px) {
+  .previews {
     display: flex; 
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -166,7 +166,7 @@ a:hover {
 }
 
 @media only screen and (max-width: 1000px) {
-  .seeMoreEpisodes {
+  .previews {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
@@ -317,7 +317,7 @@ a:hover {
 }
 
 @media only screen and (max-width: 450px) {
-  .seeMoreEpisodes {
+  .previews {
     width: 119%;
     margin-left: -25px;
   }
