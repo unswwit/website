@@ -141,6 +141,7 @@ class blogPost57 extends Component {
               "/potraits/blog-authors/therese-nguyen.png",
               styles.authorProfile,
               "Therese Nguyen",
+              "Education Team"
             ],
           }}
         />

@@ -10,6 +10,8 @@ import ReactMarkdown from "react-markdown";
 import Tabletop from "tabletop";
 import styles from "./Podcast.module.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import EpisodeTemplate from "./EpisodeTemplate.js"; 
+import ShareBtns from "../blog-post/ShareBtns";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
 
 const EpisodePage = (props) => {
   const classes = useStyles();
+  const [episodes, setEpisodes] = useState([]);
   const [episode, setEpisode] = useState({});
   const [episodeNumber, setEpisodeNumber] = useState("0");
   const [transcript, setTranscript] = useState("");
@@ -37,7 +40,7 @@ const EpisodePage = (props) => {
     spotify: "podcast-spotify.png",
     breaker: "podcast-breaker.png",
   };
-
+  
   // retrieve current episode content
   const handleEpisodeNumber = () => {
     let url = window.location.href.split("/");
@@ -72,11 +75,28 @@ const EpisodePage = (props) => {
         }
 
         // load the page content for the current podcast episode
-        const currEpisode = allEpisodes.filter((episode) => {
-          return episode.episodeNo === currEpisodeNo;
+        var episodeIndex = 0;
+        const currEpisode = allEpisodes.filter((episode, index) => {
+          if (episode.episodeNo === currEpisodeNo) {
+            episodeIndex = index;
+            return true;
+          } else {
+            return false;
+          }
         })[0];
         setEpisode(currEpisode);
 
+        // load podcast episode previews
+        if (episodeIndex < 3) {
+          let sortedEpisodes = allEpisodes.slice(0, episodeIndex).reverse();
+          const additionalEpisodes = allEpisodes.slice(episodeIndex + 1, episodeIndex + 4 - sortedEpisodes.length);
+          sortedEpisodes = [...additionalEpisodes, ...sortedEpisodes];
+          setEpisodes(sortedEpisodes);
+        } else {
+          let sortedEpisodes = allEpisodes.slice(episodeIndex - 3, episodeIndex).reverse();
+          setEpisodes(sortedEpisodes);
+        }
+       
         // hide the loading sign
         setLoading(false);
       },
@@ -166,6 +186,35 @@ const EpisodePage = (props) => {
               </Accordion>
             </>
           )}
+          
+          {/* Share buttons */}
+          <p className={styles.subHeading}>Share this episode</p>
+          <div className={styles.shareButtons}>
+            <span>
+              <ShareBtns />
+            </span>
+          </div>
+          
+          {/* See more episodes */}
+          <p className={styles.subHeading}>More From WIT</p>
+          <div className={styles.previews}>
+            {episodes.map((episode, index) => {
+              return (
+                <div key={index} className={styles.podcastContainer}> 
+                  <EpisodeTemplate
+                    className={styles.podcastContainer}
+                    key={index}
+                    episodeNo={episode.episodeNo}
+                    title={episode.title}
+                    cover={`podcast-covers/${episode.img}`}
+                    date={episode.date}
+                    description={episode.description}
+                  />
+                </div>
+              );
+            })} 
+          </div>
+      
         </div>
       )}
     </>
