@@ -7,8 +7,6 @@ import {
   FacebookMessengerIcon,
   TelegramShareButton,
   TelegramIcon,
-  LineShareButton,
-  LineIcon,
   LinkedinShareButton,
   LinkedinIcon,
   TwitterShareButton,
@@ -61,10 +59,6 @@ const ShareBtns = () => {
       >
         <LinkedinIcon size={30} round={true} />
       </LinkedinShareButton>
-
-      <LineShareButton className={styles.shareBtn} url={window.location.href}>
-        <LineIcon size={30} round={true} />
-      </LineShareButton>
       
     </>
   );

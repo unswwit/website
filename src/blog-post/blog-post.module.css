@@ -5,7 +5,6 @@
   padding: 25px;
   text-align: center;
   margin: auto;
-  margin-bottom: 6vw;
   word-wrap: break-word;
   hyphens: auto;
 }
@@ -202,6 +201,26 @@ img.floatRight {
   color: white;
   font-weight: 500;
 }
+/*-----------------------------Category Chips----------------------------*/
+
+.chipContent {
+  width: 100%;
+  max-width: 950px;
+  padding: 25px;
+  text-align: justify;
+  margin: auto;
+  margin-bottom: 6vw;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.blogCategories {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 95%;
+  margin: 0 auto;
+}
 
 /*-------------------------------Author card-----------------------------*/
 .author {
@@ -271,20 +290,19 @@ img.floatRight {
   margin-top: 10px;
 }
 
-
 /*---------------------------------Bottom ShareBtns-------------------------------*/
 
 .shareTextPosition {
   align-content: center;
   color: #313638;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.3vw;
-  font-weight: 500;
   letter-spacing: 0.1vw;
   padding-top: 10pt;
   position: relative;
   text-align: justify;
-  margin-bottom: 0.75vw;
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 15pt;
 }
 
 .shareContent {
@@ -304,13 +322,12 @@ img.floatRight {
   align-content: center;
   color: #313638;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.3vw;
-  font-weight: 500;
   letter-spacing: 0.1vw;
   padding-top: 10pt;
   position: relative;
   text-align: justify;
-  margin-bottom: 0.75vw;
+  font-weight: 500;
+  font-size: 15pt;
 }
 
 .moreFromWITContent {
@@ -319,12 +336,39 @@ img.floatRight {
   padding: 25px;
   text-align: justify;
   margin: auto;
-  margin-bottom: 3vw;
   word-wrap: break-word;
   hyphens: auto;
+  margin-bottom: 6vw;
+}
+
+.scaleDown {
+  zoom: 0.825;
+  -moz-transform: scale(0.825);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.825);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.825);
+  -webkit-transform-origin: 0 0;
+  transform: scale(0.825); /* Standard Property */
+  transform-origin: 0 0;
 }
 
 /*-------------------------------Blog mobile version-----------------------------*/
+
+@media only screen and (max-width: 1200px) {
+  .scaleDown {
+    zoom: 1;
+    -moz-transform: scale(1);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(1);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(1);
+    -webkit-transform-origin: 0 0;
+    transform: scale(1); /* Standard Property */
+    transform-origin: 0 0;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .videoWrapper {
     position: relative;
@@ -350,6 +394,18 @@ img.floatRight {
   .smallContainer {
     width: 100%;
     flex-direction: row;
+  }
+
+  .scaleDown {
+    zoom: 1;
+    -moz-transform: scale(1);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(1);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(1);
+    -webkit-transform-origin: 0 0;
+    transform: scale(1); /* Standard Property */
+    transform-origin: 0 0;
   }
 }
 
