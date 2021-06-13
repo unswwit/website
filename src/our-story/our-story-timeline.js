@@ -9,7 +9,23 @@ import TimelineDot from "@material-ui/lab/TimelineDot";
 import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent";
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
+import { createMuiTheme } from '@material-ui/core/styles';
 
+// Custom breakpoints to adjust timeline 
+const theme = createMuiTheme({
+  breakpoints: {
+    values: {
+      xs: 300,
+      sm: 450,
+      md: 600,
+      lg: 750,
+      xl: 900,
+      xxl: 1100, 
+    },
+  },
+})
+
+// Styling material ui components 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "84%",
