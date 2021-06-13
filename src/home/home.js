@@ -16,7 +16,7 @@ const Home = () => {
   const [mobileView, setMobileView] = React.useState(false);
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
-  const last3articles = articles.slice(1, 4);
+  const last3articles = articles.slice(0, 3);
 
   //start webpage at the top
   useEffect(() => {
@@ -39,7 +39,7 @@ const Home = () => {
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: googleData => {
-        setArticles(googleData["publications"]["elements"]);  
+        setArticles(googleData["publications"]["elements"].reverse());  
         setLoading(false);
       },
       simpleSheet: false
@@ -101,11 +101,11 @@ const Home = () => {
               <p>Team Members</p>
             </div>
             <div>
-              <CountUp end={20} duration={5} />
+              <CountUp end={22} duration={5} />
               <p>Sponsors</p>
             </div>
             <div>
-              <CountUp end={2841} duration={4} />
+              <CountUp end={2889} duration={4} />
               <p>Facebook Followers</p>
             </div>
           </div>
@@ -159,7 +159,7 @@ const Home = () => {
       <div data-aos={mobileView ? "fade": "fade-left"} data-aos-delay="150" className={styles.sponsors}>
         <h1>OUR SPONSORS</h1>
         <img
-          src={`${process.env.PUBLIC_URL}./sponsors-home-2021-temp.png`}
+          src={`${process.env.PUBLIC_URL}./sponsors-home-2021.png`}
           alt="banner"
         />
       </div>
