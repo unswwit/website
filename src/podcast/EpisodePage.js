@@ -25,22 +25,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-// const [episodes, setEpisodes] = useState([]);
-
-// useEffect(() => {
-//   // load podcast episode previews
-//   Tabletop.init({
-//     key: process.env.REACT_APP_GOOGLE_SHEETS,
-//     callback: (googleData) => {
-//       const unsorted = googleData["podcast-episodes"]["elements"];
-//       const sortedEpisodes = unsorted.reverse();
-//       setEpisodes(sortedEpisodes);
-//       setLoading(false);
-//     },
-//     simpleSheet: false
-//   })
-// }, []);
-
 const EpisodePage = (props) => {
   const classes = useStyles();
   const [episodes, setEpisodes] = useState([]);
@@ -213,7 +197,7 @@ const EpisodePage = (props) => {
           
           {/* See more episodes */}
           <p className={styles.subHeading}>More From WIT</p>
-          <div className={styles.seeMoreEpisodes}>
+          <div className={styles.previews}>
             {episodes.map((episode, index) => {
               return (
                 <div key={index} className={styles.podcastContainer}> 
