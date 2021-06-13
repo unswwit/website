@@ -9,9 +9,9 @@ import TimelineDot from "@material-ui/lab/TimelineDot";
 import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent";
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme } from "@material-ui/core/styles";
 
-// Custom breakpoints to adjust timeline 
+// Custom breakpoints to adjust timeline
 const theme = createMuiTheme({
   breakpoints: {
     values: {
@@ -20,12 +20,12 @@ const theme = createMuiTheme({
       md: 600,
       lg: 750,
       xl: 900,
-      xxl: 1100, 
+      xxl: 1100,
     },
   },
-})
+});
 
-// Styling material ui components 
+// Styling material ui components
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "84%",
@@ -40,11 +40,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#E85F5C",
     width: "150px",
     marginTop: "23px",
-    [theme.breakpoints.between('sm','md')]: {
-      marginTop:"45px",
+    [theme.breakpoints.between("sm", "md")]: {
+      marginTop: "45px",
     },
-    [theme.breakpoints.down('sm')]: {
-      marginTop:"210px",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "210px",
       width: "50px",
     },
   },
@@ -54,10 +54,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#E85F5C",
     width: "150px",
     marginTop: "23px",
-    [theme.breakpoints.between('sm','md')]: {
-      marginTop:"45px",
+    [theme.breakpoints.between("sm", "md")]: {
+      marginTop: "45px",
     },
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down("sm")]: {
       marginTop: "285px",
       width: "50px",
     },
@@ -68,11 +68,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#E85F5C",
     width: "150px",
     marginTop: "45px",
-    [theme.breakpoints.between('sm','md')]: {
-      marginTop:"65px",
+    [theme.breakpoints.between("sm", "md")]: {
+      marginTop: "65px",
     },
-    [theme.breakpoints.down('sm')]: {
-      marginTop:"365px",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "365px",
       width: "50px",
     },
   },
@@ -82,11 +82,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#E85F5C",
     width: "150px",
     marginTop: "23px",
-    [theme.breakpoints.between('sm','md')]: {
-      marginTop:"44px",
+    [theme.breakpoints.between("sm", "md")]: {
+      marginTop: "44px",
     },
-    [theme.breakpoints.down('sm')]: {
-      marginTop:"220px",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "220px",
       width: "50px",
     },
   },
@@ -96,17 +96,17 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#E85F5C",
     width: "150px",
     marginTop: "66px",
-    [theme.breakpoints.between('sm','md')]: {
-      marginTop:"110px",
+    [theme.breakpoints.between("sm", "md")]: {
+      marginTop: "110px",
     },
-    [theme.breakpoints.down('sm')]: {
-      marginTop:"595px",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "595px",
       width: "50px",
     },
   },
   year: {
     flex: 1,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down("sm")]: {
       width: "35%",
     },
   },
@@ -115,7 +115,7 @@ const useStyles = makeStyles((theme) => ({
   },
   history: {
     flex: 6,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down("sm")]: {
       width: "40%",
     },
   },

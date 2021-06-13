@@ -47,11 +47,11 @@
 @media only screen and (max-width: 900px) {
   .yearContent {
     padding-left: 1px;
-    font-size:10pt;
+    font-size: 10pt;
   }
 
   .timelineContent {
-    font-size:10pt;
+    font-size: 10pt;
   }
 }
 
@@ -59,10 +59,10 @@
 @media only screen and (max-width: 280px) {
   .yearContent {
     padding-left: 1px;
-    font-size:10pt;
+    font-size: 10pt;
   }
 
   .timelineContent {
-    font-size:10pt;
+    font-size: 10pt;
   }
 }

@@ -110,12 +110,12 @@ h2.oppSubheading {
 /*--- Our Story tablet version ---*/
 @media only screen and (max-width: 1000px) {
   .ourMissionSection {
-    flex-direction:column;
+    flex-direction: column;
     width: 84%;
   }
   .ourMascotSection {
-    flex-direction:column;
-    width:84%;
+    flex-direction: column;
+    width: 84%;
   }
 
   .ourMissionImg {
@@ -135,11 +135,11 @@ h2.oppSubheading {
 /*--- Our Story mobile version ---*/
 @media only screen and (max-width: 400px) {
   h2.oppSubheading {
-    margin-top:10%;
+    margin-top: 10%;
     font-size: 23pt;
     text-transform: uppercase;
   }
-  
+
   .ourMissionContent {
     font-size: 10pt;
   }
