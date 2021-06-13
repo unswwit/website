@@ -73,6 +73,11 @@ a.subheader {
   object-fit: contain;
 }
 
+.supporter {
+  width: 100%;
+  max-width: 150px;
+}
+
 .supportInKind {
   width: 100%;
   max-width: 150px;

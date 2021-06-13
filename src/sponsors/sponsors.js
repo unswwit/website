@@ -237,13 +237,14 @@ const Sponsors = () => {
 
         {/* Supporter Sponsors Area */}
         <h2 className={styles.subsponsor}>Supporter Sponsors</h2>
+
         <div id={styles.majorContainer}>
           {Object.keys(sponsors)
             .sort()
             .filter((key) => sponsors[key][3] === "SUPPORTER")
             .map((key, _) => (
               <img
-                className={styles.supportInKind}
+                className={styles.supporter}
                 src={`${process.env.PUBLIC_URL}/sponsors/2021/${sponsors[key][2]}`}
                 alt={key}
                 onClick={() => {
@@ -257,6 +258,7 @@ const Sponsors = () => {
 
         {/* In-Kind Sponsors Area */}
         <h2 className={styles.subsponsor}>In-Kind Sponsors</h2>
+        
         <div id={styles.majorContainer}>
           {Object.keys(sponsors)
             .sort()
