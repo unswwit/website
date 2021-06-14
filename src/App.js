@@ -120,6 +120,10 @@ class App extends Component {
     let options = {
       icon: {
         circular: true,
+      },
+      modules: {
+        increaseTextSpacing: false,
+        decreaseTextSpacing: false,
       }
     };
     window.addEventListener("load", function() { new Accessibility(options); }, false);
