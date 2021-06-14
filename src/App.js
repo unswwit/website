@@ -23,6 +23,7 @@ import NotFound from "./not-found/NotFound";
 import Menu from "./menu";
 import MenuBtn from "./menuBtn";
 import Footer from "./footer";
+import Accessibility from ".././node_modules/accessibility/src/main";
 
 class App extends Component {
   /*
@@ -61,6 +62,7 @@ class App extends Component {
     this.handleMenuClick = this.handleMenuClick.bind(this);
     this.changeBackground = this.changeBackground.bind(this);
     this.hideNavBar = this.hideNavBar.bind(this);
+    this.accessibility = this.accessibility.bind(this);
   }
 
   // change the background of the navigation bar based on scroll height
@@ -112,6 +114,10 @@ class App extends Component {
         hideNav: false,
       });
     }
+  }
+
+  accessibility() {
+    window.addEventListener('load', function() { new Accessibility(); }, false);
   }
 
   /*

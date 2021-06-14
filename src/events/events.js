@@ -11,7 +11,6 @@ import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../components/ScrollUpBtn"
 import AddToCalBtn from "./AddToCalBtn.js";
-//import Accessibility from "../.././node_modules/accessibility/src/main";
 
 const Events = () => {
   const [expanded, setExpanded] = useState(false);
@@ -68,8 +67,6 @@ const Events = () => {
       simpleSheet: false,
     });
   }, [year]);
-
-  //window.addEventListener('load', function() { new Accessibility(); }, false);
 
   return (
     <>
