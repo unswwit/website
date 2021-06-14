@@ -51,7 +51,7 @@ const Home = () => {
     setOpen(false);
   };
 
-  window.addEventListener('load', function() { new Accessibility(); }, false);
+  window.addEventListener("load", function() { new Accessibility(); }, false);
 
   return (
     <div>
@@ -173,7 +173,7 @@ const Home = () => {
           src={`${process.env.PUBLIC_URL}./newsletter-background.png`}
           className={styles.statsBackground}
           alt="banner"
-          />
+        />
         <button data-aos="fade" className={styles.subscribeBtn} onClick={() => setOpen(true)}>
           Subscribe to our newsletter
         </button>
