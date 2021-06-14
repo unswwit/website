@@ -124,7 +124,8 @@ class App extends Component {
       modules: {
         increaseTextSpacing: false,
         decreaseTextSpacing: false,
-      }
+      },
+      textPixelMode: true,
     };
     window.addEventListener("load", function() { new Accessibility(options); }, false);
   }
