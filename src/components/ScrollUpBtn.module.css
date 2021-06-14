@@ -8,7 +8,9 @@
 	bottom: 6em;
 	right: -50px;
 	border-radius: 100%;
-	border: none;
+	border: solid;
+  border-color: white;
+  border-width: thin;
 	color: white;
   z-index: 4;
   box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);  
