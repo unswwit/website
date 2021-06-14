@@ -165,8 +165,8 @@ class App extends Component {
                   ? this.navClass + " activeNav hiddenNav"
                   : this.navClass + " activeNav"
                 : this.state.hideNav
-                  ? this.navClass + " hiddenNav"
-                  : this.navClass
+                ? this.navClass + " hiddenNav"
+                : this.navClass
             }
           >
             <a className="navbar-brand" href="/">
@@ -390,7 +390,10 @@ class App extends Component {
             <Route path="/our-team" component={OurTeam} />
             <Route exact path="/resources/blog" component={Blog} />
             <Route exact path="/resources" component={Blog} />
-            <Route path="/resources/marketing-archive" component={MarketingContent} />
+            <Route
+              path="/resources/marketing-archive"
+              component={MarketingContent}
+            />
             <Route path="/join-us" component={JoinUs} />
             <Route path="/sponsors" component={Sponsors} />
             <Route path="/opportunities" component={Opportunities} />

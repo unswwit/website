@@ -155,8 +155,7 @@
 /* ------------ Responsive mobile design ------------ */
 
 @media only screen and (max-width: 850px) {
-  
-  .article{
+  .article {
     margin: 15px 15px;
     width: 178px;
     height: 250px;
@@ -167,5 +166,4 @@
     width: 178px;
     height: 250px;
   }
-  
 }
