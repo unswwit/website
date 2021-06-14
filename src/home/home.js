@@ -10,6 +10,7 @@ import Slideshow from "./Slideshow.js"
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Accessibility from "../.././node_modules/accessibility/src/main";
 
 const Home = () => {
   const [open, setOpen] = React.useState(false);
@@ -49,6 +50,8 @@ const Home = () => {
   const callbackModal = () => {
     setOpen(false);
   };
+
+  window.addEventListener('load', function() { new Accessibility(); }, false);
 
   return (
     <div>
