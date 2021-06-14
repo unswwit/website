@@ -24,6 +24,7 @@ import Menu from "./menu";
 import MenuBtn from "./menuBtn";
 import Footer from "./footer";
 import { Accessibility } from "accessibility/src/main";
+
 class App extends Component {
   /*
   state = {
@@ -119,7 +120,22 @@ class App extends Component {
   accessibility() {
     let options = {
       icon: {
+        position: {
+          bottom: { size: 0.8, units: "em" },
+          right: { size: 33, units: "px" },
+        },
+        zIndex: "4",
+        backgroundColor: "#feb14b",
+        borderColor: "#feb14b",
+        img: "accessibility",
         circular: true,
+        circularBorder: true,
+      },
+      menu: {
+        fontFamily: "sans-serif, Montserrat"
+      },
+      animations: {
+        buttons: false
       },
       modules: {
         increaseTextSpacing: false,
