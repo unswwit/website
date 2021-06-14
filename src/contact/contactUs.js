@@ -5,7 +5,7 @@ import styles from "./contactUs.module.css";
 
 const ContactUs = () => {
   useEffect(() => {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -120,10 +120,7 @@ const ContactUs = () => {
             <a href="mailto:hr@unswwit.com">hr@unswwit.com</a>
           </div>
           <div className={styles.profile3}>
-            <img
-              src={process.env.PUBLIC_URL + "/icons/it.png"}
-              alt="it-icon"
-            />
+            <img src={process.env.PUBLIC_URL + "/icons/it.png"} alt="it-icon" />
             <h3>Alana Hua</h3>
             <a href="mailto:alana@unswwit.com">alana@unswwit.com</a>
             <a href="mailto:it@unswwit.com">it@unswwit.com</a>
@@ -141,7 +138,6 @@ const ContactUs = () => {
       </div>
     </div>
   );
-
-}
+};
 
 export default ContactUs;

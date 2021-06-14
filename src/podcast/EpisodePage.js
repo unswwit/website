@@ -10,7 +10,7 @@ import ReactMarkdown from "react-markdown";
 import Tabletop from "tabletop";
 import styles from "./Podcast.module.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import EpisodeTemplate from "./EpisodeTemplate.js"; 
+import EpisodeTemplate from "./EpisodeTemplate.js";
 import ShareBtns from "../blog-post/ShareBtns";
 
 const useStyles = makeStyles((theme) => ({
@@ -40,7 +40,7 @@ const EpisodePage = (props) => {
     spotify: "podcast-spotify.png",
     breaker: "podcast-breaker.png",
   };
-  
+
   // retrieve current episode content
   const handleEpisodeNumber = () => {
     let url = window.location.href.split("/");
@@ -89,14 +89,19 @@ const EpisodePage = (props) => {
         // load podcast episode previews
         if (episodeIndex < 3) {
           let sortedEpisodes = allEpisodes.slice(0, episodeIndex).reverse();
-          const additionalEpisodes = allEpisodes.slice(episodeIndex + 1, episodeIndex + 4 - sortedEpisodes.length);
+          const additionalEpisodes = allEpisodes.slice(
+            episodeIndex + 1,
+            episodeIndex + 4 - sortedEpisodes.length
+          );
           sortedEpisodes = [...additionalEpisodes, ...sortedEpisodes];
           setEpisodes(sortedEpisodes);
         } else {
-          let sortedEpisodes = allEpisodes.slice(episodeIndex - 3, episodeIndex).reverse();
+          let sortedEpisodes = allEpisodes
+            .slice(episodeIndex - 3, episodeIndex)
+            .reverse();
           setEpisodes(sortedEpisodes);
         }
-       
+
         // hide the loading sign
         setLoading(false);
       },
@@ -186,7 +191,7 @@ const EpisodePage = (props) => {
               </Accordion>
             </>
           )}
-          
+
           {/* Share buttons */}
           <p className={styles.subHeading}>Share this episode</p>
           <div className={styles.shareButtons}>
@@ -194,13 +199,13 @@ const EpisodePage = (props) => {
               <ShareBtns />
             </span>
           </div>
-          
+
           {/* See more episodes */}
           <p className={styles.subHeading}>More From WIT</p>
           <div className={styles.previews}>
             {episodes.map((episode, index) => {
               return (
-                <div key={index} className={styles.podcastContainer}> 
+                <div key={index} className={styles.podcastContainer}>
                   <EpisodeTemplate
                     className={styles.podcastContainer}
                     key={index}
@@ -212,9 +217,8 @@ const EpisodePage = (props) => {
                   />
                 </div>
               );
-            })} 
+            })}
           </div>
-      
         </div>
       )}
     </>

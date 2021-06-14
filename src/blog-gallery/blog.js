@@ -55,19 +55,24 @@ const Blog = () => {
   const [currentPosts, setCurrentPosts] = useState([]);
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[])
+    window.scrollTo(0, 0);
+  }, []);
 
   // filter blogs by a selected category
   const filterBlogs = (category) => {
-    const filteredBlogs = blogs.filter((blog) => (category === "All" || (blog.category.split(",")).includes(category) 
-    || ((blog.category.split(",")).includes("WCW") && category === "WIT Crush Wednesday")));
+    const filteredBlogs = blogs.filter(
+      (blog) =>
+        category === "All" ||
+        blog.category.split(",").includes(category) ||
+        (blog.category.split(",").includes("WCW") &&
+          category === "WIT Crush Wednesday")
+    );
     setSelectedPosts(filteredBlogs);
     setCurrentPosts(filteredBlogs.slice(0, postsPerPage));
     setCurrentPage(1);
-  }
+  };
 
-  useEffect(() => {    
+  useEffect(() => {
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: (googleData) => {
@@ -97,14 +102,18 @@ const Blog = () => {
       },
       simpleSheet: false,
     });
-    
   }, []);
 
   // called when pagination item clicked to slice the correct amount of posts for viewing
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
-    setCurrentPosts(selectedPosts.slice((pageNumber - 1) * postsPerPage, pageNumber * postsPerPage));
-  }
+    setCurrentPosts(
+      selectedPosts.slice(
+        (pageNumber - 1) * postsPerPage,
+        pageNumber * postsPerPage
+      )
+    );
+  };
 
   return (
     <>
@@ -161,26 +170,28 @@ const Blog = () => {
           )}
         </div>
         <div className={styles.blogPosts}>
-          {!loading && currentPosts
-            .map((blog) => {     
-              return <BlogPreview
-                key={blog.blogNo}
-                blogNo={blog.blogNo}
-                imgUrl={`/blog-covers/${blog.img}`}
-                heading={blog.heading}
-                date={blog.date}
-                subheading={blog.subheading}
-                authors={blog.authors}
-                category={blog.category.split(",")}
-              />
-            })}       
+          {!loading &&
+            currentPosts.map((blog) => {
+              return (
+                <BlogPreview
+                  key={blog.blogNo}
+                  blogNo={blog.blogNo}
+                  imgUrl={`/blog-covers/${blog.img}`}
+                  heading={blog.heading}
+                  date={blog.date}
+                  subheading={blog.subheading}
+                  authors={blog.authors}
+                  category={blog.category.split(",")}
+                />
+              );
+            })}
         </div>
-        <PaginationComp 
-          totalPages={Math.ceil(selectedPosts.length/postsPerPage)} 
+        <PaginationComp
+          totalPages={Math.ceil(selectedPosts.length / postsPerPage)}
           paginate={paginate}
           page={currentPage}
         />
-        <ScrollUpBtn/>
+        <ScrollUpBtn />
         {/*End of blog posts*/}
       </div>
     </>

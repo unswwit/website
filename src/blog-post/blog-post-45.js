@@ -184,4 +184,3 @@ class blogPost45 extends Component {
   }
 }
 export default blogPost45;
-
