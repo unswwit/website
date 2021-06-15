@@ -44,7 +44,7 @@ class blogPost58 extends Component {
               data analytics and coding which led her to embark on an intensive
               Python online course, eventually landing a Data Analyst role at
               one of Berlin’s fastest growing Fintech companies. As someone who
-              has displayed outstanding traits as a lifelong learner , Melanie
+              has displayed outstanding traits as a lifelong learner, Melanie
               has co-founded a female empowering network to promote gender
               diversity in business, data-driven careers and proven that women
               can also be part of the STEM community today.
