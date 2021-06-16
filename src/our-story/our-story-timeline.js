@@ -15,9 +15,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 const theme = createMuiTheme({
   breakpoints: {
     values: {
-      xxxs: 0,
-      xxs: 300,
-      xs: 400,
+      xs: 300,
       sm: 450,
       md: 600,
       lg: 750,
@@ -27,7 +25,7 @@ const theme = createMuiTheme({
   },
 });
 
-// Positioning material ui components
+// Styling material ui components
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "84%",
@@ -42,16 +40,12 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#E85F5C",
     width: "150px",
     marginTop: "23px",
-    [theme.breakpoints.down("xs")]: {
-      marginTop: "100px",
-      width:"50px",
+    [theme.breakpoints.between("sm","md")]: {
+      marginTop: "30px",
+      width: "50px",
     },
-    [theme.breakpoints.down("xxs")]: {
-      marginTop: "130px",
-      width:"50px",
-    },
-    [theme.breakpoints.down("xxxs")]: {
-      marginTop: "300px",
+    [theme.breakpoints.between("xs","sm")]: {
+      marginTop: "210px",
       width: "50px",
     },
   },
@@ -62,14 +56,6 @@ const useStyles = makeStyles((theme) => ({
     width: "150px",
     marginTop: "23px",
     [theme.breakpoints.down("xs")]: {
-      marginTop: "130px",
-      width:"50px",
-    },
-    [theme.breakpoints.down("xxs")]: {
-      marginTop: "175px",
-      width:"50px",
-    },
-    [theme.breakpoints.down("xxxs")]: {
       marginTop: "285px",
       width: "50px",
     },
@@ -81,15 +67,7 @@ const useStyles = makeStyles((theme) => ({
     width: "150px",
     marginTop: "45px",
     [theme.breakpoints.down("xs")]: {
-      marginTop: "185px",
-      width:"50px",
-    },
-    [theme.breakpoints.down("xxs")]: {
-      marginTop: "230px",
-      width:"50px",
-    },
-    [theme.breakpoints.down("xxxs")]: {
-      marginTop: "300px",
+      marginTop: "360px",
       width: "50px",
     },
   },
@@ -100,14 +78,6 @@ const useStyles = makeStyles((theme) => ({
     width: "150px",
     marginTop: "23px",
     [theme.breakpoints.down("xs")]: {
-      marginTop: "120px",
-      width:"50px",
-    },
-    [theme.breakpoints.down("xxs")]: {
-      marginTop: "120px",
-      width:"50px",
-    },
-    [theme.breakpoints.down("xxxs")]: {
       marginTop: "220px",
       width: "50px",
     },
@@ -119,21 +89,13 @@ const useStyles = makeStyles((theme) => ({
     width: "150px",
     marginTop: "66px",
     [theme.breakpoints.down("xs")]: {
-      marginTop: "130px",
-      width:"50px",
-    },
-    [theme.breakpoints.down("xxs")]: {
-      marginTop: "350px",
-      width:"50px",
-    },
-    [theme.breakpoints.down("xxxs")]: {
-      marginTop: "595px",
+      marginTop: "590px",
       width: "50px",
     },
   },
   year: {
     flex: 1,
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       width: "35%",
     },
   },
@@ -142,7 +104,7 @@ const useStyles = makeStyles((theme) => ({
   },
   history: {
     flex: 6,
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       width: "40%",
     },
   },
