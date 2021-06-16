@@ -26,36 +26,36 @@ const useStyles = makeStyles((theme) => ({
     width: "150px",
     marginTop: "23px",
     // our story ipad pro version
-    '@media (max-width:1024px)' :{
-      marginTop:"20px",
+    "@media (max-width:1024px)": {
+      marginTop: "20px",
     },
     // our story ipad version
-    '@media (max-width:768px)' :{
-      marginTop:"55px",
+    "@media (max-width:768px)": {
+      marginTop: "55px",
     },
     // our story surface duo version
-    '@media (max-width:540px)' :{
-      marginTop:"100px",
+    "@media (max-width:540px)": {
+      marginTop: "110px",
     },
     // our story iphone 6+ version
-    '@media (max-width:414px)' :{
-      marginTop:"98px",
-      width:"50px",
+    "@media (max-width:414px)": {
+      marginTop: "98px",
+      width: "50px",
     },
-    // our story iphone 6 version 
-    '@media (max-width:375px)' :{
-      marginTop:"130px",
-      width:"50px",
+    // our story iphone 6 version
+    "@media (max-width:375px)": {
+      marginTop: "130px",
+      width: "50px",
     },
     // our story iphone 5 version
-    '@media (max-width:360px)' :{
-      marginTop:"165px",
-      width:"50px",
+    "@media (max-width:360px)": {
+      marginTop: "165px",
+      width: "50px",
     },
     // our story galaxy duo version
-    '@media (max-width:320px)' :{
-      marginTop:"210px",
-      width:"50px",
+    "@media (max-width:320px)": {
+      marginTop: "210px",
+      width: "50px",
     },
   },
   paperTwo: {
@@ -65,36 +65,36 @@ const useStyles = makeStyles((theme) => ({
     width: "150px",
     marginTop: "23px",
     // our story ipad pro version
-    '@media (max-width:1024px)' :{
-      marginTop:"30px",
+    "@media (max-width:1024px)": {
+      marginTop: "30px",
     },
     // our story ipad version
-    '@media (max-width:768px)' :{
-      marginTop:"65px",
+    "@media (max-width:768px)": {
+      marginTop: "65px",
     },
-     // our story surface duo version
-    '@media (max-width:540px)' :{
-      marginTop:"130px",
+    // our story surface duo version
+    "@media (max-width:540px)": {
+      marginTop: "143px",
     },
     // our story iphone 6+ version
-    '@media (max-width:414px)' :{
-      marginTop:"130px",
-      width:"50px",
+    "@media (max-width:414px)": {
+      marginTop: "130px",
+      width: "50px",
     },
-     // our story iphone 6 version 
-    '@media (max-width:375px)' :{
-      marginTop:"175px",
-      width:"50px",
+    // our story iphone 6 version
+    "@media (max-width:375px)": {
+      marginTop: "175px",
+      width: "50px",
     },
-     // our story iphone 5 version
-    '@media (max-width:360px)' :{
-      marginTop:"195px",
-      width:"50px",
+    // our story iphone 5 version
+    "@media (max-width:360px)": {
+      marginTop: "195px",
+      width: "50px",
     },
     // our story galaxy duo version
-    '@media (max-width:320px)' :{
-      marginTop:"285px",
-      width:"50px",
+    "@media (max-width:320px)": {
+      marginTop: "285px",
+      width: "50px",
     },
   },
   paperThree: {
@@ -104,36 +104,36 @@ const useStyles = makeStyles((theme) => ({
     width: "150px",
     marginTop: "45px",
     // our story ipad pro version
-    '@media (max-width:1024px)' :{
-      marginTop:"40px",
+    "@media (max-width:1024px)": {
+      marginTop: "40px",
     },
     // our story ipad version
-    '@media (max-width:768px)' :{
-      marginTop:"87px",
+    "@media (max-width:768px)": {
+      marginTop: "87px",
     },
-     // our story surface duo version
-    '@media (max-width:540px)' :{
-      marginTop:"175px",
+    // our story surface duo version
+    "@media (max-width:540px)": {
+      marginTop: "200px",
     },
     // our story iphone 6+ version
-    '@media (max-width:414px)' :{
-      marginTop:"185px",
-      width:"50px",
+    "@media (max-width:414px)": {
+      marginTop: "185px",
+      width: "50px",
     },
-     // our story iphone 6 version 
-    '@media (max-width:375px)' :{
-      marginTop:"230px",
-      width:"50px",
+    // our story iphone 6 version
+    "@media (max-width:375px)": {
+      marginTop: "230px",
+      width: "50px",
     },
-     // our story iphone 5 version
-    '@media (max-width:360px)' :{
-      marginTop:"285px",
-      width:"50px",
+    // our story iphone 5 version
+    "@media (max-width:360px)": {
+      marginTop: "285px",
+      width: "50px",
     },
     // our story galaxy duo version
-    '@media (max-width:320px)' :{
-      marginTop:"360px",
-      width:"50px",
+    "@media (max-width:320px)": {
+      marginTop: "360px",
+      width: "50px",
     },
   },
   paperFour: {
@@ -143,36 +143,36 @@ const useStyles = makeStyles((theme) => ({
     width: "150px",
     marginTop: "23px",
     // our story ipad pro version
-    '@media (max-width:1024px)' :{
-      marginTop:"18px",
+    "@media (max-width:1024px)": {
+      marginTop: "18px",
     },
     // our story ipad version
-    '@media (max-width:768px)' :{
-      marginTop:"45px",
+    "@media (max-width:768px)": {
+      marginTop: "45px",
     },
-     // our story surface duo version
-    '@media (max-width:540px)' :{
-      marginTop:"90px",
+    // our story surface duo version
+    "@media (max-width:540px)": {
+      marginTop: "100px",
     },
     // our story iphone 6+ version
-    '@media (max-width:414px)' :{
-      marginTop:"100px",
-      width:"50px",
+    "@media (max-width:414px)": {
+      marginTop: "100px",
+      width: "50px",
     },
-     // our story iphone 6 version 
-    '@media (max-width:375px)' :{
-      marginTop:"120px",
-      width:"50px",
+    // our story iphone 6 version
+    "@media (max-width:375px)": {
+      marginTop: "120px",
+      width: "50px",
     },
-     // our story iphone 5 version
-    '@media (max-width:360px)' :{
-      marginTop:"130px",
-      width:"50px",
+    // our story iphone 5 version
+    "@media (max-width:360px)": {
+      marginTop: "130px",
+      width: "50px",
     },
     // our story galaxy duo version
-    '@media (max-width:320px)' :{
-      marginTop:"220px",
-      width:"50px",
+    "@media (max-width:320px)": {
+      marginTop: "220px",
+      width: "50px",
     },
   },
   paperFive: {
@@ -182,47 +182,47 @@ const useStyles = makeStyles((theme) => ({
     width: "150px",
     marginTop: "66px",
     // our story ipad pro version
-    '@media (max-width:1024px)' :{
-      marginTop:"70px",
+    "@media (max-width:1024px)": {
+      marginTop: "70px",
     },
     // our story ipad version
-    '@media (max-width:768px)' :{
-      marginTop:"145px",
+    "@media (max-width:768px)": {
+      marginTop: "145px",
     },
-     // our story surface duo version
-    '@media (max-width:540px)' :{
-      marginTop:"265px",
+    // our story surface duo version
+    "@media (max-width:540px)": {
+      marginTop: "330px",
     },
     // our story iphone 6+ version
-    '@media (max-width:414px)' :{
-      marginTop:"300px",
-      width:"50px",
+    "@media (max-width:414px)": {
+      marginTop: "300px",
+      width: "50px",
     },
-    // our story iphone 6+ version 
-    '@media (max-width:411px)' :{
-      marginTop:"306px",
-      width:"50px",
+    // our story iphone 6+ version
+    "@media (max-width:411px)": {
+      marginTop: "306px",
+      width: "50px",
     },
-     // our story iphone 6 version 
-    '@media (max-width:375px)' :{
-      marginTop:"350px",
-      width:"50px",
+    // our story iphone 6 version
+    "@media (max-width:375px)": {
+      marginTop: "350px",
+      width: "50px",
     },
-     // our story iphone 5 version
-    '@media (max-width:360px)' :{
-      marginTop:"405px",
-      width:"50px",
+    // our story iphone 5 version
+    "@media (max-width:360px)": {
+      marginTop: "405px",
+      width: "50px",
     },
     // our story galaxy duo version
-    '@media (max-width:320px)' :{
-      marginTop:"590px",
-      width:"50px",
+    "@media (max-width:320px)": {
+      marginTop: "590px",
+      width: "50px",
     },
   },
   year: {
     flex: 1,
-    '@media (max-width:500px)' :{
-      width:"35%",
+    "@media (max-width:500px)": {
+      width: "35%",
     },
   },
   verticallyCenterContent: {
@@ -230,8 +230,8 @@ const useStyles = makeStyles((theme) => ({
   },
   history: {
     flex: 6,
-    '@media (max-width:500px)' :{
-      width:"40%",
+    "@media (max-width:500px)": {
+      width: "40%",
     },
   },
 }));
