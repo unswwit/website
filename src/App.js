@@ -25,14 +25,14 @@ import Menu from "./menu";
 import MenuBtn from "./menuBtn";
 import Footer from "./footer";
 
-import ChromeReaderModeOutlinedIcon from '@material-ui/icons/ChromeReaderModeOutlined';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
-import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
-import InsertDriveFileOutlinedIcon from '@material-ui/icons/InsertDriveFileOutlined';
-import HeadsetMicOutlinedIcon from '@material-ui/icons/HeadsetMicOutlined';
-import LocalPrintshopOutlinedIcon from '@material-ui/icons/LocalPrintshopOutlined';
-import ImageOutlinedIcon from '@material-ui/icons/ImageOutlined';
+import ChromeReaderModeOutlinedIcon from "@material-ui/icons/ChromeReaderModeOutlined";
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import PeopleOutlineIcon from "@material-ui/icons/PeopleOutline";
+import PhoneOutlinedIcon from "@material-ui/icons/PhoneOutlined";
+import InsertDriveFileOutlinedIcon from "@material-ui/icons/InsertDriveFileOutlined";
+import HeadsetMicOutlinedIcon from "@material-ui/icons/HeadsetMicOutlined";
+import LocalPrintshopOutlinedIcon from "@material-ui/icons/LocalPrintshopOutlined";
+import ImageOutlinedIcon from "@material-ui/icons/ImageOutlined";
 
 class App extends Component {
   /*
@@ -278,25 +278,25 @@ class App extends Component {
                     >
                       <div className="dropdown-item">
                         <NavLink to="/about/our-story" {...this.highlightDD}>
-                        <ChromeReaderModeOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
+                          <ChromeReaderModeOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
                           OUR STORY
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/about/sponsors" {...this.highlightDD}>
-                        <FavoriteBorderIcon fontSize="small" style={{marginRight: "10px"}} />
+                          <FavoriteBorderIcon fontSize="small" style={{marginRight: "10px"}} />
                           OUR SPONSORS
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/about/our-team" {...this.highlightDD}>
-                        <PeopleOutlineIcon fontSize="small" style={{marginRight: "10px"}} />
+                          <PeopleOutlineIcon fontSize="small" style={{marginRight: "10px"}} />
                           OUR TEAM
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/about/contact-us" {...this.highlightDD}>
-                        <PhoneOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
+                          <PhoneOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
                           CONTACT US
                         </NavLink>
                       </div>
@@ -371,25 +371,25 @@ class App extends Component {
                     >
                       <div className="dropdown-item">
                         <NavLink to="/resources/blog" {...this.highlightDD}>
-                        <InsertDriveFileOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
+                          <InsertDriveFileOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
                           BLOG POSTS
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/resources/podcast" {...this.highlightDD}>
-                        <HeadsetMicOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
+                          <HeadsetMicOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
                           PODCAST
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/resources/publications" {...this.highlightDD}>
-                        <LocalPrintshopOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
+                          <LocalPrintshopOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
                           PUBLICATIONS
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/resources/marketing-archive" {...this.highlightDD}>
-                        <ImageOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
+                          <ImageOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
                           MARKETING ARCHIVE
                         </NavLink>
                       </div>
