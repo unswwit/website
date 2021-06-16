@@ -71,7 +71,7 @@ class blogPost59 extends Component {
             <p className={styles.postContent}><b>Misconception:</b></p>
               
             <pre>
-              <code>Stem_qualification = input( “Do you have a STEM background? Yes/No:  “)</code>
+              <code>Stem_qualification = input( “Do you have a STEM background? Yes/No:  ”)</code>
               <br />
               <code>If Stem_qualification == “Yes”:</code>
               <br />
