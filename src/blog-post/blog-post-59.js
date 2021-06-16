@@ -34,10 +34,10 @@ class blogPost59 extends Component {
 
           <div className={styles.post}>
             <p className={styles.postContent}>
-              With the advent of technology and the virality of the Internet in today’s society, code has become an integral role in many of our real-world applications. Technical skills have become a part of the hiring process where candidates are expected to possess a fundamental knowledge of IT in order to be granted workforce entry. Subsequently, the need for coding expertise has naturally increased across various industries to support their backend developments, and as such many programming job roles exist today from software developers to cloud engineers.å
+              With the advent of technology and the virality of the Internet in today’s society, code has become an integral role in many of our real-world applications. Technical skills have become a part of the hiring process where candidates are expected to possess a fundamental knowledge of IT in order to be granted workforce entry. Subsequently, the need for coding expertise has naturally increased across various industries to support their backend developments, and as such many programming job roles exist today from software developers to cloud engineers.
               <br />
               <br />
-              Going forward as an ‘IN’ topic, coding is here to stay in the long run and it will undoubtedly be set as one of the most vital skill sets required to thrive in a future of technological innovation.å
+              Going forward as an ‘IN’ topic, coding is here to stay in the long run and it will undoubtedly be set as one of the most vital skill sets required to thrive in a future of technological innovation.
             </p>
             <br />
 
@@ -68,14 +68,19 @@ class blogPost59 extends Component {
             <p className={styles.question}>
               I Don’t Do STEM, So I Can’t Code
             </p>
+            <p className={styles.postContent}><b>Misconception:</b></p>
+              
+            <pre>
+              <code>Stem_qualification = input( “Do you have a STEM background? Yes/No:  “)</code>
+              <br />
+              <code>If Stem_qualification == “Yes”:</code>
+              <br />
+              <code style={{ marginLeft: "3em" }}>print(“I am qualified to become a programmer”)</code>
+              <br />
+              <br />
+            </pre>
+
             <p className={styles.postContent}>
-              <b>Misconception:</b>
-              <br />
-              Stem_qualification = input( “Do you have a STEM background? Yes/No:  “)
-              If Stem_qualification == “Yes”:
-                  print(“I am qualified to become a programmer”)
-              <br />
-              <br />
               <b>The Truth:</b>
               <br />
               Many people tend to form their own preconceived notions that “Coding is Only For Certain People”: mainly those “gifted” with mathematically-inclined skills or have withheld a strong degree background in STEM. This is a common misconception that a lot of us tend to subconsciously assume before taking the first steps into learning to code and resultantly, it creates a deterrence for those who are either not confident in their coding abilities or are wary of the technical difficulty levels expected to produce effective results, to shy away from their interests.
