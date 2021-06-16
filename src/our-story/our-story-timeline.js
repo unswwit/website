@@ -9,21 +9,6 @@ import TimelineDot from "@material-ui/lab/TimelineDot";
 import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent";
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
-import { createMuiTheme } from "@material-ui/core/styles";
-
-// Custom breakpoints to adjust timeline
-const theme = createMuiTheme({
-  breakpoints: {
-    values: {
-      xs: 300,
-      sm: 450,
-      md: 600,
-      lg: 750,
-      xl: 900,
-      xxl: 1100,
-    },
-  },
-});
 
 // Styling material ui components
 const useStyles = makeStyles((theme) => ({
@@ -40,13 +25,37 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#E85F5C",
     width: "150px",
     marginTop: "23px",
-    [theme.breakpoints.between("sm","md")]: {
-      marginTop: "30px",
-      width: "50px",
+    // our story ipad pro version
+    '@media (max-width:1024px)' :{
+      marginTop:"20px",
     },
-    [theme.breakpoints.between("xs","sm")]: {
-      marginTop: "210px",
-      width: "50px",
+    // our story ipad version
+    '@media (max-width:768px)' :{
+      marginTop:"55px",
+    },
+    // our story surface duo version
+    '@media (max-width:540px)' :{
+      marginTop:"100px",
+    },
+    // our story iphone 6+ version
+    '@media (max-width:414px)' :{
+      marginTop:"98px",
+      width:"50px",
+    },
+    // our story iphone 6 version 
+    '@media (max-width:375px)' :{
+      marginTop:"130px",
+      width:"50px",
+    },
+    // our story iphone 5 version
+    '@media (max-width:360px)' :{
+      marginTop:"165px",
+      width:"50px",
+    },
+    // our story galaxy duo version
+    '@media (max-width:320px)' :{
+      marginTop:"210px",
+      width:"50px",
     },
   },
   paperTwo: {
@@ -55,9 +64,37 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#E85F5C",
     width: "150px",
     marginTop: "23px",
-    [theme.breakpoints.down("xs")]: {
-      marginTop: "285px",
-      width: "50px",
+    // our story ipad pro version
+    '@media (max-width:1024px)' :{
+      marginTop:"30px",
+    },
+    // our story ipad version
+    '@media (max-width:768px)' :{
+      marginTop:"65px",
+    },
+     // our story surface duo version
+    '@media (max-width:540px)' :{
+      marginTop:"130px",
+    },
+    // our story iphone 6+ version
+    '@media (max-width:414px)' :{
+      marginTop:"130px",
+      width:"50px",
+    },
+     // our story iphone 6 version 
+    '@media (max-width:375px)' :{
+      marginTop:"175px",
+      width:"50px",
+    },
+     // our story iphone 5 version
+    '@media (max-width:360px)' :{
+      marginTop:"195px",
+      width:"50px",
+    },
+    // our story galaxy duo version
+    '@media (max-width:320px)' :{
+      marginTop:"285px",
+      width:"50px",
     },
   },
   paperThree: {
@@ -66,9 +103,37 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#E85F5C",
     width: "150px",
     marginTop: "45px",
-    [theme.breakpoints.down("xs")]: {
-      marginTop: "360px",
-      width: "50px",
+    // our story ipad pro version
+    '@media (max-width:1024px)' :{
+      marginTop:"40px",
+    },
+    // our story ipad version
+    '@media (max-width:768px)' :{
+      marginTop:"87px",
+    },
+     // our story surface duo version
+    '@media (max-width:540px)' :{
+      marginTop:"175px",
+    },
+    // our story iphone 6+ version
+    '@media (max-width:414px)' :{
+      marginTop:"185px",
+      width:"50px",
+    },
+     // our story iphone 6 version 
+    '@media (max-width:375px)' :{
+      marginTop:"230px",
+      width:"50px",
+    },
+     // our story iphone 5 version
+    '@media (max-width:360px)' :{
+      marginTop:"285px",
+      width:"50px",
+    },
+    // our story galaxy duo version
+    '@media (max-width:320px)' :{
+      marginTop:"360px",
+      width:"50px",
     },
   },
   paperFour: {
@@ -77,9 +142,37 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#E85F5C",
     width: "150px",
     marginTop: "23px",
-    [theme.breakpoints.down("xs")]: {
-      marginTop: "220px",
-      width: "50px",
+    // our story ipad pro version
+    '@media (max-width:1024px)' :{
+      marginTop:"18px",
+    },
+    // our story ipad version
+    '@media (max-width:768px)' :{
+      marginTop:"45px",
+    },
+     // our story surface duo version
+    '@media (max-width:540px)' :{
+      marginTop:"90px",
+    },
+    // our story iphone 6+ version
+    '@media (max-width:414px)' :{
+      marginTop:"100px",
+      width:"50px",
+    },
+     // our story iphone 6 version 
+    '@media (max-width:375px)' :{
+      marginTop:"120px",
+      width:"50px",
+    },
+     // our story iphone 5 version
+    '@media (max-width:360px)' :{
+      marginTop:"130px",
+      width:"50px",
+    },
+    // our story galaxy duo version
+    '@media (max-width:320px)' :{
+      marginTop:"220px",
+      width:"50px",
     },
   },
   paperFive: {
@@ -88,15 +181,48 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#E85F5C",
     width: "150px",
     marginTop: "66px",
-    [theme.breakpoints.down("xs")]: {
-      marginTop: "590px",
-      width: "50px",
+    // our story ipad pro version
+    '@media (max-width:1024px)' :{
+      marginTop:"70px",
+    },
+    // our story ipad version
+    '@media (max-width:768px)' :{
+      marginTop:"145px",
+    },
+     // our story surface duo version
+    '@media (max-width:540px)' :{
+      marginTop:"265px",
+    },
+    // our story iphone 6+ version
+    '@media (max-width:414px)' :{
+      marginTop:"300px",
+      width:"50px",
+    },
+    // our story iphone 6+ version 
+    '@media (max-width:411px)' :{
+      marginTop:"306px",
+      width:"50px",
+    },
+     // our story iphone 6 version 
+    '@media (max-width:375px)' :{
+      marginTop:"350px",
+      width:"50px",
+    },
+     // our story iphone 5 version
+    '@media (max-width:360px)' :{
+      marginTop:"405px",
+      width:"50px",
+    },
+    // our story galaxy duo version
+    '@media (max-width:320px)' :{
+      marginTop:"590px",
+      width:"50px",
     },
   },
   year: {
     flex: 1,
-    [theme.breakpoints.down("sm")]: {
-      width: "35%",
+    '@media (max-width:500px)' :{
+      width:"35%",
     },
   },
   verticallyCenterContent: {
@@ -104,8 +230,8 @@ const useStyles = makeStyles((theme) => ({
   },
   history: {
     flex: 6,
-    [theme.breakpoints.down("sm")]: {
-      width: "40%",
+    '@media (max-width:500px)' :{
+      width:"40%",
     },
   },
 }));

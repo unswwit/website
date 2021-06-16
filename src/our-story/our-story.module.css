@@ -133,7 +133,7 @@ h2.oppSubheading {
 }
 
 /*--- Our Story mobile version ---*/
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 540px) {
   h2.oppSubheading {
     margin-top: 10%;
     font-size: 23pt;
@@ -153,9 +153,25 @@ h2.oppSubheading {
   }
 
   .ourMissionImg {
-    margin-left: 60px;
+    margin-left: 115px;
+    width: 200px;
+    padding-top: 15px;
+    flex-direction: column-reverse;
+  }
+
+  .ourMascotImg {
+    margin-left: 89px;
+    width: 300px;
+    padding-top: 15px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .ourMissionImg {
+    margin-left: 50px;
     width: 180px;
     padding-top: 15px;
+    flex-direction: column-reverse;
   }
 
   .ourMascotImg {
@@ -165,15 +181,73 @@ h2.oppSubheading {
   }
 }
 
-/*--- Our Story small mobile version ---*/
-@media only screen and (max-width: 280px) {
+@media only screen and (max-width: 414px) {
+  h2.oppSubheading {
+    margin-top: 10%;
+    font-size: 23pt;
+    text-transform: uppercase;
+  }
+
+  .ourMissionContent {
+    font-size: 10pt;
+  }
+
+  .ourMascotContent {
+    font-size: 10pt;
+  }
+
+  .ourHistoryContent {
+    font-size: 10pt;
+  }
+
   .ourMissionImg {
-    margin-left: 37px;
+    margin-left: 75px;
+    width: 180px;
+    padding-top: 15px;
+    flex-direction: column-reverse;
+  }
+
+  .ourMascotImg {
+    margin-left: 48px;
+    width: 280px;
+    padding-top: 15px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .ourMissionImg {
+    margin-left: 50px;
+    width: 180px;
+    padding-top: 15px;
+    flex-direction: column-reverse;
+  }
+
+  .ourMascotImg {
+    margin-left: 45px;
+    width: 250px;
+    padding-top: 15px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .ourMissionImg {
+    margin-left: 50px;
+  }
+
+  .ourMascotImg {
+    margin-left: 38px;
+  }
+}
+
+/*--- Our Story small mobile version ---*/
+@media only screen and (max-width: 320px) {
+  .ourMissionImg {
+    margin-left: 30px;
     width: 180px;
   }
 
   .ourMascotImg {
-    margin-left: 25px;
+    margin-left: 20px;
     width: 250px;
     padding-top: 15px;
   }
