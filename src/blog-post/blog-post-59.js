@@ -37,7 +37,7 @@ class blogPost59 extends Component {
               With the advent of technology and the virality of the Internet in today’s society, code has become an integral role in many of our real-world applications. Technical skills have become a part of the hiring process where candidates are expected to possess a fundamental knowledge of IT in order to be granted workforce entry. Subsequently, the need for coding expertise has naturally increased across various industries to support their backend developments, and as such many programming job roles exist today from software developers to cloud engineers.å
               <br />
               <br />
-              Going forward as an ‘IN’ topic, coding is here to stay in the long run and it will undoubtedly be set as one of the most vital skill sets required to thrive in a future of technological innovation.å
+              Going forward as an ‘IN’ topic, coding is here to stay in the long run and it will undoubtedly be set as one of the most vital skill sets required to thrive in a future of technological innovation.
             </p>
             <br />
 
