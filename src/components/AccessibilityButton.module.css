@@ -1,0 +1,13 @@
+#accessibilityButton {
+  width: 50px;
+	height: 50px;
+	position: fixed;
+  border-radius: 100%;
+  bottom: 6em;
+	right: 2em;
+  z-index: 4;
+  background-color: var(--yellow);
+  color: white;
+  border: none;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3); 
+}

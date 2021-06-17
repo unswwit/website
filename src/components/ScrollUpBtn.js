@@ -29,6 +29,7 @@ export default function ScrollUpBtn() {
   return (
     <div>
       <button 
+        aria-label="scroll to top"
         className={isVisible ? [styles.scrollUp,styles.showBtn].join(" "): [styles.scrollUp,styles.hideBtn].join(" ")} 
         onClick={scrollToTop}
       >

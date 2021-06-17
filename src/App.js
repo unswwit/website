@@ -24,6 +24,7 @@ import Menu from "./menu";
 import MenuBtn from "./menuBtn";
 import Footer from "./footer";
 import { Accessibility } from "accessibility/src/main";
+import AccessibilityButton from "./components/AccessibilityButton";
 
 class App extends Component {
   /*
@@ -451,7 +452,9 @@ class App extends Component {
             <Redirect to="/404" />
           </Switch>
         </HashRouter>
+      
         <div>
+          <AccessibilityButton />
           <Footer />
         </div>
       </div>
