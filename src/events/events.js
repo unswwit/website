@@ -139,7 +139,6 @@ const Events = () => {
                     </li>                     
                   </ul>
                 </div>
-                <ScrollUpBtn/>
               </div>
             })}
           </div>)
@@ -207,6 +206,7 @@ const Events = () => {
             })}
         </div>
       </div>
+      <ScrollUpBtn/>
     </>
   );
 };
