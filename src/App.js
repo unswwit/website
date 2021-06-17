@@ -140,6 +140,7 @@ class App extends Component {
       modules: {
         increaseTextSpacing: false,
         decreaseTextSpacing: false,
+        speechToText: false,
       },
       textPixelMode: true,
     };
