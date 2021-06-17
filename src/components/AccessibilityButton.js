@@ -37,7 +37,7 @@ const AccessibilityButton = () => {
         {options.map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>{icons[index]}</ListItemIcon>
-            <ListItemText primary={text} />
+            <ListItemText className={styles.listText} primary={text} />
           </ListItem>
         ))}
       </List>

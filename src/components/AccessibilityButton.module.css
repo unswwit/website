@@ -14,5 +14,11 @@
 
 #menu {
   width: 280px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
 }
 
+.listText span {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--grey);
+}
