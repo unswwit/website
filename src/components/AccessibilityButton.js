@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import AccessibleIcon from "@material-ui/icons/Accessible";
 import Drawer from "@material-ui/core/Drawer";
-import Button from "@material-ui/core/Button";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
@@ -31,7 +30,7 @@ const AccessibilityButton = () => {
       <AccessibleIcon fontSize="large" />
     </button>
     <Drawer anchor="right" open={isOpen} onClose={() => setIsOpen(false)}>
-      <List>
+      <List id={styles.menu}>
         <ListItem button>
           Accessibility Options
         </ListItem>
