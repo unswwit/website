@@ -39,23 +39,7 @@ const useStyles = makeStyles((theme) => ({
     },
     // our story iphone 6+ version
     "@media (max-width:414px)": {
-      marginTop: "98px",
-      width: "50px",
-    },
-    // our story iphone 6 version
-    "@media (max-width:375px)": {
-      marginTop: "130px",
-      width: "50px",
-    },
-    // our story iphone 5 version
-    "@media (max-width:360px)": {
-      marginTop: "165px",
-      width: "50px",
-    },
-    // our story galaxy duo version
-    "@media (max-width:320px)": {
-      marginTop: "210px",
-      width: "50px",
+      display: "none",
     },
   },
   paperTwo: {
@@ -78,23 +62,7 @@ const useStyles = makeStyles((theme) => ({
     },
     // our story iphone 6+ version
     "@media (max-width:414px)": {
-      marginTop: "130px",
-      width: "50px",
-    },
-    // our story iphone 6 version
-    "@media (max-width:375px)": {
-      marginTop: "175px",
-      width: "50px",
-    },
-    // our story iphone 5 version
-    "@media (max-width:360px)": {
-      marginTop: "195px",
-      width: "50px",
-    },
-    // our story galaxy duo version
-    "@media (max-width:320px)": {
-      marginTop: "285px",
-      width: "50px",
+      display: "none",
     },
   },
   paperThree: {
@@ -117,23 +85,7 @@ const useStyles = makeStyles((theme) => ({
     },
     // our story iphone 6+ version
     "@media (max-width:414px)": {
-      marginTop: "185px",
-      width: "50px",
-    },
-    // our story iphone 6 version
-    "@media (max-width:375px)": {
-      marginTop: "230px",
-      width: "50px",
-    },
-    // our story iphone 5 version
-    "@media (max-width:360px)": {
-      marginTop: "285px",
-      width: "50px",
-    },
-    // our story galaxy duo version
-    "@media (max-width:320px)": {
-      marginTop: "360px",
-      width: "50px",
+      display: "none",
     },
   },
   paperFour: {
@@ -156,23 +108,7 @@ const useStyles = makeStyles((theme) => ({
     },
     // our story iphone 6+ version
     "@media (max-width:414px)": {
-      marginTop: "100px",
-      width: "50px",
-    },
-    // our story iphone 6 version
-    "@media (max-width:375px)": {
-      marginTop: "120px",
-      width: "50px",
-    },
-    // our story iphone 5 version
-    "@media (max-width:360px)": {
-      marginTop: "130px",
-      width: "50px",
-    },
-    // our story galaxy duo version
-    "@media (max-width:320px)": {
-      marginTop: "220px",
-      width: "50px",
+      display: "none",
     },
   },
   paperFive: {
@@ -195,29 +131,8 @@ const useStyles = makeStyles((theme) => ({
     },
     // our story iphone 6+ version
     "@media (max-width:414px)": {
-      marginTop: "300px",
-      width: "50px",
-    },
-    // our story iphone 6+ version
-    "@media (max-width:411px)": {
-      marginTop: "306px",
-      width: "50px",
-    },
-    // our story iphone 6 version
-    "@media (max-width:375px)": {
-      marginTop: "350px",
-      width: "50px",
-    },
-    // our story iphone 5 version
-    "@media (max-width:360px)": {
-      marginTop: "405px",
-      width: "50px",
-    },
-    // our story galaxy duo version
-    "@media (max-width:320px)": {
-      marginTop: "590px",
-      width: "50px",
-    },
+      display: "none",
+    }
   },
   year: {
     flex: 1,
