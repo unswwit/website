@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect} from "react";
 import PageHeader from ".././header";
 import styles from "./joinUs.module.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
@@ -9,6 +9,7 @@ import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import NewsletterForm from ".././home/NewsletterForm";
 import { Modal, Backdrop, Fade } from "@material-ui/core";
+import LoadingScreen from "../LoadingScreen";
 
 class JoinUs extends React.Component {
   constructor() {
@@ -22,6 +23,8 @@ class JoinUs extends React.Component {
       clickedHr: true,
       clickedIt: true,
       clickedMar: true,
+      sourceLoading: true,
+      coverPhoto: null,
     };
     this.hideSpinner = this.hideSpinner.bind(this);
     this.open = this.open.bind(this);
@@ -75,9 +78,31 @@ class JoinUs extends React.Component {
     window.scrollTo(0,0);
   }
 
+  // control when to stop loading
+  
+  observer = ({coverPhoto, sourceLoading}) => {
+    useEffect(() => {
+      const img = new Image();
+      img.src = "/headers/header-1.jpg";
+      img.onload = () => {     
+        this.setState = {coverPhoto: "img.src"}
+        setTimeout(() => {
+          this.setState = { sourceLoading: false }
+        }, 1000);
+      }
+    }, [])  
+    return null;
+  }
+
+
   render() {
     return (
       <div>
+        {this.sourceLoading ? (
+        <LoadingScreen />
+        )
+          :
+          (<>
         {/* Cover Photo */}
         <PageHeader imgUrl="/headers/join-header-2.jpg" title="Join Us" />
         <h2 className={styles.header}>Connect with us</h2>
@@ -434,6 +459,8 @@ class JoinUs extends React.Component {
           </Modal>
         </div>
         {/* End of Newsletter */}
+        </>
+        )} 
       </div>
     );
   }
