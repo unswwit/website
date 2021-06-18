@@ -130,7 +130,8 @@ h2.oppSubheading {
   .ourMascotImg {
     display: block;
     margin: 0 auto;
-    padding-right:2px;
+    padding-left: 3px;
+    padding-right: 2px;
     width: 350px;
     padding-top: 15px;
   }
@@ -167,25 +168,8 @@ h2.oppSubheading {
     display: block;
     margin: 0 auto;
     margin-left: 89px;
+    padding-right: 5px;
     width: 280px;
-  }
-}
-
-@media only screen and (max-width: 375px) {
-  .ourMissionImg {
-    display: block;
-    margin: 0 auto;
-    width: 180px;
-    padding-top: 15px;
-    flex-direction: column-reverse;
-  }
-
-  .ourMascotImg {
-    display: block;
-    margin: 0 auto;
-    width: 250px;
-    padding-top: 15px;
-    padding-left: 5px;
   }
 }
 
@@ -220,6 +204,7 @@ h2.oppSubheading {
     display: block;
     margin: 0 auto;
     width: 280px;
+    padding-right: 6px;
     padding-top: 15px;
   }
 }
@@ -237,6 +222,7 @@ h2.oppSubheading {
     display: block;
     margin: 0 auto;
     width: 250px;
+    padding-left: 2px;
     padding-top: 15px;
   }
 }
@@ -258,12 +244,13 @@ h2.oppSubheading {
   .ourMissionImg {
     display: flex;
     margin: 0 auto;
+    width: 190px;
   }
 
   .ourMascotImg {
     display: block;
     margin: 0 auto;
     width: 250px;
-    padding-left:5px;
+    padding-left: 5px;
   }
 }
