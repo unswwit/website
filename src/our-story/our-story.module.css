@@ -119,14 +119,18 @@ h2.oppSubheading {
   }
 
   .ourMissionImg {
-    margin-left: 200px;
-    width: 220px;
+    display: block;
+    margin: 0 auto;
+    padding-right: 20px;
+    width: 250px;
     padding-top: 15px;
     flex-direction: column-reverse;
   }
 
   .ourMascotImg {
-    margin-left: 157px;
+    display: block;
+    margin: 0 auto;
+    padding-right:2px;
     width: 350px;
     padding-top: 15px;
   }
@@ -153,31 +157,35 @@ h2.oppSubheading {
   }
 
   .ourMissionImg {
-    margin-left: 115px;
+    display: block;
+    margin: 0 auto;
     width: 200px;
-    padding-top: 15px;
     flex-direction: column-reverse;
   }
 
   .ourMascotImg {
+    display: block;
+    margin: 0 auto;
     margin-left: 89px;
-    width: 300px;
-    padding-top: 15px;
+    width: 280px;
   }
 }
 
 @media only screen and (max-width: 375px) {
   .ourMissionImg {
-    margin-left: 50px;
+    display: block;
+    margin: 0 auto;
     width: 180px;
     padding-top: 15px;
     flex-direction: column-reverse;
   }
 
   .ourMascotImg {
-    margin-left: 45px;
+    display: block;
+    margin: 0 auto;
     width: 250px;
     padding-top: 15px;
+    padding-left: 5px;
   }
 }
 
@@ -201,14 +209,16 @@ h2.oppSubheading {
   }
 
   .ourMissionImg {
-    margin-left: 75px;
+    display: block;
+    margin: 0 auto;
     width: 180px;
     padding-top: 15px;
     flex-direction: column-reverse;
   }
 
   .ourMascotImg {
-    margin-left: 48px;
+    display: block;
+    margin: 0 auto;
     width: 280px;
     padding-top: 15px;
   }
@@ -216,14 +226,16 @@ h2.oppSubheading {
 
 @media only screen and (max-width: 375px) {
   .ourMissionImg {
-    margin-left: 50px;
+    display: block;
+    margin: 0 auto;
     width: 180px;
     padding-top: 15px;
     flex-direction: column-reverse;
   }
 
   .ourMascotImg {
-    margin-left: 45px;
+    display: block;
+    margin: 0 auto;
     width: 250px;
     padding-top: 15px;
   }
@@ -231,24 +243,27 @@ h2.oppSubheading {
 
 @media only screen and (max-width: 360px) {
   .ourMissionImg {
-    margin-left: 50px;
+    display: block;
+    margin: 0 auto;
   }
 
   .ourMascotImg {
-    margin-left: 38px;
+    display: block;
+    margin: 0 auto;
   }
 }
 
 /*--- Our Story small mobile version ---*/
 @media only screen and (max-width: 320px) {
   .ourMissionImg {
-    margin-left: 30px;
-    width: 180px;
+    display: flex;
+    margin: 0 auto;
   }
 
   .ourMascotImg {
-    margin-left: 20px;
+    display: block;
+    margin: 0 auto;
     width: 250px;
-    padding-top: 15px;
+    padding-left:5px;
   }
 }
