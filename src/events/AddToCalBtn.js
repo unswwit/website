@@ -26,7 +26,7 @@ const AddToCalBtn = (props) => {
         className: styles.link,
       }}
     />
-  )
+  );
 };
 
 export default AddToCalBtn;
