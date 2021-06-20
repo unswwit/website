@@ -92,7 +92,6 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 3vw;
-  margin-bottom: 9vw;
   display: block;
 }
 
@@ -106,7 +105,36 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #fff7ef;
+  background-color: #000000;
+}
+
+.awssld__bullets {
+  position: relative;
+  bottom: -16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.awssld__bullets .awssld__bullets--active {
+  transform: scale(1.25);
+  background: var(--control-bullet-active-color);
+}
+
+.awssld__bullets button {
+  padding: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: 5px;
+  border-radius: 50%;
+  background: var(--control-bullet-color);
+  text-indent: -9999px;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45), background-color 0.175s ease-out;
 }
 
 .awssld {
@@ -131,6 +159,7 @@
 
 /* Event Resources Accordion */
 .accordionWrapper {
+  margin-top:36pt;
   margin-bottom: 5vw;
   -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2),
     0 2px 5px 0 rgba(0, 0, 0, 0.19);

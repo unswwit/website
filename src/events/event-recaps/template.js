@@ -8,15 +8,15 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import AwesomeSlider from 'react-awesome-slider';
-import 'react-awesome-slider/dist/styles.css';
-
+import AwesomeSlider from "react-awesome-slider";
+import "react-awesome-slider/dist/styles.css";
 
 const EventRecapPage = (props) => {
   const [expanded, setExpanded] = useState(false);
   const [event, setEvent] = useState({});
   const [loading, setLoading] = useState(true);
   const [hasResources, setHasResources] = useState(false);
+  const [hasPhotos, setHasPhotos] = useState(false);
   const [hasEmbeddedVideo, setHasEmbeddedVideo] = useState(false);
 
   useEffect(() => {
@@ -48,6 +48,10 @@ const EventRecapPage = (props) => {
 
         if (currEvent.resourcesFolderID) {
           setHasResources(true);
+        }
+
+        if (currEvent.imagePaths) {
+          setHasPhotos(true);
         }
 
         if (currEvent.youtubeVideoID) {
@@ -122,17 +126,29 @@ const EventRecapPage = (props) => {
               process.env.PUBLIC_URL +
               `/event-covers/${event.year}/${event.img}`
             }
+            
+            style={!hasPhotos ? {} : { display: "none" }}
             alt="header"
             className={styles.eventCoverImage}
           />
-          <div className = {styles.imageGalleryWrapper} >
-
-          <AwesomeSlider cssModule={styles}>
-            <div data-src={process.env.PUBLIC_URL + `/event-recap/2021/WIT-x-MCIC-accessory-atelier/148375941_433119531235874_2109725046962908161_n.jpg`} />
-            <div data-src={process.env.PUBLIC_URL + `/event-recap/2021/WIT-x-MCIC-accessory-atelier/148455294_239533420984121_6282169266328595510_n.jpg`} />
-            <div data-src={process.env.PUBLIC_URL + `/event-recap/2021/WIT-x-MCIC-accessory-atelier/148879770_218695266664323_6391444865867957757_n.jpg`} />
-            <div data-src={process.env.PUBLIC_URL + `/event-recap/2020/T3/analytics-comp/626c7bb3-e8b1-44fc-91c4-42e64fe222ef.png`} />
-          </AwesomeSlider>
+          <div className={styles.imageGalleryWrapper}>
+            <AwesomeSlider
+              cssModule={styles}
+              style={hasPhotos ? {} : { display: "none" }}
+              media={[
+                {
+                  source: `/event-recap/2021/WIT-x-MCIC-accessory-atelier/148375941_433119531235874_2109725046962908161_n.jpg`,
+                },
+                {
+                  source:
+                    "/event-recap/2021/WIT-x-MCIC-accessory-atelier/148879770_218695266664323_6391444865867957757_n.jpg",
+                },
+                {
+                  source:
+                    "/event-recap/2021/WIT-x-MCIC-accessory-atelier/148455294_239533420984121_6282169266328595510_n.jpg",
+                },
+              ]}
+            />
           </div>
 
           {/* Event Resources Accordion */}
