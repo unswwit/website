@@ -159,7 +159,9 @@ class App extends Component {
     GoogleAnalytics();
 
     // add accessibility tool
-    this.createAccessibility();
+    if (window.innerWidth >= "1200") {
+      this.accessibility();
+    }
 
     window.addEventListener("hashchange", this.changeBackground);
     window.addEventListener("resize", this.updateMenu);

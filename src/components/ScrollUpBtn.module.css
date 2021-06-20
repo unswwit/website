@@ -56,6 +56,12 @@
 }
 
 /*----------------------------------Mobile responsiveness------------------------------------*/
+@media only screen and (max-width: 1200px) {
+  .scrollUp {
+    bottom: 2em;
+  }
+}
+
 @media only screen and (max-width: 450px) {
   .scrollUp {
     bottom: 1.5em;
