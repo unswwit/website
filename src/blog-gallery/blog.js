@@ -53,6 +53,8 @@ const Blog = () => {
   const [selectedPosts, setSelectedPosts] = useState([]);
   // the posts displayed on the current page
   const [currentPosts, setCurrentPosts] = useState([]);
+  // search term (user input) for blog search bar
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     window.scrollTo(0,0);
@@ -161,19 +163,32 @@ const Blog = () => {
           )}
         </div>
         <div className={styles.blogPosts}>
+            <input 
+                type="text"
+                placeholder="Search blog post by title" 
+                onChange={(event) => {
+                    setSearchTerm(event.target.value);
+                }}
+            />
           {!loading && currentPosts
-            .map((blog) => {     
-              return <BlogPreview
-                key={blog.blogNo}
-                blogNo={blog.blogNo}
-                imgUrl={`/blog-covers/${blog.img}`}
-                heading={blog.heading}
-                date={blog.date}
-                subheading={blog.subheading}
-                authors={blog.authors}
-                category={blog.category.split(",")}
-              />
-            })}       
+            .filter((blog) => {
+                if (searchTerm === "") {
+                  return blog;
+                } else if (blog.heading.toLowerCase().includes(searchTerm.toLowerCase())) {
+                  return blog;
+                }
+              }).map((blog) => {     
+                return <BlogPreview
+                  key={blog.blogNo}
+                  blogNo={blog.blogNo}
+                  imgUrl={`/blog-covers/${blog.img}`}
+                  heading={blog.heading}
+                  date={blog.date}
+                  subheading={blog.subheading}
+                  authors={blog.authors}
+                  category={blog.category.split(",")}
+                />
+            })}      
         </div>
         <PaginationComp 
           totalPages={Math.ceil(selectedPosts.length/postsPerPage)} 
