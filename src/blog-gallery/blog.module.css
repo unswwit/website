@@ -239,6 +239,10 @@ table {
   .searchBar {
     padding-top: 8%;
   }
+
+  .inputSearchBar {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 300px) {
