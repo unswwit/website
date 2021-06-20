@@ -159,16 +159,16 @@ const MarketingContent = () => {
           {!loading && (
             <ol className={styles.grid} id={styles.content}>
               {currentPosts.map((content, index) => {
-                  return (
-                    <Initiative
-                      key={index}
-                      fb={content.link}
-                      imgUrl={`/initiatives/${year}/${content.img}`}
-                      alt={content.label}
-                      date={content.date}
-                    />
-                  );
-                })}
+                return (
+                  <Initiative
+                    key={index}
+                    fb={content.link}
+                    imgUrl={`/initiatives/${year}/${content.img}`}
+                    alt={content.label}
+                    date={content.date}
+                  />
+                );
+              })}
             </ol>
           )}
         </div>

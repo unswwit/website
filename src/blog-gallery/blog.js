@@ -54,7 +54,7 @@ const Blog = () => {
   // the posts displayed on the current page
   const [currentPosts, setCurrentPosts] = useState([]);
   // search term (user input) for blog search bar
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     window.scrollTo(0,0);
@@ -153,12 +153,12 @@ const Blog = () => {
         {/*Start of blog search bar*/}
         <div className={styles.searchBar}>
           <input 
-              className={styles.inputSearchBar}
-              type="text"
-              placeholder="Search blog post by title" 
-              onChange={(event) => {
-                  setSearchTerm(event.target.value);
-              }}
+            className={styles.inputSearchBar}
+            type="text"
+            placeholder="Search blog post by title" 
+            onChange={(event) => {
+              setSearchTerm(event.target.value);
+            }}
           />
         </div>
         {/*Start of blog posts*/}
@@ -173,26 +173,28 @@ const Blog = () => {
               />
             )}
           </div>
-            {!loading && currentPosts
-              .filter((blog) => {
-                if (searchTerm === "") {
-                  return blog;
-                } else if (blog.heading.toLowerCase().includes(searchTerm.toLowerCase())) {
-                  return blog;
-                }
-              }).map((blog) => {     
-                return <BlogPreview
-                  key={blog.blogNo}
-                  blogNo={blog.blogNo}
-                  imgUrl={`/blog-covers/${blog.img}`}
-                  heading={blog.heading}
-                  date={blog.date}
-                  subheading={blog.subheading}
-                  authors={blog.authors}
-                  category={blog.category.split(",")}
-                />
+          {!loading && currentPosts
+            .filter((blog) => {
+              if (searchTerm === "") {
+                return true;
+              } else if (blog.heading.toLowerCase().includes(searchTerm.toLowerCase())) {
+                return true;
+              } else {
+                return false;
+              }
+            }).map((blog) => {     
+              return <BlogPreview
+                key={blog.blogNo}
+                blogNo={blog.blogNo}
+                imgUrl={`/blog-covers/${blog.img}`}
+                heading={blog.heading}
+                date={blog.date}
+                subheading={blog.subheading}
+                authors={blog.authors}
+                category={blog.category.split(",")}
+              />
             })}   
-          </div>
+        </div>
         <PaginationComp 
           totalPages={Math.ceil(selectedPosts.length/postsPerPage)} 
           paginate={paginate}
