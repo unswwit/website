@@ -168,6 +168,7 @@ export default function OppositeContentTimeline() {
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent className={classes.history}>
+            {/* 2016 timeline content */}
             <p className={styles.timelineContent}>
               <ul>
                 <li>
@@ -184,6 +185,7 @@ export default function OppositeContentTimeline() {
         <TimelineItem>
           <TimelineOppositeContent className={classes.history}>
             <p className={styles.timelineContent}>
+            {/* 2017 timeline content */}
               <ul>
                 <li>
                   WIT’s first stall was held at UNSW's Orientation Week, where
@@ -218,6 +220,7 @@ export default function OppositeContentTimeline() {
           </TimelineSeparator>
           <TimelineContent className={classes.history}>
             <p className={styles.timelineContent}>
+            {/* 2018 timeline content */}
               <ul>
                 <li>
                   Numerous, successful events were held including our
@@ -234,6 +237,7 @@ export default function OppositeContentTimeline() {
         <TimelineItem>
           <TimelineOppositeContent className={classes.history}>
             <p className={styles.timelineContent}>
+            {/* 2019 timeline content */}
               <ul>
                 <li>Our student base grew to 1400+ members.</li>
                 <li>
@@ -267,6 +271,7 @@ export default function OppositeContentTimeline() {
           </TimelineSeparator>
           <TimelineContent className={classes.history}>
             <p className={styles.timelineContent}>
+            {/* 2020 timeline content */}
               <ul>
                 <li>
                   Hosted 47 events, reaching 79.4k people and achieving a 50%
