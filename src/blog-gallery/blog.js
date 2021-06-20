@@ -67,12 +67,15 @@ const Blog = () => {
     searchBlogs(filteredBlogs, searchTerm);
   }
 
-  // search blogs by title
+  // search blogs by heading, subheading or author
   const searchBlogs = (filteredBlogs, searchTerm) => {
     const searchResults = filteredBlogs.filter((blog) => {
+      const authors = Object.keys(blog.authors).join(" ").split(/[-]/).join(" ");
+      console.log(blog.authors)
       if (searchTerm === "" ||
           blog.heading.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          blog.subheading.toLowerCase().includes(searchTerm.toLowerCase())) {
+          blog.subheading.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          authors.toLowerCase().includes(searchTerm.toLowerCase())) {
         return true;
       } else {
         return false;
@@ -106,7 +109,7 @@ const Blog = () => {
           blogPreviews[index].authors = tempAuthor;
         });
 
-        const tempBlogs = googleData["blog-previews"]["elements"].reverse();
+        const tempBlogs = blogPreviews.reverse();
         setBlogs(tempBlogs);
         setCurrentPosts(tempBlogs.slice(0, postsPerPage));
         setSelectedPosts(tempBlogs);
@@ -173,7 +176,7 @@ const Blog = () => {
           <input 
             className={styles.inputSearchBar}
             type="text"
-            placeholder="Search blog post by title" 
+            placeholder="Search blog posts" 
             onChange={(event) => {
               setSearchTerm(event.target.value);
               filterBlogs(selectedCategory, event.target.value);
