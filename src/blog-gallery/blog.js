@@ -150,28 +150,31 @@ const Blog = () => {
               );
             })}
         </div>
-
-        {/*Start of blog posts*/}
-        <div id={styles.blogLoadingContainer}>
-          {loading && (
-            <CircularProgress
-              variant="indeterminate"
-              size={50}
-              thickness={5}
-              id={styles.blogsLoading}
-            />
-          )}
+        {/*Start of blog search bar*/}
+        <div className={styles.searchBar}>
+          <input 
+              className={styles.inputSearchBar}
+              type="text"
+              placeholder="Search blog post by title" 
+              onChange={(event) => {
+                  setSearchTerm(event.target.value);
+              }}
+          />
         </div>
+        {/*Start of blog posts*/}
         <div className={styles.blogPosts}>
-            <input 
-                type="text"
-                placeholder="Search blog post by title" 
-                onChange={(event) => {
-                    setSearchTerm(event.target.value);
-                }}
-            />
-          {!loading && currentPosts
-            .filter((blog) => {
+          <div id={styles.blogLoadingContainer}>
+            {loading && (
+              <CircularProgress
+                variant="indeterminate"
+                size={50}
+                thickness={5}
+                id={styles.blogsLoading}
+              />
+            )}
+          </div>
+            {!loading && currentPosts
+              .filter((blog) => {
                 if (searchTerm === "") {
                   return blog;
                 } else if (blog.heading.toLowerCase().includes(searchTerm.toLowerCase())) {
@@ -188,8 +191,8 @@ const Blog = () => {
                   authors={blog.authors}
                   category={blog.category.split(",")}
                 />
-            })}      
-        </div>
+            })}   
+          </div>
         <PaginationComp 
           totalPages={Math.ceil(selectedPosts.length/postsPerPage)} 
           paginate={paginate}

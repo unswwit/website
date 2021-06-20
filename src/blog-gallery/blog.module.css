@@ -225,3 +225,22 @@ table {
     padding-bottom: 10px;
   }
 }
+.searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3%;
+}
+
+.inputSearchBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px transparent;
+  border-left: 1px transparent;
+  border-right: 1px transparent;
+  border-bottom: 2px solid black;
+  width: 70%;
+  font-family: "Montserrat", sans-serif;
+  padding: 0.5%;
+}
