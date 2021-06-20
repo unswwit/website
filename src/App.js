@@ -139,6 +139,8 @@ class App extends Component {
         buttons: false
       },
       modules: {
+        increaseText: false,
+        decreaseText: false,
         increaseTextSpacing: false,
         decreaseTextSpacing: false,
         speechToText: false,
