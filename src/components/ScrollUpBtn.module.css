@@ -5,17 +5,15 @@
 	width: 50px;
 	height: 50px;
 	position: fixed;
-	bottom: 10em;
+	bottom: 6em;
 	right: -50px;
-	border-radius: 100%;
-  border: none;
-  /*
+	border-radius: 100%;  
 	border: solid;
   border-color: white;
-  border-width: thin;*/
+  border-width: thin;
 	color: white;
   z-index: 4;
-  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);  
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
 /*----------------------------------Scroll Up Button Animations------------------------------------*/
@@ -30,30 +28,30 @@
 }
 
 .scrollUp:hover {
-	opacity: 0.85;
+  opacity: 0.85;
 }
 
 @-webkit-keyframes showSlide {
-  100% { 
-    right: 2em; 
+  100% {
+    right: 2em;
   }
 }
 
 @keyframes showSlide {
-  100% { 
-    right: 2em; 
+  100% {
+    right: 2em;
   }
 }
 
 @-webkit-keyframes hideSlide {
-  100% { 
-    right: -80px; 
+  100% {
+    right: -80px;
   }
 }
 
 @keyframes hideSlide {
-  100% { 
-    right: -80px; 
+  100% {
+    right: -80px;
   }
 }
 
@@ -62,16 +60,16 @@
   .scrollUp {
     bottom: 1.5em;
   }
-  
+
   @-webkit-keyframes showSlide {
-    100% { 
-      right: 1.5em; 
+    100% {
+      right: 1.5em;
     }
   }
 
   @keyframes showSlide {
-    100% { 
-      right: 1.5em; 
+    100% {
+      right: 1.5em;
     }
   }
 }

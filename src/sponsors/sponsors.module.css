@@ -73,6 +73,11 @@ a.subheader {
   object-fit: contain;
 }
 
+.supporter {
+  width: 100%;
+  max-width: 150px;
+}
+
 .supportInKind {
   width: 100%;
   max-width: 150px;
@@ -131,7 +136,6 @@ a.subheader {
   padding-bottom: 50px;
   max-height: 80%;
   overflow-y: scroll;
-
 }
 
 .sponsorImage {
@@ -143,15 +147,22 @@ a.subheader {
   text-align: center;
 }
 
+.link, .sponsorLink {
+  color: var(--red);
+  text-decoration: underline;
+}
+
 .sponsorLink {
   display: inline;
-  color: #e85f5c;
   font-family: "Montserrat", sans-serif;
   font-size: 12pt;
   margin: 0;
   margin-bottom: 0px;
   text-align: justify;
-  text-decoration: underline;
+}
+
+.sponsorLink:hover, .link:hover {
+  color: var(--yellow);
 }
 
 .sponsorWebsite {
@@ -210,5 +221,3 @@ a.subheader {
     max-width: 220px;
   }
 }
-
-

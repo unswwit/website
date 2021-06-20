@@ -119,19 +119,19 @@ class blogPost47 extends Component {
               "Education Executive",
             ],
             "chelsea-chaffey": [
-              "/potraits/blog-authors/chelsea-chaffey.jpg",
+              "/potraits/blog-authors/chelsea-chaffey.png",
               styles.anonProfile,
               "Chelsea Chaffey",
               "Education team",
             ],
             "natalie-leroy": [
-              "/potraits/blog-authors/natalie-leroy.jpg",
+              "/potraits/blog-authors/natalie-leroy.png",
               styles.anonProfile,
               "Natalie Leroy",
               "Education team",
             ],
             "erika-shi": [
-              "/potraits/blog-authors/erika-shi.jpg",
+              "/potraits/blog-authors/erika-shi.png",
               styles.anonProfile,
               "Erika Shi",
               "Education team",

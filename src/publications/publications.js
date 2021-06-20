@@ -11,7 +11,7 @@ const Publications = () => {
 
   useEffect(() => {
     // start at the top of the page
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
 
     // load articles
     Tabletop.init({
@@ -27,7 +27,10 @@ const Publications = () => {
   return (
     <>
       {/* Cover Photo */}
-      <PageHeader imgUrl="/headers/publications-header.jpg" title="Publications" />
+      <PageHeader
+        imgUrl="/headers/publications-header.jpg"
+        title="Publications"
+      />
 
       <div className={styles.publicationsBody}>
         {/*Loading Container*/}

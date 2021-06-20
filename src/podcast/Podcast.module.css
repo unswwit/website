@@ -36,12 +36,12 @@
 
 #episodes {
   width: 80%;
-  display: grid; 
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 350px));
   justify-content: center;
   padding: initial;
   margin-right: auto;
-  margin-left: auto; 
+  margin-left: auto;
   margin-top: 0;
   margin-bottom: 50px;
 }
@@ -85,26 +85,26 @@ a:hover {
 } */
 
 .episodesContainer {
-  width: 110%; 
+  width: 110%;
 }
 
 .previews {
   width: 113%;
-  display: grid; 
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 320px));
   padding: initial;
   margin-right: auto;
-  margin-left: auto; 
+  margin-left: auto;
   margin-top: 0;
   margin-bottom: 50px;
   margin-left: -17px;
 }
 
 .subHeading {
-  font-weight: 500; 
-  font-size: 30px; 
+  font-weight: 500;
+  font-size: 30px;
   color: #676767;
-  margin: 30px 0 0 0; 
+  margin: 30px 0 0 0;
 }
 
 .shareButtons {
@@ -148,11 +148,11 @@ a:hover {
 /*-------------------------------Mobile Responsiveness-----------------------------*/
 @media only screen and (max-width: 1285px) {
   .previews {
-    display: flex; 
+    display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     width: 105%;
-    margin-left: -13px; 
+    margin-left: -13px;
   }
 
   .subHeading {
@@ -162,7 +162,6 @@ a:hover {
   .shareButtons {
     text-align: center;
   }
-
 }
 
 @media only screen and (max-width: 1000px) {
@@ -176,7 +175,7 @@ a:hover {
 @media only screen and (max-width: 880px) {
   #episodes {
     width: 100%;
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
   }
 
   .logoContainer {
@@ -223,7 +222,7 @@ a:hover {
     width: 65%;
     flex-flow: row wrap;
     margin-bottom: 20px;
-}
+  }
 
   .previewContainer .episodeCover {
     width: 100%;
