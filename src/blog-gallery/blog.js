@@ -61,11 +61,25 @@ const Blog = () => {
   },[])
 
   // filter blogs by a selected category
-  const filterBlogs = (category) => {
+  const filterBlogs = (category, searchTerm) => {
     const filteredBlogs = blogs.filter((blog) => (category === "All" || (blog.category.split(",")).includes(category) 
     || ((blog.category.split(",")).includes("WCW") && category === "WIT Crush Wednesday")));
-    setSelectedPosts(filteredBlogs);
-    setCurrentPosts(filteredBlogs.slice(0, postsPerPage));
+    searchBlogs(filteredBlogs, searchTerm);
+  }
+
+  // search blogs by title
+  const searchBlogs = (filteredBlogs, searchTerm) => {
+    const searchResults = filteredBlogs.filter((blog) => {
+      if (searchTerm === "" ||
+          blog.heading.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          blog.subheading.toLowerCase().includes(searchTerm.toLowerCase())) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+    setSelectedPosts(searchResults);
+    setCurrentPosts(searchResults.slice(0, postsPerPage));
     setCurrentPage(1);
   }
 
@@ -143,7 +157,7 @@ const Blog = () => {
                     }}
                     onClick={() => {
                       setSelectedCategory(category);
-                      filterBlogs(category);
+                      filterBlogs(category, searchTerm);
                     }}
                   />
                 </BootstrapTooltip>
@@ -158,6 +172,7 @@ const Blog = () => {
             placeholder="Search blog post by title" 
             onChange={(event) => {
               setSearchTerm(event.target.value);
+              filterBlogs(selectedCategory, event.target.value);
             }}
           />
         </div>
@@ -174,15 +189,7 @@ const Blog = () => {
             )}
           </div>
           {!loading && currentPosts
-            .filter((blog) => {
-              if (searchTerm === "") {
-                return true;
-              } else if (blog.heading.toLowerCase().includes(searchTerm.toLowerCase())) {
-                return true;
-              } else {
-                return false;
-              }
-            }).map((blog) => {     
+            .map((blog) => {     
               return <BlogPreview
                 key={blog.blogNo}
                 blogNo={blog.blogNo}
