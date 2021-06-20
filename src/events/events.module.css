@@ -12,7 +12,7 @@
 
 .gridContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-gap: 20px;
 }
 
@@ -92,7 +92,7 @@ a:hover.event {
 /*------------------------------Past Events--------------------------------*/
 #pastEvents.gridContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 20px;
 }
 
@@ -147,7 +147,7 @@ p.lookout {
   }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 600px) {
   .eventsBody {
     max-width: 90%;
   }
@@ -157,21 +157,18 @@ p.lookout {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     grid-gap: 20px;
   }
-}
 
-@media only screen and (max-width: 600px) {
   li.eventButton {
     display: block;
     margin: 10px 0;
   }
-  
+
   ul#links {
     display: block;
     float: none;
     width: 100%;
     text-align: center;
   }
-
 
   li.eventLink {
     margin: 10px 0;
