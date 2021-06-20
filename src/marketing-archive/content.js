@@ -4,15 +4,24 @@ import PageHeader from "../header";
 import Chip from "@material-ui/core/Chip";
 import Initiative from "./Initiative";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import ScrollUpBtn from "../components/ScrollUpBtn"
 import Tabletop from "tabletop";
-import Timeline from "../components/Timeline"
+import Timeline from "../components/Timeline";
+import PaginationComp from "../components/Pagination";
 
 const MarketingContent = () => {
   const [content, setContent] = useState([]);
   const [loading, setLoading] = useState(true);
   const [year, setYear] = useState("2021");
   const [selectedCategory, setSelectedCategory] = useState("All");
+  // set how many posts to view per page
+  const postsPerPage = 8;
+  // all the posts of the selected filter category
+  const [selectedPosts, setSelectedPosts] = useState([]);
+  // the posts displayed on the current page
+  const [currentPosts, setCurrentPosts] = useState([]);
+  // current page number
+  const [currentPage, setCurrentPage] = useState(1);
+
   const categories = {
     All: "All",
     Mascot: "mascot",
@@ -44,10 +53,11 @@ const MarketingContent = () => {
   // set the year for the events timeline
   const handleYear = (newYear) => {
     setYear(newYear);
+    setCurrentPage(1);
   };
 
   // scroll to top on load
-  useEffect(() => window.scrollTo(0,0), [])
+  useEffect(() => window.scrollTo(0, 0), []);
 
   // load archives
   useEffect(() => {
@@ -56,15 +66,40 @@ const MarketingContent = () => {
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: (googleData) => {
         setLoading(false);
-        setContent(
-          googleData["marketing-archives"]["elements"]
-            .reverse()
-            .filter((item) => item.year === year)
-        );
+
+        const tempContent = googleData["marketing-archives"]["elements"]
+          .reverse()
+          .filter((item) => item.year === year);
+        setContent(tempContent);
+        setCurrentPosts(tempContent.slice(0, postsPerPage));
+        setSelectedPosts(tempContent);
       },
       simpleSheet: false,
     });
-  }, [selectedCategory, year]);
+  }, [year]);
+
+  // filter content by selected category
+  const filterContent = (selectedCategory) => {
+    const filteredContent = content.filter(
+      (picture) =>
+        selectedCategory === "All" ||
+        picture.category.split(",").includes(selectedCategory)
+    );
+    setSelectedPosts(filteredContent);
+    setCurrentPosts(filteredContent.slice(0, postsPerPage));
+    setCurrentPage(1);
+  };
+
+  // called when pagination item clicked to slice the correct amount of posts for viewing
+  const paginate = (pageNumber) => {
+    setCurrentPosts(
+      selectedPosts.slice(
+        (pageNumber - 1) * postsPerPage,
+        pageNumber * postsPerPage
+      )
+    );
+    setCurrentPage(pageNumber);
+  };
 
   return (
     <>
@@ -99,8 +134,8 @@ const MarketingContent = () => {
                       margin: "5px",
                     }}
                     onClick={() => {
-                      setLoading(true);
                       setSelectedCategory(categories[category]);
+                      filterContent(categories[category]);
                     }}
                   />
                 );
@@ -133,27 +168,25 @@ const MarketingContent = () => {
           {/*Image collage*/}
           {!loading && (
             <ol className={styles.grid} id={styles.content}>
-              {content
-                .filter(
-                  (picture) =>
-                    selectedCategory === "All" ||
-                    picture.category.split(",").includes(selectedCategory)
-                )
-                .map((content, index) => {
-                  return (
-                    <Initiative
-                      key={index}
-                      fb={content.link}
-                      imgUrl={`/initiatives/${year}/${content.img}`}
-                      alt={content.label}
-                      date={content.date}
-                    />
-                  );
-                })}
+              {currentPosts.map((content, index) => {
+                return (
+                  <Initiative
+                    key={index}
+                    fb={content.link}
+                    imgUrl={`/initiatives/${year}/${content.img}`}
+                    alt={content.label}
+                    date={content.date}
+                  />
+                );
+              })}
             </ol>
           )}
         </div>
-        <ScrollUpBtn/>
+        <PaginationComp
+          totalPages={Math.ceil(selectedPosts.length / postsPerPage)}
+          paginate={paginate}
+          page={currentPage}
+        />
         {/*End of Initiatives*/}
       </div>
     </>
