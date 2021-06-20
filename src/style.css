@@ -62,7 +62,7 @@
 
 .coverPhoto .headerTitle h1 {
   margin: 0px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 700px) {
@@ -79,6 +79,18 @@
 
   .coverPhoto .headerTitle {
     top: 25px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .coverPhoto .headerTitle h1 {
+    font-size: 3vh;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .coverPhoto .headerTitle h1 {
+    font-size: 2.5vh;
   }
 }
 
@@ -184,14 +196,15 @@ p {
   display: none;
 }
 
-.nav-item a, .dropdown-title {
+.nav-item a,
+.dropdown-title {
   color: white;
-  padding: 10px 15px;
+  padding: 18px 15px;
   text-decoration: none;
 }
 
 .dropdown-menu {
-  border-color: transparent;
+  border-color: #fff7ef;
   letter-spacing: 1.5px;
   font-size: 14px;
   background-color: #fff7ef;
@@ -223,21 +236,23 @@ p {
 
 .nav-item a:hover {
   color: #e85f5c;
-  padding: 10px 15px;
+  padding: 18px 15px;
   text-decoration: none;
 }
 
 /*Making the navigation change colour on scroll*/
 .activeNav {
   background-color: #fff7ef;
-  transition: background-color .2s ease-in;
+  transition: background-color 0.2s ease-in;
 }
 
 .dropdown-toggle:after {
   color: white;
 }
 
-.active-nav-item a, .active-nav-item span, .active-nav-item:after {
+.active-nav-item a,
+.active-nav-item span,
+.active-nav-item:after {
   color: #313638;
 }
 
@@ -381,12 +396,12 @@ a {
 }
 
 .footer-item a:hover {
-  color: #feb14b;
+  color: var(--red);
   text-decoration: none;
 }
 
 .bottom-footer-item a:hover {
-  color: #feb14b;
+  color: var(--red);
   text-decoration: none;
 }
 
@@ -427,6 +442,6 @@ a {
   }
 
   .footer-all {
-    margin: 1.5vw auto 1vw auto;
+    margin: 0vw auto 1vw auto;
   }
 }

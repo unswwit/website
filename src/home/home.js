@@ -1,27 +1,47 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CountUp from "react-countup";
 import styles from "./home.module.css";
 import NewsletterForm from "./NewsletterForm";
 import { Modal, Backdrop, Fade } from "@material-ui/core";
+import PubArticle from "../publications/publications-article";
+import Tabletop from "tabletop";
+import Slideshow from "./Slideshow.js";
+import CircularProgress from "@material-ui/core/CircularProgress";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
 const Home = () => {
   const [open, setOpen] = React.useState(false);
   const [mobileView, setMobileView] = React.useState(false);
-  
+  const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const last3articles = articles.slice(0, 3);
+
   //start webpage at the top
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (window.innerWidth <= "1150") {
       setMobileView(true);
     }
-    Aos.init({ 
-      duration: 1300, 
-      once: true, 
-      anchorPlacement: "top-bottom", 
-      easing: "ease-in-out", 
-      offset: 20 
+    Aos.init({
+      duration: 1300,
+      once: true,
+      anchorPlacement: "top-bottom",
+      easing: "ease-in-out",
+      offset: 20,
+    });
+  }, []);
+
+  useEffect(() => {
+    setLoading(true);
+    Tabletop.init({
+      key: process.env.REACT_APP_GOOGLE_SHEETS,
+      callback: (googleData) => {
+        setArticles(googleData["publications"]["elements"].reverse());
+        setLoading(false);
+      },
+      simpleSheet: false,
     });
   }, []);
 
@@ -38,12 +58,20 @@ const Home = () => {
           <h1>Women In</h1>
           <h1>Technology</h1>
           <p> Empowering and inspiring the architects of change</p>
+          <button>
+            <Link to="/join-us" style={{ textDecoration: "none" }}>
+              JOIN US
+            </Link>
+          </button>
         </div>
       </div>
       {/* End of Header */}
 
       {/* Start of Description */}
-      <div data-aos={mobileView ? "fade": "fade-right"} className={styles.description}>
+      <div
+        data-aos={mobileView ? "fade" : "fade-right"}
+        className={styles.description}
+      >
         <div className={styles.descriptionLeft}>
           <h1>COLLABORATE. INSPIRE. CHANGE.</h1>
         </div>
@@ -75,11 +103,11 @@ const Home = () => {
               <p>Team Members</p>
             </div>
             <div>
-              <CountUp end={20} duration={5} />
+              <CountUp end={23} duration={5} />
               <p>Sponsors</p>
             </div>
             <div>
-              <CountUp end={2817} duration={4} />
+              <CountUp end={2900} duration={4} />
               <p>Facebook Followers</p>
             </div>
           </div>
@@ -87,40 +115,72 @@ const Home = () => {
       </div>
       {/* End of Statistics */}
 
-      {/* Start of Upcoming Events */}
-      <div data-aos={mobileView ? "fade":"fade-left"} data-aos-delay="150" className={styles.events}>
+      {/* Start of Upcoming Events / Latest blog / Latest podcast */}
+      <div
+        data-aos={mobileView ? "fade" : "fade-left"}
+        data-aos-delay="150"
+        className={styles.carousel}
+      >
+        <Slideshow />
+      </div>
+
+      {/* Start of Publications */}
+      <div
+        data-aos={mobileView ? "fade" : "fade-right"}
+        data-aos-delay="150"
+        className={styles.publications}
+      >
+        <h1>PUBLICATIONS</h1>
+
+        {/*Recent 3 Articles*/}
+        <div className={styles.articlesDiv}>
+          <div className={styles.articles}>
+            {loading && (
+              <CircularProgress
+                variant="indeterminate"
+                size={50}
+                thickness={5}
+                id={styles.publicationsLoading}
+              />
+            )}
+            {!loading &&
+              last3articles.map((article, index) => (
+                <div className={styles.homeArticles} key={index}>
+                  <PubArticle
+                    imgUrl={`${process.env.PUBLIC_URL}/publications/${article.year}/${article.img}`}
+                    heading={article.heading}
+                    date={article.date}
+                    url={article.url}
+                  />
+                </div>
+              ))}
+          </div>
+        </div>
+
         <div className={styles.eventsDescription}>
-          <p id="about">
-            At WIT, our focus is on providing events that foster development
-            catering to first to final years. Whether it's personal, academic,
-            professional or social, we want our students to be the best version
-            of themselves. As part of our aim, we also connect current and
-            future students with alumni and industry sponsors to serve as role
-            models to inspire.
-          </p>
-          <p>
-            <Link to="/events" style={{ textDecoration: "none" }}>
-              See More Events
+          <button>
+            <Link
+              to="/resources/publications"
+              style={{ textDecoration: "none" }}
+            >
+              see more publications
             </Link>
-          </p>
-        </div>
-        <div className={styles.eventsTitle}>
-          <h1>EVENTS</h1>
-        </div>
-        <div className={styles.event1}>
-          <a
-            href="https://www.facebook.com/events/509569410169834/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={`${process.env.PUBLIC_URL}/event-covers/2021/12-hoodie.png`}
-              alt="WIT 2021 Hoodie Design Competition"
-            />
-          </a>
+          </button>
         </div>
       </div>
-      {/* End of upcoming events area */}
+      {/* End of Publications */}
+
+      <div
+        data-aos={mobileView ? "fade" : "fade-left"}
+        data-aos-delay="150"
+        className={styles.sponsors}
+      >
+        <h1>OUR SPONSORS</h1>
+        <img
+          src={`${process.env.PUBLIC_URL}./sponsors-home-2021.png`}
+          alt="banner"
+        />
+      </div>
 
       {/* Start of newsletter */}
       <div className={styles.stats}>
@@ -129,7 +189,11 @@ const Home = () => {
           className={styles.statsBackground}
           alt="banner"
         />
-        <button data-aos="fade" className={styles.subscribeBtn} onClick={() => setOpen(true)}>
+        <button
+          data-aos="fade"
+          className={styles.subscribeBtn}
+          onClick={() => setOpen(true)}
+        >
           Subscribe to our newsletter
         </button>
         <Modal
@@ -142,7 +206,7 @@ const Home = () => {
           BackdropComponent={Backdrop}
           BackdropProps={{
             timeout: 500,
-          }} 
+          }}
         >
           <>
             <Fade in={open}>
@@ -152,14 +216,6 @@ const Home = () => {
         </Modal>
       </div>
       {/* End of Newsletter */}
-
-      <div data-aos={mobileView ? "fade": "fade-up"} className={styles.sponsors}>
-        <h1>OUR SPONSORS</h1>
-        <img
-          src={`${process.env.PUBLIC_URL}./sponsors-home-2021-temp.png`}
-          alt="banner"
-        />
-      </div>
     </div>
   );
 };

@@ -5,7 +5,10 @@ import styles from "./blog.module.css";
 import { Link } from "react-router-dom";
 
 class BlogPreview extends Component {
-  execs = ["/potraits/blog-authors/vivianw2021.jpg","/potraits/blog-authors/georgie2021.jpg"];
+  execs = [
+    "/potraits/blog-authors/vivianw2021.jpg",
+    "/potraits/blog-authors/georgie2021.jpg",
+  ];
   render() {
     return (
       <div className={this.props.category}>
@@ -13,7 +16,7 @@ class BlogPreview extends Component {
         <div className={styles.blogPost}>
           <table cellPadding="0">
             <Link
-              to={"/blog/" + this.props.blogNo}
+              to={"/resources/blog/" + this.props.blogNo}
               style={{ textDecoration: "none" }}
             >
               <tr id={styles.previewRow}>
@@ -43,7 +46,11 @@ class BlogPreview extends Component {
                               process.env.PUBLIC_URL +
                               this.props.authors[key][0]
                             }
-                            className={this.execs.includes(this.props.authors[key][0]) ? styles.execAuthor : styles.anonAuthor}
+                            className={
+                              this.execs.includes(this.props.authors[key][0])
+                                ? styles.execAuthor
+                                : styles.anonAuthor
+                            }
                             alt={key}
                           />
                         </div>

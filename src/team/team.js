@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styles from "./team.module.css";
-
 import PageHeader from "../header";
 import Execs from "./execs";
 import SubCom from "./subcom";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Timeline from "../components/Timeline";
+import ScrollUpBtn from "../components/ScrollUpBtn";
 
 function OurTeam() {
   const sectors = [
@@ -73,6 +73,7 @@ function OurTeam() {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     setLoading(true);
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
@@ -210,6 +211,7 @@ function OurTeam() {
       <footer>
         <div className={styles.footerArea} style={{ marginTop: "8vw" }} />
       </footer>
+      <ScrollUpBtn />
     </div>
   );
 }

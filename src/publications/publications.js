@@ -10,6 +10,10 @@ const Publications = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // start at the top of the page
+    window.scrollTo(0, 0);
+
+    // load articles
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: (googleData) => {
@@ -23,7 +27,10 @@ const Publications = () => {
   return (
     <>
       {/* Cover Photo */}
-      <PageHeader imgUrl="/headers/publications-header.jpg" title="Publications" />
+      <PageHeader
+        imgUrl="/headers/publications-header.jpg"
+        title="Publications"
+      />
 
       <div className={styles.publicationsBody}>
         {/*Loading Container*/}

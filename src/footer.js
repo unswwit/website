@@ -4,17 +4,17 @@ import "./style.css";
 
 const Footer = () => {
   const routes = {
-    "Home": "/",
-    "Events": "/events",
-    "Team": "/our-team",
-    "Sponsors": "/sponsors",
-    "Opportunities": "/opportunities",
-    "Join": "/join-us",
-    "Contact": "/contact-us",
-    "Blog": "/blog",
-    "Publications": "/publications",
-    "Marketing Archive": "/marketing-archive",
-    "Podcast": "/podcast"
+    Home: "/",
+    Events: "/events",
+    Team: "/our-team",
+    Sponsors: "/sponsors",
+    Opportunities: "/opportunities",
+    Join: "/join-us",
+    Contact: "/contact-us",
+    Blog: "/resources/blog",
+    Publications: "/resources/publications",
+    "Marketing Archive": "/resources/marketing-archive",
+    Podcast: "/resources/podcast",
   };
 
   const links = [

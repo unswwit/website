@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from "react";
+<<<<<<< HEAD
 import { makeStyles } from "@material-ui/core/styles";
+=======
+import ".././marketingArchive.module.css";
+>>>>>>> master
 import styles from "./content.module.css";
 import "../.././style.css";
 import PageHeader from "../.././header";
 import Chip from "@material-ui/core/Chip";
 import Initiative from "./Initiative";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import ScrollUpBtn from "../.././components/ScrollUpBtn"
+import ScrollUpBtn from "../.././components/ScrollUpBtn";
 import Tabletop from "tabletop";
+<<<<<<< HEAD
 import Timeline from "../.././components/Timeline"
 import Tooltip from "@material-ui/core/Tooltip";
 
@@ -24,12 +29,19 @@ const BootstrapTooltip = (props) => {
   const classes = useStylesBootstrap();
   return <Tooltip arrow classes={classes} {...props} />;
 };
+=======
+import Pagination from "../../components/Pagination";
+>>>>>>> master
 
 const MarketingContent = () => {
   const [content, setContent] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [year, setYear] = useState("2021");
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(8);
+  // const [indexOfLastPost, setIndexOfLastPost] = useState(currentPage * postsPerPage);
+  // const [indexOfFirstPost, setIndexOfFirstPost] = useState(indexOfLastPost - postsPerPage);
+
   const categories = {
     All: "All",
     Mascot: "mascot",
@@ -53,52 +65,46 @@ const MarketingContent = () => {
       "Celebrate special occasions with our friendly mascot, Willow!",
   };
 
-  // position of the marks on the timeline (i.e. 100 indicates that it's on the right end)
-  const marks = [
-    {
-      value: 100,
-      scaledValue: 2021,
-      label: "2021",
-    },
-    {
-      value: 0,
-      scaledValue: 2020,
-      label: "2020",
-    },
-  ];
-
-  const valueToYear = {
-    0: "2020",
-    100: "2021",
-  };
-
-  // set the year for the events timeline
-  const handleYear = (newYear) => {
-    setYear(newYear);
-  };
-
   useEffect(() => {
-    setLoading(true);
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: (googleData) => {
         setLoading(false);
-        setContent(
-          googleData["marketing-archives"]["elements"]
-            .reverse()
-            .filter((item) => item.year === year)
-        );
+        const archive = googleData["marketing-archives"]["elements"].reverse();
+        setContent(archive.slice(2));
       },
       simpleSheet: false,
     });
-  }, [selectedCategory, year]);
+  }, [selectedCategory]);
+
+  // setIndexOfLastPost(currentPage * postsPerPage);
+  // setIndexOfFirstPost(indexOfLastPost - postsPerPage);
+  //indexOfLastPost = currentPage * postsPerPage;
+  const indexOfLastPost = Math.min(
+    8,
+    content.filter(
+      (picture) =>
+        selectedCategory === "All" ||
+        picture.category.split(",").includes(selectedCategory)
+    )
+  );
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  setContent(content.slice(indexOfFirstPost, indexOfLastPost));
+
+  // change page number & scroll to top when onClick called for pagination
+  const paginate = (pageNumber) => {
+    const coverPhoto = document.getElementsByClassName("coverPhoto")[0]
+      .clientHeight;
+    window.scrollTo({ top: coverPhoto - 15, behavior: "smooth" });
+    setCurrentPage(pageNumber);
+  };
 
   return (
     <>
       {/* Cover Photo */}
       <PageHeader
-        imgUrl="/headers/marketing-header.jpg"
-        title="Marketing Archive"
+        imgUrl="/headers/marketing-header.png"
+        title="Marketing Archives"
       />
       {/*End of Header*/}
 
@@ -139,23 +145,18 @@ const MarketingContent = () => {
                     onClick={() => {
                       setLoading(true);
                       setSelectedCategory(categories[category]);
+                      setCurrentPage(1);
+                      //setIndexOfLastPost(Math.min(8, content
+                      //  .filter((picture) => selectedCategory === "All" || picture.category.split(",").includes(selectedCategory))));
+                      //setIndexOfFirstPost(indexOfLastPost-postsPerPage);
+                      setContent(
+                        content.slice(indexOfFirstPost, indexOfLastPost)
+                      );
                     }}
                   />
                 </BootstrapTooltip>
                 );
               })}
-          </div>
-
-          <div>
-            {/* Timeline */}
-            <Timeline
-              margin={"2%"}
-              page={"marketing"}
-              step={25}
-              valueToYear={valueToYear}
-              marks={marks}
-              updateYear={handleYear}
-            />
           </div>
 
           <div id={styles.contentLoadingContainer}>
@@ -168,7 +169,6 @@ const MarketingContent = () => {
               />
             )}
           </div>
-
           {/*Image collage*/}
           {!loading && (
             <ol className={styles.grid} id={styles.content}>
@@ -183,7 +183,7 @@ const MarketingContent = () => {
                     <Initiative
                       key={index}
                       fb={content.link}
-                      imgUrl={`/initiatives/${year}/${content.img}`}
+                      imgUrl={`/initiatives/2020/${content.img}`}
                       alt={content.label}
                       date={content.date}
                     />
@@ -192,7 +192,15 @@ const MarketingContent = () => {
             </ol>
           )}
         </div>
-        <ScrollUpBtn/>
+
+        <Pagination
+          postsPerPage={postsPerPage}
+          totalPosts={content.length}
+          paginate={paginate}
+          page="marketing-archive"
+          currentPage={currentPage}
+        />
+        <ScrollUpBtn />
         {/*End of Initiatives*/}
       </div>
     </>
