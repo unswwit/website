@@ -20,7 +20,7 @@ const EventMenu = (events) => {
     };
 
     return (
-        <div className={styles.gridContainer}>
+       // <div className={styles.menu-item}>
         <ScrollMenu
             data={events}
             arrowLeft={ArrowLeft}
@@ -28,7 +28,7 @@ const EventMenu = (events) => {
             selected={selected}
             onSelect={this.onSelect}
         />
-        </div>
+        //</div>
     );
 }
 

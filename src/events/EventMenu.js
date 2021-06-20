@@ -1,70 +1,105 @@
-import React, { useState } from "react";
-import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
-import KeyboardArrowLeftIcon from '@material-ui/icons/KeyboardArrowRight';
+import React, { useEffect, useState } from 'react';
 import ScrollMenu from 'react-horizontal-scrolling-menu';
+import menuStyles from './EventMenu.css';
+import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
+import KeyboardArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeft';
+import UpcomingEvent from './UpcomingEvent';
+import Tabletop from "tabletop";
 import styles from "./events.module.css";
-import UpcomingEvent from "./UpcomingEvent.js";
 
-const EventMenu = (events) => {
+// One item component
+// selected prop will be passed
+const MenuItem = ({ name, index }) => {
+  return (
+    <div className={styles.MenuItem}>
+    <UpcomingEvent
+        upcomingEvent={name}
+        index={index}
+    >
+    </UpcomingEvent>
+    </div>
+  );
+};
 
-    
-    // All items component
-    const MenuItem = ({text, selected}) => {
-        return <div
-          className={`menu-item ${selected ? 'active' : ''}`}
-          >{text}</div>;
-      };
-      
-      // All items component
-      // Important! add unique key
-      export const Menu = (events, selected) =>
-        list.map(el => {
-          const {name} = el;
-      
-          return <MenuItem text={name} key={name} selected={selected} />;
+// All items component
+// Important! add unique key
+export const Menu = (events) => events.map(el => {
+  const { name, index } = el;
+  console.log({index})
+  return (
+    <MenuItem
+      name={name}
+      index={index}
+    />
+  );
+});
+
+const buttonStyles = {
+    backgroundColor: '#e85f5c',
+    color: "#ffffff",
+    width: "44px",
+	height: "44px",
+    borderRadius: "100%",
+    boxShadow: "1px 1px 5px 0 rgba(0, 0, 0, 0.3)",
+}
+
+const Left = ({ className }) => {
+  return (
+    <KeyboardArrowLeftIcon
+      className={className}
+      style={buttonStyles}
+    ></KeyboardArrowLeftIcon>
+  );
+};
+
+const Right = ({ className }) => {
+    return (
+        <KeyboardArrowRightIcon
+        className={className}
+        style={buttonStyles}
+        ></KeyboardArrowRightIcon>
+    );
+  };
+
+const ArrowLeft = Left({ className: 'arrow-prev' });
+const ArrowRight = Right({ className: 'arow-next' });
+
+const EventMenu = () => {
+
+    const [upcomingEvents, setUpcomingEvents] = useState([]);
+    //const [events, setEvents] = useState([]);
+
+    useEffect(() => {
+        Tabletop.init({
+            key: process.env.REACT_APP_GOOGLE_SHEETS,
+            callback: (googleData) => {
+                setUpcomingEvents(googleData["upcoming-events-test"]["elements"]);
+            },
+            simpleSheet: false,
         });
-
-    const Menu = () =>   
-        events.map((upcomingEvent, index) => {
-        return(
-            <UpcomingEvent
-                upcomingEvent={upcomingEvent}
-                index={index}
-            />)  
     });
-
-    const ArrowLeft = () => {
-        return (
-            <KeyboardArrowLeftIcon className={styles.arrowButton}> </KeyboardArrowLeftIcon>
-        );
-    };
-
-    const ArrowRight = () => {
-        return (
-            <KeyboardArrowRightIcon className={styles.arrowButton}> </KeyboardArrowRightIcon>
-        );
-    };
-
-    /*const [state, setState] = useState({ selected: 0 });
-
-    onSelect = key => {
-        setState({ selected: key });
-    }
     
-    const { selected } = state;*/
+    const events = []
+    upcomingEvents.map((upcomingEvent, index) => {
+        events.push({
+            name: upcomingEvent,
+            index: index,
+        })
+    })
 
-        // Create menu from items
-    const menu = Menu();
+    // Create menu from items
+    const menu = Menu(events);
     
-        return (
-          <div className={styles.gridContainer}>
-            <ScrollMenu
-              data={menu}
-              arrowLeft={ArrowLeft}
-              arrowRight={ArrowRight}
-            />
-          </div>
-        );
+    return (
+        <div className={menuStyles}>
+        <ScrollMenu
+            data={menu}
+            arrowLeft={ArrowLeft}
+            arrowRight={ArrowRight}
+        />
+        </div>
+    );
+
 }
 
 export default EventMenu;
