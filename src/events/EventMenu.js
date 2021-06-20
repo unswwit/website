@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import ScrollMenu from 'react-horizontal-scrolling-menu';
-import menuStyles from './EventMenu.css';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeft';
 import UpcomingEvent from './UpcomingEvent';
@@ -9,28 +8,28 @@ import styles from "./events.module.css";
 
 // One item component
 // selected prop will be passed
-const MenuItem = ({ name, index }) => {
+const MenuItem = ({ event, index }) => {
+  console.log(index)
   return (
-    <div className={styles.MenuItem}>
     <UpcomingEvent
-        upcomingEvent={name}
-        index={index}
+        upcomingEvent={event}
+        indes={index}
     >
     </UpcomingEvent>
-    </div>
   );
 };
 
 // All items component
 // Important! add unique key
 export const Menu = (events) => events.map(el => {
-  const { name, index } = el;
-  console.log({index})
   return (
+    <div className={styles.gridContainer}>
     <MenuItem
-      name={name}
-      index={index}
-    />
+      event={el.event}
+      index={el.index}
+      key={el.index}
+    ></MenuItem>
+    </div>
   );
 });
 
@@ -82,7 +81,7 @@ const EventMenu = () => {
     const events = []
     upcomingEvents.map((upcomingEvent, index) => {
         events.push({
-            name: upcomingEvent,
+            event: upcomingEvent,
             index: index,
         })
     })
@@ -91,13 +90,11 @@ const EventMenu = () => {
     const menu = Menu(events);
     
     return (
-        <div className={menuStyles}>
         <ScrollMenu
             data={menu}
             arrowLeft={ArrowLeft}
             arrowRight={ArrowRight}
         />
-        </div>
     );
 
 }

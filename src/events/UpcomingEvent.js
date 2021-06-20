@@ -11,7 +11,7 @@ const UpcomingEvent = (props) => {
 
   return (
     <a href={upcomingEvent.facebookLink} target="_blank" rel="noopener noreferrer">
-      <div key={index} className={styles.menuItem}>
+      <div key={index} className={styles.upcoming}>
         <img
           className={styles.eventImages}
           src={process.env.PUBLIC_URL + `/event-covers/2021/${upcomingEvent.img}`}
