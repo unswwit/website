@@ -70,9 +70,9 @@
 /*Author circle crop*/
 .authorPic {
   border-radius: 50%;
-  height: 80px;
+  max-height: 70px;
   overflow: hidden;
-  width: 80px;
+  max-width: 70px;
   margin-right: 1vw;
   margin-left: 0px;
 }
@@ -153,10 +153,10 @@ table {
   align-items: center;
 }
 
-.authorSection { 
-  padding-right: 0.5vw;
+.authorSection {
   padding-top: 0.2vw;
-  padding-bottom: 0.2vw;  
+  padding-bottom: 0.2vw;
+  padding-right: 0.5vw;
   display: flex;
   align-items: center;
 }

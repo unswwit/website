@@ -57,7 +57,7 @@ const MarketingContent = () => {
   };
 
   // scroll to top on load
-  useEffect(() => window.scrollTo(0,0), [])
+  useEffect(() => window.scrollTo(0, 0), []);
 
   // load archives
   useEffect(() => {
@@ -67,7 +67,9 @@ const MarketingContent = () => {
       callback: (googleData) => {
         setLoading(false);
 
-        const tempContent = googleData["marketing-archives"]["elements"].reverse().filter((item) => item.year === year);
+        const tempContent = googleData["marketing-archives"]["elements"]
+          .reverse()
+          .filter((item) => item.year === year);
         setContent(tempContent);
         setCurrentPosts(tempContent.slice(0, postsPerPage));
         setSelectedPosts(tempContent);
@@ -79,17 +81,25 @@ const MarketingContent = () => {
   // filter content by selected category
   const filterContent = (selectedCategory) => {
     const filteredContent = content.filter(
-      (picture) => selectedCategory === "All" || picture.category.split(",").includes(selectedCategory));
+      (picture) =>
+        selectedCategory === "All" ||
+        picture.category.split(",").includes(selectedCategory)
+    );
     setSelectedPosts(filteredContent);
     setCurrentPosts(filteredContent.slice(0, postsPerPage));
     setCurrentPage(1);
-  }
+  };
 
   // called when pagination item clicked to slice the correct amount of posts for viewing
   const paginate = (pageNumber) => {
-    setCurrentPosts(selectedPosts.slice((pageNumber - 1) * postsPerPage, pageNumber * postsPerPage));
+    setCurrentPosts(
+      selectedPosts.slice(
+        (pageNumber - 1) * postsPerPage,
+        pageNumber * postsPerPage
+      )
+    );
     setCurrentPage(pageNumber);
-  }
+  };
 
   return (
     <>
@@ -172,8 +182,8 @@ const MarketingContent = () => {
             </ol>
           )}
         </div>
-        <PaginationComp 
-          totalPages={Math.ceil(selectedPosts.length/postsPerPage)} 
+        <PaginationComp
+          totalPages={Math.ceil(selectedPosts.length / postsPerPage)}
           paginate={paginate}
           page={currentPage}
         />

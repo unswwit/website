@@ -57,8 +57,8 @@ const Blog = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[])
+    window.scrollTo(0, 0);
+  }, []);
 
   // filter blogs by a selected category
   const filterBlogs = (category, searchTerm) => {
@@ -81,9 +81,9 @@ const Blog = () => {
     setSelectedPosts(searchResults);
     setCurrentPosts(searchResults.slice(0, postsPerPage));
     setCurrentPage(1);
-  }
+  };
 
-  useEffect(() => {    
+  useEffect(() => {
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: (googleData) => {
@@ -113,14 +113,18 @@ const Blog = () => {
       },
       simpleSheet: false,
     });
-    
   }, []);
 
   // called when pagination item clicked to slice the correct amount of posts for viewing
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
-    setCurrentPosts(selectedPosts.slice((pageNumber - 1) * postsPerPage, pageNumber * postsPerPage));
-  }
+    setCurrentPosts(
+      selectedPosts.slice(
+        (pageNumber - 1) * postsPerPage,
+        pageNumber * postsPerPage
+      )
+    );
+  };
 
   return (
     <>
@@ -202,12 +206,12 @@ const Blog = () => {
               />
             })}   
         </div>
-        <PaginationComp 
-          totalPages={Math.ceil(selectedPosts.length/postsPerPage)} 
+        <PaginationComp
+          totalPages={Math.ceil(selectedPosts.length / postsPerPage)}
           paginate={paginate}
           page={currentPage}
         />
-        <ScrollUpBtn/>
+        <ScrollUpBtn />
         {/*End of blog posts*/}
       </div>
     </>
