@@ -71,7 +71,6 @@ const Blog = () => {
   const searchBlogs = (filteredBlogs, searchTerm) => {
     const searchResults = filteredBlogs.filter((blog) => {
       const authors = Object.keys(blog.authors).join(" ").split(/[-]/).join(" ");
-      console.log(blog.authors)
       if (searchTerm === "" ||
           blog.heading.toLowerCase().includes(searchTerm.toLowerCase()) ||
           blog.subheading.toLowerCase().includes(searchTerm.toLowerCase()) ||
