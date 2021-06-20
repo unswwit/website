@@ -7,7 +7,6 @@ import TimelineConnector from "@material-ui/lab/TimelineConnector";
 import TimelineContent from "@material-ui/lab/TimelineContent";
 import TimelineDot from "@material-ui/lab/TimelineDot";
 import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent";
-import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
 
 // Styling material ui components
@@ -19,123 +18,8 @@ const useStyles = makeStyles((theme) => ({
   timelineDot: {
     backgroundColor: "#FEB14B",
   },
-  paperOne: {
-    // 2016 card
-    padding: "10px 10px",
-    backgroundColor: "#E85F5C",
-    width: "150px",
-    marginTop: "23px",
-    // our story ipad pro version
-    "@media (max-width:1024px)": {
-      marginTop: "20px",
-    },
-    // our story ipad version
-    "@media (max-width:768px)": {
-      marginTop: "55px",
-    },
-    // our story surface duo version
-    "@media (max-width:540px)": {
-      marginTop: "110px",
-    },
-    // our story iphone 6+ version
-    "@media (max-width:414px)": {
-      display: "none",
-    },
-  },
-  paperTwo: {
-    // 2017 card
-    padding: "10px 10px",
-    backgroundColor: "#E85F5C",
-    width: "150px",
-    marginTop: "23px",
-    // our story ipad pro version
-    "@media (max-width:1024px)": {
-      marginTop: "30px",
-    },
-    // our story ipad version
-    "@media (max-width:768px)": {
-      marginTop: "65px",
-    },
-    // our story surface duo version
-    "@media (max-width:540px)": {
-      marginTop: "143px",
-    },
-    // our story iphone 6+ version
-    "@media (max-width:414px)": {
-      display: "none",
-    },
-  },
-  paperThree: {
-    // 2018 card
-    padding: "10px 10px",
-    backgroundColor: "#E85F5C",
-    width: "150px",
-    marginTop: "45px",
-    // our story ipad pro version
-    "@media (max-width:1024px)": {
-      marginTop: "40px",
-    },
-    // our story ipad version
-    "@media (max-width:768px)": {
-      marginTop: "87px",
-    },
-    // our story surface duo version
-    "@media (max-width:540px)": {
-      marginTop: "200px",
-    },
-    // our story iphone 6+ version
-    "@media (max-width:414px)": {
-      display: "none",
-    },
-  },
-  paperFour: {
-    // 2019 card
-    padding: "10px 10px",
-    backgroundColor: "#E85F5C",
-    width: "150px",
-    marginTop: "23px",
-    // our story ipad pro version
-    "@media (max-width:1024px)": {
-      marginTop: "18px",
-    },
-    // our story ipad version
-    "@media (max-width:768px)": {
-      marginTop: "45px",
-    },
-    // our story surface duo version
-    "@media (max-width:540px)": {
-      marginTop: "100px",
-    },
-    // our story iphone 6+ version
-    "@media (max-width:414px)": {
-      display: "none",
-    },
-  },
-  paperFive: {
-    // 2020 card
-    padding: "10px 10px",
-    backgroundColor: "#E85F5C",
-    width: "150px",
-    marginTop: "66px",
-    // our story ipad pro version
-    "@media (max-width:1024px)": {
-      marginTop: "70px",
-    },
-    // our story ipad version
-    "@media (max-width:768px)": {
-      marginTop: "145px",
-    },
-    // our story surface duo version
-    "@media (max-width:540px)": {
-      marginTop: "330px",
-    },
-    // our story iphone 6+ version
-    "@media (max-width:414px)": {
-      display: "none",
-    }
-  },
   year: {
-    flex: 1,
+    flex: 3,
     "@media (max-width:500px)": {
       width: "35%",
     },
@@ -144,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto 0",
   },
   history: {
-    flex: 6,
+    flex: 200,
     "@media (max-width:500px)": {
       width: "40%",
     },
@@ -158,9 +42,6 @@ export default function OppositeContentTimeline() {
       <Timeline className={classes.root} align="alternate">
         <TimelineItem>
           <TimelineOppositeContent className={classes.year}>
-            <Paper elevation={2} className={classes.paperOne}>
-              <p className={styles.yearContent}>2016</p>
-            </Paper>
           </TimelineOppositeContent>
           <TimelineSeparator className={styles.timelineSeparator}>
             <TimelineConnector />
@@ -170,6 +51,8 @@ export default function OppositeContentTimeline() {
           <TimelineContent className={classes.history}>
             {/* 2016 timeline content */}
             <p className={styles.timelineContent}>
+            2016
+            <p></p>
               <ul>
                 <li>
                   WIT was founded becoming the 1st UNSW society catering
@@ -185,6 +68,8 @@ export default function OppositeContentTimeline() {
         <TimelineItem>
           <TimelineOppositeContent className={classes.history}>
             <p className={styles.timelineContent}>
+            2017
+            <p></p>
             {/* 2017 timeline content */}
               <ul>
                 <li>
@@ -202,16 +87,10 @@ export default function OppositeContentTimeline() {
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent className={classes.year}>
-            <Paper elevation={2} className={classes.paperTwo}>
-              <p className={styles.yearContent}>2017</p>
-            </Paper>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
           <TimelineOppositeContent className={classes.year}>
-            <Paper elevation={2} className={classes.paperThree}>
-              <p className={styles.yearContent}>2018</p>
-            </Paper>
           </TimelineOppositeContent>
           <TimelineSeparator className={styles.timelineSeparator}>
             <TimelineConnector />
@@ -221,6 +100,8 @@ export default function OppositeContentTimeline() {
           <TimelineContent className={classes.history}>
             <p className={styles.timelineContent}>
             {/* 2018 timeline content */}
+            2018
+            <p></p>
               <ul>
                 <li>
                   Numerous, successful events were held including our
@@ -238,6 +119,8 @@ export default function OppositeContentTimeline() {
           <TimelineOppositeContent className={classes.history}>
             <p className={styles.timelineContent}>
             {/* 2019 timeline content */}
+            2019
+            <p></p>
               <ul>
                 <li>Our student base grew to 1400+ members.</li>
                 <li>
@@ -253,16 +136,10 @@ export default function OppositeContentTimeline() {
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent className={classes.year}>
-            <Paper elevation={2} className={classes.paperFour}>
-              <p className={styles.yearContent}>2019</p>
-            </Paper>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
           <TimelineOppositeContent className={classes.year}>
-            <Paper elevation={2} className={classes.paperFive}>
-              <p className={styles.yearContent}>2020</p>
-            </Paper>
           </TimelineOppositeContent>
           <TimelineSeparator className={styles.timelineSeparator}>
             <TimelineConnector />
@@ -272,6 +149,8 @@ export default function OppositeContentTimeline() {
           <TimelineContent className={classes.history}>
             <p className={styles.timelineContent}>
             {/* 2020 timeline content */}
+            2020
+            <p></p>
               <ul>
                 <li>
                   Hosted 47 events, reaching 79.4k people and achieving a 50%
