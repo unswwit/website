@@ -17,6 +17,7 @@ const EventRecapPage = (props) => {
   const [loading, setLoading] = useState(true);
   const [hasResources, setHasResources] = useState(false);
   const [hasPhotos, setHasPhotos] = useState(false);
+  const [imageGalleryFilenames, setImageGalleryFilenames] = useState([]);
   const [hasEmbeddedVideo, setHasEmbeddedVideo] = useState(false);
 
   useEffect(() => {
@@ -46,12 +47,19 @@ const EventRecapPage = (props) => {
         // hide the loading sign
         setLoading(false);
 
-        if (currEvent.resourcesFolderID) {
-          setHasResources(true);
-        }
-
         if (currEvent.imagePaths) {
           setHasPhotos(true);
+          var tempArray = [];
+          currEvent.imagePaths.split(",").forEach((filename) => {
+            tempArray.push({
+              source: `/event-recap/${currEvent.year}/T${currEvent.term}/${currEvent.eventNumber}/${filename}`,
+            });
+          });
+          setImageGalleryFilenames(tempArray);
+        }
+
+        if (currEvent.resourcesFolderID) {
+          setHasResources(true);
         }
 
         if (currEvent.youtubeVideoID) {
@@ -120,13 +128,14 @@ const EventRecapPage = (props) => {
           {/* Event Description */}
           <p className={styles.description}>{event.description}</p>
 
-          {/* Cover Image */}
+          {/* Image Gallery / Cover Image Section */}
+          {/* Display Image gallery if images exist, otherwise display cover image */}
+
           <img
             src={
               process.env.PUBLIC_URL +
               `/event-covers/${event.year}/${event.img}`
             }
-            
             style={!hasPhotos ? {} : { display: "none" }}
             alt="header"
             className={styles.eventCoverImage}
@@ -135,19 +144,7 @@ const EventRecapPage = (props) => {
             <AwesomeSlider
               cssModule={styles}
               style={hasPhotos ? {} : { display: "none" }}
-              media={[
-                {
-                  source: `/event-recap/2021/WIT-x-MCIC-accessory-atelier/148375941_433119531235874_2109725046962908161_n.jpg`,
-                },
-                {
-                  source:
-                    "/event-recap/2021/WIT-x-MCIC-accessory-atelier/148879770_218695266664323_6391444865867957757_n.jpg",
-                },
-                {
-                  source:
-                    "/event-recap/2021/WIT-x-MCIC-accessory-atelier/148455294_239533420984121_6282169266328595510_n.jpg",
-                },
-              ]}
+              media={imageGalleryFilenames}
             />
           </div>
 
