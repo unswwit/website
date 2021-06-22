@@ -92,7 +92,7 @@ class blogPost60 extends Component {
               <br />
               A simple visual explanation of how cryptocurrency works: 
               <br />
-              <a href="https://www.dailymotion.com/video/x6er6zc" className={styles.link}>https://www.dailymotion.com/video/x6er6zc</a>
+              <a href="https://www.dailymotion.com/video/x6er6zc" className={styles.link} target="_blank" rel="noopener noreferrer">https://www.dailymotion.com/video/x6er6zc</a>
             </p>
             <br />
           </div>
