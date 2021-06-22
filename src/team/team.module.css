@@ -187,7 +187,7 @@ h2.teamHeading {
 /*Subcommittee names*/
 .subcomProfileName {
   font-family: "Montserrat", sans-serif;
-  color: #feb14b;
+  color: var(--black);
   font-size: 1.3vw;
   letter-spacing: 0.1vw;
   position: relative;

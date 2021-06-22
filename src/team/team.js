@@ -200,6 +200,8 @@ function OurTeam() {
                             />
                           );
                         })}
+                      <br />
+                      <br />
                     </div>
                   );
                 })}
