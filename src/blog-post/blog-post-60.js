@@ -102,7 +102,7 @@ class blogPost60 extends Component {
           authors={{
             "erika-shi": [
               "/potraits/blog-authors/natalie-leroy.png",
-              styles.authorProfile,
+              styles.anonProfile,
               "Natalie Leroy",
               "Education Team",
             ],
