@@ -22,7 +22,7 @@ class blogPost60 extends Component {
         <div className={styles.blogContent}>
           <div>
             <h2 className={styles.blogTitle}>
-              Why is Coding Important? 
+              Is Bitcoin overrated?
             </h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>June 22, 2021</span>
