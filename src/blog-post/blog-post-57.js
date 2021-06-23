@@ -139,9 +139,9 @@ class blogPost57 extends Component {
           authors={{
             "therese-nguyen": [
               "/potraits/blog-authors/therese-nguyen.png",
-              styles.authorProfile,
+              styles.anonProfile,
               "Therese Nguyen",
-              "Education Team"
+              "Education Team",
             ],
           }}
         />

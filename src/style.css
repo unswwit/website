@@ -196,7 +196,8 @@ p {
   display: none;
 }
 
-.nav-item a, .dropdown-title {
+.nav-item a,
+.dropdown-title {
   color: white;
   padding: 18px 15px;
   text-decoration: none;
@@ -269,14 +270,16 @@ p {
 /*Making the navigation change colour on scroll*/
 .activeNav {
   background-color: #fff7ef;
-  transition: background-color .2s ease-in;
+  transition: background-color 0.2s ease-in;
 }
 
 .dropdown-toggle:after {
   color: white;
 }
 
-.active-nav-item a, .active-nav-item span, .active-nav-item:after {
+.active-nav-item a,
+.active-nav-item span,
+.active-nav-item:after {
   color: #313638;
 }
 

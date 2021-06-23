@@ -1,7 +1,13 @@
 import React from "react";
 import styles from "./Pagination.module.css";
 
-const Pagination = ({ postsPerPage, totalPosts, paginate, page, currentPage }) => {
+const Pagination = ({
+  postsPerPage,
+  totalPosts,
+  paginate,
+  page,
+  currentPage,
+}) => {
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
@@ -20,7 +26,9 @@ const Pagination = ({ postsPerPage, totalPosts, paginate, page, currentPage }) =
             <a
               onClick={() => paginate(number)}
               href={href}
-              className={currentPage === number ? [ styles.active ] : styles.pagination}
+              className={
+                currentPage === number ? [styles.active] : styles.pagination
+              }
             >
               {number}
             </a>

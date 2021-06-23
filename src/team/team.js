@@ -73,7 +73,7 @@ function OurTeam() {
   };
 
   useEffect(() => {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
     setLoading(true);
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
@@ -200,6 +200,8 @@ function OurTeam() {
                             />
                           );
                         })}
+                      <br />
+                      <br />
                     </div>
                   );
                 })}
@@ -211,7 +213,7 @@ function OurTeam() {
       <footer>
         <div className={styles.footerArea} style={{ marginTop: "8vw" }} />
       </footer>
-      <ScrollUpBtn/>
+      <ScrollUpBtn />
     </div>
   );
 }

@@ -432,10 +432,11 @@ class App extends Component {
             <Route exact path="/about/our-story" component={OurStory} />
             <Route path="/about/our-team" component={OurTeam} />
             <Route exact path="/resources/blog" component={Blog} />
-            <Route exact path="/resources">
-              <Redirect to="/resources/blog" />
-            </Route>
-            <Route path="/resources/marketing-archive" component={MarketingContent} />
+            <Route exact path="/resources" component={Blog} />
+            <Route
+              path="/resources/marketing-archive"
+              component={MarketingContent}
+            />
             <Route path="/join-us" component={JoinUs} />
             <Route path="/about/sponsors" component={Sponsors} />
             <Route path="/opportunities" component={Opportunities} />
@@ -443,7 +444,7 @@ class App extends Component {
             <Route exact path="/resources/podcast" component={Podcast} />
             <Route path="/resources/podcast/:episode" component={EpisodePage} />
             <Route path="/resources/publications" component={Publications} />
-            {Array.from({ length: 57 }, (_, index) => index + 1).map(
+            {Array.from({ length: 60 }, (_, index) => index + 1).map(
               (blogNo) => {
                 return (
                   <Route
