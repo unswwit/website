@@ -350,11 +350,11 @@ class App extends Component {
                     >
                       <span>
                         {this.state.navBar ? (
-                          <NavLink to="/resources" {...this.highlightNav}>
+                          <NavLink to="/resources/blog" {...this.highlightNav}>
                             RESOURCES
                           </NavLink>
                         ) : (
-                          <NavLink to="/resources" {...this.highlightNoNav}>
+                          <NavLink to="/resources/blog" {...this.highlightNoNav}>
                             RESOURCES
                           </NavLink>
                         )}
@@ -442,7 +442,7 @@ class App extends Component {
             <Route path="/opportunities" component={Opportunities} />
             <Route path="/about/contact-us" component={ContactUs} />
             <Route exact path="/resources/podcast" component={Podcast} />
-            <Route path="/resources/podcast/:episode" component={EpisodePage} />
+            <Route path="/resources/podcast/:episode(\d+)" component={EpisodePage} />
             <Route path="/resources/publications" component={Publications} />
             {Array.from({ length: 60 }, (_, index) => index + 1).map(
               (blogNo) => {
@@ -469,6 +469,27 @@ class App extends Component {
             )}
             <Route exact path="/blog">
               <Redirect to="/resources/blog" />
+            </Route>
+            <Route exact path="/podcast">
+              <Redirect to="/resources/podcast" />
+            </Route>
+            <Route exact path="/publications">
+              <Redirect to="/resources/publications" />
+            </Route>
+            <Route exact path="/marketing-archive">
+              <Redirect to="/resources/marketing-archive" />
+            </Route>
+            <Route exact path="/sponsors">
+              <Redirect to="/about/sponsors" />
+            </Route>
+            <Route exact path="/our-team">
+              <Redirect to="/about/our-team" />
+            </Route>
+            <Route exact path="/contact-us">
+              <Redirect to="/about/contact-us" />
+            </Route>
+            <Route exact path="/our-story">
+              <Redirect to="/about/our-story" />
             </Route>
             {/*Error page*/}
             <Route path="/404" component={NotFound} />
