@@ -33,10 +33,8 @@ export default function OppositeContentTimeline() {
   const classes = useStyles();
   return (
     <>
-      <Timeline className={classes.root} align="alternate">
+      <Timeline className={classes.root}>
         <TimelineItem>
-          <TimelineOppositeContent>
-          </TimelineOppositeContent>
           <TimelineSeparator className={styles.timelineSeparator}>
             <TimelineConnector />
             <TimelineDot className={classes.timelineDot} />
@@ -59,7 +57,12 @@ export default function OppositeContentTimeline() {
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent className={classes.history}>
+          <TimelineSeparator className={styles.timelineSeparator}>
+            <TimelineConnector />
+            <TimelineDot className={classes.timelineDot} />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent className={classes.history}>
             <p className={styles.timelineContent}>
               <p className={styles.year}>2017</p>
               {/* 2017 timeline content */}
@@ -72,18 +75,9 @@ export default function OppositeContentTimeline() {
                 <li>We partnered up with four sponsors in its first year.</li>
               </ul>
             </p>
-          </TimelineOppositeContent>
-          <TimelineSeparator className={styles.timelineSeparator}>
-            <TimelineConnector />
-            <TimelineDot className={classes.timelineDot} />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent>
-          </TimelineOppositeContent>
           <TimelineSeparator className={styles.timelineSeparator}>
             <TimelineConnector />
             <TimelineDot className={classes.timelineDot} />
@@ -107,7 +101,12 @@ export default function OppositeContentTimeline() {
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent className={classes.history}>
+          <TimelineSeparator className={styles.timelineSeparator}>
+            <TimelineConnector />
+            <TimelineDot className={classes.timelineDot} />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent className={classes.history}>
             <p className={styles.timelineContent}>
               {/* 2019 timeline content */}
               <p className={styles.year}>2019</p>
@@ -119,18 +118,9 @@ export default function OppositeContentTimeline() {
                 </li>
               </ul>
             </p>
-          </TimelineOppositeContent>
-          <TimelineSeparator className={styles.timelineSeparator}>
-            <TimelineConnector />
-            <TimelineDot className={classes.timelineDot} />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent>
-          </TimelineOppositeContent>
           <TimelineSeparator className={styles.timelineSeparator}>
             <TimelineConnector />
             <TimelineDot className={classes.timelineDot} />
