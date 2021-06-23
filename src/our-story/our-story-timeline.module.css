@@ -9,6 +9,10 @@
   margin: auto 0;
 }
 
+.year {
+  font-weight: 500;
+}
+
 .yearContent {
   line-height: 22px;
   font-family: "Montserrat", sans-serif;

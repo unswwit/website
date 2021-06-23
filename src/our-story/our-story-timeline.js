@@ -18,12 +18,6 @@ const useStyles = makeStyles((theme) => ({
   timelineDot: {
     backgroundColor: "#FEB14B",
   },
-  year: {
-    flex: 3,
-    "@media (max-width:500px)": {
-      width: "35%",
-    },
-  },
   verticallyCenterContent: {
     margin: "auto 0",
   },
@@ -41,7 +35,7 @@ export default function OppositeContentTimeline() {
     <>
       <Timeline className={classes.root} align="alternate">
         <TimelineItem>
-          <TimelineOppositeContent className={classes.year}>
+          <TimelineOppositeContent>
           </TimelineOppositeContent>
           <TimelineSeparator className={styles.timelineSeparator}>
             <TimelineConnector />
@@ -51,8 +45,7 @@ export default function OppositeContentTimeline() {
           <TimelineContent className={classes.history}>
             {/* 2016 timeline content */}
             <p className={styles.timelineContent}>
-            2016
-            <p></p>
+              <p className={styles.year}>2016</p>
               <ul>
                 <li>
                   WIT was founded becoming the 1st UNSW society catering
@@ -68,9 +61,8 @@ export default function OppositeContentTimeline() {
         <TimelineItem>
           <TimelineOppositeContent className={classes.history}>
             <p className={styles.timelineContent}>
-            2017
-            <p></p>
-            {/* 2017 timeline content */}
+              <p className={styles.year}>2017</p>
+              {/* 2017 timeline content */}
               <ul>
                 <li>
                   WIT’s first stall was held at UNSW's Orientation Week, where
@@ -86,11 +78,11 @@ export default function OppositeContentTimeline() {
             <TimelineDot className={classes.timelineDot} />
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent className={classes.year}>
+          <TimelineContent>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent className={classes.year}>
+          <TimelineOppositeContent>
           </TimelineOppositeContent>
           <TimelineSeparator className={styles.timelineSeparator}>
             <TimelineConnector />
@@ -99,9 +91,8 @@ export default function OppositeContentTimeline() {
           </TimelineSeparator>
           <TimelineContent className={classes.history}>
             <p className={styles.timelineContent}>
-            {/* 2018 timeline content */}
-            2018
-            <p></p>
+              {/* 2018 timeline content */}
+              <p className={styles.year}>2018</p>
               <ul>
                 <li>
                   Numerous, successful events were held including our
@@ -118,9 +109,8 @@ export default function OppositeContentTimeline() {
         <TimelineItem>
           <TimelineOppositeContent className={classes.history}>
             <p className={styles.timelineContent}>
-            {/* 2019 timeline content */}
-            2019
-            <p></p>
+              {/* 2019 timeline content */}
+              <p className={styles.year}>2019</p>
               <ul>
                 <li>Our student base grew to 1400+ members.</li>
                 <li>
@@ -135,11 +125,11 @@ export default function OppositeContentTimeline() {
             <TimelineDot className={classes.timelineDot} />
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent className={classes.year}>
+          <TimelineContent>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent className={classes.year}>
+          <TimelineOppositeContent>
           </TimelineOppositeContent>
           <TimelineSeparator className={styles.timelineSeparator}>
             <TimelineConnector />
@@ -148,9 +138,8 @@ export default function OppositeContentTimeline() {
           </TimelineSeparator>
           <TimelineContent className={classes.history}>
             <p className={styles.timelineContent}>
-            {/* 2020 timeline content */}
-            2020
-            <p></p>
+              {/* 2020 timeline content */}
+              <p className={styles.year}>2020</p>
               <ul>
                 <li>
                   Hosted 47 events, reaching 79.4k people and achieving a 50%
