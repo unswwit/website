@@ -111,11 +111,11 @@ h2.oppSubheading {
 @media only screen and (max-width: 1000px) {
   .ourMissionSection {
     flex-direction: column;
-    width: 84%;
+    width: 85%;
   }
   .ourMascotSection {
     flex-direction: column;
-    width: 84%;
+    width: 85%;
   }
 
   .ourMissionImg {
