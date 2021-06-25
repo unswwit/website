@@ -353,11 +353,11 @@ class App extends Component {
                       <span>
                         {this.state.navBar ? (
                           <NavLink to="/media/blog" {...this.highlightNav}>
-                            MEDIA
+                            &nbsp; &nbsp; &nbsp; MEDIA &nbsp; &nbsp; 
                           </NavLink>
                         ) : (
                           <NavLink to="/media/blog" {...this.highlightNoNav}>
-                            MEDIA
+                            &nbsp; &nbsp; &nbsp; MEDIA &nbsp; &nbsp;
                           </NavLink>
                         )}
                       </span>
@@ -392,7 +392,7 @@ class App extends Component {
                       <div className="dropdown-item">
                         <NavLink to="/media/marketing-archive" {...this.highlightDD}>
                           <ImageOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
-                          MARKETING
+                          MARKETING ARCHIVES
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
