@@ -209,11 +209,38 @@ p {
   font-size: 14px;
   background-color: #fff7ef;
   margin-top: 15px;
-  border-radius: 0px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.transparent {
+  margin-top: 25px;
+  border-radius: 10px;
+}
+
+.transparent::after {
+  content: ' ';
+  border-style: solid;
+  border-width: 0 1.8em 2em 1.8em;
+  border-color: transparent;
+  position: absolute;
+  right: 60px;
+  top: -1em;
+  border-bottom-color: #fff7ef;
+}
+
+.resDD::after {
+  content: ' ';
+  border-style: solid;
+  border-width: 0 1.8em 2em 1.8em;
+  border-color: transparent;
+  position: absolute;
+  right: 92px;
+  top: -1em;
+  border-bottom-color: #fff7ef;
 }
 
 .dropdown-item {
-  padding: 5px 0px;
+  padding: 5px 5px;
 }
 
 .dropdown-item a {
@@ -264,7 +291,7 @@ p {
   display: none;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 950px) {
   .nav-item {
     display: none;
   }

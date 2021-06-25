@@ -182,7 +182,7 @@ class blogPost58 extends Component {
           authors={{
             "georgie-mansfield": [
               "/potraits/blog-authors/erika-shi.png",
-              styles.authorProfile,
+              styles.anonProfile,
               "Erika Shi",
               "Education Team",
             ],
