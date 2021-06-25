@@ -13,7 +13,7 @@ const Videos = () => {
   return (
     <div>
       {/*Cover Photo*/}
-      <PageHeader imgUrl="/headers/our-story-header.jpg" title="Videos" />
+      <PageHeader imgUrl="/headers/videos-header.jpg" title="Videos" />
       {/*Start of Our Story*/}
       {/*Start of Our Mission*/}
       <h2 className={styles.oppSubheading}>Welcome to our channel</h2>
