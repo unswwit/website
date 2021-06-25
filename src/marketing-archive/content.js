@@ -49,7 +49,7 @@ const MarketingContent = () => {
 
   // Marketing Archive message
   const marketingArchiveMessage = () => {
-    console.log();
+    console.log("working");
     return <>
       Keep a lookout for more marketing posts!
     </>
