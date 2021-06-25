@@ -20,7 +20,6 @@ const MarketingContent = () => {
     "Monday Motivation": "monday",
     "WIT Crush Wednesday": "wcw",
     "Special Occasions": "special",
-    Test: "test",
   };
 
   // position of the marks on the timeline (i.e. 100 indicates that it's on the right end)
@@ -46,14 +45,6 @@ const MarketingContent = () => {
   const handleYear = (newYear) => {
     setYear(newYear);
   };
-
-  // Marketing Archive message
-  const marketingArchiveMessage = () => {
-    console.log();
-    return <>
-      Keep a lookout for more marketing posts!
-    </>
-  }
 
   // scroll to top on load
   useEffect(() => window.scrollTo(0,0), [])
@@ -110,10 +101,6 @@ const MarketingContent = () => {
                     onClick={() => {
                       setLoading(true);
                       setSelectedCategory(categories[category]);
-                      let currentPosts = googleData["marketing-archives"]["elements"];
-                      if (currentPosts.length === 0) {
-                        marketingArchiveMessage();
-                      }
                     }}
                   />
                 );
