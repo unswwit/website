@@ -13,7 +13,6 @@ const MarketingContent = () => {
   const [loading, setLoading] = useState(true);
   const [year, setYear] = useState("2021");
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [state, setState] = useState("full");
   const categories = {
     All: "All",
     Mascot: "mascot",
@@ -23,14 +22,6 @@ const MarketingContent = () => {
     "Special Occasions": "special",
     Test: "test",
   };
-
-  const setStateEmpty = () => {
-    setState("empty")
-  }
-
-  const setStateFull = () => {
-    setState("full")
-  }
 
   // position of the marks on the timeline (i.e. 100 indicates that it's on the right end)
   const marks = [
@@ -56,6 +47,14 @@ const MarketingContent = () => {
     setYear(newYear);
   };
 
+  // Marketing Archive message
+  const marketingArchiveMessage = () => {
+    console.log();
+    return <>
+      Keep a lookout for more marketing posts!
+    </>
+  }
+
   // scroll to top on load
   useEffect(() => window.scrollTo(0,0), [])
 
@@ -71,7 +70,6 @@ const MarketingContent = () => {
             .reverse()
             .filter((item) => item.year === year)
         );
-        //marketingArchiveMessage();
       },
       simpleSheet: false,
     });
@@ -109,13 +107,12 @@ const MarketingContent = () => {
                       color: "white",
                       margin: "5px",
                     }}
-                    onClick={(googleData) => {
+                    onClick={() => {
                       setLoading(true);
                       setSelectedCategory(categories[category]);
-                      if (selectedCategory != "All") {
-                        setStateFull()
-                      } else {
-                        setStateEmpty()
+                      let currentPosts = googleData["marketing-archives"]["elements"];
+                      if (currentPosts.length === 0) {
+                        marketingArchiveMessage();
                       }
                     }}
                   />
@@ -134,13 +131,7 @@ const MarketingContent = () => {
               updateYear={handleYear}
             />
           </div>
-          <div>
-            {state === "empty" && (
-              <p>
-                Keep a lookout for more marketing posts!
-              </p>
-            )}
-          </div>
+
           <div id={styles.contentLoadingContainer}>
             {loading && (
               <CircularProgress
