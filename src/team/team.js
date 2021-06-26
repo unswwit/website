@@ -107,7 +107,7 @@ function OurTeam() {
       {/* Cover Photo */}
       <PageHeader
         imgUrl="/headers/2021-team-header.jpg"
-        title="Meet Our Team"
+        title="Our Team"
       />
 
       {/* Timeline */}
@@ -200,6 +200,8 @@ function OurTeam() {
                             />
                           );
                         })}
+                      <br />
+                      <br />
                     </div>
                   );
                 })}
