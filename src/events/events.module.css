@@ -11,9 +11,16 @@
 }
 
 .gridContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  grid-gap: 20px;
+  /*display: grid;*/
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  grid-gap: 0px;
+}
+
+.menuItem {
+  padding: 0 40px;
+  width: 50%;
+  cursor: pointer;
+  border: none;
 }
 
 .upcoming {
@@ -22,9 +29,8 @@
 }
 
 .eventDescription {
-  max-width: 100%;
   margin: 50px 30px;
-  padding: 0;
+  white-space: pre-wrap;
 }
 
 .eventName {
@@ -36,7 +42,9 @@
   margin: 0;
   padding-bottom: 5px;
   padding-top: 5px;
-  max-width: 100%;
+  max-block-size: 100%;
+  display: inline-flex;
+  white-space: pre-wrap;
 }
 
 .eventDate {
@@ -52,6 +60,7 @@
   padding-top: 5px;
   margin: 0;
   max-width: 100%;
+  white-space: pre-wrap;
 }
 
 .eventSummary {
@@ -65,7 +74,7 @@
   padding-bottom: 5px;
   margin: 10px, 0;
   margin-top: 20px;
-  block-size: 250px;
+  white-space: normal;
 }
 
 ul#links {
@@ -80,6 +89,7 @@ li.eventLink {
   margin: 10px 0px;
   margin-right: 5px;
   margin-bottom: 0px;
+  white-space: normal;
 }
 
 li.eventButton {
@@ -142,6 +152,18 @@ a:hover.event {
 .gridItem {
   display: flex;
   box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.termHeading {
+  text-align: left;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  color: #515151;
+  bottom: 100px;
+  flex-basis: 33.33%;
+  flex-shrink: 0;
 }
 
 img.eventImages {

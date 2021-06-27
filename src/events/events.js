@@ -13,14 +13,21 @@ import ScrollUpBtn from "../components/ScrollUpBtn"
 import UpcomingEvent from "./UpcomingEvent.js";
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import EventMenu from "./EventMenu"
+import { render } from "@testing-library/react";
 
 const Events = () => {
   const [expanded, setExpanded] = useState(false);
   const [events, setEvents] = useState([]);
   const [year, setYear] = useState("2021");
-  const [upcomingEvents, setUpcomingEvents] = useState([]);
   const [loadingPast, setLoadingPast] = useState(true);
+  const [loadingTerm1, setLoadingTerm1] = useState(true);
+  const [loadingTerm2, setLoadingTerm2] = useState(true);
+  const [loadingTerm3, setLoadingTerm3] = useState(true);
+  const [term1, setTerm1] = useState([]);
+  const [term2, setTerm2] = useState([]);
+  const [term3, setTerm3] = useState([]);
   const [loadingUpcoming, setLoadingUpcoming] = useState(true);
+  const terms = [1, 2, 3];
 
   const marks = [
     {
@@ -43,7 +50,20 @@ const Events = () => {
   // set the year for the events timeline
   const handleYear = (newYear) => {
     setYear(newYear);
+    setTerms();
   };
+
+  const setTerms = () => {
+    setTerm1(events.filter(event => event.term == 1))
+    setTerm2(events.filter(event => event.term == 2))
+    setTerm3(events.filter(event => event.term == 3))
+    
+    // Set loading wheels for term events to false
+    setLoadingTerm1(false);
+    setLoadingTerm2(false);
+    setLoadingTerm3(false);
+    setLoadingPast(false);
+  }
 
   // start webpage at the top
   useEffect(() => {
@@ -58,17 +78,21 @@ const Events = () => {
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: (googleData) => {
-        setLoadingPast(false);
+        
         setLoadingUpcoming(false);
         const allEvents = googleData["past-events"]["elements"].filter(
           (event) => event.year === year
         );
-        setEvents(allEvents.reverse());
-        setUpcomingEvents(googleData["upcoming-events-test"]["elements"]);
+        setEvents(allEvents.reverse());    
+        setTerms();
+        setLoadingPast(false);
       },
       simpleSheet: false,
     });
+
   }, [year]);
+
+
 
   return (
     <>
@@ -87,13 +111,11 @@ const Events = () => {
             />
           )}
         </div>
-        {!loadingUpcoming && (!upcomingEvents.length ? 
+        {/*!loadingUpcoming && (!upcomingEvents.length ? 
           (<p className={styles.lookout}>Keep a lookout here for our upcoming events!</p>)
-          :
-          (<EventMenu
-            upcomingEvents={upcomingEvents}
-          />)
-        )}
+        :*/}
+          <EventMenu/>
+        {/*)}*/}
         <h2>PAST EVENTS</h2>
         <Accordion
           expanded={expanded}
@@ -128,9 +150,10 @@ const Events = () => {
           marks={marks}
           updateYear={handleYear}
         />
-
+        {/* TERM 1 */}
+        <Typography id={styles.termHeading}>Term 1</Typography>
         <div id={styles.eventsLoadingContainer}>
-          {loadingPast && (
+          {loadingTerm1 && (
             <CircularProgress
               variant="indeterminate"
               size={50}
@@ -139,23 +162,85 @@ const Events = () => {
             />
           )}
         </div>
-
         <div id={styles.pastEvents} className={styles.gridContainer}>
-          {!loadingPast &&
-            events.map((event, index) => {
-              let eventLabel = event.img.split(".")[0].split("-");
-              eventLabel.shift();
-              return (
-                <div key={index} className={styles.gridItem}>
-                  <img
-                    className={styles.eventImages}
-                    src={`${process.env.PUBLIC_URL}/event-covers/${year}/${event.img}`}
-                    alt={eventLabel.join(" ")}
-                  />
-                </div>
-              );
-            })}
+          {!loadingTerm1 &&
+            /*terms.forEach((term, _) => {
+              render (<Typography id={styles.termHeading}>Term {term}</Typography>);
+              events.filter(
+                (event => event.term == {term}).map((filtered_event, index) => {*/
+              term1.map((filtered_event, index) => {
+                let eventLabel = filtered_event.img.split(".")[0].split("-");
+                eventLabel.shift();
+                return (
+                  <div key={index} className={styles.gridItem}>
+                    <img
+                      className={styles.eventImages}
+                      src={`${process.env.PUBLIC_URL}/event-covers/${year}/${filtered_event.img}`}
+                      alt={eventLabel.join(" ")}
+                    />
+                  </div>
+                );
+              })}
         </div>
+
+        {/* TERM 2 */}
+        <Typography id={styles.termHeading}>Term 2</Typography>
+        <div id={styles.eventsLoadingContainer}>
+          {loadingTerm2 && (
+            <CircularProgress
+              variant="indeterminate"
+              size={50}
+              thickness={5}
+              id={styles.eventsLoading}
+            />
+          )}
+        </div>
+        <div id={styles.pastEvents} className={styles.gridContainer}>
+          {!loadingTerm2 &&
+              term2.map((filtered_event, index) => {
+                let eventLabel = filtered_event.img.split(".")[0].split("-");
+                eventLabel.shift();
+                return (
+                  <div key={index} className={styles.gridItem}>
+                    <img
+                      className={styles.eventImages}
+                      src={`${process.env.PUBLIC_URL}/event-covers/${year}/${filtered_event.img}`}
+                      alt={eventLabel.join(" ")}
+                    />
+                  </div>
+                );
+              })}
+        </div>
+
+        {/* TERM 3 */}
+        <Typography id={styles.termHeading}>Term 3</Typography>
+        <div id={styles.eventsLoadingContainer}>
+          {loadingTerm3 && (
+            <CircularProgress
+              variant="indeterminate"
+              size={50}
+              thickness={5}
+              id={styles.eventsLoading}
+            />
+          )}
+        </div>
+        <div id={styles.pastEvents} className={styles.gridContainer}>
+          {!loadingTerm3 &&
+              term3.map((filtered_event, index) => {
+                let eventLabel = filtered_event.img.split(".")[0].split("-");
+                eventLabel.shift();
+                return (
+                  <div key={index} className={styles.gridItem}>
+                    <img
+                      className={styles.eventImages}
+                      src={`${process.env.PUBLIC_URL}/event-covers/${year}/${filtered_event.img}`}
+                      alt={eventLabel.join(" ")}
+                    />
+                  </div>
+                );
+              })}
+        </div>
+
       </div>
     </>
   );

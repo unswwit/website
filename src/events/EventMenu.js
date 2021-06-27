@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ScrollMenu from 'react-horizontal-scrolling-menu';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeft';
 import UpcomingEvent from './UpcomingEvent';
 import Tabletop from "tabletop";
 import styles from "./events.module.css";
+import "./EventMenu.css"
 
 // One item component
 // selected prop will be passed
@@ -13,7 +14,7 @@ const MenuItem = ({ event, index }) => {
   return (
     <UpcomingEvent
         upcomingEvent={event}
-        indes={index}
+        index={index}
     >
     </UpcomingEvent>
   );
@@ -23,12 +24,12 @@ const MenuItem = ({ event, index }) => {
 // Important! add unique key
 export const Menu = (events) => events.map(el => {
   return (
-    <div className={styles.gridContainer}>
-    <MenuItem
+    <div className={styles.menuItem}>
+    <UpcomingEvent
       event={el.event}
       index={el.index}
-      key={el.index}
-    ></MenuItem>
+      key={el.key}
+    ></UpcomingEvent>
     </div>
   );
 });
@@ -42,59 +43,61 @@ const buttonStyles = {
     boxShadow: "1px 1px 5px 0 rgba(0, 0, 0, 0.3)",
 }
 
-const Left = ({ className }) => {
+const Left = () => {
   return (
     <KeyboardArrowLeftIcon
-      className={className}
       style={buttonStyles}
     ></KeyboardArrowLeftIcon>
   );
 };
 
-const Right = ({ className }) => {
+const Right = () => {
     return (
-        <KeyboardArrowRightIcon
-        className={className}
+      <KeyboardArrowRightIcon
         style={buttonStyles}
-        ></KeyboardArrowRightIcon>
+      ></KeyboardArrowRightIcon>
     );
   };
 
-const ArrowLeft = Left({ className: 'arrow-prev' });
-const ArrowRight = Right({ className: 'arow-next' });
+const ArrowLeft = Left();
+const ArrowRight = Right();
 
 const EventMenu = () => {
 
     const [upcomingEvents, setUpcomingEvents] = useState([]);
     //const [events, setEvents] = useState([]);
 
-    useEffect(() => {
-        Tabletop.init({
-            key: process.env.REACT_APP_GOOGLE_SHEETS,
-            callback: (googleData) => {
-                setUpcomingEvents(googleData["upcoming-events-test"]["elements"]);
-            },
-            simpleSheet: false,
-        });
+    Tabletop.init({
+        key: process.env.REACT_APP_GOOGLE_SHEETS,
+        callback: (googleData) => {
+        setUpcomingEvents(googleData["upcoming-events-test"]["elements"]);
+        },
+        simpleSheet: false,
     });
     
     const events = []
-    upcomingEvents.map((upcomingEvent, index) => {
+
+    upcomingEvents.forEach((upcomingEvent, index) => {
         events.push({
             event: upcomingEvent,
             index: index,
+            key: upcomingEvent.img,
         })
     })
 
     // Create menu from items
     const menu = Menu(events);
-    
+    /*console.log(menu.length)*/
     return (
+      <div className={styles.eventsBody}>
         <ScrollMenu
             data={menu}
             arrowLeft={ArrowLeft}
             arrowRight={ArrowRight}
+            wheel={false}
+            alignCenter={true}
         />
+        </div>
     );
 
 }

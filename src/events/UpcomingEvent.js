@@ -6,9 +6,10 @@ import RegBtn from "./RegBtn.js";
 /* Renders the upcoming event tile on the events page for the given event */
 
 const UpcomingEvent = (props) => {
-  const upcomingEvent = props.upcomingEvent;
+  const upcomingEvent = props.event;
   const index = props.index;
 
+  console.log(index);
   return (
     <a href={upcomingEvent.facebookLink} target="_blank" rel="noopener noreferrer">
       <div key={index} className={styles.upcoming}>
