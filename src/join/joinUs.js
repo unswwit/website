@@ -88,25 +88,11 @@ class JoinUs extends React.Component {
   }*/
 
   componentDidMount() {
-<<<<<<< Updated upstream
     if (this.initialLoading && !this.loading) {
       this.setState({ initialLoading: false});
     }
   }
   
-=======
-    window.scrollTo(0,0);
-    const img = new Image();
-    img.src = "/headers/header-1.jpg";
-    img.onload = () => {     
-      this.setState = ({coverPhoto: img.src});
-      setTimeout(() => {
-        this.setState = ({ sourceLoading: false });
-      }, 1000);
-    }
-  }
-
->>>>>>> Stashed changes
   render() {
     return (
       <div>
