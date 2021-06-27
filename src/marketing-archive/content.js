@@ -12,11 +12,10 @@ import LoadingScreen from "../LoadingScreen";
 const MarketingContent = () => {
   const [content, setContent] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [initialLoading, setinitialLoading] = useState(true);
   const [year, setYear] = useState("2021");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [sourceLoading, setSourceLoading] = React.useState(true);
-  const [coverPhoto, setCoverPhoto] = React.useState(null);
+
   const categories = {
     All: "All",
     Mascot: "mascot",
@@ -51,15 +50,10 @@ const MarketingContent = () => {
 
   // control when to stop loading
   useEffect(() => {
-    const img = new Image();
-    img.src = "/headers/header-1.jpg";
-    img.onload = () => {     
-      setCoverPhoto(img.src);
-      setTimeout(() => {
-        setSourceLoading(false);
-      }, 1000);
-    }
-  }, [])  
+    setTimeout(() => {
+      setSourceLoading(false);
+    }, 1000);
+  }, []) 
 
   // scroll to top on load
   useEffect(() => window.scrollTo(0,0), [])

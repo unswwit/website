@@ -8,9 +8,7 @@ import styles from "./opportunities.module.css";
 //import OppCard from "./oppCard.js";
 
 const Opportunities = () => {
-  const [initialLoading, setinitialLoading] = React.useState(true);
   const [sourceLoading, setSourceLoading] = React.useState(true);
-  const [coverPhoto, setCoverPhoto] = React.useState(null);
 
   useEffect(() => {
     window.scrollTo(0,0);
@@ -18,15 +16,10 @@ const Opportunities = () => {
 
   // control when to stop loading
   useEffect(() => {
-    const img = new Image();
-    img.src = "/headers/header-1.jpg";
-    img.onload = () => {     
-      setCoverPhoto(img.src);
-      setTimeout(() => {
-        setSourceLoading(false);
-      }, 1000);
-    }
-  }, [])  
+    setTimeout(() => {
+      setSourceLoading(false);
+    }, 1000);
+  }, []) 
   
   return (
     <div>

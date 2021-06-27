@@ -22,9 +22,7 @@ function OurTeam() {
   const [subcommittee, setSubcommittee] = useState([]);
   const [year, setYear] = useState("2021");
   const [loading, setLoading] = useState(true);
-  const [initialLoading, setinitialLoading] = React.useState(true);
   const [sourceLoading, setSourceLoading] = React.useState(true);
-  const [coverPhoto, setCoverPhoto] = React.useState(null);
 
   const execToClassName = {
     2021: "exec2021Img",
@@ -109,14 +107,9 @@ function OurTeam() {
 
   // control when to stop loading
   useEffect(() => {
-    const img = new Image();
-    img.src = "/headers/header-1.jpg";
-    img.onload = () => {     
-      setCoverPhoto(img.src);
-      setTimeout(() => {
-        setSourceLoading(false);
-      }, 1000);
-    }
+    setTimeout(() => {
+      setSourceLoading(false);
+    }, 1000);
   }, [])  
 
   return (

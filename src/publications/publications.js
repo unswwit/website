@@ -9,9 +9,7 @@ import LoadingScreen from "../LoadingScreen";
 const Publications = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [initialLoading, setinitialLoading] = React.useState(true);
   const [sourceLoading, setSourceLoading] = React.useState(true);
-  const [coverPhoto, setCoverPhoto] = React.useState(null);
 
   useEffect(() => {
     // start at the top of the page
@@ -30,14 +28,9 @@ const Publications = () => {
 
   // control when to stop loading
   useEffect(() => {
-    const img = new Image();
-      img.src = "/headers/header-1.jpg";
-      img.onload = () => {     
-          setCoverPhoto(img.src);
-          setTimeout(() => {
-            setSourceLoading(false);
-          }, 1000);
-      }
+    setTimeout(() => {
+      setSourceLoading(false);
+    }, 1000);
   }, [])  
 
   return (

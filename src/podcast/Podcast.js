@@ -27,21 +27,14 @@ const Podcast = () => {
     pocketCasts: ["podcast-pocket-casts.png", "https://pca.st/kzc50ug6"],
     breaker: ["podcast-breaker.png", "https://www.breaker.audio/talk-wit-us"],
   };
-  const [initialLoading, setinitialLoading] = React.useState(true);
   const [sourceLoading, setSourceLoading] = React.useState(true);
-  const [coverPhoto, setCoverPhoto] = React.useState(null);
 
   // control when to stop loading
   useEffect(() => {
-    const img = new Image();
-      img.src = "/headers/header-1.jpg";
-      img.onload = () => {     
-        setCoverPhoto(img.src);
-        setTimeout(() => {
-          setSourceLoading(false);
-        }, 1000);
-      }
-  }, [])  
+    setTimeout(() => {
+      setSourceLoading(false);
+    }, 1000);
+  }, []) 
 
   useEffect(() => {
     // start at the top of the page

@@ -21,9 +21,7 @@ const Sponsors = () => {
     Telstra: ["https://www.telstra.com.au/", "telstra-large.png"],
   };
 
-  const [initialLoading, setinitialLoading] = React.useState(true);
   const [sourceLoading, setSourceLoading] = React.useState(true);
-  const [coverPhoto, setCoverPhoto] = React.useState(null);
 
   useEffect(() => {
     window.scrollTo(0,0);
@@ -31,14 +29,9 @@ const Sponsors = () => {
 
   // control when to stop loading
   useEffect(() => {
-    const img = new Image();
-    img.src = "/headers/header-1.jpg";
-    img.onload = () => {     
-      setCoverPhoto(img.src);
-      setTimeout(() => {
-        setSourceLoading(false);
-      }, 1000);
-    }
+    setTimeout(() => {
+      setSourceLoading(false);
+    }, 1000);
   }, [])  
 
   return (

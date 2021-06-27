@@ -44,21 +44,14 @@ const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [loading, setLoading] = useState(true);
   const [blogs, setBlogs] = useState([]);
-  const [initialLoading, setinitialLoading] = React.useState(true);
   const [sourceLoading, setSourceLoading] = React.useState(true);
-  const [coverPhoto, setCoverPhoto] = React.useState(null);
 
   // control when to stop loading
   useEffect(() => {
-    const img = new Image();
-    img.src = "/headers/header-1.jpg";
-    img.onload = () => {     
-      setCoverPhoto(img.src);
-      setTimeout(() => {
-        setSourceLoading(false);
-      }, 1000);
-    }
-  }, [])  
+    setTimeout(() => {
+      setSourceLoading(false);
+    }, 1000);
+  }, []) 
 
   // scroll to top on load
   useEffect(() => {

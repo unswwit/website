@@ -23,9 +23,9 @@ class JoinUs extends React.Component {
       clickedHr: true,
       clickedIt: true,
       clickedMar: true,
-      // sourceLoading: true,
-      // coverPhoto: null,
-      initialLoading: true,
+      sourceLoading: true,
+      coverPhoto: null,
+      // initialLoading: true,
     };
     this.hideSpinner = this.hideSpinner.bind(this);
     this.open = this.open.bind(this);
@@ -75,28 +75,23 @@ class JoinUs extends React.Component {
     this.setState({  openNewsletter: false });
   }
 
-  /*componentDidMount() {
+  componentDidMount() {
     window.scrollTo(0, 0);
-    const img = new Image();
-    img.src = "/headers/header-1.jpg";
-    img.onload = () => {     
-      this.setState({ coverPhoto: img.src});
-      setTimeout(() => {
-        this.setState({ sourceLoading: false});
-      }, 1000);
-    }
-  }*/
-
+    setTimeout(() => {
+      this.setState({ sourceLoading: false});
+    }, 1000);
+  }
+  /*
   componentDidMount() {
     if (this.initialLoading && !this.loading) {
       this.setState({ initialLoading: false});
     }
-  }
+  }*/
   
   render() {
     return (
       <div>
-        {this.initialLoading ? ( <LoadingScreen />)
+        {this.sourceLoading ? ( <LoadingScreen />)
           :
           (<>
         {/* Cover Photo */}
