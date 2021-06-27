@@ -18,9 +18,7 @@ const Events = () => {
   const [expanded, setExpanded] = useState(false);
   const [events, setEvents] = useState([]);
   const [year, setYear] = useState("2021");
-  const [loadingTerm1, setLoadingTerm1] = useState(true);
-  const [loadingTerm2, setLoadingTerm2] = useState(true);
-  const [loadingTerm3, setLoadingTerm3] = useState(true);
+  const [loading, setLoading] = useState(true);
   const [term1, setTerm1] = useState([]);
   const [term2, setTerm2] = useState([]);
   const [term3, setTerm3] = useState([]);
@@ -51,13 +49,10 @@ const Events = () => {
   const setTerms = (allEvents) => {
 
     setTerm1(allEvents.filter(event => event.term == 1));
-    setLoadingTerm1(false);
-    
     setTerm2(allEvents.filter(event => event.term == 2));
-    setLoadingTerm2(false);
-    
     setTerm3(allEvents.filter(event => event.term == 3))
-    setLoadingTerm3(false);
+
+    setLoading(false);
 
   }
 
@@ -69,9 +64,7 @@ const Events = () => {
   // load events
   useEffect(() => {
 
-    setLoadingTerm1(true);
-    setLoadingTerm2(true);
-    setLoadingTerm3(true);
+    setLoading(true);
 
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
@@ -144,10 +137,9 @@ const Events = () => {
           marks={marks}
           updateYear={handleYear}
         />
-        {/* TERM 1 */}
-        <label id={styles.termHeading}>Term 1</label>
-        <div id={styles.eventsLoadingContainer}>
-          {loadingTerm1 && (
+
+      <div id={styles.eventsLoadingContainer}>
+          {loading && (
             <CircularProgress
               variant="indeterminate"
               size={50}
@@ -156,8 +148,11 @@ const Events = () => {
             />
           )}
         </div>
+          
+        {/* TERM 1 */}
+        {!loading && <h3>TERM 1</h3>}
         <div id={styles.pastEvents} className={styles.gridContainer}>
-          {!loadingTerm1 &&
+          {!loading &&
               term1.map((termEvent, index) => {
                 let eventLabel = termEvent.img.split(".")[0].split("-");
                 eventLabel.shift();
@@ -174,19 +169,9 @@ const Events = () => {
         </div>
 
         {/* TERM 2 */}
-        <div id={styles.termHeading}>Term 2</div>
-        <div id={styles.eventsLoadingContainer}>
-          {loadingTerm2 && (
-            <CircularProgress
-              variant="indeterminate"
-              size={50}
-              thickness={5}
-              id={styles.eventsLoading}
-            />
-          )}
-        </div>
+        {!loading && <h3> TERM 2</h3>}
         <div id={styles.pastEvents} className={styles.gridContainer}>
-          {!loadingTerm2 &&
+          {!loading &&
               term2.map((filteredEvent, index) => {
                 let eventLabel = filteredEvent.img.split(".")[0].split("-");
                 eventLabel.shift();
@@ -203,19 +188,9 @@ const Events = () => {
         </div>
 
         {/* TERM 3 */}
-        <div id={styles.termHeading}>Term 3</div>
-        <div id={styles.eventsLoadingContainer}>
-          {loadingTerm3 && (
-            <CircularProgress
-              variant="indeterminate"
-              size={50}
-              thickness={5}
-              id={styles.eventsLoading}
-            />
-          )}
-        </div>
+        {!loading && <h3>TERM 3</h3>}
         <div id={styles.pastEvents} className={styles.gridContainer}>
-          {!loadingTerm3 &&
+          {!loading &&
               term3.map((filteredEvent, index) => {
                 let eventLabel = filteredEvent.img.split(".")[0].split("-");
                 eventLabel.shift();

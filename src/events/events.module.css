@@ -160,11 +160,10 @@ a:hover.event {
   font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 44px;
   color: #515151;
   flex-basis: 33.33%;
   flex-shrink: 0;
-  padding-top: 500px;
 }
 
 img.eventImages {
