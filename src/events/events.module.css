@@ -147,6 +147,7 @@ a:hover.event {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 20px;
+  padding: 25px 0px;
 }
 
 .gridItem {
@@ -161,9 +162,9 @@ a:hover.event {
   font-weight: 500;
   font-size: 24px;
   color: #515151;
-  bottom: 100px;
   flex-basis: 33.33%;
   flex-shrink: 0;
+  padding-top: 500px;
 }
 
 img.eventImages {

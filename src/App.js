@@ -121,7 +121,7 @@ class App extends Component {
 
   componentDidMount() {
     // google analytics
-    GoogleAnalytics();
+    //GoogleAnalytics();
 
     window.addEventListener("hashchange", this.changeBackground);
     window.addEventListener("resize", this.updateMenu);

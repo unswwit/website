@@ -65,7 +65,6 @@ const ArrowRight = Right();
 const EventMenu = () => {
 
   const [upcomingEvents, setUpcomingEvents] = useState([]);
-  //const [events, setEvents] = useState([]);
 
     Tabletop.init({
         key: process.env.REACT_APP_GOOGLE_SHEETS,

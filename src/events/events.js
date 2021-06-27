@@ -13,21 +13,17 @@ import ScrollUpBtn from "../components/ScrollUpBtn"
 import UpcomingEvent from "./UpcomingEvent.js";
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import EventMenu from "./EventMenu"
-import { render } from "@testing-library/react";
 
 const Events = () => {
   const [expanded, setExpanded] = useState(false);
   const [events, setEvents] = useState([]);
   const [year, setYear] = useState("2021");
-  const [loadingPast, setLoadingPast] = useState(true);
   const [loadingTerm1, setLoadingTerm1] = useState(true);
   const [loadingTerm2, setLoadingTerm2] = useState(true);
   const [loadingTerm3, setLoadingTerm3] = useState(true);
   const [term1, setTerm1] = useState([]);
   const [term2, setTerm2] = useState([]);
   const [term3, setTerm3] = useState([]);
-  const [loadingUpcoming, setLoadingUpcoming] = useState(true);
-  const terms = [1, 2, 3];
 
   const marks = [
     {
@@ -53,15 +49,16 @@ const Events = () => {
   };
 
   const setTerms = (allEvents) => {
-    setTerm1(allEvents.filter(event => event.term == 1))
-    setTerm2(allEvents.filter(event => event.term == 2))
-    setTerm3(allEvents.filter(event => event.term == 3))
 
-    // Set loading wheels for term events to false
+    setTerm1(allEvents.filter(event => event.term == 1));
     setLoadingTerm1(false);
+    
+    setTerm2(allEvents.filter(event => event.term == 2));
     setLoadingTerm2(false);
+    
+    setTerm3(allEvents.filter(event => event.term == 3))
     setLoadingTerm3(false);
-    setLoadingPast(false);
+
   }
 
   // start webpage at the top
@@ -71,7 +68,10 @@ const Events = () => {
 
   // load events
   useEffect(() => {
-    setLoadingPast(true);
+
+    setLoadingTerm1(true);
+    setLoadingTerm2(true);
+    setLoadingTerm3(true);
 
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
@@ -82,7 +82,7 @@ const Events = () => {
         );
         setEvents(allEvents.reverse());    
         setTerms(allEvents.reverse());
-        setLoadingPast(false);
+
       },
       simpleSheet: false,
     });
@@ -98,7 +98,7 @@ const Events = () => {
       {/* Main Title, and Subtitle Area */}
       <div className={styles.eventsBody}>
         <h2>UPCOMING EVENTS</h2>
-        <div id={styles.eventsLoadingContainer}>
+        {/*<div id={styles.eventsLoadingContainer}>
           {loadingUpcoming && (
             <CircularProgress
               variant="indeterminate"
@@ -108,10 +108,10 @@ const Events = () => {
             />
           )}
         </div>
-        {/*!loadingUpcoming && (!upcomingEvents.length ? 
+        {!loadingUpcoming && (!upcomingEvents.length ? 
           (<p className={styles.lookout}>Keep a lookout here for our upcoming events!</p>)
         :*/}
-          <EventMenu/>
+          {/*<EventMenu/>*/}
         {/*)}*/}
         <h2>PAST EVENTS</h2>
         <Accordion
@@ -148,7 +148,7 @@ const Events = () => {
           updateYear={handleYear}
         />
         {/* TERM 1 */}
-        <Typography id={styles.termHeading}>Term 1</Typography>
+        <label id={styles.termHeading}>Term 1</label>
         <div id={styles.eventsLoadingContainer}>
           {loadingTerm1 && (
             <CircularProgress
@@ -161,10 +161,6 @@ const Events = () => {
         </div>
         <div id={styles.pastEvents} className={styles.gridContainer}>
           {!loadingTerm1 &&
-            /*terms.forEach((term, _) => {
-              render (<Typography id={styles.termHeading}>Term {term}</Typography>);
-              events.filter(
-                (event => event.term == {term}).map((filtered_event, index) => {*/
               term1.map((termEvent, index) => {
                 let eventLabel = termEvent.img.split(".")[0].split("-");
                 eventLabel.shift();
@@ -181,7 +177,7 @@ const Events = () => {
         </div>
 
         {/* TERM 2 */}
-        <Typography id={styles.termHeading}>Term 2</Typography>
+        <div id={styles.termHeading}>Term 2</div>
         <div id={styles.eventsLoadingContainer}>
           {loadingTerm2 && (
             <CircularProgress
@@ -210,7 +206,7 @@ const Events = () => {
         </div>
 
         {/* TERM 3 */}
-        <Typography id={styles.termHeading}>Term 3</Typography>
+        <div id={styles.termHeading}>Term 3</div>
         <div id={styles.eventsLoadingContainer}>
           {loadingTerm3 && (
             <CircularProgress
