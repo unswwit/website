@@ -76,7 +76,6 @@ const Events = () => {
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: (googleData) => {
-        
         const allEvents = googleData["past-events"]["elements"].filter(
           (event) => event.year === year
         );
@@ -88,8 +87,6 @@ const Events = () => {
     });
 
   }, [year]);
-
-
 
   return (
     <>
@@ -190,14 +187,14 @@ const Events = () => {
         </div>
         <div id={styles.pastEvents} className={styles.gridContainer}>
           {!loadingTerm2 &&
-              term2.map((filtered_event, index) => {
-                let eventLabel = filtered_event.img.split(".")[0].split("-");
+              term2.map((filteredEvent, index) => {
+                let eventLabel = filteredEvent.img.split(".")[0].split("-");
                 eventLabel.shift();
                 return (
                   <div key={index} className={styles.gridItem}>
                     <img
                       className={styles.eventImages}
-                      src={`${process.env.PUBLIC_URL}/event-covers/${year}/${filtered_event.img}`}
+                      src={`${process.env.PUBLIC_URL}/event-covers/${year}/${filteredEvent.img}`}
                       alt={eventLabel.join(" ")}
                     />
                   </div>
@@ -219,14 +216,14 @@ const Events = () => {
         </div>
         <div id={styles.pastEvents} className={styles.gridContainer}>
           {!loadingTerm3 &&
-              term3.map((filtered_event, index) => {
-                let eventLabel = filtered_event.img.split(".")[0].split("-");
+              term3.map((filteredEvent, index) => {
+                let eventLabel = filteredEvent.img.split(".")[0].split("-");
                 eventLabel.shift();
                 return (
                   <div key={index} className={styles.gridItem}>
                     <img
                       className={styles.eventImages}
-                      src={`${process.env.PUBLIC_URL}/event-covers/${year}/${filtered_event.img}`}
+                      src={`${process.env.PUBLIC_URL}/event-covers/${year}/${filteredEvent.img}`}
                       alt={eventLabel.join(" ")}
                     />
                   </div>
