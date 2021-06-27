@@ -1,4 +1,4 @@
-import React, { useEffect} from "react";
+import React from "react";
 import PageHeader from ".././header";
 import styles from "./joinUs.module.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
@@ -23,12 +23,14 @@ class JoinUs extends React.Component {
       clickedHr: true,
       clickedIt: true,
       clickedMar: true,
-      sourceLoading: true,
-      coverPhoto: null,
+      // sourceLoading: true,
+      // coverPhoto: null,
+      initialLoading: true,
     };
     this.hideSpinner = this.hideSpinner.bind(this);
     this.open = this.open.bind(this);
     this.callbackModal = this.callbackModal.bind(this);
+    this.componentDidMount = this.componentDidMount.bind(this);
 
     this.socials = {
       spARC: [
@@ -73,34 +75,28 @@ class JoinUs extends React.Component {
     this.setState({  openNewsletter: false });
   }
 
-  // start at the top of the page
+  /*componentDidMount() {
+    window.scrollTo(0, 0);
+    const img = new Image();
+    img.src = "/headers/header-1.jpg";
+    img.onload = () => {     
+      this.setState({ coverPhoto: img.src});
+      setTimeout(() => {
+        this.setState({ sourceLoading: false});
+      }, 1000);
+    }
+  }*/
+
   componentDidMount() {
-    window.scrollTo(0,0);
+    if (this.initialLoading && !this.loading) {
+      this.setState({ initialLoading: false});
+    }
   }
-
-  // control when to stop loading
   
-  observer = ({coverPhoto, sourceLoading}) => {
-    useEffect(() => {
-      const img = new Image();
-      img.src = "/headers/header-1.jpg";
-      img.onload = () => {     
-        this.setState = {coverPhoto: "img.src"}
-        setTimeout(() => {
-          this.setState = { sourceLoading: false }
-        }, 1000);
-      }
-    }, [])  
-    return null;
-  }
-
-
   render() {
     return (
       <div>
-        {this.sourceLoading ? (
-        <LoadingScreen />
-        )
+        {this.initialLoading ? ( <LoadingScreen />)
           :
           (<>
         {/* Cover Photo */}
