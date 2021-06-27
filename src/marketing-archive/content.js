@@ -13,6 +13,8 @@ const MarketingContent = () => {
   const [loading, setLoading] = useState(true);
   const [year, setYear] = useState("2021");
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [emptyCategory, setEmptyCategory] = useState(false);
+  const [finishedLoading, setfinishedLoading] = useState(false);
   // set how many posts to view per page
   const postsPerPage = 8;
   // all the posts of the selected filter category
@@ -73,10 +75,20 @@ const MarketingContent = () => {
         setContent(tempContent);
         setCurrentPosts(tempContent.slice(0, postsPerPage));
         setSelectedPosts(tempContent);
+        setfinishedLoading(true);
       },
       simpleSheet: false,
     });
   }, [year]);
+
+  // marketing archive message
+  useEffect(() => { 
+    if (currentPosts.length === 0 && finishedLoading === true) {
+      setEmptyCategory(true);
+    } else {
+      setEmptyCategory(false);
+    }
+  },[currentPosts, finishedLoading]);
 
   // filter content by selected category
   const filterContent = (selectedCategory) => {
@@ -153,6 +165,15 @@ const MarketingContent = () => {
               updateYear={handleYear}
             />
           </div>
+
+          <div>
+            {emptyCategory === true && (
+              <p>
+                Keep a lookout for more marketing posts!
+              </p>
+            )}
+          </div>
+
 
           <div id={styles.contentLoadingContainer}>
             {loading && (
