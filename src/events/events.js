@@ -49,7 +49,6 @@ const Events = () => {
   // set the year for the events timeline
   const handleYear = (newYear) => {
     setYear(newYear);
-    setTerms();
   };
 
   const setTerms = (allEvents) => {
@@ -72,12 +71,10 @@ const Events = () => {
   // load events
   useEffect(() => {
     setLoadingPast(true);
-    setLoadingUpcoming(true);
 
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: (googleData) => {
-        setLoadingUpcoming(false);
         const allEvents = googleData["past-events"]["elements"].filter(
           (event) => event.year === year
         );
@@ -167,7 +164,7 @@ const Events = () => {
                   <div key={index} className={styles.gridItem}>
                     <img
                       className={styles.eventImages}
-                      src={`${process.env.PUBLIC_URL}/event-covers/${year}/${filteredEvent.img}`}
+                      src={`${process.env.PUBLIC_URL}/event-covers/${year}/${termEvent.img}`}
                       alt={eventLabel.join(" ")}
                     />
                   </div>
