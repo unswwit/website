@@ -9,7 +9,7 @@ import "./EventMenu.css"
 
 // One item component
 // selected prop will be passed
-const MenuItem = ({ event, index }) => {
+/*const MenuItem = ({ event, index }) => {
   console.log(index)
   return (
     <UpcomingEvent
@@ -18,7 +18,7 @@ const MenuItem = ({ event, index }) => {
     >
     </UpcomingEvent>
   );
-};
+};*/
 
 // All items component
 // Important! add unique key

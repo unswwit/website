@@ -50,14 +50,13 @@ const Events = () => {
   // set the year for the events timeline
   const handleYear = (newYear) => {
     setYear(newYear);
-    setTerms();
   };
 
-  const setTerms = () => {
-    setTerm1(events.filter(event => event.term == 1))
-    setTerm2(events.filter(event => event.term == 2))
-    setTerm3(events.filter(event => event.term == 3))
-    
+  const setTerms = (allEvents) => {
+    setTerm1(allEvents.filter(event => event.term == 1))
+    setTerm2(allEvents.filter(event => event.term == 2))
+    setTerm3(allEvents.filter(event => event.term == 3))
+
     // Set loading wheels for term events to false
     setLoadingTerm1(false);
     setLoadingTerm2(false);
@@ -73,18 +72,16 @@ const Events = () => {
   // load events
   useEffect(() => {
     setLoadingPast(true);
-    setLoadingUpcoming(true);
 
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: (googleData) => {
         
-        setLoadingUpcoming(false);
         const allEvents = googleData["past-events"]["elements"].filter(
           (event) => event.year === year
         );
         setEvents(allEvents.reverse());    
-        setTerms();
+        setTerms(allEvents.reverse());
         setLoadingPast(false);
       },
       simpleSheet: false,
@@ -168,14 +165,14 @@ const Events = () => {
               render (<Typography id={styles.termHeading}>Term {term}</Typography>);
               events.filter(
                 (event => event.term == {term}).map((filtered_event, index) => {*/
-              term1.map((filtered_event, index) => {
-                let eventLabel = filtered_event.img.split(".")[0].split("-");
+              term1.map((termEvent, index) => {
+                let eventLabel = termEvent.img.split(".")[0].split("-");
                 eventLabel.shift();
                 return (
                   <div key={index} className={styles.gridItem}>
                     <img
                       className={styles.eventImages}
-                      src={`${process.env.PUBLIC_URL}/event-covers/${year}/${filtered_event.img}`}
+                      src={`${process.env.PUBLIC_URL}/event-covers/${year}/${termEvent.img}`}
                       alt={eventLabel.join(" ")}
                     />
                   </div>
