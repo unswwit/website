@@ -15,6 +15,7 @@ const MarketingContent = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [emptyCategory, setEmptyCategory] = useState(false);
   const [finishedLoading, setfinishedLoading] = useState(false);
+  
   // set how many posts to view per page
   const postsPerPage = 8;
   // all the posts of the selected filter category
@@ -168,7 +169,7 @@ const MarketingContent = () => {
 
           <div>
             {emptyCategory === true && (
-              <p>
+              <p id={styles.emptyMessage}>
                 Keep a lookout for more marketing posts!
               </p>
             )}
