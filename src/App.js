@@ -444,7 +444,7 @@ class App extends Component {
             <Route exact path="/resources/podcast" component={Podcast} />
             <Route path="/resources/podcast/:episode(\d+)" component={EpisodePage} />
             <Route path="/resources/publications" component={Publications} />
-            {Array.from({ length: 60 }, (_, index) => index + 1).map(
+            {Array.from({ length: 61 }, (_, index) => index + 1).map(
               (blogNo) => {
                 return (
                   <Route
