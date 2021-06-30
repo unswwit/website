@@ -56,13 +56,13 @@ class blogPost58 extends Component {
             </p>
 
             <p className={styles.postContent}>
-              In highschool, I was introduced to 
-                <a href= "https://groklearning.com/" 
+              In highschool, I was introduced to{" "}
+              <a href= "https://groklearning.com/" 
                 className={styles.link} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                > Grok Learning </a>
-               which is an online platform that teaches the basics of programming. Through this, I picked 
+              >Grok Learning</a>
+              {" "}which is an online platform that teaches the basics of programming. Through this, I picked 
               up a web development course and found myself really enjoying it. I spent hours every 
               week teaching myself new concepts and solving the challenges!
             </p>
@@ -74,7 +74,7 @@ class blogPost58 extends Component {
             <p className={styles.postContent}>
               I was a Google intern working on creating accessible front-end experiences on Chrome OS, Canvas.
               Following this, I worked as a data science intern on the Growth team at Atlassian. Currently I am 
-              still a student, as well as a casual academic at UNSW taking the subjects COMP1531, 2041 and 2511. 
+              still a student, as well as a casual academic at UNSW taking the subjects COMP1531, COMP2041 and COMP2511. 
             </p>
             <br />
 
