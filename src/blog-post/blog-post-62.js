@@ -25,7 +25,7 @@ class blogPost62 extends Component {
               How Virtual Reality could change the world
             </h2>
             <div className={styles.blogDetails}>
-              <span className={styles.date}>June 31, 2021</span>
+              <span className={styles.date}>July 1st, 2021</span>
               <span>
                 <ShareBtns />
               </span>
@@ -33,12 +33,12 @@ class blogPost62 extends Component {
           </div>
 
           <div className={styles.post}>
-          <p className={styles.postContent}>
-            <i>“We live in a fantasy world, a world of illusion. The great task in life is to find reality.”</i>
-            <p style={{ marginLeft: "2em" }}>- Iris Murdoch, Irish/British Novelist and Philosopher</p>
+            <p className={styles.postContent}>
+              <em>“We live in a fantasy world, a world of illusion. The great task in life is to find reality.”</em>
+              <p style={{ marginLeft: "2em" }}>- Iris Murdoch, Irish/British Novelist and Philosopher</p>
 
-          </p>
-          {/* <p className={styles.postContent} style={{ marginLeft: "1em" }}>- Iris Murdoch, Irish/British Novelist and Philosopher</p> */}
+            </p>
+            {/* <p className={styles.postContent} style={{ marginLeft: "1em" }}>- Iris Murdoch, Irish/British Novelist and Philosopher</p> */}
 
             <p className={styles.postContent}>
               Now, more than ever, these words ring true. In a world where we are constantly connected over the radio waves, the boundaries between everyday realities and online life become more blurred. Is reality simply a series of experiences - mere sight, smell, touch and thought - or is it something more? Does technology isolate us, or does it expand our horizons? 
