@@ -353,11 +353,11 @@ class App extends Component {
                       <span>
                         {this.state.navBar ? (
                           <NavLink to="/media/blog" {...this.highlightNav}>
-                            &nbsp; &nbsp; &nbsp; MEDIA &nbsp; &nbsp; 
+                            MEDIA
                           </NavLink>
                         ) : (
                           <NavLink to="/media/blog" {...this.highlightNoNav}>
-                            &nbsp; &nbsp; &nbsp; MEDIA &nbsp; &nbsp;
+                            MEDIA 
                           </NavLink>
                         )}
                       </span>
@@ -390,9 +390,9 @@ class App extends Component {
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
-                        <NavLink to="/media/marketing-archive" {...this.highlightDD}>
+                        <NavLink to="/media/marketing" {...this.highlightDD}>
                           <ImageOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
-                          MARKETING ARCHIVES
+                          MARKETING
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
@@ -441,10 +441,7 @@ class App extends Component {
             <Route path="/about/our-team" component={OurTeam} />
             <Route exact path="/media/blog" component={Blog} />
             <Route exact path="/media" component={Blog} />
-            <Route
-              path="/media/marketing-archive"
-              component={MarketingContent}
-            />
+            <Route path="/media/marketing" component={MarketingContent} />
             <Route path="/join-us" component={JoinUs} />
             <Route path="/about/sponsors" component={Sponsors} />
             <Route path="/opportunities" component={Opportunities} />
@@ -498,7 +495,7 @@ class App extends Component {
               <Redirect to="/media/publications" />
             </Route>
             <Route exact path="/marketing-archive">
-              <Redirect to="/media/marketing-archive" />
+              <Redirect to="/media/marketing" />
             </Route>
             <Route exact path="/sponsors">
               <Redirect to="/about/sponsors" />

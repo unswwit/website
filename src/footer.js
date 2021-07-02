@@ -11,16 +11,17 @@ const Footer = () => {
     Opportunities: "/opportunities",
     Join: "/join-us",
     Contact: "/contact-us",
-    Blog: "/resources/blog",
-    Publications: "/resources/publications",
-    "Marketing Archive": "/resources/marketing-archive",
-    Podcast: "/resources/podcast",
+    Blog: "/media/blog",
+    Publications: "/media/publications",
+    Marketing: "/media/marketing",
+    Podcast: "/media/podcast",
+    Videos: "/media/videos"
   };
 
   const links = [
     ["Home", "Events", "Opportunities", "Join Us"],
     ["Our Story", "Our Sponsors", "Our Team", "Contact Us"],
-    ["Blog Posts", "Podcast", "Publications", "Marketing Archive"],
+    ["Blog Posts", "Podcast", "Publications", "Marketing", "Videos"],
   ];
 
   const socials = {

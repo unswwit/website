@@ -127,14 +127,14 @@ class Menu extends Component {
                     onClick={this.handleClick}
                   >
                     <div className="dropdown-toggle active-nav-item">
-                      <span className="menu-item menuTitle">RESOURCES</span>
+                      <span className="menu-item menuTitle">MEDIA</span>
                     </div>
                   </div>
                   {this.state.showDD ? (
                     <div>
                       <NavLink
                         className="menu-link"
-                        to="/resources/blog"
+                        to="/media/blog"
                         style={{ textDecoration: "none" }}
                         onClick={this.props.handleMenuClick}
                       >
@@ -144,7 +144,7 @@ class Menu extends Component {
                       </NavLink>
                       <NavLink
                         className="menu-link"
-                        to="/resources/podcast"
+                        to="/media/podcast"
                         style={{ textDecoration: "none" }}
                         onClick={this.props.handleMenuClick}
                       >
@@ -154,7 +154,7 @@ class Menu extends Component {
                       </NavLink>
                       <NavLink
                         className="menu-link"
-                        to="/resources/publications"
+                        to="/media/publications"
                         style={{ textDecoration: "none" }}
                         onClick={this.props.handleMenuClick}
                       >
@@ -164,12 +164,22 @@ class Menu extends Component {
                       </NavLink>
                       <NavLink
                         className="menu-link"
-                        to="/resources/marketing-archive"
+                        to="/media/marketing"
                         style={{ textDecoration: "none" }}
                         onClick={this.props.handleMenuClick}
                       >
                         <div className="menu-box">
-                          <li className="menu-item">MARKETING ARCHIVE</li>
+                          <li className="menu-item">MARKETING</li>
+                        </div>
+                      </NavLink>
+                      <NavLink
+                        className="menu-link"
+                        to="/media/videos"
+                        style={{ textDecoration: "none" }}
+                        onClick={this.props.handleMenuClick}
+                      >
+                        <div className="menu-box">
+                          <li className="menu-item">VIDEOS</li>
                         </div>
                       </NavLink>
                     </div>
