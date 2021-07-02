@@ -13,14 +13,13 @@ const Videos = (props) => {
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [videoNumber, setVideoNumber] = useState("0");
-    // set how many posts to view per page
-    const postsPerPage = 9;
-    // all the posts of the selected filter category
-    const [selectedPosts, setSelectedPosts] = useState([]);
-    // current page number
-    const [currentPage, setCurrentPage] = useState(1);
+  // set how many posts to view per page
+  const postsPerPage = 9;
+  const [selectedPosts, setSelectedPosts] = useState([]);
+  // current page number
+  const [currentPage, setCurrentPage] = useState(1);
 
-  // retrieve current episode content
+  // retrieve current video content
   const handleVideoNumber = () => {
     let url = window.location.href.split("/");
     setVideoNumber(url[url.length - 1]);
@@ -58,32 +57,23 @@ const Videos = (props) => {
         })[0];
         setVideo(currVideo);
 
-        // load podcast episode previews
-        // if (videoIndex < 9) {
-          let sortedVideos = allVideos.slice(0, videoIndex).reverse();
-          const additionalVideos = allVideos.slice(
-            videoIndex + 1,
-            allVideos.length
-          ).reverse();
-          sortedVideos = [...additionalVideos, ...sortedVideos];
-          setVideos(sortedVideos.slice(0, postsPerPage));
-          setCurrentPage(1);
-          setSelectedPosts(sortedVideos);
-          
-        // } else {
-        //   let sortedVideos = allVideos
-        //     .slice(videoIndex - 9, videoIndex)
-        //     .reverse();
-        //   setVideos(sortedVideos);
-        // }
+        // load video previews
+        let sortedVideos = allVideos.slice(0, videoIndex).reverse();
+        const additionalVideos = allVideos
+          .slice(videoIndex + 1, allVideos.length)
+          .reverse();
+        sortedVideos = [...additionalVideos, ...sortedVideos];
+        setVideos(sortedVideos.slice(0, postsPerPage));
+        setCurrentPage(1);
+        setSelectedPosts(sortedVideos);
 
         setLoading(false);
       },
       simpleSheet: false,
     });
-  }, [videoNumber, props.match.params.videoNumber, props.history]);
+  }, [videoNumber, props.history]);
 
-  // called when pagination item clicked to slice the correct amount of posts for viewing
+  // called when pagination item clicked to slice the correct amount of videos for viewing
   const paginate = (pageNumber) => {
     setVideos(
       selectedPosts.slice(
@@ -93,10 +83,10 @@ const Videos = (props) => {
     );
     setCurrentPage(pageNumber);
   };
-  
+
   return (
     <>
-      {/*Cover Photo*/}
+      {/* Cover Photo */}
       <PageHeader imgUrl="/headers/videos-header.jpg" title="Videos" />
       {loading && (
         <div id={styles.videoLoadingContainer}>
@@ -108,26 +98,22 @@ const Videos = (props) => {
           />
         </div>
       )}
-      {/*Start of Our Story*/}
-      {/*Start of Our Mission*/}
+      {/* Start of Videos */}
       {!loading && (
         <div className={styles.videosBody}>
-          <h2 className={styles.oppSubheading}>Welcome to our channel</h2>
+          <h2 className={styles.vidSubheading}>Welcome to our channel</h2>
           <img
             className={styles.youtubeImg}
             src={process.env.PUBLIC_URL + "/videos/yt.png"}
             alt="Youtube"
           />
 
-          <div className={styles.ourMissionSection}>
-            <div className={styles.ourStory}>
-              <p className={styles.ourMissionContent}>
-                Join us on our YouTube channel to keep up to date with WIT’s
-                latest events, training and development videos + some extra
-                behind the scene clips!
-              </p>
-            </div>
-          </div>
+          <p className={styles.desc}>
+            Join us on our YouTube channel to keep up to date with WIT’s latest
+            events, training and development videos + some extra behind the
+            scene clips!
+          </p>
+          {/* Subscribe Button */}
           <p className={styles.subscribeText}>SUBSCRIBE HERE</p>
           {/*https://www.youtube.com/channel/UCQ8PGe3P4ZuDSNCb9vCeTiw?sub_confirmation=1&feature=subscribe-embed-click*/}
           <YouTubeSubscribe
@@ -159,13 +145,12 @@ const Videos = (props) => {
           <div className={styles.videoContainer}>
             {videos.map((video, index) => {
               return (
-                
-                  <a
-                    href={`https://unswwit.com/#/media/videos/${video.videoNumber}`}
-                    className={styles.eventDescription}
-                    key={index}
-                  >
-                    <div>
+                <a
+                  href={`https://unswwit.com/#/media/videos/${video.videoNumber}`}
+                  className={styles.eventDescription}
+                  key={index}
+                >
+                  <div>
                     <img
                       className={styles.eventImages}
                       src={
@@ -175,18 +160,19 @@ const Videos = (props) => {
                       alt={video.name}
                     />
                     <p className={styles.moreName}>{video.name}</p>
-                    </div>
-                  </a>
+                  </div>
+                </a>
               );
             })}
           </div>
         </div>
       )}
-              <PaginationComp
-          totalPages={Math.ceil(selectedPosts.length / postsPerPage)}
-          paginate={paginate}
-          page={currentPage}
-        />
+      {/* Pagination */}
+      <PaginationComp
+        totalPages={Math.ceil(selectedPosts.length / postsPerPage)}
+        paginate={paginate}
+        page={currentPage}
+      />
     </>
   );
 };

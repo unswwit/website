@@ -1,393 +1,168 @@
-/*--- Our Story ---*/
-h2.oppSubheading {
-    font-family: "Montserrat", sans-serif;
-    font-size: 33pt;
-    text-transform: uppercase;
-    margin-top: 5%;
-    margin-bottom: 0.25%;
-    text-align: center;
-  }
+/*--- Loading Sign ---*/
 
-  .videosBody {
-    max-width: 70%;
-    margin: 0 auto;
-    margin-bottom: 5%;
-  }
+#videoLoadingContainer {
+  display: flex;
+  justify-content: center;
+}
 
-  #videoLoadingContainer {
-    display: flex;
-    justify-content: center;
-  }
-  
-  #videoLoading {
-    color: #feb14b;
-    margin-top: 10%;
-    margin-bottom: 10%;
-  }
-  
-  /*--- Our Mission ---*/
+#videoLoading {
+  color: #feb14b;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
 
-  .ourMissionSection {
-    width: 80%;
-    margin: 0 auto;
-  }
-  
-  .ourMissionContent {
-    max-width: 50%;
-    font-size: 14pt;
-    margin: 0 auto;
-		text-align: center;
-  }
-  
-  .youtubeImg {
-		object-fit: scale-down;
-		display: block;
-		margin: 0 auto;
-		margin-top: 2%;
-		margin-bottom: 2%;
-		width: 250px;
-		height: 150px;
-  }
+/*--- Videos ---*/
+.videosBody {
+  max-width: 70%;
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
 
-  .youtubeImg img {
-    object-fit: cover;
-  }
+h2.vidSubheading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 33pt;
+  text-transform: uppercase;
+  margin-top: 5%;
+  margin-bottom: 0.25%;
+  text-align: center;
+}
 
-	.subscribeText {
-		margin: 0 auto;
-		margin-top: 4%;
-		text-align: center;
-		font-family: "Montserrat", sans-serif;
-		font-weight: 500;
-		font-size: 20pt;
-		color: #feb14b;
-	}
+/*--- Youtube Logo ---*/
+.youtubeImg {
+  object-fit: scale-down;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 250px;
+  height: 150px;
+}
 
-	.subscribe {
-		margin: 0 auto;
-		margin-top: 1%;
-		margin-bottom: 5%;
-		text-align: center;
-	}
-  
-  .ourMissionImg img {
-    width: 100%;
-  }
-  
-  /*--- Our Mascot ---*/
-  .ourMascotSection {
-    display: flex;
-    width: 80%;
-    margin: 0 auto;
-  }
-  
-  .ourMascotContent {
-    line-height: 22px;
-    padding-top: 25px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 14pt;
-    text-align: justify;
-    color: var(--light-grey);
-  }
-  
-  .ourMascotImg {
-    padding-top: 30px;
-    padding-right: 25px;
-  }
-  
-  .ourMascotImg img {
-    width: 100%;
-  }
+.youtubeImg img {
+  object-fit: cover;
+}
 
-  /*--- Youtube Video ---*/
+.desc {
+  color: var(--light-grey);
+  font-family: "Montserrat", sans-serif;
+  max-width: 50%;
+  font-size: 16px;
+  margin: 0 auto;
+  text-align: center;
+}
 
-  .videoContainer {
-    max-width: 80%;
-    margin-left: 9%;
-    display: -ms-grid;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
-    grid-gap: 0%;
-  }
+.subscribeText {
+  margin: 0 auto;
+  margin-top: 4%;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20pt;
+  color: #feb14b;
+}
 
-  .iframeWrapper {
-    width: 80%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 3vw;
-    -webkit-box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
-    box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
-    position: relative;
-  }
+.subscribe {
+  margin: 0 auto;
+  margin-top: 1%;
+  margin-bottom: 5%;
+  text-align: center;
+}
 
-  .videoName {
-    color: #313638;
-    font-family: "Playfair Display", serif;
-    font-size: 20px;
-    text-align: center;
-    padding: 0;
-    margin-top: 3%;
-    margin-bottom: 1%;
-  }
+/*--- Youtube Video ---*/
 
-  .videoDate {
-    color: #feb14b;
-    font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    text-align: center;
-    padding: 0;
-    margin: 0 auto;
-    padding-bottom: 3%;
-  }
+.videoContainer {
+  max-width: 80%;
+  margin-left: 9%;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+  grid-gap: 0%;
+}
 
-  .responsiveIframe {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    height: 0;
-  }
-  .responsiveIframe iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+.iframeWrapper {
+  width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3vw;
+  -webkit-box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+}
 
-  .embeddedVideo {
-    align-content: center;
-  }
+.responsiveIframe {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.responsiveIframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
-  .subHeading {
-    font-weight: 500;
-    font-size: 30px;
-    color: #676767;
-    margin: 5% 0 0 10%;
-  }
+.embeddedVideo {
+  align-content: center;
+}
 
-  .eventDescription {
-    height: auto;
-    margin-top: 5%;
-    margin-left: 5%;
-    -webkit-box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
-    box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
-    position: relative;
-  }
+.videoName {
+  color: #313638;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  text-align: center;
+  padding: 0;
+  margin-top: 3%;
+  margin-bottom: 1%;
+}
 
-  img.eventImages {
-    max-width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
-            box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
-  }
+.videoDate {
+  color: #feb14b;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+  padding-bottom: 3%;
+}
 
-  .moreName {
-    color: #313638;
-    font-family: "Playfair Display", serif;
-    font-size: 18px;
-    text-align: center;
-    padding-top: 7%;
-    padding-bottom: 5%;
-  }
-  
-  /*--- Link to see Willow's cute photoshoot ---*/
-  .link {
-    color: #e85f5c;
-    text-decoration: underline;
-  }
-  
-  .link:hover {
-    color: #feb14b;
-  }
-  
-  /*--- Our History ---*/
-  .ourHistorySection {
-    display: flex;
-    width: 80%;
-    margin: 0 auto;
-  }
-  
-  .ourHistoryContent {
-    padding-bottom: 25px;
-    line-height: 22px;
-    font-size: 14pt;
-    color: var(--light-grey);
-  }
-  
-  .ourStory {
-    color: var(--light-grey);
-    font-family: "Montserrat", sans-serif;
-    text-align: justify;
-  }
-  
-  /*--- Our Story big tablet version ---*/
-  @media only screen and (max-width: 1200px) {
-    .ourMissionContent {
-      font-size: 11pt;
-    }
-  
-    .ourMissionImg {
-      width: 820px;
-    }
-  
-    .ourMascotContent {
-      font-size: 11pt;
-    }
-  
-    .ourHistoryContent {
-      font-size: 11pt;
-    }
-  }
-  
-  /*--- Our Story tablet version ---*/
-  @media only screen and (max-width: 1000px) {
-    .ourMissionSection {
-      flex-direction: column;
-      width: 85%;
-    }
-    .ourMascotSection {
-      flex-direction: column;
-      width: 85%;
-    }
-  
-    .ourMissionImg {
-      display: flex;
-      margin: 0 auto;
-      padding-right: 20px;
-      width: 250px;
-      padding-top: 15px;
-      flex-direction: column-reverse;
-    }
-  
-    .ourMascotImg {
-      display: flex;
-      margin: 0 auto;
-      padding-left: 3px;
-      padding-right: 2px;
-      width: 350px;
-      padding-top: 15px;
-    }
-  }
-  
-  /*--- Our Story mobile version ---*/
-  @media only screen and (max-width: 540px) {
-    h2.oppSubheading {
-      margin-top: 10%;
-      font-size: 23pt;
-      text-transform: uppercase;
-    }
-  
-    .ourMissionContent {
-      font-size: 10pt;
-    }
-  
-    .ourMascotContent {
-      font-size: 10pt;
-    }
-  
-    .ourHistoryContent {
-      font-size: 10pt;
-    }
-  
-    .ourMissionImg {
-      display: flex;
-      margin: 0 auto;
-      width: 200px;
-      flex-direction: column-reverse;
-    }
-  
-    .ourMascotImg {
-      display: flex;
-      margin: 0 auto;
-      width: 270px;
-    }
-  }
-  
-  @media only screen and (max-width: 414px) {
-    h2.oppSubheading {
-      margin-top: 10%;
-      font-size: 23pt;
-      text-transform: uppercase;
-    }
-  
-    .ourMissionContent {
-      font-size: 10pt;
-    }
-  
-    .ourMascotContent {
-      font-size: 10pt;
-    }
-  
-    .ourHistoryContent {
-      font-size: 10pt;
-    }
-  
-    .ourMissionImg {
-      display: flex;
-      margin: 0 auto;
-      width: 180px;
-      padding-top: 15px;
-      flex-direction: column-reverse;
-    }
-  
-    .ourMascotImg {
-      display: flex;
-      margin: 0 auto;
-      width: 280px;
-      padding-top: 15px;
-    }
-  }
-  
-  @media only screen and (max-width: 375px) {
-    .ourMissionImg {
-      display: flex;
-      margin: 0 auto;
-      width: 180px;
-      padding-top: 15px;
-      flex-direction: column-reverse;
-    }
-  
-    .ourMascotImg {
-      display: flex;
-      margin: 0 auto;
-      width: 250px;
-      padding-top: 15px;
-    }
-  }
-  
-  @media only screen and (max-width: 360px) {
-    .ourMissionImg {
-      display: flex;
-      margin: 0 auto;
-      width: 200px;
-    }
-  
-    .ourMascotImg {
-      display: flex;
-      margin: 0 auto;
-      width: 250px;
-    }
-  }
-  
-  /*--- Our Story small mobile version ---*/
-  @media only screen and (max-width: 320px) {
-    .ourMissionImg {
-      display: flex;
-      margin: 0 auto;
-      width: 170px;
-    }
-  
-    .ourMascotImg {
-      display: flex;
-      margin: 0 auto;
-      width: 200px;
-    }
-  }
-  
+/*--- More From WIT ---*/
+
+.subHeading {
+  font-weight: 500;
+  font-size: 30px;
+  color: #676767;
+  margin: 5% 0 0 10%;
+}
+
+.eventDescription {
+  height: auto;
+  margin-top: 5%;
+  margin-left: 5%;
+  -webkit-box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+img.eventImages {
+  max-width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.moreName {
+  color: #313638;
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  text-align: center;
+  padding: 7% 5% 5% 5%;
+}
