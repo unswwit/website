@@ -5,12 +5,20 @@ import styles from "./videos.module.css";
 import YouTubeSubscribe from "./youtubeSubscribe";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
+// TO UNCOMMENT WHEN REACH > 9 PODCASTS
+import PaginationComp from "../components/Pagination";
 
 const Videos = (props) => {
   const [video, setVideo] = useState([]);
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [videoNumber, setVideoNumber] = useState("0");
+    // set how many posts to view per page
+    const postsPerPage = 9;
+    // all the posts of the selected filter category
+    const [selectedPosts, setSelectedPosts] = useState([]);
+    // current page number
+    const [currentPage, setCurrentPage] = useState(1);
 
   // retrieve current episode content
   const handleVideoNumber = () => {
@@ -22,6 +30,9 @@ const Videos = (props) => {
   useEffect(() => {
     setLoading(true);
     const currVideoNumber = handleVideoNumber();
+
+    // Start at the top of the page
+    window.scrollTo(0, 0);
 
     // Importing Video Details
     Tabletop.init({
@@ -48,30 +59,41 @@ const Videos = (props) => {
         setVideo(currVideo);
 
         // load podcast episode previews
-        if (videoIndex < 3) {
+        // if (videoIndex < 9) {
           let sortedVideos = allVideos.slice(0, videoIndex).reverse();
           const additionalVideos = allVideos.slice(
             videoIndex + 1,
-            videoIndex + 4 - sortedVideos.length
-          );
+            allVideos.length
+          ).reverse();
           sortedVideos = [...additionalVideos, ...sortedVideos];
-          setVideos(sortedVideos);
-        } else {
-          let sortedVideos = allVideos
-            .slice(videoIndex - 3, videoIndex)
-            .reverse();
-          setVideos(sortedVideos);
-        }
+          setVideos(sortedVideos.slice(0, postsPerPage));
+          setCurrentPage(1);
+          setSelectedPosts(sortedVideos);
+          
+        // } else {
+        //   let sortedVideos = allVideos
+        //     .slice(videoIndex - 9, videoIndex)
+        //     .reverse();
+        //   setVideos(sortedVideos);
+        // }
 
         setLoading(false);
       },
       simpleSheet: false,
     });
-
-    // Start at the top of the page
-    window.scrollTo(0, 0);
   }, [videoNumber, props.match.params.videoNumber, props.history]);
 
+  // called when pagination item clicked to slice the correct amount of posts for viewing
+  const paginate = (pageNumber) => {
+    setVideos(
+      selectedPosts.slice(
+        (pageNumber - 1) * postsPerPage,
+        pageNumber * postsPerPage
+      )
+    );
+    setCurrentPage(pageNumber);
+  };
+  
   return (
     <>
       {/*Cover Photo*/}
@@ -88,7 +110,6 @@ const Videos = (props) => {
       )}
       {/*Start of Our Story*/}
       {/*Start of Our Mission*/}
-
       {!loading && (
         <div className={styles.videosBody}>
           <h2 className={styles.oppSubheading}>Welcome to our channel</h2>
@@ -138,10 +159,13 @@ const Videos = (props) => {
           <div className={styles.videoContainer}>
             {videos.map((video, index) => {
               return (
-                <div key={index} className={styles.eventDescription}>
+                
                   <a
                     href={`https://unswwit.com/#/media/videos/${video.videoNumber}`}
+                    className={styles.eventDescription}
+                    key={index}
                   >
+                    <div>
                     <img
                       className={styles.eventImages}
                       src={
@@ -151,13 +175,18 @@ const Videos = (props) => {
                       alt={video.name}
                     />
                     <p className={styles.moreName}>{video.name}</p>
+                    </div>
                   </a>
-                </div>
               );
             })}
           </div>
         </div>
       )}
+              <PaginationComp
+          totalPages={Math.ceil(selectedPosts.length / postsPerPage)}
+          paginate={paginate}
+          page={currentPage}
+        />
     </>
   );
 };
