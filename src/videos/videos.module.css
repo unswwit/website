@@ -102,11 +102,12 @@ h2.oppSubheading {
   /*--- Youtube Video ---*/
 
   .videoContainer {
+    max-width: 80%;
+    margin-left: 9%;
     display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    grid-gap: 20px;
-    
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    grid-gap: 0%;
   }
 
   .iframeWrapper {
@@ -166,6 +167,35 @@ h2.oppSubheading {
     margin: 5% 0 0 10%;
   }
 
+  .eventDescription {
+    height: auto;
+    margin-top: 5%;
+    margin-left: 5%;
+    -webkit-box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+
+  img.eventImages {
+    max-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .moreName {
+    color: #313638;
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 7%;
+    padding-bottom: 5%;
+  }
   
   /*--- Link to see Willow's cute photoshoot ---*/
   .link {

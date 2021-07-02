@@ -8,11 +8,20 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 
 const Videos = (props) => {
   const [video, setVideo] = useState([]);
+  const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [videoNumber, setVideoNumber] = useState("0");
+
+  // retrieve current episode content
+  const handleVideoNumber = () => {
+    let url = window.location.href.split("/");
+    setVideoNumber(url[url.length - 1]);
+    return url[url.length - 1];
+  };
 
   useEffect(() => {
     setLoading(true);
-    const currVideoNumber = props.match.params.videoNumber;
+    const currVideoNumber = handleVideoNumber();
 
     // Importing Video Details
     Tabletop.init({
@@ -27,11 +36,32 @@ const Videos = (props) => {
         }
 
         // load the page content for the current video
-        const currVideo = allVideos.filter((video) => {
-          const tempKey = Object.keys(video)[0];
-          return video[tempKey].videoNumber === currVideoNumber;
+        var videoIndex = 0;
+        const currVideo = allVideos.filter((video, index) => {
+          if (video.videoNumber === currVideoNumber) {
+            videoIndex = index;
+            return true;
+          } else {
+            return false;
+          }
         })[0];
         setVideo(currVideo);
+
+        // load podcast episode previews
+        if (videoIndex < 3) {
+          let sortedVideos = allVideos.slice(0, videoIndex).reverse();
+          const additionalVideos = allVideos.slice(
+            videoIndex + 1,
+            videoIndex + 4 - sortedVideos.length
+          );
+          sortedVideos = [...additionalVideos, ...sortedVideos];
+          setVideos(sortedVideos);
+        } else {
+          let sortedVideos = allVideos
+            .slice(videoIndex - 3, videoIndex)
+            .reverse();
+          setVideos(sortedVideos);
+        }
 
         setLoading(false);
       },
@@ -40,7 +70,7 @@ const Videos = (props) => {
 
     // Start at the top of the page
     window.scrollTo(0, 0);
-  }, [props.match.params.videoNumber, props.history]);
+  }, [videoNumber, props.match.params.videoNumber, props.history]);
 
   return (
     <>
@@ -99,31 +129,33 @@ const Videos = (props) => {
                   className={styles.embeddedVideo}
                 />
               </div>
-              <p className={styles.videoName}>
-                WIT International Women's Day Brunch 2021
-              </p>
-              <p className={styles.videoDate}>March 9, 2021</p>
+              <p className={styles.videoName}>{video.name}</p>
+              <p className={styles.videoDate}>{video.date}</p>
             </div>
           </div>
-          {/* See more episodes */}
+          {/* See more videos */}
           <p className={styles.subHeading}>More From WIT</p>
-          {/* <div className={styles.previews}>
-            {episodes.map((episode, index) => {
+          <div className={styles.videoContainer}>
+            {videos.map((video, index) => {
               return (
-                <div key={index} className={styles.podcastContainer}>
-                  <EpisodeTemplate
-                    className={styles.podcastContainer}
-                    key={index}
-                    episodeNo={episode.episodeNo}
-                    title={episode.title}
-                    cover={`podcast-covers/${episode.img}`}
-                    date={episode.date}
-                    description={episode.description}
-                  />
+                <div key={index} className={styles.eventDescription}>
+                  <a
+                    href={`https://unswwit.com/#/media/videos/${video.videoNumber}`}
+                  >
+                    <img
+                      className={styles.eventImages}
+                      src={
+                        process.env.PUBLIC_URL +
+                        `/event-covers/${video.year}/${video.img}`
+                      }
+                      alt={video.name}
+                    />
+                    <p className={styles.moreName}>{video.name}</p>
+                  </a>
                 </div>
               );
             })}
-          </div> */}
+          </div>
         </div>
       )}
     </>
