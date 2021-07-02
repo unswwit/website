@@ -27,8 +27,9 @@ const Videos = (props) => {
         }
 
         // load the page content for the current video
-        const currVideo = Object.keys(allVideos).filter((video) => {
-          return String(video.videoNumber) === String(currVideoNumber);
+        const currVideo = allVideos.filter((video) => {
+          const tempKey = Object.keys(video)[0];
+          return video[tempKey].videoNumber === currVideoNumber;
         })[0];
         setVideo(currVideo);
 
@@ -90,7 +91,7 @@ const Videos = (props) => {
             <div className={styles.iframeWrapper}>
               <div className={styles.responsiveIframe}>
                 <iframe
-                  src={`https://youtube.com/embed/${video.youtubeVideoID}?autoplay=0`}
+                  src={`https://youtube.com/embed/${video.youtubeVideoID}`}
                   frameBorder="0"
                   allow="autoplay; encrypted-media"
                   allowFullScreen={true}
