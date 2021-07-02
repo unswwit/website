@@ -25,9 +25,10 @@ const Videos = (props) => {
           props.history.push("/404");
           return;
         }
+
         // load the page content for the current video
-        const currVideo = allVideos.filter((video) => {
-          return video.videoNumber === currVideoNumber;
+        const currVideo = Object.keys(allVideos).filter((video) => {
+          return String(video.videoNumber) === String(currVideoNumber);
         })[0];
         setVideo(currVideo);
 
@@ -39,8 +40,6 @@ const Videos = (props) => {
     // Start at the top of the page
     window.scrollTo(0, 0);
   }, [props.match.params.videoNumber, props.history]);
-
-  console.log(video);
 
   return (
     <>
@@ -92,9 +91,9 @@ const Videos = (props) => {
               <div className={styles.responsiveIframe}>
                 <iframe
                   src={`https://youtube.com/embed/${video.youtubeVideoID}?autoplay=0`}
-                  frameborder="0"
+                  frameBorder="0"
                   allow="autoplay; encrypted-media"
-                  allowfullscreen="true"
+                  allowFullScreen={true}
                   title="video"
                   className={styles.embeddedVideo}
                 />
