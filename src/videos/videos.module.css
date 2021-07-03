@@ -161,7 +161,7 @@ img.videoImages {
 
 /*------------------------------Responsive Mobile Design--------------------------------*/
 @media only screen and (max-width: 1300px) {
-  h2.vidSubheading {
+  h1.vidSubheading {
     font-size: 30px;
   }
 
@@ -199,7 +199,7 @@ img.videoImages {
 }
 
 @media only screen and (max-width: 650px) {
-  h2.vidSubheading {
+  h1.vidSubheading {
     font-size: 25px;
     margin-bottom: 0.1%;
   }
@@ -240,7 +240,6 @@ img.videoImages {
   .videoContainer {
     margin: 0 auto;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    display: inline-grid;
     justify-items: center;
     align-items: center;
   }
