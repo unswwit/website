@@ -5,7 +5,7 @@ import styles from "./videos.module.css";
 import YouTubeSubscribe from "./youtubeSubscribe";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
-// TO UNCOMMENT WHEN REACH > 9 PODCASTS
+// TO UNCOMMENT WHEN REACH > 9 VIDEOS
 import PaginationComp from "../components/Pagination";
 
 const Videos = (props) => {
@@ -160,6 +160,7 @@ const Videos = (props) => {
                       alt={video.name}
                     />
                     <p className={styles.moreName}>{video.name}</p>
+                    <p className={styles.moreDate}>{video.date}</p>
                   </div>
                 </a>
               );
