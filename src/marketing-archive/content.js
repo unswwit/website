@@ -119,7 +119,7 @@ const MarketingContent = () => {
       {/* Cover Photo */}
       <PageHeader
         imgUrl="/headers/marketing-header.jpg"
-        title="Marketing Archive"
+        title="Marketing"
       />
       {/*End of Header*/}
 

@@ -1,0 +1,279 @@
+/*--- Loading Sign ---*/
+
+#videoLoadingContainer {
+  display: flex;
+  justify-content: center;
+}
+
+#videoLoading {
+  color: #feb14b;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+/*--- Videos ---*/
+.videosBody {
+  max-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+
+h1.vidSubheading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 45px;
+  text-transform: uppercase;
+  margin-top: 5%;
+  margin-bottom: 0.25%;
+  text-align: center;
+}
+
+/*--- Youtube Logo ---*/
+.youtubeImg {
+  object-fit: scale-down;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 250px;
+  height: 150px;
+}
+
+.youtubeImg img {
+  object-fit: cover;
+}
+
+.desc {
+  color: var(--light-grey);
+  font-family: "Montserrat", sans-serif;
+  max-width: 50%;
+  font-size: 16px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.subscribeText {
+  margin: 0 auto;
+  margin-top: 4%;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #feb14b;
+}
+
+.subscribe {
+  margin: 0 auto;
+  margin-top: 1%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+/*--- Youtube Video ---*/
+
+.videoContainer {
+  max-width: 80%;
+  margin-left: 9%;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+  grid-gap: 1em;
+}
+
+.iframeWrapper {
+  width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3vw;
+  -webkit-box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.responsiveIframe {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.responsiveIframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.embeddedVideo {
+  align-content: center;
+}
+
+.videoName {
+  color: #313638;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  text-align: center;
+  padding: 0;
+  margin-top: 3%;
+  margin-bottom: 1%;
+  margin-left: 5%;
+}
+
+.videoDate {
+  color: #feb14b;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+  padding-bottom: 3%;
+}
+
+/*--- More From WIT ---*/
+.subHeading {
+  font-weight: 500;
+  font-size: 30px;
+  color: #676767;
+  margin: 30px 0 15px 10%;
+}
+
+.videoDescription {
+  height: auto;
+  -webkit-box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+img.videoImages {
+  max-width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.moreName {
+  color: #313638;
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  text-align: center;
+  padding: 0;
+  margin-top: 3%;
+  margin-bottom: 1%;
+}
+
+.moreDate {
+  color: #feb14b;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+  padding-bottom: 3%;
+}
+
+/*------------------------------Responsive Mobile Design--------------------------------*/
+@media only screen and (max-width: 1300px) {
+  h1.vidSubheading {
+    font-size: 30px;
+  }
+
+  .youtubeImg {
+    margin-top: 0.5%;
+    width: 150px;
+  }
+
+  .desc {
+    max-width: 80%;
+  }
+
+  .videoContainer {
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  .subscribeText {
+    margin-top: 4%;
+    font-size: 25px;
+  }
+
+  .subHeading {
+    font-size: 25px;
+    text-align: center;
+    margin: 30px 0 15px 0;
+  }
+
+  .videoContainer {
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  h1.vidSubheading {
+    font-size: 25px;
+    margin-bottom: 0.1%;
+  }
+
+  .youtubeImg {
+    margin-top: 0%;
+    width: 100px;
+  }
+
+  .desc {
+    max-width: 80%;
+    font-size: 14px;
+  }
+
+  .subscribeText {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-size: 20px;
+  }
+
+  .subscribe {
+    margin-bottom: 10%;
+  }
+
+  .iframeWrapper {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .videoName {
+    font-size: 18px;
+  }
+
+  .videoDate {
+    font-size: 14px;
+  }
+
+  .videoContainer {
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-items: center;
+    align-items: center;
+  }
+
+  .subHeading {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .videoContainer {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  }
+
+  .videoName {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .videoContainer {
+    max-width: 100%;
+  }
+}
