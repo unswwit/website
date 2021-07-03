@@ -453,7 +453,7 @@ class App extends Component {
               <Redirect to="/media/videos/2" />
             </Route>
             <Route path="/media/videos" component={Videos} />
-            {Array.from({ length: 60 }, (_, index) => index + 1).map(
+            {Array.from({ length: 62 }, (_, index) => index + 1).map(
               (blogNo) => {
                 return (
                   <Route
@@ -467,7 +467,7 @@ class App extends Component {
               }
             )}
             {/*Redirect old blog links to new blog links*/}
-            {Array.from({ length: 60 }, (_, index) => index + 1).map(
+            {Array.from({ length: 62 }, (_, index) => index + 1).map(
               (blogNo) => {
                 return (
                   <Route key={blogNo} path={"/blog/" + blogNo}>
@@ -476,7 +476,7 @@ class App extends Component {
                 );
               }
             )}
-            {Array.from({ length: 60 }, (_, index) => index + 1).map(
+            {Array.from({ length: 62 }, (_, index) => index + 1).map(
               (blogNo) => {
                 return (
                   <Route key={blogNo} path={"/resources/blog/" + blogNo}>

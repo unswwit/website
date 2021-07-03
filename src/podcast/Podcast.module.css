@@ -297,7 +297,7 @@ a:hover {
     width: 200px;
   }
 
-  .platformContainer {
+  #platformContainer {
     text-align: center;
     display: flex;
     justify-content: space-around;
