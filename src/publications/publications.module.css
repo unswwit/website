@@ -167,3 +167,9 @@
     height: 250px;
   }
 }
+
+@media only screen and (max-width: 414px) {
+  .article .dark {
+    margin: 0px 0px;
+  }
+}
