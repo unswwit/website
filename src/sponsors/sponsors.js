@@ -90,6 +90,13 @@ const Sponsors = () => {
       "MAJOR",
       "More information will be added shortly! Check out the above website for now for more information about our sponsor!",
     ],
+    AmazonWebServices: [
+      "Amazon Web Services",
+      "https://aws.amazon.com/",
+      "aws_notchecked.png",
+      "MAJOR",
+      "More information will be added shortly! Check out the above website for now for more information about our sponsor!",
+    ],
     Atlassian: [
       "Atlassian",
       "https://www.atlassian.com/au-en",
@@ -219,7 +226,7 @@ const Sponsors = () => {
     Telstra: [
       "Telstra",
       "https://www.telstra.com.au/",
-      "telstra-large.png",
+      "Telstra-large.png",
       "MAJOR",
       "More information will be added shortly! Check out the above website for now for more information about our sponsor!",
     ],
