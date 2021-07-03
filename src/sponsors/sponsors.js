@@ -90,13 +90,6 @@ const Sponsors = () => {
       "MAJOR",
       "More information will be added shortly! Check out the above website for now for more information about our sponsor!",
     ],
-    AmazonWebServices: [
-      "Amazon Web Services",
-      "https://aws.amazon.com/",
-      "aws_notchecked.png",
-      "MAJOR",
-      "More information will be added shortly! Check out the above website for now for more information about our sponsor!",
-    ],
     Atlassian: [
       "Atlassian",
       "https://www.atlassian.com/au-en",
@@ -246,6 +239,12 @@ const Sponsors = () => {
     ],
   };
 
+  const affiliations = {
+    Arc: ["https://www.arc.unsw.edu.au/", "arc.png"],
+    "Business School": ["https://www.unsw.edu.au/business/", "business_school.png"],
+    "Engineering Faculty": ["https://www.unsw.edu.au/engineering/", "eng.png"],
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -346,6 +345,28 @@ const Sponsors = () => {
                 }}
                 key={key}
               />
+            ))}
+        </div>
+
+        {/* Affiliations Area */}
+        <h2 className={styles.subsponsor}>Affiliations</h2>
+
+        <div id={styles.majorContainer}>
+          {Object.keys(affiliations)
+            .sort()
+            .map((key, index) => (
+              <a
+                key={index}
+                href={affiliations[key][0]}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  className={styles.affiliations}
+                  src={`${process.env.PUBLIC_URL}/affiliations/${affiliations[key][1]}`}
+                  alt={key}
+                />
+              </a>
             ))}
         </div>
 
