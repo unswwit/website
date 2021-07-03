@@ -147,12 +147,12 @@ const Videos = (props) => {
               return (
                 <a
                   href={`https://unswwit.com/#/media/videos/${video.videoNumber}`}
-                  className={styles.eventDescription}
+                  className={styles.videoDescription}
                   key={index}
                 >
                   <div>
                     <img
-                      className={styles.eventImages}
+                      className={styles.videoImages}
                       src={
                         process.env.PUBLIC_URL +
                         `/event-covers/${video.year}/${video.img}`

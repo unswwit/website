@@ -138,14 +138,14 @@ h1.vidSubheading {
   margin: 30px 0 15px 10%;
 }
 
-.eventDescription {
+.videoDescription {
   height: auto;
   -webkit-box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
-img.eventImages {
+img.videoImages {
   max-width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
