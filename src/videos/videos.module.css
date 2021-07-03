@@ -13,12 +13,12 @@
 
 /*--- Videos ---*/
 .videosBody {
-  max-width: 70%;
+  max-width: 80%;
   margin: 0 auto;
   margin-bottom: 5%;
 }
 
-h2.vidSubheading {
+h1.vidSubheading {
   font-family: "Montserrat", sans-serif;
   font-size: 45px;
   text-transform: uppercase;
@@ -56,7 +56,7 @@ h2.vidSubheading {
   margin-top: 4%;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 30px;
   color: #feb14b;
 }
@@ -76,7 +76,7 @@ h2.vidSubheading {
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
-  grid-gap: 0%;
+  grid-gap: 1em;
 }
 
 .iframeWrapper {
@@ -131,7 +131,6 @@ h2.vidSubheading {
 }
 
 /*--- More From WIT ---*/
-
 .subHeading {
   font-weight: 500;
   font-size: 30px;
@@ -141,8 +140,6 @@ h2.vidSubheading {
 
 .eventDescription {
   height: auto;
-  margin-top: 5%;
-  margin-left: 5%;
   -webkit-box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
   position: relative;
@@ -174,7 +171,7 @@ img.eventImages {
   }
 
   .desc {
-    max-width: 70%;
+    max-width: 80%;
   }
 
   .videoContainer {
@@ -192,6 +189,7 @@ img.eventImages {
   .subHeading {
     font-size: 25px;
     text-align: center;
+    margin: 0;
   }
 
   .videoContainer {
@@ -212,7 +210,7 @@ img.eventImages {
   }
 
   .desc {
-    max-width: 70%;
+    max-width: 80%;
     font-size: 14px;
   }
 
@@ -242,6 +240,9 @@ img.eventImages {
   .videoContainer {
     margin: 0 auto;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    display: inline-grid;
+    justify-items: center;
+    align-items: center;
   }
 
   .subHeading {
@@ -251,7 +252,7 @@ img.eventImages {
 
 @media only screen and (max-width: 415px) {
   .videoContainer {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   }
 
   .videoName {

@@ -101,7 +101,7 @@ const Videos = (props) => {
       {/* Start of Videos */}
       {!loading && (
         <div className={styles.videosBody}>
-          <h2 className={styles.vidSubheading}>Welcome to our channel</h2>
+          <h1 className={styles.vidSubheading}>Welcome to our channel</h1>
           <img
             className={styles.youtubeImg}
             src={process.env.PUBLIC_URL + "/videos/youtube.png"}
