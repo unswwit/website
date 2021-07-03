@@ -36,6 +36,9 @@ const useStyles = makeStyles({
       // eslint-disable-line no-useless-computed-key
       height: 560,
     },
+    "@media (max-width:390px)": {
+      height: 600,
+    },
   },
   media: {
     height: 300,
@@ -66,12 +69,16 @@ const useStyles = makeStyles({
   },
   click: {
     height: 560,
+    "@media (max-width:390px)": {
+      // eslint-disable-line no-useless-computed-key
+      height: 1000,
+    },
   },
   content: {
     height: "260px",
     "@media (max-width:700px)": {
       // eslint-disable-line no-useless-computed-key
-      height: 300,
+      height: 800,
     },
   },
 });
@@ -90,7 +97,10 @@ export default function EpisodeTemplate({
       <CardActionArea
         className={[classes.click, styles.previewContainer].join(" ")}
       >
-        <Link to={`/resources/podcast/${episodeNo}`} style={{ textDecoration: "none" }}>
+        <Link
+          to={`/resources/podcast/${episodeNo}`}
+          style={{ textDecoration: "none" }}
+        >
           <div className={classes.media}>
             <img
               alt="podcast episode cover"
