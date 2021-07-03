@@ -48,58 +48,58 @@ class Menu extends Component {
                 </div>
               </NavLink>
               <div>
-                  <div
-                    className="menu-box menu-dropdown"
-                    onClick={this.handleClickAbout}
-                  >
-                    <div className="dropdown-toggle active-nav-item">
-                      <span className="menu-item menuTitle">ABOUT US</span>
-                    </div>
+                <div
+                  className="menu-box menu-dropdown"
+                  onClick={this.handleClickAbout}
+                >
+                  <div className="dropdown-toggle active-nav-item">
+                    <span className="menu-item menuTitle">ABOUT US</span>
                   </div>
-                  {this.state.showDDAbout ? (
-                    <div>
-                      <NavLink
-                        className="menu-link"
-                        to="/about/our-story"
-                        style={{ textDecoration: "none" }}
-                        onClick={this.props.handleMenuClick}
-                      >
-                        <div className="menu-box">
-                          <li className="menu-item">OUR STORY</li>
-                        </div>
-                      </NavLink>
-                      <NavLink
-                        className="menu-link"
-                        to="/about/sponsors"
-                        style={{ textDecoration: "none" }}
-                        onClick={this.props.handleMenuClick}
-                      >
-                        <div className="menu-box">
-                          <li className="menu-item">OUR SPONSORS</li>
-                        </div>
-                      </NavLink>
-                      <NavLink
-                        className="menu-link"
-                        to="/about/our-team"
-                        style={{ textDecoration: "none" }}
-                        onClick={this.props.handleMenuClick}
-                      >
-                        <div className="menu-box">
-                          <li className="menu-item">OUR TEAM</li>
-                        </div>
-                      </NavLink>
-                      <NavLink
-                        className="menu-link"
-                        to="/about/contact-us"
-                        style={{ textDecoration: "none" }}
-                        onClick={this.props.handleMenuClick}
-                      >
-                        <div className="menu-box">
-                          <li className="menu-item">CONTACT US</li>
-                        </div>
-                      </NavLink>
-                    </div>
-                  ) : null}
+                </div>
+                {this.state.showDDAbout ? (
+                  <div>
+                    <NavLink
+                      className="menu-link"
+                      to="/about/our-story"
+                      style={{ textDecoration: "none" }}
+                      onClick={this.props.handleMenuClick}
+                    >
+                      <div className="menu-box">
+                        <li className="menu-item">OUR STORY</li>
+                      </div>
+                    </NavLink>
+                    <NavLink
+                      className="menu-link"
+                      to="/about/sponsors"
+                      style={{ textDecoration: "none" }}
+                      onClick={this.props.handleMenuClick}
+                    >
+                      <div className="menu-box">
+                        <li className="menu-item">OUR SPONSORS</li>
+                      </div>
+                    </NavLink>
+                    <NavLink
+                      className="menu-link"
+                      to="/about/our-team"
+                      style={{ textDecoration: "none" }}
+                      onClick={this.props.handleMenuClick}
+                    >
+                      <div className="menu-box">
+                        <li className="menu-item">OUR TEAM</li>
+                      </div>
+                    </NavLink>
+                    <NavLink
+                      className="menu-link"
+                      to="/about/contact-us"
+                      style={{ textDecoration: "none" }}
+                      onClick={this.props.handleMenuClick}
+                    >
+                      <div className="menu-box">
+                        <li className="menu-item">CONTACT US</li>
+                      </div>
+                    </NavLink>
+                  </div>
+                ) : null}
               </div>
               <NavLink
                 className="menu-link"
@@ -122,68 +122,68 @@ class Menu extends Component {
                 </div>
               </NavLink>
               <div>
-                  <div
-                    className="menu-box menu-dropdown"
-                    onClick={this.handleClick}
-                  >
-                    <div className="dropdown-toggle active-nav-item">
-                      <span className="menu-item menuTitle">MEDIA</span>
-                    </div>
+                <div
+                  className="menu-box menu-dropdown"
+                  onClick={this.handleClick}
+                >
+                  <div className="dropdown-toggle active-nav-item">
+                    <span className="menu-item menuTitle">MEDIA</span>
                   </div>
-                  {this.state.showDD ? (
-                    <div>
-                      <NavLink
-                        className="menu-link"
-                        to="/media/blog"
-                        style={{ textDecoration: "none" }}
-                        onClick={this.props.handleMenuClick}
-                      >
-                        <div className="menu-box">
-                          <li className="menu-item">BLOG POSTS</li>
-                        </div>
-                      </NavLink>
-                      <NavLink
-                        className="menu-link"
-                        to="/media/podcast"
-                        style={{ textDecoration: "none" }}
-                        onClick={this.props.handleMenuClick}
-                      >
-                        <div className="menu-box">
-                          <li className="menu-item">PODCAST</li>
-                        </div>
-                      </NavLink>
-                      <NavLink
-                        className="menu-link"
-                        to="/media/publications"
-                        style={{ textDecoration: "none" }}
-                        onClick={this.props.handleMenuClick}
-                      >
-                        <div className="menu-box">
-                          <li className="menu-item">PUBLICATIONS</li>
-                        </div>
-                      </NavLink>
-                      <NavLink
-                        className="menu-link"
-                        to="/media/marketing"
-                        style={{ textDecoration: "none" }}
-                        onClick={this.props.handleMenuClick}
-                      >
-                        <div className="menu-box">
-                          <li className="menu-item">MARKETING</li>
-                        </div>
-                      </NavLink>
-                      <NavLink
-                        className="menu-link"
-                        to="/media/videos"
-                        style={{ textDecoration: "none" }}
-                        onClick={this.props.handleMenuClick}
-                      >
-                        <div className="menu-box">
-                          <li className="menu-item">VIDEOS</li>
-                        </div>
-                      </NavLink>
-                    </div>
-                  ) : null}
+                </div>
+                {this.state.showDD ? (
+                  <div>
+                    <NavLink
+                      className="menu-link"
+                      to="/media/blog"
+                      style={{ textDecoration: "none" }}
+                      onClick={this.props.handleMenuClick}
+                    >
+                      <div className="menu-box">
+                        <li className="menu-item">BLOG POSTS</li>
+                      </div>
+                    </NavLink>
+                    <NavLink
+                      className="menu-link"
+                      to="/media/podcast"
+                      style={{ textDecoration: "none" }}
+                      onClick={this.props.handleMenuClick}
+                    >
+                      <div className="menu-box">
+                        <li className="menu-item">PODCAST</li>
+                      </div>
+                    </NavLink>
+                    <NavLink
+                      className="menu-link"
+                      to="/media/publications"
+                      style={{ textDecoration: "none" }}
+                      onClick={this.props.handleMenuClick}
+                    >
+                      <div className="menu-box">
+                        <li className="menu-item">PUBLICATIONS</li>
+                      </div>
+                    </NavLink>
+                    <NavLink
+                      className="menu-link"
+                      to="/media/marketing"
+                      style={{ textDecoration: "none" }}
+                      onClick={this.props.handleMenuClick}
+                    >
+                      <div className="menu-box">
+                        <li className="menu-item">MARKETING</li>
+                      </div>
+                    </NavLink>
+                    <NavLink
+                      className="menu-link"
+                      to="/media/videos"
+                      style={{ textDecoration: "none" }}
+                      onClick={this.props.handleMenuClick}
+                    >
+                      <div className="menu-box">
+                        <li className="menu-item">VIDEOS</li>
+                      </div>
+                    </NavLink>
+                  </div>
+                ) : null}
               </div>
 
               <NavLink
