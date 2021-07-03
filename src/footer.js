@@ -18,8 +18,9 @@ const Footer = () => {
   };
 
   const links = [
-    ["Home", "Events", "Team", "Sponsors", "Opportunities", "Join", "Contact"],
-    ["Blog", "Publications", "Marketing Archive", "Podcast"],
+    ["Home", "Events", "Opportunities", "Join Us"],
+    ["Our Story", "Our Sponsors", "Our Team", "Contact Us"],
+    ["Blog Posts", "Podcast", "Publications", "Marketing Archive"],
   ];
 
   const socials = {
@@ -57,7 +58,7 @@ const Footer = () => {
                         <li className="footer-item" key={route}>
                           <Link
                             onClick={() => window.scrollTo(0, 0)}
-                            to={routes[route]}
+                            to={routes[route] || "/"}
                           >
                             {route}
                           </Link>
