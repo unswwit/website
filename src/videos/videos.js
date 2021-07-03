@@ -6,18 +6,19 @@ import YouTubeSubscribe from "./youtubeSubscribe";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 // TO UNCOMMENT WHEN REACH > 9 VIDEOS
-import PaginationComp from "../components/Pagination";
+// import PaginationComp from "../components/Pagination";
 
 const Videos = (props) => {
   const [video, setVideo] = useState([]);
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [videoNumber, setVideoNumber] = useState("0");
+  // TO UNCOMMENT WHEN REACH > 9 VIDEOS
   // set how many posts to view per page
-  const postsPerPage = 9;
-  const [selectedPosts, setSelectedPosts] = useState([]);
-  // current page number
-  const [currentPage, setCurrentPage] = useState(1);
+  // const postsPerPage = 9;
+  // const [selectedPosts, setSelectedPosts] = useState([]);
+  // // current page number
+  // const [currentPage, setCurrentPage] = useState(1);
 
   // retrieve current video content
   const handleVideoNumber = () => {
@@ -63,9 +64,12 @@ const Videos = (props) => {
           .slice(videoIndex + 1, allVideos.length)
           .reverse();
         sortedVideos = [...additionalVideos, ...sortedVideos];
-        setVideos(sortedVideos.slice(0, postsPerPage));
-        setCurrentPage(1);
-        setSelectedPosts(sortedVideos);
+        // REMOVE THE LINE BELOW WHEN REACH > 9 VIDEOS
+        setVideos(sortedVideos);
+        // TO UNCOMMENT WHEN REACH > 9 VIDEOS
+        // setVideos(sortedVideos.slice(0, postsPerPage));
+        // setCurrentPage(1);
+        // setSelectedPosts(sortedVideos);
 
         setLoading(false);
       },
@@ -73,16 +77,17 @@ const Videos = (props) => {
     });
   }, [videoNumber, props.history]);
 
+  // TO UNCOMMENT WHEN REACH > 9 VIDEOS
   // called when pagination item clicked to slice the correct amount of videos for viewing
-  const paginate = (pageNumber) => {
-    setVideos(
-      selectedPosts.slice(
-        (pageNumber - 1) * postsPerPage,
-        pageNumber * postsPerPage
-      )
-    );
-    setCurrentPage(pageNumber);
-  };
+  // const paginate = (pageNumber) => {
+  //   setVideos(
+  //     selectedPosts.slice(
+  //       (pageNumber - 1) * postsPerPage,
+  //       pageNumber * postsPerPage
+  //     )
+  //   );
+  //   setCurrentPage(pageNumber);
+  // };
 
   return (
     <>
@@ -169,11 +174,12 @@ const Videos = (props) => {
         </div>
       )}
       {/* Pagination */}
+      {/* TO UNCOMMENT WHEN REACH > 9 VIDEOS
       <PaginationComp
         totalPages={Math.ceil(selectedPosts.length / postsPerPage)}
         paginate={paginate}
         page={currentPage}
-      />
+      /> */}
     </>
   );
 };
