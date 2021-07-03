@@ -104,7 +104,7 @@ const Videos = (props) => {
           <h2 className={styles.vidSubheading}>Welcome to our channel</h2>
           <img
             className={styles.youtubeImg}
-            src={process.env.PUBLIC_URL + "/videos/yt.png"}
+            src={process.env.PUBLIC_URL + "/videos/youtube.png"}
             alt="Youtube"
           />
 
