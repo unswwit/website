@@ -22,26 +22,8 @@
   background-color: #feb14b;
   margin: 0 auto;
   z-index: 1;
-  position: absolute;
+  position: flex; 
 }
+/*screws up the paper underneath if switching position from absolute to flex*/
 
-/*-- Iphone 8 Plus --*/
-@media only screen and (max-width: 414px) {
-	.dropItems {
-		margin-left:81px;
-	}
-  }
 
-/*-- Iphone 8 --*/
-@media only screen and (max-width: 375px) {
-	.dropItems {
-		margin-left:64px;
-	}
-  }
-
-/*-- Iphone SE --*/
-@media only screen and (max-width: 350px) {
-	.dropItems {
-		margin-left:55px;
-	}
-  }
