@@ -35,13 +35,13 @@ div .headline {
 }
 
 .headline button {
-  border: 1px solid #E85F5C;
-  background-color: #E85F5C;
+  border: 1px solid #e85f5c;
+  background-color: #e85f5c;
   padding: 11px 11px;
 }
 
 .headline a {
-  color: white; 
+  color: white;
   font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
@@ -195,8 +195,8 @@ div .headline {
 .eventsDescription {
   /* grid-area: auto / span 1; */
   /* padding-top: 10px; */
-  width: 100%; 
-  height: 100%; 
+  width: 100%;
+  height: 100%;
   /* height: auto; */
   padding-bottom: 80px;
 }
@@ -218,7 +218,7 @@ div .headline {
   font-family: "Montserrat", sans-serif;
   text-align: right;
   color: #e85f5c;
-  float: left; 
+  float: left;
 }
 
 /*Events title grid area*/
@@ -236,8 +236,7 @@ div .headline {
 /*Big event image grid area*/
 .event1 {
   /* grid-area: 2 / 2; */
-  height: 100; 
-  
+  height: 100;
 }
 
 /*Big event image size*/
@@ -256,7 +255,7 @@ div .headline {
 }
 
 .eventsDescription button {
-  border: 1.5px solid #E85F5C;
+  border: 1.5px solid #e85f5c;
   box-sizing: border-box;
   background-color: white;
   padding: 6px 6px;
@@ -272,7 +271,7 @@ div .headline {
 }
 
 .eventsDescription a:hover {
-  color: #E85F5C;
+  color: #e85f5c;
 }
 
 /*---------------Slideshow-------------------*/
@@ -287,7 +286,8 @@ div .headline {
 
 /* .mySlides {display: none} */
 
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -334,7 +334,7 @@ div .headline {
   width: 50%;
   height: 100%;
   float: right;
-  padding: 10px 55px 10px 15px; 
+  padding: 10px 55px 10px 15px;
 }
 
 .eventsDescription .right h1 {
@@ -356,8 +356,8 @@ div .headline {
   font-family: "Montserrat", sans-serif;
   text-align: right;
   color: #e85f5c;
-  float: left; 
-  height: 100%; 
+  float: left;
+  height: 100%;
 }
 
 .right:hover img {
@@ -379,7 +379,7 @@ div .headline {
   border-left: 0;
   padding: 0;
   background-color: transparent;
-  outline: 0; 
+  outline: 0;
 }
 
 .carousel .buttonNext {
@@ -399,11 +399,11 @@ div .headline {
 }
 
 .buttonBack:disabled {
-  border-right: 30px solid #C4C4C4;
+  border-right: 30px solid #c4c4c4;
 }
 
 .buttonNext:disabled {
-  border-left: 30px solid #C4C4C4;
+  border-left: 30px solid #c4c4c4;
 }
 
 .titleMobile h1 {
@@ -415,11 +415,11 @@ div .headline {
 }
 
 /* .home_publications__ncQSH img { */
-  /* margin-top: 50px; */
-  /* width: 50%; */
-  /* max-width: 500px; */
-  /* text-align: right; */
-  /* float: right; */
+/* margin-top: 50px; */
+/* width: 50%; */
+/* max-width: 500px; */
+/* text-align: right; */
+/* float: right; */
 
 /*--------------Newsletter-------------------*/
 .subscribeBtn {
@@ -481,7 +481,7 @@ div .headline {
   text-align: center;
   margin: auto;
   padding-top: 20px;
-  padding-bottom: 100px; 
+  padding-bottom: 100px;
   width: 85%;
 }
 
@@ -502,7 +502,7 @@ div .headline {
 
 /*--------------Publications-------------------*/
 #publicationsLoading {
-  color:#feb14b;  
+  color: #feb14b;
   margin-top: 7%;
   margin-bottom: 8%;
 }
@@ -532,7 +532,7 @@ div .headline {
 
 .publications .articlesDiv {
   margin-top: 60px;
-  margin-bottom: 40px; 
+  margin-bottom: 40px;
 }
 
 .articles {
@@ -548,7 +548,7 @@ div .headline {
 }
 
 .slide_component {
-  height: 100%; 
+  height: 100%;
 }
 
 /*--------------Responsive Mobile Design-------------------*/
@@ -618,7 +618,7 @@ div .headline {
     padding: 8px 8px;
   }
 
-  .headline h1{
+  .headline h1 {
     font-size: 6vw;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -691,10 +691,9 @@ div .headline {
   }
 } */
 
-
 @media only screen and (max-width: 1065px) {
   .publications .homeArticles {
-    padding: 15px 15px 15px 15px; 
+    padding: 15px 15px 15px 15px;
     display: inline-block;
   }
 }
@@ -709,15 +708,15 @@ div .headline {
     padding-bottom: 50px;
     /* max-width: 85%;
     margin: 0; */
-    width: 100%; 
+    width: 100%;
   }
 
   .eventsDescription {
     order: 2;
     padding: 0px;
     height: auto;
-    max-width: 90%; 
-    margin: auto; 
+    max-width: 90%;
+    margin: auto;
     padding: 5px;
     /* display: flex; */
     /* align-items: center; */
@@ -726,29 +725,29 @@ div .headline {
 
   .eventsDescription .left {
     padding: 0px 5px 0px 5px;
-    width: 85%; 
+    width: 85%;
     height: auto;
     float: none;
-    margin: auto; 
+    margin: auto;
   }
 
   .left p {
     margin: 20px 0;
     text-align: justify;
   }
-  
+
   .eventsDescription .right {
-    padding: 0px 5px 0px 5px; 
-    width: 85%; 
-    height: auto; 
-    float: none; 
-    margin: auto; 
+    padding: 0px 5px 0px 5px;
+    width: 85%;
+    height: auto;
+    float: none;
+    margin: auto;
   }
-  
+
   .eventsDescription .right h1 {
     font-size: 5vw;
     text-align: center;
-    display: none; 
+    display: none;
   }
 
   .right img {
@@ -762,7 +761,7 @@ div .headline {
     height: auto;
     text-align: center;
   }
-  
+
   /* .buttonBack {
     display: none;
     margin-left: 35px; 
@@ -776,18 +775,17 @@ div .headline {
   .titleMobile h1 {
     display: contents;
     font-size: 55px;
-    padding-top: 50px; 
+    padding-top: 50px;
   }
-  
+
   .dot {
-    display: contents; 
+    display: contents;
     height: 25px;
     width: 25px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
   }
-
 }
 /* 
 @media only screen and (max-width: 700px) {
@@ -797,11 +795,10 @@ div .headline {
   }
 } */
 
-
 @media only screen and (max-width: 850px) {
   .publications {
-    padding-top: 0px;  
-    padding-bottom: 30px;  
+    padding-top: 0px;
+    padding-bottom: 30px;
   }
 
   .publications h1 {
@@ -810,17 +807,15 @@ div .headline {
   }
 
   .publications .articlesDiv {
-    margin-top: 15px; 
+    margin-top: 15px;
   }
 
   .titleMobile h1 {
     display: contents;
     font-size: 9vw;
-    padding-top: 50px; 
+    padding-top: 50px;
   }
-
 }
-
 
 /* adjusting font size of carousel description  */
 
@@ -832,7 +827,7 @@ div .headline {
 
 @media only screen and (max-width: 500px) {
   .eventsDescription {
-    max-width: 80%; 
+    max-width: 80%;
   }
 }
 
@@ -856,27 +851,25 @@ div .headline {
     /* padding-right: 0; 
     padding-left: 0; 
     padding-bottom: 40px; */
-    padding: 40px 0; 
+    padding: 40px 0;
   }
 
   .carousel .buttonBack {
-    margin-left: 25px; 
+    margin-left: 25px;
   }
-  
+
   .carousel .buttonNext {
     margin-right: 25px;
   }
 
   .carousel .buttonBack:disabled {
-    margin-left: 50px; 
+    margin-left: 50px;
   }
-  
+
   .carousel .buttonNext:disabled {
     margin-right: 50px;
   }
-  
 }
-
 
 /* adjusting button size and position
 @media only screen and (max-width: 650px) {
@@ -894,24 +887,24 @@ div .headline {
     border-top: 13px solid transparent;
     border-bottom: 13px solid transparent;
     border-right: 24px solid #313638;
-    margin-left: 20px; 
+    margin-left: 20px;
   }
 
   .carousel .buttonNext {
     border-top: 13px solid transparent;
     border-bottom: 13px solid transparent;
     border-left: 24px solid #313638;
-    margin-right: 20px; 
+    margin-right: 20px;
   }
 
   .carousel .buttonBack:disabled {
-    border-right: 24px solid #C4C4C4;
-    margin-left: 20px; 
+    border-right: 24px solid #c4c4c4;
+    margin-left: 20px;
   }
-  
+
   .carousel .buttonNext:disabled {
-    border-left: 24px solid #C4C4C4;
-    margin-right: 20px; 
+    border-left: 24px solid #c4c4c4;
+    margin-right: 20px;
   }
 }
 /* 
@@ -919,9 +912,8 @@ div .headline {
   display: contents; 
 } */
 
-
-
 /* add height: 250px to both class=Homecarousel and class=Horizontal Slider, remove max-height from class=SlideInner */
+
 @media only screen and (max-width: 500px) {
   .number {
     bottom: 40%;

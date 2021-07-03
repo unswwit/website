@@ -163,7 +163,6 @@ class blogPost55 extends Component {
               excited about!
             </p>
             <br />
-            
           </div>
         </div>
         {/*for the blog post author*/}

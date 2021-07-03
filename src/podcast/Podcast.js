@@ -36,7 +36,7 @@ const Podcast = () => {
 
   useEffect(() => {
     // start at the top of the page
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
 
     // load podcast episode previews
     Tabletop.init({
@@ -45,11 +45,11 @@ const Podcast = () => {
         const unsorted = googleData["podcast-episodes"]["elements"];
         const sortedEpisodes = unsorted.reverse();
         //setEpisodes(sortedEpisodes);
-        setCurrentPosts(sortedEpisodes)
+        setCurrentPosts(sortedEpisodes);
         setLoading(false);
       },
-      simpleSheet: false
-    })
+      simpleSheet: false,
+    });
   }, []);
 
   /*
@@ -124,14 +124,14 @@ const Podcast = () => {
             />
           );
         })}
-      </div>  
-      {/* TO UNCOMMENT WHEN REACH > 9 PODCASTS */ }
+      </div>
+      {/* TO UNCOMMENT WHEN REACH > 9 PODCASTS */}
       {/*<PaginationComp 
         totalPages={Math.ceil(currentPosts.length/postsPerPage)} 
         paginate={paginate}
       />*/}
-        
-      <ScrollUpBtn/>
+
+      <ScrollUpBtn />
     </>
   );
 };

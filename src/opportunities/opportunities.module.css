@@ -111,7 +111,8 @@
 
 /*-------------------------------Responsive mobile design------------------------------*/
 @media only screen and (max-width: 750px) {
-  .head, .lookoutSize {
+  .head,
+  .lookoutSize {
     font-size: 10pt;
   }
 
@@ -121,7 +122,8 @@
 }
 
 @media only screen and (max-width: 640px) {
-  .oppBody, .oppLookout {
+  .oppBody,
+  .oppLookout {
     max-width: 90%;
   }
 
@@ -149,7 +151,6 @@
   .lookoutSize {
     font-size: 9pt;
   }
-
 }
 
 @media only screen and (max-width: 350px) {

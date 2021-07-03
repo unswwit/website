@@ -6,7 +6,7 @@ import NewsletterForm from "./NewsletterForm";
 import { Modal, Backdrop, Fade } from "@material-ui/core";
 import PubArticle from "../publications/publications-article";
 import Tabletop from "tabletop";
-import Slideshow from "./Slideshow.js"
+import Slideshow from "./Slideshow.js";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -20,30 +20,29 @@ const Home = () => {
 
   //start webpage at the top
   useEffect(() => {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
     if (window.innerWidth <= "1150") {
       setMobileView(true);
     }
-    Aos.init({ 
-      duration: 1300, 
-      once: true, 
-      anchorPlacement: "top-bottom", 
-      easing: "ease-in-out", 
-      offset: 20 
+    Aos.init({
+      duration: 1300,
+      once: true,
+      anchorPlacement: "top-bottom",
+      easing: "ease-in-out",
+      offset: 20,
     });
-   
   }, []);
 
   useEffect(() => {
     setLoading(true);
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
-      callback: googleData => {
-        setArticles(googleData["publications"]["elements"].reverse());  
+      callback: (googleData) => {
+        setArticles(googleData["publications"]["elements"].reverse());
         setLoading(false);
       },
-      simpleSheet: false
-    })
+      simpleSheet: false,
+    });
   }, []);
 
   const callbackModal = () => {
@@ -59,8 +58,8 @@ const Home = () => {
           <h1>Women In</h1>
           <h1>Technology</h1>
           <p> Empowering and inspiring the architects of change</p>
-          <button>           
-            <Link to="/join-us" style={{ textDecoration: "none"}}>
+          <button>
+            <Link to="/join-us" style={{ textDecoration: "none" }}>
               JOIN US
             </Link>
           </button>
@@ -69,7 +68,10 @@ const Home = () => {
       {/* End of Header */}
 
       {/* Start of Description */}
-      <div data-aos={mobileView ? "fade": "fade-right"} className={styles.description}>
+      <div
+        data-aos={mobileView ? "fade" : "fade-right"}
+        className={styles.description}
+      >
         <div className={styles.descriptionLeft}>
           <h1>COLLABORATE. INSPIRE. CHANGE.</h1>
         </div>
@@ -101,11 +103,11 @@ const Home = () => {
               <p>Team Members</p>
             </div>
             <div>
-              <CountUp end={20} duration={5} />
+              <CountUp end={23} duration={5} />
               <p>Sponsors</p>
             </div>
             <div>
-              <CountUp end={2860} duration={4} />
+              <CountUp end={2907} duration={4} />
               <p>Facebook Followers</p>
             </div>
           </div>
@@ -114,52 +116,68 @@ const Home = () => {
       {/* End of Statistics */}
 
       {/* Start of Upcoming Events / Latest blog / Latest podcast */}
-      <div data-aos={mobileView ? "fade":"fade-left"} data-aos-delay="150" className={styles.carousel}>
+      <div
+        data-aos={mobileView ? "fade" : "fade-left"}
+        data-aos-delay="150"
+        className={styles.carousel}
+      >
         <Slideshow />
       </div>
-  
+
       {/* Start of Publications */}
-      <div data-aos={mobileView ? "fade":"fade-right"} data-aos-delay="150" className={styles.publications}>
+      <div
+        data-aos={mobileView ? "fade" : "fade-right"}
+        data-aos-delay="150"
+        className={styles.publications}
+      >
         <h1>PUBLICATIONS</h1>
 
         {/*Recent 3 Articles*/}
         <div className={styles.articlesDiv}>
           <div className={styles.articles}>
-            {loading && <CircularProgress
-              variant="indeterminate"
-              size={50}
-              thickness={5}
-              id={styles.publicationsLoading}
-            />}
-            {!loading && last3articles.map((article, index) => 
-              <div className={styles.homeArticles} key={index}> 
-                <PubArticle                 
-                  imgUrl={`${process.env.PUBLIC_URL}/publications/${article.year}/${article.img}`}
-                  heading={article.heading}
-                  date={article.date}
-                  url={article.url}
-                />
-              </div>
-                 
+            {loading && (
+              <CircularProgress
+                variant="indeterminate"
+                size={50}
+                thickness={5}
+                id={styles.publicationsLoading}
+              />
             )}
+            {!loading &&
+              last3articles.map((article, index) => (
+                <div className={styles.homeArticles} key={index}>
+                  <PubArticle
+                    imgUrl={`${process.env.PUBLIC_URL}/publications/${article.year}/${article.img}`}
+                    heading={article.heading}
+                    date={article.date}
+                    url={article.url}
+                  />
+                </div>
+              ))}
           </div>
         </div>
-          
+
         <div className={styles.eventsDescription}>
           <button>
-            <Link to="/resources/publications" style={{ textDecoration: "none"}}>
-                see more publications
+            <Link
+              to="/resources/publications"
+              style={{ textDecoration: "none" }}
+            >
+              see more publications
             </Link>
           </button>
         </div>
-          
       </div>
-      {/* End of Publications */}     
+      {/* End of Publications */}
 
-      <div data-aos={mobileView ? "fade": "fade-left"} data-aos-delay="150" className={styles.sponsors}>
+      <div
+        data-aos={mobileView ? "fade" : "fade-left"}
+        data-aos-delay="150"
+        className={styles.sponsors}
+      >
         <h1>OUR SPONSORS</h1>
         <img
-          src={`${process.env.PUBLIC_URL}./sponsors-home-2021-temp.png`}
+          src={`${process.env.PUBLIC_URL}./sponsors-home-2021.png`}
           alt="banner"
         />
       </div>
@@ -170,8 +188,12 @@ const Home = () => {
           src={`${process.env.PUBLIC_URL}./newsletter-background.png`}
           className={styles.statsBackground}
           alt="banner"
-          />
-        <button data-aos="fade" className={styles.subscribeBtn} onClick={() => setOpen(true)}>
+        />
+        <button
+          data-aos="fade"
+          className={styles.subscribeBtn}
+          onClick={() => setOpen(true)}
+        >
           Subscribe to our newsletter
         </button>
         <Modal
@@ -184,7 +206,7 @@ const Home = () => {
           BackdropComponent={Backdrop}
           BackdropProps={{
             timeout: 500,
-          }} 
+          }}
         >
           <>
             <Fade in={open}>
