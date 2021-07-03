@@ -135,7 +135,7 @@ h1.vidSubheading {
   font-weight: 500;
   font-size: 30px;
   color: #676767;
-  margin: 5% 0 0 10%;
+  margin: 30px 0 15px 10%;
 }
 
 .eventDescription {
@@ -189,7 +189,7 @@ img.eventImages {
   .subHeading {
     font-size: 25px;
     text-align: center;
-    margin: 0;
+    margin: 30px 0 15px 0;
   }
 
   .videoContainer {
