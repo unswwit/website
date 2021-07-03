@@ -16,7 +16,7 @@ class BlogPreview extends Component {
         <div className={styles.blogPost}>
           <table cellPadding="0">
             <Link
-              to={"/resources/blog/" + this.props.blogNo}
+              to={"/media/blog/" + this.props.blogNo}
               style={{ textDecoration: "none" }}
             >
               <tr id={styles.previewRow}>
