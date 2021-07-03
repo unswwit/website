@@ -83,6 +83,12 @@ a.subheader {
   max-width: 150px;
 }
 
+.affiliations {
+  width: 330px;
+  max-height: 200px;
+  object-fit: contain;
+}
+
 @media only screen and (max-width: 1415px) {
   .affiliations {
     padding: 15px;

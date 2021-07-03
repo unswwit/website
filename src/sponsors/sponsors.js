@@ -242,8 +242,7 @@ const Sponsors = () => {
   const affiliations = {
     Arc: ["https://www.arc.unsw.edu.au/", "arc.png"],
     "Business School": ["https://www.unsw.edu.au/business/", "business_school.png"],
-    "School of CSE": ["https://www.unsw.edu.au/engineering/computer-science-and-engineering", "cse.png"],
-    "Women and Girls in Engineering": ["https://www.unsw.edu.au/engineering/student-life/women-engineering", "women_girls_eng.png"],
+    "Engineering Faculty": ["https://www.unsw.edu.au/engineering/", "eng.png"],
   };
 
   useEffect(() => {
