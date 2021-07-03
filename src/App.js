@@ -1,3 +1,4 @@
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 import React, { Component } from "react";
 import { HashRouter, Route, NavLink, Switch, Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -183,6 +184,10 @@ class App extends Component {
           <Menu
             open={this.state.menuOpen}
             handleMenuClick={this.handleMenuClick}
+          />
+          <MessengerCustomerChat
+            pageId={process.env.REACT_APP_PAGE_ID}
+            appId={process.env.REACT_APP_APP_ID}
           />
           <nav
             className={
