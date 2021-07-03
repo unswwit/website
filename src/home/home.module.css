@@ -922,10 +922,62 @@ div .headline {
 
 
 /* add height: 250px to both class=Homecarousel and class=Horizontal Slider, remove max-height from class=SlideInner */
-
-
 @media only screen and (max-width: 500px) {
   .number {
     bottom: 40%;
+  }
+}
+
+/* Adjusting height of header and header decription */
+@media only screen and (max-width: 736px) {
+  .contain {
+    height: 150vh;
+  }
+
+  div .headline {
+    top: 50%;
+  }
+}
+
+@media only screen and (max-width: 667px) {
+  div .headline {
+    top: 50%;
+  }
+}
+@media only screen and (max-width: 568px) {
+  div .headline {
+    top: 40%;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  div .headline {
+    top: 4%;
+  }
+
+  .contain {
+    height: 66vh;
+  }
+}
+
+@media only screen and (max-width: 391px) {
+  div .headline {
+    top: 5%;
+  }
+
+  .contain {
+    height: 66vh;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  div .headline { 
+    top: 1%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  div .headline {
+    top: -3.5%;
   }
 }
