@@ -6,21 +6,23 @@ const Footer = () => {
   const routes = {
     Home: "/",
     Events: "/events",
-    Team: "/our-team",
-    Sponsors: "/sponsors",
     Opportunities: "/opportunities",
-    Join: "/join-us",
-    Contact: "/contact-us",
-    Blog: "/resources/blog",
-    Publications: "/resources/publications",
-    "Marketing Archive": "/resources/marketing-archive",
-    Podcast: "/resources/podcast",
+    "Join Us": "/join-us",
+    "Our Story": "/our-story",
+    "Our Sponsors": "/sponsors",
+    "Our Team": "/our-team",
+    "Contact Us": "/contact-us",
+    "Blog Posts": "/media/blog",
+    Podcast: "/media/podcast",
+    Publications: "/media/publications",
+    Marketing: "/media/marketing",
+    Videos: "/media/videos"
   };
 
   const links = [
     ["Home", "Events", "Opportunities", "Join Us"],
     ["Our Story", "Our Sponsors", "Our Team", "Contact Us"],
-    ["Blog Posts", "Podcast", "Publications", "Marketing Archive"],
+    ["Blog Posts", "Podcast", "Publications", "Marketing", "Videos"],
   ];
 
   const socials = {
