@@ -152,8 +152,7 @@ const Videos = (props) => {
               return (
                 <a
                   href={`https://unswwit.com/#/media/videos/${video.videoNumber}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={() => window.location.reload()}
                   className={styles.videoDescription}
                   key={index}
                 >
