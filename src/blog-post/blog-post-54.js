@@ -26,6 +26,7 @@ class blogPost54 extends Component {
   }
 
   render() {
+    // Get Previous 2 Blog Info
     var currBlogNo = parseInt(
       String(this.props.match.url).split("/").reverse()[0]
     );

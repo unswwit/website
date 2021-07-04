@@ -4,6 +4,10 @@ import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
 import PageHeader from "../header";
 import ShareBtns from "./ShareBtns";
+import Tabletop from "tabletop";
+import Chip from "@material-ui/core/Chip";
+import BlogEndPreview from "./blog-end-preview";
+import { Link } from "react-router-dom";
 
 class blogPost58 extends Component {
   //start webpage at the top
@@ -11,7 +15,60 @@ class blogPost58 extends Component {
     window.scrollTo(0, 0);
   }
 
+  constructor() {
+    super();
+    this.state = {
+      currentBlogNo: 0,
+      currentBlog: "",
+      previousBlogs: [],
+      currentBlogCategories: [],
+    };
+  }
+
   render() {
+    // Get Previous 2 Blog Info
+    var currBlogNo = parseInt(
+      String(this.props.match.url).split("/").reverse()[0]
+    );
+    Tabletop.init({
+      key: process.env.REACT_APP_GOOGLE_SHEETS,
+      callback: (googleData) => {
+        const blogOriginal = googleData["blog-previews"]["elements"];
+        let blogPreviews = googleData["blog-previews"]["elements"];
+        const authorList = googleData["blog-authors"]["elements"];
+        blogOriginal.forEach((blogPreview, index) => {
+          const tempAuthor = {};
+          blogPreview.authors.split(",").forEach((authorKey) => {
+            const result = authorList.filter(
+              (authorItem) => authorItem.authors === authorKey
+            )[0];
+            tempAuthor[authorKey] = [
+              `/potraits/blog-authors/${result.img}`,
+              result.name,
+            ];
+          });
+          blogPreviews[index].authors = tempAuthor;
+        });
+
+        var lastTwoBlogPreviews = blogPreviews.slice(
+          currBlogNo - 3,
+          currBlogNo - 1
+        );
+
+        var currBlogCategories = blogPreviews[currBlogNo - 1].category.split(
+          ","
+        );
+
+        this.setState({
+          previousBlogs: lastTwoBlogPreviews,
+          currentBlog: blogPreviews[currBlogNo - 1],
+          currentBlogNo: currBlogNo,
+          currentBlogCategories: currBlogCategories,
+        });
+      },
+      simpleSheet: false,
+    });
+
     return (
       <div>
         {/* Cover Photo */}
@@ -21,9 +78,7 @@ class blogPost58 extends Component {
         {/*Start of blog post*/}
         <div className={styles.blogContent}>
           <div>
-            <h2 className={styles.blogTitle}>
-              Introducing Vivian Shen
-            </h2>
+            <h2 className={styles.blogTitle}>Introducing Vivian Shen</h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>June 30, 2021</span>
               <span>
@@ -34,20 +89,23 @@ class blogPost58 extends Component {
 
           <div className={styles.post}>
             <p className={styles.postContent}>
-              On course to graduate with a Bachelor of Data Science and Decisions, Vivian has
-              already amassed a great deal of awe-inspiring experience, having interned at Google 
-              and Atlassian and leading UNSW Women in Technology as its President in 2020. 
-              Currently working as a casual academic in UNSW’s Computer Science and 
-              Engineering Faculty, Vivian shares her knowledge and expertise with her fellow 
-              technology students. From as early as her high school days, Vivian showed her 
-              passion for technology and demonstrated her commitment to upskilling and 
-              empowering others in STEM through her involvement in initiatives such as ‘Code 
-              Camp’ as a teaching assistant. She continues to educate, inspire and empower 
-              others to excel in STEM and is genuinely passionate about promoting diversity in the field.
+              On course to graduate with a Bachelor of Data Science and
+              Decisions, Vivian has already amassed a great deal of
+              awe-inspiring experience, having interned at Google and Atlassian
+              and leading UNSW Women in Technology as its President in 2020.
+              Currently working as a casual academic in UNSW’s Computer Science
+              and Engineering Faculty, Vivian shares her knowledge and expertise
+              with her fellow technology students. From as early as her high
+              school days, Vivian showed her passion for technology and
+              demonstrated her commitment to upskilling and empowering others in
+              STEM through her involvement in initiatives such as ‘Code Camp’ as
+              a teaching assistant. She continues to educate, inspire and
+              empower others to excel in STEM and is genuinely passionate about
+              promoting diversity in the field.
             </p>
             <p className={styles.postContent}>
-              Read on to find out more about Vivian’s journey; we hope you learn as much as we 
-              did from her insights. 
+              Read on to find out more about Vivian’s journey; we hope you learn
+              as much as we did from her insights.
             </p>
             <br />
 
@@ -57,14 +115,18 @@ class blogPost58 extends Component {
 
             <p className={styles.postContent}>
               In highschool, I was introduced to{" "}
-              <a href= "https://groklearning.com/" 
-                className={styles.link} 
-                target="_blank" 
+              <a
+                href="https://groklearning.com/"
+                className={styles.link}
+                target="_blank"
                 rel="noopener noreferrer"
-              >Grok Learning</a>
-              {" "}which is an online platform that teaches the basics of programming. Through this, I picked 
-              up a web development course and found myself really enjoying it. I spent hours every 
-              week teaching myself new concepts and solving the challenges!
+              >
+                Grok Learning
+              </a>{" "}
+              which is an online platform that teaches the basics of
+              programming. Through this, I picked up a web development course
+              and found myself really enjoying it. I spent hours every week
+              teaching myself new concepts and solving the challenges!
             </p>
             <br />
 
@@ -72,9 +134,11 @@ class blogPost58 extends Component {
               Please provide a short summary of your career journey so far:
             </p>
             <p className={styles.postContent}>
-              I was a Google intern working on creating accessible front-end experiences on Chrome OS, Canvas.
-              Following this, I worked as a data science intern on the Growth team at Atlassian. Currently I am 
-              still a student, as well as a casual academic at UNSW taking the subjects COMP1531, COMP2041 and COMP2511. 
+              I was a Google intern working on creating accessible front-end
+              experiences on Chrome OS, Canvas. Following this, I worked as a
+              data science intern on the Growth team at Atlassian. Currently I
+              am still a student, as well as a casual academic at UNSW taking
+              the subjects COMP1531, COMP2041 and COMP2511.
             </p>
             <br />
 
@@ -83,11 +147,13 @@ class blogPost58 extends Component {
               Where do you see yourself in the future (career wise)?
             </p>
             <p className={styles.postContent}>
-              I am not sure what the future holds for me, but I know that I want to spend a couple 
-              of years working in software engineering at a tech company. I am also extremely passionate
-              about diversity, equity and inclusion so I can definitely see myself volunteering in that
-              community. Ultimately, I do want to build my own startup and work on areas where I think 
-              I can make a difference and that I am passionate about.
+              I am not sure what the future holds for me, but I know that I want
+              to spend a couple of years working in software engineering at a
+              tech company. I am also extremely passionate about diversity,
+              equity and inclusion so I can definitely see myself volunteering
+              in that community. Ultimately, I do want to build my own startup
+              and work on areas where I think I can make a difference and that I
+              am passionate about.
             </p>
             <br />
 
@@ -95,10 +161,12 @@ class blogPost58 extends Component {
               What do you love about your career now?
             </p>
             <p className={styles.postContent}>
-              I love the people in this community. You're surrounded by such talent, but most importantly 
-              people who are willing to help you out and share their knowledge and experiences. They're
-              incredibly supportive and really want to see you grow and achieve your goals. It really is 
-              a safe space where you feel comfortable asking for help and being yourself!
+              I love the people in this community. You're surrounded by such
+              talent, but most importantly people who are willing to help you
+              out and share their knowledge and experiences. They're incredibly
+              supportive and really want to see you grow and achieve your goals.
+              It really is a safe space where you feel comfortable asking for
+              help and being yourself!
             </p>
             <br />
 
@@ -108,9 +176,10 @@ class blogPost58 extends Component {
               their involvement in the STEM industry?
             </p>
             <p className={styles.postContent}>
-              STEM is going to be a big part of our future and it is really important that women and 
-              underrepresented groups are encouraged to be involved in shaping our future so that it 
-              can be more inclusive and accessible to everyone.
+              STEM is going to be a big part of our future and it is really
+              important that women and underrepresented groups are encouraged to
+              be involved in shaping our future so that it can be more inclusive
+              and accessible to everyone.
             </p>
             <br />
 
@@ -121,20 +190,25 @@ class blogPost58 extends Component {
               Finding what career path is the right fit for you.
             </p>
             <p className={styles.postContent}>
-              Technology is so broad and there are so many different pathways you can take - frontend, 
-              backend, full-stack, data science, product management, UI/UX just to name a few. I had a 
-              lot of different interests and that is why it is really important to take some time at university 
-              exploring internships, programs, courses and most importantly talking to people in the industry 
-              to better understand the role and the field. Through this, you can figure out what works for you 
-              and decide if this role will be a good fit for your interest and your set of skills. 
+              Technology is so broad and there are so many different pathways
+              you can take - frontend, backend, full-stack, data science,
+              product management, UI/UX just to name a few. I had a lot of
+              different interests and that is why it is really important to take
+              some time at university exploring internships, programs, courses
+              and most importantly talking to people in the industry to better
+              understand the role and the field. Through this, you can figure
+              out what works for you and decide if this role will be a good fit
+              for your interest and your set of skills.
             </p>
             <p className={styles.postContent}>
-              Coming into university, I was really dead set on pursuing data science as a career despite 
-              being interested in all these other areas. In my 2nd year, I began exploring all these different 
-              avenues and areas and I finally found out in my 4th year that software engineering aligned better 
-              with my interests and skills. After realising this, I picked up a couple more comp courses to better 
-              prepare myself for a software engineering career despite planning to graduate with a data science 
-              degree.
+              Coming into university, I was really dead set on pursuing data
+              science as a career despite being interested in all these other
+              areas. In my 2nd year, I began exploring all these different
+              avenues and areas and I finally found out in my 4th year that
+              software engineering aligned better with my interests and skills.
+              After realising this, I picked up a couple more comp courses to
+              better prepare myself for a software engineering career despite
+              planning to graduate with a data science degree.
             </p>
             <br />
 
@@ -143,10 +217,12 @@ class blogPost58 extends Component {
               career?
             </p>
             <p className={styles.postContent}>
-              There is an extraordinary amount of talented, passionate and resilient individuals at UNSW. I get 
-              inspired regularly by my peers - they have a lot of really interesting ideas, work on amazing 
-              projects and especially seeing how others overcome adversity, pick themselves up and continue to 
-              move forward to pursue their goals is incredibly inspiring!
+              There is an extraordinary amount of talented, passionate and
+              resilient individuals at UNSW. I get inspired regularly by my
+              peers - they have a lot of really interesting ideas, work on
+              amazing projects and especially seeing how others overcome
+              adversity, pick themselves up and continue to move forward to
+              pursue their goals is incredibly inspiring!
             </p>
             <br />
 
@@ -156,13 +232,14 @@ class blogPost58 extends Component {
               internship/graduate role) to upskill on?
             </p>
             <p className={styles.postContent}>
-              Hard Skills: research what hard skills are 'required' or assumed knowledge in the field(s) 
-              you are interested in. Understanding key concepts, data structures and algorithms such as 
-              time and space complexity, breadth-first search etc. 
+              Hard Skills: research what hard skills are 'required' or assumed
+              knowledge in the field(s) you are interested in. Understanding key
+              concepts, data structures and algorithms such as time and space
+              complexity, breadth-first search etc.
               <br />
               <br />
-              Soft Skills: communication and teamwork are key! Behind every successful story is an amazing 
-              team.
+              Soft Skills: communication and teamwork are key! Behind every
+              successful story is an amazing team.
             </p>
             <br />
 
@@ -171,23 +248,49 @@ class blogPost58 extends Component {
               self back in university?
             </p>
             <p className={styles.postContent}>
-              Have an open mind, take on challenges that are thrown your way and don't be afraid to ask 
-              for help!
+              Have an open mind, take on challenges that are thrown your way and
+              don't be afraid to ask for help!
             </p>
             <br />
 
             <p className={styles.question}>Favourite quote or motto?</p>
+            <p className={styles.postContent}>"Be the change you seek".</p>
             <p className={styles.postContent}>
-              "Be the change you seek".
-            </p>
-            <p className={styles.postContent}>
-              I used to hear this phrase a lot at school, and over time it has really morphed into 
-              something I feel really strongly about. It helps me stay focused, driven and create 
-              something that will add value and be a positive influence on people’s lives.
+              I used to hear this phrase a lot at school, and over time it has
+              really morphed into something I feel really strongly about. It
+              helps me stay focused, driven and create something that will add
+              value and be a positive influence on people’s lives.
             </p>
             <br />
           </div>
         </div>
+
+        <div className={styles.chipContent}>
+          <div className={styles.BlogCategories}>
+            {this.state.currentBlogCategories.map((category) => {
+              const chipColour = "#7F7F7F";
+              return (
+                <Link
+                  to={{ pathname: "/media/blog", category }}
+                  style={{ textDecoration: "none" }}
+                >
+                  <Chip
+                    size="medium"
+                    label={category}
+                    style={{
+                      textTransform: "uppercase",
+                      backgroundColor: chipColour,
+                      color: "white",
+                      margin: "5px",
+                    }}
+                    onClick={() => {}}
+                  />
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+
         {/*for the blog post author*/}
         <AuthorCard
           authors={{
@@ -199,6 +302,34 @@ class blogPost58 extends Component {
             ],
           }}
         />
+
+        {/*Bottom Share Buttons*/}
+        <div className={styles.shareContent}>
+          <p className={styles.shareTextPosition}>Share this blog post</p>
+          <ShareBtns />
+        </div>
+
+        {/*More From WIT Section*/}
+        <div className={styles.moreFromWITContent}>
+          <p className={styles.moreFromWITTextPosition}>More From WIT</p>
+          {this.state.previousBlogs.map((blog) => {
+            return (
+              <div className={styles.scaleDown}>
+                <BlogEndPreview
+                  key={blog.blogNo}
+                  blogNo={blog.blogNo}
+                  imgUrl={`/blog-covers/${blog.img}`}
+                  heading={blog.heading}
+                  date={blog.date}
+                  subheading={blog.subheading}
+                  authors={blog.authors}
+                  category={blog.category.split(",")}
+                />
+              </div>
+            );
+          })}
+        </div>
+
         {/*End of blog posts*/}
       </div>
     );
