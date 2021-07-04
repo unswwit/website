@@ -152,7 +152,8 @@ const Videos = (props) => {
               return (
                 <a
                   href={`https://unswwit.com/#/media/videos/${video.videoNumber}`}
-                  target="_self"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={styles.videoDescription}
                   key={index}
                 >
