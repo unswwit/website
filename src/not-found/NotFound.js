@@ -4,8 +4,8 @@ import styles from "./NotFound.module.css";
 
 const NotFound = () => {
   useEffect(() => {
-    window.scrollTo(0,0);
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div id={styles.container}>
       <img

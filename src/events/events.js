@@ -106,16 +106,18 @@ const Events = () => {
                         {upcomingEvent.description}
                       </p>
                       <ul id={styles.links}>
-                        <li className={styles.eventLink}>
-                          <a
-                            href={upcomingEvent.registerLink}
-                            className={styles.event}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            Register
-                          </a>
-                        </li>
+                        {upcomingEvent.registerLink && (
+                          <li className={styles.eventLink}>
+                            <a
+                              href={upcomingEvent.registerLink}
+                              className={styles.event}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Register
+                            </a>
+                          </li>
+                        )}
                         {upcomingEvent.facebookLink && (
                           <li className={styles.eventLink}>
                             <a
@@ -175,16 +177,16 @@ const Events = () => {
               let eventLabel = event.img.split(".")[0].split("-");
               eventLabel.shift();
               return (
-                <div key={index} className={styles.gridItem}>
+                <div key={index}>
                   <Link
                     to={`/event-recaps/${year}/${event.eventNumber}`}
                     style={{ textDecoration: "none" }}
                   >
-                    <img
-                      className={styles.eventImages}
-                      src={`${process.env.PUBLIC_URL}/event-covers/${year}/${event.img}`}
-                      alt={eventLabel.join(" ")}
-                    />
+                  <img
+                    className={styles.eventImages}
+                    src={`${process.env.PUBLIC_URL}/event-covers/${year}/${event.img}`}
+                    alt={eventLabel.join(" ")}
+                  />
                   </Link>
                 </div>
               );
