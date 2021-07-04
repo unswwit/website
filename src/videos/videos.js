@@ -21,15 +21,17 @@ const Videos = (props) => {
   // const [currentPage, setCurrentPage] = useState(1);
 
   // retrieve current video content
-  const handleVideoNumber = () => {
+  const handleVideoNumber = (numVideos) => {
     let url = window.location.href.split("/");
-    setVideoNumber(url[url.length - 1]);
-    return url[url.length - 1];
+    if (url[url.length-1] !== "videos") {
+      setVideoNumber(url[url.length - 1]);
+      return url[url.length - 1];
+    } 
+    return `${+numVideos - 1}`;
   };
 
   useEffect(() => {
     setLoading(true);
-    const currVideoNumber = handleVideoNumber();
 
     // Start at the top of the page
     window.scrollTo(0, 0);
@@ -40,6 +42,7 @@ const Videos = (props) => {
       callback: (googleData) => {
         // Redirect to 404 page if visiting an invalid video number in the url
         const allVideos = googleData["videos"]["elements"];
+        const currVideoNumber = handleVideoNumber(allVideos.length);
 
         if (allVideos.length <= 0 || currVideoNumber > allVideos.length) {
           props.history.push("/404");
@@ -152,7 +155,6 @@ const Videos = (props) => {
               return (
                 <a
                   href={`https://unswwit.com/#/media/videos/${video.videoNumber}`}
-                  onClick={() => window.location.reload()}
                   className={styles.videoDescription}
                   key={index}
                 >
