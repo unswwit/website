@@ -238,7 +238,7 @@ class blogPost54 extends Component {
               const chipColour = "#7F7F7F";
               return (
                 <Link
-                  to={{ pathname: "/resources/blog", category }}
+                  to={{ pathname: "/media/blog", category }}
                   style={{ textDecoration: "none" }}
                 >
                   <Chip

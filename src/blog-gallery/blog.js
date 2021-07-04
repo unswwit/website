@@ -96,9 +96,11 @@ const Blog = (props) => {
   };
 
   useEffect(() => {
+    // If a category is specified in props, use it
     if (props.location.category) {
       setSelectedCategory(props.location.category);
     }
+
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: (googleData) => {
@@ -128,7 +130,7 @@ const Blog = (props) => {
       },
       simpleSheet: false,
     });
-  }, []);
+  }, [props.location.category]);
 
   // called when pagination item clicked to slice the correct amount of posts for viewing
   const paginate = (pageNumber) => {
@@ -140,7 +142,7 @@ const Blog = (props) => {
       )
     );
   };
-
+  
   return (
     <>
       {/* Cover Photo */}
