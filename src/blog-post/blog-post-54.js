@@ -64,7 +64,6 @@ class blogPost54 extends Component {
           currentBlogNo: currBlogNo,
           currentBlogCategories: currBlogCategories,
         });
-        console.log(this.state);
       },
       simpleSheet: false,
     });
@@ -239,7 +238,7 @@ class blogPost54 extends Component {
               const chipColour = "#7F7F7F";
               return (
                 <Link
-                  to={"/resources/blog"}
+                  to={{ pathname: "/resources/blog", category }}
                   style={{ textDecoration: "none" }}
                 >
                   <Chip

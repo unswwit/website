@@ -8,7 +8,7 @@ import Chip from "@material-ui/core/Chip";
 import Tooltip from "@material-ui/core/Tooltip";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import ScrollUpBtn from "../components/ScrollUpBtn"
+import ScrollUpBtn from "../components/ScrollUpBtn";
 
 const useStylesBootstrap = makeStyles((theme) => ({
   arrow: {
@@ -24,7 +24,7 @@ const BootstrapTooltip = (props) => {
   return <Tooltip arrow classes={classes} {...props} />;
 };
 
-const Blog = () => {
+const Blog = (props) => {
   const categoryDescriptions = {
     All: "Click here to see all the blog posts that we have posted!",
     "WIT Crush Wednesday":
@@ -45,10 +45,13 @@ const Blog = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[])
+    window.scrollTo(0, 0);
+  }, []);
 
-  useEffect(() => {    
+  useEffect(() => {
+    if (props.location.category) {
+      setSelectedCategory(props.location.category);
+    }
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: (googleData) => {
@@ -157,7 +160,7 @@ const Blog = () => {
                 );
               })}
         </div>
-        <ScrollUpBtn/>
+        <ScrollUpBtn />
         {/*End of blog posts*/}
       </div>
     </>
