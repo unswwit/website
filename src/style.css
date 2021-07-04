@@ -82,6 +82,18 @@
   }
 }
 
+@media only screen and (max-width: 400px) {
+  .coverPhoto .headerTitle h1 {
+    font-size: 3vh;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .coverPhoto .headerTitle h1 {
+    font-size: 2.5vh;
+  }
+}
+
 @media only screen and (max-width: 318px) {
   .coverPhoto {
     position: relative;
@@ -184,7 +196,8 @@ p {
   display: none;
 }
 
-.nav-item a, .dropdown-title {
+.nav-item a,
+.dropdown-title {
   color: white;
   padding: 18px 15px;
   text-decoration: none;
@@ -196,11 +209,38 @@ p {
   font-size: 14px;
   background-color: #fff7ef;
   margin-top: 15px;
-  border-radius: 0px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.transparent {
+  margin-top: 25px;
+  border-radius: 10px;
+}
+
+.transparent::after {
+  content: ' ';
+  border-style: solid;
+  border-width: 0 1.8em 2em 1.8em;
+  border-color: transparent;
+  position: absolute;
+  right: 60px;
+  top: -1em;
+  border-bottom-color: #fff7ef;
+}
+
+.mediaDD::after {
+  content: ' ';
+  border-style: solid;
+  border-width: 0 1.8em 2em 1.8em;
+  border-color: transparent;
+  position: absolute;
+  right: 82px;
+  top: -1em;
+  border-bottom-color: #fff7ef;
 }
 
 .dropdown-item {
-  padding: 5px 0px;
+  padding: 5px 5px;
 }
 
 .dropdown-item a {
@@ -230,14 +270,16 @@ p {
 /*Making the navigation change colour on scroll*/
 .activeNav {
   background-color: #fff7ef;
-  transition: background-color .2s ease-in;
+  transition: background-color 0.2s ease-in;
 }
 
 .dropdown-toggle:after {
   color: white;
 }
 
-.active-nav-item a, .active-nav-item span, .active-nav-item:after {
+.active-nav-item a,
+.active-nav-item span,
+.active-nav-item:after {
   color: #313638;
 }
 
@@ -249,7 +291,7 @@ p {
   display: none;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 950px) {
   .nav-item {
     display: none;
   }

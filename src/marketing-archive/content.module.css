@@ -118,6 +118,10 @@ a.darken:hover div {
   }
 }
 
+#emptyMessage {
+  padding-top: 40px;
+}
+
 @media only screen and (max-width: 450px) {
   .initiatives label {
     width: 80%;
