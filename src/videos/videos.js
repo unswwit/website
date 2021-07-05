@@ -24,7 +24,7 @@ const Videos = (props) => {
   // retrieve current video content
   const handleVideoNumber = (numVideos) => {
     let url = window.location.href.split("/");
-    if (url[url.length - 1] !== "videos") {
+    if (url[url.length - 1] && url[url.length - 1] !== "videos") {
       setVideoNumber(url[url.length - 1]);
       return url[url.length - 1];
     }
