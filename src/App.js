@@ -449,7 +449,8 @@ class App extends Component {
             <Route exact path="/media/podcast" component={Podcast} />
             <Route path="/media/podcast/:episode(\d+)" component={EpisodePage} />
             <Route path="/media/publications" component={Publications} />
-            <Route path="/media/videos" component={Videos} />
+            <Route exact path="/media/videos" component={Videos} />
+            <Route path="/media/videos/:videoNumber(\d+)" component={Videos} />
             {Array.from({ length: 62 }, (_, index) => index + 1).map(
               (blogNo) => {
                 return (
