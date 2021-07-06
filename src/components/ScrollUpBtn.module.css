@@ -56,6 +56,7 @@
 /*----------------------------------Mobile responsiveness------------------------------------*/
 @media only screen and (max-width: 450px) {
   .scrollUp {
+    margin-right: 1%;
     bottom: 6em;
   }
 
