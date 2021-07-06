@@ -5,7 +5,7 @@
   width: 50px;
   height: 50px;
   position: fixed;
-  bottom: 2em;
+  bottom: 6em;
   right: -50px;
   border-radius: 100%;
   border: none;
@@ -56,7 +56,7 @@
 /*----------------------------------Mobile responsiveness------------------------------------*/
 @media only screen and (max-width: 450px) {
   .scrollUp {
-    bottom: 1.5em;
+    bottom: 6em;
   }
 
   @-webkit-keyframes showSlide {
