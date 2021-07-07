@@ -3,7 +3,7 @@
 /*Form*/
 .form {
   text-align: center;
-  margin: 60px auto 10px auto;
+  margin: 50px auto 0 auto;
   max-width: 80%;
 }
 
@@ -14,7 +14,6 @@
 /*Form left*/
 .formLeft {
   display: inline-block;
-  padding: 10px 20px;
   width: 40%;
   height: 100%;
 }
@@ -79,7 +78,7 @@ form input.button:hover {
 
 /*Style for the Emails is below*/
 .contactTeam {
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .newEmails div.dot {
@@ -137,7 +136,7 @@ form input.button:hover {
   height: auto;
   margin-left: 12%;
   margin-right: auto;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .newEmails div.profile3 {
@@ -176,6 +175,11 @@ form input.button:hover {
 
   .formLeft {
     display: initial;
+    float: none;
+  }
+
+  .formLeft form {
+    margin-bottom: 50px;
   }
 
   .newEmails div.col2 {
