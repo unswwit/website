@@ -165,7 +165,7 @@ const Blog = () => {
         <>
           {recommendation && 
           <>
-            <h2>WIT-COMMENDATION</h2>
+            <h2>WIT-COMMENDATIONS</h2>
             <BlogPreview
               recommendationId={styles.recommendation}
               key={recommendation.blogNo}
