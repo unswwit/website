@@ -16,7 +16,7 @@ const Footer = () => {
     Podcast: "/media/podcast",
     Publications: "/media/publications",
     Marketing: "/media/marketing",
-    Videos: "/media/videos"
+    Videos: "/media/videos",
   };
 
   const links = [

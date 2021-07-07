@@ -105,10 +105,7 @@ function OurTeam() {
   return (
     <div>
       {/* Cover Photo */}
-      <PageHeader
-        imgUrl="/headers/2021-team-header.jpg"
-        title="Our Team"
-      />
+      <PageHeader imgUrl="/headers/2021-team-header.jpg" title="Our Team" />
 
       {/* Timeline */}
       <Timeline

@@ -6,8 +6,7 @@
 }
 
 .eventsBody h2 {
-  margin-top: 8%;
-  margin-bottom: 4%;
+  margin-top: 100px;
 }
 
 .gridContainer {
@@ -19,7 +18,7 @@
 
 .upcoming {
   -webkit-box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
@@ -66,8 +65,8 @@ ul#links {
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   float: right;
 }
 
@@ -106,13 +105,13 @@ a:hover.event {
 img.eventImages {
   max-width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
 p.lookout {
@@ -123,9 +122,9 @@ p.lookout {
   text-transform: uppercase;
   color: #e85f5c;
   -ms-flex-preferred-size: 33.33%;
-      flex-basis: 33.33%;
+  flex-basis: 33.33%;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
@@ -147,8 +146,8 @@ p.lookout {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 /*------------------------------Responsive Mobile Design--------------------------------*/
@@ -160,7 +159,7 @@ p.lookout {
 
   #eventResources {
     -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    flex-basis: 100%;
   }
 }
 
