@@ -80,21 +80,21 @@ class blogPost63 extends Component {
               consultancy called Arup. At Arup, I got a real taste of civil
               engineering and its disciplines including water, transport, roads
               and highways, geotechnics and traffic modelling.
-              <br />
-              <br />
+            </p>
+            <p className={styles.postContent}>
               In 2020, I completed a short internship at a company called EIC
               Activities in their digital engineering team, where I experimented
               with different CAD software and modelled different design options,
               in order to understand how we can better use technology to solve
               problems.
-              <br />
-              <br />
+            </p>
+            <p className={styles.postContent}>
               Currently, I have been working at WSP, another top tier
               engineering design consultancy, for the past year and a half in
               the Power and Resources business unit on various defence and
               mining engagements.
-              <br />
-              <br />
+            </p>
+            <p className={styles.postContent}>
               On the side, I also am a private high school tutor and casual
               academic at UNSW for engineering courses.
             </p>
@@ -142,8 +142,8 @@ class blogPost63 extends Component {
               psychologists and economists clearly indicate that a diverse
               workplace makes people more innovative, creative, hardworking and
               diligent.
-              <br />
-              <br />
+            </p>
+            <p className={styles.postContent}>
               Diversity makes us smarter, and it comes in many forms, with
               gender being only one of them. That is why we need more women to
               pursue STEM – to provide a fresh perspective on projects so that
@@ -161,8 +161,9 @@ class blogPost63 extends Component {
               that no matter who you are or where you came from, if you work
               hard, anything is possible. This has carried me throughout my
               successes and failures.
-              <br />
-              <br />I also always seek to meet new people from different walks
+            </p>
+            <p className={styles.postContent}>
+              I also always seek to meet new people from different walks
               of life and engage in meaningful conversations with them. Although
               a piece of advice might not resonate with you at that moment, it
               may in the future, and that can be a way to reconnect with them
@@ -185,8 +186,9 @@ class blogPost63 extends Component {
               Otherwise you’ll be left to do hand sketches like me :’) All other
               software is discipline-related and normally learnt on the job. Be
               sure to also learn the shortcuts, so you can complete work faster!
-              <br />
-              <br />
+            </p>
+
+            <p className={styles.postContent}>
               In terms of soft skills, communication is key. Practice all forms
               of communication; written, email, verbal, non-verbal, like body
               language, presentation, public speaking, visual, like formatting
@@ -209,14 +211,14 @@ class blogPost63 extends Component {
               a point where you need to prioritise your commitments and choose
               those that will add the most value to your personal and
               professional development.
-              <br />
-              <br />
+            </p>
+            <p className={styles.postContent}>
               If you commit to too much, you’ll end up committing to nothing
               because no matter how hard you try, you won’t be able to put 100%
               into everything. And when that happens, you’ll be missing out on
               valuable learning opportunities.
-              <br />
-              <br />
+            </p>
+            <p className={styles.postContent}>
               Don’t forget that you are human, so look after your mental health,
               be kind to yourself, and enjoy life because you’re only young
               once!
@@ -228,8 +230,9 @@ class blogPost63 extends Component {
               My favourite quote changes all the time, but my current favourite
               is “The harder you fail, the faster you learn. If you want to
               succeed, double your failure rate.”
-              <br />
-              <br />
+            </p>
+
+            <p className={styles.postContent}>
               Linking to my piece of advice above, if you’re having trouble
               deciding which commitments to take up, my advice is to choose
               those that push you out of your comfort zone, force you to
@@ -238,7 +241,6 @@ class blogPost63 extends Component {
               Because usually there’s a manager on the other side to pick up
               your mistakes…
             </p>
-
           </div>
         </div>
         {/*for the blog post author*/}
