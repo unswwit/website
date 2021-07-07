@@ -107,7 +107,7 @@ const Home = () => {
               <p>Sponsors</p>
             </div>
             <div>
-              <CountUp end={2905} duration={4} />
+              <CountUp end={2917} duration={4} />
               <p>Facebook Followers</p>
             </div>
           </div>
@@ -177,7 +177,7 @@ const Home = () => {
       >
         <h1>OUR SPONSORS</h1>
         <img
-          src={`${process.env.PUBLIC_URL}./sponsors-home-2021.png`}
+          src={`${process.env.PUBLIC_URL}./home-sponsors-2021.png`}
           alt="banner"
         />
       </div>

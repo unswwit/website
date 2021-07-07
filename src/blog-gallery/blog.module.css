@@ -45,7 +45,6 @@
 
 /*-------------------------------Blog post Preview-----------------------------*/
 /*Preview Image and Hover*/
-
 .blogPreview {
   padding: 30px;
 }
@@ -181,8 +180,18 @@ table {
   padding: 0.5%;
 }
 
+/*-------------------------------Blog post Recommendation-----------------------------*/
+
+#recommendation {
+  margin-top: 0;
+  margin-bottom: 100px;
+}
+
+/*-------------------------------Blog post Responsiveness-----------------------------*/
+
 @media screen and (max-width: 1200px) {
-  table, .inputSearchBar {
+  table,
+  .inputSearchBar {
     width: 90%;
   }
 
@@ -211,7 +220,8 @@ table {
     width: 100%;
   }
 
-  table, .inputSearchBar {
+  table,
+  .inputSearchBar {
     width: 95%;
   }
 

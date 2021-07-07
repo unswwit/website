@@ -150,7 +150,7 @@ class JoinUs extends React.Component {
         </div>
 
         {/* How to join section */}
-        <h2 className={styles.header}>How to join</h2>
+        <h2 className={styles.section}>How to join</h2>
         <div className={styles.descriptionHowto}>
           <strong>Interact through social media</strong>
           <p>
@@ -203,7 +203,7 @@ class JoinUs extends React.Component {
         </div>
 
         {/* What to join section */}
-        <h2 className={styles.header}>What to join</h2>
+        <h2 className={styles.section}>What to join</h2>
         <div className={styles.descriptionHowto}>
           <p>
             WIT has several specialised portfolios that you can join as a
@@ -352,7 +352,7 @@ class JoinUs extends React.Component {
         </div>
 
         {/* Start FAQ section */}
-        <h2 className={styles.header}>FAQ</h2>
+        <h2 className={styles.section}>FAQ</h2>
         <div className={styles.accordion}>
           <Accordion>
             <AccordionSummary
@@ -478,7 +478,7 @@ class JoinUs extends React.Component {
         {/* Start of newsletter */}
         <div className={styles.stats}>
           <img
-            src={`${process.env.PUBLIC_URL}./stats-background-1.png`}
+            src={`${process.env.PUBLIC_URL}./newsletter-background.png`}
             className={styles.statsBackground}
             alt="banner"
           />

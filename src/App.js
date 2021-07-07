@@ -1,3 +1,4 @@
+import MessengerCustomerChat from "react-messenger-customer-chat";
 import React, { Component } from "react";
 import { HashRouter, Route, NavLink, Switch, Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -19,7 +20,8 @@ import Events from "./events/events";
 import Podcast from "./podcast/Podcast";
 import EpisodePage from "./podcast/EpisodePage";
 import NotFound from "./not-found/NotFound";
-import OurStory from "./our-story/our-story";
+import OurStory from "./ourStory/OurStory";
+import Videos from "./videos/videos";
 
 import Menu from "./menu";
 import MenuBtn from "./menuBtn";
@@ -33,6 +35,7 @@ import InsertDriveFileOutlinedIcon from "@material-ui/icons/InsertDriveFileOutli
 import HeadsetMicOutlinedIcon from "@material-ui/icons/HeadsetMicOutlined";
 import LocalPrintshopOutlinedIcon from "@material-ui/icons/LocalPrintshopOutlined";
 import ImageOutlinedIcon from "@material-ui/icons/ImageOutlined";
+import VideocamOutlinedIcon from "@material-ui/icons/VideocamOutlined";
 
 class App extends Component {
   /*
@@ -101,7 +104,7 @@ class App extends Component {
     });
   }
 
-  // show and hide drop down on hover (Resources)
+  // show and hide drop down on hover (Media)
   handleHover(e) {
     this.setState({
       showDD: !this.state.showDD,
@@ -184,6 +187,10 @@ class App extends Component {
             open={this.state.menuOpen}
             handleMenuClick={this.handleMenuClick}
           />
+          <MessengerCustomerChat
+            pageId={process.env.REACT_APP_PAGE_ID}
+            appId={process.env.REACT_APP_APP_ID}
+          />
           <nav
             className={
               this.state.navBar
@@ -191,8 +198,8 @@ class App extends Component {
                   ? this.navClass + " activeNav hiddenNav"
                   : this.navClass + " activeNav"
                 : this.state.hideNav
-                  ? this.navClass + " hiddenNav"
-                  : this.navClass
+                ? this.navClass + " hiddenNav"
+                : this.navClass
             }
           >
             <a className="navbar-brand" href="/">
@@ -278,25 +285,37 @@ class App extends Component {
                     >
                       <div className="dropdown-item">
                         <NavLink to="/about/our-story" {...this.highlightDD}>
-                          <ChromeReaderModeOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
+                          <ChromeReaderModeOutlinedIcon
+                            fontSize="small"
+                            style={{ marginRight: "10px" }}
+                          />
                           OUR STORY
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/about/sponsors" {...this.highlightDD}>
-                          <FavoriteBorderIcon fontSize="small" style={{marginRight: "10px"}} />
+                          <FavoriteBorderIcon
+                            fontSize="small"
+                            style={{ marginRight: "10px" }}
+                          />
                           OUR SPONSORS
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/about/our-team" {...this.highlightDD}>
-                          <PeopleOutlineIcon fontSize="small" style={{marginRight: "10px"}} />
+                          <PeopleOutlineIcon
+                            fontSize="small"
+                            style={{ marginRight: "10px" }}
+                          />
                           OUR TEAM
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/about/contact-us" {...this.highlightDD}>
-                          <PhoneOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
+                          <PhoneOutlinedIcon
+                            fontSize="small"
+                            style={{ marginRight: "10px" }}
+                          />
                           CONTACT US
                         </NavLink>
                       </div>
@@ -350,12 +369,12 @@ class App extends Component {
                     >
                       <span>
                         {this.state.navBar ? (
-                          <NavLink to="/resources/blog" {...this.highlightNav}>
-                            RESOURCES
+                          <NavLink to="/media/blog" {...this.highlightNav}>
+                            MEDIA
                           </NavLink>
                         ) : (
-                          <NavLink to="/resources/blog" {...this.highlightNoNav}>
-                            RESOURCES
+                          <NavLink to="/media/blog" {...this.highlightNoNav}>
+                            MEDIA
                           </NavLink>
                         )}
                       </span>
@@ -365,32 +384,53 @@ class App extends Component {
                         this.state.showDD
                           ? this.state.navBar
                             ? "dropdown-menu show"
-                            : "dropdown-menu transparent resDD show"
+                            : "dropdown-menu transparent mediaDD show"
                           : "dropdown-menu"
                       }
                     >
                       <div className="dropdown-item">
-                        <NavLink to="/resources/blog" {...this.highlightDD}>
-                          <InsertDriveFileOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
+                        <NavLink to="/media/blog" {...this.highlightDD}>
+                          <InsertDriveFileOutlinedIcon
+                            fontSize="small"
+                            style={{ marginRight: "10px" }}
+                          />
                           BLOG POSTS
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
-                        <NavLink to="/resources/podcast" {...this.highlightDD}>
-                          <HeadsetMicOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
+                        <NavLink to="/media/podcast" {...this.highlightDD}>
+                          <HeadsetMicOutlinedIcon
+                            fontSize="small"
+                            style={{ marginRight: "10px" }}
+                          />
                           PODCAST
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
-                        <NavLink to="/resources/publications" {...this.highlightDD}>
-                          <LocalPrintshopOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
+                        <NavLink to="/media/publications" {...this.highlightDD}>
+                          <LocalPrintshopOutlinedIcon
+                            fontSize="small"
+                            style={{ marginRight: "10px" }}
+                          />
                           PUBLICATIONS
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
-                        <NavLink to="/resources/marketing-archive" {...this.highlightDD}>
-                          <ImageOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
-                          MARKETING ARCHIVE
+                        <NavLink to="/media/marketing" {...this.highlightDD}>
+                          <ImageOutlinedIcon
+                            fontSize="small"
+                            style={{ marginRight: "10px" }}
+                          />
+                          MARKETING
+                        </NavLink>
+                      </div>
+                      <div className="dropdown-item">
+                        <NavLink to="/media/videos" {...this.highlightDD}>
+                          <VideocamOutlinedIcon
+                            fontSize="small"
+                            style={{ marginRight: "10px" }}
+                          />
+                          VIDEOS
                         </NavLink>
                       </div>
                     </div>
@@ -428,28 +468,30 @@ class App extends Component {
             {/*When user clicks on About tab, the page will be redirected to Our Story*/}
             <Route exact path="/about">
               <Redirect to="/about/our-story" />
-            </Route>            
+            </Route>
             <Route exact path="/about/our-story" component={OurStory} />
             <Route path="/about/our-team" component={OurTeam} />
-            <Route exact path="/resources/blog" component={Blog} />
-            <Route exact path="/resources" component={Blog} />
-            <Route
-              path="/resources/marketing-archive"
-              component={MarketingContent}
-            />
+            <Route exact path="/media/blog" component={Blog} />
+            <Route exact path="/media" component={Blog} />
+            <Route path="/media/marketing" component={MarketingContent} />
             <Route path="/join-us" component={JoinUs} />
             <Route path="/about/sponsors" component={Sponsors} />
             <Route path="/opportunities" component={Opportunities} />
             <Route path="/about/contact-us" component={ContactUs} />
-            <Route exact path="/resources/podcast" component={Podcast} />
-            <Route path="/resources/podcast/:episode(\d+)" component={EpisodePage} />
-            <Route path="/resources/publications" component={Publications} />
-            {Array.from({ length: 60 }, (_, index) => index + 1).map(
+            <Route exact path="/media/podcast" component={Podcast} />
+            <Route
+              path="/media/podcast/:episode(\d+)"
+              component={EpisodePage}
+            />
+            <Route path="/media/publications" component={Publications} />
+            <Route exact path="/media/videos" component={Videos} />
+            <Route path="/media/videos/:videoNumber(\d+)" component={Videos} />
+            {Array.from({ length: 63 }, (_, index) => index + 1).map(
               (blogNo) => {
                 return (
                   <Route
                     key={blogNo}
-                    path={"/resources/blog/" + blogNo}
+                    path={"/media/blog/" + blogNo}
                     component={
                       require(`./blog-post/blog-post-${blogNo}`).default
                     }
@@ -458,26 +500,35 @@ class App extends Component {
               }
             )}
             {/*Redirect old blog links to new blog links*/}
-            {Array.from({ length: 54 }, (_, index) => index + 1).map(
+            {Array.from({ length: 62 }, (_, index) => index + 1).map(
               (blogNo) => {
                 return (
                   <Route key={blogNo} path={"/blog/" + blogNo}>
-                    <Redirect to={"/resources/blog/" + blogNo} />
+                    <Redirect to={"/media/blog/" + blogNo} />
+                  </Route>
+                );
+              }
+            )}
+            {Array.from({ length: 62 }, (_, index) => index + 1).map(
+              (blogNo) => {
+                return (
+                  <Route key={blogNo} path={"/resources/blog/" + blogNo}>
+                    <Redirect to={"/media/blog/" + blogNo} />
                   </Route>
                 );
               }
             )}
             <Route exact path="/blog">
-              <Redirect to="/resources/blog" />
+              <Redirect to="/media/blog" />
             </Route>
             <Route exact path="/podcast">
-              <Redirect to="/resources/podcast" />
+              <Redirect to="/media/podcast" />
             </Route>
             <Route exact path="/publications">
-              <Redirect to="/resources/publications" />
+              <Redirect to="/media/publications" />
             </Route>
             <Route exact path="/marketing-archive">
-              <Redirect to="/resources/marketing-archive" />
+              <Redirect to="/media/marketing" />
             </Route>
             <Route exact path="/sponsors">
               <Redirect to="/about/sponsors" />

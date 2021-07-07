@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import PageHeader from ".././header";
+import PageHeader from "../header";
 import ".././style.css";
-import styles from "./our-story.module.css";
-import Timeline from "./our-story-timeline.js";
+import styles from "./OurStory.module.css";
+import Timeline from "./OurStoryTimeline.js";
 
 // Start at the top of the page
 const OurStory = () => {
@@ -11,12 +11,12 @@ const OurStory = () => {
   }, []);
 
   return (
-    <div>
+    <div id={styles.container}>
       {/*Cover Photo*/}
       <PageHeader imgUrl="/headers/our-story-header.jpg" title="Our Story" />
       {/*Start of Our Story*/}
       {/*Start of Our Mission*/}
-      <h2 className={styles.oppSubheading}>Our Mission</h2>
+      <h2 className={styles.oppSubheading} id={styles.topHeading}>Our Mission</h2>
       <div className={styles.ourMissionSection}>
         <div className={styles.ourMissionImg}>
           <img
@@ -115,11 +115,7 @@ const OurStory = () => {
           </p>
         </div>
       </div>
-      {/*Start of timeline*/}
       <Timeline />
-      <p className={styles.ourHistoryContent} />
-      <p className={styles.ourHistoryContent} />
-      {/*End of timeline*/}
       {/*End of Our History*/}
     </div>
   );

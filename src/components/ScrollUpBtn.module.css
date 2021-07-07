@@ -5,7 +5,7 @@
   width: 50px;
   height: 50px;
   position: fixed;
-  bottom: 2em;
+  bottom: 6em;
   right: -50px;
   border-radius: 100%;
   border: none;
@@ -31,13 +31,13 @@
 
 @-webkit-keyframes showSlide {
   100% {
-    right: 2em;
+    right: 1.9em;
   }
 }
 
 @keyframes showSlide {
   100% {
-    right: 2em;
+    right: 1.9em;
   }
 }
 
@@ -56,18 +56,6 @@
 /*----------------------------------Mobile responsiveness------------------------------------*/
 @media only screen and (max-width: 450px) {
   .scrollUp {
-    bottom: 1.5em;
-  }
-
-  @-webkit-keyframes showSlide {
-    100% {
-      right: 1.5em;
-    }
-  }
-
-  @keyframes showSlide {
-    100% {
-      right: 1.5em;
-    }
+    bottom: 6em;
   }
 }

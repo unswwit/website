@@ -91,7 +91,7 @@ export default function EpisodeTemplate({
         className={[classes.click, styles.previewContainer].join(" ")}
       >
         <Link
-          to={`/resources/podcast/${episodeNo}`}
+          to={`/media/podcast/${episodeNo}`}
           style={{ textDecoration: "none" }}
         >
           <div className={classes.media}>

@@ -14,7 +14,7 @@
 div .headline {
   text-align: left;
   position: absolute;
-  top: 15%;
+  top: 20%;
   left: 54vw;
 }
 
@@ -48,6 +48,10 @@ div .headline {
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.1em;
+}
+
+.link {
+  text-decoration: none;
 }
 
 .headline a:hover {
