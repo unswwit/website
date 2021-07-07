@@ -20,7 +20,7 @@ import Events from "./events/events";
 import Podcast from "./podcast/Podcast";
 import EpisodePage from "./podcast/EpisodePage";
 import NotFound from "./not-found/NotFound";
-import OurStory from "./our-story/our-story";
+import OurStory from "./ourStory/OurStory";
 import Videos from "./videos/videos";
 
 import Menu from "./menu";
