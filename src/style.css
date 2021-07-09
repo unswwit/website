@@ -218,7 +218,7 @@ p {
 }
 
 .transparent::after {
-  content: ' ';
+  content: " ";
   border-style: solid;
   border-width: 0 1.8em 2em 1.8em;
   border-color: transparent;
@@ -228,13 +228,13 @@ p {
   border-bottom-color: #fff7ef;
 }
 
-.resDD::after {
-  content: ' ';
+.mediaDD::after {
+  content: " ";
   border-style: solid;
   border-width: 0 1.8em 2em 1.8em;
   border-color: transparent;
   position: absolute;
-  right: 92px;
+  right: 82px;
   top: -1em;
   border-bottom-color: #fff7ef;
 }

@@ -6,8 +6,6 @@ const Footer = () => {
   const routes = {
     Home: "/",
     Events: "/events",
-    Team: "/our-team",
-    Sponsors: "/sponsors",
     Opportunities: "/opportunities",
     "Join Us": "/join-us",
     "Our Story": "/our-story",

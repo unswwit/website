@@ -105,14 +105,11 @@ function OurTeam() {
   return (
     <div>
       {/* Cover Photo */}
-      <PageHeader
-        imgUrl="/headers/2021-team-header.jpg"
-        title="Our Team"
-      />
+      <PageHeader imgUrl="/headers/2021-team-header.jpg" title="Our Team" />
 
       {/* Timeline */}
       <Timeline
-        margin={"7%"}
+        margin={"50px"}
         page={"teams"}
         step={25}
         valueToYear={valueToYear}
@@ -134,9 +131,7 @@ function OurTeam() {
       {!loading && (
         <>
           {/* Exec section */}
-          <div className={styles.profileSectionHeading}>
-            <h2 className={styles.teamHeading}>OUR {year} EXECUTIVE TEAM</h2>
-          </div>
+          <h2 className={styles.teamHeading} id={styles.topHeading}>OUR {year} EXECUTIVE TEAM</h2>
 
           <div className={styles.allExecsSection}>
             <div className={styles.execRow}>
@@ -176,10 +171,7 @@ function OurTeam() {
           {/* Subcommittee section */}
           {subcommittee.length ? (
             <>
-              <h2
-                className={styles.teamHeading}
-                style={{ marginTop: "2vw", paddingBottom: "5px" }}
-              >
+              <h2 className={styles.teamHeading}>
                 OUR {year} SUBCOMMITTEE TEAM
               </h2>
 
