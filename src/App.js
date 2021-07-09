@@ -293,7 +293,7 @@ class App extends Component {
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
-                        <NavLink to="/about/sponsors" {...this.highlightDD}>
+                        <NavLink to="/about/sponsors-affiliations" {...this.highlightDD}>
                           <FavoriteBorderIcon
                             fontSize="small"
                             style={{ marginRight: "10px" }}
@@ -475,7 +475,7 @@ class App extends Component {
             <Route exact path="/media" component={Blog} />
             <Route path="/media/marketing" component={MarketingContent} />
             <Route path="/join-us" component={JoinUs} />
-            <Route path="/about/sponsors" component={Sponsors} />
+            <Route path="/about/sponsors-affiliations" component={Sponsors} />
             <Route path="/opportunities" component={Opportunities} />
             <Route path="/about/contact-us" component={ContactUs} />
             <Route exact path="/media/podcast" component={Podcast} />
@@ -531,7 +531,7 @@ class App extends Component {
               <Redirect to="/media/marketing" />
             </Route>
             <Route exact path="/sponsors">
-              <Redirect to="/about/sponsors" />
+              <Redirect to="/about/sponsors-affiliations" />
             </Route>
             <Route exact path="/our-team">
               <Redirect to="/about/our-team" />

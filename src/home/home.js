@@ -177,7 +177,7 @@ const Home = () => {
       >
         <h1>SPONSORS AND AFFILIATIONS</h1>
         <img
-          src={`${process.env.PUBLIC_URL}./home-sponsors-2021.png`}
+          src={`${process.env.PUBLIC_URL}./sponsors-affiliations-home-2021.png`}
           alt="banner"
         />
       </div>
