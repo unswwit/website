@@ -257,7 +257,10 @@ const Sponsors = () => {
   return (
     <div>
       {/* Cover Photo */}
-      <PageHeader imgUrl="/headers/sponsors-header-2.jpg" title="Our Sponsors" />
+      <PageHeader
+        imgUrl="/headers/sponsors-header-2.jpg"
+        title="Sponsors and Affiliations"
+      />
 
       <div id={styles.sponsorsBody}>
         <p className={styles.subheader}>

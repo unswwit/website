@@ -284,8 +284,11 @@ class App extends Component {
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/about/sponsors" {...this.highlightDD}>
-                          <FavoriteBorderIcon fontSize="small" style={{marginRight: "10px"}} />
-                          OUR SPONSORS
+                          <FavoriteBorderIcon
+                            fontSize="small"
+                            style={{ marginRight: "10px" }}
+                          />
+                          SPONSORS AND AFFILIATIONS
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
