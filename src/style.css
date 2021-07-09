@@ -223,7 +223,7 @@ p {
   border-width: 0 1.8em 2em 1.8em;
   border-color: transparent;
   position: absolute;
-  right: 197px;
+  right: 56px;
   top: -1em;
   border-bottom-color: #fff7ef;
 }
@@ -240,7 +240,7 @@ p {
 }
 
 .dropdown-item {
-  padding: 5px 5px;
+  padding: 7px 5px;
 }
 
 .dropdown-item a {

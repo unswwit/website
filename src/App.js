@@ -298,7 +298,9 @@ class App extends Component {
                             fontSize="small"
                             style={{ marginRight: "10px" }}
                           />
-                          SPONSORS AND AFFILIATIONS
+                          SPONSORS AND &nbsp;<br/> 
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          AFFILIATIONS
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
