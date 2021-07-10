@@ -287,7 +287,7 @@ class App extends Component {
                         <NavLink to="/about/our-story" {...this.highlightDD}>
                           <ChromeReaderModeOutlinedIcon
                             fontSize="small"
-                            style={{ marginRight: "10px" }}
+                            style={{ marginRight: "10px", marginLeft: "-10px" }}
                           />
                           OUR STORY
                         </NavLink>
@@ -302,12 +302,12 @@ class App extends Component {
                         >
                           <FavoriteBorderIcon
                             fontSize="small"
-                            style={{ marginRight: "10px" }}
+                            style={{ marginRight: "10px", marginLeft: "-10px" }}
                           />
                           SPONSORS AND
                           <br />
                           <p
-                            style={{ marginLeft: "42px", paddingBottom: "0px" }}
+                            style={{ marginLeft: "32px", paddingBottom: "0px" }}
                           >
                             AFFILIATIONS
                           </p>
@@ -324,7 +324,7 @@ class App extends Component {
                         >
                           <PeopleOutlineIcon
                             fontSize="small"
-                            style={{ marginRight: "10px", paddingTop: "0px" }}
+                            style={{ marginRight: "10px", paddingTop: "0px", marginLeft: "-10px" }}
                           />
                           OUR TEAM
                         </NavLink>
@@ -333,7 +333,7 @@ class App extends Component {
                         <NavLink to="/about/contact-us" {...this.highlightDD}>
                           <PhoneOutlinedIcon
                             fontSize="small"
-                            style={{ marginRight: "10px" }}
+                            style={{ marginRight: "10px", marginLeft: "-10px" }}
                           />
                           CONTACT US
                         </NavLink>
