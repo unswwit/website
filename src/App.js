@@ -407,7 +407,7 @@ class App extends Component {
                           : "dropdown-menu"
                       }
                     >
-                      <div className="dropdown-item">
+                      <div className="dropdown-item dropdown-media">
                         <NavLink to="/media/blog" {...this.highlightDD}>
                           <InsertDriveFileOutlinedIcon
                             fontSize="small"
@@ -416,7 +416,7 @@ class App extends Component {
                           BLOG POSTS
                         </NavLink>
                       </div>
-                      <div className="dropdown-item">
+                      <div className="dropdown-item dropdown-media">
                         <NavLink to="/media/podcast" {...this.highlightDD}>
                           <HeadsetMicOutlinedIcon
                             fontSize="small"
@@ -425,7 +425,7 @@ class App extends Component {
                           PODCAST
                         </NavLink>
                       </div>
-                      <div className="dropdown-item">
+                      <div className="dropdown-item dropdown-media">
                         <NavLink to="/media/publications" {...this.highlightDD}>
                           <LocalPrintshopOutlinedIcon
                             fontSize="small"
@@ -434,7 +434,7 @@ class App extends Component {
                           PUBLICATIONS
                         </NavLink>
                       </div>
-                      <div className="dropdown-item">
+                      <div className="dropdown-item dropdown-media">
                         <NavLink to="/media/marketing" {...this.highlightDD}>
                           <ImageOutlinedIcon
                             fontSize="small"
@@ -443,7 +443,7 @@ class App extends Component {
                           MARKETING
                         </NavLink>
                       </div>
-                      <div className="dropdown-item">
+                      <div className="dropdown-item dropdown-media">
                         <NavLink to="/media/videos" {...this.highlightDD}>
                           <VideocamOutlinedIcon
                             fontSize="small"
