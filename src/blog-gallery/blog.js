@@ -10,6 +10,7 @@ import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../components/ScrollUpBtn";
 import PaginationComp from "../components/Pagination";
+import LoadingScreen from "../LoadingScreen";
 
 const useStylesBootstrap = makeStyles((theme) => ({
   arrow: {
@@ -43,6 +44,7 @@ const Blog = () => {
   };
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [loading, setLoading] = useState(true);
+  const [sourceLoading, setSourceLoading] = React.useState(true);
   const [recommendation, setRecommendation] = useState({
     date: "",
     heading: "",
@@ -68,6 +70,17 @@ const Blog = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // control when to stop loading
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => {     
+      setCoverPhoto(img.src);
+      setTimeout(() => {
+        setSourceLoading(false);
+      }, 1000);
+    }
+  }, [])  
 
   // filter blogs by a selected category
   const filterBlogs = (category, searchTerm) => {
@@ -146,6 +159,12 @@ const Blog = () => {
   };
 
   return (
+    <div>
+    {sourceLoading ? (
+      <LoadingScreen />
+    )
+      :
+      (
     <>
       {/* Cover Photo */}
       <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Posts" />
@@ -256,7 +275,8 @@ const Blog = () => {
           {/*End of blog posts*/}
         </>}
       </div>
-    </>
+      </>)}
+    </div>
   );
 };
 
