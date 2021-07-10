@@ -12,6 +12,7 @@ import styles from "./Podcast.module.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import EpisodeTemplate from "./EpisodeTemplate.js";
 import ShareBtns from "../blog-post/ShareBtns";
+import LoadingScreen from "../LoadingScreen";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,6 +30,7 @@ const EpisodePage = (props) => {
   const classes = useStyles();
   const [episodes, setEpisodes] = useState([]);
   const [episode, setEpisode] = useState({});
+  const [sourceLoading, setSourceLoading] = React.useState(true);
   const [episodeNumber, setEpisodeNumber] = useState("0");
   const [transcript, setTranscript] = useState("");
   const [loading, setLoading] = useState(true);

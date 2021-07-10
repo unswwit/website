@@ -7,6 +7,7 @@ import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Timeline from "../components/Timeline";
 import ScrollUpBtn from "../components/ScrollUpBtn";
+import LoadingScreen from "../LoadingScreen";
 
 function OurTeam() {
   const sectors = [
@@ -21,6 +22,7 @@ function OurTeam() {
   const [subcommittee, setSubcommittee] = useState([]);
   const [year, setYear] = useState("2021");
   const [loading, setLoading] = useState(true);
+  const [sourceLoading, setSourceLoading] = React.useState(true);
   const execToClassName = {
     2021: "exec2021Img",
     2020: {

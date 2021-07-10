@@ -7,6 +7,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import Tabletop from "tabletop";
 import Timeline from "../components/Timeline";
 import PaginationComp from "../components/Pagination";
+import LoadingScreen from "../LoadingScreen";
 
 const MarketingContent = () => {
   const [content, setContent] = useState([]);
@@ -15,6 +16,7 @@ const MarketingContent = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [emptyCategory, setEmptyCategory] = useState(false);
   const [finishedLoading, setfinishedLoading] = useState(false);
+  const [sourceLoading, setSourceLoading] = React.useState(true);
 
   // set how many posts to view per page
   const postsPerPage = 8;

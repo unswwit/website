@@ -4,10 +4,12 @@ import PubArticle from "./publications-article";
 import PageHeader from ".././header";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import LoadingScreen from "../LoadingScreen";
 
 const Publications = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [sourceLoading, setSourceLoading] = React.useState(true);
 
   useEffect(() => {
     // start at the top of the page

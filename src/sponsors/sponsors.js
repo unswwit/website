@@ -4,10 +4,12 @@ import PageHeader from ".././header";
 import { Modal, Backdrop, Fade } from "@material-ui/core";
 import { Button } from "semantic-ui-react";
 import SponsorsModal from "./sponsorsModal";
+import LoadingScreen from "../LoadingScreen";
 
 const Sponsors = () => {
   const [open, setOpen] = React.useState(false);
   const [currSponsor, setCurrSponsor] = React.useState("");
+  const [sourceLoading, setSourceLoading] = React.useState(true);
 
   // Getting the eucalyptus description
   const eucalyptusDescription = () => {

@@ -5,12 +5,14 @@ import EpisodeTemplate from "./EpisodeTemplate";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Tabletop from "tabletop";
 import ScrollUpBtn from "../components/ScrollUpBtn";
+import LoadingScreen from "../LoadingScreen";
 // TO UNCOMMENT WHEN REACH > 9 PODCASTS
 // import PaginationComp from "../components/Pagination";
 
 const Podcast = () => {
   //const [episodes, setEpisodes] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [sourceLoading, setSourceLoading] = React.useState(true);
   // set how many posts to view per page
   //const postsPerPage = 9;
   // the posts displayed on the current page

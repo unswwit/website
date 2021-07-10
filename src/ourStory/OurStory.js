@@ -3,9 +3,12 @@ import PageHeader from "../header";
 import ".././style.css";
 import styles from "./OurStory.module.css";
 import Timeline from "./OurStoryTimeline.js";
+import LoadingScreen from "../LoadingScreen";
+
 
 // Start at the top of the page
 const OurStory = () => {
+  const [sourceLoading, setSourceLoading] = React.useState(true);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

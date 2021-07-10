@@ -3,10 +3,12 @@ import PageHeader from ".././header";
 import styles from "./opportunities.module.css";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import LoadingScreen from "../LoadingScreen";
 
 const Opportunities = () => {
   const [loading, setLoading] = useState(true);
   const [opportunities, setOpportunities] = useState(true);
+  const [sourceLoading, setSourceLoading] = React.useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);

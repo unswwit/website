@@ -17,6 +17,7 @@ const Events = () => {
   const [events, setEvents] = useState([]);
   const [year, setYear] = useState("2021");
   const [upcomingEvents, setUpcomingEvents] = useState([]);
+  const [sourceLoading, setSourceLoading] = React.useState(true);
   const [loadingPast, setLoadingPast] = useState(true);
   const [loadingUpcoming, setLoadingUpcoming] = useState(true);
 

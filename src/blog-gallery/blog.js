@@ -73,13 +73,9 @@ const Blog = () => {
 
   // control when to stop loading
   useEffect(() => {
-    const img = new Image();
-    img.onload = () => {     
-      setCoverPhoto(img.src);
-      setTimeout(() => {
-        setSourceLoading(false);
-      }, 1000);
-    }
+    setTimeout(() => {
+      setSourceLoading(false);
+    }, 1000);
   }, [])  
 
   // filter blogs by a selected category
