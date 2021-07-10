@@ -198,8 +198,8 @@ class App extends Component {
                   ? this.navClass + " activeNav hiddenNav"
                   : this.navClass + " activeNav"
                 : this.state.hideNav
-                  ? this.navClass + " hiddenNav"
-                  : this.navClass
+                ? this.navClass + " hiddenNav"
+                : this.navClass
             }
           >
             <a className="navbar-brand" href="/">
@@ -292,22 +292,39 @@ class App extends Component {
                           OUR STORY
                         </NavLink>
                       </div>
-                      <div className="dropdown-item">
-                        <NavLink to="/about/sponsors-affiliations" {...this.highlightDD}>
+                      <div
+                        className="dropdown-item"
+                        style={{ paddingBottom: "0px" }}
+                      >
+                        <NavLink
+                          to="/about/sponsors-affiliations"
+                          {...this.highlightDD}
+                        >
                           <FavoriteBorderIcon
                             fontSize="small"
                             style={{ marginRight: "10px" }}
                           />
-                          SPONSORS AND &nbsp;<br/> 
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          AFFILIATIONS
+                          SPONSORS AND
+                          <br />
+                          <p
+                            style={{ marginLeft: "42px", paddingBottom: "0px" }}
+                          >
+                            AFFILIATIONS
+                          </p>
                         </NavLink>
                       </div>
-                      <div className="dropdown-item">
-                        <NavLink to="/about/our-team" {...this.highlightDD}>
+                      <div
+                        className="dropdown-item"
+                        style={{ paddingTop: "0px" }}
+                      >
+                        <NavLink
+                          to="/about/our-team"
+                          {...this.highlightDD}
+                          style={{ paddingTop: "0px" }}
+                        >
                           <PeopleOutlineIcon
                             fontSize="small"
-                            style={{ marginRight: "10px" }}
+                            style={{ marginRight: "10px", paddingTop: "0px" }}
                           />
                           OUR TEAM
                         </NavLink>
