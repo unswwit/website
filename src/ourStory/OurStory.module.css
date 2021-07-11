@@ -1,11 +1,19 @@
+/*--- General ---*/
+#container {
+  margin-bottom: 100px;
+}
+
 /*--- Our Story ---*/
 h2.oppSubheading {
   font-family: "Montserrat", sans-serif;
   font-size: 33pt;
   text-transform: uppercase;
-  margin-top: 8%;
-  margin-bottom: 0.25%;
+  margin-top: 100px;
   text-align: center;
+}
+
+h2#topHeading {
+  margin-top: 50px;
 }
 
 /*--- Our Mission ---*/
@@ -42,7 +50,6 @@ h2.oppSubheading {
 
 .ourMascotContent {
   line-height: 22px;
-  padding-top: 25px;
   font-family: "Montserrat", sans-serif;
   font-size: 14pt;
   text-align: justify;
@@ -50,7 +57,7 @@ h2.oppSubheading {
 }
 
 .ourMascotImg {
-  padding-top: 30px;
+  padding-top: 1px;
   padding-right: 25px;
 }
 

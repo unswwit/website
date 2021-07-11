@@ -5,6 +5,7 @@ import styles from "./videos.module.css";
 import YouTubeSubscribe from "./youtubeSubscribe";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import { Link } from "react-router-dom";
 // TO UNCOMMENT WHEN REACH > 9 VIDEOS
 // import PaginationComp from "../components/Pagination";
 
@@ -21,15 +22,17 @@ const Videos = (props) => {
   // const [currentPage, setCurrentPage] = useState(1);
 
   // retrieve current video content
-  const handleVideoNumber = () => {
+  const handleVideoNumber = (numVideos) => {
     let url = window.location.href.split("/");
-    setVideoNumber(url[url.length - 1]);
-    return url[url.length - 1];
+    if (url[url.length - 1] && url[url.length - 1] !== "videos") {
+      setVideoNumber(url[url.length - 1]);
+      return url[url.length - 1];
+    }
+    return `${+numVideos - 1}`;
   };
 
   useEffect(() => {
     setLoading(true);
-    const currVideoNumber = handleVideoNumber();
 
     // Start at the top of the page
     window.scrollTo(0, 0);
@@ -40,6 +43,7 @@ const Videos = (props) => {
       callback: (googleData) => {
         // Redirect to 404 page if visiting an invalid video number in the url
         const allVideos = googleData["videos"]["elements"];
+        const currVideoNumber = handleVideoNumber(allVideos.length);
 
         if (allVideos.length <= 0 || currVideoNumber > allVideos.length) {
           props.history.push("/404");
@@ -76,6 +80,59 @@ const Videos = (props) => {
       simpleSheet: false,
     });
   }, [videoNumber, props.history]);
+
+  const currentVideo = (currentNumber) => {
+    setLoading(true);
+
+    // Start at the top of the page
+    window.scrollTo(0, 0);
+
+    // Importing Video Details
+    Tabletop.init(
+      {
+        key: process.env.REACT_APP_GOOGLE_SHEETS,
+        callback: (googleData) => {
+          // Redirect to 404 page if visiting an invalid video number in the url
+          const allVideos = googleData["videos"]["elements"];
+          const currVideoNumber = handleVideoNumber(allVideos.length);
+
+          if (allVideos.length <= 0 || currVideoNumber > allVideos.length) {
+            props.history.push("/404");
+            return;
+          }
+
+          // load the page content for the current video
+          var videoIndex = 0;
+          const currVideo = allVideos.filter((video, index) => {
+            if (video.videoNumber === currVideoNumber) {
+              videoIndex = index;
+              return true;
+            } else {
+              return false;
+            }
+          })[0];
+          setVideo(currVideo);
+
+          // load video previews
+          let sortedVideos = allVideos.slice(0, videoIndex).reverse();
+          const additionalVideos = allVideos
+            .slice(videoIndex + 1, allVideos.length)
+            .reverse();
+          sortedVideos = [...additionalVideos, ...sortedVideos];
+          // REMOVE THE LINE BELOW WHEN REACH > 9 VIDEOS
+          setVideos(sortedVideos);
+          // TO UNCOMMENT WHEN REACH > 9 VIDEOS
+          // setVideos(sortedVideos.slice(0, postsPerPage));
+          // setCurrentPage(1);
+          // setSelectedPosts(sortedVideos);
+
+          setLoading(false);
+        },
+        simpleSheet: false,
+      },
+      [videoNumber, props.history]
+    );
+  };
 
   // TO UNCOMMENT WHEN REACH > 9 VIDEOS
   // called when pagination item clicked to slice the correct amount of videos for viewing
@@ -150,12 +207,11 @@ const Videos = (props) => {
           <div className={styles.videoContainer}>
             {videos.map((video, index) => {
               return (
-                <a
-                  href={`https://unswwit.com/#/media/videos/${video.videoNumber}`}
-                  className={styles.videoDescription}
-                  key={index}
-                >
-                  <div>
+                <div className={styles.videoDescription} key={index}>
+                  <Link
+                    to={`/media/videos/${video.videoNumber}`}
+                    onClick={() => currentVideo(video.videoNumber)}
+                  >
                     <img
                       className={styles.videoImages}
                       src={
@@ -166,8 +222,8 @@ const Videos = (props) => {
                     />
                     <p className={styles.moreName}>{video.name}</p>
                     <p className={styles.moreDate}>{video.date}</p>
-                  </div>
-                </a>
+                  </Link>
+                </div>
               );
             })}
           </div>

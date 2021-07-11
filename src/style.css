@@ -218,7 +218,7 @@ p {
 }
 
 .transparent::after {
-  content: ' ';
+  content: " ";
   border-style: solid;
   border-width: 0 1.8em 2em 1.8em;
   border-color: transparent;
@@ -229,7 +229,7 @@ p {
 }
 
 .mediaDD::after {
-  content: ' ';
+  content: " ";
   border-style: solid;
   border-width: 0 1.8em 2em 1.8em;
   border-color: transparent;

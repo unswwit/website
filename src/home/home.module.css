@@ -50,6 +50,10 @@ div .headline {
   letter-spacing: 0.1em;
 }
 
+.link {
+  text-decoration: none;
+}
+
 .headline a:hover {
   color: white;
 }
