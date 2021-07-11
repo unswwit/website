@@ -376,13 +376,79 @@
   }
 
   .whatTo {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: inherit;
     max-width: 70%;
+    display: block;
+    margin-top: 40px;
+  }
+
+  .edu {
+    margin-top: 10px;
+    display: flex;
+    max-height:300px;
+    max-width: 300px;
+    padding: 120px 120px 120px 120px;
+    aspect-ratio: 1/1;
+  }
+
+  .externals {
+    margin-top: 10px;
+    display: flex;
+    max-height:300px;
+    max-width: 300px;
+    padding: 120px;
+    aspect-ratio: 1/1;
+  }
+
+  .events {
+    margin-top: 10px;
+    display: flex;
+    max-height:300px;
+    max-width: 300px;
+    padding: 120px;
+    aspect-ratio: 1/1;
+  }
+
+  .externals {
+    margin-top: 10px;
+    display: flex;
+    max-height:300px;
+    max-width: 300px;
+    padding: 120px;
+    aspect-ratio: 1/1;
+  }
+
+  .hr {
+    margin-top: 10px;
+    display: flex;
+    max-height:300px;
+    max-width: 300px;
+    padding: 120px;
+    aspect-ratio: 1/1;
+  }
+  
+  .it {
+    margin-top: 10px;
+    display: flex;
+    max-height:300px;
+    max-width: 300px;
+    padding: 120px;
+    aspect-ratio: 1/1;
+  }
+
+  .marketing {
+    margin-top: 10px;
+    display: flex;
+    max-height:300px;
+    max-width: 300px;
+    padding: 120px;
+    aspect-ratio: 1/1;
   }
 
   .desc {
-    font-size: 10pt;
+    font-size: 11pt;
+    max-height:300px;
+    max-width: 1000px;
   }
 
   .accordion {
@@ -414,11 +480,5 @@
 
   .googleMap {
     padding-left: 0px;
-  }
-
-  .whatTo {
-    max-width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
   }
 }
