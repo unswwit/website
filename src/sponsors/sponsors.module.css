@@ -81,10 +81,34 @@ a.subheader {
 .supportInKind {
   width: 100%;
   max-width: 150px;
-  margin-bottom: 75px;
 }
 
-@media only screen and (max-width: 600px) {
+.affiliations {
+  width: 330px;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 1415px) {
+  .affiliations {
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .affiliations {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 715px) {
+  .affiliations {
+    max-width: 220px;
+    max-height: 160px;
+  }
+}
+
+@media only screen and (max-width: 630px) {
   #sponsorsBody {
     max-width: 85%;
   }
@@ -147,7 +171,8 @@ a.subheader {
   text-align: center;
 }
 
-.link, .sponsorLink {
+.link,
+.sponsorLink {
   color: var(--red);
   text-decoration: underline;
 }
@@ -161,7 +186,8 @@ a.subheader {
   text-align: justify;
 }
 
-.sponsorLink:hover, .link:hover {
+.sponsorLink:hover,
+.link:hover {
   color: var(--yellow);
 }
 

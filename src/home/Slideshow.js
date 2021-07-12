@@ -61,7 +61,7 @@ const Slideshow = () => {
                 </p>
                 <p>
                   <button>
-                    <Link to="/events" style={{ textDecoration: "none" }}>
+                    <Link to="/events" className={styles.link}>
                       see more events
                     </Link>
                   </button>
@@ -135,7 +135,7 @@ const Slideshow = () => {
                   <button>
                     <Link
                       to="resources/blog"
-                      style={{ textDecoration: "none" }}
+                      className={styles.link}
                     >
                       see more blog posts
                     </Link>
@@ -146,6 +146,20 @@ const Slideshow = () => {
                 <div className={styles.right} key={index}>
                   <h1>BLOGS</h1>
                   <a
+                    href="https://unswwit.com/#/resources/blog/9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={
+                        process.env.PUBLIC_URL +
+                        "/blog-covers/09-procrastinating.png"
+                      }
+                      alt="What are you REALLY Procrastinating?"
+                    />
+                  </a>
+                  {/*
+                  <a
                     href={`https://unswwit.com/#/resources/blog/${latestBlog.blogNo}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -155,9 +169,9 @@ const Slideshow = () => {
                         process.env.PUBLIC_URL +
                         `/blog-covers/${latestBlog.img}`
                       }
-                      alt={`Blog ${latestBlog.blogNo}`}
+                      alt={`${latestBlog.heading}`}
                     />
-                  </a>
+                  </a>*/}
                 </div>
               ))}
             </div>
@@ -181,7 +195,7 @@ const Slideshow = () => {
                   <button>
                     <Link
                       to="resources/podcast"
-                      style={{ textDecoration: "none" }}
+                      className={styles.link}
                     >
                       see more episodes
                     </Link>
@@ -201,7 +215,7 @@ const Slideshow = () => {
                         process.env.PUBLIC_URL +
                         `/podcast-covers/${latestPodcast.img}`
                       }
-                      alt={`Podcast Episode ${latestPodcast.episodeNo}`}
+                      alt={`${latestPodcast.title}`}
                     />
                   </a>
                 </div>
