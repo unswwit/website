@@ -83,7 +83,7 @@
   position: absolute;
   left: 50%;
   z-index: 2;
-  top: 45px;
+  top: 70px;
 }
 
 .article h2 {
@@ -91,7 +91,7 @@
   text-transform: capitalize;
   text-align: center;
 
-  font-size: 20px;
+  font-size: 21px;
   display: block;
   visibility: hidden;
   position: relative;
@@ -163,6 +163,10 @@
     margin: 15px 15px;
     width: 178px;
     height: 250px;
+  }
+
+  .textContainer {
+    top: 45px;
   }
 }
 
