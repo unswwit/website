@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import ".././style.css";
 import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
@@ -203,7 +204,7 @@ class blogPost65 extends Component {
             <p className={styles.postContent}>
               Overall each of us have a role to play in ensuring our own data
               confidentiality and with the rapid advancement of technology,
-              lurking cyberthreats will become smarter and harder to detect. It
+              lurking cyber threats will become smarter and harder to detect. It
               is important that all of us stay aware, updated and informed about
               the available security protection methods to prevent us from
               becoming cyber-victims.
@@ -212,7 +213,7 @@ class blogPost65 extends Component {
             <p className={styles.postContent}>
               <i>
                 Want more tips on staying secure? Check out{" "}
-                <a href=" https://unswwit.com/#/media/blog/50">this blog!</a>
+                <Link to="/media/blog/50">this blog!</Link>
               </i>
             </p>
 
