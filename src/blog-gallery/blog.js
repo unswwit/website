@@ -62,6 +62,7 @@ const Blog = (props) => {
 
   // filter blogs by a selected category
   const filterBlogs = (category, searchTerm) => {
+    console.log(category);
     const filteredBlogs = blogs.filter(
       (blog) =>
         category === "All" ||
@@ -96,11 +97,6 @@ const Blog = (props) => {
   };
 
   useEffect(() => {
-    // If a category is specified in props, use it
-    if (props.location.category) {
-      setSelectedCategory(props.location.category);
-    }
-
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: (googleData) => {
@@ -125,6 +121,13 @@ const Blog = (props) => {
 
         const tempBlogs = blogPreviews.reverse();
         setBlogs(tempBlogs);
+
+        // If a category is specified in props, use it
+        if (props.location.category) {
+          setSelectedCategory(props.location.category);
+          filterBlogs(props.location.category, searchTerm);
+        }
+
         setCurrentPosts(tempBlogs.slice(0, postsPerPage));
         setSelectedPosts(tempBlogs);
       },
@@ -142,7 +145,7 @@ const Blog = (props) => {
       )
     );
   };
-  
+
   return (
     <>
       {/* Cover Photo */}
