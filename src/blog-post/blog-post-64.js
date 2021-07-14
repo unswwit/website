@@ -126,7 +126,7 @@ class blogPost64 extends Component {
           authors={{
             "zoe-webster": [
               "/potraits/blog-authors/zoe-webster.png",
-              styles.authorProfile,
+              styles.anonProfile,
               "Zoe Webster",
               "Education Team",
             ],
