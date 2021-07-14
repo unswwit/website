@@ -32,7 +32,7 @@ class blogPost64 extends Component {
 
           <div className={styles.post}>
             <p className={styles.postContent}>
-              Current PhD student Stephanie Chen’s curiousity in the biology and technology fields have led her to undertake research opportunities at numerous Australian universities, alongside stints at CSIRO and the Botanical Gardens. As a casual academic at both Sydney University and UNSW’s own School of Biotechnology and Biomolecular Sciences, Stephanie has been able to gain a bunch of valuable experience in science education, in addition to her fascinating research into plant science and genetics. 
+              Current PhD student Stephanie Chen’s curiosity in the biology and technology fields have led her to undertake research opportunities at numerous Australian universities, alongside stints at CSIRO and the Botanical Gardens. As a casual academic at both Sydney University and UNSW’s own School of Biotechnology and Biomolecular Sciences, Stephanie has been able to gain a bunch of valuable experience in science education, in addition to her fascinating research into plant science and genetics. 
             </p>
             <p className={styles.postContent}>
               We loved hearing from Stephanie this week about her academic career in STEM thus far, her insights into the research world and what advice she’d give aspiring women with similar interests and goals.
