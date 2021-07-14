@@ -21,7 +21,7 @@ class blogPost64 extends Component {
         {/*Start of blog post*/}
         <div className={styles.blogContent}>
           <div>
-            <h2 className={styles.blogTitle}>Introducing Stephanie Chen</h2>
+            <h2 className={styles.blogTitle}>Introducing Stephanie Chen, PhD Student in Plant Genomics</h2>
             <div className={styles.blogDetails}>
               <span className={styles.date}>July 14, 2021</span>
               <span>
