@@ -45,7 +45,11 @@
 
 /*Subtitle*/
 h2.teamHeading {
-  padding: 75px 0px;
+  margin-top: 100px;
+}
+
+h2#topheading {
+  margin-top: 50px;
 }
 
 /*Executive profile images*/

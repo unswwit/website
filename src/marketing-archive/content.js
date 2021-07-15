@@ -15,7 +15,7 @@ const MarketingContent = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [emptyCategory, setEmptyCategory] = useState(false);
   const [finishedLoading, setfinishedLoading] = useState(false);
-  
+
   // set how many posts to view per page
   const postsPerPage = 8;
   // all the posts of the selected filter category
@@ -83,13 +83,13 @@ const MarketingContent = () => {
   }, [year]);
 
   // marketing archive message
-  useEffect(() => { 
+  useEffect(() => {
     if (currentPosts.length === 0 && finishedLoading === true) {
       setEmptyCategory(true);
     } else {
       setEmptyCategory(false);
     }
-  },[currentPosts, finishedLoading]);
+  }, [currentPosts, finishedLoading]);
 
   // filter content by selected category
   const filterContent = (selectedCategory) => {
@@ -117,10 +117,7 @@ const MarketingContent = () => {
   return (
     <>
       {/* Cover Photo */}
-      <PageHeader
-        imgUrl="/headers/marketing-header.jpg"
-        title="Marketing Archive"
-      />
+      <PageHeader imgUrl="/headers/marketing-header.jpg" title="Marketing" />
       {/*End of Header*/}
 
       <div id={styles.parent}>
@@ -174,7 +171,6 @@ const MarketingContent = () => {
               </p>
             )}
           </div>
-
 
           <div id={styles.contentLoadingContainer}>
             {loading && (

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./our-story-timeline.module.css";
+import styles from "./OurStoryTimeline.module.css";
 import Timeline from "@material-ui/lab/Timeline";
 import TimelineItem from "@material-ui/lab/TimelineItem";
 import TimelineSeparator from "@material-ui/lab/TimelineSeparator";

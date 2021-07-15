@@ -19,6 +19,7 @@
     "emailjs-com": "^2.6.4",
     "firebase": "^8.2.1",
     "jsonp": "^0.2.1",
+    "popper.js": "^1.16.0",
     "pure-react-carousel": "^1.27.6",
     "query-string": "^6.13.8",
     "react": "^16.13.1",
@@ -27,8 +28,10 @@
     "react-countup": "^4.3.3",
     "react-dom": "^16.13.1",
     "react-ga": "^3.3.0",
+    "react-helmet": "^6.1.0",
     "react-mailchimp-form": "^1.0.2",
     "react-markdown": "^5.0.3",
+    "react-messenger-customer-chat": "^0.8.0",
     "react-responsive-image": "^5.0.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3",
@@ -37,6 +40,7 @@
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.1",
     "tabletop": "^1.6.3",
+    "typescript": "^4.3.5",
     "use-state-with-callback": "^2.0.3"
   },
   "scripts": {
