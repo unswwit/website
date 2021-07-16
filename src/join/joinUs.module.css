@@ -311,13 +311,6 @@
   }
 }
 
-/*-------------------------------Join us slightly smaller than ipad------------------------------*/
-@media only screen and (max-width: 1005px) {
-  .whatTo {
-    max-width: 95%;
-  }
-}
-
 /*-------------------------------Join us mobile------------------------------*/
 @media only screen and (max-width: 900px) {
   .joinUsRight {
@@ -386,69 +379,6 @@
     margin-top: 40px;
   }
 
-  .edu {
-    margin-top: 10px;
-    display: flex;
-    max-height:300px;
-    max-width: 300px;
-    padding: 120px 120px 120px 120px;
-    aspect-ratio: 1/1;
-  }
-
-  .externals {
-    margin-top: 10px;
-    display: flex;
-    max-height:300px;
-    max-width: 300px;
-    padding: 120px;
-    aspect-ratio: 1/1;
-  }
-
-  .events {
-    margin-top: 10px;
-    display: flex;
-    max-height:300px;
-    max-width: 300px;
-    padding: 120px;
-    aspect-ratio: 1/1;
-  }
-
-  .externals {
-    margin-top: 10px;
-    display: flex;
-    max-height:300px;
-    max-width: 300px;
-    padding: 120px;
-    aspect-ratio: 1/1;
-  }
-
-  .hr {
-    margin-top: 10px;
-    display: flex;
-    max-height:300px;
-    max-width: 300px;
-    padding: 120px;
-    aspect-ratio: 1/1;
-  }
-  
-  .it {
-    margin-top: 10px;
-    display: flex;
-    max-height:300px;
-    max-width: 300px;
-    padding: 120px;
-    aspect-ratio: 1/1;
-  }
-
-  .marketing {
-    margin-top: 10px;
-    display: flex;
-    max-height:300px;
-    max-width: 300px;
-    padding: 120px;
-    aspect-ratio: 1/1;
-  }
-
   .desc {
     font-size: 11pt;
     max-height:300px;
@@ -468,6 +398,261 @@
   }
 }
 
+@media only screen and (max-widdth: 768px) {
+  .whatTo {
+    padding-left: 130px;
+  }
+
+  .edu {
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
+  }
+
+
+  .externals{
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
+  }
+
+  .events {
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
+  }
+
+  .hr {
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
+  }
+
+  .it {
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
+  }
+
+  .marketing {
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
+  }
+
+  .desc {
+    font-size: 9pt;
+    max-height:190px;
+    max-width: 400px;
+  }
+}
+
+@media only screen and (max-width: 736px) { 
+  .whatTo {
+    padding-left: 130px;
+  }
+
+  .edu {
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
+  }
+
+  /*css padding: top right bottom left */
+
+  .externals{
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
+  }
+
+  .events {
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
+  }
+
+  .hr {
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
+  }
+
+  .it {
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
+  }
+
+  .marketing {
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
+  }
+}
+
+@media only screen and (max-width: 667px) {
+  .whatTo {
+    padding-left: 100px;
+  }
+
+  .edu {
+    max-height:220px;
+    max-width: 250px;
+  }
+
+  .externals{
+    max-height:220px;
+    max-width: 250px;
+  }
+
+  .events {
+    max-height:220px;
+    max-width: 250px;
+  }
+
+  .hr {
+    max-height:220px;
+    max-width: 250px;
+  }
+
+  .it {
+    max-height:220px;
+    max-width: 250px;
+  }
+
+  .marketing {
+    max-height:220px;
+    max-width: 250px;
+  }
+}
+
+@media only screen and (max-width:568px) {
+  .whatTo {
+    padding-left: 70px;
+  }
+
+  .edu {
+    max-height:220px;
+    max-width: 250px;
+  }
+
+  .externals{
+    max-height:220px;
+    max-width: 250px;
+  }
+
+  .events {
+    max-height:220px;
+    max-width: 250px;
+  }
+
+  .hr {
+    max-height:220px;
+    max-width: 250px;
+  }
+
+  .it {
+    max-height:220px;
+    max-width: 250px;
+  }
+
+  .marketing {
+    max-height:220px;
+    max-width: 250px;
+  }
+}
+
+@media only screen and (max-width: 508px) {
+  .whatTo {
+    padding-left: 54px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .whatTo {
+    padding-left: 20px;
+  }
+
+  .edu {
+    max-height:235px;
+    max-width: 250px;
+  }
+
+  .externals {
+    max-height:235px;
+    max-width: 250px;
+  }
+
+  .events {
+    max-height:235px;
+    max-width: 250px;
+  }
+
+  .hr {
+    max-height:235px;
+    max-width: 250px;
+  }
+
+  .it {
+    max-height:235px;
+    max-width: 250px;
+  }
+
+  .marketing {
+    max-height:235px;
+    max-width: 250px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .whatTo {
+    padding-left: 12px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .whatTo {
+    padding-left: 7px;
+  }
+}
+
 /*-------------------------------Join us very small screen------------------------------*/
 @media only screen and (max-width: 355px) {
   .joinLink {
@@ -479,10 +664,50 @@
   }
 
   .header {
-    font-size: 20pt;
+    font-size: 22pt;
+  }
+
+  .section {
+    font-size: 24pt;
   }
 
   .googleMap {
     padding-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .section {
+    font-size: 24pt;
+  }
+
+  .edu {
+    max-height:200px;
+    max-width: 250px;
+  }
+
+  .externals {
+    max-height:200px;
+    max-width: 250px;
+  }
+
+  .events {
+    max-height:200px;
+    max-width: 250px;
+  }
+
+  .hr {
+    max-height:200px;
+    max-width: 250px;
+  }
+
+  .it {
+    max-height:200px;
+    max-width: 250px;
+  }
+
+  .marketing {
+    max-height:200px;
+    max-width: 250px;
   }
 }
