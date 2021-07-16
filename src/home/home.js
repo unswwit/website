@@ -10,12 +10,14 @@ import Slideshow from "./Slideshow.js";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import LoadingScreen from "../LoadingScreen";
 
 const Home = () => {
   const [open, setOpen] = React.useState(false);
   const [mobileView, setMobileView] = React.useState(false);
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [sourceLoading, setSourceLoading] = React.useState(true);
   const last3articles = articles.slice(0, 3);
 
   //start webpage at the top
@@ -45,11 +47,24 @@ const Home = () => {
     });
   }, []);
 
+  // control when to stop loading
+  useEffect(() => {
+    setTimeout(() => {
+      setSourceLoading(false);
+    }, 1000);
+  }, [])  
+
   const callbackModal = () => {
     setOpen(false);
   };
 
   return (
+    <div>
+    {sourceLoading ? (
+      <LoadingScreen />
+    )
+      :
+      (
     <div>
       {/* Start of Header */}
       <div className={styles.contain}>
@@ -216,6 +231,7 @@ const Home = () => {
         </Modal>
       </div>
       {/* End of Newsletter */}
+      </div>)}
     </div>
   );
 };
