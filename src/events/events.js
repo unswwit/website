@@ -79,11 +79,7 @@ const Events = () => {
 
   return (
     <div>
-    {sourceLoading ? (
-      <LoadingScreen />
-    )
-      :
-      (
+    {sourceLoading ? ( <LoadingScreen /> ) : (
       <>
         {/* Cover Photo */}
         <PageHeader imgUrl="/headers/events-header.jfif" title="Events" />

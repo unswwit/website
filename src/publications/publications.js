@@ -35,11 +35,7 @@ const Publications = () => {
 
   return (
     <div>
-    {sourceLoading ? (
-      <LoadingScreen />
-    )
-      :
-      (
+    {sourceLoading ? ( <LoadingScreen /> ) : ( 
       <>
         {/* Cover Photo */}
         <PageHeader

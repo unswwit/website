@@ -44,7 +44,6 @@ class JoinUs extends React.Component {
     this.hideSpinner = this.hideSpinner.bind(this);
     this.open = this.open.bind(this);
     this.callbackModal = this.callbackModal.bind(this);
-    this.componentWillUnmount = this.componentWillUnmount.bind(this);
 
     this.socials = {
       spArc: [
@@ -92,21 +91,16 @@ class JoinUs extends React.Component {
   // start at the top of the page
   componentDidMount() {
     window.scrollTo(0, 0);
+    setTimeout(() => {
+      this.setState({ sourceLoading: false});
+    }, 1000);
   }
 
-  componentWillUnmount() {
-    this.setState({ sourceLoading: false });
-  }
-
-  render(sourceLoading) {
+  render() {
     return (
       <div>
-      {sourceLoading ? (
-        <LoadingScreen />
-      )
-        :
-        (
-          <>
+      {this.state.sourceLoading ? (<LoadingScreen />) :  ( 
+        <>
         {/* Cover Photo */}
         <PageHeader imgUrl="/headers/join-header-2.jpg" title="Join Us" />
         <h2 className={styles.header}>Connect with us</h2>

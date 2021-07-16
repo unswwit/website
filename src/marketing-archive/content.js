@@ -125,11 +125,7 @@ const MarketingContent = () => {
 
   return (
     <div>
-    {sourceLoading ? (
-      <LoadingScreen />
-    )
-      :
-      (
+    {sourceLoading ? ( <LoadingScreen /> ) : (
       <>
       {/* Cover Photo */}
       <PageHeader imgUrl="/headers/marketing-header.jpg" title="Marketing" />

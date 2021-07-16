@@ -156,11 +156,7 @@ const Blog = () => {
 
   return (
     <div>
-    {sourceLoading ? (
-      <LoadingScreen />
-    )
-      :
-      (
+    {sourceLoading ? ( <LoadingScreen /> ) : (
     <>
       {/* Cover Photo */}
       <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Posts" />

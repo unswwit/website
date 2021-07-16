@@ -19,11 +19,7 @@ const ContactUs = () => {
 
   return (
   <div>
-    {sourceLoading ? (
-      <LoadingScreen />
-    )
-      :
-      (
+    {sourceLoading ? ( <LoadingScreen />) : (
       <div>
         {/* Cover Photo */}
         <PageHeader imgUrl="/headers/2021-exec-header.jpg" title="Contact Us" />

@@ -36,11 +36,7 @@ const Opportunities = () => {
 
   return (
     <div>
-    {sourceLoading ? (
-      <LoadingScreen />
-    )
-      :
-      (
+    {sourceLoading ? ( <LoadingScreen /> ) : (
       <>
         {/* Cover Photo */}
         <PageHeader

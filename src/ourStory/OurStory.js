@@ -21,11 +21,7 @@ const OurStory = () => {
 
   return (
     <div>
-    {sourceLoading ? (
-      <LoadingScreen />
-    )
-      :
-      (
+    {sourceLoading ? ( <LoadingScreen /> ) : (
       <>
       <div id={styles.container}>
         {/*Cover Photo*/}

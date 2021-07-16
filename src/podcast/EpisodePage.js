@@ -121,12 +121,7 @@ const EpisodePage = (props) => {
 
   return (
   <div>
-    {sourceLoading ? (
-      <LoadingScreen />
-    )
-      :
-      (
-      <>
+    {sourceLoading ? ( <LoadingScreen /> ) : ( <>
         <PageHeader
           imgUrl="/headers/podcast-header.jpg"
           title={`Podcast Episode #${episodeNumber}`}

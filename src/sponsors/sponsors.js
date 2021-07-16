@@ -384,11 +384,7 @@ const Sponsors = () => {
 
   return (
     <div>
-      {sourceLoading ? (
-        <LoadingScreen />
-      )
-        :
-        (
+      {sourceLoading ? ( <LoadingScreen /> ) : (
       <div>
         {/* Cover Photo */}
         <PageHeader

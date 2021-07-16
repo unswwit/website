@@ -71,11 +71,7 @@ const Podcast = () => {
 
   return (
     <div>
-    {sourceLoading ? (
-      <LoadingScreen />
-    )
-      :
-      (
+    {sourceLoading ? ( <LoadingScreen /> ) : ( 
       <>
         {/* Cover Photo */}
         <PageHeader imgUrl="/headers/podcast-header.jpg" title="Podcast" />

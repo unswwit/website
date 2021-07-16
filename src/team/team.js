@@ -113,11 +113,7 @@ function OurTeam() {
 
   return (
     <div>
-    {sourceLoading ? (
-      <LoadingScreen />
-    )
-      :
-      (
+    {sourceLoading ? ( <LoadingScreen /> ) : (
       <div>
         {/* Cover Photo */}
         <PageHeader imgUrl="/headers/2021-team-header.jpg" title="Our Team" />

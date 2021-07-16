@@ -157,11 +157,7 @@ const Videos = (props) => {
 
   return (
     <div>
-    {sourceLoading ? (
-      <LoadingScreen />
-    )
-      :
-      (
+    {sourceLoading ? ( <LoadingScreen />) : ( 
       <>
         {/* Cover Photo */}
         <PageHeader imgUrl="/headers/videos-header.jpg" title="Videos" />
