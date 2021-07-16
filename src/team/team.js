@@ -104,110 +104,125 @@ function OurTeam() {
     });
   }, [year]);
 
+  // control when to stop loading
+  useEffect(() => {
+    setTimeout(() => {
+      setSourceLoading(false);
+    }, 1000);
+  }, [])  
+
   return (
     <div>
-      {/* Cover Photo */}
-      <PageHeader imgUrl="/headers/2021-team-header.jpg" title="Our Team" />
+    {sourceLoading ? (
+      <LoadingScreen />
+    )
+      :
+      (
+      <div>
+        {/* Cover Photo */}
+        <PageHeader imgUrl="/headers/2021-team-header.jpg" title="Our Team" />
 
-      {/* Timeline */}
-      <Timeline
-        margin={"50px"}
-        page={"teams"}
-        step={25}
-        valueToYear={valueToYear}
-        marks={marks}
-        updateYear={handleYear}
-      />
+        {/* Timeline */}
+        <Timeline
+          margin={"50px"}
+          page={"teams"}
+          step={25}
+          valueToYear={valueToYear}
+          marks={marks}
+          updateYear={handleYear}
+        />
 
-      <div id={styles.teamLoadingContainer}>
-        {loading && (
-          <CircularProgress
-            variant="indeterminate"
-            size={50}
-            thickness={5}
-            id={styles.teamLoading}
-          />
-        )}
-      </div>
+        <div id={styles.teamLoadingContainer}>
+          {loading && (
+            <CircularProgress
+              variant="indeterminate"
+              size={50}
+              thickness={5}
+              id={styles.teamLoading}
+            />
+          )}
+        </div>
 
-      {!loading && (
-        <>
-          {/* Exec section */}
-          <h2 className={styles.teamHeading} id={styles.topHeading}>OUR {year} EXECUTIVE TEAM</h2>
+        {!loading && (
+          <>
+            {/* Exec section */}
+            <h2 className={styles.teamHeading} id={styles.topHeading}>OUR {year} EXECUTIVE TEAM</h2>
 
-          <div className={styles.allExecsSection}>
-            <div className={styles.execRow}>
-              {execs.map((row, index) => {
-                return (
-                  <div key={index} className={styles.execRow}>
-                    {row.map((exec, index) => {
-                      return (
-                        <Execs
-                          key={index}
-                          imgUrl={
-                            exec.img !== ""
-                              ? `/potraits/${year}-exec/${exec.img}`
-                              : ""
-                          }
-                          name={exec.name}
-                          className={
-                            year === "2020"
-                              ? execToClassName[year][exec.name]
-                              : execToClassName[year]
-                          }
-                          position={exec.position}
-                          degree={exec.degree}
-                          year={exec.year}
-                          linkedin={exec.linkedin}
-                          fb={exec.facebook}
-                          email={exec.email}
-                        />
-                      );
-                    })}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Subcommittee section */}
-          {subcommittee.length ? (
-            <>
-              <h2 className={styles.teamHeading}>
-                OUR {year} SUBCOMMITTEE TEAM
-              </h2>
-
-              <div className={styles.subcomSection}>
-                {sectors.map((sector) => {
+            <div className={styles.allExecsSection}>
+              <div className={styles.execRow}>
+                {execs.map((row, index) => {
                   return (
-                    <div key={sector}>
-                      <h3 className={styles.subcomType}>{sector} Team</h3>
-                      {subcommittee
-                        .filter((member) => member.team === sector)
-                        .map((member, index) => {
-                          return (
-                            <SubCom
-                              key={index}
-                              name={member.name}
-                              degree={member.degree}
-                              year={member.year}
-                            />
-                          );
-                        })}
-                      <br />
-                      <br />
+                    <div key={index} className={styles.execRow}>
+                      {row.map((exec, index) => {
+                        return (
+                          <Execs
+                            key={index}
+                            imgUrl={
+                              exec.img !== ""
+                                ? `/potraits/${year}-exec/${exec.img}`
+                                : ""
+                            }
+                            name={exec.name}
+                            className={
+                              year === "2020"
+                                ? execToClassName[year][exec.name]
+                                : execToClassName[year]
+                            }
+                            position={exec.position}
+                            degree={exec.degree}
+                            year={exec.year}
+                            linkedin={exec.linkedin}
+                            fb={exec.facebook}
+                            email={exec.email}
+                          />
+                        );
+                      })}
                     </div>
                   );
                 })}
               </div>
-            </>
-          ) : null}
-        </>
+            </div>
+
+            {/* Subcommittee section */}
+            {subcommittee.length ? (
+              <>
+                <h2 className={styles.teamHeading}>
+                  OUR {year} SUBCOMMITTEE TEAM
+                </h2>
+
+                <div className={styles.subcomSection}>
+                  {sectors.map((sector) => {
+                    return (
+                      <div key={sector}>
+                        <h3 className={styles.subcomType}>{sector} Team</h3>
+                        {subcommittee
+                          .filter((member) => member.team === sector)
+                          .map((member, index) => {
+                            return (
+                              <SubCom
+                                key={index}
+                                name={member.name}
+                                degree={member.degree}
+                                year={member.year}
+                              />
+                            );
+                          })}
+                        <br />
+                        <br />
+                      </div>
+                    );
+                  })}
+                </div>
+              </>
+            ) : null}
+          </>
+        )}
+        <footer>
+          <div className={styles.footerArea} style={{ marginTop: "8vw" }} />
+        </footer>
+        <ScrollUpBtn />
+      </div>
       )}
-      <footer>
-        <div className={styles.footerArea} style={{ marginTop: "8vw" }} />
-      </footer>
-      <ScrollUpBtn />
     </div>
   );
 }

@@ -93,6 +93,13 @@ const MarketingContent = () => {
     }
   }, [currentPosts, finishedLoading]);
 
+  // control when to stop loading
+  useEffect(() => {
+    setTimeout(() => {
+      setSourceLoading(false);
+    }, 1000);
+  }, []) 
+
   // filter content by selected category
   const filterContent = (selectedCategory) => {
     const filteredContent = content.filter(
@@ -117,7 +124,13 @@ const MarketingContent = () => {
   };
 
   return (
-    <>
+    <div>
+    {sourceLoading ? (
+      <LoadingScreen />
+    )
+      :
+      (
+      <>
       {/* Cover Photo */}
       <PageHeader imgUrl="/headers/marketing-header.jpg" title="Marketing" />
       {/*End of Header*/}
@@ -210,6 +223,8 @@ const MarketingContent = () => {
         {/*End of Initiatives*/}
       </div>
     </>
+    )}
+  </div>
   );
 };
 export default MarketingContent;

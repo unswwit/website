@@ -111,119 +111,135 @@ const EpisodePage = (props) => {
     });
   }, [episodeNumber, props.history, props.match.params.episode]);
 
+  // control when to stop loading
+  useEffect(() => {
+    setTimeout(() => {
+      setSourceLoading(false);
+    }, 1000);
+  }, []) 
+
+
   return (
-    <>
-      <PageHeader
-        imgUrl="/headers/podcast-header.jpg"
-        title={`Podcast Episode #${episodeNumber}`}
-      />
+  <div>
+    {sourceLoading ? (
+      <LoadingScreen />
+    )
+      :
+      (
+      <>
+        <PageHeader
+          imgUrl="/headers/podcast-header.jpg"
+          title={`Podcast Episode #${episodeNumber}`}
+        />
 
-      {loading && (
-        <div id={styles.podcastLoadingContainer}>
-          <CircularProgress
-            variant="indeterminate"
-            size={50}
-            thickness={5}
-            id={styles.podcastLoading}
-          />
-        </div>
-      )}
-
-      {!loading && (
-        <div id={styles.episodeContainer}>
-          {/* Episode content */}
-          <h2>{episode.title}</h2>
-          <p id={styles.episodeDate}>{episode.date}</p>
-
-          {/* Podcast Episode Audio Player */}
-          <iframe
-            title={episode.title}
-            src={episode.link}
-            width="100%"
-            height="232"
-            frameBorder="0"
-            allowtransparency="true"
-            allow="encrypted-media"
-          ></iframe>
-
-          {/* Podcast Episode Links */}
-          <div className={styles.platforms}>
-            {platforms.map((platform, index) => {
-              return (
-                <a
-                  key={index}
-                  href={episode[platform]}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    className={styles.sourceLogos}
-                    src={`${process.env.PUBLIC_URL}/podcast-logos/${links[platform]}`}
-                    alt={platform}
-                    width="25px"
-                    height="25px"
-                  />
-                </a>
-              );
-            })}
+        {loading && (
+          <div id={styles.podcastLoadingContainer}>
+            <CircularProgress
+              variant="indeterminate"
+              size={50}
+              thickness={5}
+              id={styles.podcastLoading}
+            />
           </div>
+        )}
 
-          <h2>Overview</h2>
-          <p id={styles.overview}>{episode.description}</p>
+        {!loading && (
+          <div id={styles.episodeContainer}>
+            {/* Episode content */}
+            <h2>{episode.title}</h2>
+            <p id={styles.episodeDate}>{episode.date}</p>
 
-          {/* Podcast Episode Transcript */}
-          {false && (
-            <>
-              <h2>Transcript</h2>
-              <Accordion>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
-                >
-                  <Typography className={classes.heading}>
-                    View Transcript
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>
-                    <ReactMarkdown children={`${transcript}`} />
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
-            </>
-          )}
+            {/* Podcast Episode Audio Player */}
+            <iframe
+              title={episode.title}
+              src={episode.link}
+              width="100%"
+              height="232"
+              frameBorder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+            ></iframe>
 
-          {/* Share buttons */}
-          <p className={styles.subHeading}>Share this episode</p>
-          <div className={styles.shareButtons}>
-            <span>
-              <ShareBtns />
-            </span>
-          </div>
-
-          {/* See more episodes */}
-          <p className={styles.subHeading}>More From WIT</p>
-          <div className={styles.previews}>
-            {episodes.map((episode, index) => {
-              return (
-                <div key={index} className={styles.podcastContainer}>
-                  <EpisodeTemplate
-                    className={styles.podcastContainer}
+            {/* Podcast Episode Links */}
+            <div className={styles.platforms}>
+              {platforms.map((platform, index) => {
+                return (
+                  <a
                     key={index}
-                    episodeNo={episode.episodeNo}
-                    title={episode.title}
-                    cover={`podcast-covers/${episode.img}`}
-                    date={episode.date}
-                    description={episode.description}
-                  />
-                </div>
-              );
-            })}
+                    href={episode[platform]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      className={styles.sourceLogos}
+                      src={`${process.env.PUBLIC_URL}/podcast-logos/${links[platform]}`}
+                      alt={platform}
+                      width="25px"
+                      height="25px"
+                    />
+                  </a>
+                );
+              })}
+            </div>
+
+            <h2>Overview</h2>
+            <p id={styles.overview}>{episode.description}</p>
+
+            {/* Podcast Episode Transcript */}
+            {false && (
+              <>
+                <h2>Transcript</h2>
+                <Accordion>
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                  >
+                    <Typography className={classes.heading}>
+                      View Transcript
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      <ReactMarkdown children={`${transcript}`} />
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+              </>
+            )}
+
+            {/* Share buttons */}
+            <p className={styles.subHeading}>Share this episode</p>
+            <div className={styles.shareButtons}>
+              <span>
+                <ShareBtns />
+              </span>
+            </div>
+
+            {/* See more episodes */}
+            <p className={styles.subHeading}>More From WIT</p>
+            <div className={styles.previews}>
+              {episodes.map((episode, index) => {
+                return (
+                  <div key={index} className={styles.podcastContainer}>
+                    <EpisodeTemplate
+                      className={styles.podcastContainer}
+                      key={index}
+                      episodeNo={episode.episodeNo}
+                      title={episode.title}
+                      cover={`podcast-covers/${episode.img}`}
+                      date={episode.date}
+                      description={episode.description}
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
+        )}
+      </>
       )}
-    </>
+    </div>
   );
 };
 

@@ -6,6 +6,7 @@ import YouTubeSubscribe from "./youtubeSubscribe";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { Link } from "react-router-dom";
+import LoadingScreen from "../LoadingScreen";
 // TO UNCOMMENT WHEN REACH > 9 VIDEOS
 // import PaginationComp from "../components/Pagination";
 
@@ -14,6 +15,7 @@ const Videos = (props) => {
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [videoNumber, setVideoNumber] = useState("0");
+  const [sourceLoading, setSourceLoading] = React.useState(true);
   // TO UNCOMMENT WHEN REACH > 9 VIDEOS
   // set how many posts to view per page
   // const postsPerPage = 9;
@@ -134,6 +136,13 @@ const Videos = (props) => {
     );
   };
 
+  // control when to stop loading
+  useEffect(() => {
+    setTimeout(() => {
+      setSourceLoading(false);
+    }, 1000);
+  }, []) 
+
   // TO UNCOMMENT WHEN REACH > 9 VIDEOS
   // called when pagination item clicked to slice the correct amount of videos for viewing
   // const paginate = (pageNumber) => {
@@ -147,96 +156,104 @@ const Videos = (props) => {
   // };
 
   return (
-    <>
-      {/* Cover Photo */}
-      <PageHeader imgUrl="/headers/videos-header.jpg" title="Videos" />
-      {loading && (
-        <div id={styles.videoLoadingContainer}>
-          <CircularProgress
-            variant="indeterminate"
-            size={50}
-            thickness={5}
-            id={styles.videoLoading}
-          />
-        </div>
-      )}
-      {/* Start of Videos */}
-      {!loading && (
-        <div className={styles.videosBody}>
-          <h1 className={styles.vidSubheading}>Welcome to our channel</h1>
-          <img
-            className={styles.youtubeImg}
-            src={process.env.PUBLIC_URL + "/videos/youtube.png"}
-            alt="Youtube"
-          />
+    <div>
+    {sourceLoading ? (
+      <LoadingScreen />
+    )
+      :
+      (
+      <>
+        {/* Cover Photo */}
+        <PageHeader imgUrl="/headers/videos-header.jpg" title="Videos" />
+        {loading && (
+          <div id={styles.videoLoadingContainer}>
+            <CircularProgress
+              variant="indeterminate"
+              size={50}
+              thickness={5}
+              id={styles.videoLoading}
+            />
+          </div>
+        )}
+        {/* Start of Videos */}
+        {!loading && (
+          <div className={styles.videosBody}>
+            <h1 className={styles.vidSubheading}>Welcome to our channel</h1>
+            <img
+              className={styles.youtubeImg}
+              src={process.env.PUBLIC_URL + "/videos/youtube.png"}
+              alt="Youtube"
+            />
 
-          <p className={styles.desc}>
-            Join us on our YouTube channel to keep up to date with WIT’s latest
-            events, training and development videos + some extra behind the
-            scene clips!
-          </p>
-          {/* Subscribe Button */}
-          <p className={styles.subscribeText}>SUBSCRIBE HERE</p>
-          {/*https://www.youtube.com/channel/UCQ8PGe3P4ZuDSNCb9vCeTiw?sub_confirmation=1&feature=subscribe-embed-click*/}
-          <YouTubeSubscribe
-            channelid={"UCQ8PGe3P4ZuDSNCb9vCeTiw"}
-            theme={"default"}
-            layout={"full"}
-            count={"hidden"}
-            className={styles.subscribe}
-          />
-          {/* YouTube Embedded Video */}
-          <div id={styles.videoContainer}>
-            <div className={styles.iframeWrapper}>
-              <div className={styles.responsiveIframe}>
-                <iframe
-                  src={`https://youtube.com/embed/${video.youtubeVideoID}`}
-                  frameBorder="0"
-                  allow="autoplay; encrypted-media"
-                  allowFullScreen={true}
-                  title="video"
-                  className={styles.embeddedVideo}
-                />
+            <p className={styles.desc}>
+              Join us on our YouTube channel to keep up to date with WIT’s latest
+              events, training and development videos + some extra behind the
+              scene clips!
+            </p>
+            {/* Subscribe Button */}
+            <p className={styles.subscribeText}>SUBSCRIBE HERE</p>
+            {/*https://www.youtube.com/channel/UCQ8PGe3P4ZuDSNCb9vCeTiw?sub_confirmation=1&feature=subscribe-embed-click*/}
+            <YouTubeSubscribe
+              channelid={"UCQ8PGe3P4ZuDSNCb9vCeTiw"}
+              theme={"default"}
+              layout={"full"}
+              count={"hidden"}
+              className={styles.subscribe}
+            />
+            {/* YouTube Embedded Video */}
+            <div id={styles.videoContainer}>
+              <div className={styles.iframeWrapper}>
+                <div className={styles.responsiveIframe}>
+                  <iframe
+                    src={`https://youtube.com/embed/${video.youtubeVideoID}`}
+                    frameBorder="0"
+                    allow="autoplay; encrypted-media"
+                    allowFullScreen={true}
+                    title="video"
+                    className={styles.embeddedVideo}
+                  />
+                </div>
+                <p className={styles.videoName}>{video.name}</p>
+                <p className={styles.videoDate}>{video.date}</p>
               </div>
-              <p className={styles.videoName}>{video.name}</p>
-              <p className={styles.videoDate}>{video.date}</p>
+            </div>
+            {/* See more videos */}
+            <p className={styles.subHeading}>More From WIT</p>
+            <div className={styles.videoContainer}>
+              {videos.map((video, index) => {
+                return (
+                  <div className={styles.videoDescription} key={index}>
+                    <Link
+                      to={`/media/videos/${video.videoNumber}`}
+                      onClick={() => currentVideo(video.videoNumber)}
+                    >
+                      <img
+                        className={styles.videoImages}
+                        src={
+                          process.env.PUBLIC_URL +
+                          `/event-covers/${video.year}/${video.img}`
+                        }
+                        alt={video.name}
+                      />
+                      <p className={styles.moreName}>{video.name}</p>
+                      <p className={styles.moreDate}>{video.date}</p>
+                    </Link>
+                  </div>
+                );
+              })}
             </div>
           </div>
-          {/* See more videos */}
-          <p className={styles.subHeading}>More From WIT</p>
-          <div className={styles.videoContainer}>
-            {videos.map((video, index) => {
-              return (
-                <div className={styles.videoDescription} key={index}>
-                  <Link
-                    to={`/media/videos/${video.videoNumber}`}
-                    onClick={() => currentVideo(video.videoNumber)}
-                  >
-                    <img
-                      className={styles.videoImages}
-                      src={
-                        process.env.PUBLIC_URL +
-                        `/event-covers/${video.year}/${video.img}`
-                      }
-                      alt={video.name}
-                    />
-                    <p className={styles.moreName}>{video.name}</p>
-                    <p className={styles.moreDate}>{video.date}</p>
-                  </Link>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+        )}
+        {/* Pagination */}
+        {/* TO UNCOMMENT WHEN REACH > 9 VIDEOS
+        <PaginationComp
+          totalPages={Math.ceil(selectedPosts.length / postsPerPage)}
+          paginate={paginate}
+          page={currentPage}
+        /> */}
+      </>
       )}
-      {/* Pagination */}
-      {/* TO UNCOMMENT WHEN REACH > 9 VIDEOS
-      <PaginationComp
-        totalPages={Math.ceil(selectedPosts.length / postsPerPage)}
-        paginate={paginate}
-        page={currentPage}
-      /> */}
-    </>
+    </div>
   );
 };
 
