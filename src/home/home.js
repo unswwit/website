@@ -60,7 +60,7 @@ const Home = () => {
 
   return (
     <div>
-  {sourceLoading ? ( <LoadingScreen /> ) : (
+      {sourceLoading ? ( <LoadingScreen /> ) : (
     <div>
       {/* Start of Header */}
       <div className={styles.contain}>
