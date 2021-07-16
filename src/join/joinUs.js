@@ -39,10 +39,12 @@ class JoinUs extends React.Component {
       clickedHr: true,
       clickedIt: true,
       clickedMar: true,
+      sourceLoading: true,
     };
     this.hideSpinner = this.hideSpinner.bind(this);
     this.open = this.open.bind(this);
     this.callbackModal = this.callbackModal.bind(this);
+    this.componentWillUnmount = this.componentWillUnmount.bind(this);
 
     this.socials = {
       spArc: [
@@ -92,9 +94,19 @@ class JoinUs extends React.Component {
     window.scrollTo(0, 0);
   }
 
-  render() {
+  componentWillUnmount() {
+    this.setState({ sourceLoading: false });
+  }
+
+  render(sourceLoading) {
     return (
       <div>
+      {sourceLoading ? (
+        <LoadingScreen />
+      )
+        :
+        (
+          <>
         {/* Cover Photo */}
         <PageHeader imgUrl="/headers/join-header-2.jpg" title="Join Us" />
         <h2 className={styles.header}>Connect with us</h2>
@@ -506,6 +518,8 @@ class JoinUs extends React.Component {
           </Modal>
         </div>
         {/* End of Newsletter */}
+        </>
+      )}
       </div>
     );
   }
