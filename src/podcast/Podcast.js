@@ -12,7 +12,7 @@ import LoadingScreen from "../LoadingScreen";
 const Podcast = () => {
   //const [episodes, setEpisodes] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [sourceLoading, setSourceLoading] = React.useState(true);
+  const [sourceLoading, setSourceLoading] = useState(true);
   // set how many posts to view per page
   //const postsPerPage = 9;
   // the posts displayed on the current page
@@ -49,6 +49,7 @@ const Podcast = () => {
         //setEpisodes(sortedEpisodes);
         setCurrentPosts(sortedEpisodes);
         setLoading(false);
+        setSourceLoading(false);
       },
       simpleSheet: false,
     });
@@ -60,14 +61,6 @@ const Podcast = () => {
     setCurrentPosts(episodes.slice((pageNumber - 1) * postsPerPage, pageNumber * postsPerPage));
   }
   */
-
-  // control when to stop loading
-  useEffect(() => {
-    setTimeout(() => {
-      setSourceLoading(false);
-    }, 1000);
-  }, []) 
-
 
   return (
     <div>
