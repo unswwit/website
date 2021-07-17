@@ -5,18 +5,19 @@ import Button from "./Button.js";
 import styles from "./AddToCal.module.css";
 
 const AddToCalBtn = (props) => {
-  const event = {
+  let event = {
     title: props.title,
     description: props.description,
     location: props.location,
-    startDatetime: props.startDate,
-    endDatetime: props.endDate,
     duration: props.duration,
     timezone: "Australia/Sydney",
+    ...props.startDate && {startDateTime : props.startDate},
+    ...props.endDate && {endDateTime : props.endDate},
   };
 
-  const AddToCalendarDropdown = AddToCalendarHOC(Button, Dropdown);
+  console.log(event);
 
+  const AddToCalendarDropdown = AddToCalendarHOC(Button, Dropdown);
   return (
     <AddToCalendarDropdown
       className={styles.componentStyles}
