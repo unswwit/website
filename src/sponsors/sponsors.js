@@ -384,161 +384,163 @@ const Sponsors = () => {
 
   return (
     <div>
-      {/* Cover Photo */}
-      <PageHeader
-        imgUrl="/headers/sponsors-header-2.jpg"
-        title="Sponsors and Affiliations"
-      />
+      {sourceLoading ? ( <LoadingScreen /> ) : (
+        <div>
+          {/* Cover Photo */}
+          <PageHeader
+            imgUrl="/headers/sponsors-header-2.jpg"
+            title="Sponsors and Affiliations"
+          />
 
-        <div id={styles.sponsorsBody}>
-          <p className={styles.subheader}>
+          <div id={styles.sponsorsBody}>
+            <p className={styles.subheader}>
             Thank you to our sponsors for generously supporting our cause and
             collaborating with us to provide our students invaluable
             opportunities.
-          </p>
+            </p>
 
-          {/* Principal Sponsors Area */}
-          <h2 className={styles.subsponsor}>Principal Sponsors</h2>
-          <div id={styles.majorContainer}>
-            {Object.keys(sponsors)
-              .sort()
-              .filter((key) => sponsors[key][3] === "PRINCIPAL")
-              .map((key, _) => (
-                <img
-                  className={styles.principal}
-                  src={`${process.env.PUBLIC_URL}/sponsors/2021/${sponsors[key][2]}`}
-                  alt={key}
-                  onClick={() => {
-                    setOpen(true);
-                    setCurrSponsor(key);
-                  }}
-                  key={key}
-                />
-              ))}
-          </div>
-
-          {/* Major Sponsors Area */}
-          <h2 className={styles.subsponsor}>Major Sponsors</h2>
-
-          <div id={styles.majorContainer}>
-            {Object.keys(sponsors)
-              .sort()
-              .filter((key) => sponsors[key][3] === "MAJOR")
-              .map((key, _) => (
-                <img
-                  className={styles.major}
-                  src={`${process.env.PUBLIC_URL}/sponsors/2021/${sponsors[key][2]}`}
-                  alt={key}
-                  onClick={() => {
-                    setOpen(true);
-                    setCurrSponsor(key);
-                  }}
-                  key={key}
-                />
-              ))}
-          </div>
-
-          {/* Supporter Sponsors Area */}
-          <h2 className={styles.subsponsor}>Supporter Sponsors</h2>
-
-          <div id={styles.majorContainer}>
-            {Object.keys(sponsors)
-              .sort()
-              .filter((key) => sponsors[key][3] === "SUPPORTER")
-              .map((key, _) => (
-                <img
-                  className={styles.supporter}
-                  src={`${process.env.PUBLIC_URL}/sponsors/2021/${sponsors[key][2]}`}
-                  alt={key}
-                  onClick={() => {
-                    setOpen(true);
-                    setCurrSponsor(key);
-                  }}
-                  key={key}
-                />
-              ))}
-          </div>
-
-          {/* In-Kind Sponsors Area */}
-          <h2 className={styles.subsponsor}>In-Kind Sponsors</h2>
-
-          <div id={styles.majorContainer}>
-            {Object.keys(sponsors)
-              .sort()
-              .filter((key) => sponsors[key][3] === "IN-KIND")
-              .map((key, _) => (
-                <img
-                  className={styles.supportInKind}
-                  src={`${process.env.PUBLIC_URL}/sponsors/2021/${sponsors[key][2]}`}
-                  alt={key}
-                  onClick={() => {
-                    setOpen(true);
-                    setCurrSponsor(key);
-                  }}
-                  key={key}
-                />
-              ))}
-          </div>
-
-          {/* Affiliations Area */}
-          <h2 className={styles.subsponsor}>Affiliations</h2>
-
-          <div id={styles.majorContainer}>
-            {Object.keys(affiliations)
-              .sort()
-              .map((key, index) => (
-                <a
-                  key={index}
-                  href={affiliations[key][0]}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+            {/* Principal Sponsors Area */}
+            <h2 className={styles.subsponsor}>Principal Sponsors</h2>
+            <div id={styles.majorContainer}>
+              {Object.keys(sponsors)
+                .sort()
+                .filter((key) => sponsors[key][3] === "PRINCIPAL")
+                .map((key, _) => (
                   <img
-                    className={styles.affiliations}
-                    src={`${process.env.PUBLIC_URL}/affiliations/${affiliations[key][1]}`}
+                    className={styles.principal}
+                    src={`${process.env.PUBLIC_URL}/sponsors/2021/${sponsors[key][2]}`}
                     alt={key}
+                    onClick={() => {
+                      setOpen(true);
+                      setCurrSponsor(key);
+                    }}
+                    key={key}
                   />
-                </a>
-              ))}
+                ))}
+            </div>
+
+            {/* Major Sponsors Area */}
+            <h2 className={styles.subsponsor}>Major Sponsors</h2>
+
+            <div id={styles.majorContainer}>
+              {Object.keys(sponsors)
+                .sort()
+                .filter((key) => sponsors[key][3] === "MAJOR")
+                .map((key, _) => (
+                  <img
+                    className={styles.major}
+                    src={`${process.env.PUBLIC_URL}/sponsors/2021/${sponsors[key][2]}`}
+                    alt={key}
+                    onClick={() => {
+                      setOpen(true);
+                      setCurrSponsor(key);
+                    }}
+                    key={key}
+                  />
+                ))}
+            </div>
+
+            {/* Supporter Sponsors Area */}
+            <h2 className={styles.subsponsor}>Supporter Sponsors</h2>
+
+            <div id={styles.majorContainer}>
+              {Object.keys(sponsors)
+                .sort()
+                .filter((key) => sponsors[key][3] === "SUPPORTER")
+                .map((key, _) => (
+                  <img
+                    className={styles.supporter}
+                    src={`${process.env.PUBLIC_URL}/sponsors/2021/${sponsors[key][2]}`}
+                    alt={key}
+                    onClick={() => {
+                      setOpen(true);
+                      setCurrSponsor(key);
+                    }}
+                    key={key}
+                  />
+                ))}
+            </div>
+
+            {/* In-Kind Sponsors Area */}
+            <h2 className={styles.subsponsor}>In-Kind Sponsors</h2>
+
+            <div id={styles.majorContainer}>
+              {Object.keys(sponsors)
+                .sort()
+                .filter((key) => sponsors[key][3] === "IN-KIND")
+                .map((key, _) => (
+                  <img
+                    className={styles.supportInKind}
+                    src={`${process.env.PUBLIC_URL}/sponsors/2021/${sponsors[key][2]}`}
+                    alt={key}
+                    onClick={() => {
+                      setOpen(true);
+                      setCurrSponsor(key);
+                    }}
+                    key={key}
+                  />
+                ))}
+            </div>
+
+            {/* Affiliations Area */}
+            <h2 className={styles.subsponsor}>Affiliations</h2>
+
+            <div id={styles.majorContainer}>
+              {Object.keys(affiliations)
+                .sort()
+                .map((key, index) => (
+                  <a
+                    key={index}
+                    href={affiliations[key][0]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      className={styles.affiliations}
+                      src={`${process.env.PUBLIC_URL}/affiliations/${affiliations[key][1]}`}
+                      alt={key}
+                    />
+                  </a>
+                ))}
+            </div>
+
+            <p className={styles.subheader}>
+            Interested in partnering with us? Contact us at{" "}
+              <a className={styles.subheader} href="mailto:externals@unswwit.com">
+              externals@unswwit.com
+              </a>
+            </p>
           </div>
 
-          <p className={styles.subheader}>
-            Interested in partnering with us? Contact us at{" "}
-            <a className={styles.subheader} href="mailto:externals@unswwit.com">
-              externals@unswwit.com
-            </a>
-          </p>
+          {/* Start of Modal */}
+          <div className={styles.modalContainer}>
+            <Modal
+              className={styles.modal}
+              aria-labelledby="spring-modal-title"
+              aria-describedby="spring-modal-description"
+              open={open}
+              onClose={() => setOpen(false)}
+              trigger={<Button>Scrolling Content Modal</Button>}
+              closeAfterTransition
+              BackdropComponent={Backdrop}
+              BackdropProps={{
+                timeout: 500,
+              }}
+            >
+              <>
+                <Fade in={open}>
+                  <SponsorsModal
+                    sponsors={sponsors}
+                    handleClose={callbackModal}
+                    sponsorName={currSponsor}
+                  />
+                </Fade>
+              </>
+            </Modal>
+          </div>
+          {/* End of Modal */}
         </div>
-
-        {/* Start of Modal */}
-        <div className={styles.modalContainer}>
-          <Modal
-            className={styles.modal}
-            aria-labelledby="spring-modal-title"
-            aria-describedby="spring-modal-description"
-            open={open}
-            onClose={() => setOpen(false)}
-            trigger={<Button>Scrolling Content Modal</Button>}
-            closeAfterTransition
-            BackdropComponent={Backdrop}
-            BackdropProps={{
-              timeout: 500,
-            }}
-          >
-            <>
-              <Fade in={open}>
-                <SponsorsModal
-                  sponsors={sponsors}
-                  handleClose={callbackModal}
-                  sponsorName={currSponsor}
-                />
-              </Fade>
-            </>
-          </Modal>
-        </div>
-        {/* End of Modal */}
-      </div>
-    )}
+      )}
     </div>
   );
 };
