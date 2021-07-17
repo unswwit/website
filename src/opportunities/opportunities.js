@@ -22,17 +22,11 @@ const Opportunities = () => {
       callback: (googleData) => {
         setLoading(false);
         setOpportunities(googleData["opportunities"]["elements"]);
+        setSourceLoading(false);
       },
       simpleSheet: false,
     });
   }, []);
-
-  // control when to stop loading
-  useEffect(() => {
-    setTimeout(() => {
-      setSourceLoading(false);
-    }, 1000);
-  }, []) 
 
   return (
     <div>
