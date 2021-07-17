@@ -93,7 +93,7 @@ class JoinUs extends React.Component {
     window.scrollTo(0, 0);
     setTimeout(() => {
       this.setState({ sourceLoading: false});
-    }, 1000);
+    }, 10000);
   }
 
   render() {
