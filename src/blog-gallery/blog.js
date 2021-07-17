@@ -71,13 +71,6 @@ const Blog = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // control when to stop loading
-  useEffect(() => {
-    setTimeout(() => {
-      setSourceLoading(false);
-    }, 1000);
-  }, [])  
-
   // filter blogs by a selected category
   const filterBlogs = (category, searchTerm) => {
     const filteredBlogs = blogs.filter((blog) => (category === "All" || (blog.category.split(",")).includes(category) 
@@ -138,6 +131,7 @@ const Blog = () => {
         setBlogs(tempBlogs);
         setCurrentPosts(tempBlogs.slice(0, postsPerPage));
         setSelectedPosts(tempBlogs);
+        setSourceLoading(false);
       },
       simpleSheet: false,
     });
