@@ -17,8 +17,11 @@ import EventMenu from "./EventMenu"
 const Events = () => {
   const [expanded, setExpanded] = useState(false);
   const [events, setEvents] = useState([]);
+  const [upcomingEvents, setUpcomingEvents] = useState([]);
   const [year, setYear] = useState("2021");
   const [loading, setLoading] = useState(true);
+  const [loadingUpcoming, setLoadingUpcoming] = useState(true);
+
   const [term1, setTerm1] = useState([]);
   const [term2, setTerm2] = useState([]);
   const [term3, setTerm3] = useState([]);
@@ -65,6 +68,7 @@ const Events = () => {
   useEffect(() => {
 
     setLoading(true);
+    setLoadingUpcoming(true);
 
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
@@ -74,6 +78,9 @@ const Events = () => {
         );
         setEvents(allEvents.reverse());    
         setTerms(allEvents.reverse());
+        
+        setUpcomingEvents(googleData["upcoming-events-test"]["elements"]);
+        setLoadingUpcoming(false);
 
       },
       simpleSheet: false,
@@ -88,7 +95,7 @@ const Events = () => {
       {/* Main Title, and Subtitle Area */}
       <div className={styles.eventsBody}>
         <h2>UPCOMING EVENTS</h2>
-        {/*<div id={styles.eventsLoadingContainer}>
+        <div id={styles.eventsLoadingContainer}>
           {loadingUpcoming && (
             <CircularProgress
               variant="indeterminate"
@@ -98,11 +105,11 @@ const Events = () => {
             />
           )}
         </div>
-        {!loadingUpcoming && (!upcomingEvents.length ? 
-          (<p className={styles.lookout}>Keep a lookout here for our upcoming events!</p>)
-        :*/}
-          {/*<EventMenu/>*/}
-        {/*)}*/}
+        {!loadingUpcoming && (!upcomingEvents.length ? (
+          <p className={styles.lookout}>Keep a lookout here for our upcoming events!</p> )
+        :
+          <EventMenu/>
+        )}
         <h2>PAST EVENTS</h2>
         <Accordion
           expanded={expanded}
