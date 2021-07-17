@@ -78,6 +78,7 @@ const Videos = (props) => {
         // setSelectedPosts(sortedVideos);
 
         setLoading(false);
+        setSourceLoading(false);
       },
       simpleSheet: false,
     });
@@ -135,13 +136,6 @@ const Videos = (props) => {
       [videoNumber, props.history]
     );
   };
-
-  // control when to stop loading
-  useEffect(() => {
-    setTimeout(() => {
-      setSourceLoading(false);
-    }, 1000);
-  }, []) 
 
   // TO UNCOMMENT WHEN REACH > 9 VIDEOS
   // called when pagination item clicked to slice the correct amount of videos for viewing
