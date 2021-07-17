@@ -168,10 +168,12 @@ p {
   background: transparent;
   font-size: 10pt;
   padding: 0px;
+  z-index: 99;
 }
 
 .nav {
   height: 70px;
+  z-index: 99;
 }
 
 .navbar-nav {
@@ -179,6 +181,7 @@ p {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   text-decoration: none;
+  z-index: 99;
 }
 
 .nav-item {
@@ -187,6 +190,7 @@ p {
   padding: 20px 5px;
   text-decoration: none;
   letter-spacing: 1.5px;
+  z-index: 99;
 }
 
 .nav-item-btn {
@@ -194,6 +198,7 @@ p {
   padding-top: 22px;
   padding-right: 10px;
   display: none;
+  z-index: 99;
 }
 
 .nav-item a,
@@ -201,6 +206,7 @@ p {
   color: white;
   padding: 18px 15px;
   text-decoration: none;
+  z-index: 99;
 }
 
 .dropdown-menu {
@@ -210,11 +216,13 @@ p {
   background-color: #fff7ef;
   margin-top: 15px;
   border-radius: 0px 0px 10px 10px;
+  z-index: 99;
 }
 
 .transparent {
   margin-top: 25px;
   border-radius: 10px;
+  z-index: 99;
 }
 
 .transparent::after {
@@ -226,6 +234,7 @@ p {
   right: 51px;
   top: -1em;
   border-bottom-color: #fff7ef;
+  z-index: 99;
 }
 
 .mediaDD::after {
@@ -314,6 +323,7 @@ p {
 
   .nav-item-btn {
     display: block;
+    z-index: 99;
   }
 }
 
@@ -321,7 +331,7 @@ p {
 #loadingBackground {
   background: #fff7ef;
   height: 100vh;
-  z-index: 5;
+  z-index: 100;
   position: absolute;
   width: 100vw;
   text-align: center;
