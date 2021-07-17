@@ -20,18 +20,11 @@ const Publications = () => {
       callback: (googleData) => {
         setArticles(googleData["publications"]["elements"]);
         setLoading(false);
+        setSourceLoading(false);
       },
       simpleSheet: false,
     });
   }, []);
-
-  // control when to stop loading
-  useEffect(() => {
-    setTimeout(() => {
-      setSourceLoading(false);
-    }, 1000);
-  }, []) 
-
 
   return (
     <div>
