@@ -71,6 +71,7 @@ const MarketingContent = () => {
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: (googleData) => {
         setLoading(false);
+        setSourceLoading(false);
 
         const tempContent = googleData["marketing-archives"]["elements"]
           .reverse()
@@ -92,13 +93,6 @@ const MarketingContent = () => {
       setEmptyCategory(false);
     }
   }, [currentPosts, finishedLoading]);
-
-  // control when to stop loading
-  useEffect(() => {
-    setTimeout(() => {
-      setSourceLoading(false);
-    }, 1000);
-  }, []) 
 
   // filter content by selected category
   const filterContent = (selectedCategory) => {
