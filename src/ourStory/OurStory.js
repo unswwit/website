@@ -13,9 +13,12 @@ const OurStory = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // control when to stop loading
   useEffect(() => {
-    setTimeout(() => {
-      setSourceLoading(false);
+    setTimeout((loading) => {
+      if (!loading) {
+        setSourceLoading(false);
+      }
     }, 1000);
   }, [])  
 
