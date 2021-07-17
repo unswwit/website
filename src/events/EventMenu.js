@@ -1,36 +1,36 @@
-import React, { useState } from "react";
+import React from "react";
 import ScrollMenu from "react-horizontal-scrolling-menu";
 import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 import KeyboardArrowLeftIcon from "@material-ui/icons/KeyboardArrowLeft";
 import UpcomingEvent from "./UpcomingEvent";
-import Tabletop from "tabletop";
 import styles from "./events.module.css";
 import "./EventMenu.css"
 
-/*
+
 // One item component
 // selected prop will be passed
-/*const MenuItem = ({ event, index }) => {
+const MenuItem = ({ event, index }) => {
   console.log(index)
   return (
-    <UpcomingEvent
-      upcomingEvent={event}
-      index={index}
-    >
-    </UpcomingEvent>
+    <div className={styles.menuItem}>
+      <UpcomingEvent
+        upcomingEvent={event}
+        index={index}
+      ></UpcomingEvent>
+    </div>
   );
-};*/
+};
 
 // All items component
 // Important! add unique key
 export const Menu = (events) => events.map(el => {
   return (
     <div className={styles.menuItem}>
-      <UpcomingEvent
+      <MenuItem
         event={el.event}
         index={el.index}
-        key={el.key}
-      ></UpcomingEvent>
+        key={el.index}
+      ></MenuItem>
     </div>
   );
 });
@@ -48,6 +48,7 @@ const Left = () => {
   return (
     <KeyboardArrowLeftIcon
       style={buttonStyles}
+      className='arrow-prev'
     ></KeyboardArrowLeftIcon>
   );
 };
@@ -63,43 +64,17 @@ const Right = () => {
 const ArrowLeft = Left();
 const ArrowRight = Right();
 
-const EventMenu = () => {
+const EventMenu = ({ events }) => {
 
-  const [upcomingEvents, setUpcomingEvents] = useState([]);
-
-  Tabletop.init({
-    key: process.env.REACT_APP_GOOGLE_SHEETS,
-    callback: (googleData) => {
-      setUpcomingEvents(googleData["upcoming-events-test"]["elements"]);
-    },
-    simpleSheet: false,
-  });
-    
-  const events = []
-
-  upcomingEvents.forEach((upcomingEvent, index) => {
-    events.push({
-      event: upcomingEvent,
-      index: index,
-      key: upcomingEvent.img,
-    })
-  })
-
-  // Create menu from items
-  const menu = Menu(events);
-  /*console.log(menu.length)*/
   return (
-    <div className={styles.eventsBody}>
+
       <ScrollMenu
-        data={menu}
+        data={Menu(events)}
         arrowLeft={ArrowLeft}
         arrowRight={ArrowRight}
         wheel={false}
-        alignCenter={true}
-      />
-    </div>
-  );
-
+      ></ScrollMenu>
+  )
 }
 
 export default EventMenu;
