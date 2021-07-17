@@ -74,7 +74,7 @@ class App extends Component {
       showDDAbout: false,
       menuOpen: false,
       navBar: false,
-      hideNav: false,
+      hideNav: true,
     };
     this.navClass = "navbar navbar-expand-md navbar-dark bg-custom fixed-top";
     this.handleHover = this.handleHover.bind(this);
@@ -128,7 +128,7 @@ class App extends Component {
   };
 
   // hide the navigation bar when a user is at the bottom of the page
-  hideNavBar() {
+  hideNavBar(props) {
     const bottom =
       Math.ceil(window.innerHeight + window.scrollY) >=
       document.documentElement.scrollHeight;
