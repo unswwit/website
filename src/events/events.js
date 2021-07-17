@@ -50,13 +50,6 @@ const Events = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // control when to stop loading
-  useEffect(() => {
-    setTimeout(() => {
-      setSourceLoading(false);
-    }, 1000);
-  }, []) 
-
   // load events
   useEffect(() => {
     setLoadingPast(true);
@@ -72,6 +65,7 @@ const Events = () => {
         );
         setEvents(allEvents.reverse());
         setUpcomingEvents(googleData["upcoming-events"]["elements"]);
+        setSourceLoading(false);
       },
       simpleSheet: false,
     });
