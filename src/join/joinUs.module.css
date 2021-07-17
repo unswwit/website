@@ -529,79 +529,127 @@
 
 @media only screen and (max-width: 667px) {
   .whatTo {
-    padding-left: 100px;
+    padding-left: 0px;
   }
 
   .edu {
-    max-height:220px;
-    max-width: 250px;
+    max-height:390px;
+    max-width: 560px;
+    padding: 190px 10px 190px 10px;
   }
 
   .externals{
-    max-height:220px;
-    max-width: 250px;
+    max-height:390px;
+    max-width: 560px;
+    padding: 190px 10px 190px 10px;
   }
 
   .events {
-    max-height:220px;
-    max-width: 250px;
+    max-height:390px;
+    max-width: 560px;
+    padding: 190px 10px 190px 10px;
   }
 
   .hr {
-    max-height:220px;
-    max-width: 250px;
+    max-height:390px;
+    max-width: 560px;
+    padding: 190px 10px 190px 10px;
   }
 
   .it {
-    max-height:220px;
-    max-width: 250px;
+    max-height:390px;
+    max-width: 560px;
+    padding: 190px 10px 190px 10px;
   }
 
   .marketing {
-    max-height:220px;
-    max-width: 250px;
+    max-height:390px;
+    max-width: 560px;
+    padding: 190px 10px 190px 10px;
   }
 }
 
 @media only screen and (max-width:568px) {
   .whatTo {
-    padding-left: 70px;
+    padding-left: 0px;
   }
 
   .edu {
-    max-height:220px;
-    max-width: 250px;
+    max-height:390px;
+    max-width: 560px;
+    padding: 190px 10px 190px 10px;
   }
 
   .externals{
-    max-height:220px;
-    max-width: 250px;
+    max-height:390px;
+    max-width: 560px;
+    padding: 190px 10px 190px 10px;
   }
 
   .events {
-    max-height:220px;
-    max-width: 250px;
+    max-height:390px;
+    max-width: 560px;
+    padding: 190px 10px 190px 10px;
   }
 
   .hr {
-    max-height:220px;
-    max-width: 250px;
+    max-height:390px;
+    max-width: 560px;
+    padding: 190px 10px 190px 10px;
   }
 
   .it {
-    max-height:220px;
-    max-width: 250px;
+    max-height:390px;
+    max-width: 560px;
+    padding: 190px 10px 190px 10px;
   }
 
   .marketing {
-    max-height:220px;
-    max-width: 250px;
+    max-height:390px;
+    max-width: 560px;
+    padding: 190px 10px 190px 10px;
   }
 }
 
 @media only screen and (max-width: 508px) {
   .whatTo {
-    padding-left: 54px;
+    padding-left: 0px;
+  }
+
+  .edu {
+    max-height:390px;
+    max-width: 560px;
+    padding: 190px 10px 190px 10px;
+  }
+
+  .externals{
+    max-height:390px;
+    max-width: 560px;
+    padding: 190px 10px 190px 10px;
+  }
+
+  .events {
+    max-height:390px;
+    max-width: 560px;
+    padding: 190px 10px 190px 10px;
+  }
+
+  .hr {
+    max-height:390px;
+    max-width: 560px;
+    padding: 190px 10px 190px 10px;
+  }
+
+  .it {
+    max-height:390px;
+    max-width: 560px;
+    padding: 190px 10px 190px 10px;
+  }
+
+  .marketing {
+    max-height:390px;
+    max-width: 560px;
+    padding: 190px 10px 190px 10px;
   }
 }
 
@@ -611,28 +659,59 @@
   }
 
   .edu {
-    max-height:235px;
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
     max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
   }
 
-  .externals {
-    max-height:235px;
+  /*css padding: top right bottom left */
+
+  .externals{
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
     max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
   }
 
   .events {
-    max-height:235px;
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
     max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
   }
 
   .hr {
-    max-height:235px;
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
     max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
   }
 
   .it {
-    max-height:235px;
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
     max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
+  }
+
+  .marketing {
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
   }
 
   .marketing {
@@ -650,6 +729,62 @@
 @media only screen and (max-width: 375px) {
   .whatTo {
     padding-left: 7px;
+  }
+
+  .edu {
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
+  }
+
+  /*css padding: top right bottom left */
+
+  .externals{
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
+  }
+
+  .events {
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
+  }
+
+  .hr {
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
+  }
+
+  .it {
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
+  }
+
+  .marketing {
+    margin-top: 10px;
+    display: flex;
+    max-height:220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+    aspect-ratio: 1/1;
   }
 }
 
@@ -681,33 +816,49 @@
     font-size: 24pt;
   }
 
+  .whatTo {
+    padding-left: 0px;
+  }
+
   .edu {
     max-height:200px;
     max-width: 250px;
+    padding: 110px 10px 110px 10px;
   }
 
   .externals {
     max-height:200px;
     max-width: 250px;
+    padding: 110px 10px 110px 10px;
   }
 
   .events {
     max-height:200px;
     max-width: 250px;
+    padding: 110px 10px 110px 10px;
   }
 
   .hr {
     max-height:200px;
     max-width: 250px;
+    padding: 110px 10px 110px 10px;
   }
 
   .it {
     max-height:200px;
     max-width: 250px;
+    padding: 110px 10px 110px 10px;
   }
 
   .marketing {
     max-height:200px;
     max-width: 250px;
+    padding: 110px 10px 110px 10px;
+  }
+
+  .desc {
+    font-size: 9pt;
+    max-height:190px;
+    max-width: 400px;
   }
 }
