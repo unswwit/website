@@ -384,13 +384,11 @@ const Sponsors = () => {
 
   return (
     <div>
-      {sourceLoading ? ( <LoadingScreen /> ) : (
-      <div>
-        {/* Cover Photo */}
-        <PageHeader
-          imgUrl="/headers/sponsors-header-2.jpg"
-          title="Our Sponsors"
-        />
+      {/* Cover Photo */}
+      <PageHeader
+        imgUrl="/headers/sponsors-header-2.jpg"
+        title="Sponsors and Affiliations"
+      />
 
         <div id={styles.sponsorsBody}>
           <p className={styles.subheader}>
