@@ -13,11 +13,11 @@ import "aos/dist/aos.css";
 import LoadingScreen from "../LoadingScreen";
 
 const Home = () => {
-  const [open, setOpen] = React.useState(false);
-  const [mobileView, setMobileView] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [mobileView, setMobileView] = useState(false);
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [sourceLoading, setSourceLoading] = React.useState(true);
+  const [sourceLoading, setSourceLoading] = useState(true);
   const last3articles = articles.slice(0, 3);
 
   //start webpage at the top
@@ -42,19 +42,11 @@ const Home = () => {
       callback: (googleData) => {
         setArticles(googleData["publications"]["elements"].reverse());
         setLoading(false);
+        setSourceLoading(false);
       },
       simpleSheet: false,
     });
   }, []);
-
-  // control when to stop loading
-  useEffect(() => {
-    setTimeout((loading) => {
-      if (!loading) {
-        setSourceLoading(false);
-      }
-    }, 1000);
-  }, [])  
 
   const callbackModal = () => {
     setOpen(false);
