@@ -22,7 +22,7 @@ function OurTeam() {
   const [subcommittee, setSubcommittee] = useState([]);
   const [year, setYear] = useState("2021");
   const [loading, setLoading] = useState(true);
-  const [sourceLoading, setSourceLoading] = React.useState(true);
+  const [sourceLoading, setSourceLoading] = useState(true);
   const execToClassName = {
     2021: "exec2021Img",
     2020: {
@@ -99,17 +99,11 @@ function OurTeam() {
 
         // stop loading
         setLoading(false);
+        setSourceLoading(false);
       },
       simpleSheet: false,
     });
   }, [year]);
-
-  // control when to stop loading
-  useEffect(() => {
-    setTimeout(() => {
-      setSourceLoading(false);
-    }, 1000);
-  }, [])  
 
   return (
     <div>
