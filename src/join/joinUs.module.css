@@ -4,7 +4,6 @@
   max-width: 80%;
   text-align: center;
   margin: auto;
-  padding-top: 50px;
   padding-bottom: 150px;
   margin-bottom: 200px;
 }
@@ -29,14 +28,21 @@
   justify-content: center;
 }
 
-/*Heading*/
+/*Top Heading*/
 .header {
   font-family: "Montserrat", sans-serif;
-  font-size: 33pt;
-  padding-top: 50px;
-  padding-bottom: 0px;
+  font-size: 30pt;
+  margin-top: 50px;
   text-transform: uppercase;
-  margin-bottom: 0px;
+  text-align: center;
+}
+
+/*Heading of sections*/
+.section {
+  font-family: "Montserrat", sans-serif;
+  font-size: 33pt;
+  padding-top: 100px;
+  text-transform: uppercase;
   text-align: center;
 }
 
@@ -87,7 +93,6 @@
 /* Headings in how to join */
 .descriptionHowto {
   line-height: 22px;
-  padding-top: 50px;
   font-family: "Montserrat", sans-serif;
   font-size: 13pt;
   text-align: justify;
@@ -206,7 +211,6 @@
 
 /*-------------------------------FAQ Section------------------------------*/
 .accordion {
-  padding-top: 50px;
   max-width: 80%;
   margin: auto;
   padding-bottom: 100px;

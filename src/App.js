@@ -1,3 +1,4 @@
+import MessengerCustomerChat from "react-messenger-customer-chat";
 import React, { Component } from "react";
 import { HashRouter, Route, NavLink, Switch, Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -19,7 +20,7 @@ import Events from "./events/events";
 import Podcast from "./podcast/Podcast";
 import EpisodePage from "./podcast/EpisodePage";
 import NotFound from "./not-found/NotFound";
-import OurStory from "./our-story/our-story";
+import OurStory from "./ourStory/OurStory";
 import Videos from "./videos/videos";
 
 import Menu from "./menu";
@@ -34,7 +35,7 @@ import InsertDriveFileOutlinedIcon from "@material-ui/icons/InsertDriveFileOutli
 import HeadsetMicOutlinedIcon from "@material-ui/icons/HeadsetMicOutlined";
 import LocalPrintshopOutlinedIcon from "@material-ui/icons/LocalPrintshopOutlined";
 import ImageOutlinedIcon from "@material-ui/icons/ImageOutlined";
-import VideocamOutlinedIcon from '@material-ui/icons/VideocamOutlined';
+import VideocamOutlinedIcon from "@material-ui/icons/VideocamOutlined";
 
 class App extends Component {
   /*
@@ -186,6 +187,10 @@ class App extends Component {
             open={this.state.menuOpen}
             handleMenuClick={this.handleMenuClick}
           />
+          <MessengerCustomerChat
+            pageId={process.env.REACT_APP_PAGE_ID}
+            appId={process.env.REACT_APP_APP_ID}
+          />
           <nav
             className={
               this.state.navBar
@@ -193,8 +198,8 @@ class App extends Component {
                   ? this.navClass + " activeNav hiddenNav"
                   : this.navClass + " activeNav"
                 : this.state.hideNav
-                  ? this.navClass + " hiddenNav"
-                  : this.navClass
+                ? this.navClass + " hiddenNav"
+                : this.navClass
             }
           >
             <a className="navbar-brand" href="/">
@@ -280,25 +285,56 @@ class App extends Component {
                     >
                       <div className="dropdown-item">
                         <NavLink to="/about/our-story" {...this.highlightDD}>
-                          <ChromeReaderModeOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
+                          <ChromeReaderModeOutlinedIcon
+                            fontSize="small"
+                            style={{ marginRight: "10px", marginLeft: "-10px" }}
+                          />
                           OUR STORY
                         </NavLink>
                       </div>
-                      <div className="dropdown-item">
-                        <NavLink to="/about/sponsors" {...this.highlightDD}>
-                          <FavoriteBorderIcon fontSize="small" style={{marginRight: "10px"}} />
-                          OUR SPONSORS
+                      <div
+                        className="dropdown-item"
+                        style={{ paddingBottom: "0px" }}
+                      >
+                        <NavLink
+                          to="/about/sponsors-affiliations"
+                          {...this.highlightDD}
+                        >
+                          <FavoriteBorderIcon
+                            fontSize="small"
+                            style={{ marginRight: "10px", marginLeft: "-10px" }}
+                          />
+                          SPONSORS AND
+                          <br />
+                          <p
+                            style={{ marginLeft: "32px", paddingBottom: "0px" }}
+                          >
+                            AFFILIATIONS
+                          </p>
                         </NavLink>
                       </div>
-                      <div className="dropdown-item">
-                        <NavLink to="/about/our-team" {...this.highlightDD}>
-                          <PeopleOutlineIcon fontSize="small" style={{marginRight: "10px"}} />
+                      <div
+                        className="dropdown-item"
+                        style={{ paddingTop: "0px" }}
+                      >
+                        <NavLink
+                          to="/about/our-team"
+                          {...this.highlightDD}
+                          style={{ paddingTop: "0px" }}
+                        >
+                          <PeopleOutlineIcon
+                            fontSize="small"
+                            style={{ marginRight: "10px", paddingTop: "0px", marginLeft: "-10px" }}
+                          />
                           OUR TEAM
                         </NavLink>
                       </div>
                       <div className="dropdown-item">
                         <NavLink to="/about/contact-us" {...this.highlightDD}>
-                          <PhoneOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
+                          <PhoneOutlinedIcon
+                            fontSize="small"
+                            style={{ marginRight: "10px", marginLeft: "-10px" }}
+                          />
                           CONTACT US
                         </NavLink>
                       </div>
@@ -357,7 +393,7 @@ class App extends Component {
                           </NavLink>
                         ) : (
                           <NavLink to="/media/blog" {...this.highlightNoNav}>
-                            MEDIA 
+                            MEDIA
                           </NavLink>
                         )}
                       </span>
@@ -371,33 +407,48 @@ class App extends Component {
                           : "dropdown-menu"
                       }
                     >
-                      <div className="dropdown-item">
+                      <div className="dropdown-item dropdown-media">
                         <NavLink to="/media/blog" {...this.highlightDD}>
-                          <InsertDriveFileOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
+                          <InsertDriveFileOutlinedIcon
+                            fontSize="small"
+                            style={{ marginRight: "10px" }}
+                          />
                           BLOG POSTS
                         </NavLink>
                       </div>
-                      <div className="dropdown-item">
+                      <div className="dropdown-item dropdown-media">
                         <NavLink to="/media/podcast" {...this.highlightDD}>
-                          <HeadsetMicOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
+                          <HeadsetMicOutlinedIcon
+                            fontSize="small"
+                            style={{ marginRight: "10px" }}
+                          />
                           PODCAST
                         </NavLink>
                       </div>
-                      <div className="dropdown-item">
+                      <div className="dropdown-item dropdown-media">
                         <NavLink to="/media/publications" {...this.highlightDD}>
-                          <LocalPrintshopOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
+                          <LocalPrintshopOutlinedIcon
+                            fontSize="small"
+                            style={{ marginRight: "10px" }}
+                          />
                           PUBLICATIONS
                         </NavLink>
                       </div>
-                      <div className="dropdown-item">
+                      <div className="dropdown-item dropdown-media">
                         <NavLink to="/media/marketing" {...this.highlightDD}>
-                          <ImageOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
+                          <ImageOutlinedIcon
+                            fontSize="small"
+                            style={{ marginRight: "10px" }}
+                          />
                           MARKETING
                         </NavLink>
                       </div>
-                      <div className="dropdown-item">
+                      <div className="dropdown-item dropdown-media">
                         <NavLink to="/media/videos" {...this.highlightDD}>
-                          <VideocamOutlinedIcon fontSize="small" style={{marginRight: "10px"}} />
+                          <VideocamOutlinedIcon
+                            fontSize="small"
+                            style={{ marginRight: "10px" }}
+                          />
                           VIDEOS
                         </NavLink>
                       </div>
@@ -436,24 +487,25 @@ class App extends Component {
             {/*When user clicks on About tab, the page will be redirected to Our Story*/}
             <Route exact path="/about">
               <Redirect to="/about/our-story" />
-            </Route>            
+            </Route>
             <Route exact path="/about/our-story" component={OurStory} />
             <Route path="/about/our-team" component={OurTeam} />
             <Route exact path="/media/blog" component={Blog} />
             <Route exact path="/media" component={Blog} />
             <Route path="/media/marketing" component={MarketingContent} />
             <Route path="/join-us" component={JoinUs} />
-            <Route path="/about/sponsors" component={Sponsors} />
+            <Route path="/about/sponsors-affiliations" component={Sponsors} />
             <Route path="/opportunities" component={Opportunities} />
             <Route path="/about/contact-us" component={ContactUs} />
             <Route exact path="/media/podcast" component={Podcast} />
-            <Route path="/media/podcast/:episode(\d+)" component={EpisodePage} />
+            <Route
+              path="/media/podcast/:episode(\d+)"
+              component={EpisodePage}
+            />
             <Route path="/media/publications" component={Publications} />
-            <Route exact path="/media/videos">
-              <Redirect to="/media/videos/2" />
-            </Route>
-            <Route path="/media/videos" component={Videos} />
-            {Array.from({ length: 62 }, (_, index) => index + 1).map(
+            <Route exact path="/media/videos" component={Videos} />
+            <Route path="/media/videos/:videoNumber(\d+)" component={Videos} />
+            {Array.from({ length: 65 }, (_, index) => index + 1).map(
               (blogNo) => {
                 return (
                   <Route
@@ -498,7 +550,7 @@ class App extends Component {
               <Redirect to="/media/marketing" />
             </Route>
             <Route exact path="/sponsors">
-              <Redirect to="/about/sponsors" />
+              <Redirect to="/about/sponsors-affiliations" />
             </Route>
             <Route exact path="/our-team">
               <Redirect to="/about/our-team" />

@@ -171,7 +171,8 @@ a.subheader {
   text-align: center;
 }
 
-.link, .sponsorLink {
+.link,
+.sponsorLink {
   color: var(--red);
   text-decoration: underline;
 }
@@ -185,7 +186,8 @@ a.subheader {
   text-align: justify;
 }
 
-.sponsorLink:hover, .link:hover {
+.sponsorLink:hover,
+.link:hover {
   color: var(--yellow);
 }
 

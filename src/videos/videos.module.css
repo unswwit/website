@@ -15,12 +15,12 @@
 .videosBody {
   max-width: 80%;
   margin: 0 auto;
-  margin-bottom: 5%;
+  margin-bottom: 100px;
 }
 
 h1.vidSubheading {
   font-family: "Montserrat", sans-serif;
-  font-size: 45px;
+  font-size: 30pt;
   text-transform: uppercase;
   margin-top: 5%;
   margin-bottom: 0.25%;
