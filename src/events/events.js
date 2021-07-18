@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./events.module.css";
-import PageHeader from ".././header";
+import PageHeader from "../components/header";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
@@ -11,7 +11,7 @@ import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../components/ScrollUpBtn";
 import AddToCalBtn from "./AddToCalBtn.js";
-import LoadingScreen from "../LoadingScreen";
+import LoadingScreen from "../components/LoadingScreen";
 
 const Events = () => {
   const [expanded, setExpanded] = useState(false);
@@ -52,7 +52,8 @@ const Events = () => {
 
   // load events
   useEffect(() => {
-    // show loading signs for past events 
+    console.log("called here1");
+    // show loading signs for past events
     setLoadingPast(true);
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
@@ -64,6 +65,7 @@ const Events = () => {
         setUpcomingEvents(googleData["upcoming-events"]["elements"]);
 
         // remove loading signs
+        console.log("called here");
         setSourceLoading(false);
         setLoadingPast(false);
         setLoadingUpcoming(false); // only load upcoming once
@@ -74,7 +76,9 @@ const Events = () => {
 
   return (
     <div>
-      {sourceLoading ? ( <LoadingScreen /> ) : (
+      {sourceLoading ? (
+        <LoadingScreen />
+      ) : (
         <>
           {/* Cover Photo */}
           <PageHeader imgUrl="/headers/events-header.jfif" title="Events" />
@@ -92,73 +96,77 @@ const Events = () => {
               )}
             </div>
             {!loadingUpcoming &&
-            (!upcomingEvents.length ? (
-              <p className={styles.lookout}>
-                Keep a lookout here for our upcoming events!
-              </p>
-            ) : (
-              <div className={styles.gridContainer}>
-                {upcomingEvents.map((upcomingEvent, index) => {
-                  return (
-                    <div key={index} className={styles.upcoming}>
-                      <img
-                        className={styles.eventImages}
-                        src={
-                          process.env.PUBLIC_URL +
-                          `/event-covers/2021/${upcomingEvent.img}`
-                        }
-                        alt={upcomingEvent.title}
-                      />
-                      <div className={styles.eventDescription}>
-                        <p className={styles.eventName}>{upcomingEvent.title}</p>
-                        {/* The date should be in the format of the following example: 24th January 2020 */}
-                        <p className={styles.eventDate}>{upcomingEvent.date}</p>
-                        <p className={styles.eventSummary}>
-                          {upcomingEvent.description}
-                        </p>
-                        <ul id={styles.links}>
-                          {upcomingEvent.registerLink && (
-                            <li className={styles.eventLink}>
-                              <a
-                                href={upcomingEvent.registerLink}
-                                className={styles.event}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                Register
-                              </a>
+              (!upcomingEvents.length ? (
+                <p className={styles.lookout}>
+                  Keep a lookout here for our upcoming events!
+                </p>
+              ) : (
+                <div className={styles.gridContainer}>
+                  {upcomingEvents.map((upcomingEvent, index) => {
+                    return (
+                      <div key={index} className={styles.upcoming}>
+                        <img
+                          className={styles.eventImages}
+                          src={
+                            process.env.PUBLIC_URL +
+                            `/event-covers/2021/${upcomingEvent.img}`
+                          }
+                          alt={upcomingEvent.title}
+                        />
+                        <div className={styles.eventDescription}>
+                          <p className={styles.eventName}>
+                            {upcomingEvent.title}
+                          </p>
+                          {/* The date should be in the format of the following example: 24th January 2020 */}
+                          <p className={styles.eventDate}>
+                            {upcomingEvent.date}
+                          </p>
+                          <p className={styles.eventSummary}>
+                            {upcomingEvent.description}
+                          </p>
+                          <ul id={styles.links}>
+                            {upcomingEvent.registerLink && (
+                              <li className={styles.eventLink}>
+                                <a
+                                  href={upcomingEvent.registerLink}
+                                  className={styles.event}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  Register
+                                </a>
+                              </li>
+                            )}
+                            {upcomingEvent.facebookLink && (
+                              <li className={styles.eventLink}>
+                                <a
+                                  href={upcomingEvent.facebookLink}
+                                  className={styles.event}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  Facebook
+                                </a>
+                              </li>
+                            )}
+                            <li className={styles.eventButton}>
+                              <AddToCalBtn
+                                title={upcomingEvent.title}
+                                description={upcomingEvent.description}
+                                location={upcomingEvent.location}
+                                startDate={upcomingEvent.start}
+                                endDate={upcomingEvent.end}
+                                duration={upcomingEvent.duration}
+                              />
                             </li>
-                          )}
-                          {upcomingEvent.facebookLink && (
-                            <li className={styles.eventLink}>
-                              <a
-                                href={upcomingEvent.facebookLink}
-                                className={styles.event}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                Facebook
-                              </a>
-                            </li>
-                          )}
-                          <li className={styles.eventButton}>
-                            <AddToCalBtn
-                              title={upcomingEvent.title}
-                              description={upcomingEvent.description}
-                              location={upcomingEvent.location}
-                              startDate={upcomingEvent.start}
-                              endDate={upcomingEvent.end}
-                              duration={upcomingEvent.duration}
-                            />
-                          </li>
-                        </ul>
+                          </ul>
+                        </div>
+                        <ScrollUpBtn />
                       </div>
-                      <ScrollUpBtn />
-                    </div>
-                  );
-                })}
-              </div>
-            ))}
+                    );
+                  })}
+                </div>
+              ))}
             <h2>PAST EVENTS</h2>
             <Accordion
               expanded={expanded}
@@ -170,9 +178,11 @@ const Events = () => {
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel4bh-content"
               >
-                <Typography id={styles.eventResources}>Event Resources</Typography>
+                <Typography id={styles.eventResources}>
+                  Event Resources
+                </Typography>
                 <Typography id={styles.resourcesDescription}>
-                Learning material used in past events
+                  Learning material used in past events
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
@@ -207,19 +217,19 @@ const Events = () => {
 
             <div id={styles.pastEvents} className={styles.gridContainer}>
               {!loadingPast &&
-              events.map((event, index) => {
-                let eventLabel = event.img.split(".")[0].split("-");
-                eventLabel.shift();
-                return (
-                  <div key={index}>
-                    <img
-                      className={styles.eventImages}
-                      src={`${process.env.PUBLIC_URL}/event-covers/${year}/${event.img}`}
-                      alt={eventLabel.join(" ")}
-                    />
-                  </div>
-                );
-              })}
+                events.map((event, index) => {
+                  let eventLabel = event.img.split(".")[0].split("-");
+                  eventLabel.shift();
+                  return (
+                    <div key={index}>
+                      <img
+                        className={styles.eventImages}
+                        src={`${process.env.PUBLIC_URL}/event-covers/${year}/${event.img}`}
+                        alt={eventLabel.join(" ")}
+                      />
+                    </div>
+                  );
+                })}
             </div>
           </div>
         </>
