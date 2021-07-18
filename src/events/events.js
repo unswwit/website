@@ -21,6 +21,7 @@ const Events = () => {
   const [sourceLoading, setSourceLoading] = useState(true);
   const [loadingPast, setLoadingPast] = useState(true);
   const [loadingUpcoming, setLoadingUpcoming] = useState(true);
+  const [headerLoading, setHeaderLoading,] = useState(true);
 
   const marks = [
     {
@@ -74,12 +75,12 @@ const Events = () => {
 
   return (
     <div>
-      {sourceLoading ? (
+      {sourceLoading && !headerLoading ? (
         <LoadingScreen />
       ) : (
         <>
           {/* Cover Photo */}
-          <PageHeader imgUrl="/headers/events-header.jfif" title="Events" />
+          <PageHeader imageLoading={setHeaderLoading} imgUrl="/headers/events-header.jfif" title="Events" />
           {/* Main Title, and Subtitle Area */}
           <div className={styles.eventsBody}>
             <h2>UPCOMING EVENTS</h2>
