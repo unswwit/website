@@ -182,11 +182,11 @@ const Events = () => {
                     to={`/event-recaps/${year}/${event.eventNumber}`}
                     style={{ textDecoration: "none" }}
                   >
-                  <img
-                    className={styles.eventImages}
-                    src={`${process.env.PUBLIC_URL}/event-covers/${year}/${event.img}`}
-                    alt={eventLabel.join(" ")}
-                  />
+                    <img
+                      className={styles.eventImages}
+                      src={`${process.env.PUBLIC_URL}/event-covers/${year}/${event.img}`}
+                      alt={eventLabel.join(" ")}
+                    />
                   </Link>
                 </div>
               );
