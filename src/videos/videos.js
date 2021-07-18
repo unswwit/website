@@ -16,6 +16,7 @@ const Videos = (props) => {
   const [loading, setLoading] = useState(true);
   const [videoNumber, setVideoNumber] = useState("0");
   const [sourceLoading, setSourceLoading] = useState(true);
+  const [headerLoading, setHeaderLoading] = useState(true);
   // TO UNCOMMENT WHEN REACH > 9 VIDEOS
   // set how many posts to view per page
   // const postsPerPage = 9;
@@ -151,12 +152,12 @@ const Videos = (props) => {
 
   return (
     <div>
-      {sourceLoading ? (
+      {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (
         <>
           {/* Cover Photo */}
-          <PageHeader imgUrl="/headers/videos-header.jpg" title="Videos" />
+          <PageHeader imageLoading={setHeaderLoading} imgUrl="/headers/videos-header.jpg" title="Videos" />
           {loading && (
             <div id={styles.videoLoadingContainer}>
               <CircularProgress

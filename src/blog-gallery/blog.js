@@ -44,6 +44,7 @@ const Blog = () => {
   };
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [loading, setLoading] = useState(true);
+  const [headerLoading, setHeaderLoading] = useState(true);
   const [recommendation, setRecommendation] = useState({
     date: "",
     heading: "",
@@ -147,10 +148,10 @@ const Blog = () => {
 
   return (
     <div>
-      {loading ? ( <LoadingScreen /> ) : (
+      {loading && headerLoading ? ( <LoadingScreen /> ) : (
         <>
           {/* Cover Photo */}
-          <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Posts" />
+          <PageHeader imageLoading={setHeaderLoading} imgUrl="/headers/blog-header.jpg" title="Blog Posts" />
           <div className={styles.blogGallery}>
             <div id={styles.blogLoadingContainer}>
               {loading && (

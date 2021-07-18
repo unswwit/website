@@ -23,6 +23,8 @@ function OurTeam() {
   const [year, setYear] = useState("2021");
   const [loading, setLoading] = useState(true);
   const [sourceLoading, setSourceLoading] = useState(true);
+  const [headerLoading, setHeaderLoading] = useState(true);
+
   const execToClassName = {
     2021: "exec2021Img",
     2020: {
@@ -107,12 +109,12 @@ function OurTeam() {
 
   return (
     <div>
-      {sourceLoading ? (
+      {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (
         <div>
           {/* Cover Photo */}
-          <PageHeader imgUrl="/headers/2021-team-header.jpg" title="Our Team" />
+          <PageHeader imgUrl="/headers/2021-team-header.jpg" title="Our Team" imageLoading={setHeaderLoading} />
 
           {/* Timeline */}
           <Timeline

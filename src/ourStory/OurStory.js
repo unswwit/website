@@ -8,6 +8,7 @@ import LoadingScreen from "../components/LoadingScreen";
 // Start at the top of the page
 const OurStory = () => {
   const [sourceLoading, setSourceLoading] = useState(true);
+  const [headerLoading, setHeaderLoading] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,7 +25,7 @@ const OurStory = () => {
 
   return (
     <div>
-      {sourceLoading ? (
+      {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (
         <>
@@ -33,6 +34,7 @@ const OurStory = () => {
             <PageHeader
               imgUrl="/headers/our-story-header.jpg"
               title="Our Story"
+              imageLoading={setHeaderLoading}
             />
             {/*Start of Our Story*/}
             {/*Start of Our Mission*/}

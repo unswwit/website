@@ -13,6 +13,7 @@ const Podcast = () => {
   //const [episodes, setEpisodes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [sourceLoading, setSourceLoading] = useState(true);
+  const [headerLoading, setHeaderLoading] = useState(true);
   // set how many posts to view per page
   //const postsPerPage = 9;
   // the posts displayed on the current page
@@ -64,12 +65,12 @@ const Podcast = () => {
 
   return (
     <div>
-      {sourceLoading ? (
+      {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (
         <>
           {/* Cover Photo */}
-          <PageHeader imgUrl="/headers/podcast-header.jpg" title="Podcast" />
+          <PageHeader headerLoading={setHeaderLoading} imgUrl="/headers/podcast-header.jpg" title="Podcast" />
           <div id={styles.podcastIntroduction}>
             <div className={styles.logoContainer}>
               <img

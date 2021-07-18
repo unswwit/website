@@ -9,6 +9,7 @@ const Opportunities = () => {
   const [loading, setLoading] = useState(true);
   const [opportunities, setOpportunities] = useState(true);
   const [sourceLoading, setSourceLoading] = React.useState(true);
+  const [headerLoading, setHeaderLoading] = React.useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -30,7 +31,7 @@ const Opportunities = () => {
 
   return (
     <div>
-      {sourceLoading ? (
+      {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (
         <>
@@ -38,6 +39,7 @@ const Opportunities = () => {
           <PageHeader
             imgUrl="/headers/opportunities-header.jfif"
             title="Opportunities"
+            imageLoading={setHeaderLoading}
           />
 
           {/*start of opportunies*/}

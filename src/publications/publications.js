@@ -9,7 +9,8 @@ import LoadingScreen from "../components/LoadingScreen";
 const Publications = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [sourceLoading, setSourceLoading] = React.useState(true);
+  const [sourceLoading, setSourceLoading] = useState(true);
+  const [headerLoading, setHeaderLoading] = useState(true);
 
   useEffect(() => {
     // start at the top of the page
@@ -28,7 +29,7 @@ const Publications = () => {
 
   return (
     <div>
-      {sourceLoading ? (
+      {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (
         <>
@@ -36,6 +37,7 @@ const Publications = () => {
           <PageHeader
             imgUrl="/headers/publications-header.jpg"
             title="Publications"
+            imageLoading={setHeaderLoading}
           />
 
           <div className={styles.publicationsBody}>

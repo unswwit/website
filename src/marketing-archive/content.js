@@ -15,8 +15,8 @@ const MarketingContent = () => {
   const [year, setYear] = useState("2021");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [emptyCategory, setEmptyCategory] = useState(false);
-  const [finishedLoading, setfinishedLoading] = useState(false);
-  const [sourceLoading, setSourceLoading] = React.useState(true);
+  const [sourceLoading, setSourceLoading] = useState(true);
+  const [headerLoading, setHeaderLoading] = useState(true);
 
   // set how many posts to view per page
   const postsPerPage = 8;
@@ -79,7 +79,6 @@ const MarketingContent = () => {
         setContent(tempContent);
         setCurrentPosts(tempContent.slice(0, postsPerPage));
         setSelectedPosts(tempContent);
-        setfinishedLoading(true);
       },
       simpleSheet: false,
     });
@@ -87,12 +86,12 @@ const MarketingContent = () => {
 
   // marketing archive message
   useEffect(() => {
-    if (currentPosts.length === 0 && finishedLoading === true) {
+    if (currentPosts.length === 0 && loading === false) {
       setEmptyCategory(true);
     } else {
       setEmptyCategory(false);
     }
-  }, [currentPosts, finishedLoading]);
+  }, [currentPosts, loading]);
 
   // filter content by selected category
   const filterContent = (selectedCategory) => {
@@ -119,7 +118,7 @@ const MarketingContent = () => {
 
   return (
     <div>
-      {sourceLoading ? (
+      {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (
         <>
@@ -127,6 +126,7 @@ const MarketingContent = () => {
           <PageHeader
             imgUrl="/headers/marketing-header.jpg"
             title="Marketing"
+            imageLoading={setHeaderLoading}
           />
           {/*End of Header*/}
 

@@ -1,11 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import PageHeader from "../components/header";
 import ContactForm from "./contactForm";
 import styles from "./contactUs.module.css";
 import LoadingScreen from "../components/LoadingScreen";
 
 const ContactUs = () => {
-  const [sourceLoading, setSourceLoading] = React.useState(true);
+  const [sourceLoading, setSourceLoading] = useState(true);
+  const [headerLoading, setHeaderLoading] = useState(true);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -19,7 +21,7 @@ const ContactUs = () => {
 
   return (
     <div>
-      {sourceLoading ? (
+      {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (
         <div>
@@ -27,6 +29,7 @@ const ContactUs = () => {
           <PageHeader
             imgUrl="/headers/2021-exec-header.jpg"
             title="Contact Us"
+            imageLoading={setHeaderLoading}
           />
           <div className={styles.form}>
             <h2 className={styles.inquiry}>Send Through a General Inquiry</h2>

@@ -10,6 +10,7 @@ const Sponsors = () => {
   const [open, setOpen] = React.useState(false);
   const [currSponsor, setCurrSponsor] = React.useState("");
   const [sourceLoading, setSourceLoading] = React.useState(true);
+  const [headerLoading, setHeaderLoading] = React.useState(true);
 
   // control when to stop loading
   useEffect(() => {
@@ -386,7 +387,7 @@ const Sponsors = () => {
 
   return (
     <div>
-      {sourceLoading ? (
+      {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (
         <div>
@@ -394,6 +395,7 @@ const Sponsors = () => {
           <PageHeader
             imgUrl="/headers/sponsors-header-2.jpg"
             title="Sponsors and Affiliations"
+            imageLoading={setHeaderLoading}
           />
 
           <div id={styles.sponsorsBody}>

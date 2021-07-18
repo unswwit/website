@@ -99,7 +99,7 @@ class JoinUs extends React.Component {
   render() {
     return (
       <div>
-        {this.state.sourceLoading ? (
+        {this.state.sourceLoading && this.state.loading ? (
           <LoadingScreen />
         ) : (
           <>
