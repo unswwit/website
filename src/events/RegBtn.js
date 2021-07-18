@@ -1,19 +1,20 @@
-import React from 'react';
+import React from "react";
 import styles from "./dropbutton.module.css";
 
 const RegBtn = (props) => {
-  const link = props.link
+  const link = props.link;
 
   const openLink = () => {
-    window.open(link)
-  }
+    window.open(link);
+  };
 
   return (
     <div>
-      <button type="button" onClick={openLink} className={styles.regButton}>REGISTER
+      <button type="button" onClick={openLink} className={styles.regButton}>
+        REGISTER
       </button>
-      </div>
-  )
+    </div>
+  );
 };
 
 export default RegBtn;

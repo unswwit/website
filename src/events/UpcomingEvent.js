@@ -11,16 +11,22 @@ const UpcomingEvent = (props) => {
 
   console.log(index);
   return (
-    <a href={upcomingEvent.facebookLink} target="_blank" rel="noopener noreferrer">
+    <a
+      href={upcomingEvent.facebookLink}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <div key={index} className={styles.upcoming}>
         <img
           className={styles.eventImages}
-          src={process.env.PUBLIC_URL + `/event-covers/2021/${upcomingEvent.img}`}
+          src={
+            process.env.PUBLIC_URL + `/event-covers/2021/${upcomingEvent.img}`
+          }
           alt={upcomingEvent.title}
         />
         <div className={styles.eventDescription}>
           <p className={styles.eventDate}>{upcomingEvent.date}</p>
-          <p className={styles.eventName}>{upcomingEvent.title}</p>
+          <span class="vertical-center" className={styles.eventName}>{upcomingEvent.title}</span>
           <p className={styles.eventDate}>{upcomingEvent.location}</p>
           <p className={styles.eventSummary}>{upcomingEvent.description}</p>
           <ul id={styles.links}>

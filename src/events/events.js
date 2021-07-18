@@ -9,10 +9,10 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Timeline from "../components/Timeline";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import ScrollUpBtn from "../components/ScrollUpBtn"
+import ScrollUpBtn from "../components/ScrollUpBtn";
 import UpcomingEvent from "./UpcomingEvent.js";
-import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
-import EventMenu from "./EventMenu"
+import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
+import EventMenu from "./EventMenu";
 
 const Events = () => {
   const [expanded, setExpanded] = useState(false);
@@ -50,23 +50,20 @@ const Events = () => {
   };
 
   const setTerms = (allEvents) => {
-
-    setTerm1(allEvents.filter(event => event.term == 1));
-    setTerm2(allEvents.filter(event => event.term == 2));
-    setTerm3(allEvents.filter(event => event.term == 3))
+    setTerm1(allEvents.filter((event) => event.term === 1));
+    setTerm2(allEvents.filter((event) => event.term === 2));
+    setTerm3(allEvents.filter((event) => event.term === 3));
 
     setLoading(false);
-
-  }
+  };
 
   // start webpage at the top
   useEffect(() => {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
   }, []);
 
   // load events
   useEffect(() => {
-
     setLoading(true);
     setLoadingUpcoming(true);
 
@@ -76,16 +73,14 @@ const Events = () => {
         const allEvents = googleData["past-events"]["elements"].filter(
           (event) => event.year === year
         );
-        setEvents(allEvents.reverse());    
+        setEvents(allEvents.reverse());
         setTerms(allEvents.reverse());
-        
+
         setUpcomingEvents(googleData["upcoming-events-test"]["elements"]);
         setLoadingUpcoming(false);
-
       },
       simpleSheet: false,
     });
-
   }, [year]);
 
   return (
@@ -105,11 +100,14 @@ const Events = () => {
             />
           )}
         </div>
-        {!loadingUpcoming && (!upcomingEvents.length ? (
-          <p className={styles.lookout}>Keep a lookout here for our upcoming events!</p> )
-        :
-          <EventMenu/>
-        )}
+        {!loadingUpcoming &&
+          (!upcomingEvents.length ? (
+            <p className={styles.lookout}>
+              Keep a lookout here for our upcoming events!
+            </p>
+          ) : (
+            <EventMenu />
+          ))}
         <h2>PAST EVENTS</h2>
         <Accordion
           expanded={expanded}
@@ -145,7 +143,7 @@ const Events = () => {
           updateYear={handleYear}
         />
 
-      <div id={styles.eventsLoadingContainer}>
+        <div id={styles.eventsLoadingContainer}>
           {loading && (
             <CircularProgress
               variant="indeterminate"
@@ -155,64 +153,63 @@ const Events = () => {
             />
           )}
         </div>
-          
+
         {/* TERM 1 */}
         {!loading && <h3>TERM 1</h3>}
         <div id={styles.pastEvents} className={styles.gridContainer}>
           {!loading &&
-              term1.map((termEvent, index) => {
-                let eventLabel = termEvent.img.split(".")[0].split("-");
-                eventLabel.shift();
-                return (
-                  <div key={index} className={styles.gridItem}>
-                    <img
-                      className={styles.eventImages}
-                      src={`${process.env.PUBLIC_URL}/event-covers/${year}/${termEvent.img}`}
-                      alt={eventLabel.join(" ")}
-                    />
-                  </div>
-                );
-              })}
+            term1.map((termEvent, index) => {
+              let eventLabel = termEvent.img.split(".")[0].split("-");
+              eventLabel.shift();
+              return (
+                <div key={index} className={styles.gridItem}>
+                  <img
+                    className={styles.eventImages}
+                    src={`${process.env.PUBLIC_URL}/event-covers/${year}/${termEvent.img}`}
+                    alt={eventLabel.join(" ")}
+                  />
+                </div>
+              );
+            })}
         </div>
 
         {/* TERM 2 */}
         {!loading && <h3> TERM 2</h3>}
         <div id={styles.pastEvents} className={styles.gridContainer}>
           {!loading &&
-              term2.map((filteredEvent, index) => {
-                let eventLabel = filteredEvent.img.split(".")[0].split("-");
-                eventLabel.shift();
-                return (
-                  <div key={index} className={styles.gridItem}>
-                    <img
-                      className={styles.eventImages}
-                      src={`${process.env.PUBLIC_URL}/event-covers/${year}/${filteredEvent.img}`}
-                      alt={eventLabel.join(" ")}
-                    />
-                  </div>
-                );
-              })}
+            term2.map((filteredEvent, index) => {
+              let eventLabel = filteredEvent.img.split(".")[0].split("-");
+              eventLabel.shift();
+              return (
+                <div key={index} className={styles.gridItem}>
+                  <img
+                    className={styles.eventImages}
+                    src={`${process.env.PUBLIC_URL}/event-covers/${year}/${filteredEvent.img}`}
+                    alt={eventLabel.join(" ")}
+                  />
+                </div>
+              );
+            })}
         </div>
 
         {/* TERM 3 */}
         {!loading && <h3>TERM 3</h3>}
         <div id={styles.pastEvents} className={styles.gridContainer}>
           {!loading &&
-              term3.map((filteredEvent, index) => {
-                let eventLabel = filteredEvent.img.split(".")[0].split("-");
-                eventLabel.shift();
-                return (
-                  <div key={index} className={styles.gridItem}>
-                    <img
-                      className={styles.eventImages}
-                      src={`${process.env.PUBLIC_URL}/event-covers/${year}/${filteredEvent.img}`}
-                      alt={eventLabel.join(" ")}
-                    />
-                  </div>
-                );
-              })}
+            term3.map((filteredEvent, index) => {
+              let eventLabel = filteredEvent.img.split(".")[0].split("-");
+              eventLabel.shift();
+              return (
+                <div key={index} className={styles.gridItem}>
+                  <img
+                    className={styles.eventImages}
+                    src={`${process.env.PUBLIC_URL}/event-covers/${year}/${filteredEvent.img}`}
+                    alt={eventLabel.join(" ")}
+                  />
+                </div>
+              );
+            })}
         </div>
-
       </div>
     </>
   );

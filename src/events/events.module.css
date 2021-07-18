@@ -16,35 +16,31 @@
   grid-gap: 0px;
 }
 
-.menuItem {
-  padding: 0 40px;
-  width: 50%;
-  cursor: pointer;
-  border: none;
-}
-
 .upcoming {
-  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
 .eventDescription {
-  margin: 50px 30px;
-  white-space: pre-wrap;
+  margin: 30px;
+  white-space: normal;
 }
 
 .eventName {
   color: #000000;
   font-family: "Playfair Display", serif;
   font-size: 28px;
+  line-height: 110%;
   text-align: center;
   letter-spacing: 1pt;
-  margin: 0;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  max-block-size: 100%;
   display: inline-flex;
-  white-space: pre-wrap;
+  margin: 5px;
+  overflow: hidden;
+}
+span {
+  align-items: center;
+  vertical-align: middle;
+  height: 90px;
 }
 
 .eventDate {
@@ -52,13 +48,10 @@
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 15px;
   text-align: center;
-  color: #FEB14B;
+  color: #feb14b;
   letter-spacing: 0.1vw;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  margin: 0;
+  margin: 0px 10px;
   max-width: 100%;
   white-space: pre-wrap;
 }
@@ -74,6 +67,7 @@
   padding-bottom: 5px;
   margin: 10px, 0;
   margin-top: 20px;
+  height: 180px;
   white-space: normal;
 }
 
@@ -98,19 +92,19 @@ li.eventButton {
 }
 
 .regButton {
-	border: none;
-	width: 150px;
-	height: 36px;
-	background-color: #e85f5c;
-	box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
+  border: none;
+  width: 150px;
+  height: 36px;
+  background-color: #e85f5c;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
 
-	font-family: "Montserrat", sans-serif;
-	font-style: normal;
-	font-weight: 600;
-	font-size: 12px;
-	line-height: 15px;
-	letter-spacing: 0.05em;
-	color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
 }
 
 a.event {
@@ -129,17 +123,17 @@ a:hover.event {
 }
 
 .arrowButton {
-	background-color: #e85f5c;
-	width: 50px;
-	height: 50px;
-	position: fixed;
-	bottom: 2em;
-	right: -50px;
-	border-radius: 100%;
-	border: none;
-	color: white;
+  background-color: #e85f5c;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 2em;
+  right: -50px;
+  border-radius: 100%;
+  border: none;
+  color: white;
   z-index: 4;
-  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);  
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
 }
 
 /*------------------------------Past Events--------------------------------*/
@@ -229,14 +223,13 @@ p.lookout {
     display: block;
     margin: 10px 0;
   }
-  
+
   ul#links {
     display: block;
     float: none;
     width: 100%;
     text-align: center;
   }
-
 
   li.eventLink {
     margin: 10px 0;

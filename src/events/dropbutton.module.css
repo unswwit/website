@@ -1,42 +1,42 @@
 .regButton {
-	border: none;
-	width: 150px;
-	height: 36px;
-	background-color: #e85f5c;
-	box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
+  border: none;
+  width: 150px;
+  height: 36px;
+  background-color: #e85f5c;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
 
-	font-family: "Montserrat", sans-serif;
-	font-style: normal;
-	font-weight: 600;
-	font-size: 12px;
-	line-height: 15px;
-	letter-spacing: 0.05em;
-	color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
 }
 
 .button {
-	background-color: #ffffff;
-	border: 2px solid #feb14b;
-	color: #feb14b;
+  background-color: #ffffff;
+  border: 2px solid #feb14b;
+  color: #feb14b;
 
-	width: 150px;
-	height: 36px;
-	box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
+  width: 150px;
+  height: 36px;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
 
-	font-family: "Montserrat", sans-serif;
-	font-style: normal;
-	font-weight: 600;
-	font-size: 12px;
-	line-height: 15px;
-	letter-spacing: 0.05em;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
 }
 
 .dropItems {
-	padding: 10px;
-	border-top: none;
-	width: 150px;
-	background-color: #feb14b;
-	margin: 0 auto;
+  padding: 10px;
+  border-top: none;
+  width: 150px;
+  background-color: #feb14b;
+  margin: 0 auto;
   z-index: 1;
   position: absolute;
 }
