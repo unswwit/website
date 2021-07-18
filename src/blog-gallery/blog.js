@@ -61,9 +61,8 @@ const Blog = (props) => {
   }, []);
 
   // filter blogs by a selected category
-  const filterBlogs = (category, searchTerm) => {
-    console.log(category);
-    const filteredBlogs = blogs.filter(
+  const filterBlogs = (category, searchTerm, tempBlogs) => {
+    const filteredBlogs = tempBlogs.filter(
       (blog) =>
         category === "All" ||
         blog.category.split(",").includes(category) ||
@@ -121,15 +120,16 @@ const Blog = (props) => {
 
         const tempBlogs = blogPreviews.reverse();
         setBlogs(tempBlogs);
-
-        // If a category is specified in props, use it
-        if (props.location.category) {
-          setSelectedCategory(props.location.category);
-          filterBlogs(props.location.category, searchTerm);
-        }
-
         setCurrentPosts(tempBlogs.slice(0, postsPerPage));
         setSelectedPosts(tempBlogs);
+
+        // If a category is specified in props, use it
+        // (When redirected from category at the end of blogs)
+        if (props.location.category) {
+          setSelectedCategory(props.location.category);
+          filterBlogs(props.location.category, searchTerm, tempBlogs);
+        }
+        
       },
       simpleSheet: false,
     });
@@ -181,7 +181,7 @@ const Blog = (props) => {
                     }}
                     onClick={() => {
                       setSelectedCategory(category);
-                      filterBlogs(category, searchTerm);
+                      filterBlogs(category, searchTerm, blogs);
                     }}
                   />
                 </BootstrapTooltip>
