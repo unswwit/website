@@ -365,46 +365,32 @@
   }
 
   .edu {
-    max-height: 90px;
-    max-width: 450px;
     padding: 130px 10px 130px 10px;
   }
 
   .events {
-    max-height: 90px;
-    max-width: 450px;
     padding: 130px 10px 130px 10px;
   }
 
   .externals {
-    max-height: 90px;
-    max-width: 450px;
     padding: 130px 10px 130px 10px;
   }
 
   .hr {
-    max-height: 90px;
-    max-width: 450px;
     padding: 130px 10px 130px 10px;
   }
 
   .it {
-    max-height: 90px;
-    max-width: 450px;
     padding: 130px 10px 130px 10px;
   }
 
   .marketing {
-    max-height: 90px;
-    max-width: 450px;
     padding: 130px 10px 130px 10px;
   }
 }
 
 @media only screen and (max-width: 1024px) {
   .edu {
-    max-height: 90px;
-    max-width: 450px;
     padding: 120px 10px 120px 10px;
   }
 
@@ -415,32 +401,22 @@
   }
 
   .events {
-    max-height: 90px;
-    max-width: 450px;
     padding: 120px 10px 120px 10px;
   }
 
   .externals {
-    max-height: 90px;
-    max-width: 450px;
     padding: 120px 10px 120px 10px;
   }
 
   .hr {
-    max-height: 90px;
-    max-width: 450px;
     padding: 120px 10px 120px 10px;
   }
 
   .it {
-    max-height: 90px;
-    max-width: 450px;
     padding: 120px 10px 120px 10px;
   }
 
   .marketing {
-    max-height: 90px;
-    max-width: 450px;
     padding: 120px 10px 120px 10px;
   }
 }
@@ -531,6 +507,7 @@
     font-size: 10pt;
   }
 }
+
 @media only screen and (max-width: 834px) {
   .edu {
     margin-top: 10px;
@@ -620,10 +597,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .whatTo {
-    padding-left: 0px;
-  }
-
   .edu {
     max-height: 520px;
     max-width: 540px;
@@ -752,10 +725,6 @@
 }
 
 @media only screen and (max-width: 568px) {
-  .whatTo {
-    padding-left: 0px;
-  }
-
   .edu {
     max-height: 390px;
     max-width: 560px;
@@ -794,10 +763,6 @@
 }
 
 @media only screen and (max-width: 508px) {
-  .whatTo {
-    padding-left: 0px;
-  }
-
   .edu {
     max-height: 310px;
     max-width: 540px;
@@ -946,42 +911,6 @@
   .whatTo {
     padding-left: 7px;
   }
-
-  .edu {
-    max-height: 220px;
-    max-width: 250px;
-    padding: 120px 10px 120px 10px;
-  }
-
-  .externals {
-    max-height: 220px;
-    max-width: 250px;
-    padding: 120px 10px 120px 10px;
-  }
-
-  .events {
-    max-height: 220px;
-    max-width: 250px;
-    padding: 120px 10px 120px 10px;
-  }
-
-  .hr {
-    max-height: 220px;
-    max-width: 250px;
-    padding: 120px 10px 120px 10px;
-  }
-
-  .it {
-    max-height: 220px;
-    max-width: 250px;
-    padding: 120px 10px 120px 10px;
-  }
-
-  .marketing {
-    max-height: 220px;
-    max-width: 250px;
-    padding: 120px 10px 120px 10px;
-  }
 }
 
 /*-------------------------------Join us very small screen------------------------------*/
@@ -1010,10 +939,6 @@
 @media only screen and (max-width: 320px) {
   .section {
     font-size: 24pt;
-  }
-
-  .whatTo {
-    padding-left: 0px;
   }
 
   .edu {
