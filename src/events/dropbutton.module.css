@@ -22,8 +22,7 @@
   background-color: #feb14b;
   margin: 0 auto;
   z-index: 1;
-  position: flex; 
+  position: absolute; 
 }
-/*screws up the paper underneath if switching position from absolute to flex*/
 
 
