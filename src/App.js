@@ -4,7 +4,6 @@ import { HashRouter, Route, NavLink, Switch, Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "semantic-ui-css/semantic.min.css";
 import "./style.css";
-//import "./loader.css";
 // import GoogleAnalytics from "./config/GoogleAnalytics";
 
 import Home from "./home/home";
@@ -38,11 +37,6 @@ import ImageOutlinedIcon from "@material-ui/icons/ImageOutlined";
 import VideocamOutlinedIcon from "@material-ui/icons/VideocamOutlined";
 
 class App extends Component {
-  /*
-  state = {
-    loading: true,
-  };*/
-
   highlightNav = {
     activeStyle: {
       fontWeight: "500",
@@ -143,11 +137,6 @@ class App extends Component {
     }
   }
 
-  /*
-  fakeRequest = () => {
-    return new Promise((resolve) => setTimeout(() => resolve(), 2500));
-  };*/
-
   componentDidMount() {
     // google analytics
     // GoogleAnalytics();
@@ -156,14 +145,6 @@ class App extends Component {
     window.addEventListener("resize", this.updateMenu);
     window.addEventListener("scroll", this.changeBackground);
     window.addEventListener("scroll", this.hideNavBar);
-    /*
-    this.fakeRequest().then(() => {
-      const el = document.querySelector(".loader");
-      if (el) {
-        el.remove(); // removing the spinner element
-        this.setState({ loading: false }); // showing the app
-      }
-    });*/
   }
 
   componentWillUnmount() {
@@ -174,14 +155,8 @@ class App extends Component {
   }
 
   render() {
-    /*
-    if (this.state.loading) {
-      return null; //app is not ready (fake request is in process)
-    }*/
-
     return (
       <div>
-        {/*<div className="loader loader-default is-active"></div>*/}
         <HashRouter basename="/">
           <Menu
             open={this.state.menuOpen}
@@ -198,8 +173,8 @@ class App extends Component {
                   ? this.navClass + " activeNav hiddenNav"
                   : this.navClass + " activeNav"
                 : this.state.hideNav
-                ? this.navClass + " hiddenNav"
-                : this.navClass
+                  ? this.navClass + " hiddenNav"
+                  : this.navClass
             }
           >
             <a className="navbar-brand" href="/">

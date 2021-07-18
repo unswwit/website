@@ -1,7 +1,7 @@
 import React from "react";
-import "./style.css";
+import "../style.css";
 
-const PageHeader = ({ imageLoading, imgUrl }) => {
+const PageHeader = ({ imageLoading, imgUrl, title }) => {
   return (
     <div className="coverPhoto">
       {/* dark overlay */}
@@ -17,7 +17,7 @@ const PageHeader = ({ imageLoading, imgUrl }) => {
 
       {/* text */}
       <div className="headerTitle">
-        <h1>{this.props.title}</h1>
+        <h1>{title}</h1>
       </div>
     </div>
   );

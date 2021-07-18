@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./events.module.css";
-import PageHeader from ".././header";
+import PageHeader from "../components/header";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
@@ -21,7 +21,7 @@ const Events = () => {
   const [sourceLoading, setSourceLoading] = useState(true);
   const [loadingPast, setLoadingPast] = useState(true);
   const [loadingUpcoming, setLoadingUpcoming] = useState(true);
-  const [headerLoading, setHeaderLoading,] = useState(true);
+  const [headerLoading, setHeaderLoading] = useState(true);
 
   const marks = [
     {
@@ -75,7 +75,7 @@ const Events = () => {
 
   return (
     <div>
-      {sourceLoading && !headerLoading ? (
+      {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (
         <>
