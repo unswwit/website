@@ -308,42 +308,36 @@
   }
 
   .edu {
-    display: flex;
     max-height: 90px;
     max-width: 450px;
     padding: 160px 10px 160px 10px;
   }
 
   .events {
-    display: flex;
     max-height: 90px;
     max-width: 450px;
     padding: 160px 10px 160px 10px;
   }
-  
+
   .externals {
-    display: flex;
     max-height: 90px;
     max-width: 450px;
     padding: 160px 10px 160px 10px;
   }
-  
+
   .hr {
-    display: flex;
     max-height: 90px;
     max-width: 450px;
     padding: 160px 10px 160px 10px;
   }
-  
+
   .it {
-    display: flex;
     max-height: 90px;
     max-width: 450px;
     padding: 160px 10px 160px 10px;
   }
-  
+
   .marketing {
-    display: flex;
     max-height: 90px;
     max-width: 450px;
     padding: 160px 10px 160px 10px;
@@ -371,42 +365,36 @@
   }
 
   .edu {
-    display: flex;
     max-height: 90px;
     max-width: 450px;
     padding: 130px 10px 130px 10px;
   }
 
   .events {
-    display: flex;
     max-height: 90px;
     max-width: 450px;
     padding: 130px 10px 130px 10px;
   }
-  
+
   .externals {
-    display: flex;
     max-height: 90px;
     max-width: 450px;
     padding: 130px 10px 130px 10px;
   }
-  
+
   .hr {
-    display: flex;
     max-height: 90px;
     max-width: 450px;
     padding: 130px 10px 130px 10px;
   }
-  
+
   .it {
-    display: flex;
     max-height: 90px;
     max-width: 450px;
     padding: 130px 10px 130px 10px;
   }
-  
+
   .marketing {
-    display: flex;
     max-height: 90px;
     max-width: 450px;
     padding: 130px 10px 130px 10px;
@@ -415,48 +403,42 @@
 
 @media only screen and (max-width: 1024px) {
   .edu {
-    display: flex;
     max-height: 90px;
     max-width: 450px;
     padding: 120px 10px 120px 10px;
   }
-  
+
   .desc {
     font-size: 9pt;
     max-height: 190px;
     max-width: 400px;
   }
-  
+
   .events {
-    display: flex;
     max-height: 90px;
     max-width: 450px;
     padding: 120px 10px 120px 10px;
   }
-  
+
   .externals {
-    display: flex;
     max-height: 90px;
     max-width: 450px;
     padding: 120px 10px 120px 10px;
   }
-  
+
   .hr {
-    display: flex;
     max-height: 90px;
     max-width: 450px;
     padding: 120px 10px 120px 10px;
   }
-  
+
   .it {
-    display: flex;
     max-height: 90px;
     max-width: 450px;
     padding: 120px 10px 120px 10px;
   }
-  
+
   .marketing {
-    display: flex;
     max-height: 90px;
     max-width: 450px;
     padding: 120px 10px 120px 10px;
@@ -552,112 +534,82 @@
 @media only screen and (max-width: 834px) {
   .edu {
     margin-top: 10px;
-    display: flex;
     max-height: 540px;
     max-width: 580px;
     padding: 270px 30px 270px 30px;
-    aspect-ratio: 1/1;
   }
 
   .externals {
     margin-top: 10px;
-    display: flex;
     max-height: 540px;
     max-width: 580px;
     padding: 270px 30px 270px 30px;
-    aspect-ratio: 1/1;
   }
 
   .events {
     margin-top: 10px;
-    display: flex;
     max-height: 540px;
     max-width: 580px;
     padding: 270px 30px 270px 30px;
-    aspect-ratio: 1/1;
   }
 
   .hr {
     margin-top: 10px;
-    display: flex;
     max-height: 540px;
     max-width: 580px;
     padding: 270px 30px 270px 30px;
-    aspect-ratio: 1/1;
   }
 
   .it {
     margin-top: 10px;
-    display: flex;
     max-height: 540px;
     max-width: 580px;
     padding: 270px 30px 270px 30px;
-    aspect-ratio: 1/1;
   }
 
   .marketing {
     margin-top: 10px;
-    display: flex;
     max-height: 540px;
     max-width: 580px;
     padding: 270px 30px 270px 30px;
-    aspect-ratio: 1/1;
   }
 }
 
 @media only screen and (max-width: 782px) {
   .edu {
-    margin-top: 10px;
-    display: flex;
     max-height: 520px;
     max-width: 540px;
     padding: 260px 30px 260px 30px;
-    aspect-ratio: 1/1;
   }
 
   .externals {
-    margin-top: 10px;
-    display: flex;
     max-height: 520px;
     max-width: 540px;
     padding: 260px 30px 260px 30px;
-    aspect-ratio: 1/1;
   }
 
   .events {
-    margin-top: 10px;
-    display: flex;
     max-height: 520px;
     max-width: 540px;
     padding: 260px 30px 260px 30px;
-    aspect-ratio: 1/1;
   }
 
   .hr {
-    margin-top: 10px;
-    display: flex;
     max-height: 520px;
     max-width: 540px;
     padding: 260px 30px 260px 30px;
-    aspect-ratio: 1/1;
   }
 
   .it {
-    margin-top: 10px;
-    display: flex;
     max-height: 520px;
     max-width: 540px;
     padding: 260px 30px 260px 30px;
-    aspect-ratio: 1/1;
   }
 
   .marketing {
-    margin-top: 10px;
-    display: flex;
     max-height: 520px;
     max-width: 540px;
     padding: 260px 30px 260px 30px;
-    aspect-ratio: 1/1;
   }
 
   .desc {
@@ -673,57 +625,39 @@
   }
 
   .edu {
-    margin-top: 10px;
-    display: flex;
     max-height: 520px;
     max-width: 540px;
     padding: 260px 30px 260px 30px;
-    aspect-ratio: 1/1;
   }
 
   .externals {
-    margin-top: 10px;
-    display: flex;
     max-height: 520px;
     max-width: 540px;
     padding: 260px 30px 260px 30px;
-    aspect-ratio: 1/1;
   }
 
   .events {
-    margin-top: 10px;
-    display: flex;
     max-height: 520px;
     max-width: 540px;
     padding: 260px 30px 260px 30px;
-    aspect-ratio: 1/1;
   }
 
   .hr {
-    margin-top: 10px;
-    display: flex;
     max-height: 520px;
     max-width: 540px;
     padding: 260px 30px 260px 30px;
-    aspect-ratio: 1/1;
   }
 
   .it {
-    margin-top: 10px;
-    display: flex;
     max-height: 520px;
     max-width: 540px;
     padding: 260px 30px 260px 30px;
-    aspect-ratio: 1/1;
   }
 
   .marketing {
-    margin-top: 10px;
-    display: flex;
     max-height: 520px;
     max-width: 540px;
     padding: 260px 30px 260px 30px;
-    aspect-ratio: 1/1;
   }
 
   .desc {
@@ -739,59 +673,39 @@
   }
 
   .edu {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 
-  /*css padding: top right bottom left */
-
   .externals {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 
   .events {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 
   .hr {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 
   .it {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 
   .marketing {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 }
 
@@ -933,59 +847,40 @@
   }
 
   .edu {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 
-  /*css padding: top right bottom left */
-
   .externals {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 
   .events {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 
   .hr {
-    margin-top: 10px;
     display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 
   .it {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 
   .marketing {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 
   .marketing {
@@ -1000,59 +895,39 @@
   }
 
   .edu {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 
-  /*css padding: top right bottom left */
-
   .externals {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 
   .events {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 
   .hr {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 
   .it {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 
   .marketing {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 
   .marketing {
@@ -1073,59 +948,39 @@
   }
 
   .edu {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 
-  /*css padding: top right bottom left */
-
   .externals {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 
   .events {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 
   .hr {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 
   .it {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 
   .marketing {
-    margin-top: 10px;
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
-    aspect-ratio: 1/1;
   }
 }
 
