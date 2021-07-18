@@ -77,7 +77,7 @@ const Events = () => {
 
   return (
     <div>
-      {sourceLoading ? (
+      {sourceLoading && !headerLoading ? (
         <LoadingScreen />
       ) : (
         <>

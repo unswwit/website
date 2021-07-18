@@ -1,7 +1,7 @@
 import React from "react";
 import "../style.css";
 
-const PageHeader = (Loading) => {
+const PageHeader = ({ imageLoading }) => {
   return (
     <div className="coverPhoto">
       {/* dark overlay */}
@@ -12,7 +12,7 @@ const PageHeader = (Loading) => {
         src={process.env.PUBLIC_URL + this.props.imgUrl}
         alt="header"
         className="cover_image"
-        onLoad={Loading(false)}
+        onLoad={imageLoading(false)}
       />
 
       {/* text */}

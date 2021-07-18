@@ -74,7 +74,7 @@ class App extends Component {
       showDDAbout: false,
       menuOpen: false,
       navBar: false,
-      hideNav: true,
+      hideNav: false,
     };
     this.navClass = "navbar navbar-expand-md navbar-dark bg-custom fixed-top";
     this.handleHover = this.handleHover.bind(this);

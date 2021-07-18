@@ -40,8 +40,10 @@ class JoinUs extends React.Component {
       clickedIt: true,
       clickedMar: true,
       sourceLoading: true,
+      headerLoading: true,
     };
     this.hideSpinner = this.hideSpinner.bind(this);
+    this.headerLoading = this.headerLoading.bind(this);
     this.open = this.open.bind(this);
     this.callbackModal = this.callbackModal.bind(this);
 
@@ -96,15 +98,20 @@ class JoinUs extends React.Component {
     }, 10000);
   }
 
+  // set header loading
+  headerLoading() {
+    this.setState({ headerLoading: false });
+  }
+
   render() {
     return (
       <div>
-        {this.state.sourceLoading ? (
+        {this.state.sourceLoading && this.state.headerLoading ? (
           <LoadingScreen />
         ) : (
           <>
             {/* Cover Photo */}
-            <PageHeader imgUrl="/headers/join-header-2.jpg" title="Join Us" />
+            <PageHeader imageLoading={this.headerLoading} imgUrl="/headers/join-header-2.jpg" title="Join Us" />
             <h2 className={styles.header}>Connect with us</h2>
             <div className={styles.joinUsBody}>
               <div className={styles.joinUsRight}>
