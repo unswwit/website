@@ -64,80 +64,82 @@ const Podcast = () => {
 
   return (
     <div>
-    {sourceLoading ? ( <LoadingScreen /> ) : ( 
-      <>
-        {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/podcast-header.jpg" title="Podcast" />
-        <div id={styles.podcastIntroduction}>
-          <div className={styles.logoContainer}>
-            <img
-              className={styles.podcastLogo}
-              src="/podcast-logos/talk-WIT-us-logo.png"
-              alt="Talk WIT Us logo"
-            />
-          </div>
-          <div id={styles.introDescription}>
-            <h2 id={styles.heading}>Talk WIT Us</h2>
-            <p>
-              Join us each month as we talk all about tech, uni, and life,
-              featuring our wonderful WIT team and some special guests!
-            </p>
-            <div id={styles.platformContainer}>
-              {Object.keys(links).map((link, index) => {
-                return (
-                  <a
-                    key={index}
-                    href={links[link][1]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      className={styles.platformLogos}
-                      src={`${process.env.PUBLIC_URL}/podcast-logos/${links[link][0]}`}
-                      alt={link}
-                      width="25px"
-                      height="25px"
-                    />
-                  </a>
-                );
-              })}
+      {sourceLoading ? (
+        <LoadingScreen />
+      ) : (
+        <>
+          {/* Cover Photo */}
+          <PageHeader imgUrl="/headers/podcast-header.jpg" title="Podcast" />
+          <div id={styles.podcastIntroduction}>
+            <div className={styles.logoContainer}>
+              <img
+                className={styles.podcastLogo}
+                src="/podcast-logos/talk-WIT-us-logo.png"
+                alt="Talk WIT Us logo"
+              />
+            </div>
+            <div id={styles.introDescription}>
+              <h2 id={styles.heading}>Talk WIT Us</h2>
+              <p>
+                Join us each month as we talk all about tech, uni, and life,
+                featuring our wonderful WIT team and some special guests!
+              </p>
+              <div id={styles.platformContainer}>
+                {Object.keys(links).map((link, index) => {
+                  return (
+                    <a
+                      key={index}
+                      href={links[link][1]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        className={styles.platformLogos}
+                        src={`${process.env.PUBLIC_URL}/podcast-logos/${links[link][0]}`}
+                        alt={link}
+                        width="25px"
+                        height="25px"
+                      />
+                    </a>
+                  );
+                })}
+              </div>
             </div>
           </div>
-        </div>
 
-        <div id={styles.podcastLoadingContainer}>
-          {loading && (
-            <CircularProgress
-              variant="indeterminate"
-              size={50}
-              thickness={5}
-              id={styles.podcastLoading}
-            />
-          )}
-        </div>
-
-        <div id={styles.episodes}>
-          {currentPosts.map((episode, index) => {
-            return (
-              <EpisodeTemplate
-                key={index}
-                episodeNo={episode.episodeNo}
-                title={episode.title}
-                cover={`podcast-covers/${episode.img}`}
-                date={episode.date}
-                description={episode.description}
+          <div id={styles.podcastLoadingContainer}>
+            {loading && (
+              <CircularProgress
+                variant="indeterminate"
+                size={50}
+                thickness={5}
+                id={styles.podcastLoading}
               />
-            );
-          })}
-        </div>
-        {/* TO UNCOMMENT WHEN REACH > 9 PODCASTS */}
-        {/*<PaginationComp 
+            )}
+          </div>
+
+          <div id={styles.episodes}>
+            {currentPosts.map((episode, index) => {
+              return (
+                <EpisodeTemplate
+                  key={index}
+                  episodeNo={episode.episodeNo}
+                  title={episode.title}
+                  cover={`podcast-covers/${episode.img}`}
+                  date={episode.date}
+                  description={episode.description}
+                />
+              );
+            })}
+          </div>
+          {/* TO UNCOMMENT WHEN REACH > 9 PODCASTS */}
+          {/*<PaginationComp 
           totalPages={Math.ceil(currentPosts.length/postsPerPage)} 
           paginate={paginate}
         />*/}
 
-        <ScrollUpBtn />
-      </>
+          <ScrollUpBtn />
+        </>
       )}
     </div>
   );

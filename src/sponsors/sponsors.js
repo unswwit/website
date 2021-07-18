@@ -18,7 +18,7 @@ const Sponsors = () => {
         setSourceLoading(false);
       }
     }, 1000);
-  }, [])  
+  }, []);
 
   // Getting the eucalyptus description
   const eucalyptusDescription = () => {
@@ -386,7 +386,9 @@ const Sponsors = () => {
 
   return (
     <div>
-      {sourceLoading ? ( <LoadingScreen /> ) : (
+      {sourceLoading ? (
+        <LoadingScreen />
+      ) : (
         <div>
           {/* Cover Photo */}
           <PageHeader
@@ -396,9 +398,9 @@ const Sponsors = () => {
 
           <div id={styles.sponsorsBody}>
             <p className={styles.subheader}>
-            Thank you to our sponsors for generously supporting our cause and
-            collaborating with us to provide our students invaluable
-            opportunities.
+              Thank you to our sponsors for generously supporting our cause and
+              collaborating with us to provide our students invaluable
+              opportunities.
             </p>
 
             {/* Principal Sponsors Area */}
@@ -507,9 +509,12 @@ const Sponsors = () => {
             </div>
 
             <p className={styles.subheader}>
-            Interested in partnering with us? Contact us at{" "}
-              <a className={styles.subheader} href="mailto:externals@unswwit.com">
-              externals@unswwit.com
+              Interested in partnering with us? Contact us at{" "}
+              <a
+                className={styles.subheader}
+                href="mailto:externals@unswwit.com"
+              >
+                externals@unswwit.com
               </a>
             </p>
           </div>

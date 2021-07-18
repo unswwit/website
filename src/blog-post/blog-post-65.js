@@ -209,14 +209,13 @@ class blogPost65 extends Component {
               the available security protection methods to prevent us from
               becoming cyber-victims.
             </p>
-            
+
             <p className={styles.postContent}>
               <i>
                 Want more tips on staying secure? Check out{" "}
                 <Link to="/media/blog/50">this blog!</Link>
               </i>
             </p>
-
           </div>
         </div>
         {/*for the blog post author*/}

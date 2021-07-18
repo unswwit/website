@@ -133,10 +133,7 @@ const Slideshow = () => {
                 </p>
                 <p>
                   <button>
-                    <Link
-                      to="resources/blog"
-                      className={styles.link}
-                    >
+                    <Link to="resources/blog" className={styles.link}>
                       see more blog posts
                     </Link>
                   </button>
@@ -193,10 +190,7 @@ const Slideshow = () => {
                 </p>
                 <p>
                   <button>
-                    <Link
-                      to="resources/podcast"
-                      className={styles.link}
-                    >
+                    <Link to="resources/podcast" className={styles.link}>
                       see more episodes
                     </Link>
                   </button>

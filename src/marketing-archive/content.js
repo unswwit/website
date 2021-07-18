@@ -119,102 +119,107 @@ const MarketingContent = () => {
 
   return (
     <div>
-    {sourceLoading ? ( <LoadingScreen /> ) : (
-      <>
-      {/* Cover Photo */}
-      <PageHeader imgUrl="/headers/marketing-header.jpg" title="Marketing" />
-      {/*End of Header*/}
+      {sourceLoading ? (
+        <LoadingScreen />
+      ) : (
+        <>
+          {/* Cover Photo */}
+          <PageHeader
+            imgUrl="/headers/marketing-header.jpg"
+            title="Marketing"
+          />
+          {/*End of Header*/}
 
-      <div id={styles.parent}>
-        {/*List of initiatives*/}
-        <div className={styles.initiatives}>
-          {/* Start of categories */}
-          <div className={styles.contentCategories}>
-            {Object.keys(categories)
-              .sort()
-              .map((category) => {
-                const chipColour =
-                  selectedCategory === categories[category]
-                    ? "#e85f5c"
-                    : "#7F7F7F";
-                return (
-                  <Chip
-                    key={category}
-                    size="medium"
-                    label={category}
-                    style={{
-                      textTransform: "uppercase",
-                      backgroundColor: chipColour,
-                      color: "white",
-                      margin: "5px",
-                    }}
-                    onClick={() => {
-                      setSelectedCategory(categories[category]);
-                      filterContent(categories[category]);
-                    }}
+          <div id={styles.parent}>
+            {/*List of initiatives*/}
+            <div className={styles.initiatives}>
+              {/* Start of categories */}
+              <div className={styles.contentCategories}>
+                {Object.keys(categories)
+                  .sort()
+                  .map((category) => {
+                    const chipColour =
+                      selectedCategory === categories[category]
+                        ? "#e85f5c"
+                        : "#7F7F7F";
+                    return (
+                      <Chip
+                        key={category}
+                        size="medium"
+                        label={category}
+                        style={{
+                          textTransform: "uppercase",
+                          backgroundColor: chipColour,
+                          color: "white",
+                          margin: "5px",
+                        }}
+                        onClick={() => {
+                          setSelectedCategory(categories[category]);
+                          filterContent(categories[category]);
+                        }}
+                      />
+                    );
+                  })}
+              </div>
+
+              <div>
+                {/* Timeline */}
+                <Timeline
+                  margin={"2%"}
+                  page={"marketing"}
+                  step={100}
+                  valueToYear={valueToYear}
+                  marks={marks}
+                  updateYear={handleYear}
+                />
+              </div>
+
+              <div>
+                {emptyCategory === true && (
+                  <p id={styles.emptyMessage}>
+                    Keep a lookout for more marketing posts!
+                  </p>
+                )}
+              </div>
+
+              <div id={styles.contentLoadingContainer}>
+                {loading && (
+                  <CircularProgress
+                    variant="indeterminate"
+                    size={50}
+                    thickness={5}
+                    id={styles.contentLoading}
                   />
-                );
-              })}
-          </div>
+                )}
+              </div>
 
-          <div>
-            {/* Timeline */}
-            <Timeline
-              margin={"2%"}
-              page={"marketing"}
-              step={100}
-              valueToYear={valueToYear}
-              marks={marks}
-              updateYear={handleYear}
+              {/*Image collage*/}
+              {!loading && (
+                <ol className={styles.grid} id={styles.content}>
+                  {currentPosts.map((content, index) => {
+                    return (
+                      <Initiative
+                        key={index}
+                        fb={content.link}
+                        imgUrl={`/initiatives/${year}/${content.img}`}
+                        alt={content.label}
+                        date={content.date}
+                      />
+                    );
+                  })}
+                </ol>
+              )}
+            </div>
+            <PaginationComp
+              totalPages={Math.ceil(selectedPosts.length / postsPerPage)}
+              paginate={paginate}
+              page={currentPage}
             />
+            {/*End of Initiatives*/}
           </div>
-
-          <div>
-            {emptyCategory === true && (
-              <p id={styles.emptyMessage}>
-                Keep a lookout for more marketing posts!
-              </p>
-            )}
-          </div>
-
-          <div id={styles.contentLoadingContainer}>
-            {loading && (
-              <CircularProgress
-                variant="indeterminate"
-                size={50}
-                thickness={5}
-                id={styles.contentLoading}
-              />
-            )}
-          </div>
-
-          {/*Image collage*/}
-          {!loading && (
-            <ol className={styles.grid} id={styles.content}>
-              {currentPosts.map((content, index) => {
-                return (
-                  <Initiative
-                    key={index}
-                    fb={content.link}
-                    imgUrl={`/initiatives/${year}/${content.img}`}
-                    alt={content.label}
-                    date={content.date}
-                  />
-                );
-              })}
-            </ol>
-          )}
-        </div>
-        <PaginationComp
-          totalPages={Math.ceil(selectedPosts.length / postsPerPage)}
-          paginate={paginate}
-          page={currentPage}
-        />
-        {/*End of Initiatives*/}
-      </div>
-    </>
-    )}
-  </div>
+        </>
+      )}
+    </div>
   );
 };
 export default MarketingContent;

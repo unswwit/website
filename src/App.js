@@ -324,7 +324,11 @@ class App extends Component {
                         >
                           <PeopleOutlineIcon
                             fontSize="small"
-                            style={{ marginRight: "10px", paddingTop: "0px", marginLeft: "-10px" }}
+                            style={{
+                              marginRight: "10px",
+                              paddingTop: "0px",
+                              marginLeft: "-10px",
+                            }}
                           />
                           OUR TEAM
                         </NavLink>

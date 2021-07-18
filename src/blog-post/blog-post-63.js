@@ -163,11 +163,10 @@ class blogPost63 extends Component {
               successes and failures.
             </p>
             <p className={styles.postContent}>
-              I also always seek to meet new people from different walks
-              of life and engage in meaningful conversations with them. Although
-              a piece of advice might not resonate with you at that moment, it
-              may in the future, and that can be a way to reconnect with them
-              too.
+              I also always seek to meet new people from different walks of life
+              and engage in meaningful conversations with them. Although a piece
+              of advice might not resonate with you at that moment, it may in
+              the future, and that can be a way to reconnect with them too.
             </p>
             <br />
 

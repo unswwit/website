@@ -32,19 +32,14 @@ const BlogPreview = (props) => {
                 <div className={styles.blogDetails}>
                   <div className={styles.heading}>{props.heading}</div>
                   <div className={styles.date}>{props.date}</div>
-                  <div className={styles.subheading}>
-                    {props.subheading}
-                  </div>
+                  <div className={styles.subheading}>{props.subheading}</div>
                 </div>
                 <tr className={styles.authorRow}>
                   {Object.keys(props.authors).map((key) => (
                     <div className={styles.authorSection} key={key}>
                       <div className={styles.authorPic}>
                         <img
-                          src={
-                            process.env.PUBLIC_URL +
-                              props.authors[key][0]
-                          }
+                          src={process.env.PUBLIC_URL + props.authors[key][0]}
                           className={
                             execs.includes(props.authors[key][0])
                               ? styles.execAuthor
@@ -69,5 +64,5 @@ const BlogPreview = (props) => {
       {/*End of blog post preview*/}
     </div>
   );
-}
+};
 export default BlogPreview;
