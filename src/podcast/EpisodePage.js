@@ -12,7 +12,7 @@ import styles from "./Podcast.module.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import EpisodeTemplate from "./EpisodeTemplate.js";
 import ShareBtns from "../blog-post/ShareBtns";
-import LoadingScreen from "../LoadingScreen";
+import LoadingScreen from "../components/LoadingScreen";
 
 const useStyles = makeStyles((theme) => ({
   root: {

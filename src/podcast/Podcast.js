@@ -5,7 +5,7 @@ import EpisodeTemplate from "./EpisodeTemplate";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Tabletop from "tabletop";
 import ScrollUpBtn from "../components/ScrollUpBtn";
-import LoadingScreen from "../LoadingScreen";
+import LoadingScreen from "../components/LoadingScreen";
 // TO UNCOMMENT WHEN REACH > 9 PODCASTS
 // import PaginationComp from "../components/Pagination";
 

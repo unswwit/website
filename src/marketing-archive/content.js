@@ -7,7 +7,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import Tabletop from "tabletop";
 import Timeline from "../components/Timeline";
 import PaginationComp from "../components/Pagination";
-import LoadingScreen from "../LoadingScreen";
+import LoadingScreen from "../components/LoadingScreen";
 
 const MarketingContent = () => {
   const [content, setContent] = useState([]);

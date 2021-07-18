@@ -10,7 +10,7 @@ import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../components/ScrollUpBtn";
 import PaginationComp from "../components/Pagination";
-import LoadingScreen from "../LoadingScreen";
+import LoadingScreen from "../components/LoadingScreen";
 
 const useStylesBootstrap = makeStyles((theme) => ({
   arrow: {
@@ -44,7 +44,6 @@ const Blog = () => {
   };
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [loading, setLoading] = useState(true);
-  const [sourceLoading, setSourceLoading] = React.useState(true);
   const [recommendation, setRecommendation] = useState({
     date: "",
     heading: "",
@@ -73,29 +72,19 @@ const Blog = () => {
 
   // filter blogs by a selected category
   const filterBlogs = (category, searchTerm) => {
-    const filteredBlogs = blogs.filter(
-      (blog) =>
-        category === "All" ||
-        blog.category.split(",").includes(category) ||
-        (blog.category.split(",").includes("WCW") &&
-          category === "WIT Crush Wednesday")
-    );
+    const filteredBlogs = blogs.filter((blog) => (category === "All" || (blog.category.split(",")).includes(category) 
+    || ((blog.category.split(",")).includes("WCW") && category === "WIT Crush Wednesday")));
     searchBlogs(filteredBlogs, searchTerm);
-  };
+  }
 
   // search blogs by heading, subheading or author
   const searchBlogs = (filteredBlogs, searchTerm) => {
     const searchResults = filteredBlogs.filter((blog) => {
-      const authors = Object.keys(blog.authors)
-        .join(" ")
-        .split(/[-]/)
-        .join(" ");
-      if (
-        searchTerm === "" ||
-        blog.heading.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        blog.subheading.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        authors.toLowerCase().includes(searchTerm.toLowerCase())
-      ) {
+      const authors = Object.keys(blog.authors).join(" ").split(/[-]/).join(" ");
+      if (searchTerm === "" ||
+          blog.heading.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          blog.subheading.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          authors.toLowerCase().includes(searchTerm.toLowerCase())) {
         return true;
       } else {
         return false;
@@ -110,8 +99,6 @@ const Blog = () => {
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: (googleData) => {
-        setLoading(false);
-
         const blogOriginal = googleData["blog-previews"]["elements"];
         let blogPreviews = googleData["blog-previews"]["elements"];
         const authorList = googleData["blog-authors"]["elements"];
@@ -130,13 +117,10 @@ const Blog = () => {
           });
           blogPreviews[index].authors = tempAuthor;
         });
-
+        
         // Get the blog recommendation
         const currRecommendation = blogPreviews.filter((preview) => {
-          return (
-            preview.heading.toUpperCase() ===
-            "WHAT ARE YOU REALLY PROCRASTINATING?"
-          );
+          return preview.heading.toUpperCase() === "WHAT ARE YOU REALLY PROCRASTINATING?";
         })[0];
         setRecommendation(currRecommendation);
 
@@ -144,7 +128,7 @@ const Blog = () => {
         setBlogs(tempBlogs);
         setCurrentPosts(tempBlogs.slice(0, postsPerPage));
         setSelectedPosts(tempBlogs);
-        setSourceLoading(false);
+        setLoading(false);
       },
       simpleSheet: false,
     });
@@ -163,9 +147,7 @@ const Blog = () => {
 
   return (
     <div>
-      {sourceLoading ? (
-        <LoadingScreen />
-      ) : (
+      {loading ? ( <LoadingScreen /> ) : (
         <>
           {/* Cover Photo */}
           <PageHeader imgUrl="/headers/blog-header.jpg" title="Blog Posts" />
@@ -181,109 +163,102 @@ const Blog = () => {
               )}
             </div>
             {/* Start of blog recommendation */}
-            {!loading && (
-              <>
-                {recommendation && (
-                  <>
-                    <h2>WIT-COMMENDATIONS</h2>
-                    <BlogPreview
-                      recommendationId={styles.recommendation}
-                      key={recommendation.blogNo}
-                      blogNo={recommendation.blogNo}
-                      imgUrl={`/blog-covers/${recommendation.img}`}
-                      heading={recommendation.heading}
-                      date={recommendation.date}
-                      subheading={recommendation.subheading}
-                      authors={recommendation.authors}
-                      category={recommendation.category.split(",")}
+            {!loading &&
+        <>
+          {recommendation && 
+          <>
+            <h2>WIT-COMMENDATIONS</h2>
+            <BlogPreview
+              recommendationId={styles.recommendation}
+              key={recommendation.blogNo}
+              blogNo={recommendation.blogNo}
+              imgUrl={`/blog-covers/${recommendation.img}`}
+              heading={recommendation.heading}
+              date={recommendation.date}
+              subheading={recommendation.subheading}
+              authors={recommendation.authors}
+              category={recommendation.category.split(",")}
+            /></>}
+          {/* End of blog recommendations */}
+          {/* Start of other blogs */}
+          <h2>MORE FROM WIT</h2>
+          {/* Start of blog categories */}
+          <div className={styles.blogCategories}>
+            {Object.keys(categoryDescriptions)
+              .sort()
+              .map((category) => {
+                const chipColour =
+                selectedCategory === category ? "#e85f5c" : "#7F7F7F";
+                return (
+                  <BootstrapTooltip
+                    key={category}
+                    title={
+                      <>
+                        <div className={styles.tooltipTitle}>{category}</div>
+                        <p className={styles.tooltipDescription}>
+                          {categoryDescriptions[category]}
+                        </p>
+                      </>
+                    }
+                  >
+                    <Chip
+                      size="medium"
+                      label={category}
+                      style={{
+                        textTransform: "uppercase",
+                        backgroundColor: chipColour,
+                        color: "white",
+                        margin: "5px",
+                      }}
+                      onClick={() => {
+                        setSelectedCategory(category);
+                        filterBlogs(category, searchTerm);
+                      }}
                     />
-                  </>
-                )}
-                {/* End of blog recommendations */}
-                {/* Start of other blogs */}
-                <h2>MORE FROM WIT</h2>
-                {/* Start of blog categories */}
-                <div className={styles.blogCategories}>
-                  {Object.keys(categoryDescriptions)
-                    .sort()
-                    .map((category) => {
-                      const chipColour =
-                        selectedCategory === category ? "#e85f5c" : "#7F7F7F";
-                      return (
-                        <BootstrapTooltip
-                          key={category}
-                          title={
-                            <>
-                              <div className={styles.tooltipTitle}>
-                                {category}
-                              </div>
-                              <p className={styles.tooltipDescription}>
-                                {categoryDescriptions[category]}
-                              </p>
-                            </>
-                          }
-                        >
-                          <Chip
-                            size="medium"
-                            label={category}
-                            style={{
-                              textTransform: "uppercase",
-                              backgroundColor: chipColour,
-                              color: "white",
-                              margin: "5px",
-                            }}
-                            onClick={() => {
-                              setSelectedCategory(category);
-                              filterBlogs(category, searchTerm);
-                            }}
-                          />
-                        </BootstrapTooltip>
-                      );
-                    })}
-                </div>
-                {/* End of blog categories */}
-                {/* Start of search bar */}
-                <div className={styles.searchBar}>
-                  <input
-                    className={styles.inputSearchBar}
-                    type="text"
-                    placeholder="Search blog posts"
-                    onChange={(event) => {
-                      setSearchTerm(event.target.value);
-                      filterBlogs(selectedCategory, event.target.value);
-                    }}
-                  />
-                </div>
-                {/* End of search bar */}
-                {/* Start of blog posts */}
-                <div className={styles.blogPosts}>
-                  {currentPosts.map((blog) => {
-                    return (
-                      <BlogPreview
-                        key={blog.blogNo}
-                        blogNo={blog.blogNo}
-                        imgUrl={`/blog-covers/${blog.img}`}
-                        heading={blog.heading}
-                        date={blog.date}
-                        subheading={blog.subheading}
-                        authors={blog.authors}
-                        category={blog.category.split(",")}
-                      />
-                    );
-                  })}
-                </div>
-                <PaginationComp
-                  totalPages={Math.ceil(selectedPosts.length / postsPerPage)}
-                  paginate={paginate}
-                  page={currentPage}
-                />
-                <ScrollUpBtn />
-                {/*End of blog posts*/}
-              </>
-            )}
+                  </BootstrapTooltip>
+                );
+              })}
           </div>
-        </>
-      )}
+          {/* End of blog categories */}
+          {/* Start of search bar */}
+          <div className={styles.searchBar}>
+            <input 
+              className={styles.inputSearchBar}
+              type="text"
+              placeholder="Search blog posts" 
+              onChange={(event) => {
+                setSearchTerm(event.target.value);
+                filterBlogs(selectedCategory, event.target.value);
+              }}
+            />
+          </div>
+          {/* End of search bar */}
+          {/* Start of blog posts */}
+          <div className={styles.blogPosts}>
+            {currentPosts
+              .map((blog) => {     
+                return <BlogPreview
+                  key={blog.blogNo}
+                  blogNo={blog.blogNo}
+                  imgUrl={`/blog-covers/${blog.img}`}
+                  heading={blog.heading}
+                  date={blog.date}
+                  subheading={blog.subheading}
+                  authors={blog.authors}
+                  category={blog.category.split(",")}
+                />
+              })}
+          </div>
+          <PaginationComp
+            totalPages={Math.ceil(selectedPosts.length / postsPerPage)}
+            paginate={paginate}
+            page={currentPage}
+          />
+          <ScrollUpBtn />
+          {/*End of blog posts*/}
+        </>}
+          </div>
+        </>)}
     </div>
   );
 };

@@ -6,7 +6,7 @@ import YouTubeSubscribe from "./youtubeSubscribe";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { Link } from "react-router-dom";
-import LoadingScreen from "../LoadingScreen";
+import LoadingScreen from "../components/LoadingScreen";
 // TO UNCOMMENT WHEN REACH > 9 VIDEOS
 // import PaginationComp from "../components/Pagination";
 

@@ -10,7 +10,7 @@ import Slideshow from "./Slideshow.js";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import LoadingScreen from "../LoadingScreen";
+import LoadingScreen from "../components/LoadingScreen";
 
 const Home = () => {
   const [open, setOpen] = useState(false);

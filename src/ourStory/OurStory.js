@@ -3,7 +3,7 @@ import PageHeader from "../header";
 import ".././style.css";
 import styles from "./OurStory.module.css";
 import Timeline from "./OurStoryTimeline.js";
-import LoadingScreen from "../LoadingScreen";
+import LoadingScreen from "../components/LoadingScreen";
 
 // Start at the top of the page
 const OurStory = () => {

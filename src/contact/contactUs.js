@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import PageHeader from ".././header";
 import ContactForm from "./contactForm";
 import styles from "./contactUs.module.css";
-import LoadingScreen from "../LoadingScreen";
+import LoadingScreen from "../components/LoadingScreen";
 
 const ContactUs = () => {
   const [sourceLoading, setSourceLoading] = React.useState(true);

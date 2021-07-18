@@ -4,7 +4,7 @@ import PageHeader from ".././header";
 import { Modal, Backdrop, Fade } from "@material-ui/core";
 import { Button } from "semantic-ui-react";
 import SponsorsModal from "./sponsorsModal";
-import LoadingScreen from "../LoadingScreen";
+import LoadingScreen from "../components/LoadingScreen";
 
 const Sponsors = () => {
   const [open, setOpen] = React.useState(false);

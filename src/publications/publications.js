@@ -4,7 +4,7 @@ import PubArticle from "./publications-article";
 import PageHeader from ".././header";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import LoadingScreen from "../LoadingScreen";
+import LoadingScreen from "../components/LoadingScreen";
 
 const Publications = () => {
   const [articles, setArticles] = useState([]);

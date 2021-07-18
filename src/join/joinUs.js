@@ -11,7 +11,7 @@ import NewsletterForm from ".././home/NewsletterForm";
 import { Modal, Backdrop, Fade } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Tooltip from "@material-ui/core/Tooltip";
-import LoadingScreen from "../LoadingScreen";
+import LoadingScreen from "../components/LoadingScreen";
 
 const useStylesBootstrap = makeStyles((theme) => ({
   arrow: {
