@@ -71,7 +71,19 @@ class App extends Component {
     style: {
       fontSize: "medium",
       marginRight: "10px",
-    }
+    },
+  };
+
+  aboutIconDD = {
+    style: {
+      fontSize: "medium",
+      marginRight: "10px",
+      marginLeft: "-5px",
+      paddingTop: "0px",
+      marginTop: "0px",
+      paddingBottom: "0px",
+      marginBottom: "0px",
+    },
   };
 
   constructor(props) {
@@ -89,6 +101,7 @@ class App extends Component {
     this.handleMenuClick = this.handleMenuClick.bind(this);
     this.changeBackground = this.changeBackground.bind(this);
     this.hideNavBar = this.hideNavBar.bind(this);
+
     this.routes = {
       Home: ["/", "HOME"],
       "About Us": ["/about", "ABOUT US"],
@@ -96,21 +109,25 @@ class App extends Component {
       Opportunities: ["/opportunities", "OPPORTUNITIES"],
       Media: ["/media", "MEDIA"],
       "Join Us": ["/join-us", "JOIN US"],
-
-      // "Blog Posts": "/media/blog",
-      // Podcast: "/media/podcast",
-      // Publications: "/media/publications",
-      // Marketing: "/media/marketing",
-      // Videos: "/media/videos",
     };
+
     this.aboutRoutes = {
       "Our Story": ["/about/our-story", "OUR STORY"],
       "Sponsors and Affiliations": [
         "/about/sponsors-affiliations",
-        "SPONSORS AND AFFILIATIONS",
+        "SPONSORS AND",
+        "AFFILIATIONS",
       ],
       "Our Team": ["/about/our-team", "OUR TEAM"],
       "Contact Us": ["/about/contact-us", "CONTACT US"],
+    };
+
+    this.mediaRoutes = {
+      "Blog Posts": ["/media/blog", "BLOG POSTS"],
+      Podcast: ["/media/podcast", "PODCAST"],
+      Publications: ["/media/publications", "PUBLICATIONS"],
+      Marketing: ["/media/marketing", "MARKETING"],
+      Videos: ["/media/videos", "VIDEOS"],
     };
   }
 
@@ -203,18 +220,28 @@ class App extends Component {
     window.removeEventListener("scroll", this.hideNavBar);
   }
 
-  // getIcon(icon) {
-  //   switch (icon) {
-  //     case "OUR STORY":
-  //       return <ChromeReaderModeOutlinedIcon />;
-  //     case "SPONSORS AND AFFILIATIONS":
-  //       return <FavoriteBorderIcon />;
-  //     case "OUR TEAM":
-  //       return <PeopleOutlineIcon />;
-  //     default:
-  //       return <PhoneOutlinedIcon />;
-  //   }
-  // }
+  getIcon(icon) {
+    switch (icon) {
+      case "OUR STORY":
+        return <ChromeReaderModeOutlinedIcon {...this.aboutIconDD} />;
+      case "SPONSORS AND":
+        return <FavoriteBorderIcon {...this.aboutIconDD} />;
+      case "OUR TEAM":
+        return <PeopleOutlineIcon {...this.aboutIconDD} />;
+      case "CONTACT US":
+        return <PhoneOutlinedIcon {...this.aboutIconDD} />;
+      case "BLOG POSTS":
+        return <InsertDriveFileOutlinedIcon {...this.iconDD} />;
+      case "PODCAST":
+        return <HeadsetMicOutlinedIcon {...this.iconDD} />;
+      case "PUBLICATIONS":
+        return <LocalPrintshopOutlinedIcon {...this.iconDD} />;
+      case "MARKETING":
+        return <ImageOutlinedIcon {...this.iconDD} />;
+      default:
+        return <VideocamOutlinedIcon {...this.iconDD} />;
+    }
+  }
 
   render() {
     /*
@@ -287,7 +314,6 @@ class App extends Component {
                           : "nav-item"
                       }
                       key={index}
-                      
                     >
                       {this.state.navBar ? (
                         <NavLink
@@ -307,14 +333,13 @@ class App extends Component {
                         </NavLink>
                       )}
                     </li>
-                  ) : (
+                  ) : index === 1 ? (
                     <li
                       className={
                         this.state.navBar
                           ? "nav-item active-nav-item"
                           : "nav-item"
                       }
-                      // not sure how to change onMouseEnter/Leave based on about/media dd
                       onMouseEnter={this.handleHoverAbout}
                       onMouseLeave={this.handleHoverAbout}
                     >
@@ -344,155 +369,110 @@ class App extends Component {
                             )}
                           </span>
                         </div>
-                        {index === 1 ? (
-                          <div
-                            className={
-                              this.state.showDDAbout
-                                ? this.state.navBar
-                                  ? "dropdown-menu show"
-                                  : "dropdown-menu transparent show"
-                                : "dropdown-menu"
-                            }
-                          >
-                            <div className="dropdown-item">
-                              <NavLink
-                                to="/about/our-story"
-                                {...this.highlightDD}
-                              >
-                                <ChromeReaderModeOutlinedIcon
-                                  fontSize="small"
-                                  style={{
-                                    marginRight: "10px",
-                                    marginLeft: "-10px",
-                                  }}
-                                />
-                                OUR STORY
-                              </NavLink>
-                            </div>
-                            <div
-                              className="dropdown-item"
-                              style={{ paddingBottom: "0px" }}
-                            >
-                              <NavLink
-                                to="/about/sponsors-affiliations"
-                                {...this.highlightDD}
-                              >
-                                <FavoriteBorderIcon
-                                  fontSize="small"
-                                  style={{
-                                    marginRight: "10px",
-                                    marginLeft: "-10px",
-                                  }}
-                                />
-                                SPONSORS AND
-                                <br />
-                                <p
-                                  style={{
-                                    marginLeft: "32px",
-                                    paddingBottom: "0px",
-                                  }}
+                        <div
+                          className={
+                            this.state.showDDAbout
+                              ? this.state.navBar
+                                ? "dropdown-menu show"
+                                : "dropdown-menu transparent show"
+                              : "dropdown-menu"
+                          }
+                        >
+                          {Object.keys(this.aboutRoutes).map((aboutRoute) => {
+                            return (
+                              <div className="dropdown-item">
+                                <NavLink
+                                  to={this.aboutRoutes[aboutRoute][0]}
+                                  {...this.highlightDD}
                                 >
-                                  AFFILIATIONS
-                                </p>
-                              </NavLink>
-                            </div>
-                            <div
-                              className="dropdown-item"
-                              style={{ paddingTop: "0px" }}
-                            >
+                                  {this.getIcon(
+                                    this.aboutRoutes[aboutRoute][1]
+                                  )}
+
+                                  {this.aboutRoutes[aboutRoute][1]}
+
+                                  {this.aboutRoutes[aboutRoute][2] ===
+                                  "AFFILIATIONS" ? (
+                                    <p
+                                      style={{
+                                        marginLeft: "35px",
+                                        paddingBottom: "0px",
+                                        marginBottom: "0px",
+                                      }}
+                                    >
+                                      {this.aboutRoutes[aboutRoute][2]}{" "}
+                                    </p>
+                                  ) : (
+                                    this.aboutRoutes[aboutRoute][2]
+                                  )}
+                                </NavLink>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </li>
+                  ) : (
+                    <li
+                      className={
+                        this.state.navBar
+                          ? "nav-item active-nav-item"
+                          : "nav-item"
+                      }
+                      onMouseEnter={this.handleHover}
+                      onMouseLeave={this.handleHover}
+                    >
+                      <div className="dropdown" display="static">
+                        <div
+                          className={
+                            this.state.navBar
+                              ? "dropdown-toggle active-nav-item"
+                              : "dropdown-toggle"
+                          }
+                        >
+                          <span>
+                            {this.state.navBar ? (
                               <NavLink
-                                to="/about/our-team"
-                                {...this.highlightDD}
-                                style={{ paddingTop: "0px" }}
+                                to={this.routes[route][0]}
+                                {...this.highlightNav}
                               >
-                                <PeopleOutlineIcon
-                                  fontSize="small"
-                                  style={{
-                                    marginRight: "10px",
-                                    paddingTop: "0px",
-                                    marginLeft: "-10px",
-                                  }}
-                                />
-                                OUR TEAM
+                                {this.routes[route][1]}
                               </NavLink>
-                            </div>
-                            <div className="dropdown-item">
+                            ) : (
                               <NavLink
-                                to="/about/contact-us"
-                                {...this.highlightDD}
+                                to={this.routes[route][0]}
+                                {...this.highlightNoNav}
                               >
-                                <PhoneOutlinedIcon
-                                  fontSize="small"
-                                  style={{
-                                    marginRight: "10px",
-                                    marginLeft: "-10px",
-                                  }}
-                                />
-                                CONTACT US
+                                {this.routes[route][1]}
                               </NavLink>
-                            </div>
-                          </div>
-                        ) : (
-                          <div
-                            className={
-                              this.state.showDD
-                                ? this.state.navBar
-                                  ? "dropdown-menu show"
-                                  : "dropdown-menu transparent mediaDD show"
-                                : "dropdown-menu"
-                            }
-                          >
-                            <div className="dropdown-item dropdown-media">
-                              <NavLink to="/media/blog" {...this.highlightDD}>
-                                <InsertDriveFileOutlinedIcon
-                                  {...this.iconDD}
-                                />
-                                BLOG POSTS
-                              </NavLink>
-                            </div>
-                            <div className="dropdown-item dropdown-media">
-                              <NavLink
-                                to="/media/podcast"
-                                {...this.highlightDD}
-                              >
-                                <HeadsetMicOutlinedIcon
-                                  {...this.iconDD}
-                                />
-                                PODCAST
-                              </NavLink>
-                            </div>
-                            <div className="dropdown-item dropdown-media">
-                              <NavLink
-                                to="/media/publications"
-                                {...this.highlightDD}
-                              >
-                                <LocalPrintshopOutlinedIcon
-                                  {...this.iconDD}
-                                />
-                                PUBLICATIONS
-                              </NavLink>
-                            </div>
-                            <div className="dropdown-item dropdown-media">
-                              <NavLink
-                                to="/media/marketing"
-                                {...this.highlightDD}
-                              >
-                                <ImageOutlinedIcon
-                                  {...this.iconDD}
-                                />
-                                MARKETING
-                              </NavLink>
-                            </div>
-                            <div className="dropdown-item dropdown-media">
-                              <NavLink to="/media/videos" {...this.highlightDD}>
-                                <VideocamOutlinedIcon
-                                  {...this.iconDD}
-                                />
-                                VIDEOS
-                              </NavLink>
-                            </div>
-                          </div>
-                        )}
+                            )}
+                          </span>
+                        </div>
+                        <div
+                          className={
+                            this.state.showDD
+                              ? this.state.navBar
+                                ? "dropdown-menu show"
+                                : "dropdown-menu transparent mediaDD show"
+                              : "dropdown-menu"
+                          }
+                        >
+                          {Object.keys(this.mediaRoutes).map((mediaRoute) => {
+                            return (
+                              <div className="dropdown-item dropdown-media">
+                                <NavLink
+                                  to={this.mediaRoutes[mediaRoute][0]}
+                                  {...this.highlightDD}
+                                >
+                                  {this.getIcon(
+                                    this.mediaRoutes[mediaRoute][1]
+                                  )}
+                                  {this.mediaRoutes[mediaRoute][1]}
+                                </NavLink>
+                              </div>
+                            );
+                          })}
+                        </div>
                       </div>
                     </li>
                   );
