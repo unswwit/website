@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./events.module.css";
-import PageHeader from ".././header";
+import PageHeader from "../components/header";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";

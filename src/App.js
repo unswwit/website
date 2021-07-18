@@ -316,12 +316,9 @@ class App extends Component {
                       <div
                         className="dropdown-item"
                         style={{ paddingTop: "0px" }}
-                                  style={{
-                              marginRight: "10px",
-                              paddingTop: "0px",
-                              marginLeft: "-10px",
-                            }}
-
+                      >
+                        <NavLink
+                          to="/about/our-team"
                           {...this.highlightDD}
                           style={{ paddingTop: "0px" }}
                         >
