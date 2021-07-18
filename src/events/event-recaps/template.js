@@ -52,7 +52,7 @@ const EventRecapPage = (props) => {
           var tempArray = [];
           currEvent.imagePaths.split(",").forEach((filename) => {
             tempArray.push({
-              source: `/event-recap/${currEvent.year}/T${currEvent.term}/${currEvent.eventNumber}/${filename}`,
+              source: `/event-recap/${currEvent.year}/T${currEvent.term}/${currEvent.imageFolder}/${filename}`,
             });
           });
           setImageGalleryFilenames(tempArray);
