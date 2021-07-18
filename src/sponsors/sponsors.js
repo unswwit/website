@@ -3,7 +3,7 @@ import styles from "./sponsors.module.css";
 import PageHeader from ".././header";
 import { Modal, Backdrop, Fade } from "@material-ui/core";
 import { Button } from "semantic-ui-react";
-import SponsorsModal  from "./sponsorsModal";
+import SponsorsModal from "./sponsorsModal";
 
 const Sponsors = () => {
   const [open, setOpen] = React.useState(false);
@@ -11,67 +11,190 @@ const Sponsors = () => {
 
   // Getting the eucalyptus description
   const eucalyptusDescription = () => {
-    return <>
-      Eucalyptus is a pioneer in telehealth, making a significant mark on the industry through their house of online healthcare brands. This fast growing startup has built a patient-centric technology platform that powers{" "}
-      <a className={styles.link} href="https://pilot.com.au/" target="_blank" rel="noopener noreferrer">Pilot</a> (a medical health navigator for men),{" "}
-      <a className={styles.link} href="https://kinfertility.com.au/" target="_blank" rel="noopener noreferrer">Kin</a> (subscription service delivering the contraceptive pill to your door and services for the fertility journey),{" "}
-      <a className={styles.link} href="https://skin.software/" target="_blank" rel="noopener noreferrer">Software</a> (personalised skincare) and{" "}
-      <a className={styles.link} href="http://itsnormal.com/" target="_blank" rel="noopener noreferrer">Normal</a> (sexual wellness).
-    </>
-  }
+    return (
+      <>
+        Eucalyptus is a pioneer in telehealth, making a significant mark on the
+        industry through their house of online healthcare brands. This fast
+        growing startup has built a patient-centric technology platform that
+        powers{" "}
+        <a
+          className={styles.link}
+          href="https://pilot.com.au/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Pilot
+        </a>{" "}
+        (a medical health navigator for men),{" "}
+        <a
+          className={styles.link}
+          href="https://kinfertility.com.au/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Kin
+        </a>{" "}
+        (subscription service delivering the contraceptive pill to your door and
+        services for the fertility journey),{" "}
+        <a
+          className={styles.link}
+          href="https://skin.software/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Software
+        </a>{" "}
+        (personalised skincare) and{" "}
+        <a
+          className={styles.link}
+          href="http://itsnormal.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Normal
+        </a>{" "}
+        (sexual wellness).
+      </>
+    );
+  };
 
   // Getting the eucalyptus description
   const mcGrathNicolDescription = () => {
-    return <>
-      McGrathNicol is a specialist Advisory and Restructuring firm.  Their experts work with corporates, banks, law firms, private companies and government across all industry sectors and business sizes to deliver valuable advice and high-quality outcomes.  McGrathNicol’s Technology team specialise in complex forensic investigations, time critical cybersecurity incident response activities and helping our clients to design strategies and implement frameworks to mitigate digital and information risk.  To gain insight into the type of work they do, check out their Technology virtual experience at <a className={styles.link} href="https://www.theforage.com/show-firm-programs/oiHtSBFcPM2KnaEGJ/McGrathNicol" target="_blank" rel="noopener noreferrer">Forage</a>.
-    </>
+    return (
+      <>
+        McGrathNicol is a specialist Advisory and Restructuring firm. Their
+        experts work with corporates, banks, law firms, private companies and
+        government across all industry sectors and business sizes to deliver
+        valuable advice and high-quality outcomes. McGrathNicol’s Technology
+        team specialise in complex forensic investigations, time critical
+        cybersecurity incident response activities and helping our clients to
+        design strategies and implement frameworks to mitigate digital and
+        information risk. To gain insight into the type of work they do, check
+        out their Technology virtual experience at{" "}
+        <a
+          className={styles.link}
+          href="https://www.theforage.com/show-firm-programs/oiHtSBFcPM2KnaEGJ/McGrathNicol"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Forage
+        </a>
+        .
+      </>
+    );
   };
 
   // Getting EY description
   const eyDescription = () => {
-    return <>
-      <p>Your ambition is as bold as ours. To solve the world’s toughest problems. To ask questions that have never been asked before. To innovate, to grow, to learn, to lead, to belong bringing out the best in yourself and in others.</p>
-      <p>Here at EY, you’ll build the tech skillsets and growth mindsets to become the leader you want to be.</p>
-      <p>We’ll provide the culture, the tech, the teams, the scale, the learning and the relationships for you to personalise your career.</p>
-      <p>You’ll learn and innovate here while asking better questions to seek better answers and building a better working world. Together.</p>
-      <p>It’s yours to build.</p>
-    </>
+    return (
+      <>
+        <p>
+          Your ambition is as bold as ours. To solve the world’s toughest
+          problems. To ask questions that have never been asked before. To
+          innovate, to grow, to learn, to lead, to belong bringing out the best
+          in yourself and in others.
+        </p>
+        <p>
+          Here at EY, you’ll build the tech skillsets and growth mindsets to
+          become the leader you want to be.
+        </p>
+        <p>
+          We’ll provide the culture, the tech, the teams, the scale, the
+          learning and the relationships for you to personalise your career.
+        </p>
+        <p>
+          You’ll learn and innovate here while asking better questions to seek
+          better answers and building a better working world. Together.
+        </p>
+        <p>It’s yours to build.</p>
+      </>
+    );
   };
 
   // Getting FDM description
   const fdmDescription = () => {
-    return <>
-      <p>FDM Group launches careers in tech! We recruit tech potential from all disciplines, train our grads with the skills and knowledge they need, and deploy them out to big name clients as FDM tech consultants to deliver on real world tech solutions.</p>
-      <p>Fast track your tech specialisation with paid training, gain two years experience with a major brand company and then choose your own adventure - with huge demand for tech skills and experience, you choose where you go next!</p>
-    </>
+    return (
+      <>
+        <p>
+          FDM Group launches careers in tech! We recruit tech potential from all
+          disciplines, train our grads with the skills and knowledge they need,
+          and deploy them out to big name clients as FDM tech consultants to
+          deliver on real world tech solutions.
+        </p>
+        <p>
+          Fast track your tech specialisation with paid training, gain two years
+          experience with a major brand company and then choose your own
+          adventure - with huge demand for tech skills and experience, you
+          choose where you go next!
+        </p>
+      </>
+    );
   };
 
   // Getting PWC description
   const pwcDescription = () => {
-    return <>
-      In an increasingly complex world, PwC works with businesses, Government and the community to help Australia continue to thrive and grow.<br />
-      PwC Australia delivers quality in audit, assurance, consulting and tax services to more than 5,000 clients.<br />
-      We’re part of a network of firms in 158 countries with over 250,000 people. PwC is one of the top 50 brands worldwide and PwC Australia is among LinkedIn’s top companies for where Australians want to work.<br />
-      We are bold about our commitment to diversity and inclusion, and we empower flexible working.<br />
-      Our purpose is to build trust in society and solve important problems.<br /><br />
-      <p>At PwC, we call this The Together Effect.</p>
-    </>
+    return (
+      <>
+        In an increasingly complex world, PwC works with businesses, Government
+        and the community to help Australia continue to thrive and grow.
+        <br />
+        PwC Australia delivers quality in audit, assurance, consulting and tax
+        services to more than 5,000 clients.
+        <br />
+        We’re part of a network of firms in 158 countries with over 250,000
+        people. PwC is one of the top 50 brands worldwide and PwC Australia is
+        among LinkedIn’s top companies for where Australians want to work.
+        <br />
+        We are bold about our commitment to diversity and inclusion, and we
+        empower flexible working.
+        <br />
+        Our purpose is to build trust in society and solve important problems.
+        <br />
+        <br />
+        <p>At PwC, we call this The Together Effect.</p>
+      </>
+    );
   };
-  
+
   // Getting Amstelveen description
   const amstelveenDescription = () => {
-    return <>
-      <p>Amstelveen is a specialist provider of risk, assurance, performance, and technology expertise, operating across numerous business sectors. At our core, we work with our clients to help them make risk-informed strategic choices and raise the bar in risk and compliance; like by building a new risk strategy, performing project technology reviews, or helping them drive digital transformation.</p>
-      <p>Our strong relationships with our clients are reflected in their continued trust in the delivery of our work and our rapid growth, with Amstelveen making AFR’s Fast Starters lists in FY18 and FY19!</p>
-    </>
+    return (
+      <>
+        <p>
+          Amstelveen is a specialist provider of risk, assurance, performance,
+          and technology expertise, operating across numerous business sectors.
+          At our core, we work with our clients to help them make risk-informed
+          strategic choices and raise the bar in risk and compliance; like by
+          building a new risk strategy, performing project technology reviews,
+          or helping them drive digital transformation.
+        </p>
+        <p>
+          Our strong relationships with our clients are reflected in their
+          continued trust in the delivery of our work and our rapid growth, with
+          Amstelveen making AFR’s Fast Starters lists in FY18 and FY19!
+        </p>
+      </>
+    );
   };
 
   // Getting Cochlear description
   const cochlearDescription = () => {
-    return <> 
-      Cochlear’s mission is to help people hear and be heard. As the global leader in implantable hearing solutions, Cochlear is dedicated to helping people with moderate to profound hearing loss experience a life full of hearing. We aim to give people the best lifelong hearing experience and access to innovative future technologies. We collaborate with the industry’s best clinical, research and support networks. That’s why more people choose Cochlear than any other hearing implant company. Learn and grow with us as we tackle the most complex challenges in helping people to 
-      <em><strong> Hear Now. And Always.</strong></em>
-    </>
+    return (
+      <>
+        Cochlear’s mission is to help people hear and be heard. As the global
+        leader in implantable hearing solutions, Cochlear is dedicated to
+        helping people with moderate to profound hearing loss experience a life
+        full of hearing. We aim to give people the best lifelong hearing
+        experience and access to innovative future technologies. We collaborate
+        with the industry’s best clinical, research and support networks. That’s
+        why more people choose Cochlear than any other hearing implant company.
+        Learn and grow with us as we tackle the most complex challenges in
+        helping people to
+        <em>
+          <strong> Hear Now. And Always.</strong>
+        </em>
+      </>
+    );
   };
 
   const sponsors = {
@@ -106,10 +229,10 @@ const Sponsors = () => {
     ],
     Amstelveen: [
       "Amstelveen",
-      "https://amstelveen.com/", 
-      "Amstelveen_notchecked.png", 
-      "MAJOR", 
-      amstelveenDescription()
+      "https://amstelveen.com/",
+      "Amstelveen_notchecked.png",
+      "MAJOR",
+      amstelveenDescription(),
     ],
     Canva: [
       "Canva",
@@ -125,33 +248,27 @@ const Sponsors = () => {
       "SUPPORTER",
       cochlearDescription(),
     ],
-    Commonwealth: 
-    ["Commonwealth Bank (CBA)",
-      "https://www.commbank.com.au/about-us/careers.html", 
-      "2021_commbank.jpg", 
-      "MAJOR", 
-      "More information will be added shortly! Check out the above website for now for more information about our sponsor!"
+    Commonwealth: [
+      "Commonwealth Bank (CBA)",
+      "https://www.commbank.com.au/about-us/careers.html",
+      "2021_commbank.jpg",
+      "MAJOR",
+      "More information will be added shortly! Check out the above website for now for more information about our sponsor!",
     ],
     Eucalyptus: [
       "Eucalyptus",
       "https://www.eucalyptus.vc/",
       "euc-logo.png",
       "PRINCIPAL",
-      eucalyptusDescription()
+      eucalyptusDescription(),
     ],
-    EY: [
-      "EY",
-      "https://www.ey.com/en_au",
-      "EY.gif",
-      "MAJOR",
-      eyDescription()
-    ],
+    EY: ["EY", "https://www.ey.com/en_au", "EY.gif", "MAJOR", eyDescription()],
     Fdm: [
       "FDM Group",
       "https://www.fdmgroup.com/en-au/au-home/",
       "fdm-group.png",
       "MAJOR",
-      fdmDescription()
+      fdmDescription(),
     ],
     Google: [
       "Google",
@@ -172,7 +289,7 @@ const Sponsors = () => {
       "https://www.mcgrathnicol.com/",
       "mcgrathcicol-major.png",
       "MAJOR",
-      mcGrathNicolDescription()
+      mcGrathNicolDescription(),
     ],
     Microsoft: [
       "Microsoft",
@@ -200,7 +317,7 @@ const Sponsors = () => {
       "https://www.pwc.com.au/",
       "pwc-logo-png-transparent.png",
       "MAJOR",
-      pwcDescription()
+      pwcDescription(),
     ],
     Quantium: [
       "Quantium",
@@ -241,7 +358,10 @@ const Sponsors = () => {
 
   const affiliations = {
     Arc: ["https://www.arc.unsw.edu.au/", "arc.png"],
-    "Business School": ["https://www.unsw.edu.au/business/", "business_school.png"],
+    "Business School": [
+      "https://www.unsw.edu.au/business/",
+      "business_school.png",
+    ],
     "Engineering Faculty": ["https://www.unsw.edu.au/engineering/", "eng.png"],
   };
 
@@ -256,7 +376,10 @@ const Sponsors = () => {
   return (
     <div>
       {/* Cover Photo */}
-      <PageHeader imgUrl="/headers/sponsors-header-2.jpg" title="Our Sponsors" />
+      <PageHeader
+        imgUrl="/headers/sponsors-header-2.jpg"
+        title="Sponsors and Affiliations"
+      />
 
       <div id={styles.sponsorsBody}>
         <p className={styles.subheader}>
@@ -329,7 +452,7 @@ const Sponsors = () => {
 
         {/* In-Kind Sponsors Area */}
         <h2 className={styles.subsponsor}>In-Kind Sponsors</h2>
-        
+
         <div id={styles.majorContainer}>
           {Object.keys(sponsors)
             .sort()

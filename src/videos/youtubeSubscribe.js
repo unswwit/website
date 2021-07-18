@@ -8,7 +8,7 @@ export default class YouTubeSubscribe extends Component {
     channelid: PropTypes.string.isRequired,
     theme: PropTypes.string,
     layout: PropTypes.string,
-    count: PropTypes.string
+    count: PropTypes.string,
   };
 
   static defaultProps = {
@@ -16,7 +16,7 @@ export default class YouTubeSubscribe extends Component {
     channelid: "UCaYhcUwRBNscFNUKTjgPFiA",
     theme: "full",
     layout: "default",
-    count: "default"
+    count: "default",
   };
 
   /**
@@ -30,13 +30,13 @@ export default class YouTubeSubscribe extends Component {
 
     // To render components economically w/o repetition
     this.state = {
-      initialized: false
+      initialized: false,
     };
   }
 
   initialized() {
     this.setState({
-      initialized: true
+      initialized: true,
     });
   }
 
@@ -78,18 +78,18 @@ export default class YouTubeSubscribe extends Component {
     const { theme, layout, count, channelName, channelid } = this.props;
 
     return (
-        <div className={styles.subscribe}>
-      <section className="youtubeSubscribe">
-        <div
-          ref={this.youtubeSubscribeNode}
-          className="g-ytsubscribe"
-          data-theme={theme}
-          data-layout={layout}
-          data-count={count}
-          data-channel={channelName}
-          data-channelid={channelid}
-        />
-      </section>
+      <div className={styles.subscribe}>
+        <section className="youtubeSubscribe">
+          <div
+            ref={this.youtubeSubscribeNode}
+            className="g-ytsubscribe"
+            data-theme={theme}
+            data-layout={layout}
+            data-count={count}
+            data-channel={channelName}
+            data-channelid={channelid}
+          />
+        </section>
       </div>
     );
   }
