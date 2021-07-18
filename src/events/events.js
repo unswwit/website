@@ -53,7 +53,6 @@ const Events = () => {
 
   // load events
   useEffect(() => {
-    console.log("called here1");
     // show loading signs for past events
     setLoadingPast(true);
     Tabletop.init({
@@ -66,7 +65,6 @@ const Events = () => {
         setUpcomingEvents(googleData["upcoming-events"]["elements"]);
 
         // remove loading signs
-        console.log("called here");
         setSourceLoading(false);
         setLoadingPast(false);
         setLoadingUpcoming(false); // only load upcoming once
