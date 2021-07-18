@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import PageHeader from ".././header";
+import PageHeader from "../components/header";
 import ".././style.css";
 import styles from "./videos.module.css";
 import YouTubeSubscribe from "./youtubeSubscribe";

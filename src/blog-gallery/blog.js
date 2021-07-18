@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import "../style.css";
 import styles from "./blog.module.css";
 import BlogPreview from "./blog-preview";
-import PageHeader from ".././header";
+import PageHeader from "../components/header";
 import Chip from "@material-ui/core/Chip";
 import Tooltip from "@material-ui/core/Tooltip";
 import Tabletop from "tabletop";

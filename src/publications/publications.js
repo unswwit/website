@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./publications.module.css";
 import PubArticle from "./publications-article";
-import PageHeader from ".././header";
+import PageHeader from "../components/header";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import LoadingScreen from "../components/LoadingScreen";

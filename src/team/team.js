@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./team.module.css";
-import PageHeader from "../header";
+import PageHeader from "../components/header";
 import Execs from "./execs";
 import SubCom from "./subcom";
 import Tabletop from "tabletop";

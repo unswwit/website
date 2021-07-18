@@ -1,5 +1,5 @@
 import React from "react";
-import PageHeader from ".././header";
+import PageHeader from "../components/header";
 import styles from "./joinUs.module.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Accordion from "@material-ui/core/Accordion";

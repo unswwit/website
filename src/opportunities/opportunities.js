@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import PageHeader from ".././header";
+import PageHeader from "../components/header";
 import styles from "./opportunities.module.css";
 import Tabletop from "tabletop";
 import CircularProgress from "@material-ui/core/CircularProgress";

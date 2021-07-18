@@ -5,7 +5,7 @@ import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import PageHeader from "../header";
+import PageHeader from "../components/header";
 import ReactMarkdown from "react-markdown";
 import Tabletop from "tabletop";
 import styles from "./Podcast.module.css";

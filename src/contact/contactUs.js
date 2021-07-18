@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import PageHeader from ".././header";
+import PageHeader from "../components/header";
 import ContactForm from "./contactForm";
 import styles from "./contactUs.module.css";
 import LoadingScreen from "../components/LoadingScreen";

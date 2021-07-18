@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styles from "./sponsors.module.css";
-import PageHeader from ".././header";
+import PageHeader from "../components/header";
 import { Modal, Backdrop, Fade } from "@material-ui/core";
 import { Button } from "semantic-ui-react";
 import SponsorsModal from "./sponsorsModal";
