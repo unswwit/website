@@ -18,7 +18,7 @@ const Events = () => {
   const [events, setEvents] = useState([]);
   const [year, setYear] = useState("2021");
   const [upcomingEvents, setUpcomingEvents] = useState([]);
-  const [sourceLoading, setSourceLoading] = React.useState(true);
+  const [sourceLoading, setSourceLoading] = useState(true);
   const [loadingPast, setLoadingPast] = useState(true);
   const [loadingUpcoming, setLoadingUpcoming] = useState(true);
 
@@ -52,20 +52,21 @@ const Events = () => {
 
   // load events
   useEffect(() => {
+    // show loading signs for past events 
     setLoadingPast(true);
-    setLoadingUpcoming(true);
-
     Tabletop.init({
       key: process.env.REACT_APP_GOOGLE_SHEETS,
       callback: (googleData) => {
-        setLoadingPast(false);
-        setLoadingUpcoming(false);
         const allEvents = googleData["past-events"]["elements"].filter(
           (event) => event.year === year
         );
         setEvents(allEvents.reverse());
         setUpcomingEvents(googleData["upcoming-events"]["elements"]);
+
+        // remove loading signs
         setSourceLoading(false);
+        setLoadingPast(false);
+        setLoadingUpcoming(false); // only load upcoming once
       },
       simpleSheet: false,
     });
@@ -73,24 +74,24 @@ const Events = () => {
 
   return (
     <div>
-    {sourceLoading ? ( <LoadingScreen /> ) : (
-      <>
-        {/* Cover Photo */}
-        <PageHeader imgUrl="/headers/events-header.jfif" title="Events" />
-        {/* Main Title, and Subtitle Area */}
-        <div className={styles.eventsBody}>
-          <h2>UPCOMING EVENTS</h2>
-          <div id={styles.eventsLoadingContainer}>
-            {loadingUpcoming && (
-              <CircularProgress
-                variant="indeterminate"
-                size={50}
-                thickness={5}
-                id={styles.eventsLoading}
-              />
-            )}
-          </div>
-          {!loadingUpcoming &&
+      {sourceLoading ? ( <LoadingScreen /> ) : (
+        <>
+          {/* Cover Photo */}
+          <PageHeader imgUrl="/headers/events-header.jfif" title="Events" />
+          {/* Main Title, and Subtitle Area */}
+          <div className={styles.eventsBody}>
+            <h2>UPCOMING EVENTS</h2>
+            <div id={styles.eventsLoadingContainer}>
+              {loadingUpcoming && (
+                <CircularProgress
+                  variant="indeterminate"
+                  size={50}
+                  thickness={5}
+                  id={styles.eventsLoading}
+                />
+              )}
+            </div>
+            {!loadingUpcoming &&
             (!upcomingEvents.length ? (
               <p className={styles.lookout}>
                 Keep a lookout here for our upcoming events!
@@ -158,54 +159,54 @@ const Events = () => {
                 })}
               </div>
             ))}
-          <h2>PAST EVENTS</h2>
-          <Accordion
-            expanded={expanded}
-            onChange={() => {
-              setExpanded(!expanded);
-            }}
-          >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel4bh-content"
+            <h2>PAST EVENTS</h2>
+            <Accordion
+              expanded={expanded}
+              onChange={() => {
+                setExpanded(!expanded);
+              }}
             >
-              <Typography id={styles.eventResources}>Event Resources</Typography>
-              <Typography id={styles.resourcesDescription}>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel4bh-content"
+              >
+                <Typography id={styles.eventResources}>Event Resources</Typography>
+                <Typography id={styles.resourcesDescription}>
                 Learning material used in past events
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <iframe
-                title="event-resources"
-                src="https://drive.google.com/a/unswwit.com/embeddedfolderview?id=1zgocvaYesg7IBRYLvehAXb4Auu0Pl4Ef#grid"
-                style={{ width: "100%", height: "280px", border: "0" }}
-              ></iframe>
-            </AccordionDetails>
-          </Accordion>
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <iframe
+                  title="event-resources"
+                  src="https://drive.google.com/a/unswwit.com/embeddedfolderview?id=1zgocvaYesg7IBRYLvehAXb4Auu0Pl4Ef#grid"
+                  style={{ width: "100%", height: "280px", border: "0" }}
+                ></iframe>
+              </AccordionDetails>
+            </Accordion>
 
-          {/* Timeline */}
-          <Timeline
-            margin={"3%"}
-            page={"events"}
-            step={100}
-            valueToYear={valueToYear}
-            marks={marks}
-            updateYear={handleYear}
-          />
+            {/* Timeline */}
+            <Timeline
+              margin={"3%"}
+              page={"events"}
+              step={100}
+              valueToYear={valueToYear}
+              marks={marks}
+              updateYear={handleYear}
+            />
 
-          <div id={styles.eventsLoadingContainer}>
-            {loadingPast && (
-              <CircularProgress
-                variant="indeterminate"
-                size={50}
-                thickness={5}
-                id={styles.eventsLoading}
-              />
-            )}
-          </div>
+            <div id={styles.eventsLoadingContainer}>
+              {loadingPast && (
+                <CircularProgress
+                  variant="indeterminate"
+                  size={50}
+                  thickness={5}
+                  id={styles.eventsLoading}
+                />
+              )}
+            </div>
 
-          <div id={styles.pastEvents} className={styles.gridContainer}>
-            {!loadingPast &&
+            <div id={styles.pastEvents} className={styles.gridContainer}>
+              {!loadingPast &&
               events.map((event, index) => {
                 let eventLabel = event.img.split(".")[0].split("-");
                 eventLabel.shift();
@@ -219,11 +220,11 @@ const Events = () => {
                   </div>
                 );
               })}
+            </div>
           </div>
-        </div>
-      </>
-    )}
-  </div>
+        </>
+      )}
+    </div>
   );
 };
 
