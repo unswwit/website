@@ -145,44 +145,6 @@ div .headline {
   font-size: 14pt;
 }
 
-/*--------------Statistics Mobile Design-------------------*/
-@media only screen and (max-width: 1200px) {
-  .number {
-    width: 70%;
-  }
-}
-@media only screen and (max-width: 1000px) {
-  .number {
-    grid-template-columns: 25% 30% 45%;
-    position: absolute;
-    width: 85%;
-  }
-
-  .number span {
-    letter-spacing: 15px;
-  }
-  .number p {
-    font-size: 2vw;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .number span {
-    font-size: 12.5vw;
-    letter-spacing: 8px;
-  }
-
-  .number p {
-    font-size: 2.4vw;
-  }
-
-  .number {
-    bottom: 33%;
-    grid-template-columns: 28% 30% 45%;
-    width: 85%;
-  }
-}
-
 /*-------------------------------Home page events-----------------------------*/
 /*Events block*/
 .events {
@@ -453,32 +415,6 @@ div .headline {
   justify-content: center;
 }
 
-/*--------------Newsletter Mobile Design-------------------*/
-@media only screen and (max-width: 1200px) {
-  .subscribeBtn {
-    font-size: 20pt;
-    width: 70%;
-    right: 15%;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .subscribeBtn {
-    font-size: 16pt;
-    width: 70%;
-    right: 15%;
-    bottom: 38%;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .subscribeBtn {
-    font-size: 14pt;
-    width: 80%;
-    right: 10%;
-  }
-}
-
 /*------------------------------Home page sponsors----------------------------*/
 /*Sponsors image position*/
 .sponsors {
@@ -557,6 +493,124 @@ div .headline {
 
 /*--------------Responsive Mobile Design-------------------*/
 
+@media only screen and (max-width: 1200px) {
+  .number {
+    width: 70%;
+  }
+
+  .subscribeBtn {
+    font-size: 20pt;
+    width: 70%;
+    right: 15%;
+  }
+}
+
+@media only screen and (max-width: 1065px) {
+  .publications .homeArticles {
+    padding: 15px 15px 15px 15px;
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .number {
+    grid-template-columns: 25% 30% 45%;
+    position: absolute;
+    width: 85%;
+  }
+
+  .number span {
+    letter-spacing: 15px;
+  }
+  .number p {
+    font-size: 2vw;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .sponsors {
+    padding: 100px 0;
+  }
+
+  .carousel {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+  }
+
+  .eventsDescription {
+    order: 2;
+    padding: 0px;
+    height: auto;
+    max-width: 90%;
+    margin: auto;
+    padding: 5px;
+  }
+
+  .eventsDescription .left {
+    padding: 0px 5px 0px 5px;
+    width: 85%;
+    height: auto;
+    float: none;
+    margin: auto;
+  }
+
+  .left p {
+    margin: 20px 0;
+    text-align: justify;
+  }
+
+  .eventsDescription .right {
+    padding: 0px 5px 0px 5px;
+    width: 85%;
+    height: auto;
+    float: none;
+    margin: auto;
+  }
+
+  .eventsDescription .right h1 {
+    font-size: 5vw;
+    text-align: center;
+    display: none;
+  }
+
+  .right img {
+    object-fit: contain;
+  }
+
+  .right a {
+    height: auto;
+    text-align: center;
+  }
+
+  .titleMobile h1 {
+    display: contents;
+    font-size: 55px;
+    padding-top: 50px;
+  }
+
+  .dot {
+    display: contents;
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .slide_component {
+    height: 840px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 946px) {
+  .eventsDescription .left p {
+    font-size: 14px;
+  }
+}
+
 @media only screen and (max-width: 850px) {
   .events {
     padding: 50px 0px;
@@ -579,22 +633,8 @@ div .headline {
     font-size: 9vw;
   }
 
-  /*Events description text - flexbox*/
-  /* .eventsDescription {
-    order: 2;
-    padding: 0px;
-    height: 400px;
-  } */
-
-  /*Events description text*/
-  /* .eventsDescription p {
-    text-align: justify;
-    margin: 20px 0;
-  } */
-
   .eventsDescription a {
     text-align: justify;
-    /* padding-left: 20px; */
   }
 
   /*Big event image area - flexbox*/
@@ -673,133 +713,7 @@ div .headline {
   .sponsors img {
     margin-top: 20px;
   }
-}
-/* 
-@media only screen and (max-width: 640px) {
-  .eventsDescription p#about {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
 
-  .event1 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  .eventsDescription a {
-    padding: 0px;
-  }
-
-  div .headline {
-    height: 58vh;
-  }
-} */
-
-@media only screen and (max-width: 1065px) {
-  .publications .homeArticles {
-    padding: 15px 15px 15px 15px;
-    display: inline-block;
-  }
-}
-
-@media only screen and (max-width: 990px) {
-  .sponsors {
-    padding: 100px 0;
-  }
-
-  .carousel {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    /* max-width: 85%;
-    margin: 0; */
-    width: 100%;
-  }
-
-  .eventsDescription {
-    order: 2;
-    padding: 0px;
-    height: auto;
-    max-width: 90%;
-    margin: auto;
-    padding: 5px;
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content:center; */
-  }
-
-  .eventsDescription .left {
-    padding: 0px 5px 0px 5px;
-    width: 85%;
-    height: auto;
-    float: none;
-    margin: auto;
-  }
-
-  .left p {
-    margin: 20px 0;
-    text-align: justify;
-  }
-
-  .eventsDescription .right {
-    padding: 0px 5px 0px 5px;
-    width: 85%;
-    height: auto;
-    float: none;
-    margin: auto;
-  }
-
-  .eventsDescription .right h1 {
-    font-size: 5vw;
-    text-align: center;
-    display: none;
-  }
-
-  .right img {
-    object-fit: contain;
-    /* max-height: 50%;
-    max-width: 50%; */
-  }
-
-  .right a {
-    /* padding-left: 20px; */
-    height: auto;
-    text-align: center;
-  }
-
-  /* .buttonBack {
-    display: none;
-    margin-left: 35px; 
-  }
-
-  .buttonNext {
-    display: none;
-    margin-right: 35px; 
-  } */
-
-  .titleMobile h1 {
-    display: contents;
-    font-size: 55px;
-    padding-top: 50px;
-  }
-
-  .dot {
-    display: contents;
-    height: 25px;
-    width: 25px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-  }
-}
-/* 
-@media only screen and (max-width: 700px) {
-  .eventsDescription .left p {
-    font-size: 10px;
-    margin-top: 7px; 
-  }
-} */
-
-@media only screen and (max-width: 850px) {
   .publications {
     padding-top: 0px;
     padding-bottom: 30px;
@@ -807,7 +721,6 @@ div .headline {
 
   .publications h1 {
     font-size: 9vw;
-    /* padding-bottom: 15px; */
   }
 
   .publications .articlesDiv {
@@ -821,40 +734,36 @@ div .headline {
   }
 }
 
-/* adjusting font size of carousel description  */
-
-@media only screen and (max-width: 946px) {
-  .eventsDescription .left p {
-    font-size: 14px;
+@media only screen and (max-width: 800px) {
+  .number span {
+    font-size: 12.5vw;
+    letter-spacing: 8px;
   }
-}
 
-@media only screen and (max-width: 500px) {
-  .eventsDescription {
-    max-width: 80%;
+  .number p {
+    font-size: 2.4vw;
   }
-}
 
-@media only screen and (max-width: 990px) {
-  .slide_component {
-    height: 840px;
-    display: flex;
-    flex-direction: column;
-    /* width: 100%; */
+  .number {
+    bottom: 33%;
+    grid-template-columns: 28% 30% 45%;
+    width: 85%;
+  }
+
+  .subscribeBtn {
+    font-size: 16pt;
+    width: 70%;
+    right: 15%;
+    bottom: 38%;
   }
 }
 
 @media only screen and (max-width: 700px) {
   .slide_component {
     height: 670px;
-    /* padding-bottom: 0;  */
-    /* width: 100%; */
   }
 
   .carousel {
-    /* padding-right: 0; 
-    padding-left: 0; 
-    padding-bottom: 40px; */
     padding: 40px 0;
   }
 
@@ -875,16 +784,9 @@ div .headline {
   }
 }
 
-/* adjusting button size and position
-@media only screen and (max-width: 650px) {
-
-  
-} */
-
 @media only screen and (max-width: 550px) {
   .slide_component {
     height: 600px;
-    /* width: 100%; */
   }
 
   .carousel .buttonBack {
@@ -911,15 +813,20 @@ div .headline {
     margin-right: 20px;
   }
 }
-/* 
-.slide_component {
-  display: contents; 
-} */
-
-/* add height: 250px to both class=Homecarousel and class=Horizontal Slider, remove max-height from class=SlideInner */
 
 @media only screen and (max-width: 500px) {
+  .eventsDescription {
+    max-width: 80%;
+  }
   .number {
     bottom: 40%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .subscribeBtn {
+    font-size: 14pt;
+    width: 80%;
+    right: 10%;
   }
 }
