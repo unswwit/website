@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ".././style.css";
 import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
-import PageHeader from "../header";
+import PageHeader from "../components/header";
 import ShareBtns from "./ShareBtns";
 
 class blogPost65 extends Component {

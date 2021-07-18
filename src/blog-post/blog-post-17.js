@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ".././style.css";
 import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
-import PageHeader from ".././header";
+import PageHeader from "../components/header";
 import ShareBtns from "./ShareBtns";
 
 class blogPost17 extends Component {
