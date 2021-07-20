@@ -21,8 +21,6 @@ const AddToCalBtn = (props) => {
     endDatetime: props.endDate ? props.endDate: endDefaultString,
   };
 
-  console.log(event);
-
   const AddToCalendarDropdown = AddToCalendarHOC(Button, Dropdown);
   return (
     <AddToCalendarDropdown
