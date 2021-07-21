@@ -360,7 +360,7 @@ const Sponsors = () => {
     Arc: ["https://www.arc.unsw.edu.au/", "arc.png"],
     "Business School": [
       "https://www.unsw.edu.au/business/",
-      "business_school.png",
+      "business_school_transparent.png",
     ],
     "Engineering Faculty": ["https://www.unsw.edu.au/engineering/", "eng.png"],
   };
