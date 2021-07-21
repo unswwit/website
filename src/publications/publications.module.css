@@ -141,8 +141,7 @@
 /*-------------------------------Loading Sign-----------------------------*/
 #pubLoading {
   color: #feb14b;
-  margin-top: 10%;
-  margin-bottom: 7%;
+  margin-bottom: 100px;
 }
 
 #pubLoadingContainer {
