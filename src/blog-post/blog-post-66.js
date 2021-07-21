@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import ".././style.css";
 import styles from "./blog-post.module.css";
 import AuthorCard from "./authorCard";
