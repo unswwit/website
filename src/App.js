@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "semantic-ui-css/semantic.min.css";
 import "./style.css";
 //import "./loader.css";
-import GoogleAnalytics from "./config/GoogleAnalytics";
+// import GoogleAnalytics from "./config/GoogleAnalytics";
 
 import Home from "./home/home";
 import JoinUs from "./join/joinUs";

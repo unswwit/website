@@ -830,7 +830,6 @@
   }
 
   .hr {
-    display: flex;
     max-height: 220px;
     max-width: 250px;
     padding: 120px 10px 120px 10px;
@@ -901,9 +900,94 @@
   }
 }
 
+/* Android device */
+@media only screen and (max-width: 413px) {
+  .whatTo {
+    padding-left: 14px;
+  }
+
+  .edu {
+    max-height: 260px;
+    max-width: 300px;
+    padding: 30px 10px 30px 10px;
+  }
+
+  .events {
+    max-height: 260px;
+    max-width: 300px;
+    padding: 30px 10px 30px 10px;
+  }
+
+  .externals {
+    max-height: 260px;
+    max-width: 300px;
+    padding: 30px 10px 30px 10px;
+  }
+
+  .hr {
+    max-height: 260px;
+    max-width: 300px;
+    padding: 30px 10px 30px 10px;
+  }
+
+  .it {
+    max-height: 260px;
+    max-width: 300px;
+    padding: 30px 10px 30px 10px;
+  }
+
+  .marketing {
+    max-height: 260px;
+    max-width: 300px;
+    padding: 30px 10px 30px 10px;
+  }
+}
+
+/* Iphone device */
 @media only screen and (max-width: 390px) {
   .whatTo {
     padding-left: 12px;
+  }
+
+  .edu {
+    max-height: 220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+  }
+
+  .externals {
+    max-height: 220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+  }
+
+  .events {
+    max-height: 220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+  }
+
+  .hr {
+    max-height: 220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+  }
+
+  .it {
+    max-height: 220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+  }
+
+  .marketing {
+    max-height: 220px;
+    max-width: 250px;
+    padding: 120px 10px 120px 10px;
+  }
+
+  .marketing {
+    max-height: 235px;
+    max-width: 250px;
   }
 }
 
