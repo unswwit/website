@@ -1004,7 +1004,7 @@ div .headline {
 }
 
 @media only screen and (max-width: 375px) {
-  div .headline { 
+  div .headline {
     top: 1%;
   }
 }
