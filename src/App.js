@@ -148,14 +148,14 @@ class App extends Component {
     return new Promise((resolve) => setTimeout(() => resolve(), 2500));
   };*/
 
-  componentDidMount() {
+  //componentDidMount() {
     // google analytics
-    GoogleAnalytics();
+    //GoogleAnalytics();
 
-    window.addEventListener("hashchange", this.changeBackground);
-    window.addEventListener("resize", this.updateMenu);
-    window.addEventListener("scroll", this.changeBackground);
-    window.addEventListener("scroll", this.hideNavBar);
+    //window.addEventListener("hashchange", this.changeBackground);
+    //window.addEventListener("resize", this.updateMenu);
+    //window.addEventListener("scroll", this.changeBackground);
+    //window.addEventListener("scroll", this.hideNavBar);
     /*
     this.fakeRequest().then(() => {
       const el = document.querySelector(".loader");
@@ -164,7 +164,7 @@ class App extends Component {
         this.setState({ loading: false }); // showing the app
       }
     });*/
-  }
+  //}
 
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateMenu);

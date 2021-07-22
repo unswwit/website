@@ -2,8 +2,8 @@
 .scrollUp {
   opacity: 1;
   background-color: #e85f5c;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   position: fixed;
   bottom: 6em;
   right: -50px;
@@ -12,6 +12,9 @@
   color: white;
   z-index: 4;
   box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*----------------------------------Scroll Up Button Animations------------------------------------*/
@@ -59,3 +62,4 @@
     bottom: 6em;
   }
 }
+
