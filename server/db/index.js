@@ -1,6 +1,6 @@
 const config = require('../../config');
 const helper = require('../../helper');
-const Pool = require('pg').Pool
+const Pool = require('pg-pool');
 const pool = new Pool(config.db);
 
 // Get Execs data 
@@ -12,7 +12,7 @@ const getExecs = (request, response) => {
     [config.listPerPage, offset],
     (error, results) => {
     if (error) {
-      throw error;
+      console.log(error);
     }
     response.status(200).json(results.rows)
   })
