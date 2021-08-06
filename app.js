@@ -9,6 +9,10 @@ const bodyParser = require('body-parser');
 const db = require('./server/db');
 const port = process.env.PORT || '3000';
 
+var execsRouter = require ('./routes/execs');
+var subcommitteeRouter = require('./routes/subcommittee');
+var marketingarchivesRouter = require('./routes/marketingarchives');
+
 const app = express();
 app.use(bodyParser.json())
 app.use(
@@ -21,9 +25,9 @@ app.get('/', (request, response) => {
   response.json({ info: 'Node.js, Express, and Postgres API' })
 });
 
-app.get('/execs', db.getExecs);
-app.get('/subcommittee', db.getSubcommittee);
-app.get('/marketingarchives', db.getMarketingArchives); 
+app.get('/execs', execsRouter);
+app.get('/subcommittee', subcommitteeRouter);
+app.get('/marketingarchives', marketingarchivesRouter); 
 
 app.listen(port, () => {
   console.log(`The server is running at http://localhost:${port}`)

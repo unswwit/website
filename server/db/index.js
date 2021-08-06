@@ -27,7 +27,7 @@ const getSubcommittee = (request, response) => {
     [config.listPerPage, offset],
     (error, results) => {
     if (error) {
-      throw error;
+      console.log(error);
     }
     response.status(200).json(results.rows)
   })
@@ -42,7 +42,7 @@ const getMarketingArchives = (request, response) => {
     [config.listPerPage, offset],
     (error, results) => {
     if (error) {
-      throw error;
+      console.log(error);
     }
     response.status(200).json(results.rows)
   })

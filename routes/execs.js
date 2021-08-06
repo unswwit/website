@@ -1,15 +1,9 @@
-const express = require('express');
-const router = express.Router();
-const execs = require('../services/execs');
+var express = require('express');
+var router = express.Router();
 
-/* GET programming languages. */
-router.get('/', async function(req, res, next) {
-  try {
-    res.json(await execs.getMultiple(req.query.page));
-  } catch (err) {
-    console.error(`Error while getting execs `, err.message);
-    next(err);
-  }
+/* GET execs */
+router.get('/execs', function(req, res, next) {
+  res.render('execs', { title: 'Execs' });
 });
 
 module.exports = router;
