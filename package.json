@@ -3,7 +3,8 @@
     "express": "^4.17.1",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.12",
-    "pg": "^8.7.1"
+    "pg": "^8.7.1",
+    "pg-pool": "^3.4.1"
   },
   "name": "backend",
   "description": "UNSW WIT Backend",
