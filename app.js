@@ -18,6 +18,14 @@ app.get('/', (request, response) => {
 app.get('/execs', db.getExecs);
 app.get('/subcommittee', db.getSubcommittee);
 app.get('/marketingarchives', db.getMarketingArchives); 
+app.get('/blogauthors', db.getBlogAuthors);
+app.get('/blogpreviews', db.getBlogPreviews);
+app.get('/opportunities', db.getOpportunities);
+app.get('/pastevents', db.getPastEvents);
+app.get('/podcastepisodes', db.getPodcastEpisodes);
+app.get('/publications', db.getPublications);
+app.get('/sponsors', db.getSponsors);
+app.get('/upcomingevents', db.getUpcomingEvents);
 
 app.listen(port, () => {
   console.log(`The server is running at http://localhost:${port}`)
