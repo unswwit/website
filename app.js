@@ -15,6 +15,7 @@ app.get('/', (request, response) => {
   response.json({ info: 'Node.js, Express, and Postgres API' })
 });
 
+// Get data from database 
 app.get('/execs', db.getExecs);
 app.get('/subcommittee', db.getSubcommittee);
 app.get('/marketingarchives', db.getMarketingArchives); 
