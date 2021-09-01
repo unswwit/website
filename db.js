@@ -1,5 +1,5 @@
-const config = require('../../config');
-const helper = require('../../helper');
+const config = require('./config');
+const helper = require('./helper');
 const Pool = require('pg-pool');
 const pool = new Pool(config.db);
 
