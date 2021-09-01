@@ -38,7 +38,7 @@ const getMarketingArchives = (request, response) => {
   const offset = helper.getOffset(request.query.page, config.listPerPage);
   pool.query(
     `SELECT label, date, img, category, link, year
-    FROM marketing-archives LIMIT $1 OFFSET $2`, 
+    FROM marketing_archives LIMIT $1 OFFSET $2`, 
     [config.listPerPage, offset],
     (error, results) => {
     if (error) {
