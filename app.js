@@ -19,8 +19,8 @@ app.get('/', (request, response) => {
 app.get('/execs', db.getExecs);
 app.get('/subcommittee', db.getSubcommittee);
 app.get('/marketing-archives', db.getMarketingArchives); 
-app.get('/blog-authors', db.getBlogAuthors);
-app.get('/blog-previews', db.getBlogPreviews);
+app.get('/blog/authors', db.getBlogAuthors);
+app.get('/blog/previews', db.getBlogPreviews);
 app.get('/opportunities', db.getOpportunities);
 app.get('/past-events', db.getPastEvents);
 app.get('/podcast-episodes', db.getPodcastEpisodes);
