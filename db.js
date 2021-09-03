@@ -12,7 +12,7 @@ const getExecs = (request, response) => {
     [config.listPerPage, offset],
     (error, results) => {
     if (error) {
-      console.log(error);
+      console.error('Error:', error.stack);
     }
     response.status(200).json(results.rows)
   })
@@ -27,7 +27,7 @@ const getSubcommittee = (request, response) => {
     [config.listPerPage, offset],
     (error, results) => {
     if (error) {
-      console.log(error);
+      console.error('Error:', error.stack);
     }
     response.status(200).json(results.rows)
   })
@@ -42,7 +42,7 @@ const getMarketingArchives = (request, response) => {
     [config.listPerPage, offset],
     (error, results) => {
     if (error) {
-      console.log(error);
+      console.error('Error:', error.stack);
     }
     response.status(200).json(results.rows)
   })
@@ -57,7 +57,7 @@ const getBlogAuthors = (request, response) => {
     [config.listPerPage, offset],
     (error, results) => {
     if (error) {
-      console.log(error);
+      console.error('Error:', error.stack);
     }
     response.status(200).json(results.rows)
   })
@@ -72,7 +72,7 @@ const getBlogPreviews = (request, response) => {
     [config.listPerPage, offset],
     (error, results) => {
     if (error) {
-      console.log(error);
+      console.error('Error:', error.stack);
     }
     response.status(200).json(results.rows)
   })
@@ -87,7 +87,7 @@ const getOpportunities = (request, response) => {
     [config.listPerPage, offset],
     (error, results) => {
     if (error) {
-      console.log(error);
+      console.error('Error:', error.stack);
     }
     response.status(200).json(results.rows)
   })
@@ -102,7 +102,7 @@ const getPastEvents = (request, response) => {
     [config.listPerPage, offset],
     (error, results) => {
     if (error) {
-      console.log(error);
+      console.error('Error:', error.stack);
     }
     response.status(200).json(results.rows)
   })
@@ -117,7 +117,7 @@ const getPodcastEpisodes = (request, response) => {
     [config.listPerPage, offset],
     (error, results) => {
     if (error) {
-      console.log(error);
+      console.error('Error:', error.stack);
     }
     response.status(200).json(results.rows)
   })
@@ -132,7 +132,7 @@ const getPublications = (request, response) => {
     [config.listPerPage, offset],
     (error, results) => {
     if (error) {
-      console.log(error);
+      console.error('Error:', error.stack);
     }
     response.status(200).json(results.rows)
   })
@@ -147,7 +147,7 @@ const getSponsors = (request, response) => {
     [config.listPerPage, offset],
     (error, results) => {
     if (error) {
-      console.log(error);
+      console.error('Error:', error.stack);
     }
     response.status(200).json(results.rows)
   })
@@ -162,7 +162,7 @@ const getUpcomingEvents = (request, response) => {
     [config.listPerPage, offset],
     (error, results) => {
     if (error) {
-      console.log(error);
+      console.error('Error:', error.stack);
     }
     response.status(200).json(results.rows)
   })
