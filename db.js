@@ -3,7 +3,7 @@ const helper = require('./helper');
 const Pool = require('pg-pool');
 const pool = new Pool(config.db);
 
-// Get Execs data 
+// Get all Execs data 
 const getExecs = (request, response) => {
   const offset = helper.getOffset(request.query.page, config.listPerPage);
   pool.query(
@@ -18,7 +18,7 @@ const getExecs = (request, response) => {
   })
 }
 
-// Get Subcommittee data
+// Get all Subcommittee data
 const getSubcommittee = (request, response) => {
   const offset = helper.getOffset(request.query.page, config.listPerPage);
   pool.query(
@@ -33,7 +33,7 @@ const getSubcommittee = (request, response) => {
   })
 }
 
-// Get marketing archives data
+// Get all marketing archives data
 const getMarketingArchives = (request, response) => {
   const offset = helper.getOffset(request.query.page, config.listPerPage);
   pool.query(
@@ -48,7 +48,7 @@ const getMarketingArchives = (request, response) => {
   })
 }
 
-// Get blog authors data 
+// Get all blog authors data 
 const getBlogAuthors = (request, response) => {
   const offset = helper.getOffset(request.query.page, config.listPerPage);
   pool.query(
@@ -63,7 +63,7 @@ const getBlogAuthors = (request, response) => {
   })
 }
 
-// Get blog previews data 
+// Get all blog previews data 
 const getBlogPreviews = (request, response) => {
   const offset = helper.getOffset(request.query.page, config.listPerPage);
   pool.query(
@@ -78,7 +78,7 @@ const getBlogPreviews = (request, response) => {
   })
 }
 
-// Get opportunities data 
+// Get all opportunities data 
 const getOpportunities = (request, response) => {
   const offset = helper.getOffset(request.query.page, config.listPerPage);
   pool.query(
@@ -93,7 +93,7 @@ const getOpportunities = (request, response) => {
   })
 }
 
-// Get past events data 
+// Get all past events data 
 const getPastEvents = (request, response) => {
   const offset = helper.getOffset(request.query.page, config.listPerPage);
   pool.query(
@@ -108,7 +108,7 @@ const getPastEvents = (request, response) => {
   })
 }
 
-// Get podcast episodes data
+// Get all podcast episodes data
 const getPodcastEpisodes = (request, response) => {
   const offset = helper.getOffset(request.query.page, config.listPerPage);
   pool.query(
@@ -123,7 +123,7 @@ const getPodcastEpisodes = (request, response) => {
   })
 }
 
-// Get publications data 
+// Get all publications data 
 const getPublications = (request, response) => {
   const offset = helper.getOffset(request.query.page, config.listPerPage);
   pool.query(
@@ -138,7 +138,7 @@ const getPublications = (request, response) => {
   })
 }
 
-// Get sponsors data 
+// Get all sponsors data 
 const getSponsors = (request, response) => {
   const offset = helper.getOffset(request.query.page, config.listPerPage);
   pool.query(
@@ -153,7 +153,7 @@ const getSponsors = (request, response) => {
   })
 }
 
-// Get upcoming events data 
+// Get all upcoming events data 
 const getUpcomingEvents = (request, response) => {
   const offset = helper.getOffset(request.query.page, config.listPerPage);
   pool.query(
