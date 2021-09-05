@@ -9,6 +9,9 @@
   "name": "backend",
   "description": "UNSW WIT Backend",
   "version": "1.0.0",
+  "engines": {
+    "node": "15.14.0"
+  },
   "main": "app.js",
   "devDependencies": {},
   "scripts": {
