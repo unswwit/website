@@ -15,7 +15,8 @@
   "main": "app.js",
   "devDependencies": {},
   "scripts": {
-    "dev": "npx nodemon app.js -w server"
+    "dev": "npx nodemon app.js -w server",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
