@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.12",
+    "pg": "^8.7.1",
+    "pg-pool": "^3.4.1"
+  },
+  "name": "backend",
+  "description": "UNSW WIT Backend",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "dev": "npx nodemon app.js -w server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unswwit/Backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unswwit/Backend/issues"
+  },
+  "homepage": "https://github.com/unswwit/Backend#readme"
+}
