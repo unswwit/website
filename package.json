@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.12",
@@ -13,7 +14,6 @@
     "node": "15.14.0"
   },
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "dev": "npx nodemon app.js -w server",
     "start": "node app.js"
