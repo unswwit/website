@@ -82,7 +82,7 @@ const getBlogPreviews = (request, response) => {
 const getOpportunities = (request, response) => {
   const offset = helper.getOffset(request.query.page, config.listPerPage);
   pool.query(
-    `SELECT close_date, img, type, position, location, summary, company_name, link, not_sponsor_img
+    `SELECT closeDate, img, type, position, location, summary, companyName, link, notSponsorImg
     FROM opportunities LIMIT $1 OFFSET $2`, 
     [config.listPerPage, offset],
     (error, results) => {
