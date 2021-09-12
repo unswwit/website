@@ -29,6 +29,7 @@ app.get('/podcast-episodes', db.getPodcastEpisodes);
 app.get('/publications', db.getPublications);
 app.get('/sponsors', db.getSponsors);
 app.get('/upcoming-events', db.getUpcomingEvents);
+app.get('/videos', db.getVideos);
 
 app.listen(port, () => {
   console.log(`The server is running at http://localhost:${port}`)

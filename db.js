@@ -168,6 +168,21 @@ const getUpcomingEvents = (request, response) => {
   })
 }
 
+// Get all videos data 
+const getVideos = (request, response) => {
+  const offset = helper.getOffset(request.query.page, config.listPerPage);
+  pool.query(
+    `SELECT name, date, youtube_video_id, video_number, img
+    FROM videos LIMIT $1 OFFSET $2`, 
+    [config.listPerPage, offset],
+    (error, results) => {
+    if (error) {
+      console.error('Error:', error.stack);
+    }
+    response.status(200).json(results.rows)
+  })
+}
+
 module.exports = {
   getExecs,
   getSubcommittee,
@@ -179,5 +194,6 @@ module.exports = {
   getPodcastEpisodes,
   getPublications,
   getSponsors,
-  getUpcomingEvents
+  getUpcomingEvents,
+  getVideos
 }
