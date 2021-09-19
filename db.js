@@ -97,7 +97,7 @@ const getOpportunities = (request, response) => {
 const getPastEvents = (request, response) => {
   const offset = helper.getOffset(request.query.page, config.listPerPage);
   pool.query(
-    `SELECT img, year, term, event_number, facebook_link, title, description, date_time, location, resources_folder_id, youtube_video_id, youtube_link
+    `SELECT img, year, term, event_number, facebook_link, title, description, date_time, location, resources_folder_id, youtube_video_id, image_folder, image_paths
     FROM past_events LIMIT $1 OFFSET $2`, 
     [config.listPerPage, offset],
     (error, results) => {
