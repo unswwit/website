@@ -27,7 +27,6 @@ app.get('/opportunities', db.getOpportunities);
 app.get('/past-events', db.getPastEvents);
 app.get('/podcast-episodes', db.getPodcastEpisodes);
 app.get('/publications', db.getPublications);
-app.get('/sponsors', db.getSponsors);
 app.get('/upcoming-events', db.getUpcomingEvents);
 app.get('/videos', db.getVideos);
 

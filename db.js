@@ -111,18 +111,6 @@ const getPublications = (request, response) => {
   })
 }
 
-// Get all sponsors data 
-const getSponsors = (request, response) => {
-  pool.query(
-    `SELECT * FROM sponsors`, 
-    (error, results) => {
-    if (error) {
-      console.error('Error:', error.stack);
-    }
-    response.status(200).json(results.rows)
-  })
-}
-
 // Get all upcoming events data 
 const getUpcomingEvents = (request, response) => {
   pool.query(
@@ -157,7 +145,6 @@ module.exports = {
   getPastEvents,
   getPodcastEpisodes,
   getPublications,
-  getSponsors,
   getUpcomingEvents,
   getVideos
 }
