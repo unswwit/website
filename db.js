@@ -8,7 +8,7 @@ const getExecs = (response) => {
   pool.query(
     `SELECT * FROM execs`, 
     (error, results) => {
-    if (error) {
+    if (error, request, response, next) {
       console.error('Error:', error.stack);
     }
     response.status(200).json()
