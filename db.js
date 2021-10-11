@@ -11,7 +11,7 @@ const getExecs = (response) => {
     if (error) {
       console.error('Error:', error.stack);
     }
-    response.status(200).json(results)
+    response.status(200).json()
   })
 }
 
