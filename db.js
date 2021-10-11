@@ -4,12 +4,10 @@ const Pool = require('pg-pool');
 const pool = new Pool(config.db);
 
 // Get all Execs data 
-const getExecs = (request, response) => {
-  const offset = helper.getOffset(request.query.page, config.listPerPage);
+const getExecs = (response) => {
   pool.query(
     `SELECT email, facebook, degree, linkedin, year, position, name, img, index, year_joined 
-    FROM execs LIMIT $1 OFFSET $2`, 
-    [config.listPerPage, offset],
+    FROM execs`,
     (error, results) => {
     if (error) {
       console.error('Error:', error.stack);
@@ -19,12 +17,10 @@ const getExecs = (request, response) => {
 }
 
 // Get all Subcommittee data
-const getSubcommittee = (request, response) => {
-  const offset = helper.getOffset(request.query.page, config.listPerPage);
+const getSubcommittee = (response) => {
   pool.query(
     `SELECT team, degree, name, year, year_joined
-    FROM subcommittee LIMIT $1 OFFSET $2`, 
-    [config.listPerPage, offset],
+    FROM subcommittee`, 
     (error, results) => {
     if (error) {
       console.error('Error:', error.stack);
@@ -34,12 +30,10 @@ const getSubcommittee = (request, response) => {
 }
 
 // Get all marketing archives data
-const getMarketingArchives = (request, response) => {
-  const offset = helper.getOffset(request.query.page, config.listPerPage);
+const getMarketingArchives = (response) => {
   pool.query(
     `SELECT label, date, img, category, link, year
-    FROM marketing_archives LIMIT $1 OFFSET $2`, 
-    [config.listPerPage, offset],
+    FROM marketing_archives`,
     (error, results) => {
     if (error) {
       console.error('Error:', error.stack);
@@ -49,12 +43,10 @@ const getMarketingArchives = (request, response) => {
 }
 
 // Get all blog authors data 
-const getBlogAuthors = (request, response) => {
-  const offset = helper.getOffset(request.query.page, config.listPerPage);
+const getBlogAuthors = (response) => {
   pool.query(
     `SELECT authors, name, img
-    FROM blog_authors LIMIT $1 OFFSET $2`, 
-    [config.listPerPage, offset],
+    FROM blog_authors`, 
     (error, results) => {
     if (error) {
       console.error('Error:', error.stack);
@@ -64,12 +56,10 @@ const getBlogAuthors = (request, response) => {
 }
 
 // Get all blog previews data 
-const getBlogPreviews = (request, response) => {
-  const offset = helper.getOffset(request.query.page, config.listPerPage);
+const getBlogPreviews = (response) => {
   pool.query(
     `SELECT date, img, heading, subheading, authors, blog_no, category
-    FROM blog_previews LIMIT $1 OFFSET $2`, 
-    [config.listPerPage, offset],
+    FROM blog_previews`, 
     (error, results) => {
     if (error) {
       console.error('Error:', error.stack);
@@ -79,12 +69,10 @@ const getBlogPreviews = (request, response) => {
 }
 
 // Get all opportunities data 
-const getOpportunities = (request, response) => {
-  const offset = helper.getOffset(request.query.page, config.listPerPage);
+const getOpportunities = (response) => {
   pool.query(
     `SELECT close_date, img, type, position, location, summary, company_name, link, not_sponsor_img
-    FROM opportunities LIMIT $1 OFFSET $2`, 
-    [config.listPerPage, offset],
+    FROM opportunities`, 
     (error, results) => {
     if (error) {
       console.error('Error:', error.stack);
@@ -94,12 +82,10 @@ const getOpportunities = (request, response) => {
 }
 
 // Get all past events data 
-const getPastEvents = (request, response) => {
-  const offset = helper.getOffset(request.query.page, config.listPerPage);
+const getPastEvents = (response) => {
   pool.query(
     `SELECT img, year, term, event_number, facebook_link, title, description, date_time, location, resources_folder_id, youtube_video_id, image_folder, image_paths
-    FROM past_events LIMIT $1 OFFSET $2`, 
-    [config.listPerPage, offset],
+    FROM past_events`, 
     (error, results) => {
     if (error) {
       console.error('Error:', error.stack);
@@ -109,12 +95,10 @@ const getPastEvents = (request, response) => {
 }
 
 // Get all podcast episodes data
-const getPodcastEpisodes = (request, response) => {
-  const offset = helper.getOffset(request.query.page, config.listPerPage);
+const getPodcastEpisodes = (response) => {
   pool.query(
     `SELECT date, title, episode_no, link, img, description, anchor, radio_republic, google, spotify, breaker
-    FROM podcast_episodes LIMIT $1 OFFSET $2`, 
-    [config.listPerPage, offset],
+    FROM podcast_episodes`, 
     (error, results) => {
     if (error) {
       console.error('Error:', error.stack);
@@ -124,12 +108,10 @@ const getPodcastEpisodes = (request, response) => {
 }
 
 // Get all publications data 
-const getPublications = (request, response) => {
-  const offset = helper.getOffset(request.query.page, config.listPerPage);
+const getPublications = (response) => {
   pool.query(
     `SELECT date, heading, img, url, year
-    FROM publications LIMIT $1 OFFSET $2`, 
-    [config.listPerPage, offset],
+    FROM publications`, 
     (error, results) => {
     if (error) {
       console.error('Error:', error.stack);
@@ -139,12 +121,10 @@ const getPublications = (request, response) => {
 }
 
 // Get all sponsors data 
-const getSponsors = (request, response) => {
-  const offset = helper.getOffset(request.query.page, config.listPerPage);
+const getSponsors = (response) => {
   pool.query(
     `SELECT name, description, website, img, type
-    FROM sponsors LIMIT $1 OFFSET $2`, 
-    [config.listPerPage, offset],
+    FROM sponsors`, 
     (error, results) => {
     if (error) {
       console.error('Error:', error.stack);
@@ -154,12 +134,10 @@ const getSponsors = (request, response) => {
 }
 
 // Get all upcoming events data 
-const getUpcomingEvents = (request, response) => {
-  const offset = helper.getOffset(request.query.page, config.listPerPage);
+const getUpcomingEvents = (response) => {
   pool.query(
     `SELECT img, title, date, description, start, finish, duration, register_link, facebook_link, location
-    FROM upcoming_events LIMIT $1 OFFSET $2`, 
-    [config.listPerPage, offset],
+    FROM upcoming_events`, 
     (error, results) => {
     if (error) {
       console.error('Error:', error.stack);
@@ -169,12 +147,10 @@ const getUpcomingEvents = (request, response) => {
 }
 
 // Get all videos data 
-const getVideos = (request, response) => {
-  const offset = helper.getOffset(request.query.page, config.listPerPage);
+const getVideos = (response) => {
   pool.query(
     `SELECT name, date, youtube_video_id, video_number, img
-    FROM videos LIMIT $1 OFFSET $2`, 
-    [config.listPerPage, offset],
+    FROM videos`, 
     (error, results) => {
     if (error) {
       console.error('Error:', error.stack);
