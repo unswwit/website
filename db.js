@@ -4,14 +4,14 @@ const Pool = require('pg-pool');
 const pool = new Pool(config.db);
 
 // Get all Execs data 
-const getExecs = (response) => {
+const getExecs = (request, response) => {
   pool.query(
     `SELECT * FROM execs`, 
-    (error, request, response, next) => {
+    (error, results) => {
     if (error) {
       console.error('Error:', error.stack);
     }
-    response.status(200).json()
+    response.status(200).json(results.rows)
   })
 }
 
