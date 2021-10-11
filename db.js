@@ -4,17 +4,14 @@ const Pool = require('pg-pool');
 const pool = new Pool(config.db);
 
 // Get all Execs data 
-const getExecs = (request, response) => {
-  const offset = helper.getOffset(request.query.page, config.listPerPage);
+const getExecs = (response) => {
   pool.query(
-    `SELECT email, facebook, degree, linkedin, year, position, name, img, index, year_joined 
-    FROM execs LIMIT $1 OFFSET $2`, 
-    [config.listPerPage, offset],
+    `SELECT * FROM execs`, 
     (error, results) => {
     if (error) {
       console.error('Error:', error.stack);
     }
-    response.status(200).json(results.rows)
+    response.status(200).json(results)
   })
 }
 
