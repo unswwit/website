@@ -33,3 +33,22 @@ app.get('/videos', db.getVideos);
 app.listen(port, () => {
   console.log(`The server is running at http://localhost:${port}`)
 });
+
+// verify recaptcha token obtained from frontend
+// returns JSON object with success: true/false field
+const verifyHuman = await fetch(`https://www.google.com/recaptcha/api/siteverify`, {
+  method: 'post',
+  headers: {
+    Accept: 'application/json',
+    'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'
+  },
+  // verify against formKey from frontend
+  body: `secret=${env.RECAPTCHA_SITE_KEY}&response=${args.formKey}`
+})
+.then(res => (res.json()))
+.then(json => (json.success))
+.catch(err => { throw new Error(`Error in key verification. ${err.message}`) })
+
+if (args.formKey == null) {
+  throw new Error('Error: bot.')
+}
