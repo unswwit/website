@@ -34,20 +34,20 @@ app.listen(port, () => {
   console.log(`The server is running at http://localhost:${port}`)
 });
 
-// verify recaptcha token obtained from frontend
-const verifyHuman = await fetch(`https://www.google.com/recaptcha/api/siteverify`, {
-  method: 'post',
-  headers: {
-    Accept: 'application/json',
-    'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'
-  },
-  // verify against formKey from frontend
-  body: `secret=${process.env.RECAPTCHA_SITE_KEY}&response=${args.formKey}`
-})
-.then(res => (res.json()))
-.then(json => (json.success))
-.catch(err => { throw new Error(`Error in key verification. ${err.message}`) })
 
-if (args.formKey == null || !verifyHuman) {
-  throw new Error('Error: bot.')
-}
+// verify recaptcha token obtained from frontend
+
+// extract data
+const {
+  data,
+  token
+} = req.body;
+
+const result = await axios.post(
+  `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`
+);
+
+if (result.data.success)
+  console.log('Verified');
+else
+  console.log('Verification failed.');
