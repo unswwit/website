@@ -35,7 +35,6 @@ app.listen(port, () => {
 });
 
 // verify recaptcha token obtained from frontend
-// returns JSON object with success: true/false field
 const verifyHuman = await fetch(`https://www.google.com/recaptcha/api/siteverify`, {
   method: 'post',
   headers: {
@@ -43,7 +42,7 @@ const verifyHuman = await fetch(`https://www.google.com/recaptcha/api/siteverify
     'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'
   },
   // verify against formKey from frontend
-  body: `secret=${env.RECAPTCHA_SITE_KEY}&response=${args.formKey}`
+  body: `secret=${process.env.RECAPTCHA_SITE_KEY}&response=${args.formKey}`
 })
 .then(res => (res.json()))
 .then(json => (json.success))
