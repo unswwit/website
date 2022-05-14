@@ -48,6 +48,6 @@ const verifyHuman = await fetch(`https://www.google.com/recaptcha/api/siteverify
 .then(json => (json.success))
 .catch(err => { throw new Error(`Error in key verification. ${err.message}`) })
 
-if (args.formKey == null) {
+if (args.formKey == null || !verifyHuman) {
   throw new Error('Error: bot.')
 }
