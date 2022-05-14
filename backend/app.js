@@ -1,3 +1,6 @@
+import axios from "axios";
+import { loadReCaptcha } from 'react-recaptcha-google';
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -36,15 +39,16 @@ app.listen(port, () => {
 
 
 // verify recaptcha token obtained from frontend
+loadReCaptcha();
 
 // extract data
 const {
-  formInfo,
-  token
+  fromData,
+  captchaToken
 } = req.body;
 
 const result = await axios.post(
-  `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`
+  `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${captchaToken}`
 );
 
 if (result.data.success)
