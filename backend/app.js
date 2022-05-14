@@ -39,7 +39,7 @@ app.listen(port, () => {
 
 // extract data
 const {
-  data,
+  formInfo,
   token
 } = req.body;
 
