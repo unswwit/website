@@ -43,7 +43,6 @@ loadReCaptcha();
 
 // extract data
 const {
-  fromData,
   captchaToken
 } = req.body;
 
