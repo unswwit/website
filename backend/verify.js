@@ -1,5 +1,3 @@
-// verification for recaptcha token
-
 const axios = require('axios');
 const config = require('./config');
 

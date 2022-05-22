@@ -30,7 +30,7 @@ app.get('/podcast-episodes', db.getPodcastEpisodes);
 app.get('/publications', db.getPublications);
 app.get('/upcoming-events', db.getUpcomingEvents);
 app.get('/videos', db.getVideos);
-app.post('/verify', verify.validateRecaptcha)
+app.post('/verify', verify.validateRecaptcha);
 
 app.listen(port, () => {
   console.log(`The server is running at http://localhost:${port}`)
