@@ -50,6 +50,7 @@ const useStyles = makeStyles({
       width: "100%",
       height: "initial",
     },
+    position: "relative",
   },
   date: {
     textAlign: "center",
