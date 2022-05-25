@@ -9,6 +9,7 @@ import axios from "axios";
 import humps from "humps";
 import { links } from "../../data/podcastData";
 import Image from "next/image";
+import Link from "next/link";
 
 // TO UNCOMMENT WHEN REACH > 9 PODCASTS
 // import PaginationComp from "../components/Pagination";
@@ -86,20 +87,21 @@ const Podcast = () => {
               <div id={styles.platformContainer}>
                 {Object.keys(links).map((link, index) => {
                   return (
-                    <a
-                      key={index}
-                      href={links[link][1]}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Image
-                        className={styles.platformLogos}
-                        src={`/../public/podcast-logos/${links[link][0]}`}
-                        alt={link}
-                        width="25px"
-                        height="25px"
-                      />
-                    </a>
+                    <Link href={links[link][1]}>
+                      <a
+                        key={index}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Image
+                          className={styles.platformLogos}
+                          src={`/../public/podcast-logos/${links[link][0]}`}
+                          alt={link}
+                          width="25px"
+                          height="25px"
+                        />
+                      </a>
+                    </Link>
                   );
                 })}
               </div>
