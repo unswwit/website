@@ -46,11 +46,15 @@ const useStyles = makeStyles({
     display: "flex",
     overflow: "hidden",
     verticalAlign: "top",
-    "@media (max-width:700px)": {
-      width: "100%",
-      height: "initial",
-    },
     position: "relative",
+    "@media (max-width:700px)": {
+      objectFit: "contain",
+      height: "60vw",
+    },
+    "@media (max-width:600px)": {
+      objectFit: "contain",
+      height: "88vw",
+    },
   },
   date: {
     textAlign: "center",
@@ -107,7 +111,7 @@ export default function EpisodeTemplate({
         className={[classes.click, styles.previewContainer].join(" ")}
       >
         <Link href={episode["spotify"]}>
-          <a>
+          <a className={styles.a}>
             <div className={classes.media}>
               <Image
                 alt="podcast episode cover"

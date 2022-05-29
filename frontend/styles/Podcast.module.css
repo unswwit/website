@@ -11,9 +11,6 @@
 }
 
 .podcastLogo {
-  height: 280px;
-  width: 280px;
-  object-fit: contain;
   padding-bottom: 35px;
 }
 
@@ -67,9 +64,9 @@
   background-color: none;
 }
 
-/* a:hover {
+.a:hover {
   color: #313638;
-} */
+}
 
 /*-------------------------------Podcast Episode Page-----------------------------*/
 .episodesContainer {
@@ -139,10 +136,10 @@
     color: #fff;
   }
 
-  /* a:hover {
+  .a:hover {
     color: #E85F5C;
     ;
-  } */
+  }
 
   .subHeading {
     color: white;
@@ -229,8 +226,9 @@
   }
 
   .podcastLogo {
-    height: 250px;
-    width: 250px;
+    padding-bottom: 230px;
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -254,8 +252,9 @@
   }
 
   .podcastLogo {
-    height: 210px;
-    width: 210px;
+    padding-bottom: 170px;
+    height: 150px;
+    width: 150px;
   }
 
   #heading {
@@ -274,9 +273,11 @@
   }
 
   .podcastLogo {
-    height: 180px;
-    width: 180px;
+    padding-bottom: 150px;
+    height: 130px;
+    width: 130px;
   }
+
 
   #podcastIntroduction {
     width: 90%;
@@ -322,8 +323,9 @@
   }
 
   .podcastLogo {
-    height: 200px;
-    width: 200px;
+    padding-bottom: 190px;
+    height: 170px;
+    width: 170px;
   }
 
   .platformLogos {

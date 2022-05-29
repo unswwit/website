@@ -181,34 +181,38 @@ const MarketingContent = () => {
 
               {/*Image collage*/}
               {!isMobile && !loading && (
-                <ol className={styles.grid} id={styles.content}>
-                  {currentPosts.map((content, index) => {
-                    return (
-                      <Initiative
-                        key={index}
-                        fb={content.link}
-                        imgUrl={`/initiatives/${year}/${content.img}`}
-                        alt={content.label}
-                        date={content.date}
-                      />
-                    );
-                  })}
-                </ol>
+                <div id={styles.orderedlist}>
+                  <div className={styles.grid} id={styles.content}>
+                    {currentPosts.map((content, index) => {
+                      return (
+                        <Initiative
+                          key={index}
+                          fb={content.link}
+                          imgUrl={`/initiatives/${year}/${content.img}`}
+                          alt={content.label}
+                          date={content.date}
+                        />
+                      );
+                    })}
+                  </div>
+                </div>
               )}
               {isMobile && !loading && (
-                <ol className={styles.grid} id={styles.content}>
-                  {selectedPosts.map((content, index) => {
-                    return (
-                      <Initiative
-                        key={index}
-                        fb={content.link}
-                        imgUrl={`/initiatives/${year}/${content.img}`}
-                        alt={content.label}
-                        date={content.date}
-                      />
-                    );
-                  })}
-                </ol>
+                <div id={styles.orderedlist}>
+                  <div className={styles.grid} id={styles.content}>
+                    {selectedPosts.map((content, index) => {
+                      return (
+                        <Initiative
+                          key={index}
+                          fb={content.link}
+                          imgUrl={`/initiatives/${year}/${content.img}`}
+                          alt={content.label}
+                          date={content.date}
+                        />
+                      );
+                    })}
+                  </div>
+                </div>
               )}
             </div>
             {!isMobile && (

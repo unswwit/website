@@ -24,6 +24,7 @@ const PageHeader = ({ imageLoading, imgUrl, title }) => {
           typeof imageLoading === "function" ? () => setImageLoaded(true) : null
         }
         layout={"fill"}
+        priority="True"
       />
 
       {/* text */}

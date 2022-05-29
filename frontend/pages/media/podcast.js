@@ -70,13 +70,15 @@ const Podcast = () => {
           />
           <div id={styles.podcastIntroduction}>
             <div className={styles.logoContainer}>
-              <Image
-                className={styles.podcastLogo}
-                src="/../public/podcast-logos/talk-WIT-us-logo.png"
-                alt="Talk WIT Us logo"
-                height={250}
-                width={250}
-              />
+              <div className={styles.podcastLogo}>
+                <Image
+                  src="/../public/podcast-logos/talk-WIT-us-logo.png"
+                  alt="Talk WIT Us logo"
+                  height="250px"
+                  width="250px"
+                  objectFit={"contain"}
+                />
+              </div>
             </div>
             <div id={styles.introDescription}>
               <h2 id={styles.heading}>Talk WIT Us</h2>
@@ -88,18 +90,19 @@ const Podcast = () => {
                 {Object.keys(links).map((link, index) => {
                   return (
                     <Link href={links[link][1]}>
-                      <a
-                        key={index}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Image
-                          className={styles.platformLogos}
-                          src={`/../public/podcast-logos/${links[link][0]}`}
-                          alt={link}
-                          width="25px"
-                          height="25px"
-                        />
+                      <a className={styles.platformLogos}>
+                        <a className={styles.a}
+                          key={index}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Image
+                            src={`/../public/podcast-logos/${links[link][0]}`}
+                            alt={link}
+                            width="25px"
+                            height="25px"
+                          />
+                        </a>
                       </a>
                     </Link>
                   );
