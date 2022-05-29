@@ -97,6 +97,7 @@ export default function EpisodeTemplate({
   date,
   description,
   episodeNo,
+  episode,
 }) {
   const classes = useStyles();
 
@@ -105,7 +106,7 @@ export default function EpisodeTemplate({
       <CardActionArea
         className={[classes.click, styles.previewContainer].join(" ")}
       >
-        <Link href={`/media/podcast/${episodeNo}`}>
+        <Link href={episode["spotify"]}>
           <a>
             <div className={classes.media}>
               <Image

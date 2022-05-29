@@ -129,6 +129,7 @@ const Podcast = () => {
                   cover={`podcast-covers/${episode.img}`}
                   date={episode.date}
                   description={episode.description}
+                  episode={episode}
                 />
               );
             })}
