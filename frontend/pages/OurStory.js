@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import PageHeader from "../components/header";
-import ".././style.css";
-import styles from "./OurStory.module.css";
-import Timeline from "./OurStoryTimeline.js";
-import LoadingScreen from "../components/LoadingScreen";
+import PageHeader from "../../components/header";
+import "../../styles/style.css";
+import styles from "../../styles/OurStory.module.css";
+import Timeline from "../../components/OurStoryTimeline.js";
+import LoadingScreen from "../../components/LoadingScreen";
 
 // Start at the top of the page
 const OurStory = () => {
