@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PageHeader from "../../components/Header";
+import Chip from "@material-ui/core/Chip";
 import styles from "../../styles/Podcast.module.css";
 import EpisodeTemplate from "../../components/EpisodeTemplate";
 import CircularProgress from "@mui/material/CircularProgress";
@@ -7,7 +8,7 @@ import ScrollUpBtn from "../../components/ScrollUpBtn";
 import LoadingScreen from "../../components/LoadingScreen";
 import axios from "axios";
 import humps from "humps";
-import { links } from "../../data/podcastData";
+import { useStyles, links, categories } from "../../data/podcastData";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,14 +16,26 @@ import Link from "next/link";
 // import PaginationComp from "../components/Pagination";
 
 const Podcast = () => {
-  // const [episodes, setEpisodes] = useState([]);
+  const classes = useStyles();
   const [loading, setLoading] = useState(true);
   const [sourceLoading, setSourceLoading] = useState(true);
   const [headerLoading, setHeaderLoading] = useState(true);
+  // all podcast episodes
+  const [content, setContent] = useState([]);
+  // currently selected category -> default to "All"
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  // check if search + category filters result in no results
+  const [emptyCategory, setEmptyCategory] = useState(false);
+  // search term (user input) for podcast search bar
+  const [searchTerm, setSearchTerm] = useState("");
+  // all the posts of the selected filter category
+  const [selectedPosts, setSelectedPosts] = useState([]);
+
+  // FOR PAGINATION
+  // the posts displayed on the current page
+  // const [currentPosts, setCurrentPosts] = useState([]);
   // set how many posts to view per page
   // const postsPerPage = 9;
-  // the posts displayed on the current page
-  const [currentPosts, setCurrentPosts] = useState([]);
 
   // get podcasts
   // input: podcasts data from google sheets
@@ -33,8 +46,9 @@ const Podcast = () => {
     );
     const unsorted = humps.camelizeKeys(res.data);
     const sortedEpisodes = unsorted.reverse();
-    // setEpisodes(sortedEpisodes);
-    setCurrentPosts(sortedEpisodes);
+    setContent(sortedEpisodes);
+    // setCurrentPosts(sortedEpisodes);
+    setSelectedPosts(sortedEpisodes);
     setLoading(false);
     setSourceLoading(false);
   };
@@ -50,7 +64,45 @@ const Podcast = () => {
     );
   }, []);
 
-  
+  useEffect(() => {
+    // if no posts, setEmptyCategory to true
+    if (selectedPosts.length === 0 && loading === false) {
+      setEmptyCategory(true);
+      console.error = () => {};
+    } else {
+      setEmptyCategory(false);
+    }
+  }, [selectedPosts, loading]);
+
+  // filter content by selected category + searchTerm
+  const filterContent = (selectedCategory, searchTerm) => {
+    const filteredContent = content.filter(
+      (picture) =>
+        selectedCategory === "All" ||
+        picture.category.split(",").includes(selectedCategory)
+    );
+    searchPodcasts(filteredContent, searchTerm);
+  };
+
+  // filter category content by search filter in heading, subheading or author
+  const searchPodcasts = (filteredContent, searchTerm) => {
+    const searchResults = filteredContent.filter((episode) => {
+      if (
+        searchTerm === "" ||
+        episode.date.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        episode.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        episode.description.toLowerCase().includes(searchTerm.toLowerCase())
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+    // only required for pagination
+    // setCurrentPosts(searchResults);
+    setSelectedPosts(searchResults);
+  };
+
   // called when pagination item clicked to slice the correct amount of posts for viewing
   // const paginate = (pageNumber) => {
   //   setCurrentPosts(episodes.slice((pageNumber - 1) * postsPerPage, pageNumber * postsPerPage));
@@ -86,6 +138,18 @@ const Podcast = () => {
                 Join us each month as we talk all about tech, uni, and life,
                 featuring our wonderful WIT team and some special guests!
               </p>
+
+              <div id={styles.contentLoadingContainer}>
+                {loading && (
+                  <CircularProgress
+                    variant="indeterminate"
+                    size={50}
+                    thickness={5}
+                    id={styles.contentLoading}
+                  />
+                )}
+              </div>
+
               <div id={styles.platformContainer}>
                 {Object.keys(links).map((link, index) => {
                   return (
@@ -111,6 +175,55 @@ const Podcast = () => {
             </div>
           </div>
 
+          <div className={styles.podcastCategories}>
+            {/* Start of categories */}
+            <div className={styles.contentCategories}>
+              {Object.keys(categories)
+                .sort()
+                .map((category) => {
+                  const chipColour =
+                    selectedCategory === categories[category]
+                      ? "#e85f5c"
+                      : "#7F7F7F";
+                  return (
+                    <Chip
+                      key={category}
+                      size="medium"
+                      label={category}
+                      className={classes.chip}
+                      style={{
+                        backgroundColor: chipColour,
+                      }}
+                      onClick={() => {
+                        setSelectedCategory(categories[category]);
+                        filterContent(categories[category], searchTerm);
+                      }}
+                    />
+                  );
+                })}
+            </div>
+          </div>
+          {/* End of blog categories */}
+
+          {/* Start of search bar */}
+          <div className={styles.searchBar}>
+            <input
+              className={styles.inputSearchBar}
+              type="text"
+              placeholder="Search podcasts"
+              onChange={(event) => {
+                setSearchTerm(event.target.value);
+                filterContent(selectedCategory, event.target.value);
+              }}
+            />
+          </div>
+          {/* End of search bar */}
+          <div>
+            {emptyCategory === true && (
+              <p id={styles.emptyMessage}>No results were found.</p>
+            )}
+          </div>
+
           <div id={styles.podcastLoadingContainer}>
             {loading && (
               <CircularProgress
@@ -123,7 +236,7 @@ const Podcast = () => {
           </div>
 
           <div id={styles.episodes}>
-            {currentPosts.map((episode, index) => {
+            {selectedPosts.map((episode, index) => {
               return (
                 <EpisodeTemplate
                   key={index}

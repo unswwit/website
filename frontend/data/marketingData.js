@@ -10,11 +10,11 @@ const useStyles = makeStyles({
 
 const categories = {
   All: "All",
-  Mascot: "mascot",
-  Memes: "memes",
-  "Monday Motivation": "monday",
-  "WIT Crush Wednesday": "wcw",
-  "Special Occasions": "special",
+  Mascot: "Mascot",
+  Memes: "Memes",
+  "Monday Motivation": "Monday",
+  "WIT Crush Wednesday": "WCW",
+  "Special Occasions": "Special",
 };
 
 // position of the marks on the timeline (i.e. 100 indicates that it's on the right end)
@@ -39,7 +39,7 @@ const marks = [
 const valueToYear = {
   0: "2020",
   50: "2021",
-  100: "2022"
+  100: "2022",
 };
 
 export { useStyles, categories, marks, valueToYear };

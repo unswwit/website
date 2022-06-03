@@ -39,7 +39,7 @@ const MarketingContent = () => {
   // set the year for the events timeline
   const handleYear = (newYear) => {
     setYear(newYear);
-    setCurrentPage(1);
+    setCurrentPage("All");
   };
 
   // scroll to top on load

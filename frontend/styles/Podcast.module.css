@@ -1,6 +1,6 @@
 /*-------------------------------Podcast Previews-----------------------------*/
 .logoContainer {
-  background-color: #fff7ef;
+  background-color: var(--light-yellow);
   border-radius: 50%;
   height: 280px;
   width: 280px;
@@ -29,6 +29,17 @@
 
 #introDescription h2 {
   text-align: left;
+}
+
+.podcastCategories {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#emptyMessage {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 #episodes {
@@ -65,7 +76,39 @@
 }
 
 .a:hover {
-  color: #313638;
+  color: var(--black);
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.inputSearchBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px transparent;
+  border-left: 1px transparent;
+  border-right: 1px transparent;
+  border-bottom: 2px solid black;
+  width: 75%;
+  font-family: "Montserrat", sans-serif;
+  background: url("/icons/search_icon.png") center left no-repeat;
+  background-position-x: 0.5%;
+  background-size: auto 85%;
+  padding: 0.5%;
+  height: 32px;
+  padding-left: 3%;
+}
+
+#emptyMessage {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 /*-------------------------------Podcast Episode Page-----------------------------*/
@@ -88,7 +131,7 @@
 .subHeading {
   font-weight: 500;
   font-size: 30px;
-  color: #676767;
+  color: var(--grey);
   margin: 30px 0 0 0;
 }
 
@@ -131,25 +174,36 @@
 }
 
 /* Dark mode */
-@media (prefers-color-scheme:dark) {
+@media (prefers-color-scheme: dark) {
   #introDescription p {
-    color: #fff;
+    color: var(--white);
   }
 
   .a:hover {
-    color: #E85F5C;
-    ;
+    color: var(--red);
   }
 
   .subHeading {
-    color: white;
+    color: var(--white);
   }
   
   #episodeDate {
-    color: white;
+    color: var(--white);
   }
 
   #overview {
+    color: var(--white);
+  }
+
+  .inputSearchBar {
+    color: white;
+    border-color: white;
+    background: url("/icons/dark-search_icon.png") center left no-repeat;
+    background-position-x: 0.5%;
+    background-size: auto 85%;
+  }
+  
+  #emptyMessage {
     color: white;
   }
 }
@@ -171,11 +225,20 @@
   .shareButtons {
     text-align: center;
   }
+
+  .inputSearchBar {
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
   #episodes {
     grid-template-columns: repeat(auto-fill, minmax(320px, 350px));
+  }
+
+  .inputSearchBar {
+    width: 75%;
+    padding-left: 4%;
   }
 }
 
@@ -184,6 +247,11 @@
     width: 100%;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  .inputSearchBar {
+    width: 80%;
+    padding-left: 4%;
   }
 }
 
@@ -230,6 +298,11 @@
     width: 200px;
     height: 200px;
   }
+
+  .inputSearchBar {
+    width: 85%;
+    padding-left: 5%;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -264,6 +337,11 @@
   #introDescription {
     width: 55%;
   }
+
+  .inputSearchBar {
+    width: 70%;
+    padding-left: 5%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -289,6 +367,11 @@
 
   #episodes {
     width: 95%;
+  }
+
+  .inputSearchBar {
+    width: 85%;
+    padding-left: 5%;
   }
 }
 
@@ -333,6 +416,10 @@
     width: 35px;
     height: 35px;
   }
+
+  .inputSearchBar {
+    padding-left: 7%;
+  }
 }
 
 @media only screen and (max-width: 450px) {
@@ -355,10 +442,18 @@
   #overview {
     text-align: justify;
   }
+
+  .inputSearchBar {
+    padding-left: 7%;
+  }
 }
 
 @media only screen and (max-width: 350px) {
   #episodeContainer {
     padding: 25px 0px;
+  }
+
+  .inputSearchBar {
+    padding-left: 7%;
   }
 }
