@@ -8,7 +8,7 @@ const Footer = () => {
     Home: "/",
     Events: "/events",
     Opportunities: "/opportunities",
-    "Join Us": "/join-us",
+    "Join Us": "/joinUs",
     "Our Story": "/about/our-story",
     "Sponsors and Affiliations": "/about/sponsors-affiliations",
     "Our Team": "/about/our-team",
