@@ -61,6 +61,8 @@ h2 {
   text-align: center;
 }
 
+
+
 p {
   font-family: "Montserrat", sans-serif;
   font-size: 10pt;
@@ -151,6 +153,62 @@ p {
 @media only screen and (max-width: 318px) {
   .coverPhoto {
     position: relative;
+  }
+}
+
+/*----------------------------------Loading Screen------------------------------------*/
+#loadingBackground {
+  background: var(--light-yellow);
+  height: 100vh;
+  z-index: 100;
+  position: absolute;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#loadingBackground p {
+  overflow: hidden;
+  font-size: 18pt;
+  animation: typing 2.5s steps(34, end);
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 10em;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  #loadingBackground {
+    background: #323235;
+  }
+
+  #loadingBackground p {
+    color: #fff; 
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #loadingBackground {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #loadingWillow {
+    height: 280px;
+    width: 280px;
   }
 }
 
