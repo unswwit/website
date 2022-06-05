@@ -33,7 +33,28 @@ a {
   box-sizing: border-box;
 }
 
-/* Footer */
+
+/*----------------------------------General------------------------------------*/
+h1 {
+  color: var(--yellow);
+  font-family: "Playfair Display", serif;
+  font-size: 48pt;
+}
+
+h2 {
+  color:var(--yellow);
+  font-family: "Montserrat", sans-serif;
+  font-size: 30pt;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10pt;
+  margin-top: 0;
+}
 
 /*----------------------------------Footer------------------------------------*/
 /* WIT logo */
