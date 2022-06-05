@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../styles/style.css";
+import Image from "next/image";
 
 const PageHeader = ({ imageLoading, imgUrl, title }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -16,7 +16,7 @@ const PageHeader = ({ imageLoading, imgUrl, title }) => {
       <div className="dark" />
 
       {/* header image */}
-      <img
+      <Image
         src={process.env.PUBLIC_URL + imgUrl}
         alt="header"
         className="cover_image"

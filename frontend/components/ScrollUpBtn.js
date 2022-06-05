@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
-import styles from "./ScrollUpBtn.module.css";
+import styles from "../styles/ScrollUpBtn.module.css";
 
 export default function ScrollUpBtn() {
   const [isVisible, setIsVisible] = useState(false);

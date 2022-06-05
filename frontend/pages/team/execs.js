@@ -1,6 +1,6 @@
 import React from "react";
-import "../../styles/style.css";
 import styles from "../../styles/team.module.css";
+import Image from "next/image";
 
 const Execs = (props) => {
   const socials = {
@@ -15,7 +15,7 @@ const Execs = (props) => {
         <div>
           {props.imgUrl && (
             <div className={styles.profileCrop}>
-              <img
+              <Image
                 src={process.env.PUBLIC_URL + props.imgUrl}
                 className={`${styles.profileImg} ${styles[props.className]}`}
                 alt={props.name}
@@ -41,7 +41,7 @@ const Execs = (props) => {
                       rel="noopener noreferrer"
                       key={social}
                     >
-                      <img
+                      <Image
                         className={styles.icon}
                         src={`${process.env.PUBLIC_URL}/icons/${social}.png`}
                         alt={social}

@@ -1,6 +1,5 @@
-//All necessary imports for this javascript
+// All necessary imports for this javascript
 import React, { Component } from "react";
-import "../../styles/style.css";
 import styles from "../../styles/team.module.css";
 
 class SubCom extends Component {
