@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../../styles/sponsors.module.css";
+import styles from "../styles/sponsors.module.css";
 
 //getting the Nakatomi Description
 const nakatomiDescription = () => {
