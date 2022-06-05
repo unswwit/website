@@ -1,0 +1,247 @@
+/* ---------------------------Sponsor page header-----------------------------*/
+/*Subheading "Thank you message" & contact*/
+p.subheader {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12pt;
+  color: var(--general-text);
+  text-align: center;
+  margin-top: 50px;
+}
+
+/*----------------------------Sponsor page sponsors---------------------------*/
+/*Sponsor tier names*/
+h2.subsponsor {
+  font-family: "Montserrat", sans-serif;
+  font-size: 33pt;
+  text-transform: uppercase;
+  margin-top: 100px;
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+/*Sponsor logos*/
+#majorContainer {
+  margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#majorContainer img {
+  transition: transform 0.5s ease;
+}
+
+#majorContainer img:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.09);
+}
+
+/*Sponsor contact*/
+a.subheader {
+  font-family: "Montserrat", sans-serif;
+  color: var(--general-text);
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+#sponsorsBody {
+  max-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 10%;
+  margin-top: 5%;
+}
+
+.logo{
+  width: 100%;
+  width: 220px;
+  max-height: 160px;
+  padding: 15px;
+  object-fit: contain;
+}
+
+/*--- Dark mode ---*/
+@media (prefers-color-scheme:dark) {
+  p.subheader {
+    color: white;
+  }
+
+  a.subheader {
+    color: white;
+  }
+}
+
+/*--- Mobile responsiveness ---*/
+@media only screen and (max-width: 950px) {
+  .logo {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 715px) {
+  .logo {
+    max-width: 220px;
+    max-height: 160px;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  #sponsorsBody {
+    max-width: 85%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h2.subsponsor {
+    font-size: 20pt;
+  }
+
+  p.subheader {
+    font-size: 13pt;
+  }
+
+  a.subheader {
+    font-size: 11pt;
+  }
+}
+
+/*----------------------------Sponsor page modal---------------------------*/
+
+.sponsorType {
+  color: var(--yellow);
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  text-align: left;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.sponsorDescription {
+  color: #313638;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12pt;
+  margin-top: 2%;
+  text-align: justify;
+  margin-bottom: 100px;
+}
+
+.paper {
+  background-color: white;
+  border-radius: 2;
+  padding: 1vw 2vw 2vw 2vw;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  padding-bottom: 50px;
+  max-height: 80%;
+  overflow-y: scroll;
+}
+
+.sponsorImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 120px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.link,
+.sponsorLink, 
+.link:hover, 
+.sponsorLink:hover  {
+  text-decoration: underline;
+  color: var(--red);
+}
+
+.link:visited, .sponsorLink:visited {
+  color: var(--dark-red);
+}
+
+.sponsorLink {
+  display: inline;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12pt;
+  margin: 0;
+  margin-bottom: 0px;
+  text-align: justify;
+}
+
+.sponsorWebsite {
+  color: #313638;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+  margin-right: 1%;
+  margin-bottom: 0px;
+  text-align: justify;
+  display: inline-block;
+}
+
+.inLine p {
+  display: inline-block;
+}
+
+.modalContainer {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textBlock {
+  padding: 3rem;
+  overflow-wrap: break-word;
+}
+
+.closeBtn {
+  float: right;
+  overflow: hidden;
+  position: fixed;
+}
+
+.closeSymbol {
+  color: #313638;
+  text-align: right;
+}
+
+/*--- Dark mode ---*/
+@media (prefers-color-scheme:dark) {
+  .sponsorDescription {
+    color: white;
+  }
+
+  .paper {
+    background-color:var(--dark-grey);
+  }
+
+  .closeSymbol {
+    color: white;
+  }
+
+  .sponsorWebsite {
+    color: white;
+  }
+}
+
+/*--- Mobile responsiveness ---*/ 
+@media only screen and (max-width: 400px) {
+  .sponsorImage {
+    max-width: 200px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .sponsorImage {
+    max-width: 220px;
+  }
+}
