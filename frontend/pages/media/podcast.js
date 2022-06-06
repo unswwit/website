@@ -124,7 +124,7 @@ const Podcast = () => {
             <div className={styles.logoContainer}>
               <div className={styles.podcastLogo}>
                 <Image
-                  src="/../public/podcast-logos/talk-WIT-us-logo.png"
+                  src="/podcast-logos/talk-WIT-us-logo.png"
                   alt="Talk WIT Us logo"
                   height="250px"
                   width="250px"
@@ -161,7 +161,7 @@ const Podcast = () => {
                           rel="noopener noreferrer"
                         >
                           <Image
-                            src={`/../public/podcast-logos/${links[link][0]}`}
+                            src={`/podcast-logos/${links[link][0]}`}
                             alt={link}
                             width="25px"
                             height="25px"

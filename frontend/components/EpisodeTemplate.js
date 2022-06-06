@@ -115,7 +115,7 @@ export default function EpisodeTemplate({
             <div className={classes.media}>
               <Image
                 alt="podcast episode cover"
-                src={"/../public/" + cover}
+                src={"/" + cover}
                 className={styles.episodeCover}
                 layout={"fill"}
                 objectFit={"contain"}

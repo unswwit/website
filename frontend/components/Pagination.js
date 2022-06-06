@@ -9,7 +9,6 @@ const useStyles = makeStyles((theme) => ({
     padding: "2px 2px",
     display: "flex",
     justifyContent: "center",
-    fontFamily: "Montserrat, sans-serif",
     "& .MuiPaginationItem-root": {
       fontFamily: "Montserrat, sans-serif",
     },

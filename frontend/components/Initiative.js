@@ -14,7 +14,7 @@ class Initiative extends Component {
             rel="noopener noreferrer"
           >
             <Image
-              src={"/../public" + this.props.imgUrl}
+              src={this.props.imgUrl}
               alt={this.props.alt}
               layout={"fill"}
             />
