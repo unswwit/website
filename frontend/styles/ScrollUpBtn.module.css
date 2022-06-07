@@ -1,0 +1,67 @@
+@import "../style.css";
+
+/*----------------------------------Scroll Up Button Container------------------------------------*/
+.scrollUp {
+  background-color: var(--red);
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 6em;
+  right: -50px;
+  border-radius: 100%;
+  border: none;
+  color: white;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+/*----------------------------------Scroll Up Button Animations------------------------------------*/
+.showBtn {
+  -webkit-animation: showSlide 0.5s forwards;
+  animation: showSlide 0.5s forwards;
+}
+
+.hideBtn {
+  -webkit-animation: hideSlide 1s forwards;
+  animation: hideSlide 1s forwards;
+}
+
+@media (hover: hover) {
+  .scrollUp:hover {
+    background-color: var(--dark-red);
+  }
+}
+
+@-webkit-keyframes showSlide {
+  100% {
+    right: 1.9em;
+  }
+}
+
+@keyframes showSlide {
+  100% {
+    right: 1.9em;
+  }
+}
+
+@-webkit-keyframes hideSlide {
+  100% {
+    right: -80px;
+  }
+}
+
+@keyframes hideSlide {
+  100% {
+    right: -80px;
+  }
+}
+
+/*----------------------------------Mobile responsiveness------------------------------------*/
+@media only screen and (max-width: 450px) {
+  .scrollUp {
+    bottom: 6em;
+  }
+}
