@@ -2,18 +2,18 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CountUp from "react-countup";
 import styles from "../../styles/home.module.css";
-import PubArticle from "../../components/publications-article";
-import InitiativesSlideshow from "../../components/InitiativesSlideshow.js";
+import PubArticle from "../components/publications-article";
+import InitiativesSlideshow from "../components/InitiativesSlideshow.js";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Aos from "aos";
 import { isMobile } from "react-device-detect";
 import "aos/dist/aos.css";
-import LoadingScreen from "../../components/LoadingScreen";
-import NewsletterSection from "../../components/NewsletterSection";
+import LoadingScreen from "../components/LoadingScreen";
+import NewsletterSection from "../components/NewsletterSection";
 import axios from "axios";
 import humps from "humps";
-import QuoteSlideshow from "../../components/QuotesSlideshow.js";
-import executives from "../../data/ExecQuotes";
+import QuoteSlideshow from "../components/QuotesSlideshow.js";
+import executives from "../data/ExecQuotes";
 
 const Home = () => {
   const [open, setOpen] = React.useState(false);
