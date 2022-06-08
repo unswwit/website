@@ -13,8 +13,8 @@ const NotFound = () => {
         id={styles.image404}
         src={`/404.png`}
         alt="404"
-        width="350px"
-        height="350px"
+        width="375px"
+        height="375px"
       />
       <h2>Page Not Found</h2>
       <p>Oops! We can't seem to find the page you are looking for.</p>
