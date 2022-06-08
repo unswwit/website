@@ -7,7 +7,7 @@ import styles from "../styles/Footer.module.css";
 
 const Footer = () => {
   const routes = {
-    Home: "/",
+    Home: "/home",
     Events: "/events",
     Opportunities: "/opportunities",
     "Join Us": "/join-us",
@@ -59,22 +59,28 @@ const Footer = () => {
 
   return (
     <div>
-<<<<<<< HEAD
       <footer>
         <ul className="footer-all">
           <div className="grid-footer-container">
             <li className="col-width footer-item footer-logo">
               {/* TODO: change to next/image */}
-              <img
-                src="/logo-black.png"
-                className="footer-logo-black"
-                alt="wit logo"
-              />
-              <img
-                src="/logo-white.png"
-                className="footer-logo-white"
-                alt="wit logo"
-              />
+              <div className={styles.footerLogoWhite}>
+                <Image
+                  src="/logo-white.png"
+                  alt="wit logo"
+                  width={45}
+                  height={40}
+                />
+              </div>
+              <div className={styles.footerLogoBlack}>
+                <Image
+                  src="/logo-black.png"
+                  className="footer-logo-black"
+                  alt="wit logo"
+                  width={45}
+                  height={40}
+                />
+              </div>
             </li>
             {links.map((col, index) => {
               return (
@@ -90,52 +96,6 @@ const Footer = () => {
                       </li>
                     );
                   })}
-=======
-        <footer>
-          <ul className="footer-all">
-            <div className="grid-footer-container">
-              <li className="col-width footer-item footer-logo">
-                {/* TODO: change to next/image */}
-                <div className={styles.footerLogoWhite}>
-                    <Image
-                    src="/logo-white.png"
-                    alt="wit logo"
-                    width={45}
-                    height={40}
-                    />
-                </div>
-                <div className={styles.footerLogoBlack}>
-                  <Image
-                    src="/logo-black.png"
-                    className="footer-logo-black"
-                    alt="wit logo"
-                    width={45}
-                    height={40}
-                  />
-                </div>
-              </li>
-              {links.map((col, index) => {
-                return (
-                  <div key={col} className="col-width footer-links">
-                    <li className="footer-item footer-header"> {headings[index]} </li>
-                    {col.map((route) => {
-                      return (
-                        <li className="footer-item" key={route}>
-                          <Link
-                            href={routes[route] || "/"}
-                          >
-                            {route}
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </div>
-                );
-              })}
-              <div className="col-width socials">
-                <div className="socials-subheading">
-                  <li className="footer-item footer-header"> FOLLOW OUR SOCIALS </li>
->>>>>>> feat/nextjs
                 </div>
               );
             })}
@@ -152,25 +112,25 @@ const Footer = () => {
                     return (
                       <span key={social} className="footer-icons">
                         <BootstrapTooltip
-                            key={social}
-                            title={
-                              <>
-                                <div className="tooltipTitle">{social}</div>
-                              </>
-                            }
-                          >
-                        <a
-                          href={socials[social][0]}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          key={social}
+                          title={
+                            <>
+                              <div className="tooltipTitle">{social}</div>
+                            </>
+                          }
                         >
+                          <a
+                            href={socials[social][0]}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <Image
                               src={`/icons/${social}.png`}
                               alt={social}
                               width="40px"
                               height="40px"
                             />
-                        </a>
+                          </a>
                         </BootstrapTooltip>
                       </span>
                     );

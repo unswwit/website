@@ -1,14 +1,14 @@
-import {
+/*import {
   CarouselProvider,
   Slider,
   Slide,
   ButtonBack,
   ButtonNext,
-} from "pure-react-carousel";
+} from "pure-react-carousel";*/
 import React, { useEffect, useState } from "react";
-import "pure-react-carousel/dist/react-carousel.es.css";
-import styles from "./home.module.css";
-import { Link } from "react-router-dom";
+//import "pure-react-carousel/dist/react-carousel.es.css";
+import styles from "../styles/home.module.css";
+//import { Link } from "react-router-dom";
 import axios from "axios";
 import humps from "humps";
 
@@ -180,7 +180,7 @@ const InitiativesSlideshow = () => {
                       alt="What are you REALLY Procrastinating?"
                     />
                   </a> */}
-                  
+
                   <a
                     href={`https://unswwit.com/#/media/blog/${latestBlog.blogNo}`}
                     target="_blank"
