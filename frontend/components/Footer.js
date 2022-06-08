@@ -2,6 +2,8 @@ import React from "react";
 import Link from "next/link";
 import { BootstrapTooltip } from "./BootstrapTooltip";
 import Image from "next/image";
+import { StylesContext } from "@material-ui/styles";
+import styles from "../styles/Footer.module.css";
 
 const Footer = () => {
   const routes = {
@@ -62,16 +64,23 @@ const Footer = () => {
             <div className="grid-footer-container">
               <li className="col-width footer-item footer-logo">
                 {/* TODO: change to next/image */}
-                <img
-                  src="/logo-black.png"
-                  className="footer-logo-black"
-                  alt="wit logo"
-                />
-                <img
-                  src="/logo-white.png"
-                  className="footer-logo-white"
-                  alt="wit logo"
-                />
+                <div className={styles.footerLogoWhite}>
+                    <Image
+                    src="/logo-white.png"
+                    alt="wit logo"
+                    width={45}
+                    height={40}
+                    />
+                </div>
+                <div className={styles.footerLogoBlack}>
+                  <Image
+                    src="/logo-black.png"
+                    className="footer-logo-black"
+                    alt="wit logo"
+                    width={45}
+                    height={40}
+                  />
+                </div>
               </li>
               {links.map((col, index) => {
                 return (

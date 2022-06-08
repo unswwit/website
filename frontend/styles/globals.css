@@ -164,24 +164,7 @@ a {
 }
 
 /*---Dark mode version of footer---*/
-.footer-logo-black {
-  display:block;
-  width: 50px;
-}
-
-.footer-logo-white {
-  display:none;
-}
-
 @media (prefers-color-scheme: dark) {
-  .footer-logo-black {
-    display: none;
-  }
-
-  .footer-logo-white {
-    display: block;
-    width: 50px;
-  }
 
   footer {
     color: var(--white);
