@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { BootstrapTooltip } from "./BootstrapToolTip";
+import { BootstrapTooltip } from "./BootstrapTooltip";
 import Image from "next/image";
 
 const Footer = () => {
