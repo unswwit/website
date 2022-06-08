@@ -1,4 +1,3 @@
-@import "../style.css";
 
 /*--- Timeline card ---*/
 .timelineCard:hover {
@@ -82,10 +81,10 @@
     font-size: 11pt;
   }
 
-  li {
+ /* li {
     font-size: 11pt;
-  }
-}
+  }*/
+} 
 
 /*--- Our Story tablet version ---*/
 @media only screen and (max-width: 1000px) {
@@ -100,9 +99,9 @@
     font-size: 10pt;
   }
 
-  li {
+  /*li {
     font-size: 10pt;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 500px) {

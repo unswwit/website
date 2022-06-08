@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "../styles/style.css";
 import Image from "next/image";
 
 const PageHeader = ({ imageLoading, imgUrl, title }) => {

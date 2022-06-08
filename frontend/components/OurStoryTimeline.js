@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "../styles/OurStoryTimeline.module.css";
 import Timeline from "../components/Timeline";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import { marks, valueToYear, timelinePhoto } from "./data/ourStoryData";
+import { marks, valueToYear, timelinePhoto } from "../data/ourStoryData";
 
 export default function OppositeContentTimeline() {
   const [year, setYear] = useState(valueToYear[250]);

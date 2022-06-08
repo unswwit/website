@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import PageHeader from "../../components/header.js";
-import "../../styles/style.css";
 import styles from "../../styles/OurStory.module.css";
 import Timeline from "../../components/OurStoryTimeline.js";
 import LoadingScreen from "../../components/LoadingScreen";

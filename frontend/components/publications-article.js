@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ".././style.css";
 import styles from "./publications.module.css";
 
 class PubArticle extends Component {
