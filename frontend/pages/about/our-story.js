@@ -3,6 +3,7 @@ import PageHeader from "../../components/header.js";
 import styles from "../../styles/OurStory.module.css";
 import Timeline from "../../components/OurStoryTimeline.js";
 import LoadingScreen from "../../components/LoadingScreen";
+import Image from "next/image";
 
 // Start at the top of the page
 const OurStory = () => {
@@ -42,10 +43,7 @@ const OurStory = () => {
             </h2>
             <div className={styles.ourMissionSection}>
               <div className={styles.ourMissionImg}>
-                <img
-                  src={process.env.PUBLIC_URL + "/our-story/our-mission.jpg"}
-                  alt="WIT members"
-                />
+                <Image src="/our-story/our-mission.jpg" alt="WIT members" />
               </div>
               <div className={styles.ourStory}>
                 <p className={styles.ourMissionContent}>
