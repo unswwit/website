@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import BootstrapTooltip from "../components/BootstrapToolTip";
+import { BootstrapTooltip } from "./BootstrapToolTip";
 import Image from "next/image";
 
 const Footer = () => {
@@ -100,12 +100,7 @@ const Footer = () => {
                   {Object.keys(socials).map((social) => {
                     return (
                       <span key={social} className="footer-icons">
-                        <a
-                          href={socials[social][0]}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <BootstrapTooltip
+                        <BootstrapTooltip
                             key={social}
                             title={
                               <>
@@ -113,14 +108,19 @@ const Footer = () => {
                               </>
                             }
                           >
+                        <a
+                          href={socials[social][0]}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                             <Image
                               src={`/icons/${social}.png`}
                               alt={social}
                               width="40px"
                               height= "40px"
                             />
-                          </BootstrapTooltip>
                         </a>
+                        </BootstrapTooltip>
                       </span>
                     );
                   })}
