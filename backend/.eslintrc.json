@@ -1,12 +1,12 @@
 {
 	"env": {
-		"browser": true,
-		"es2021": true
+		"commonjs": true,
+		"es2021": true,
+		"node": true
 	},
 	"extends": "eslint:recommended",
 	"parserOptions": {
-		"ecmaVersion": "latest",
-		"sourceType": "module"
+		"ecmaVersion": "latest"
 	},
 	"rules": {
 		"max-lines-per-function": ["error", 20],
