@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "../../styles/publications.module.css";
 import PubArticle from "../../components/publications-article";
 import PageHeader from "../../components/Header";
-import CircularProgress from "@mui/material/CircularProgress";
+import CircularProgress from "@material-ui/core/CircularProgress";
 import axios from "axios";
 import LoadingScreen from "../../components/LoadingScreen";
 

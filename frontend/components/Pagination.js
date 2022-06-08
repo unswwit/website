@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Pagination from "@mui/material/Pagination";
-import PaginationItem from "@mui/material/PaginationItem";
+import Pagination from "@material-ui/lab/Pagination";
+import PaginationItem from "@material-ui/lab/PaginationItem";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   pagItem: {
-    backgroundColor: "transparent",
     color: "#676767",
     "&:hover:not(.selected)": {
       backgroundColor: "#feb14b",

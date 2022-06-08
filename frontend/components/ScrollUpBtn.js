@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import styles from "../styles/ScrollUpBtn.module.css";
 
 export default function ScrollUpBtn() {

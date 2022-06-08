@@ -3,7 +3,7 @@ import styles from "../../styles/Marketing.module.css";
 import PageHeader from "../../components/Header";
 import Chip from "@material-ui/core/Chip";
 import Initiative from "../../components/Initiative";
-import CircularProgress from "@mui/material/CircularProgress";
+import CircularProgress from "@material-ui/core/CircularProgress";
 import Timeline from "../../components/Timeline";
 import PaginationComp from "../../components/Pagination";
 import LoadingScreen from "../../components/LoadingScreen";

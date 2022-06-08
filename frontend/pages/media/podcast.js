@@ -3,7 +3,7 @@ import PageHeader from "../../components/Header";
 import Chip from "@material-ui/core/Chip";
 import styles from "../../styles/Podcast.module.css";
 import EpisodeTemplate from "../../components/EpisodeTemplate";
-import CircularProgress from "@mui/material/CircularProgress";
+import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../../components/ScrollUpBtn";
 import LoadingScreen from "../../components/LoadingScreen";
 import axios from "axios";
