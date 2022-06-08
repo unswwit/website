@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/unswwit/Backend/issues"
   },
-  "homepage": "https://github.com/unswwit/Backend#readme"
+  "homepage": "https://github.com/unswwit/Backend#readme",
+  "devDependencies": {
+    "eslint": "^8.16.0"
+  }
 }
