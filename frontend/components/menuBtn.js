@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 
 class MenuBtn extends React.Component {
   constructor(props) {
@@ -74,4 +74,4 @@ class MenuBtn extends React.Component {
   }
 }
 
-export default MenuBtn;
+export default MenuBtn;*/

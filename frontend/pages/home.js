@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CountUp from "react-countup";
-import styles from "../../styles/home.module.css";
+import styles from "../styles/Home.module.css";
 import PubArticle from "../components/publications-article";
 import InitiativesSlideshow from "../components/InitiativesSlideshow.js";
 import CircularProgress from "@material-ui/core/CircularProgress";

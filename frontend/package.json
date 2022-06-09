@@ -12,14 +12,19 @@
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@material-ui/core": "^4.12.4",
+    "aos": "^3.0.0-beta.6",
+    "axios": "^0.26.1",
     "install": "^0.13.0",
+    "humps": "^2.0.1",
     "next": "12.1.6",
     "npm": "^8.9.0",
     "pure-react-carousel": "^1.28.1",
     "react": "18.1.0",
+    "react-device-detect": "^2.2.2",
     "react-dom": "18.1.0",
     "react-ga": "^3.3.0",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.3.0",
+    "react-countup": "^6.2.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^12.1.6",

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "./publications.module.css";
+import styles from "../styles/publications.module.css";
 
 class PubArticle extends Component {
   render() {

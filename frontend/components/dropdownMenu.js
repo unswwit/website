@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/*import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import ChromeReaderModeOutlinedIcon from "@material-ui/icons/ChromeReaderModeOutlined";
@@ -96,7 +96,7 @@ const DropdownMenu = (props) => {
           }
         >
           <span>
-            {/* Highlights navbar if user is on that page */}
+            {/* Highlights navbar if user is on that page */ /*}
             {navBarCurrentState() ? (
               <NavLink
                 to={routes[props.route][0]}
@@ -210,4 +210,4 @@ const DropdownMenu = (props) => {
   );
 };
 
-export default DropdownMenu;
+export default DropdownMenu;*/

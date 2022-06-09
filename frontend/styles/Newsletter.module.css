@@ -1,4 +1,3 @@
-@import "../style.css";
 
 /*-------------------------------Newsletter-----------------------------*/
 /*Background image*/
@@ -75,7 +74,7 @@
 }
 
 /*-------------------------------Newsletter sign up form-----------------------------*/
-form input {
+.forminput {
   margin: 15px auto;
   display: block;
   font-size: 1.2vw;
@@ -90,7 +89,7 @@ form input {
   width: 50%;
 }
 
-form button {
+.formbutton {
   background-color: #e85f5c;
   color: #ffffff;
   font-size: 1.3vw;
@@ -155,13 +154,13 @@ form button {
 
 /*--- Dark mode ---*/
 @media (prefers-color-scheme:dark) {
-  form input {
+  .forminput {
     background-color: #323235;
     border-color: white;
     color: white;
   }
   
-  form button {
+  .formbutton {
     background-color: var(--red);
     color: white;
   }
@@ -181,12 +180,12 @@ form button {
 
 /*-------------------------------Newsletter Form Mobile Design-----------------------------*/
 @media only screen and (max-width: 1000px) {
-  form button {
+  .formbutton {
     font-size: 12pt;
     width: 75%;
   }
 
-  form input {
+  .forminput {
     width: 75%;
   }
 
@@ -194,21 +193,21 @@ form button {
     font-size: 14pt;
   }
 
-  form input,
+  .forminput,
   .msg-alert p {
     font-size: 12pt;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  form input,
+  .forminput,
   .msg-alert p {
     font-size: 11pt;
   }
 
-  form input,
+  .forminput,
   .formDescription,
-  form button {
+  .formbutton {
     width: 80%;
   }
 }

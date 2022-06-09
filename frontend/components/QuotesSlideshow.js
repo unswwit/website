@@ -7,7 +7,7 @@ import {
 } from "pure-react-carousel";
 import React from "react";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import quotes from "./QuotesSlideshow.module.css";
+import quotes from "../styles/QuotesSlideshow.module.css";
 
 const QuotesSlideshow = ({
   height,

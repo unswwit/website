@@ -1,14 +1,14 @@
-/*import {
+import {
   CarouselProvider,
   Slider,
   Slide,
   ButtonBack,
   ButtonNext,
-} from "pure-react-carousel";*/
+} from "pure-react-carousel";
 import React, { useEffect, useState } from "react";
-//import "pure-react-carousel/dist/react-carousel.es.css";
+import "pure-react-carousel/dist/react-carousel.es.css";
 import styles from "../styles/home.module.css";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import humps from "humps";
 

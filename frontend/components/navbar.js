@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+/*import React, { Component } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Link from "next/link";
 import Menu from "./Menu";
@@ -129,3 +129,4 @@ class Navbar extends Component {
   }
 }
 export default Navbar;
+*/

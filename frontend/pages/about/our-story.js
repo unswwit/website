@@ -48,7 +48,6 @@ const OurStory = () => {
                   alt="WIT members"
                   width="800px"
                   height="1200px"
-                  padding-left="25px"
                 />
               </div>
               <div className={styles.ourStory}>
@@ -81,8 +80,6 @@ const OurStory = () => {
                 <Image
                   src="/our-story/our-mascot.png"
                   alt="Introducing Willow the Australian Wombat, WIT's mascot"
-                  padding-top="1px"
-                  padding-right="25px"
                   width="3000px"
                   height="2000px"
                 />
