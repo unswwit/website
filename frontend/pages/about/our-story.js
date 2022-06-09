@@ -43,7 +43,13 @@ const OurStory = () => {
             </h2>
             <div className={styles.ourMissionSection}>
               <div className={styles.ourMissionImg}>
-                <Image src="/our-story/our-mission.jpg" alt="WIT members" />
+                <Image
+                  src="/our-story/our-mission.jpg"
+                  alt="WIT members"
+                  width="800px"
+                  height="1200px"
+                  padding-left="25px"
+                />
               </div>
               <div className={styles.ourStory}>
                 <p className={styles.ourMissionContent}>
@@ -72,9 +78,13 @@ const OurStory = () => {
             <h2 className={styles.oppSubheading}>Our Mascot</h2>
             <div className={styles.ourMascotSection}>
               <div className={styles.ourMascotImg}>
-                <img
-                  src={process.env.PUBLIC_URL + "/our-story/our-mascot.png"}
+                <Image
+                  src="/our-story/our-mascot.png"
                   alt="Introducing Willow the Australian Wombat, WIT's mascot"
+                  padding-top="1px"
+                  padding-right="25px"
+                  width="3000px"
+                  height="2000px"
                 />
               </div>
               <div className={styles.ourStory}>
