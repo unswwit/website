@@ -72,7 +72,7 @@ const Home = () => {
               <h1>Technology</h1>
               <p> Empowering and inspiring the architects of change</p>
               <button>
-                <Link to="/join-us">JOIN US</Link>
+                <Link to="/xjoin-us">JOIN US</Link>
               </button>
             </div>
           </div>
