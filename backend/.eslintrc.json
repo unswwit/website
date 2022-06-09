@@ -1,0 +1,19 @@
+{
+	"env": {
+		"commonjs": true,
+		"es2021": true,
+		"node": true
+	},
+	"extends": "eslint:recommended",
+	"parserOptions": {
+		"ecmaVersion": "latest"
+	},
+	"rules": {
+		"max-lines-per-function": ["error", 20],
+		"no-unused-vars": ["error"],
+		"quotes": ["error", "double"],
+		"max-depth": ["error", 4],
+		"indent": ["error", "tab"],
+		"max-len": ["error", 80]
+	}
+}
