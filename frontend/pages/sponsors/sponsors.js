@@ -5,7 +5,7 @@ import Fade from "@material-ui/core/Fade";
 import { Button } from "semantic-ui-react";
 import styles from "../../styles/sponsors.module.css";
 import PageHeader from "../../components/header";
-import SponsorsModal from "./sponsorsModal";
+import SponsorsModal from "../../components/sponsorsModal";
 import LoadingScreen from "../../components/LoadingScreen";
 import { sponsors, affiliations, partnerships } from "../../components/sponsorData";
 import Image from "next/image";
