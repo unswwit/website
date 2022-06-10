@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "axios": "^0.27.2",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
     "express": "^4.17.1",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.12",
@@ -27,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/unswwit/Backend/issues"
   },
-  "homepage": "https://github.com/unswwit/Backend#readme"
+  "homepage": "https://github.com/unswwit/Backend#readme",
+  "devDependencies": {
+    "eslint": "^8.16.0"
+  }
 }
