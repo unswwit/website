@@ -1,0 +1,310 @@
+/*------------------------------Contact us body-----------------------------*/
+
+/*Form*/
+.form {
+  text-align: center;
+  margin: 50px auto 0 auto;
+  max-width: 80%;
+}
+
+.inquiry {
+  padding-bottom: 50px;
+}
+
+/*Form left*/
+.formLeft {
+  display: inline-block;
+  width: 40%;
+  height: 100%;
+}
+
+.formLeft form {
+  float: left;
+  text-align: left;
+  width: 100%;
+}
+
+.formLeft textarea {
+  border-style: none;
+  border-bottom: solid;
+  border-color: var(--grey);
+  border-width: 2px;
+  width: 100%;
+}
+
+.formInput {
+  padding: 5px;
+  padding-left: 0px;
+
+  border-style: none;
+  border-bottom: solid;
+  border-color: var(--general-text);
+  border-width: 2px;
+
+  border-radius: 0px;
+  width: 100%;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  font-size: 12pt;
+  font-family: "Montserrat", sans-serif;
+}
+
+.submitButton {
+  color: #ffffff;
+  background-color: #e85f5c;
+  text-align: center;
+  margin: 0px 0px 30px 0px;
+  padding: 12px 10px;
+  width: 120px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  float: left;
+  font-weight: 500;
+  font-size: 12pt;
+  transition: 0.3s;
+}
+
+.submitButton:hover {
+  background-color: var(--dark-red);
+}
+
+form input.button:hover {
+  background-color: var(--yellow);
+  color: var(--white);
+}
+
+/*Form image*/
+.formRight {
+  width: 50%;
+  overflow: hidden;
+  float: right;
+}
+
+.centre {
+  object-fit: contain;
+}
+
+/*Style for the Emails is below*/
+.contactTeam {
+  margin-top: 100px;
+}
+
+.newEmails div.dot {
+  height: 50px;
+  width: 50px;
+  background-color: var(--red);
+  margin-bottom: 25px;
+}
+
+.newEmails img {
+  height: 50px;
+  width: 50px;
+  margin-bottom: 25px;
+}
+
+.newEmails h3 {
+  color: var(--yellow);
+  font-family: "Playfair Display", serif;
+  font-size: 20pt;
+  font-weight: normal;
+  letter-spacing: 2.5px;
+}
+
+.newEmails a {
+  color: var(--general-text);
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10pt;
+  padding-bottom: 5px;
+}
+
+.newEmails a:hover {
+  text-decoration: underline;
+}
+
+.newEmails div.col2 {
+  width: 57%;
+  margin-left: 26%;
+  margin-right: auto;
+}
+
+.newEmails div.profile2 {
+  display: inline-block;
+  width: 50%;
+  padding: 30px;
+  float: none;
+  overflow: none;
+}
+
+.newEmails div.col3 {
+  width: 80%;
+  height: auto;
+  margin-left: 12%;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+
+.newEmails div.profile3 {
+  display: inline-block;
+  width: 33%;
+  padding: 30px;
+  float: none;
+  height: 230px;
+  overflow: none;
+}
+
+.lineBreak {
+  visibility: hidden;
+}
+
+/*--- Dark mode ---*/
+@media (prefers-color-scheme:dark) {
+  .formInput {
+    background-color: #323235;
+    border-color: white;
+    color: white;
+  }
+  
+  .formLeft textarea {
+    border-color: white;
+    color: white;
+  }
+  
+  .formLeft {
+    border-color: white;
+  }
+
+  .newEmails div.profile2 {
+    color: white;
+  }
+  .newEmails div.profile3 {
+    color: white;
+  }
+
+}
+
+/*-------------------------------Join us: different screen sizes ------------------------------*/
+@media only screen and (max-width: 1200px) {
+  .newEmails div.profile2 {
+    padding: 25px;
+  }
+
+  .newEmails div.profile3 {
+    padding: 25px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .formRight {
+    display: initial;
+    float: none;
+  }
+
+  .centre {
+    height: 100%;
+  }
+
+  .formLeft {
+    display: initial;
+    float: none;
+  }
+
+  .formLeft form {
+    margin-bottom: 50px;
+  }
+
+  .newEmails div.col2 {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .newEmails div.col3 {
+    width: 90%;
+    margin-left: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .newEmails div.profile3 {
+    display: inline-block;
+    width: 50%;
+    padding: 30px;
+    float: none;
+    overflow-wrap: break-word;
+  }
+
+  .newEmails div.profile2 {
+    overflow-wrap: break-word;
+  }
+
+  hr.solid {
+    border-top: 2px solid #bbb;
+  }
+
+  .lineBreak {
+    visibility: visible;
+  }
+
+  .newEmails img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .newEmails h3,
+  a {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 910px) {
+  .centre {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .centre {
+    height: 300px;
+  }
+
+  .newEmails div.profile3 {
+    width: 100%;
+  }
+
+  .newEmails div.profile2 {
+    width: 100%;
+  }
+
+  .newEmails div.col2 {
+    width: 90%;
+  }
+
+  .newEmails a {
+    font-size: 16px;
+  }
+
+  .form h2,
+  .contactTeam {
+    font-size: 30px;
+  }
+
+  .form h3 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .centre {
+    height: 200px;
+  }
+
+  .form {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
