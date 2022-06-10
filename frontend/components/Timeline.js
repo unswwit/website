@@ -2,7 +2,7 @@ import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Slider from "@material-ui/core/Slider";
 import styles from "../styles/Timeline.module.css";
-import { pageToValue } from "../pages/ourStory/data/ourStoryData";
+import { pageToValue } from "./ourStoryData";
 
 const TimelineSlider = withStyles({
   root: {

@@ -9,7 +9,7 @@ import ScrollUpBtn from "../../components/ScrollUpBtn";
 import LoadingScreen from "../../components/LoadingScreen";
 import axios from "axios";
 import humps from "humps";
-import { execToClassName, marks, valueToYear } from "./data/teamData";
+import { execToClassName, marks, valueToYear } from "../../components/teamData";
 
 function OurTeam() {
   const masterExec = useRef();
