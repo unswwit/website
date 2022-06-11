@@ -62,15 +62,19 @@ const Footer = () => {
             <div className="grid-footer-container">
               <li className="col-width footer-item footer-logo">
                 {/* TODO: change to next/image */}
-                <img
+                <Image
                   src="/logo-black.png"
                   className="footer-logo-black"
                   alt="wit logo"
+                  width={45}
+                  height={40}
                 />
                 <img
                   src="/logo-white.png"
                   className="footer-logo-white"
                   alt="wit logo"
+                  width={45}
+                  height={40}
                 />
               </li>
               {links.map((col, index) => {
