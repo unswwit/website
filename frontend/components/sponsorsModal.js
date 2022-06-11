@@ -21,6 +21,7 @@ const SponsorsModal = ({ handleClose, sponsorName, sponsors }) => {
           className={styles.sponsorImage}
           src={(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)?`/sponsors/2022/dark-mode/${sponsors[sponsorName][2]}`:`/sponsors/2022/${sponsors[sponsorName][2]}`}
           alt={sponsorName}
+          layout="fill"
         />
         <h1 className={styles.sponsorType}>
           {sponsors[sponsorName][3]} SPONSOR

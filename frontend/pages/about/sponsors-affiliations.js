@@ -84,6 +84,7 @@ function Sponsors() {
                       setCurrSponsor(key);
                     }}
                     key={key}
+                    layout="fill"
                   />
                 ))}
             </div>
@@ -111,6 +112,7 @@ function Sponsors() {
                       setCurrSponsor(key);
                     }}
                     key={key}
+                    layout="fill"
                   />
                 ))}
             </div>
@@ -138,6 +140,7 @@ function Sponsors() {
                       setCurrSponsor(key);
                     }}
                     key={key}
+                    layout="fill"
                   />
                 ))}
             </div>
@@ -165,6 +168,7 @@ function Sponsors() {
                       setCurrSponsor(key);
                     }}
                     key={key}
+                    layout="fill"
                   />
                 ))}
             </div>
@@ -193,6 +197,7 @@ function Sponsors() {
                           : `/affiliations/${affiliations[key][1]}`
                       }
                       alt={key}
+                      layout="fill"
                     />
                   </a>
                 ))}
@@ -221,6 +226,7 @@ function Sponsors() {
                           : `/partnerships/${partnerships[key][1]}`
                       }
                       alt={key}
+                      layout="fill"
                     />
                   </a>
                 ))}

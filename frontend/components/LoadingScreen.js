@@ -8,6 +8,7 @@ const LoadingScreen = () => {
         id="loadingWillow"
         src={`/walkingWillow.gif`}
         alt="Walking Willow the wombat"
+        layout="fill"
       />
       <p>Loading...</p>
     </div>
