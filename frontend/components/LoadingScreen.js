@@ -8,6 +8,9 @@ const LoadingScreen = () => {
         id="loadingWillow"
         src={`/walkingWillow.gif`}
         alt="Walking Willow the wombat"
+        height="300px"
+        width="300px"
+        priority="True"
       />
       <p>Loading...</p>
     </div>
