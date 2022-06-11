@@ -253,10 +253,10 @@ form input.button:hover {
     display: block;
   }
 
-  .newEmails h3,
+  /* .newEmails h3,
   a {
     text-align: center;
-  }
+  } */
 }
 
 @media only screen and (max-width: 910px) {
