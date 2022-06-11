@@ -19,7 +19,7 @@ const SponsorsModal = ({ handleClose, sponsorName, sponsors }) => {
       <div className={styles.textBlock}>
         <Image
           className={styles.sponsorImage}
-          src={(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)?`${process.env.PUBLIC_URL}/sponsors/2022/dark-mode/${sponsors[sponsorName][2]}`:`${process.env.PUBLIC_URL}/sponsors/2022/${sponsors[sponsorName][2]}`}
+          src={(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)?`/sponsors/2022/dark-mode/${sponsors[sponsorName][2]}`:`/sponsors/2022/${sponsors[sponsorName][2]}`}
           alt={sponsorName}
         />
         <h1 className={styles.sponsorType}>
