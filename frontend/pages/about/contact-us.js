@@ -39,10 +39,8 @@ const ContactUs = () => {
                 src={
                   window.matchMedia &&
                   window.matchMedia("(prefers-color-scheme: dark)").matches
-                    ? `${
-                      process.env.PUBLIC_URL + "/willow_contact_dark_mode.png"
-                    }`
-                    : `${process.env.PUBLIC_URL + "/willow_contact.png"}`
+                    ? `${"/willow_contact_dark_mode.png"}`
+                    : `${"/willow_contact.png"}`
                 }
                 width="90%"
                 height="400px"
@@ -60,7 +58,7 @@ const ContactUs = () => {
             <div className={styles.col2}>
               <div className={styles.profile2}>
                 <Image
-                  src={process.env.PUBLIC_URL + "/icons/pres-icon.png"}
+                  src="/icons/pres-icon.png"
                   alt="pres-icon"
                 />
                 <h3>Jane Wang</h3>
@@ -68,7 +66,7 @@ const ContactUs = () => {
               </div>
               <div className={styles.profile2}>
                 <Image
-                  src={process.env.PUBLIC_URL + "/icons/pres-icon.png"}
+                  src="/icons/pres-icon.png"
                   alt="pres-icon"
                 />
                 <h3>Nishimi Kapoor</h3>
@@ -76,7 +74,7 @@ const ContactUs = () => {
               </div>
               <div className={styles.profile2}>
                 <Image
-                  src={process.env.PUBLIC_URL + "/icons/sec-icon.png"}
+                  src="/icons/sec-icon.png"
                   alt="sec-icon"
                 />
                 <h3>Emily Dang</h3>
@@ -84,7 +82,7 @@ const ContactUs = () => {
               </div>
               <div className={styles.profile2}>
                 <Image
-                  src={process.env.PUBLIC_URL + "/icons/tr-icon.png"}
+                  src="/icons/tr-icon.png"
                   alt="tr-icon"
                 />
                 <h3>Tiana Douroudis</h3>
@@ -99,7 +97,7 @@ const ContactUs = () => {
             <div className={styles.col3}>
               <div className={styles.profile3}>
                 <Image
-                  src={process.env.PUBLIC_URL + "/icons/careers-icon.png"}
+                  src="/icons/careers-icon.png"
                   alt="careers-icon"
                 />
                 <h3>Brianna Kim</h3>
@@ -107,7 +105,7 @@ const ContactUs = () => {
               </div>
               <div className={styles.profile3}>
                 <Image
-                  src={process.env.PUBLIC_URL + "/icons/careers-icon.png"}
+                  src="/icons/careers-icon.png"
                   alt="careers-icon"
                 />
                 <h3>Vivian Wang</h3>
@@ -115,7 +113,7 @@ const ContactUs = () => {
               </div>
               <div className={styles.profile3}>
                 <Image
-                  src={process.env.PUBLIC_URL + "/icons/comps-icon.png"}
+                  src="/icons/comps-icon.png"
                   alt="comps-icon"
                 />
                 <h3>Vivian Wong</h3>
@@ -123,7 +121,7 @@ const ContactUs = () => {
               </div>
               <div className={styles.profile3}>
                 <Image
-                  src={process.env.PUBLIC_URL + "/icons/ex-icon.png"}
+                  src="/icons/ex-icon.png"
                   alt="ex-icon"
                 />
                 <h3>Gayathri Balaji</h3>
@@ -131,7 +129,7 @@ const ContactUs = () => {
               </div>
               <div className={styles.profile3}>
                 <Image
-                  src={process.env.PUBLIC_URL + "/icons/ex-icon.png"}
+                  src="/icons/ex-icon.png"
                   alt="ex-icon"
                 />
                 <h3>Tanisha Dasmohaptra</h3>
@@ -139,7 +137,7 @@ const ContactUs = () => {
               </div>
               <div className={styles.profile3}>
                 <Image
-                  src={process.env.PUBLIC_URL + "/icons/hr-icon.png"}
+                  src="/icons/hr-icon.png"
                   alt="hr-icon"
                 />
                 <h3>Emily Chang</h3>
@@ -147,7 +145,7 @@ const ContactUs = () => {
               </div>
               <div className={styles.profile3}>
                 <Image
-                  src={process.env.PUBLIC_URL + "/icons/it.png"}
+                  src="/icons/it.png"
                   alt="it-icon"
                 />
                 <h3>Joanna He</h3>
@@ -155,7 +153,7 @@ const ContactUs = () => {
               </div>
               <div className={styles.profile3}>
                 <Image
-                  src={process.env.PUBLIC_URL + "/icons/mark-icon.png"}
+                  src="/icons/mark-icon.png"
                   alt="mark-icon"
                 />
                 <h3>Abigail Joesan Johan</h3>
@@ -163,7 +161,7 @@ const ContactUs = () => {
               </div>
               <div className={styles.profile3}>
                 <Image
-                  src={process.env.PUBLIC_URL + "/icons/mark-icon.png"}
+                  src="/icons/mark-icon.png"
                   alt="mark-icon"
                 />
                 <h3>Gabriella Hartanto</h3>
@@ -171,7 +169,7 @@ const ContactUs = () => {
               </div>
               <div className={styles.profile3}>
                 <Image
-                  src={process.env.PUBLIC_URL + "/icons/media-icon.png"}
+                  src="/icons/media-icon.png"
                   alt="media-icon"
                 />
                 <h3>Natalie Leroy</h3>
@@ -179,7 +177,7 @@ const ContactUs = () => {
               </div>
               <div className={styles.profile3}>
                 <Image
-                  src={process.env.PUBLIC_URL + "/icons/pubs-icon.png"}
+                  src="/icons/pubs-icon.png"
                   alt="pubs-icon"
                 />
                 <h3>Chelsea Chaffey</h3>
@@ -187,7 +185,7 @@ const ContactUs = () => {
               </div>
               <div className={styles.profile3}>
                 <Image
-                  src={process.env.PUBLIC_URL + "/icons/pubs-icon.png"}
+                  src="/icons/pubs-icon.png"
                   alt="pubs-icon"
                 />
                 <h3>Yuhan Zhou</h3>
