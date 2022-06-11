@@ -8,6 +8,9 @@ const LoadingScreen = () => {
         id="loadingWillow"
         src={`${process.env.PUBLIC_URL}/walkingWillow.gif`}
         alt="Walking Willow the wombat"
+        height="300px"
+        width="300px"
+        priority="True"
       />
       <p>Loading...</p>
     </div>
