@@ -24,6 +24,7 @@
     "prop-types": "^15.8.1",
     "pure-react-carousel": "^1.28.1",
     "react": "18.1.0",
+    "react-add-to-calendar-hoc": "^1.0.10",
     "react-device-detect": "^2.2.2",
     "react-dom": "18.1.0",
     "react-ga": "^3.3.0",
