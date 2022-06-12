@@ -1,19 +1,24 @@
 import React, { useEffect, useState } from "react";
-import PageHeader from "../../components/header";
+import PageHeader from "../../../components/header";
 import Chip from "@material-ui/core/Chip";
-import styles from "../../styles/videos.module.css";
-import YouTubeSubscribe from "../../components/youtubeSubscribe";
+import styles from "../../../styles/videos.module.css";
+import YouTubeSubscribe from "../../../components/youtubeSubscribe";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import axios from "axios";
 import humps from "humps";
-import PaginationComp from "../../components/Pagination";
-import LoadingScreen from "../../components/LoadingScreen";
+import PaginationComp from "../../../components/Pagination";
+import LoadingScreen from "../../../components/LoadingScreen";
 import { isMobile } from "react-device-detect";
-import { useStyles, categories } from "../../data/videoData";
+import { useStyles, categories } from "../../../data/videoData";
 
 const Videos = (props) => {
+  const router = useRouter();
+  const query = router.query;
+  const video_id = query.video_id;
+  
   const classes = useStyles();
 
   const [video, setVideo] = useState([]);
@@ -52,6 +57,7 @@ const Videos = (props) => {
   const loadPageContent = (allVideos, currVideoNumber) => {
     var videoIndex = 0;
     const currVideo = allVideos.filter((video, index) => {
+      console.log(allVideos)
       if (video.videoNumber.toString() === currVideoNumber) {
         videoIndex = index;
         return true;
@@ -87,13 +93,13 @@ const Videos = (props) => {
       const res = await axios.get("https://wit-database.herokuapp.com/videos");
       const allVideos = humps.camelizeKeys(res.data);
       const currVideoNumber = handleVideoNumber(allVideos.length);
-
       if (allVideos.length <= 0 || currVideoNumber > allVideos.length) {
         props.history.push("/404");
         return;
       }
-
+  
       var videoIndex = loadPageContent(allVideos, currVideoNumber);
+      console.log("videoIndex: " + videoIndex);
       loadVideoPreviews(allVideos, videoIndex);
 
       setLoading(false);
@@ -181,13 +187,14 @@ const Videos = (props) => {
 
   // get video items
   const getVideos = (videos) => {
+    {console.log("video.videoNumber: " + video.videoNumber)}
     return videos.map((video, index) => {
       return (
         <div className={styles.videoDescription} key={index}>
           <Link
             href={`/media/videos/${video.videoNumber}`}
           >
-            <div className={styles.boxContainer}
+            <div className={styles.boxContainer} 
               onClick={() => setVideoNumber(video.videoNumber)}
             >
               <div className={styles.darkOverlay} />
@@ -197,8 +204,8 @@ const Videos = (props) => {
                   src={`/videos/${video.img}`}
                   alt={video.name}
                   layout={"fill"}
-                  objectFit={"contain"}
-                  objectPosition={"top"}
+                  // height={"250px"}
+                  // width={"250px"}
                 />
               </div>
               <p className={styles.moreName}>{video.name}</p>
