@@ -8,25 +8,25 @@ function ContactForm() {
   const [email, setEmail] = React.useState("");
 
   // configure recaptcha
-  const recaptchaRef = useRef(null)
+  // const recaptchaRef = useRef(null)
 
-  const validateCaptcha = async () => {
-    const captchaToken = await recaptchaRef.current.getValue();
-    recaptchaRef.current.reset();
+  // const validateCaptcha = async () => {
+  //   const captchaToken = await recaptchaRef.current.getValue();
+  //   recaptchaRef.current.reset();
 
-    // pass token to backend & verify
-    try {
-      const result = await axios.post(
-        process.env.REACT_APP_VERIFY_URL, {captchaToken}
-      );
+  //   // pass token to backend & verify
+  //   try {
+  //     const result = await axios.post(
+  //       process.env.REACT_APP_VERIFY_URL, {captchaToken}
+  //     );
 
-      return result.status === 200 ? true : false;
+  //     return result.status === 200 ? true : false;
 
-    } catch (error) {
-      console.error("Error: recaptcha token verification failed.")
-      return false;
-    }
-  };
+  //   } catch (error) {
+  //     console.error("Error: recaptcha token verification failed.")
+  //     return false;
+  //   }
+  // };
  
   // form submission
   const sendEmail = async (e) => {
@@ -38,7 +38,7 @@ function ContactForm() {
     if (validate.test(email)) {
       // validate recaptcha
       const captchaResult = await validateCaptcha();
-      if (captchaResult === true) {
+      // if (captchaResult === true) {
 
       emailjs
         .sendForm(
@@ -64,9 +64,9 @@ function ContactForm() {
           alert("ReCaptcha validation failed.");
         }
 
-    } else {
-      alert("Please input a valid email");
-    }
+    // } else {
+    //   alert("Please input a valid email");
+    // }
 
   };
 
@@ -106,10 +106,10 @@ function ContactForm() {
       />
       <br />
       <br />
-        <ReCAPTCHA
+        {/* <ReCAPTCHA
           ref={recaptchaRef}
           sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-        />
+        /> */}
       <br />
       <br />
       <input type="submit" className={styles.submitButton} value="Submit" />
