@@ -37,7 +37,7 @@ function ContactForm() {
 
     if (validate.test(email)) {
       // validate recaptcha
-      const captchaResult = await validateCaptcha();
+      // const captchaResult = await validateCaptcha();
       // if (captchaResult === true) {
 
       emailjs

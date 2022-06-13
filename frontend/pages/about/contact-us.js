@@ -61,7 +61,7 @@ const ContactUs = () => {
                   src="/icons/pres-icon.png"
                   alt="pres-icon"
                   width="45px"
-                  height= "45px"
+                  height="45px"
                 />
                 <h3>Jane Wang</h3>
                 <a href="mailto:president@unswwit.com">president@unswwit.com</a>
