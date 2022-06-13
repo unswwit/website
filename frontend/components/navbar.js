@@ -1,4 +1,4 @@
-/*import React, { Component } from "react";
+import React, { Component } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Link from "next/link";
 import Menu from "./Menu";
@@ -68,14 +68,40 @@ class Navbar extends Component {
               <li className="nav-item">
                 <Link href="/">HOME</Link>
               </li>
+              <li
+                className="nav-item"
+                onMouseEnter={this.handleHover}
+                onMouseLeave={this.handleHover}
+              >
+                <div className="dropdown" display="static">
+                  <div className="dropdown-toggle">
+                    <span className="menuTitle">ABOUT US</span>
+                  </div>
+                  <div
+                    className={
+                      this.state.showDD ? "dropdown-menu show" : "dropdown-menu"
+                    }
+                  >
+                    <div className="dropdown-item">
+                      <Link href="/about/our-story">OUR STORY</Link>
+                    </div>
+                    <div className="dropdown-item">
+                      <Link href="/about/sponsors-affiliations">
+                        SPONSORS AND AFFILIATIONS
+                      </Link>
+                    </div>
+                    <div className="dropdown-item">
+                      <Link href="/about/our-team">OUR TEAM</Link>
+                    </div>
+                    <div className="dropdown-item">
+                      <Link href="/about/contact-us">CONTACT US</Link>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
               <li className="nav-item">
                 <Link href="/events">EVENTS</Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/our-team">TEAM</Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/sponsors">SPONSORS</Link>
               </li>
               <li className="nav-item">
                 <Link href="/opportunities">OPPORTUNITIES</Link>
@@ -87,7 +113,7 @@ class Navbar extends Component {
               >
                 <div className="dropdown" display="static">
                   <div className="dropdown-toggle">
-                    <span className="menuTitle">RESOURCES</span>
+                    <span className="menuTitle">MEDIA</span>
                   </div>
                   <div
                     className={
@@ -95,25 +121,26 @@ class Navbar extends Component {
                     }
                   >
                     <div className="dropdown-item">
-                      <Link href="/blog">BLOG</Link>
+                      <Link href="/media/blog">BLOG POSTS</Link>
                     </div>
                     <div className="dropdown-item">
-                      <Link href="/podcast">PODCAST</Link>
+                      <Link href="/media/podcasts">PODCASTS</Link>
                     </div>
                     <div className="dropdown-item">
-                      <Link href="/publications">PUBLICATIONS</Link>
+                      <Link href="/media/publications">PUBLICATIONS</Link>
                     </div>
                     <div className="dropdown-item">
-                      <Link href="/marketing-archive">MARKETING ARCHIVES</Link>
+                      <Link href="/media/marketing">MARKETING</Link>
+                    </div>
+                    <div className="dropdown-item">
+                      <Link href="/media/videos">VIDEOS</Link>
                     </div>
                   </div>
                 </div>
               </li>
+
               <li className="nav-item">
-                <Link href="/join-us">JOIN</Link>
-              </li>
-              <li className="nav-item" style={{ marginRight: "15px" }}>
-                <Link href="/contact-us">CONTACT</Link>
+                <Link href="/join-us">JOIN US</Link>
               </li>
             </ul>
           </div>
@@ -129,4 +156,3 @@ class Navbar extends Component {
   }
 }
 export default Navbar;
-*/

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-// import NavBar from "./Navbar";
+import NavBar from "./Navbar";
 import Footer from "./Footer";
 import Menu from "../components/menu";
 import MenuBtn from "../components/menuBtn";
@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-      {/* <NavBar /> */}
+      {<NavBar />}
 
       {children}
       <Footer />

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-/*import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 class Menu extends Component {
   constructor(props) {
@@ -69,85 +69,85 @@ class Menu extends Component {
                   index === 2 ||
                   index === 3 ||
                   index === 5 ? (
-                  // Non-dropdown 
-                    <NavLink
-                      className="menu-link"
-                      to={this.routes[route][0]}
-                      onClick={this.props.handleMenuClick}
-                    >
-                      <div className="menu-box">
-                        <li className="menu-item">{this.routes[route][1]}</li>
-                      </div>
-                    </NavLink>
-                  ) : index === 1 ? (
+                  // Non-dropdown
+                  <NavLink
+                    className="menu-link"
+                    to={this.routes[route][0]}
+                    onClick={this.props.handleMenuClick}
+                  >
+                    <div className="menu-box">
+                      <li className="menu-item">{this.routes[route][1]}</li>
+                    </div>
+                  </NavLink>
+                ) : index === 1 ? (
                   // About dropdown
-                    <div>
-                      <div
-                        className="menu-box menu-dropdown"
-                        onClick={this.handleClickAbout}
-                      >
-                        <div className="dropdown-toggle active-nav-item">
-                          <span className="menu-item menuTitle">
-                            {this.routes[route][1]}
-                          </span>
-                        </div>
+                  <div>
+                    <div
+                      className="menu-box menu-dropdown"
+                      onClick={this.handleClickAbout}
+                    >
+                      <div className="dropdown-toggle active-nav-item">
+                        <span className="menu-item menuTitle">
+                          {this.routes[route][1]}
+                        </span>
                       </div>
-                      {this.state.showDDAbout ? (
-                        <div>
-                          {Object.keys(this.aboutRoutes).map((aboutRoute) => {
-                            return (
-                              <NavLink
-                                className="menu-link"
-                                to={this.aboutRoutes[aboutRoute][0]}
-                                onClick={this.props.handleMenuClick}
-                              >
-                                <div className="menu-box">
-                                  <li className="menu-item">
-                                    {" "}
-                                    {this.aboutRoutes[aboutRoute][1]}
-                                  </li>
-                                </div>
-                              </NavLink>
-                            );
-                          })}
-                        </div>
-                      ) : null}
                     </div>
-                  ) : (
+                    {this.state.showDDAbout ? (
+                      <div>
+                        {Object.keys(this.aboutRoutes).map((aboutRoute) => {
+                          return (
+                            <NavLink
+                              className="menu-link"
+                              to={this.aboutRoutes[aboutRoute][0]}
+                              onClick={this.props.handleMenuClick}
+                            >
+                              <div className="menu-box">
+                                <li className="menu-item">
+                                  {" "}
+                                  {this.aboutRoutes[aboutRoute][1]}
+                                </li>
+                              </div>
+                            </NavLink>
+                          );
+                        })}
+                      </div>
+                    ) : null}
+                  </div>
+                ) : (
                   // Media dropdown
-                    <div>
-                      <div
-                        className="menu-box menu-dropdown"
-                        onClick={this.handleClick}
-                      >
-                        <div className="dropdown-toggle active-nav-item">
-                          <span className="menu-item menuTitle">
-                            {this.routes[route][1]}
-                          </span>
-                        </div>
+                  <div>
+                    <div
+                      className="menu-box menu-dropdown"
+                      onClick={this.handleClick}
+                    >
+                      <div className="dropdown-toggle active-nav-item">
+                        <span className="menu-item menuTitle">
+                          {this.routes[route][1]}
+                        </span>
                       </div>
-                      {this.state.showDD ? (
-                        <div>
-                          {Object.keys(this.mediaRoutes).map((mediaRoute) => {
-                            return (
-                              <NavLink
-                                className="menu-link"
-                                to={this.mediaRoutes[mediaRoute][0]}
-                                onClick={this.props.handleMenuClick}
-                              >
-                                <div className="menu-box">
-                                  <li className="menu-item">
-                                    {" "}
-                                    {this.mediaRoutes[mediaRoute][1]}
-                                  </li>
-                                </div>
-                              </NavLink>
-                            );
-                          })}
-                        </div>
-                      ) : null}
                     </div>
-                  );
+                    {this.state.showDD ? (
+                      <div>
+                        {Object.keys(this.mediaRoutes).map((mediaRoute) => {
+                          return (
+                            <NavLink
+                              className="menu-link"
+                              to={this.mediaRoutes[mediaRoute][0]}
+                              onClick={this.props.handleMenuClick}
+                            >
+                              <div className="menu-box">
+                                <li className="menu-item">
+                                  {" "}
+                                  {this.mediaRoutes[mediaRoute][1]}
+                                </li>
+                              </div>
+                            </NavLink>
+                          );
+                        })}
+                      </div>
+                    ) : null}
+                  </div>
+                );
               })}
             </ul>
           </div>
@@ -158,4 +158,3 @@ class Menu extends Component {
 }
 
 export default Menu;
-*/

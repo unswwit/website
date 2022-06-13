@@ -1,4 +1,4 @@
-/*import React from "react";
+import React from "react";
 
 class MenuBtn extends React.Component {
   constructor(props) {
@@ -23,13 +23,20 @@ class MenuBtn extends React.Component {
   }
 
   // change colour of lines depending on user dark/light mode
-  getBackground() {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  /*getBackground() {
+    //if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
       return "white";
-    } if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    }
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: light)").matches
+    ) {
       return "var(--grey)";
-    } 
-  }
+    }
+  }*/
 
   render() {
     const styles = {
@@ -42,7 +49,7 @@ class MenuBtn extends React.Component {
       line: {
         height: "2px",
         width: "20px",
-        background: this.getBackground(),
+        //background: this.getBackground(),
         transition: "all 0.2s ease",
       },
       lineTop: {
@@ -74,4 +81,4 @@ class MenuBtn extends React.Component {
   }
 }
 
-export default MenuBtn;*/
+export default MenuBtn;

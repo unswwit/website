@@ -297,7 +297,7 @@ p {
 }
 
 .menuTitle {
-  color: var(--general-text);
+  color: white;
   padding: 10px 15px;
 }
 
