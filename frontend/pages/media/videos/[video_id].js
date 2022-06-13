@@ -203,9 +203,9 @@ const Videos = (props) => {
                   className={styles.videoImages}
                   src={`/videos/${video.img}`}
                   alt={video.name}
-                  layout={"fill"}
-                  // height={"250px"}
-                  // width={"250px"}
+                  // layout={"fill"}
+                  width={"450px"}
+                  height={"200px"}
                 />
               </div>
               <p className={styles.moreName}>{video.name}</p>
