@@ -7,7 +7,7 @@ import styles from "../styles/Footer.module.css";
 
 const Footer = () => {
   const routes = {
-    Home: "/home",
+    Home: "/",
     Events: "/events",
     Opportunities: "/opportunities",
     "Join Us": "/join-us",

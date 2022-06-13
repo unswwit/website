@@ -3,7 +3,7 @@ const executives = {
   0: [
     "Gabrielle Younes",
     "2021 Co-President",
-    "2021-exec/gabbie.jpg",
+    "portraits/2021-exec/gabbie.jpg",
     "WIT has been pivotal in bringing my university experience to life! Whether it is developing my professional capabilities, learning more about the tech industry or forming friendships with amazing women in STEM, I have been able to learn, grow and unlock new doors to great opportunities through WIT. Being a part of such a supportive network of the up and coming pioneers in the industry has truly been a privilege.",
   ],
   1: [

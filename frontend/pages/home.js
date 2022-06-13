@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import CountUp from "react-countup";
 import styles from "../styles/Home.module.css";
 import PubArticle from "../components/publications-article";
@@ -72,7 +72,7 @@ const Home = () => {
               <h1>Technology</h1>
               <p> Empowering and inspiring the architects of change</p>
               <button>
-                <Link to="/xjoin-us">JOIN US</Link>
+                <Link href="/join-us">JOIN US</Link>
               </button>
             </div>
           </div>
@@ -183,7 +183,7 @@ const Home = () => {
               </div>
             </div>
             <button className={styles.pubBtn}>
-              <Link to="/media/publications">see more publications</Link>
+              <Link href="/media/publications">see more publications</Link>
             </button>
           </div>
           {/* End of Publications */}
