@@ -1,0 +1,298 @@
+/* Date and facebookLink button */
+.eventDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5%;
+}
+
+.date {
+  font-size: 11pt;
+}
+
+.buttonSpan {
+  display: flex;
+  align-items: center;
+}
+
+.facebookLinkButton {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  color: #e85f5c;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11pt;
+  font-weight: 500;
+  padding: 7px;
+  background-color: #ffffff;
+  border: solid #dd380d 1px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.facebookLinkButton:hover {
+  background: #fff7f7;
+  border: solid #e85f5c 1px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  text-decoration: none;
+}
+
+/* Embedded YouTube Video */
+.embeddedVideo {
+  align-content: center;
+}
+
+.responsiveIframe {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.responsiveIframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.iframeWrapper {
+  width: 90%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3vw;
+}
+
+/* Description */
+.description {
+  text-align: justify;
+  margin-top: 1em;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+}
+/* Cover image */
+.eventCoverImage {
+  width: 90%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3vw !important;
+  margin-bottom: 3vw !important;
+  display: block;
+}
+
+/* Event Image Gallery Wrapper */
+.imageGalleryWrapper {
+  width: 90%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3vw;
+  display: block;
+}
+
+/* ------ Dark Mode --------- */
+@media (prefers-color-scheme:dark) {
+  .description {
+    color: white;
+  }
+  .date {
+    color: var(--yellow);
+  }
+
+  .facebookLinkButton {
+    background-color: transparent;
+  }
+  .facebookLinkButton:hover {
+    background-color:#6b4e4d;
+  }
+
+}
+
+/* react-awesome-slider (Image Gallery) style override */
+.awssld__content > img,
+.awssld__content > video {
+  -o-object-fit: scale-down !important;
+  object-fit: scale-down !important;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+}
+
+.awssld__bullets {
+  position: relative;
+  bottom: -16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.awssld__bullets .awssld__bullets--active {
+  transform: scale(1.25);
+  background: var(--control-bullet-active-color);
+}
+
+.awssld__bullets button {
+  padding: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: 5px;
+  border-radius: 50%;
+  background: var(--control-bullet-color);
+  text-indent: -9999px;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45),
+    background-color 0.175s ease-out;
+}
+
+.awssld {
+  --organic-arrow-thickness: 4px;
+  --organic-arrow-height: 40px;
+  --slider-height-percentage: 60%;
+  --loader-bar-color: var(--yellow);
+  --loader-bar-height: 6px;
+  --control-button-width: 10%;
+  --control-button-height: 25%;
+  --control-button-opacity: 0.5;
+  --control-button-hover-opacity: 0.75;
+  --control-button-background: transparent;
+  --transition-bezier: cubic-bezier(0.5, 0.075, 0.25, 0.95);
+  --slider-transition-duration: 200ms;
+  --organic-arrow-color: #6a6a6a;
+  --organic-arrow-border-radius: 0;
+  --control-bullet-color: #6a6a6a;
+  --control-bullet-active-color: #6a6a6a;
+  --content-background-color: #2f2f2f;
+}
+
+/* Event Resources Accordion */
+.accordionWrapper {
+  margin-top: 36pt;
+  margin-bottom: 5vw;
+  -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2),
+    0 2px 5px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2),
+    0 2px 5px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+#eventResources {
+  text-transform: uppercase;
+  color: #e85f5c;
+  flex-basis: 33.33%;
+  flex-shrink: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+#resourcesDescription {
+  font-family: "Montserrat", sans-serif;
+  color: #4f4f4f;
+}
+
+/*-------------------------------Event Recap Page-----------------------------*/
+#eventContainer {
+  width: 70%;
+  margin: auto;
+  white-space: pre-wrap;
+  margin-bottom: 100px;
+}
+
+#eventLoadingContainer {
+  display: flex;
+  justify-content: center;
+}
+
+#eventTitle {
+  padding-top: 50px;
+}
+
+#eventLoading {
+  color: var(--yellow);
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+/*-------------------------------Mobile Responsiveness-----------------------------*/
+
+@media only screen and (max-width: 880px) {
+  #eventResources {
+    flex-basis: 100%;
+  }
+
+  #resourcesDescription {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #eventContainer {
+    width: 80%;
+  }
+
+  #eventContainer h2 {
+    font-size: 16.5pt;
+  }
+
+  #heading {
+    font-size: 40px;
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #heading {
+    font-size: 25pt;
+  }
+
+  #introDescription {
+    width: 55%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .eventDetails {
+    display: block;
+    text-align: center;
+  }
+
+  .eventDetails span {
+    display: block;
+    padding: 5px;
+  }
+
+  #introDescription {
+    width: 95%;
+  }
+
+  #introDescription p {
+    text-align: justify;
+  }
+
+  #introDescription h2 {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #overview {
+    text-align: justify;
+    white-space: pre-wrap;
+  }
+}

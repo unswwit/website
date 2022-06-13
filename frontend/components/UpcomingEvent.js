@@ -128,7 +128,9 @@ export default function UpcomingEvent({ upcomingEvent, index }) {
             }
             alt={upcomingEvent.title}
             className={styles.upcomingEventCover}
-            layout={"fill"}
+            // layout={"fill"}
+            width={"375px"}
+            height={"375px"}
           />
         </div>
 
