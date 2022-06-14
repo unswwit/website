@@ -160,7 +160,6 @@ const EventRecapPage = (props) => {
             }
             style={!hasPhotos ? {} : { display: "none" }}
             alt="header"
-            className={styles.eventCoverImage}
             width="1200px"
             height="630px"
           />
