@@ -4,7 +4,7 @@ import styles from "../styles/joinUs.module.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Slideshow from "../components/QuotesSlideshow.js";
 import NewsletterSection from "../components/NewsletterSection";
-import { BootstrapTooltip } from "../components/bootstrapTooltip";
+import { BootstrapTooltip } from "../components/BootstrapTooltip";
 import LoadingScreen from "../components/LoadingScreen";
 import { memberQuotes } from "../data/joinData";
 import { socials } from "../data/joinData";
