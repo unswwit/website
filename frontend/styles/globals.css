@@ -674,7 +674,7 @@ p {
   .menu-box:hover .menu-item {
     color: var(--red);
   }
-
+}
 /*----------------------------------General------------------------------------*/
 h1 {
   color: var(--yellow);
