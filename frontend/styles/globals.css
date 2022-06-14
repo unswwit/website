@@ -761,8 +761,7 @@ footer {
   font-size: 1.05vw;
 }
 
-.footer-copyright,
-a {
+.footer-copyright a {
   color: #313638;
   transition: 0.2s;
 }
@@ -820,8 +819,11 @@ a {
     color: var(--white);
   }
 
-  .footer-copyright,
-  a {
+  .footer-copyright a {
+    color: var(--white);
+  }
+
+  .footer-item a {
     color: var(--white);
   }
 }

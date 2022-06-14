@@ -24,7 +24,7 @@ const useStyles = makeStyles({
       height: 420,
     },
     "@media (max-width:680px)": {
-      height: 480,
+      height: 520,
     },
     "@media (max-width:400px)": {
       height: 520,
@@ -75,12 +75,12 @@ const useStyles = makeStyles({
     }
   },
   content: {
-    height: "275px",
+    height: "255px",
     "@media (max-width:1200px)": {
-      height: 240,
+      height: 210,
     },
     "@media (max-width:1000px)": {
-      height: 310,
+      height: 280,
     },
     "@media (max-width:750px)": {
       height: 180,
@@ -89,7 +89,7 @@ const useStyles = makeStyles({
       height: 250,
     },
     "@media (max-width:400px)": {
-      height: 275,
+      height: 255,
     },
   },
   buttons: {
@@ -101,7 +101,7 @@ const useStyles = makeStyles({
       justifyContent: "space-around",
     },
     "@media (max-width:750px)": {
-      justifyContent: "initial",
+      justifyContent: "space-around",
     },
     "@media (max-width:450px)": {
       justifyContent: "space-between",
