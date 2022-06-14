@@ -75,21 +75,6 @@
   margin-top: 1em;
 }
 
-.imgContainer {
-  display: flex;
-  justify-content: center;
-}
-/* Cover image */
-.eventCoverImage {
-  width: 90%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3vw !important;
-  margin-bottom: 3vw !important;
-  display: block;
-}
-
 /* Event Image Gallery Wrapper */
 .imageGalleryWrapper {
   width: 90%;
