@@ -4,7 +4,7 @@ import styles from "../styles/joinUs.module.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Slideshow from "../components/QuotesSlideshow.js";
 import NewsletterSection from "../components/NewsletterSection";
-import BootstrapTooltip from "../components/BootstrapTooltip";
+import { BootstrapTooltip } from "../components/BootstrapTooltip";
 import LoadingScreen from "../components/LoadingScreen";
 import { memberQuotes } from "../data/joinData";
 import { socials } from "../data/joinData";
@@ -49,20 +49,20 @@ const JoinUs = () => {
               <div className={styles.joinButtons}>
                 {Object.keys(socials).map((social, index) => {
                   return (
-                    <a
-                      className={styles.joinLink}
-                      key={index}
-                      href={socials[social][0]}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <BootstrapTooltip
+                      key={social}
+                      title={
+                        <>
+                          <div className="tooltipTitle">{social}</div>
+                        </>
+                      }
                     >
-                      <BootstrapTooltip
-                        key={social}
-                        title={
-                          <>
-                            <div className="tooltipTitle">{social}</div>
-                          </>
-                        }
+                      <a
+                        className={styles.joinLink}
+                        key={index}
+                        href={socials[social][0]}
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <Image
                           src={`/../public/icons/${socials[social][1]}`}
@@ -70,8 +70,8 @@ const JoinUs = () => {
                           height="250px"
                           width="250px"
                         />
-                      </BootstrapTooltip>
-                    </a>
+                      </a>
+                    </BootstrapTooltip>
                   );
                 })}
               </div>
