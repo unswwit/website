@@ -192,6 +192,10 @@ h1.vidSubheading {
   position: relative;
 }
 
+.videoDescription:hover {
+  cursor: pointer;
+}
+
 img.videoImages {
   max-width: 100%;
   -o-object-fit: cover;

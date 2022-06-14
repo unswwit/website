@@ -17,9 +17,7 @@ const useStylesBootstrap = makeStyles((theme) => ({
     },
 }));
 
-const BootstrapTooltip = (props) => {
+export const BootstrapTooltip = (props) => {
   const classes = useStylesBootstrap();
   return <Tooltip arrow classes={classes} {...props} />;
 };
-
-export default BootstrapTooltip;

@@ -1,0 +1,19 @@
+.footerLogoBlack {
+    display: block;
+    width: 50px;
+  }
+  
+.footerLogoWhite {
+    display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    .footerLogoBlack {
+        display: none;
+    }
+    
+    .footerLogoWhite {
+        display: block;
+        width: 50px;
+    }
+}
