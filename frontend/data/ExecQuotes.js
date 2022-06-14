@@ -9,19 +9,19 @@ const executives = {
   1: [
     "Vivian Wong",
     "2021 Co-President",
-    "2021-exec/viv_w.jpg",
+    "portraits/2021-exec/viv_w.jpg",
     "WIT has opened up a world of opportunities for me, allowing me to meet people from diverse backgrounds who are ambitious and passionate about the same thing as I am.",
   ],
   2: [
     "Victoria Yu",
     "2021 General Secretary",
-    "2021-exec/victoria.jpg",
+    "portraits/2021-exec/victoria.jpg",
     "Joining WIT has been both a challenging and rewarding experience. Throughout my time at WIT, I have been able to develop a wide range of skills AND meet like-minded, driven people to champion change in the tech industry!",
   ],
   3: [
     "Connie Shi",
     "2021 Treasurer",
-    "2021-exec/connie.jpg",
+    "portraits/2021-exec/connie.jpg",
     "In my past couple of years on the WIT team, it has truly been an amazing journey meeting some of the most inspirational and hardworking women who I am proud to call my friends. Come to our events and meet our awesome team and equally awesome members who are breaking into the tech field!",
   ],
 };

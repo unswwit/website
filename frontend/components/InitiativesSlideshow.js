@@ -8,9 +8,9 @@ import {
 import React, { useEffect, useState } from "react";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import styles from "../styles/home.module.css";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import humps from "humps";
+import Link from "next/link";
 
 const InitiativesSlideshow = () => {
   const [firstUpcomingEvent, setFirstUpcomingEvent] = useState([]);
@@ -86,7 +86,7 @@ const InitiativesSlideshow = () => {
                 </p>
                 <p>
                   <button>
-                    <Link to="/events" className={styles.link}>
+                    <Link href="/events" className={styles.link}>
                       see more events
                     </Link>
                   </button>
@@ -158,7 +158,7 @@ const InitiativesSlideshow = () => {
                 </p>
                 <p>
                   <button>
-                    <Link to="media/blog" className={styles.link}>
+                    <Link href="media/blog" className={styles.link}>
                       see more blog posts
                     </Link>
                   </button>
@@ -215,7 +215,7 @@ const InitiativesSlideshow = () => {
                 </p>
                 <p>
                   <button>
-                    <Link to="media/podcast" className={styles.link}>
+                    <Link href="media/podcast" className={styles.link}>
                       see more episodes
                     </Link>
                   </button>

@@ -3,6 +3,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Link from "next/link";
 import Menu from "./Menu";
 import MenuBtn from "./MenuBtn";
+import DropdownMenu from "./dropdownMenu";
 
 class Navbar extends Component {
   constructor(props) {
@@ -70,6 +71,7 @@ class Navbar extends Component {
               </li>
               <li
                 className="nav-item"
+                key={"about"}
                 onMouseEnter={this.handleHover}
                 onMouseLeave={this.handleHover}
               >
@@ -108,8 +110,9 @@ class Navbar extends Component {
               </li>
               <li
                 className="nav-item"
-                onMouseEnter={this.handleHover}
-                onMouseLeave={this.handleHover}
+                onMouseEnter={this.handleHoverMedia}
+                onMouseLeave={this.handleHoverMedia}
+                key={"media"}
               >
                 <div className="dropdown" display="static">
                   <div className="dropdown-toggle">

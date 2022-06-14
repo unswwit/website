@@ -139,6 +139,53 @@ export default function Home() {
         </div>
         {/* End of Statistics */}
 
+        {/* Start of Upcoming Events / Latest blog / Latest podcast */}
+        <div
+          data-aos={isMobile ? "fade" : "fade-right"}
+          data-aos-delay="150"
+          className={styles.carousel}
+        >
+          <InitiativesSlideshow />
+        </div>
+
+        {/* Start of Publications */}
+        <div
+          data-aos={isMobile ? "fade" : "fade-left"}
+          data-aos-delay="150"
+          className={styles.publications}
+        >
+          <h1>PUBLICATIONS</h1>
+
+          {/*Recent 3 Articles*/}
+          <div className={styles.articlesDiv}>
+            <div className={styles.articles}>
+              {loading && (
+                <CircularProgress
+                  variant="indeterminate"
+                  size={50}
+                  thickness={5}
+                  id={styles.publicationsLoading}
+                />
+              )}
+              {!loading &&
+                last3articles.map((article, index) => (
+                  <div className={styles.homeArticles} key={index}>
+                    <PubArticle
+                      imgUrl={`${process.env.PUBLIC_URL}/publications/${article.year}/${article.img}`}
+                      heading={article.heading}
+                      date={article.date}
+                      url={article.url}
+                    />
+                  </div>
+                ))}
+            </div>
+          </div>
+          <button className={styles.pubBtn}>
+            <Link href="/media/publications">see more publications</Link>
+          </button>
+        </div>
+        {/* End of Publications */}
+
         <div
           data-aos={isMobile ? "fade" : "fade-right"}
           data-aos-delay="150"
