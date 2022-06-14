@@ -196,11 +196,8 @@ const Videos = (props) => {
                   className={styles.videoImages}
                   src={`/videos/${video.img}`}
                   alt={video.name}
-                  // layout={"fill"}
-                  // objectFit={"contain"}
-                  // objectPosition={"top"}
-                  width={"450px"}
-                  height={"200px"}
+                  width={"1200px"}
+                  height={"628px"}
                 />
               </div>
               <p className={styles.moreName}>{video.name}</p>
