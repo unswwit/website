@@ -789,6 +789,7 @@ footer {
 }
 
 .footer-item a {
+  color: black;
   transition: 0.2s;
 }
 
