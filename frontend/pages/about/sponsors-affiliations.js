@@ -84,7 +84,8 @@ function Sponsors() {
                       setCurrSponsor(key);
                     }}
                     key={key}
-                    layout="fill"
+                    width="206px"
+                    height="74px"
                   />
                 ))}
             </div>
@@ -112,7 +113,8 @@ function Sponsors() {
                       setCurrSponsor(key);
                     }}
                     key={key}
-                    layout="fill"
+                    width="206px"
+                    height="74px"
                   />
                 ))}
             </div>
@@ -140,7 +142,8 @@ function Sponsors() {
                       setCurrSponsor(key);
                     }}
                     key={key}
-                    layout="fill"
+                    width="206px"
+                    height="74px"
                   />
                 ))}
             </div>
@@ -168,7 +171,8 @@ function Sponsors() {
                       setCurrSponsor(key);
                     }}
                     key={key}
-                    layout="fill"
+                    width="206px"
+                    height="74px"
                   />
                 ))}
             </div>
@@ -197,7 +201,8 @@ function Sponsors() {
                           : `/affiliations/${affiliations[key][1]}`
                       }
                       alt={key}
-                      layout="fill"
+                      width="206px"
+                      height="74px"
                     />
                   </a>
                 ))}
@@ -226,7 +231,8 @@ function Sponsors() {
                           : `/partnerships/${partnerships[key][1]}`
                       }
                       alt={key}
-                      layout="fill"
+                      width="206px"
+                      height="74px"
                     />
                   </a>
                 ))}
