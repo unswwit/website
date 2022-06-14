@@ -32,7 +32,6 @@ const EventRecapPage = (props) => {
     let url = window.location.href.split("/");
     setEventNumber(url[url.length-1].split("_")[1])
     let currEventNumber = url[url.length-1].split("_")[1]
-    console.log(url)
     const fetchPastEvents = async () => {
       const res = await axios.get("https://wit-database.herokuapp.com/past-events");
       const allEvents = humps
@@ -154,18 +153,17 @@ const EventRecapPage = (props) => {
 
           {/* Image Gallery / Cover Image Section */}
           {/* Display Image gallery if images exist, otherwise display cover image */}
-          <div className={styles.imgContainer}>
-            <Image
-              src={
-                `/event-covers/${event.year}/${event.img}`
-              }
-              style={!hasPhotos ? {} : { display: "none" }}
-              alt="header"
-              className={styles.eventCoverImage}
-              width={"1000px"}
-              height={"700px"}
-            />
-          </div>
+
+          <Image
+            src={
+              `/event-covers/${event.year}/${event.img}`
+            }
+            style={!hasPhotos ? {} : { display: "none" }}
+            alt="header"
+            className={styles.eventCoverImage}
+            width="1200px"
+            height="630px"
+          />
           <div className={styles.imageGalleryWrapper}>
             <AwesomeSlider
               cssModule={styles}

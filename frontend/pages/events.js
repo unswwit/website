@@ -192,8 +192,8 @@ const Events = () => {
                 className={styles.eventImages}
                 src={`/event-covers/${year}/${event.img}`}
                 alt={eventLabel.join(" ")}
-                width={"375px"}
-                height={"200px"}
+                width="1200px"
+                height="628px"
               />
             </div>
           </Link>
