@@ -135,6 +135,7 @@ form input.button:hover {
   padding: 30px;
   float: none;
   overflow: none;
+  text-align: left;
 }
 
 .newEmails div.col3 {
@@ -152,6 +153,7 @@ form input.button:hover {
   float: none;
   height: 230px;
   overflow: none;
+  text-align: left;
 }
 
 .lineBreak {
