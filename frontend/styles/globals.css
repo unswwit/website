@@ -56,6 +56,92 @@ p {
   margin-top: 0;
 }
 
+/*----------------------------------Header------------------------------------*/
+/*Heading title*/
+.headerTitle h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 5vw;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.coverPhoto {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.cover_image {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+/*website overlay*/
+.coverPhoto .dark {
+  width: 100%;
+  background-color: #313638;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  z-index: 1;
+}
+
+.coverPhoto .headerTitle {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coverPhoto .headerTitle h1 {
+  margin: 0px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 700px) {
+  .coverPhoto,
+  .coverPhoto .dark,
+  .coverPhoto .headerTitle,
+  .cover_image {
+    height: 40vh;
+  }
+
+  .coverPhoto .headerTitle h1 {
+    font-size: 3.5vh;
+  }
+
+  .coverPhoto .headerTitle {
+    top: 25px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .coverPhoto .headerTitle h1 {
+    font-size: 3vh;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .coverPhoto .headerTitle h1 {
+    font-size: 2.5vh;
+  }
+}
+
+@media only screen and (max-width: 318px) {
+  .coverPhoto {
+    position: relative;
+  }
+}
+
 /*----------------------------------Footer------------------------------------*/
 /* WIT logo */
 .photo {
