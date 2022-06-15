@@ -9,6 +9,7 @@ import SponsorsModal from "../../components/sponsorsModal";
 import LoadingScreen from "../../components/LoadingScreen";
 import { sponsors, affiliations, partnerships } from "../../components/sponsorData";
 import Image from "next/image";
+import Link from "next/link";
 
 function Sponsors() {
   const [open, setOpen] = React.useState(false);
@@ -55,12 +56,9 @@ function Sponsors() {
 
             <p className={styles.subheader}>
               Interested in partnering with us? Contact us at{" "}
-              <a
-                className={styles.subheader}
-                href="mailto:externals@unswwit.com"
-              >
-                externals@unswwit.com
-              </a>
+              <Link href="mailto:externals@unswwit.com">
+                <a className={styles.subheader}>externals@unswwit.com</a>
+              </Link>
             </p>
 
             {/* Start of Diamond Sponsors Section */}
