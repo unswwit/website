@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/team.module.css";
+import styles from "../styles/team.module.css";
 import Image from "next/image";
 
 const Execs = (props) => {

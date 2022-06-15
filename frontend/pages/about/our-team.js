@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import styles from "../../styles/team.module.css";
 import PageHeader from "../../components/header";
-import Execs from "./execs";
-import SubCom from "./subcom";
+import Execs from "../../components/execs";
+import SubCom from "../../components/subcom";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Timeline from "../../components/Timeline";
 import ScrollUpBtn from "../../components/ScrollUpBtn";
