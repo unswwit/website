@@ -33,6 +33,17 @@ a {
   box-sizing: border-box;
 }
 
+/*----------------------------------Dark mode----------------------------------*/
+body {
+  color: #222;
+}
+
+/*Changes background*/
+@media (prefers-color-scheme: dark) {
+  body {
+    background:var(--dark-grey);
+  }
+}
 
 /*----------------------------------General------------------------------------*/
 h1 {

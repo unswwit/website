@@ -32,8 +32,6 @@ const ContactUs = () => {
             imgUrl="/headers/2021-exec-header.jpg"
             title="Contact Us"
             imageLoading={setHeaderLoading}
-            width="3000px"
-            height="1331px"
           />
           <div className={styles.form}>
             <h2 className={styles.inquiry}>Send Through a General Inquiry</h2>
@@ -45,8 +43,8 @@ const ContactUs = () => {
                     ? `${"/willow_contact_dark_mode.png"}`
                     : `${"/willow_contact.png"}`
                 }
-                width="90%"
-                height="400px"
+                width="315px"
+                height="415px"
                 className={styles.centre}
                 alt="contact us"
               />
