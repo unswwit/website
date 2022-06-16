@@ -9,7 +9,7 @@ class PubArticle extends Component {
         <div className={styles.dark} />
         <div className={styles.imageContainer}>
           <img
-            src={process.env.PUBLIC_URL + this.props.imgUrl}
+            src={this.props.imgUrl}
             alt="wit logo"
             className={styles.articleImg}
           />

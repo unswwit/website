@@ -171,7 +171,7 @@ export default function Home() {
                 last3articles.map((article, index) => (
                   <div className={styles.homeArticles} key={index}>
                     <PubArticle
-                      imgUrl={`${process.env.PUBLIC_URL}/publications/${article.year}/${article.img}`}
+                      imgUrl={`/publications/${article.year}/${article.img}`}
                       heading={article.heading}
                       date={article.date}
                       url={article.url}

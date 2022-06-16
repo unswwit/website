@@ -8,6 +8,7 @@ import {
 import React from "react";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import quotes from "../styles/QuotesSlideshow.module.css";
+import Image from "next/image";
 
 const QuotesSlideshow = ({
   height,
@@ -138,9 +139,11 @@ const QuotesSlideshow = ({
     return (
       <>
         <div className={quotes.authorBlock}>
-          <img
+          <Image
             className={quotes.authorImage}
-            src={`${process.env.PUBLIC_URL}/portraits/${data[key][2]}`}
+            src={`/portraits/${data[key][2]}`}
+            width="90px"
+            height="90px"
             alt={data[key][0]}
           />
           <div className={quotes.authorDetails}>

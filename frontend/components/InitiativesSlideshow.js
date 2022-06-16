@@ -104,10 +104,7 @@ const InitiativesSlideshow = () => {
                         rel="noopener noreferrer"
                       >
                         <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            `/event-covers/2022/${firstUpcomingEvent.img}`
-                          }
+                          src={`/event-covers/2022/${firstUpcomingEvent.img}`}
                           alt={firstUpcomingEvent.title}
                         />
                       </a>
@@ -126,10 +123,7 @@ const InitiativesSlideshow = () => {
                         rel="noopener noreferrer"
                       >
                         <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            `/event-covers/2022/${latestEvent.img}`
-                          }
+                          src={`/event-covers/2022/${latestEvent.img}`}
                           alt={latestEvent.title}
                         />
                       </a>
@@ -174,7 +168,6 @@ const InitiativesSlideshow = () => {
                   >
                     <img
                       src={
-                        process.env.PUBLIC_URL +
                         "/blog-covers/09-procrastinating.png"
                       }
                       alt="What are you REALLY Procrastinating?"
@@ -187,10 +180,7 @@ const InitiativesSlideshow = () => {
                     rel="noopener noreferrer"
                   >
                     <img
-                      src={
-                        process.env.PUBLIC_URL +
-                        `/blog-covers/${latestBlog.img}`
-                      }
+                      src={`/blog-covers/${latestBlog.img}`}
                       alt={`${latestBlog.heading}`}
                     />
                   </a>
@@ -230,10 +220,7 @@ const InitiativesSlideshow = () => {
                     rel="noopener noreferrer"
                   >
                     <img
-                      src={
-                        process.env.PUBLIC_URL +
-                        `/podcast-covers/${latestPodcast.img}`
-                      }
+                      src={`/podcast-covers/${latestPodcast.img}`}
                       alt={`${latestPodcast.title}`}
                     />
                   </a>

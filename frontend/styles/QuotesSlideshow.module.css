@@ -151,13 +151,13 @@
 .beginQuote {
   position: relative;
   right: 50%;
-  top: 10px;
+  top: 140px;
 }
 
 .endQuote {
   position: relative;
   left: 50%;
-  top: 80px;
+  top: -40px;
 }
 
 .quoteContainer {
