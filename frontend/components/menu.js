@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
 
 class Menu extends Component {
   constructor(props) {
@@ -70,15 +70,15 @@ class Menu extends Component {
                   index === 3 ||
                   index === 5 ? (
                   // Non-dropdown
-                  <NavLink
+                  <Link
                     className="menu-link"
-                    to={this.routes[route][0]}
+                    href={this.routes[route][0]}
                     onClick={this.props.handleMenuClick}
                   >
                     <div className="menu-box">
                       <li className="menu-item">{this.routes[route][1]}</li>
                     </div>
-                  </NavLink>
+                  </Link>
                 ) : index === 1 ? (
                   // About dropdown
                   <div>
@@ -96,9 +96,9 @@ class Menu extends Component {
                       <div>
                         {Object.keys(this.aboutRoutes).map((aboutRoute) => {
                           return (
-                            <NavLink
+                            <Link
                               className="menu-link"
-                              to={this.aboutRoutes[aboutRoute][0]}
+                              href={this.aboutRoutes[aboutRoute][0]}
                               onClick={this.props.handleMenuClick}
                             >
                               <div className="menu-box">
@@ -107,7 +107,7 @@ class Menu extends Component {
                                   {this.aboutRoutes[aboutRoute][1]}
                                 </li>
                               </div>
-                            </NavLink>
+                            </Link>
                           );
                         })}
                       </div>
@@ -130,9 +130,9 @@ class Menu extends Component {
                       <div>
                         {Object.keys(this.mediaRoutes).map((mediaRoute) => {
                           return (
-                            <NavLink
+                            <Link
                               className="menu-link"
-                              to={this.mediaRoutes[mediaRoute][0]}
+                              href={this.mediaRoutes[mediaRoute][0]}
                               onClick={this.props.handleMenuClick}
                             >
                               <div className="menu-box">
@@ -141,7 +141,7 @@ class Menu extends Component {
                                   {this.mediaRoutes[mediaRoute][1]}
                                 </li>
                               </div>
-                            </NavLink>
+                            </Link>
                           );
                         })}
                       </div>

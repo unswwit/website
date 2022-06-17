@@ -7,7 +7,7 @@ import {
 } from "pure-react-carousel";
 import React, { useEffect, useState } from "react";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import styles from "../styles/home.module.css";
+import styles from "../styles/Home.module.css";
 import axios from "axios";
 import humps from "humps";
 import Link from "next/link";

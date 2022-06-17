@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
 
-import ChromeReaderModeOutlinedIcon from "@material-ui/icons/ChromeReaderModeOutlined";
+import ChromeReaderModeOutlinedIcon from '@material-ui/icons/ChromeReaderModeOutlined';
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import PeopleOutlineIcon from "@material-ui/icons/PeopleOutline";
 import PhoneOutlinedIcon from "@material-ui/icons/PhoneOutlined";
@@ -98,19 +98,19 @@ const DropdownMenu = (props) => {
           <span>
             {/* Highlights navbar if user is on that page */}
             {navBarCurrentState() ? (
-              <NavLink
-                to={routes[props.route][0]}
+              <Link
+                href={routes[props.route][0]}
                 activeClassName="highlight-nav"
               >
                 {routes[props.route][1]}
-              </NavLink>
+              </Link>
             ) : (
-              <NavLink
-                to={routes[props.route][0]}
+              <Link
+                href={routes[props.route][0]}
                 activeClassName="highlight-no-nav"
               >
                 {routes[props.route][1]}
-              </NavLink>
+              </Link>
             )}
           </span>
         </div>
@@ -126,8 +126,8 @@ const DropdownMenu = (props) => {
           {Object.keys(aboutRoutes).map((aboutRoute) => {
             return (
               <div className="dropdown-item" key={aboutRoute}>
-                <NavLink
-                  to={aboutRoutes[aboutRoute][0]}
+                <Link
+                  herf={aboutRoutes[aboutRoute][0]}
                   activeClassName="highlight-dropdown"
                 >
                   {getIcon(aboutRoutes[aboutRoute][1])}
@@ -141,7 +141,7 @@ const DropdownMenu = (props) => {
                   ) : (
                     aboutRoutes[aboutRoute][2]
                   )}
-                </NavLink>
+                </Link>
               </div>
             );
           })}
@@ -166,19 +166,19 @@ const DropdownMenu = (props) => {
         >
           <span>
             {navBarCurrentState() ? (
-              <NavLink
-                to={routes[props.route][0]}
+              <Link
+                href={routes[props.route][0]}
                 activeClassName="highlight-nav"
               >
                 {routes[props.route][1]}
-              </NavLink>
+              </Link>
             ) : (
-              <NavLink
-                to={routes[props.route][0]}
+              <Link
+                href={routes[props.route][0]}
                 activeClassName="highlight-no-nav"
               >
                 {routes[props.route][1]}
-              </NavLink>
+              </Link>
             )}
           </span>
         </div>
@@ -194,13 +194,13 @@ const DropdownMenu = (props) => {
           {Object.keys(mediaRoutes).map((mediaRoute) => {
             return (
               <div className="dropdown-item dropdown-media" key={mediaRoute}>
-                <NavLink
-                  to={mediaRoutes[mediaRoute][0]}
+                <Link
+                  href={mediaRoutes[mediaRoute][0]}
                   activeClassName="highlight-dropdown"
                 >
                   {getIcon(mediaRoutes[mediaRoute][1])}
                   {mediaRoutes[mediaRoute][1]}
-                </NavLink>
+                </Link>
               </div>
             );
           })}
