@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/team.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const Execs = (props) => {
   const socials = {
@@ -36,19 +37,16 @@ const Execs = (props) => {
               <div className={styles.iconBar}>
                 {Object.keys(socials).map((social) => {
                   return (
-                    <a
-                      href={socials[social]}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      key={social}
-                    >
-                      <Image
-                        className={styles.icon}
-                        src={`/icons/${social}.png`}
-                        alt={social}
-                        layout="fill"
-                      />
-                    </a>
+                    <Link target="blank" href={socials[social]} rel="noopener noreferrer" key={social}>
+                      <a className={styles.icon}>
+                        <Image
+                          src={`/icons/${social}.png`}
+                          alt={social}
+                          width="50px"
+                          height="50px"
+                        />
+                      </a>
+                    </Link>
                   );
                 })}
               </div>
