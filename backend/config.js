@@ -1,7 +1,3 @@
-// configure access to env variables
-const dotenv = require('dotenv');
-dotenv.config();
-
 const env = process.env;
 
 const config = {
@@ -16,10 +12,6 @@ const config = {
     }
   },
   offset: 0,
-  captcha: {
-    // get secret key from env file
-    key: env.RECAPTCHA_SECRET_KEY
-  }
 };
 
 module.exports = config;
