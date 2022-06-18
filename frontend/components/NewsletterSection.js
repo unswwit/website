@@ -29,7 +29,7 @@ const NewsletterSection = ({ setOpen, open, callbackModal, fade }) => {
       <Modal
         aria-labelledby="spring-modal-title"
         aria-describedby="spring-modal-description"
-        className={styles.signUpForm}
+        className="signUpForm"
         open={open}
         onClose={() => setOpen(false)}
         closeAfterTransition

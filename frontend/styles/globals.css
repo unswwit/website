@@ -697,6 +697,155 @@ p {
   margin-top: 0;
 }
 
+/*-------------------------------Newsletter sign up form-----------------------------*/
+.signUpForm span {
+  color: #e85f5c;
+  font-family: "Montserrat", sans-serif;
+}
+
+.signUpForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter form input {
+  margin: 15px auto;
+  display: block;
+  font-size: 1.2vw;
+  width: 100%;
+
+  border-style: none;
+  border-bottom: solid;
+  border-color: var(--general-text);
+  border-width: 2px;
+  padding: 5px;
+  font-family: "Montserrat", sans-serif;
+  width: 50%;
+}
+
+.button form button {
+  background-color: #e85f5c;
+  color: #ffffff;
+  font-size: 1.3vw;
+  width: 100%;
+  margin: 20px auto;
+  border: none;
+  display: block;
+  padding: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  width: 50%;
+}
+
+.newsletterImg {
+  width: 40%;
+  object-fit: contain;
+}
+
+.paper {
+  background-color: white;
+  border-radius: 2;
+  padding: 1vw 2vw 2vw 2vw;
+  width: 100%;
+}
+
+.formTitle {
+  color: var(--yellow);
+  font-size: 2.5vw;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.formDescription {
+  color: #313638;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12pt;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.msg-alert p {
+  font-size: 1.3vw;
+}
+
+.closeBtn {
+  float: right;
+  margin: 12px;
+}
+
+.closeSymbol {
+  color: #313638;
+  text-align: right;
+}
+
+.subscribeError {
+  color: #e85f5c;
+  font-weight: 500;
+}
+
+/*--- Dark mode ---*/
+@media (prefers-color-scheme:dark) {
+  .newsletter form input {
+    background-color: #323235;
+    border-color: white;
+    color: white;
+  }
+  
+  .button form button {
+    background-color: var(--red);
+    color: white;
+  }
+  
+  .paper {
+    background-color: var(--dark-grey);
+  }
+  
+  .formDescription {
+    color: white;
+  }
+  
+  .closeSymbol {
+    color: white;
+  }
+}
+
+/*-------------------------------Newsletter Form Mobile Design-----------------------------*/
+@media only screen and (max-width: 1000px) {
+  .button form button {
+    font-size: 12pt;
+    width: 75%;
+  }
+
+  .newsletter form input {
+    width: 75%;
+  }
+
+  .formTitle {
+    font-size: 14pt;
+  }
+
+  .newsletter form input,
+  .msg-alert p {
+    font-size: 12pt;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .newsletter form input,
+  .msg-alert p {
+    font-size: 11pt;
+  }
+
+  .newsletter form input,
+  .formDescription,
+  .button form button {
+    width: 80%;
+  }
+}
 /*----------------------------------Footer------------------------------------*/
 /* WIT logo */
 .photo {

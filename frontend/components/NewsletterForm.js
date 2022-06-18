@@ -18,18 +18,18 @@ const NewsletterForm = ({ handleClose }) => {
   };
 
   return (
-    <div className={styles.paper}>
+    <div className="paper">
       <IconButton
         aria-label="close newsletter subscribe form"
         onClick={handleClose}
-        className={styles.closeBtn}
+        className="closeBtn"
       >
-        <CloseIcon className={styles.closeSymbol} />
+        <CloseIcon className="closeSymbol"/>
       </IconButton>
       <br />
       <br />
-      <h1 className={styles.formTitle}>Newsletter</h1>
-      <p className={styles.formDescription}>
+      <h1 className="formTitle">Newsletter</h1>
+      <p className="formDescription">
         Stay up to date WIT us on the latest events and news
       </p>
       <form
@@ -72,10 +72,10 @@ const NewsletterForm = ({ handleClose }) => {
           name="MMERGE3"
           placeholder="Degree"
         />
-        <p className={styles.subscribeError}>
+        <p className="subscribeError">
           {error ? "Please input a valid email" : ""}
         </p>
-        <button className={styles.button} disabled={error}>Subscribe</button>
+        <button className="button" disabled={error}>Subscribe</button>
       </form>
     </div>
   );
