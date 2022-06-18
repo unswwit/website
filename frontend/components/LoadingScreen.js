@@ -6,7 +6,7 @@ const LoadingScreen = () => {
     <div id="loadingBackground">
       <Image
         id="loadingWillow"
-        src={`${process.env.PUBLIC_URL}/walkingWillow.gif`}
+        src="/walkingWillow.gif"
         alt="Walking Willow the wombat"
         height="300px"
         width="300px"

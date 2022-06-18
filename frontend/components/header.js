@@ -17,7 +17,7 @@ const PageHeader = ({ imageLoading, imgUrl, title }) => {
 
       {/* header image */}
       <Image
-        src={process.env.PUBLIC_URL + imgUrl}
+        src={imgUrl}
         alt="header"
         className="cover_image"
         onLoad={

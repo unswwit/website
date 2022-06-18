@@ -16,12 +16,15 @@ const Execs = (props) => {
         <div>
           {props.imgUrl && (
             <div className={styles.profileCrop}>
+              <div className={styles.profileImg}>
               <Image
                 src={props.imgUrl}
-                className={`${styles.profileImg} ${styles[props.className]}`}
+                className={`${styles[props.className]}`}
                 alt={props.name}
-                layout="fill"
+                width="250px"
+                height="250px"
               />
+              </div>
             </div>
           )}
           <div className={styles.profileDetails}>

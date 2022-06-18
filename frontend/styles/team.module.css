@@ -75,36 +75,6 @@ h2#topheading {
   display: block;
   height: 100%;
   margin: 0 auto;
-  width: auto;
-}
-
-/*Transform executive profile images*/
-.exec2021Img {
-  transform: translate(-3%, -13%);
-  width: 105%;
-  height: auto;
-}
-
-.gabImg {
-  transform: translate(0%, 0);
-}
-
-.vivwImg {
-  height: auto;
-  transform: translate(-5%, -10%);
-  width: 120%;
-}
-
-.alisonImg {
-  transform: translate(-17%, 0);
-}
-
-.eliImg {
-  transform: translate(-7%, 0%);
-}
-
-.felImg {
-  transform: translate(-12%, 0);
 }
 
 /*Executive profile block*/
