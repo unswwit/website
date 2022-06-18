@@ -193,25 +193,25 @@ export default function Home() {
         >
           <h1>SPONSORS AND AFFILIATIONS</h1>
           <div id={styles.sponsorsContainer}>
-            <Image
-              src="/sponsors-collage-light-mode.png"
-              alt="light mode banner"
-              margin-top="50px"
-              width="900px"
-              height="650px"
-              display="unset"
-              className={styles.lightmodeBanner}
-            />
-
-            {/* UNABLE TO MAKE DARK MODE WORK <Image
-              display="none"
-              src="/sponsors-collage-dark-mode.png"
-              alt="dark mode banner"
-              margin-top="50px"
-              width="900px"
-              height="650px"
-              className={styles.darkmodeBanner}
-              />*/}
+            <div className={styles.lightmodeBanner}>
+              <Image
+                src="/sponsors-collage-light-mode.png"
+                alt="light mode banner"
+                margin-top="50px"
+                width="900px"
+                height="650px"
+              />
+            </div>
+            <div className={styles.darkmodeBanner}>
+              <Image
+                display="none"
+                src="/sponsors-collage-dark-mode.png"
+                alt="dark mode banner"
+                margin-top="50px"
+                width="900px"
+                height="650px"
+              />
+            </div>
           </div>
         </div>
         {/* Start of newsletter */}

@@ -1,4 +1,3 @@
-
 /*-------------------------------Home page header-----------------------------*/
 /*Header image*/
 .contain {
@@ -143,7 +142,7 @@ div .headline {
 /*Dark mode*/
 @media (prefers-color-scheme:dark) {
   .descriptionRight p {
-    color:white;
+    color: white;
   }
 }
 
@@ -257,8 +256,10 @@ div .headline {
 }
 
 .event1 img:hover {
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  -ms-transform: scale(1.5);
+  /* IE 9 */
+  -webkit-transform: scale(1.5);
+  /* Safari 3-8 */
   transform: scale(1.03);
 }
 
@@ -290,7 +291,7 @@ div .headline {
   }
 
   .eventsDescription button {
-    background-color:#202124;
+    background-color: #202124;
   }
 
   .eventsDescription button:hover {
@@ -307,7 +308,7 @@ div .headline {
   padding-bottom: 100px;
   background: var(--section);
 }
-  
+
 /*Center block text*/
 .quotes h1 {
   font-family: "Montserrat", sans-serif;
@@ -416,8 +417,10 @@ div .headline {
 }
 
 .right img:hover {
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  -ms-transform: scale(1.5);
+  /* IE 9 */
+  -webkit-transform: scale(1.5);
+  /* Safari 3-8 */
   transform: scale(1.03);
 }
 
@@ -481,7 +484,7 @@ div .headline {
   .carousel .buttonBack {
     border-right: 30px solid var(--light-grey);
   }
-  
+
   .carousel .buttonNext {
     border-left: 30px solid var(--light-grey);
   }
@@ -489,7 +492,7 @@ div .headline {
   .buttonBack:disabled {
     border-right: 30px solid var(--grey);
   }
-  
+
   .buttonNext:disabled {
     border-left: 30px solid var(--grey);
   }
@@ -525,16 +528,16 @@ div .headline {
 }
 
 .darkmodeBanner {
-  display:none;
+  display: none;
 }
 
 .lightmodeBanner {
-  display:unset;
+  display: block;
 }
 
 @media (prefers-color-scheme:dark) {
   .lightmodeBanner {
-    display:none;
+    display: none;
   }
 
   .darkmodeBanner {
@@ -573,7 +576,7 @@ div .headline {
 }
 
 .publications .articlesDiv {
-  margin: 50px auto 40px  auto;
+  margin: 50px auto 40px auto;
   width: 85%;
 }
 
@@ -614,7 +617,7 @@ div .headline {
 }
 
 /*---Dark mode---*/
-@media (prefers-color-scheme:dark){
+@media (prefers-color-scheme:dark) {
   .publications {
     background-color: #323235;
   }
@@ -623,9 +626,9 @@ div .headline {
     border: 1.5px solid var(--red);
     background-color: #323235;
   }
-  
+
   .pubBtn:hover {
-    background-color:var(--sand);
+    background-color: var(--sand);
   }
 }
 
@@ -659,6 +662,7 @@ div .headline {
   .number span {
     letter-spacing: 15px;
   }
+
   .number p {
     font-size: 2vw;
   }
@@ -1002,19 +1006,23 @@ div .headline {
     padding: 40px 0;
   }
 
-  .carousel .buttonBack, .homeLeftArrow {
-    margin-left: 25px; 
-  }
-
-  .carousel .buttonNext, .homeRightArrow {
-    margin-right: 25px;
-  }
-
-  .carousel .buttonBack:disabled, .homeLeftArrow:disabled {
+  .carousel .buttonBack,
+  .homeLeftArrow {
     margin-left: 25px;
   }
 
-  .carousel .buttonNext:disabled, .homeRightArrow:disabled {
+  .carousel .buttonNext,
+  .homeRightArrow {
+    margin-right: 25px;
+  }
+
+  .carousel .buttonBack:disabled,
+  .homeLeftArrow:disabled {
+    margin-left: 25px;
+  }
+
+  .carousel .buttonNext:disabled,
+  .homeRightArrow:disabled {
     margin-right: 25px;
   }
 }
@@ -1028,7 +1036,8 @@ div .headline {
     margin-left: 20px;
   }
 
-  .carousel .buttonNext, .homeRightArrow {
+  .carousel .buttonNext,
+  .homeRightArrow {
     margin-right: 20px;
   }
 
