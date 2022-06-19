@@ -187,7 +187,6 @@ const Events = () => {
         <div className={styles.pastEvent} key={index}>
           <Link href={`/event-recaps/${event_id}`}>
             <div className={styles.eventImgBox}>
-              <div className={styles.darkOverlay} />
               <Image
                 className={styles.eventImages}
                 src={`/event-covers/${year}/${event.img}`}
@@ -195,6 +194,7 @@ const Events = () => {
                 width="1200px"
                 height="628px"
               />
+              <div className={styles.darkOverlay} />
             </div>
           </Link>
         </div>
