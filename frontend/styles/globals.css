@@ -1,25 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display&display=swap");
 
-/* 
-  Web fonts used:
-  font-family: "Playfair Display", serif;
-  font-family: "Montserrat", sans-serif;
-*/
-
 /*Web colours*/
 :root {
   --white: #fff;
-  --yellow: #feb14b; /* Headings and Highlighted text */
-  --light-yellow: #fff7ef; /* Navigation */
-  --sand:  #fff0e1c1; /* Selected navigation */
-  --black: #313638; /* General text */
-  --grey: #676767; /* Subheadings */
-  --light-grey: #c4c4c4; /* disabled arrows */
+  --yellow: #feb14b;
+  /* Headings and Highlighted text */
+  --light-yellow: #fff7ef;
+  /* Navigation */
+  --sand: #fff0e1c1;
+  /* Selected navigation */
+  --black: #313638;
+  /* General text */
+  --grey: #676767;
+  /* Subheadings */
+  --light-grey: #c4c4c4;
+  /* disabled arrows */
   --section: #F4F4F4;
-  --red: #e85f5c; /* Buttons and unvisited links */
-  --dark-red: #bd3f3d; /* visited links */
-  --dark-grey: #202124; /* dark mode card */
-  --dark-slate-grey: #3b3b41; /* dark mode lighter grey card */
+  --red: #e85f5c;
+  /* Buttons and unvisited links */
+  --dark-red: #bd3f3d;
+  /* visited links */
+  --dark-grey: #202124;
+  /* dark mode card */
+  --dark-slate-grey: #3b3b41;
+  /* dark mode lighter grey card */
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /*----------------------------------Dark mode----------------------------------*/
@@ -30,7 +51,7 @@ body {
 /*Changes background*/
 @media (prefers-color-scheme: dark) {
   body {
-    background:var(--dark-grey);
+    background: var(--dark-grey);
   }
 }
 
@@ -42,7 +63,7 @@ h1 {
 }
 
 h2 {
-  color:var(--yellow);
+  color: var(--yellow);
   font-family: "Montserrat", sans-serif;
   font-size: 30pt;
   text-transform: uppercase;
@@ -50,52 +71,10 @@ h2 {
   text-align: center;
 }
 
-.header {
-  padding-top: 50px;
-  padding-bottom: 20px;
-  text-align: center;
-}
-
-.subheader {
-  font-family: "Montserrat", sans-serif;
-  font-size: 13pt;
-  color: var(--grey);
-}
-
 p {
   font-family: "Montserrat", sans-serif;
   font-size: 10pt;
   margin-top: 0;
-}
-
-.body_bold {
-  font-family: "Montserrat", sans-serif;
-  font-size: 10pt;
-  font-weight: bold;
-}
-
-.centre {
-  text-align: center;
-}
-
-.button {
-  font-family: "Montserrat", sans-serif;
-  background-color: #e85f5c;
-  border-radius: 60px;
-  border-style: none;
-  color: white;
-  padding: 10px 45px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.button:hover {
-  background-color: var(--dark-red);
-  color: #ffffff;
 }
 
 /*----------------------------------Header------------------------------------*/
@@ -111,7 +90,6 @@ p {
 .coverPhoto {
   height: 100vh;
   overflow: hidden;
-  position: relative;
 }
 
 .cover_image {
@@ -151,6 +129,7 @@ p {
 }
 
 @media only screen and (max-width: 700px) {
+
   .coverPhoto,
   .coverPhoto .dark,
   .coverPhoto .headerTitle,
@@ -297,7 +276,7 @@ p {
 }
 
 .menuTitle {
-  color: white;
+  color: var(--general-text);
   padding: 10px 15px;
 }
 
@@ -307,7 +286,7 @@ p {
 }
 
 .nav-item a:hover {
-  color:  var(--red);
+  color: var(--red);
   padding: 15px;
   text-decoration: none;
 }
@@ -325,27 +304,358 @@ p {
   transition: opacity 300ms, width 0.35s ease 0s;
 }
 
-
-/*----------------------------------General------------------------------------*/
-h1 {
-  color: var(--yellow);
-  font-family: "Playfair Display", serif;
-  font-size: 48pt;
+.nav-item:hover:not(.highlight-nav):after {
+  width: 90%;
+  opacity: 1;
 }
 
-h2 {
-  color:var(--yellow);
-  font-family: "Montserrat", sans-serif;
-  font-size: 30pt;
-  text-transform: uppercase;
-  padding-bottom: 20px;
+.nav-item:hover:not(.highlight-nav-no-drop):after {
+  width: 90%;
+  opacity: 1;
+}
+
+.nav-item:hover:not(.highlight-nav-white):after {
+  width: 90%;
+  opacity: 1;
+}
+
+/*Making the navigation change colour on scroll*/
+.activeNav {
+  background-color: var(--light-yellow);
+  transition: background-color 0.2s ease-in;
+}
+
+.dropdown-toggle:after {
+  color: var(--white);
+}
+
+.active-nav-item a,
+.active-nav-item span,
+.active-nav-item:after {
+  color: var(--black);
+}
+
+.logo-black {
+  display: none;
+}
+
+/* logo on hamburger menu */
+.logo {
+  width: 35px;
+  margin: 5px 0px 5px 15px;
+}
+
+.icon {
+  transform: scale(0.9);
+  margin-right: 10px;
+  margin-left: -10px;
+}
+
+.icon-media {
+  margin-left: -5px;
+}
+
+.highlight-nav,
+.highlight-nav-white,
+.highlight-nav-no-drop,
+.highlight-dropdown,
+.highlight-no-nav {
+  font-weight: 500;
+}
+
+/* clear background - dropdown */
+.highlight-no-nav::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  left: 0%;
+  background-color: var(--white);
+  top: 32px;
+  z-index: 100;
+}
+
+/* yellow background - dropdown */
+.highlight-nav::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  left: 0%;
+  background-color: var(--red);
+  top: 32px;
+  z-index: 100;
+}
+
+/* yellow background - no dropdown*/
+.highlight-nav-no-drop::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 90%;
+  bottom: 0;
+  left: 5%;
+  background-color: var(--red);
+  z-index: 100;
+}
+
+/* clear background - no dropdown */
+.highlight-nav-white::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 90%;
+  bottom: 0;
+  left: 5%;
+  background-color: var(--white);
+  z-index: 99;
+}
+
+.hiddenNav {
+  display: none;
+}
+
+/*Dark mode version of nav bar*/
+@media (prefers-color-scheme: dark) {
+  .activeNav {
+    background-color: #000000;
+  }
+
+  .active-nav-item a,
+  .active-nav-item span,
+  .active-nav-item:after {
+    color: #ffffff;
+  }
+
+  .dropdown-item:hover {
+    background-color: #000000;
+  }
+
+  .dropdown-menu {
+    border-color: #000000;
+    background-color: #000000;
+  }
+
+  .dropdown-item a {
+    color: #fff;
+  }
+
+  .transparent::after {
+    border-bottom-color: #000000;
+  }
+
+  .mediaDD::after {
+    border-bottom-color: #000000;
+  }
+}
+
+/* Mobile responsiveness of nav bar */
+@media screen and (max-width: 950px) {
+  .nav-item {
+    display: none;
+  }
+
+  .bg-custom {
+    background-color: var(--light-yellow);
+  }
+
+  .logo-black {
+    display: block;
+  }
+
+  .nav-item-btn {
+    color: white;
+    display: block;
+    z-index: 99;
+  }
+}
+
+/* Mobile responsiveness of nav bar and dark mode */
+@media screen and (max-width: 950px) and (prefers-color-scheme: dark) {
+  .activeNav {
+    background-color: #000;
+  }
+
+  .active-nav-item a,
+  .active-nav-item span,
+  .active-nav-item:after {
+    color: #ffffff;
+  }
+
+  .bg-custom {
+    background-color: #000;
+  }
+
+  .dropdown-item:hover {
+    background-color: #000;
+  }
+
+  .dropdown-menu {
+    border-color: #000000;
+    background-color: #000000;
+  }
+
+  .dropdown-item a {
+    color: #fff;
+  }
+
+  .transparent::after {
+    border-bottom-color: #000000;
+  }
+
+  .mediaDD::after {
+    border-bottom-color: #000000;
+  }
+
+  .nav-item-btn {
+    color: white;
+    display: block;
+    z-index: 99;
+  }
+
+  .photo {
+    display: block;
+  }
+}
+
+/*----------------------------------Loading Screen------------------------------------*/
+#loadingBackground {
+  background: var(--light-yellow);
+  height: 100vh;
+  z-index: 100;
+  position: absolute;
+  width: 100vw;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-p {
-  font-family: "Montserrat", sans-serif;
-  font-size: 10pt;
-  margin-top: 0;
+#loadingWillow {
+  height: 300px;
+  width: 300px;
+}
+
+#loadingBackground p {
+  overflow: hidden;
+  font-size: 18pt;
+  animation: typing 2.5s steps(34, end);
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 10em;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  #loadingBackground {
+    background: #323235;
+  }
+
+  #loadingBackground p {
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #loadingBackground {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #loadingWillow {
+    height: 280px;
+    width: 280px;
+  }
+}
+
+/*-----------------------------------Menu-----------------------------------*/
+
+.menu-container {
+  position: fixed;
+  width: 100%;
+  background: var(--light-yellow);
+  opacity: 1;
+  color: #313638;
+  z-index: 3;
+  box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.menu-link {
+  text-decoration: none;
+}
+
+.menu-item {
+  color: #313638;
+  padding: 5px 35px;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.menu-box:hover {
+  width: 92%;
+  background-color: var(--sand);
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-box:hover .menu-item {
+  color: var(--red);
+}
+
+.menu-bar {
+  float: none;
+}
+
+.menu-list {
+  padding-top: 4rem;
+}
+
+.menu-dropdown {
+  padding: 5px 0px;
+}
+
+/* Dark mode and responsive menu dropdown*/
+@media screen and (max-width: 950px) and (prefers-color-scheme: dark) {
+  .menu-container {
+    background: #000000;
+    color: #fff;
+  }
+
+  .menu-item {
+    color: #fff;
+  }
+
+  .menu-box:hover {
+    background-color: var(--dark-grey);
+  }
+
+  .menu-box:hover .menu-item {
+    color: var(--red);
+  }
 }
 
 /*----------------------------------Footer------------------------------------*/
@@ -404,11 +714,6 @@ footer {
   padding: 0px;
 }
 
-.footer-icons-img {
-  width: 100%;
-  height: 100%;
-}
-
 /*Social Tooltip Styles*/
 .tooltipTitle {
   font-size: 13px;
@@ -437,6 +742,7 @@ footer {
 a {
   color: #313638;
   transition: 0.2s;
+  text-align: center;
 }
 
 .footer-item a {
@@ -507,7 +813,7 @@ a {
   }
 
   .footer-white-logo {
-    margin-bottom: 2%; 
+    margin-bottom: 2%;
   }
 
   .footer-black-logo {
@@ -555,12 +861,12 @@ a {
   .footer-icons {
     margin-left: 1.5vw;
     margin-right: 1.5vw;
-  }  
+  }
 }
 
 @media screen and (max-width: 355px) {
   .footer-icons {
     margin-left: 1vw;
     margin-right: 1vw;
-  }  
-} 
+  }
+}
