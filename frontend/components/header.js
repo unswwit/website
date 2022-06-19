@@ -19,7 +19,7 @@ const PageHeader = ({ imageLoading, imgUrl, title }) => {
       <Image
         src={imgUrl}
         alt="header"
-        className="cover_image"
+        className="coverImage"
         onLoad={
           typeof imageLoading === "function" ? () => setImageLoaded(true) : null
         }
