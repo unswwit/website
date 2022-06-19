@@ -709,7 +709,7 @@ p {
   justify-content: center;
 }
 
-.newsletter form input {
+form input {
   margin: 15px auto;
   display: block;
   font-size: 1.2vw;
