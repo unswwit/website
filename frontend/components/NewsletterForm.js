@@ -18,18 +18,18 @@ const NewsletterForm = ({ handleClose }) => {
   };
 
   return (
-    <div className="paper">
+    <div className={styles.paper}>
       <IconButton
         aria-label="close newsletter subscribe form"
         onClick={handleClose}
-        className="closeBtn"
+        className={styles.closeBtn}
       >
-        <CloseIcon className="closeSymbol"/>
+        <CloseIcon className={styles.closeSymbol}/>
       </IconButton>
       <br />
       <br />
-      <h1 className="formTitle">Newsletter</h1>
-      <p className="formDescription">
+      <h1 className={styles.formTitle}>Newsletter</h1>
+      <p className={styles.formDescription}>
         Stay up to date WIT us on the latest events and news
       </p>
       <form

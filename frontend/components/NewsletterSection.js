@@ -9,7 +9,7 @@ const NewsletterSection = ({ setOpen, open, callbackModal, fade }) => {
     <div id={styles.container}>
       <div id={styles.newsletterBgContainer}>
         <Image
-          src={`/../public/newsletter-background.png`}
+          src={`/newsletter-background.png`}
           className={styles.background}
           alt="banner"
           layout={'fill'}
@@ -29,7 +29,7 @@ const NewsletterSection = ({ setOpen, open, callbackModal, fade }) => {
       <Modal
         aria-labelledby="spring-modal-title"
         aria-describedby="spring-modal-description"
-        className="signUpForm"
+        className={styles.signUpForm}
         open={open}
         onClose={() => setOpen(false)}
         closeAfterTransition
