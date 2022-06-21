@@ -37,7 +37,6 @@ const TimelineSlider = withStyles({
     fontSize: 20,
   },
   markLabel: {
-    fontFamily: "Montserrat, sans-serif",
     "@media (prefers-color-scheme:dark)": {
       color: "#fff", 
     }

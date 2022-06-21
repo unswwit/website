@@ -9,9 +9,6 @@ const useStyles = makeStyles((theme) => ({
     padding: "2px 2px",
     display: "flex",
     justifyContent: "center",
-    "& .MuiPaginationItem-root": {
-      fontFamily: "Montserrat, sans-serif",
-    },
     "& .Mui-selected": {
       backgroundColor: "#e85f5c",
       color: "white",
@@ -34,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const PaginationComp = ({ totalPages, paginate, page, size }) => {
+const PaginationComp = ({ totalPages, paginate, defaultPage, size }) => {
   const classes = useStyles();
 
   return (
@@ -46,7 +43,7 @@ const PaginationComp = ({ totalPages, paginate, page, size }) => {
         )}
         count={totalPages}
         onChange={(_, pageNumber) => paginate(pageNumber)}
-        page={page}
+        page={defaultPage}
         size={size ? size : "medium"}
       />
     </div>
