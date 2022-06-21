@@ -42,6 +42,8 @@ const Videos = (props) => {
   const postsPerPage = 9;
   // current page number
   const [currentPage, setCurrentPage] = useState(1);
+  // set youtube theme
+  const [youtubeTheme, setYoutubeTheme] = useState("full");
 
   // retrieve current video content
   const handleVideoNumber = (numVideos) => {
@@ -57,7 +59,6 @@ const Videos = (props) => {
   const loadPageContent = (allVideos, currVideoNumber) => {
     var videoIndex = 0;
     const currVideo = allVideos.filter((video, index) => {
-      console.log(allVideos)
       if (video.videoNumber.toString() === currVideoNumber) {
         videoIndex = index;
         return true;
@@ -99,7 +100,6 @@ const Videos = (props) => {
       }
   
       var videoIndex = loadPageContent(allVideos, currVideoNumber);
-      console.log("videoIndex: " + videoIndex);
       loadVideoPreviews(allVideos, videoIndex);
 
       setLoading(false);
@@ -167,17 +167,17 @@ const Videos = (props) => {
   };
   
   // change youtube theme depending on user dark/light mode
-  let youtubetheme = "full";
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  ) {
-    youtubetheme = "dark";
-  }
+  useEffect(() => {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      setYoutubeTheme("dark")
+    }
+  }, []);
 
   // get video items
   const getVideos = (videos) => {
-    {console.log("video.videoNumber: " + video.videoNumber)}
     return videos.map((video, index) => {
       return (
         <div className={styles.videoDescription} key={index}>
@@ -251,7 +251,7 @@ const Videos = (props) => {
               {/*https://www.youtube.com/channel/UCQ8PGe3P4ZuDSNCb9vCeTiw?sub_confirmation=1&feature=subscribe-embed-click*/}
               <YouTubeSubscribe
                 channelid={"UCQ8PGe3P4ZuDSNCb9vCeTiw"}
-                theme={youtubetheme}
+                theme={youtubeTheme}
                 layout={"full"}
                 count={"hidden"}
                 className={styles.subscribe}
