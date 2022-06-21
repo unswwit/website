@@ -171,15 +171,6 @@ const Videos = (props) => {
       setYoutubeTheme("dark")
     }
   }, []);
-  
-
-  // let youtubetheme = "full";
-  // if (
-  //   window.matchMedia &&
-  //   window.matchMedia("(prefers-color-scheme: dark)").matches
-  // ) {
-  //   youtubetheme = "dark";
-  // }
 
   // get video items
   const getVideos = (videos) => {

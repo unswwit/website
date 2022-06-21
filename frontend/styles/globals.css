@@ -67,6 +67,11 @@ p {
   margin-top: 0;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #b5bec4;
+  opacity: 1
+}
+
 /*----------------------------------Header------------------------------------*/
 /*Heading title*/
 .headerTitle h1 {
