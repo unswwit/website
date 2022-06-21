@@ -165,25 +165,15 @@ const Videos = (props) => {
     );
     setCurrentPage(pageNumber);
   };
-
-    let youtubetheme = "full";
-  useEffect(() => {
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      youtubetheme = "dark";
-    }
-  }, []);
   
   // change youtube theme depending on user dark/light mode
-  // let youtubetheme = "full";
-  // if (
-  //   window.matchMedia &&
-  //   window.matchMedia("(prefers-color-scheme: dark)").matches
-  // ) {
-  //   youtubetheme = "dark";
-  // }
+  let youtubetheme = "full";
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    youtubetheme = "dark";
+  }
 
   // get video items
   const getVideos = (videos) => {
