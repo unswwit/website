@@ -43,6 +43,19 @@ body {
   body {
     background:var(--dark-grey);
   }
+
+  /* Change colour of podcast search bar placeholder text to white on dark mode */
+  ::placeholder {
+    color: white;
+  }
+
+  :-ms-input-placeholder {
+    color: white; 
+  }
+
+  ::ms-input-placeholder {
+    color: white; 
+  }
 }
 
 /*----------------------------------General------------------------------------*/
