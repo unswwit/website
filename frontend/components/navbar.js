@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Link from "next/link";
-import Menu from "./nenu";
+import Menu from "./menu";
 import MenuBtn from "./menuBtn";
 import DropdownMenu from "./dropdownMenu";
 
