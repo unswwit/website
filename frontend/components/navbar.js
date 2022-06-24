@@ -110,8 +110,8 @@ class Navbar extends Component {
               </li>
               <li
                 className="nav-item"
-                onMouseEnter={this.handleHoverMedia}
-                onMouseLeave={this.handleHoverMedia}
+                onMouseEnter={this.handleHover}
+                onMouseLeave={this.handleHover}
                 key={"media"}
               >
                 <div className="dropdown" display="static">
