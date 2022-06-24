@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Link from "next/link";
-import Menu from "./Menu";
-import MenuBtn from "./MenuBtn";
+import Menu from "./nenu";
+import MenuBtn from "./menuBtn";
 import DropdownMenu from "./dropdownMenu";
 
 class Navbar extends Component {
