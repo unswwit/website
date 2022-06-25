@@ -1,0 +1,120 @@
+Vivian [00:00:07] This podcast is produced by UNSW WIT, a Sydney run society founded in 2016 that has grown into a network of over 2000 students. Our mission is to empower, unite and upskill students within stem by hosting various online and offline events, as well as creating publications and I'm Vivian, the education exec of WIT. I'm currently in my second year, pursuing a double degree in actuarial science and commerce. Today, I'm joined by the WIT IT exec Alisha welcome, Alisha.
+
+Alisha [00:00:41] Hi, everyone. My name is Alisha Young and as Vivian mentioned, I'm currently the IT executive for women in technology and I'm in my second year studying commerce and computer science. For today's episode, we'll be diving into the data industry with our guest speaker, Emma Badman, an associate analyst from Quantium, who'll be discussing her journey in technology.
+
+Vivian [00:01:00] So without further ado, let's get started now so hello and thank you for talking with us today. So to kick things off, could you please tell us a little bit about yourself and your role in Quantium?
+
+Emma Badman [00:01:13] Hi, it's nice to be here. Thanks for having me. So a bit about myself. I did a double degree in business and math in Q2 in Brisbane, so I majored in decision science and finance, so similar to the actuarial studies. And then I decided once I graduated to move to Sydney and I started as a grad at Quantium. So I recently just finished that grad program, but that went for a year and a half and had three different rotations. So in my first rotation, I was an analyst in the FMCG team, and as my second rotation, I sort of did full circle and tried out a consulting role within that same team. I'm now staying in that second role, and so I'm a consultant.
+
+Vivian [00:01:58] I'm curious because you're originally from Queensland. What make you move to Sydney? Because I understand it can be daunting to move to another state for a new job because, myself, I'm from Singapore and I moved to Sydney about two years ago.
+
+Emma Badman [00:02:15] Well, that's a much bigger move than me. I think there was a lot more opportunities in Sydney for me. Data analytics isn't very big in Queensland, and there wasn't a whole lot I could do outside of finance. So I decided to make the move and see where things took me, and I thought it was really perfect timing to give it a go.
+
+Vivian [00:02:40] Would you see yourself working in other countries or moving back to Queensland in the future?
+
+Emma Badman [00:02:46] Yeah, I'm open to anything, really. Might just say where things take me. It's all a bit tricky to say right now with everything going on. But yeah, definitely be open to it.
+
+Vivian [00:02:58] Interesting. Is there a reason why you choose to join Quantium graduate programs instead of any other companies?
+
+Emma Badman [00:03:04] I thought about a lot and I applied to a lot of grad programs, and to be honest, I didn't really know what I wanted to do. I was so unsure. So I just applied to so many. And at the end of the day, I needed to think about, Well, what do I want to do? And when I thought about it, I thought I liked the idea of analytics, and I felt like Quantium was so broad that it gave me exposure to everything. I thought, Well, that sounds perfect. I can get in and try it all and then decide what I want to do from there.
+
+Vivian [00:03:32] I guess what are some of the things you value the most in terms of the company that you choose to work for?
+
+Emma Badman [00:03:38] I think I value good people and enjoyment. I like to surround myself with positive people, and I think that goes a really long way to know what the culture of a company is like. And Quantium definitely has a great culture. I think another thing was Quantium gave a lot of responsibility at quite low levels. I like the freedom and the opportunities to take on so many different problems and be trusted with it so early on.
+
+Vivian [00:04:06] You mentioned that you went through a two rotation in your graduate program. I was wondering if you could go through each of the rotation in the graduate program?
+
+Emma Badman [00:04:16] Yeah. So Quantium has about eight different verticals, so there's a lot of different teams that you can work in within that. And so there's things like banking or health or FMCG or retail and typically what everyone will do, so you'll have two rotations and we'll try out one team and then maybe another team. And it might be something where one's a bit more coding orientated, a bit more data focused, and the other one might be a bit more client facing. Mine was a little bit different because I stayed in the one team, but I did that because I really wanted to try out consulting and building relationships and things like that.
+
+Vivian [00:04:52] Cool. What are some projects that you get to work on as a graduate at Quantium?
+
+Emma Badman [00:04:58] So I think when I started, I built a tracker to look at sales over time that was there for a client that was running a promotion and wanted to see how they were going week by week. Really, I sort of got thrown into the deep end there. It would be so different if you spoke to every grad. Every grad, I'm sure, had a different experience. Yeah, that was mine being thrown into the deep end and trying a lot of different things. I think with that FMCG, a lot of the deliverables are quite sure. It's very, very fast paced. So you don't necessarily get put on really long projects. It's more just short deliverables and having that client question and then sitting back and thinking, OK, how am I going to answer this? And using the data to get them an output that they can action?
+
+Vivian [00:05:44] Oh, interesting. How do you think your degree in math and business help prepare you for your role?
+
+Emma Badman [00:05:51] I think really what my degree helps with the most was my soft skills. So it's things like problem solving and logical thinking. I think it really set me up and developed those skills. You know, that way of thinking, of looking at the bigger picture and breaking it down into little steps.
+
+Vivian [00:06:06] What is the career progression in a company like Quantium? Could you run through the career progression from intern or graduate?
+
+Emma Badman [00:06:14] Yeah. So I guess I can speak specifically for FMCG. I'm not sure if it's exactly the same everywhere else, but you've got your interns and the grads and then you become a contributor. So that's where I'm at now and then also a senior and a lead and an executive. And I think another executive level that's up. So there's a few different levels.
+
+Vivian [00:06:36] But how does your role change as your career progresses in Quantium?
+
+Emma Badman [00:06:42] Yeah. So it changes in terms of responsibility and also in terms of management. So as you go higher, I think you start to look after a bigger team and you're also, I guess, a responsible for more responsible for things like L and D or different team initiatives. And I guess more serious relationships specifically within the consultants, you might get a bigger client and be responsible for a bit more there.
+
+Alisha [00:07:22] Next, we'll be moving on to more insight in the data industry. So, Emma, what sparked your initial interest in data?
+
+Emma Badman [00:07:30] So that's a fun question, actually, I think. In short, it was my Mum. So my Mum's also a mathematician, so I think that's always going to go down that road a little bit. She definitely showed me a lot of different career paths and data, and I always enjoyed math. I've always liked the structure and the certainty of it. So I think I knew that was the general area. And then once I got to uni, I broke it down and I liked the analytics side of things and the problems.
+
+Alisha [00:07:58] Oh, cool. It's really interesting to hear that you had a female role model in STEM. For listeners who are new to the data field, could you please introduce your area of specialty FMCG data analysis? And specifically, we'd like to know what type of data you work with and how you conduct data analysis?
+
+Emma Badman [00:08:15] Yeah, for sure. So FMCG stands for fast moving consumer goods. So essentially, when we talk about FMCG analytics, what we're doing is analyzing consumer behavior. So more specifically at Quantium and what I do. We work with Woolworths and we look at, you know, when you go into Woolworths and you're buying something, we're analyzing all of that data. So if you've got a Woolworths rewards card, I think over 10 million customers do. When you scan that, what we can do is track your purchasing behavior. And when you come out of the shops and you've got your receipt of all that information as well as we can look at those two different things and answer a lot of questions about what customers are doing, what they are loyal to a brand and trying new things or promotions working. Things like that.
+
+Vivian [00:09:00] Could you please tell us about how the data you work with impact Quantium and the average person?
+
+Emma Badman [00:09:08] Yeah. So I guess when you break it down, what we do is we help businesses make better decisions through understanding their data. So we work with suppliers of Woolworths, so you can think of like Coke, for example, when you're going in and you're picking up different flavors or different packs of coke, we're looking at what people like, what promotions they like, what prices, new products. You're not a fan of old products, things like that. We can analyze that and track it and then help them make smart decisions for their internal strategies. And at the day, it means you get what you want. So when you're walking in the aisle, they are the promotions you want or the prices you want. And if you think to, even if you do have a Woolworths rewards card, you should get emails from them and those emails are customized, so you're getting offers that relate to what you normally buy. So that's what you want to be seeing.
+
+Alisha [00:10:01] Yeah, it's really interesting to hear all the behind the scenes that goes on with our shopping decisions. I'm curious to know from your perspective, how has the data industry changed since you started working at Quantium?
+
+Emma Badman [00:10:12] I think the data industry is such a rapidly changing thing. I mean, even I've only been there for a year and a half and already there's a lot of things changing. I think Quantium does so much and it's a little bit of a later. It's filled with everything it does. But since dying, we've got some new competitors that have started. So I think there's going to be interesting to see how things change with that, but also just the move towards automated insights and that sort of artificial AI, that type of thing. I think there's a big push to having things automated, automated passive analytics and sorting out those recommendations for clients sort of with the click of a button. And I think that's just going to continue to develop.
+
+Vivian [00:10:57] Looking into the future, since we know data is a fast changing industry, what changes do you foresee in the data for you and how would your role as an analyst be changing?
+
+Emma Badman [00:11:08] Yeah, I think everything is so fast, I think is definitely going to be a push to automation. I think it'll be really interesting to see how it goes, I think. As an analyst, a lot of what we do is maybe some smaller quests and some more routine analytics, but there's a push to making all of that automated, so that becomes almost a client thing they can do with a click of the button, which frees up analyst time to do really complex problems and modeling and things like things like that. So I think, yeah, more automation, it'll be interesting to see where we go in terms of having that more capacity to answer some really cool problems.
+
+Vivian [00:11:46] And what do you think are the most challenging and rewarding parts of your career?
+
+Emma Badman [00:11:51] Oh, that's a good question. I think the challenging part is there's a lot of relationship management and problem-solving, and I think that having that ability to step back and look at a bigger picture is definitely a valuable skill. I think it can definitely be challenging, but it's a good challenge. And what's rewarding? I mean, I know the relationships are challenging, but they also also are quite rewarding. Being able to build those relationships and say your clients action- what you're actually saying is really nice and good to know that they're listening and actually taking on board what you're saying.
+
+Vivian [00:12:32] Definitely. What are some of the most common myths about the data industry that you would like to bust for?
+
+Emma Badman [00:12:39] I think a lot of people think data analytics is just sort of sitting at a computer and not really talking to anyone, and I know that was something that would make back a little bit because I can be quite extroverted at times, but there's definitely opportunities to be talking with people. There's a lot of collaborative work, a lot of brainstorming sessions, things like that. And that was the stuff that I really enjoyed that I didn't really know if I was going to get.
+
+Vivian [00:13:06] Yup, cool. There's actually something I had about people working in the tech industry in a sense that we were infront of a computer, coding.
+
+Emma Badman [00:13:17] Well, yeah, I think it depends what role you're in. And I think really consumer, you can sort of pick what you want to do each day, which is something that I've definitely done in exploring the small consulting side. But yeah, it can have a bit of control if you do want to sit at your desk and code all day, that's fine, too. But if you want to be out there talking to people, there's definitely opportunities for that.
+
+Vivian [00:13:54] Next, we'll move on to what is it like working as an analyst? Emma, what is a typical day in the life looks like as an analyst?
+
+Emma Badman [00:14:03] Yes, I think in the morning there'll be a few phone calls, a few emails trying to get in touch with people. And yet just come back to we'll talk to the client. I'll probably put in a call with them off the back of an email and establish exactly what they are after. And then you go back, I'll get on a call with an analyst and talk through that. And then speaking as when I was an analyst, what I would do once I received that work would be sort of look at the bigger picture. So this is where that problem solving from union came in is I break it down. All right. Well, what do I want my output to look like and how am I going to get the data for that? And so that would help me for my queries, my code to look at what tables I needed, what fields I needed and then work through it that way. And then once that's done, you can have a look at the output, whether it be a chart or an excel document, and help form some conclusions and recommendations. And then all of that gets back to the client.
+
+Alisha [00:15:06] And then how has your work life changed since we're all in lockdown and staying at home?
+
+Emma Badman [00:15:12] That's definitely tricky. I was actually thinking about it just before, so we recently moved and I'm fortunate now that I've got a little study nook, so I'm quite the living room when I'm working. But before I was working at the dining table and I definitely found it quite tricky to isolate all of my different parts of my life. It was very easy just to sit down and work all day. And also when I was working, it was very easy to get distracted doing everything in the one room. But this way I'm very out of it and I don't just see jobs. When I look out, I can separate my work from my relaxing time.
+
+Vivian [00:16:01] Moving on to the next question. This is my favorite questions to my friends, mentors, the people I met. Which is what you are your career goals? And what do you see yourself in three to five years?
+
+Emma Badman [00:16:14] This is not my favorite question. I just think of anything I've learned from the past few years is that I don't know where I'm going to end up. And if I tell you an answer, it's probably not going to be the case. But I'm really, really enjoying what I'm doing at the moment, so I'm happy to just keep following that path and keep going with consulting. I feel like I have so much more to learn. I'm loving growing my people skills and yeah, really looking forward to seeing what comes my way. But you never know. Maybe after this, I'll follow a career in podcasts.
+
+Vivian [00:16:48] What would you see yourself doing if you weren't an analyst?
+
+Emma Badman [00:16:54] Oh, I always thought in uni that I wanted to do trading, so a bit more financing stuff, but the end of the day, I was way too risk averse to take any of that. So that was never going to be very good to me. So maybe something like that.
+
+Vivian [00:17:10] What are some of the female role models that you looked up to in life in general?
+
+Emma Badman [00:17:16] Yeah. Well, I think in life in general, it comes back to what sparked my interest. My Mum's definitely a role model of mine. She was a very cool lady. So being a mathematician, I think that generation ago definitely wasn't easy. And she's very strong and driven and definitely look up to her in the way she conducts herself and how respected she is in what she does. It's definitely something I'd like to achieve one day. And in terms of work, I love my current manager, Lauren. She's excellent and just have people skills. Amazing. Just every time she talks, I'm just like, oh wow, I wish I could wear it like that definitely doesn't come out that way when I talk and the way she finds insight so quickly. Yeah, it's really something to watch, and I'd love to be able to get to that level.
+
+Alisha [00:18:15] Now, move on to any tips you have for students that are interested in pursuing a career in data. What are some steps they could take in high school or university to educate themselves? And are there any specific programing, languages or skills that are important in the data industry?
+
+Emma Badman [00:18:30] I think this is actually a funny one, because it's so hard to say you will need this coding language just because there's so many out there. I think personally, I've used SQL the most, but I know even people on different floors at Quantium will use different languages, so I don't know if there's necessarily one to learn. One piece of advice I was actually given in was to learn VBA. Maybe because chances are a company will have excel and I have used VBA I know most people in the company have. So maybe that's a good one to try. But I guess it, even if you don't want to learn a language, another thing you can just do is work on your problem solving skills because that's definitely going to come in handy.
+
+Alisha [00:19:13] And on the flip side, do you have any tips for students who aren't sure if they should go into data analysis?
+
+Emma Badman [00:19:20] I actually think what we've put together recently was a sort of virtual intern program. I'm not sure exactly what it's hosted on, but I know Quantium has put it together and there's a lot of practice questions or practice briefs on this. So it could give you an idea of the kind of work you'd be doing day to day. And that's all just online. So in lockdown, you can give it a go.
+
+Vivian [00:19:44] Since you recently just finished your graduate program, what are some things that you wish you knew before you started your program or your rotation at Quantium?
+
+Emma Badman [00:19:54] Yeah, I think this is one that I thought about a fair bit. You know, I can think of specific instances where I maybe didn't do to handle something in the best way I can think back to how nervous I was. But if you had told me not to be nervous, I don't think it would have changed a thing. I still was nervous. So I don't know if that's going to help you much. But one thing my manager said recently that really stuck with me was just to be confident in my own abilities and that I shouldn't feel like I have to conform to that picture of success. I don't know about you, but I think there's that picture of success that's actually quite masculine, and it's got a lot of masculine qualities. And I felt, you know, like I had to change or behave differently in order to be successful. And I went to such a fantastic high school, and it was an all girls school that was quite empowering, really. And it was always a question of where do you want to do it? If so, then you do it. There was never I don't know because you're a girl, can you? Can't you? And I think I was quite like, Oh yeah, I can do anything going into uni and then I experience a glass ceiling, and I was a bit like, Oh, what's going on? So I think when I went to start my role, I was a little bit cautious. I was a little bit worried that I was going to get opportunities because I was a girl, not because I was good. And I think that was instances where I overthought things when I should not. And what I needed to do was just be confident in myself and my abilities, and I needed to just be myself. And I think that really is what success is. It doesn't have to be that preconceived idea of historically what success was. I mean, even now I can look around and I've got a fantastic team with a lot of female role models, and we've got women society at Quanitum with a lot of successful women in there. And even you guys with this sort of thing, I'm sure you talk to some amazing women all the time. It just shows that we don't need to change our qualities or sense of self to be successful, really just being you. And I think that is what will really count. Definitely.
+
+Vivian [00:22:08] And maybe something that I would like to know personally, because I'm actually also in the recruitment process, I am currently applying for Singapore. So maybe I can get your take on it. How do you differentiate yourself when you were in the recruitment process?
+Emma Badman [00:22:24] I think it's really just about showing passion and being yourself, and I know that sounds so cheesy and I hated it when everyone said that to me when I was applying. But I think your personality will definitely shine through, and that's what makes you a bit more memorable. I actually found out about Quantium through a girl that I did tap dancing with, and I think I spent way too much of my interview talking about that, and I know what kind of picture that painted a major recruitment, but it must have worked.
+
+Alisha [00:22:55] Thanks for that insight, Emma. We have one final question What advice would you give university students who are looking to secure a grad position or internship at Quantium?
+
+Emma Badman [00:23:06] I think if you had asked recruitment, the answer would be no who Quantium is and know what Quantium does. But I think when it boils down to it, you need to just have a passion for the industry and be yourself. I know I said that before, but I think it's really important. I think what Quantium is looking for is that personality. There's a lot of people, people at Quantium. Everyone's so happy and willing to chat, and I think that's really what they're looking for. And I think it will go a long way if you can just show them who you are.
+
+Vivian [00:23:38] Thank you so much for sharing your time with us, Emma. You have left such an interesting career and we are excited to see what is next for you. So that concludes this episode of Talk WIT Us with Quantum, so stay tuned for our next episode. We released a podcast episode every week.
+
+Alisha [00:23:56] Emma, if our listeners would like to know more about you or Quantium, where could they reach you?
+
+Emma Badman [00:24:01] Yep, well, I'm on LinkedIn. You can find me on there, Emma Badman feel free to reach out. Thanks for having me, and good luck with your interviews.
