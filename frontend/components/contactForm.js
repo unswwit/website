@@ -1,45 +1,19 @@
-import React, { useRef } from "react";
+import React from "react";
 import emailjs from "@emailjs/browser";
 import styles from "../styles/contactUs.module.css";
 import ReCAPTCHA from "react-google-recaptcha";
-import axios from "axios";
 
 function ContactForm() {
   const [email, setEmail] = React.useState("");
 
-  // configure recaptcha
-  // const recaptchaRef = useRef(null)
-
-  // const validateCaptcha = async () => {
-  //   const captchaToken = await recaptchaRef.current.getValue();
-  //   recaptchaRef.current.reset();
-
-  //   // pass token to backend & verify
-  //   try {
-  //     const result = await axios.post(
-  //       process.env.REACT_APP_VERIFY_URL, {captchaToken}
-  //     );
-
-  //     return result.status === 200 ? true : false;
-
-  //   } catch (error) {
-  //     console.error("Error: recaptcha token verification failed.")
-  //     return false;
-  //   }
-  // };
- 
-  // form submission
-  const sendEmail = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
 
     // validating that the email is in the correct form
-    const validate = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
+    const validate =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
     if (validate.test(email)) {
-      // validate recaptcha
-      // const captchaResult = await validateCaptcha();
-      // if (captchaResult === true) {
-
       emailjs
         .sendForm(
           process.env.REACT_APP_SERVICE_ID,
@@ -59,15 +33,9 @@ function ContactForm() {
         );
       setEmail("");
       e.target.reset();
-        }
-        else {
-          alert("ReCaptcha validation failed.");
-        }
-
-    // } else {
-    //   alert("Please input a valid email");
-    // }
-
+    } else {
+      alert("Please input a valid email");
+    }
   };
 
   return (
@@ -105,12 +73,11 @@ function ContactForm() {
         required
       />
       <br />
-      <br />
-        {/* <ReCAPTCHA
-          ref={recaptchaRef}
-          sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-        /> */}
-      <br />
+      <ReCAPTCHA
+        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+        onChange={sendEmail}
+      />
+      {/* TODO: add functionality to reset recaptcha check after form submission */}
       <br />
       <input type="submit" className={styles.submitButton} value="Submit" />
     </form>
