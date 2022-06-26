@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import { BootstrapTooltip } from "./BootstrapTooltip";
 import Image from "next/image";
-import { StylesContext } from "@material-ui/styles";
 import styles from "../styles/Footer.module.css";
 
 const Footer = () => {
@@ -63,7 +62,6 @@ const Footer = () => {
         <ul className="footer-all">
           <div className="grid-footer-container">
             <li className="col-width footer-item footer-logo">
-              {/* TODO: change to next/image */}
               <div className={styles.footerLogoWhite}>
                 <Image
                   src="/logo-white.png"
