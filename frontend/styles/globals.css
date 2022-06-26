@@ -225,7 +225,7 @@ form input {
   border-style: none;
   border-bottom: solid;
   border-color: var(--general-text);
-  border-width: 2px;
+  border-width: 3px;
   padding: 5px;
   font-family: "Montserrat", sans-serif;
   width: 50%;
