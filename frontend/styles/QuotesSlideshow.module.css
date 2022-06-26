@@ -1,0 +1,429 @@
+/*---------------Quotes-------------------*/
+.quoteBackground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.quoteBlockCareers,
+.quoteBlockCompetitions,
+.quoteBlockExternals,
+.quoteBlockHR,
+.quoteBlockIT,
+.quoteBlockMarketing,
+.quoteBlockMedia,
+.quoteBlockPublications {
+  height: 380px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+}
+
+.quoteBlockDefault {
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+  background: #ffe9c0;
+}
+
+.quoteBlockCareers {
+  background: #ffdfb4;
+}
+
+.quoteBlockCompetitions {
+  background: #a1dbcb;
+}
+
+.quoteBlockExternals {
+  background: #ffbfaf;
+}
+
+.quoteBlockHR {
+  background: #b7ecbc;
+}
+
+.quoteBlockIT {
+  background: #b4c9e8;
+}
+
+.quoteBlockMarketing {
+  background: #dcbff7;
+}
+
+.quoteBlockMedia {
+  background: #c0f5ff;
+}
+
+.quoteBlockPublications {
+  background: #ffc2e4;
+}
+
+.authorBlock {
+  display: flex;
+  flex-flow: row wrap;
+  background: #4f4f4f;
+  padding: 20px;
+  justify-content: center;
+}
+
+.authorDetails {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.authorName {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 13px;
+  color: #ffffff;
+}
+
+.authorRoles {
+  width: 100%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 13px;
+}
+
+.defaultRoleColour {
+  color: #ffe9c0;
+}
+
+.careersRoleColour {
+  color: #ffdfb4;
+}
+
+.competitionsRoleColour {
+  color: #a1dbcb;
+}
+
+.externalsRoleColour {
+  color: #ffbfaf;
+}
+
+.hrRoleColour {
+  color: #b7ecbc;
+}
+
+.itRoleColour {
+  color: #b4c9e8;
+}
+
+.marketingRoleColour {
+  color: #dcbff7;
+}
+
+.mediaRoleColour {
+  color: #c0f5ff;
+}
+
+.publicationsRoleColour {
+  color: #ffc2e4;
+}
+
+.authorImage {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+}
+
+.beginQuote,
+.endQuote {
+  margin: 0;
+  color: #515151;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 180px;
+}
+
+.beginQuote {
+  position: relative;
+  right: 50%;
+  top: 10px;
+}
+
+.endQuote {
+  position: relative;
+  left: 50%;
+  top: 80px;
+}
+
+.quoteContainer {
+  height: 65%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.quoteText {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: justify;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.horizontalLine {
+  width: 90%;
+  margin: 20px auto 0 auto;
+
+  border: 0.5px solid #000000;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+/*---------------Carousel-------------------*/
+.slideContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.buttonBack {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+  border-right: 30px solid #313638;
+  border-left: 0;
+  padding: 0;
+  background-color: transparent;
+  outline: 0;
+}
+
+.buttonNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+  border-left: 30px solid #313638;
+  border-right: 0;
+  padding: 0;
+  background-color: transparent;
+  outline: 0;
+}
+
+.buttonBack:disabled {
+  border-right: 30px solid #c4c4c4;
+}
+
+.buttonNext:disabled {
+  border-left: 30px solid #c4c4c4;
+}
+
+/*---Dark mode---*/
+@media (prefers-color-scheme: dark) {
+  .buttonBack {
+    border-right: 30px solid var(--light-grey);
+  }
+
+  .buttonNext {
+    border-left: 30px solid var(--light-grey);
+  }
+
+  .buttonBack:disabled {
+    border-right: 30px solid var(--grey);
+  }
+
+  .buttonNext:disabled {
+    border-left: 30px solid var(--grey);
+  }
+
+  .beginQuote,
+  .endQuote {
+    color: var(--light-grey);
+  }
+}
+
+/*---------------Screen Responsiveness-------------------*/
+@media only screen and (max-width: 1800px) {
+  .slideComponent,
+  .slideContainer {
+    height: 450px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .beginQuote {
+    top: 15px;
+  }
+
+  .endQuote {
+    top: 75px;
+  }
+
+  .quoteBlockEducation,
+  .quoteBlockEvents,
+  .quoteBlockExternals,
+  .quoteBlockHR,
+  .quoteBlockIT,
+  .quoteBlockMarketing,
+  .quoteBlockDefault {
+    width: 75%;
+  }
+
+  .slideComponent,
+  .slideContainer {
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .authorBlock {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .authorDetails {
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 0px;
+  }
+
+  .beginQuote,
+  .endQuote,
+  .horizontalLine {
+    display: none;
+  }
+
+  .quoteContainer {
+    height: 55%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .quoteBlockDefault {
+    width: 70%;
+  }
+
+  .quoteBlock {
+    height: 320px;
+  }
+
+  .quoteContainer {
+    height: 55%;
+  }
+
+  .authorName {
+    font-size: 10px;
+    line-height: 10px;
+  }
+
+  .authorRoles {
+    font-size: 10px;
+    line-height: 10px;
+  }
+
+  .authorImage {
+    width: 50px;
+    height: 50px;
+  }
+
+  .quoteText {
+    width: 80%;
+    font-size: 13px;
+    max-height: 100%;
+  }
+
+  .slideComponent,
+  .slideContainer {
+    height: 320px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .quoteBlock {
+    height: 360px;
+  }
+
+  .quoteContainer {
+    height: 60%;
+  }
+
+  .slideComponent,
+  .slideContainer {
+    height: 360px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .quoteBlock {
+    width: 70%;
+    height: 400px;
+  }
+
+  .quoteBlockDefault {
+    width: 60%;
+  }
+
+  .slideComponent,
+  .slideContainer {
+    height: 400px;
+  }
+
+  .quoteContainer {
+    height: 62%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .quoteBlock {
+    height: 460px;
+  }
+
+  .quoteContainer {
+    height: 68%;
+  }
+
+  .quoteText {
+    text-align: center;
+  }
+
+  .slideComponent,
+  .slideContainer {
+    height: 460px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .quoteBlock {
+    height: 520px;
+  }
+
+  .slideComponent,
+  .slideContainer {
+    height: 520px;
+  }
+
+  .quoteContainer {
+    height: 69%;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .quoteText {
+    font-size: 11px;
+  }
+}
