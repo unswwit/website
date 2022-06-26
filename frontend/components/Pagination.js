@@ -20,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   pagItem: {
-    backgroundColor: "transparent",
     color: "#676767",
     "&:hover:not(.selected)": {
       backgroundColor: "#feb14b",
@@ -32,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const PaginationComp = ({ totalPages, paginate, page, size }) => {
+const PaginationComp = ({ totalPages, paginate, defaultPage, size }) => {
   const classes = useStyles();
 
   return (
@@ -44,7 +43,7 @@ const PaginationComp = ({ totalPages, paginate, page, size }) => {
         )}
         count={totalPages}
         onChange={(_, pageNumber) => paginate(pageNumber)}
-        page={page}
+        page={defaultPage}
         size={size ? size : "medium"}
       />
     </div>

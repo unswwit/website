@@ -1,4 +1,3 @@
-
 #teams {
   width: 60%;
 }
@@ -11,14 +10,9 @@
   width: 60%;
 }
 
-#ourStoryTimeline {
-  width: 60%;
-}
-
 #teams,
 #events,
-#marketingArchive,
-#ourStoryTimeline {
+#marketingArchive {
   margin: 0 auto;
   margin-bottom: 2%;
 }

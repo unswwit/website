@@ -51,7 +51,20 @@ body {
 /*Changes background*/
 @media (prefers-color-scheme: dark) {
   body {
-    background: var(--dark-grey);
+    background:var(--dark-grey);
+  }
+
+  /* Change colour of podcast search bar placeholder text to white on dark mode */
+  ::placeholder {
+    color: white;
+  }
+
+  :-ms-input-placeholder {
+    color: white; 
+  }
+
+  ::ms-input-placeholder {
+    color: white; 
   }
 }
 
@@ -90,6 +103,7 @@ p {
 .coverPhoto {
   height: 100vh;
   overflow: hidden;
+  position: relative;
 }
 
 .cover_image {
@@ -129,7 +143,6 @@ p {
 }
 
 @media only screen and (max-width: 700px) {
-
   .coverPhoto,
   .coverPhoto .dark,
   .coverPhoto .headerTitle,
@@ -538,26 +551,18 @@ p {
   justify-content: center;
 }
 
-#loadingWillow {
-  height: 300px;
-  width: 300px;
-}
-
 #loadingBackground p {
   overflow: hidden;
   font-size: 18pt;
   animation: typing 2.5s steps(34, end);
-  white-space: nowrap;
-  /* Keeps the content on a single line */
-  margin: 0 auto;
-  /* Gives that scrolling effect as the typing happens */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
 }
 
 @keyframes typing {
   from {
     width: 0;
   }
-
   to {
     width: 10em;
   }
@@ -569,7 +574,7 @@ p {
   }
 
   #loadingBackground p {
-    color: #fff;
+    color: #fff; 
   }
 }
 

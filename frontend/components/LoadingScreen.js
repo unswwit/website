@@ -1,12 +1,16 @@
 import React from "react";
+import Image from "next/image"
 
 const LoadingScreen = () => {
   return (
     <div id="loadingBackground">
-      <img
+      <Image
         id="loadingWillow"
-        src={`${process.env.PUBLIC_URL}/walkingWillow.gif`}
+        src={`/walkingWillow.gif`}
         alt="Walking Willow the wombat"
+        height="300px"
+        width="300px"
+        priority="True"
       />
       <p>Loading...</p>
     </div>
