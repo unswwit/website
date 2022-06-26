@@ -93,6 +93,10 @@ h2#topHeading {
   text-align: justify;
 }
 
+.timeline {
+  width: 75%;
+}
+
 /*--- Dark mode ---*/
 @media (prefers-color-scheme: dark) {
   .ourMissionContent {

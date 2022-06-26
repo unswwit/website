@@ -64,7 +64,6 @@ const Timeline = ({ updateYear, marks, valueToYear, page, step, margin }) => {
         marks={marks}
         valueLabelDisplay="off"
         aria-label="timeline"
-        defaultValue={100}
         onChange={(_, value) => updateYear(valueToYear[value])}
       />
     </div>

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import PageHeader from "../../components/header.js";
+import PageHeader from "../../components/Header.js";
 import styles from "../../styles/OurStory.module.css";
-import Timeline from "../../components/OurStoryTimeline.js";
+// import Timeline from "../../components/OurStoryTimeline.js";
 import LoadingScreen from "../../components/LoadingScreen";
 import Image from "next/image";
+// import { marks, valueToYear, timelinePhoto } from "../../data/ourStoryData";
 
 // Start at the top of the page
 const OurStory = () => {
@@ -44,7 +45,7 @@ const OurStory = () => {
             <div className={styles.ourMissionSection}>
               <div className={styles.ourMissionImg}>
                 <Image
-                  src="/our-story/our-mission.jpg"
+                  src={"/our-story/our-mission.jpg"}
                   alt="WIT members"
                   width="800px"
                   height="1200px"
@@ -78,7 +79,7 @@ const OurStory = () => {
             <div className={styles.ourMascotSection}>
               <div className={styles.ourMascotImg}>
                 <Image
-                  src="/our-story/our-mascot.png"
+                  src={"/our-story/our-mascot.png"}
                   alt="Introducing Willow the Australian Wombat, WIT's mascot"
                   width="3000px"
                   height="2000px"
@@ -145,7 +146,6 @@ const OurStory = () => {
                 </p>
               </div>
             </div>
-            <Timeline />
             {/*End of Our History*/}
           </div>
         </>

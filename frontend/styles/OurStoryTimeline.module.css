@@ -51,15 +51,12 @@
   justify-content: center;
 }
 
-#timelineStyle {
-  margin: 3%;
-}
-
 #timelineLoading {
   color: var(--yellow);
   margin-top: 5%;
   margin-bottom: 3%;
 }
+
 
 /*--- Our Story dark mode ---*/
 @media (prefers-color-scheme: dark) {
