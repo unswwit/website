@@ -75,6 +75,16 @@
   margin-top: 1em;
 }
 
+/* Event Image Wrapper */
+.imageWrapper {
+  width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3vw;
+  display: block;
+}
+
 /* Event Image Gallery Wrapper */
 .imageGalleryWrapper {
   width: 90%;
