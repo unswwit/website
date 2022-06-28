@@ -89,7 +89,7 @@ const JoinUs = () => {
                 onLoad={() => setHideSpinner(true)}
                 title="google-maps"
                 width="100%"
-                height="350"
+                height="390"
                 frameBorder="0"
                 className={styles.gmapColour}
                 scrolling="no"
