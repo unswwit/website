@@ -71,6 +71,7 @@
 
 /* Description */
 .description {
+  font-size: 13pt;
   text-align: justify;
   margin-top: 1em;
 }
