@@ -43,6 +43,19 @@ body {
   body {
     background:var(--dark-grey);
   }
+
+  /* Change colour of podcast search bar placeholder text to white on dark mode */
+  ::placeholder {
+    color: white;
+  }
+
+  :-ms-input-placeholder {
+    color: white; 
+  }
+
+  ::ms-input-placeholder {
+    color: white; 
+  }
 }
 
 /*----------------------------------General------------------------------------*/
@@ -65,11 +78,6 @@ p {
   font-family: "Montserrat", sans-serif;
   font-size: 10pt;
   margin-top: 0;
-}
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #b5bec4;
-  opacity: 1
 }
 
 /*----------------------------------Header------------------------------------*/

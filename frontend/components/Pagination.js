@@ -20,7 +20,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   pagItem: {
+<<<<<<< HEAD
     backgroundColor: "transparent",
+=======
+>>>>>>> feat/nextjs
     color: "#676767",
     "&:hover:not(.selected)": {
       backgroundColor: "#feb14b",
@@ -32,7 +35,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+<<<<<<< HEAD
 const PaginationComp = ({ totalPages, paginate, page, size }) => {
+=======
+const PaginationComp = ({ totalPages, paginate, defaultPage, size }) => {
+>>>>>>> feat/nextjs
   const classes = useStyles();
 
   return (
@@ -44,7 +51,11 @@ const PaginationComp = ({ totalPages, paginate, page, size }) => {
         )}
         count={totalPages}
         onChange={(_, pageNumber) => paginate(pageNumber)}
+<<<<<<< HEAD
         page={page}
+=======
+        page={defaultPage}
+>>>>>>> feat/nextjs
         size={size ? size : "medium"}
       />
     </div>
