@@ -17,8 +17,4 @@ const LoadingScreen = () => {
   );
 };
 
-<<<<<<< HEAD
 export default LoadingScreen;
-=======
-export default LoadingScreen;
->>>>>>> feat/nextjs
