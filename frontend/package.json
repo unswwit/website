@@ -24,6 +24,7 @@
     "react-dom": "18.1.0",
     "react-ga": "^3.3.0",
     "react-markdown": "^8.0.2",
+    "react-messenger-customer-chat": "^0.8.0",
     "react-share": "^4.4.0"
   },
   "devDependencies": {
