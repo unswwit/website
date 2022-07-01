@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import { BootstrapTooltip } from "./BootstrapTooltip";
 import Image from "next/image";
-import { StylesContext } from "@material-ui/styles";
 import styles from "../styles/Footer.module.css";
 
 const Footer = () => {
@@ -10,7 +9,7 @@ const Footer = () => {
     Home: "/",
     Events: "/events",
     Opportunities: "/opportunities",
-    "Join Us": "/joinUs",
+    "Join Us": "/join-us",
     "Our Story": "/about/our-story",
     "Sponsors and Affiliations": "/about/sponsors-affiliations",
     "Our Team": "/about/our-team",
