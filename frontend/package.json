@@ -22,6 +22,7 @@
     "install": "^0.13.0",
     "next": "12.1.6",
     "npm": "^8.9.0",
+    "prop-types": "^15.8.1",
     "pure-react-carousel": "^1.28.1",
     "react": "18.1.0",
     "react-add-to-calendar-hoc": "^1.0.10",
