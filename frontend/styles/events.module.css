@@ -91,7 +91,7 @@
 
 .pastEventsContainer h3 {
   margin-top: 30px;
-  color: var(--white);
+  color: var(--black);
 }
 
 .gridContainer {
@@ -142,6 +142,9 @@
 
 /*--- Dark mode ---*/
 @media (prefers-color-scheme: dark) {
+  .pastEventsContainer h3 {
+    color: var(--white);
+  }
   .termColour h3 {
     color: var(--white) !important;
   }
@@ -149,7 +152,6 @@
     background-color: var(--white);
     color: var(--white);
   }
-
   .lookout {
     color: var(--white);
   }
