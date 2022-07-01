@@ -50,14 +50,9 @@
   text-align: center;
 }
 
-<<<<<<< HEAD
-.msg-alert p {
-  font-size: 1.3vw;
-=======
 .closeSymbol {
   color: #313638;
   text-align: right;
->>>>>>> feat/nextjs
 }
 
 .closeBtn {
@@ -65,34 +60,11 @@
   margin: 12px;
 }
 
-<<<<<<< HEAD
-.closeSymbol {
-  color: #313638;
-  text-align: right;
-}
-
-=======
->>>>>>> feat/nextjs
 .subscribeError {
   color: #e85f5c;
   font-weight: 500;
 }
 
-<<<<<<< HEAD
-/*--- Dark mode ---*/
-@media (prefers-color-scheme:dark) {
-  .newsletter form input {
-    background-color: #323235;
-    border-color: white;
-    color: white;
-  }
-  
-  .button form button {
-    background-color: var(--red);
-    color: white;
-  }
-  
-=======
 .subscribeBtn {
   position: absolute;
   right: 20%;
@@ -122,7 +94,6 @@
 
 /*--- Dark mode ---*/
 @media (prefers-color-scheme:dark) {
->>>>>>> feat/nextjs
   .paper {
     background-color: var(--dark-grey);
   }
@@ -136,26 +107,6 @@
   }
 }
 
-<<<<<<< HEAD
-/*-------------------------------Newsletter Form Mobile Design-----------------------------*/
-@media only screen and (max-width: 1000px) {
-  .button form button {
-    font-size: 12pt;
-    width: 75%;
-  }
-
-  .newsletter form input {
-    width: 75%;
-  }
-
-  .formTitle {
-    font-size: 14pt;
-  }
-
-  .newsletter form input,
-  .msg-alert p {
-    font-size: 12pt;
-=======
 /*-------------------------------Newsletter section Mobile Design-----------------------------*/
 @media only screen and (max-width: 1200px) {
   .subscribeBtn {
@@ -177,24 +128,10 @@
     width: 70%;
     right: 15%;
     bottom: 38%;
->>>>>>> feat/nextjs
   }
 }
 
 @media only screen and (max-width: 600px) {
-<<<<<<< HEAD
-  .newsletter form input,
-  .msg-alert p {
-    font-size: 11pt;
-  }
-
-  .newsletter form input,
-  .formDescription,
-  .button form button {
-    width: 80%;
-  }
-}
-=======
   .formDescription {
     width: 80%;
   }
@@ -207,4 +144,3 @@
     right: 10%;
   }
 }
->>>>>>> feat/nextjs
