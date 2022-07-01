@@ -223,6 +223,87 @@ p {
   }
 }
 
+/*-------------------------------Newsletter sign up form-----------------------------*/
+.signUpForm span {
+  color: #e85f5c;
+  font-family: "Montserrat", sans-serif;
+}
+
+form input {
+  margin: 15px auto;
+  display: block;
+  font-size: 1.2vw;
+  width: 100%;
+
+  border-style: none;
+  border-bottom: solid;
+  border-color: var(--general-text);
+  border-width: 3px;
+  padding: 5px;
+  font-family: "Montserrat", sans-serif;
+  width: 50%;
+}
+
+form button {
+  background-color: #e85f5c;
+  color: #ffffff;
+  font-size: 1.3vw;
+  width: 100%;
+  margin: 20px auto;
+  border: none;
+  display: block;
+  padding: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  width: 50%;
+}
+
+.msg-alert p {
+  font-size: 1.3vw;
+}
+
+/*--- Dark mode ---*/
+@media (prefers-color-scheme:dark) {
+  form input {
+    background-color: #323235;
+    border-color: white;
+    color: white;
+  }
+  
+  form button {
+    background-color: var(--red);
+    color: white;
+  }
+}
+
+/*-------------------------------Newsletter Form Mobile Design-----------------------------*/
+@media only screen and (max-width: 1000px) {
+  .button form button {
+    font-size: 12pt;
+    width: 75%;
+  }
+
+  .newsletter form input {
+    width: 75%;
+  }
+
+  .newsletter form input,
+  .msg-alert p {
+    font-size: 12pt;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .newsletter form input,
+  .msg-alert p {
+    font-size: 11pt;
+  }
+
+  .newsletter form input,
+  .button form button {
+    width: 80%;
+  }
+}
 /* Footer */
 
 /*----------------------------------Footer------------------------------------*/
@@ -334,7 +415,6 @@ a {
 
 /*---Dark mode version of footer---*/
 @media (prefers-color-scheme: dark) {
-
   footer {
     color: var(--white);
     background: black;

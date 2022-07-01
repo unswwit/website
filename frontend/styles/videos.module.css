@@ -36,10 +36,12 @@
   padding: 0.5%;
   height: 32px;
   padding-left: 3%;
+  font-size: 12pt;
 }
 
 #emptyMessage {
   text-align: center;
+  font-size: 12pt;
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -192,6 +194,10 @@ h1.vidSubheading {
   position: relative;
 }
 
+.videoDescription:hover {
+  cursor: pointer;
+}
+
 img.videoImages {
   max-width: 100%;
   -o-object-fit: cover;
@@ -241,6 +247,15 @@ img.videoImages {
 
 .previewContainer {
   overflow: hidden;
+}
+
+.boxContainer {
+  width: 100%;
+  height: auto;
+}
+
+.previewContainer {
+  overflow: auto;
   position: relative;
 }
 
@@ -410,6 +425,7 @@ img.videoImages {
     background: url("/icons/dark-search_icon.png") center left no-repeat;
     background-position-x: 0.5%;
     background-size: auto 85%;
+    font-size: 12pt;
   }
 
   #emptyMessage {

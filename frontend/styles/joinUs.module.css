@@ -84,7 +84,7 @@
 /* Headings in how to join */
 .descriptionHowto {
   font-family: "Montserrat", sans-serif;
-  font-size: 13pt;
+  font-size: 14pt;
   text-align: justify;
   color: var(--general-text);
   width: 80%;
@@ -93,6 +93,7 @@
 
 /* Body in how to join */
 .descriptionHowto p {
+  font-size: 12pt;
   color: var(--general-text);
 }
 
@@ -112,7 +113,7 @@
 
 .carousel {
   text-align: center;
-  margin: 50px auto;
+  margin: 0px auto;
   width: 90%;
   position: relative;
 }
@@ -121,7 +122,7 @@
 .whatTo {
   max-width: 75%;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 25px;
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

@@ -9,7 +9,7 @@ const NewsletterSection = ({ setOpen, open, callbackModal, fade }) => {
     <div id={styles.container}>
       <div id={styles.newsletterBgContainer}>
         <Image
-          src={`/../public/newsletter-background.png`}
+          src={`/newsletter-background.png`}
           className={styles.background}
           alt="banner"
           layout={'fill'}

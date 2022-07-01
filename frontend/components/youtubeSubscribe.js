@@ -76,7 +76,6 @@ export default class YouTubeSubscribe extends Component {
 
   render() {
     const { theme, layout, count, channelName, channelid } = this.props;
-
     return (
       <div className={styles.subscribe}>
         <section className="youtubeSubscribe">
