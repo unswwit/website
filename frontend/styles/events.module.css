@@ -155,6 +155,9 @@
   .lookout {
     color: var(--white);
   }
+  #emptyMessage {
+    color: var(--white);
+  }
 }
 
 /*---------------------------Loading Sign--------------------------*/
