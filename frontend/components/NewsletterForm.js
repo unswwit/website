@@ -34,7 +34,7 @@ const NewsletterForm = ({ handleClose }) => {
       </p>
       <form
         className="newsletter"
-        action={process.env.REACT_APP_MAILCHIMP_URL}
+        action={process.env.NEXT_PUBLIC_MAILCHIMP_URL}
         target="_blank"
         method="POST"
         noValidate
@@ -72,7 +72,7 @@ const NewsletterForm = ({ handleClose }) => {
           name="MMERGE3"
           placeholder="Degree"
         />
-        <p className="subscribeError">
+        <p className={styles.subscribeError}>
           {error ? "Please input a valid email" : ""}
         </p>
         <button className="button" disabled={error}>Subscribe</button>
