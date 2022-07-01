@@ -141,7 +141,7 @@ const QuotesSlideshow = ({
         <div className={quotes.authorBlock}>
           <Image
             className={quotes.authorImage}
-            src={`/../public/portraits/${data[key][2]}`}
+            src={`/portraits/${data[key][2]}`}
             alt={data[key][0]}
             height='90px'
             width='90px'

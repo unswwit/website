@@ -151,13 +151,13 @@
 .beginQuote {
   position: relative;
   right: 50%;
-  top: 10px;
+  top: 90px;
 }
 
 .endQuote {
   position: relative;
   left: 50%;
-  top: 80px;
+  top: 5px;
 }
 
 .quoteContainer {
@@ -264,11 +264,11 @@
 
 @media only screen and (max-width: 1100px) {
   .beginQuote {
-    top: 15px;
+    top: 90px;
   }
 
   .endQuote {
-    top: 75px;
+    top: 5px;
   }
 
   .quoteBlockEducation, 
