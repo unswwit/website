@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import CountUp from "react-countup";
 import styles from "../styles/home.module.css";
 import PubArticle from "../components/publications-article";
