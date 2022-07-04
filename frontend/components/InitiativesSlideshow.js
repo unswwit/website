@@ -7,7 +7,7 @@ import {
 } from "pure-react-carousel";
 import React, { useEffect, useState } from "react";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import styles from "../styles/home.module.css";
+import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import axios from "axios";
@@ -126,10 +126,7 @@ const InitiativesSlideshow = () => {
                         rel="noopener noreferrer"
                       >
                         <Image
-                          src={
-                            process.env.PUBLIC_URL +
-                            `/event-covers/2022/${latestEvent.img}`
-                          }
+                          src={`/event-covers/2022/${latestEvent.img}`}
                           alt={latestEvent.title}
                           height="1500px"
                           width="2800px"
@@ -189,10 +186,7 @@ const InitiativesSlideshow = () => {
                     rel="noopener noreferrer"
                   >
                     <Image
-                      src={
-                        process.env.PUBLIC_URL +
-                        `/blog-covers/${latestBlog.img}`
-                      }
+                      src={`/blog-covers/${latestBlog.img}`}
                       alt={`${latestBlog.heading}`}
                       height="1500px"
                       width="2800px"
@@ -234,10 +228,7 @@ const InitiativesSlideshow = () => {
                     rel="noopener noreferrer"
                   >
                     <Image
-                      src={
-                        process.env.PUBLIC_URL +
-                        `/podcast-covers/${latestPodcast.img}`
-                      }
+                      src={`/podcast-covers/${latestPodcast.img}`}
                       height="1500px"
                       width="2800px"
                       alt={`${latestPodcast.title}`}

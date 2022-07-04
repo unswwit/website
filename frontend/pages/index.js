@@ -4,7 +4,7 @@ import Image from "next/image";
 import CountUp from "react-countup";
 import styles from "../styles/Home.module.css";
 import PubArticle from "../components/publications-article";
-//import InitiativesSlideshow from "../components/InitiativesSlideshow.js";
+import InitiativesSlideshow from "../components/InitiativesSlideshow.js";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Aos from "aos";
 import { isMobile } from "react-device-detect";
@@ -144,14 +144,14 @@ const Home = () => {
           </div>
           {/* End of Statistics */}
 
-          {/* Start of Upcoming Events / Latest blog / Latest podcast
+          {/* Start of Upcoming Events / Latest blog / Latest podcast*/}
           <div
             data-aos={isMobile ? "fade" : "fade-right"}
             data-aos-delay="150"
             className={styles.carousel}
           >
             <InitiativesSlideshow />
-          </div> */}
+          </div> 
 
           {/* Start of Publications */}
           <div
