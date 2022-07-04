@@ -10,7 +10,7 @@ import Aos from "aos";
 import { isMobile } from "react-device-detect";
 import "aos/dist/aos.css";
 import LoadingScreen from "../components/LoadingScreen";
-//import NewsletterSection from "../components/NewsletterSection";
+import NewsletterSection from "../components/NewsletterSection";
 import axios from "axios";
 import humps from "humps";
 import QuoteSlideshow from "../components/QuotesSlideshow";
@@ -219,12 +219,12 @@ const Home = () => {
           </div>
 
           {/* Start of newsletter */}
-          {/*<NewsletterSection
+          <NewsletterSection
             setOpen={setOpen}
             open={open}
             callbackModal={callbackModal}
             fade={true}
-                  />*/}
+          />
           {/* End of Newsletter */}
         </div>
       )}
