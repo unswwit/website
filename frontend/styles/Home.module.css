@@ -104,6 +104,7 @@ div .headline {
 
 /*Description left block*/
 .descriptionLeft {
+  padding-top: 0px;
   grid-area: auto / span 1;
 }
 
@@ -112,7 +113,7 @@ div .headline {
   color: var(--yellow);
   font-family: "Montserrat", sans-serif;
   font-size: 4.5vw;
-
+  padding-top: 0px;
   font-weight: 600;
   letter-spacing: 4px;
   line-height: 100px;
@@ -122,7 +123,7 @@ div .headline {
 /*Description right block*/
 .descriptionRight {
   line-height: 22px;
-  padding-top: 20px;
+  padding-top: 55px;
   grid-area: auto / span 1;
 }
 

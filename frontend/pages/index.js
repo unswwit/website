@@ -2,19 +2,19 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import CountUp from "react-countup";
-import styles from "../styles/home.module.css";
+import styles from "../styles/Home.module.css";
 import PubArticle from "../components/publications-article";
-import InitiativesSlideshow from "../components/InitiativesSlideshow";
+//import InitiativesSlideshow from "../components/InitiativesSlideshow.js";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Aos from "aos";
 import { isMobile } from "react-device-detect";
 import "aos/dist/aos.css";
-import LoadingScreen from "../components/LoadingScreen.js";
-// import NewsletterSection from "../components/NewsletterSection";
+import LoadingScreen from "../components/LoadingScreen";
+//import NewsletterSection from "../components/NewsletterSection";
 import axios from "axios";
 import humps from "humps";
 import QuoteSlideshow from "../components/QuotesSlideshow";
-import executives from "../data/execQuotes";
+import executives from "../data/ExecQuotes";
 
 const Home = () => {
   const [open, setOpen] = React.useState(false);
@@ -126,11 +126,11 @@ const Home = () => {
             <div>
               <div data-aos="fade" className={styles.number}>
                 <div>
-                  <CountUp end={47} duration={5} />
+                  <CountUp end={55} duration={5} />
                   <p>Team Members</p>
                 </div>
                 <div>
-                  <CountUp end={23} duration={5} />
+                  <CountUp end={28} duration={5} />
                   <p>Sponsors</p>
                 </div>
                 <div>
@@ -142,14 +142,14 @@ const Home = () => {
           </div>
           {/* End of Statistics */}
 
-          {/* Start of Upcoming Events / Latest blog / Latest podcast */}
+          {/* Start of Upcoming Events / Latest blog / Latest podcast
           <div
             data-aos={isMobile ? "fade" : "fade-right"}
             data-aos-delay="150"
             className={styles.carousel}
           >
             <InitiativesSlideshow />
-          </div>
+          </div> */}
 
           {/* Start of Publications */}
           <div
@@ -196,26 +196,35 @@ const Home = () => {
           >
             <h1>SPONSORS AND AFFILIATIONS</h1>
             <div id={styles.sponsorsContainer}>
-              <img
-                src={`/sponsor-collage-light-mode.png`}
-                alt="light mode banner"
-                className={styles.lightmodeBanner}
-              />
-              <img
-                src={`/sponsor-collage-dark-mode.png`}
-                alt="dark mode banner"
-                className={styles.darkmodeBanner}
-              />
+              <div className={styles.lightmodeBanner}>
+                <Image
+                  src="/sponsors-collage-light-mode.png"
+                  alt="light mode banner"
+                  margin-top="50px"
+                  width="900px"
+                  height="650px"
+                />
+              </div>
+              <div className={styles.darkmodeBanner}>
+                <Image
+                  display="none"
+                  src="/sponsors-collage-dark-mode.png"
+                  alt="dark mode banner"
+                  margin-top="50px"
+                  width="900px"
+                  height="650px"
+                />
+              </div>
             </div>
           </div>
 
           {/* Start of newsletter */}
-          {/* <NewsletterSection
+          {/*<NewsletterSection
             setOpen={setOpen}
             open={open}
             callbackModal={callbackModal}
             fade={true}
-          /> */}
+                  />*/}
           {/* End of Newsletter */}
         </div>
       )}

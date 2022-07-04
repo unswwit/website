@@ -9,6 +9,7 @@ import React, { useEffect, useState } from "react";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import styles from "../styles/home.module.css";
 import Link from "next/link";
+import Image from "next/image";
 import axios from "axios";
 import humps from "humps";
 
@@ -103,12 +104,11 @@ const InitiativesSlideshow = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
-                            `/event-covers/2022/${firstUpcomingEvent.img}`
-                          }
+                        <Image
+                          src={`/event-covers/2022/${firstUpcomingEvent.img}`}
                           alt={firstUpcomingEvent.title}
+                          height="1500px"
+                          width="2800px"
                         />
                       </a>
                     </div>
@@ -125,12 +125,14 @@ const InitiativesSlideshow = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <img
+                        <Image
                           src={
                             process.env.PUBLIC_URL +
                             `/event-covers/2022/${latestEvent.img}`
                           }
                           alt={latestEvent.title}
+                          height="1500px"
+                          width="2800px"
                         />
                       </a>
                     </div>
@@ -180,18 +182,20 @@ const InitiativesSlideshow = () => {
                       alt="What are you REALLY Procrastinating?"
                     />
                   </a> */}
-                  
+
                   <a
                     href={`https://unswwit.com/#/media/blog/${latestBlog.blogNo}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
+                    <Image
                       src={
                         process.env.PUBLIC_URL +
                         `/blog-covers/${latestBlog.img}`
                       }
                       alt={`${latestBlog.heading}`}
+                      height="1500px"
+                      width="2800px"
                     />
                   </a>
                 </div>
@@ -229,11 +233,13 @@ const InitiativesSlideshow = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
+                    <Image
                       src={
                         process.env.PUBLIC_URL +
                         `/podcast-covers/${latestPodcast.img}`
                       }
+                      height="1500px"
+                      width="2800px"
                       alt={`${latestPodcast.title}`}
                     />
                   </a>

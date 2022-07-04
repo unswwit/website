@@ -1,4 +1,4 @@
-/*--- Timeline card ---*/
+/*hi--- Timeline card ---*/
 .timelineCard:hover {
   transform: scale(1.01);
 }
@@ -51,12 +51,15 @@
   justify-content: center;
 }
 
+#timelineStyle {
+  margin: 3%;
+}
+
 #timelineLoading {
   color: var(--yellow);
   margin-top: 5%;
   margin-bottom: 3%;
 }
-
 
 /*--- Our Story dark mode ---*/
 @media (prefers-color-scheme: dark) {
@@ -76,6 +79,8 @@
   .witJourneyText {
     font-size: 11pt;
   }
+
+ 
 }
 
 /*--- Our Story tablet version ---*/
@@ -91,6 +96,7 @@
     font-size: 10pt;
   }
 }
+  
 
 @media only screen and (max-width: 500px) {
   .timelineCardImageContainer {
