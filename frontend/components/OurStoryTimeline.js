@@ -2,7 +2,12 @@ import React, { useState, useEffect } from "react";
 import styles from "../styles/OurStoryTimeline.module.css";
 import Timeline from "../components/Timeline";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import { marks, valueToYear, timelinePhoto } from "../data/ourStoryData";
+import {
+  marks,
+  valueToYear,
+  pageToValue,
+  timelinePhoto,
+} from "../data/ourStoryData";
 import Image from "next/image";
 
 export default function OppositeContentTimeline() {
@@ -29,7 +34,7 @@ export default function OppositeContentTimeline() {
       <Timeline
         id={styles.timelineStyle}
         page={"ourStory"}
-        step={50}
+        step={20}
         valueToYear={valueToYear}
         marks={marks}
         updateYear={handleYear}
