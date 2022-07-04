@@ -118,10 +118,12 @@ const Home = () => {
 
           {/* Start of Statistics */}
           <div className={styles.stats}>
-            <img
-              src={`/stats-background-1.png`}
+            <Image
+              src="/stats-background-1.png"
               className={styles.statsBackground}
               alt="banner"
+              width="2000px"
+              height="450px"
             />
             <div>
               <div data-aos="fade" className={styles.number}>

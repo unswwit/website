@@ -97,7 +97,7 @@ div .headline {
   margin: auto;
   max-width: 85%;
   display: grid;
-  padding: 100px 0px;
+  padding: 50px 0px;
   grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
 }
@@ -123,7 +123,7 @@ div .headline {
 /*Description right block*/
 .descriptionRight {
   line-height: 22px;
-  padding-top: 55px;
+  padding-top: 60px;
   grid-area: auto / span 1;
 }
 
