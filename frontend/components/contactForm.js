@@ -16,10 +16,10 @@ function ContactForm() {
     if (validate.test(email)) {
       emailjs
         .sendForm(
-          process.env.REACT_APP_SERVICE_ID,
-          process.env.REACT_APP_TEMPLATE,
+          process.env.NEXT_PUBLIC_SERVICE_ID,
+          process.env.NEXT_PUBLIC_TEMPLATE,
           e.target,
-          process.env.REACT_APP_EMAILJS_ID
+          process.env.NEXT_PUBLIC_EMAILJS_ID
         )
         .then(
           (result) => {
