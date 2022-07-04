@@ -7,9 +7,9 @@
 }
 
 .quoteBlockCareers,
-.quoteBlockCompetitions,
-.quoteBlockExternals,
-.quoteBlockHR,
+.quoteBlockCompetitions,  
+.quoteBlockExternals, 
+.quoteBlockHR, 
 .quoteBlockIT,
 .quoteBlockMarketing,
 .quoteBlockMedia,
@@ -45,7 +45,7 @@
 }
 
 .quoteBlockIT {
-  background: #b4c9e8;
+  background: #B4C9E8;
 }
 
 .quoteBlockMarketing {
@@ -57,13 +57,13 @@
 }
 
 .quoteBlockPublications {
-  background: #ffc2e4;
+  background: #FFC2E4;
 }
 
 .authorBlock {
   display: flex;
   flex-flow: row wrap;
-  background: #4f4f4f;
+  background: #4F4F4F;
   padding: 20px;
   justify-content: center;
 }
@@ -82,7 +82,7 @@
   font-weight: bold;
   font-size: 13px;
   line-height: 13px;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .authorRoles {
@@ -115,7 +115,7 @@
 }
 
 .itRoleColour {
-  color: #b4c9e8;
+  color: #B4C9E8;
 }
 
 .marketingRoleColour {
@@ -127,7 +127,7 @@
 }
 
 .publicationsRoleColour {
-  color: #ffc2e4;
+  color: #FFC2E4;
 }
 
 .authorImage {
@@ -139,8 +139,7 @@
   text-align: center;
 }
 
-.beginQuote,
-.endQuote {
+.beginQuote, .endQuote {
   margin: 0;
   color: #515151;
   font-family: Montserrat;
@@ -152,13 +151,13 @@
 .beginQuote {
   position: relative;
   right: 50%;
-  top: 10px;
+  top: 140px;
 }
 
 .endQuote {
   position: relative;
   left: 50%;
-  top: 80px;
+  top: -40px;
 }
 
 .quoteContainer {
@@ -204,7 +203,7 @@
   border-bottom: 17px solid transparent;
   border-right: 30px solid #313638;
   border-left: 0;
-  padding: 0;
+  padding-left: 60px;
   background-color: transparent;
   outline: 0;
 }
@@ -220,7 +219,7 @@
   border-bottom: 17px solid transparent;
   border-left: 30px solid #313638;
   border-right: 0;
-  padding: 0;
+  padding-right: 60px;
   background-color: transparent;
   outline: 0;
 }
@@ -234,33 +233,31 @@
 }
 
 /*---Dark mode---*/
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme:dark) {
   .buttonBack {
     border-right: 30px solid var(--light-grey);
   }
-
+  
   .buttonNext {
     border-left: 30px solid var(--light-grey);
   }
-
+  
   .buttonBack:disabled {
     border-right: 30px solid var(--grey);
   }
-
+  
   .buttonNext:disabled {
     border-left: 30px solid var(--grey);
   }
 
-  .beginQuote,
-  .endQuote {
+  .beginQuote, .endQuote {
     color: var(--light-grey);
   }
 }
 
 /*---------------Screen Responsiveness-------------------*/
 @media only screen and (max-width: 1800px) {
-  .slideComponent,
-  .slideContainer {
+  .slideComponent, .slideContainer {
     height: 450px;
   }
 }
@@ -274,18 +271,17 @@
     top: 75px;
   }
 
-  .quoteBlockEducation,
-  .quoteBlockEvents,
-  .quoteBlockExternals,
-  .quoteBlockHR,
+  .quoteBlockEducation, 
+  .quoteBlockEvents, 
+  .quoteBlockExternals, 
+  .quoteBlockHR, 
   .quoteBlockIT,
   .quoteBlockMarketing,
   .quoteBlockDefault {
     width: 75%;
   }
 
-  .slideComponent,
-  .slideContainer {
+  .slideComponent, .slideContainer {
     height: 400px;
   }
 }
@@ -302,9 +298,7 @@
     margin-left: 0px;
   }
 
-  .beginQuote,
-  .endQuote,
-  .horizontalLine {
+  .beginQuote, .endQuote, .horizontalLine {
     display: none;
   }
 
@@ -321,7 +315,7 @@
   .quoteBlock {
     height: 320px;
   }
-
+  
   .quoteContainer {
     height: 55%;
   }
@@ -347,8 +341,7 @@
     max-height: 100%;
   }
 
-  .slideComponent,
-  .slideContainer {
+  .slideComponent, .slideContainer {
     height: 320px;
   }
 }
@@ -357,13 +350,12 @@
   .quoteBlock {
     height: 360px;
   }
-
+  
   .quoteContainer {
     height: 60%;
   }
 
-  .slideComponent,
-  .slideContainer {
+  .slideComponent, .slideContainer {
     height: 360px;
   }
 }
@@ -378,11 +370,10 @@
     width: 60%;
   }
 
-  .slideComponent,
-  .slideContainer {
+  .slideComponent, .slideContainer {
     height: 400px;
   }
-
+    
   .quoteContainer {
     height: 62%;
   }
@@ -401,8 +392,7 @@
     text-align: center;
   }
 
-  .slideComponent,
-  .slideContainer {
+  .slideComponent, .slideContainer {
     height: 460px;
   }
 }
@@ -412,8 +402,7 @@
     height: 520px;
   }
 
-  .slideComponent,
-  .slideContainer {
+  .slideComponent, .slideContainer {
     height: 520px;
   }
 
