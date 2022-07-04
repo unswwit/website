@@ -24,6 +24,7 @@ div .headline {
   font-size: 5.5vw;
   text-transform: uppercase;
   letter-spacing: 3px;
+  line-height: 60px;
 }
 
 /*Header subtitle*/
