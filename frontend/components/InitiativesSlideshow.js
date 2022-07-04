@@ -107,8 +107,8 @@ const InitiativesSlideshow = () => {
                         <Image
                           src={`/event-covers/2022/${firstUpcomingEvent.img}`}
                           alt={firstUpcomingEvent.title}
-                          height="1500px"
-                          width="2800px"
+                          height="320px"
+                          width="500px"
                         />
                       </a>
                     </div>
@@ -128,8 +128,8 @@ const InitiativesSlideshow = () => {
                         <Image
                           src={`/event-covers/2022/${latestEvent.img}`}
                           alt={latestEvent.title}
-                          height="1500px"
-                          width="2800px"
+                          height="320px"
+                          width="500px"
                         />
                       </a>
                     </div>
@@ -188,8 +188,8 @@ const InitiativesSlideshow = () => {
                     <Image
                       src={`/blog-covers/${latestBlog.img}`}
                       alt={`${latestBlog.heading}`}
-                      height="1500px"
-                      width="2800px"
+                      height="320px"
+                      width="450px"
                     />
                   </a>
                 </div>
@@ -229,8 +229,8 @@ const InitiativesSlideshow = () => {
                   >
                     <Image
                       src={`/podcast-covers/${latestPodcast.img}`}
-                      height="1500px"
-                      width="2800px"
+                      height="320px"
+                      width="250px"
                       alt={`${latestPodcast.title}`}
                     />
                   </a>

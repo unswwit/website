@@ -217,10 +217,10 @@ div .headline {
   font-family: "Montserrat", sans-serif;
   font-size: 11pt;
   text-align: right;
+  padding-top:30px;
 }
 
 .eventsDescription p#about {
-  padding: 20px;
   padding-bottom: 0;
 }
 
@@ -249,7 +249,7 @@ div .headline {
 }
 
 /*Big event image size*/
-.event1 img {
+.event1 Image {
   object-fit: contain;
   width: 100%;
   height: 100%;
@@ -257,7 +257,7 @@ div .headline {
   overflow: hidden;
 }
 
-.event1 img:hover {
+.event1 Image:hover {
   -ms-transform: scale(1.5); /* IE 9 */
   -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.03);
@@ -400,7 +400,7 @@ div .headline {
   padding: 10px 55px 10px 15px;
 }
 
-.right img {
+.right Image {
   object-fit: contain;
   max-height: 100%;
   max-width: 100%;
@@ -416,7 +416,7 @@ div .headline {
   height: 100%;
 }
 
-.right img:hover {
+.right Image:hover {
   -ms-transform: scale(1.5); /* IE 9 */
   -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.03);
@@ -520,7 +520,7 @@ div .headline {
   line-height: normal;
 }
 
-.sponsors img {
+.sponsors Image {
   margin-top: 50px;
   width: 100%;
   max-width: 900px;
@@ -569,7 +569,7 @@ div .headline {
   line-height: normal;
 }
 
-.publications img {
+.publications Image {
   width: 100%;
   max-width: 900px;
 }
