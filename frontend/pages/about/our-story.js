@@ -46,8 +46,8 @@ const OurStory = () => {
                 <Image
                   src="/our-story/our-mission.jpg"
                   alt="WIT members"
-                  width="1000px"
-                  height="1500px"
+                  width="4000px"
+                  height="6000px"
                 />
               </div>
               <div className={styles.ourStory}>
