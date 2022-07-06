@@ -14,7 +14,7 @@ import NewsletterSection from "../components/NewsletterSection";
 import axios from "axios";
 import humps from "humps";
 import QuoteSlideshow from "../components/QuotesSlideshow";
-import executives from "../data/ExecQuotes";
+import executives from "../data/execQuotes";
 
 const Home = () => {
   const [open, setOpen] = React.useState(false);
@@ -151,7 +151,7 @@ const Home = () => {
             className={styles.carousel}
           >
             <InitiativesSlideshow />
-          </div> 
+          </div>
 
           {/* Start of Publications */}
           <div
