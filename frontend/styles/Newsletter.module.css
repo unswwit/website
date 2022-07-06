@@ -136,6 +136,11 @@
   font-size: 1.3vw;
 }
 
+.closeSymbol {
+  color: #313638;
+  text-align: right;
+}
+
 .closeBtn {
   float: right;
   margin: 12px;
@@ -164,6 +169,35 @@
     color: white;
   }
   
+.subscribeBtn {
+  position: absolute;
+  right: 20%;
+  text-align: center;
+  width: 60%;
+  bottom: 37%;
+  color: #ffffff;
+  background-color: #e85f5c;
+  padding: 12px 10px;
+  border: none;
+  font-size: 2vw;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 3px;
+  transition: 0.3s;
+}
+
+.subscribeBtn:hover {
+  background-color: #bd3f3d;
+}
+
+.signUpForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*--- Dark mode ---*/
+@media (prefers-color-scheme:dark) {
   .paper {
     background-color: var(--dark-grey);
   }
@@ -197,6 +231,29 @@
     font-size: 12pt;
   }
 }
+/*-------------------------------Newsletter section Mobile Design-----------------------------*/
+@media only screen and (max-width: 1200px) {
+  .subscribeBtn {
+    font-size: 20pt;
+    width: 70%;
+    right: 15%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .formTitle {
+    font-size: 14pt;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .subscribeBtn {
+    font-size: 16pt;
+    width: 70%;
+    right: 15%;
+    bottom: 38%;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   .forminput,
@@ -209,4 +266,16 @@
   .formbutton {
     width: 80%;
   }
+  .formDescription {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .subscribeBtn {
+    font-size: 14pt;
+    width: 80%;
+    right: 10%;
+  }
+}
 }

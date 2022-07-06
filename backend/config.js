@@ -14,5 +14,4 @@ const config = {
   offset: 0,
 };
 
-
 module.exports = config;
