@@ -10,9 +10,14 @@
   width: 60%;
 }
 
+#ourStoryTimeline {
+  width: 60%;
+}
+
 #teams,
 #events,
-#marketingArchive {
+#marketingArchive,
+#ourStoryTimeline {
   margin: 0 auto;
   margin-bottom: 2%;
 }
