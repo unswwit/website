@@ -167,6 +167,366 @@ p {
   }
 }
 
+/*-----------------------------------Navbar-----------------------------------*/
+.bg-custom {
+  background: transparent;
+  font-size: 10pt;
+  padding: 0px;
+  z-index: 99;
+}
+
+.nav {
+  height: 70px;
+  z-index: 99;
+}
+
+.navbar-nav {
+  color: #313638;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  z-index: 99;
+}
+
+.nav-item {
+  float: right;
+  color: #313638;
+  padding: 15px 5px;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  z-index: 99;
+  position: relative;
+}
+
+.nav-item-btn {
+  color: #313638;
+  padding-top: 22px;
+  padding-right: 10px;
+  display: none;
+  z-index: 99;
+  position: relative;
+}
+
+.nav-item a,
+.dropdown-title {
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  z-index: 99;
+}
+
+.dropdown-menu {
+  border-color: #fff7ef;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+  background-color: #fff7ef;
+  margin-top: 15px;
+  border-radius: 0px 0px 10px 10px;
+  z-index: 99;
+}
+
+.transparent {
+  margin-top: 25px;
+  border-radius: 10px;
+  z-index: 99;
+}
+
+.transparent::after {
+  content: " ";
+  border-style: solid;
+  border-width: 0 1.8em 2em 1.8em;
+  border-color: transparent;
+  position: absolute;
+  right: 48px;
+  top: -1em;
+  border-bottom-color: #fff7ef;
+  z-index: 99;
+}
+
+.mediaDD::after {
+  content: " ";
+  border-style: solid;
+  border-width: 0 1.8em 2em 1.8em;
+  border-color: transparent;
+  position: absolute;
+  right: 81px;
+  top: -1em;
+  border-bottom-color: #fff7ef;
+}
+
+.dropdown-item {
+  padding: 7px 10px 5px 10px;
+}
+
+.dropdown-media {
+  padding: 7px 5px;
+}
+
+.dropdown-item a {
+  color: #313638;
+  transition: 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #fff7ef;
+}
+
+.affiliations-remove-gap {
+  margin-left: 35px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  max-height: 0;
+}
+
+.menuTitle {
+  color: var(--general-text);
+  padding: 10px 15px;
+}
+
+.menuTitle:hover {
+  color: var(--red);
+  cursor: pointer;
+}
+
+.nav-item a:hover {
+  color:  var(--red);
+  padding: 15px;
+  text-decoration: none;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 0%;
+  bottom: 0;
+  left: 5%;
+  opacity: 0;
+  background-color: var(--red);
+  transition: opacity 300ms, width 0.35s ease 0s;
+}
+  
+.nav-item:hover:not(.highlight-nav):after  {
+  width: 90%;
+  opacity: 1;
+}
+
+.nav-item:hover:not(.highlight-nav-no-drop):after  {
+  width: 90%;
+  opacity: 1;
+}
+
+.nav-item:hover:not(.highlight-nav-white):after  {
+  width: 90%;
+  opacity: 1;
+}
+
+/*Making the navigation change colour on scroll*/
+.activeNav {
+  background-color: var(--light-yellow);
+  transition: background-color 0.2s ease-in;
+}
+
+.dropdown-toggle:after {
+  color: var(--white);
+}
+
+.active-nav-item a,
+.active-nav-item span,
+.active-nav-item:after {
+  color: var(--black);
+}
+
+.logo-black {
+  display: none;
+}
+
+/* logo on hamburger menu */
+.logo {
+  width: 35px;
+  margin: 5px 0px 5px 15px;
+}
+
+.icon {
+  transform: scale(0.9);
+  margin-right: 10px;
+  margin-left: -10px;
+}
+
+.icon-media {
+  margin-left: -5px;
+}
+
+.highlight-nav, 
+.highlight-nav-white,
+.highlight-nav-no-drop,
+.highlight-dropdown,
+.highlight-no-nav {
+  font-weight: 500;
+}
+
+/* clear background - dropdown */
+.highlight-no-nav::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  left: 0%;
+  background-color: var(--white);
+  top: 32px;
+  z-index: 100;
+}
+
+/* yellow background - dropdown */
+.highlight-nav::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  left: 0%;
+  background-color: var(--red);
+  top: 32px;
+  z-index: 100;
+}
+
+/* yellow background - no dropdown*/
+.highlight-nav-no-drop::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 90%;
+  bottom: 0;
+  left: 5%;
+  background-color: var(--red);
+  z-index: 100;
+}
+
+/* clear background - no dropdown */
+.highlight-nav-white::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 90%;
+  bottom: 0;
+  left: 5%;
+  background-color: var(--white);
+  z-index: 99;
+}
+
+.hiddenNav {
+  display: none;
+}
+
+/*Dark mode version of nav bar*/
+@media (prefers-color-scheme: dark) {
+  .activeNav {
+    background-color: #000000;
+  }
+
+  .active-nav-item a,
+  .active-nav-item span,
+  .active-nav-item:after {
+    color: #ffffff;
+  }
+
+  .dropdown-item:hover {
+    background-color: #000000;
+  }
+
+  .dropdown-menu {
+    border-color: #000000;
+    background-color: #000000;
+  }
+
+  .dropdown-item a {
+    color: #fff;
+  }
+
+  .transparent::after {
+    border-bottom-color: #000000;
+  }
+
+  .mediaDD::after {
+    border-bottom-color: #000000;
+  }
+}
+
+/* Mobile responsiveness of nav bar */
+@media screen and (max-width: 950px) {
+  .nav-item {
+    display: none;
+  }
+
+  .bg-custom {
+    background-color: var(--light-yellow);
+  }
+
+  .logo-black {
+    display: block;
+  }
+    
+  .nav-item-btn {
+    color: white;
+    display: block;
+    z-index: 99;
+  }
+}
+
+/* Mobile responsiveness of nav bar and dark mode */
+@media screen and (max-width: 950px) and (prefers-color-scheme: dark) {
+  .activeNav {
+    background-color: #000;
+  }
+
+  .active-nav-item a,
+  .active-nav-item span,
+  .active-nav-item:after {
+    color: #ffffff;
+  }
+
+  .bg-custom {
+    background-color: #000;
+  }
+
+  .dropdown-item:hover {
+    background-color: #000;
+  }
+
+  .dropdown-menu {
+    border-color: #000000;
+    background-color: #000000;
+  }
+
+  .dropdown-item a {
+    color: #fff;
+  }
+
+  .transparent::after {
+    border-bottom-color: #000000;
+  }
+
+  .mediaDD::after {
+    border-bottom-color: #000000;
+  }
+
+  .nav-item-btn {
+    color: white;
+    display: block;
+    z-index: 99;
+  }
+
+  .photo {
+    display: block;
+  }
+}
+
 /*----------------------------------Loading Screen------------------------------------*/
 #loadingBackground {
   background: var(--light-yellow);
@@ -179,6 +539,11 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+#loadingWillow {
+  height: 300px;
+  width: 300px;
 }
 
 #loadingBackground p {
@@ -220,6 +585,76 @@ p {
   #loadingWillow {
     height: 280px;
     width: 280px;
+  }
+}
+
+/*-----------------------------------Menu-----------------------------------*/
+
+.menu-container {
+  position: fixed;
+  width: 100%;
+  background: var(--light-yellow);
+  opacity: 1;
+  color: #313638;
+  z-index: 3;
+  box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.menu-link {
+  text-decoration: none;
+}
+
+.menu-item {
+  color: #313638;
+  padding: 5px 35px;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.menu-box:hover {
+  width: 92%;
+  background-color: var(--sand);
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-box:hover .menu-item {
+  color: var(--red);
+}
+
+.menu-bar {
+  float: none;
+}
+
+.menu-list {
+  padding-top: 4rem;
+}
+
+.menu-dropdown {
+  padding: 5px 0px;
+}
+
+/* Dark mode and responsive menu dropdown*/
+@media screen and (max-width: 950px) and (prefers-color-scheme: dark) {
+  .menu-container {
+    background: #000000;
+    color: #fff;
+  }
+
+  .menu-item {
+    color: #fff;
+  }
+  
+  .menu-box:hover {
+    background-color: var(--dark-grey);
+  }
+  
+  .menu-box:hover .menu-item {
+    color: var(--red);
   }
 }
 
@@ -304,7 +739,6 @@ form button {
     width: 80%;
   }
 }
-/* Footer */
 
 /*----------------------------------Footer------------------------------------*/
 /* WIT logo */
