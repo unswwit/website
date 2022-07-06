@@ -9,9 +9,9 @@ import ScrollUpBtn from "../../components/ScrollUpBtn";
 import LoadingScreen from "../../components/LoadingScreen";
 import axios from "axios";
 import humps from "humps";
-import { execToClassName, marks, valueToYear } from "../../components/teamData";
+import { execToClassName, marks, valueToYear } from "../../data/teamData";
 
-function OurTeam() {
+export default function OurTeam() {
   const masterExec = useRef();
   const masterSubcom = useRef();
   const [filteredExecs, setFilteredExecs] = useState([]);
@@ -231,5 +231,3 @@ function OurTeam() {
     </div>
   );
 }
-
-export default OurTeam;

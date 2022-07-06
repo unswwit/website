@@ -247,6 +247,7 @@ h2#topheading {
 
   .profileDegree {
     font-size: 16px;
+    line-height: 25px; 
   }
 
   .execRow {
