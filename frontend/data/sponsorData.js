@@ -379,7 +379,6 @@ const placeHolderDescription = () => {
 
 const sponsors = {
   // name, website, img, type, description
-
   Airwallex: [
     "Airwallex",
     "https://www.airwallex.com/au",

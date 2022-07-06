@@ -7,11 +7,11 @@ import styles from "../../styles/sponsors.module.css";
 import PageHeader from "../../components/header";
 import SponsorsModal from "../../components/sponsorsModal";
 import LoadingScreen from "../../components/LoadingScreen";
-import { sponsors, affiliations, partnerships } from "../../components/sponsorData";
-import Image from "next/image";
+import { sponsors, affiliations, partnerships } from "../../data/sponsorData";
+// import Image from "next/image";
 import Link from "next/link";
 
-function Sponsors() {
+export default function Sponsors() {
   const [open, setOpen] = React.useState(false);
   const [currSponsor, setCurrSponsor] = React.useState("");
   const [sourceLoading, setSourceLoading] = React.useState(true);
@@ -68,7 +68,8 @@ function Sponsors() {
                 .sort()
                 .filter((key) => sponsors[key][3] === "DIAMOND")
                 .map((key, _) => (
-                  <Image
+                  // TODO: change img tags to next/image tags
+                  <img
                     className={styles.logo}
                     src={
                       window.matchMedia &&
@@ -82,8 +83,6 @@ function Sponsors() {
                       setCurrSponsor(key);
                     }}
                     key={key}
-                    width="206px"
-                    height="74px"
                   />
                 ))}
             </div>
@@ -97,7 +96,7 @@ function Sponsors() {
                 .sort()
                 .filter((key) => sponsors[key][3] === "GOLD")
                 .map((key, _) => (
-                  <Image
+                  <img
                     className={styles.logo}
                     src={
                       window.matchMedia &&
@@ -111,8 +110,6 @@ function Sponsors() {
                       setCurrSponsor(key);
                     }}
                     key={key}
-                    width="206px"
-                    height="74px"
                   />
                 ))}
             </div>
@@ -126,7 +123,7 @@ function Sponsors() {
                 .sort()
                 .filter((key) => sponsors[key][3] === "SILVER")
                 .map((key, _) => (
-                  <Image
+                  <img
                     className={styles.logo}
                     src={
                       window.matchMedia &&
@@ -140,8 +137,6 @@ function Sponsors() {
                       setCurrSponsor(key);
                     }}
                     key={key}
-                    width="206px"
-                    height="74px"
                   />
                 ))}
             </div>
@@ -155,7 +150,7 @@ function Sponsors() {
                 .sort()
                 .filter((key) => sponsors[key][3] === "BRONZE")
                 .map((key, _) => (
-                  <Image
+                  <img
                     className={styles.logo}
                     src={
                       window.matchMedia &&
@@ -169,8 +164,6 @@ function Sponsors() {
                       setCurrSponsor(key);
                     }}
                     key={key}
-                    width="206px"
-                    height="74px"
                   />
                 ))}
             </div>
@@ -189,7 +182,7 @@ function Sponsors() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <img
                       className={styles.logo}
                       src={
                         window.matchMedia &&
@@ -199,8 +192,6 @@ function Sponsors() {
                           : `/affiliations/${affiliations[key][1]}`
                       }
                       alt={key}
-                      width="206px"
-                      height="74px"
                     />
                   </a>
                 ))}
@@ -219,7 +210,7 @@ function Sponsors() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <img
                       className={styles.logo}
                       src={
                         window.matchMedia &&
@@ -229,8 +220,6 @@ function Sponsors() {
                           : `/partnerships/${partnerships[key][1]}`
                       }
                       alt={key}
-                      width="206px"
-                      height="74px"
                     />
                   </a>
                 ))}
@@ -270,5 +259,3 @@ function Sponsors() {
     </div>
   );
 }
-
-export default Sponsors;

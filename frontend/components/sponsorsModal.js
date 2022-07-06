@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/sponsors.module.css";
 import CloseIcon from "@material-ui/icons/Close";
 import IconButton from "@material-ui/core/IconButton";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 
 const SponsorsModal = ({ handleClose, sponsorName, sponsors }) => {
@@ -18,12 +18,11 @@ const SponsorsModal = ({ handleClose, sponsorName, sponsors }) => {
       <br />
       <br />
       <div className={styles.textBlock}>
-        <Image
+        {/* TODO: change img tag to next/image */}
+        <img
           className={styles.sponsorImage}
           src={(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)?`/sponsors/2022/dark-mode/${sponsors[sponsorName][2]}`:`/sponsors/2022/${sponsors[sponsorName][2]}`}
           alt={sponsorName}
-          width="206px"
-          height="74px"
         />
         <h1 className={styles.sponsorType}>
           {sponsors[sponsorName][3]} SPONSOR
