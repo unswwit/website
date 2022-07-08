@@ -2,7 +2,6 @@ import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Slider from "@material-ui/core/Slider";
 import styles from "../styles/Timeline.module.css";
-import { pageToValue } from "../data/ourStoryData";
 
 const TimelineSlider = withStyles({
   root: {
@@ -47,6 +46,12 @@ const TimelineSlider = withStyles({
     backgroundColor: "currentColor",
   },
 })(Slider);
+
+const pageToValue = (page) => {
+  return page === "teams" || page === "events" || page === "marketing"
+    ? 100
+    : 250;
+};
 
 const Timeline = ({ updateYear, marks, valueToYear, page, step, margin }) => {
   return (
