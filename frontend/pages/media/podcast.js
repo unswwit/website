@@ -12,6 +12,9 @@ import { useStyles, links, categories } from "../../data/podcastData";
 import Image from "next/image";
 import Link from "next/link";
 
+import useContentful from "../../components/contentful-podcast";
+const { getPodcastEpisodes } = useContentful();
+
 // TO UNCOMMENT WHEN REACH > 9 PODCASTS
 // import PaginationComp from "../components/Pagination";
 
@@ -41,13 +44,10 @@ const Podcast = () => {
   // input: podcasts data from google sheets
   // output: array of dictionaries containing podcasts data
   const fetchPodcastEpisodes = async () => {
-    const res = await axios.get(
-      "https://wit-database.herokuapp.com/podcast-episodes"
-    );
-    const unsorted = humps.camelizeKeys(res.data);
+    const res = await getPodcastEpisodes();
+    const unsorted = humps.camelizeKeys(res);
     const sortedEpisodes = unsorted.reverse();
     setContent(sortedEpisodes);
-    // setCurrentPosts(sortedEpisodes);
     setSelectedPosts(sortedEpisodes);
     setLoading(false);
     setSourceLoading(false);
@@ -155,7 +155,8 @@ const Podcast = () => {
                   return (
                     <Link href={links[link][1]}>
                       <a className={styles.platformLogos}>
-                        <a className={styles.a}
+                        <a
+                          className={styles.a}
                           key={index}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -242,7 +243,7 @@ const Podcast = () => {
                   key={index}
                   episodeNo={episode.episodeNo}
                   title={episode.title}
-                  cover={`podcast-covers/${episode.img}`}
+                  cover={episode.imgUrl}
                   date={episode.date}
                   description={episode.description}
                   episode={episode}
