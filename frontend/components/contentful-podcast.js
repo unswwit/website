@@ -4,7 +4,7 @@ require("dotenv").config();
 const useContentful = () => {
   const client = createClient({
     space: "g8syemd5uoqq",
-    accessToken: process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN,
+    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_API_TOKEN,
     host: "preview.contentful.com",
   });
 
