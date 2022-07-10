@@ -51,7 +51,6 @@ const Podcast = () => {
     setSelectedPosts(sortedEpisodes);
     setLoading(false);
     setSourceLoading(false);
-    console.log(fetchPodcastEpisodes);
   };
 
   useEffect(() => {
