@@ -12,7 +12,7 @@ import { useStyles, links, categories } from "../../data/podcastData";
 import Image from "next/image";
 import Link from "next/link";
 
-import useContentful from "../../components/contentful-podcast";
+import useContentful from "../api/contentful-podcast";
 const { getPodcastEpisodes } = useContentful();
 
 // TO UNCOMMENT WHEN REACH > 9 PODCASTS
@@ -51,6 +51,7 @@ const Podcast = () => {
     setSelectedPosts(sortedEpisodes);
     setLoading(false);
     setSourceLoading(false);
+    console.log(fetchPodcastEpisodes);
   };
 
   useEffect(() => {
