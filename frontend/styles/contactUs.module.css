@@ -28,7 +28,7 @@
   border-style: none;
   border-bottom: solid;
   border-color: var(--grey);
-  border-width: 2px;
+  border-width: 3px;
   width: 100%;
 }
 
@@ -39,7 +39,7 @@
   border-style: none;
   border-bottom: solid;
   border-color: var(--general-text);
-  border-width: 2px;
+  border-width: 3px;
 
   border-radius: 0px;
   width: 100%;
