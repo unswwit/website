@@ -542,6 +542,20 @@ const sponsors = {
     "GOLD",
     placeHolderDescription(),
   ],
+  VivCourt: [
+    "VivCourt",
+    "https://www.vivcourt.com.au/",
+    "viv-court.png",
+    "GOLD",
+    placeHolderDescription(),
+  ],
+  VMWare: [
+    "VMWare",
+    "https://www.vmware.com/",
+    "VMware-Logo.png",
+    "SILVER",
+    placeHolderDescription(),
+  ],
   WooliesX: [
     "WooliesX",
     "https://wooliesx.com.au/",
