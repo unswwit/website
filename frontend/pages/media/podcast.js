@@ -79,7 +79,7 @@ const Podcast = () => {
     const filteredContent = content.filter(
       (picture) =>
         selectedCategory === "All" ||
-        picture.category.split(",").includes(selectedCategory)
+        picture.category.includes(selectedCategory)
     );
     searchPodcasts(filteredContent, searchTerm);
   };
@@ -204,7 +204,7 @@ const Podcast = () => {
                 })}
             </div>
           </div>
-          {/* End of blog categories */}
+          {/* End of podcast categories */}
 
           {/* Start of search bar */}
           <div className={styles.searchBar}>
