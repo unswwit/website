@@ -2,15 +2,17 @@ import { createClient } from "contentful";
 // require("dotenv").config();
 
 // TODO: rename the useContentful variable and add comments so that it is clear that this is for podcasts.
-// TODO: move space and host details to the .env file. 
-// TODO: migrate the rest of the db over. 
-const useContentful = () => {
+// TODO: move space and host details to the .env file.
+// TODO: migrate the rest of the db over.
+
+const useContentfulPodcasts = () => {
   const client = createClient({
-    space: "g8syemd5uoqq",
+    space: process.env.NEXT_PUBLIC_CONTENTFUL_API_SPACE,
     accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_API_TOKEN,
-    host: "preview.contentful.com",
+    host: process.env.NEXT_PUBLIC_CONTENTFUL_API_HOST,
   });
 
+  // Gets podcast episodes using Contentful API
   const getPodcastEpisodes = async () => {
     try {
       const entries = await client.getEntries({
@@ -54,4 +56,4 @@ const useContentful = () => {
   return { getPodcastEpisodes };
 };
 
-export default useContentful;
+export default useContentfulPodcasts;

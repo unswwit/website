@@ -12,8 +12,8 @@ import { useStyles, links, categories } from "../../data/podcastData";
 import Image from "next/image";
 import Link from "next/link";
 
-import useContentful from "../api/contentful-podcast";
-const { getPodcastEpisodes } = useContentful();
+import useContentfulPodcasts from "../api/contentful-podcast";
+const { getPodcastEpisodes } = useContentfulPodcasts();
 
 // TO UNCOMMENT WHEN REACH > 9 PODCASTS
 // import PaginationComp from "../components/Pagination";
