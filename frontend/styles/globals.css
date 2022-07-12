@@ -951,3 +951,12 @@ a {
     margin-right: 1vw;
   }  
 }
+
+@media screen and (max-width: 800px) {
+  tr {
+      flex-wrap: wrap;
+      justify-items: flex-start;
+      align-items: flex-start;
+      width: 100%;
+  }
+}

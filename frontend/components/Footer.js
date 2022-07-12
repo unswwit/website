@@ -14,7 +14,7 @@ const Footer = () => {
     "Sponsors and Affiliations": "/about/sponsors-affiliations",
     "Our Team": "/about/our-team",
     "Contact Us": "/about/contact-us",
-    "Blog Posts": "/media/blog",
+    Blog: "/media/blog",
     Podcast: "/media/podcast",
     Publications: "/media/publications",
     Marketing: "/media/marketing",
