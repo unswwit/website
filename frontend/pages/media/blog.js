@@ -9,7 +9,7 @@ import PaginationComp from "../../components/Pagination";
 import LoadingScreen from "../../components/LoadingScreen";
 import axios from "axios";
 import humps from "humps";
-import BootstrapTooltip from "../../components/BootstrapToolTip";
+import BootstrapTooltip from "../../components/BootstrapTooltip";
 import { isMobile } from "react-device-detect";
 import { useStyles, categoryDescriptions } from "../../data/blogData";
 
