@@ -9,13 +9,11 @@ const nakatomiDescription = () => {
         Nakatomi is a multi-disciplinary, award winning technology innovation
         company. We function as an extension of businesses to design meaningful
         products and experiences using our unique perspective.
-      </p>
-      <p>
+        <br /><br />
         We apply unlimited imaginative thinking, combined with engineering
         certainty, to solve uncommon problems. The result is high impact,
         bespoke products and solutions. Imagined, validated and executed.
-      </p>
-      <p>
+        <br /><br />
         We’re experts in the disciplines most relevant to the future. Some of
         our best work involves helping startups launch, product strategy and
         development for a variety of businesses, introducing brands to the
@@ -60,20 +58,18 @@ const eyDescription = () => {
         problems. To ask questions that have never been asked before. To
         innovate, to grow, to learn, to lead, to belong bringing out the best in
         yourself and in others.
-      </p>
-      <p>
+        <br /><br />
         Here at EY, you’ll build the tech skillsets and growth mindsets to
         become the leader you want to be.
-      </p>
-      <p>
+        <br /><br />
         We’ll provide the culture, the tech, the teams, the scale, the learning
         and the relationships for you to personalise your career.
-      </p>
-      <p>
+        <br /><br />
         You’ll learn and innovate here while asking better questions to seek
         better answers and building a better working world. Together.
+        <br /><br />
+        It’s yours to build.
       </p>
-      <p>It’s yours to build.</p>
     </>
   );
 };
@@ -88,16 +84,14 @@ const fdmDescription = () => {
         IT or business career. We welcome candidates from all degree backgrounds
         and universities, you don’t need a STEM degree to start a career in tech
         with us.
-      </p>
-      <p>
+        <br /><br />
         The FDM Graduate Program provides fast-paced, specialised training,
         equipping graduates with the vital professional and technical skills to
         step into an exciting role with one of our leading international
         clients. From the moment you apply, our team really get to know you and
         establish your career goals, matching your skills and strengths to the
         stream that is the best fit for you.
-      </p>
-      <p>
+        <br /><br />
         Led by our expert training team, the FDM Academy gets you job-ready in
         6-14 weeks, depending on the career pathway you choose. The technical
         stream leads to roles such as Software Development or Cloud Computing.
@@ -105,19 +99,16 @@ const fdmDescription = () => {
         and Compliance. You then begin your 2-year career journey as an FDM
         Consultant gaining exceptional hands-on experience and adding some
         leading brands to your CV.
-      </p>
-      <p>
+        <br /><br />
         FDM is committed to your success. We provide you with ongoing support
         and guidance throughout your whole career journey. We recruit all year
         round and have start dates throughout the year, allowing you much more
         flexibility on when you can start your career.
-      </p>
-      <p>
+        <br /><br />
         We are proud to support our diverse community. We celebrate differences
         because we want everyone to have equal opportunity to belong and grow in
         their career.
-      </p>
-      <p>
+        <br /><br />
         Over its 30-year history FDM Group has won many awards. In 2022 FDM has
         risen 5 places to #16 on the GradConnection Top 100 Graduate Employers
         and is again one of GradAustralia's Top 100 Graduate Employers.
@@ -133,24 +124,21 @@ const pwcDescription = () => {
       <p>
         In an increasingly complex world, PwC works with businesses, Government
         and the community to help Australia continue to thrive and grow.
-      </p>
-      <p>
+        <br /><br />
         PwC Australia delivers quality in audit, assurance, consulting and tax
         services to more than 5,000 clients.
-      </p>
-      <p>
+        <br /><br />
         We’re part of a network of firms in 158 countries with over 250,000
         people. PwC is one of the top 50 brands worldwide and PwC Australia is
         among LinkedIn’s top companies for where Australians want to work.
-      </p>
-      <p>
+        <br /><br />
         We are bold about our commitment to diversity and inclusion, and we
         empower flexible working.
-      </p>
-      <p>
+        <br /><br />
         Our purpose is to build trust in society and solve important problems.
+        <br /><br />
+        At PwC, we call this The Together Effect.
       </p>
-      <p>At PwC, we call this The Together Effect.</p>
     </>
   );
 };
@@ -165,13 +153,10 @@ const mantelGroupDescription = () => {
         one of us is an individual and our experience in the workplace has to
         reflect that. We do not believe that standard perks and benefits, or
         ‘one size fits all’ experiences give people what they need.
-      </p>
-      <p>
+        <br /><br />
         For us, creating a great place to work is no accident. All good
         relationships have a foundation of trust, and our trust is articulated
-        through our Mantel Group Principles, that guide our decisions and behaviours.
-      </p>
-      <p>
+        through our Mantel Group Principles, that guide our decisions and behaviours.<br /><br />
         We hire smart people and get out of their way. By focusing on our five
         principles and not getting caught up in red tape, we trust you to get
         the job done. We prioritise the culture and team way before revenue,
@@ -194,8 +179,7 @@ const amstelveenDescription = () => {
         choices and raise the bar in risk and compliance; like by building a new
         risk strategy, performing project technology reviews, or helping them
         drive digital transformation.
-      </p>
-      <p>
+        <br /><br />
         Our strong relationships with our clients are reflected in their
         continued trust in the delivery of our work and our rapid growth, with
         Amstelveen making AFR’s Fast Starters lists in FY18 and FY19!
@@ -208,8 +192,9 @@ const amstelveenDescription = () => {
 const quantiumDescription = () => {
   return (
     <>
-      <p>Power your possibilities at Quantium</p>
       <p>
+        Power your possibilities at Quantium.
+        <br /><br />
         Quantium is a global leader in the application of data analytics and
         engineering, helping our clients solve their most important problems
         using data. We have a track record of innovation and combining the best
@@ -339,8 +324,7 @@ const akunaDescription = () => {
         implement our own low latency technologies, trading strategies and
         mathematical models. At Akuna we have a flat structure, where the best
         idea wins.
-      </p>
-      <p>
+        <br /><br />
         Our Founding Partners, including our CEO Andrew Killion, first
         conceptualised Akuna in their hometown of Sydney. They opened our first
         office in 2011 in Chicago, the heart of the derivatives & options
@@ -349,8 +333,7 @@ const akunaDescription = () => {
         waterfront office. We are currently trading HK, Korea, cryptocurrencies
         and US night markets and are excited for expansions into all the major
         Asian exchanges. We also have offices in Shanghai and Boston.
-      </p>
-      <p>
+        <br /><br />
         At Akuna, we believe that the people are the centre of everything we do.
         Our Sydney office has a start-up feel with less than 200 people, which
         means you really get to know the team! We run social poker competitions,
