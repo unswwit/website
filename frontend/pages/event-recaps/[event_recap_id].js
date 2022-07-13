@@ -55,22 +55,7 @@ const EventRecapPage = (props) => {
         // hide the loading sign
         setLoading(false);
 
-        if (currEvent.imagePaths) {
-          setHasPhotos(true);
-          var tempArray = [];
-          currEvent.imagePaths.split(",").forEach((filename) => {
-            tempArray.push({
-              source: `/event-recap/${currEvent.year}/T${currEvent.term}/${currEvent.imageFolder}/${filename}`,
-            });
-          });
-
-          // If at least two images dont exist, disable gallery arrows
-          if (tempArray.length < 2) {
-            setEnableGalleryArrows(false);
-          }
-
-          setImageGalleryFilenames(tempArray);
-        }
+        setPhotos(currEvent);
 
         if (currEvent.resourcesFolderId) {
           setHasResources(true);
@@ -89,6 +74,25 @@ const EventRecapPage = (props) => {
     fetchPastEvents();
     
   }, [eventNumber, props.history]);
+
+  const setPhotos = (currEvent) => {
+    if (currEvent.imagePaths) {
+      setHasPhotos(true);
+      var tempArray = [];
+      currEvent.imagePaths.split(",").forEach((filename) => {
+        tempArray.push({
+          source: `/event-recap/${currEvent.year}/T${currEvent.term}/${currEvent.imageFolder}/${filename}`,
+        });
+      });
+
+      // If at least two images dont exist, disable gallery arrows
+      if (tempArray.length < 2) {
+        setEnableGalleryArrows(false);
+      }
+
+      setImageGalleryFilenames(tempArray);
+    }
+  }
 
   return (
     <>
