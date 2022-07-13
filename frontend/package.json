@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watch"
+    "test": "jest --runInBand"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.4",
