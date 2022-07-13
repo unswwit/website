@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import PageHeader from "../../components/header";
-import styles from "../../styles/event-recap.module.css";
+import PageHeader from "../../../components/Header";
+import styles from "../../../styles/event-recap.module.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
@@ -29,18 +29,19 @@ const EventRecapPage = (props) => {
 
   useEffect(() => {
     setLoading(true);
+  
     let url = window.location.href.split("/");
-    setEventNumber(url[url.length-1].split("_")[1])
-    let currEventNumber = url[url.length-1].split("_")[1]
+    setEventNumber(url[url.length-1])
+    let currEventNumber = url[url.length-1]
+
     const fetchPastEvents = async () => {
       const res = await axios.get("https://wit-database.herokuapp.com/past-events");
       const allEvents = humps
         .camelizeKeys(res.data)
         .filter(
-          // (event) => event.year.toString() === props.match.params.year
-          (event) => event.year.toString() === url[url.length-1].split("_")[0]
+          (event) => event.year.toString() === url[url.length-2]
         );
-      
+
         if (allEvents.length <= 0 || currEventNumber > allEvents.length) {
           props.history.push("/404");
           return;

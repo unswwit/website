@@ -182,10 +182,10 @@ const Events = () => {
     return events.map((event, index) => {
       let eventLabel = event.img.split(".")[0].split("-");
       eventLabel.shift();
-      let event_id = `${year}_${event.eventNumber}`;
+      let event_id = `${event.eventNumber}`;
       return (
         <div className={styles.pastEvent} key={index}>
-          <Link href={`/event-recaps/${event_id}`}>
+          <Link href={`/event-recaps/${year}/${event_id}`}>
             <div className={styles.eventImgBox}>
               <Image
                 className={styles.eventImages}
