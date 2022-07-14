@@ -51,7 +51,7 @@ const timelinePhoto = {
   2016: "/our-story/timelinePhotos/2016.jpg",
   2017: "/our-story/timelinePhotos/2017.jpg",
   2018: "/our-story/timelinePhotos/2018.jpg",
-  2019: "/our-story/timelinePhotos/2019_1.jpg",
+  2019: "/our-story/timelinePhotos/2019.jpg",
   2020: "/our-story/timelinePhotos/2020.jpg",
   2021: "/our-story/timelinePhotos/2021.jpg",
 };
