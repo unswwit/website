@@ -122,8 +122,7 @@ const Home = () => {
               src="/stats-background-1.png"
               className={styles.statsBackground}
               alt="banner"
-              width="2000px"
-              height="450px"
+              layout="fill"
             />
             <div>
               <div data-aos="fade" className={styles.number}>
