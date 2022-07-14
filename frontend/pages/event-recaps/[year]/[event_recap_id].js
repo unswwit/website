@@ -124,32 +124,34 @@ const EventRecapPage = (props) => {
                 rel="noopener noreferrer"
                 href={event.facebookLink}
               >
-                <button
-                  className={styles.facebookLinkButton}
-                  style={hasFBLink ? {} : { display: "none" }}
-                >
-                  Facebook
-                </button>
+                {hasFBLink && (
+                  <button 
+                      className={styles.facebookLinkButton}
+                  >
+                    Facebook
+                  </button>
+                )}
               </a>
             </span>
           </div>
 
           {/* YouTube Embedded Video */}
-          <div
-            className={styles.iframeWrapper}
-            style={hasEmbeddedVideo ? {} : { display: "none" }}
-          >
-            <div className={styles.responsiveIframe}>
-              <iframe
-                src={`https://youtube.com/embed/${event.youtubeVideoId}?autoplay=0`}
-                frameborder="0"
-                allow="autoplay; encrypted-media"
-                allowfullscreen="true"
-                title="video"
-                className={styles.embeddedVideo}
-              />
+          {hasEmbeddedVideo && (
+            <div
+              className={styles.iframeWrapper}
+            >
+              <div className={styles.responsiveIframe}>
+                <iframe
+                  src={`https://youtube.com/embed/${event.youtubeVideoId}?autoplay=0`}
+                  frameborder="0"
+                  allow="autoplay; encrypted-media"
+                  allowfullscreen="true"
+                  title="video"
+                  className={styles.embeddedVideo}
+                />
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Event Description */}
           <p className={styles.description}>{event.description}</p>
@@ -157,60 +159,66 @@ const EventRecapPage = (props) => {
           {/* Image Gallery / Cover Image Section */}
           {/* Display Image gallery if images exist, otherwise display cover image */}
 
-          <div
-            className={styles.imageWrapper}
-            style={!hasPhotos ? {} : { display: "none" }}
-          >
-            <Image
-              src={`/event-covers/${event.year}/${event.img}`}
-              alt="header"
-              width="1200px"
-              height="630px"
-            />
-          </div>
-          <div
-            className={styles.imageGalleryWrapper}
-            style={hasPhotos ? {} : { display: "none" }}
-          >
-            <AwesomeSlider
-              cssModule={styles}
-              media={imageGalleryFilenames}
-              buttons={enableGalleryArrows}
-              mobileTouch={enableGalleryArrows}
-            />
-          </div>
+          {!hasPhotos && (
+            <div
+              className={styles.imageWrapper}
+            >
+              <Image
+                src={`/event-covers/${event.year}/${event.img}`}
+                alt="header"
+                width="1200px"
+                height="630px"
+              />
+            </div>
+          )}
+
+          {hasPhotos && (
+            <div
+              className={styles.imageGalleryWrapper}
+            >
+              <AwesomeSlider
+                cssModule={styles}
+                media={imageGalleryFilenames}
+                buttons={enableGalleryArrows}
+                mobileTouch={enableGalleryArrows}
+              />
+            </div>
+          )}
 
           {/* Event Resources Accordion */}
-          <div
-            className={styles.accordionWrapper}
-            style={hasResources ? {} : { display: "none" }}
-          >
-            <Accordion
-              expanded={expanded}
-              onChange={() => {
-                setExpanded(!expanded);
-              }}
+
+          {hasResources && (
+            <div
+              className={styles.accordionWrapper}
             >
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel4bh-content"
+              <Accordion
+                expanded={expanded}
+                onChange={() => {
+                  setExpanded(!expanded);
+                }}
               >
-                <Typography id={styles.eventResources}>
-                  Event Resources
-                </Typography>
-                <Typography id={styles.resourcesDescription}>
-                  Learning materials used
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <iframe
-                  title="event-resources"
-                  src={`https://drive.google.com/a/unswwit.com/embeddedfolderview?id=${event.resourcesFolderId}#grid`}
-                  style={{ width: "100%", height: "280px", border: "0" }}
-                ></iframe>
-              </AccordionDetails>
-            </Accordion>
-          </div>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel4bh-content"
+                >
+                  <Typography id={styles.eventResources}>
+                    Event Resources
+                  </Typography>
+                  <Typography id={styles.resourcesDescription}>
+                    Learning materials used
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <iframe
+                    title="event-resources"
+                    src={`https://drive.google.com/a/unswwit.com/embeddedfolderview?id=${event.resourcesFolderId}#grid`}
+                    style={{ width: "100%", height: "280px", border: "0" }}
+                  ></iframe>
+                </AccordionDetails>
+              </Accordion>
+            </div>
+          )}
+
         </div>
       )}
     </>
