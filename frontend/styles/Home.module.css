@@ -531,7 +531,7 @@ div .headline {
 }
 
 .lightmodeBanner {
-  display:unset;
+  display:block;
 }
 
 @media (prefers-color-scheme:dark) {
@@ -540,7 +540,7 @@ div .headline {
   }
 
   .darkmodeBanner {
-    display: unset;
+    display: block;
   }
 }
 
