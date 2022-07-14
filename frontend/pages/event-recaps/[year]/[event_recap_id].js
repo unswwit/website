@@ -157,19 +157,23 @@ const EventRecapPage = (props) => {
           {/* Image Gallery / Cover Image Section */}
           {/* Display Image gallery if images exist, otherwise display cover image */}
 
-          <div className={styles.imageWrapper}>
+          <div
+            className={styles.imageWrapper}
+            style={!hasPhotos ? {} : { display: "none" }}
+          >
             <Image
               src={`/event-covers/${event.year}/${event.img}`}
-              style={!hasPhotos ? {} : { display: "none" }}
               alt="header"
               width="1200px"
               height="630px"
             />
           </div>
-          <div className={styles.imageGalleryWrapper}>
+          <div
+            className={styles.imageGalleryWrapper}
+            style={hasPhotos ? {} : { display: "none" }}
+          >
             <AwesomeSlider
               cssModule={styles}
-              style={hasPhotos ? {} : { display: "none" }}
               media={imageGalleryFilenames}
               buttons={enableGalleryArrows}
               mobileTouch={enableGalleryArrows}
