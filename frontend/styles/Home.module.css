@@ -159,8 +159,7 @@ div .headline {
 
 .stats {
   position: relative;
-  overflow: hidden;
-  
+  overflow: hidden; 
   display:block;
   align-items: center;
   justify-content: center;
