@@ -1,19 +1,20 @@
 import React from "react";
 import styles from "../styles/Newsletter.module.css";
-import NewsletterForm from "./NewsletterForm";
+import NewsletterForm from "../components/NewsletterForm";
 import { Modal, Backdrop, Fade } from "@material-ui/core";
 import Image from "next/image";
 
 const NewsletterSection = ({ setOpen, open, callbackModal, fade }) => {
   return (
     <div id={styles.container}>
-      <Image
-        src="/newsletter-background.png"
-        className={styles.background}
-        alt="banner"
-        width="2000px"
-        height="450px"
-      />
+      <div id={styles.newsletterBgContainer}>
+        <Image
+          src={`/newsletter-background.png`}
+          className={styles.background}
+          alt="banner"
+          layout={'fill'}
+        />
+      </div>
       {fade ? (
         <div data-aos="fade">
           <button className={styles.subscribeBtn} onClick={() => setOpen(true)}>

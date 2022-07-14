@@ -24,7 +24,7 @@ const NewsletterForm = ({ handleClose }) => {
         onClick={handleClose}
         className={styles.closeBtn}
       >
-        <CloseIcon className={styles.closeSymbol} />
+        <CloseIcon className={styles.closeSymbol}/>
       </IconButton>
       <br />
       <br />
@@ -34,7 +34,7 @@ const NewsletterForm = ({ handleClose }) => {
       </p>
       <form
         className="newsletter"
-        action={process.env.REACT_APP_MAILCHIMP_URL}
+        action={process.env.NEXT_PUBLIC_MAILCHIMP_URL}
         target="_blank"
         method="POST"
         noValidate
@@ -75,7 +75,7 @@ const NewsletterForm = ({ handleClose }) => {
         <p className={styles.subscribeError}>
           {error ? "Please input a valid email" : ""}
         </p>
-        <button disabled={error}>Subscribe</button>
+        <button className="button" disabled={error}>Subscribe</button>
       </form>
     </div>
   );
