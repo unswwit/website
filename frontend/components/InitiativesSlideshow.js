@@ -98,19 +98,21 @@ const InitiativesSlideshow = () => {
                   {firstEvent.map((firstUpcomingEvent, index) => (
                     <div className={styles.right} key={index}>
                       <h1>EVENTS</h1>
-
                       <a
                         href={firstUpcomingEvent.facebookLink}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Image
-                          src={`/event-covers/2022/${firstUpcomingEvent.img}`}
-                          alt={firstUpcomingEvent.title}
-                          height="320px"
-                          width="500px"
-                        />
+                        <div className={styles.eventImg}>
+                          <Image
+                            src={`/event-covers/2022/${firstUpcomingEvent.img}`}
+                            alt={firstUpcomingEvent.title}
+                            height="320px"
+                            width="500px"
+                          />
+                        </div>
                       </a>
+                      
                     </div>
                   ))}
                 </div>
@@ -185,12 +187,14 @@ const InitiativesSlideshow = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
-                      src={`/blog-covers/${latestBlog.img}`}
-                      alt={`${latestBlog.heading}`}
-                      height="300px"
-                      width="450px"
-                    />
+                    <div className={styles.eventImg}>
+                      <Image
+                        src={`/blog-covers/${latestBlog.img}`}
+                        alt={`${latestBlog.heading}`}
+                        height="300px"
+                        width="450px"
+                      />
+                    </div>
                   </a>
                 </div>
               ))}
@@ -227,12 +231,14 @@ const InitiativesSlideshow = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
-                      src={`/podcast-covers/${latestPodcast.img}`}
-                      height="250px"
-                      width="250px"
-                      alt={`${latestPodcast.title}`}
-                    />
+                    <div className={styles.eventImg}>
+                      <Image
+                        src={`/podcast-covers/${latestPodcast.img}`}
+                        height="250px"
+                        width="250px"
+                        alt={`${latestPodcast.title}`}
+                      />
+                    </div>
                   </a>
                 </div>
               ))}
