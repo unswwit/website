@@ -29,51 +29,50 @@ const EventRecapPage = (props) => {
 
   useEffect(() => {
     setLoading(true);
-  
+
     let url = window.location.href.split("/");
-    setEventNumber(url[url.length-1])
-    let currEventNumber = url[url.length-1]
+    setEventNumber(url[url.length - 1]);
+    let currEventNumber = url[url.length - 1];
 
     const fetchPastEvents = async () => {
-      const res = await axios.get("https://wit-database.herokuapp.com/past-events");
+      const res = await axios.get(
+        "https://wit-database.herokuapp.com/past-events"
+      );
       const allEvents = humps
         .camelizeKeys(res.data)
-        .filter(
-          (event) => event.year.toString() === url[url.length-2]
-        );
+        .filter((event) => event.year.toString() === url[url.length - 2]);
 
-        if (allEvents.length <= 0 || currEventNumber > allEvents.length) {
-          props.history.push("/404");
-          return;
-        }
+      if (allEvents.length <= 0 || currEventNumber > allEvents.length) {
+        props.history.push("/404");
+        return;
+      }
 
-        // load the page content for the current event
-        const currEvent = allEvents.filter((event) => {
-          return event.eventNumber.toString() === currEventNumber;
-        })[0];
-        setEvent(currEvent);
+      // load the page content for the current event
+      const currEvent = allEvents.filter((event) => {
+        return event.eventNumber.toString() === currEventNumber;
+      })[0];
+      setEvent(currEvent);
 
-        // hide the loading sign
-        setLoading(false);
+      // hide the loading sign
+      setLoading(false);
 
-        setPhotos(currEvent);
+      setPhotos(currEvent);
 
-        if (currEvent.resourcesFolderId) {
-          setHasResources(true);
-        }
+      if (currEvent.resourcesFolderId) {
+        setHasResources(true);
+      }
 
-        if (currEvent.youtubeVideoId) {
-          setHasEmbeddedVideo(true);
-        }
+      if (currEvent.youtubeVideoId) {
+        setHasEmbeddedVideo(true);
+      }
 
-        if (currEvent.facebookLink) {
-          setHasFBLink(true);
-        }
+      if (currEvent.facebookLink) {
+        setHasFBLink(true);
+      }
     };
 
     // Importing Event Details
     fetchPastEvents();
-    
   }, [eventNumber, props.history]);
 
   const setPhotos = (currEvent) => {
@@ -85,7 +84,6 @@ const EventRecapPage = (props) => {
           source: `/event-recap/${currEvent.year}/T${currEvent.term}/${currEvent.imageFolder}/${filename}`,
         });
       });
-
       // If at least two images dont exist, disable gallery arrows
       if (tempArray.length < 2) {
         setEnableGalleryArrows(false);
@@ -93,7 +91,7 @@ const EventRecapPage = (props) => {
 
       setImageGalleryFilenames(tempArray);
     }
-  }
+  };
 
   return (
     <>
@@ -161,9 +159,7 @@ const EventRecapPage = (props) => {
 
           <div className={styles.imageWrapper}>
             <Image
-              src={
-                `/event-covers/${event.year}/${event.img}`
-              }
+              src={`/event-covers/${event.year}/${event.img}`}
               style={!hasPhotos ? {} : { display: "none" }}
               alt="header"
               width="1200px"
