@@ -153,7 +153,7 @@ const Podcast = () => {
               <div id={styles.platformContainer}>
                 {Object.keys(links).map((link, index) => {
                   return (
-                    <Link href={links[link][1]}>
+                    <Link href={links[link][1]} key={index}>
                       <a className={styles.platformLogos}>
                         <a
                           className={styles.a}
