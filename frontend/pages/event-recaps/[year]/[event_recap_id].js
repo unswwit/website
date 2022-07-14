@@ -158,7 +158,6 @@ const EventRecapPage = (props) => {
 
           {/* Image Gallery / Cover Image Section */}
           {/* Display Image gallery if images exist, otherwise display cover image */}
-
           {!hasPhotos && (
             <div
               className={styles.imageWrapper}
@@ -186,7 +185,6 @@ const EventRecapPage = (props) => {
           )}
 
           {/* Event Resources Accordion */}
-
           {hasResources && (
             <div
               className={styles.accordionWrapper}
