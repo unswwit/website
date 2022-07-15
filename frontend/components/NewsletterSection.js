@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/Newsletter.module.css";
-import NewsletterForm from "../components/NewsletterForm";
+import NewsletterForm from "./NewsletterForm";
 import { Modal, Backdrop, Fade } from "@material-ui/core";
 import Image from "next/image";
 

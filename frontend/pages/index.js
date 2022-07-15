@@ -20,8 +20,14 @@ const Home = () => {
   const [open, setOpen] = React.useState(false);
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [openNewsletter, setOpenNewsletter] = useState(false);
   const [sourceLoading, setSourceLoading] = useState(true);
   const last3articles = articles.slice(0, 3);
+
+  // close newsletter
+  const callbackModal = () => {
+    setOpenNewsletter(false);
+  };
 
   //start webpage at the top
   useEffect(() => {
@@ -54,10 +60,6 @@ const Home = () => {
       console.error(error)
     );
   }, []);
-
-  const callbackModal = () => {
-    setOpen(false);
-  };
 
   return (
     <div>
@@ -221,10 +223,10 @@ const Home = () => {
 
           {/* Start of newsletter */}
           <NewsletterSection
-            setOpen={setOpen}
-            open={open}
+            setOpen={setOpenNewsletter}
+            open={openNewsletter}
             callbackModal={callbackModal}
-            fade={true}
+            fade={false}
           />
           {/* End of Newsletter */}
         </div>
