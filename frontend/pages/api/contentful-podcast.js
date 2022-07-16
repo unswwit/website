@@ -1,10 +1,6 @@
 import { createClient } from "contentful";
 // require("dotenv").config();
 
-// TODO: rename the useContentful variable and add comments so that it is clear that this is for podcasts.
-// TODO: move space and host details to the .env file.
-// TODO: migrate the rest of the db over.
-
 const useContentfulPodcasts = () => {
   const client = createClient({
     space: process.env.NEXT_PUBLIC_CONTENTFUL_API_SPACE,

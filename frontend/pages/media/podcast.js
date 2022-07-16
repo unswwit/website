@@ -11,7 +11,7 @@ import humps from "humps";
 import { useStyles, links, categories } from "../../data/podcastData";
 import Image from "next/image";
 import Link from "next/link";
-
+import moment from "moment";
 import useContentfulPodcasts from "../api/contentful-podcast";
 const { getPodcastEpisodes } = useContentfulPodcasts();
 
@@ -45,10 +45,9 @@ const Podcast = () => {
   // output: array of dictionaries containing podcasts data
   const fetchPodcastEpisodes = async () => {
     const res = await getPodcastEpisodes();
-    const unsorted = humps.camelizeKeys(res);
-    const sortedEpisodes = unsorted.reverse();
-    setContent(sortedEpisodes);
-    setSelectedPosts(sortedEpisodes);
+    const allEpisodes = humps.camelizeKeys(res);
+    setContent(allEpisodes);
+    setSelectedPosts(allEpisodes);
     setLoading(false);
     setSourceLoading(false);
   };
@@ -244,7 +243,7 @@ const Podcast = () => {
                   episodeNo={episode.episodeNo}
                   title={episode.title}
                   cover={episode.imgUrl}
-                  date={episode.date}
+                  date={moment(episode.date).format("MMMM DD, YYYY")}
                   description={episode.description}
                   episode={episode}
                 />
