@@ -100,10 +100,7 @@ const Opportunities = () => {
                           {individualOpportunity.img ? (
                             <Image
                               className={styles.oppImg}
-                              src={
-                                process.env.PUBLIC_URL +
-                                `/sponsors/2022/${individualOpportunity.img}`
-                              }
+                              src={`/sponsors/2022/${individualOpportunity.img}`}
                               alt={individualOpportunity.companyName}
                               width={45}
                               height={40}
@@ -111,10 +108,7 @@ const Opportunities = () => {
                           ) : (
                             <Image
                               className={styles.oppImg}
-                              src={
-                                process.env.PUBLIC_URL +
-                                `/opportunities/${individualOpportunity.notSponsorImg}`
-                              }
+                              src={`/opportunities/${individualOpportunity.notSponsorImg}`}
                               alt={individualOpportunity.companyName}
                               width={45}
                               height={40}
