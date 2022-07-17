@@ -105,6 +105,8 @@ const Opportunities = () => {
                                 `/sponsors/2022/${individualOpportunity.img}`
                               }
                               alt={individualOpportunity.companyName}
+                              width={45}
+                              height={40}
                             />
                           ) : (
                             <Image
@@ -114,6 +116,8 @@ const Opportunities = () => {
                                 `/opportunities/${individualOpportunity.notSponsorImg}`
                               }
                               alt={individualOpportunity.companyName}
+                              width={45}
+                              height={40}
                             />
                           )}
                         </div>
