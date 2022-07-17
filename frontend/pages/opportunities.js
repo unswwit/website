@@ -98,21 +98,24 @@ const Opportunities = () => {
                         <div className={styles.darkOverlay} />
                         <div className={styles.imageContainer}>
                           {individualOpportunity.img ? (
-                            <Image
-                              className={styles.oppImg}
-                              src={`/sponsors/2022/${individualOpportunity.img}`}
-                              alt={individualOpportunity.companyName}
-                              width={45}
-                              height={40}
-                            />
+                            <div className={styles.oppImg}>
+                              <Image
+                                src={`/sponsors/2022/${individualOpportunity.img}`}
+                                alt={individualOpportunity.companyName}
+                                width="250px"
+                                height="150px"
+                                layout="responsive"
+                              />
+                            </div>
                           ) : (
-                            <Image
-                              className={styles.oppImg}
-                              src={`/opportunities/${individualOpportunity.notSponsorImg}`}
-                              alt={individualOpportunity.companyName}
-                              width={45}
-                              height={40}
-                            />
+                            <div className={styles.oppImg}>
+                              <Image
+                                src={`/opportunities/${individualOpportunity.notSponsorImg}`}
+                                alt={individualOpportunity.companyName}
+                                width={250}
+                                height={150}
+                              />
+                            </div>
                           )}
                         </div>
 
