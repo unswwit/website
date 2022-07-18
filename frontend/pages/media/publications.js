@@ -24,7 +24,7 @@ const Publications = () => {
   }, []);
 
   // get publications
-  // input: publications data from google sheets
+  // input: publications data from database
   // output: array of dictionaries containing publications data
   const fetchPublications = async () => {
     setLoading(false);
