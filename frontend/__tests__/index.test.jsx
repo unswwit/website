@@ -7,7 +7,7 @@ describe('Home', () => {
     render(<Home />)
 
     const heading = screen.getByRole('heading', {
-      name: /UNSW WOMEN IN TECHNOLOGY/i,
+      name: /UNSW/i,
     })
 
     expect(heading).toBeInTheDocument()

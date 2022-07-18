@@ -31,7 +31,6 @@ const Home = () => {
 
   //start webpage at the top
   useEffect(() => {
-    window.scrollTo(0, 0);
     Aos.init({
       duration: 1300,
       once: true,
