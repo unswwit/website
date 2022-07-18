@@ -1,5 +1,4 @@
 import { createClient } from "contentful";
-// require("dotenv").config();
 
 const useContentfulPodcasts = () => {
   const client = createClient({
