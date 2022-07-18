@@ -66,7 +66,7 @@ const ContactUs = () => {
                 />
                 <h3>Jane Wang</h3>
                 <Link href="mailto:president@unswwit.com">
-                  <a><p align="left">president@unswwit.com</p></a>
+                  <a>president@unswwit.com</a>
                 </Link>
               </div>
               <div className={styles.profile2}>
@@ -78,7 +78,7 @@ const ContactUs = () => {
                 />
                 <h3>Nishimi Kapoor</h3>
                 <Link href="mailto:president@unswwit.com">
-                  <a><p align="left">president@unswwit.com</p></a>
+                  <a>president@unswwit.com</a>
                 </Link>
               </div>
               <div className={styles.profile2}>
@@ -90,7 +90,7 @@ const ContactUs = () => {
                 />
                 <h3>Emily Dang</h3>
                 <Link href="mailto:secretary@unswwit.com">
-                  <a><p align="left">secretary@unswwit.com</p></a>
+                  <a>secretary@unswwit.com</a>
                 </Link>
               </div>
               <div className={styles.profile2}>
@@ -102,7 +102,7 @@ const ContactUs = () => {
                 />
                 <h3>Tiana Douroudis</h3>
                 <Link href="mailto:treasurer@unswwit.com">
-                  <a><p align="left">treasurer@unswwit.com</p></a>
+                  <a>treasurer@unswwit.com</a>
                 </Link>
               </div>
             </div>
@@ -121,7 +121,7 @@ const ContactUs = () => {
                 />
                 <h3>Brianna Kim</h3>
                 <Link href="mailto:careers@unswwit.com">
-                  <a><p align="left">careers@unswwit.com</p></a>
+                  <a>careers@unswwit.com</a>
                 </Link>
               </div>
               <div className={styles.profile3}>
@@ -133,7 +133,7 @@ const ContactUs = () => {
                 />
                 <h3>Vivian Wang</h3>
                 <Link href="mailto:careers@unswwit.com">
-                  <a><p align="left">careers@unswwit.com</p></a>
+                  <a>careers@unswwit.com</a>
                 </Link>
               </div>
               <div className={styles.profile3}>
@@ -145,7 +145,7 @@ const ContactUs = () => {
                 />
                 <h3>Vivian Wong</h3>
                 <Link href="mailto:competitions@unswwit.com">
-                  <a><p align="left">competitions@unswwit.com</p></a>
+                  <a>competitions@unswwit.com</a>
                 </Link>
               </div>
               <div className={styles.profile3}>
@@ -157,7 +157,7 @@ const ContactUs = () => {
                 />
                 <h3>Gayathri Balaji</h3>
                 <Link href="mailto:externals@unswwit.com">
-                  <a><p align="left">externals@unswwit.com</p></a>
+                  <a>externals@unswwit.com</a>
                 </Link>
               </div>
               <div className={styles.profile3}>
@@ -169,7 +169,7 @@ const ContactUs = () => {
                 />
                 <h3>Tanisha Dasmohaptra</h3>
                 <Link href="mailto:externals@unswwit.com">
-                  <a><p align="left">externals@unswwit.com</p></a>
+                  <a>externals@unswwit.com</a>
                 </Link>
               </div>
               <div className={styles.profile3}>
@@ -181,7 +181,7 @@ const ContactUs = () => {
                 />
                 <h3>Emily Chang</h3>
                 <Link href="mailto:hr@unswwit.com">
-                  <a><p align="left">hr@unswwit.com</p></a>
+                  <a>hr@unswwit.com</a>
                 </Link>
               </div>
               <div className={styles.profile3}>
@@ -193,7 +193,7 @@ const ContactUs = () => {
                 />
                 <h3>Joanna He</h3>
                 <Link href="mailto:it@unswwit.com">
-                  <a><p align="left">it@unswwit.com</p></a>
+                  <a>it@unswwit.com</a>
                 </Link>
               </div>
               <div className={styles.profile3}>
@@ -205,7 +205,7 @@ const ContactUs = () => {
                 />
                 <h3>Abigail Joesan Johan</h3>
                 <Link href="mailto:marketing@unswwit.com">
-                  <a><p align="left">marketing@unswwit.com</p></a>
+                  <a>marketing@unswwit.com</a>
                 </Link>
               </div>
               <div className={styles.profile3}>
@@ -217,7 +217,7 @@ const ContactUs = () => {
                 />
                 <h3>Gabriella Hartanto</h3>
                 <Link href="mailto:marketing@unswwit.com">
-                  <a><p align="left">marketing@unswwit.com</p></a>
+                  <a>marketing@unswwit.com</a>
                 </Link>
               </div>
               <div className={styles.profile3}>
@@ -229,7 +229,7 @@ const ContactUs = () => {
                 />
                 <h3>Natalie Leroy</h3>
                 <Link href="mailto:media@unswwit.com">
-                  <a><p align="left">media@unswwit.com</p></a>
+                  <a>media@unswwit.com</a>
                 </Link>
               </div>
               <div className={styles.profile3}>
@@ -241,7 +241,7 @@ const ContactUs = () => {
                 />
                 <h3>Chelsea Chaffey</h3>
                 <Link href="mailto:publications@unswwit.com">
-                  <a><p align="left">publications@unswwit.com</p></a>
+                  <a>publications@unswwit.com</a>
                 </Link>
               </div>
               <div className={styles.profile3}>
@@ -253,7 +253,7 @@ const ContactUs = () => {
                 />
                 <h3>Yuhan Zhou</h3>
                 <Link href="mailto:publications@unswwit.com">
-                  <a><p align="left">publications@unswwit.com</p></a>
+                  <a>publications@unswwit.com</a>
                 </Link>
               </div>
             </div>

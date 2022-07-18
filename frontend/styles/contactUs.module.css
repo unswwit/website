@@ -117,6 +117,7 @@ form input.button:hover {
   font-family: "Montserrat", sans-serif;
   font-size: 10pt;
   padding-bottom: 5px;
+  text-align: left;
 }
 
 .newEmails a:hover {
@@ -190,10 +191,12 @@ form input.button:hover {
 @media only screen and (max-width: 1200px) {
   .newEmails div.profile2 {
     padding: 25px;
+    text-align: center;
   }
 
   .newEmails div.profile3 {
     padding: 25px;
+    text-align: center;
   }
 }
 
@@ -235,10 +238,12 @@ form input.button:hover {
     padding: 30px;
     float: none;
     overflow-wrap: break-word;
+    text-align: center;
   }
 
   .newEmails div.profile2 {
     overflow-wrap: break-word;
+    text-align: center;
   }
 
   hr.solid {
@@ -253,12 +258,17 @@ form input.button:hover {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    text-align: center;
   }
 
-  /* .newEmails h3,
-  a {
+  .newEmails h3 {
     text-align: center;
-  } */
+  }
+
+  .newEmails a {
+    text-align: center;
+  }
+
 }
 
 @media only screen and (max-width: 910px) {
@@ -275,10 +285,12 @@ form input.button:hover {
 
   .newEmails div.profile3 {
     width: 100%;
+    text-align: center;
   }
 
   .newEmails div.profile2 {
     width: 100%;
+    text-align: center;
   }
 
   .newEmails div.col2 {
@@ -287,6 +299,7 @@ form input.button:hover {
 
   .newEmails a {
     font-size: 16px;
+    text-align: center;
   }
 
   .form h2,
