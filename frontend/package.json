@@ -10,6 +10,7 @@
     "test": "jest --runInBand"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
     "@material-ui/lab": "^4.0.0-alpha.61",
@@ -18,17 +19,22 @@
     "bootstrap": "^4.6.0",
     "humps": "^2.0.1",
     "install": "^0.13.0",
-    "next": "12.1.6",
+    "material-ui": "^0.20.2",
+    "next": "^12.1.6",
     "npm": "^8.9.0",
     "pure-react-carousel": "^1.28.1",
     "react": "18.1.0",
     "react-countup": "^6.3.0",
+    "react-add-to-calendar-hoc": "^1.0.10",
+    "react-awesome-slider": "^4.1.0",
     "react-device-detect": "^2.2.2",
     "react-dom": "18.1.0",
     "react-ga": "^3.3.0",
+    "react-google-recaptcha": "^2.1.0",
     "react-markdown": "^8.0.2",
     "react-router-dom": "^5.2.0",
-    "react-share": "^4.4.0"
+    "react-share": "^4.4.0",
+    "semantic-ui-react": "^2.1.3"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^12.1.6",
