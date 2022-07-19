@@ -3,13 +3,13 @@ import Home from '../pages/index'
 import '@testing-library/jest-dom'
 
 describe('Home', () => {
-  it('renders a heading', () => {
+  it('renders a loading screen', () => {
     render(<Home />)
 
-    const heading = screen.getByRole('heading', {
-      name: /UNSW/i,
+    const loadingScreen = screen.getByRole('img', {
+      name: /Walking Willow the wombat/i,
     })
 
-    expect(heading).toBeInTheDocument()
+    expect(loadingScreen).toBeInTheDocument()
   })
 })
