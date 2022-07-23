@@ -11,7 +11,7 @@ import {
 import Image from "next/image";
 
 export default function OppositeContentTimeline() {
-  const [year, setYear] = useState(valueToYear[0]);
+  const [year, setYear] = useState(valueToYear[250]);
   const [loading, setLoadingCircle] = useState(true);
   // set the year for the events timeline
   const handleYear = (newYear) => {
@@ -34,7 +34,7 @@ export default function OppositeContentTimeline() {
       <Timeline
         id={styles.timelineStyle}
         page={"ourStory"}
-        step={20}
+        step={50}
         valueToYear={valueToYear}
         marks={marks}
         updateYear={handleYear}

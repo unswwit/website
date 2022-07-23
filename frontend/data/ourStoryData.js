@@ -1,27 +1,27 @@
 // position of the marks on the timeline (i.e. 250 indicates that it's on the right end)
 const marks = [
   {
-    value: 100,
+    value: 250,
     scaledValue: 2021,
     label: "2021",
   },
   {
-    value: 80,
+    value: 200,
     scaledValue: 2020,
     label: "2020",
   },
   {
-    value: 60,
+    value: 150,
     scaledValue: 2019,
     label: "2019",
   },
   {
-    value: 40,
+    value: 100,
     scaledValue: 2018,
     label: "2018",
   },
   {
-    value: 20,
+    value: 50,
     scaledValue: 2017,
     label: "2017",
   },
@@ -34,11 +34,11 @@ const marks = [
 
 const valueToYear = {
   0: "2016",
-  20: "2017",
-  40: "2018",
-  60: "2019",
-  80: "2020",
-  100: "2021",
+  50: "2017",
+  100: "2018",
+  150: "2019",
+  200: "2020",
+  250: "2021",
 };
 
 let pageToValue = (page) => {
