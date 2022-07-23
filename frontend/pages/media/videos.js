@@ -12,6 +12,8 @@ import PaginationComp from "../../components/Pagination";
 import LoadingScreen from "../../components/LoadingScreen";
 import { isMobile } from "react-device-detect";
 import { useStyles, categories } from "../../data/videoData";
+import useContentfulVideos from "../api/contentful-videos";
+const { getVideos } = useContentfulVideos();
 
 const Videos = (props) => {
   const classes = useStyles();
