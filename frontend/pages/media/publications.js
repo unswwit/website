@@ -6,6 +6,9 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import axios from "axios";
 import LoadingScreen from "../../components/LoadingScreen";
 
+import useContentful from "../../components/contentful-publications";
+const { getPublications } = useContentful();
+
 const Publications = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -28,9 +31,7 @@ const Publications = () => {
   // output: array of dictionaries containing publications data
   const fetchPublications = async () => {
     setLoading(false);
-    const res = await axios.get(
-      "https://wit-database.herokuapp.com/publications"
-    );
+    const res = await getPublications();
     setArticles(res.data);
     setSourceLoading(false);
   };
@@ -75,7 +76,7 @@ const Publications = () => {
                           .map((article, index) => (
                             <PubArticle
                               key={index}
-                              imgUrl={`/publications/${year}/${article.img}`}
+                              imgUrl={article.imgUrl}
                               heading={article.heading}
                               date={article.date}
                               url={article.url}
