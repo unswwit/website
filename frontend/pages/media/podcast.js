@@ -155,7 +155,8 @@ const Podcast = () => {
                   return (
                     <Link href={links[link][1]}>
                       <a className={styles.platformLogos}>
-                        <a className={styles.a}
+                        <a
+                          className={styles.a}
                           key={index}
                           target="_blank"
                           rel="noopener noreferrer"

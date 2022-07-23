@@ -5,9 +5,8 @@ import PageHeader from "../../components/Header";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import axios from "axios";
 import LoadingScreen from "../../components/LoadingScreen";
-
-import useContentful from "../../components/contentful-publications";
-const { getPublications } = useContentful();
+import useContentfulPublications from "../api/contentful-publications";
+const { getPublications } = useContentfulPublications();
 
 const Publications = () => {
   const [articles, setArticles] = useState([]);
