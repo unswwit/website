@@ -14,6 +14,8 @@ import UpcomingEvent from "../components/UpcomingEvent";
 import PaginationComp from "../components/Pagination";
 import { isMobile } from "react-device-detect";
 import { useStyles, categories, marks, valueToYear } from "../data/eventData";
+import useContentfulUpcomingEvents from "./api/contentful-upcomingEvents";
+const { getUpcomingEvents } = useContentfulUpcomingEvents();
 
 const Events = () => {
   const classes = useStyles();
@@ -157,10 +159,8 @@ const Events = () => {
   // input: upcoming events data from google sheets
   // output: array of dictionaries containing upcoming events data
   const fetchUpcomingEvents = async () => {
-    const res = await axios.get(
-      "https://wit-database.herokuapp.com/upcoming-events"
-    );
-    const tempEvents = humps.camelizeKeys(res.data);
+    const res = await getUpcomingEvents();
+    const tempEvents = humps.camelizeKeys(res);
     setUpcomingEvents(tempEvents);
     setCurrentPosts(tempEvents.slice(0, postsPerPage));
     setSelectedPosts(tempEvents);
