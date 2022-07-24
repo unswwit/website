@@ -5,7 +5,6 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import LoadingScreen from "../components/LoadingScreen";
 import axios from "axios";
 import humps from "humps";
-import Image from "next/image";
 
 const Opportunities = () => {
   const [loading, setLoading] = useState(true);
@@ -97,21 +96,18 @@ const Opportunities = () => {
                         <div className={styles.darkOverlay} />
                         <div className={styles.imageContainer}>
                           {individualOpportunity.img ? (
-                            <picture>
-                              <img
-                                className={styles.oppImg}
-                                src={`/sponsors/2022/${individualOpportunity.img}`}
-                                alt={individualOpportunity.companyName}
-                              />
-                            </picture>
+                            // TODO: change img tags to Image tags
+                            <img
+                              className={styles.oppImg}
+                              src={`/sponsors/2022/${individualOpportunity.img}`}
+                              alt={individualOpportunity.companyName}
+                            />
                           ) : (
-                            <picture>
-                              <img
-                                className={styles.oppImg}
-                                src={`/opportunities/${individualOpportunity.notSponsorImg}`}
-                                alt={individualOpportunity.companyName}
-                              />
-                            </picture>
+                            <img
+                              className={styles.oppImg}
+                              src={`/opportunities/${individualOpportunity.notSponsorImg}`}
+                              alt={individualOpportunity.companyName}
+                            />
                           )}
                         </div>
 
