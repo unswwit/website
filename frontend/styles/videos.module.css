@@ -245,9 +245,13 @@ img.videoImages {
   opacity: 0.04;
 }
 
+.previewContainer {
+  overflow: hidden;
+}
+
 .boxContainer {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
 }
 
 .previewContainer {

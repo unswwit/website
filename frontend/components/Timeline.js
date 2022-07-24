@@ -47,6 +47,12 @@ const TimelineSlider = withStyles({
   },
 })(Slider);
 
+const pageToValue = (page) => {
+  return page === "teams" || page === "events" || page === "marketing"
+    ? 100
+    : 250;
+};
+
 const Timeline = ({ updateYear, marks, valueToYear, page, step, margin }) => {
   return (
     <div
@@ -55,18 +61,21 @@ const Timeline = ({ updateYear, marks, valueToYear, page, step, margin }) => {
           ? styles.teams
           : page === "events"
             ? styles.events
+          : page === "ourStory"
+            ? styles.ourStoryTimeline
             : styles.marketingArchive
       }
       style={{ marginTop: margin }}
     >
-      <TimelineSlider
-        step={step}
-        marks={marks}
-        valueLabelDisplay="off"
-        aria-label="timeline"
-        defaultValue={100}
-        onChange={(_, value) => updateYear(valueToYear[value])}
-      />
+    <TimelineSlider
+      step={step}
+      marks={marks}
+      valueLabelDisplay="off"
+      aria-label="timeline"
+      defaultValue={pageToValue(page)}
+      max={pageToValue(page)}
+      onChange={(_, value) => updateYear(valueToYear[value])}
+    />
     </div>
   );
 };
