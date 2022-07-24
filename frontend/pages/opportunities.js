@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PageHeader from "../components/header";
+import OpportunitiesCard from "../components/OpportunitiesCard";
 import styles from "../styles/opportunities.module.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import LoadingScreen from "../components/LoadingScreen";
@@ -86,58 +87,18 @@ const Opportunities = () => {
                 <div className={styles.oppGridContainer}>
                   {opportunities.map((individualOpportunity, index) => {
                     return (
-                      <a
-                        href={individualOpportunity.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.oppGridItems}
-                        key={index}
-                      >
-                        <div className={styles.darkOverlay} />
-                        <div className={styles.imageContainer}>
-                          {individualOpportunity.img ? (
-                            // TODO: change img tags to Image tags
-                            <img
-                              className={styles.oppImg}
-                              src={`/sponsors/2022/${individualOpportunity.img}`}
-                              alt={individualOpportunity.companyName}
-                            />
-                          ) : (
-                            <img
-                              className={styles.oppImg}
-                              src={`/opportunities/${individualOpportunity.notSponsorImg}`}
-                              alt={individualOpportunity.companyName}
-                            />
-                          )}
-                        </div>
-
-                        {/* The image name could be found in the "public/sponsors/2021" folder or add it to "public/opportunities" folder */}
-                        <div className={styles.oppDesc}>
-                          <p className={styles.oppTypeAndLocation}>
-                            {individualOpportunity.type}
-                          </p>
-                          {/* The type should be in the format of the following example: Graduate Role */}
-                          <p className={styles.jobPosition}>
-                            {individualOpportunity.position}
-                          </p>
-                          {/* The position should be in the format of the following example: Front End Developer */}
-                          <p className={styles.oppTypeAndLocation}>
-                            {individualOpportunity.location}
-                          </p>
-                          {individualOpportunity.closeDate ? (
-                            <p className={styles.oppSummary}>
-                              Applications close:{" "}
-                              {individualOpportunity.closeDate}
-                              {/* The close date should be in the format of the following example: 01/01/2021 */}
-                            </p>
-                          ) : (
-                            <p className={styles.oppSummary}></p>
-                          )}
-                          <p className={styles.oppSummary}>
-                            {individualOpportunity.summary}
-                          </p>
-                        </div>
-                      </a>
+                      <OpportunitiesCard
+                        index={index}
+                        link={individualOpportunity.link}
+                        img={individualOpportunity.img}
+                        companyName={individualOpportunity.companyName}
+                        notSponsorImg={individualOpportunity.notSponsorImg}
+                        type={individualOpportunity.type}
+                        position={individualOpportunity.position}
+                        location={individualOpportunity.location}
+                        closeDate={individualOpportunity.closeDate}
+                        summary={individualOpportunity.summary}
+                      />
                     );
                   })}
                 </div>
