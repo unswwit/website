@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import PageHeader from "../../components/Header";
+import PageHeader from "../../components/header";
 import Chip from "@material-ui/core/Chip";
 import styles from "../../styles/videos.module.css";
 import YouTubeSubscribe from "../../components/youtubeSubscribe";
@@ -85,24 +85,37 @@ const Videos = (props) => {
   // input: videos data from google sheets
   // output: array of dictionaries containing videos data
   useEffect(() => {
+
     const fetchVideos = async () => {
+      const res = await getVideos();
+      const videos = humps.camelizeKeys(res.data.items);
+      setContent(videos);
       setLoading(false);
-
-      const res = await axios.get("https://wit-database.herokuapp.com/videos");
-      const allVideos = humps.camelizeKeys(res.data);
-      const currVideoNumber = handleVideoNumber(allVideos.length);
-
-      if (allVideos.length <= 0 || currVideoNumber > allVideos.length) {
-        props.history.push("/404");
-        return;
-      }
-
-      var videoIndex = loadPageContent(allVideos, currVideoNumber);
-      loadVideoPreviews(allVideos, videoIndex);
-
-      setLoading(false);
+      setHeaderLoading(false);
       setSourceLoading(false);
+      setVideoNumber(handleVideoNumber(videos.length));
+      loadVideoPreviews(videos, loadPageContent(videos, videoNumber));
+
     };
+    
+    // const fetchVideos = async () => {
+    //   setLoading(false);
+
+    //   const res = await axios.get("https://wit-database.herokuapp.com/videos");
+    //   const allVideos = humps.camelizeKeys(res.data);
+    //   const currVideoNumber = handleVideoNumber(allVideos.length);
+
+    //   if (allVideos.length <= 0 || currVideoNumber > allVideos.length) {
+    //     props.history.push("/404");
+    //     return;
+    //   }
+
+    //   var videoIndex = loadPageContent(allVideos, currVideoNumber);
+    //   loadVideoPreviews(allVideos, videoIndex);
+
+    //   setLoading(false);
+    //   setSourceLoading(false);
+    // };
 
     // Start at the top of the page
     window.scrollTo(0, 0);

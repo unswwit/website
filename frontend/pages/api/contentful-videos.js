@@ -2,12 +2,11 @@ import { createClient } from "contentful";
 
 const useContentfulVideos = () => {
   const client = createClient({
-    space: process.env.NEXT_PUBLIC_CONTENTFULS_SPACE_ID,
+    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
     accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_VIDEOS_ACCESS_TOKEN,
     host: process.env.NEXT_PUBLIC_CONTENTFUL_API_HOST,
   });
 
-  // get videos using Contentful API
   const getVideos = async () => {
     try {
       const entries = await client.getEntries({

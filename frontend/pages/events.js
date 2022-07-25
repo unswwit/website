@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/events.module.css";
-import PageHeader from "../components/Header";
+import PageHeader from "../components/header";
 import Chip from "@material-ui/core/Chip";
 import Timeline from "../components/Timeline";
 import CircularProgress from "@material-ui/core/CircularProgress";

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import PageHeader from "../../components/Header";
+import PageHeader from "../../components/header";
 import Chip from "@material-ui/core/Chip";
 import styles from "../../styles/Podcast.module.css";
 import EpisodeTemplate from "../../components/EpisodeTemplate";
