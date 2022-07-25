@@ -109,4 +109,5 @@ const Opportunities = () => {
     </div>
   );
 };
+
 export default Opportunities;

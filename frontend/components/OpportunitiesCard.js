@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import styles from "../styles/opportunities.module.css";
+import Link from "next/link";
 
 class OpportunitiesCard extends Component {
   render() {
     return (
-      <div>
+      <Link href={this.props.link}>
         <a
-          href={this.props.link}
-          target="_blank"
-          rel="noopener noreferrer"
           className={styles.oppGridItems}
           key={this.props.index}
         >
@@ -48,7 +46,7 @@ class OpportunitiesCard extends Component {
             <p className={styles.oppSummary}>{this.props.summary}</p>
           </div>
         </a>
-      </div>
+        </Link>
     );
   }
 }
