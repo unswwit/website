@@ -97,7 +97,7 @@
 }
 
 .jobPosition {
-  color: #313638;
+  color: var(--black);
   font-size: 14pt;
   font-family: "Playfair Display", serif;
   font-weight: 500;

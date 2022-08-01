@@ -6,10 +6,7 @@ class OpportunitiesCard extends Component {
   render() {
     return (
       <Link href={this.props.link}>
-        <a
-          className={styles.oppGridItems}
-          key={this.props.index}
-        >
+        <a className={styles.oppGridItems} key={this.props.index}>
           <div className={styles.darkOverlay} />
           <div className={styles.imageContainer}>
             {this.props.img ? (
@@ -46,7 +43,7 @@ class OpportunitiesCard extends Component {
             <p className={styles.oppSummary}>{this.props.summary}</p>
           </div>
         </a>
-        </Link>
+      </Link>
     );
   }
 }
