@@ -1,0 +1,110 @@
+/*NavigationBar*/
+.navigationBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 6.5%;
+  overflow: hidden;
+  background-color: var(--light-yellow);
+  z-index: 99;
+}
+
+.navContainer {
+  align-items: center;
+  height: 100%;
+  display: grid;
+  grid-template:
+    'logo empty empty empty empty home aboutUs events opportunities media joinUs';
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-left: 12%;
+  padding-top: 3%;
+}
+
+.linkItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  height: 100%;
+  width: 90%;
+}
+
+.gridBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: color 0.3s;
+}
+
+.gridBox:hover {
+  cursor: pointer;
+  color: var(--red);
+}
+
+.gridBox:hover .gridOverlay {
+  opacity: 1;
+  width: 100%;
+}
+
+.gridOverlay {
+  width: 0%;
+  height: 90%;
+  border-bottom: 0.15vw solid var(--red);
+  opacity: 0;
+  position: absolute;
+  transition: all 0.25s;
+}
+
+.emptyItem {
+  grid-area: empty;
+}
+
+.item0 {
+  grid-area: logo;
+}
+
+.item1 {
+  grid-area: home;
+}
+
+.item2 {
+  grid-area: aboutUs;
+}
+
+.item3 {
+  grid-area: events;
+}
+
+.item4 {
+  grid-area: opportunities;
+}
+
+.item5 {
+  grid-area: media;
+}
+
+.item6 {
+  grid-area: joinUs;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

@@ -1,22 +1,24 @@
-import React, {useEffect} from "react";
-// import NavBar from "./Navbar";
+import React, { useEffect } from "react";
 import Footer from "./Footer";
-import {initGA, logPageView} from "../utils/GoogleAnalytics";
+import NavigationBar from "../components/NavigationBar";
+import { initGA, logPageView } from "../utils/GoogleAnalytics";
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   useEffect(() => {
     if (!window.GA_INITIALIZED) {
       initGA();
-      window.GA_INITIALIZED = true
+      window.GA_INITIALIZED = true;
     }
     logPageView();
   }, []);
 
-  return <div>
-    {/* <NavBar /> */}
-    {children}
-    <Footer />
-  </div>;
-}
+  return (
+    <div>
+      <NavigationBar />
+      {children}
+      <Footer />
+    </div>
+  );
+};
 
 export default Layout;
