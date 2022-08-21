@@ -4,7 +4,7 @@
   top: 0;
   width: 100%;
   height: 6.5%;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: var(--light-yellow);
   z-index: 99;
 }
@@ -101,10 +101,57 @@
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+  display: block;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.dropdown:hover .dropdownContent {
+  visibility: visible;
+  opacity: 1;
+}
+
+.dropdown:hover .gridOverlay {
+  opacity: 1;
+  width: 100%;
+}
+
+.dropdown:hover .gridBox {
+  color: var(--red);
+}
+
+.dropdownContent {
+  width: 15%;
+  position: absolute;
+  transition: all 0.2s;
+  visibility: hidden;
+  opacity: 0;
+  background-color: var(--light-yellow);
+  border-radius: 0px 0px 15px 15px;
+}
+
+.dropdownBox {
+  padding: 5% 15% 0% 15%; /* no bottoms padding */
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.dropdownBoxEnd {
+  padding: 5% 15% 8% 15%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.dropdownBox:hover {
+  cursor: pointer;
+  color: var(--red);
+}
+
+.dropdownBoxEnd:hover {
+  cursor: pointer;
+  color: var(--red);
 }
