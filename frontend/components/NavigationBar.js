@@ -14,6 +14,7 @@ import HeadsetMicOutlinedIcon from "@material-ui/icons/HeadsetMicOutlined";
 import LocalPrintshopOutlinedIcon from "@material-ui/icons/LocalPrintshopOutlined";
 import ImageOutlinedIcon from "@material-ui/icons/ImageOutlined";
 import VideocamOutlinedIcon from "@material-ui/icons/VideocamOutlined";
+import { set } from "react-ga";
 
 const NavigationBar = () => {
   const [invisNavBar, setInvisNavBar] = useState(false);
@@ -43,14 +44,14 @@ const NavigationBar = () => {
   };
 
   const checkTopNavBar = () => {
-    const checkTop = window.scrollY < 60 && router.pathname != "/404";
+    const checkTop = window.scrollY < 60;
     setClearNavBar(checkTop);
   };
 
   return (
     <nav
       className={
-        clearNavBar
+        clearNavBar && router.pathname != "/404"
           ? `${styles.clearNavigationBar} ${styles.navigationBar}`
           : invisNavBar
           ? `${styles.invisNavigationBar} ${styles.navigationBar}`
@@ -63,7 +64,11 @@ const NavigationBar = () => {
             <a>
               <Image
                 className={styles.item0}
-                src={clearNavBar ? "/logo-white.png" : "/logo-black.png"}
+                src={
+                  clearNavBar && router.pathname != "/404"
+                    ? "/logo-white.png"
+                    : "/logo-black.png"
+                }
                 alt="wit logo"
                 width={40}
                 height={35}
@@ -104,7 +109,7 @@ const NavigationBar = () => {
           </Link>
           <div
             className={
-              clearNavBar
+              clearNavBar && router.pathname != "/404"
                 ? `${styles.clearDropdownContent} ${styles.dropdownContent}`
                 : styles.dropdownContent
             }
@@ -205,7 +210,7 @@ const NavigationBar = () => {
           </Link>
           <div
             className={
-              clearNavBar
+              clearNavBar && router.pathname != "/404"
                 ? `${styles.clearDropdownContent} ${styles.dropdownContent}`
                 : styles.dropdownContent
             }
