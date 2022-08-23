@@ -21,6 +21,17 @@ const NavigationBar = () => {
   const [clearNavBar, setClearNavBar] = useState(false);
   const router = useRouter();
   const [smallNavBar, setSmallNavBar] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+
+  // change youtube theme depending on user dark/light mode
+  useEffect(() => {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      setDarkMode(true);
+    }
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", checkBottomNavBar);
@@ -81,7 +92,7 @@ const NavigationBar = () => {
               <Image
                 className={styles.item0}
                 src={
-                  clearNavBar && router.pathname != "/404"
+                  darkMode || (clearNavBar && router.pathname != "/404")
                     ? "/logo-white.png"
                     : "/logo-black.png"
                 }

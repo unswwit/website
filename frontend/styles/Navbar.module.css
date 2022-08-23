@@ -11,7 +11,7 @@
 }
 
 .clearNavigationBar {
-  background-color: transparent;
+  background-color: transparent !important;
   color: var(--white);
 }
 
@@ -136,7 +136,7 @@
 }
 
 .dropdown:hover .gridBox {
-  color: var(--red);
+  color: var(--red) !important;
 }
 
 .dropdownContent {
@@ -151,7 +151,7 @@
 
 .clearDropdownContent {
   border-top-right-radius: 15px;
-  background-color: transparent;
+  background-color: transparent !important;
   border: 0.15vw solid var(--white);
 }
 
@@ -183,9 +183,19 @@
   color: var(--red);
 }
 
+.dropdownBox:hover a {
+  color: var(--red);
+  transition: color 0.3s, opacity 0.2s, visibility 0.2s;
+}
+
 .dropdownBoxEnd:hover {
   cursor: pointer;
   color: var(--red);
+}
+
+.dropdownBoxEnd:hover a{
+  color: var(--red);
+  transition: color 0.3s, opacity 0.2s, visibility 0.2s;
 }
 
 /* small navbar */
@@ -281,7 +291,7 @@
 
 .clearMenuContent {
   border-radius: 15px 15px 15px 15px;
-  background-color: transparent;
+  background-color: transparent !important;
   border: 0.15vw solid var(--white);
 }
 
@@ -311,9 +321,19 @@
   color: var(--red);
 }
 
+.menuItem:hover a{
+  color: var(--red);
+  transition: color 0.3s, opacity 0.2s, visibility 0.2s;
+}
+
 .menuItemEnd:hover {
   cursor: pointer;
   color: var(--red);
+}
+
+.menuItemEnd:hover a{
+  color: var(--red);
+  transition: color 0.3s, opacity 0.2s, visibility 0.2s;
 }
 
 .menuDropdownButton {
@@ -332,4 +352,32 @@
 
 .hiddenMenuDropdownItem {
   display: none;
+}
+
+/*--- Dark mode ---*/
+@media (prefers-color-scheme: dark) {
+  .navigationBar {
+    background-color: #000;
+  }
+  .dropdownContent {
+    background-color: #000;
+  }
+  .dropdownBox {
+    color: var(--white);
+  }
+  .dropdownBoxEnd {
+    color: var(--white);
+  }
+  .menuButton {
+    color: var(--white);
+  }
+  .menuContent {
+    background-color: #000;
+  }
+  .menuItem {
+    color: var(--white);
+  }
+  .menuItemEnd {
+    color: var(--white);
+  }
 }
