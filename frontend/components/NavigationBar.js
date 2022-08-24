@@ -149,7 +149,7 @@ const NavigationBar = () => {
                     : styles.dropdownBox
                 }
               >
-                <ChromeReaderModeOutlinedIcon className="icon" />
+                <ChromeReaderModeOutlinedIcon className={styles.icon} />
                 <a>Our Story</a>
               </div>
             </Link>
@@ -161,7 +161,7 @@ const NavigationBar = () => {
                     : styles.dropdownBox
                 }
               >
-                <FavoriteBorderIcon className="icon" />
+                <FavoriteBorderIcon className={styles.icon} />
                 <a>Sponsors and Affiliations</a>
               </div>
             </Link>
@@ -173,7 +173,7 @@ const NavigationBar = () => {
                     : styles.dropdownBox
                 }
               >
-                <PeopleOutlineIcon className="icon" />
+                <PeopleOutlineIcon className={styles.icon} />
                 <a>Our Team</a>
               </div>
             </Link>
@@ -185,7 +185,7 @@ const NavigationBar = () => {
                     : styles.dropdownBoxEnd
                 }
               >
-                <PhoneOutlinedIcon className="icon" />
+                <PhoneOutlinedIcon className={styles.icon} />
                 <a>Contact Us</a>
               </div>
             </Link>
@@ -250,7 +250,7 @@ const NavigationBar = () => {
                     : styles.dropdownBox
                 }
               >
-                <InsertDriveFileOutlinedIcon className="icon icon-media" />
+                <InsertDriveFileOutlinedIcon className={styles.icon} />
                 <a>Blog Posts</a>
               </div>
             </Link>
@@ -262,7 +262,7 @@ const NavigationBar = () => {
                     : styles.dropdownBox
                 }
               >
-                <HeadsetMicOutlinedIcon className="icon icon-media" />
+                <HeadsetMicOutlinedIcon className={styles.icon} />
                 <a>Podcast</a>
               </div>
             </Link>
@@ -274,7 +274,7 @@ const NavigationBar = () => {
                     : styles.dropdownBox
                 }
               >
-                <LocalPrintshopOutlinedIcon className="icon icon-media" />
+                <LocalPrintshopOutlinedIcon className={styles.icon} />
                 <a>Publications</a>
               </div>
             </Link>
@@ -286,7 +286,7 @@ const NavigationBar = () => {
                     : styles.dropdownBox
                 }
               >
-                <ImageOutlinedIcon className="icon icon-media" />
+                <ImageOutlinedIcon className={styles.icon} />
                 <a>Marketing</a>
               </div>
             </Link>
@@ -298,7 +298,7 @@ const NavigationBar = () => {
                     : styles.dropdownBoxEnd
                 }
               >
-                <VideocamOutlinedIcon className="icon icon-media" />
+                <VideocamOutlinedIcon className={styles.icon} />
                 <a>Videos</a>
               </div>
             </Link>

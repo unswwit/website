@@ -177,7 +177,7 @@ const SmallNavigationBar = () => {
                 }
                 onClick={menuItemClick}
               >
-                <ChromeReaderModeOutlinedIcon className="icon" />
+                <ChromeReaderModeOutlinedIcon className={styles.icon} />
                 <a>Our Story</a>
               </div>
             </Link>
@@ -190,7 +190,7 @@ const SmallNavigationBar = () => {
                 }
                 onClick={menuItemClick}
               >
-                <FavoriteBorderIcon className="icon" />
+                <FavoriteBorderIcon className={styles.icon} />
                 <a>Sponsors and Affiliations</a>
               </div>
             </Link>
@@ -203,7 +203,7 @@ const SmallNavigationBar = () => {
                 }
                 onClick={menuItemClick}
               >
-                <PeopleOutlineIcon className="icon" />
+                <PeopleOutlineIcon className={styles.icon} />
                 <a>Our Team</a>
               </div>
             </Link>
@@ -216,7 +216,7 @@ const SmallNavigationBar = () => {
                 }
                 onClick={menuItemClick}
               >
-                <PhoneOutlinedIcon className="icon" />
+                <PhoneOutlinedIcon className={styles.icon} />
                 <a>Contact Us</a>
               </div>
             </Link>
@@ -280,7 +280,7 @@ const SmallNavigationBar = () => {
                 }
                 onClick={menuItemClick}
               >
-                <InsertDriveFileOutlinedIcon className="icon icon-media" />
+                <InsertDriveFileOutlinedIcon className={styles.icon} />
                 <a>Blog Posts</a>
               </div>
             </Link>
@@ -293,7 +293,7 @@ const SmallNavigationBar = () => {
                 }
                 onClick={menuItemClick}
               >
-                <HeadsetMicOutlinedIcon className="icon icon-media" />
+                <HeadsetMicOutlinedIcon className={styles.icon} />
                 <a>Podcast</a>
               </div>
             </Link>
@@ -306,7 +306,7 @@ const SmallNavigationBar = () => {
                 }
                 onClick={menuItemClick}
               >
-                <LocalPrintshopOutlinedIcon className="icon icon-media" />
+                <LocalPrintshopOutlinedIcon className={styles.icon} />
                 <a>Publications</a>
               </div>
             </Link>
@@ -319,7 +319,7 @@ const SmallNavigationBar = () => {
                 }
                 onClick={menuItemClick}
               >
-                <ImageOutlinedIcon className="icon icon-media" />
+                <ImageOutlinedIcon className={styles.icon} />
                 <a>Marketing</a>
               </div>
             </Link>
@@ -332,7 +332,7 @@ const SmallNavigationBar = () => {
                 }
                 onClick={menuItemClick}
               >
-                <VideocamOutlinedIcon className="icon icon-media" />
+                <VideocamOutlinedIcon className={styles.icon} />
                 <a>Videos</a>
               </div>
             </Link>
