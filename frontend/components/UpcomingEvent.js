@@ -31,7 +31,7 @@ const useStyles = makeStyles({
     },
     "@media (prefers-color-scheme:dark)": {
       backgroundColor: "#3b3b41",
-    }
+    },
   },
   media: {
     height: 170,
@@ -53,7 +53,7 @@ const useStyles = makeStyles({
     fontFamily: "Montserrat, sans-serif",
     color: "#feb14b",
     fontWeight: 600,
-    marginBottom:"10px",
+    marginBottom: "10px",
   },
   description: {
     textAlign: "justify",
@@ -62,7 +62,7 @@ const useStyles = makeStyles({
     fontFamily: "Montserrat, sans-serif",
     "@media (prefers-color-scheme:dark)": {
       color: "white",
-    }
+    },
   },
   title: {
     fontFamily: "Playfair Display, serif",
@@ -72,7 +72,7 @@ const useStyles = makeStyles({
     margin: "5px 0px",
     "@media (prefers-color-scheme:dark)": {
       color: "white",
-    }
+    },
   },
   content: {
     height: "255px",
@@ -111,7 +111,7 @@ const useStyles = makeStyles({
 
 export default function UpcomingEvent({ upcomingEvent, index }) {
   const classes = useStyles();
-
+  console.log(upcomingEvent);
   return (
     <Card className={[classes.root, styles.previewContainer].join(" ")}>
       <a
@@ -123,10 +123,7 @@ export default function UpcomingEvent({ upcomingEvent, index }) {
         <div className={styles.darkOverlay} />
         <div className={classes.media}>
           <Image
-            src={
-              `/event-covers/2022/${upcomingEvent.img}`
-            }
-            alt={upcomingEvent.title}
+            src={"https:" + upcomingEvent.imgUrl}
             className={styles.upcomingEventCover}
             width="360px"
             height="300px"

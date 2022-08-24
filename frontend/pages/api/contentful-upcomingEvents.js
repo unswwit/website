@@ -14,6 +14,8 @@ const useContentfulUpcomingEvents = () => {
         content_type: "upcomingEvents",
         select: "fields",
       });
+
+      console.log(entries);
       const sanitizeEntries = entries.items.map((item) => {
         const imgUrl = item.fields.img.fields.file.url;
         const title = item.fields.title;
@@ -22,8 +24,8 @@ const useContentfulUpcomingEvents = () => {
         const start = item.fields.start;
         const finish = item.fields.finish;
         const duration = item.fields.duration;
-        const register_link = item.fields.register_link;
-        const facebook_link = item.fields.facebook_link;
+        const registerLink = item.fields.registerLink;
+        const facebookLink = item.fields.facebookLink;
         const location = item.fields.location;
 
         return {
@@ -34,8 +36,8 @@ const useContentfulUpcomingEvents = () => {
           start,
           finish,
           duration,
-          register_link,
-          facebook_link,
+          registerLink,
+          facebookLink,
           location,
         };
       });

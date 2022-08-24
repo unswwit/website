@@ -180,6 +180,7 @@ const Events = () => {
   // get events for a specific term
   const getTermEvents = (events) => {
     return events.map((event, index) => {
+      console.log(event, index);
       let eventLabel = event.img.split(".")[0].split("-");
       eventLabel.shift();
       let event_id = `${event.eventNumber}`;
@@ -258,7 +259,6 @@ const Events = () => {
                     })}
                 </div>
               ))}
-
             {!isMobile && (
               <PaginationComp
                 totalPages={Math.ceil(selectedPosts.length / postsPerPage)}
@@ -267,8 +267,7 @@ const Events = () => {
                 size="large"
               />
             )}
-
-            {/* PAST EVENTS */}
+            PAST EVENTS
             <h2>PAST EVENTS</h2>
             <div className={styles.eventCategories}>
               <div className={styles.contentCategories}>
@@ -314,7 +313,6 @@ const Events = () => {
                 )}
               </div>
             </div>
-
             <div className={styles.eventsLoadingContainer}>
               {loadingPast && (
                 <CircularProgress
@@ -325,7 +323,6 @@ const Events = () => {
                 />
               )}
             </div>
-
             <div className={styles.pastEventsContainer}>
               {!loadingPast &&
                 Object.keys(pastSelectedPosts)
