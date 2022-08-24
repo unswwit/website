@@ -149,7 +149,8 @@ const Events = () => {
     const filteredTerm = pastContent[term].filter(
       (picture) =>
         selectedCategory === "All" ||
-        (picture.category != null && picture.category.split(",").includes(selectedCategory))
+        (picture.category != null &&
+          picture.category.split(",").includes(selectedCategory))
     );
 
     return filteredTerm;
@@ -267,7 +268,7 @@ const Events = () => {
                 size="large"
               />
             )}
-            PAST EVENTS
+            {/* PAST EVENTS */}
             <h2>PAST EVENTS</h2>
             <div className={styles.eventCategories}>
               <div className={styles.contentCategories}>
