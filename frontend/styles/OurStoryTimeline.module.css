@@ -6,15 +6,16 @@
 .timelineCard {
   display: flex;
   flex-direction: column;
-  width: 25%;
   margin: 0 auto;
   background-color: var(--sand);
   box-shadow: 5px 0px 5px 0 rgba(0, 0, 0, 0.3);
   margin-top: 15px;
+  width:370px;
 }
 
 .timelineCardImageContainer {
   height: 400px;
+  width:370px;
 }
 
 .timelineCardImage {
@@ -27,7 +28,6 @@
   background-color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 12pt;
-  width: 100%;
   min-height: 250px;
   padding-right: 15px;
   padding-bottom: 2rem;
@@ -79,10 +79,6 @@
   .witJourneyText {
     font-size: 11pt;
   }
-
-  li {
-    font-size: 11pt;
-  }
 }
 
 /*--- Our Story tablet version ---*/
@@ -97,11 +93,8 @@
   .witJourneyText {
     font-size: 10pt;
   }
-
-  li {
-    font-size: 10pt;
-  }
 }
+  
 
 @media only screen and (max-width: 500px) {
   .timelineCardImageContainer {

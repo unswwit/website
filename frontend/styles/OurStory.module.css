@@ -62,7 +62,8 @@ h2#topHeading {
 }
 
 /*--- Link to see Willow's cute photoshoot ---*/
-.link, .link:hover {
+.link,
+.link:hover {
   text-decoration: underline;
   font-weight: 500;
   color: var(--red);
@@ -92,12 +93,15 @@ h2#topHeading {
   text-align: justify;
 }
 
+.timeline {
+  width: 75%;
+}
+
 /*--- Dark mode ---*/
 @media (prefers-color-scheme: dark) {
   .ourMissionContent {
     color: var(--white);
   }
-  
   .ourMascotContent {
     color: var(--white);
   }

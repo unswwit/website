@@ -149,7 +149,7 @@ const Events = () => {
     const filteredTerm = pastContent[term].filter(
       (picture) =>
         selectedCategory === "All" ||
-        picture.category.split(",").includes(selectedCategory)
+        (picture.category != null && picture.category.split(",").includes(selectedCategory))
     );
 
     return filteredTerm;
