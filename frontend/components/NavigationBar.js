@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import styles from "../styles/Navbar.module.css";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/router";
-import SmallNavigationBar from "./SmallNavigationBar";
+import styles from "../styles/Navbar.module.css";
+import CompactNavigationBar from "./CompactNavigationBar";
 
-// import dropdown menu icons
+// import dropdownContainer icons
 import ChromeReaderModeOutlinedIcon from "@material-ui/icons/ChromeReaderModeOutlined";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import PeopleOutlineIcon from "@material-ui/icons/PeopleOutline";
@@ -17,13 +17,12 @@ import ImageOutlinedIcon from "@material-ui/icons/ImageOutlined";
 import VideocamOutlinedIcon from "@material-ui/icons/VideocamOutlined";
 
 const NavigationBar = () => {
-  const [invisNavBar, setInvisNavBar] = useState(false);
   const [clearNavBar, setClearNavBar] = useState(false);
-  const router = useRouter();
-  const [smallNavBar, setSmallNavBar] = useState(false);
+  const [hiddenNavBar, setHiddenNavBar] = useState(false);
+  const [compactNavBar, setCompactNavBar] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  const router = useRouter();
 
-  // change youtube theme depending on user dark/light mode
   useEffect(() => {
     if (
       window.matchMedia &&
@@ -34,63 +33,66 @@ const NavigationBar = () => {
   }, []);
 
   useEffect(() => {
-    window.addEventListener("scroll", checkBottomNavBar);
+    window.addEventListener("scroll", checkBottomScreen);
     return () => {
-      window.removeEventListener("scroll", checkBottomNavBar);
+      window.removeEventListener("scroll", checkBottomScreen);
     };
   }, []);
 
   useEffect(() => {
-    checkTopNavBar();
-    window.addEventListener("scroll", checkTopNavBar);
+    checkWindowWidth();
+    window.addEventListener("resize", checkWindowWidth);
     return () => {
-      window.removeEventListener("scroll", checkTopNavBar);
+      window.removeEventListener("resize", checkWindowWidth);
     };
   }, []);
 
   useEffect(() => {
-    checkWindowSize();
-    window.addEventListener("resize", checkWindowSize);
+    checkTopScreen();
+    window.addEventListener("scroll", checkTopScreen);
     return () => {
-      window.removeEventListener("resize", checkWindowSize);
+      window.removeEventListener("scroll", checkTopScreen);
     };
   }, []);
 
-  const checkWindowSize = () => {
-    const checkSize = window.innerWidth < "950";
-    setSmallNavBar(checkSize);
+  const checkWindowWidth = () => {
+    const checkWidth = window.innerWidth < "950";
+    setCompactNavBar(checkWidth);
   };
 
-  const checkBottomNavBar = () => {
+  const checkBottomScreen = () => {
     const checkBottom =
       Math.ceil(window.innerHeight + window.scrollY) >=
       document.documentElement.scrollHeight;
-    setInvisNavBar(checkBottom);
+    setHiddenNavBar(checkBottom);
   };
 
-  const checkTopNavBar = () => {
+  const checkTopScreen = () => {
     const checkTop = window.scrollY < 60;
     setClearNavBar(checkTop);
   };
 
-  return smallNavBar ? (
-    <SmallNavigationBar />
+  /* return hamburger navbar if screen size is smaller than 950px,
+    otherwise return regular navbar */
+  return compactNavBar ? (
+    <CompactNavigationBar />
   ) : (
+    /* return clear or hidden regular navbar if at top or bottom of screen */
     <nav
       className={
         clearNavBar && router.pathname != "/404"
-          ? `${styles.clearNavigationBar} ${styles.navigationBar}`
-          : invisNavBar
-          ? `${styles.invisNavigationBar} ${styles.navigationBar}`
-          : styles.navigationBar
+          ? `${styles.clearNavBar} ${styles.navBarContainer}`
+          : hiddenNavBar
+          ? `${styles.hiddenNavBar} ${styles.navBarContainer}`
+          : styles.navBarContainer
       }
     >
-      <div className={styles.navContainer}>
+      <div className={styles.navBarGrid}>
         <div className={styles.logoContainer}>
           <Link href="/">
             <a>
               <Image
-                className={styles.item0}
+                className={styles.logoGridItem}
                 src={
                   darkMode || (clearNavBar && router.pathname != "/404")
                     ? "/logo-white.png"
@@ -103,16 +105,16 @@ const NavigationBar = () => {
             </a>
           </Link>
         </div>
-        <div className={styles.emptyItem}></div>
-        <div className={`${styles.item1} ${styles.linkItem}`}>
+        <div className={styles.emptyGridItem}></div>
+        <div className={`${styles.homeGridItem} ${styles.linkContainer}`}>
           <Link href="/">
-            <div className={styles.gridBox}>
+            <div className={styles.linkContent}>
               <a>Home</a>
               <div
                 className={
                   router.asPath === "/"
-                    ? `${styles.currentPageOverlay} ${styles.gridOverlay}`
-                    : styles.gridOverlay
+                    ? `${styles.currentPageUnderline} ${styles.linkUnderline}`
+                    : styles.linkUnderline
                 }
               ></div>
             </div>
@@ -120,16 +122,16 @@ const NavigationBar = () => {
         </div>
 
         <div
-          className={`${styles.dropdown} ${styles.item2} ${styles.linkItem}`}
+          className={`${styles.dropdownContainer} ${styles.aboutUsGridItem} ${styles.linkContainer}`}
         >
           <Link href="/about/our-story">
-            <div className={styles.gridBox}>
+            <div className={styles.linkContent}>
               <a>About Us ▾</a>
               <div
                 className={
                   router.asPath.split("/")[1] === "about"
-                    ? `${styles.currentPageOverlay} ${styles.gridOverlay}`
-                    : styles.gridOverlay
+                    ? `${styles.currentPageUnderline} ${styles.linkUnderline}`
+                    : styles.linkUnderline
                 }
               ></div>
             </div>
@@ -145,8 +147,8 @@ const NavigationBar = () => {
               <div
                 className={
                   router.asPath.split("/")[2] === "our-story"
-                    ? `${styles.currentPageDropdownOverlay} ${styles.dropdownBox}`
-                    : styles.dropdownBox
+                    ? `${styles.currentPageBold} ${styles.dropdownItem}`
+                    : styles.dropdownItem
                 }
               >
                 <ChromeReaderModeOutlinedIcon className={styles.icon} />
@@ -157,8 +159,8 @@ const NavigationBar = () => {
               <div
                 className={
                   router.asPath.split("/")[2] === "sponsors-affiliations"
-                    ? `${styles.currentPageDropdownOverlay} ${styles.dropdownBox}`
-                    : styles.dropdownBox
+                    ? `${styles.currentPageBold} ${styles.dropdownItem}`
+                    : styles.dropdownItem
                 }
               >
                 <FavoriteBorderIcon className={styles.icon} />
@@ -169,8 +171,8 @@ const NavigationBar = () => {
               <div
                 className={
                   router.asPath.split("/")[2] === "our-team"
-                    ? `${styles.currentPageDropdownOverlay} ${styles.dropdownBox}`
-                    : styles.dropdownBox
+                    ? `${styles.currentPageBold} ${styles.dropdownItem}`
+                    : styles.dropdownItem
                 }
               >
                 <PeopleOutlineIcon className={styles.icon} />
@@ -181,8 +183,8 @@ const NavigationBar = () => {
               <div
                 className={
                   router.asPath.split("/")[2] === "contact-us"
-                    ? `${styles.currentPageDropdownOverlay} ${styles.dropdownBoxEnd}`
-                    : styles.dropdownBoxEnd
+                    ? `${styles.currentPageBold} ${styles.dropdownItemEnd}`
+                    : styles.dropdownItemEnd
                 }
               >
                 <PhoneOutlinedIcon className={styles.icon} />
@@ -192,45 +194,47 @@ const NavigationBar = () => {
           </div>
         </div>
 
-        <div className={`${styles.item3} ${styles.linkItem}`}>
+        <div className={`${styles.eventsGridItem} ${styles.linkContainer}`}>
           <Link href="/events">
-            <div className={styles.gridBox}>
+            <div className={styles.linkContent}>
               <a>Events</a>
               <div
                 className={
                   router.asPath === "/events"
-                    ? `${styles.currentPageOverlay} ${styles.gridOverlay}`
-                    : styles.gridOverlay
-                }
-              ></div>
-            </div>
-          </Link>
-        </div>
-        <div className={`${styles.item4} ${styles.linkItem}`}>
-          <Link href="/opportunities">
-            <div className={styles.gridBox}>
-              <a>Opportunities</a>
-              <div
-                className={
-                  router.asPath === "/opportunities"
-                    ? `${styles.currentPageOverlay} ${styles.gridOverlay}`
-                    : styles.gridOverlay
+                    ? `${styles.currentPageUnderline} ${styles.linkUnderline}`
+                    : styles.linkUnderline
                 }
               ></div>
             </div>
           </Link>
         </div>
         <div
-          className={`${styles.dropdown} ${styles.item5} ${styles.linkItem}`}
+          className={`${styles.opportunitiesGridItem} ${styles.linkContainer}`}
+        >
+          <Link href="/opportunities">
+            <div className={styles.linkContent}>
+              <a>Opportunities</a>
+              <div
+                className={
+                  router.asPath === "/opportunities"
+                    ? `${styles.currentPageUnderline} ${styles.linkUnderline}`
+                    : styles.linkUnderline
+                }
+              ></div>
+            </div>
+          </Link>
+        </div>
+        <div
+          className={`${styles.dropdownContainer} ${styles.mediaGridItem} ${styles.linkContainer}`}
         >
           <Link href="/media/blog">
-            <div className={styles.gridBox}>
+            <div className={styles.linkContent}>
               <a>Media ▾</a>
               <div
                 className={
                   router.asPath.split("/")[1] === "media"
-                    ? `${styles.currentPageOverlay} ${styles.gridOverlay}`
-                    : styles.gridOverlay
+                    ? `${styles.currentPageUnderline} ${styles.linkUnderline}`
+                    : styles.linkUnderline
                 }
               ></div>
             </div>
@@ -246,8 +250,8 @@ const NavigationBar = () => {
               <div
                 className={
                   router.asPath.split("/")[2] === "blog"
-                    ? `${styles.currentPageDropdownOverlay} ${styles.dropdownBox}`
-                    : styles.dropdownBox
+                    ? `${styles.currentPageBold} ${styles.dropdownItem}`
+                    : styles.dropdownItem
                 }
               >
                 <InsertDriveFileOutlinedIcon className={styles.icon} />
@@ -258,8 +262,8 @@ const NavigationBar = () => {
               <div
                 className={
                   router.asPath.split("/")[2] === "podcast"
-                    ? `${styles.currentPageDropdownOverlay} ${styles.dropdownBox}`
-                    : styles.dropdownBox
+                    ? `${styles.currentPageBold} ${styles.dropdownItem}`
+                    : styles.dropdownItem
                 }
               >
                 <HeadsetMicOutlinedIcon className={styles.icon} />
@@ -270,8 +274,8 @@ const NavigationBar = () => {
               <div
                 className={
                   router.asPath.split("/")[2] === "publications"
-                    ? `${styles.currentPageDropdownOverlay} ${styles.dropdownBox}`
-                    : styles.dropdownBox
+                    ? `${styles.currentPageBold} ${styles.dropdownItem}`
+                    : styles.dropdownItem
                 }
               >
                 <LocalPrintshopOutlinedIcon className={styles.icon} />
@@ -282,8 +286,8 @@ const NavigationBar = () => {
               <div
                 className={
                   router.asPath.split("/")[2] === "marketing"
-                    ? `${styles.currentPageDropdownOverlay} ${styles.dropdownBox}`
-                    : styles.dropdownBox
+                    ? `${styles.currentPageBold} ${styles.dropdownItem}`
+                    : styles.dropdownItem
                 }
               >
                 <ImageOutlinedIcon className={styles.icon} />
@@ -294,8 +298,8 @@ const NavigationBar = () => {
               <div
                 className={
                   router.asPath.split("/")[2] === "videos"
-                    ? `${styles.currentPageDropdownOverlay} ${styles.dropdownBoxEnd}`
-                    : styles.dropdownBoxEnd
+                    ? `${styles.currentPageBold} ${styles.dropdownItemEnd}`
+                    : styles.dropdownItemEnd
                 }
               >
                 <VideocamOutlinedIcon className={styles.icon} />
@@ -304,15 +308,15 @@ const NavigationBar = () => {
             </Link>
           </div>
         </div>
-        <div className={`${styles.item6} ${styles.linkItem}`}>
+        <div className={`${styles.joinUsGridItem} ${styles.linkContainer}`}>
           <Link href="/join-us">
-            <div className={styles.gridBox}>
+            <div className={styles.linkContent}>
               <a>Join Us</a>
               <div
                 className={
                   router.asPath === "/join-us"
-                    ? `${styles.currentPageOverlay} ${styles.gridOverlay}`
-                    : styles.gridOverlay
+                    ? `${styles.currentPageUnderline} ${styles.linkUnderline}`
+                    : styles.linkUnderline
                 }
               ></div>
             </div>

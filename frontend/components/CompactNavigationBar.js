@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import styles from "../styles/Navbar.module.css";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/router";
+import styles from "../styles/Navbar.module.css";
 
+// import menu icons
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
-// import dropdown menu icons
+// import menuDropdownContainer icons
 import ChromeReaderModeOutlinedIcon from "@material-ui/icons/ChromeReaderModeOutlined";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import PeopleOutlineIcon from "@material-ui/icons/PeopleOutline";
@@ -17,16 +18,15 @@ import LocalPrintshopOutlinedIcon from "@material-ui/icons/LocalPrintshopOutline
 import ImageOutlinedIcon from "@material-ui/icons/ImageOutlined";
 import VideocamOutlinedIcon from "@material-ui/icons/VideocamOutlined";
 
-const SmallNavigationBar = () => {
-  const [invisNavBar, setInvisNavBar] = useState(false);
-  const [clearNavBar, setClearNavBar] = useState(false);
-  const router = useRouter();
+const CompactNavigationBar = () => {
+  const [clearNavBar, setClearNavBar] = useState(true);
+  const [hiddenNavBar, setHiddenNavBar] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [aboutUsOpen, setAboutUsOpen] = useState(false);
-  const [mediaOpen, setMediaOpen] = useState(false);
+  const [aboutUsMenuOpen, setAboutUsMenuOpen] = useState(false);
+  const [mediaMenuOpen, setMediaMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  const router = useRouter();
 
-  // change youtube theme depending on user dark/light mode
   useEffect(() => {
     if (
       window.matchMedia &&
@@ -37,28 +37,28 @@ const SmallNavigationBar = () => {
   }, []);
 
   useEffect(() => {
-    window.addEventListener("scroll", checkBottomNavBar);
+    window.addEventListener("scroll", checkBottomScreen);
     return () => {
-      window.removeEventListener("scroll", checkBottomNavBar);
+      window.removeEventListener("scroll", checkBottomScreen);
     };
   }, []);
 
   useEffect(() => {
-    checkTopNavBar();
-    window.addEventListener("scroll", checkTopNavBar);
+    checkTopScreen();
+    window.addEventListener("scroll", checkTopScreen);
     return () => {
-      window.removeEventListener("scroll", checkTopNavBar);
+      window.removeEventListener("scroll", checkTopScreen);
     };
   }, []);
 
-  const checkBottomNavBar = () => {
+  const checkBottomScreen = () => {
     const checkBottom =
       Math.ceil(window.innerHeight + window.scrollY) >=
       document.documentElement.scrollHeight;
-    setInvisNavBar(checkBottom);
+    setHiddenNavBar(checkBottom);
   };
 
-  const checkTopNavBar = () => {
+  const checkTopScreen = () => {
     const checkTop = window.scrollY < 60;
     setClearNavBar(checkTop);
   };
@@ -68,35 +68,36 @@ const SmallNavigationBar = () => {
   };
 
   const menuItemClick = () => {
-    setAboutUsOpen(false);
-    setMediaOpen(false);
+    setAboutUsMenuOpen(false);
+    setMediaMenuOpen(false);
     setMenuOpen(false);
   };
 
-  const aboutClick = () => {
-    setAboutUsOpen(!aboutUsOpen);
+  const aboutUsMenuClick = () => {
+    setAboutUsMenuOpen(!aboutUsMenuOpen);
   };
 
-  const mediaClick = () => {
-    setMediaOpen(!mediaOpen);
+  const mediaMenuClick = () => {
+    setMediaMenuOpen(!mediaMenuOpen);
   };
 
   return (
+    /* return clear or hidden regular navbar if at top or bottom of screen */
     <nav
       className={
         clearNavBar && router.pathname != "/404"
-          ? `${styles.clearNavigationBar} ${styles.navigationBar}`
-          : invisNavBar
-          ? `${styles.invisNavigationBar} ${styles.navigationBar}`
-          : styles.navigationBar
+          ? `${styles.clearNavBar} ${styles.navBarContainer}`
+          : hiddenNavBar
+          ? `${styles.hiddenNavBar} ${styles.navBarContainer}`
+          : styles.navBarContainer
       }
     >
-      <div className={styles.smallNavContainer}>
+      <div className={styles.compactNavBarGrid}>
         <div className={styles.logoContainer}>
           <Link href="/">
             <a>
               <Image
-                className={styles.item0}
+                className={styles.logoGridItem}
                 src={
                   darkMode || (clearNavBar && router.pathname != "/404")
                     ? "/logo-white.png"
@@ -109,8 +110,8 @@ const SmallNavigationBar = () => {
             </a>
           </Link>
         </div>
-        <div className={styles.emptyItem}></div>
-        <div className={`${styles.item7} ${styles.linkItem}`}>
+        <div className={styles.emptyGridItem}></div>
+        <div className={`${styles.menuIconGridItem} ${styles.linkContainer}`}>
           <button className={styles.menuButton} onClick={menuClick}>
             {menuOpen ? (
               <CloseIcon className={styles.menuIcon} />
@@ -122,7 +123,9 @@ const SmallNavigationBar = () => {
       </div>
       <div
         className={
-          menuOpen ? styles.menu : `${styles.invisMenu} ${styles.menu}`
+          menuOpen
+            ? styles.menuContainer
+            : `${styles.hiddenMenu} ${styles.menuContainer}`
         }
       >
         <div
@@ -133,11 +136,11 @@ const SmallNavigationBar = () => {
           }
         >
           <Link href="/">
-            <div className={styles.menuBox}>
+            <div className={styles.menuItemContent}>
               <div
                 className={
                   router.asPath === "/"
-                    ? `${styles.currentPageMenuOverlay} ${styles.menuItem}`
+                    ? `${styles.currentPageMenuUnderline} ${styles.menuItem}`
                     : styles.menuItem
                 }
                 onClick={menuItemClick}
@@ -146,15 +149,18 @@ const SmallNavigationBar = () => {
               </div>
             </div>
           </Link>
-          <div className={styles.menuDropdownButton} onClick={aboutClick}>
+          <div
+            className={styles.menuDropdownContainer}
+            onClick={aboutUsMenuClick}
+          >
             <div
               className={
-                router.asPath.split("/")[1] === "about" && aboutUsOpen
-                  ? `${styles.currentPageMenuOverlay} ${styles.currentDropdownMenu} ${styles.menuItem}`
+                router.asPath.split("/")[1] === "about" && aboutUsMenuOpen
+                  ? `${styles.currentPageMenuUnderline} ${styles.currentDropdown} ${styles.menuItem}`
                   : router.asPath.split("/")[1] === "about"
-                  ? `${styles.currentPageMenuOverlay} ${styles.menuItem}`
-                  : aboutUsOpen
-                  ? `${styles.currentDropdownMenu} ${styles.menuItem}`
+                  ? `${styles.currentPageMenuUnderline} ${styles.menuItem}`
+                  : aboutUsMenuOpen
+                  ? `${styles.currentDropdown} ${styles.menuItem}`
                   : styles.menuItem
               }
             >
@@ -163,16 +169,16 @@ const SmallNavigationBar = () => {
           </div>
           <div
             className={
-              aboutUsOpen
-                ? styles.menuDropdownItem
-                : `${styles.menuDropdownItem} ${styles.hiddenMenuDropdownItem}`
+              aboutUsMenuOpen
+                ? styles.menuDropdownContent
+                : `${styles.menuDropdownContent} ${styles.hiddenMenuDropdownContent}`
             }
           >
             <Link href="/about/our-story">
               <div
                 className={
                   router.asPath.split("/")[2] === "our-story"
-                    ? `${styles.currentPageMenuDropdownOverlay} ${styles.menuItem}`
+                    ? `${styles.currentPageMenuBold} ${styles.menuItem}`
                     : styles.menuItem
                 }
                 onClick={menuItemClick}
@@ -185,7 +191,7 @@ const SmallNavigationBar = () => {
               <div
                 className={
                   router.asPath.split("/")[2] === "sponsors-affiliations"
-                    ? `${styles.currentPageMenuDropdownOverlay} ${styles.menuItem}`
+                    ? `${styles.currentPageMenuBold} ${styles.menuItem}`
                     : styles.menuItem
                 }
                 onClick={menuItemClick}
@@ -198,7 +204,7 @@ const SmallNavigationBar = () => {
               <div
                 className={
                   router.asPath.split("/")[2] === "our-team"
-                    ? `${styles.currentPageMenuDropdownOverlay} ${styles.menuItem}`
+                    ? `${styles.currentPageMenuBold} ${styles.menuItem}`
                     : styles.menuItem
                 }
                 onClick={menuItemClick}
@@ -211,7 +217,7 @@ const SmallNavigationBar = () => {
               <div
                 className={
                   router.asPath.split("/")[2] === "contact-us"
-                    ? `${styles.currentPageMenuDropdownOverlay} ${styles.menuItemEnd}`
+                    ? `${styles.currentPageMenuBold} ${styles.menuItemEnd}`
                     : styles.menuItemEnd
                 }
                 onClick={menuItemClick}
@@ -222,11 +228,11 @@ const SmallNavigationBar = () => {
             </Link>
           </div>
           <Link href="/events">
-            <div className={styles.menuBox}>
+            <div className={styles.menuItemContent}>
               <div
                 className={
                   router.asPath === "/events"
-                    ? `${styles.currentPageMenuOverlay} ${styles.menuItem}`
+                    ? `${styles.currentPageMenuUnderline} ${styles.menuItem}`
                     : styles.menuItem
                 }
                 onClick={menuItemClick}
@@ -236,11 +242,11 @@ const SmallNavigationBar = () => {
             </div>
           </Link>
           <Link href="/opportunities">
-            <div className={styles.menuBox}>
+            <div className={styles.menuItemContent}>
               <div
                 className={
                   router.asPath === "/opportunities"
-                    ? `${styles.currentPageMenuOverlay} ${styles.menuItem}`
+                    ? `${styles.currentPageMenuUnderline} ${styles.menuItem}`
                     : styles.menuItem
                 }
                 onClick={menuItemClick}
@@ -249,15 +255,18 @@ const SmallNavigationBar = () => {
               </div>
             </div>
           </Link>
-          <div className={styles.menuDropdownButton} onClick={mediaClick}>
+          <div
+            className={styles.menuDropdownContainer}
+            onClick={mediaMenuClick}
+          >
             <div
               className={
-                router.asPath.split("/")[1] === "media" && mediaOpen
-                  ? `${styles.currentPageMenuOverlay} ${styles.currentDropdownMenu} ${styles.menuItem}`
+                router.asPath.split("/")[1] === "media" && mediaMenuOpen
+                  ? `${styles.currentPageMenuUnderline} ${styles.currentDropdown} ${styles.menuItem}`
                   : router.asPath.split("/")[1] === "media"
-                  ? `${styles.currentPageMenuOverlay} ${styles.menuItem}`
-                  : mediaOpen
-                  ? `${styles.currentDropdownMenu} ${styles.menuItem}`
+                  ? `${styles.currentPageMenuUnderline} ${styles.menuItem}`
+                  : mediaMenuOpen
+                  ? `${styles.currentDropdown} ${styles.menuItem}`
                   : styles.menuItem
               }
             >
@@ -266,16 +275,16 @@ const SmallNavigationBar = () => {
           </div>
           <div
             className={
-              mediaOpen
-                ? styles.menuDropdownItem
-                : `${styles.menuDropdownItem} ${styles.hiddenMenuDropdownItem}`
+              mediaMenuOpen
+                ? styles.menuDropdownContent
+                : `${styles.menuDropdownContent} ${styles.hiddenMenuDropdownContent}`
             }
           >
             <Link href="/media/blog">
               <div
                 className={
                   router.asPath.split("/")[2] === "blog"
-                    ? `${styles.currentPageMenuDropdownOverlay} ${styles.menuItem}`
+                    ? `${styles.currentPageMenuBold} ${styles.menuItem}`
                     : styles.menuItem
                 }
                 onClick={menuItemClick}
@@ -288,7 +297,7 @@ const SmallNavigationBar = () => {
               <div
                 className={
                   router.asPath.split("/")[2] === "podcast"
-                    ? `${styles.currentPageMenuDropdownOverlay} ${styles.menuItem}`
+                    ? `${styles.currentPageMenuBold} ${styles.menuItem}`
                     : styles.menuItem
                 }
                 onClick={menuItemClick}
@@ -301,7 +310,7 @@ const SmallNavigationBar = () => {
               <div
                 className={
                   router.asPath.split("/")[2] === "publications"
-                    ? `${styles.currentPageMenuDropdownOverlay} ${styles.menuItem}`
+                    ? `${styles.currentPageMenuBold} ${styles.menuItem}`
                     : styles.menuItem
                 }
                 onClick={menuItemClick}
@@ -314,7 +323,7 @@ const SmallNavigationBar = () => {
               <div
                 className={
                   router.asPath.split("/")[2] === "marketing"
-                    ? `${styles.currentPageMenuDropdownOverlay} ${styles.menuItem}`
+                    ? `${styles.currentPageMenuBold} ${styles.menuItem}`
                     : styles.menuItem
                 }
                 onClick={menuItemClick}
@@ -327,7 +336,7 @@ const SmallNavigationBar = () => {
               <div
                 className={
                   router.asPath.split("/")[2] === "videos"
-                    ? `${styles.currentPageMenuDropdownOverlay} ${styles.menuItemEnd}`
+                    ? `${styles.currentPageMenuBold} ${styles.menuItemEnd}`
                     : styles.menuItemEnd
                 }
                 onClick={menuItemClick}
@@ -338,11 +347,11 @@ const SmallNavigationBar = () => {
             </Link>
           </div>
           <Link href="/join-us">
-            <div className={styles.menuBox}>
+            <div className={styles.menuItemContent}>
               <div
                 className={
                   router.asPath === "/join-us"
-                    ? `${styles.currentPageMenuOverlay} ${styles.menuItemEnd}`
+                    ? `${styles.currentPageMenuUnderline} ${styles.menuItemEnd}`
                     : styles.menuItemEnd
                 }
                 onClick={menuItemClick}
@@ -357,4 +366,4 @@ const SmallNavigationBar = () => {
   );
 };
 
-export default SmallNavigationBar;
+export default CompactNavigationBar;

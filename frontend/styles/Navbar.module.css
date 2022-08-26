@@ -1,223 +1,229 @@
 /*NavigationBar*/
-.navigationBar {
+.navBarContainer {
   position: fixed;
   top: 0;
-  width: 100%;
   height: 6.5%;
+  width: 100%;
   background-color: var(--light-yellow);
+  opacity: 1;
   z-index: 99;
   transition: background-color 0.2s, opacity 0.2s;
-  opacity: 1;
 }
 
-.clearNavigationBar {
-  background-color: transparent !important;
+.clearNavBar {
   color: var(--white);
+  background-color: transparent !important;
 }
 
-.invisNavigationBar {
+.hiddenNavBar {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.2s, visibility 0.2s;
 }
 
-.navContainer {
-  align-items: center;
-  height: 100%;
+.navBarGrid {
   display: grid;
   grid-template:
     'logo empty empty empty empty home aboutUs events opportunities media joinUs';
+  align-items: center;
+  height: 100%;
+}
+
+.logoGridItem {
+  grid-area: logo;
+}
+
+.emptyGridItem {
+  grid-area: empty;
+}
+
+.homeGridItem {
+  grid-area: home;
+}
+
+.aboutUsGridItem {
+  grid-area: aboutUs;
+}
+
+.eventsGridItem {
+  grid-area: events;
+}
+
+.opportunitiesGridItem {
+  grid-area: opportunities;
+}
+
+.mediaGridItem {
+  grid-area: media;
+}
+
+.joinUsGridItem {
+  grid-area: joinUs;
 }
 
 .logoContainer {
+  position: relative;
   display: flex;
   align-items: center;
-  position: relative;
-  width: 100%;
   height: 100%;
-  padding-left: 12%;
+  width: 100%;
   padding-top: 3%;
+  padding-left: 12%;
 }
 
-.linkItem {
+.linkContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  text-transform: uppercase;
   height: 100%;
   width: 90%;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
 }
 
-.gridBox {
+.linkContent {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  width: 100%;
   height: 100%;
+  width: 100%;
   transition: color 0.3s;
 }
 
-.gridBox:hover {
-  cursor: pointer;
+.linkContent:hover {
   color: var(--red);
+  cursor: pointer;
 }
 
-.gridBox:hover .gridOverlay {
+.linkContent:hover .linkUnderline {
   opacity: 1;
   width: 100%;
 }
 
-.gridOverlay {
-  width: 0%;
-  height: 90%;
-  border-bottom: 0.15vw solid var(--red);
-  opacity: 0;
+.linkUnderline {
   position: absolute;
+  height: 90%;
+  width: 0%;
+  opacity: 0;
+  border-bottom: 0.15vw solid var(--red);
   transition: width 0.25s, opacity 0.25s;
 }
 
-.currentPageOverlay {
+.currentPageUnderline {
   width: 100%;
   opacity: 1;
 }
 
-.emptyItem {
-  grid-area: empty;
-}
-
-.item0 {
-  grid-area: logo;
-}
-
-.item1 {
-  grid-area: home;
-}
-
-.item2 {
-  grid-area: aboutUs;
-}
-
-.item3 {
-  grid-area: events;
-}
-
-.item4 {
-  grid-area: opportunities;
-}
-
-.item5 {
-  grid-area: media;
-}
-
-.item6 {
-  grid-area: joinUs;
-}
-
-.dropdown {
+.dropdownContainer {
   display: block;
 }
 
-.currentPageDropdownOverlay {
-  font-weight: bold;
+.dropdownContainer:hover .linkContent {
+  color: var(--red) !important;
 }
 
-.dropdown:hover .dropdownContent {
+.dropdownContainer:hover .linkUnderline {
+  width: 100%;
+  opacity: 1;
+}
+
+.dropdownContainer:hover .dropdownContent {
   visibility: visible;
   opacity: 1;
 }
 
-.dropdown:hover .gridOverlay {
+.dropdownContainer:hover .clearDropdownContent {
+  visibility: visible;
   opacity: 1;
-  width: 100%;
-}
-
-.dropdown:hover .gridBox {
-  color: var(--red) !important;
 }
 
 .dropdownContent {
-  width: 15%;
   position: absolute;
   visibility: hidden;
-  opacity: 0;
+  width: 15%;
   background-color: var(--light-yellow);
+  opacity: 0;
   border-radius: 0px 0px 15px 15px;
   transition: background-color 0.2s, border-radius 0.2s, opacity 0.2s, visibility 0.2s;
 }
 
 .clearDropdownContent {
-  border-top-right-radius: 15px;
   background-color: transparent !important;
   border: 0.15vw solid var(--white);
+  border-top-right-radius: 15px;
 }
 
-.dropdown:hover .clearDropdownContent {
-  visibility: visible;
-  opacity: 1;
-}
-
-.dropdownBox {
+.dropdownItem {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
   padding: 5% 15% 0% 15%; /* no bottom padding */
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  position: relative;
   transition: color 0.3s, opacity 0.2s, visibility 0.2s;
 }
 
-.dropdownBoxEnd {
+.dropdownItem:hover {
+  color: var(--red);
+  cursor: pointer;
+}
+
+.dropdownItem:hover a {
+  color: var(--red);
+  transition: color 0.3s, opacity 0.2s, visibility 0.2s;
+}
+
+.dropdownItemEnd {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
   padding: 5% 15% 8% 15%;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  position: relative;
   transition: color 0.3s, opacity 0.2s, visibility 0.2s;
 }
 
-.dropdownBox:hover {
+.dropdownItemEnd:hover {
+  color: var(--red);
   cursor: pointer;
-  color: var(--red);
 }
 
-.dropdownBox:hover a {
-  color: var(--red);
-  transition: color 0.3s, opacity 0.2s, visibility 0.2s;
-}
-
-.dropdownBoxEnd:hover {
-  cursor: pointer;
-  color: var(--red);
-}
-
-.dropdownBoxEnd:hover a{
+.dropdownItemEnd:hover a{
   color: var(--red);
   transition: color 0.3s, opacity 0.2s, visibility 0.2s;
 }
 
-/* small navbar */
-.smallNavContainer {
-  align-items: center;
-  height: 100%;
+.currentPageBold {
+  font-weight: bold;
+}
+
+.icon {
+  margin-left: -10px;
+  margin-right: 10px;
+  transform: scale(0.9);
+}
+
+/* compact navbar */
+.compactNavBarGrid {
   display: grid;
   grid-template:
     'logo empty empty empty empty empty menuIcon';
+  align-items: center;
+  height: 100%;
 }
 
-.item7 {
+.menuIconGridItem {
   grid-area: menuIcon;
 }
 
 .menuButton {
+  position: relative;
   display: flex;
   justify-content: right;
   align-items: center;
-  position: relative;
-  width: 100%;
   height: 100%;
+  width: 100%;
   transition: color 0.3s;
 
   background-color: inherit;
@@ -229,139 +235,138 @@
 }
 
 .menuButton:hover {
-  cursor: pointer;
   color: var(--red);
+  cursor: pointer;
 }
 
 .menuIcon {
-  transform: scale(1.5);
-  margin-right: 10px;
   margin-left: -10px;
+  margin-right: 10px;
+  transform: scale(1.5);
 }
 
-.menu {
+.menuContainer {
   display: block;
   justify-content: center;
   align-items: center;
   margin: auto;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  text-transform: uppercase;
   width: 100%;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
   transition: opacity 0.2s;
 }
 
-.invisMenu {
+.hiddenMenu {
   visibility: hidden;
   opacity: 0;
 }
 
-.menuBox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.currentPageMenuOverlay {
-  width: 30%;
-  height: 100%;
-  position: absolute;
-  border-bottom: 0.15vw solid var(--red);
-  opacity: 1;
-}
-
-.currentDropdownMenu {
-  color: var(--red) !important;
-}
-
-.currentPageMenuDropdownOverlay {
-  font-weight: bold;
-}
-
 .menuContent {
-  width: 100%;
   position: absolute;
+  width: 100%;
   background-color: var(--light-yellow);
   border-radius: 0px 0px 15px 15px;
   transition: background-color 0.2s, border-radius 0.2s, visibility 0.2s;
 }
 
 .clearMenuContent {
-  border-radius: 15px 15px 15px 15px;
   background-color: rgba(255, 255, 255, 0.2) !important;
   border: 0.15vw solid var(--white);
+  border-radius: 15px 15px 15px 15px;
+}
+
+.menuItemContent {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
 .menuItem {
-  padding-top: 2%;
-  /* padding: 5% 15% 0% 15%; no bottom padding */
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  transition: color 0.3s, opacity 0.2s, visibility 0.2s;
-}
-
-.menuItemEnd {
   padding-top: 2%;
-  padding-bottom: 2%;
-  /* padding: 5% 15% 8% 15%; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
   transition: color 0.3s, opacity 0.2s, visibility 0.2s;
 }
 
 .menuItem:hover {
-  cursor: pointer;
   color: var(--red);
+  cursor: pointer;
 }
 
-.menuItemEnd:hover {
-  cursor: pointer;
-  color: var(--red);
-}
-
-.menuDropdownButton {
+.menuItemEnd {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  width: 100%;
-  height: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  transition: color 0.3s, opacity 0.2s, visibility 0.2s;
 }
 
-.menuDropdownButton:hover {
-  cursor: pointer;
+.menuItemEnd:hover {
   color: var(--red);
+  cursor: pointer;
 }
 
-.hiddenMenuDropdownItem {
+.currentPageMenuUnderline {
+  height: 100%;
+  width: 30%;
+  opacity: 1;
+  border-bottom: 0.15vw solid var(--red);
+}
+
+.menuDropdownContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.menuDropdownContainer:hover {
+  color: var(--red);
+  cursor: pointer;
+}
+
+.currentDropdown {
+  color: var(--red) !important;
+}
+
+.menuDropdownContent {
+  display: block;
+}
+
+.hiddenMenuDropdownContent {
   display: none;
 }
 
-.icon {
-  transform: scale (0.9);
-  margin-right: 10px;
-  margin-left: -10px;
+.currentPageMenuBold {
+  font-weight: bold;
 }
+
 
 /*--- Dark mode ---*/
 @media (prefers-color-scheme: dark) {
-  .navigationBar {
+  .navBarContainer {
     background-color: #000;
+  }
+  .linkContainer {
+    color: var(--white);
   }
   .dropdownContent {
     background-color: #000;
   }
-  .dropdownBox {
+  .dropdownItem {
     color: var(--white);
   }
-  .dropdownBoxEnd {
+  .dropdownItemEnd {
     color: var(--white);
   }
   .menuButton {
@@ -376,7 +381,46 @@
   .menuItemEnd {
     color: var(--white);
   }
-  .linkItem {
-    color: var(--white);
+} 
+
+@media only screen and (max-width: 1280px) {
+  .dropdownContent {
+    width: 17%;
   }
 }
+
+@media only screen and (max-width: 1100px) {
+  .dropdownContent {
+    width: 19%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .dropdownContent {
+    width: 21%;
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  .navBarContainer {
+    height: 8%;
+  }
+} 
+
+@media only screen and (max-height: 550px) {
+  .navBarContainer {
+    height: 10%;
+  }
+} 
+
+@media only screen and (max-height: 420px) {
+  .navBarContainer {
+    height: 15%;
+  }
+} 
+
+@media only screen and (max-height: 300px) {
+  .navBarContainer {
+    height: 18%;
+  }
+} 
