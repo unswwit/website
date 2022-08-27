@@ -22,11 +22,14 @@ const CompactNavigationBar = () => {
   const [clearNavBar, setClearNavBar] = useState(true);
   const [hiddenNavBar, setHiddenNavBar] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [aboutUsMenuOpen, setAboutUsMenuOpen] = useState(false);
-  const [mediaMenuOpen, setMediaMenuOpen] = useState(false);
+  const [aboutUsDropdownOpen, setAboutUsDropdownOpen] = useState(false);
+  const [mediaDropdownOpen, setMediaDropdownOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const router = useRouter();
+  const pageLoading = false;
 
+  /* check whether device is in light or dark mode 
+     and change darkMode state accordingly */
   useEffect(() => {
     if (
       window.matchMedia &&
@@ -36,6 +39,8 @@ const CompactNavigationBar = () => {
     }
   }, []);
 
+  /* check whether user is at the bottom of the page when scrolling
+     and change hiddenNavBar state accordingly */
   useEffect(() => {
     window.addEventListener("scroll", checkBottomScreen);
     return () => {
@@ -43,6 +48,8 @@ const CompactNavigationBar = () => {
     };
   }, []);
 
+  /* check whether user is at the top of the page when scrolling
+     and change clearNavBar state accordingly */
   useEffect(() => {
     checkTopScreen();
     window.addEventListener("scroll", checkTopScreen);
@@ -50,6 +57,14 @@ const CompactNavigationBar = () => {
       window.removeEventListener("scroll", checkTopScreen);
     };
   }, []);
+
+  /* check whether a page has been loaded when this component is rendered
+     and close menus if true */
+  useEffect(() => {
+    if (pageLoading) {
+      menuItemClick();
+    }
+  });
 
   const checkBottomScreen = () => {
     const checkBottom =
@@ -68,21 +83,59 @@ const CompactNavigationBar = () => {
   };
 
   const menuItemClick = () => {
-    setAboutUsMenuOpen(false);
-    setMediaMenuOpen(false);
+    setAboutUsDropdownOpen(false);
+    setMediaDropdownOpen(false);
     setMenuOpen(false);
   };
 
-  const aboutUsMenuClick = () => {
-    setAboutUsMenuOpen(!aboutUsMenuOpen);
+  const aboutUsDropdownClick = () => {
+    setAboutUsDropdownOpen(!aboutUsDropdownOpen);
+    if (aboutUsDropdownOpen) {
+      changeAboutUsToArrowRight();
+    } else {
+      changeAboutUsToArrowDown();
+    }
   };
 
-  const mediaMenuClick = () => {
-    setMediaMenuOpen(!mediaMenuOpen);
+  const mediaDropdownClick = () => {
+    setMediaDropdownOpen(!mediaDropdownOpen);
+    if (mediaDropdownOpen) {
+      changeMediaToArrowRight();
+    } else {
+      changeMediaToArrowDown();
+    }
   };
+
+  const changeAboutUsToArrowDown = () => {
+    let aboutUsText = document.getElementById("aboutUsText");
+    aboutUsText.innerHTML = "About Us ▾";
+  };
+
+  const changeAboutUsToArrowRight = () => {
+    let aboutUsText = document.getElementById("aboutUsText");
+    aboutUsText.innerHTML = "About Us ▸";
+  };
+
+  const changeMediaToArrowDown = () => {
+    let mediaText = document.getElementById("mediaText");
+    mediaText.innerHTML = "Media ▾";
+  };
+
+  const changeMediaToArrowRight = () => {
+    let mediaText = document.getElementById("mediaText");
+    mediaText.innerHTML = "Media ▸";
+  };
+
+  /* set pageLoading boolean to true if page has loading screen */
+  if (document.getElementById("loadingWillow")) {
+    pageLoading = true;
+  } else {
+    pageLoading = false;
+  }
 
   return (
-    /* return clear or hidden regular navbar if at top or bottom of screen */
+    /* return clear or hidden navbar if at top or bottom of screen respectively,
+       otherwise return regular navbar */
     <nav
       className={
         clearNavBar && router.pathname != "/404"
@@ -95,7 +148,9 @@ const CompactNavigationBar = () => {
       <div className={styles.compactNavBarGrid}>
         <div className={styles.logoContainer}>
           <Link href="/">
-            <a>
+            <a onClick={menuItemClick}>
+              {/* change WIT logo color depending on 
+                  the device theme and current scroll position */}
               <Image
                 className={styles.logoGridItem}
                 src={
@@ -112,6 +167,7 @@ const CompactNavigationBar = () => {
         </div>
         <div className={styles.emptyGridItem}></div>
         <div className={`${styles.menuIconGridItem} ${styles.linkContainer}`}>
+          {/* change menu icon if the menu is opened or closed */}
           <button className={styles.menuButton} onClick={menuClick}>
             {menuOpen ? (
               <CloseIcon className={styles.menuIcon} />
@@ -121,6 +177,7 @@ const CompactNavigationBar = () => {
           </button>
         </div>
       </div>
+      {/* make menu visible if the menu is open */}
       <div
         className={
           menuOpen
@@ -128,6 +185,8 @@ const CompactNavigationBar = () => {
             : `${styles.hiddenMenu} ${styles.menuContainer}`
         }
       >
+        {/* if the navbar is transparent then the menu is also transparent,
+            same structure for the other menu links */}
         <div
           className={
             clearNavBar && router.pathname != "/404"
@@ -137,6 +196,8 @@ const CompactNavigationBar = () => {
         >
           <Link href="/">
             <div className={styles.menuItemContent}>
+              {/* underline current page name in the menu, 
+                  same structure for the other links */}
               <div
                 className={
                   router.asPath === "/"
@@ -149,32 +210,41 @@ const CompactNavigationBar = () => {
               </div>
             </div>
           </Link>
+          {/* div for dropdown inside menu */}
           <div
             className={styles.menuDropdownContainer}
-            onClick={aboutUsMenuClick}
+            id="aboutUsDropdown"
+            onClick={aboutUsDropdownClick}
           >
+            {/* apply dropdown underline and red text color accordingly:
+                if the current page belongs to the dropdown, the text should be underlined
+                if the dropdown is open, the text should be red
+                same structure for the other dropdowns */}
             <div
               className={
-                router.asPath.split("/")[1] === "about" && aboutUsMenuOpen
+                router.asPath.split("/")[1] === "about" && aboutUsDropdownOpen
                   ? `${styles.currentPageMenuUnderline} ${styles.currentDropdown} ${styles.menuItem}`
                   : router.asPath.split("/")[1] === "about"
                   ? `${styles.currentPageMenuUnderline} ${styles.menuItem}`
-                  : aboutUsMenuOpen
+                  : aboutUsDropdownOpen
                   ? `${styles.currentDropdown} ${styles.menuItem}`
                   : styles.menuItem
               }
             >
-              <a>About Us ▾</a>
+              <a id="aboutUsText">About Us ▸</a>
             </div>
           </div>
+          {/* make dropdown visible if the dropdown is open */}
           <div
             className={
-              aboutUsMenuOpen
+              aboutUsDropdownOpen
                 ? styles.menuDropdownContent
                 : `${styles.menuDropdownContent} ${styles.hiddenMenuDropdownContent}`
             }
           >
             <Link href="/about/our-story">
+              {/* make the current page name in the dropdown bold,
+                  same structure for the other dropdown links */}
               <div
                 className={
                   router.asPath.split("/")[2] === "our-story"
@@ -257,25 +327,26 @@ const CompactNavigationBar = () => {
           </Link>
           <div
             className={styles.menuDropdownContainer}
-            onClick={mediaMenuClick}
+            id="mediaDropdown"
+            onClick={mediaDropdownClick}
           >
             <div
               className={
-                router.asPath.split("/")[1] === "media" && mediaMenuOpen
+                router.asPath.split("/")[1] === "media" && mediaDropdownOpen
                   ? `${styles.currentPageMenuUnderline} ${styles.currentDropdown} ${styles.menuItem}`
                   : router.asPath.split("/")[1] === "media"
                   ? `${styles.currentPageMenuUnderline} ${styles.menuItem}`
-                  : mediaMenuOpen
+                  : mediaDropdownOpen
                   ? `${styles.currentDropdown} ${styles.menuItem}`
                   : styles.menuItem
               }
             >
-              <a>Media ▾</a>
+              <a id="mediaText">Media ▸</a>
             </div>
           </div>
           <div
             className={
-              mediaMenuOpen
+              mediaDropdownOpen
                 ? styles.menuDropdownContent
                 : `${styles.menuDropdownContent} ${styles.hiddenMenuDropdownContent}`
             }

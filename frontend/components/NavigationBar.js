@@ -23,6 +23,8 @@ const NavigationBar = () => {
   const [darkMode, setDarkMode] = useState(false);
   const router = useRouter();
 
+  /* check whether device is in light or dark mode 
+     and change darkMode state accordingly */
   useEffect(() => {
     if (
       window.matchMedia &&
@@ -32,6 +34,8 @@ const NavigationBar = () => {
     }
   }, []);
 
+  /* check whether user is at the bottom of the page when scrolling
+     and change hiddenNavBar state accordingly */
   useEffect(() => {
     window.addEventListener("scroll", checkBottomScreen);
     return () => {
@@ -39,6 +43,8 @@ const NavigationBar = () => {
     };
   }, []);
 
+  /* check window width when the window is resized
+     and change compactNavBar state accordingly */
   useEffect(() => {
     checkWindowWidth();
     window.addEventListener("resize", checkWindowWidth);
@@ -47,12 +53,24 @@ const NavigationBar = () => {
     };
   }, []);
 
+  /* check whether user is at the top of the page when scrolling
+     and change clearNavBar state accordingly */
   useEffect(() => {
     checkTopScreen();
     window.addEventListener("scroll", checkTopScreen);
     return () => {
       window.removeEventListener("scroll", checkTopScreen);
     };
+  }, []);
+
+  /* add mouseover and mouseleave event listeners to the dropdown containers */
+  useEffect(() => {
+    let aboutUsDropdown = document.getElementById("aboutUsDropdown");
+    let mediaDropdown = document.getElementById("mediaDropdown");
+    aboutUsDropdown.addEventListener("mouseover", changeAboutUsToArrowDown);
+    aboutUsDropdown.addEventListener("mouseleave", changeAboutUsToArrowRight);
+    mediaDropdown.addEventListener("mouseover", changeMediaToArrowDown);
+    mediaDropdown.addEventListener("mouseleave", changeMediaToArrowRight);
   }, []);
 
   const checkWindowWidth = () => {
@@ -72,12 +90,33 @@ const NavigationBar = () => {
     setClearNavBar(checkTop);
   };
 
+  const changeAboutUsToArrowDown = () => {
+    let aboutUsText = document.getElementById("aboutUsText");
+    aboutUsText.innerHTML = "About Us ▾";
+  };
+
+  const changeAboutUsToArrowRight = () => {
+    let aboutUsText = document.getElementById("aboutUsText");
+    aboutUsText.innerHTML = "About Us ▸";
+  };
+
+  const changeMediaToArrowDown = () => {
+    let mediaText = document.getElementById("mediaText");
+    mediaText.innerHTML = "Media ▾";
+  };
+
+  const changeMediaToArrowRight = () => {
+    let mediaText = document.getElementById("mediaText");
+    mediaText.innerHTML = "Media ▸";
+  };
+
   /* return hamburger navbar if screen size is smaller than 950px,
-    otherwise return regular navbar */
+     otherwise return regular navbar */
   return compactNavBar ? (
     <CompactNavigationBar />
   ) : (
-    /* return clear or hidden regular navbar if at top or bottom of screen */
+    /* return clear or hidden navbar if at top or bottom of screen respectively,
+       otherwise return regular navbar */
     <nav
       className={
         clearNavBar && router.pathname != "/404"
@@ -91,6 +130,8 @@ const NavigationBar = () => {
         <div className={styles.logoContainer}>
           <Link href="/">
             <a>
+              {/* change WIT logo color depending on 
+                  the device theme and current scroll position */}
               <Image
                 className={styles.logoGridItem}
                 src={
@@ -110,6 +151,8 @@ const NavigationBar = () => {
           <Link href="/">
             <div className={styles.linkContent}>
               <a>Home</a>
+              {/* underline current page name on the navbar, 
+                  same structure for the other links */}
               <div
                 className={
                   router.asPath === "/"
@@ -121,12 +164,14 @@ const NavigationBar = () => {
           </Link>
         </div>
 
+        {/* div for dropdown inside navbar */}
         <div
           className={`${styles.dropdownContainer} ${styles.aboutUsGridItem} ${styles.linkContainer}`}
+          id="aboutUsDropdown"
         >
           <Link href="/about/our-story">
             <div className={styles.linkContent}>
-              <a>About Us ▾</a>
+              <a id="aboutUsText">About Us ▸</a>
               <div
                 className={
                   router.asPath.split("/")[1] === "about"
@@ -136,6 +181,8 @@ const NavigationBar = () => {
               ></div>
             </div>
           </Link>
+          {/* if the navbar is transparent then the dropdown is also transparent,
+              same structure for the other dropdown links */}
           <div
             className={
               clearNavBar && router.pathname != "/404"
@@ -144,6 +191,8 @@ const NavigationBar = () => {
             }
           >
             <Link href="/about/our-story">
+              {/* make the current page name in the dropdown bold, 
+                  same structure for the other dropdown links */}
               <div
                 className={
                   router.asPath.split("/")[2] === "our-story"
@@ -226,10 +275,11 @@ const NavigationBar = () => {
         </div>
         <div
           className={`${styles.dropdownContainer} ${styles.mediaGridItem} ${styles.linkContainer}`}
+          id="mediaDropdown"
         >
           <Link href="/media/blog">
             <div className={styles.linkContent}>
-              <a>Media ▾</a>
+              <a id="mediaText">Media ▸</a>
               <div
                 className={
                   router.asPath.split("/")[1] === "media"
