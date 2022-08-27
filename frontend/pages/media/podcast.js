@@ -12,11 +12,55 @@ import { useStyles, links, categories } from "../../data/podcastData";
 import Image from "next/image";
 import Link from "next/link";
 import moment from "moment";
-import useContentfulPodcasts from "../api/contentful-podcast";
+import useContentfulPodcasts from "../api/podcast";
 const { getPodcastEpisodes } = useContentfulPodcasts();
 
 // TO UNCOMMENT WHEN REACH > 9 PODCASTS
 // import PaginationComp from "../components/Pagination";
+
+export async function getStaticProps() {
+  const res = await getPodcastEpisodes();
+  const entries = await res.map((p) => {
+    return p.fields;
+  });
+
+  const sanitizeEntries = entries.map((item) => {
+    const date = item.date;
+    const title = item.title;
+    const episodeNo = item.episodeNo;
+    const link = item.link;
+    const imgUrl = item.img.fields.file.url;
+    const description = item.description;
+    const anchor = item.anchor;
+    const radioRepublic = item.radioRepublic;
+    const google = item.google;
+    const spotify = item.spotify;
+    // const breaker = item.breaker;
+    const category = item.category;
+    return {
+      date,
+      title,
+      episodeNo,
+      link,
+      imgUrl,
+      description,
+      anchor,
+      radioRepublic,
+      google,
+      spotify,
+      // breaker,
+      category,
+    };
+  });
+
+  console.log(sanitizeEntries);
+
+  return {
+    props: {
+      sanitizeEntries,
+    },
+  };
+}
 
 const Podcast = () => {
   const classes = useStyles();
@@ -40,14 +84,19 @@ const Podcast = () => {
   // set how many posts to view per page
   // const postsPerPage = 9;
 
-  // get podcasts
-  // input: podcasts data from google sheets
-  // output: array of dictionaries containing podcasts data
-  const fetchPodcastEpisodes = async () => {
-    const res = await getPodcastEpisodes();
-    const allEpisodes = humps.camelizeKeys(res);
-    setContent(allEpisodes);
-    setSelectedPosts(allEpisodes);
+  // get podcasts from Contentful
+  // output: array of dictionaries containing podcasts
+  const fetchPodcastEpisodes = ({ sanitizeEntries }) => {
+    // const res = await getPodcastEpisodes();
+    // const tempEpisodes = humps.camelizeKeys(res);
+    const tempEpisodes = humps.camelizeKeys(sanitizeEntries);
+
+    // order podcastEpisodes by episodeNo i.e most recent podcast episode
+    const sortedEpisodes = tempEpisodes.sort((a, b) => {
+      return b.episodeNo - a.episodeNo;
+    });
+    setContent(sortedEpisodes);
+    setSelectedPosts(sortedEpisodes);
     setLoading(false);
     setSourceLoading(false);
   };
