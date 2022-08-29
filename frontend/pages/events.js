@@ -14,14 +14,15 @@ import UpcomingEvent from "../components/UpcomingEvent";
 import PaginationComp from "../components/Pagination";
 import { isMobile } from "react-device-detect";
 import { useStyles, categories, marks, valueToYear } from "../data/eventData";
-import useContentfulUpcomingEvents from "./api/contentful-upcomingEvents";
-const { getUpcomingEvents } = useContentfulUpcomingEvents();
 
-const Events = () => {
+import { loadUpcomingEvents } from "../lib/Api";
+
+const Events = ({ upcomingEvents }) => {
+  console.log(upcomingEvents);
   const classes = useStyles();
 
+  // const [upcomingEvents, setUpcomingEvents] = useState();
   const [year, setYear] = useState(valueToYear[100]);
-  const [upcomingEvents, setUpcomingEvents] = useState([]);
   const [pastEvents, setPastEvents] = useState({
     term1: [],
     term2: [],
@@ -72,12 +73,12 @@ const Events = () => {
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
-    setCurrentPosts(
-      selectedPosts.slice(
-        (pageNumber - 1) * postsPerPage,
-        pageNumber * postsPerPage
-      )
-    );
+    // setCurrentPosts(
+    //   selectedPosts.slice(
+    //     (pageNumber - 1) * postsPerPage,
+    //     pageNumber * postsPerPage
+    //   )
+    // );
   };
 
   // start webpage at the top
@@ -159,24 +160,23 @@ const Events = () => {
   // get upcoming events
   // input: upcoming events data from google sheets
   // output: array of dictionaries containing upcoming events data
-  const fetchUpcomingEvents = async () => {
-    const res = await getUpcomingEvents();
-    const tempEvents = humps.camelizeKeys(res);
-    setUpcomingEvents(tempEvents);
-    setCurrentPosts(tempEvents.slice(0, postsPerPage));
-    setSelectedPosts(tempEvents);
-    setLoadingUpcoming(false);
-    setSourceLoading(false);
-  };
+  // const fetchUpcomingEvents = async ({ upcomingEvents }) => {
+  //   const tempEvents = humps.camelizeKeys(upcomingEvents);
+  //   setUpcomingEvents(tempEvents);
+  //   setCurrentPosts(tempEvents.slice(0, postsPerPage));
+  //   setSelectedPosts(tempEvents);
+  //   setLoadingUpcoming(false);
+  //   setSourceLoading(false);
+  // };
 
-  // load upcoming events
-  useEffect(() => {
-    setLoadingUpcoming(true);
-    fetchUpcomingEvents().catch((error) =>
-      // error handling
-      console.error(error)
-    );
-  }, []);
+  // // load upcoming events
+  // useEffect(() => {
+  //   setLoadingUpcoming(true);
+  //   fetchUpcomingEvents().catch((error) =>
+  //     // error handling
+  //     console.error(error)
+  //   );
+  // }, []);
 
   // get events for a specific term
   const getTermEvents = (events) => {
@@ -204,6 +204,8 @@ const Events = () => {
     });
   };
 
+  setSourceLoading(false);
+
   return (
     <div>
       {sourceLoading && headerLoading ? (
@@ -211,6 +213,8 @@ const Events = () => {
       ) : (
         <>
           {/* Cover Photo */}
+          {console.log("hello")}
+
           <PageHeader
             imageLoading={setHeaderLoading}
             imgUrl="/headers/events-header.jfif"
@@ -238,7 +242,7 @@ const Events = () => {
               ) : (
                 <div className={styles.upcomingEventsContainer}>
                   {!isMobile &&
-                    currentPosts.map((upcomingEvent, index) => {
+                    upcomingEvents.map((upcomingEvent, index) => {
                       return (
                         <div className={styles.upcomingEventsBox}>
                           <UpcomingEvent
@@ -253,7 +257,7 @@ const Events = () => {
                     upcomingEvents.map((upcomingEvent, index) => {
                       return (
                         <UpcomingEvent
-                          upcomingEvent={upcomingEvent}
+                          upcomingEvent={upcomingEvents}
                           index={index}
                         />
                       );
@@ -357,3 +361,10 @@ const Events = () => {
 };
 
 export default Events;
+
+export async function getStaticProps() {
+  const upcomingEvents = await loadUpcomingEvents();
+  return {
+    props: { upcomingEvents },
+  };
+}

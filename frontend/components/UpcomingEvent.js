@@ -111,7 +111,7 @@ const useStyles = makeStyles({
 
 export default function UpcomingEvent({ upcomingEvent, index }) {
   const classes = useStyles();
-  console.log(upcomingEvent);
+  console.log("hello");
   return (
     <Card className={[classes.root, styles.previewContainer].join(" ")}>
       <a
@@ -123,7 +123,7 @@ export default function UpcomingEvent({ upcomingEvent, index }) {
         <div className={styles.darkOverlay} />
         <div className={classes.media}>
           <Image
-            src={"https:" + upcomingEvent.imgUrl}
+            src={upcomingEvent.imgUrl}
             className={styles.upcomingEventCover}
             width="360px"
             height="300px"
