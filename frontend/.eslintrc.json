@@ -6,10 +6,12 @@
   "extends": ["eslint:recommended", "next", "prettier"],
   "plugins": ["eslint-plugin-no-inline-styles"],
   "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 12
+      "jsx": true,
+      "modules": true
+    }
   },
   "rules": {
     "eqeqeq": ["error", "always"],
