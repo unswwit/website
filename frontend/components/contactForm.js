@@ -1,17 +1,17 @@
-import React from "react";
-import emailjs from "@emailjs/browser";
-import styles from "../styles/ContactUs.module.css";
-import ReCAPTCHA from "react-google-recaptcha";
+import React from 'react'
+import emailjs from '@emailjs/browser'
+import styles from '../styles/ContactUs.module.css'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 export default function ContactForm() {
-  const [email, setEmail] = React.useState("");
+  const [email, setEmail] = React.useState('')
 
   const sendEmail = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     // validating that the email is in the correct form
     const validate =
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
     if (validate.test(email)) {
       emailjs
@@ -21,21 +21,22 @@ export default function ContactForm() {
           e.target,
           process.env.NEXT_PUBLIC_EMAILJS_ID
         )
-        .then(() => {
-          alert(
-            "Your inquiry was sent successfully. You can expect to hear a response from us within a week."
-          );
-        },
-        (error) => {
-          alert("Your inquiry failed to send. Please try again");
-        }
-        );
-      setEmail("");
-      e.target.reset();
+        .then(
+          () => {
+            alert(
+              'Your inquiry was sent successfully. You can expect to hear a response from us within a week.'
+            )
+          },
+          (error) => {
+            alert('Your inquiry failed to send. Please try again')
+          }
+        )
+      setEmail('')
+      e.target.reset()
     } else {
-      alert("Please input a valid email");
+      alert('Please input a valid email')
     }
-  };
+  }
 
   return (
     <form
@@ -80,5 +81,5 @@ export default function ContactForm() {
       <br />
       <input type="submit" className={styles.submitButton} value="Submit" />
     </form>
-  );
+  )
 }

@@ -1,97 +1,97 @@
-import { useEffect, useState } from "react";
-import styles from "../../styles/Marketing.module.css";
-import PageHeader from "../../components/Header";
-import Chip from "@material-ui/core/Chip";
-import Initiative from "../../components/Initiative";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import Timeline from "../../components/Timeline";
-import PaginationComp from "../../components/Pagination";
-import LoadingScreen from "../../components/LoadingScreen";
-import axios from "axios";
-import humps from "humps";
-import { isMobile } from "react-device-detect";
+import { useEffect, useState } from 'react'
+import styles from '../../styles/Marketing.module.css'
+import PageHeader from '../../components/Header'
+import Chip from '@material-ui/core/Chip'
+import Initiative from '../../components/Initiative'
+import CircularProgress from '@material-ui/core/CircularProgress'
+import Timeline from '../../components/Timeline'
+import PaginationComp from '../../components/Pagination'
+import LoadingScreen from '../../components/LoadingScreen'
+import axios from 'axios'
+import humps from 'humps'
+import { isMobile } from 'react-device-detect'
 import {
   useStyles,
   categories,
   marks,
   valueToYear,
-} from "../../data/MarketingData";
+} from '../../data/MarketingData'
 
 const MarketingContent = () => {
-  const classes = useStyles();
-  const [content, setContent] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [year, setYear] = useState("2022");
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [emptyCategory, setEmptyCategory] = useState(false);
-  const [sourceLoading, setSourceLoading] = useState(true);
-  const [headerLoading, setHeaderLoading] = useState(true);
+  const classes = useStyles()
+  const [content, setContent] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [year, setYear] = useState('2022')
+  const [selectedCategory, setSelectedCategory] = useState('All')
+  const [emptyCategory, setEmptyCategory] = useState(false)
+  const [sourceLoading, setSourceLoading] = useState(true)
+  const [headerLoading, setHeaderLoading] = useState(true)
 
   // set how many posts to view per page
-  const postsPerPage = 8;
+  const postsPerPage = 8
   // all the posts of the selected filter category
-  const [selectedPosts, setSelectedPosts] = useState([]);
+  const [selectedPosts, setSelectedPosts] = useState([])
   // the posts displayed on the current page
-  const [currentPosts, setCurrentPosts] = useState([]);
+  const [currentPosts, setCurrentPosts] = useState([])
   // current page number
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1)
 
   // set the year for the events timeline
   const handleYear = (newYear) => {
-    setYear(newYear);
-    setCurrentPage("All");
-  };
+    setYear(newYear)
+    setCurrentPage('All')
+  }
 
   // scroll to top on load
-  useEffect(() => window.scrollTo(0, 0), []);
+  useEffect(() => window.scrollTo(0, 0), [])
 
   // get marketing archives
   // input: marketing archives data from google sheets
   // output: array of dictionaries containing marketing archives data
   useEffect(() => {
-    setLoading(true);
+    setLoading(true)
     const fetchMarketingArchive = async () => {
       const res = await axios.get(
-        "https://wit-database.herokuapp.com/marketing-archives"
-      );
+        'https://wit-database.herokuapp.com/marketing-archives'
+      )
       const tempContent = humps
         .camelizeKeys(res.data)
         .reverse()
-        .filter((item) => item.year === Number(year));
-      setContent(tempContent);
-      setCurrentPosts(tempContent.slice(0, postsPerPage));
-      setSelectedPosts(tempContent);
-      setLoading(false);
-      setSourceLoading(false);
-    };
+        .filter((item) => item.year === Number(year))
+      setContent(tempContent)
+      setCurrentPosts(tempContent.slice(0, postsPerPage))
+      setSelectedPosts(tempContent)
+      setLoading(false)
+      setSourceLoading(false)
+    }
 
     fetchMarketingArchive().catch((error) =>
-    // error handling
+      // error handling
       console.error(error)
-    );
-  }, [year]);
+    )
+  }, [year])
 
   // marketing archive message
   useEffect(() => {
     if (currentPosts.length === 0 && loading === false) {
-      setEmptyCategory(true);
-      console.error = () => {};
+      setEmptyCategory(true)
+      console.error = () => {}
     } else {
-      setEmptyCategory(false);
+      setEmptyCategory(false)
     }
-  }, [currentPosts, loading]);
+  }, [currentPosts, loading])
 
   // filter content by selected category
   const filterContent = (selectedCategory) => {
     const filteredContent = content.filter(
       (picture) =>
-        selectedCategory === "All" ||
-        picture.category.split(",").includes(selectedCategory)
-    );
-    setSelectedPosts(filteredContent);
-    setCurrentPosts(filteredContent.slice(0, postsPerPage));
-    setCurrentPage(1);
-  };
+        selectedCategory === 'All' ||
+        picture.category.split(',').includes(selectedCategory)
+    )
+    setSelectedPosts(filteredContent)
+    setCurrentPosts(filteredContent.slice(0, postsPerPage))
+    setCurrentPage(1)
+  }
 
   // called when pagination item clicked to slice the correct amount of posts for viewing
   const paginate = (pageNumber) => {
@@ -100,9 +100,9 @@ const MarketingContent = () => {
         (pageNumber - 1) * postsPerPage,
         pageNumber * postsPerPage
       )
-    );
-    setCurrentPage(pageNumber);
-  };
+    )
+    setCurrentPage(pageNumber)
+  }
 
   return (
     <div>
@@ -128,8 +128,8 @@ const MarketingContent = () => {
                   .map((category) => {
                     const chipColour =
                       selectedCategory === categories[category]
-                      	? "#e85f5c"
-                      	: "#7F7F7F";
+                        ? '#e85f5c'
+                        : '#7F7F7F'
                     return (
                       <Chip
                         key={category}
@@ -140,19 +140,19 @@ const MarketingContent = () => {
                           backgroundColor: chipColour,
                         }}
                         onClick={() => {
-                          setSelectedCategory(categories[category]);
-                          filterContent(categories[category]);
+                          setSelectedCategory(categories[category])
+                          filterContent(categories[category])
                         }}
                       />
-                    );
+                    )
                   })}
               </div>
 
               <div>
                 {/* Timeline */}
                 <Timeline
-                  margin={"2%"}
-                  page={"marketing"}
+                  margin={'2%'}
+                  page={'marketing'}
                   step={50}
                   valueToYear={valueToYear}
                   marks={marks}
@@ -192,7 +192,7 @@ const MarketingContent = () => {
                           alt={content.label}
                           date={content.date}
                         />
-                      );
+                      )
                     })}
                   </div>
                 </div>
@@ -209,7 +209,7 @@ const MarketingContent = () => {
                           alt={content.label}
                           date={content.date}
                         />
-                      );
+                      )
                     })}
                   </div>
                 </div>
@@ -228,6 +228,6 @@ const MarketingContent = () => {
         </>
       )}
     </div>
-  );
-};
-export default MarketingContent;
+  )
+}
+export default MarketingContent

@@ -1,62 +1,60 @@
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import CountUp from "react-countup";
-import styles from "../styles/Home.module.css";
-import PubArticle from "../components/PublicationsArticle";
-import InitiativesSlideshow from "../components/InitiativesSlideshow.js";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import Aos from "aos";
-import { isMobile } from "react-device-detect";
-import "aos/dist/aos.css";
-import LoadingScreen from "../components/LoadingScreen";
-import NewsletterSection from "../components/NewsletterSection";
-import axios from "axios";
-import humps from "humps";
-import QuoteSlideshow from "../components/QuotesSlideshow";
-import execQuotes from "../data/HomeData";
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+import CountUp from 'react-countup'
+import styles from '../styles/Home.module.css'
+import PubArticle from '../components/PublicationsArticle'
+import InitiativesSlideshow from '../components/InitiativesSlideshow.js'
+import CircularProgress from '@material-ui/core/CircularProgress'
+import Aos from 'aos'
+import { isMobile } from 'react-device-detect'
+import 'aos/dist/aos.css'
+import LoadingScreen from '../components/LoadingScreen'
+import NewsletterSection from '../components/NewsletterSection'
+import axios from 'axios'
+import humps from 'humps'
+import QuoteSlideshow from '../components/QuotesSlideshow'
+import execQuotes from '../data/HomeData'
 
 const Home = () => {
-  const [articles, setArticles] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [openNewsletter, setOpenNewsletter] = useState(false);
-  const [sourceLoading, setSourceLoading] = useState(true);
-  const last3articles = articles.slice(0, 3);
+  const [articles, setArticles] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [openNewsletter, setOpenNewsletter] = useState(false)
+  const [sourceLoading, setSourceLoading] = useState(true)
+  const last3articles = articles.slice(0, 3)
 
   // close newsletter
   const callbackModal = () => {
-    setOpenNewsletter(false);
-  };
+    setOpenNewsletter(false)
+  }
 
   //start webpage at the top
   useEffect(() => {
     Aos.init({
       duration: 1300,
       once: true,
-      anchorPlacement: "top-bottom",
-      easing: "ease-in-out",
+      anchorPlacement: 'top-bottom',
+      easing: 'ease-in-out',
       offset: 20,
-    });
-  }, []);
+    })
+  }, [])
 
   // get publications
   // input: publications data from google sheets
   // output: array of dictionaries containing publications data
   const fetchPublications = async () => {
     const res = await axios.get(
-      "https://wit-database.herokuapp.com/publications"
-    );
-    setArticles(humps.camelizeKeys(res.data).reverse());
-    setLoading(false);
-    setSourceLoading(false);
-  };
+      'https://wit-database.herokuapp.com/publications'
+    )
+    setArticles(humps.camelizeKeys(res.data).reverse())
+    setLoading(false)
+    setSourceLoading(false)
+  }
 
   useEffect(() => {
-    setLoading(true);
-    fetchPublications().catch((error) =>
-      console.error(error)
-    );
-  }, []);
+    setLoading(true)
+    fetchPublications().catch((error) => console.error(error))
+  }, [])
 
   return (
     <div>
@@ -80,7 +78,7 @@ const Home = () => {
 
           {/* Start of Description */}
           <div
-            data-aos={isMobile ? "fade" : "fade-right"}
+            data-aos={isMobile ? 'fade' : 'fade-right'}
             className={styles.description}
           >
             <div className={styles.descriptionLeft}>
@@ -102,11 +100,11 @@ const Home = () => {
 
           {/* Start of Quotes */}
           <div
-            data-aos={isMobile ? "fade" : "fade-left"}
+            data-aos={isMobile ? 'fade' : 'fade-left'}
             className={styles.quotes}
           >
             <h1>HEAR FROM US</h1>
-            <div className={[styles.carousel, styles.quoteCarousel].join(" ")}>
+            <div className={[styles.carousel, styles.quoteCarousel].join(' ')}>
               <QuoteSlideshow
                 height={450}
                 data={execQuotes}
@@ -146,7 +144,7 @@ const Home = () => {
 
           {/* Start of Upcoming Events / Latest blog / Latest podcast*/}
           <div
-            data-aos={isMobile ? "fade" : "fade-right"}
+            data-aos={isMobile ? 'fade' : 'fade-right'}
             data-aos-delay="150"
             className={styles.carousel}
           >
@@ -155,7 +153,7 @@ const Home = () => {
 
           {/* Start of Publications */}
           <div
-            data-aos={isMobile ? "fade" : "fade-left"}
+            data-aos={isMobile ? 'fade' : 'fade-left'}
             data-aos-delay="150"
             className={styles.publications}
           >
@@ -172,14 +170,14 @@ const Home = () => {
                 )}
                 {!loading &&
                   last3articles.map((article, index) => (
-                  	<div className={styles.homeArticles} key={index}>
-                  		<PubArticle
-                  			imgUrl={`/publications/${article.year}/${article.img}`}
-                  			heading={article.heading}
-                  			date={article.date}
-                  			url={article.url}
-                  		/>
-                  	</div>
+                    <div className={styles.homeArticles} key={index}>
+                      <PubArticle
+                        imgUrl={`/publications/${article.year}/${article.img}`}
+                        heading={article.heading}
+                        date={article.date}
+                        url={article.url}
+                      />
+                    </div>
                   ))}
               </div>
             </div>
@@ -191,7 +189,7 @@ const Home = () => {
 
           {/* Start of Sponsors & Affliations */}
           <div
-            data-aos={isMobile ? "fade" : "fade-right"}
+            data-aos={isMobile ? 'fade' : 'fade-right'}
             data-aos-delay="150"
             className={styles.sponsors}
           >
@@ -231,7 +229,7 @@ const Home = () => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

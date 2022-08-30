@@ -1,21 +1,21 @@
-import { withStyles } from "@material-ui/core/styles";
-import Slider from "@material-ui/core/Slider";
-import styles from "../styles/Timeline.module.css";
+import { withStyles } from '@material-ui/core/styles'
+import Slider from '@material-ui/core/Slider'
+import styles from '../styles/Timeline.module.css'
 
 const TimelineSlider = withStyles({
   root: {
-    color: "#E85F5C",
+    color: '#E85F5C',
     height: 6,
   },
   thumb: {
     height: 24,
     width: 24,
-    backgroundColor: "#fff",
-    border: "2px solid currentColor",
+    backgroundColor: '#fff',
+    border: '2px solid currentColor',
     marginTop: -8,
     marginLeft: -12,
-    "&:focus, &:hover, &$active": {
-      boxShadow: "inherit",
+    '&:focus, &:hover, &$active': {
+      boxShadow: 'inherit',
     },
   },
   active: {},
@@ -24,45 +24,45 @@ const TimelineSlider = withStyles({
     borderRadius: 4,
   },
   rail: {
-    backgroundColor: "#E85F5C",
+    backgroundColor: '#E85F5C',
     height: 8,
     borderRadius: 4,
   },
   mark: {
-    backgroundColor: "#E85F5C",
+    backgroundColor: '#E85F5C',
     height: 15,
     width: 1.5,
     marginTop: -3,
     fontSize: 20,
   },
   markLabel: {
-    "@media (prefers-color-scheme:dark)": {
-      color: "#fff",
+    '@media (prefers-color-scheme:dark)': {
+      color: '#fff',
     },
   },
   markActive: {
     opacity: 1,
-    backgroundColor: "currentColor",
+    backgroundColor: 'currentColor',
   },
-})(Slider);
+})(Slider)
 
 const pageToValue = (page) => {
-  return page === "teams" || page === "events" || page === "marketing"
+  return page === 'teams' || page === 'events' || page === 'marketing'
     ? 100
-    : 250;
-};
+    : 250
+}
 
 const Timeline = ({ updateYear, marks, valueToYear, page, step, margin }) => {
   return (
     <div
       id={
-        page === "teams"
+        page === 'teams'
           ? styles.teams
-          : page === "events"
-            ? styles.events
-            : page === "ourStory"
-              ? styles.ourStoryTimeline
-              : styles.marketingArchive
+          : page === 'events'
+          ? styles.events
+          : page === 'ourStory'
+          ? styles.ourStoryTimeline
+          : styles.marketingArchive
       }
       style={{ marginTop: margin }}
     >
@@ -76,7 +76,7 @@ const Timeline = ({ updateYear, marks, valueToYear, page, step, margin }) => {
         onChange={(_, value) => updateYear(valueToYear[value])}
       />
     </div>
-  );
-};
+  )
+}
 
-export default Timeline;
+export default Timeline

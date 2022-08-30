@@ -1,9 +1,9 @@
-import React from "react";
-import styles from "../styles/sponsors.module.css";
-import CloseIcon from "@material-ui/icons/Close";
-import IconButton from "@material-ui/core/IconButton";
+import React from 'react'
+import styles from '../styles/sponsors.module.css'
+import CloseIcon from '@material-ui/icons/Close'
+import IconButton from '@material-ui/core/IconButton'
 // import Image from "next/image";
-import Link from "next/link";
+import Link from 'next/link'
 
 const SponsorsModal = ({ handleClose, sponsorName, sponsors }) => {
   return (
@@ -23,7 +23,7 @@ const SponsorsModal = ({ handleClose, sponsorName, sponsors }) => {
           className={styles.sponsorImage}
           src={
             window.matchMedia &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches
+            window.matchMedia('(prefers-color-scheme: dark)').matches
               ? `/sponsors/2022/dark-mode/${sponsors[sponsorName][2]}`
               : `/sponsors/2022/${sponsors[sponsorName][2]}`
           }
@@ -45,7 +45,7 @@ const SponsorsModal = ({ handleClose, sponsorName, sponsors }) => {
         <p className={styles.sponsorDescription}>{sponsors[sponsorName][4]} </p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SponsorsModal;
+export default SponsorsModal

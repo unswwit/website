@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
+    "prettier": "prettier --write .",
     "test": "jest --runInBand"
   },
   "dependencies": {

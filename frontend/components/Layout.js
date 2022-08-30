@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react'
 // import NavBar from "./Navbar";
-import Footer from "./Footer";
-import { initGA, logPageView } from "../utils/GoogleAnalytics";
+import Footer from './Footer'
+import { initGA, logPageView } from '../utils/GoogleAnalytics'
 
 const Layout = ({ children }) => {
   useEffect(() => {
     if (!window.GA_INITIALIZED) {
-      initGA();
-      window.GA_INITIALIZED = true;
+      initGA()
+      window.GA_INITIALIZED = true
     }
-    logPageView();
-  }, []);
+    logPageView()
+  }, [])
 
   return (
     <div>
@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
       {children}
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

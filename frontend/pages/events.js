@@ -1,108 +1,108 @@
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import styles from "../styles/Events.module.css";
-import PageHeader from "../components/Header";
-import Chip from "@material-ui/core/Chip";
-import Timeline from "../components/Timeline";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import ScrollUpBtn from "../components/ScrollUpBtn";
-import LoadingScreen from "../components/LoadingScreen";
-import axios from "axios";
-import humps from "humps";
-import UpcomingEvent from "../components/UpcomingEvent";
-import PaginationComp from "../components/Pagination";
-import { isMobile } from "react-device-detect";
-import { useStyles, categories, marks, valueToYear } from "../data/EventData";
+import React, { useEffect, useState } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+import styles from '../styles/Events.module.css'
+import PageHeader from '../components/Header'
+import Chip from '@material-ui/core/Chip'
+import Timeline from '../components/Timeline'
+import CircularProgress from '@material-ui/core/CircularProgress'
+import ScrollUpBtn from '../components/ScrollUpBtn'
+import LoadingScreen from '../components/LoadingScreen'
+import axios from 'axios'
+import humps from 'humps'
+import UpcomingEvent from '../components/UpcomingEvent'
+import PaginationComp from '../components/Pagination'
+import { isMobile } from 'react-device-detect'
+import { useStyles, categories, marks, valueToYear } from '../data/EventData'
 
 const Events = () => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const [year, setYear] = useState(valueToYear[100]);
-  const [upcomingEvents, setUpcomingEvents] = useState([]);
+  const [year, setYear] = useState(valueToYear[100])
+  const [upcomingEvents, setUpcomingEvents] = useState([])
   const [pastEvents, setPastEvents] = useState({
     term1: [],
     term2: [],
     term3: [],
-  });
-  const [sourceLoading, setSourceLoading] = useState(true);
-  const [loadingPast, setLoadingPast] = useState(true);
-  const [loadingUpcoming, setLoadingUpcoming] = useState(true);
-  const [headerLoading, setHeaderLoading] = useState(true);
+  })
+  const [sourceLoading, setSourceLoading] = useState(true)
+  const [loadingPast, setLoadingPast] = useState(true)
+  const [loadingUpcoming, setLoadingUpcoming] = useState(true)
+  const [headerLoading, setHeaderLoading] = useState(true)
 
   // set how many posts to view per page
-  const postsPerPage = 3;
+  const postsPerPage = 3
 
   // current page number
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1)
 
-  const [selectedPosts, setSelectedPosts] = useState([]);
+  const [selectedPosts, setSelectedPosts] = useState([])
 
   // the posts displayed on the current page for upcoming events
-  const [currentPosts, setCurrentPosts] = useState([]);
+  const [currentPosts, setCurrentPosts] = useState([])
 
   // currently selected category -> default to "All"
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState('All')
 
   // check if category filters result in no results
-  const [emptyCategory, setEmptyCategory] = useState(false);
+  const [emptyCategory, setEmptyCategory] = useState(false)
 
   // all past events of the given year
   const [pastContent, setPastContent] = useState({
     term1: [],
     term2: [],
     term3: [],
-  });
+  })
 
   // all past events after being filtered for category
   const [pastSelectedPosts, setPastSelectedPosts] = useState({
     term1: [],
     term2: [],
     term3: [],
-  });
+  })
 
   // set the year for the events timeline
   const handleYear = (newYear) => {
-    setYear(newYear);
+    setYear(newYear)
     // when year is change, category automatically changes to 'All'
-    setSelectedCategory("All");
-  };
+    setSelectedCategory('All')
+  }
 
   const paginate = (pageNumber) => {
-    setCurrentPage(pageNumber);
+    setCurrentPage(pageNumber)
     setCurrentPosts(
       selectedPosts.slice(
         (pageNumber - 1) * postsPerPage,
         pageNumber * postsPerPage
       )
-    );
-  };
+    )
+  }
 
   // start webpage at the top
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    window.scrollTo(0, 0)
+  }, [])
 
   // get past events
   // input: past events data from google sheets
   // output: array of dictionaries containing past events data
   useEffect(() => {
     // show loading signs for past events
-    setLoadingPast(true);
+    setLoadingPast(true)
     const fetchPastEvents = async () => {
       const res = await axios.get(
-        "https://wit-database.herokuapp.com/past-events"
-      );
+        'https://wit-database.herokuapp.com/past-events'
+      )
       const allEvents = humps
         .camelizeKeys(res.data)
-        .filter((event) => event.year === Number(year));
-      setTerms(allEvents.reverse());
-    };
+        .filter((event) => event.year === Number(year))
+      setTerms(allEvents.reverse())
+    }
     fetchPastEvents().catch((error) =>
-    // error handling
+      // error handling
       console.error(error)
-    );
-  }, [year]);
+    )
+  }, [year])
 
   // Takes in events from a given year and separates them by term
   const setTerms = (events) => {
@@ -110,80 +110,78 @@ const Events = () => {
       term1: events.filter((event) => event.term === 1),
       term2: events.filter((event) => event.term === 2),
       term3: events.filter((event) => event.term === 3),
-    };
-    setPastEvents(tempPastEvents);
-    setPastSelectedPosts(tempPastEvents);
-    setPastContent(tempPastEvents);
-    setLoadingPast(false);
-  };
+    }
+    setPastEvents(tempPastEvents)
+    setPastSelectedPosts(tempPastEvents)
+    setPastContent(tempPastEvents)
+    setLoadingPast(false)
+  }
 
   // events archive message
   useEffect(() => {
-    const isEmpty = Object.values(pastEvents).every(
-      (term) => term.length === 0
-    );
+    const isEmpty = Object.values(pastEvents).every((term) => term.length === 0)
 
     if (isEmpty && loadingPast === false) {
-      setEmptyCategory(true);
-      console.error = () => {};
+      setEmptyCategory(true)
+      console.error = () => {}
     } else {
-      setEmptyCategory(false);
+      setEmptyCategory(false)
     }
-  }, [pastEvents, loadingPast]);
+  }, [pastEvents, loadingPast])
 
   // filter past events of a year by selected category
   const filterContent = (selectedCategory) => {
     const filteredContent = {
-      term1: filterTerm("term1", selectedCategory),
-      term2: filterTerm("term2", selectedCategory),
-      term3: filterTerm("term3", selectedCategory),
-    };
-    setPastSelectedPosts(filteredContent);
-    setPastEvents(filteredContent);
-  };
+      term1: filterTerm('term1', selectedCategory),
+      term2: filterTerm('term2', selectedCategory),
+      term3: filterTerm('term3', selectedCategory),
+    }
+    setPastSelectedPosts(filteredContent)
+    setPastEvents(filteredContent)
+  }
 
   // filter the past events of the given term by the selected category
   const filterTerm = (term, selectedCategory) => {
     const filteredTerm = pastContent[term].filter(
       (picture) =>
-        selectedCategory === "All" ||
+        selectedCategory === 'All' ||
         (picture.category !== null &&
-          picture.category.split(",").includes(selectedCategory))
-    );
+          picture.category.split(',').includes(selectedCategory))
+    )
 
-    return filteredTerm;
-  };
+    return filteredTerm
+  }
 
   // get upcoming events
   // input: upcoming events data from google sheets
   // output: array of dictionaries containing upcoming events data
   const fetchUpcomingEvents = async () => {
     const res = await axios.get(
-      "https://wit-database.herokuapp.com/upcoming-events"
-    );
-    const tempEvents = humps.camelizeKeys(res.data);
-    setUpcomingEvents(tempEvents);
-    setCurrentPosts(tempEvents.slice(0, postsPerPage));
-    setSelectedPosts(tempEvents);
-    setLoadingUpcoming(false);
-    setSourceLoading(false);
-  };
+      'https://wit-database.herokuapp.com/upcoming-events'
+    )
+    const tempEvents = humps.camelizeKeys(res.data)
+    setUpcomingEvents(tempEvents)
+    setCurrentPosts(tempEvents.slice(0, postsPerPage))
+    setSelectedPosts(tempEvents)
+    setLoadingUpcoming(false)
+    setSourceLoading(false)
+  }
 
   // load upcoming events
   useEffect(() => {
-    setLoadingUpcoming(true);
+    setLoadingUpcoming(true)
     fetchUpcomingEvents().catch((error) =>
-    // error handling
+      // error handling
       console.error(error)
-    );
-  }, []);
+    )
+  }, [])
 
   // get events for a specific term
   const getTermEvents = (events) => {
     return events.map((event, index) => {
-      let eventLabel = event.img.split(".")[0].split("-");
-      eventLabel.shift();
-      let eventId = `${event.eventNumber}`;
+      let eventLabel = event.img.split('.')[0].split('-')
+      eventLabel.shift()
+      let eventId = `${event.eventNumber}`
       return (
         <div className={styles.pastEvent} key={index}>
           <Link href={`/event-recaps/${year}/${eventId}`}>
@@ -191,7 +189,7 @@ const Events = () => {
               <Image
                 className={styles.eventImages}
                 src={`/event-covers/${year}/${event.img}`}
-                alt={eventLabel.join(" ")}
+                alt={eventLabel.join(' ')}
                 width="1200px"
                 height="628px"
               />
@@ -199,9 +197,9 @@ const Events = () => {
             </div>
           </Link>
         </div>
-      );
-    });
-  };
+      )
+    })
+  }
 
   return (
     <div>
@@ -231,33 +229,33 @@ const Events = () => {
             </div>
             {!loadingUpcoming &&
               (!upcomingEvents.length ? (
-              	<p className={styles.lookout}>
+                <p className={styles.lookout}>
                   Keep a lookout here for our upcoming events!
-              	</p>
+                </p>
               ) : (
-              	<div className={styles.upcomingEventsContainer}>
-              		{!isMobile &&
+                <div className={styles.upcomingEventsContainer}>
+                  {!isMobile &&
                     currentPosts.map((upcomingEvent, index) => {
-                    	return (
-                    		<div className={styles.upcomingEventsBox} key={index}>
-                    			<UpcomingEvent
-                    				upcomingEvent={upcomingEvent}
-                    				key={index}
-                    			/>
-                    		</div>
-                    	);
+                      return (
+                        <div className={styles.upcomingEventsBox} key={index}>
+                          <UpcomingEvent
+                            upcomingEvent={upcomingEvent}
+                            key={index}
+                          />
+                        </div>
+                      )
                     })}
 
-              		{isMobile &&
+                  {isMobile &&
                     upcomingEvents.map((upcomingEvent, index) => {
-                    	return (
-                    		<UpcomingEvent
-                    			upcomingEvent={upcomingEvent}
-                    			key={index}
-                    		/>
-                    	);
+                      return (
+                        <UpcomingEvent
+                          upcomingEvent={upcomingEvent}
+                          key={index}
+                        />
+                      )
                     })}
-              	</div>
+                </div>
               ))}
 
             {!isMobile && (
@@ -278,8 +276,8 @@ const Events = () => {
                   .map((category) => {
                     const chipColour =
                       selectedCategory === categories[category]
-                      	? "#e85f5c"
-                      	: "#7F7F7F";
+                        ? '#e85f5c'
+                        : '#7F7F7F'
                     return (
                       <Chip
                         key={category}
@@ -290,17 +288,17 @@ const Events = () => {
                           backgroundColor: chipColour,
                         }}
                         onClick={() => {
-                          setSelectedCategory(categories[category]);
-                          filterContent(categories[category]);
+                          setSelectedCategory(categories[category])
+                          filterContent(categories[category])
                         }}
                       />
-                    );
+                    )
                   })}
               </div>
 
               <Timeline
-                margin={"3%"}
-                page={"events"}
+                margin={'3%'}
+                page={'events'}
                 step={50}
                 valueToYear={valueToYear}
                 marks={marks}
@@ -330,33 +328,33 @@ const Events = () => {
             <div className={styles.pastEventsContainer}>
               {!loadingPast &&
                 Object.keys(pastSelectedPosts)
-                	.reverse()
-                	.map((key) => {
-                		const numEvents = React.Children.count(
-                			getTermEvents(pastSelectedPosts[key])
-                		);
-                		if (numEvents > 0) {
-                			return (
-                				<div key={key}>
-                					<h3 className={styles.termColour}>
-                            TERM {key.replace("term", "")}
-                					</h3>
-                					<div className={styles.gridContainer}>
-                						{getTermEvents(pastSelectedPosts[key])}
-                					</div>
-                				</div>
-                			);
-                		} else {
-                			return null;
-                		}
-                	})}
+                  .reverse()
+                  .map((key) => {
+                    const numEvents = React.Children.count(
+                      getTermEvents(pastSelectedPosts[key])
+                    )
+                    if (numEvents > 0) {
+                      return (
+                        <div key={key}>
+                          <h3 className={styles.termColour}>
+                            TERM {key.replace('term', '')}
+                          </h3>
+                          <div className={styles.gridContainer}>
+                            {getTermEvents(pastSelectedPosts[key])}
+                          </div>
+                        </div>
+                      )
+                    } else {
+                      return null
+                    }
+                  })}
             </div>
             <ScrollUpBtn />
           </div>
         </>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Events;
+export default Events

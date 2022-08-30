@@ -1,301 +1,301 @@
 /*---------------------------General--------------------------*/
 #pageContainer {
- margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 /*---------------------------Search filtering and loading--------------------------*/
 
 #timeline span {
- font-size: 11pt;
+  font-size: 11pt;
 }
 
 #teamLoading {
- color: var(--yellow);
- margin-top: 10%;
- margin-bottom: 5%;
+  color: var(--yellow);
+  margin-top: 10%;
+  margin-bottom: 5%;
 }
 
 #teamLoadingContainer {
- display: flex;
- justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #teamTimeLine {
- margin-top: 7%;
- width: 60%;
+  margin-top: 7%;
+  width: 60%;
 }
 
 /*---------------------------Executive team profiles--------------------------*/
 /*Executive team section*/
 .allExecsSection {
- align-content: center;
- justify-content: center;
+  align-content: center;
+  justify-content: center;
 }
 
 .execRow {
- display: flex;
- flex-direction: row;
- flex-wrap: wrap;
- margin-left: auto;
- margin-right: auto;
- width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 
 .execCol {
- display: flex;
- flex-basis: 100%;
- flex-direction: column;
- flex: 1;
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  flex: 1;
 }
 
 /*Subtitle*/
 h2.teamHeading {
- margin-top: 100px;
+  margin-top: 100px;
 }
 
 h2#topheading {
- margin-top: 50px;
+  margin-top: 50px;
 }
 
 /*Executive profile images*/
 .profileCrop {
- border-radius: 50%;
- height: 250px;
- width: 250px;
- margin-left: auto;
- margin-right: auto;
- max-width: 100%;
- object-fit: contain;
- overflow: hidden;
- position: relative;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+  position: relative;
 }
 
 .profileImg {
- background-size: cover;
- display: block;
- height: 100%;
- margin: 0 auto;
+  background-size: cover;
+  display: block;
+  height: 100%;
+  margin: 0 auto;
 }
 
 /*Executive profile block*/
 .profile {
- display: inline-block;
- margin-left: auto;
- margin-right: auto;
- padding: 20px;
- position: relative;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  position: relative;
 }
 
 /*Executive profile details*/
 .profileDetails {
- align-content: center;
- justify-content: space-evenly;
- line-height: 13pt;
- margin: 25px 0px 70px 0px;
- text-align: center;
+  align-content: center;
+  justify-content: space-evenly;
+  line-height: 13pt;
+  margin: 25px 0px 70px 0px;
+  text-align: center;
 }
 
 /*Executive social media links*/
 .iconBar {
- align-content: center;
+  align-content: center;
 }
 .icon {
- border: 0;
- height: 25px;
- width: 25px;
- margin: 0 auto;
- margin-left: 10px;
- margin-right: 10px;
- align-self: center;
+  border: 0;
+  height: 25px;
+  width: 25px;
+  margin: 0 auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  align-self: center;
 }
 
 /*Executive names*/
 .profileTextName {
- align-content: center;
- color: var(--yellow);
- font-family: "Playfair Display", serif;
- font-size: 2vw;
- font-weight: 500;
- letter-spacing: 0.1vw;
- position: relative;
- text-align: center;
+  align-content: center;
+  color: var(--yellow);
+  font-family: 'Playfair Display', serif;
+  font-size: 2vw;
+  font-weight: 500;
+  letter-spacing: 0.1vw;
+  position: relative;
+  text-align: center;
 }
 
 /*Executive positions*/
 .profileTextPosition {
- align-content: center;
- font-family: "Montserrat", sans-serif;
- font-size: 1.3vw;
- font-weight: 500;
- padding-top: 10pt;
- position: relative;
- text-align: center;
+  align-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3vw;
+  font-weight: 500;
+  padding-top: 10pt;
+  position: relative;
+  text-align: center;
 }
 
 /*Executive degrees*/
 .profileDegree {
- font-family: "Montserrat", sans-serif;
- font-size: 1.3vw;
- position: relative;
- white-space: initial;
- word-wrap: break-word;
- text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3vw;
+  position: relative;
+  white-space: initial;
+  word-wrap: break-word;
+  text-align: center;
 }
 
 /*---------------------------Subcommittee team profiles--------------------------*/
 .subcomSection {
- align-content: center;
- justify-content: center;
- display: grid;
+  align-content: center;
+  justify-content: center;
+  display: grid;
 }
 
 /*Subcommittee team section*/
 .subcomType {
- font-family: "Montserrat", sans-serif;
- color: var(--grey);
- text-align: center;
- margin-top: 6vw;
- margin-bottom: 2vw;
- font-size: 30px;
- font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--grey);
+  text-align: center;
+  margin-top: 6vw;
+  margin-bottom: 2vw;
+  font-size: 30px;
+  font-weight: 500;
 }
 
 /*Subcommittee names*/
 .subcomProfileName {
- font-family: "Montserrat", sans-serif;
- color: var(--general-text);
- font-size: 12pt;
- position: relative;
- font-weight: 500;
- margin: 0;
- padding: 0;
- text-align: left;
- flex-shrink: 2;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--general-text);
+  font-size: 12pt;
+  position: relative;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  flex-shrink: 2;
 }
 
 /*Subcommittee degrees*/
 .subcomProfileDegree {
- font-family: "Montserrat", sans-serif;
- font-size: 12pt;
- position: relative;
- word-wrap: break-word;
- text-align: left;
- margin: 0;
- padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12pt;
+  position: relative;
+  word-wrap: break-word;
+  text-align: left;
+  margin: 0;
+  padding: 0;
 }
 
 .subcomRow {
- display: flex;
- flex-direction: row;
- margin: 0 auto;
- width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .subcomCol {
- align-items: flex-start;
- margin-right: 5%;
- flex: 1;
+  align-items: flex-start;
+  margin-right: 5%;
+  flex: 1;
 }
 
 .subcomLongerCol {
- align-items: flex-start;
- flex: 2;
+  align-items: flex-start;
+  flex: 2;
 }
 
 .profile {
- margin: 15px;
- padding: 0;
+  margin: 15px;
+  padding: 0;
 }
 
 /*--------------------------Dark mode-----------------------------*/
 @media (prefers-color-scheme: dark) {
- .profileTextPosition {
-  color: white;
- }
+  .profileTextPosition {
+    color: white;
+  }
 
- .profileDegree {
-  color: white;
- }
+  .profileDegree {
+    color: white;
+  }
 
- .subcomProfileName {
-  color: white;
- }
+  .subcomProfileName {
+    color: white;
+  }
 
- .subcomProfileDegree {
-  color: white;
- }
+  .subcomProfileDegree {
+    color: white;
+  }
 
- .subcomType {
-  color: white;
- }
+  .subcomType {
+    color: white;
+  }
 }
 
 /*---------------------------Mobile resizing--------------------------*/
 @media screen and (max-width: 800px) {
- .teamHeading {
-  font-size: 24px;
- }
+  .teamHeading {
+    font-size: 24px;
+  }
 
- .subcomType,
- .profileTextName {
-  font-size: 20px;
- }
+  .subcomType,
+  .profileTextName {
+    font-size: 20px;
+  }
 
- .profileTextPosition {
-  font-size: 18px;
- }
+  .profileTextPosition {
+    font-size: 18px;
+  }
 
- .profileDegree {
-  font-size: 16px;
-  line-height: 25px;
- }
+  .profileDegree {
+    font-size: 16px;
+    line-height: 25px;
+  }
 
- .execRow {
-  flex-direction: column;
- }
+  .execRow {
+    flex-direction: column;
+  }
 
- .teamHeading,
- .subcomSection,
- .subcomType {
-  width: 90%;
-  margin: 0 auto;
- }
+  .teamHeading,
+  .subcomSection,
+  .subcomType {
+    width: 90%;
+    margin: 0 auto;
+  }
 
- .subcomRow {
-  display: inline-grid;
-  width: 100%;
-  grid-template-columns: 160px auto;
-  grid-gap: 15px;
-  align-content: start;
- }
+  .subcomRow {
+    display: inline-grid;
+    width: 100%;
+    grid-template-columns: 160px auto;
+    grid-gap: 15px;
+    align-content: start;
+  }
 
- .subcomProfileDegree {
-  font-size: 11pt;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  hyphens: auto;
- }
+  .subcomProfileDegree {
+    font-size: 11pt;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+  }
 
- .subcomProfileName {
-  width: 140%;
-  font-size: 11pt;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  hyphens: auto;
- }
+  .subcomProfileName {
+    width: 140%;
+    font-size: 11pt;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+  }
 
- .profileCrop {
-  width: 200px;
-  height: 200px;
- }
+  .profileCrop {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 @media screen and (max-width: 600px) {
- .subcomRow {
-  display: inline-grid;
-  width: 100%;
-  grid-template-columns: 90px auto;
-  grid-gap: 15px;
-  align-content: start;
- }
+  .subcomRow {
+    display: inline-grid;
+    width: 100%;
+    grid-template-columns: 90px auto;
+    grid-gap: 15px;
+    align-content: start;
+  }
 }

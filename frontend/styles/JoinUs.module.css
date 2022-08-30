@@ -34,7 +34,7 @@
 
 /*Top Heading*/
 .header {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 30pt;
   margin-top: 50px;
   text-transform: uppercase;
@@ -43,7 +43,7 @@
 
 /*Heading of sections*/
 .section {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 33pt;
   padding-top: 100px;
   text-transform: uppercase;
@@ -83,7 +83,7 @@
 
 /* Headings in how to join */
 .descriptionHowto {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14pt;
   text-align: justify;
   color: var(--general-text);
@@ -135,12 +135,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   cursor: pointer;
 }
 
 .portfolioBox:before {
-  content: "";
+  content: '';
   padding-top: 100%;
 }
 
@@ -165,7 +165,7 @@
 }
 
 #it {
-  background-color: #B4C9E8;
+  background-color: #b4c9e8;
 }
 
 #marketing {
@@ -177,7 +177,7 @@
 }
 
 #publications {
-  background-color: #FFC2E4;
+  background-color: #ffc2e4;
 }
 
 .desc {
@@ -195,12 +195,12 @@
 
 .accordionHeading {
   font-size: 14pt;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: var(--general-text);
 }
 
 .accordionDetails {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 13pt;
   color: var(--black);
 }
@@ -353,7 +353,7 @@
     max-height: 190px;
     max-width: 400px;
   }
-  
+
   .quoteContainer {
     height: 57%;
   }
@@ -410,13 +410,13 @@
 }
 
 /* Dark mode */
-@media (prefers-color-scheme:dark) {
+@media (prefers-color-scheme: dark) {
   .gmapColour {
     filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
   }
 
   .descriptionHowto {
-    color: white; 
+    color: white;
   }
 
   .descriptionHowto p {
@@ -424,10 +424,10 @@
   }
 
   .accordionHeading {
-    color: white; 
+    color: white;
   }
 
   .accordionDetails {
-    color: white; 
+    color: white;
   }
 }

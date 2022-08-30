@@ -4,59 +4,59 @@ import {
   Slide,
   ButtonBack,
   ButtonNext,
-} from "pure-react-carousel";
-import React, { useEffect, useState } from "react";
-import "pure-react-carousel/dist/react-carousel.es.css";
-import styles from "../styles/Home.module.css";
-import Link from "next/link";
-import Image from "next/image";
-import axios from "axios";
-import humps from "humps";
+} from 'pure-react-carousel'
+import React, { useEffect, useState } from 'react'
+import 'pure-react-carousel/dist/react-carousel.es.css'
+import styles from '../styles/Home.module.css'
+import Link from 'next/link'
+import Image from 'next/image'
+import axios from 'axios'
+import humps from 'humps'
 
 const InitiativesSlideshow = () => {
-  const [firstUpcomingEvent, setFirstUpcomingEvent] = useState([]);
-  const [latestEvent, setLatestEvent] = useState([]);
-  const [latestBlog, setLatestBlog] = useState([]);
-  const [latestPodcast, setLatestPodcast] = useState([]);
-  const firstEvent = firstUpcomingEvent.slice(0, 1);
-  const lastEvent = latestEvent.slice(0, 1);
-  const lastBlog = latestBlog.slice(0, 1);
-  const lastPodcast = latestPodcast.slice(0, 1);
+  const [firstUpcomingEvent, setFirstUpcomingEvent] = useState([])
+  const [latestEvent, setLatestEvent] = useState([])
+  const [latestBlog, setLatestBlog] = useState([])
+  const [latestPodcast, setLatestPodcast] = useState([])
+  const firstEvent = firstUpcomingEvent.slice(0, 1)
+  const lastEvent = latestEvent.slice(0, 1)
+  const lastBlog = latestBlog.slice(0, 1)
+  const lastPodcast = latestPodcast.slice(0, 1)
 
   useEffect(() => {
     const urls = [
-      "https://wit-database.herokuapp.com/upcoming-events",
-      "https://wit-database.herokuapp.com/past-events",
-      "https://wit-database.herokuapp.com/blog/previews",
-      "https://wit-database.herokuapp.com/podcast-episodes",
-    ];
-    urls.forEach((url) => loadGoogleSheets(url));
-  }, []);
+      'https://wit-database.herokuapp.com/upcoming-events',
+      'https://wit-database.herokuapp.com/past-events',
+      'https://wit-database.herokuapp.com/blog/previews',
+      'https://wit-database.herokuapp.com/podcast-episodes',
+    ]
+    urls.forEach((url) => loadGoogleSheets(url))
+  }, [])
 
   // load data from google sheets
   const loadGoogleSheets = (url) => {
     const fetchSlideshowData = async (url) => {
-      const res = await axios.get(url);
+      const res = await axios.get(url)
       switch (url) {
-      case "https://wit-database.herokuapp.com/upcoming-events":
-        setFirstUpcomingEvent(humps.camelizeKeys(res.data));
-        break;
-      case "https://wit-database.herokuapp.com/past-events":
-        setLatestEvent(humps.camelizeKeys(res.data).reverse());
-        break;
-      case "https://wit-database.herokuapp.com/blog/previews":
-        setLatestBlog(humps.camelizeKeys(res.data).reverse());
-        break;
-      case "https://wit-database.herokuapp.com/podcast-episodes":
-        setLatestPodcast(humps.camelizeKeys(res.data).reverse());
-        break;
-      default:
-        break;
+        case 'https://wit-database.herokuapp.com/upcoming-events':
+          setFirstUpcomingEvent(humps.camelizeKeys(res.data))
+          break
+        case 'https://wit-database.herokuapp.com/past-events':
+          setLatestEvent(humps.camelizeKeys(res.data).reverse())
+          break
+        case 'https://wit-database.herokuapp.com/blog/previews':
+          setLatestBlog(humps.camelizeKeys(res.data).reverse())
+          break
+        case 'https://wit-database.herokuapp.com/podcast-episodes':
+          setLatestPodcast(humps.camelizeKeys(res.data).reverse())
+          break
+        default:
+          break
       }
-    };
+    }
 
-    fetchSlideshowData(url);
-  };
+    fetchSlideshowData(url)
+  }
 
   return (
     <CarouselProvider
@@ -79,11 +79,12 @@ const InitiativesSlideshow = () => {
               <div className={styles.left}>
                 <p id="about">
                   At WIT, our focus is on providing events that foster
-                  development catering to first to final years. Whether it&apos;s
-                  personal, academic, professional or social, we want our
-                  students to be the best version of themselves. As part of our
-                  aim, we also connect current and future students with alumni
-                  and industry sponsors to serve as role models to inspire.
+                  development catering to first to final years. Whether
+                  it&apos;s personal, academic, professional or social, we want
+                  our students to be the best version of themselves. As part of
+                  our aim, we also connect current and future students with
+                  alumni and industry sponsors to serve as role models to
+                  inspire.
                 </p>
                 <p>
                   <button>
@@ -248,7 +249,7 @@ const InitiativesSlideshow = () => {
       <ButtonBack className={styles.buttonBack}></ButtonBack>
       <ButtonNext className={styles.buttonNext}></ButtonNext>
     </CarouselProvider>
-  );
-};
+  )
+}
 
-export default InitiativesSlideshow;
+export default InitiativesSlideshow

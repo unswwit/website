@@ -113,7 +113,7 @@ h2#topheading {
 .profileTextName {
   align-content: center;
   color: var(--yellow);
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-size: 2vw;
   font-weight: 500;
   letter-spacing: 0.1vw;
@@ -124,7 +124,7 @@ h2#topheading {
 /*Executive positions*/
 .profileTextPosition {
   align-content: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.3vw;
   font-weight: 500;
   padding-top: 10pt;
@@ -134,7 +134,7 @@ h2#topheading {
 
 /*Executive degrees*/
 .profileDegree {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.3vw;
   position: relative;
   white-space: initial;
@@ -151,7 +151,7 @@ h2#topheading {
 
 /*Subcommittee team section*/
 .subcomType {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: var(--grey);
   text-align: center;
   margin-top: 6vw;
@@ -162,7 +162,7 @@ h2#topheading {
 
 /*Subcommittee names*/
 .subcomProfileName {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: var(--general-text);
   font-size: 12pt;
   position: relative;
@@ -175,7 +175,7 @@ h2#topheading {
 
 /*Subcommittee degrees*/
 .subcomProfileDegree {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12pt;
   position: relative;
   word-wrap: break-word;
@@ -207,7 +207,7 @@ h2#topheading {
   padding: 0;
 }
 
-/*--------------------------Dark mode-----------------------------*/ 
+/*--------------------------Dark mode-----------------------------*/
 @media (prefers-color-scheme: dark) {
   .profileTextPosition {
     color: white;
@@ -218,11 +218,11 @@ h2#topheading {
   }
 
   .subcomProfileName {
-    color:white;
+    color: white;
   }
 
   .subcomProfileDegree {
-    color:white;
+    color: white;
   }
 
   .subcomType {
@@ -247,7 +247,7 @@ h2#topheading {
 
   .profileDegree {
     font-size: 16px;
-    line-height: 25px; 
+    line-height: 25px;
   }
 
   .execRow {

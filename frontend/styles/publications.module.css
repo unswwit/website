@@ -1,7 +1,7 @@
 /*-------------------------------Publications structure------------------------------*/
 /* Subheading */
 .publicationsBody h1 {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /*Body block*/
@@ -88,7 +88,7 @@
 .article p {
   font-size: 15px;
   color: white;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   display: block;
   text-align: center;
   float: center;
@@ -117,7 +117,8 @@
   letter-spacing: 0.1vw;
 }
 
-.button a, .button:hover a {
+.button a,
+.button:hover a {
   text-decoration: none;
   color: white;
 }

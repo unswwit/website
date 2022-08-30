@@ -1,37 +1,37 @@
-import React, { useEffect } from "react";
-import Modal from "@material-ui/core/Modal";
-import Backdrop from "@material-ui/core/Backdrop";
-import Fade from "@material-ui/core/Fade";
-import { Button } from "semantic-ui-react";
-import styles from "../../styles/sponsors.module.css";
-import PageHeader from "../../components/Header";
-import SponsorsModal from "../../components/SponsorModal";
-import LoadingScreen from "../../components/LoadingScreen";
-import { sponsors, affiliations, partnerships } from "../../data/SponsorData";
-import Link from "next/link";
+import React, { useEffect } from 'react'
+import Modal from '@material-ui/core/Modal'
+import Backdrop from '@material-ui/core/Backdrop'
+import Fade from '@material-ui/core/Fade'
+import { Button } from 'semantic-ui-react'
+import styles from '../../styles/sponsors.module.css'
+import PageHeader from '../../components/Header'
+import SponsorsModal from '../../components/SponsorModal'
+import LoadingScreen from '../../components/LoadingScreen'
+import { sponsors, affiliations, partnerships } from '../../data/SponsorData'
+import Link from 'next/link'
 
 export default function Sponsors() {
-  const [open, setOpen] = React.useState(false);
-  const [currSponsor, setCurrSponsor] = React.useState("");
-  const [sourceLoading, setSourceLoading] = React.useState(true);
-  const [headerLoading, setHeaderLoading] = React.useState(true);
+  const [open, setOpen] = React.useState(false)
+  const [currSponsor, setCurrSponsor] = React.useState('')
+  const [sourceLoading, setSourceLoading] = React.useState(true)
+  const [headerLoading, setHeaderLoading] = React.useState(true)
 
   // control when to stop loading
   useEffect(() => {
     setTimeout((loading) => {
       if (!loading) {
-        setSourceLoading(false);
+        setSourceLoading(false)
       }
-    }, 1000);
-  }, []);
+    }, 1000)
+  }, [])
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    window.scrollTo(0, 0)
+  }, [])
 
   const callbackModal = () => {
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   return (
     <div>
@@ -54,7 +54,7 @@ export default function Sponsors() {
             </p>
 
             <p className={styles.subheader}>
-              Interested in partnering with us? Contact us at{" "}
+              Interested in partnering with us? Contact us at{' '}
               <Link href="mailto:externals@unswwit.com">
                 <a className={styles.subheader}>externals@unswwit.com</a>
               </Link>
@@ -65,21 +65,21 @@ export default function Sponsors() {
             <div id={styles.majorContainer}>
               {Object.keys(sponsors)
                 .sort()
-                .filter((key) => sponsors[key][3] === "DIAMOND")
+                .filter((key) => sponsors[key][3] === 'DIAMOND')
                 .map((key) => (
                   // TODO: change img tags to next/image tags
                   <img
                     className={styles.logo}
                     src={
                       window.matchMedia &&
-                      window.matchMedia("(prefers-color-scheme: dark)").matches
+                      window.matchMedia('(prefers-color-scheme: dark)').matches
                         ? `/sponsors/2022/dark-mode/${sponsors[key][2]}`
                         : `/sponsors/2022/${sponsors[key][2]}`
                     }
                     alt={key}
                     onClick={() => {
-                      setOpen(true);
-                      setCurrSponsor(key);
+                      setOpen(true)
+                      setCurrSponsor(key)
                     }}
                     key={key}
                   />
@@ -93,20 +93,20 @@ export default function Sponsors() {
             <div id={styles.majorContainer}>
               {Object.keys(sponsors)
                 .sort()
-                .filter((key) => sponsors[key][3] === "GOLD")
+                .filter((key) => sponsors[key][3] === 'GOLD')
                 .map((key) => (
                   <img
                     className={styles.logo}
                     src={
                       window.matchMedia &&
-                      window.matchMedia("(prefers-color-scheme: dark)").matches
+                      window.matchMedia('(prefers-color-scheme: dark)').matches
                         ? `/sponsors/2022/dark-mode/${sponsors[key][2]}`
                         : `/sponsors/2022/${sponsors[key][2]}`
                     }
                     alt={key}
                     onClick={() => {
-                      setOpen(true);
-                      setCurrSponsor(key);
+                      setOpen(true)
+                      setCurrSponsor(key)
                     }}
                     key={key}
                   />
@@ -120,20 +120,20 @@ export default function Sponsors() {
             <div id={styles.majorContainer}>
               {Object.keys(sponsors)
                 .sort()
-                .filter((key) => sponsors[key][3] === "SILVER")
+                .filter((key) => sponsors[key][3] === 'SILVER')
                 .map((key) => (
                   <img
                     className={styles.logo}
                     src={
                       window.matchMedia &&
-                      window.matchMedia("(prefers-color-scheme: dark)").matches
+                      window.matchMedia('(prefers-color-scheme: dark)').matches
                         ? `/sponsors/2022/dark-mode/${sponsors[key][2]}`
                         : `/sponsors/2022/${sponsors[key][2]}`
                     }
                     alt={key}
                     onClick={() => {
-                      setOpen(true);
-                      setCurrSponsor(key);
+                      setOpen(true)
+                      setCurrSponsor(key)
                     }}
                     key={key}
                   />
@@ -147,20 +147,20 @@ export default function Sponsors() {
             <div id={styles.majorContainer}>
               {Object.keys(sponsors)
                 .sort()
-                .filter((key) => sponsors[key][3] === "BRONZE")
+                .filter((key) => sponsors[key][3] === 'BRONZE')
                 .map((key) => (
                   <img
                     className={styles.logo}
                     src={
                       window.matchMedia &&
-                      window.matchMedia("(prefers-color-scheme: dark)").matches
+                      window.matchMedia('(prefers-color-scheme: dark)').matches
                         ? `/sponsors/2022/dark-mode/${sponsors[key][2]}`
                         : `/sponsors/2022/${sponsors[key][2]}`
                     }
                     alt={key}
                     onClick={() => {
-                      setOpen(true);
-                      setCurrSponsor(key);
+                      setOpen(true)
+                      setCurrSponsor(key)
                     }}
                     key={key}
                   />
@@ -185,8 +185,8 @@ export default function Sponsors() {
                       className={styles.logo}
                       src={
                         window.matchMedia &&
-                        window.matchMedia("(prefers-color-scheme: dark)")
-                        	.matches
+                        window.matchMedia('(prefers-color-scheme: dark)')
+                          .matches
                           ? `/affiliations/dark-mode/${affiliations[key][1]}`
                           : `/affiliations/${affiliations[key][1]}`
                       }
@@ -213,8 +213,8 @@ export default function Sponsors() {
                       className={styles.logo}
                       src={
                         window.matchMedia &&
-                        window.matchMedia("(prefers-color-scheme: dark)")
-                        	.matches
+                        window.matchMedia('(prefers-color-scheme: dark)')
+                          .matches
                           ? `/partnerships/dark-mode/${partnerships[key][1]}`
                           : `/partnerships/${partnerships[key][1]}`
                       }
@@ -256,5 +256,5 @@ export default function Sponsors() {
         </div>
       )}
     </div>
-  );
+  )
 }
