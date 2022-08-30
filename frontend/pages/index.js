@@ -14,7 +14,7 @@ import NewsletterSection from "../components/NewsletterSection";
 import axios from "axios";
 import humps from "humps";
 import QuoteSlideshow from "../components/QuotesSlideshow";
-import executives from "../data/ExecQuotes";
+import execQuotes from "../data/HomeData";
 
 const Home = () => {
   const [articles, setArticles] = useState([]);
@@ -109,7 +109,7 @@ const Home = () => {
             <div className={[styles.carousel, styles.quoteCarousel].join(" ")}>
               <QuoteSlideshow
                 height={450}
-                data={executives}
+                data={execQuotes}
                 homeLeftArrow={styles.homeLeftArrow}
                 homeRightArrow={styles.homeRightArrow}
               />
