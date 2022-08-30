@@ -6,7 +6,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import LoadingScreen from "../components/LoadingScreen";
 import axios from "axios";
 import humps from "humps";
-import { loadOpportunities } from "../lib/OppApi";
+import { loadOpportunities } from "../lib/OpportunitiesApi";
 
 const Opportunities = ({ opportunities }) => {
   const [loading, setLoading] = useState(true);
