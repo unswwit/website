@@ -54,7 +54,7 @@ const memberQuotes = {
     "Natalie Leroy",
     "2022 Media Director | 2021 Education Subcommittee Member",
     "2022-exec/Nat.jpg",
-    "\"No matter what anybody tells you, words and ideas can change the world\"",
+    "No matter what anybody tells you, words and ideas can change the world",
   ],
   9: [
     "Chelsea Chaffey",
@@ -103,7 +103,7 @@ const careerDescription = () => {
       <>
         <li>
           Organises and plans innovative events that aligns with WIT and our
-          sponsors’ interests
+          sponsors&apos; interests
         </li>
         <li>
           Involves creating event run sheets, booking venues and organising
@@ -120,7 +120,7 @@ const competitionDescription = () => {
       <>
         <li>
           Create competition materials and plan events that align with WIT and
-          our sponsors’ interests
+          our sponsors&apos; interests
         </li>
         <li>
           Involves creating event run sheets, booking venues and organising
@@ -166,7 +166,7 @@ const itDescription = () => {
     <ul>
       <>
         <li>
-          Responsible for designing, updating and improving on WIT’s official
+          Responsible for designing, updating and improving on WIT&apos;s official
           website
         </li>
         <li>
@@ -183,7 +183,7 @@ const marketingDescription = () => {
     <ul>
       <>
         <li>
-          Responsible for managing WIT’s social media platforms and outreach to
+          Responsible for managing WIT&apos;s social media platforms and outreach to
           the wider community
         </li>
         <li>
@@ -200,7 +200,7 @@ const mediaDescription = () => {
     <ul>
       <>
         <li>
-          Generates WIT’s podcast and video content such as the Talk WIT Us
+          Generates WIT&apos;s podcast and video content such as the Talk WIT Us
           Podcast
         </li>
         <li>
@@ -217,8 +217,8 @@ const publicationsDescription = () => {
     <ul>
       <>
         <li>
-          Develop WIT’s written content including blog posts and major
-          publications such as WIT’s Careers Guide
+          Develop WIT&apos;s written content including blog posts and major
+          publications such as WIT&apos;s Careers Guide
         </li>
         <li>
           About bringing new ideas, upskilling, and empowering members in a
