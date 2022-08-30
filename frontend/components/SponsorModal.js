@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/sponsors.module.css";
+import styles from "../styles/Sponsors.module.css";
 import CloseIcon from "@material-ui/icons/Close";
 import IconButton from "@material-ui/core/IconButton";
 // import Image from "next/image";
