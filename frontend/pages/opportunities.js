@@ -81,7 +81,6 @@ const Opportunities = ({ opportunities }) => {
                   .
                 </p>
                 <div className={styles.oppGridContainer}>
-                  console.log(opportunities)
                   {opportunities.map((individualOpportunity, index) => {
                     return (
                       <OpportunitiesCard
