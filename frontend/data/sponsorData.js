@@ -1,7 +1,5 @@
-import React from "react";
 import styles from "../styles/sponsors.module.css";
 
-//getting the Nakatomi Description
 const nakatomiDescription = () => {
  return (
   <>
@@ -25,32 +23,33 @@ const nakatomiDescription = () => {
  );
 };
 
-// Getting the mcGrathNicol description
 const mcGrathNicolDescription = () => {
  return (
   <>
-   McGrathNicol is a specialist Advisory and Restructuring firm. Their experts
-   work with corporates, banks, law firms, private companies and government
-   across all industry sectors and business sizes to deliver valuable advice and
-   high-quality outcomes. McGrathNicol’s Technology team specialise in complex
-   forensic investigations, time critical cybersecurity incident response
-   activities and helping our clients to design strategies and implement
-   frameworks to mitigate digital and information risk. To gain insight into the
-   type of work they do, check out their Technology virtual experience at{" "}
-   <a
-    className={styles.link}
-    href="https://www.theforage.com/show-firm-programs/oiHtSBFcPM2KnaEGJ/McGrathNicol"
-    target="_blank"
-    rel="noopener noreferrer"
-   >
-    Forage
-   </a>
-   .
+   <p>
+    McGrathNicol is a specialist Advisory and Restructuring firm. Their experts
+    work with corporates, banks, law firms, private companies and government
+    across all industry sectors and business sizes to deliver valuable advice
+    and high-quality outcomes. McGrathNicol’s Technology team specialise in
+    complex forensic investigations, time critical cybersecurity incident
+    response activities and helping our clients to design strategies and
+    implement frameworks to mitigate digital and information risk. To gain
+    insight into the type of work they do, check out their Technology virtual
+    experience at{" "}
+    <a
+     className={styles.link}
+     href="https://www.theforage.com/show-firm-programs/oiHtSBFcPM2KnaEGJ/McGrathNicol"
+     target="_blank"
+     rel="noopener noreferrer"
+    >
+     Forage
+    </a>
+    .
+   </p>
   </>
  );
 };
 
-// Getting EY description
 const eyDescription = () => {
  return (
   <>
@@ -76,7 +75,6 @@ const eyDescription = () => {
  );
 };
 
-// Getting FDM description
 const fdmDescription = () => {
  return (
   <>
@@ -118,13 +116,12 @@ const fdmDescription = () => {
    <p>
     Over its 30-year history FDM Group has won many awards. In 2022 FDM has
     risen 5 places to #16 on the GradConnection Top 100 Graduate Employers and
-    is again one of GradAustralia's Top 100 Graduate Employers.
+    is again one of GradAustralia&apos;s Top 100 Graduate Employers.
    </p>
   </>
  );
 };
 
-// Getting PWC description
 const pwcDescription = () => {
  return (
   <>
@@ -151,7 +148,6 @@ const pwcDescription = () => {
  );
 };
 
-// Getting Mantel Group description
 const mantelGroupDescription = () => {
  return (
   <>
@@ -179,7 +175,6 @@ const mantelGroupDescription = () => {
  );
 };
 
-// Getting Amstelveen description
 const amstelveenDescription = () => {
  return (
   <>
@@ -200,7 +195,6 @@ const amstelveenDescription = () => {
  );
 };
 
-// Getting Quantium description
 const quantiumDescription = () => {
  return (
   <>
@@ -210,13 +204,12 @@ const quantiumDescription = () => {
     engineering, helping our clients solve their most important problems using
     data. We have a track record of innovation and combining the best of human
     and artificial intelligence to power possibilities for individuals,
-    organisations and society and we're proud of it!
+    organisations and society and we&apos;re proud of it!
    </p>
   </>
  );
 };
 
-// Getting Google description
 const googleDescription = () => {
  return (
   <>
@@ -232,18 +225,17 @@ const googleDescription = () => {
  );
 };
 
-// Getting IMC description
 const imcDescription = () => {
  return (
   <>
    <p>
     IMC is a leading global trading firm with technology - and individuality -
-    at its heart. With offices in Amsterdam, Chicago and Sydney, you'll
+    at its heart. With offices in Amsterdam, Chicago and Sydney, you&apos;ll
     experience our truly global culture. A culture of openness, idea sharing and
-    collaboration. Whether it's trading, data, software or hardware, we're
+    collaboration. Whether it&apos;s trading, data, software or hardware, we&apos;re
     constantly pushing ourselves and our systems further; challenging, adapting
     and redesigning to create world-class solutions that can outsmart the
-    competition. It's in these collaborations, with incredibly fast feedback
+    competition. It&apos;s in these collaborations, with incredibly fast feedback
     that the magic happens. Operating at this extremely high level gives you the
     skills that will form the foundations of your career.
    </p>
@@ -251,7 +243,6 @@ const imcDescription = () => {
  );
 };
 
-// Getting Jane Street description
 const janeStreetDescription = () => {
  return (
   <>
@@ -268,7 +259,6 @@ const janeStreetDescription = () => {
  );
 };
 
-// Getting Blackbird description
 const blackbirdDescription = () => {
  return (
   <>
@@ -284,7 +274,6 @@ const blackbirdDescription = () => {
  );
 };
 
-// Getting Palantir description
 const palantirDescription = () => {
  return (
   <>
@@ -302,7 +291,6 @@ const palantirDescription = () => {
  );
 };
 
-// Getting Appian description
 const appianDescription = () => {
  return (
   <>
@@ -319,7 +307,6 @@ const appianDescription = () => {
  );
 };
 
-// Getting Akuna description
 const akunaDescription = () => {
  return (
   <>
@@ -357,7 +344,6 @@ const akunaDescription = () => {
  );
 };
 
-// Getting place holder description
 const placeHolderDescription = () => {
  return (
   <>

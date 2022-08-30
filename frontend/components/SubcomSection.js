@@ -1,5 +1,5 @@
 import { Component } from "react";
-import styles from "../styles/team.module.css";
+import styles from "../styles/Team.module.css";
 
 class SubCom extends Component {
   render() {

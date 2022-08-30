@@ -5,7 +5,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
-import styles from "../styles/joinUs.module.css";
+import styles from "../styles/JoinUs.module.css";
 
 const useStyles = makeStyles({
   colorPrimary: {

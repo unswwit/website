@@ -1,4 +1,4 @@
-import styles from "../styles/team.module.css";
+import styles from "../styles/Team.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -64,4 +64,5 @@ const Execs = (props) => {
     </div>
   );
 };
+
 export default Execs;

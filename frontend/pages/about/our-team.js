@@ -1,15 +1,15 @@
 import { useEffect, useRef, useState, useCallback } from "react";
-import styles from "../../styles/team.module.css";
+import styles from "../../styles/Team.module.css";
 import PageHeader from "../../components/Header";
-import Execs from "../../components/execs";
-import SubCom from "../../components/subcom";
+import Execs from "../../components/ExecSection";
+import SubCom from "../../components/SubcomSection";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Timeline from "../../components/Timeline";
 import ScrollUpBtn from "../../components/ScrollUpBtn";
 import LoadingScreen from "../../components/LoadingScreen";
 import axios from "axios";
 import humps from "humps";
-import { execToClassName, marks, valueToYear } from "../../data/teamData";
+import { execToClassName, marks, valueToYear } from "../../data/TeamData";
 
 export default function OurTeam() {
   const masterExec = useRef();

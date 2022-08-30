@@ -8,7 +8,7 @@ import {
   mediaDescription,
   publicationsDescription,
 } from "../data/JoinData";
-import styles from "../styles/joinUs.module.css";
+import styles from "../styles/JoinUs.module.css";
 import React, { useState } from "react";
 
 const PortfolioGrid = () => {

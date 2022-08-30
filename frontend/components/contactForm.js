@@ -1,9 +1,9 @@
 import React from "react";
 import emailjs from "@emailjs/browser";
-import styles from "../styles/contactUs.module.css";
+import styles from "../styles/ContactUs.module.css";
 import ReCAPTCHA from "react-google-recaptcha";
 
-function ContactForm() {
+export default function ContactForm() {
   const [email, setEmail] = React.useState("");
 
   const sendEmail = (e) => {
@@ -82,5 +82,3 @@ function ContactForm() {
     </form>
   );
 }
-
-export default ContactForm;

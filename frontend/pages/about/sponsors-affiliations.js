@@ -7,8 +7,7 @@ import styles from "../../styles/sponsors.module.css";
 import PageHeader from "../../components/Header";
 import SponsorsModal from "../../components/SponsorModal";
 import LoadingScreen from "../../components/LoadingScreen";
-import { sponsors, affiliations, partnerships } from "../../data/sponsorData";
-// import Image from "next/image";
+import { sponsors, affiliations, partnerships } from "../../data/SponsorData";
 import Link from "next/link";
 
 export default function Sponsors() {

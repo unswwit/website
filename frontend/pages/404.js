@@ -18,7 +18,7 @@ const NotFound = () => {
         height="375px"
       />
       <h2>Page Not Found</h2>
-      <p>Oops! We can`&apos;`t seem to find the page you are looking for.</p>
+      <p>Oops! We can&apos;t seem to find the page you are looking for.</p>
       <div id={styles.homeBtn}>
         <Link href="/">
           <div className={styles.text}>Go back home</div>
