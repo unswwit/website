@@ -1,35 +1,35 @@
-import { useState, useEffect } from 'react'
-import PageHeader from '../../components/Header'
-import Chip from '@material-ui/core/Chip'
-import styles from '../../styles/Podcast.module.css'
-import EpisodeTemplate from '../../components/PodcastCard'
-import CircularProgress from '@material-ui/core/CircularProgress'
-import ScrollUpBtn from '../../components/ScrollUpBtn'
-import LoadingScreen from '../../components/LoadingScreen'
-import axios from 'axios'
-import humps from 'humps'
-import { useStyles, links, categories } from '../../data/PodcastData'
-import Image from 'next/image'
-import Link from 'next/link'
+import { useState, useEffect } from "react";
+import PageHeader from "../../components/Header";
+import Chip from "@material-ui/core/Chip";
+import styles from "../../styles/Podcast.module.css";
+import EpisodeTemplate from "../../components/PodcastCard";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import ScrollUpBtn from "../../components/ScrollUpBtn";
+import LoadingScreen from "../../components/LoadingScreen";
+import axios from "axios";
+import humps from "humps";
+import { useStyles, links, categories } from "../../data/PodcastData";
+import Image from "next/image";
+import Link from "next/link";
 
 // TO UNCOMMENT WHEN REACH > 9 PODCASTS
 // import PaginationComp from "../components/Pagination";
 
 const Podcast = () => {
-  const classes = useStyles()
-  const [loading, setLoading] = useState(true)
-  const [sourceLoading, setSourceLoading] = useState(true)
-  const [headerLoading, setHeaderLoading] = useState(true)
+  const classes = useStyles();
+  const [loading, setLoading] = useState(true);
+  const [sourceLoading, setSourceLoading] = useState(true);
+  const [headerLoading, setHeaderLoading] = useState(true);
   // all podcast episodes
-  const [content, setContent] = useState([])
+  const [content, setContent] = useState([]);
   // currently selected category -> default to "All"
-  const [selectedCategory, setSelectedCategory] = useState('All')
+  const [selectedCategory, setSelectedCategory] = useState("All");
   // check if search + category filters result in no results
-  const [emptyCategory, setEmptyCategory] = useState(false)
+  const [emptyCategory, setEmptyCategory] = useState(false);
   // search term (user input) for podcast search bar
-  const [searchTerm, setSearchTerm] = useState('')
+  const [searchTerm, setSearchTerm] = useState("");
   // all the posts of the selected filter category
-  const [selectedPosts, setSelectedPosts] = useState([])
+  const [selectedPosts, setSelectedPosts] = useState([]);
 
   // FOR PAGINATION
   // the posts displayed on the current page
@@ -42,66 +42,66 @@ const Podcast = () => {
   // output: array of dictionaries containing podcasts data
   const fetchPodcastEpisodes = async () => {
     const res = await axios.get(
-      'https://wit-database.herokuapp.com/podcast-episodes'
-    )
-    const unsorted = humps.camelizeKeys(res.data)
-    const sortedEpisodes = unsorted.reverse()
-    setContent(sortedEpisodes)
+      "https://wit-database.herokuapp.com/podcast-episodes"
+    );
+    const unsorted = humps.camelizeKeys(res.data);
+    const sortedEpisodes = unsorted.reverse();
+    setContent(sortedEpisodes);
     // setCurrentPosts(sortedEpisodes);
-    setSelectedPosts(sortedEpisodes)
-    setLoading(false)
-    setSourceLoading(false)
-  }
+    setSelectedPosts(sortedEpisodes);
+    setLoading(false);
+    setSourceLoading(false);
+  };
 
   useEffect(() => {
     // start at the top of the page
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
 
     // load podcast episode previews
     fetchPodcastEpisodes().catch((error) =>
       // error handling
       console.error(error)
-    )
-  }, [])
+    );
+  }, []);
 
   useEffect(() => {
     // if no posts, setEmptyCategory to true
     if (selectedPosts.length === 0 && loading === false) {
-      setEmptyCategory(true)
-      console.error = () => {}
+      setEmptyCategory(true);
+      console.error = () => {};
     } else {
-      setEmptyCategory(false)
+      setEmptyCategory(false);
     }
-  }, [selectedPosts, loading])
+  }, [selectedPosts, loading]);
 
   // filter content by selected category + searchTerm
   const filterContent = (selectedCategory, searchTerm) => {
     const filteredContent = content.filter(
       (picture) =>
-        selectedCategory === 'All' ||
-        picture.category.split(',').includes(selectedCategory)
-    )
-    searchPodcasts(filteredContent, searchTerm)
-  }
+        selectedCategory === "All" ||
+        picture.category.split(",").includes(selectedCategory)
+    );
+    searchPodcasts(filteredContent, searchTerm);
+  };
 
   // filter category content by search filter in heading, subheading or author
   const searchPodcasts = (filteredContent, searchTerm) => {
     const searchResults = filteredContent.filter((episode) => {
       if (
-        searchTerm === '' ||
+        searchTerm === "" ||
         episode.date.toLowerCase().includes(searchTerm.toLowerCase()) ||
         episode.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         episode.description.toLowerCase().includes(searchTerm.toLowerCase())
       ) {
-        return true
+        return true;
       } else {
-        return false
+        return false;
       }
-    })
+    });
     // only required for pagination
     // setCurrentPosts(searchResults);
-    setSelectedPosts(searchResults)
-  }
+    setSelectedPosts(searchResults);
+  };
 
   // called when pagination item clicked to slice the correct amount of posts for viewing
   // const paginate = (pageNumber) => {
@@ -128,7 +128,7 @@ const Podcast = () => {
                   alt="Talk WIT Us logo"
                   height="250px"
                   width="250px"
-                  objectFit={'contain'}
+                  objectFit={"contain"}
                 />
               </div>
             </div>
@@ -170,7 +170,7 @@ const Podcast = () => {
                         </a>
                       </a>
                     </Link>
-                  )
+                  );
                 })}
               </div>
             </div>
@@ -184,8 +184,8 @@ const Podcast = () => {
                 .map((category) => {
                   const chipColour =
                     selectedCategory === categories[category]
-                      ? '#e85f5c'
-                      : '#7F7F7F'
+                      ? "#e85f5c"
+                      : "#7F7F7F";
                   return (
                     <Chip
                       key={category}
@@ -196,11 +196,11 @@ const Podcast = () => {
                         backgroundColor: chipColour,
                       }}
                       onClick={() => {
-                        setSelectedCategory(categories[category])
-                        filterContent(categories[category], searchTerm)
+                        setSelectedCategory(categories[category]);
+                        filterContent(categories[category], searchTerm);
                       }}
                     />
-                  )
+                  );
                 })}
             </div>
           </div>
@@ -213,8 +213,8 @@ const Podcast = () => {
               type="text"
               placeholder="Search podcasts"
               onChange={(event) => {
-                setSearchTerm(event.target.value)
-                filterContent(selectedCategory, event.target.value)
+                setSearchTerm(event.target.value);
+                filterContent(selectedCategory, event.target.value);
               }}
             />
           </div>
@@ -248,7 +248,7 @@ const Podcast = () => {
                   description={episode.description}
                   episode={episode}
                 />
-              )
+              );
             })}
           </div>
           {/* TO UNCOMMENT WHEN REACH > 9 PODCASTS */}
@@ -260,6 +260,6 @@ const Podcast = () => {
         </>
       )}
     </div>
-  )
-}
-export default Podcast
+  );
+};
+export default Podcast;

@@ -1,0 +1,8 @@
+.gitignore
+.npmrc
+.prettierignore
+README.md
+node_modules
+.next
+.vscode
+.swc

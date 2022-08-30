@@ -1,4 +1,4 @@
-import styles from '../styles/sponsors.module.css'
+import styles from "../styles/sponsors.module.css";
 
 const nakatomiDescription = () => {
   return (
@@ -20,8 +20,8 @@ const nakatomiDescription = () => {
         metaverse, and creating branded experiences that blow minds.
       </p>
     </>
-  )
-}
+  );
+};
 
 const mcGrathNicolDescription = () => {
   return (
@@ -35,7 +35,7 @@ const mcGrathNicolDescription = () => {
         cybersecurity incident response activities and helping our clients to
         design strategies and implement frameworks to mitigate digital and
         information risk. To gain insight into the type of work they do, check
-        out their Technology virtual experience at{' '}
+        out their Technology virtual experience at{" "}
         <a
           className={styles.link}
           href="https://www.theforage.com/show-firm-programs/oiHtSBFcPM2KnaEGJ/McGrathNicol"
@@ -47,8 +47,8 @@ const mcGrathNicolDescription = () => {
         .
       </p>
     </>
-  )
-}
+  );
+};
 
 const eyDescription = () => {
   return (
@@ -73,8 +73,8 @@ const eyDescription = () => {
       </p>
       <p>It’s yours to build.</p>
     </>
-  )
-}
+  );
+};
 
 const fdmDescription = () => {
   return (
@@ -120,8 +120,8 @@ const fdmDescription = () => {
         and is again one of GradAustralia&apos;s Top 100 Graduate Employers.
       </p>
     </>
-  )
-}
+  );
+};
 
 const pwcDescription = () => {
   return (
@@ -148,14 +148,14 @@ const pwcDescription = () => {
       </p>
       <p>At PwC, we call this The Together Effect.</p>
     </>
-  )
-}
+  );
+};
 
 const mantelGroupDescription = () => {
   return (
     <>
       <p>
-        ​​Mantel Group hires talented individuals who love what they do and give
+        ​Mantel Group hires talented individuals who love what they do and give
         them the tools and autonomy to be awesome at their jobs! Every single
         one of us is an individual and our experience in the workplace has to
         reflect that. We do not believe that standard perks and benefits, or
@@ -175,8 +175,8 @@ const mantelGroupDescription = () => {
         go hand in hand – what is right for culture, is right for the business.
       </p>
     </>
-  )
-}
+  );
+};
 
 const amstelveenDescription = () => {
   return (
@@ -195,8 +195,8 @@ const amstelveenDescription = () => {
         Amstelveen making AFR’s Fast Starters lists in FY18 and FY19!
       </p>
     </>
-  )
-}
+  );
+};
 
 const quantiumDescription = () => {
   return (
@@ -210,8 +210,8 @@ const quantiumDescription = () => {
         individuals, organisations and society and we&apos;re proud of it!
       </p>
     </>
-  )
-}
+  );
+};
 
 const googleDescription = () => {
   return (
@@ -225,8 +225,8 @@ const googleDescription = () => {
         Made by Google devices and YouTube.
       </p>
     </>
-  )
-}
+  );
+};
 
 const imcDescription = () => {
   return (
@@ -244,8 +244,8 @@ const imcDescription = () => {
         that will form the foundations of your career.
       </p>
     </>
-  )
-}
+  );
+};
 
 const janeStreetDescription = () => {
   return (
@@ -261,8 +261,8 @@ const janeStreetDescription = () => {
         mentoring and discussion
       </p>
     </>
-  )
-}
+  );
+};
 
 const blackbirdDescription = () => {
   return (
@@ -276,8 +276,8 @@ const blackbirdDescription = () => {
         New Zealand startups such as Canva, Zoox, SafetyCulture and Culture Amp.
       </p>
     </>
-  )
-}
+  );
+};
 
 const palantirDescription = () => {
   return (
@@ -294,8 +294,8 @@ const palantirDescription = () => {
         we’re just getting started.
       </p>
     </>
-  )
-}
+  );
+};
 
 const appianDescription = () => {
   return (
@@ -310,8 +310,8 @@ const appianDescription = () => {
         with career growth and opportunity.
       </p>
     </>
-  )
-}
+  );
+};
 
 const akunaDescription = () => {
   return (
@@ -348,8 +348,8 @@ const akunaDescription = () => {
         place for you!
       </p>
     </>
-  )
-}
+  );
+};
 
 const placeHolderDescription = () => {
   return (
@@ -359,214 +359,214 @@ const placeHolderDescription = () => {
         now for more information about our sponsor!
       </p>
     </>
-  )
-}
+  );
+};
 
 const sponsors = {
   // name, website, img, type, description
   Airwallex: [
-    'Airwallex',
-    'https://www.airwallex.com/au',
-    'Airwallex.png',
-    'GOLD',
+    "Airwallex",
+    "https://www.airwallex.com/au",
+    "Airwallex.png",
+    "GOLD",
     placeHolderDescription(),
   ],
   Akuna: [
-    'Akuna',
-    'https://akunacapital.com/',
-    'Akuna.png',
-    'SILVER',
+    "Akuna",
+    "https://akunacapital.com/",
+    "Akuna.png",
+    "SILVER",
     akunaDescription(),
   ],
   Amazon: [
-    'Amazon',
-    'https://www.amazon.com.au',
-    'amazon.png',
-    'DIAMOND',
+    "Amazon",
+    "https://www.amazon.com.au",
+    "amazon.png",
+    "DIAMOND",
     placeHolderDescription(),
   ],
   Atlassian: [
-    'Atlassian',
-    'https://www.atlassian.com/au-en',
-    'atlassian-major.png',
-    'DIAMOND',
+    "Atlassian",
+    "https://www.atlassian.com/au-en",
+    "atlassian-major.png",
+    "DIAMOND",
     placeHolderDescription(),
   ],
   Appian: [
-    'Appian',
-    'https://appian.com/',
-    'appian_2021.jpg',
-    'GOLD',
+    "Appian",
+    "https://appian.com/",
+    "appian_2021.jpg",
+    "GOLD",
     appianDescription(),
   ],
   Amstelveen: [
-    'Amstelveen',
-    'https://amstelveen.com/',
-    'Amstelveen_notchecked.png',
-    'BRONZE',
+    "Amstelveen",
+    "https://amstelveen.com/",
+    "Amstelveen_notchecked.png",
+    "BRONZE",
     amstelveenDescription(),
   ],
   Blackbird: [
-    'Blackbird',
-    'https://blackbird.vc/',
-    'blackbird.png',
-    'GOLD',
+    "Blackbird",
+    "https://blackbird.vc/",
+    "blackbird.png",
+    "GOLD",
     blackbirdDescription(),
   ],
   CISCO: [
-    'CISCO',
-    'https://www.cisco.com/c/en_au/index.html',
-    'CISCO-diamond.png',
-    'DIAMOND',
+    "CISCO",
+    "https://www.cisco.com/c/en_au/index.html",
+    "CISCO-diamond.png",
+    "DIAMOND",
     placeHolderDescription(),
   ],
   Commonwealth: [
-    'Commonwealth Bank (CBA)',
-    'https://www.commbank.com.au/about-us/careers.html',
-    'cba.jpg',
-    'SILVER',
+    "Commonwealth Bank (CBA)",
+    "https://www.commbank.com.au/about-us/careers.html",
+    "cba.jpg",
+    "SILVER",
     placeHolderDescription(),
   ],
-  EY: ['EY', 'https://www.ey.com/en_au', 'ey.png', 'SILVER', eyDescription()],
+  EY: ["EY", "https://www.ey.com/en_au", "ey.png", "SILVER", eyDescription()],
   Fdm: [
-    'FDM Group',
-    'https://www.fdmgroup.com/en-au/au-home/',
-    'fdm-group.png',
-    'SILVER',
+    "FDM Group",
+    "https://www.fdmgroup.com/en-au/au-home/",
+    "fdm-group.png",
+    "SILVER",
     fdmDescription(),
   ],
   Google: [
-    'Google',
-    'https://careers.google.com/',
-    'google-major.png',
-    'GOLD',
+    "Google",
+    "https://careers.google.com/",
+    "google-major.png",
+    "GOLD",
     googleDescription(),
   ],
   Honeywell: [
-    'Honeywell,',
-    'https://www.honeywell.com/us/en',
-    'honeywell.png',
-    'GOLD',
+    "Honeywell,",
+    "https://www.honeywell.com/us/en",
+    "honeywell.png",
+    "GOLD",
     placeHolderDescription(),
   ],
-  IMC: ['IMC', 'https://www.imc.com/ap/', 'IMC.png', 'GOLD', imcDescription()],
+  IMC: ["IMC", "https://www.imc.com/ap/", "IMC.png", "GOLD", imcDescription()],
   JaneStreet: [
-    'JaneStreet',
-    'https://www.janestreet.com/',
-    'jane-street.png',
-    'GOLD',
+    "JaneStreet",
+    "https://www.janestreet.com/",
+    "jane-street.png",
+    "GOLD",
     janeStreetDescription(),
   ],
   Macquarie: [
-    'Microsoft',
-    'https://www.macquarie.com.au/',
-    'macquarie.png',
-    'GOLD',
+    "Microsoft",
+    "https://www.macquarie.com.au/",
+    "macquarie.png",
+    "GOLD",
     placeHolderDescription(),
   ],
   MantelGroup: [
-    'Mantel Group',
-    'https://mantelgroup.com.au/',
-    'mantel-group.png',
-    'SILVER',
+    "Mantel Group",
+    "https://mantelgroup.com.au/",
+    "mantel-group.png",
+    "SILVER",
     mantelGroupDescription(),
   ],
   McGrathNicol: [
-    'McGrathNicol',
-    'https://www.mcgrathnicol.com/',
-    'mcgrathnicol-major.png',
-    'GOLD',
+    "McGrathNicol",
+    "https://www.mcgrathnicol.com/",
+    "mcgrathnicol-major.png",
+    "GOLD",
     mcGrathNicolDescription(),
   ],
   McKinsey: [
-    'McKinsey',
-    'https://www.mckinsey.com/',
-    'mckinsey.png',
-    'SILVER',
+    "McKinsey",
+    "https://www.mckinsey.com/",
+    "mckinsey.png",
+    "SILVER",
     placeHolderDescription(),
   ],
   Microsoft: [
-    'Microsoft',
-    'https://www.microsoft.com/en-au',
-    'microsoft_notchecked.png',
-    'GOLD',
+    "Microsoft",
+    "https://www.microsoft.com/en-au",
+    "microsoft_notchecked.png",
+    "GOLD",
     placeHolderDescription(),
   ],
   Nakatomi: [
-    'Nakatomi',
-    'https://nakatomi.com/',
-    'Nakatomi.png',
-    'DIAMOND',
+    "Nakatomi",
+    "https://nakatomi.com/",
+    "Nakatomi.png",
+    "DIAMOND",
     nakatomiDescription(),
   ],
   Palantir: [
-    'Palantir',
-    'https://www.palantir.com/',
-    'palantir-support.png',
-    'GOLD',
+    "Palantir",
+    "https://www.palantir.com/",
+    "palantir-support.png",
+    "GOLD",
     palantirDescription(),
   ],
   Pwc: [
-    'Pwc',
-    'https://www.pwc.com.au/',
-    'pwc-logo-png-transparent.png',
-    'SILVER',
+    "Pwc",
+    "https://www.pwc.com.au/",
+    "pwc-logo-png-transparent.png",
+    "SILVER",
     pwcDescription(),
   ],
   Quantium: [
-    'Quantium',
-    'https://quantium.com/',
-    'quantium-major.png',
-    'GOLD',
+    "Quantium",
+    "https://quantium.com/",
+    "quantium-major.png",
+    "GOLD",
     quantiumDescription(),
   ],
   Telstra: [
-    'Telstra',
-    'https://www.telstra.com.au/',
-    'telstra.png',
-    'GOLD',
+    "Telstra",
+    "https://www.telstra.com.au/",
+    "telstra.png",
+    "GOLD",
     placeHolderDescription(),
   ],
   VivCourt: [
-    'VivCourt',
-    'https://www.vivcourt.com.au/',
-    'viv-court.png',
-    'GOLD',
+    "VivCourt",
+    "https://www.vivcourt.com.au/",
+    "viv-court.png",
+    "GOLD",
     placeHolderDescription(),
   ],
   VMWare: [
-    'VMWare',
-    'https://www.vmware.com/',
-    'VMware-Logo.png',
-    'SILVER',
+    "VMWare",
+    "https://www.vmware.com/",
+    "VMware-Logo.png",
+    "SILVER",
     placeHolderDescription(),
   ],
   WooliesX: [
-    'WooliesX',
-    'https://wooliesx.com.au/',
-    'WooliesX.png',
-    'GOLD',
+    "WooliesX",
+    "https://wooliesx.com.au/",
+    "WooliesX.png",
+    "GOLD",
     placeHolderDescription(),
   ],
-}
+};
 
 const affiliations = {
   // website, img
-  Arc: ['https://www.arc.unsw.edu.au/', 'arc.png'],
-  'Business School': [
-    'https://www.unsw.edu.au/business/',
-    'business_school_transparent.png',
+  Arc: ["https://www.arc.unsw.edu.au/", "arc.png"],
+  "Business School": [
+    "https://www.unsw.edu.au/business/",
+    "business_school_transparent.png",
   ],
-  'Engineering Faculty': ['https://www.unsw.edu.au/engineering/', 'eng.png'],
-}
+  "Engineering Faculty": ["https://www.unsw.edu.au/engineering/", "eng.png"],
+};
 
 const partnerships = {
   // name, website, img
-  'Clay Sydney': ['https://claysydney.com/', 'claysydney.png'],
-  'Escape Hunt': ['https://escapehunt.com/', 'escapehunt.png'],
-  'Pinot & Picasso': ['https://www.pinotandpicasso.com.au', 'pinot.png'],
-  'Side Bar': ['https://sidebarsydney.com.au/', 'sidebar.png'],
-  'Virtual Room': ['https://sydney.virtual-room.com/', 'virtualroom.png'],
-}
+  "Clay Sydney": ["https://claysydney.com/", "claysydney.png"],
+  "Escape Hunt": ["https://escapehunt.com/", "escapehunt.png"],
+  "Pinot & Picasso": ["https://www.pinotandpicasso.com.au", "pinot.png"],
+  "Side Bar": ["https://sidebarsydney.com.au/", "sidebar.png"],
+  "Virtual Room": ["https://sydney.virtual-room.com/", "virtualroom.png"],
+};
 
-export { sponsors, affiliations, partnerships }
+export { sponsors, affiliations, partnerships };

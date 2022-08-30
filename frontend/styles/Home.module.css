@@ -1,7 +1,7 @@
 /*-------------------------------Home page header-----------------------------*/
 /*Header image*/
 .contain {
-  background-image: url('/headers/header-1.jpg');
+  background-image: url("/headers/header-1.jpg");
   background-position: center bottom 40%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,7 +20,7 @@ div .headline {
 
 .headline h1 {
   color: var(--yellow);
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 5.5vw;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -30,7 +30,7 @@ div .headline {
 /*Header subtitle*/
 .headline p {
   color: var(--white);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.17vw;
   letter-spacing: 2.5px;
 }
@@ -49,7 +49,7 @@ div .headline {
 }
 
 .headline button:before {
-  content: '➜';
+  content: "➜";
   font-size: 11pt;
   color: var(--white);
   position: absolute;
@@ -112,7 +112,7 @@ div .headline {
 /*Left block text*/
 .descriptionLeft h1 {
   color: var(--yellow);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 4.5vw;
   padding-top: 0px;
   font-weight: 600;
@@ -131,7 +131,7 @@ div .headline {
 /*Right block text*/
 .descriptionRight p {
   color: var(--general-text);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 11pt;
   text-align: justify;
 }
@@ -181,7 +181,7 @@ div .headline {
 
 .number span {
   color: var(--yellow);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 75pt;
   font-weight: 500;
   letter-spacing: 15px;
@@ -189,7 +189,7 @@ div .headline {
 
 .number p {
   color: var(--white);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14pt;
 }
 
@@ -215,7 +215,7 @@ div .headline {
 /*Events description text*/
 .eventsDescription p {
   color: var(--general-text);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 11pt;
   text-align: right;
   padding-top: 30px;
@@ -226,7 +226,7 @@ div .headline {
 }
 
 .eventsDescription a {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-align: right;
   color: var(--red);
   float: left;
@@ -239,7 +239,7 @@ div .headline {
 }
 
 .eventsTitle h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 55px;
   text-align: left;
 }
@@ -312,7 +312,7 @@ div .headline {
 
 /*Center block text*/
 .quotes h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 55px;
   text-align: center;
   line-height: normal;
@@ -345,7 +345,7 @@ div .headline {
 }
 
 .carousel h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 55px;
   text-align: left;
 }
@@ -410,7 +410,7 @@ div .headline {
 }
 
 .right a {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-align: right;
   color: var(--red);
   float: left;
@@ -467,7 +467,7 @@ div .headline {
   display: none;
   text-align: center;
   grid-area: 1 / 2;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 55px;
   padding: 0;
 }
@@ -513,7 +513,7 @@ div .headline {
 }
 
 .sponsors h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 55px;
   letter-spacing: 3px;
   text-align: center;
@@ -561,7 +561,7 @@ div .headline {
 }
 
 .publications h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 55px;
   letter-spacing: 3px;
   line-height: 100px;
@@ -590,7 +590,7 @@ div .headline {
 
 .pubBtn a {
   color: var(--red);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 11pt;
   font-weight: 500;
 }

@@ -1,18 +1,18 @@
-import React from 'react'
-import styles from '../styles/Newsletter.module.css'
-import NewsletterForm from './NewsletterForm'
-import { Modal, Backdrop, Fade } from '@material-ui/core'
-import Image from 'next/image'
+import React from "react";
+import styles from "../styles/Newsletter.module.css";
+import NewsletterForm from "./NewsletterForm";
+import { Modal, Backdrop, Fade } from "@material-ui/core";
+import Image from "next/image";
 
 const NewsletterSection = ({ setOpen, open, callbackModal, fade }) => {
   return (
     <div id={styles.container}>
       <div id={styles.newsletterBgContainer}>
         <Image
-          src={'/newsletter-background.png'}
+          src={"/newsletter-background.png"}
           className={styles.background}
           alt="banner"
-          layout={'fill'}
+          layout={"fill"}
         />
       </div>
       {fade ? (
@@ -45,7 +45,7 @@ const NewsletterSection = ({ setOpen, open, callbackModal, fade }) => {
         </>
       </Modal>
     </div>
-  )
-}
+  );
+};
 
-export default NewsletterSection
+export default NewsletterSection;

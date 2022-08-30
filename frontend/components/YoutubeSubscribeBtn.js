@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import styles from '../styles/videos.module.css'
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import styles from "../styles/videos.module.css";
 
 export default class YouTubeSubscribe extends Component {
   static propTypes = {
@@ -9,15 +9,15 @@ export default class YouTubeSubscribe extends Component {
     theme: PropTypes.string,
     layout: PropTypes.string,
     count: PropTypes.string,
-  }
+  };
 
   static defaultProps = {
-    channelName: '',
-    channelid: 'UCaYhcUwRBNscFNUKTjgPFiA',
-    theme: 'full',
-    layout: 'default',
-    count: 'default',
-  }
+    channelName: "",
+    channelid: "UCaYhcUwRBNscFNUKTjgPFiA",
+    theme: "full",
+    layout: "default",
+    count: "default",
+  };
 
   /**
    *  React.createRef to attach script after mount
@@ -25,19 +25,19 @@ export default class YouTubeSubscribe extends Component {
    */
 
   constructor(props) {
-    super(props)
-    this.youtubeSubscribeNode = React.createRef()
+    super(props);
+    this.youtubeSubscribeNode = React.createRef();
 
     // To render components economically w/o repetition
     this.state = {
       initialized: false,
-    }
+    };
   }
 
   initialized() {
     this.setState({
       initialized: true,
-    })
+    });
   }
 
   /**
@@ -52,14 +52,14 @@ export default class YouTubeSubscribe extends Component {
 
   componentDidMount() {
     if (this.state.initialized) {
-      return
+      return;
     }
 
     // Make <script src="https://apis.google.com/js/platform.js" ></script>
-    const youtubescript = document.createElement('script')
-    youtubescript.src = 'https://apis.google.com/js/platform.js'
-    this.youtubeSubscribeNode.current.parentNode.appendChild(youtubescript)
-    this.initialized()
+    const youtubescript = document.createElement("script");
+    youtubescript.src = "https://apis.google.com/js/platform.js";
+    this.youtubeSubscribeNode.current.parentNode.appendChild(youtubescript);
+    this.initialized();
   }
 
   // shouldComponentUpdate(nextProps, nextState) {
@@ -75,7 +75,7 @@ export default class YouTubeSubscribe extends Component {
   // }
 
   render() {
-    const { theme, layout, count, channelName, channelid } = this.props
+    const { theme, layout, count, channelName, channelid } = this.props;
     return (
       <div className={styles.subscribe}>
         <section className="youtubeSubscribe">
@@ -90,6 +90,6 @@ export default class YouTubeSubscribe extends Component {
           />
         </section>
       </div>
-    )
+    );
   }
 }

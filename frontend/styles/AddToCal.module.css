@@ -3,7 +3,7 @@
 }
 
 .link {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #ffffff;
   letter-spacing: 0.1vw;
   font-size: 9pt;
@@ -23,7 +23,7 @@
   border: 2px solid var(--yellow);
   color: var(--yellow);
   padding: 6px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;

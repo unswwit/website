@@ -1,4 +1,4 @@
-import styles from '../styles/ShareBtn.module.css'
+import styles from "../styles/ShareBtn.module.css";
 import {
   FacebookShareButton,
   FacebookIcon,
@@ -10,7 +10,7 @@ import {
   TwitterIcon,
   WhatsappShareButton,
   WhatsappIcon,
-} from 'react-share'
+} from "react-share";
 
 const ShareBtns = () => {
   return (
@@ -43,7 +43,7 @@ const ShareBtns = () => {
         <WhatsappIcon size={30} round={true} />
       </WhatsappShareButton>
     </>
-  )
-}
+  );
+};
 
-export default ShareBtns
+export default ShareBtns;

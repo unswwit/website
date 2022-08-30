@@ -1,5 +1,5 @@
-import AddToCalendarHOC from 'react-add-to-calendar-hoc'
-import styles from '../styles/AddToCal.module.css'
+import AddToCalendarHOC from "react-add-to-calendar-hoc";
+import styles from "../styles/AddToCal.module.css";
 
 const AddToCalBtn = ({
   title,
@@ -9,32 +9,32 @@ const AddToCalBtn = ({
   endDate,
   duration,
 }) => {
-  const start = new Date()
-  let end = new Date()
-  end.setHours(start.getHours() + 1)
+  const start = new Date();
+  let end = new Date();
+  end.setHours(start.getHours() + 1);
   const startDefaultString = start
-    .toLocaleString('sv')
-    .split('.')[0]
-    .replaceAll(/[Z:-]/g, '')
-    .replaceAll(' ', 'T')
+    .toLocaleString("sv")
+    .split(".")[0]
+    .replaceAll(/[Z:-]/g, "")
+    .replaceAll(" ", "T");
   const endDefaultString = end
-    .toLocaleString('sv')
-    .split('.')[0]
-    .replaceAll(/[Z:-]/g, '')
-    .replaceAll(' ', 'T')
+    .toLocaleString("sv")
+    .split(".")[0]
+    .replaceAll(/[Z:-]/g, "")
+    .replaceAll(" ", "T");
 
   let event = {
     title: title,
     description: description,
     location: location,
-    duration: duration ? duration : '0100',
-    timezone: 'Australia/Sydney',
+    duration: duration ? duration : "0100",
+    timezone: "Australia/Sydney",
     startDatetime: startDate ? startDate : startDefaultString,
     endDatetime: endDate ? endDate : endDefaultString,
-  }
+  };
 
   function Dropdown({ children }) {
-    return <div className={styles.dropItems}>{children}</div>
+    return <div className={styles.dropItems}>{children}</div>;
   }
 
   function Button({ children, onClick }) {
@@ -42,10 +42,10 @@ const AddToCalBtn = ({
       <button className={styles.button} onClick={onClick}>
         {children}
       </button>
-    )
+    );
   }
 
-  const AddToCalendarDropdown = AddToCalendarHOC(Button, Dropdown)
+  const AddToCalendarDropdown = AddToCalendarHOC(Button, Dropdown);
 
   return (
     <AddToCalendarDropdown
@@ -56,7 +56,7 @@ const AddToCalBtn = ({
         className: styles.link,
       }}
     />
-  )
-}
+  );
+};
 
-export default AddToCalBtn
+export default AddToCalBtn;

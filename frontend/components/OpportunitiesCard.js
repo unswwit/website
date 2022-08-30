@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import styles from '../styles/opportunities.module.css'
-import Link from 'next/link'
+import React, { Component } from "react";
+import styles from "../styles/opportunities.module.css";
+import Link from "next/link";
 
 class OpportunitiesCard extends Component {
   render() {
@@ -44,8 +44,8 @@ class OpportunitiesCard extends Component {
           </div>
         </a>
       </Link>
-    )
+    );
   }
 }
 
-export default OpportunitiesCard
+export default OpportunitiesCard;

@@ -1,98 +1,98 @@
-import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import {
   Card,
   CardActionArea,
   CardContent,
   Typography,
-} from '@material-ui/core'
-import styles from '../styles/Podcast.module.css'
-import Image from 'next/image'
+} from "@material-ui/core";
+import styles from "../styles/Podcast.module.css";
+import Image from "next/image";
 
 const useStyles = makeStyles({
   root: {
-    alignSelf: 'center',
-    justifySelf: 'center',
+    alignSelf: "center",
+    justifySelf: "center",
     maxWidth: 300,
     height: 560,
-    display: 'inline-block',
+    display: "inline-block",
     margin: 20,
     borderRadius: 0,
-    boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
-    '@media (max-width:700px)': {
-      maxWidth: '100%',
+    boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
+    "@media (max-width:700px)": {
+      maxWidth: "100%",
       height: 600,
     },
-    '@media (max-width:600px)': {
+    "@media (max-width:600px)": {
       height: 680,
     },
-    '@media (max-width:500px)': {
+    "@media (max-width:500px)": {
       height: 620,
     },
-    '@media (max-width:450px)': {
+    "@media (max-width:450px)": {
       height: 600,
     },
-    '@media (max-width:400px)': {
+    "@media (max-width:400px)": {
       height: 560,
     },
-    '@media (max-width:390px)': {
+    "@media (max-width:390px)": {
       height: 600,
     },
   },
   media: {
     height: 300,
-    justifyContent: 'center',
-    display: 'flex',
-    overflow: 'hidden',
-    verticalAlign: 'top',
-    position: 'relative',
-    '@media (max-width:700px)': {
-      objectFit: 'contain',
-      height: '60vw',
+    justifyContent: "center",
+    display: "flex",
+    overflow: "hidden",
+    verticalAlign: "top",
+    position: "relative",
+    "@media (max-width:700px)": {
+      objectFit: "contain",
+      height: "60vw",
     },
-    '@media (max-width:600px)': {
-      objectFit: 'contain',
-      height: '88vw',
+    "@media (max-width:600px)": {
+      objectFit: "contain",
+      height: "88vw",
     },
   },
   date: {
-    textAlign: 'center',
-    fontFamily: 'Montserrat, sans-serif',
-    color: '#feb14b',
+    textAlign: "center",
+    fontFamily: "Montserrat, sans-serif",
+    color: "#feb14b",
     fontWeight: 600,
   },
   description: {
-    textAlign: 'justify',
+    textAlign: "justify",
     fontSize: 12,
-    fontFamily: 'Montserrat, sans-serif',
-    color: '#313638',
-    '@media (prefers-color-scheme:dark)': {
-      color: '#fff',
+    fontFamily: "Montserrat, sans-serif",
+    color: "#313638",
+    "@media (prefers-color-scheme:dark)": {
+      color: "#fff",
     },
   },
   title: {
-    fontFamily: 'Playfair Display, serif',
-    fontSize: '20px',
-    fontWeight: '500',
-    textAlign: 'center',
-    margin: '5px 0px',
+    fontFamily: "Playfair Display, serif",
+    fontSize: "20px",
+    fontWeight: "500",
+    textAlign: "center",
+    margin: "5px 0px",
   },
   click: {
     height: 560,
-    '@media (max-width:390px)': {
+    "@media (max-width:390px)": {
       height: 1000,
     },
   },
   content: {
-    height: '260px',
-    '@media (max-width:700px)': {
+    height: "260px",
+    "@media (max-width:700px)": {
       height: 800,
     },
-    '@media (prefers-color-scheme:dark)': {
-      background: '#3B3B41',
+    "@media (prefers-color-scheme:dark)": {
+      background: "#3B3B41",
     },
   },
-})
+});
 
 export default function EpisodeTemplate({
   cover,
@@ -101,22 +101,22 @@ export default function EpisodeTemplate({
   description,
   episode,
 }) {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <Card className={classes.root}>
       <CardActionArea
-        className={[classes.click, styles.previewContainer].join(' ')}
+        className={[classes.click, styles.previewContainer].join(" ")}
       >
-        <a href={episode['spotify']} target="_blank" rel="noreferrer">
+        <a href={episode["spotify"]} target="_blank" rel="noreferrer">
           <div className={classes.media}>
             <Image
               alt="podcast episode cover"
-              src={'/' + cover}
+              src={"/" + cover}
               className={styles.episodeCover}
-              layout={'fill'}
-              objectFit={'contain'}
-              objectPosition={'top'}
+              layout={"fill"}
+              objectFit={"contain"}
+              objectPosition={"top"}
             />
           </div>
           <CardContent className={classes.content}>
@@ -143,5 +143,5 @@ export default function EpisodeTemplate({
         </a>
       </CardActionArea>
     </Card>
-  )
+  );
 }

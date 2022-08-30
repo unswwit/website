@@ -1,25 +1,25 @@
-import { useEffect, useState } from 'react'
-import PageHeader from '../../components/Header'
-import ContactForm from '../../components/ContactForm'
-import styles from '../../styles/ContactUs.module.css'
-import LoadingScreen from '../../components/LoadingScreen'
-import Image from 'next/image'
-import Link from 'next/link'
+import { useEffect, useState } from "react";
+import PageHeader from "../../components/Header";
+import ContactForm from "../../components/ContactForm";
+import styles from "../../styles/ContactUs.module.css";
+import LoadingScreen from "../../components/LoadingScreen";
+import Image from "next/image";
+import Link from "next/link";
 
 const ContactUs = () => {
-  const [sourceLoading, setSourceLoading] = useState(true)
-  const [headerLoading, setHeaderLoading] = useState(true)
+  const [sourceLoading, setSourceLoading] = useState(true);
+  const [headerLoading, setHeaderLoading] = useState(true);
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   // control when to stop loading
   useEffect(() => {
     setTimeout(() => {
-      setSourceLoading(false)
-    }, 1000)
-  }, [])
+      setSourceLoading(false);
+    }, 1000);
+  }, []);
 
   return (
     <div>
@@ -39,9 +39,9 @@ const ContactUs = () => {
               <Image
                 src={
                   window.matchMedia &&
-                  window.matchMedia('(prefers-color-scheme: dark)').matches
-                    ? `${'/willow_contact_dark_mode.png'}`
-                    : `${'/willow_contact.png'}`
+                  window.matchMedia("(prefers-color-scheme: dark)").matches
+                    ? `${"/willow_contact_dark_mode.png"}`
+                    : `${"/willow_contact.png"}`
                 }
                 width="315px"
                 height="415px"
@@ -108,7 +108,7 @@ const ContactUs = () => {
             </div>
 
             <hr
-              className={[styles.lineBreak, styles.solid].join(' ')}
+              className={[styles.lineBreak, styles.solid].join(" ")}
               width="90%"
             />
             <div className={styles.col3}>
@@ -261,7 +261,7 @@ const ContactUs = () => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default ContactUs
+export default ContactUs;

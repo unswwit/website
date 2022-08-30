@@ -1,34 +1,34 @@
-import { useEffect, useState } from 'react'
-import PageHeader from '../components/Header'
-import styles from '../styles/JoinUs.module.css'
-import CircularProgress from '@material-ui/core/CircularProgress'
-import Slideshow from '../components/QuotesSlideshow.js'
-import NewsletterSection from '../components/NewsletterSection'
-import { BootstrapTooltip } from '../components/BootstrapTooltip'
-import LoadingScreen from '../components/LoadingScreen'
-import { memberQuotes, socials } from '../data/JoinData'
-import SimpleAccordion from '../components/JoinUsAccordion'
-import PortfolioGrid from '../components/JoinUsGrid'
-import Image from 'next/image'
+import { useEffect, useState } from "react";
+import PageHeader from "../components/Header";
+import styles from "../styles/JoinUs.module.css";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import Slideshow from "../components/QuotesSlideshow.js";
+import NewsletterSection from "../components/NewsletterSection";
+import { BootstrapTooltip } from "../components/BootstrapTooltip";
+import LoadingScreen from "../components/LoadingScreen";
+import { memberQuotes, socials } from "../data/JoinData";
+import SimpleAccordion from "../components/JoinUsAccordion";
+import PortfolioGrid from "../components/JoinUsGrid";
+import Image from "next/image";
 
 const JoinUs = () => {
-  const [hideSpinner, setHideSpinner] = useState(false)
-  const [openNewsletter, setOpenNewsletter] = useState(false)
-  const [sourceLoading, setSourceLoading] = useState(true)
-  const [headerLoading, setHeaderLoading] = useState(true)
+  const [hideSpinner, setHideSpinner] = useState(false);
+  const [openNewsletter, setOpenNewsletter] = useState(false);
+  const [sourceLoading, setSourceLoading] = useState(true);
+  const [headerLoading, setHeaderLoading] = useState(true);
 
   // close newsletter
   const callbackModal = () => {
-    setOpenNewsletter(false)
-  }
+    setOpenNewsletter(false);
+  };
 
   // start at the top of the page
   useEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
     setTimeout(() => {
-      setSourceLoading(false)
-    }, 10000)
-  }, [])
+      setSourceLoading(false);
+    }, 10000);
+  }, []);
 
   return (
     <div>
@@ -71,7 +71,7 @@ const JoinUs = () => {
                         />
                       </a>
                     </BootstrapTooltip>
-                  )
+                  );
                 })}
               </div>
             </div>
@@ -196,7 +196,7 @@ const JoinUs = () => {
         </>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default JoinUs
+export default JoinUs;

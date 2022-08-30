@@ -1,7 +1,7 @@
 /* ---------------------------Sponsor page header-----------------------------*/
 /*Subheading "Thank you message" & contact*/
 p.subheader {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12pt;
   color: var(--general-text);
   text-align: center;
@@ -11,7 +11,7 @@ p.subheader {
 /*----------------------------Sponsor page sponsors---------------------------*/
 /*Sponsor tier names*/
 h2.subsponsor {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 33pt;
   text-transform: uppercase;
   margin-top: 100px;
@@ -40,7 +40,7 @@ h2.subsponsor {
 
 /*Sponsor contact*/
 a.subheader {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: var(--general-text);
   font-weight: 500;
   text-decoration: underline;
@@ -110,7 +110,7 @@ a.subheader {
 .sponsorType {
   color: var(--yellow);
   font-size: 19.5px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   text-align: left;
   margin-top: 60px;
@@ -120,7 +120,7 @@ a.subheader {
 .sponsorDescription p {
   color: #313638;
   font-size: 12pt;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-top: 2%;
   text-align: justify;
   margin-bottom: 15px;
@@ -162,7 +162,7 @@ a.subheader {
 
 .sponsorLink {
   display: inline;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12pt;
   margin: 0;
   margin-bottom: 0px;
@@ -171,7 +171,7 @@ a.subheader {
 
 .sponsorWebsite {
   color: #313638;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12pt;
   font-weight: bold;
   margin-right: 1%;

@@ -1,140 +1,140 @@
-import React, { useEffect, useState } from 'react'
-import PageHeader from '../../../components/Header'
-import Chip from '@material-ui/core/Chip'
-import styles from '../../../styles/videos.module.css'
-import YouTubeSubscribe from '../../../components/YoutubeSubscribeBtn'
-import CircularProgress from '@material-ui/core/CircularProgress'
-import Link from 'next/link'
-import Image from 'next/image'
-import axios from 'axios'
-import humps from 'humps'
-import PaginationComp from '../../../components/Pagination'
-import LoadingScreen from '../../../components/LoadingScreen'
-import { isMobile } from 'react-device-detect'
-import { useStyles, categories } from '../../../data/VideoData'
+import React, { useEffect, useState } from "react";
+import PageHeader from "../../../components/Header";
+import Chip from "@material-ui/core/Chip";
+import styles from "../../../styles/videos.module.css";
+import YouTubeSubscribe from "../../../components/YoutubeSubscribeBtn";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import Link from "next/link";
+import Image from "next/image";
+import axios from "axios";
+import humps from "humps";
+import PaginationComp from "../../../components/Pagination";
+import LoadingScreen from "../../../components/LoadingScreen";
+import { isMobile } from "react-device-detect";
+import { useStyles, categories } from "../../../data/VideoData";
 
 const Videos = (props) => {
-  const classes = useStyles()
-  const [video, setVideo] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [videoNumber, setVideoNumber] = useState('0')
-  const [sourceLoading, setSourceLoading] = useState(true)
-  const [headerLoading, setHeaderLoading] = useState(true)
-  const [content, setContent] = useState([])
-  const [selectedCategory, setSelectedCategory] = useState('All')
-  const [emptyCategory, setEmptyCategory] = useState(false)
-  const [searchTerm, setSearchTerm] = useState('')
-  const [selectedPosts, setSelectedPosts] = useState([])
-  const [currentPosts, setCurrentPosts] = useState([])
-  const postsPerPage = 9
-  const [currentPage, setCurrentPage] = useState(1)
-  const [youtubeTheme, setYoutubeTheme] = useState('full')
+  const classes = useStyles();
+  const [video, setVideo] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [videoNumber, setVideoNumber] = useState("0");
+  const [sourceLoading, setSourceLoading] = useState(true);
+  const [headerLoading, setHeaderLoading] = useState(true);
+  const [content, setContent] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [emptyCategory, setEmptyCategory] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedPosts, setSelectedPosts] = useState([]);
+  const [currentPosts, setCurrentPosts] = useState([]);
+  const postsPerPage = 9;
+  const [currentPage, setCurrentPage] = useState(1);
+  const [youtubeTheme, setYoutubeTheme] = useState("full");
 
   // retrieve current video content
   const handleVideoNumber = (numVideos) => {
-    let url = window.location.href.split('/')
-    if (url[url.length - 1] && url[url.length - 1] !== 'videos') {
-      setVideoNumber(url[url.length - 1])
-      return url[url.length - 1]
+    let url = window.location.href.split("/");
+    if (url[url.length - 1] && url[url.length - 1] !== "videos") {
+      setVideoNumber(url[url.length - 1]);
+      return url[url.length - 1];
     }
-    return `${+numVideos - 1}`
-  }
+    return `${+numVideos - 1}`;
+  };
 
   // load the page content for the current video
   const loadPageContent = (allVideos, currVideoNumber) => {
-    var videoIndex = 0
+    var videoIndex = 0;
     const currVideo = allVideos.filter((video, index) => {
       if (video.videoNumber.toString() === currVideoNumber) {
-        videoIndex = index
-        return true
+        videoIndex = index;
+        return true;
       } else {
-        return false
+        return false;
       }
-    })[0]
-    setVideo(currVideo)
+    })[0];
+    setVideo(currVideo);
 
-    return videoIndex
-  }
+    return videoIndex;
+  };
 
   // load video previews
   const loadVideoPreviews = (allVideos, videoIndex) => {
-    let sortedVideos = allVideos.slice(0, videoIndex).reverse()
+    let sortedVideos = allVideos.slice(0, videoIndex).reverse();
     const additionalVideos = allVideos
       .slice(videoIndex + 1, allVideos.length)
-      .reverse()
-    sortedVideos = [...additionalVideos, ...sortedVideos]
-    setCurrentPosts(sortedVideos.slice(0, postsPerPage))
-    setCurrentPage(1)
-    setSelectedPosts(sortedVideos)
-    setContent(sortedVideos)
-  }
+      .reverse();
+    sortedVideos = [...additionalVideos, ...sortedVideos];
+    setCurrentPosts(sortedVideos.slice(0, postsPerPage));
+    setCurrentPage(1);
+    setSelectedPosts(sortedVideos);
+    setContent(sortedVideos);
+  };
 
   // get videos
   // input: videos data from google sheets
   // output: array of dictionaries containing videos data
   useEffect(() => {
     const fetchVideos = async () => {
-      setLoading(false)
-      const res = await axios.get('https://wit-database.herokuapp.com/videos')
-      const allVideos = humps.camelizeKeys(res.data)
-      const currVideoNumber = handleVideoNumber(allVideos.length)
+      setLoading(false);
+      const res = await axios.get("https://wit-database.herokuapp.com/videos");
+      const allVideos = humps.camelizeKeys(res.data);
+      const currVideoNumber = handleVideoNumber(allVideos.length);
 
       if (allVideos.length <= 0 || currVideoNumber > allVideos.length) {
-        props.history.push('/404')
-        return
+        props.history.push("/404");
+        return;
       }
 
-      var videoIndex = loadPageContent(allVideos, currVideoNumber)
-      loadVideoPreviews(allVideos, videoIndex)
+      var videoIndex = loadPageContent(allVideos, currVideoNumber);
+      loadVideoPreviews(allVideos, videoIndex);
 
-      setLoading(false)
-      setSourceLoading(false)
-    }
+      setLoading(false);
+      setSourceLoading(false);
+    };
 
     // start at the top of the page
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
 
-    fetchVideos().catch((error) => console.error(error))
-  }, [videoNumber, props.history])
+    fetchVideos().catch((error) => console.error(error));
+  }, [videoNumber, props.history]);
 
   useEffect(() => {
     if (currentPosts.length === 0 && loading === false) {
-      setEmptyCategory(true)
-      console.error = () => {}
+      setEmptyCategory(true);
+      console.error = () => {};
     } else {
-      setEmptyCategory(false)
+      setEmptyCategory(false);
     }
-  }, [currentPosts, loading])
+  }, [currentPosts, loading]);
 
   // filter content by selected category + searchTerm
   const filterContent = (selectedCategory, searchTerm) => {
     // filter by category
     const filteredContent = content.filter(
       (picture) =>
-        selectedCategory === 'All' ||
-        picture.category.split(',').includes(selectedCategory)
-    )
+        selectedCategory === "All" ||
+        picture.category.split(",").includes(selectedCategory)
+    );
     // filter by search term
-    searchVideos(filteredContent, searchTerm)
-  }
+    searchVideos(filteredContent, searchTerm);
+  };
 
   // filter category content by search filter in heading, subheading or author
   const searchVideos = (filteredContent, searchTerm) => {
     const searchResults = filteredContent.filter((video) => {
       if (
-        searchTerm === '' ||
+        searchTerm === "" ||
         video.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         video.date.toLowerCase().includes(searchTerm.toLowerCase())
       ) {
-        return true
+        return true;
       } else {
-        return false
+        return false;
       }
-    })
-    setSelectedPosts(searchResults)
-    setCurrentPosts(searchResults.slice(0, postsPerPage))
-    setCurrentPage(1)
-  }
+    });
+    setSelectedPosts(searchResults);
+    setCurrentPosts(searchResults.slice(0, postsPerPage));
+    setCurrentPage(1);
+  };
 
   // called when pagination item clicked to slice the correct amount of videos for viewing
   const paginate = (pageNumber) => {
@@ -143,19 +143,19 @@ const Videos = (props) => {
         (pageNumber - 1) * postsPerPage,
         pageNumber * postsPerPage
       )
-    )
-    setCurrentPage(pageNumber)
-  }
+    );
+    setCurrentPage(pageNumber);
+  };
 
   // change youtube theme depending on user dark/light mode
   useEffect(() => {
     if (
       window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
+      window.matchMedia("(prefers-color-scheme: dark)").matches
     ) {
-      setYoutubeTheme('dark')
+      setYoutubeTheme("dark");
     }
-  }, [])
+  }, []);
 
   // get video items
   const getVideos = (videos) => {
@@ -173,8 +173,8 @@ const Videos = (props) => {
                   className={styles.videoImages}
                   src={`/videos/${video.img}`}
                   alt={video.name}
-                  width={'450px'}
-                  height={'200px'}
+                  width={"450px"}
+                  height={"200px"}
                 />
               </div>
               <p className={styles.moreName}>{video.name}</p>
@@ -182,9 +182,9 @@ const Videos = (props) => {
             </div>
           </Link>
         </div>
-      )
-    })
-  }
+      );
+    });
+  };
 
   return (
     <div>
@@ -215,9 +215,9 @@ const Videos = (props) => {
               <div className={styles.youtubeImgContainer}>
                 <Image
                   className={styles.youtubeImg}
-                  src={'/videos/youtube.png'}
+                  src={"/videos/youtube.png"}
                   alt="Youtube"
-                  layout={'fill'}
+                  layout={"fill"}
                 />
               </div>
               <p className={styles.desc}>
@@ -229,10 +229,10 @@ const Videos = (props) => {
               <p className={styles.subscribeText}>SUBSCRIBE HERE</p>
               {/*https://www.youtube.com/channel/UCQ8PGe3P4ZuDSNCb9vCeTiw?sub_confirmation=1&feature=subscribe-embed-click*/}
               <YouTubeSubscribe
-                channelid={'UCQ8PGe3P4ZuDSNCb9vCeTiw'}
+                channelid={"UCQ8PGe3P4ZuDSNCb9vCeTiw"}
                 theme={youtubeTheme}
-                layout={'full'}
-                count={'hidden'}
+                layout={"full"}
+                count={"hidden"}
                 className={styles.subscribe}
               />
               {/* YouTube Embedded Video */}
@@ -247,7 +247,7 @@ const Videos = (props) => {
                       frameBorder="0"
                       allow="autoplay; encrypted-media"
                       allowFullScreen={true}
-                      title={!video.name ? 'Video' : video.name}
+                      title={!video.name ? "Video" : video.name}
                       className={styles.embeddedVideo}
                     />
                   </div>
@@ -264,8 +264,8 @@ const Videos = (props) => {
                     .map((category) => {
                       const chipColour =
                         selectedCategory === categories[category]
-                          ? '#e85f5c'
-                          : '#7F7F7F'
+                          ? "#e85f5c"
+                          : "#7F7F7F";
                       return (
                         <Chip
                           key={category}
@@ -276,11 +276,11 @@ const Videos = (props) => {
                             backgroundColor: chipColour,
                           }}
                           onClick={() => {
-                            setSelectedCategory(categories[category])
-                            filterContent(categories[category], searchTerm)
+                            setSelectedCategory(categories[category]);
+                            filterContent(categories[category], searchTerm);
                           }}
                         />
-                      )
+                      );
                     })}
                 </div>
               </div>
@@ -292,8 +292,8 @@ const Videos = (props) => {
                   type="text"
                   placeholder="Search videos"
                   onChange={(event) => {
-                    setSearchTerm(event.target.value)
-                    filterContent(selectedCategory, event.target.value)
+                    setSearchTerm(event.target.value);
+                    filterContent(selectedCategory, event.target.value);
                   }}
                 />
               </div>
@@ -320,7 +320,7 @@ const Videos = (props) => {
         </>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Videos
+export default Videos;

@@ -1,5 +1,5 @@
-import React from 'react'
-import Image from 'next/image'
+import React from "react";
+import Image from "next/image";
 
 const LoadingScreen = () => {
   return (
@@ -14,7 +14,7 @@ const LoadingScreen = () => {
       />
       <p>Loading...</p>
     </div>
-  )
-}
+  );
+};
 
-export default LoadingScreen
+export default LoadingScreen;

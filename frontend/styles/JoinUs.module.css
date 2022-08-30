@@ -34,7 +34,7 @@
 
 /*Top Heading*/
 .header {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 30pt;
   margin-top: 50px;
   text-transform: uppercase;
@@ -43,7 +43,7 @@
 
 /*Heading of sections*/
 .section {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 33pt;
   padding-top: 100px;
   text-transform: uppercase;
@@ -83,7 +83,7 @@
 
 /* Headings in how to join */
 .descriptionHowto {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14pt;
   text-align: justify;
   color: var(--general-text);
@@ -135,12 +135,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   cursor: pointer;
 }
 
 .portfolioBox:before {
-  content: '';
+  content: "";
   padding-top: 100%;
 }
 
@@ -195,12 +195,12 @@
 
 .accordionHeading {
   font-size: 14pt;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: var(--general-text);
 }
 
 .accordionDetails {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 13pt;
   color: var(--black);
 }

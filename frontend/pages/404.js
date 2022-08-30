@@ -1,17 +1,17 @@
-import { useEffect } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import styles from '../styles/NotFound.module.css'
+import { useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import styles from "../styles/NotFound.module.css";
 
 const NotFound = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div id={styles.container}>
       <Image
         id={styles.image404}
-        src={'/404.png'}
+        src={"/404.png"}
         alt="404"
         width="375px"
         height="375px"
@@ -24,7 +24,7 @@ const NotFound = () => {
         </Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default NotFound
+export default NotFound;

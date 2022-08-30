@@ -1,22 +1,22 @@
-import React from 'react'
-import styles from '../styles/Newsletter.module.css'
-import CloseIcon from '@material-ui/icons/Close'
-import IconButton from '@material-ui/core/IconButton'
+import React from "react";
+import styles from "../styles/Newsletter.module.css";
+import CloseIcon from "@material-ui/icons/Close";
+import IconButton from "@material-ui/core/IconButton";
 
 const NewsletterForm = ({ handleClose }) => {
-  const [email, setEmail] = React.useState('')
-  const [error, setError] = React.useState('')
+  const [email, setEmail] = React.useState("");
+  const [error, setError] = React.useState("");
   const validate =
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   const checkEmail = (e) => {
-    setEmail(e.target.value)
+    setEmail(e.target.value);
     if (validate.test(e.target.value)) {
-      setError(false)
+      setError(false);
     } else {
-      setError(true)
+      setError(true);
     }
-  }
+  };
 
   return (
     <div className={styles.paper}>
@@ -74,14 +74,14 @@ const NewsletterForm = ({ handleClose }) => {
           placeholder="Degree"
         />
         <p className={styles.subscribeError}>
-          {error ? 'Please input a valid email' : ''}
+          {error ? "Please input a valid email" : ""}
         </p>
         <button className="button" disabled={error}>
           Subscribe
         </button>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default NewsletterForm
+export default NewsletterForm;

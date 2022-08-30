@@ -1,38 +1,38 @@
-import React, { useEffect, useState } from 'react'
-import PageHeader from '../components/Header'
-import OpportunitiesCard from '../components/OpportunitiesCard'
-import styles from '../styles/opportunities.module.css'
-import CircularProgress from '@material-ui/core/CircularProgress'
-import LoadingScreen from '../components/LoadingScreen'
-import axios from 'axios'
-import humps from 'humps'
+import React, { useEffect, useState } from "react";
+import PageHeader from "../components/Header";
+import OpportunitiesCard from "../components/OpportunitiesCard";
+import styles from "../styles/opportunities.module.css";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import LoadingScreen from "../components/LoadingScreen";
+import axios from "axios";
+import humps from "humps";
 
 const Opportunities = () => {
-  const [loading, setLoading] = useState(true)
-  const [opportunities, setOpportunities] = useState([])
-  const [sourceLoading, setSourceLoading] = React.useState(true)
-  const [headerLoading, setHeaderLoading] = React.useState(true)
+  const [loading, setLoading] = useState(true);
+  const [opportunities, setOpportunities] = useState([]);
+  const [sourceLoading, setSourceLoading] = React.useState(true);
+  const [headerLoading, setHeaderLoading] = React.useState(true);
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   const fetchOpportunities = async () => {
     const res = await axios.get(
-      'https://wit-database.herokuapp.com/opportunities'
-    )
-    setLoading(false)
-    setOpportunities(humps.camelizeKeys(res.data))
-    setSourceLoading(false)
-  }
+      "https://wit-database.herokuapp.com/opportunities"
+    );
+    setLoading(false);
+    setOpportunities(humps.camelizeKeys(res.data));
+    setSourceLoading(false);
+  };
 
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
     fetchOpportunities().catch((error) =>
       // error handling
       console.error(error)
-    )
-  }, [])
+    );
+  }, []);
 
   return (
     <div>
@@ -99,7 +99,7 @@ const Opportunities = () => {
                         closeDate={individualOpportunity.closeDate}
                         summary={individualOpportunity.summary}
                       />
-                    )
+                    );
                   })}
                 </div>
               </div>
@@ -107,7 +107,7 @@ const Opportunities = () => {
         </>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Opportunities
+export default Opportunities;

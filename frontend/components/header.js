@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react'
-import Image from 'next/image'
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 const PageHeader = ({ imageLoading, imgUrl, title }) => {
-  const [imageLoaded, setImageLoaded] = useState(false)
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
-    if (typeof imageLoading === 'function') {
-      imageLoading(false)
+    if (typeof imageLoading === "function") {
+      imageLoading(false);
     }
-  }, [imageLoaded, imageLoading])
+  }, [imageLoaded, imageLoading]);
 
   return (
     <div className="coverPhoto">
@@ -21,9 +21,9 @@ const PageHeader = ({ imageLoading, imgUrl, title }) => {
         alt="header"
         className="cover_image"
         onLoad={
-          typeof imageLoading === 'function' ? () => setImageLoaded(true) : null
+          typeof imageLoading === "function" ? () => setImageLoaded(true) : null
         }
-        layout={'fill'}
+        layout={"fill"}
         priority="True"
       />
 
@@ -32,7 +32,7 @@ const PageHeader = ({ imageLoading, imgUrl, title }) => {
         <h1>{title}</h1>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default PageHeader
+export default PageHeader;

@@ -46,7 +46,7 @@
   margin-bottom: 15px;
   padding-bottom: 10px;
   font-size: 12pt;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .submitButton {
@@ -105,7 +105,7 @@ form input.button:hover {
 
 .newEmails h3 {
   color: var(--yellow);
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 20pt;
   font-weight: normal;
   letter-spacing: 2.5px;
@@ -114,7 +114,7 @@ form input.button:hover {
 .newEmails a {
   color: var(--general-text);
   display: block;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 10pt;
   padding-bottom: 5px;
   text-align: left;

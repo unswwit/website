@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import styles from '../styles/publications.module.css'
-import Image from 'next/image'
-import Link from 'next/link'
+import React, { Component } from "react";
+import styles from "../styles/publications.module.css";
+import Image from "next/image";
+import Link from "next/link";
 
 class PubArticle extends Component {
   render() {
@@ -10,7 +10,7 @@ class PubArticle extends Component {
         {/*Start of publications article*/}
         <div className={styles.dark} />
         <div className={styles.articleImg}>
-          <Image src={this.props.imgUrl} alt="wit logo" layout={'fill'} />
+          <Image src={this.props.imgUrl} alt="wit logo" layout={"fill"} />
         </div>
 
         <div className={styles.textContainer}>
@@ -26,7 +26,7 @@ class PubArticle extends Component {
         </div>
         {/*End of publications article*/}
       </div>
-    )
+    );
   }
 }
-export default PubArticle
+export default PubArticle;

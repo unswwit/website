@@ -1,5 +1,5 @@
-import { Component } from 'react'
-import styles from '../styles/Team.module.css'
+import { Component } from "react";
+import styles from "../styles/Team.module.css";
 
 class SubCom extends Component {
   render() {
@@ -14,13 +14,13 @@ class SubCom extends Component {
         <div className={styles.subcomLongerCol}>
           <div className={styles.profile}>
             <p className={styles.subcomProfileDegree}>
-              {this.props.degree + ', ' + this.props.year + ' year'}
+              {this.props.degree + ", " + this.props.year + " year"}
             </p>
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default SubCom
+export default SubCom;

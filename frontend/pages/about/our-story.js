@@ -1,27 +1,27 @@
-import { useEffect, useState } from 'react'
-import PageHeader from '../../components/Header.js'
-import styles from '../../styles/OurStory.module.css'
-import Timeline from '../../components/OurStoryTimeline.js'
-import LoadingScreen from '../../components/LoadingScreen'
-import Image from 'next/image'
+import { useEffect, useState } from "react";
+import PageHeader from "../../components/Header.js";
+import styles from "../../styles/OurStory.module.css";
+import Timeline from "../../components/OurStoryTimeline.js";
+import LoadingScreen from "../../components/LoadingScreen";
+import Image from "next/image";
 
 // Start at the top of the page
 const OurStory = () => {
-  const [sourceLoading, setSourceLoading] = useState(true)
-  const [headerLoading, setHeaderLoading] = useState(true)
+  const [sourceLoading, setSourceLoading] = useState(true);
+  const [headerLoading, setHeaderLoading] = useState(true);
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   // control when to stop loading
   useEffect(() => {
     setTimeout((loading) => {
       if (!loading) {
-        setSourceLoading(false)
+        setSourceLoading(false);
       }
-    }, 1000)
-  }, [])
+    }, 1000);
+  }, []);
 
   return (
     <div>
@@ -151,7 +151,7 @@ const OurStory = () => {
         </>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default OurStory
+export default OurStory;

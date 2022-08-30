@@ -26,7 +26,7 @@
 
 .timelineCardText {
   background-color: white;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12pt;
   min-height: 250px;
   padding-right: 15px;
@@ -34,7 +34,7 @@
 }
 
 .witJourneyText {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 12pt !important;
   text-align: center;

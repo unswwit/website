@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display&display=swap");
 
 /*Web colours*/
 :root {
@@ -61,13 +61,13 @@ body {
 /*----------------------------------General------------------------------------*/
 h1 {
   color: var(--yellow);
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 48pt;
 }
 
 h2 {
   color: var(--yellow);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 30pt;
   text-transform: uppercase;
   padding-bottom: 20px;
@@ -75,7 +75,7 @@ h2 {
 }
 
 p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 10pt;
   margin-top: 0;
 }
@@ -83,7 +83,7 @@ p {
 /*----------------------------------Header------------------------------------*/
 /*Heading title*/
 .headerTitle h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 5vw;
   letter-spacing: 8px;
   text-transform: uppercase;
@@ -182,7 +182,7 @@ p {
 
 .navbar-nav {
   color: #313638;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
   text-decoration: none;
   z-index: 99;
@@ -232,7 +232,7 @@ p {
 }
 
 .transparent::after {
-  content: ' ';
+  content: " ";
   border-style: solid;
   border-width: 0 1.8em 2em 1.8em;
   border-color: transparent;
@@ -244,7 +244,7 @@ p {
 }
 
 .mediaDD::after {
-  content: ' ';
+  content: " ";
   border-style: solid;
   border-width: 0 1.8em 2em 1.8em;
   border-color: transparent;
@@ -295,7 +295,7 @@ p {
 }
 
 .nav-item::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   height: 2px;
@@ -368,7 +368,7 @@ p {
 
 /* clear background - dropdown */
 .highlight-no-nav::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   height: 2px;
@@ -382,7 +382,7 @@ p {
 
 /* yellow background - dropdown */
 .highlight-nav::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   height: 2px;
@@ -396,7 +396,7 @@ p {
 
 /* yellow background - no dropdown*/
 .highlight-nav-no-drop::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   height: 2px;
@@ -409,7 +409,7 @@ p {
 
 /* clear background - no dropdown */
 .highlight-nav-white::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   height: 2px;
@@ -661,7 +661,7 @@ p {
 /*-------------------------------Newsletter sign up form-----------------------------*/
 .signUpForm span {
   color: #e85f5c;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 form input {
@@ -675,7 +675,7 @@ form input {
   border-color: var(--general-text);
   border-width: 3px;
   padding: 5px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   width: 50%;
 }
 
@@ -760,7 +760,7 @@ footer {
 }
 
 .footer-item {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding: 0.5vw;
   color: var(--black);
   font-size: 1.05vw;
@@ -772,7 +772,7 @@ footer {
 }
 
 .bottom-footer-item {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding: 0.3vw;
   color: var(--black);
   text-transform: uppercase;
@@ -799,7 +799,7 @@ footer {
 /*Social Tooltip Styles*/
 .tooltipTitle {
   font-size: 13px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 10px 0;
 }
 
@@ -814,7 +814,7 @@ footer {
 }
 
 .footer-copyright {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-transform: none;
   padding-bottom: 1vw;
   font-size: 1.05vw;
@@ -955,7 +955,7 @@ a {
 /*-------------------------------Newsletter sign up form-----------------------------*/
 .signUpForm span {
   color: #e85f5c;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 form input {
@@ -969,7 +969,7 @@ form input {
   border-color: var(--general-text);
   border-width: 3px;
   padding: 5px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   width: 50%;
 }
 

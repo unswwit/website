@@ -1,28 +1,28 @@
-import Accordion from '@material-ui/core/Accordion'
-import AccordionDetails from '@material-ui/core/AccordionDetails'
-import AccordionSummary from '@material-ui/core/AccordionSummary'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-import Typography from '@material-ui/core/Typography'
-import { makeStyles } from '@material-ui/core/styles'
-import React from 'react'
-import styles from '../styles/JoinUs.module.css'
+import Accordion from "@material-ui/core/Accordion";
+import AccordionDetails from "@material-ui/core/AccordionDetails";
+import AccordionSummary from "@material-ui/core/AccordionSummary";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
+import React from "react";
+import styles from "../styles/JoinUs.module.css";
 
 const useStyles = makeStyles({
   colorPrimary: {
-    color: 'black',
+    color: "black",
   },
-  '@media (prefers-color-scheme:dark)': {
+  "@media (prefers-color-scheme:dark)": {
     root: {
-      backgroundColor: '#3B3B41',
+      backgroundColor: "#3B3B41",
     },
     colorPrimary: {
-      color: 'white',
+      color: "white",
     },
   },
-})
+});
 
 export default function SimpleAccordion() {
-  const accordionclasses = useStyles()
+  const accordionclasses = useStyles();
   return (
     <div className={styles.accordion}>
       <Accordion classes={{ root: accordionclasses.root }}>
@@ -37,7 +37,7 @@ export default function SimpleAccordion() {
           }
           aria-controls="panel4bh-content"
         >
-          <Typography id={styles.accordionHeading} component={'span'}>
+          <Typography id={styles.accordionHeading} component={"span"}>
             <div className={styles.accordionHeading}>
               <strong>
                 Can non-female students apply for a subcommittee position?
@@ -65,7 +65,7 @@ export default function SimpleAccordion() {
           }
           aria-controls="panel4bh-content"
         >
-          <Typography id={styles.accordionHeading} component={'span'}>
+          <Typography id={styles.accordionHeading} component={"span"}>
             <div className={styles.accordionHeading}>
               <strong>Do I need a tech background to join?</strong>
             </div>
@@ -90,7 +90,7 @@ export default function SimpleAccordion() {
           }
           aria-controls="panel4bh-content"
         >
-          <Typography id={styles.accordionHeading} component={'span'}>
+          <Typography id={styles.accordionHeading} component={"span"}>
             <div className={styles.accordionHeading}>
               <strong>
                 Do I need any prior experience in the portfolio that I applied?
@@ -117,7 +117,7 @@ export default function SimpleAccordion() {
           }
           aria-controls="panel4bh-content"
         >
-          <Typography id={styles.accordionHeading} component={'span'}>
+          <Typography id={styles.accordionHeading} component={"span"}>
             <div className={styles.accordionHeading}>
               <strong>How can I make my application stand out?</strong>
             </div>
@@ -142,7 +142,7 @@ export default function SimpleAccordion() {
           }
           aria-controls="panel4bh-content"
         >
-          <Typography id={styles.accordionHeading} component={'span'}>
+          <Typography id={styles.accordionHeading} component={"span"}>
             <div className={styles.accordionHeading}>
               <strong>What is the time commitment like?</strong>
             </div>
@@ -168,7 +168,7 @@ export default function SimpleAccordion() {
           aria-controls="panel4bh-content"
           classes={{ root: styles.accordiontest }}
         >
-          <Typography id={styles.accordionHeading} component={'span'}>
+          <Typography id={styles.accordionHeading} component={"span"}>
             <div className={styles.accordionHeading}>
               <strong>
                 I’m not in 1st year, can I still join as a subcommittee member?
@@ -184,5 +184,5 @@ export default function SimpleAccordion() {
         </AccordionDetails>
       </Accordion>
     </div>
-  )
+  );
 }
