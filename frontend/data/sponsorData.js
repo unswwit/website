@@ -155,11 +155,11 @@ const mantelGroupDescription = () => {
   return (
     <>
       <p>
-        ​Mantel Group hires talented individuals who love what they do and give
+        Mantel group hires talented individuals who love what they do and give
         them the tools and autonomy to be awesome at their jobs! Every single
         one of us is an individual and our experience in the workplace has to
         reflect that. We do not believe that standard perks and benefits, or
-        ‘one size fits all’ experiences give people what they need.
+        &apos;one size fits all&apos; experiences gives people what they need.
       </p>
       <p>
         For us, creating a great place to work is no accident. All good
