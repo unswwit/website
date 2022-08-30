@@ -9,7 +9,7 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": "latest"
+    "ecmaVersion": 12
   },
   "rules": {
     "eqeqeq": ["error", "always"],
