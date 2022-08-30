@@ -204,8 +204,6 @@ const Events = ({ upcomingEvents }) => {
     });
   };
 
-  setSourceLoading(false);
-
   return (
     <div>
       {sourceLoading && headerLoading ? (
