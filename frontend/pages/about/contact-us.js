@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import PageHeader from "../../components/header";
+import { useEffect, useState } from "react";
+import PageHeader from "../../components/Header";
 import ContactForm from "../../components/contactForm";
 import styles from "../../styles/contactUs.module.css";
 import LoadingScreen from "../../components/LoadingScreen";

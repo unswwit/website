@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../../styles/publications.module.css";
-import PubArticle from "../../components/publications-article";
+import PubArticle from "../../components/PublicationsArticle";
 import PageHeader from "../../components/Header";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import axios from "axios";
@@ -18,7 +18,7 @@ const Publications = () => {
 
     // load articles
     fetchPublications().catch((error) =>
-      // error handling
+    // error handling
       console.error(error)
     );
   }, []);
@@ -64,27 +64,27 @@ const Publications = () => {
             {/*Articles*/}
             {!loading &&
               Array.from({ length: 3 }, (_, i) => i + 2020)
-                .reverse()
-                .map((year) => {
-                  return (
-                    <div key={year}>
-                      <h1>{year}</h1>
-                      <div className={styles.row}>
-                        {articles
-                          .filter((article) => article.year === year)
-                          .map((article, index) => (
-                            <PubArticle
-                              key={index}
-                              imgUrl={`/publications/${year}/${article.img}`}
-                              heading={article.heading}
-                              date={article.date}
-                              url={article.url}
-                            />
-                          ))}
-                      </div>
-                    </div>
-                  );
-                })}
+              	.reverse()
+              	.map((year) => {
+              		return (
+              			<div key={year}>
+              				<h1>{year}</h1>
+              				<div className={styles.row}>
+              					{articles
+              						.filter((article) => article.year === year)
+              						.map((article, index) => (
+              							<PubArticle
+              								key={index}
+              								imgUrl={`/publications/${year}/${article.img}`}
+              								heading={article.heading}
+              								date={article.date}
+              								url={article.url}
+              							/>
+              						))}
+              				</div>
+              			</div>
+              		);
+              	})}
           </div>
         </>
       )}

@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import CountUp from "react-countup";
 import styles from "../styles/Home.module.css";
-import PubArticle from "../components/publications-article";
+import PubArticle from "../components/PublicationsArticle";
 import InitiativesSlideshow from "../components/InitiativesSlideshow.js";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Aos from "aos";
@@ -14,10 +14,9 @@ import NewsletterSection from "../components/NewsletterSection";
 import axios from "axios";
 import humps from "humps";
 import QuoteSlideshow from "../components/QuotesSlideshow";
-import executives from "../data/execQuotes";
+import executives from "../data/ExecQuotes";
 
 const Home = () => {
-  const [open, setOpen] = React.useState(false);
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [openNewsletter, setOpenNewsletter] = useState(false);
@@ -55,7 +54,6 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     fetchPublications().catch((error) =>
-      // error handling
       console.error(error)
     );
   }, []);
@@ -101,7 +99,8 @@ const Home = () => {
             </div>
           </div>
           {/* End of Description */}
-          {/* Quotes */}
+
+          {/* Start of Quotes */}
           <div
             data-aos={isMobile ? "fade" : "fade-left"}
             className={styles.quotes}
@@ -116,6 +115,7 @@ const Home = () => {
               />
             </div>
           </div>
+          {/* End of Quotes */}
 
           {/* Start of Statistics */}
           <div className={styles.stats}>
@@ -160,8 +160,6 @@ const Home = () => {
             className={styles.publications}
           >
             <h1>PUBLICATIONS</h1>
-
-            {/*Recent 3 Articles*/}
             <div className={styles.articlesDiv}>
               <div className={styles.articles}>
                 {loading && (
@@ -174,14 +172,14 @@ const Home = () => {
                 )}
                 {!loading &&
                   last3articles.map((article, index) => (
-                    <div className={styles.homeArticles} key={index}>
-                      <PubArticle
-                        imgUrl={`/publications/${article.year}/${article.img}`}
-                        heading={article.heading}
-                        date={article.date}
-                        url={article.url}
-                      />
-                    </div>
+                  	<div className={styles.homeArticles} key={index}>
+                  		<PubArticle
+                  			imgUrl={`/publications/${article.year}/${article.img}`}
+                  			heading={article.heading}
+                  			date={article.date}
+                  			url={article.url}
+                  		/>
+                  	</div>
                   ))}
               </div>
             </div>
@@ -191,6 +189,7 @@ const Home = () => {
           </div>
           {/* End of Publications */}
 
+          {/* Start of Sponsors & Affliations */}
           <div
             data-aos={isMobile ? "fade" : "fade-right"}
             data-aos-delay="150"
@@ -219,8 +218,9 @@ const Home = () => {
               </div>
             </div>
           </div>
+          {/* End of Sponsors & Affliations */}
 
-          {/* Start of newsletter */}
+          {/* Start of Newsletter */}
           <NewsletterSection
             setOpen={setOpenNewsletter}
             open={openNewsletter}

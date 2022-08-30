@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "../styles/team.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,13 +16,13 @@ const Execs = (props) => {
           {props.imgUrl && (
             <div className={styles.profileCrop}>
               <div className={styles.profileImg}>
-              <Image
-                src={props.imgUrl}
-                className={`${styles[props.className]}`}
-                alt={props.name}
-                width="250px"
-                height="250px"
-              />
+                <Image
+                  src={props.imgUrl}
+                  className={`${styles[props.className]}`}
+                  alt={props.name}
+                  width="250px"
+                  height="250px"
+                />
               </div>
             </div>
           )}
@@ -40,7 +39,12 @@ const Execs = (props) => {
               <div className={styles.iconBar}>
                 {Object.keys(socials).map((social) => {
                   return (
-                    <Link target="blank" href={socials[social]} rel="noopener noreferrer" key={social}>
+                    <Link
+                      target="blank"
+                      href={socials[social]}
+                      rel="noopener noreferrer"
+                      key={social}
+                    >
                       <a className={styles.icon}>
                         <Image
                           src={`/icons/${social}.png`}

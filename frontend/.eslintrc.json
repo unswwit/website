@@ -1,20 +1,22 @@
 {
   "env": {
-      "browser": true,
-      "es2021": true
+    "browser": true,
+    "es2021": true
   },
-  "extends": [
-      "plugin:@next/next/recommended"
-  ],
-  "parserOptions": {
-      "ecmaFeatures": {
-          "jsx": true
-      },
-      "ecmaVersion": "latest",
-      "sourceType": "module"
-  },
+  "extends": ["eslint:recommended", "next", "prettier"],
   "plugins": [
-      "react",
-      "eslint-plugin-no-inline-styles"
-  ]
+    "eslint-plugin-no-inline-styles"
+  ],
+  "rules": {
+    "eqeqeq": ["error", "always"],
+    "eol-last": ["error", "always"],
+    "indent": ["error", 2],
+    "no-duplicate-imports": "error",
+    "no-inline-styles/no-inline-styles": "warn",
+    "no-unused-expressions": "error",
+    "no-unneeded-ternary": "error", 
+    "no-unused-vars": "warn",
+    "semi": ["error", "always"],
+    "quotes": ["error", "double"]
+  }
 }

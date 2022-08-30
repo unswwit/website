@@ -12,7 +12,7 @@ function ContactForm() {
     // validating that the email is in the correct form
     const validate =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    
+
     if (validate.test(email)) {
       emailjs
         .sendForm(
@@ -21,15 +21,14 @@ function ContactForm() {
           e.target,
           process.env.NEXT_PUBLIC_EMAILJS_ID
         )
-        .then(
-          (result) => {
-            alert(
-              "Your inquiry was sent successfully. You can expect to hear a response from us within a week."
-            );
-          },
-          (error) => {
-            alert("Your inquiry failed to send. Please try again");
-          }
+        .then(() => {
+          alert(
+            "Your inquiry was sent successfully. You can expect to hear a response from us within a week."
+          );
+        },
+        (error) => {
+          alert("Your inquiry failed to send. Please try again");
+        }
         );
       setEmail("");
       e.target.reset();

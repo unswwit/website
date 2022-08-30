@@ -13,7 +13,7 @@ import humps from "humps";
 import UpcomingEvent from "../components/UpcomingEvent";
 import PaginationComp from "../components/Pagination";
 import { isMobile } from "react-device-detect";
-import { useStyles, categories, marks, valueToYear } from "../data/eventData";
+import { useStyles, categories, marks, valueToYear } from "../data/EventData";
 
 const Events = () => {
   const classes = useStyles();
@@ -99,7 +99,7 @@ const Events = () => {
       setTerms(allEvents.reverse());
     };
     fetchPastEvents().catch((error) =>
-      // error handling
+    // error handling
       console.error(error)
     );
   }, [year]);
@@ -147,7 +147,8 @@ const Events = () => {
     const filteredTerm = pastContent[term].filter(
       (picture) =>
         selectedCategory === "All" ||
-        (picture.category != null && picture.category.split(",").includes(selectedCategory))
+        (picture.category !== null &&
+          picture.category.split(",").includes(selectedCategory))
     );
 
     return filteredTerm;
@@ -172,7 +173,7 @@ const Events = () => {
   useEffect(() => {
     setLoadingUpcoming(true);
     fetchUpcomingEvents().catch((error) =>
-      // error handling
+    // error handling
       console.error(error)
     );
   }, []);
@@ -182,10 +183,10 @@ const Events = () => {
     return events.map((event, index) => {
       let eventLabel = event.img.split(".")[0].split("-");
       eventLabel.shift();
-      let event_id = `${event.eventNumber}`;
+      let eventId = `${event.eventNumber}`;
       return (
         <div className={styles.pastEvent} key={index}>
-          <Link href={`/event-recaps/${year}/${event_id}`}>
+          <Link href={`/event-recaps/${year}/${eventId}`}>
             <div className={styles.eventImgBox}>
               <Image
                 className={styles.eventImages}
@@ -230,33 +231,33 @@ const Events = () => {
             </div>
             {!loadingUpcoming &&
               (!upcomingEvents.length ? (
-                <p className={styles.lookout}>
+              	<p className={styles.lookout}>
                   Keep a lookout here for our upcoming events!
-                </p>
+              	</p>
               ) : (
-                <div className={styles.upcomingEventsContainer}>
-                  {!isMobile &&
+              	<div className={styles.upcomingEventsContainer}>
+              		{!isMobile &&
                     currentPosts.map((upcomingEvent, index) => {
-                      return (
-                        <div className={styles.upcomingEventsBox}>
-                          <UpcomingEvent
-                            upcomingEvent={upcomingEvent}
-                            index={index}
-                          />
-                        </div>
-                      );
+                    	return (
+                    		<div className={styles.upcomingEventsBox} key={index}>
+                    			<UpcomingEvent
+                    				upcomingEvent={upcomingEvent}
+                    				key={index}
+                    			/>
+                    		</div>
+                    	);
                     })}
 
-                  {isMobile &&
+              		{isMobile &&
                     upcomingEvents.map((upcomingEvent, index) => {
-                      return (
-                        <UpcomingEvent
-                          upcomingEvent={upcomingEvent}
-                          index={index}
-                        />
-                      );
+                    	return (
+                    		<UpcomingEvent
+                    			upcomingEvent={upcomingEvent}
+                    			key={index}
+                    		/>
+                    	);
                     })}
-                </div>
+              	</div>
               ))}
 
             {!isMobile && (
@@ -277,8 +278,8 @@ const Events = () => {
                   .map((category) => {
                     const chipColour =
                       selectedCategory === categories[category]
-                        ? "#e85f5c"
-                        : "#7F7F7F";
+                      	? "#e85f5c"
+                      	: "#7F7F7F";
                     return (
                       <Chip
                         key={category}
@@ -329,26 +330,26 @@ const Events = () => {
             <div className={styles.pastEventsContainer}>
               {!loadingPast &&
                 Object.keys(pastSelectedPosts)
-                  .reverse()
-                  .map((key) => {
-                    const numEvents = React.Children.count(
-                      getTermEvents(pastSelectedPosts[key])
-                    );
-                    if (numEvents > 0) {
-                      return (
-                        <div key={key}>
-                          <h3 className={styles.termColour}>
+                	.reverse()
+                	.map((key) => {
+                		const numEvents = React.Children.count(
+                			getTermEvents(pastSelectedPosts[key])
+                		);
+                		if (numEvents > 0) {
+                			return (
+                				<div key={key}>
+                					<h3 className={styles.termColour}>
                             TERM {key.replace("term", "")}
-                          </h3>
-                          <div className={styles.gridContainer}>
-                            {getTermEvents(pastSelectedPosts[key])}
-                          </div>
-                        </div>
-                      );
-                    } else {
-                      return null;
-                    }
-                  })}
+                					</h3>
+                					<div className={styles.gridContainer}>
+                						{getTermEvents(pastSelectedPosts[key])}
+                					</div>
+                				</div>
+                			);
+                		} else {
+                			return null;
+                		}
+                	})}
             </div>
             <ScrollUpBtn />
           </div>

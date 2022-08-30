@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import PageHeader from "../components/Header";
 import styles from "../styles/joinUs.module.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
@@ -6,8 +6,7 @@ import Slideshow from "../components/QuotesSlideshow.js";
 import NewsletterSection from "../components/NewsletterSection";
 import { BootstrapTooltip } from "../components/BootstrapTooltip";
 import LoadingScreen from "../components/LoadingScreen";
-import { memberQuotes } from "../data/joinData";
-import { socials } from "../data/joinData";
+import { memberQuotes, socials } from "../data/JoinData";
 import SimpleAccordion from "../components/joinUsAccordion";
 import PortfolioGrid from "../components/joinUsGrid";
 import Image from "next/image";

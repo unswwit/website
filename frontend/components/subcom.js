@@ -1,5 +1,4 @@
-// All necessary imports for this javascript
-import React, { Component } from "react";
+import { Component } from "react";
 import styles from "../styles/team.module.css";
 
 class SubCom extends Component {
@@ -23,4 +22,5 @@ class SubCom extends Component {
     );
   }
 }
+
 export default SubCom;

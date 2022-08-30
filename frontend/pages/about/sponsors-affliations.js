@@ -4,8 +4,8 @@ import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import { Button } from "semantic-ui-react";
 import styles from "../../styles/sponsors.module.css";
-import PageHeader from "../../components/header";
-import SponsorsModal from "../../components/sponsorsModal";
+import PageHeader from "../../components/Header";
+import SponsorsModal from "../../components/SponsorModal";
 import LoadingScreen from "../../components/LoadingScreen";
 import { sponsors, affiliations, partnerships } from "../../data/sponsorData";
 // import Image from "next/image";
@@ -67,7 +67,7 @@ export default function Sponsors() {
               {Object.keys(sponsors)
                 .sort()
                 .filter((key) => sponsors[key][3] === "DIAMOND")
-                .map((key, _) => (
+                .map((key) => (
                   // TODO: change img tags to next/image tags
                   <img
                     className={styles.logo}
@@ -95,7 +95,7 @@ export default function Sponsors() {
               {Object.keys(sponsors)
                 .sort()
                 .filter((key) => sponsors[key][3] === "GOLD")
-                .map((key, _) => (
+                .map((key) => (
                   <img
                     className={styles.logo}
                     src={
@@ -122,7 +122,7 @@ export default function Sponsors() {
               {Object.keys(sponsors)
                 .sort()
                 .filter((key) => sponsors[key][3] === "SILVER")
-                .map((key, _) => (
+                .map((key) => (
                   <img
                     className={styles.logo}
                     src={
@@ -149,7 +149,7 @@ export default function Sponsors() {
               {Object.keys(sponsors)
                 .sort()
                 .filter((key) => sponsors[key][3] === "BRONZE")
-                .map((key, _) => (
+                .map((key) => (
                   <img
                     className={styles.logo}
                     src={
@@ -187,7 +187,7 @@ export default function Sponsors() {
                       src={
                         window.matchMedia &&
                         window.matchMedia("(prefers-color-scheme: dark)")
-                          .matches
+                        	.matches
                           ? `/affiliations/dark-mode/${affiliations[key][1]}`
                           : `/affiliations/${affiliations[key][1]}`
                       }
@@ -215,7 +215,7 @@ export default function Sponsors() {
                       src={
                         window.matchMedia &&
                         window.matchMedia("(prefers-color-scheme: dark)")
-                          .matches
+                        	.matches
                           ? `/partnerships/dark-mode/${partnerships[key][1]}`
                           : `/partnerships/${partnerships[key][1]}`
                       }

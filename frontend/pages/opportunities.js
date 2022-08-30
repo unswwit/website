@@ -29,7 +29,7 @@ const Opportunities = () => {
   useEffect(() => {
     setLoading(true);
     fetchOpportunities().catch((error) =>
-      // error handling
+    // error handling
       console.error(error)
     );
   }, []);
@@ -59,51 +59,46 @@ const Opportunities = () => {
             )}
           </div>
           {!loading &&
-            (!opportunities.length ? (
-              <div className={styles.oppLookout}>
-                <p className={styles.lookoutSize}>
-                  Keep a lookout here for upcoming opportunities!
-                </p>
-              </div>
-            ) : (
-              <div className={styles.oppBody}>
-                <p className={styles.head}>
-                  Here are all the links to all current career opportunities
-                  available ranging from internships to graduate roles. Bookmark
-                  this page and check back regularly to be the first to know
-                  about job opportunities!
-                </p>
-                <p className={styles.head}>
-                  If you would like to make a listing, please contact us
-                  at&nbsp;
-                  <a
-                    href="mailto:externals@unswwit.com"
-                    className={styles.link}
-                  >
-                    externals@unswwit.com
-                  </a>
-                  .
-                </p>
-                <div className={styles.oppGridContainer}>
-                  {opportunities.map((individualOpportunity, index) => {
-                    return (
-                      <OpportunitiesCard
-                        index={index}
-                        link={individualOpportunity.link}
-                        img={individualOpportunity.img}
-                        companyName={individualOpportunity.companyName}
-                        notSponsorImg={individualOpportunity.notSponsorImg}
-                        type={individualOpportunity.type}
-                        position={individualOpportunity.position}
-                        location={individualOpportunity.location}
-                        closeDate={individualOpportunity.closeDate}
-                        summary={individualOpportunity.summary}
-                      />
-                    );
-                  })}
-                </div>
-              </div>
-            ))}
+      (!opportunities.length ? (
+        <div className={styles.oppLookout}>
+          <p className={styles.lookoutSize}>
+         Keep a lookout here for upcoming opportunities!
+          </p>
+        </div>
+      ) : (
+        <div className={styles.oppBody}>
+          <p className={styles.head}>
+         Here are all the links to all current career opportunities available
+         ranging from internships to graduate roles. Bookmark this page and
+         check back regularly to be the first to know about job opportunities!
+          </p>
+          <p className={styles.head}>
+         If you would like to make a listing, please contact us at&nbsp;
+            <a href="mailto:externals@unswwit.com" className={styles.link}>
+          externals@unswwit.com
+            </a>
+         .
+          </p>
+          <div className={styles.oppGridContainer}>
+            {opportunities.map((individualOpportunity, index) => {
+              return (
+                <OpportunitiesCard
+                  key={index}
+                  link={individualOpportunity.link}
+                  img={individualOpportunity.img}
+                  companyName={individualOpportunity.companyName}
+                  notSponsorImg={individualOpportunity.notSponsorImg}
+                  type={individualOpportunity.type}
+                  position={individualOpportunity.position}
+                  location={individualOpportunity.location}
+                  closeDate={individualOpportunity.closeDate}
+                  summary={individualOpportunity.summary}
+                />
+              );
+            })}
+          </div>
+        </div>
+      ))}
         </>
       )}
     </div>

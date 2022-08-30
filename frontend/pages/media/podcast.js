@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import PageHeader from "../../components/Header";
 import Chip from "@material-ui/core/Chip";
 import styles from "../../styles/Podcast.module.css";
-import EpisodeTemplate from "../../components/EpisodeTemplate";
+import EpisodeTemplate from "../../components/PodcastCard";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../../components/ScrollUpBtn";
 import LoadingScreen from "../../components/LoadingScreen";
 import axios from "axios";
 import humps from "humps";
-import { useStyles, links, categories } from "../../data/podcastData";
+import { useStyles, links, categories } from "../../data/PodcastData";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -59,7 +59,7 @@ const Podcast = () => {
 
     // load podcast episode previews
     fetchPodcastEpisodes().catch((error) =>
-      // error handling
+    // error handling
       console.error(error)
     );
   }, []);
@@ -153,9 +153,10 @@ const Podcast = () => {
               <div id={styles.platformContainer}>
                 {Object.keys(links).map((link, index) => {
                   return (
-                    <Link href={links[link][1]}>
+                    <Link key={index} href={links[link][1]}>
                       <a className={styles.platformLogos}>
-                        <a className={styles.a}
+                        <a
+                          className={styles.a}
                           key={index}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -183,8 +184,8 @@ const Podcast = () => {
                 .map((category) => {
                   const chipColour =
                     selectedCategory === categories[category]
-                      ? "#e85f5c"
-                      : "#7F7F7F";
+                    	? "#e85f5c"
+                    	: "#7F7F7F";
                   return (
                     <Chip
                       key={category}
@@ -255,7 +256,6 @@ const Podcast = () => {
           totalPages={Math.ceil(currentPosts.length/postsPerPage)} 
           paginate={paginate}
         /> */}
-
           <ScrollUpBtn />
         </>
       )}

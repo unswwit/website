@@ -38,20 +38,20 @@ const InitiativesSlideshow = () => {
     const fetchSlideshowData = async (url) => {
       const res = await axios.get(url);
       switch (url) {
-        case "https://wit-database.herokuapp.com/upcoming-events":
-          setFirstUpcomingEvent(humps.camelizeKeys(res.data));
-          break;
-        case "https://wit-database.herokuapp.com/past-events":
-          setLatestEvent(humps.camelizeKeys(res.data).reverse());
-          break;
-        case "https://wit-database.herokuapp.com/blog/previews":
-          setLatestBlog(humps.camelizeKeys(res.data).reverse());
-          break;
-        case "https://wit-database.herokuapp.com/podcast-episodes":
-          setLatestPodcast(humps.camelizeKeys(res.data).reverse());
-          break;
-        default:
-          break;
+      case "https://wit-database.herokuapp.com/upcoming-events":
+        setFirstUpcomingEvent(humps.camelizeKeys(res.data));
+        break;
+      case "https://wit-database.herokuapp.com/past-events":
+        setLatestEvent(humps.camelizeKeys(res.data).reverse());
+        break;
+      case "https://wit-database.herokuapp.com/blog/previews":
+        setLatestBlog(humps.camelizeKeys(res.data).reverse());
+        break;
+      case "https://wit-database.herokuapp.com/podcast-episodes":
+        setLatestPodcast(humps.camelizeKeys(res.data).reverse());
+        break;
+      default:
+        break;
       }
     };
 
@@ -79,7 +79,7 @@ const InitiativesSlideshow = () => {
               <div className={styles.left}>
                 <p id="about">
                   At WIT, our focus is on providing events that foster
-                  development catering to first to final years. Whether it's
+                  development catering to first to final years. Whether it&apos;s
                   personal, academic, professional or social, we want our
                   students to be the best version of themselves. As part of our
                   aim, we also connect current and future students with alumni
@@ -112,7 +112,6 @@ const InitiativesSlideshow = () => {
                           />
                         </div>
                       </a>
-                      
                     </div>
                   ))}
                 </div>

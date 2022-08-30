@@ -1,4 +1,3 @@
-import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Pagination from "@material-ui/lab/Pagination";
 import PaginationItem from "@material-ui/lab/PaginationItem";
@@ -13,10 +12,10 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "#e85f5c",
       color: "white",
     },
-    "@media(prefers-color-scheme:dark)":{
+    "@media(prefers-color-scheme:dark)": {
       "& .MuiPaginationItem-root": {
         color: "white",
-      }
+      },
     },
   },
   pagItem: {
@@ -25,9 +24,9 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "#feb14b",
       color: "white",
     },
-    "@media(prefers-color-scheme:dark)":{
+    "@media(prefers-color-scheme:dark)": {
       color: "white",
-    }
+    },
   },
 }));
 
