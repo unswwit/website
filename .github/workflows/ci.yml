@@ -17,6 +17,7 @@ jobs:
         working-directory: ./frontend
         run: npm install 
       - name: Run linting
+        working-directory: ./frontend
         run: npm run lint
       - name: Run tests
         working-directory: ./frontend
