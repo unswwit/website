@@ -6,10 +6,10 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import LoadingScreen from "../components/LoadingScreen";
 import axios from "axios";
 import humps from "humps";
+import { loadOpportunities } from "../lib/OppApi";
 
-const Opportunities = () => {
+const Opportunities = ({ opportunities }) => {
   const [loading, setLoading] = useState(true);
-  const [opportunities, setOpportunities] = useState([]);
   const [sourceLoading, setSourceLoading] = React.useState(true);
   const [headerLoading, setHeaderLoading] = React.useState(true);
 
@@ -18,11 +18,7 @@ const Opportunities = () => {
   }, []);
 
   const fetchOpportunities = async () => {
-    const res = await axios.get(
-      "https://wit-database.herokuapp.com/opportunities"
-    );
     setLoading(false);
-    setOpportunities(humps.camelizeKeys(res.data));
     setSourceLoading(false);
   };
 
@@ -85,19 +81,12 @@ const Opportunities = () => {
                   .
                 </p>
                 <div className={styles.oppGridContainer}>
+                  console.log(opportunities)
                   {opportunities.map((individualOpportunity, index) => {
                     return (
                       <OpportunitiesCard
+                        individualOpportunity={individualOpportunity}
                         index={index}
-                        link={individualOpportunity.link}
-                        img={individualOpportunity.img}
-                        companyName={individualOpportunity.companyName}
-                        notSponsorImg={individualOpportunity.notSponsorImg}
-                        type={individualOpportunity.type}
-                        position={individualOpportunity.position}
-                        location={individualOpportunity.location}
-                        closeDate={individualOpportunity.closeDate}
-                        summary={individualOpportunity.summary}
                       />
                     );
                   })}
@@ -111,3 +100,10 @@ const Opportunities = () => {
 };
 
 export default Opportunities;
+
+export async function getStaticProps() {
+  const opportunities = await loadOpportunities();
+  return {
+    props: { opportunities },
+  };
+}
