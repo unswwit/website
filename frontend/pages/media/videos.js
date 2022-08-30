@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PageHeader from "../../components/Header";
 import Chip from "@material-ui/core/Chip";
-import styles from "../../styles/videos.module.css";
+import styles from "../../styles/Videos.module.css";
 import YouTubeSubscribe from "../../components/YoutubeSubscribeBtn";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Link from "next/link";

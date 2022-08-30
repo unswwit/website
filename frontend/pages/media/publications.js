@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "../../styles/publications.module.css";
+import styles from "../../styles/Publications.module.css";
 import PubArticle from "../../components/PublicationsArticle";
 import PageHeader from "../../components/Header";
 import CircularProgress from "@material-ui/core/CircularProgress";
