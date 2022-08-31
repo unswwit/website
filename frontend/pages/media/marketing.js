@@ -17,8 +17,10 @@ import {
   valueToYear,
 } from "../../data/marketingData";
 
-import useContentfulMarketingArchives from "../api/contentful-marketing-archives";
-const { getMarketingArchives } = useContentfulMarketingArchives();
+// import useContentfulMarketingArchives from "../api/marketing";
+// const { getMarketingArchives } = useContentfulMarketingArchives();
+
+import fetchMarketingEntries from "../api/marketing";
 
 const MarketingContent = () => {
   const classes = useStyles();
@@ -48,10 +50,10 @@ const MarketingContent = () => {
   // get marketing archives
   // input: marketing archives data from google sheets
   // output: array of dictionaries containing marketing archives data
-  const fetchMarketingArchives = async () => {
-    const res = await getMarketingArchives();
-    const tempContent = humps.camelizeKeys(res);
-    console.log(res);
+  const fetchMarketingArchives = ({ sanitizeEntries }) => {
+    console.log(sanitizeEntries);
+    // const res = await getMarketingArchives();
+    const tempContent = humps.camelizeKeys(sanitizeEntries);
     setContent(tempContent);
     setCurrentPosts(tempContent.slice(0, postsPerPage));
     setSelectedPosts(tempContent);
@@ -230,4 +232,47 @@ const MarketingContent = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const res = await fetchMarketingEntries()
+  const entries = await res.map((p) => {
+    return p.fields;
+  })
+
+  // sanitize entries
+  const sanitizeEntries = entries.map((item) => {
+    const id = item.id;
+    const label = item.label;
+    const date = item.date;
+    let imgUrl = item.img.fields.file.url;
+    const category = item.category;
+    const link = item.link;
+    const year = Number(item.year);
+
+    if (!/^https?:/.test(imgUrl)) {
+        // Relative URL/path
+        imgUrl = 'https:' + imgUrl;
+    }
+    
+    return {
+      id,
+      label,
+      date,
+      imgUrl,
+      category,
+      link,
+      year,
+    };
+
+  });
+
+  console.log(sanitizeEntries);
+
+  return {
+    props: {
+      sanitizeEntries,
+    },
+  }
+}
+
 export default MarketingContent;
