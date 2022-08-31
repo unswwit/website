@@ -18,7 +18,6 @@ import { useStyles, categories, marks, valueToYear } from "../data/eventData";
 import { loadUpcomingEvents } from "../lib/Api";
 
 const Events = ({ upcomingEvents }) => {
-  console.log(upcomingEvents);
   const classes = useStyles();
 
   // const [upcomingEvents, setUpcomingEvents] = useState();
@@ -160,28 +159,26 @@ const Events = ({ upcomingEvents }) => {
   // get upcoming events
   // input: upcoming events data from google sheets
   // output: array of dictionaries containing upcoming events data
-  // const fetchUpcomingEvents = async ({ upcomingEvents }) => {
-  //   const tempEvents = humps.camelizeKeys(upcomingEvents);
-  //   setUpcomingEvents(tempEvents);
-  //   setCurrentPosts(tempEvents.slice(0, postsPerPage));
-  //   setSelectedPosts(tempEvents);
-  //   setLoadingUpcoming(false);
-  //   setSourceLoading(false);
-  // };
+  const fetchUpcomingEvents = async () => {
+    const tempEvents = upcomingEvents;
+    setCurrentPosts(tempEvents.slice(0, postsPerPage));
+    setSelectedPosts(tempEvents);
+    setLoadingUpcoming(false);
+    setSourceLoading(false);
+  };
 
-  // // load upcoming events
-  // useEffect(() => {
-  //   setLoadingUpcoming(true);
-  //   fetchUpcomingEvents().catch((error) =>
-  //     // error handling
-  //     console.error(error)
-  //   );
-  // }, []);
+  // load upcoming events
+  useEffect(() => {
+    setLoadingUpcoming(true);
+    fetchUpcomingEvents().catch((error) =>
+      // error handling
+      console.error(error)
+    );
+  }, []);
 
   // get events for a specific term
   const getTermEvents = (events) => {
     return events.map((event, index) => {
-      console.log(event, index);
       let eventLabel = event.img.split(".")[0].split("-");
       eventLabel.shift();
       let event_id = `${event.eventNumber}`;
@@ -211,8 +208,6 @@ const Events = ({ upcomingEvents }) => {
       ) : (
         <>
           {/* Cover Photo */}
-          {console.log("hello")}
-
           <PageHeader
             imageLoading={setHeaderLoading}
             imgUrl="/headers/events-header.jfif"
@@ -264,7 +259,7 @@ const Events = ({ upcomingEvents }) => {
               ))}
             {!isMobile && (
               <PaginationComp
-                totalPages={Math.ceil(selectedPosts.length / postsPerPage)}
+                totalPages={Math.ceil(upcomingEvents.length / postsPerPage)}
                 paginate={paginate}
                 page={currentPage}
                 size="large"
