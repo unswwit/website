@@ -1,4 +1,4 @@
-const executives = {
+const execQuotes = {
   // name and role, image, quote
   0: [
     "Gabrielle Younes",
@@ -26,4 +26,4 @@ const executives = {
   ],
 };
 
-export default executives;
+export default execQuotes;

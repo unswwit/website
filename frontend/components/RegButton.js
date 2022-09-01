@@ -1,5 +1,4 @@
-import React from "react";
-import styles from "../styles/events.module.css";
+import styles from "../styles/Events.module.css";
 
 const RegBtn = ({ link }) => {
   const openLink = () => {

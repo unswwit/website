@@ -117,7 +117,8 @@
   letter-spacing: 0.1vw;
 }
 
-.button a, .button:hover a {
+.button a,
+.button:hover a {
   text-decoration: none;
   color: white;
 }

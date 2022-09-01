@@ -47,11 +47,11 @@
 }
 
 /*--- Dark mode ---*/
-@media (prefers-color-scheme:dark) {
+@media (prefers-color-scheme: dark) {
   .button {
     background-color: var(--dark-slate-grey);
   }
   .button:hover {
-    background-color:#61605b;
+    background-color: #61605b;
   }
 }
