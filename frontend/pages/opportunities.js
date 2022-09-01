@@ -8,7 +8,7 @@ import axios from "axios";
 import humps from "humps";
 
 const Opportunities = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [opportunities, setOpportunities] = useState([]);
   const [sourceLoading, setSourceLoading] = React.useState(true);
   const [headerLoading, setHeaderLoading] = React.useState(true);
@@ -27,7 +27,7 @@ const Opportunities = () => {
   };
 
   useEffect(() => {
-    setLoading(true);
+    setLoading(true);setSourceLoading(false);
     fetchOpportunities().catch((error) =>
       // error handling
       console.error(error)
