@@ -3,7 +3,7 @@ import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import { Button } from "semantic-ui-react";
-import styles from "../../styles/sponsors.module.css";
+import styles from "../../styles/Sponsors.module.css";
 import PageHeader from "../../components/Header";
 import SponsorsModal from "../../components/SponsorModal";
 import LoadingScreen from "../../components/LoadingScreen";

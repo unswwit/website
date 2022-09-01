@@ -1,4 +1,4 @@
-import styles from "../styles/sponsors.module.css";
+import styles from "../styles/Sponsors.module.css";
 
 const nakatomiDescription = () => {
   return (

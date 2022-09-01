@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "../styles/publications.module.css";
+import styles from "../styles/Publications.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
