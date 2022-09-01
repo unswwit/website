@@ -9,60 +9,22 @@ import LoadingScreen from "../../components/LoadingScreen";
 import axios from "axios";
 import humps from "humps";
 import { useStyles, links, categories } from "../../data/podcastData";
+import { loadPodcasts } from "../../lib/api";
+import { formatPodcastDate } from "../../lib/helpers";
 import Image from "next/image";
 import Link from "next/link";
-import moment from "moment";
-import useContentfulPodcasts from "../api/podcast";
-const { getPodcastEpisodes } = useContentfulPodcasts();
 
 // TO UNCOMMENT WHEN REACH > 9 PODCASTS
 // import PaginationComp from "../components/Pagination";
 
 export async function getStaticProps() {
-  const res = await getPodcastEpisodes();
-  const entries = await res.map((p) => {
-    return p.fields;
-  });
-
-  const sanitizeEntries = entries.map((item) => {
-    const date = item.date;
-    const title = item.title;
-    const episodeNo = item.episodeNo;
-    const link = item.link;
-    const imgUrl = item.img.fields.file.url;
-    const description = item.description;
-    const anchor = item.anchor;
-    const radioRepublic = item.radioRepublic;
-    const google = item.google;
-    const spotify = item.spotify;
-    // const breaker = item.breaker;
-    const category = item.category;
-    return {
-      date,
-      title,
-      episodeNo,
-      link,
-      imgUrl,
-      description,
-      anchor,
-      radioRepublic,
-      google,
-      spotify,
-      // breaker,
-      category,
-    };
-  });
-
-  console.log(sanitizeEntries);
-
+  const episodes = await loadPodcasts();
   return {
-    props: {
-      sanitizeEntries,
-    },
+    props: { episodes },
   };
 }
 
-const Podcast = () => {
+const Podcast = ({ episodes }) => {
   const classes = useStyles();
   const [loading, setLoading] = useState(true);
   const [sourceLoading, setSourceLoading] = useState(true);
@@ -85,18 +47,9 @@ const Podcast = () => {
   // const postsPerPage = 9;
 
   // get podcasts from Contentful
-  // output: array of dictionaries containing podcasts
-  const fetchPodcastEpisodes = ({ sanitizeEntries }) => {
-    // const res = await getPodcastEpisodes();
-    // const tempEpisodes = humps.camelizeKeys(res);
-    const tempEpisodes = humps.camelizeKeys(sanitizeEntries);
-
-    // order podcastEpisodes by episodeNo i.e most recent podcast episode
-    const sortedEpisodes = tempEpisodes.sort((a, b) => {
-      return b.episodeNo - a.episodeNo;
-    });
-    setContent(sortedEpisodes);
-    setSelectedPosts(sortedEpisodes);
+  const fetchPodcastEpisodes = (episodes) => {
+    setContent(episodes);
+    setSelectedPosts(episodes);
     setLoading(false);
     setSourceLoading(false);
   };
@@ -106,10 +59,7 @@ const Podcast = () => {
     window.scrollTo(0, 0);
 
     // load podcast episode previews
-    fetchPodcastEpisodes().catch((error) =>
-      // error handling
-      console.error(error)
-    );
+    fetchPodcastEpisodes(episodes);
   }, []);
 
   useEffect(() => {
@@ -127,7 +77,7 @@ const Podcast = () => {
     const filteredContent = content.filter(
       (picture) =>
         selectedCategory === "All" ||
-        picture.category.includes(selectedCategory)
+        picture.fields.category.includes(selectedCategory)
     );
     searchPodcasts(filteredContent, searchTerm);
   };
@@ -135,11 +85,13 @@ const Podcast = () => {
   // filter category content by search filter in heading, subheading or author
   const searchPodcasts = (filteredContent, searchTerm) => {
     const searchResults = filteredContent.filter((episode) => {
+      const { title, date, description } = episode.fields;
+      date = formatPodcastDate(date);
       if (
         searchTerm === "" ||
-        episode.date.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        episode.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        episode.description.toLowerCase().includes(searchTerm.toLowerCase())
+        date.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        description.toLowerCase().includes(searchTerm.toLowerCase())
       ) {
         return true;
       } else {
@@ -286,15 +238,18 @@ const Podcast = () => {
 
           <div id={styles.episodes}>
             {selectedPosts.map((episode, index) => {
+              const { episodeNo, title, date, description } = episode.fields;
+              date = formatPodcastDate(date);
+              const { url } = episode.fields.img.fields.file;
               return (
                 <EpisodeTemplate
                   key={index}
-                  episodeNo={episode.episodeNo}
-                  title={episode.title}
-                  cover={episode.imgUrl}
-                  date={moment(episode.date).format("MMMM DD, YYYY")}
-                  description={episode.description}
-                  episode={episode}
+                  episodeNo={episodeNo}
+                  title={title}
+                  cover={url}
+                  date={date}
+                  description={description}
+                  episode={episode.fields}
                 />
               );
             })}
