@@ -5,10 +5,16 @@ import PageHeader from "../../components/Header";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import axios from "axios";
 import LoadingScreen from "../../components/LoadingScreen";
-import useContentfulPublications from "../api/contentful-publications";
-const { getPublications } = useContentfulPublications();
+import { loadPublications } from "../../lib/api";
 
-const Publications = () => {
+export async function getStaticProps() {
+  const publications = await loadPublications();
+  return {
+    props: { publications },
+  };
+}
+
+const Publications = ({ publications }) => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [sourceLoading, setSourceLoading] = useState(true);
@@ -30,8 +36,7 @@ const Publications = () => {
   // output: array of dictionaries containing publications data
   const fetchPublications = async () => {
     setLoading(false);
-    const res = await getPublications();
-    setArticles(res.data);
+    setArticles(publications);
     setSourceLoading(false);
   };
 
