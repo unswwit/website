@@ -10,8 +10,16 @@ import LoadingScreen from "../../components/LoadingScreen";
 import axios from "axios";
 import humps from "humps";
 import { execToClassName, marks, valueToYear } from "../../data/TeamData";
+import { loadExecs } from "../../lib/api";
 
-export default function OurTeam() {
+export async function getStaticProps() {
+  const execs = await loadExecs();
+  return {
+    props: { execs },
+  };
+}
+
+export default function OurTeam({ execs }) {
   const masterExec = useRef();
   const masterSubcom = useRef();
   const [filteredExecs, setFilteredExecs] = useState([]);
@@ -25,15 +33,9 @@ export default function OurTeam() {
     setYear(newYear);
   };
 
-  // get execs
-  // input: execs data from google sheets
-  // output: array of dictionaries containing execs data
-  const fetchExecs = async () => {
-    await axios
-      .get("https://wit-database.herokuapp.com/execs")
-      .then((execRes) => {
-        masterExec.current = humps.camelizeKeys(execRes.data);
-      });
+  // get execs from contenful
+  const fetchExecs = (execs) => {
+    masterExec.current = execs;
   };
 
   // get subcom
@@ -53,8 +55,9 @@ export default function OurTeam() {
 
     // Execs
     const tempExecs = masterExec.current.filter(
-      (exec) => exec.yearJoined === year
+      (exec) => exec.fields.yearJoined === year
     );
+
     const result = tempExecs.reduce(function (result, _, index, tempExecs) {
       if (index % 2 === 0) result.push(tempExecs.slice(index, index + 2));
       return result;
@@ -80,10 +83,7 @@ export default function OurTeam() {
     // show loading sign for team page
     setLoading(true);
     const fetchDataPromises = [
-      fetchExecs().catch((error) =>
-        // error handling
-        console.error(error)
-      ),
+      fetchExecs(execs),
       fetchSubcom().catch((error) =>
         // error handling
         console.error(error)
@@ -165,26 +165,32 @@ export default function OurTeam() {
                     return (
                       <div key={index} className={styles.execRow}>
                         {row.map((exec, index) => {
+                          const {
+                            name,
+                            position,
+                            degree,
+                            year,
+                            linkedin,
+                            facebook,
+                            email,
+                          } = exec.fields;
+                          const { url } = exec.fields.img.fields.file;
                           return (
                             <Execs
                               key={index}
-                              imgUrl={
-                                exec.img
-                                  ? `/portraits/${year}-exec/${exec.img}`
-                                  : ""
-                              }
-                              name={exec.name}
+                              imgUrl={"http:" + url}
+                              name={name}
                               className={
                                 year === 2020
-                                  ? execToClassName[year][exec.name]
+                                  ? execToClassName[year][name]
                                   : execToClassName[year]
                               }
-                              position={exec.position}
-                              degree={exec.degree}
-                              year={exec.year}
-                              linkedin={exec.linkedin}
-                              fb={exec.facebook}
-                              email={exec.email}
+                              position={position}
+                              degree={degree}
+                              year={year}
+                              linkedin={linkedin}
+                              fb={facebook}
+                              email={email}
                             />
                           );
                         })}
