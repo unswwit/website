@@ -16,7 +16,9 @@ export default function OpportunitiesCard({ individualOpportunity, index }) {
 
   const imgUrl = "https:" + img.fields.file.url;
 
-  // change date
+  // contentfulDate = YYYY-MM-DD
+  // formattedDate = DD-MM-YYYY
+  const closeDateFormatted = closeDate.split("-").reverse().join("/");
 
   return (
     <Link href={link}>
@@ -36,7 +38,7 @@ export default function OpportunitiesCard({ individualOpportunity, index }) {
           <p className={styles.oppTypeAndLocation}>{location}</p>
           {closeDate ? (
             <p className={styles.oppSummary}>
-              Applications close: {closeDate}
+              Applications close: {closeDateFormatted}
               {/* The close date should be in the format of the following example: 01/01/2021 */}
             </p>
           ) : (
