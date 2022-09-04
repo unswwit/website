@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../../styles/Marketing.module.css";
 import PageHeader from "../../components/Header";
 import Chip from "@material-ui/core/Chip";
@@ -15,12 +15,7 @@ import {
   categories,
   marks,
   valueToYear,
-} from "../../data/marketingData";
-
-// import useContentfulMarketingArchives from "../api/marketing";
-// const { getMarketingArchives } = useContentfulMarketingArchives();
-
-import fetchMarketingEntries from "../api/marketing";
+} from "../../data/MarketingData";
 
 const MarketingContent = () => {
   const classes = useStyles();
@@ -47,34 +42,38 @@ const MarketingContent = () => {
     setCurrentPage("All");
   };
 
-  // get marketing archives
-  // input: marketing archives data from google sheets
-  // output: array of dictionaries containing marketing archives data
-  const fetchMarketingArchives = ({ sanitizeEntries }) => {
-    console.log(sanitizeEntries);
-    // const res = await getMarketingArchives();
-    const tempContent = humps.camelizeKeys(sanitizeEntries);
+  // scroll to top on load
+  useEffect(() => window.scrollTo(0, 0), []);
+
+  const fetchMarketingArchive = async () => {
+    const res = await axios.get(
+      "https://wit-database.herokuapp.com/marketing-archives"
+    );
+    const tempContent = humps
+      .camelizeKeys(res.data)
+      .reverse()
+      .filter((item) => item.year === Number(year));
     setContent(tempContent);
     setCurrentPosts(tempContent.slice(0, postsPerPage));
     setSelectedPosts(tempContent);
     setLoading(false);
     setSourceLoading(false);
   };
-
-  // scroll to top on load
+  
+  // get marketing archives
+  // input: marketing archives data from google sheets
+  // output: array of dictionaries containing marketing archives data
   useEffect(() => {
-    window.scrollTo(0, 0);
-    // load marketing previews
-    fetchMarketingArchives().catch((error) =>
+    setLoading(true);
+
+    fetchMarketingArchive().catch((error) =>
       // error handling
       console.error(error)
     );
-  }, []);
-
+  }, [year]);
 
   // marketing archive message
   useEffect(() => {
-    // no posts
     if (currentPosts.length === 0 && loading === false) {
       setEmptyCategory(true);
       console.error = () => {};
@@ -88,7 +87,7 @@ const MarketingContent = () => {
     const filteredContent = content.filter(
       (picture) =>
         selectedCategory === "All" ||
-        picture.category.includes(selectedCategory)
+        picture.category.split(",").includes(selectedCategory)
     );
     setSelectedPosts(filteredContent);
     setCurrentPosts(filteredContent.slice(0, postsPerPage));
@@ -178,7 +177,7 @@ const MarketingContent = () => {
                     thickness={5}
                     id={styles.contentLoading}
                   />
-                )}                                        j
+                )}
               </div>
 
               {/*Image collage*/}
@@ -190,7 +189,7 @@ const MarketingContent = () => {
                         <Initiative
                           key={index}
                           fb={content.link}
-                          imgUrl={content.imgUrl}
+                          imgUrl={`/initiatives/${year}/${content.img}`}
                           alt={content.label}
                           date={content.date}
                         />
@@ -207,7 +206,7 @@ const MarketingContent = () => {
                         <Initiative
                           key={index}
                           fb={content.link}
-                          imgUrl={content.imgUrl}
+                          imgUrl={`/initiatives/${year}/${content.img}`}
                           alt={content.label}
                           date={content.date}
                         />
@@ -232,47 +231,5 @@ const MarketingContent = () => {
     </div>
   );
 };
-
-export async function getStaticProps() {
-  const res = await fetchMarketingEntries()
-  const entries = await res.map((p) => {
-    return p.fields;
-  })
-
-  // sanitize entries
-  const sanitizeEntries = entries.map((item) => {
-    const id = item.id;
-    const label = item.label;
-    const date = item.date;
-    let imgUrl = item.img.fields.file.url;
-    const category = item.category;
-    const link = item.link;
-    const year = Number(item.year);
-
-    if (!/^https?:/.test(imgUrl)) {
-        // Relative URL/path
-        imgUrl = 'https:' + imgUrl;
-    }
-    
-    return {
-      id,
-      label,
-      date,
-      imgUrl,
-      category,
-      link,
-      year,
-    };
-
-  });
-
-  console.log(sanitizeEntries);
-
-  return {
-    props: {
-      sanitizeEntries,
-    },
-  }
-}
 
 export default MarketingContent;
