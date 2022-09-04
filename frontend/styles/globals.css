@@ -5,11 +5,11 @@
   --white: #fff;
   --yellow: #feb14b; /* Headings and Highlighted text */
   --light-yellow: #fff7ef; /* Navigation */
-  --sand:  #fff0e1c1; /* Selected navigation */
+  --sand: #fff0e1c1; /* Selected navigation */
   --black: #313638; /* General text */
   --grey: #676767; /* Subheadings */
   --light-grey: #c4c4c4; /* disabled arrows */
-  --section: #F4F4F4;
+  --section: #f4f4f4;
   --red: #e85f5c; /* Buttons and unvisited links */
   --dark-red: #bd3f3d; /* visited links */
   --dark-grey: #202124; /* dark mode card */
@@ -41,7 +41,7 @@ body {
 /*Changes background*/
 @media (prefers-color-scheme: dark) {
   body {
-    background:var(--dark-grey);
+    background: var(--dark-grey);
   }
 
   /* Change colour of podcast search bar placeholder text to white on dark mode */
@@ -50,11 +50,11 @@ body {
   }
 
   :-ms-input-placeholder {
-    color: white; 
+    color: white;
   }
 
   ::ms-input-placeholder {
-    color: white; 
+    color: white;
   }
 }
 
@@ -66,7 +66,7 @@ h1 {
 }
 
 h2 {
-  color:var(--yellow);
+  color: var(--yellow);
   font-family: "Montserrat", sans-serif;
   font-size: 30pt;
   text-transform: uppercase;
@@ -289,13 +289,13 @@ p {
 }
 
 .nav-item a:hover {
-  color:  var(--red);
+  color: var(--red);
   padding: 15px;
   text-decoration: none;
 }
 
 .nav-item::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   height: 2px;
@@ -306,18 +306,18 @@ p {
   background-color: var(--red);
   transition: opacity 300ms, width 0.35s ease 0s;
 }
-  
-.nav-item:hover:not(.highlight-nav):after  {
+
+.nav-item:hover:not(.highlight-nav):after {
   width: 90%;
   opacity: 1;
 }
 
-.nav-item:hover:not(.highlight-nav-no-drop):after  {
+.nav-item:hover:not(.highlight-nav-no-drop):after {
   width: 90%;
   opacity: 1;
 }
 
-.nav-item:hover:not(.highlight-nav-white):after  {
+.nav-item:hover:not(.highlight-nav-white):after {
   width: 90%;
   opacity: 1;
 }
@@ -358,7 +358,7 @@ p {
   margin-left: -5px;
 }
 
-.highlight-nav, 
+.highlight-nav,
 .highlight-nav-white,
 .highlight-nav-no-drop,
 .highlight-dropdown,
@@ -368,7 +368,7 @@ p {
 
 /* clear background - dropdown */
 .highlight-no-nav::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   height: 2px;
@@ -382,7 +382,7 @@ p {
 
 /* yellow background - dropdown */
 .highlight-nav::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   height: 2px;
@@ -396,7 +396,7 @@ p {
 
 /* yellow background - no dropdown*/
 .highlight-nav-no-drop::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   height: 2px;
@@ -409,7 +409,7 @@ p {
 
 /* clear background - no dropdown */
 .highlight-nav-white::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   height: 2px;
@@ -471,7 +471,7 @@ p {
   .logo-black {
     display: block;
   }
-    
+
   .nav-item-btn {
     color: white;
     display: block;
@@ -569,7 +569,7 @@ p {
   }
 
   #loadingBackground p {
-    color: #fff; 
+    color: #fff;
   }
 }
 
@@ -648,11 +648,11 @@ p {
   .menu-item {
     color: #fff;
   }
-  
+
   .menu-box:hover {
     background-color: var(--dark-grey);
   }
-  
+
   .menu-box:hover .menu-item {
     color: var(--red);
   }
@@ -698,13 +698,13 @@ form button {
 }
 
 /*--- Dark mode ---*/
-@media (prefers-color-scheme:dark) {
+@media (prefers-color-scheme: dark) {
   form input {
     background-color: #323235;
     border-color: white;
     color: white;
   }
-  
+
   form button {
     background-color: var(--red);
     color: white;
@@ -894,9 +894,9 @@ a {
   }
 
   .footer-white-logo {
-    margin-bottom: 2%; 
+    margin-bottom: 2%;
   }
-  
+
   .footer-black-logo {
     margin-bottom: 2%;
   }
@@ -919,7 +919,7 @@ a {
   .footer-item {
     padding-bottom: 2vw;
   }
-  
+
   .bottom-footer-item {
     padding-bottom: 5vw;
   }
@@ -942,12 +942,94 @@ a {
   .footer-icons {
     margin-left: 1.5vw;
     margin-right: 1.5vw;
-  }  
+  }
 }
 
 @media screen and (max-width: 355px) {
   .footer-icons {
     margin-left: 1vw;
     margin-right: 1vw;
-  }  
+  }
+}
+
+/*-------------------------------Newsletter sign up form-----------------------------*/
+.signUpForm span {
+  color: #e85f5c;
+  font-family: "Montserrat", sans-serif;
+}
+
+form input {
+  margin: 15px auto;
+  display: block;
+  font-size: 1.2vw;
+  width: 100%;
+
+  border-style: none;
+  border-bottom: solid;
+  border-color: var(--general-text);
+  border-width: 3px;
+  padding: 5px;
+  font-family: "Montserrat", sans-serif;
+  width: 50%;
+}
+
+form button {
+  background-color: #e85f5c;
+  color: #ffffff;
+  font-size: 1.3vw;
+  width: 100%;
+  margin: 20px auto;
+  border: none;
+  display: block;
+  padding: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  width: 50%;
+}
+
+.msg-alert p {
+  font-size: 1.3vw;
+}
+
+/*--- Dark mode ---*/
+@media (prefers-color-scheme: dark) {
+  form input {
+    background-color: #323235;
+    border-color: white;
+    color: white;
+  }
+
+  form button {
+    background-color: var(--red);
+    color: white;
+  }
+}
+
+/*-------------------------------Newsletter Form Mobile Design-----------------------------*/
+@media only screen and (max-width: 1000px) {
+  .button form button {
+    font-size: 12pt;
+    width: 75%;
+  }
+
+  .newsletter form input {
+    width: 75%;
+  }
+
+  .newsletter form input,
+  .msg-alert p {
+    font-size: 12pt;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .newsletter form input,
+  .msg-alert p {
+    font-size: 11pt;
+  }
+
+  .newsletter form input,
+  .button form button {
+    width: 80%;
+  }
 }

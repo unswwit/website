@@ -1,15 +1,15 @@
-import React, { useEffect, useRef, useState, useCallback } from "react";
-import styles from "../../styles/team.module.css";
-import PageHeader from "../../components/header";
-import Execs from "../../components/execs";
-import SubCom from "../../components/subcom";
+import { useEffect, useRef, useState, useCallback } from "react";
+import styles from "../../styles/Team.module.css";
+import PageHeader from "../../components/Header";
+import Execs from "../../components/ExecSection";
+import SubCom from "../../components/SubcomSection";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Timeline from "../../components/Timeline";
 import ScrollUpBtn from "../../components/ScrollUpBtn";
 import LoadingScreen from "../../components/LoadingScreen";
 import axios from "axios";
 import humps from "humps";
-import { execToClassName, marks, valueToYear } from "../../data/teamData";
+import { execToClassName, marks, valueToYear } from "../../data/TeamData";
 
 export default function OurTeam() {
   const masterExec = useRef();
@@ -97,23 +97,26 @@ export default function OurTeam() {
 
   // Moved from teamData.js to prevent new portfolios
   // from showing when the year is earlier than 2021.
-  const sectors = year < 2022 ? [
-    "Events",
-    "Externals",
-    "Human Resources",
-    "Education",
-    "Marketing",
-    "Information Technology",
-  ] : [
-    "Careers",
-    "Competitions",
-    "Externals",
-    "Human Resources",
-    "Information Technology",
-    "Marketing",
-    "Media",
-    "Publications",
-  ];
+  const sectors =
+    year < 2022
+      ? [
+          "Events",
+          "Externals",
+          "Human Resources",
+          "Education",
+          "Marketing",
+          "Information Technology",
+        ]
+      : [
+          "Careers",
+          "Competitions",
+          "Externals",
+          "Human Resources",
+          "Information Technology",
+          "Marketing",
+          "Media",
+          "Publications",
+        ];
 
   return (
     <div>

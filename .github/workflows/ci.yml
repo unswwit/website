@@ -16,6 +16,12 @@ jobs:
       - name: Install dependencies
         working-directory: ./frontend
         run: npm install 
+      - name: Format files
+        working-directory: ./frontend
+        run: npm run prettier 
+      - name: Lint files
+        working-directory: ./frontend
+        run: npm run lint
       - name: Run tests
         working-directory: ./frontend
         run: npm run test
