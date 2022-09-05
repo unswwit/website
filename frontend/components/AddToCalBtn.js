@@ -1,4 +1,3 @@
-import React from "react";
 import AddToCalendarHOC from "react-add-to-calendar-hoc";
 import styles from "../styles/AddToCal.module.css";
 

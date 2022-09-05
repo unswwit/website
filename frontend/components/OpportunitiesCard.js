@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "../styles/opportunities.module.css";
+import styles from "../styles/Opportunities.module.css";
 import Link from "next/link";
 
 export default function OpportunitiesCard({ individualOpportunity, index }) {

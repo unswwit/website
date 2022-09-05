@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import styles from "../styles/videos.module.css";
+import styles from "../styles/Videos.module.css";
 
 export default class YouTubeSubscribe extends Component {
   static propTypes = {

@@ -5,10 +5,9 @@ import {
   CardActionArea,
   CardContent,
   Typography,
-} from '@material-ui/core';
+} from "@material-ui/core";
 import styles from "../styles/Podcast.module.css";
-import Link from "next/link";
-import Image from "next/image"
+import Image from "next/image";
 
 const useStyles = makeStyles({
   root: {
@@ -68,8 +67,8 @@ const useStyles = makeStyles({
     fontFamily: "Montserrat, sans-serif",
     color: "#313638",
     "@media (prefers-color-scheme:dark)": {
-      color: "#fff", 
-    }
+      color: "#fff",
+    },
   },
   title: {
     fontFamily: "Playfair Display, serif",
@@ -90,8 +89,8 @@ const useStyles = makeStyles({
       height: 800,
     },
     "@media (prefers-color-scheme:dark)": {
-      background: "#3B3B41", 
-    }
+      background: "#3B3B41",
+    },
   },
 });
 
@@ -100,7 +99,6 @@ export default function EpisodeTemplate({
   title,
   date,
   description,
-  episodeNo,
   episode,
 }) {
   const classes = useStyles();
@@ -110,41 +108,39 @@ export default function EpisodeTemplate({
       <CardActionArea
         className={[classes.click, styles.previewContainer].join(" ")}
       >
-        <Link href={episode["spotify"]}>
-          <a className={styles.a}>
-            <div className={classes.media}>
-              <Image
-                alt="podcast episode cover"
-                src={"/" + cover}
-                className={styles.episodeCover}
-                layout={"fill"}
-                objectFit={"contain"}
-                objectPosition={"top"}
-              />
-            </div>
-            <CardContent className={classes.content}>
-              <Typography
-                className={classes.date}
-                variant="body2"
-                color="textSecondary"
-                component="p"
-              >
-                {date}
-              </Typography>
-              <Typography className={classes.title} gutterBottom>
-                {title}
-              </Typography>
-              <Typography
-                className={classes.description}
-                variant="body2"
-                color="textSecondary"
-                component="p"
-              >
-                {description}
-              </Typography>
-            </CardContent>
-            </a>
-        </Link>
+        <a href={episode["spotify"]} target="_blank" rel="noreferrer">
+          <div className={classes.media}>
+            <Image
+              alt="podcast episode cover"
+              src={"/" + cover}
+              className={styles.episodeCover}
+              layout={"fill"}
+              objectFit={"contain"}
+              objectPosition={"top"}
+            />
+          </div>
+          <CardContent className={classes.content}>
+            <Typography
+              className={classes.date}
+              variant="body2"
+              color="textSecondary"
+              component="p"
+            >
+              {date}
+            </Typography>
+            <Typography className={classes.title} gutterBottom>
+              {title}
+            </Typography>
+            <Typography
+              className={classes.description}
+              variant="body2"
+              color="textSecondary"
+              component="p"
+            >
+              {description}
+            </Typography>
+          </CardContent>
+        </a>
       </CardActionArea>
     </Card>
   );
