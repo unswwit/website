@@ -47,6 +47,7 @@ const Publications = ({ publications }) => {
       ) : (
         <>
           {/* Cover Photo */}
+
           <PageHeader
             imgUrl="/headers/publications-header.jpg"
             title="Publications"
@@ -65,8 +66,8 @@ const Publications = ({ publications }) => {
                 />
               )}
             </div>
-
             {/*Articles*/}
+            const {(img, heading, date, url)} = publications.fields;
             {!loading &&
               Array.from({ length: 3 }, (_, i) => i + 2020)
                 .reverse()
@@ -75,15 +76,15 @@ const Publications = ({ publications }) => {
                     <div key={year}>
                       <h1>{year}</h1>
                       <div className={styles.row}>
-                        {articles
-                          .filter((article) => article.year === year)
-                          .map((article, index) => (
+                        {publications
+                          .filter((publications) => year === year)
+                          .map((index) => (
                             <PubArticle
                               key={index}
-                              imgUrl={article.imgUrl}
-                              heading={article.heading}
-                              date={article.date}
-                              url={article.url}
+                              imgUrl={img}
+                              heading={heading}
+                              date={date}
+                              url={url}
                             />
                           ))}
                       </div>
