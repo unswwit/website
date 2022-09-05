@@ -162,18 +162,18 @@ form input.button:hover {
 }
 
 /*--- Dark mode ---*/
-@media (prefers-color-scheme:dark) {
+@media (prefers-color-scheme: dark) {
   .formInput {
     background-color: #323235;
     border-color: white;
     color: white;
   }
-  
+
   .formLeft textarea {
     border-color: white;
     color: white;
   }
-  
+
   .formLeft {
     border-color: white;
   }
@@ -184,7 +184,6 @@ form input.button:hover {
   .newEmails div.profile3 {
     color: white;
   }
-
 }
 
 /*-------------------------------Join us: different screen sizes ------------------------------*/
@@ -268,7 +267,6 @@ form input.button:hover {
   .newEmails a {
     text-align: center;
   }
-
 }
 
 @media only screen and (max-width: 910px) {

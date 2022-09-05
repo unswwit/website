@@ -17,7 +17,6 @@ const categories = {
   "Special Occasions": "Special",
 };
 
-// position of the marks on the timeline (i.e. 100 indicates that it's on the right end)
 const marks = [
   {
     value: 100,

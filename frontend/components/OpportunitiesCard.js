@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "../styles/opportunities.module.css";
+import styles from "../styles/Opportunities.module.css";
 import Link from "next/link";
 
 class OpportunitiesCard extends Component {

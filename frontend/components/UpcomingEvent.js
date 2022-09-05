@@ -1,9 +1,8 @@
-import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Card, CardContent, CardActions, Typography } from "@material-ui/core";
-import styles from "../styles/events.module.css";
-import AddToCalBtn from "./AddToCalBtn.js";
-import RegBtn from "./RegButton.js";
+import styles from "../styles/Events.module.css";
+import AddToCalBtn from "./AddToCalBtn";
+import RegBtn from "./RegButton";
 import Image from "next/image";
 
 const useStyles = makeStyles({
@@ -109,7 +108,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function UpcomingEvent({ upcomingEvent, index }) {
+export default function UpcomingEvent({ upcomingEvent }) {
   const classes = useStyles();
 
   const {

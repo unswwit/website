@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../styles/events.module.css";
+import styles from "../styles/Events.module.css";
 import PageHeader from "../components/Header";
 import Chip from "@material-ui/core/Chip";
 import Timeline from "../components/Timeline";
@@ -13,7 +13,7 @@ import humps from "humps";
 import UpcomingEvent from "../components/UpcomingEvent";
 import PaginationComp from "../components/Pagination";
 import { isMobile } from "react-device-detect";
-import { useStyles, categories, marks, valueToYear } from "../data/eventData";
+import { useStyles, categories, marks, valueToYear } from "../data/EventData";
 
 import { loadUpcomingEvents } from "../lib/Api";
 
@@ -149,7 +149,7 @@ const Events = ({ upcomingEvents }) => {
     const filteredTerm = pastContent[term].filter(
       (picture) =>
         selectedCategory === "All" ||
-        (picture.category != null &&
+        (picture.category !== null &&
           picture.category.split(",").includes(selectedCategory))
     );
 
@@ -181,10 +181,10 @@ const Events = ({ upcomingEvents }) => {
     return events.map((event, index) => {
       let eventLabel = event.img.split(".")[0].split("-");
       eventLabel.shift();
-      let event_id = `${event.eventNumber}`;
+      let eventId = `${event.eventNumber}`;
       return (
         <div className={styles.pastEvent} key={index}>
-          <Link href={`/event-recaps/${year}/${event_id}`}>
+          <Link href={`/event-recaps/${year}/${eventId}`}>
             <div className={styles.eventImgBox}>
               <Image
                 className={styles.eventImages}
@@ -237,10 +237,10 @@ const Events = ({ upcomingEvents }) => {
                   {!isMobile &&
                     upcomingEvents.map((upcomingEvent, index) => {
                       return (
-                        <div className={styles.upcomingEventsBox}>
+                        <div className={styles.upcomingEventsBox} key={index}>
                           <UpcomingEvent
                             upcomingEvent={upcomingEvent}
-                            index={index}
+                            key={index}
                           />
                         </div>
                       );
