@@ -108,7 +108,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function UpcomingEvent({ index, upcomingEvent }) {
+export default function UpcomingEvent({ upcomingEvent }) {
   const classes = useStyles();
 
   const {
