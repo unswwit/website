@@ -81,7 +81,7 @@ const Opportunities = ({ opportunities }) => {
                   .
                 </p>
                 <div className={styles.oppGridContainer}>
-                  {opportunities.map((index, individualOpportunity, index) => {
+                  {opportunities.map((index, individualOpportunity) => {
                     return (
                       <OpportunitiesCard
                         key={index}
