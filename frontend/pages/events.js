@@ -250,7 +250,7 @@ const Events = ({ upcomingEvents }) => {
                     upcomingEvents.map((index, upcomingEvent) => {
                       return (
                         <UpcomingEvent
-                          upcomingEvent={(index, upcomingEvent)}
+                          upcomingEvent={upcomingEvent}
                           index={index}
                         />
                       );
