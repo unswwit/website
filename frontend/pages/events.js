@@ -247,8 +247,13 @@ const Events = ({ upcomingEvents }) => {
                     })}
 
                   {isMobile &&
-                    upcomingEvents.map((upcomingEvent) => {
-                      return <UpcomingEvent upcomingEvent={upcomingEvent} />;
+                    upcomingEvents.map((index, upcomingEvent) => {
+                      return (
+                        <UpcomingEvent
+                          key={index}
+                          upcomingEvent={upcomingEvent}
+                        />
+                      );
                     })}
                 </div>
               ))}
