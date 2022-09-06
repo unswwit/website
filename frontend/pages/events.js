@@ -247,10 +247,10 @@ const Events = ({ upcomingEvents }) => {
                     })}
 
                   {isMobile &&
-                    upcomingEvents.map((upcomingEvent, index) => {
+                    upcomingEvents.map((index, upcomingEvent) => {
                       return (
                         <UpcomingEvent
-                          upcomingEvent={upcomingEvents}
+                          upcomingEvent={(index, upcomingEvent)}
                           index={index}
                         />
                       );
