@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import PageHeader from "../../components/header";
+import PageHeader from "../../components/Header";
 import Chip from "@material-ui/core/Chip";
 import styles from "../../styles/Videos.module.css";
 import YouTubeSubscribe from "../../components/YoutubeSubscribeBtn";
