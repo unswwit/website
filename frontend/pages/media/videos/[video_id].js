@@ -14,10 +14,6 @@ import { isMobile } from "react-device-detect";
 import { useStyles, categories } from "../../../data/VideoData";
 
 const Videos = (props) => {
-  const router = useRouter();
-  const query = router.query;
-  const video_id = query.video_id;
-
   const classes = useStyles();
   const [video, setVideo] = useState([]);
   const [loading, setLoading] = useState(true);
