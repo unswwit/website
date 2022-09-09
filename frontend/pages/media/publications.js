@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import styles from "../../styles/publications.module.css";
-import PubArticle from "../../components/publications-article";
-import PageHeader from "../../components/header";
+import { useEffect, useState } from "react";
+import styles from "../../styles/Publications.module.css";
+import PubArticle from "../../components/PublicationsArticle";
+import PageHeader from "../../components/Header";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import axios from "axios";
 import LoadingScreen from "../../components/LoadingScreen";
@@ -24,7 +24,7 @@ const Publications = () => {
   }, []);
 
   // get publications
-  // input: publications data from google sheets
+  // input: publications data from database
   // output: array of dictionaries containing publications data
   const fetchPublications = async () => {
     setLoading(false);

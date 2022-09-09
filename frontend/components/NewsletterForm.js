@@ -6,7 +6,8 @@ import IconButton from "@material-ui/core/IconButton";
 const NewsletterForm = ({ handleClose }) => {
   const [email, setEmail] = React.useState("");
   const [error, setError] = React.useState("");
-  const validate = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const validate =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   const checkEmail = (e) => {
     setEmail(e.target.value);
@@ -24,7 +25,7 @@ const NewsletterForm = ({ handleClose }) => {
         onClick={handleClose}
         className={styles.closeBtn}
       >
-        <CloseIcon className={styles.closeSymbol}/>
+        <CloseIcon className={styles.closeSymbol} />
       </IconButton>
       <br />
       <br />
@@ -75,7 +76,9 @@ const NewsletterForm = ({ handleClose }) => {
         <p className={styles.subscribeError}>
           {error ? "Please input a valid email" : ""}
         </p>
-        <button className="button" disabled={error}>Subscribe</button>
+        <button className="button" disabled={error}>
+          Subscribe
+        </button>
       </form>
     </div>
   );

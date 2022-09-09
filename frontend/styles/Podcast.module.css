@@ -187,7 +187,7 @@
   .subHeading {
     color: var(--white);
   }
-  
+
   #episodeDate {
     color: var(--white);
   }
@@ -203,7 +203,7 @@
     background-position-x: 0.5%;
     background-size: auto 85%;
   }
-  
+
   #emptyMessage {
     color: white;
   }
@@ -356,7 +356,6 @@
     height: 130px;
     width: 130px;
   }
-
 
   #podcastIntroduction {
     width: 90%;

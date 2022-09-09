@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import PageHeader from "../../components/header";
+import { useState, useEffect } from "react";
+import PageHeader from "../../components/Header";
 import Chip from "@material-ui/core/Chip";
 import styles from "../../styles/Podcast.module.css";
-import EpisodeTemplate from "../../components/EpisodeTemplate";
+import EpisodeTemplate from "../../components/PodcastCard";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../../components/ScrollUpBtn";
 import LoadingScreen from "../../components/LoadingScreen";
@@ -252,7 +252,6 @@ const Podcast = ({ episodes }) => {
           totalPages={Math.ceil(currentPosts.length/postsPerPage)} 
           paginate={paginate}
         /> */}
-
           <ScrollUpBtn />
         </>
       )}
