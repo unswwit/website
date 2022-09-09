@@ -3,20 +3,19 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Navbar.module.css";
-
-// import menu icons
+import {
+  navigationBarContent,
+  aboutUsDropdownContent,
+  mediaDropdownContent,
+} from "../data/navbarData";
+import {
+  changeAboutUsToArrowDown,
+  changeAboutUsToArrowRight,
+  changeMediaToArrowDown,
+  changeMediaToArrowRight,
+} from "./navbarHelpers";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
-// import menuDropdownContainer icons
-import ChromeReaderModeOutlinedIcon from "@material-ui/icons/ChromeReaderModeOutlined";
-import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
-import PeopleOutlineIcon from "@material-ui/icons/PeopleOutline";
-import PhoneOutlinedIcon from "@material-ui/icons/PhoneOutlined";
-import InsertDriveFileOutlinedIcon from "@material-ui/icons/InsertDriveFileOutlined";
-import HeadsetMicOutlinedIcon from "@material-ui/icons/HeadsetMicOutlined";
-import LocalPrintshopOutlinedIcon from "@material-ui/icons/LocalPrintshopOutlined";
-import ImageOutlinedIcon from "@material-ui/icons/ImageOutlined";
-import VideocamOutlinedIcon from "@material-ui/icons/VideocamOutlined";
 
 const CompactNavigationBar = () => {
   const [clearNavBar, setClearNavBar] = useState(true);
@@ -28,8 +27,6 @@ const CompactNavigationBar = () => {
   const router = useRouter();
   const pageLoading = false;
 
-  /* check whether device is in light or dark mode 
-     and change darkMode state accordingly */
   useEffect(() => {
     if (
       window.matchMedia &&
@@ -39,8 +36,6 @@ const CompactNavigationBar = () => {
     }
   }, []);
 
-  /* check whether user is at the bottom of the page when scrolling
-     and change hiddenNavBar state accordingly */
   useEffect(() => {
     window.addEventListener("scroll", checkBottomScreen);
     return () => {
@@ -48,8 +43,6 @@ const CompactNavigationBar = () => {
     };
   }, []);
 
-  /* check whether user is at the top of the page when scrolling
-     and change clearNavBar state accordingly */
   useEffect(() => {
     checkTopScreen();
     window.addEventListener("scroll", checkTopScreen);
@@ -58,8 +51,7 @@ const CompactNavigationBar = () => {
     };
   }, []);
 
-  /* check whether a page has been loaded when this component is rendered
-     and close menus if true */
+  // close menus if a page has been loaded
   useEffect(() => {
     if (pageLoading) {
       menuItemClick();
@@ -106,27 +98,6 @@ const CompactNavigationBar = () => {
     }
   };
 
-  const changeAboutUsToArrowDown = () => {
-    let aboutUsText = document.getElementById("aboutUsText");
-    aboutUsText.innerHTML = "About Us ▾";
-  };
-
-  const changeAboutUsToArrowRight = () => {
-    let aboutUsText = document.getElementById("aboutUsText");
-    aboutUsText.innerHTML = "About Us ▸";
-  };
-
-  const changeMediaToArrowDown = () => {
-    let mediaText = document.getElementById("mediaText");
-    mediaText.innerHTML = "Media ▾";
-  };
-
-  const changeMediaToArrowRight = () => {
-    let mediaText = document.getElementById("mediaText");
-    mediaText.innerHTML = "Media ▸";
-  };
-
-  /* set pageLoading boolean to true if page has loading screen */
   if (document.getElementById("loadingWillow")) {
     pageLoading = true;
   } else {
@@ -134,7 +105,7 @@ const CompactNavigationBar = () => {
   }
 
   return (
-    /* return clear or hidden navbar if at top or bottom of screen respectively,
+    /* return clear or hidden navbar if at top or bottom of screen respectively, 
        otherwise return regular navbar */
     <nav
       className={
@@ -149,8 +120,7 @@ const CompactNavigationBar = () => {
         <div className={styles.logoContainer}>
           <Link href="/">
             <a onClick={menuItemClick}>
-              {/* change WIT logo color depending on 
-                  the device theme and current scroll position */}
+              {/* change WIT logo depending on device theme and scroll position */}
               <Image
                 className={styles.logoGridItem}
                 src={
@@ -167,7 +137,7 @@ const CompactNavigationBar = () => {
         </div>
         <div className={styles.emptyGridItem}></div>
         <div className={`${styles.menuIconGridItem} ${styles.linkContainer}`}>
-          {/* change menu icon if the menu is opened or closed */}
+          {/* change menu icon if menu is open or closed */}
           <button className={styles.menuButton} onClick={menuClick}>
             {menuOpen ? (
               <CloseIcon className={styles.menuIcon} />
@@ -177,7 +147,7 @@ const CompactNavigationBar = () => {
           </button>
         </div>
       </div>
-      {/* make menu visible if the menu is open */}
+      {/* make menu visible if menu is open */}
       <div
         className={
           menuOpen
@@ -185,8 +155,7 @@ const CompactNavigationBar = () => {
             : `${styles.hiddenMenu} ${styles.menuContainer}`
         }
       >
-        {/* if the navbar is transparent then the menu is also transparent,
-            same structure for the other menu links */}
+        {/* if the navbar is transparent then the menu is also transparent */}
         <div
           className={
             clearNavBar && router.pathname != "/404"
@@ -194,243 +163,118 @@ const CompactNavigationBar = () => {
               : styles.menuContent
           }
         >
-          <Link href="/">
-            <div className={styles.menuItemContent}>
-              {/* underline current page name in the menu, 
-                  same structure for the other links */}
-              <div
-                className={
-                  router.asPath === "/"
-                    ? `${styles.currentPageMenuUnderline} ${styles.menuItem}`
-                    : styles.menuItem
-                }
-                onClick={menuItemClick}
-              >
-                <a>Home</a>
-              </div>
-            </div>
-          </Link>
-          {/* div for dropdown inside menu */}
-          <div
-            className={styles.menuDropdownContainer}
-            id="aboutUsDropdown"
-            onClick={aboutUsDropdownClick}
-          >
-            {/* apply dropdown underline and red text color accordingly:
-                if the current page belongs to the dropdown, the text should be underlined
-                if the dropdown is open, the text should be red
-                same structure for the other dropdowns */}
-            <div
-              className={
-                router.asPath.split("/")[1] === "about" && aboutUsDropdownOpen
-                  ? `${styles.currentPageMenuUnderline} ${styles.currentDropdown} ${styles.menuItem}`
-                  : router.asPath.split("/")[1] === "about"
-                  ? `${styles.currentPageMenuUnderline} ${styles.menuItem}`
-                  : aboutUsDropdownOpen
-                  ? `${styles.currentDropdown} ${styles.menuItem}`
-                  : styles.menuItem
-              }
-            >
-              <a id="aboutUsText">About Us ▸</a>
-            </div>
-          </div>
-          {/* make dropdown visible if the dropdown is open */}
-          <div
-            className={
-              aboutUsDropdownOpen
-                ? styles.menuDropdownContent
-                : `${styles.menuDropdownContent} ${styles.hiddenMenuDropdownContent}`
+          {navigationBarContent.map((page, index) => {
+            const menuContentLength =
+              Object.keys(navigationBarContent).length - 1;
+            if (page.dropdownContent) {
+              const dropdownContentLength =
+                Object.keys(page.dropdownContent).length - 1;
+              return (
+                <div key={index}>
+                  <div
+                    className={styles.menuDropdownContainer}
+                    id={page.id}
+                    onClick={
+                      page.id === "aboutUsDropdown"
+                        ? aboutUsDropdownClick
+                        : mediaDropdownClick
+                    }
+                    key={index}
+                  >
+                    {/* apply dropdown underline and red text color accordingly:
+                        if the current page belongs to the dropdown, the text should be underlined
+                        if the dropdown is open, the text should be red */}
+                    <div
+                      className={
+                        page.id === "aboutUsDropdown"
+                          ? router.asPath.split("/")[1] === "about" &&
+                            aboutUsDropdownOpen
+                            ? `${styles.currentPageMenuUnderline} ${styles.currentDropdown} ${styles.menuItem}`
+                            : router.asPath.split("/")[1] === "about"
+                            ? `${styles.currentPageMenuUnderline} ${styles.menuItem}`
+                            : aboutUsDropdownOpen
+                            ? `${styles.currentDropdown} ${styles.menuItem}`
+                            : styles.menuItem
+                          : router.asPath.split("/")[1] === "media" &&
+                            mediaDropdownOpen
+                          ? `${styles.currentPageMenuUnderline} ${styles.currentDropdown} ${styles.menuItem}`
+                          : router.asPath.split("/")[1] === "media"
+                          ? `${styles.currentPageMenuUnderline} ${styles.menuItem}`
+                          : mediaDropdownOpen
+                          ? `${styles.currentDropdown} ${styles.menuItem}`
+                          : styles.menuItem
+                      }
+                      key={index}
+                    >
+                      <a id={page.text} key={index}>
+                        {page.pageName}
+                      </a>
+                    </div>
+                  </div>
+                  <div
+                    className={
+                      page.id === "aboutUsDropdown"
+                        ? aboutUsDropdownOpen
+                          ? styles.menuDropdownContent
+                          : `${styles.menuDropdownContent} ${styles.hiddenMenuDropdownContent}`
+                        : page.id === "mediaDropdown" && mediaDropdownOpen
+                        ? styles.menuDropdownContent
+                        : `${styles.menuDropdownContent} ${styles.hiddenMenuDropdownContent}`
+                    }
+                    key={index}
+                  >
+                    {page.dropdownContent.map((page, index) => {
+                      return (
+                        <Link href={page.link} key={index}>
+                          <div
+                            className={
+                              router.asPath.split("/")[2] ===
+                              page.link.split("/")[2]
+                                ? `${styles.currentPageMenuBold} ${
+                                    index === dropdownContentLength
+                                      ? styles.menuItemEnd
+                                      : styles.menuItem
+                                  }`
+                                : index === dropdownContentLength
+                                ? styles.menuItemEnd
+                                : styles.menuItem
+                            }
+                            key={index}
+                          >
+                            <page.icon className={styles.icon} key={index} />
+                            <a key={index}>{page.pageName}</a>
+                          </div>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
             }
-          >
-            <Link href="/about/our-story">
-              {/* make the current page name in the dropdown bold,
-                  same structure for the other dropdown links */}
-              <div
-                className={
-                  router.asPath.split("/")[2] === "our-story"
-                    ? `${styles.currentPageMenuBold} ${styles.menuItem}`
-                    : styles.menuItem
-                }
-                onClick={menuItemClick}
-              >
-                <ChromeReaderModeOutlinedIcon className={styles.icon} />
-                <a>Our Story</a>
-              </div>
-            </Link>
-            <Link href="/about/sponsors-affiliations">
-              <div
-                className={
-                  router.asPath.split("/")[2] === "sponsors-affiliations"
-                    ? `${styles.currentPageMenuBold} ${styles.menuItem}`
-                    : styles.menuItem
-                }
-                onClick={menuItemClick}
-              >
-                <FavoriteBorderIcon className={styles.icon} />
-                <a>Sponsors and Affiliations</a>
-              </div>
-            </Link>
-            <Link href="/about/our-team">
-              <div
-                className={
-                  router.asPath.split("/")[2] === "our-team"
-                    ? `${styles.currentPageMenuBold} ${styles.menuItem}`
-                    : styles.menuItem
-                }
-                onClick={menuItemClick}
-              >
-                <PeopleOutlineIcon className={styles.icon} />
-                <a>Our Team</a>
-              </div>
-            </Link>
-            <Link href="/about/contact-us">
-              <div
-                className={
-                  router.asPath.split("/")[2] === "contact-us"
-                    ? `${styles.currentPageMenuBold} ${styles.menuItemEnd}`
-                    : styles.menuItemEnd
-                }
-                onClick={menuItemClick}
-              >
-                <PhoneOutlinedIcon className={styles.icon} />
-                <a>Contact Us</a>
-              </div>
-            </Link>
-          </div>
-          <Link href="/events">
-            <div className={styles.menuItemContent}>
-              <div
-                className={
-                  router.asPath === "/events"
-                    ? `${styles.currentPageMenuUnderline} ${styles.menuItem}`
-                    : styles.menuItem
-                }
-                onClick={menuItemClick}
-              >
-                <a>Events</a>
-              </div>
-            </div>
-          </Link>
-          <Link href="/opportunities">
-            <div className={styles.menuItemContent}>
-              <div
-                className={
-                  router.asPath === "/opportunities"
-                    ? `${styles.currentPageMenuUnderline} ${styles.menuItem}`
-                    : styles.menuItem
-                }
-                onClick={menuItemClick}
-              >
-                <a>Opportunities</a>
-              </div>
-            </div>
-          </Link>
-          <div
-            className={styles.menuDropdownContainer}
-            id="mediaDropdown"
-            onClick={mediaDropdownClick}
-          >
-            <div
-              className={
-                router.asPath.split("/")[1] === "media" && mediaDropdownOpen
-                  ? `${styles.currentPageMenuUnderline} ${styles.currentDropdown} ${styles.menuItem}`
-                  : router.asPath.split("/")[1] === "media"
-                  ? `${styles.currentPageMenuUnderline} ${styles.menuItem}`
-                  : mediaDropdownOpen
-                  ? `${styles.currentDropdown} ${styles.menuItem}`
-                  : styles.menuItem
-              }
-            >
-              <a id="mediaText">Media ▸</a>
-            </div>
-          </div>
-          <div
-            className={
-              mediaDropdownOpen
-                ? styles.menuDropdownContent
-                : `${styles.menuDropdownContent} ${styles.hiddenMenuDropdownContent}`
-            }
-          >
-            <Link href="/media/blog">
-              <div
-                className={
-                  router.asPath.split("/")[2] === "blog"
-                    ? `${styles.currentPageMenuBold} ${styles.menuItem}`
-                    : styles.menuItem
-                }
-                onClick={menuItemClick}
-              >
-                <InsertDriveFileOutlinedIcon className={styles.icon} />
-                <a>Blog Posts</a>
-              </div>
-            </Link>
-            <Link href="/media/podcast">
-              <div
-                className={
-                  router.asPath.split("/")[2] === "podcast"
-                    ? `${styles.currentPageMenuBold} ${styles.menuItem}`
-                    : styles.menuItem
-                }
-                onClick={menuItemClick}
-              >
-                <HeadsetMicOutlinedIcon className={styles.icon} />
-                <a>Podcast</a>
-              </div>
-            </Link>
-            <Link href="/media/publications">
-              <div
-                className={
-                  router.asPath.split("/")[2] === "publications"
-                    ? `${styles.currentPageMenuBold} ${styles.menuItem}`
-                    : styles.menuItem
-                }
-                onClick={menuItemClick}
-              >
-                <LocalPrintshopOutlinedIcon className={styles.icon} />
-                <a>Publications</a>
-              </div>
-            </Link>
-            <Link href="/media/marketing">
-              <div
-                className={
-                  router.asPath.split("/")[2] === "marketing"
-                    ? `${styles.currentPageMenuBold} ${styles.menuItem}`
-                    : styles.menuItem
-                }
-                onClick={menuItemClick}
-              >
-                <ImageOutlinedIcon className={styles.icon} />
-                <a>Marketing</a>
-              </div>
-            </Link>
-            <Link href="/media/videos">
-              <div
-                className={
-                  router.asPath.split("/")[2] === "videos"
-                    ? `${styles.currentPageMenuBold} ${styles.menuItemEnd}`
-                    : styles.menuItemEnd
-                }
-                onClick={menuItemClick}
-              >
-                <VideocamOutlinedIcon className={styles.icon} />
-                <a>Videos</a>
-              </div>
-            </Link>
-          </div>
-          <Link href="/join-us">
-            <div className={styles.menuItemContent}>
-              <div
-                className={
-                  router.asPath === "/join-us"
-                    ? `${styles.currentPageMenuUnderline} ${styles.menuItemEnd}`
-                    : styles.menuItemEnd
-                }
-                onClick={menuItemClick}
-              >
-                <a>Join Us</a>
-              </div>
-            </div>
-          </Link>
+            return (
+              <Link href={page.link} key={index}>
+                <div className={styles.menuItemContent} key={index}>
+                  <div
+                    className={
+                      router.asPath === page.link
+                        ? `${styles.currentPageMenuUnderline} ${
+                            index === menuContentLength
+                              ? styles.menuItemEnd
+                              : styles.menuItem
+                          }`
+                        : index === menuContentLength
+                        ? styles.menuItemEnd
+                        : styles.menuItem
+                    }
+                    key={index}
+                    onClick={menuItemClick}
+                  >
+                    <a key={index}>{page.pageName}</a>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </nav>

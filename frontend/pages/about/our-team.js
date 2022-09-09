@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import styles from "../../styles/team.module.css";
-import PageHeader from "../../components/header";
+import PageHeader from "../../components/Header";
 import Execs from "../../components/execs";
 import SubCom from "../../components/subcom";
 import CircularProgress from "@material-ui/core/CircularProgress";
@@ -97,23 +97,26 @@ export default function OurTeam() {
 
   // Moved from teamData.js to prevent new portfolios
   // from showing when the year is earlier than 2021.
-  const sectors = year < 2022 ? [
-    "Events",
-    "Externals",
-    "Human Resources",
-    "Education",
-    "Marketing",
-    "Information Technology",
-  ] : [
-    "Careers",
-    "Competitions",
-    "Externals",
-    "Human Resources",
-    "Information Technology",
-    "Marketing",
-    "Media",
-    "Publications",
-  ];
+  const sectors =
+    year < 2022
+      ? [
+          "Events",
+          "Externals",
+          "Human Resources",
+          "Education",
+          "Marketing",
+          "Information Technology",
+        ]
+      : [
+          "Careers",
+          "Competitions",
+          "Externals",
+          "Human Resources",
+          "Information Technology",
+          "Marketing",
+          "Media",
+          "Publications",
+        ];
 
   return (
     <div>

@@ -1,4 +1,4 @@
-/*NavigationBar*/
+/*-------------------------------Navigation Bar-------------------------------*/
 .navBarContainer {
   position: fixed;
   top: 0;
@@ -204,7 +204,7 @@
   transform: scale(0.9);
 }
 
-/* compact navbar */
+/*------------------------------Compact Navbar--------------------------------*/
 .compactNavBarGrid {
   display: grid;
   grid-template:
@@ -235,7 +235,6 @@
 }
 
 .menuButton:hover {
-  color: var(--red);
   cursor: pointer;
 }
 
@@ -352,7 +351,7 @@
 }
 
 
-/*--- Dark mode ---*/
+/*---------------------------------Dark Mode----------------------------------*/
 @media (prefers-color-scheme: dark) {
   .navBarContainer {
     background-color: #000;
