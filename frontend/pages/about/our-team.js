@@ -10,8 +10,16 @@ import LoadingScreen from "../../components/LoadingScreen";
 import axios from "axios";
 import humps from "humps";
 import { execToClassName, marks, valueToYear } from "../../data/TeamData";
+import { loadSubcommittee } from "../../lib/api";
 
-export default function OurTeam() {
+export async function getStaticProps() {
+  const subcommittee = await loadSubcommittee();
+  return {
+    props: { subcommittee },
+  };
+}
+
+export default function OurTeam({ subcommittee }) {
   const masterExec = useRef();
   const masterSubcom = useRef();
   const [filteredExecs, setFilteredExecs] = useState([]);
@@ -36,15 +44,9 @@ export default function OurTeam() {
       });
   };
 
-  // get subcom
-  // input: subcom data from google sheets
-  // output: array of dictionaries containing subcom data
-  const fetchSubcom = async () => {
-    await axios
-      .get("https://wit-database.herokuapp.com/subcommittee")
-      .then((subcomRes) => {
-        masterSubcom.current = humps.camelizeKeys(subcomRes.data);
-      });
+  // get subcommittee members from contentful
+  const fetchSubcom = (subcom) => {
+    masterSubcom.current = subcom;
   };
 
   const filterDataByYear = useCallback(() => {
@@ -62,8 +64,9 @@ export default function OurTeam() {
     setFilteredExecs(result);
 
     // Subcom
+    console.log(masterSubcom);
     const subcom = masterSubcom.current.filter(
-      (exec) => exec.yearJoined === year
+      (exec) => exec.fields.yearJoined === year
     );
     setFilteredSubcom(subcom);
 
@@ -84,10 +87,7 @@ export default function OurTeam() {
         // error handling
         console.error(error)
       ),
-      fetchSubcom().catch((error) =>
-        // error handling
-        console.error(error)
-      ),
+      fetchSubcom(subcommittee),
     ];
     Promise.all(fetchDataPromises).then(() => {
       filterDataByYear();
@@ -207,14 +207,16 @@ export default function OurTeam() {
                         <div key={sector}>
                           <h3 className={styles.subcomType}>{sector} Team</h3>
                           {filteredSubcom
-                            .filter((member) => member.team === sector)
+                            .filter((member) => member.fields.team === sector)
                             .map((member, index) => {
+                              console.log(member);
+                              const { name, degree, year } = member.fields;
                               return (
                                 <SubCom
                                   key={index}
-                                  name={member.name}
-                                  degree={member.degree}
-                                  year={member.year}
+                                  name={name}
+                                  degree={degree}
+                                  year={year}
                                 />
                               );
                             })}
