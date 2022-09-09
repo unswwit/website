@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import styles from "../styles/Podcast.module.css";
+import { formatPodcastDate } from "../lib/helpers";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -129,7 +130,7 @@ export default function EpisodeTemplate({
                 color="textSecondary"
                 component="p"
               >
-                {date}
+                {formatPodcastDate(date)}
               </Typography>
               <Typography className={classes.title} gutterBottom>
                 {title}

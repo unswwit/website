@@ -17,13 +17,6 @@ import Link from "next/link";
 // TO UNCOMMENT WHEN REACH > 9 PODCASTS
 // import PaginationComp from "../components/Pagination";
 
-export async function getStaticProps() {
-  const episodes = await loadPodcasts();
-  return {
-    props: { episodes },
-  };
-}
-
 const Podcast = ({ episodes }) => {
   const classes = useStyles();
   const [loading, setLoading] = useState(true);
@@ -47,6 +40,8 @@ const Podcast = ({ episodes }) => {
   // const postsPerPage = 9;
 
   // get podcasts from Contentful
+  // input: podcast data from Contentful
+  // output: array of dictionaries containing podcast data
   const fetchPodcastEpisodes = (episodes) => {
     setContent(episodes);
     setSelectedPosts(episodes);
@@ -85,13 +80,14 @@ const Podcast = ({ episodes }) => {
   // filter category content by search filter in heading, subheading or author
   const searchPodcasts = (filteredContent, searchTerm) => {
     const searchResults = filteredContent.filter((episode) => {
-      const { title, date, description } = episode.fields;
-      date = formatPodcastDate(date);
+      const date = formatPodcastDate(episode.fields.date);
       if (
         searchTerm === "" ||
         date.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        description.toLowerCase().includes(searchTerm.toLowerCase())
+        episode.fields.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        episode.fields.description
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase())
       ) {
         return true;
       } else {
@@ -154,7 +150,7 @@ const Podcast = ({ episodes }) => {
                 {Object.keys(links).map((link, index) => {
                   return (
                     <Link href={links[link][1]} key={index}>
-                      <a className={styles.platformLogos}>
+                      <div className={styles.platformLogos}>
                         <a
                           className={styles.a}
                           key={index}
@@ -168,7 +164,7 @@ const Podcast = ({ episodes }) => {
                             height="25px"
                           />
                         </a>
-                      </a>
+                      </div>
                     </Link>
                   );
                 })}
@@ -238,17 +234,14 @@ const Podcast = ({ episodes }) => {
 
           <div id={styles.episodes}>
             {selectedPosts.map((episode, index) => {
-              const { episodeNo, title, date, description } = episode.fields;
-              date = formatPodcastDate(date);
-              const { url } = episode.fields.img.fields.file;
               return (
                 <EpisodeTemplate
                   key={index}
-                  episodeNo={episodeNo}
-                  title={title}
-                  cover={url}
-                  date={date}
-                  description={description}
+                  episodeNo={episode.fields.episodeNo}
+                  title={episode.fields.title}
+                  cover={episode.fields.img.fields.file.url}
+                  date={episode.fields.date}
+                  description={episode.fields.description}
                   episode={episode.fields}
                 />
               );
@@ -266,4 +259,12 @@ const Podcast = ({ episodes }) => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const episodes = await loadPodcasts();
+  return {
+    props: { episodes },
+  };
+}
+
 export default Podcast;
