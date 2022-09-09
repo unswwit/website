@@ -170,7 +170,7 @@ const CompactNavigationBar = () => {
               const dropdownContentLength =
                 Object.keys(page.dropdownContent).length - 1;
               return (
-                <div key={index}>
+                <div>
                   <div
                     className={styles.menuDropdownContainer}
                     id={page.id}
@@ -179,7 +179,6 @@ const CompactNavigationBar = () => {
                         ? aboutUsDropdownClick
                         : mediaDropdownClick
                     }
-                    key={index}
                   >
                     {/* apply dropdown underline and red text color accordingly:
                         if the current page belongs to the dropdown, the text should be underlined
@@ -204,11 +203,8 @@ const CompactNavigationBar = () => {
                           ? `${styles.currentDropdown} ${styles.menuItem}`
                           : styles.menuItem
                       }
-                      key={index}
                     >
-                      <a id={page.text} key={index}>
-                        {page.pageName}
-                      </a>
+                      <a id={page.text}>{page.pageName}</a>
                     </div>
                   </div>
                   <div
@@ -221,11 +217,10 @@ const CompactNavigationBar = () => {
                         ? styles.menuDropdownContent
                         : `${styles.menuDropdownContent} ${styles.hiddenMenuDropdownContent}`
                     }
-                    key={index}
                   >
                     {page.dropdownContent.map((page, index) => {
                       return (
-                        <Link href={page.link} key={index}>
+                        <Link href={page.link}>
                           <div
                             className={
                               router.asPath.split("/")[2] ===
@@ -239,10 +234,9 @@ const CompactNavigationBar = () => {
                                 ? styles.menuItemEnd
                                 : styles.menuItem
                             }
-                            key={index}
                           >
-                            <page.icon className={styles.icon} key={index} />
-                            <a key={index}>{page.pageName}</a>
+                            <page.icon className={styles.icon} />
+                            <a>{page.pageName}</a>
                           </div>
                         </Link>
                       );
@@ -252,8 +246,8 @@ const CompactNavigationBar = () => {
               );
             }
             return (
-              <Link href={page.link} key={index}>
-                <div className={styles.menuItemContent} key={index}>
+              <Link href={page.link}>
+                <div className={styles.menuItemContent}>
                   <div
                     className={
                       router.asPath === page.link
@@ -266,10 +260,9 @@ const CompactNavigationBar = () => {
                         ? styles.menuItemEnd
                         : styles.menuItem
                     }
-                    key={index}
                     onClick={menuItemClick}
                   >
-                    <a key={index}>{page.pageName}</a>
+                    <a>{page.pageName}</a>
                   </div>
                 </div>
               </Link>

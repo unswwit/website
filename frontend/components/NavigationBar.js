@@ -125,20 +125,16 @@ const NavigationBar = () => {
               <div
                 className={`${styles.dropdownContainer} ${page.itemName} ${styles.linkContainer}`}
                 id={page.id}
-                key={index}
               >
-                <Link href={page.link} key={index}>
-                  <div className={styles.linkContent} key={index}>
-                    <a id={page.text} key={index}>
-                      {page.pageName}
-                    </a>
+                <Link href={page.link}>
+                  <div className={styles.linkContent}>
+                    <a id={page.text}>{page.pageName}</a>
                     <div
                       className={
                         router.asPath === page.link
                           ? `${styles.currentPageUnderline} ${styles.linkUnderline}`
                           : styles.linkUnderline
                       }
-                      key={index}
                     ></div>
                   </div>
                 </Link>
@@ -148,11 +144,10 @@ const NavigationBar = () => {
                       ? `${styles.clearDropdownContent} ${styles.dropdownContent}`
                       : styles.dropdownContent
                   }
-                  key={index}
                 >
                   {page.dropdownContent.map((page, index) => {
                     return (
-                      <Link href={page.link} key={index}>
+                      <Link href={page.link}>
                         <div
                           className={
                             router.asPath.split("/")[2] ===
@@ -166,10 +161,9 @@ const NavigationBar = () => {
                               ? styles.dropdownItemEnd
                               : styles.dropdownItem
                           }
-                          key={index}
                         >
-                          <page.icon className={styles.icon} key={index} />
-                          <a key={index}>{page.pageName}</a>
+                          <page.icon className={styles.icon} />
+                          <a>{page.pageName}</a>
                         </div>
                       </Link>
                     );
@@ -179,20 +173,16 @@ const NavigationBar = () => {
             );
           }
           return (
-            <div
-              className={`${page.itemName} ${styles.linkContainer}`}
-              key={index}
-            >
-              <Link href={page.link} key={index}>
-                <div className={styles.linkContent} key={index}>
-                  <a key={index}>{page.pageName}</a>
+            <div className={`${page.itemName} ${styles.linkContainer}`}>
+              <Link href={page.link}>
+                <div className={styles.linkContent}>
+                  <a>{page.pageName}</a>
                   <div
                     className={
                       router.asPath === page.link
                         ? `${styles.currentPageUnderline} ${styles.linkUnderline}`
                         : styles.linkUnderline
                     }
-                    key={index}
                   ></div>
                 </div>
               </Link>
