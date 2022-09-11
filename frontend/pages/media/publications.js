@@ -34,7 +34,7 @@ const Publications = ({ publications }) => {
   // get publications
   // input: publications data from database
   // output: array of dictionaries containing publications data
-  const fetchPublications = async () => {
+  const fetchPublications = async (publications) => {
     setLoading(false);
     setArticles(publications);
     setSourceLoading(false);
@@ -67,7 +67,13 @@ const Publications = ({ publications }) => {
               )}
             </div>
             {/*Articles*/}
-            const {(img, heading, date, url)} = publications.fields;
+
+            {/*
+            const {img} = publications.fields; const imgUrl = "https:" +
+            img.fields.file.url;
+            const {img, heading, date, url} = publications.fields;
+            
+            {/*{(heading, date, url)} = publications.fields;*/}
             {!loading &&
               Array.from({ length: 3 }, (_, i) => i + 2020)
                 .reverse()
@@ -77,8 +83,10 @@ const Publications = ({ publications }) => {
                       <h1>{year}</h1>
                       <div className={styles.row}>
                         {publications
-                          .filter((publications) => year === year)
+                          .filter(() => year === year)
                           .map((index) => (
+                            // const { heading, date, url } = publications.fields;
+                            // const { img } = publications.fields.img.fields.file;
                             <PubArticle
                               key={index}
                               imgUrl={img}
