@@ -6,6 +6,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import axios from "axios";
 import LoadingScreen from "../../components/LoadingScreen";
 import { loadPublications } from "../../lib/api";
+import { stringifyQuery } from "next/dist/server/server-route-utils";
 
 export async function getStaticProps() {
   const publications = await loadPublications();
@@ -25,10 +26,11 @@ const Publications = ({ publications }) => {
     window.scrollTo(0, 0);
 
     // load articles
-    fetchPublications().catch((error) =>
-      // error handling
-      console.error(error)
-    );
+    fetchPublications(publications);
+    // fetchPublications().catch((error) =>
+    //   // error handling
+    //   console.error(error)
+    // );
   }, []);
 
   // get publications
@@ -82,17 +84,22 @@ const Publications = ({ publications }) => {
                     <div key={year}>
                       <h1>{year}</h1>
                       <div className={styles.row}>
-                        {publications
-                          .filter(() => year === year)
-                          .map((index) => (
+                        {articles
+                          .filter(
+                            (publication) =>
+                              publication.fields.year === year.toString()
+                          )
+                          .map((publication, index) => (
                             // const { heading, date, url } = publications.fields;
                             // const { img } = publications.fields.img.fields.file;
                             <PubArticle
                               key={index}
-                              imgUrl={img}
-                              heading={heading}
-                              date={date}
-                              url={url}
+                              imgUrl={
+                                "http:" + publication.fields.img.fields.file.url
+                              }
+                              heading={publication.fields.heading}
+                              date={publication.fields.date}
+                              url={publication.fields.url}
                             />
                           ))}
                       </div>
