@@ -12,13 +12,6 @@ import humps from "humps";
 import { execToClassName, marks, valueToYear } from "../../data/TeamData";
 import { loadExecs } from "../../lib/api";
 
-export async function getStaticProps() {
-  const execs = await loadExecs();
-  return {
-    props: { execs },
-  };
-}
-
 export default function OurTeam({ execs }) {
   const masterExec = useRef();
   const masterSubcom = useRef();
@@ -33,7 +26,9 @@ export default function OurTeam({ execs }) {
     setYear(newYear);
   };
 
-  // get execs from contenful
+  // get execs
+  // input: execs data from Contentful
+  // output: array of dictionaries containing exec data
   const fetchExecs = (execs) => {
     masterExec.current = execs;
   };
@@ -165,32 +160,24 @@ export default function OurTeam({ execs }) {
                     return (
                       <div key={index} className={styles.execRow}>
                         {row.map((exec, index) => {
-                          const {
-                            name,
-                            position,
-                            degree,
-                            year,
-                            linkedin,
-                            facebook,
-                            email,
-                          } = exec.fields;
-                          const { url } = exec.fields.img.fields.file;
                           return (
                             <Execs
                               key={index}
-                              imgUrl={"http:" + url}
-                              name={name}
+                              imgUrl={"http:" + exec.fields.img.fields.file.url}
+                              name={exec.fields.name}
                               className={
-                                year === 2020
-                                  ? execToClassName[year][name]
-                                  : execToClassName[year]
+                                exec.fields.year === 2020
+                                  ? execToClassName[exec.fields.year][
+                                      exec.fields.name
+                                    ]
+                                  : execToClassName[exec.fields.year]
                               }
-                              position={position}
-                              degree={degree}
-                              year={year}
-                              linkedin={linkedin}
-                              fb={facebook}
-                              email={email}
+                              position={exec.fields.position}
+                              degree={exec.fields.degree}
+                              year={exec.fields.year}
+                              linkedin={exec.fields.linkedin}
+                              fb={exec.fields.facebook}
+                              email={exec.fields.email}
                             />
                           );
                         })}
@@ -239,4 +226,11 @@ export default function OurTeam({ execs }) {
       )}
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const execs = await loadExecs();
+  return {
+    props: { execs },
+  };
 }
