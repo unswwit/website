@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import PageHeader from "../../components/header";
 import Chip from "@material-ui/core/Chip";
-import styles from "../../styles/videos.module.css";
-import YouTubeSubscribe from "../../components/youtubeSubscribe";
+import styles from "../../styles/Videos.module.css";
+import YouTubeSubscribe from "../../components/YoutubeSubscribeBtn";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Link from "next/link";
 import Image from "next/image";
@@ -11,8 +11,8 @@ import humps from "humps";
 import PaginationComp from "../../components/Pagination";
 import LoadingScreen from "../../components/LoadingScreen";
 import { isMobile } from "react-device-detect";
-import { useStyles, categories } from "../../data/videoData";
 import { loadVideos } from "../../lib/api";
+import { useStyles, categories } from "../../data/VideoData";
 
 const Videos = ( { videos } ) => {
   const classes = useStyles();
@@ -133,7 +133,7 @@ const Videos = ( { videos } ) => {
     setCurrentPosts(searchResults.slice(0, postsPerPage));
     setCurrentPage(1);
   };
-  
+
   // called when pagination item clicked to slice the correct amount of videos for viewing
   const paginate = (pageNumber) => {
     setCurrentPosts(
@@ -151,7 +151,7 @@ const Videos = ( { videos } ) => {
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
     ) {
-      setYoutubeTheme("dark")
+      setYoutubeTheme("dark");
     }
   }, []);
 
@@ -160,10 +160,9 @@ const Videos = ( { videos } ) => {
     return videos.map((video, index) => {
       return (
         <div className={styles.videoDescription} key={index}>
-          <Link
-            href={`/media/videos/${video.videoNumber}`}
-          >
-            <div className={styles.boxContainer}
+          <Link href={`/media/videos/${video.videoNumber}`}>
+            <div
+              className={styles.boxContainer}
               onClick={() => setVideoNumber(video.videoNumber)}
             >
               <div className={styles.darkOverlay} />

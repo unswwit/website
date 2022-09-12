@@ -1,48 +1,33 @@
 import React, { useEffect, useState } from "react";
 import PageHeader from "../../../components/header";
 import Chip from "@material-ui/core/Chip";
-import styles from "../../../styles/videos.module.css";
-import YouTubeSubscribe from "../../../components/youtubeSubscribe";
+import styles from "../../../styles/Videos.module.css";
+import YouTubeSubscribe from "../../../components/YoutubeSubscribeBtn";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import axios from "axios";
 import humps from "humps";
 import PaginationComp from "../../../components/Pagination";
 import LoadingScreen from "../../../components/LoadingScreen";
 import { isMobile } from "react-device-detect";
-import { useStyles, categories } from "../../../data/videoData";
+import { useStyles, categories } from "../../../data/VideoData";
 
 const Videos = (props) => {
-  const router = useRouter();
-  const query = router.query;
-  const video_id = query.video_id;
-
   const classes = useStyles();
-
   const [video, setVideo] = useState([]);
   const [loading, setLoading] = useState(true);
   const [videoNumber, setVideoNumber] = useState("0");
   const [sourceLoading, setSourceLoading] = useState(true);
   const [headerLoading, setHeaderLoading] = useState(true);
-  // all videos
   const [content, setContent] = useState([]);
-  // currently selected category -> default to "All"
   const [selectedCategory, setSelectedCategory] = useState("All");
-  // check if search + category filters result in no results
   const [emptyCategory, setEmptyCategory] = useState(false);
-  // search term (user input) for videos search bar
   const [searchTerm, setSearchTerm] = useState("");
-  // all the posts of the selected filter category
   const [selectedPosts, setSelectedPosts] = useState([]);
-  // the posts displayed on the current page
   const [currentPosts, setCurrentPosts] = useState([]);
-  // set how many posts to view per page
   const postsPerPage = 9;
-  // current page number
   const [currentPage, setCurrentPage] = useState(1);
-  // set youtube theme
   const [youtubeTheme, setYoutubeTheme] = useState("full");
 
   // retrieve current video content
@@ -90,10 +75,10 @@ const Videos = (props) => {
   useEffect(() => {
     const fetchVideos = async () => {
       setLoading(false);
-
       const res = await axios.get("https://wit-database.herokuapp.com/videos");
       const allVideos = humps.camelizeKeys(res.data);
       const currVideoNumber = handleVideoNumber(allVideos.length);
+
       if (allVideos.length <= 0 || currVideoNumber > allVideos.length) {
         props.history.push("/404");
         return;
@@ -106,14 +91,10 @@ const Videos = (props) => {
       setSourceLoading(false);
     };
 
-    // Start at the top of the page
+    // start at the top of the page
     window.scrollTo(0, 0);
 
-    // Importing Video Details
-    fetchVideos().catch((error) =>
-      // error handling
-      console.error(error)
-    );
+    fetchVideos().catch((error) => console.error(error));
   }, [videoNumber, props.history]);
 
   useEffect(() => {
@@ -192,7 +173,6 @@ const Videos = (props) => {
                   className={styles.videoImages}
                   src={`/videos/${video.img}`}
                   alt={video.name}
-                  // layout={"fill"}
                   width={"450px"}
                   height={"200px"}
                 />

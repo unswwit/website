@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import PageHeader from "../../../components/header";
 import styles from "../../../styles/event-recap.module.css";
+=======
+import { useState, useEffect } from "react";
+import PageHeader from "../../../components/Header";
+import styles from "../../../styles/EventRecap.module.css";
+>>>>>>> develop
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
@@ -125,9 +131,7 @@ const EventRecapPage = (props) => {
                 href={event.facebookLink}
               >
                 {hasFBLink && (
-                  <button 
-                      className={styles.facebookLinkButton}
-                  >
+                  <button className={styles.facebookLinkButton}>
                     Facebook
                   </button>
                 )}
@@ -137,15 +141,13 @@ const EventRecapPage = (props) => {
 
           {/* YouTube Embedded Video */}
           {hasEmbeddedVideo && (
-            <div
-              className={styles.iframeWrapper}
-            >
+            <div className={styles.iframeWrapper}>
               <div className={styles.responsiveIframe}>
                 <iframe
                   src={`https://youtube.com/embed/${event.youtubeVideoId}?autoplay=0`}
-                  frameborder="0"
+                  frameBorder="0"
                   allow="autoplay; encrypted-media"
-                  allowfullscreen="true"
+                  allowFullScreen="true"
                   title="video"
                   className={styles.embeddedVideo}
                 />
@@ -159,9 +161,7 @@ const EventRecapPage = (props) => {
           {/* Image Gallery / Cover Image Section */}
           {/* Display Image gallery if images exist, otherwise display cover image */}
           {!hasPhotos && (
-            <div
-              className={styles.imageWrapper}
-            >
+            <div className={styles.imageWrapper}>
               <Image
                 src={`/event-covers/${event.year}/${event.img}`}
                 alt="header"
@@ -172,9 +172,7 @@ const EventRecapPage = (props) => {
           )}
 
           {hasPhotos && (
-            <div
-              className={styles.imageGalleryWrapper}
-            >
+            <div className={styles.imageGalleryWrapper}>
               <AwesomeSlider
                 cssModule={styles}
                 media={imageGalleryFilenames}
@@ -186,9 +184,7 @@ const EventRecapPage = (props) => {
 
           {/* Event Resources Accordion */}
           {hasResources && (
-            <div
-              className={styles.accordionWrapper}
-            >
+            <div className={styles.accordionWrapper}>
               <Accordion
                 expanded={expanded}
                 onChange={() => {
@@ -210,13 +206,16 @@ const EventRecapPage = (props) => {
                   <iframe
                     title="event-resources"
                     src={`https://drive.google.com/a/unswwit.com/embeddedfolderview?id=${event.resourcesFolderId}#grid`}
-                    style={{ width: "100%", height: "280px", border: "0" }}
+                    style={{
+                      width: "100%",
+                      height: "280px",
+                      border: "0",
+                    }}
                   ></iframe>
                 </AccordionDetails>
               </Accordion>
             </div>
           )}
-
         </div>
       )}
     </>

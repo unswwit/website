@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../styles/events.module.css";
-import PageHeader from "../components/header";
+import styles from "../styles/Events.module.css";
+import PageHeader from "../components/Header";
 import Chip from "@material-ui/core/Chip";
 import Timeline from "../components/Timeline";
 import CircularProgress from "@material-ui/core/CircularProgress";
@@ -13,7 +13,7 @@ import humps from "humps";
 import UpcomingEvent from "../components/UpcomingEvent";
 import PaginationComp from "../components/Pagination";
 import { isMobile } from "react-device-detect";
-import { useStyles, categories, marks, valueToYear } from "../data/eventData";
+import { useStyles, categories, marks, valueToYear } from "../data/EventData";
 
 const Events = () => {
   const classes = useStyles();
@@ -147,7 +147,8 @@ const Events = () => {
     const filteredTerm = pastContent[term].filter(
       (picture) =>
         selectedCategory === "All" ||
-        picture.category.split(",").includes(selectedCategory)
+        (picture.category !== null &&
+          picture.category.split(",").includes(selectedCategory))
     );
 
     return filteredTerm;
@@ -182,10 +183,10 @@ const Events = () => {
     return events.map((event, index) => {
       let eventLabel = event.img.split(".")[0].split("-");
       eventLabel.shift();
-      let event_id = `${event.eventNumber}`;
+      let eventId = `${event.eventNumber}`;
       return (
         <div className={styles.pastEvent} key={index}>
-          <Link href={`/event-recaps/${year}/${event_id}`}>
+          <Link href={`/event-recaps/${year}/${eventId}`}>
             <div className={styles.eventImgBox}>
               <Image
                 className={styles.eventImages}
@@ -238,10 +239,10 @@ const Events = () => {
                   {!isMobile &&
                     currentPosts.map((upcomingEvent, index) => {
                       return (
-                        <div className={styles.upcomingEventsBox}>
+                        <div className={styles.upcomingEventsBox} key={index}>
                           <UpcomingEvent
                             upcomingEvent={upcomingEvent}
-                            index={index}
+                            key={index}
                           />
                         </div>
                       );
@@ -252,7 +253,7 @@ const Events = () => {
                       return (
                         <UpcomingEvent
                           upcomingEvent={upcomingEvent}
-                          index={index}
+                          key={index}
                         />
                       );
                     })}
