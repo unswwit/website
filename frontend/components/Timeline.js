@@ -1,4 +1,3 @@
-import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Slider from "@material-ui/core/Slider";
 import styles from "../styles/Timeline.module.css";
@@ -38,8 +37,8 @@ const TimelineSlider = withStyles({
   },
   markLabel: {
     "@media (prefers-color-scheme:dark)": {
-      color: "#fff", 
-    }
+      color: "#fff",
+    },
   },
   markActive: {
     opacity: 1,
@@ -60,22 +59,22 @@ const Timeline = ({ updateYear, marks, valueToYear, page, step, margin }) => {
         page === "teams"
           ? styles.teams
           : page === "events"
-            ? styles.events
+          ? styles.events
           : page === "ourStory"
-            ? styles.ourStoryTimeline
-            : styles.marketingArchive
+          ? styles.ourStoryTimeline
+          : styles.marketingArchive
       }
       style={{ marginTop: margin }}
     >
-    <TimelineSlider
-      step={step}
-      marks={marks}
-      valueLabelDisplay="off"
-      aria-label="timeline"
-      defaultValue={pageToValue(page)}
-      max={pageToValue(page)}
-      onChange={(_, value) => updateYear(valueToYear[value])}
-    />
+      <TimelineSlider
+        step={step}
+        marks={marks}
+        valueLabelDisplay="off"
+        aria-label="timeline"
+        defaultValue={pageToValue(page)}
+        max={pageToValue(page)}
+        onChange={(_, value) => updateYear(valueToYear[value])}
+      />
     </div>
   );
 };

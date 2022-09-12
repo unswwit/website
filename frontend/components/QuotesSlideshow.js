@@ -7,7 +7,7 @@ import {
 } from "pure-react-carousel";
 import React from "react";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import quotes from "../styles/QuotesSlideshow.module.css";
+import styles from "../styles/QuotesSlideshow.module.css";
 import Image from "next/image";
 
 const QuotesSlideshow = ({
@@ -27,108 +27,108 @@ const QuotesSlideshow = ({
       quoteBlock = (
         <div
           className={[
-            quotes.quoteBlock,
-            quotes.quoteBlockCareers,
+            styles.quoteBlock,
+            styles.quoteBlockCareers,
             customSlideStyle,
           ].join(" ")}
         >
-          {displaySlideInfo(key, quotes.careersRoleColour)}
+          {displaySlideInfo(key, styles.careersRoleColour)}
         </div>
       );
     } else if (data[key][1].includes("Competitions")) {
       quoteBlock = (
         <div
           className={[
-            quotes.quoteBlock,
-            quotes.quoteBlockCompetitions,
+            styles.quoteBlock,
+            styles.quoteBlockCompetitions,
             customSlideStyle,
           ].join(" ")}
         >
-          {displaySlideInfo(key, quotes.competitionsRoleColour)}
+          {displaySlideInfo(key, styles.competitionsRoleColour)}
         </div>
       );
     } else if (data[key][1].includes("Externals")) {
       quoteBlock = (
         <div
           className={[
-            quotes.quoteBlock,
-            quotes.quoteBlockExternals,
+            styles.quoteBlock,
+            styles.quoteBlockExternals,
             customSlideStyle,
           ].join(" ")}
         >
-          {displaySlideInfo(key, quotes.externalsRoleColour)}
+          {displaySlideInfo(key, styles.externalsRoleColour)}
         </div>
       );
     } else if (data[key][1].includes("HR")) {
       quoteBlock = (
         <div
           className={[
-            quotes.quoteBlock,
-            quotes.quoteBlockHR,
+            styles.quoteBlock,
+            styles.quoteBlockHR,
             customSlideStyle,
           ].join(" ")}
         >
-          {displaySlideInfo(key, quotes.hrRoleColour)}
+          {displaySlideInfo(key, styles.hrRoleColour)}
         </div>
       );
     } else if (data[key][1].includes("Publications")) {
       quoteBlock = (
         <div
           className={[
-            quotes.quoteBlock,
-            quotes.quoteBlockPublications,
+            styles.quoteBlock,
+            styles.quoteBlockPublications,
             customSlideStyle,
           ].join(" ")}
         >
-          {displaySlideInfo(key, quotes.publicationsRoleColour)}
+          {displaySlideInfo(key, styles.publicationsRoleColour)}
         </div>
       );
     } else if (data[key][1].includes("Marketing")) {
       quoteBlock = (
         <div
           className={[
-            quotes.quoteBlock,
-            quotes.quoteBlockMarketing,
+            styles.quoteBlock,
+            styles.quoteBlockMarketing,
             customSlideStyle,
           ].join(" ")}
         >
-          {displaySlideInfo(key, quotes.marketingRoleColour)}
+          {displaySlideInfo(key, styles.marketingRoleColour)}
         </div>
       );
     } else if (data[key][1].includes("IT")) {
       quoteBlock = (
         <div
           className={[
-            quotes.quoteBlock,
-            quotes.quoteBlockIT,
+            styles.quoteBlock,
+            styles.quoteBlockIT,
             customSlideStyle,
           ].join(" ")}
         >
-          {displaySlideInfo(key, quotes.itRoleColour)}
+          {displaySlideInfo(key, styles.itRoleColour)}
         </div>
       );
     } else if (data[key][1].includes("Media")) {
       quoteBlock = (
         <div
           className={[
-            quotes.quoteBlock,
-            quotes.quoteBlockMedia,
+            styles.quoteBlock,
+            styles.quoteBlockMedia,
             customSlideStyle,
           ].join(" ")}
         >
-          {displaySlideInfo(key, quotes.mediaRoleColour)}
+          {displaySlideInfo(key, styles.mediaRoleColour)}
         </div>
       );
     } else {
       quoteBlock = (
         <div
           className={[
-            quotes.quoteBlock,
-            quotes.quoteBlockDefault,
+            styles.quoteBlock,
+            styles.quoteBlockDefault,
             customSlideStyle,
           ].join(" ")}
         >
-          {displaySlideInfo(key, quotes.defaultRoleColour)}
+          {displaySlideInfo(key, styles.defaultRoleColour)}
         </div>
       );
     }
@@ -138,26 +138,26 @@ const QuotesSlideshow = ({
   const displaySlideInfo = (key, colorClass) => {
     return (
       <>
-        <div className={quotes.authorBlock}>
+        <div className={styles.authorBlock}>
           <Image
-            className={quotes.authorImage}
+            className={styles.authorImage}
             src={`/portraits/${data[key][2]}`}
             alt={data[key][0]}
-            height='90px'
-            width='90px'
+            width={90}
+            height={90}
           />
-          <div className={quotes.authorDetails}>
-            <p className={quotes.authorName}>{data[key][0]}</p>
-            <p className={[quotes.authorRoles, colorClass].join(" ")}>
+          <div className={styles.authorDetails}>
+            <p className={styles.authorName}>{data[key][0]}</p>
+            <p className={[styles.authorRoles, colorClass].join(" ")}>
               {data[key][1]}
             </p>
           </div>
         </div>
-        <div className={[quotes.quoteContainer, customQuoteStyle].join(" ")}>
-          <div className={quotes.beginQuote}>“</div>
-          <p className={quotes.quoteText}>{data[key][3]}</p>
-          <div className={quotes.horizontalLine} />
-          <div className={quotes.endQuote}>”</div>
+        <div className={[styles.quoteContainer, customQuoteStyle].join(" ")}>
+          <div className={styles.beginQuote}>“</div>
+          <p className={styles.quoteText}>{data[key][3]}</p>
+          <div className={styles.horizontalLine} />
+          <div className={styles.endQuote}>”</div>
         </div>
       </>
     );
@@ -168,25 +168,25 @@ const QuotesSlideshow = ({
     return (
       <Slide
         index={key}
-        innerClassName={[quotes.slideContainer, customSlideStyle].join(" ")}
+        innerClassName={[styles.slideContainer, customSlideStyle].join(" ")}
         key={key}
       >
-        <div className={quotes.quoteBackground}>{displayBackground(key)}</div>
+        <div className={styles.quoteBackground}>{displayBackground(key)}</div>
       </Slide>
     );
   };
 
   return (
     <CarouselProvider
-      className={[quotes.slideComponent, customSlideStyle].join(" ")}
+      className={[styles.slideComponent, customSlideStyle].join(" ")}
       naturalSlideWidth={1400}
       naturalSlideHeight={height}
       totalSlides={subcoms.length}
     >
       <Slider
-        className={quotes.slideComponent}
-        classNameTray={quotes.slideComponent}
-        classNameTrayWrap={quotes.slideComponent}
+        className={styles.slideComponent}
+        classNameTray={styles.slideComponent}
+        classNameTrayWrap={styles.slideComponent}
       >
         {Array.from(
           { length: Object.keys(data).length },
@@ -194,10 +194,10 @@ const QuotesSlideshow = ({
         ).map((slideNum) => displaySlide(+slideNum))}
       </Slider>
       <ButtonBack
-        className={[homeLeftArrow, quotes.buttonBack].join(" ")}
+        className={[homeLeftArrow, styles.buttonBack].join(" ")}
       ></ButtonBack>
       <ButtonNext
-        className={[homeRightArrow, quotes.buttonNext].join(" ")}
+        className={[homeRightArrow, styles.buttonNext].join(" ")}
       ></ButtonNext>
     </CarouselProvider>
   );
