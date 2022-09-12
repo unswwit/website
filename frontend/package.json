@@ -15,10 +15,7 @@
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
     "@material-ui/lab": "^4.0.0-alpha.61",
-<<<<<<< HEAD
-=======
     "aos": "^2.3.4",
->>>>>>> 1822238762ac758b6d87b2c5abfb6b0c03ff3e89
     "axios": "^0.26.1",
     "bootstrap": "^4.6.0",
     "contentful": "^9.1.32",
@@ -29,12 +26,9 @@
     "npm": "^8.9.0",
     "pure-react-carousel": "^1.28.1",
     "react": "18.1.0",
-<<<<<<< HEAD
-=======
     "react-add-to-calendar-hoc": "^1.0.10",
     "react-awesome-slider": "^4.1.0",
     "react-countup": "^6.3.0",
->>>>>>> 1822238762ac758b6d87b2c5abfb6b0c03ff3e89
     "react-device-detect": "^2.2.2",
     "react-dom": "18.1.0",
     "react-ga": "^3.3.0",

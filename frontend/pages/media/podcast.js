@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import PageHeader from "../../components/header";
-=======
-import { useState, useEffect } from "react";
-import PageHeader from "../../components/Header";
->>>>>>> 1822238762ac758b6d87b2c5abfb6b0c03ff3e89
 import Chip from "@material-ui/core/Chip";
 import styles from "../../styles/Podcast.module.css";
 import EpisodeTemplate from "../../components/PodcastCard";
@@ -157,11 +152,7 @@ const Podcast = () => {
               <div id={styles.platformContainer}>
                 {Object.keys(links).map((link, index) => {
                   return (
-<<<<<<< HEAD
                     <Link href={links[link][1]} key={index}>
-=======
-                    <Link key={index} href={links[link][1]}>
->>>>>>> 1822238762ac758b6d87b2c5abfb6b0c03ff3e89
                       <a className={styles.platformLogos}>
                         <a
                           className={styles.a}
