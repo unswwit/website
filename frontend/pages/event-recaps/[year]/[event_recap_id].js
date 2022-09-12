@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from "react";
-import PageHeader from "../../../components/header";
-import styles from "../../../styles/event-recap.module.css";
-=======
 import { useState, useEffect } from "react";
 import PageHeader from "../../../components/Header";
 import styles from "../../../styles/EventRecap.module.css";
->>>>>>> develop
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
