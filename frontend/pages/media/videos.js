@@ -12,10 +12,9 @@ import PaginationComp from "../../components/Pagination";
 import LoadingScreen from "../../components/LoadingScreen";
 import { isMobile } from "react-device-detect";
 import { useStyles, categories } from "../../data/videoData";
-import useContentfulVideos from "../api/contentful-videos";
-const { getVideos } = useContentfulVideos();
+import { loadVideos } from "../../lib/api";
 
-const Videos = (props) => {
+const Videos = ( { videos } ) => {
   const classes = useStyles();
 
   const [video, setVideo] = useState([]);
@@ -81,51 +80,20 @@ const Videos = (props) => {
     setContent(sortedVideos);
   };
 
-  // get videos
-  // input: videos data from google sheets
+  // get videos from contentful
+  // input: video data from contentful
   // output: array of dictionaries containing videos data
-  useEffect(() => {
+  const fetchVideos = (videos) => {
+    setContent(videos);
+    setLoading(false);
+    setHeaderLoading(false);
+    setSourceLoading(false);
+    setVideoNumber(handleVideoNumber(videos.length));
+    loadVideoPreviews(videos, loadPageContent(videos, videoNumber));
+  };
 
-    const fetchVideos = async () => {
-      const res = await getVideos();
-      const videos = humps.camelizeKeys(res.data.items);
-      setContent(videos);
-      setLoading(false);
-      setHeaderLoading(false);
-      setSourceLoading(false);
-      setVideoNumber(handleVideoNumber(videos.length));
-      loadVideoPreviews(videos, loadPageContent(videos, videoNumber));
-
-    };
-    
-    // const fetchVideos = async () => {
-    //   setLoading(false);
-
-    //   const res = await axios.get("https://wit-database.herokuapp.com/videos");
-    //   const allVideos = humps.camelizeKeys(res.data);
-    //   const currVideoNumber = handleVideoNumber(allVideos.length);
-
-    //   if (allVideos.length <= 0 || currVideoNumber > allVideos.length) {
-    //     props.history.push("/404");
-    //     return;
-    //   }
-
-    //   var videoIndex = loadPageContent(allVideos, currVideoNumber);
-    //   loadVideoPreviews(allVideos, videoIndex);
-
-    //   setLoading(false);
-    //   setSourceLoading(false);
-    // };
-
-    // Start at the top of the page
-    window.scrollTo(0, 0);
-
-    // Importing Video Details
-    fetchVideos().catch((error) =>
-      // error handling
-      console.error(error)
-    );
-  }, [videoNumber, props.history]);
+    window.scrollTo(0, 0); // start at the top of the page
+    fetchVideos(videos);
 
   useEffect(() => {
     if (currentPosts.length === 0 && loading === false) {
@@ -142,7 +110,7 @@ const Videos = (props) => {
     const filteredContent = content.filter(
       (picture) =>
         selectedCategory === "All" ||
-        picture.category.split(",").includes(selectedCategory)
+        picture.fields.category.includes(selectedCategory)
     );
     // filter by search term
     searchVideos(filteredContent, searchTerm);
@@ -153,8 +121,8 @@ const Videos = (props) => {
     const searchResults = filteredContent.filter((video) => {
       if (
         searchTerm === "" ||
-        video.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        video.date.toLowerCase().includes(searchTerm.toLowerCase())
+        video.fields.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        video.fields.date.toLowerCase().includes(searchTerm.toLowerCase())
       ) {
         return true;
       } else {
@@ -203,13 +171,13 @@ const Videos = (props) => {
                 <Image
                   className={styles.videoImages}
                   src={`/videos/${video.img}`}
-                  alt={video.name}
+                  alt={video.fields.title}
                   width={"1200px"}
                   height={"628px"}
                 />
               </div>
-              <p className={styles.moreName}>{video.name}</p>
-              <p className={styles.moreDate}>{video.date}</p>
+              <p className={styles.moreName}>{video.fields.title}</p>
+              <p className={styles.moreDate}>{video.fields.date}</p>
             </div>
           </Link>
         </div>
@@ -278,12 +246,12 @@ const Videos = (props) => {
                       frameBorder="0"
                       allow="autoplay; encrypted-media"
                       allowFullScreen={true}
-                      title={!video.name ? "Video" : video.name}
+                      title={!video.fields.title ? "Video" : video.fields.title}
                       className={styles.embeddedVideo}
                     />
                   </div>
-                  <p className={styles.videoName}>{video.name}</p>
-                  <p className={styles.videoDate}>{video.date}</p>
+                  <p className={styles.videoName}>{video.fields.title}</p>
+                  <p className={styles.videoDate}>{video.fields.date}</p>
                 </div>
               </div>
               <p className={styles.subHeading}>More From WIT</p>
@@ -354,4 +322,9 @@ const Videos = (props) => {
   );
 };
 
-export default Videos;
+export async function getStaticProps() {
+  const videos = await loadVideos();
+  return {
+    props: { videos },
+  };
+}
