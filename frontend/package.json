@@ -6,13 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --write .",
     "test": "jest --runInBand"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
     "@material-ui/lab": "^4.0.0-alpha.61",
+<<<<<<< HEAD
+=======
+    "aos": "^2.3.4",
+>>>>>>> 1822238762ac758b6d87b2c5abfb6b0c03ff3e89
     "axios": "^0.26.1",
     "bootstrap": "^4.6.0",
     "contentful": "^9.1.32",
@@ -21,9 +27,14 @@
     "moment": "^2.29.4",
     "next": "12.1.6",
     "npm": "^8.9.0",
-    "prop-types": "^15.8.1",
     "pure-react-carousel": "^1.28.1",
     "react": "18.1.0",
+<<<<<<< HEAD
+=======
+    "react-add-to-calendar-hoc": "^1.0.10",
+    "react-awesome-slider": "^4.1.0",
+    "react-countup": "^6.3.0",
+>>>>>>> 1822238762ac758b6d87b2c5abfb6b0c03ff3e89
     "react-device-detect": "^2.2.2",
     "react-dom": "18.1.0",
     "react-ga": "^3.3.0",
@@ -32,15 +43,15 @@
     "react-share": "^4.4.0"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^12.1.6",
+    "@next/eslint-plugin-next": "^12.2.5",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "eslint": "8.15.0",
-    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "12.1.6",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-no-inline-styles": "^1.0.5",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.5.0",
     "jest": "^28.1.2",

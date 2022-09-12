@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../../styles/Marketing.module.css";
 import PageHeader from "../../components/Header";
 import Chip from "@material-ui/core/Chip";
@@ -15,7 +15,7 @@ import {
   categories,
   marks,
   valueToYear,
-} from "../../data/marketingData";
+} from "../../data/MarketingData";
 
 import useContentfulMarketingArchives from "../api/contentful-marketing-archives";
 const { getMarketingArchives } = useContentfulMarketingArchives();

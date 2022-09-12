@@ -1,14 +1,19 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import PageHeader from "../../components/header";
+=======
+import { useState, useEffect } from "react";
+import PageHeader from "../../components/Header";
+>>>>>>> 1822238762ac758b6d87b2c5abfb6b0c03ff3e89
 import Chip from "@material-ui/core/Chip";
 import styles from "../../styles/Podcast.module.css";
-import EpisodeTemplate from "../../components/EpisodeTemplate";
+import EpisodeTemplate from "../../components/PodcastCard";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../../components/ScrollUpBtn";
 import LoadingScreen from "../../components/LoadingScreen";
 import axios from "axios";
 import humps from "humps";
-import { useStyles, links, categories } from "../../data/podcastData";
+import { useStyles, links, categories } from "../../data/PodcastData";
 import Image from "next/image";
 import Link from "next/link";
 import moment from "moment";
@@ -152,7 +157,11 @@ const Podcast = () => {
               <div id={styles.platformContainer}>
                 {Object.keys(links).map((link, index) => {
                   return (
+<<<<<<< HEAD
                     <Link href={links[link][1]} key={index}>
+=======
+                    <Link key={index} href={links[link][1]}>
+>>>>>>> 1822238762ac758b6d87b2c5abfb6b0c03ff3e89
                       <a className={styles.platformLogos}>
                         <a
                           className={styles.a}
@@ -255,7 +264,6 @@ const Podcast = () => {
           totalPages={Math.ceil(currentPosts.length/postsPerPage)} 
           paginate={paginate}
         /> */}
-
           <ScrollUpBtn />
         </>
       )}
