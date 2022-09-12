@@ -3,10 +3,8 @@ import styles from "../../styles/Publications.module.css";
 import PubArticle from "../../components/PublicationsArticle";
 import PageHeader from "../../components/Header";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import axios from "axios";
 import LoadingScreen from "../../components/LoadingScreen";
 import { loadPublications } from "../../lib/api";
-import { stringifyQuery } from "next/dist/server/server-route-utils";
 
 export async function getStaticProps() {
   const publications = await loadPublications();

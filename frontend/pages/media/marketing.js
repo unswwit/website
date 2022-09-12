@@ -6,7 +6,8 @@ import Initiative from "../../components/Initiative";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Timeline from "../../components/Timeline";
 import PaginationComp from "../../components/Pagination";
-import LoadingScreen from "../../components/LoadingScreen";
+{
+  /*import LoadingScreen from "../../components/LoadingScreen";
 import axios from "axios";
 import humps from "humps";
 import { isMobile } from "react-device-detect";
@@ -109,18 +110,18 @@ const MarketingContent = () => {
         <LoadingScreen />
       ) : (
         <>
-          {/* Cover Photo */}
+          {/* Cover Photo 
           <PageHeader
             imgUrl="/headers/marketing-header.jpg"
             title="Marketing"
             imageLoading={setHeaderLoading}
           />
-          {/*End of Header*/}
+          {/*End of Header*
 
           <div id={styles.parent}>
-            {/*List of initiatives*/}
+            {/*List of initiatives*
             <div className={styles.initiatives}>
-              {/* Start of categories */}
+              {/* Start of categories 
               <div className={styles.contentCategories}>
                 {Object.keys(categories)
                   .sort()
@@ -148,7 +149,7 @@ const MarketingContent = () => {
               </div>
 
               <div>
-                {/* Timeline */}
+                {/* Timeline
                 <Timeline
                   margin={"2%"}
                   page={"marketing"}
@@ -179,7 +180,7 @@ const MarketingContent = () => {
                 j
               </div>
 
-              {/*Image collage*/}
+              {/*Image collage
               {!isMobile && !loading && (
                 <div id={styles.orderedlist}>
                   <div className={styles.grid} id={styles.content}>
@@ -223,11 +224,12 @@ const MarketingContent = () => {
                 size="large"
               />
             )}
-            {/*End of Initiatives*/}
+            {/*End of Initiatives
           </div>
         </>
       )}
     </div>
   );
 };
-export default MarketingContent;
+export default MarketingContent;*/
+}

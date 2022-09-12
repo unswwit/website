@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+{
+  /*import React, { useState, useEffect } from "react";
 import PageHeader from "../../components/header";
 import Chip from "@material-ui/core/Chip";
 import styles from "../../styles/Podcast.module.css";
@@ -6,7 +7,6 @@ import EpisodeTemplate from "../../components/PodcastCard";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../../components/ScrollUpBtn";
 import LoadingScreen from "../../components/LoadingScreen";
-import axios from "axios";
 import humps from "humps";
 import { useStyles, links, categories } from "../../data/PodcastData";
 import Image from "next/image";
@@ -27,7 +27,7 @@ const Podcast = () => {
   const [content, setContent] = useState([]);
   // currently selected category -> default to "All"
   const [selectedCategory, setSelectedCategory] = useState("All");
-  // check if search + category filters result in no results
+  // check if search + category filters result  in no results
   const [emptyCategory, setEmptyCategory] = useState(false);
   // search term (user input) for podcast search bar
   const [searchTerm, setSearchTerm] = useState("");
@@ -113,7 +113,7 @@ const Podcast = () => {
         <LoadingScreen />
       ) : (
         <>
-          {/* Cover Photo */}
+          {/* Cover Photo
           <PageHeader
             headerLoading={setHeaderLoading}
             imgUrl="/headers/podcast-header.jpg"
@@ -176,7 +176,7 @@ const Podcast = () => {
           </div>
 
           <div className={styles.podcastCategories}>
-            {/* Start of categories */}
+            {/* Start of categories
             <div className={styles.contentCategories}>
               {Object.keys(categories)
                 .sort()
@@ -203,9 +203,9 @@ const Podcast = () => {
                 })}
             </div>
           </div>
-          {/* End of podcast categories */}
+          {/* End of podcast categories
 
-          {/* Start of search bar */}
+          {/* Start of search bar
           <div className={styles.searchBar}>
             <input
               className={styles.inputSearchBar}
@@ -217,7 +217,7 @@ const Podcast = () => {
               }}
             />
           </div>
-          {/* End of search bar */}
+          {/* End of search bar
           <div>
             {emptyCategory === true && (
               <p id={styles.emptyMessage}>No results were found.</p>
@@ -250,11 +250,11 @@ const Podcast = () => {
               );
             })}
           </div>
-          {/* TO UNCOMMENT WHEN REACH > 9 PODCASTS */}
+          {/* TO UNCOMMENT WHEN REACH > 9 PODCASTS 
           {/* <PaginationComp 
           totalPages={Math.ceil(currentPosts.length/postsPerPage)} 
           paginate={paginate}
-        /> */}
+        /> 
           <ScrollUpBtn />
         </>
       )}
@@ -262,3 +262,5 @@ const Podcast = () => {
   );
 };
 export default Podcast;
+*/
+}
