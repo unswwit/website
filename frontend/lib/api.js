@@ -13,6 +13,9 @@ export async function loadExecs() {
       select: "fields",
       order: "fields.index",
     })
+    .catch((error) => {
+      console.error(error);
+    });
   return res.items;
 }
 
