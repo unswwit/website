@@ -10,6 +10,7 @@ import PaginationComp from "../../components/Pagination";
 import LoadingScreen from "../../components/LoadingScreen";
 import { isMobile } from "react-device-detect";
 import { loadVideos } from "../../lib/api";
+import moment from "moment";
 import { useStyles, categories } from "../../data/VideoData";
 
 const Videos = ( { videos } ) => {
@@ -38,6 +39,10 @@ const Videos = ( { videos } ) => {
   const [currentPage, setCurrentPage] = useState(1);
   // set youtube theme
   const [youtubeTheme, setYoutubeTheme] = useState("full");
+
+  const formatDate = (date) => {
+    return moment(date).format("MMMM DD, YYYY");
+  };
 
   // retrieve current video content
   const handleVideoNumber = (numVideos) => {
@@ -82,12 +87,17 @@ const Videos = ( { videos } ) => {
   // input: video data from contentful
   // output: array of dictionaries containing videos data
   const fetchVideos = (videos) => {
-    setContent(videos);
+    // sort videos in descending order (most recent first)
+    const sortedVideos = videos.sort((a, b) => {
+      return b.fields.episodeNo - a.fields.episodeNo;
+    }).reverse();
+
+    setContent(sortedVideos);
     setLoading(false);
     setHeaderLoading(false);
     setSourceLoading(false);
-    setVideoNumber(handleVideoNumber(videos.length));
-    loadVideoPreviews(videos, loadPageContent(videos, handleVideoNumber(videos.length)));
+    setVideoNumber(handleVideoNumber(sortedVideos.length));
+    loadVideoPreviews(sortedVideos, loadPageContent(sortedVideos, handleVideoNumber(sortedVideos.length)));
   };
 
   useEffect(() => {
@@ -176,7 +186,7 @@ const Videos = ( { videos } ) => {
                 />
               </div>
               <p className={styles.moreName}>{video.fields.title}</p>
-              <p className={styles.moreDate}>{video.fields.date}</p>
+              <p className={styles.moreDate}>{formatDate(video.fields.date)}</p>
             </div>
           </Link>
         </div>
@@ -250,7 +260,7 @@ const Videos = ( { videos } ) => {
                     />
                   </div>
                   <p className={styles.videoName}>{video.fields.title}</p>
-                  <p className={styles.videoDate}>{video.fields.date}</p>
+                  <p className={styles.videoDate}>{formatDate(video.fields.date)}</p>
                 </div>
               </div>
               <p className={styles.subHeading}>More From WIT</p>
