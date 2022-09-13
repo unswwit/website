@@ -6,6 +6,19 @@ const client = createClient({
   host: process.env.NEXT_PUBLIC_CONTENTFUL_API_HOST,
 });
 
+export async function loadExecs() {
+  const res = await client
+    .getEntries({
+      content_type: "execs",
+      select: "fields",
+      order: "fields.index",
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
+
 export async function loadPodcasts() {
   const res = await client
     .getEntries({
