@@ -67,13 +67,6 @@ const Publications = ({ publications }) => {
               )}
             </div>
             {/*Articles*/}
-
-            {/*
-            const {img} = publications.fields; const imgUrl = "https:" +
-            img.fields.file.url;
-            const {img, heading, date, url} = publications.fields;
-            
-            {/*{(heading, date, url)} = publications.fields;*/}
             {!loading &&
               Array.from({ length: 3 }, (_, i) => i + 2020)
                 .reverse()
@@ -83,13 +76,13 @@ const Publications = ({ publications }) => {
                       <h1>{year}</h1>
                       <div className={styles.row}>
                         {articles
+
                           .filter(
                             (publication) =>
                               publication.fields.year === year.toString()
                           )
+
                           .map((publication, index) => (
-                            // const { heading, date, url } = publications.fields;
-                            // const { img } = publications.fields.img.fields.file;
                             <PubArticle
                               key={index}
                               imgUrl={
