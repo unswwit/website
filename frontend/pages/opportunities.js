@@ -4,24 +4,18 @@ import OpportunitiesCard from "../components/OpportunitiesCard";
 import styles from "../styles/Opportunities.module.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import LoadingScreen from "../components/LoadingScreen";
-import axios from "axios";
-import humps from "humps";
 import { loadOpportunities } from "../lib/OpportunitiesApi";
-
 const Opportunities = ({ opportunities }) => {
   const [loading, setLoading] = useState(true);
   const [sourceLoading, setSourceLoading] = React.useState(true);
   const [headerLoading, setHeaderLoading] = React.useState(true);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   const fetchOpportunities = async () => {
     setLoading(false);
     setSourceLoading(false);
   };
-
   useEffect(() => {
     setLoading(true);
     fetchOpportunities().catch((error) =>
@@ -29,7 +23,6 @@ const Opportunities = ({ opportunities }) => {
       console.error(error)
     );
   }, []);
-
   return (
     <div>
       {sourceLoading && headerLoading ? (
@@ -42,7 +35,6 @@ const Opportunities = ({ opportunities }) => {
             title="Opportunities"
             imageLoading={setHeaderLoading}
           />
-
           {/*start of opportunies*/}
           <div id={styles.oppLoadingContainer}>
             {loading && (
@@ -81,7 +73,7 @@ const Opportunities = ({ opportunities }) => {
                   .
                 </p>
                 <div className={styles.oppGridContainer}>
-                  {opportunities.map((index, individualOpportunity) => {
+                  {opportunities.map((individualOpportunity, index) => {
                     return (
                       <OpportunitiesCard
                         key={index}
@@ -98,7 +90,6 @@ const Opportunities = ({ opportunities }) => {
     </div>
   );
 };
-
 export default Opportunities;
 
 export async function getStaticProps() {
