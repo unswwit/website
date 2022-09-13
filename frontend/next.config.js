@@ -3,4 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
 };
 
-module.exports = nextConfig;
+module.exports = {
+  assets: {
+    domains: ["assets.ctfassets.net"],
+  }
+};

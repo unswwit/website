@@ -6,8 +6,6 @@ import YouTubeSubscribe from "../../components/YoutubeSubscribeBtn";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Link from "next/link";
 import Image from "next/image";
-import axios from "axios";
-import humps from "humps";
 import PaginationComp from "../../components/Pagination";
 import LoadingScreen from "../../components/LoadingScreen";
 import { isMobile } from "react-device-detect";
@@ -55,15 +53,15 @@ const Videos = ( { videos } ) => {
   const loadPageContent = (allVideos, currVideoNumber) => {
     var videoIndex = 0;
     const currVideo = allVideos.filter((video, index) => {
-      if (video.videoNumber.toString() === currVideoNumber) {
+      if (video.fields.episodeNo.toString() === currVideoNumber) {
         videoIndex = index;
         return true;
       } else {
         return false;
       }
     })[0];
-    setVideo(currVideo);
 
+    setVideo(currVideo);
     return videoIndex;
   };
 
@@ -89,11 +87,13 @@ const Videos = ( { videos } ) => {
     setHeaderLoading(false);
     setSourceLoading(false);
     setVideoNumber(handleVideoNumber(videos.length));
-    loadVideoPreviews(videos, loadPageContent(videos, videoNumber));
+    loadVideoPreviews(videos, loadPageContent(videos, handleVideoNumber(videos.length)));
   };
 
+  useEffect(() => {
     window.scrollTo(0, 0); // start at the top of the page
-    fetchVideos(videos);
+    fetchVideos(videos);  // load video data
+  }, []);
 
   useEffect(() => {
     if (currentPosts.length === 0 && loading === false) {
@@ -160,10 +160,10 @@ const Videos = ( { videos } ) => {
     return videos.map((video, index) => {
       return (
         <div className={styles.videoDescription} key={index}>
-          <Link href={`/media/videos/${video.videoNumber}`}>
+          <Link href={`/media/videos/${video.fields.episodeNo}`}>
             <div
               className={styles.boxContainer}
-              onClick={() => setVideoNumber(video.videoNumber)}
+              onClick={() => setVideoNumber(video.fields.episodeNo)}
             >
               <div className={styles.darkOverlay} />
               <div className={styles.previewContainer}>
@@ -241,7 +241,7 @@ const Videos = ( { videos } ) => {
                 <div className={styles.iframeWrapper}>
                   <div className={styles.responsiveIframe}>
                     <iframe
-                      src={`https://youtube.com/embed/${video.youtubeVideoId}`}
+                      src={video.fields.video.fields.file.url} // assets.ctfassets.net/[path to video]
                       frameBorder="0"
                       allow="autoplay; encrypted-media"
                       allowFullScreen={true}
@@ -327,3 +327,5 @@ export async function getStaticProps() {
     props: { videos },
   };
 }
+
+export default Videos;
