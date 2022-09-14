@@ -44,7 +44,9 @@ export default function OurTeam({ subcommittee }) {
       });
   };
 
-  // get subcommittee members from contentful
+  // get subcom
+  // input: subcom data from contentful
+  // output: array of dictionaries containing subcom data
   const fetchSubcom = (subcom) => {
     masterSubcom.current = subcom;
   };
@@ -64,7 +66,6 @@ export default function OurTeam({ subcommittee }) {
     setFilteredExecs(result);
 
     // Subcom
-    console.log(masterSubcom);
     const subcom = masterSubcom.current.filter(
       (exec) => exec.fields.yearJoined === year
     );
