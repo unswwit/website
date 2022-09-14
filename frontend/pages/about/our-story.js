@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import PageHeader from "../../components/Header.js";
 import styles from "../../styles/OurStory.module.css";
 import Timeline from "../../components/OurStoryTimeline.js";
@@ -59,9 +59,9 @@ const OurStory = () => {
                 </p>
                 <p className={styles.ourMissionContent}>
                   At WIT, we are proud of being able to provide opportunities
-                  that develop all students' professional and technical skills.
-                  Whether it's personal, academic, or social, we want our
-                  members to become the best version of themselves.
+                  that develop all students&apos; professional and technical
+                  skills. Whether it&apos;s personal, academic, or social, we
+                  want our members to become the best version of themselves.
                 </p>
                 <p className={styles.ourMissionContent}>
                   Our society captures a diverse range of disciplines, enabling
@@ -86,21 +86,21 @@ const OurStory = () => {
               </div>
               <div className={styles.ourStory}>
                 <p className={styles.ourMascotContent}>
-                  Have you met Willow? Willow is WIT's trusty mascot and biggest
-                  supporter. Willow, like us, shares a dislike of bugs (the
-                  crawley kind and the codey kind) and believes in empowering
-                  all creatures. Willow is only four years old but she
-                  understands the power of nurturing young creatures and showing
-                  them how to navigate the forest. When she’s not burrowed under
-                  the desk having a quick snooze, she can be found munching on a
-                  shrub salad and cheering on the WIT team in everything they
-                  do.
+                  Have you met Willow? Willow is WIT&apos;s trusty mascot and
+                  biggest supporter. Willow, like us, shares a dislike of bugs
+                  (the crawley kind and the codey kind) and believes in
+                  empowering all creatures. Willow is only four years old but
+                  she understands the power of nurturing young creatures and
+                  showing them how to navigate the forest. When she&apos;s not
+                  burrowed under the desk having a quick snooze, she can be
+                  found munching on a shrub salad and cheering on the WIT team
+                  in everything they do.
                 </p>
                 <p className={styles.ourMascotContent}>
-                  Willow debuted as WIT’s mascot in 2020, and has been bringing
-                  laughter and motivation to our community ever since! In 2021,
-                  Willow was brought to life from the screen to O-Week as a
-                  handmade crocheted plushie. Through a&nbsp;
+                  Willow debuted as WIT&apos;s mascot in 2020, and has been
+                  bringing laughter and motivation to our community ever since!
+                  In 2021, Willow was brought to life from the screen to O-Week
+                  as a handmade crocheted plushie. Through a&nbsp;
                   <a
                     href="https://www.facebook.com/unsw.wit/posts/2510541182584081"
                     className={styles.link}
@@ -133,7 +133,7 @@ const OurStory = () => {
                   platform to share experiences and knowledge. They were
                   passionate about wanting to ensure that young women were
                   better informed about the opportunities within technology and
-                  had a network to support them. The team’s goals were
+                  had a network to support them. The team&apos;s goals were
                   centralised around breaking the stereotypes of the tech
                   industry and forming a close-knit community where they could
                   provide support for each other, both in pursuing a career in

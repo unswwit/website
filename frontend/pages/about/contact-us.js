@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import PageHeader from "../../components/Header";
-import ContactForm from "../../components/contactForm";
-import styles from "../../styles/contactUs.module.css";
+import ContactForm from "../../components/ContactForm";
+import styles from "../../styles/ContactUs.module.css";
 import LoadingScreen from "../../components/LoadingScreen";
 import Image from "next/image";
 import Link from "next/link";

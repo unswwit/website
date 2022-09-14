@@ -1,17 +1,18 @@
-import React, { useEffect, useRef, useState, useCallback } from "react";
-import styles from "../../styles/team.module.css";
+import { useEffect, useRef, useState, useCallback } from "react";
+import styles from "../../styles/Team.module.css";
 import PageHeader from "../../components/Header";
-import Execs from "../../components/execs";
-import SubCom from "../../components/subcom";
+import Execs from "../../components/ExecSection";
+import SubCom from "../../components/SubcomSection";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Timeline from "../../components/Timeline";
 import ScrollUpBtn from "../../components/ScrollUpBtn";
 import LoadingScreen from "../../components/LoadingScreen";
 import axios from "axios";
 import humps from "humps";
-import { execToClassName, marks, valueToYear } from "../../data/teamData";
+import { execToClassName, marks, valueToYear } from "../../data/TeamData";
+import { loadExecs } from "../../lib/api";
 
-export default function OurTeam() {
+export default function OurTeam({ execs }) {
   const masterExec = useRef();
   const masterSubcom = useRef();
   const [filteredExecs, setFilteredExecs] = useState([]);
@@ -26,14 +27,10 @@ export default function OurTeam() {
   };
 
   // get execs
-  // input: execs data from google sheets
-  // output: array of dictionaries containing execs data
-  const fetchExecs = async () => {
-    await axios
-      .get("https://wit-database.herokuapp.com/execs")
-      .then((execRes) => {
-        masterExec.current = humps.camelizeKeys(execRes.data);
-      });
+  // input: execs data from Contentful
+  // output: array of dictionaries containing exec data
+  const fetchExecs = (execs) => {
+    masterExec.current = execs;
   };
 
   // get subcom
@@ -53,8 +50,9 @@ export default function OurTeam() {
 
     // Execs
     const tempExecs = masterExec.current.filter(
-      (exec) => exec.yearJoined === year
+      (exec) => exec.fields.yearJoined === year
     );
+
     const result = tempExecs.reduce(function (result, _, index, tempExecs) {
       if (index % 2 === 0) result.push(tempExecs.slice(index, index + 2));
       return result;
@@ -80,10 +78,7 @@ export default function OurTeam() {
     // show loading sign for team page
     setLoading(true);
     const fetchDataPromises = [
-      fetchExecs().catch((error) =>
-        // error handling
-        console.error(error)
-      ),
+      fetchExecs(execs),
       fetchSubcom().catch((error) =>
         // error handling
         console.error(error)
@@ -168,23 +163,21 @@ export default function OurTeam() {
                           return (
                             <Execs
                               key={index}
-                              imgUrl={
-                                exec.img
-                                  ? `/portraits/${year}-exec/${exec.img}`
-                                  : ""
-                              }
-                              name={exec.name}
+                              imgUrl={"http:" + exec.fields.img.fields.file.url}
+                              name={exec.fields.name}
                               className={
-                                year === 2020
-                                  ? execToClassName[year][exec.name]
-                                  : execToClassName[year]
+                                exec.fields.year === 2020
+                                  ? execToClassName[exec.fields.year][
+                                      exec.fields.name
+                                    ]
+                                  : execToClassName[exec.fields.year]
                               }
-                              position={exec.position}
-                              degree={exec.degree}
-                              year={exec.year}
-                              linkedin={exec.linkedin}
-                              fb={exec.facebook}
-                              email={exec.email}
+                              position={exec.fields.position}
+                              degree={exec.fields.degree}
+                              year={exec.fields.year}
+                              linkedin={exec.fields.linkedin}
+                              fb={exec.fields.facebook}
+                              email={exec.fields.email}
                             />
                           );
                         })}
@@ -233,4 +226,11 @@ export default function OurTeam() {
       )}
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const execs = await loadExecs();
+  return {
+    props: { execs },
+  };
 }

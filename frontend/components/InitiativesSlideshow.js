@@ -79,11 +79,12 @@ const InitiativesSlideshow = () => {
               <div className={styles.left}>
                 <p id="about">
                   At WIT, our focus is on providing events that foster
-                  development catering to first to final years. Whether it's
-                  personal, academic, professional or social, we want our
-                  students to be the best version of themselves. As part of our
-                  aim, we also connect current and future students with alumni
-                  and industry sponsors to serve as role models to inspire.
+                  development catering to first to final years. Whether
+                  it&apos;s personal, academic, professional or social, we want
+                  our students to be the best version of themselves. As part of
+                  our aim, we also connect current and future students with
+                  alumni and industry sponsors to serve as role models to
+                  inspire.
                 </p>
                 <p>
                   <button>
@@ -112,7 +113,6 @@ const InitiativesSlideshow = () => {
                           />
                         </div>
                       </a>
-                      
                     </div>
                   ))}
                 </div>

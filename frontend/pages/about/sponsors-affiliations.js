@@ -3,12 +3,11 @@ import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import { Button } from "semantic-ui-react";
-import styles from "../../styles/sponsors.module.css";
+import styles from "../../styles/Sponsors.module.css";
 import PageHeader from "../../components/Header";
-import SponsorsModal from "../../components/sponsorsModal";
+import SponsorsModal from "../../components/SponsorModal";
 import LoadingScreen from "../../components/LoadingScreen";
-import { sponsors, affiliations, partnerships } from "../../data/sponsorData";
-// import Image from "next/image";
+import { sponsors, affiliations, partnerships } from "../../data/SponsorData";
 import Link from "next/link";
 
 export default function Sponsors() {
@@ -67,7 +66,7 @@ export default function Sponsors() {
               {Object.keys(sponsors)
                 .sort()
                 .filter((key) => sponsors[key][3] === "DIAMOND")
-                .map((key, _) => (
+                .map((key) => (
                   // TODO: change img tags to next/image tags
                   <img
                     className={styles.logo}
@@ -95,7 +94,7 @@ export default function Sponsors() {
               {Object.keys(sponsors)
                 .sort()
                 .filter((key) => sponsors[key][3] === "GOLD")
-                .map((key, _) => (
+                .map((key) => (
                   <img
                     className={styles.logo}
                     src={
@@ -122,7 +121,7 @@ export default function Sponsors() {
               {Object.keys(sponsors)
                 .sort()
                 .filter((key) => sponsors[key][3] === "SILVER")
-                .map((key, _) => (
+                .map((key) => (
                   <img
                     className={styles.logo}
                     src={
@@ -149,7 +148,7 @@ export default function Sponsors() {
               {Object.keys(sponsors)
                 .sort()
                 .filter((key) => sponsors[key][3] === "BRONZE")
-                .map((key, _) => (
+                .map((key) => (
                   <img
                     className={styles.logo}
                     src={

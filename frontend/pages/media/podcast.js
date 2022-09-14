@@ -1,21 +1,23 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import PageHeader from "../../components/Header";
 import Chip from "@material-ui/core/Chip";
 import styles from "../../styles/Podcast.module.css";
-import EpisodeTemplate from "../../components/EpisodeTemplate";
+import EpisodeTemplate from "../../components/PodcastCard";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../../components/ScrollUpBtn";
 import LoadingScreen from "../../components/LoadingScreen";
 import axios from "axios";
 import humps from "humps";
-import { useStyles, links, categories } from "../../data/podcastData";
+import { useStyles, links, categories } from "../../data/PodcastData";
+import { loadPodcasts } from "../../lib/api";
+import { formatPodcastDate } from "../../lib/helpers";
 import Image from "next/image";
 import Link from "next/link";
 
 // TO UNCOMMENT WHEN REACH > 9 PODCASTS
 // import PaginationComp from "../components/Pagination";
 
-const Podcast = () => {
+const Podcast = ({ episodes }) => {
   const classes = useStyles();
   const [loading, setLoading] = useState(true);
   const [sourceLoading, setSourceLoading] = useState(true);
@@ -37,18 +39,12 @@ const Podcast = () => {
   // set how many posts to view per page
   // const postsPerPage = 9;
 
-  // get podcasts
-  // input: podcasts data from google sheets
-  // output: array of dictionaries containing podcasts data
-  const fetchPodcastEpisodes = async () => {
-    const res = await axios.get(
-      "https://wit-database.herokuapp.com/podcast-episodes"
-    );
-    const unsorted = humps.camelizeKeys(res.data);
-    const sortedEpisodes = unsorted.reverse();
-    setContent(sortedEpisodes);
-    // setCurrentPosts(sortedEpisodes);
-    setSelectedPosts(sortedEpisodes);
+  // get podcasts from Contentful
+  // input: podcast data from Contentful
+  // output: array of dictionaries containing podcast data
+  const fetchPodcastEpisodes = (episodes) => {
+    setContent(episodes);
+    setSelectedPosts(episodes);
     setLoading(false);
     setSourceLoading(false);
   };
@@ -58,10 +54,7 @@ const Podcast = () => {
     window.scrollTo(0, 0);
 
     // load podcast episode previews
-    fetchPodcastEpisodes().catch((error) =>
-      // error handling
-      console.error(error)
-    );
+    fetchPodcastEpisodes(episodes);
   }, []);
 
   useEffect(() => {
@@ -79,7 +72,7 @@ const Podcast = () => {
     const filteredContent = content.filter(
       (picture) =>
         selectedCategory === "All" ||
-        picture.category.split(",").includes(selectedCategory)
+        picture.fields.category.includes(selectedCategory)
     );
     searchPodcasts(filteredContent, searchTerm);
   };
@@ -87,11 +80,14 @@ const Podcast = () => {
   // filter category content by search filter in heading, subheading or author
   const searchPodcasts = (filteredContent, searchTerm) => {
     const searchResults = filteredContent.filter((episode) => {
+      const date = formatPodcastDate(episode.fields.date);
       if (
         searchTerm === "" ||
-        episode.date.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        episode.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        episode.description.toLowerCase().includes(searchTerm.toLowerCase())
+        date.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        episode.fields.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        episode.fields.description
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase())
       ) {
         return true;
       } else {
@@ -153,9 +149,10 @@ const Podcast = () => {
               <div id={styles.platformContainer}>
                 {Object.keys(links).map((link, index) => {
                   return (
-                    <Link href={links[link][1]}>
-                      <a className={styles.platformLogos}>
-                        <a className={styles.a}
+                    <Link href={links[link][1]} key={index}>
+                      <div className={styles.platformLogos}>
+                        <a
+                          className={styles.a}
                           key={index}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -167,7 +164,7 @@ const Podcast = () => {
                             height="25px"
                           />
                         </a>
-                      </a>
+                      </div>
                     </Link>
                   );
                 })}
@@ -203,7 +200,7 @@ const Podcast = () => {
                 })}
             </div>
           </div>
-          {/* End of blog categories */}
+          {/* End of podcast categories */}
 
           {/* Start of search bar */}
           <div className={styles.searchBar}>
@@ -240,12 +237,12 @@ const Podcast = () => {
               return (
                 <EpisodeTemplate
                   key={index}
-                  episodeNo={episode.episodeNo}
-                  title={episode.title}
-                  cover={`podcast-covers/${episode.img}`}
-                  date={episode.date}
-                  description={episode.description}
-                  episode={episode}
+                  episodeNo={episode.fields.episodeNo}
+                  title={episode.fields.title}
+                  cover={episode.fields.img.fields.file.url}
+                  date={episode.fields.date}
+                  description={episode.fields.description}
+                  episode={episode.fields}
                 />
               );
             })}
@@ -255,11 +252,18 @@ const Podcast = () => {
           totalPages={Math.ceil(currentPosts.length/postsPerPage)} 
           paginate={paginate}
         /> */}
-
           <ScrollUpBtn />
         </>
       )}
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const episodes = await loadPodcasts();
+  return {
+    props: { episodes },
+  };
+}
+
 export default Podcast;

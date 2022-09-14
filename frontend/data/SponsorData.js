@@ -1,7 +1,5 @@
-import React from "react";
-import styles from "../styles/sponsors.module.css";
+import styles from "../styles/Sponsors.module.css";
 
-//getting the Nakatomi Description
 const nakatomiDescription = () => {
   return (
     <>
@@ -25,33 +23,33 @@ const nakatomiDescription = () => {
   );
 };
 
-// Getting the mcGrathNicol description
 const mcGrathNicolDescription = () => {
   return (
     <>
-      McGrathNicol is a specialist Advisory and Restructuring firm. Their
-      experts work with corporates, banks, law firms, private companies and
-      government across all industry sectors and business sizes to deliver
-      valuable advice and high-quality outcomes. McGrathNicol’s Technology team
-      specialise in complex forensic investigations, time critical cybersecurity
-      incident response activities and helping our clients to design strategies
-      and implement frameworks to mitigate digital and information risk. To gain
-      insight into the type of work they do, check out their Technology virtual
-      experience at{" "}
-      <a
-        className={styles.link}
-        href="https://www.theforage.com/show-firm-programs/oiHtSBFcPM2KnaEGJ/McGrathNicol"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Forage
-      </a>
-      .
+      <p>
+        McGrathNicol is a specialist Advisory and Restructuring firm. Their
+        experts work with corporates, banks, law firms, private companies and
+        government across all industry sectors and business sizes to deliver
+        valuable advice and high-quality outcomes. McGrathNicol’s Technology
+        team specialise in complex forensic investigations, time critical
+        cybersecurity incident response activities and helping our clients to
+        design strategies and implement frameworks to mitigate digital and
+        information risk. To gain insight into the type of work they do, check
+        out their Technology virtual experience at{" "}
+        <a
+          className={styles.link}
+          href="https://www.theforage.com/show-firm-programs/oiHtSBFcPM2KnaEGJ/McGrathNicol"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Forage
+        </a>
+        .
+      </p>
     </>
   );
 };
 
-// Getting EY description
 const eyDescription = () => {
   return (
     <>
@@ -73,14 +71,11 @@ const eyDescription = () => {
         You’ll learn and innovate here while asking better questions to seek
         better answers and building a better working world. Together.
       </p>
-      <p>
-        It’s yours to build.
-      </p>
+      <p>It’s yours to build.</p>
     </>
   );
 };
 
-// Getting FDM description
 const fdmDescription = () => {
   return (
     <>
@@ -122,13 +117,12 @@ const fdmDescription = () => {
       <p>
         Over its 30-year history FDM Group has won many awards. In 2022 FDM has
         risen 5 places to #16 on the GradConnection Top 100 Graduate Employers
-        and is again one of GradAustralia's Top 100 Graduate Employers.
+        and is again one of GradAustralia&apos;s Top 100 Graduate Employers.
       </p>
     </>
   );
 };
 
-// Getting PWC description
 const pwcDescription = () => {
   return (
     <>
@@ -152,28 +146,27 @@ const pwcDescription = () => {
       <p>
         Our purpose is to build trust in society and solve important problems.
       </p>
-      <p>
-        At PwC, we call this The Together Effect.
-      </p>
+      <p>At PwC, we call this The Together Effect.</p>
     </>
   );
 };
 
-// Getting Mantel Group description
 const mantelGroupDescription = () => {
   return (
     <>
       <p>
-        ​​Mantel Group hires talented individuals who love what they do and give
+        Mantel group hires talented individuals who love what they do and give
         them the tools and autonomy to be awesome at their jobs! Every single
         one of us is an individual and our experience in the workplace has to
         reflect that. We do not believe that standard perks and benefits, or
-        ‘one size fits all’ experiences give people what they need.
+        &apos;one size fits all&apos; experiences gives people what they need.
       </p>
       <p>
         For us, creating a great place to work is no accident. All good
         relationships have a foundation of trust, and our trust is articulated
-        through our Mantel Group Principles, that guide our decisions and behaviours.<br /><br />
+        through our Mantel Group Principles, that guide our decisions and
+        behaviours.
+        <p></p>
         We hire smart people and get out of their way. By focusing on our five
         principles and not getting caught up in red tape, we trust you to get
         the job done. We prioritise the culture and team way before revenue,
@@ -183,9 +176,8 @@ const mantelGroupDescription = () => {
       </p>
     </>
   );
-}
+};
 
-// Getting Amstelveen description
 const amstelveenDescription = () => {
   return (
     <>
@@ -206,25 +198,21 @@ const amstelveenDescription = () => {
   );
 };
 
-// Getting Quantium description
 const quantiumDescription = () => {
   return (
     <>
-      <p>
-        Power your possibilities at Quantium.
-      </p>
+      <p>Power your possibilities at Quantium.</p>
       <p>
         Quantium is a global leader in the application of data analytics and
         engineering, helping our clients solve their most important problems
         using data. We have a track record of innovation and combining the best
         of human and artificial intelligence to power possibilities for
-        individuals, organisations and society and we're proud of it!
+        individuals, organisations and society and we&apos;re proud of it!
       </p>
     </>
   );
 };
 
-// Getting Google description
 const googleDescription = () => {
   return (
     <>
@@ -240,27 +228,25 @@ const googleDescription = () => {
   );
 };
 
-// Getting IMC description
 const imcDescription = () => {
   return (
     <>
       <p>
         IMC is a leading global trading firm with technology - and individuality
-        - at its heart. With offices in Amsterdam, Chicago and Sydney, you'll
-        experience our truly global culture. A culture of openness, idea sharing
-        and collaboration. Whether it's trading, data, software or hardware,
-        we're constantly pushing ourselves and our systems further; challenging,
-        adapting and redesigning to create world-class solutions that can
-        outsmart the competition. It's in these collaborations, with incredibly
-        fast feedback that the magic happens. Operating at this extremely high
-        level gives you the skills that will form the foundations of your
-        career.
+        - at its heart. With offices in Amsterdam, Chicago and Sydney,
+        you&apos;ll experience our truly global culture. A culture of openness,
+        idea sharing and collaboration. Whether it&apos;s trading, data,
+        software or hardware, we&apos;re constantly pushing ourselves and our
+        systems further; challenging, adapting and redesigning to create
+        world-class solutions that can outsmart the competition. It&apos;s in
+        these collaborations, with incredibly fast feedback that the magic
+        happens. Operating at this extremely high level gives you the skills
+        that will form the foundations of your career.
       </p>
     </>
   );
 };
 
-// Getting Jane Street description
 const janeStreetDescription = () => {
   return (
     <>
@@ -278,7 +264,6 @@ const janeStreetDescription = () => {
   );
 };
 
-// Getting Blackbird description
 const blackbirdDescription = () => {
   return (
     <>
@@ -294,7 +279,6 @@ const blackbirdDescription = () => {
   );
 };
 
-// Getting Palantir description
 const palantirDescription = () => {
   return (
     <>
@@ -313,7 +297,6 @@ const palantirDescription = () => {
   );
 };
 
-// Getting Appian description
 const appianDescription = () => {
   return (
     <>
@@ -330,7 +313,6 @@ const appianDescription = () => {
   );
 };
 
-// Getting Akuna description
 const akunaDescription = () => {
   return (
     <>
@@ -369,7 +351,6 @@ const akunaDescription = () => {
   );
 };
 
-// Getting place holder description
 const placeHolderDescription = () => {
   return (
     <>

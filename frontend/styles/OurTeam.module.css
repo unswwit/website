@@ -207,7 +207,7 @@ h2#topheading {
   padding: 0;
 }
 
-/*--------------------------Dark mode-----------------------------*/ 
+/*--------------------------Dark mode-----------------------------*/
 @media (prefers-color-scheme: dark) {
   .profileTextPosition {
     color: white;
@@ -218,11 +218,11 @@ h2#topheading {
   }
 
   .subcomProfileName {
-    color:white;
+    color: white;
   }
 
   .subcomProfileDegree {
-    color:white;
+    color: white;
   }
 
   .subcomType {
@@ -247,7 +247,7 @@ h2#topheading {
 
   .profileDegree {
     font-size: 16px;
-    line-height: 25px; 
+    line-height: 25px;
   }
 
   .execRow {

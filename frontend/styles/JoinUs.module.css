@@ -165,7 +165,7 @@
 }
 
 #it {
-  background-color: #B4C9E8;
+  background-color: #b4c9e8;
 }
 
 #marketing {
@@ -177,7 +177,7 @@
 }
 
 #publications {
-  background-color: #FFC2E4;
+  background-color: #ffc2e4;
 }
 
 .desc {
@@ -353,7 +353,7 @@
     max-height: 190px;
     max-width: 400px;
   }
-  
+
   .quoteContainer {
     height: 57%;
   }
@@ -410,13 +410,13 @@
 }
 
 /* Dark mode */
-@media (prefers-color-scheme:dark) {
+@media (prefers-color-scheme: dark) {
   .gmapColour {
     filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
   }
 
   .descriptionHowto {
-    color: white; 
+    color: white;
   }
 
   .descriptionHowto p {
@@ -424,10 +424,10 @@
   }
 
   .accordionHeading {
-    color: white; 
+    color: white;
   }
 
   .accordionDetails {
-    color: white; 
+    color: white;
   }
 }

@@ -1,9 +1,9 @@
 import React from "react";
 import emailjs from "@emailjs/browser";
-import styles from "../styles/contactUs.module.css";
+import styles from "../styles/ContactUs.module.css";
 import ReCAPTCHA from "react-google-recaptcha";
 
-function ContactForm() {
+export default function ContactForm() {
   const [email, setEmail] = React.useState("");
 
   const sendEmail = (e) => {
@@ -12,7 +12,7 @@ function ContactForm() {
     // validating that the email is in the correct form
     const validate =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    
+
     if (validate.test(email)) {
       emailjs
         .sendForm(
@@ -22,7 +22,7 @@ function ContactForm() {
           process.env.NEXT_PUBLIC_EMAILJS_ID
         )
         .then(
-          (result) => {
+          () => {
             alert(
               "Your inquiry was sent successfully. You can expect to hear a response from us within a week."
             );
@@ -83,5 +83,3 @@ function ContactForm() {
     </form>
   );
 }
-
-export default ContactForm;

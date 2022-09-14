@@ -93,15 +93,15 @@
 }
 
 /*--- Dark mode ---*/
-@media (prefers-color-scheme:dark) {
+@media (prefers-color-scheme: dark) {
   .paper {
     background-color: var(--dark-grey);
   }
-  
+
   .formDescription {
     color: white;
   }
-  
+
   .closeSymbol {
     color: white;
   }

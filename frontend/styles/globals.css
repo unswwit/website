@@ -5,11 +5,11 @@
   --white: #fff;
   --yellow: #feb14b; /* Headings and Highlighted text */
   --light-yellow: #fff7ef; /* Navigation */
-  --sand:  #fff0e1c1; /* Selected navigation */
+  --sand: #fff0e1c1; /* Selected navigation */
   --black: #313638; /* General text */
   --grey: #676767; /* Subheadings */
   --light-grey: #c4c4c4; /* disabled arrows */
-  --section: #F4F4F4;
+  --section: #f4f4f4;
   --red: #e85f5c; /* Buttons and unvisited links */
   --dark-red: #bd3f3d; /* visited links */
   --dark-grey: #202124; /* dark mode card */
@@ -41,7 +41,7 @@ body {
 /*Changes background*/
 @media (prefers-color-scheme: dark) {
   body {
-    background:var(--dark-grey);
+    background: var(--dark-grey);
   }
 
   /* Change colour of podcast search bar placeholder text to white on dark mode */
@@ -50,11 +50,11 @@ body {
   }
 
   :-ms-input-placeholder {
-    color: white; 
+    color: white;
   }
 
   ::ms-input-placeholder {
-    color: white; 
+    color: white;
   }
 }
 
@@ -66,7 +66,7 @@ h1 {
 }
 
 h2 {
-  color:var(--yellow);
+  color: var(--yellow);
   font-family: "Montserrat", sans-serif;
   font-size: 30pt;
   text-transform: uppercase;
@@ -209,7 +209,7 @@ p {
   }
 
   #loadingBackground p {
-    color: #fff; 
+    color: #fff;
   }
 }
 
@@ -288,11 +288,11 @@ p {
   .menu-item {
     color: #fff;
   }
-  
+
   .menu-box:hover {
     background-color: var(--dark-grey);
   }
-  
+
   .menu-box:hover .menu-item {
     color: var(--red);
   }
@@ -338,13 +338,13 @@ form button {
 }
 
 /*--- Dark mode ---*/
-@media (prefers-color-scheme:dark) {
+@media (prefers-color-scheme: dark) {
   form input {
     background-color: #323235;
     border-color: white;
     color: white;
   }
-  
+
   form button {
     background-color: var(--red);
     color: white;
@@ -533,9 +533,9 @@ footer {
   }
 
   .footer-white-logo {
-    margin-bottom: 2%; 
+    margin-bottom: 2%;
   }
-  
+
   .footer-black-logo {
     margin-bottom: 2%;
   }
@@ -558,7 +558,7 @@ footer {
   .footer-item {
     padding-bottom: 2vw;
   }
-  
+
   .bottom-footer-item {
     padding-bottom: 5vw;
   }
@@ -581,16 +581,15 @@ footer {
   .footer-icons {
     margin-left: 1.5vw;
     margin-right: 1.5vw;
-  }  
+  }
 }
 
 @media screen and (max-width: 355px) {
   .footer-icons {
     margin-left: 1vw;
     margin-right: 1vw;
-  }  
+  }
 }
-
 
 /*-------------------------------Newsletter sign up form-----------------------------*/
 .signUpForm span {
@@ -632,13 +631,13 @@ form button {
 }
 
 /*--- Dark mode ---*/
-@media (prefers-color-scheme:dark) {
+@media (prefers-color-scheme: dark) {
   form input {
     background-color: #323235;
     border-color: white;
     color: white;
   }
-  
+
   form button {
     background-color: var(--red);
     color: white;

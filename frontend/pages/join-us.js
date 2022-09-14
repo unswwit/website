@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import PageHeader from "../components/Header";
-import styles from "../styles/joinUs.module.css";
+import styles from "../styles/JoinUs.module.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Slideshow from "../components/QuotesSlideshow.js";
 import NewsletterSection from "../components/NewsletterSection";
 import { BootstrapTooltip } from "../components/BootstrapTooltip";
 import LoadingScreen from "../components/LoadingScreen";
-import { memberQuotes } from "../data/joinData";
-import { socials } from "../data/joinData";
-import SimpleAccordion from "../components/joinUsAccordion";
-import PortfolioGrid from "../components/joinUsGrid";
+import { memberQuotes, socials } from "../data/JoinData";
+import SimpleAccordion from "../components/JoinUsAccordion";
+import PortfolioGrid from "../components/JoinUsGrid";
 import Image from "next/image";
 
 const JoinUs = () => {
@@ -92,7 +91,6 @@ const JoinUs = () => {
                 height="390"
                 frameBorder="0"
                 className={styles.gmapColour}
-                scrolling="no"
                 src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=UNSW%20Sydney%20High%20St%20Kensington,%20NSW%202052%20Australia+(UNSW%20Sydney)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               />
             </div>

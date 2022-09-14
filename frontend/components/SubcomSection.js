@@ -1,6 +1,5 @@
-// All necessary imports for this javascript
-import React, { Component } from "react";
-import styles from "../styles/team.module.css";
+import { Component } from "react";
+import styles from "../styles/Team.module.css";
 
 class SubCom extends Component {
   render() {
@@ -23,4 +22,5 @@ class SubCom extends Component {
     );
   }
 }
+
 export default SubCom;
