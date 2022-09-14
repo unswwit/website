@@ -105,6 +105,8 @@ const Videos = ( { videos } ) => {
     fetchVideos(videos);  // load video data
   }, []);
 
+  console.log("fetched videos: ", videos);
+
   useEffect(() => {
     if (currentPosts.length === 0 && loading === false) {
       setEmptyCategory(true);
@@ -251,12 +253,15 @@ const Videos = ( { videos } ) => {
                 <div className={styles.iframeWrapper}>
                   <div className={styles.responsiveIframe}>
                     <iframe
-                      src={video.fields.video.fields.file.url} // assets.ctfassets.net/[path to video]
+                      width="560"
+                      height="315"
+                      src={`https://www.youtube.com/embed/${video.fields.url}?`} // manually embedded path
+                      // src={video.fields.video.fields.file.url}   // assets.ctfassets.net/[path to video]
                       frameBorder="0"
-                      allow="autoplay; encrypted-media"
-                      allowFullScreen={true}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       title={!video.fields.title ? "Video" : video.fields.title}
                       className={styles.embeddedVideo}
+                      allowFullScreen
                     />
                   </div>
                   <p className={styles.videoName}>{video.fields.title}</p>

@@ -12,11 +12,13 @@ const useContentfulVideos = () => {
         const title = item.fields.title;
         const video = item.fields.video;
         const category = item.fields.category;
+        const url = item.fields.url;
         return {
             date,
             title,
             video,
             category,
+            url,
         };
       });
 
