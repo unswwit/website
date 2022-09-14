@@ -3,12 +3,8 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Navbar.module.css";
-import CompactNavigationBar from "./CompactNavigationBar";
-import {
-  navigationBarContent,
-  aboutUsDropdownContent,
-  mediaDropdownContent,
-} from "../data/navbarData";
+import Navbar from "../lib/helpers/navbar";
+import { navigationBarContent } from "../data/NavbarData";
 import {
   changeAboutUsToArrowDown,
   changeAboutUsToArrowRight,
@@ -83,13 +79,13 @@ const NavigationBar = () => {
 
   // return hamburger navbar if screen size is smaller than 950px
   return compactNavBar ? (
-    <CompactNavigationBar />
+    <Navbar />
   ) : (
     /* return clear or hidden navbar if at top or bottom of screen respectively, 
        otherwise return regular navbar */
     <nav
       className={
-        clearNavBar && router.pathname != "/404"
+        clearNavBar && router.pathname !== "/404"
           ? `${styles.clearNavBar} ${styles.navBarContainer}`
           : hiddenNavBar
           ? `${styles.hiddenNavBar} ${styles.navBarContainer}`
@@ -104,7 +100,7 @@ const NavigationBar = () => {
               <Image
                 className={styles.logoGridItem}
                 src={
-                  darkMode || (clearNavBar && router.pathname != "/404")
+                  darkMode || (clearNavBar && router.pathname !== "/404")
                     ? "/logo-white.png"
                     : "/logo-black.png"
                 }
@@ -140,14 +136,14 @@ const NavigationBar = () => {
                 </Link>
                 <div
                   className={
-                    clearNavBar && router.pathname != "/404"
+                    clearNavBar && router.pathname !== "/404"
                       ? `${styles.clearDropdownContent} ${styles.dropdownContent}`
                       : styles.dropdownContent
                   }
                 >
                   {page.dropdownContent.map((page, index) => {
                     return (
-                      <Link href={page.link}>
+                      <Link href={page.link} key={index}>
                         <div
                           className={
                             router.asPath.split("/")[2] ===
@@ -173,7 +169,10 @@ const NavigationBar = () => {
             );
           }
           return (
-            <div className={`${page.itemName} ${styles.linkContainer}`}>
+            <div
+              className={`${page.itemName} ${styles.linkContainer}`}
+              key={index}
+            >
               <Link href={page.link}>
                 <div className={styles.linkContent}>
                   <a>{page.pageName}</a>

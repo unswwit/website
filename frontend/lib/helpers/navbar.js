@@ -2,22 +2,18 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../styles/Navbar.module.css";
-import {
-  navigationBarContent,
-  aboutUsDropdownContent,
-  mediaDropdownContent,
-} from "../data/navbarData";
+import styles from "../../styles/Navbar.module.css";
+import { navigationBarContent } from "../../data/NavbarData";
 import {
   changeAboutUsToArrowDown,
   changeAboutUsToArrowRight,
   changeMediaToArrowDown,
   changeMediaToArrowRight,
-} from "./navbarHelpers";
+} from "../../components/navbarHelpers";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 
-const CompactNavigationBar = () => {
+const Navbar = () => {
   const [clearNavBar, setClearNavBar] = useState(true);
   const [hiddenNavBar, setHiddenNavBar] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,7 +21,7 @@ const CompactNavigationBar = () => {
   const [mediaDropdownOpen, setMediaDropdownOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const router = useRouter();
-  const pageLoading = false;
+  let pageLoading = false;
 
   useEffect(() => {
     if (
@@ -98,6 +94,29 @@ const CompactNavigationBar = () => {
     }
   };
 
+  const setDropdownStyles = (id) => {
+    if (id === "aboutUsDropdown") {
+      if (router.asPath.split("/")[1] === "about" && aboutUsDropdownOpen) {
+        return `${styles.currentPageMenuUnderline} ${styles.currentDropdown} ${styles.menuItem}`;
+      } else if (router.asPath.split("/")[1] === "about") {
+        return `${styles.currentPageMenuUnderline} ${styles.menuItem}`;
+      } else if (aboutUsDropdownOpen) {
+        return `${styles.currentDropdown} ${styles.menuItem}`;
+      } else {
+        return styles.menuItem;
+      }
+    }
+    if (router.asPath.split("/")[1] === "media" && mediaDropdownOpen) {
+      return `${styles.currentPageMenuUnderline} ${styles.currentDropdown} ${styles.menuItem}`;
+    } else if (router.asPath.split("/")[1] === "media") {
+      return `${styles.currentPageMenuUnderline} ${styles.menuItem}`;
+    } else if (mediaDropdownOpen) {
+      return `${styles.currentDropdown} ${styles.menuItem}`;
+    } else {
+      return styles.menuItem;
+    }
+  };
+
   if (document.getElementById("loadingWillow")) {
     pageLoading = true;
   } else {
@@ -109,7 +128,7 @@ const CompactNavigationBar = () => {
        otherwise return regular navbar */
     <nav
       className={
-        clearNavBar && router.pathname != "/404"
+        clearNavBar && router.pathname !== "/404"
           ? `${styles.clearNavBar} ${styles.navBarContainer}`
           : hiddenNavBar
           ? `${styles.hiddenNavBar} ${styles.navBarContainer}`
@@ -124,7 +143,7 @@ const CompactNavigationBar = () => {
               <Image
                 className={styles.logoGridItem}
                 src={
-                  darkMode || (clearNavBar && router.pathname != "/404")
+                  darkMode || (clearNavBar && router.pathname !== "/404")
                     ? "/logo-white.png"
                     : "/logo-black.png"
                 }
@@ -158,7 +177,7 @@ const CompactNavigationBar = () => {
         {/* if the navbar is transparent then the menu is also transparent */}
         <div
           className={
-            clearNavBar && router.pathname != "/404"
+            clearNavBar && router.pathname !== "/404"
               ? `${styles.clearMenuContent} ${styles.menuContent}`
               : styles.menuContent
           }
@@ -183,27 +202,7 @@ const CompactNavigationBar = () => {
                     {/* apply dropdown underline and red text color accordingly:
                         if the current page belongs to the dropdown, the text should be underlined
                         if the dropdown is open, the text should be red */}
-                    <div
-                      className={
-                        page.id === "aboutUsDropdown"
-                          ? router.asPath.split("/")[1] === "about" &&
-                            aboutUsDropdownOpen
-                            ? `${styles.currentPageMenuUnderline} ${styles.currentDropdown} ${styles.menuItem}`
-                            : router.asPath.split("/")[1] === "about"
-                            ? `${styles.currentPageMenuUnderline} ${styles.menuItem}`
-                            : aboutUsDropdownOpen
-                            ? `${styles.currentDropdown} ${styles.menuItem}`
-                            : styles.menuItem
-                          : router.asPath.split("/")[1] === "media" &&
-                            mediaDropdownOpen
-                          ? `${styles.currentPageMenuUnderline} ${styles.currentDropdown} ${styles.menuItem}`
-                          : router.asPath.split("/")[1] === "media"
-                          ? `${styles.currentPageMenuUnderline} ${styles.menuItem}`
-                          : mediaDropdownOpen
-                          ? `${styles.currentDropdown} ${styles.menuItem}`
-                          : styles.menuItem
-                      }
-                    >
+                    <div className={setDropdownStyles(page.id)}>
                       <a id={page.text}>{page.pageName}</a>
                     </div>
                   </div>
@@ -220,7 +219,7 @@ const CompactNavigationBar = () => {
                   >
                     {page.dropdownContent.map((page, index) => {
                       return (
-                        <Link href={page.link}>
+                        <Link href={page.link} key={index}>
                           <div
                             className={
                               router.asPath.split("/")[2] ===
@@ -246,7 +245,7 @@ const CompactNavigationBar = () => {
               );
             }
             return (
-              <Link href={page.link}>
+              <Link href={page.link} key={index}>
                 <div className={styles.menuItemContent}>
                   <div
                     className={
@@ -274,4 +273,4 @@ const CompactNavigationBar = () => {
   );
 };
 
-export default CompactNavigationBar;
+export default Navbar;

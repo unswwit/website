@@ -351,7 +351,7 @@
 }
 
 
-/*---------------------------------Dark Mode----------------------------------*/
+/*--- Dark mode ---*/
 @media (prefers-color-scheme: dark) {
   .navBarContainer {
     background-color: #000;

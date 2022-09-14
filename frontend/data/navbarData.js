@@ -9,7 +9,6 @@ import LocalPrintshopOutlinedIcon from "@material-ui/icons/LocalPrintshopOutline
 import ImageOutlinedIcon from "@material-ui/icons/ImageOutlined";
 import VideocamOutlinedIcon from "@material-ui/icons/VideocamOutlined";
 
-// page and link content for NavigationBar and CompactNavigationBar
 const aboutUsDropdownContent = [
   {
     pageName: "Our Story",
