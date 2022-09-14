@@ -10,15 +10,15 @@ const useContentfulVideos = () => {
       const sanitizeEntries = entries.items.map((item) => {
         const date = item.fields.date;
         const title = item.fields.title;
-        const video = item.fields.video;
+        const episodeNo = item.fields.episodeNo;
         const category = item.fields.category;
-        const url = item.fields.url;
+        const embedUrl = item.fields.embedUrl;
         return {
             date,
             title,
-            video,
+            episodeNo,
             category,
-            url,
+            embedUrl,
         };
       });
 

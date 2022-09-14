@@ -67,6 +67,10 @@ const Videos = ( { videos } ) => {
     })[0];
 
     setVideo(currVideo);
+
+    const imageTest0 = `/videos/${video.img}`;
+    console.log("page content video img: ", imageTest0);
+
     return videoIndex;
   };
 
@@ -167,6 +171,9 @@ const Videos = ( { videos } ) => {
     }
   }, []);
 
+  const imageTest = `/videos/${video.img}`;
+  console.log("main page video img: ", imageTest);
+
   // get video items
   const getVideos = (videos) => {
     return videos.map((video, index) => {
@@ -253,15 +260,12 @@ const Videos = ( { videos } ) => {
                 <div className={styles.iframeWrapper}>
                   <div className={styles.responsiveIframe}>
                     <iframe
-                      width="560"
-                      height="315"
-                      src={`https://www.youtube.com/embed/${video.fields.url}?`} // manually embedded path
-                      // src={video.fields.video.fields.file.url}   // assets.ctfassets.net/[path to video]
+                      src={`https://www.youtube.com/embed/${video.fields.embedUrl}?`} // embedded path
                       frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allow="fullscreen; autoplay; encrypted-media;"
                       title={!video.fields.title ? "Video" : video.fields.title}
                       className={styles.embeddedVideo}
-                      allowFullScreen
+                      allowFullScreen="true"
                     />
                   </div>
                   <p className={styles.videoName}>{video.fields.title}</p>
