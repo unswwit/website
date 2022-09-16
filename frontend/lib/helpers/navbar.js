@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../../styles/Navbar.module.css";
-import { navigationBarContent } from "../../data/NavbarData";
+import { navigationBarContent } from "../../data/NavbarData.js";
 import {
   changeAboutUsToArrowDown,
   changeAboutUsToArrowRight,
