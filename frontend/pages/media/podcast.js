@@ -6,8 +6,6 @@ import EpisodeTemplate from "../../components/PodcastCard";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../../components/ScrollUpBtn";
 import LoadingScreen from "../../components/LoadingScreen";
-import axios from "axios";
-import humps from "humps";
 import { useStyles, links, categories } from "../../data/PodcastData";
 import { loadPodcasts } from "../../lib/api";
 import { formatPodcastDate } from "../../lib/helpers";

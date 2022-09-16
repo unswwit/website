@@ -8,8 +8,7 @@ import Timeline from "../../components/Timeline";
 import ScrollUpBtn from "../../components/ScrollUpBtn";
 import LoadingScreen from "../../components/LoadingScreen";
 import { execToClassName, marks, valueToYear } from "../../data/TeamData";
-import { loadSubcommittee } from "../../lib/api";
-import { loadExecs } from "../../lib/api";
+import { loadSubcommittee, loadExecs } from "../../lib/api";
 
 export default function OurTeam({ execs, subcommittee }) {
   const masterExec = useRef();
