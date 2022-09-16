@@ -91,7 +91,6 @@ const JoinUs = () => {
                 height="390"
                 frameBorder="0"
                 className={styles.gmapColour}
-                scrolling="no"
                 src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=UNSW%20Sydney%20High%20St%20Kensington,%20NSW%202052%20Australia+(UNSW%20Sydney)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               />
             </div>

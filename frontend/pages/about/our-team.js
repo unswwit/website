@@ -7,12 +7,11 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import Timeline from "../../components/Timeline";
 import ScrollUpBtn from "../../components/ScrollUpBtn";
 import LoadingScreen from "../../components/LoadingScreen";
-import axios from "axios";
-import humps from "humps";
 import { execToClassName, marks, valueToYear } from "../../data/TeamData";
 import { loadSubcommittee } from "../../lib/api";
+import { loadExecs } from "../../lib/api";
 
-export default function OurTeam({ subcommittee }) {
+export default function OurTeam({ execs, subcommittee }) {
   const masterExec = useRef();
   const masterSubcom = useRef();
   const [filteredExecs, setFilteredExecs] = useState([]);
@@ -27,14 +26,10 @@ export default function OurTeam({ subcommittee }) {
   };
 
   // get execs
-  // input: execs data from google sheets
-  // output: array of dictionaries containing execs data
-  const fetchExecs = async () => {
-    await axios
-      .get("https://wit-database.herokuapp.com/execs")
-      .then((execRes) => {
-        masterExec.current = humps.camelizeKeys(execRes.data);
-      });
+  // input: execs data from Contentful
+  // output: array of dictionaries containing exec data
+  const fetchExecs = (execs) => {
+    masterExec.current = execs;
   };
 
   // get subcom
@@ -50,8 +45,9 @@ export default function OurTeam({ subcommittee }) {
 
     // Execs
     const tempExecs = masterExec.current.filter(
-      (exec) => exec.yearJoined === year
+      (exec) => exec.fields.yearJoined === year
     );
+
     const result = tempExecs.reduce(function (result, _, index, tempExecs) {
       if (index % 2 === 0) result.push(tempExecs.slice(index, index + 2));
       return result;
@@ -77,11 +73,8 @@ export default function OurTeam({ subcommittee }) {
     // show loading sign for team page
     setLoading(true);
     const fetchDataPromises = [
-      fetchExecs().catch((error) =>
-        // error handling
-        console.error(error)
-      ),
       fetchSubcom(subcommittee),
+      fetchExecs(execs),
     ];
     Promise.all(fetchDataPromises).then(() => {
       filterDataByYear();
@@ -162,23 +155,21 @@ export default function OurTeam({ subcommittee }) {
                           return (
                             <Execs
                               key={index}
-                              imgUrl={
-                                exec.img
-                                  ? `/portraits/${year}-exec/${exec.img}`
-                                  : ""
-                              }
-                              name={exec.name}
+                              imgUrl={"http:" + exec.fields.img.fields.file.url}
+                              name={exec.fields.name}
                               className={
-                                year === 2020
-                                  ? execToClassName[year][exec.name]
-                                  : execToClassName[year]
+                                exec.fields.year === 2020
+                                  ? execToClassName[exec.fields.year][
+                                      exec.fields.name
+                                    ]
+                                  : execToClassName[exec.fields.year]
                               }
-                              position={exec.position}
-                              degree={exec.degree}
-                              year={exec.year}
-                              linkedin={exec.linkedin}
-                              fb={exec.facebook}
-                              email={exec.email}
+                              position={exec.fields.position}
+                              degree={exec.fields.degree}
+                              year={exec.fields.year}
+                              linkedin={exec.fields.linkedin}
+                              fb={exec.fields.facebook}
+                              email={exec.fields.email}
                             />
                           );
                         })}
@@ -233,7 +224,8 @@ export default function OurTeam({ subcommittee }) {
 
 export async function getStaticProps() {
   const subcommittee = await loadSubcommittee();
+  const execs = await loadExecs();
   return {
-    props: { subcommittee },
+    props: { subcommittee, execs },
   };
 }
