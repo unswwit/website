@@ -12,6 +12,27 @@ export async function loadPublications() {
       content_type: "publications",
       select: "fields",
       order: "-fields.index",
+
+export async function loadExecs() {
+  const res = await client
+    .getEntries({
+      content_type: "execs",
+      select: "fields",
+      order: "fields.index",
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
+
+export async function loadPodcasts() {
+  const res = await client
+    .getEntries({
+      content_type: "podcastEpisode",
+      select: "fields",
+      order: "-fields.episodeNo",
+
     })
     .catch((error) => {
       console.error(error);
