@@ -14,7 +14,6 @@ import UpcomingEvent from "../components/UpcomingEvent";
 import PaginationComp from "../components/Pagination";
 import { isMobile } from "react-device-detect";
 import { useStyles, categories, marks, valueToYear } from "../data/EventData";
-
 import { loadUpcomingEvents } from "../lib/Api";
 
 const Events = ({ upcomingEvents }) => {
@@ -72,12 +71,6 @@ const Events = ({ upcomingEvents }) => {
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
-    // setCurrentPosts(
-    //   selectedPosts.slice(
-    //     (pageNumber - 1) * postsPerPage,
-    //     pageNumber * postsPerPage
-    //   )
-    // );
   };
 
   // start webpage at the top

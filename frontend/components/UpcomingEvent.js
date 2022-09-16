@@ -125,6 +125,7 @@ export default function UpcomingEvent({ upcomingEvent }) {
   } = upcomingEvent.fields;
 
   const imgUrl = "https:" + img.fields.file.url;
+
   return (
     <Card className={[classes.root, styles.previewContainer].join(" ")}>
       <a
