@@ -15,7 +15,7 @@ export async function loadPublications() {
     })
     .catch((error) => {
       console.error(error); 
-    })
+    });
   return res.items;
 }
 
