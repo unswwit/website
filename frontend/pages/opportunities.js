@@ -4,7 +4,8 @@ import OpportunitiesCard from "../components/OpportunitiesCard";
 import styles from "../styles/Opportunities.module.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import LoadingScreen from "../components/LoadingScreen";
-import { loadOpportunities } from "../lib/OpportunitiesApi";
+import { loadOpportunities } from "../lib/Api";
+
 const Opportunities = ({ opportunities }) => {
   const [loading, setLoading] = useState(true);
   const [sourceLoading, setSourceLoading] = React.useState(true);
@@ -90,6 +91,7 @@ const Opportunities = ({ opportunities }) => {
     </div>
   );
 };
+
 export default Opportunities;
 
 export async function getStaticProps() {

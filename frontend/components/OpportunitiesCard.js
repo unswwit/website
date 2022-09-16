@@ -17,7 +17,7 @@ export default function OpportunitiesCard({ individualOpportunity, index }) {
   const imgUrl = "https:" + img.fields.file.url;
 
   // contentfulDate = YYYY-MM-DD
-  // formattedDate = DD-MM-YYYY
+  // formattedDate = DD/MM/YYYY
   const closeDateFormatted = closeDate.split("-").reverse().join("/");
 
   return (
@@ -29,17 +29,13 @@ export default function OpportunitiesCard({ individualOpportunity, index }) {
           <img className={styles.oppImg} src={imgUrl} alt={companyName} />
         </div>
 
-        {/* The image name could be found in the "public/sponsors/2021" folder or add it to "public/opportunities" folder */}
         <div className={styles.oppDesc}>
           <p className={styles.oppTypeAndLocation}>{type}</p>
-          {/* The type should be in the format of the following example: Graduate Role */}
           <p className={styles.jobPosition}>{position}</p>
-          {/* The position should be in the format of the following example: Front End Developer */}
           <p className={styles.oppTypeAndLocation}>{location}</p>
           {closeDate ? (
             <p className={styles.oppSummary}>
               Applications close: {closeDateFormatted}
-              {/* The close date should be in the format of the following example: 01/01/2021 */}
             </p>
           ) : (
             <p className={styles.oppSummary}></p>
