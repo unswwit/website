@@ -112,7 +112,6 @@ const NavigationBar = () => {
           </Link>
         </div>
         <div className={styles.emptyGridItem}></div>
-
         {navigationBarContent.map((page, index) => {
           if (page.dropdownContent) {
             const dropdownContentLength =
@@ -121,6 +120,7 @@ const NavigationBar = () => {
               <div
                 className={`${styles.dropdownContainer} ${page.itemName} ${styles.linkContainer}`}
                 id={page.id}
+                key={index}
               >
                 <Link href={page.link}>
                   <div className={styles.linkContent}>

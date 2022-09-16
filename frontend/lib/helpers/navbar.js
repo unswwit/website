@@ -189,7 +189,7 @@ const Navbar = () => {
               const dropdownContentLength =
                 Object.keys(page.dropdownContent).length - 1;
               return (
-                <div>
+                <div key={index}>
                   <div
                     className={styles.menuDropdownContainer}
                     id={page.id}
