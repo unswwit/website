@@ -188,7 +188,7 @@ const Videos = ( { videos } ) => {
               <div className={styles.previewContainer}>
                 <Image
                   className={styles.videoImages}
-                  src={`/videos/${video.img}`}
+                  src={"http://" + video.fields.video.fields.file.url}
                   alt={video.fields.title}
                   width={"1200px"}
                   height={"628px"}
