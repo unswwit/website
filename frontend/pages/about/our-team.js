@@ -12,13 +12,6 @@ import humps from "humps";
 import { execToClassName, marks, valueToYear } from "../../data/TeamData";
 import { loadSubcommittee } from "../../lib/api";
 
-export async function getStaticProps() {
-  const subcommittee = await loadSubcommittee();
-  return {
-    props: { subcommittee },
-  };
-}
-
 export default function OurTeam({ subcommittee }) {
   const masterExec = useRef();
   const masterSubcom = useRef();
@@ -236,4 +229,11 @@ export default function OurTeam({ subcommittee }) {
       )}
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const subcommittee = await loadSubcommittee();
+  return {
+    props: { subcommittee },
+  };
 }
