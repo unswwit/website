@@ -6,13 +6,6 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import LoadingScreen from "../../components/LoadingScreen";
 import { loadPublications } from "../../lib/api";
 
-export async function getStaticProps() {
-  const publications = await loadPublications();
-  return {
-    props: { publications },
-  };
-}
-
 const Publications = ({ publications }) => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -25,10 +18,6 @@ const Publications = ({ publications }) => {
 
     // load articles
     fetchPublications(publications);
-    // fetchPublications().catch((error) =>
-    //   // error handling
-    //   console.error(error)
-    // );
   }, []);
 
   // get publications
@@ -103,5 +92,12 @@ const Publications = ({ publications }) => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const publications = await loadPublications();
+  return {
+    props: { publications },
+  };
+}
 
 export default Publications;

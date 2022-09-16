@@ -11,7 +11,7 @@ export async function loadPublications() {
     .getEntries({
       content_type: "publications",
       select: "fields",
-      order: "-fields.date",
+      order: "-fields.index",
     })
     .catch((error) => {
       console.error(error);
