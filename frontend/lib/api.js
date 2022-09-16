@@ -33,9 +33,14 @@ export async function loadExecs() {
 }
 
 export async function loadPodcasts() {
-  const res = await client.getEntries({
-    content_type: "podcastEpisode",
-    select: "fields",
-    order: "-fields.episodeNo",
-  });
+  const res = await client
+    .getEntries({
+      content_type: "podcastEpisode",
+      select: "fields",
+      order: "-fields.episodeNo",
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
 }
