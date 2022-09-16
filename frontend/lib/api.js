@@ -14,6 +14,17 @@ export async function loadPublications() {
       order: "-fields.index",
     })
     .catch((error) => {
+      console.error(error); 
+    })
+  return res.items;
+}
+
+export async function loadSubcommittee() {
+  const res = await client
+    .getEntries({
+      content_type: "subcommittee",
+    })
+    .catch((error) => {
       console.error(error);
     });
   return res.items;
