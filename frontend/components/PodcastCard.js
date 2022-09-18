@@ -7,6 +7,8 @@ import {
   Typography,
 } from "@material-ui/core";
 import styles from "../styles/Podcast.module.css";
+import { formatPodcastDate } from "../lib/helpers";
+import Link from "next/link";
 import Image from "next/image";
 
 const useStyles = makeStyles({
@@ -108,39 +110,41 @@ export default function EpisodeTemplate({
       <CardActionArea
         className={[classes.click, styles.previewContainer].join(" ")}
       >
-        <a href={episode["spotify"]} target="_blank" rel="noreferrer">
-          <div className={classes.media}>
-            <Image
-              alt="podcast episode cover"
-              src={"/" + cover}
-              className={styles.episodeCover}
-              layout={"fill"}
-              objectFit={"contain"}
-              objectPosition={"top"}
-            />
-          </div>
-          <CardContent className={classes.content}>
-            <Typography
-              className={classes.date}
-              variant="body2"
-              color="textSecondary"
-              component="p"
-            >
-              {date}
-            </Typography>
-            <Typography className={classes.title} gutterBottom>
-              {title}
-            </Typography>
-            <Typography
-              className={classes.description}
-              variant="body2"
-              color="textSecondary"
-              component="p"
-            >
-              {description}
-            </Typography>
-          </CardContent>
-        </a>
+        <Link href={episode["spotify"]}>
+          <a className={styles.a}>
+            <div className={classes.media}>
+              <Image
+                alt="podcast episode cover"
+                src={"http://" + cover}
+                className={styles.episodeCover}
+                layout={"fill"}
+                objectFit={"contain"}
+                objectPosition={"top"}
+              />
+            </div>
+            <CardContent className={classes.content}>
+              <Typography
+                className={classes.date}
+                variant="body2"
+                color="textSecondary"
+                component="p"
+              >
+                {formatPodcastDate(date)}
+              </Typography>
+              <Typography className={classes.title} gutterBottom>
+                {title}
+              </Typography>
+              <Typography
+                className={classes.description}
+                variant="body2"
+                color="textSecondary"
+                component="p"
+              >
+                {description}
+              </Typography>
+            </CardContent>
+          </a>
+        </Link>
       </CardActionArea>
     </Card>
   );

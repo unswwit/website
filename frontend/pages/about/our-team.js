@@ -7,11 +7,10 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import Timeline from "../../components/Timeline";
 import ScrollUpBtn from "../../components/ScrollUpBtn";
 import LoadingScreen from "../../components/LoadingScreen";
-import axios from "axios";
-import humps from "humps";
 import { execToClassName, marks, valueToYear } from "../../data/TeamData";
+import { loadSubcommittee, loadExecs } from "../../lib/api";
 
-export default function OurTeam() {
+export default function OurTeam({ execs, subcommittee }) {
   const masterExec = useRef();
   const masterSubcom = useRef();
   const [filteredExecs, setFilteredExecs] = useState([]);
@@ -26,25 +25,17 @@ export default function OurTeam() {
   };
 
   // get execs
-  // input: execs data from google sheets
-  // output: array of dictionaries containing execs data
-  const fetchExecs = async () => {
-    await axios
-      .get("https://wit-database.herokuapp.com/execs")
-      .then((execRes) => {
-        masterExec.current = humps.camelizeKeys(execRes.data);
-      });
+  // input: execs data from Contentful
+  // output: array of dictionaries containing exec data
+  const fetchExecs = (execs) => {
+    masterExec.current = execs;
   };
 
   // get subcom
-  // input: subcom data from google sheets
+  // input: subcom data from contentful
   // output: array of dictionaries containing subcom data
-  const fetchSubcom = async () => {
-    await axios
-      .get("https://wit-database.herokuapp.com/subcommittee")
-      .then((subcomRes) => {
-        masterSubcom.current = humps.camelizeKeys(subcomRes.data);
-      });
+  const fetchSubcom = (subcom) => {
+    masterSubcom.current = subcom;
   };
 
   const filterDataByYear = useCallback(() => {
@@ -53,8 +44,9 @@ export default function OurTeam() {
 
     // Execs
     const tempExecs = masterExec.current.filter(
-      (exec) => exec.yearJoined === year
+      (exec) => exec.fields.yearJoined === year
     );
+
     const result = tempExecs.reduce(function (result, _, index, tempExecs) {
       if (index % 2 === 0) result.push(tempExecs.slice(index, index + 2));
       return result;
@@ -63,7 +55,7 @@ export default function OurTeam() {
 
     // Subcom
     const subcom = masterSubcom.current.filter(
-      (exec) => exec.yearJoined === year
+      (exec) => exec.fields.yearJoined === year
     );
     setFilteredSubcom(subcom);
 
@@ -80,14 +72,8 @@ export default function OurTeam() {
     // show loading sign for team page
     setLoading(true);
     const fetchDataPromises = [
-      fetchExecs().catch((error) =>
-        // error handling
-        console.error(error)
-      ),
-      fetchSubcom().catch((error) =>
-        // error handling
-        console.error(error)
-      ),
+      fetchSubcom(subcommittee),
+      fetchExecs(execs),
     ];
     Promise.all(fetchDataPromises).then(() => {
       filterDataByYear();
@@ -168,23 +154,21 @@ export default function OurTeam() {
                           return (
                             <Execs
                               key={index}
-                              imgUrl={
-                                exec.img
-                                  ? `/portraits/${year}-exec/${exec.img}`
-                                  : ""
-                              }
-                              name={exec.name}
+                              imgUrl={"http:" + exec.fields.img.fields.file.url}
+                              name={exec.fields.name}
                               className={
-                                year === 2020
-                                  ? execToClassName[year][exec.name]
-                                  : execToClassName[year]
+                                exec.fields.year === 2020
+                                  ? execToClassName[exec.fields.year][
+                                      exec.fields.name
+                                    ]
+                                  : execToClassName[exec.fields.year]
                               }
-                              position={exec.position}
-                              degree={exec.degree}
-                              year={exec.year}
-                              linkedin={exec.linkedin}
-                              fb={exec.facebook}
-                              email={exec.email}
+                              position={exec.fields.position}
+                              degree={exec.fields.degree}
+                              year={exec.fields.year}
+                              linkedin={exec.fields.linkedin}
+                              fb={exec.fields.facebook}
+                              email={exec.fields.email}
                             />
                           );
                         })}
@@ -207,14 +191,16 @@ export default function OurTeam() {
                         <div key={sector}>
                           <h3 className={styles.subcomType}>{sector} Team</h3>
                           {filteredSubcom
-                            .filter((member) => member.team === sector)
+                            .filter((member) => member.fields.team === sector)
                             .map((member, index) => {
+                              console.log(member);
+                              const { name, degree, year } = member.fields;
                               return (
                                 <SubCom
                                   key={index}
-                                  name={member.name}
-                                  degree={member.degree}
-                                  year={member.year}
+                                  name={name}
+                                  degree={degree}
+                                  year={year}
                                 />
                               );
                             })}
@@ -233,4 +219,12 @@ export default function OurTeam() {
       )}
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const subcommittee = await loadSubcommittee();
+  const execs = await loadExecs();
+  return {
+    props: { subcommittee, execs },
+  };
 }

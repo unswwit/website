@@ -166,8 +166,8 @@ const itDescription = () => {
     <ul>
       <>
         <li>
-          Responsible for designing, updating and improving on WIT&apos;s official
-          website
+          Responsible for designing, updating and improving on WIT&apos;s
+          official website
         </li>
         <li>
           Supports the creation of IT-related workshops, and events such as
@@ -183,8 +183,8 @@ const marketingDescription = () => {
     <ul>
       <>
         <li>
-          Responsible for managing WIT&apos;s social media platforms and outreach to
-          the wider community
+          Responsible for managing WIT&apos;s social media platforms and
+          outreach to the wider community
         </li>
         <li>
           Involves creating fun posts, event photography, designing merchandise

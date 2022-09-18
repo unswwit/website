@@ -3,10 +3,10 @@ import styles from "../../styles/Publications.module.css";
 import PubArticle from "../../components/PublicationsArticle";
 import PageHeader from "../../components/Header";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import axios from "axios";
 import LoadingScreen from "../../components/LoadingScreen";
+import { loadPublications } from "../../lib/api";
 
-const Publications = () => {
+const Publications = ({ publications }) => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [sourceLoading, setSourceLoading] = useState(true);
@@ -17,21 +17,15 @@ const Publications = () => {
     window.scrollTo(0, 0);
 
     // load articles
-    fetchPublications().catch((error) =>
-      // error handling
-      console.error(error)
-    );
+    fetchPublications(publications);
   }, []);
 
   // get publications
   // input: publications data from database
   // output: array of dictionaries containing publications data
-  const fetchPublications = async () => {
+  const fetchPublications = async (publications) => {
     setLoading(false);
-    const res = await axios.get(
-      "https://wit-database.herokuapp.com/publications"
-    );
-    setArticles(res.data);
+    setArticles(publications);
     setSourceLoading(false);
   };
 
@@ -42,6 +36,7 @@ const Publications = () => {
       ) : (
         <>
           {/* Cover Photo */}
+
           <PageHeader
             imgUrl="/headers/publications-header.jpg"
             title="Publications"
@@ -60,7 +55,6 @@ const Publications = () => {
                 />
               )}
             </div>
-
             {/*Articles*/}
             {!loading &&
               Array.from({ length: 3 }, (_, i) => i + 2020)
@@ -71,14 +65,21 @@ const Publications = () => {
                       <h1>{year}</h1>
                       <div className={styles.row}>
                         {articles
-                          .filter((article) => article.year === year)
-                          .map((article, index) => (
+
+                          .filter(
+                            (publication) =>
+                              publication.fields.year === year.toString()
+                          )
+
+                          .map((publication, index) => (
                             <PubArticle
                               key={index}
-                              imgUrl={`/publications/${year}/${article.img}`}
-                              heading={article.heading}
-                              date={article.date}
-                              url={article.url}
+                              imgUrl={
+                                "http:" + publication.fields.img.fields.file.url
+                              }
+                              heading={publication.fields.heading}
+                              date={publication.fields.date}
+                              url={publication.fields.url}
                             />
                           ))}
                       </div>
@@ -91,5 +92,12 @@ const Publications = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const publications = await loadPublications();
+  return {
+    props: { publications },
+  };
+}
 
 export default Publications;
