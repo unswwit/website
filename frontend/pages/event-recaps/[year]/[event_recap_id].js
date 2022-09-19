@@ -204,8 +204,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const pastEvents1 = await loadPastEvents();
-  let selectedEvent = pastEvents1.filter((event) => {
+  const pastEvents = await loadPastEvents();
+  let selectedEvent = pastEvents.filter((event) => {
     if (
       event.fields.eventNumber.toString() === params.event_recap_id &&
       event.fields.year.toString() === params.year

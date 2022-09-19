@@ -16,7 +16,7 @@ import { isMobile } from "react-device-detect";
 import { useStyles, categories, marks, valueToYear } from "../data/EventData";
 import { loadPastEvents } from "../lib/api";
 
-const Events = ({ pastEvents1 }) => {
+const Events = ({ allPastEvents }) => {
   const classes = useStyles();
 
   const [year, setYear] = useState(valueToYear[100]);
@@ -91,7 +91,7 @@ const Events = ({ pastEvents1 }) => {
     // show loading signs for past events
     setLoadingPast(true);
     const fetchPastEvents = async () => {
-      const allEvents = pastEvents1.filter(
+      const allEvents = allPastEvents.filter(
         (event) => event.fields.year === Number(year)
       );
       setTerms(allEvents);
@@ -360,9 +360,9 @@ const Events = ({ pastEvents1 }) => {
 };
 
 export async function getStaticProps() {
-  const pastEvents1 = await loadPastEvents();
+  const allPastEvents = await loadPastEvents();
   return {
-    props: { pastEvents1 },
+    props: { allPastEvents },
   };
 }
 
