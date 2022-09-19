@@ -7,12 +7,10 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import Timeline from "../../components/Timeline";
 import ScrollUpBtn from "../../components/ScrollUpBtn";
 import LoadingScreen from "../../components/LoadingScreen";
-import axios from "axios";
-import humps from "humps";
 import { execToClassName, marks, valueToYear } from "../../data/TeamData";
-import { loadExecs } from "../../lib/api";
+import { loadSubcommittee, loadExecs } from "../../lib/api";
 
-export default function OurTeam({ execs }) {
+export default function OurTeam({ execs, subcommittee }) {
   const masterExec = useRef();
   const masterSubcom = useRef();
   const [filteredExecs, setFilteredExecs] = useState([]);
@@ -34,14 +32,10 @@ export default function OurTeam({ execs }) {
   };
 
   // get subcom
-  // input: subcom data from google sheets
+  // input: subcom data from contentful
   // output: array of dictionaries containing subcom data
-  const fetchSubcom = async () => {
-    await axios
-      .get("https://wit-database.herokuapp.com/subcommittee")
-      .then((subcomRes) => {
-        masterSubcom.current = humps.camelizeKeys(subcomRes.data);
-      });
+  const fetchSubcom = (subcom) => {
+    masterSubcom.current = subcom;
   };
 
   const filterDataByYear = useCallback(() => {
@@ -61,7 +55,7 @@ export default function OurTeam({ execs }) {
 
     // Subcom
     const subcom = masterSubcom.current.filter(
-      (exec) => exec.yearJoined === year
+      (exec) => exec.fields.yearJoined === year
     );
     setFilteredSubcom(subcom);
 
@@ -78,11 +72,8 @@ export default function OurTeam({ execs }) {
     // show loading sign for team page
     setLoading(true);
     const fetchDataPromises = [
+      fetchSubcom(subcommittee),
       fetchExecs(execs),
-      fetchSubcom().catch((error) =>
-        // error handling
-        console.error(error)
-      ),
     ];
     Promise.all(fetchDataPromises).then(() => {
       filterDataByYear();
@@ -200,14 +191,16 @@ export default function OurTeam({ execs }) {
                         <div key={sector}>
                           <h3 className={styles.subcomType}>{sector} Team</h3>
                           {filteredSubcom
-                            .filter((member) => member.team === sector)
+                            .filter((member) => member.fields.team === sector)
                             .map((member, index) => {
+                              console.log(member);
+                              const { name, degree, year } = member.fields;
                               return (
                                 <SubCom
                                   key={index}
-                                  name={member.name}
-                                  degree={member.degree}
-                                  year={member.year}
+                                  name={name}
+                                  degree={degree}
+                                  year={year}
                                 />
                               );
                             })}
@@ -229,8 +222,9 @@ export default function OurTeam({ execs }) {
 }
 
 export async function getStaticProps() {
+  const subcommittee = await loadSubcommittee();
   const execs = await loadExecs();
   return {
-    props: { execs },
+    props: { subcommittee, execs },
   };
 }
