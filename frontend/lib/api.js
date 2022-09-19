@@ -23,6 +23,8 @@ export async function loadSubcommittee() {
   const res = await client
     .getEntries({
       content_type: "subcommittee",
+      select: "fields",
+      order: "fields.index",
     })
     .catch((error) => {
       console.error(error);
@@ -61,6 +63,7 @@ export async function loadMarketingArchives() {
     .getEntries({
       content_type: "marketing_archives",
       select: "fields",
+      order: "-fields.id",
     })
     .catch((error) => {
       console.error(error);
