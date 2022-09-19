@@ -1,6 +1,6 @@
-# Backend
+# unswwit.com
 
-This repository houses the backend of the [UNSW Women in Technology website](https://unswwit.com). 
+This repository houses the [UNSW Women in Technology website](https://unswwit.com). 
 
 ## Getting Started
 
@@ -12,8 +12,6 @@ Before you start, make sure you have the following software installed.
 
 - Git or [Github Desktop](https://desktop.github.com/)
 - [Node.js](https://nodejs.org/en/download/package-manager/) and [npm](https://www.npmjs.com/) (usually bundled with Node.js)
-- [Heroku](https://devcenter.heroku.com/articles/heroku-cli)
-- [PostgreSQL](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup) 
 
 ### Installing
 
@@ -23,16 +21,13 @@ Before you start, make sure you have the following software installed.
 git clone https://github.com/unswwit/Backend.git
 ```
 
-2. Install npm packages and run with 
+2. Add the `.env.local` file to the root of the frontend directory 
+
+3. Install npm packages and run with 
 
 ```
 npm install
-npm start 
+npm run dev
 ```
 
 The local server should be open on port 3000. 
-
-### Connecting to the database 
-
-Refer to WIT 2022 IT Guide. 
-
