@@ -14,8 +14,9 @@ import UpcomingEvent from "../components/UpcomingEvent";
 import PaginationComp from "../components/Pagination";
 import { isMobile } from "react-device-detect";
 import { useStyles, categories, marks, valueToYear } from "../data/EventData";
+import { loadPastEvents } from "../lib/api";
 
-const Events = () => {
+const Events = ({ pastEvents1 }) => {
   const classes = useStyles();
 
   const [year, setYear] = useState(valueToYear[100]);
@@ -90,13 +91,10 @@ const Events = () => {
     // show loading signs for past events
     setLoadingPast(true);
     const fetchPastEvents = async () => {
-      const res = await axios.get(
-        "https://wit-database.herokuapp.com/past-events"
+      const allEvents = pastEvents1.filter(
+        (event) => event.fields.year === Number(year)
       );
-      const allEvents = humps
-        .camelizeKeys(res.data)
-        .filter((event) => event.year === Number(year));
-      setTerms(allEvents.reverse());
+      setTerms(allEvents);
     };
     fetchPastEvents().catch((error) =>
       // error handling
@@ -107,9 +105,9 @@ const Events = () => {
   // Takes in events from a given year and separates them by term
   const setTerms = (events) => {
     const tempPastEvents = {
-      term1: events.filter((event) => event.term === 1),
-      term2: events.filter((event) => event.term === 2),
-      term3: events.filter((event) => event.term === 3),
+      term1: events.filter((event) => event.fields.term === 1),
+      term2: events.filter((event) => event.fields.term === 2),
+      term3: events.filter((event) => event.fields.term === 3),
     };
     setPastEvents(tempPastEvents);
     setPastSelectedPosts(tempPastEvents);
@@ -144,11 +142,12 @@ const Events = () => {
 
   // filter the past events of the given term by the selected category
   const filterTerm = (term, selectedCategory) => {
+    console.log(pastContent[term]);
     const filteredTerm = pastContent[term].filter(
       (picture) =>
         selectedCategory === "All" ||
-        (picture.category !== null &&
-          picture.category.split(",").includes(selectedCategory))
+        (picture.fields.categories !== null &&
+          picture.fields.categories.includes(selectedCategory))
     );
 
     return filteredTerm;
@@ -181,16 +180,17 @@ const Events = () => {
   // get events for a specific term
   const getTermEvents = (events) => {
     return events.map((event, index) => {
-      let eventLabel = event.img.split(".")[0].split("-");
+      let eventLabel = event.fields.img.fields.title.split(".")[0].split("-");
       eventLabel.shift();
       let eventId = `${event.eventNumber}`;
+      let imgUrl = "https:" + event.fields.img.fields.file.url;
       return (
         <div className={styles.pastEvent} key={index}>
           <Link href={`/event-recaps/${year}/${eventId}`}>
             <div className={styles.eventImgBox}>
               <Image
                 className={styles.eventImages}
-                src={`/event-covers/${year}/${event.img}`}
+                src={imgUrl}
                 alt={eventLabel.join(" ")}
                 width="1200px"
                 height="628px"
@@ -358,5 +358,12 @@ const Events = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const pastEvents1 = await loadPastEvents();
+  return {
+    props: { pastEvents1 },
+  };
+}
 
 export default Events;

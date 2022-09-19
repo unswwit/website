@@ -12,8 +12,9 @@ import "react-awesome-slider/dist/styles.css";
 import axios from "axios";
 import humps from "humps";
 import Image from "next/image";
+import { loadPastEvents } from "../../../lib/api";
 
-const EventRecapPage = (props) => {
+const EventRecapPage = (props, { pastEvents1 }) => {
   const [expanded, setExpanded] = useState(false);
   const [event, setEvent] = useState({});
   const [loading, setLoading] = useState(true);
@@ -38,9 +39,9 @@ const EventRecapPage = (props) => {
       const res = await axios.get(
         "https://wit-database.herokuapp.com/past-events"
       );
-      const allEvents = humps
-        .camelizeKeys(res.data)
-        .filter((event) => event.year.toString() === url[url.length - 2]);
+      const allEvents = pastEvents1.filter(
+        (event) => event.fields.year.toString() === url[url.length - 2]
+      );
 
       if (allEvents.length <= 0 || currEventNumber > allEvents.length) {
         props.history.push("/404");
@@ -215,5 +216,12 @@ const EventRecapPage = (props) => {
     </>
   );
 };
+
+export async function getStaticProps() {
+  const pastEvents1 = await loadPastEvents();
+  return {
+    props: { pastEvents1 },
+  };
+}
 
 export default EventRecapPage;
