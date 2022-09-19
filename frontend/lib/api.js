@@ -61,6 +61,7 @@ export async function loadPastEvents() {
     .getEntries({
       content_type: "pastEvents",
       select: "fields",
+      order: "fields.index",
     })
     .catch((error) => {
       console.error(error);

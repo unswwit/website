@@ -182,7 +182,7 @@ const Events = ({ pastEvents1 }) => {
     return events.map((event, index) => {
       let eventLabel = event.fields.img.fields.title.split(".")[0].split("-");
       eventLabel.shift();
-      let eventId = `${event.eventNumber}`;
+      let eventId = event.fields.eventNumber;
       let imgUrl = "https:" + event.fields.img.fields.file.url;
       return (
         <div className={styles.pastEvent} key={index}>
