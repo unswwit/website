@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom'
-import { formatPodcastDate } from "../lib/helpers";
+import { formatPodcastDate, getMostRecentPodcast } from "../lib/helpers";
 
 describe('Podcast', () => {
   describe('formatPodcastDate formatting', () => {
@@ -14,4 +14,15 @@ describe('Podcast', () => {
     })
   })
 
+  describe('getMostRecentPodcast', () => {
+    it('gets the most recent podcast', () => {
+      const podcasts = [
+        { id: 1, date: "2020-10-10" },
+        { id: 2, date: "2022-10-10" },
+        { id: 3, date: "2022-02-09" },
+        { id: 4, date: "2022-11-11" },
+      ]
+      expect(getMostRecentPodcast(podcasts)).toEqual({ id: 4, date: "2022-11-11" })
+    })
+  })
 })
