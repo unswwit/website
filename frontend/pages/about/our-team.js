@@ -71,10 +71,7 @@ export default function OurTeam({ execs, subcommittee }) {
   useEffect(() => {
     // show loading sign for team page
     setLoading(true);
-    const fetchDataPromises = [
-      fetchSubcom(subcommittee),
-      fetchExecs(execs),
-    ];
+    const fetchDataPromises = [fetchSubcom(subcommittee), fetchExecs(execs)];
     Promise.all(fetchDataPromises).then(() => {
       filterDataByYear();
       setSourceLoading(false);

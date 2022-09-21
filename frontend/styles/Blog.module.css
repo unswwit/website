@@ -1,0 +1,59 @@
+/* ----------------------- Blog Recommendations ------------------------------ */
+.blogRecommendations {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.blog {
+  display: flex;
+  max-width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+  display: flex;
+}
+
+h2.blogRecommendationsTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 33pt;
+  text-transform: uppercase;
+  margin-top: 100px;
+  text-align: center;
+}
+
+/* Media responsiveness */
+@media only screen and (max-width: 540px) {
+  h2.blogRecommendationsTitle {
+    font-size: 23pt;
+  }
+
+  .blog {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  h2.blogRecommendationsTitle {
+    font-size: 20pt;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  h2.blogRecommendationsTitle {
+    font-size: 16pt;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .blogRecommendations {
+    grid-template-columns: 50vw 50vw;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .blogRecommendations {
+    grid-template-columns: 100vw;
+  }
+}

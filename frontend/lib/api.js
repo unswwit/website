@@ -14,7 +14,7 @@ export async function loadPublications() {
       order: "-fields.index",
     })
     .catch((error) => {
-      console.error(error); 
+      console.error(error);
     });
   return res.items;
 }
@@ -49,6 +49,19 @@ export async function loadPodcasts() {
       content_type: "podcastEpisode",
       select: "fields",
       order: "-fields.episodeNo",
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
+
+export async function loadBlogRecommendations() {
+  const res = await client
+    .getEntries({
+      content_type: "blogRecommendations",
+      select: "fields",
+      order: "fields.index",
     })
     .catch((error) => {
       console.error(error);
