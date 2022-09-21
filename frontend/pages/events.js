@@ -14,7 +14,7 @@ import UpcomingEvent from "../components/UpcomingEvent";
 import PaginationComp from "../components/Pagination";
 import { isMobile } from "react-device-detect";
 import { useStyles, categories, marks, valueToYear } from "../data/EventData";
-import { loadUpcomingEvents } from "../lib/Api";
+import { loadUpcomingEvents } from "../lib/api";
 
 const Events = ({ upcomingEvents }) => {
   const classes = useStyles();
