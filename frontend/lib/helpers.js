@@ -7,3 +7,10 @@ export const formatPublicationsDate = (date) => {
 export const formatPodcastDate = (date) => {
   return moment(date).format("MMMM DD, YYYY");
 };
+
+export const getMostRecentEvent = (events) => {
+  // return the most recent upcoming event
+  return events.sort((a, b) => {
+    return new Date(a.date) - new Date(b.date);
+  })[0];
+};
