@@ -6,14 +6,13 @@ import YouTubeSubscribe from "../../../components/YoutubeSubscribeBtn";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Link from "next/link";
 import Image from "next/image";
-import axios from "axios";
-import humps from "humps";
 import PaginationComp from "../../../components/Pagination";
 import LoadingScreen from "../../../components/LoadingScreen";
 import { isMobile } from "react-device-detect";
 import { useStyles, categories } from "../../../data/VideoData";
+import { loadVideos } from "../../../lib/api";
 
-const Videos = (props) => {
+const Videos = ( { videos } ) => {
   const classes = useStyles();
   const [video, setVideo] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -30,6 +29,10 @@ const Videos = (props) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [youtubeTheme, setYoutubeTheme] = useState("full");
 
+  const formatDate = (date) => {
+    return moment(date).format("MMMM DD, YYYY");
+  };
+
   // retrieve current video content
   const handleVideoNumber = (numVideos) => {
     let url = window.location.href.split("/");
@@ -44,7 +47,7 @@ const Videos = (props) => {
   const loadPageContent = (allVideos, currVideoNumber) => {
     var videoIndex = 0;
     const currVideo = allVideos.filter((video, index) => {
-      if (video.videoNumber.toString() === currVideoNumber) {
+      if (video.fields.episodeNo.toString() === currVideoNumber) {
         videoIndex = index;
         return true;
       } else {
@@ -69,33 +72,29 @@ const Videos = (props) => {
     setContent(sortedVideos);
   };
 
-  // get videos
-  // input: videos data from google sheets
+  // get videos from contentful
+  // input: video data from contentful
   // output: array of dictionaries containing videos data
+  const fetchVideos = (videos) => {
+    // sort videos in descending order (most recent first)
+    const sortedVideos = videos.sort((a, b) => {
+      return b.fields.episodeNo - a.fields.episodeNo;
+    }).reverse();
+
+    setContent(sortedVideos);
+    setLoading(false);
+    setHeaderLoading(false);
+    setSourceLoading(false);
+    setVideoNumber(handleVideoNumber(sortedVideos.length));
+    loadVideoPreviews(sortedVideos, loadPageContent(sortedVideos, handleVideoNumber(sortedVideos.length)));
+  };
+
   useEffect(() => {
-    const fetchVideos = async () => {
-      setLoading(false);
-      const res = await axios.get("https://wit-database.herokuapp.com/videos");
-      const allVideos = humps.camelizeKeys(res.data);
-      const currVideoNumber = handleVideoNumber(allVideos.length);
+    window.scrollTo(0, 0); // start at the top of the page
+    fetchVideos(videos);  // load video data
+  }, []);
 
-      if (allVideos.length <= 0 || currVideoNumber > allVideos.length) {
-        props.history.push("/404");
-        return;
-      }
-
-      var videoIndex = loadPageContent(allVideos, currVideoNumber);
-      loadVideoPreviews(allVideos, videoIndex);
-
-      setLoading(false);
-      setSourceLoading(false);
-    };
-
-    // start at the top of the page
-    window.scrollTo(0, 0);
-
-    fetchVideos().catch((error) => console.error(error));
-  }, [videoNumber, props.history]);
+  console.log("videos fetched on ID page: ", videos);
 
   useEffect(() => {
     if (currentPosts.length === 0 && loading === false) {
@@ -123,8 +122,8 @@ const Videos = (props) => {
     const searchResults = filteredContent.filter((video) => {
       if (
         searchTerm === "" ||
-        video.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        video.date.toLowerCase().includes(searchTerm.toLowerCase())
+        video.fields.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        video.fields.date.toLowerCase().includes(searchTerm.toLowerCase())
       ) {
         return true;
       } else {
@@ -162,23 +161,23 @@ const Videos = (props) => {
     return videos.map((video, index) => {
       return (
         <div className={styles.videoDescription} key={index}>
-          <Link href={`/media/videos/${video.videoNumber}`}>
+          <Link href={`/media/videos/${video.fields.episodeNo}`}>
             <div
               className={styles.boxContainer}
-              onClick={() => setVideoNumber(video.videoNumber)}
+              onClick={() => setVideoNumber(video.fields.episodeNo)}
             >
               <div className={styles.darkOverlay} />
               <div className={styles.previewContainer}>
                 <Image
                   className={styles.videoImages}
-                  src={`/videos/${video.img}`}
-                  alt={video.name}
+                  src={"http://" + video.fields.video.fields.file.url}
+                  alt={video.fields.title}
                   width={"450px"}
                   height={"200px"}
                 />
               </div>
-              <p className={styles.moreName}>{video.name}</p>
-              <p className={styles.moreDate}>{video.date}</p>
+              <p className={styles.moreName}>{video.fields.title}</p>
+              <p className={styles.moreDate}>{formatDate(video.fields.date)}</p>
             </div>
           </Link>
         </div>
@@ -243,16 +242,15 @@ const Videos = (props) => {
                 <div className={styles.iframeWrapper}>
                   <div className={styles.responsiveIframe}>
                     <iframe
-                      src={`https://youtube.com/embed/${video.youtubeVideoId}`}
-                      frameBorder="0"
+                      src={`https://www.youtube.com/embed/${video.fields.embedUrl}?`} // embedded path                      frameBorder="0"
                       allow="autoplay; encrypted-media"
                       allowFullScreen={true}
-                      title={!video.name ? "Video" : video.name}
+                      title={!video.fields.title ? "Video" : video.fields.title}
                       className={styles.embeddedVideo}
                     />
                   </div>
-                  <p className={styles.videoName}>{video.name}</p>
-                  <p className={styles.videoDate}>{video.date}</p>
+                  <p className={styles.videoName}>{video.fields.title}</p>
+                  <p className={styles.videoDate}>{formatDate(video.fields.date)}</p>
                 </div>
               </div>
               <p className={styles.subHeading}>More From WIT</p>
@@ -322,5 +320,25 @@ const Videos = (props) => {
     </div>
   );
 };
+
+export async function getStaticPaths() {
+  // path = /media/videos/[video_id]
+  const videos = await loadVideos();
+  const paths = videos.map((video) => ({
+    params: { video_id: video.fields.episodeNo.toString() },
+  }));
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }) {
+  const videos = await loadVideos();
+  // video to load is the one with the same episodeNo as the video_id
+  const video = videos.find(
+    (video) => video.fields.episodeNo === parseInt(params.video_id)
+  );
+  return {
+    props: { video },
+  };
+}
 
 export default Videos;

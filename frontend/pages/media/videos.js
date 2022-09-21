@@ -67,10 +67,6 @@ const Videos = ( { videos } ) => {
     })[0];
 
     setVideo(currVideo);
-
-    const imageTest0 = `/videos/${video.img}`;
-    console.log("page content video img: ", imageTest0);
-
     return videoIndex;
   };
 
@@ -108,8 +104,6 @@ const Videos = ( { videos } ) => {
     window.scrollTo(0, 0); // start at the top of the page
     fetchVideos(videos);  // load video data
   }, []);
-
-  console.log("fetched videos: ", videos);
 
   useEffect(() => {
     if (currentPosts.length === 0 && loading === false) {
@@ -170,9 +164,6 @@ const Videos = ( { videos } ) => {
       setYoutubeTheme("dark");
     }
   }, []);
-
-  const imageTest = `/videos/${video.img}`;
-  console.log("main page video img: ", imageTest);
 
   // get video items
   const getVideos = (videos) => {
