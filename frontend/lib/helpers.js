@@ -9,11 +9,8 @@ export const formatPodcastDate = (date) => {
 };
 
 export const getMostRecentPodcast = (podcasts) => {
-  if (podcasts.length === 0) {
-    return null;
-  }
-
+  // return the most recent podcast (sorted by date)
   return podcasts.sort((a, b) => {
-    return new Date(b.fields.date) - new Date(a.fields.date);
+    return new Date(b.date) - new Date(a.date);
   })[0];
 };
