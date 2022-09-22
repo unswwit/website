@@ -54,6 +54,7 @@ const Videos = ( { videos } ) => {
         return false;
       }
     })[0];
+    console.log("curr video:", currVideo);
     setVideo(currVideo);
 
     return videoIndex;
@@ -322,9 +323,9 @@ const Videos = ( { videos } ) => {
 };
 
 export async function getStaticPaths() {
-  // path = /media/videos/[video_id]
   const videos = await loadVideos();
   const paths = videos.map((video) => ({
+    // path = /media/videos/[video_id]
     params: { video_id: video.fields.episodeNo.toString() },
   }));
   return { paths, fallback: false };
@@ -332,8 +333,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const videos = await loadVideos();
-  // video to load is the one with the same episodeNo as the video_id
   const video = videos.find(
+    // find video with the matching id
     (video) => video.fields.episodeNo === parseInt(params.video_id)
   );
   return {

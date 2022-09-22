@@ -15,7 +15,6 @@ import { useStyles, categories } from "../../data/VideoData";
 
 const Videos = ( { videos } ) => {
   const classes = useStyles();
-
   const [video, setVideo] = useState([]);
   const [loading, setLoading] = useState(true);
   const [videoNumber, setVideoNumber] = useState("0");
