@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styles from "../styles/Publications.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { formatPublicationsDate } from "../lib/helpers";
 
 class PubArticle extends Component {
   render() {
@@ -15,7 +16,7 @@ class PubArticle extends Component {
 
         <div className={styles.textContainer}>
           <h2>{this.props.heading}</h2>
-          <p>{this.props.date}</p>
+          <p>{formatPublicationsDate(this.props.date)}</p>
           <div tabIndex={0} role="button" className={styles.button}>
             <Link href={this.props.url}>
               <a target="_blank" rel="noopener noreferrer">
