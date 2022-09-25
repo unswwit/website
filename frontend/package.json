@@ -19,7 +19,7 @@
     "aos": "^2.3.4",
     "axios": "^0.26.1",
     "bootstrap": "^4.6.0",
-    "contentful": "^9.1.32",
+    "contentful": "^9.2.4",
     "humps": "^2.0.1",
     "install": "^0.13.0",
     "material-ui": "^0.20.2",
