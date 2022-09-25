@@ -71,6 +71,12 @@ const Events = ({ upcomingEvents }) => {
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
+    setCurrentPosts(
+      selectedPosts.slice(
+        (pageNumber - 1) * postsPerPage,
+        pageNumber * postsPerPage
+      )
+    );
   };
 
   // start webpage at the top
