@@ -1,6 +1,5 @@
 //All necessary imports for this javascript
 import React from "react";
-// import "../styles/globals.css";
 import styles from "../styles/Blog.module.css";
 
 const BlogPreview = ({ individualBlogPreview }) => {

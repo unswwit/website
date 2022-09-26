@@ -10,4 +10,4 @@ export const formatPodcastDate = (date) => {
 
 export const formatBlogRecDate = (date) => {
   return moment(date).format("MMMM DD, YYYY");
-}
+};
