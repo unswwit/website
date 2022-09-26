@@ -68,3 +68,15 @@ export async function loadBlogRecommendations() {
     });
   return res.items;
 }
+
+export async function loadBlogPreviews() {
+  const res = await client
+    .getEntries({
+      content_type: "blogPreview",
+      select: "fields",
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
