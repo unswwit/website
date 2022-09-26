@@ -111,19 +111,33 @@ const useStyles = makeStyles({
 export default function UpcomingEvent({ upcomingEvent }) {
   const classes = useStyles();
 
+  const {
+    img,
+    title,
+    date,
+    description,
+    start,
+    finish,
+    duration,
+    registerLink,
+    facebookLink,
+    location,
+  } = upcomingEvent.fields;
+
+  const imgUrl = "https:" + img.fields.file.url;
+
   return (
     <Card className={[classes.root, styles.previewContainer].join(" ")}>
       <a
         className={styles.aStyle}
-        href={upcomingEvent.facebookLink}
+        href={facebookLink}
         target="_blank"
         rel="noopener noreferrer"
       >
         <div className={styles.darkOverlay} />
         <div className={classes.media}>
           <Image
-            src={`/event-covers/2022/${upcomingEvent.img}`}
-            alt={upcomingEvent.title}
+            src={imgUrl}
             className={styles.upcomingEventCover}
             width="360px"
             height="300px"
@@ -137,18 +151,16 @@ export default function UpcomingEvent({ upcomingEvent }) {
             color="textSecondary"
             component="p"
           >
-            {upcomingEvent.date}
+            {date}
           </Typography>
-          <Typography className={classes.title}>
-            {upcomingEvent.title}
-          </Typography>
+          <Typography className={classes.title}>{title}</Typography>
           <Typography
             className={classes.location}
             variant="body2"
             color="textSecondary"
             component="p"
           >
-            {upcomingEvent.location}
+            {location}
           </Typography>
           <Typography
             className={classes.description}
@@ -156,18 +168,18 @@ export default function UpcomingEvent({ upcomingEvent }) {
             color="textSecondary"
             component="p"
           >
-            {upcomingEvent.description}
+            {description}
           </Typography>
         </CardContent>
         <CardActions className={classes.buttons}>
-          <RegBtn link={upcomingEvent.registerLink} />
+          <RegBtn link={registerLink} />
           <AddToCalBtn
-            title={upcomingEvent.title}
-            description={upcomingEvent.description}
-            location={upcomingEvent.location}
-            startDate={upcomingEvent.start}
-            endDate={upcomingEvent.end}
-            duration={upcomingEvent.duration}
+            title={title}
+            description={description}
+            location={location}
+            startDate={start}
+            endDate={finish}
+            duration={duration}
           />
         </CardActions>
       </a>

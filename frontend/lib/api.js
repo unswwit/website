@@ -69,12 +69,36 @@ export async function loadBlogRecommendations() {
   return res.items;
 }
 
+export async function loadUpcomingEvents() {
+  const res = await client
+    .getEntries({
+      content_type: "upcomingEvents",
+      select: "fields",
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
+
 export async function loadBlogPreviews() {
   const res = await client
     .getEntries({
       content_type: "blogPreview",
       select: "fields",
       order: "-fields.blog_no",
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
+
+export async function loadOpportunities() {
+  const res = await client
+    .getEntries({
+      content_type: "opportunities",
+      select: "fields",
     })
     .catch((error) => {
       console.error(error);
