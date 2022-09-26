@@ -74,6 +74,7 @@ export async function loadBlogPreviews() {
     .getEntries({
       content_type: "blogPreview",
       select: "fields",
+      order: "-fields.blog_no",
     })
     .catch((error) => {
       console.error(error);

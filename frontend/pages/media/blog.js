@@ -1,4 +1,4 @@
-import { loadBlogRecommendations } from "../../lib/api";
+import { loadBlogPreviews, loadBlogRecommendations } from "../../lib/api";
 import BlogRecommendations from "../../components/BlogRecommendations";
 import styles from "../../styles/Blog.module.css";
 
@@ -17,7 +17,7 @@ import { BootstrapTooltip } from "../../components/BootstrapTooltip";
 import { isMobile } from "react-device-detect";
 import { useStyles, categoryDescriptions } from "../../data/BlogData";
 
-const Blog = ({ recommendations }) => {
+const Blog = ({ recommendations, blogPreviews }) => {
   const classes = useStyles();
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [loading, setLoading] = useState(true);
@@ -46,8 +46,8 @@ const Blog = ({ recommendations }) => {
     const filteredBlogs = blogs.filter(
       (blog) =>
         category === "All" ||
-        blog.category.split(",").includes(category) ||
-        (blog.category.split(",").includes("WCW") &&
+        blog.fields.category.includes(category) ||
+        (blog.fields.category.includes("WCW") &&
           category === "WIT Crush Wednesday")
     );
     searchBlogs(filteredBlogs, searchTerm);
@@ -62,8 +62,10 @@ const Blog = ({ recommendations }) => {
         .join(" ");
       if (
         searchTerm === "" ||
-        blog.heading.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        blog.subheading.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        blog.fields.heading.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        blog.fields.subheading
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase()) ||
         authors.toLowerCase().includes(searchTerm.toLowerCase())
       ) {
         return true;
@@ -98,7 +100,8 @@ const Blog = ({ recommendations }) => {
   const renameAuthors = (blogOriginal, authorList, blogPreviews) => {
     blogOriginal.forEach((blogPreview, index) => {
       const tempAuthor = {};
-      blogPreview.authors.split(",").forEach((authorKey) => {
+
+      blogPreview.fields.authors.forEach((authorKey) => {
         const result = authorList.filter(
           (authorItem) => authorItem.authors === authorKey
         )[0];
@@ -120,29 +123,15 @@ const Blog = ({ recommendations }) => {
   // get blog previews
   // input: previews data from google sheets
   // output: blog previews array of dictionaries
-  const loadBlogs = useCallback((authorList) => {
-    return new Promise((resolve, reject) => {
-      const fetchBlogPreviews = async () => {
-        setLoading(false);
-
-        const res = await axios.get(
-          "https://wit-database.herokuapp.com/blog/previews"
-        );
-        const blogOriginal = humps.camelizeKeys(res.data);
-        let blogPreviews = humps.camelizeKeys(res.data);
-
-        renameAuthors(blogOriginal, authorList, blogPreviews);
-        const tempBlogs = blogPreviews.reverse();
-        blogSet(tempBlogs);
-
-        resolve(tempBlogs);
-      };
-      fetchBlogPreviews().catch((error) =>
-        // error handling
-        console.error(error)
-      );
-    });
-  }, []);
+  const loadBlogs = useCallback(
+    (authorList) => {
+      setLoading(false);
+      const blogOriginal = blogPreviews;
+      renameAuthors(blogOriginal, authorList, blogPreviews);
+      blogSet(blogPreviews);
+    },
+    [blogPreviews]
+  );
 
   useEffect(() => {
     loadAuthors().then((response) => loadBlogs(response));
@@ -194,7 +183,6 @@ const Blog = ({ recommendations }) => {
             {/* Start of blog recommendation */}
             {!loading && (
               <>
-                {console.log(recommendations)}
                 <h2 className={styles.blogRecommendationsTitle}>
                   WIT-Commendations
                 </h2>
@@ -277,33 +265,22 @@ const Blog = ({ recommendations }) => {
                 <div className={styles.blogPosts}>
                   {!loading &&
                     !isMobile &&
-                    currentPosts.map((blog) => {
+                    currentPosts.map((individualBlogPreview, index) => {
                       return (
                         <BlogPreview
-                          key={blog.blogNo}
-                          blogNo={blog.blogNo}
-                          imgUrl={`/blog-covers/${blog.img}`}
-                          heading={blog.heading}
-                          date={blog.date}
-                          subheading={blog.subheading}
-                          authors={blog.authors}
-                          category={blog.category.split(",")}
+                          key={index}
+                          individualBlogPreview={individualBlogPreview}
+                          index={index}
                         />
                       );
                     })}
                   {!loading &&
                     isMobile &&
-                    selectedPosts.map((blog) => {
+                    selectedPosts.map((individualBlogPreview, index) => {
                       return (
                         <BlogPreview
-                          key={blog.blogNo}
-                          blogNo={blog.blogNo}
-                          imgUrl={`/blog-covers/${blog.img}`}
-                          heading={blog.heading}
-                          date={blog.date}
-                          subheading={blog.subheading}
-                          authors={blog.authors}
-                          category={blog.category.split(",")}
+                          key={index}
+                          individualBlogPreview={individualBlogPreview}
                         />
                       );
                     })}
@@ -331,7 +308,8 @@ export default Blog;
 
 export async function getStaticProps() {
   const recommendations = await loadBlogRecommendations();
+  const blogPreviews = await loadBlogPreviews();
   return {
-    props: { recommendations },
+    props: { recommendations, blogPreviews },
   };
 }
