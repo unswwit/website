@@ -14,12 +14,13 @@ import UpcomingEvent from "../components/UpcomingEvent";
 import PaginationComp from "../components/Pagination";
 import { isMobile } from "react-device-detect";
 import { useStyles, categories, marks, valueToYear } from "../data/EventData";
+import { loadUpcomingEvents } from "../lib/api";
 
-const Events = () => {
+const Events = ({ upcomingEvents }) => {
   const classes = useStyles();
 
+  // const [upcomingEvents, setUpcomingEvents] = useState();
   const [year, setYear] = useState(valueToYear[100]);
-  const [upcomingEvents, setUpcomingEvents] = useState([]);
   const [pastEvents, setPastEvents] = useState({
     term1: [],
     term2: [],
@@ -158,11 +159,7 @@ const Events = () => {
   // input: upcoming events data from google sheets
   // output: array of dictionaries containing upcoming events data
   const fetchUpcomingEvents = async () => {
-    const res = await axios.get(
-      "https://wit-database.herokuapp.com/upcoming-events"
-    );
-    const tempEvents = humps.camelizeKeys(res.data);
-    setUpcomingEvents(tempEvents);
+    const tempEvents = upcomingEvents;
     setCurrentPosts(tempEvents.slice(0, postsPerPage));
     setSelectedPosts(tempEvents);
     setLoadingUpcoming(false);
@@ -237,7 +234,7 @@ const Events = () => {
               ) : (
                 <div className={styles.upcomingEventsContainer}>
                   {!isMobile &&
-                    currentPosts.map((upcomingEvent, index) => {
+                    upcomingEvents.map((upcomingEvent, index) => {
                       return (
                         <div className={styles.upcomingEventsBox} key={index}>
                           <UpcomingEvent
@@ -249,26 +246,24 @@ const Events = () => {
                     })}
 
                   {isMobile &&
-                    upcomingEvents.map((upcomingEvent, index) => {
+                    upcomingEvents.map((index, upcomingEvent) => {
                       return (
                         <UpcomingEvent
-                          upcomingEvent={upcomingEvent}
                           key={index}
+                          upcomingEvent={upcomingEvent}
                         />
                       );
                     })}
                 </div>
               ))}
-
             {!isMobile && (
               <PaginationComp
-                totalPages={Math.ceil(selectedPosts.length / postsPerPage)}
+                totalPages={Math.ceil(upcomingEvents.length / postsPerPage)}
                 paginate={paginate}
                 page={currentPage}
                 size="large"
               />
             )}
-
             {/* PAST EVENTS */}
             <h2>PAST EVENTS</h2>
             <div className={styles.eventCategories}>
@@ -315,7 +310,6 @@ const Events = () => {
                 )}
               </div>
             </div>
-
             <div className={styles.eventsLoadingContainer}>
               {loadingPast && (
                 <CircularProgress
@@ -326,7 +320,6 @@ const Events = () => {
                 />
               )}
             </div>
-
             <div className={styles.pastEventsContainer}>
               {!loadingPast &&
                 Object.keys(pastSelectedPosts)
@@ -360,3 +353,10 @@ const Events = () => {
 };
 
 export default Events;
+
+export async function getStaticProps() {
+  const upcomingEvents = await loadUpcomingEvents();
+  return {
+    props: { upcomingEvents },
+  };
+}
