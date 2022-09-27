@@ -24,5 +24,9 @@ describe('Podcast', () => {
       ]
       expect(getMostRecentPodcast(podcasts)).toEqual({ id: 4, date: "2022-11-11" })
     })
+
+    it('returns null if no podcasts are passed', () => {
+      expect(getMostRecentPodcast()).toBeNull()
+    })
   })
 })
