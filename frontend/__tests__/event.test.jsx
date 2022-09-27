@@ -24,5 +24,10 @@ describe('Event', () => {
         it('returns most recent upcoming event', () => {
             expect(getMostRecentEvent(events)).toEqual(events[0])
         })
+
+        it('returns null if no upcoming events are passed in', () => {
+            expect(getMostRecentEvent([])).toEqual(null)
+        })
+
     })
 })
