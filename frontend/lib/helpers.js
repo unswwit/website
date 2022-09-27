@@ -9,7 +9,9 @@ export const formatPodcastDate = (date) => {
 };
 
 export const getRecentPublications = (publications) => {
-  if (!publications) return [];
+  if (!publications || publications.length === 0) {
+    return null;
+  }
 
   // return the 3 most recent publications (sorted by date)
   const sortedPublications = publications.sort((a, b) => {

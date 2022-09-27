@@ -43,8 +43,9 @@ describe('Publications', () => {
         expect(getRecentPublications(publications)).toEqual(expected)
       })
 
-      it('returns an empty array if publications dont exist', () => {
-        expect(getRecentPublications()).toEqual([])
+      it('returns null if publications dont exist', () => {
+        expect(getRecentPublications()).toBe(null)
       })
     })
+
 })
