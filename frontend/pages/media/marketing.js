@@ -15,6 +15,7 @@ import {
   marks,
   valueToYear,
 } from "../../data/MarketingData";
+import { formatMarketingArchivesDate } from "../../lib/helpers";
 
 const MarketingContent = ({ archives }) => {
   const classes = useStyles();
@@ -55,12 +56,18 @@ const MarketingContent = ({ archives }) => {
     setSourceLoading(false);
   };
 
+  const sleep = (ms) => {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  };
+
   // get marketing archives
   // input: marketing archives data from google sheets
   // output: array of dictionaries containing marketing archives data
   useEffect(() => {
     setLoading(true);
-    fetchMarketingArchive(archives);
+    sleep(300).then(() => {
+      fetchMarketingArchive(archives);
+    });
   }, [year]);
 
   // marketing archive message
@@ -98,6 +105,7 @@ const MarketingContent = ({ archives }) => {
 
   return (
     <div>
+      {console.log(loading)}
       {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (
@@ -182,7 +190,9 @@ const MarketingContent = ({ archives }) => {
                           fb={content.fields.link}
                           imgUrl={`https:${content.fields.img.fields.file.url}`}
                           alt={content.fields.label}
-                          date={content.fields.date}
+                          date={formatMarketingArchivesDate(
+                            content.fields.date
+                          )}
                         />
                       );
                     })}
