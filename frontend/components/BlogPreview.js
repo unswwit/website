@@ -23,27 +23,25 @@ const BlogPreview = ({ individualBlogPreview }) => {
     <div className={category}>
       {/* Start of blog post preview */}
       <div className={styles.blogPost}>
-        <table cellPadding="0">
-          {/* TODO: change the <a> tag to link to the actual blog page */}
-          <a href="{recommendation.fields.url}">
-            <div className={styles.darkOverlay} />
-            <tr id={styles.previewRow}>
-              <td>
-                <div className={styles.previewContainer}>
-                  <img
-                    className={styles.previewPic}
-                    src={`${imgUrl}`}
-                    alt="preview"
-                  />
-                </div>
-              </td>
-              <td className={styles.blogPreview}>
+        {/* TODO: change the <a> tag to link to the actual blog page */}
+        <a href="{recommendation.fields.url}">
+          <div className={styles.darkOverlay} />
+          <div className={styles.previewRow}>
+            <div className={styles.previewContainerImg}>
+              <img
+                className={styles.previewPic}
+                src={`${imgUrl}`}
+                alt="preview"
+              />
+            </div>
+            <div className={styles.previewContainerBlogInfo}>
+              <div className={styles.previewContainerBlogDetails}>
                 <div className={styles.blogDetails}>
                   <div className={styles.heading}>{heading}</div>
                   <div className={styles.date}>{formattedDate}</div>
                   <div className={styles.subheading}>{subheading}</div>
                 </div>
-                <tr className={styles.authorRow}>
+                <div className={styles.authorRow}>
                   {Object.keys(authors).map((key) => (
                     <div className={styles.authorSection} key={key}>
                       <div className={styles.authorPic}>
@@ -64,11 +62,11 @@ const BlogPreview = ({ individualBlogPreview }) => {
                       </div>
                     </div>
                   ))}
-                </tr>
-              </td>
-            </tr>
-          </a>
-        </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
       </div>
       {/*End of blog post preview*/}
     </div>

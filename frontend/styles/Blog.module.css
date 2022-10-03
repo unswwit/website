@@ -98,31 +98,56 @@ h2.blogRecommendationsTitle {
 }
 
 /*-------------------------------Blog post Preview-----------------------------*/
+
 /*Preview Image and Hover*/
-.blogPreview {
-  padding: 30px;
+.blogPost {
+  width: 70vw;
+  height: 100%;
+  position: relative;
+  margin: 5vw auto;
+  transition: 0.2s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.previewContainer {
-  width: 35.807vw;
+.previewRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.previewRow::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.previewContainerImg {
+  width: 35vw;
+  height: 22vw;
   overflow: hidden;
 }
 
+.previewContainerBlogInfo {
+  width: 35vw;
+  height: 22vw;
+  overflow: hidden;
+}
+
+.previewContainerBlogDetails {
+  padding: 20px;
+}
+
 .previewPic {
-  width: 35.807vw;
-  height: 22.786vw;
+  width: 35vw;
+  height: 22vw;
   transition: transform 0.5s ease;
 }
 
-.blogPost table:hover .previewPic {
+.blogPost:hover .previewPic {
   -ms-transform: scale(1.05); /* IE 9 */
   -webkit-transform: scale(1.05); /* Safari 3-8 */
   transform: scale(1.05);
-}
-
-.blogPost {
-  margin: 5vw 0;
-  transition: 0.2s;
 }
 
 .darkOverlay {
@@ -218,19 +243,6 @@ h2.blogRecommendationsTitle {
   text-align: left;
 }
 
-.blogPost table {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 0 auto;
-  width: 70vw;
-  height: 100%;
-  position: relative;
-}
-
-#previewRow {
-  display: flex;
-  align-items: center;
-}
-
 .authorSection {
   padding-top: 0.2vw;
   padding-bottom: 0.2vw;
@@ -297,13 +309,6 @@ h2.blogRecommendationsTitle {
   .darkOverlay {
     background-color: white;
   }
-}
-
-/*-------------------------------Blog post Recommendation-----------------------------*/
-
-#recommendation {
-  margin-top: 0;
-  margin-bottom: 100px;
 }
 
 /*-------------------------------Blog post Responsiveness-----------------------------*/

@@ -3,7 +3,6 @@ import BlogRecommendations from "../../components/BlogRecommendations";
 import styles from "../../styles/Blog.module.css";
 
 import React, { useState, useEffect, useCallback } from "react";
-// import "../../styles/globals.css";
 import BlogPreview from "../../components/BlogPreview";
 import PageHeader from "../../components/Header";
 import Chip from "@material-ui/core/Chip";
