@@ -105,7 +105,6 @@ const MarketingContent = ({ archives }) => {
 
   return (
     <div>
-      {console.log(loading)}
       {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (
