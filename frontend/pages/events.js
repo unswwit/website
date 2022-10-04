@@ -87,19 +87,17 @@ const Events = ({ allPastEvents }) => {
   // get past events
   // input: past events data from google sheets
   // output: array of dictionaries containing past events data
+  const fetchPastEvents = () => {
+    const allEvents = allPastEvents.filter(
+      (event) => event.fields.year === Number(year)
+    );
+    setTerms(allEvents);
+  };
+
   useEffect(() => {
     // show loading signs for past events
     setLoadingPast(true);
-    const fetchPastEvents = async () => {
-      const allEvents = allPastEvents.filter(
-        (event) => event.fields.year === Number(year)
-      );
-      setTerms(allEvents);
-    };
-    fetchPastEvents().catch((error) =>
-      // error handling
-      console.error(error)
-    );
+    fetchPastEvents();
   }, [year]);
 
   // Takes in events from a given year and separates them by term
@@ -142,7 +140,6 @@ const Events = ({ allPastEvents }) => {
 
   // filter the past events of the given term by the selected category
   const filterTerm = (term, selectedCategory) => {
-    console.log(pastContent[term]);
     const filteredTerm = pastContent[term].filter(
       (picture) =>
         selectedCategory === "All" ||
