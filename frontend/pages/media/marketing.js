@@ -61,7 +61,7 @@ const MarketingContent = ({ archives }) => {
   };
 
   // get marketing archives
-  // input: marketing archives data from google sheets
+  // input: marketing archives data from contentful
   // output: array of dictionaries containing marketing archives data
   useEffect(() => {
     setLoading(true);
