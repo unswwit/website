@@ -84,14 +84,26 @@ const Events = ({ allPastEvents }) => {
     window.scrollTo(0, 0);
   }, []);
 
+  // insert delay for loadingPast during timeline change
+  function delay() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve("resolved");
+      }, 500);
+    });
+  }
+
   // get past events
   // input: past events data from google sheets
   // output: array of dictionaries containing past events data
-  const fetchPastEvents = () => {
-    const allEvents = allPastEvents.filter(
+  const fetchPastEvents = async () => {
+    const allEvents = await allPastEvents.filter(
       (event) => event.fields.year === Number(year)
     );
+
     setTerms(allEvents);
+    await delay();
+    setLoadingPast(false);
   };
 
   useEffect(() => {
@@ -110,7 +122,6 @@ const Events = ({ allPastEvents }) => {
     setPastEvents(tempPastEvents);
     setPastSelectedPosts(tempPastEvents);
     setPastContent(tempPastEvents);
-    setLoadingPast(false);
   };
 
   // events archive message
