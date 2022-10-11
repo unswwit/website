@@ -23,6 +23,8 @@ export async function loadSubcommittee() {
   const res = await client
     .getEntries({
       content_type: "subcommittee",
+      select: "fields",
+      order: "fields.index",
     })
     .catch((error) => {
       console.error(error);
@@ -62,6 +64,42 @@ export async function loadPastEvents() {
       content_type: "pastEvents",
       select: "fields",
       order: "-fields.index",
+    })
+    .catch((error) => {
+      console.error(error);
+    })
+  return res.items;
+}
+
+export async function loadMarketingArchives() {
+  const res = await client
+    .getEntries({
+      content_type: "marketing_archives",
+      select: "fields",
+      order: "-fields.id",
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
+
+export async function loadUpcomingEvents() {
+  const res = await client
+    .getEntries({
+      content_type: "upcomingEvents",
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
+
+export async function loadOpportunities() {
+  const res = await client
+    .getEntries({
+      content_type: "opportunities",
+      select: "fields",
     })
     .catch((error) => {
       console.error(error);

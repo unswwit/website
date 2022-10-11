@@ -78,7 +78,7 @@ const Home = () => {
 
           {/* Start of Description */}
           <div
-            data-aos={isMobile ? "fade" : "fade-right"}
+            data-aos={isMobile ? "fade" : "fade-up"}
             className={styles.description}
           >
             <div className={styles.descriptionLeft}>
@@ -100,7 +100,7 @@ const Home = () => {
 
           {/* Start of Quotes */}
           <div
-            data-aos={isMobile ? "fade" : "fade-left"}
+            data-aos={isMobile ? "fade" : "fade-up"}
             className={styles.quotes}
           >
             <h1>HEAR FROM US</h1>
@@ -144,7 +144,7 @@ const Home = () => {
 
           {/* Start of Upcoming Events / Latest blog / Latest podcast*/}
           <div
-            data-aos={isMobile ? "fade" : "fade-right"}
+            data-aos={isMobile ? "fade" : "fade-up"}
             data-aos-delay="150"
             className={styles.carousel}
           >
@@ -153,7 +153,7 @@ const Home = () => {
 
           {/* Start of Publications */}
           <div
-            data-aos={isMobile ? "fade" : "fade-left"}
+            data-aos={isMobile ? "fade" : "fade-up"}
             data-aos-delay="150"
             className={styles.publications}
           >
@@ -189,7 +189,7 @@ const Home = () => {
 
           {/* Start of Sponsors & Affliations */}
           <div
-            data-aos={isMobile ? "fade" : "fade-right"}
+            data-aos={isMobile ? "fade" : "fade-up"}
             data-aos-delay="150"
             className={styles.sponsors}
           >

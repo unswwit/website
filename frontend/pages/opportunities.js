@@ -4,28 +4,19 @@ import OpportunitiesCard from "../components/OpportunitiesCard";
 import styles from "../styles/Opportunities.module.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import LoadingScreen from "../components/LoadingScreen";
-import axios from "axios";
-import humps from "humps";
+import { loadOpportunities } from "../lib/api";
 
-const Opportunities = () => {
+const Opportunities = ({ opportunities }) => {
   const [loading, setLoading] = useState(true);
-  const [opportunities, setOpportunities] = useState([]);
   const [sourceLoading, setSourceLoading] = React.useState(true);
   const [headerLoading, setHeaderLoading] = React.useState(true);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   const fetchOpportunities = async () => {
-    const res = await axios.get(
-      "https://wit-database.herokuapp.com/opportunities"
-    );
     setLoading(false);
-    setOpportunities(humps.camelizeKeys(res.data));
     setSourceLoading(false);
   };
-
   useEffect(() => {
     setLoading(true);
     fetchOpportunities().catch((error) =>
@@ -33,7 +24,6 @@ const Opportunities = () => {
       console.error(error)
     );
   }, []);
-
   return (
     <div>
       {sourceLoading && headerLoading ? (
@@ -46,7 +36,6 @@ const Opportunities = () => {
             title="Opportunities"
             imageLoading={setHeaderLoading}
           />
-
           {/*start of opportunies*/}
           <div id={styles.oppLoadingContainer}>
             {loading && (
@@ -89,15 +78,8 @@ const Opportunities = () => {
                     return (
                       <OpportunitiesCard
                         key={index}
-                        link={individualOpportunity.link}
-                        img={individualOpportunity.img}
-                        companyName={individualOpportunity.companyName}
-                        notSponsorImg={individualOpportunity.notSponsorImg}
-                        type={individualOpportunity.type}
-                        position={individualOpportunity.position}
-                        location={individualOpportunity.location}
-                        closeDate={individualOpportunity.closeDate}
-                        summary={individualOpportunity.summary}
+                        individualOpportunity={individualOpportunity}
+                        index={index}
                       />
                     );
                   })}
@@ -111,3 +93,10 @@ const Opportunities = () => {
 };
 
 export default Opportunities;
+
+export async function getStaticProps() {
+  const opportunities = await loadOpportunities();
+  return {
+    props: { opportunities },
+  };
+}
