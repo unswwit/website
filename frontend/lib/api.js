@@ -67,7 +67,7 @@ export async function loadPastEvents() {
     })
     .catch((error) => {
       console.error(error);
-    })
+    });
   return res.items;
 }
 
