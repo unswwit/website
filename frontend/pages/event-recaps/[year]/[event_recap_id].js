@@ -9,13 +9,12 @@ import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
-import axios from "axios";
-import humps from "humps";
 import Image from "next/image";
+import { loadPastEvents } from "../../../lib/api";
 
-const EventRecapPage = (props) => {
+const EventRecapPage = ({ selectedEvent }) => {
   const [expanded, setExpanded] = useState(false);
-  const [event, setEvent] = useState({});
+  const [event, setEvent] = useState(selectedEvent);
   const [loading, setLoading] = useState(true);
   const [hasResources, setHasResources] = useState(false);
   const [hasPhotos, setHasPhotos] = useState(false);
@@ -23,65 +22,39 @@ const EventRecapPage = (props) => {
   const [imageGalleryFilenames, setImageGalleryFilenames] = useState([]);
   const [hasEmbeddedVideo, setHasEmbeddedVideo] = useState(false);
   const [enableGalleryArrows, setEnableGalleryArrows] = useState(true);
-  const [eventNumber, setEventNumber] = useState("0");
 
-  useEffect(() => window.scrollTo(0, 0), []);
+  const fetchPastEvent = (event) => {
+    setLoading(false);
+    setPhotos(event);
+
+    if (event.fields.resourcesFolderId) {
+      setHasResources(true);
+    }
+
+    if (event.fields.youtubeVideoId) {
+      setHasEmbeddedVideo(true);
+    }
+
+    if (event.fields.facebookLink) {
+      setHasFBLink(true);
+    }
+  };
 
   useEffect(() => {
-    setLoading(true);
+    // start at the top of the page
+    window.scrollTo(0, 0);
 
-    let url = window.location.href.split("/");
-    setEventNumber(url[url.length - 1]);
-    let currEventNumber = url[url.length - 1];
-
-    const fetchPastEvents = async () => {
-      const res = await axios.get(
-        "https://wit-database.herokuapp.com/past-events"
-      );
-      const allEvents = humps
-        .camelizeKeys(res.data)
-        .filter((event) => event.year.toString() === url[url.length - 2]);
-
-      if (allEvents.length <= 0 || currEventNumber > allEvents.length) {
-        props.history.push("/404");
-        return;
-      }
-
-      // load the page content for the current event
-      const currEvent = allEvents.filter((event) => {
-        return event.eventNumber.toString() === currEventNumber;
-      })[0];
-      setEvent(currEvent);
-
-      // hide the loading sign
-      setLoading(false);
-
-      setPhotos(currEvent);
-
-      if (currEvent.resourcesFolderId) {
-        setHasResources(true);
-      }
-
-      if (currEvent.youtubeVideoId) {
-        setHasEmbeddedVideo(true);
-      }
-
-      if (currEvent.facebookLink) {
-        setHasFBLink(true);
-      }
-    };
-
-    // Importing Event Details
-    fetchPastEvents();
-  }, [eventNumber, props.history]);
+    // load event recap
+    fetchPastEvent(event);
+  }, []);
 
   const setPhotos = (currEvent) => {
-    if (currEvent.imagePaths) {
+    if (currEvent.fields.imagePaths) {
       setHasPhotos(true);
       var tempArray = [];
-      currEvent.imagePaths.split(",").forEach((filename) => {
+      currEvent.fields.imagePaths.split(",").forEach((filename) => {
         tempArray.push({
-          source: `/event-recap/${currEvent.year}/T${currEvent.term}/${currEvent.imageFolder}/${filename}`,
+          source: `/event-recap/${currEvent.fields.year}/T${currEvent.fields.term}/${currEvent.fields.imageFolder}/${filename}`,
         });
       });
       // If at least two images dont exist, disable gallery arrows
@@ -111,18 +84,18 @@ const EventRecapPage = (props) => {
       {!loading && (
         <div id={styles.eventContainer}>
           {/* Event Recap content */}
-          <h2 id={styles.eventTitle}>{event.title}</h2>
+          <h2 id={styles.eventTitle}>{event.fields.title}</h2>
           <div className={styles.eventDetails}>
             <span className={styles.date}>
               {/* Location and time */}
-              {event.location}, {event.dateTime}
+              {event.fields.location}, {event.fields.dateTime}
             </span>
             <span>
               {/* facebook link button */}
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href={event.facebookLink}
+                href={event.fields.facebookLink}
               >
                 {hasFBLink && (
                   <button className={styles.facebookLinkButton}>
@@ -138,7 +111,7 @@ const EventRecapPage = (props) => {
             <div className={styles.iframeWrapper}>
               <div className={styles.responsiveIframe}>
                 <iframe
-                  src={`https://youtube.com/embed/${event.youtubeVideoId}?autoplay=0`}
+                  src={`https://youtube.com/embed/${event.fields.youtubeVideoId}?autoplay=0`}
                   frameBorder="0"
                   allow="autoplay; encrypted-media"
                   allowFullScreen="true"
@@ -150,14 +123,14 @@ const EventRecapPage = (props) => {
           )}
 
           {/* Event Description */}
-          <p className={styles.description}>{event.description}</p>
+          <p className={styles.description}>{event.fields.description}</p>
 
           {/* Image Gallery / Cover Image Section */}
           {/* Display Image gallery if images exist, otherwise display cover image */}
           {!hasPhotos && (
             <div className={styles.imageWrapper}>
               <Image
-                src={`/event-covers/${event.year}/${event.img}`}
+                src={"http:" + event.fields.img.fields.file.url}
                 alt="header"
                 width="1200px"
                 height="630px"
@@ -199,7 +172,7 @@ const EventRecapPage = (props) => {
                 <AccordionDetails>
                   <iframe
                     title="event-resources"
-                    src={`https://drive.google.com/a/unswwit.com/embeddedfolderview?id=${event.resourcesFolderId}#grid`}
+                    src={`https://drive.google.com/a/unswwit.com/embeddedfolderview?id=${event.fields.resourcesFolderId}#grid`}
                     style={{
                       width: "100%",
                       height: "280px",
@@ -215,5 +188,37 @@ const EventRecapPage = (props) => {
     </>
   );
 };
+
+export async function getStaticPaths() {
+  const pastEvents = await loadPastEvents();
+  const paths = pastEvents.map((event) => ({
+    params: {
+      year: event.fields.year.toString(),
+      event_recap_id: event.fields.eventNumber.toString(),
+    },
+  }));
+  return {
+    paths,
+    fallback: false, // can also be true or 'blocking'
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const pastEvents = await loadPastEvents();
+  let selectedEvent = pastEvents.filter((event) => {
+    if (
+      event.fields.eventNumber.toString() === params.event_recap_id &&
+      event.fields.year.toString() === params.year
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  selectedEvent = selectedEvent[0];
+  return {
+    props: { selectedEvent },
+  };
+}
 
 export default EventRecapPage;

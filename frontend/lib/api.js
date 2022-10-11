@@ -58,6 +58,19 @@ export async function loadPodcasts() {
   return res.items;
 }
 
+export async function loadPastEvents() {
+  const res = await client
+    .getEntries({
+      content_type: "pastEvents",
+      select: "fields",
+      order: "-fields.index",
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
+
 export async function loadMarketingArchives() {
   const res = await client
     .getEntries({
