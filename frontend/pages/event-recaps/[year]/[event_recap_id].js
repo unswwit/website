@@ -31,6 +31,7 @@ const EventRecapPage = (props) => {
     setLoading(true);
 
     let url = window.location.href.split("/");
+    console.log(url);
     setEventNumber(url[url.length - 1]);
     let currEventNumber = url[url.length - 1];
 

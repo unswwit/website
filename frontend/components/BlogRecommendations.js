@@ -2,6 +2,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Card, CardContent, Typography, Chip } from "@material-ui/core";
 import styles from "../styles/Events.module.css";
 import Image from "next/image";
+import Link from "next/link";
+
 import { formatBlogRecDate } from "../lib/helpers";
 
 const useStyles = makeStyles({
@@ -18,7 +20,7 @@ const useStyles = makeStyles({
     "@media (max-width:1000px)": {
       height: 640,
     },
-    "@media (max-width: 800px)":{
+    "@media (max-width: 800px)": {
       height: 650,
     },
     "@media (max-width:750px)": {
@@ -124,41 +126,41 @@ export default function BlogRecommendations({ recommendation }) {
 
   return (
     // TODO: change the <a> tag to link to the actual blog page
-    <a href="{recommendation.fields.url}">
-    <Card className={[classes.root, styles.previewContainer].join(" ")}>
-      <div className={styles.darkOverlay} />
-      <Image
-        src={"https://" + recommendation.fields.cover.fields.file.url}
-        alt={recommendation.title}
-        className={styles.upcomingEventCover}
-        width="1800px"
-        height="1200px"
-      />
+    <Link href={`/media/blog/${recommendation.fields.index}`}>
+      <Card className={[classes.root, styles.previewContainer].join(" ")}>
+        <div className={styles.darkOverlay} />
+        <Image
+          src={"https://" + recommendation.fields.cover.fields.file.url}
+          alt={recommendation.title}
+          className={styles.upcomingEventCover}
+          width="1800px"
+          height="1200px"
+        />
 
-      <CardContent className={classes.content}>
-        <Typography
-          className={classes.date}
-          variant="body2"
-          color="textSecondary"
-          component="p"
-        >
-          {formatBlogRecDate(recommendation.fields.date)}
-        </Typography>
-        <Typography className={classes.title}>
-          {recommendation.fields.title}
-        </Typography>
-        {/* TODO: need to account for more than one category */}
-        <Chip size="small" label={recommendation.fields.category}></Chip>
-        <Typography
-          className={classes.description}
-          variant="body2"
-          color="textSecondary"
-          component="p"
-        >
-          {recommendation.fields.subheading}
-        </Typography>
-      </CardContent>
-    </Card>
-    </a>
+        <CardContent className={classes.content}>
+          <Typography
+            className={classes.date}
+            variant="body2"
+            color="textSecondary"
+            component="p"
+          >
+            {formatBlogRecDate(recommendation.fields.date)}
+          </Typography>
+          <Typography className={classes.title}>
+            {recommendation.fields.title}
+          </Typography>
+          {/* TODO: need to account for more than one category */}
+          <Chip size="small" label={recommendation.fields.category}></Chip>
+          <Typography
+            className={classes.description}
+            variant="body2"
+            color="textSecondary"
+            component="p"
+          >
+            {recommendation.fields.subheading}
+          </Typography>
+        </CardContent>
+      </Card>
+    </Link>
   );
 }

@@ -1,6 +1,7 @@
 //All necessary imports for this javascript
 import React from "react";
 import styles from "../styles/Blog.module.css";
+import Link from "next/link";
 
 const BlogPreview = ({ individualBlogPreview }) => {
   const execs = [
@@ -8,6 +9,7 @@ const BlogPreview = ({ individualBlogPreview }) => {
     "/portraits/blog-authors/georgie2021.jpg",
   ];
 
+  console.log(individualBlogPreview);
   const { date, img, heading, subheading, blog_no, category } =
     individualBlogPreview.fields;
 
@@ -24,49 +26,51 @@ const BlogPreview = ({ individualBlogPreview }) => {
       {/* Start of blog post preview */}
       <div className={styles.blogPost}>
         {/* TODO: change the <a> tag to link to the actual blog page */}
-        <a href="{recommendation.fields.url}">
-          <div className={styles.darkOverlay} />
-          <div className={styles.previewRow}>
-            <div className={styles.previewContainerImg}>
-              <img
-                className={styles.previewPic}
-                src={`${imgUrl}`}
-                alt="preview"
-              />
-            </div>
-            <div className={styles.previewContainerBlogInfo}>
-              <div className={styles.previewContainerBlogDetails}>
-                <div className={styles.blogDetails}>
-                  <div className={styles.heading}>{heading}</div>
-                  <div className={styles.date}>{formattedDate}</div>
-                  <div className={styles.subheading}>{subheading}</div>
-                </div>
-                <div className={styles.authorRow}>
-                  {Object.keys(authors).map((key) => (
-                    <div className={styles.authorSection} key={key}>
-                      <div className={styles.authorPic}>
-                        <img
-                          src={`${authors[key][0]}`}
-                          className={
-                            execs.includes(authors[key][0])
-                              ? styles.execAuthor
-                              : styles.anonAuthor
-                          }
-                          alt={key}
-                        />
+        <Link href={`/media/blog/${blog_no}`}>
+          <div>
+            <div className={styles.darkOverlay} />
+            <div className={styles.previewRow}>
+              <div className={styles.previewContainerImg}>
+                <img
+                  className={styles.previewPic}
+                  src={`${imgUrl}`}
+                  alt="preview"
+                />
+              </div>
+              <div className={styles.previewContainerBlogInfo}>
+                <div className={styles.previewContainerBlogDetails}>
+                  <div className={styles.blogDetails}>
+                    <div className={styles.heading}>{heading}</div>
+                    <div className={styles.date}>{formattedDate}</div>
+                    <div className={styles.subheading}>{subheading}</div>
+                  </div>
+                  <div className={styles.authorRow}>
+                    {Object.keys(authors).map((key) => (
+                      <div className={styles.authorSection} key={key}>
+                        <div className={styles.authorPic}>
+                          <img
+                            src={`${authors[key][0]}`}
+                            className={
+                              execs.includes(authors[key][0])
+                                ? styles.execAuthor
+                                : styles.anonAuthor
+                            }
+                            alt={key}
+                          />
+                        </div>
+                        <div
+                          className={[styles.auth, styles.authorName].join(" ")}
+                        >
+                          {authors[key][1]}
+                        </div>
                       </div>
-                      <div
-                        className={[styles.auth, styles.authorName].join(" ")}
-                      >
-                        {authors[key][1]}
-                      </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </a>
+        </Link>
       </div>
       {/*End of blog post preview*/}
     </div>
