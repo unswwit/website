@@ -29,45 +29,8 @@ class blogPost112 extends Component {
               future
             </h2>
 
-            <div className={styles.authorRow}>
-              <div className={styles.authorContainer}>
-                <div className={styles.authorContainer}>
-                  <Image
-                    src="/portraits/blog-authors/kara-mckinney.png"
-                    alt="kara"
-                    className="authorImg"
-                    height="50"
-                    width="50"
-                  />
-                  <div className={styles.authorName}>Kara McKinney</div>
-                </div>
-              </div>
-              <div className={styles.authorContainer}>
-                <div className={styles.authorContainer}>
-                  <Image
-                    src="/portraits/blog-authors/kara-mckinney.png"
-                    alt="kara"
-                    height="50"
-                    width="50"
-                  />
-                  <div className={styles.authorName}>Kara McKinney</div>
-                </div>
-              </div>
-              <div className={styles.authorContainer}>
-                <div className={styles.authorContainer}>
-                  <Image
-                    src="/portraits/blog-authors/kara-mckinney.png"
-                    alt="kara"
-                    height="50"
-                    width="50"
-                  />
-                  <div className={styles.authorName}>Kara McKinney</div>
-                </div>
-              </div>
-            </div>
-
             {/*for the blog post author*/}
-            {/* <AuthorCard
+            <AuthorCard
               authors={{
                 "kara-mckinney": [
                   "/portraits/blog-authors/kara-mckinney.png",
@@ -75,7 +38,7 @@ class blogPost112 extends Component {
                   "Kara McKinney",
                 ],
               }}
-            /> */}
+            />
           </div>
 
           <div className={styles.post}>
