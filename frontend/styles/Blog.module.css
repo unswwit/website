@@ -107,6 +107,7 @@ h2.blogRecommendationsTitle {
   margin: 5vw auto;
   transition: 0.2s;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
 }
 
 .previewRow {
@@ -126,6 +127,7 @@ h2.blogRecommendationsTitle {
   width: 35vw;
   height: 22vw;
   overflow: hidden;
+  border-radius: 16px;
 }
 
 .previewContainerBlogInfo {
@@ -136,6 +138,10 @@ h2.blogRecommendationsTitle {
 
 .previewContainerBlogDetails {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .previewPic {
@@ -163,6 +169,14 @@ h2.blogRecommendationsTitle {
 
 .blogPost .darkOverlay:hover {
   opacity: 0.04;
+}
+
+.previewCategories {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 /*Author circle crop*/
@@ -196,10 +210,14 @@ h2.blogRecommendationsTitle {
 /*Post preview*/
 .blogDetails {
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .heading {
-  color: var(--yellow);
+  color: var(--general-text);
   letter-spacing: 0.1vw;
   font-size: 11pt;
   font-family: "Montserrat", sans-serif;
@@ -210,7 +228,7 @@ h2.blogRecommendationsTitle {
 }
 
 .auth {
-  color: var(--yellow);
+  color: var(--general-text);
   font-size: 10pt;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
@@ -240,7 +258,7 @@ h2.blogRecommendationsTitle {
   font-family: "Montserrat", sans-serif;
   padding: 0;
   margin: 0;
-  text-align: left;
+  text-align: center;
 }
 
 .authorSection {
@@ -261,11 +279,8 @@ h2.blogRecommendationsTitle {
 .inputSearchBar {
   display: flex;
   align-items: center;
+  border: 1px transparent;
   justify-content: center;
-  border-top: 1px transparent;
-  border-left: 1px transparent;
-  border-right: 1px transparent;
-  border-bottom: 2px solid black;
   width: 71%;
   font-family: "Montserrat", sans-serif;
   background: url("/icons/search_icon.png") center left no-repeat;
@@ -274,8 +289,13 @@ h2.blogRecommendationsTitle {
   padding: 0.5%;
   height: 32px;
   padding-left: 3%;
+  border-radius: 20px;
+  background-color: #ecedeb;
 }
 
+.inputSearchBar:hover {
+  border: 1px solid black;
+}
 #emptyMessage {
   text-align: center;
   padding-top: 40px;
@@ -302,7 +322,7 @@ h2.blogRecommendationsTitle {
     opacity: 1; /* Firefox */
   }
 
-  .blogPost table {
+  .blogPost {
     background-color: var(--dark-slate-grey);
   }
 
@@ -314,7 +334,7 @@ h2.blogRecommendationsTitle {
 /*-------------------------------Blog post Responsiveness-----------------------------*/
 
 @media screen and (max-width: 1200px) {
-  .blogPost table {
+  .blogPost {
     width: 80%;
   }
 
@@ -394,7 +414,7 @@ h2.blogRecommendationsTitle {
     padding-left: 7%;
   }
 
-  .blogPost table {
+  .blogPost {
     width: 90vw;
   }
 }

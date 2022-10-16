@@ -1,4 +1,5 @@
 /*-------------------------------Blog post content (text) -----------------------------*/
+
 .blogContent {
   width: 100%;
   max-width: 950px;
@@ -10,11 +11,15 @@
   hyphens: auto;
 }
 
+.blogHeader {
+  margin-top: 8vw;
+}
+
 /*Blog title*/
 .blogTitle {
   font-size: 34pt;
   letter-spacing: 4px;
-  margin-top: 8vw;
+  padding: 0;
 }
 
 /*Blog subtitle*/
@@ -59,15 +64,17 @@ b {
   font-weight: bolder;
 } */
 
-.blogDetails .date {
+.date {
   color: var(--general-text);
   font-size: 11pt;
   font-weight: 500;
+  text-align: center;
 }
 
 .postContent {
   color: var(--general-text);
   font-weight: 400;
+  font-family: "Montserrat", sans-serif;
 }
 
 /*Heading in post content*/
@@ -257,27 +264,23 @@ img.floatRight {
 
 /*-------------------------------Author card-----------------------------*/
 
-.author {
-  margin: 0 auto;
-  margin-bottom: 4vw;
-  /*margin-bottom: 6vw;*/
+.authorRow {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.authorContainer {
   display: flex;
   align-items: center;
-  width: 600px;
 }
 
-/*Author icon*/
-.authorLeft {
+.authorImg {
   display: inline-block;
-  width: 150px;
-  height: 150px;
-}
-
-.authorLeft div {
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  height: 100%;
-  overflow: hidden;
-  width: 100%;
 }
 
 /*Profile pictures*/
@@ -287,13 +290,13 @@ img.floatRight {
   width: 120%;
 }
 
-.anonProfile {
+/* .anonProfile {
   height: auto;
   width: 100%;
-}
+} */
 
 /*Author details*/
-.authorRight {
+/* .authorRight {
   display: inline-block;
   padding: 0px 0px 0px 30px;
   letter-spacing: 2px;
@@ -301,13 +304,16 @@ img.floatRight {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   text-align: left;
-}
+} */
 
 .authorName {
   font-family: "Playfair Display", serif;
-  font-size: 20pt;
-  margin: 0;
+  margin: 10px;
   padding: 0;
+  color: var(--general-text);
+  font-size: 11pt;
+  font-weight: 500;
+  text-align: center;
 }
 
 .position {
@@ -370,10 +376,10 @@ img.floatRight {
     font-size: 12pt;
   } */
 
-  .author {
+  /* .author {
     flex-flow: column;
     width: 100%;
-  }
+  } */
 
   .authorRight {
     text-align: center;

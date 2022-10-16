@@ -2,9 +2,11 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   chip: {
-    textTransform: "uppercase",
+    // textTransform: "uppercase",
     color: "white",
-    margin: "5px",
+    marginRight: "5px",
+    fontFamily: "Montserrat",
+    backgroundColor: "#6d6e6d",
   },
 });
 

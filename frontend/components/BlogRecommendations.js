@@ -125,7 +125,6 @@ export default function BlogRecommendations({ recommendation }) {
   const classes = useStyles();
 
   return (
-    // TODO: change the <a> tag to link to the actual blog page
     <Link href={`/media/blog/${recommendation.fields.index}`}>
       <Card className={[classes.root, styles.previewContainer].join(" ")}>
         <div className={styles.darkOverlay} />

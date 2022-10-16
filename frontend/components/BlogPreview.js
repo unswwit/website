@@ -2,8 +2,12 @@
 import React from "react";
 import styles from "../styles/Blog.module.css";
 import Link from "next/link";
+import Chip from "@material-ui/core/Chip";
+import { useStyles } from "../data/BlogData";
 
 const BlogPreview = ({ individualBlogPreview }) => {
+  const classes = useStyles();
+
   const execs = [
     "/portraits/blog-authors/vivianw2021.jpg",
     "/portraits/blog-authors/georgie2021.jpg",
@@ -25,10 +29,9 @@ const BlogPreview = ({ individualBlogPreview }) => {
     <div className={category}>
       {/* Start of blog post preview */}
       <div className={styles.blogPost}>
-        {/* TODO: change the <a> tag to link to the actual blog page */}
         <Link href={`/media/blog/${blog_no}`}>
           <div>
-            <div className={styles.darkOverlay} />
+            {/* <div className={styles.darkOverlay} /> */}
             <div className={styles.previewRow}>
               <div className={styles.previewContainerImg}>
                 <img
@@ -40,8 +43,18 @@ const BlogPreview = ({ individualBlogPreview }) => {
               <div className={styles.previewContainerBlogInfo}>
                 <div className={styles.previewContainerBlogDetails}>
                   <div className={styles.blogDetails}>
-                    <div className={styles.heading}>{heading}</div>
                     <div className={styles.date}>{formattedDate}</div>
+                    <div className={styles.heading}>{heading}</div>
+                    <div className={styles.previewCategories}>
+                      {Object.keys(category).map((key) => (
+                        <Chip
+                          size="small"
+                          label={category[key]}
+                          className={classes.chip}
+                        ></Chip>
+                      ))}
+                    </div>
+
                     <div className={styles.subheading}>{subheading}</div>
                   </div>
                   <div className={styles.authorRow}>

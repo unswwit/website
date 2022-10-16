@@ -501,8 +501,7 @@ footer {
     color: var(--white);
   }
 
-  .footer-copyright
-  a {
+  .footer-copyright a {
     color: var(--white);
   }
 }

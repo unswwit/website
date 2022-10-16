@@ -22,17 +22,60 @@ class blogPost112 extends Component {
 
         {/*Start of blog post*/}
         <div className={styles.blogContent}>
-          <div>
+          <div className={styles.blogHeader}>
+            <p className={styles.date}>September 29, 2022</p>
             <h2 className={styles.blogTitle}>
               Historical Women in Tech: How the women of the past shaped our
               future
             </h2>
-            <div className={styles.blogDetails}>
-              <span className={styles.date}>September 29, 2022</span>
-              {/* <span>
-                <ShareBtns />
-              </span> */}
+
+            <div className={styles.authorRow}>
+              <div className={styles.authorContainer}>
+                <div className={styles.authorContainer}>
+                  <Image
+                    src="/portraits/blog-authors/kara-mckinney.png"
+                    alt="kara"
+                    className="authorImg"
+                    height="50"
+                    width="50"
+                  />
+                  <div className={styles.authorName}>Kara McKinney</div>
+                </div>
+              </div>
+              <div className={styles.authorContainer}>
+                <div className={styles.authorContainer}>
+                  <Image
+                    src="/portraits/blog-authors/kara-mckinney.png"
+                    alt="kara"
+                    height="50"
+                    width="50"
+                  />
+                  <div className={styles.authorName}>Kara McKinney</div>
+                </div>
+              </div>
+              <div className={styles.authorContainer}>
+                <div className={styles.authorContainer}>
+                  <Image
+                    src="/portraits/blog-authors/kara-mckinney.png"
+                    alt="kara"
+                    height="50"
+                    width="50"
+                  />
+                  <div className={styles.authorName}>Kara McKinney</div>
+                </div>
+              </div>
             </div>
+
+            {/*for the blog post author*/}
+            {/* <AuthorCard
+              authors={{
+                "kara-mckinney": [
+                  "/portraits/blog-authors/kara-mckinney.png",
+                  styles.authorProfile,
+                  "Kara McKinney",
+                ],
+              }}
+            /> */}
           </div>
 
           <div className={styles.post}>
@@ -139,18 +182,12 @@ class blogPost112 extends Component {
               contributed to this research - and always will.
             </p>
           </div>
+
+          {/* <span>
+            <ShareBtns />
+          </span> */}
         </div>
-        {/*for the blog post author*/}
-        <AuthorCard
-          authors={{
-            "kara-mckinney": [
-              "/portraits/blog-authors/kara-mckinney.png",
-              styles.authorProfile,
-              "Kara McKinney",
-              "Publications Team",
-            ],
-          }}
-        />
+
         {/*see blog suggestions*/}
         {/* <BlogSuggestions
           category={"Lifestyle"}
