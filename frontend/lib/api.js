@@ -23,6 +23,8 @@ export async function loadSubcommittee() {
   const res = await client
     .getEntries({
       content_type: "subcommittee",
+      select: "fields",
+      order: "fields.index",
     })
     .catch((error) => {
       console.error(error);
@@ -49,6 +51,32 @@ export async function loadPodcasts() {
       content_type: "podcastEpisode",
       select: "fields",
       order: "-fields.episodeNo",
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
+
+export async function loadPastEvents() {
+  const res = await client
+    .getEntries({
+      content_type: "pastEvents",
+      select: "fields",
+      order: "-fields.index",
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
+
+export async function loadMarketingArchives() {
+  const res = await client
+    .getEntries({
+      content_type: "marketing_archives",
+      select: "fields",
+      order: "-fields.id",
     })
     .catch((error) => {
       console.error(error);
