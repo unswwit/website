@@ -8,18 +8,17 @@ import Timeline from "../components/Timeline";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ScrollUpBtn from "../components/ScrollUpBtn";
 import LoadingScreen from "../components/LoadingScreen";
-import axios from "axios";
-import humps from "humps";
 import UpcomingEvent from "../components/UpcomingEvent";
 import PaginationComp from "../components/Pagination";
 import { isMobile } from "react-device-detect";
 import { useStyles, categories, marks, valueToYear } from "../data/EventData";
+import { loadPastEvents, loadUpcomingEvents } from "../lib/api";
 
-const Events = () => {
+const Events = ({ upcomingEvents, allPastEvents }) => {
   const classes = useStyles();
 
+  // const [upcomingEvents, setUpcomingEvents] = useState();
   const [year, setYear] = useState(valueToYear[100]);
-  const [upcomingEvents, setUpcomingEvents] = useState([]);
   const [pastEvents, setPastEvents] = useState({
     term1: [],
     term2: [],
@@ -83,38 +82,44 @@ const Events = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // insert delay for loadingPast during timeline change
+  function delay() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve("resolved");
+      }, 500);
+    });
+  }
+
   // get past events
   // input: past events data from google sheets
   // output: array of dictionaries containing past events data
+  const fetchPastEvents = async () => {
+    const allEvents = await allPastEvents.filter(
+      (event) => event.fields.year === Number(year)
+    );
+
+    setTerms(allEvents);
+    await delay();
+    setLoadingPast(false);
+  };
+
   useEffect(() => {
     // show loading signs for past events
     setLoadingPast(true);
-    const fetchPastEvents = async () => {
-      const res = await axios.get(
-        "https://wit-database.herokuapp.com/past-events"
-      );
-      const allEvents = humps
-        .camelizeKeys(res.data)
-        .filter((event) => event.year === Number(year));
-      setTerms(allEvents.reverse());
-    };
-    fetchPastEvents().catch((error) =>
-      // error handling
-      console.error(error)
-    );
+    fetchPastEvents();
   }, [year]);
 
   // Takes in events from a given year and separates them by term
   const setTerms = (events) => {
     const tempPastEvents = {
-      term1: events.filter((event) => event.term === 1),
-      term2: events.filter((event) => event.term === 2),
-      term3: events.filter((event) => event.term === 3),
+      term1: events.filter((event) => event.fields.term === 1),
+      term2: events.filter((event) => event.fields.term === 2),
+      term3: events.filter((event) => event.fields.term === 3),
     };
     setPastEvents(tempPastEvents);
     setPastSelectedPosts(tempPastEvents);
     setPastContent(tempPastEvents);
-    setLoadingPast(false);
   };
 
   // events archive message
@@ -147,8 +152,8 @@ const Events = () => {
     const filteredTerm = pastContent[term].filter(
       (picture) =>
         selectedCategory === "All" ||
-        (picture.category !== null &&
-          picture.category.split(",").includes(selectedCategory))
+        (picture.fields.categories !== null &&
+          picture.fields.categories.includes(selectedCategory))
     );
 
     return filteredTerm;
@@ -158,11 +163,7 @@ const Events = () => {
   // input: upcoming events data from google sheets
   // output: array of dictionaries containing upcoming events data
   const fetchUpcomingEvents = async () => {
-    const res = await axios.get(
-      "https://wit-database.herokuapp.com/upcoming-events"
-    );
-    const tempEvents = humps.camelizeKeys(res.data);
-    setUpcomingEvents(tempEvents);
+    const tempEvents = upcomingEvents;
     setCurrentPosts(tempEvents.slice(0, postsPerPage));
     setSelectedPosts(tempEvents);
     setLoadingUpcoming(false);
@@ -181,16 +182,17 @@ const Events = () => {
   // get events for a specific term
   const getTermEvents = (events) => {
     return events.map((event, index) => {
-      let eventLabel = event.img.split(".")[0].split("-");
+      let eventLabel = event.fields.img.fields.title.split(".")[0].split("-");
       eventLabel.shift();
-      let eventId = `${event.eventNumber}`;
+      let eventId = event.fields.eventNumber;
+      let imgUrl = "https:" + event.fields.img.fields.file.url;
       return (
         <div className={styles.pastEvent} key={index}>
           <Link href={`/event-recaps/${year}/${eventId}`}>
             <div className={styles.eventImgBox}>
               <Image
                 className={styles.eventImages}
-                src={`/event-covers/${year}/${event.img}`}
+                src={imgUrl}
                 alt={eventLabel.join(" ")}
                 width="1200px"
                 height="628px"
@@ -237,7 +239,7 @@ const Events = () => {
               ) : (
                 <div className={styles.upcomingEventsContainer}>
                   {!isMobile &&
-                    currentPosts.map((upcomingEvent, index) => {
+                    upcomingEvents.map((upcomingEvent, index) => {
                       return (
                         <div className={styles.upcomingEventsBox} key={index}>
                           <UpcomingEvent
@@ -249,26 +251,24 @@ const Events = () => {
                     })}
 
                   {isMobile &&
-                    upcomingEvents.map((upcomingEvent, index) => {
+                    upcomingEvents.map((index, upcomingEvent) => {
                       return (
                         <UpcomingEvent
-                          upcomingEvent={upcomingEvent}
                           key={index}
+                          upcomingEvent={upcomingEvent}
                         />
                       );
                     })}
                 </div>
               ))}
-
             {!isMobile && (
               <PaginationComp
-                totalPages={Math.ceil(selectedPosts.length / postsPerPage)}
+                totalPages={Math.ceil(upcomingEvents.length / postsPerPage)}
                 paginate={paginate}
                 page={currentPage}
                 size="large"
               />
             )}
-
             {/* PAST EVENTS */}
             <h2>PAST EVENTS</h2>
             <div className={styles.eventCategories}>
@@ -315,7 +315,6 @@ const Events = () => {
                 )}
               </div>
             </div>
-
             <div className={styles.eventsLoadingContainer}>
               {loadingPast && (
                 <CircularProgress
@@ -326,7 +325,6 @@ const Events = () => {
                 />
               )}
             </div>
-
             <div className={styles.pastEventsContainer}>
               {!loadingPast &&
                 Object.keys(pastSelectedPosts)
@@ -358,5 +356,13 @@ const Events = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const allPastEvents = await loadPastEvents();
+  const upcomingEvents = await loadUpcomingEvents();
+  return {
+    props: { allPastEvents, upcomingEvents },
+  };
+}
 
 export default Events;

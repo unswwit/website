@@ -77,17 +77,12 @@ const Videos = ( { videos } ) => {
   // input: video data from contentful
   // output: array of dictionaries containing videos data
   const fetchVideos = (videos) => {
-    // sort videos in descending order (most recent first)
-    const sortedVideos = videos.sort((a, b) => {
-      return b.fields.episodeNo - a.fields.episodeNo;
-    }).reverse();
-
-    setContent(sortedVideos);
+    setContent(videos);
     setLoading(false);
     setHeaderLoading(false);
     setSourceLoading(false);
-    setVideoNumber(handleVideoNumber(sortedVideos.length));
-    loadVideoPreviews(sortedVideos, loadPageContent(sortedVideos, handleVideoNumber(sortedVideos.length)));
+    setVideoNumber(handleVideoNumber(videos.length));
+    loadVideoPreviews(videos, loadPageContent(videos, handleVideoNumber(videos.length)));
   };
 
   useEffect(() => {

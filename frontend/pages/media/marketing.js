@@ -7,8 +7,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import Timeline from "../../components/Timeline";
 import PaginationComp from "../../components/Pagination";
 import LoadingScreen from "../../components/LoadingScreen";
-import axios from "axios";
-import humps from "humps";
+import { loadMarketingArchives } from "../../lib/api";
 import { isMobile } from "react-device-detect";
 import {
   useStyles,
@@ -16,8 +15,9 @@ import {
   marks,
   valueToYear,
 } from "../../data/MarketingData";
+import { formatMarketingArchivesDate } from "../../lib/helpers";
 
-const MarketingContent = () => {
+const MarketingContent = ({ archives }) => {
   const classes = useStyles();
   const [content, setContent] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -45,30 +45,29 @@ const MarketingContent = () => {
   // scroll to top on load
   useEffect(() => window.scrollTo(0, 0), []);
 
+  const fetchMarketingArchive = (archives) => {
+    setContent(archives);
+    archives = archives.filter((item) => {
+      return item.fields.year === year;
+    });
+    setCurrentPosts(archives.slice(0, postsPerPage));
+    setSelectedPosts(archives);
+    setLoading(false);
+    setSourceLoading(false);
+  };
+
+  const sleep = (ms) => {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  };
+
   // get marketing archives
-  // input: marketing archives data from google sheets
+  // input: marketing archives data from contentful
   // output: array of dictionaries containing marketing archives data
   useEffect(() => {
     setLoading(true);
-    const fetchMarketingArchive = async () => {
-      const res = await axios.get(
-        "https://wit-database.herokuapp.com/marketing-archives"
-      );
-      const tempContent = humps
-        .camelizeKeys(res.data)
-        .reverse()
-        .filter((item) => item.year === Number(year));
-      setContent(tempContent);
-      setCurrentPosts(tempContent.slice(0, postsPerPage));
-      setSelectedPosts(tempContent);
-      setLoading(false);
-      setSourceLoading(false);
-    };
-
-    fetchMarketingArchive().catch((error) =>
-      // error handling
-      console.error(error)
-    );
+    sleep(300).then(() => {
+      fetchMarketingArchive(archives);
+    });
   }, [year]);
 
   // marketing archive message
@@ -86,7 +85,7 @@ const MarketingContent = () => {
     const filteredContent = content.filter(
       (picture) =>
         selectedCategory === "All" ||
-        picture.category.split(",").includes(selectedCategory)
+        picture.fields.category.includes(selectedCategory)
     );
     setSelectedPosts(filteredContent);
     setCurrentPosts(filteredContent.slice(0, postsPerPage));
@@ -187,10 +186,12 @@ const MarketingContent = () => {
                       return (
                         <Initiative
                           key={index}
-                          fb={content.link}
-                          imgUrl={`/initiatives/${year}/${content.img}`}
-                          alt={content.label}
-                          date={content.date}
+                          fb={content.fields.link}
+                          imgUrl={`https:${content.fields.img.fields.file.url}`}
+                          alt={content.fields.label}
+                          date={formatMarketingArchivesDate(
+                            content.fields.date
+                          )}
                         />
                       );
                     })}
@@ -204,10 +205,10 @@ const MarketingContent = () => {
                       return (
                         <Initiative
                           key={index}
-                          fb={content.link}
-                          imgUrl={`/initiatives/${year}/${content.img}`}
-                          alt={content.label}
-                          date={content.date}
+                          fb={content.fields.link}
+                          imgUrl={`https:${content.fields.img.fields.file.url}`}
+                          alt={content.fields.label}
+                          date={content.fields.date}
                         />
                       );
                     })}
@@ -230,4 +231,11 @@ const MarketingContent = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const archives = await loadMarketingArchives();
+  return {
+    props: { archives },
+  };
+}
 export default MarketingContent;
