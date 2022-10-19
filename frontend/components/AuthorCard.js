@@ -11,11 +11,13 @@ class AuthorCard extends Component {
         {/*for the blog post author*/}
         {Object.keys(this.props.authors).map((key, index) => (
           <div key={index} className={styles.authorSection}>
-            <img
-              src={this.props.authors[key][0]}
-              className={styles.authorImg}
-              alt={key}
-            />
+            <div>
+              <img
+                src={this.props.authors[key][0]}
+                className={styles.authorImg}
+                alt={key}
+              />
+            </div>
             <div className={styles.authorName}>
               {this.props.authors[key][1]}
             </div>
