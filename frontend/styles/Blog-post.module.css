@@ -291,6 +291,12 @@ img.floatRight {
   text-align: center;
 }
 
+/*-------------------------------Share Button-----------------------------*/
+
+.shareBtnContainer {
+  margin: 40px;
+}
+
 /*--- Dark mode ---*/
 @media (prefers-color-scheme: dark) {
   .position {

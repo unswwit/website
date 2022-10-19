@@ -146,9 +146,11 @@ class blogPost112 extends Component {
             </p>
           </div>
 
-          {/* <span>
-            <ShareBtns />
-          </span> */}
+          <div className={styles.shareBtnContainer}>
+            <span>
+              <ShareBtns />
+            </span>
+          </div>
         </div>
 
         {/*see blog suggestions*/}
