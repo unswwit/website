@@ -34,9 +34,16 @@ class blogPost112 extends Component {
               authors={{
                 "kara-mckinney": [
                   "/portraits/blog-authors/kara-mckinney.png",
-                  styles.authorProfile,
                   "Kara McKinney",
                 ],
+                // "kara-mckinney2": [
+                //   "/portraits/blog-authors/kara-mckinney.png",
+                //   "Kara McKinney",
+                // ],
+                // "kara-mckinney3": [
+                //   "/portraits/blog-authors/kara-mckinney.png",
+                //   "Kara McKinney",
+                // ],
               }}
             />
           </div>
@@ -80,6 +87,7 @@ class blogPost112 extends Component {
             <div className={styles.pic}>
               <img
                 src={"/blog-attachments/blog-112-ada-lovelace.jpeg"}
+                className={styles.blogImg}
                 alt="Ada Lovelace"
               />
             </div>
@@ -106,6 +114,7 @@ class blogPost112 extends Component {
             <div className={styles.pic}>
               <img
                 src={"/blog-attachments/blog-112-grace-hopper.jpeg"}
+                className={styles.blogImg}
                 alt="Grace Hopper"
               />
             </div>
@@ -132,6 +141,7 @@ class blogPost112 extends Component {
             <div className={styles.pic}>
               <img
                 src={"/blog-attachments/blog-112-annie-easley.jpeg"}
+                className={styles.blogImg}
                 alt="Grace Hopper"
               />
             </div>
