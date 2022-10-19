@@ -36,14 +36,6 @@ class blogPost112 extends Component {
                   "/portraits/blog-authors/kara-mckinney.png",
                   "Kara McKinney",
                 ],
-                // "kara-mckinney2": [
-                //   "/portraits/blog-authors/kara-mckinney.png",
-                //   "Kara McKinney",
-                // ],
-                // "kara-mckinney3": [
-                //   "/portraits/blog-authors/kara-mckinney.png",
-                //   "Kara McKinney",
-                // ],
               }}
             />
           </div>

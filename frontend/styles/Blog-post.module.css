@@ -265,11 +265,15 @@ img.floatRight {
 .authorRow {
   display: flex;
   justify-content: center;
+  margin-bottom: 2vw;
+  flex-wrap: wrap;
 }
 
 .authorSection {
   display: flex;
   align-items: center;
+  margin-right: 1vw;
+  flex-wrap: wrap;
 }
 
 .authorImg {
@@ -277,7 +281,7 @@ img.floatRight {
   max-height: 50px;
   overflow: hidden;
   max-width: 50px;
-  margin-right: 1vw;
+  margin-right: 0.5vw;
   margin-left: 0px;
   text-align: center;
 }
@@ -288,6 +292,7 @@ img.floatRight {
   font-size: 11pt;
   font-weight: 500;
   align-items: center;
+  word-wrap: break-word;
 }
 
 /*-------------------------------Share Button-----------------------------*/
@@ -361,7 +366,7 @@ img.floatRight {
   }
 
   .authorName {
-    font-size: 16.5pt;
+    font-size: 8pt;
   }
 
   .position {
