@@ -251,13 +251,13 @@ h2.blogRecommendationsTitle {
 }
 
 .date {
-  color: var(--general-text);
+  color: var(--yellow);
   letter-spacing: 0.1vw;
-  font-size: 7pt;
-  font-weight: 500;
+  font-size: 10pt;
+  font-weight: 600;
   font-family: "Montserrat", sans-serif;
   padding: 0;
-  margin: 0;
+  margin: 5px;
   text-align: center;
 }
 
