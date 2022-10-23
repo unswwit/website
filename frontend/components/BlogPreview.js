@@ -12,8 +12,6 @@ const BlogPreview = ({ individualBlogPreview }) => {
     "/portraits/blog-authors/vivianw2021.jpg",
     "/portraits/blog-authors/georgie2021.jpg",
   ];
-
-  console.log(individualBlogPreview);
   const { date, img, heading, subheading, blog_no, category } =
     individualBlogPreview.fields;
 

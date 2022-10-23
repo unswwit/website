@@ -3,10 +3,9 @@ import styles from "../styles/blog-post.module.css";
 import BlogPreview from "./BlogPreview";
 import axios from "axios";
 import humps from "humps";
+import { ContactSupport } from "@material-ui/icons";
 
-const BlogSuggestions = ({ props, blogPreviews }) => {
-  console.log(props);
-  console.log(blogPreviews);
+const BlogSuggestions = ({ currIndex, currCategory, blogPreviews }) => {
   // set how many posts to view per page
   const postsPerPage = 3;
   // all the posts of the selected filter category
@@ -32,7 +31,6 @@ const BlogSuggestions = ({ props, blogPreviews }) => {
 
   // renaming authors to be the image location of the author image and name
   const renameAuthors = (blogOriginal, authorList, blogPreviews) => {
-    console.log(blogOriginal);
     blogOriginal.forEach((blogPreview, index) => {
       const tempAuthor = {};
 
@@ -53,18 +51,16 @@ const BlogSuggestions = ({ props, blogPreviews }) => {
     setSelectedPosts(tempBlogs.slice(0, postsPerPage));
   };
 
-  // returns a flitered list of blogs
-  const filterBlogs = useCallback(
-    (blogPreviews) => {
-      const filteredBlogs = blogPreviews.filter(
-        (blog) =>
-          props.category.includes(blog.category.split(",")) ||
-          blog.fields.category.includes(props.category.split(","))
-      );
-      return filteredBlogs;
-    },
-    [props]
-  );
+  // returns a list of blogs that have the same category as currCategory but
+  // not the same blog_no
+  const filterBlogs = useCallback((blogPreviews) => {
+    const filteredBlogs = blogPreviews.filter(
+      (blog) =>
+        blog.fields.category.includes(currCategory) &&
+        blog.fields.blog_no !== currIndex
+    );
+    return filteredBlogs;
+  }, []);
 
   // get blog previews
   // input: previews data from google sheets
@@ -74,17 +70,12 @@ const BlogSuggestions = ({ props, blogPreviews }) => {
       const blogOriginal = blogPreviews;
       renameAuthors(blogOriginal, authorList, blogPreviews);
 
-      // remove current blog from blog suggestions
-      blogPreviews.splice(props.index - 1, 1);
-      blogSet(blogPreviews);
-
       // filter blogs by category
       const filteredBlogs = filterBlogs(blogPreviews);
 
-      const tempBlogs = filteredBlogs.reverse();
-      blogSet(tempBlogs);
+      blogSet(filteredBlogs);
     },
-    [filterBlogs, props]
+    [filterBlogs]
   );
 
   useEffect(() => {
