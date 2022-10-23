@@ -101,7 +101,7 @@ h2.blogRecommendationsTitle {
 
 /*Preview Image and Hover*/
 .blogPost {
-  width: 70vw;
+  width: 70%;
   height: 100%;
   position: relative;
   margin: 5vw auto;
@@ -124,16 +124,15 @@ h2.blogRecommendationsTitle {
 }
 
 .previewContainerImg {
-  width: 35vw;
-  height: 22vw;
+  width: 50%;
   overflow: hidden;
   border-radius: 16px;
 }
 
 .previewContainerBlogInfo {
-  width: 35vw;
-  height: 22vw;
+  width: 50%;
   overflow: hidden;
+  padding: 30px;
 }
 
 .previewContainerBlogDetails {
@@ -145,8 +144,9 @@ h2.blogRecommendationsTitle {
 }
 
 .previewPic {
-  width: 35vw;
-  height: 22vw;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: transform 0.5s ease;
 }
 
@@ -361,7 +361,7 @@ h2.blogRecommendationsTitle {
     width: 85%;
   }
 
-  .blogPost table {
+  .blogPost {
     width: 85vw;
   }
 }
@@ -371,20 +371,22 @@ h2.blogRecommendationsTitle {
     padding: 20px;
   }
 
-  .tr {
+  .previewRow {
+    flex-direction: column;
     flex-wrap: wrap;
     justify-items: flex-start;
     align-items: flex-start;
     width: 100%;
   }
 
-  .blogPost table,
+  .blogPost,
   .inputSearchBar {
     width: 90%;
   }
 
   .previewPic,
-  .previewContainer {
+  .previewContainerImg,
+  .previewContainerBlogInfo {
     width: 100%;
     height: auto;
   }
