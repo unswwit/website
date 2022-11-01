@@ -80,6 +80,21 @@ const useStyles = makeStyles({
       justifyContent: "space-between",
     },
   },
+
+  previewCategories: {
+    display: "flex",
+    justifyContent: "flex-start",
+    flexFlow: "row-wrap",
+    width: "100%",
+    marginBottom: "10px",
+  },
+
+  chip: {
+    color: "white",
+    marginRight: "5px",
+    fontFamily: "Montserrat",
+    backgroundColor: "#6d6e6d",
+  },
 });
 
 export default function BlogRecommendations({ recommendation }) {
@@ -109,8 +124,15 @@ export default function BlogRecommendations({ recommendation }) {
           <Typography className={classes.title}>
             {recommendation.fields.title}
           </Typography>
-          {/* TODO: need to account for more than one category */}
-          <Chip size="small" label={recommendation.fields.category}></Chip>
+          <div className={styles.previewCategories}>
+            {Object.keys(recommendation.fields.category).map((key) => (
+              <Chip
+                size="small"
+                label={recommendation.fields.category[key]}
+                className={classes.chip}
+              ></Chip>
+            ))}
+          </div>
           <Typography
             className={classes.description}
             variant="body2"

@@ -29,7 +29,7 @@ const BlogPreview = ({ individualBlogPreview }) => {
       <div className={styles.blogPost}>
         <Link href={`/media/blog/${blog_no}`}>
           <div>
-            {/* <div className={styles.darkOverlay} /> */}
+            <div className={styles.darkOverlay} />
             <div className={styles.previewRow}>
               <div className={styles.previewContainerImg}>
                 <img
