@@ -128,6 +128,12 @@ h2.blogRecommendationsTitle {
   overflow: hidden;
   border-radius: 16px;
 }
+.previewPic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
 
 .previewContainerBlogInfo {
   width: 50%;
@@ -141,13 +147,6 @@ h2.blogRecommendationsTitle {
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-}
-
-.previewPic {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
 }
 
 .blogPost:hover .previewPic {

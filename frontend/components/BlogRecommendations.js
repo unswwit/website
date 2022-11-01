@@ -8,36 +8,13 @@ import { formatBlogRecDate } from "../lib/helpers";
 
 const useStyles = makeStyles({
   root: {
-    height: 630,
+    maxWidth: "95%",
     display: "inline-block",
     margin: 10,
     borderRadius: 0,
     boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
     overflow: "visible",
-    "@media (max-width:1200px)": {
-      height: 480,
-    },
-    "@media (max-width:1000px)": {
-      height: 640,
-    },
-    "@media (max-width: 800px)": {
-      height: 650,
-    },
-    "@media (max-width:750px)": {
-      height: 630,
-    },
-    "@media (max-width:680px)": {
-      height: 600,
-    },
-    "@media (max-width:540px)": {
-      height: 650,
-    },
-    "@media (max-width:400px)": {
-      height: 680,
-    },
-    "@media (max-width:280px)": {
-      height: 700,
-    },
+
     "@media (prefers-color-scheme:dark)": {
       backgroundColor: "#3b3b41",
     },
@@ -87,22 +64,6 @@ const useStyles = makeStyles({
   },
   content: {
     margin: "10px 10px",
-    height: "255px",
-    "@media (max-width:1200px)": {
-      height: 210,
-    },
-    "@media (max-width:1000px)": {
-      height: 280,
-    },
-    "@media (max-width:750px)": {
-      height: 180,
-    },
-    "@media (max-width:680px)": {
-      height: 250,
-    },
-    "@media (max-width:400px)": {
-      height: 255,
-    },
   },
   buttons: {
     padding: "16px",

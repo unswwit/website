@@ -53,6 +53,8 @@ const BlogSuggestions = ({ currIndex, currCategory, blogPreviews }) => {
 
   // returns a list of blogs that have the same category as currCategory but
   // not the same blog_no
+
+  // ToDo: make suggestions work for multiple categories
   const filterBlogs = useCallback((blogPreviews) => {
     const filteredBlogs = blogPreviews.filter(
       (blog) =>
