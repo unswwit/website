@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import styles from "../styles/blog-post.module.css";
+import styles from "../styles/BlogPost.module.css";
 import BlogPreview from "./BlogPreview";
 import axios from "axios";
 import humps from "humps";
