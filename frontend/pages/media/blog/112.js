@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PageHeader from "../../../components/Header";
 import { loadBlogPreviews } from "../../../lib/api";
-import styles from "../../../styles/Blog-post.module.css";
+import styles from "../../../styles/BlogPost.module.css";
 import AuthorCard from "../../../components/AuthorCard";
 import BlogSuggestions from "../../../components/BlogSuggestions";
 import ShareBtns from "../../../components/ShareBtns";

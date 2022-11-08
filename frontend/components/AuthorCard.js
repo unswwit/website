@@ -1,6 +1,6 @@
 //All necessary imports for this javascript
 import React, { Component } from "react";
-import styles from "../styles/blog-post.module.css";
+import styles from "../styles/BlogPost.module.css";
 
 class AuthorCard extends Component {
   render() {
