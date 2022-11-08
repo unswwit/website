@@ -11,3 +11,6 @@ export const formatPodcastDate = (date) => {
 export const formatBlogRecDate = (date) => {
   return moment(date).format("MMMM DD, YYYY");
 };
+export const formatMarketingArchivesDate = (date) => {
+  return moment(date).format("DD/MM/YYYY");
+};
