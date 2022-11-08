@@ -49,6 +49,7 @@ const BlogPreview = ({ individualBlogPreview }) => {
                           size="small"
                           label={category[key]}
                           className={classes.chip}
+                          key={category[key]}
                         ></Chip>
                       ))}
                     </div>

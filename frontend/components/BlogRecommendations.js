@@ -130,6 +130,7 @@ export default function BlogRecommendations({ recommendation }) {
                 size="small"
                 label={recommendation.fields.category[key]}
                 className={classes.chip}
+                key={recommendation.fields.category[key]}
               ></Chip>
             ))}
           </div>
