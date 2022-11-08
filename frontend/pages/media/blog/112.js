@@ -5,7 +5,6 @@ import styles from "../../../styles/Blog-post.module.css";
 import AuthorCard from "../../../components/AuthorCard";
 import BlogSuggestions from "../../../components/BlogSuggestions";
 import ShareBtns from "../../../components/ShareBtns";
-import Image from "next/image";
 
 const blogPost112 = ({ blogPreviews }) => {
   // start webpage at the top

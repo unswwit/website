@@ -1,14 +1,11 @@
 //All necessary imports for this javascript
-import { imageConfigDefault } from "next/dist/shared/lib/image-config";
 import React, { Component } from "react";
 import styles from "../styles/blog-post.module.css";
-import Image from "next/image";
 
 class AuthorCard extends Component {
   render() {
     return (
       <div className={styles.authorRow}>
-        {/*for the blog post author*/}
         {Object.keys(this.props.authors).map((key, index) => (
           <div key={index} className={styles.authorSection}>
             <div>
@@ -23,7 +20,6 @@ class AuthorCard extends Component {
             </div>
           </div>
         ))}
-        {/*End of blog posts*/}
       </div>
     );
   }

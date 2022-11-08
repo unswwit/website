@@ -3,7 +3,6 @@ import styles from "../styles/blog-post.module.css";
 import BlogPreview from "./BlogPreview";
 import axios from "axios";
 import humps from "humps";
-import { ContactSupport } from "@material-ui/icons";
 
 const BlogSuggestions = ({ currIndex, currCategory, blogPreviews }) => {
   // set how many posts to view per page
