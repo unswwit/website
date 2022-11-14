@@ -13,5 +13,4 @@ describe('Podcast', () => {
       expect(formatPodcastDate("2022-11-11")).toBe("November 11, 2022")
     })
   })
-
 })

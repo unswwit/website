@@ -152,6 +152,7 @@ h1.vidSubheading {
 
 .embeddedVideo {
   align-content: center;
+  allowfullscreen: true;
 }
 
 .videoName {
