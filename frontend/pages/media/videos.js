@@ -4,16 +4,15 @@ import Chip from "@material-ui/core/Chip";
 import styles from "../../styles/Videos.module.css";
 import YouTubeSubscribe from "../../components/YoutubeSubscribeBtn";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import Link from "next/link";
 import Image from "next/image";
 import PaginationComp from "../../components/Pagination";
 import LoadingScreen from "../../components/LoadingScreen";
 import { isMobile } from "react-device-detect";
 import { loadVideos } from "../../lib/api";
-import moment from "moment";
 import { useStyles, categories } from "../../data/VideoData";
+import { formatDate } from "../../lib/helpers";
 
-const Videos = ( { videos } ) => {
+const Videos = ({ videos }) => {
   const classes = useStyles();
   const [video, setVideo] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -38,10 +37,6 @@ const Videos = ( { videos } ) => {
   const [currentPage, setCurrentPage] = useState(1);
   // set youtube theme
   const [youtubeTheme, setYoutubeTheme] = useState("full");
-
-  const formatDate = (date) => {
-    return moment(date).format("MMMM DD, YYYY");
-  };
 
   // retrieve current video content
   const handleVideoNumber = (numVideos) => {
@@ -86,28 +81,23 @@ const Videos = ( { videos } ) => {
   // input: video data from contentful
   // output: array of dictionaries containing videos data
   const fetchVideos = (videos) => {
-    // sort videos in descending order (most recent first)
-    const sortedVideos = videos.sort((a, b) => {
-      return b.fields.episodeNo - a.fields.episodeNo;
-    }).reverse();
-
-    setContent(sortedVideos);
+    setContent(videos);
     setLoading(false);
     setHeaderLoading(false);
     setSourceLoading(false);
-    setVideoNumber(handleVideoNumber(sortedVideos.length));
-    loadVideoPreviews(sortedVideos, loadPageContent(sortedVideos, handleVideoNumber(sortedVideos.length)));
+    setVideoNumber(handleVideoNumber(videos.length));
+    loadVideoPreviews(videos, loadPageContent(videos, handleVideoNumber(videos.length)));
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0); // start at the top of the page
-    fetchVideos(videos);  // load video data
+    window.scrollTo(0, 0);
+    fetchVideos(videos);
   }, []);
 
   useEffect(() => {
     if (currentPosts.length === 0 && loading === false) {
       setEmptyCategory(true);
-      console.error = () => {};
+      console.error = () => { };
     } else {
       setEmptyCategory(false);
     }
@@ -169,10 +159,9 @@ const Videos = ( { videos } ) => {
     return videos.map((video, index) => {
       return (
         <div className={styles.videoDescription} key={index}>
-          <Link href={`/media/videos/${video.fields.episodeNo}`}>
+          <a href={"https://www.youtube.com/watch?v=" + video.fields.embedUrl} target="_blank" rel="noopener noreferrer">
             <div
               className={styles.boxContainer}
-              onClick={() => setVideoNumber(video.fields.episodeNo)}
             >
               <div className={styles.darkOverlay} />
               <div className={styles.previewContainer}>
@@ -187,7 +176,7 @@ const Videos = ( { videos } ) => {
               <p className={styles.moreName}>{video.fields.title}</p>
               <p className={styles.moreDate}>{formatDate(video.fields.date)}</p>
             </div>
-          </Link>
+          </a>
         </div>
       );
     });
