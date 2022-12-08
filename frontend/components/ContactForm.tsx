@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 import styles from '../styles/ContactUs.module.css';
 import ReCAPTCHA from 'react-google-recaptcha';
 
-export default function ContactForm() {
+const ContactForm = () => {
   const [email, setEmail] = React.useState('');
 
   const sendEmail = (e) => {
@@ -82,4 +82,6 @@ export default function ContactForm() {
       <input type="submit" className={styles.submitButton} value="Submit" />
     </form>
   );
-}
+};
+
+export default ContactForm;

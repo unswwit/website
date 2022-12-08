@@ -2,15 +2,15 @@ import { useEffect, useRef, useState, useCallback } from 'react';
 import styles from '../../styles/Team.module.css';
 import PageHeader from '../../components/Header';
 import Execs from '../../components/ExecSection';
-import SubCom from '../../components/SubcomSection';
+import Subcom from '../../components/SubcomSection';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Timeline from '../../components/Timeline';
 import ScrollUpBtn from '../../components/ScrollUpBtn';
 import LoadingScreen from '../../components/LoadingScreen';
-import { execToClassName, marks, valueToYear } from '../../data/TeamData';
+import { execToClassName, marks, valueToYear } from '../../data/team';
 import { loadSubcommittee, loadExecs } from '../../lib/api';
 
-export default function OurTeam({ execs, subcommittee }) {
+const OurTeam = ({ execs, subcommittee }: any) => {
   const masterExec = useRef();
   const masterSubcom = useRef();
   const [filteredExecs, setFilteredExecs] = useState([]);
@@ -20,21 +20,21 @@ export default function OurTeam({ execs, subcommittee }) {
   const [sourceLoading, setSourceLoading] = useState(true);
   const [headerLoading, setHeaderLoading] = useState(true);
 
-  const handleYear = (newYear) => {
+  const handleYear = (newYear: number) => {
     setYear(newYear);
   };
 
   // get execs
   // input: execs data from Contentful
   // output: array of dictionaries containing exec data
-  const fetchExecs = (execs) => {
+  const fetchExecs = (execs: any) => {
     masterExec.current = execs;
   };
 
   // get subcom
   // input: subcom data from contentful
   // output: array of dictionaries containing subcom data
-  const fetchSubcom = (subcom) => {
+  const fetchSubcom = (subcom: any) => {
     masterSubcom.current = subcom;
   };
 
@@ -44,10 +44,10 @@ export default function OurTeam({ execs, subcommittee }) {
 
     // Execs
     const tempExecs = masterExec.current.filter(
-      (exec) => exec.fields.yearJoined === year
+      (exec: any) => exec.fields.yearJoined === year
     );
 
-    const result = tempExecs.reduce(function (result, _, index, tempExecs) {
+    const result = tempExecs.reduce(function (result: any, _: any, index: number, tempExecs: any) {
       if (index % 2 === 0) result.push(tempExecs.slice(index, index + 2));
       return result;
     }, []);
@@ -55,7 +55,7 @@ export default function OurTeam({ execs, subcommittee }) {
 
     // Subcom
     const subcom = masterSubcom.current.filter(
-      (exec) => exec.fields.yearJoined === year
+      (exec: any) => exec.fields.yearJoined === year
     );
     setFilteredSubcom(subcom);
 
@@ -147,7 +147,7 @@ export default function OurTeam({ execs, subcommittee }) {
                   {filteredExecs.map((row, index) => {
                     return (
                       <div key={index} className={styles.execRow}>
-                        {row.map((exec, index) => {
+                        {row.map((exec: any, index: number) => {
                           return (
                             <Execs
                               key={index}
@@ -193,7 +193,7 @@ export default function OurTeam({ execs, subcommittee }) {
                               console.log(member);
                               const { name, degree, year } = member.fields;
                               return (
-                                <SubCom
+                                <Subcom
                                   key={index}
                                   name={name}
                                   degree={degree}
@@ -217,6 +217,8 @@ export default function OurTeam({ execs, subcommittee }) {
     </div>
   );
 }
+
+export default OurTeam;
 
 export async function getStaticProps() {
   const subcommittee = await loadSubcommittee();

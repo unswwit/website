@@ -2,7 +2,7 @@ import styles from '../styles/Team.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Execs = (props) => {
+const Execs = (props: any) => {
   const socials = {
     LinkedIn: 'https://www.linkedin.com/in/' + props.linkedin + '/',
     Facebook: 'https://www.facebook.com/' + props.fb,

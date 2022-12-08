@@ -46,13 +46,13 @@ const TimelineSlider = withStyles({
   },
 })(Slider);
 
-const pageToValue = (page) => {
+const pageToValue = (page: string) => {
   return page === 'teams' || page === 'events' || page === 'marketing'
     ? 100
     : 250;
 };
 
-const Timeline = ({ updateYear, marks, valueToYear, page, step, margin }) => {
+const Timeline = ({ updateYear, marks, valueToYear, page, step, margin }: any) => {
   return (
     <div
       id={
