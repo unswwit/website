@@ -113,8 +113,7 @@ const EventRecapPage = ({ selectedEvent }: any) => {
                 <iframe
                   src={`https://youtube.com/embed/${event.fields.youtubeVideoId}?autoplay=0`}
                   frameBorder="0"
-                  allow="autoplay; encrypted-media"
-                  allowFullScreen="true"
+                  allow="autoplay; encrypted-media fullscreen"
                   title="video"
                   className={styles.embeddedVideo}
                 />

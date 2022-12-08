@@ -1,3 +1,4 @@
+// @ts-nocheck comment
 import {
   CarouselProvider,
   Slider,
@@ -34,8 +35,8 @@ const InitiativesSlideshow = () => {
   }, []);
 
   // load data from google sheets
-  const loadGoogleSheets = (url: string) => {
-    const fetchSlideshowData = async (url: string) => {
+  const loadGoogleSheets = (url) => {
+    const fetchSlideshowData = async (url) => {
       const res = await axios.get(url);
       switch (url) {
         case 'https://wit-database.herokuapp.com/upcoming-events':

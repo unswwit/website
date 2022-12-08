@@ -1,3 +1,4 @@
+// @ts-nocheck comment
 import { useEffect, useState } from 'react';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import styles from '../styles/ScrollUpBtn.module.css';

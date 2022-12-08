@@ -1,3 +1,4 @@
+// @ts-nocheck comment
 import { useEffect, useRef, useState, useCallback } from 'react';
 import styles from '../../styles/Team.module.css';
 import PageHeader from '../../components/Header';

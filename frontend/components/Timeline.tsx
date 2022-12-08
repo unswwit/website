@@ -1,3 +1,4 @@
+// @ts-nocheck comment
 import { withStyles } from '@material-ui/core/styles';
 import Slider from '@material-ui/core/Slider';
 import styles from '../styles/Timeline.module.css';

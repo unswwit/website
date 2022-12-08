@@ -19,7 +19,7 @@ const Podcast = ({ episodes }: any) => {
   const classes = useStyles();
   const [loading, setLoading] = useState(true);
   const [sourceLoading, setSourceLoading] = useState(true);
-  const [headerLoading, setHeaderLoading] = useState(true);
+  const [imageLoading, setImageLoading] = useState(true);
   // all podcast episodes
   const [content, setContent] = useState([]);
   // currently selected category -> default to "All"
@@ -104,13 +104,13 @@ const Podcast = ({ episodes }: any) => {
 
   return (
     <div>
-      {sourceLoading && headerLoading ? (
+      {sourceLoading && imageLoading ? (
         <LoadingScreen />
       ) : (
         <>
           {/* Cover Photo */}
           <PageHeader
-            headerLoading={setHeaderLoading}
+            imageLoading={setImageLoading}
             imgUrl="/headers/podcast-header.jpg"
             title="Podcast"
           />

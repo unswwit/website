@@ -1,3 +1,4 @@
+// @ts-nocheck comment
 import { useEffect, useState } from 'react';
 import PageHeader from '../components/Header';
 import styles from '../styles/JoinUs.module.css';

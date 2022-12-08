@@ -75,7 +75,7 @@ const useStyles = makeStyles({
   title: {
     fontFamily: 'Playfair Display, serif',
     fontSize: '20px',
-    fontWeight: '500',
+    fontWeight: 500,
     textAlign: 'center',
     margin: '5px 0px',
   },

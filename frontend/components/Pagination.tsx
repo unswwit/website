@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const PaginationComp = ({ totalPages, paginate, defaultPage, size }) => {
+const PaginationComp = ({ totalPages, paginate, currentPage, size }: any) => {
   const classes = useStyles();
 
   return (
@@ -42,7 +42,7 @@ const PaginationComp = ({ totalPages, paginate, defaultPage, size }) => {
         )}
         count={totalPages}
         onChange={(_, pageNumber) => paginate(pageNumber)}
-        page={defaultPage}
+        page={currentPage}
         size={size ? size : 'medium'}
       />
     </div>

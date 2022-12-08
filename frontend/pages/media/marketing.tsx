@@ -37,17 +37,17 @@ const MarketingContent = ({ archives }: any) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   // set the year for the events timeline
-  const handleYear = (newYear: string) => {
+  const handleYear = (newYear: any) => {
     setYear(newYear);
-    setCurrentPage('All');
+    setCurrentPage(1);
   };
 
   // scroll to top on load
   useEffect(() => window.scrollTo(0, 0), []);
 
-  const fetchMarketingArchive = (archives) => {
+  const fetchMarketingArchive = (archives: any) => {
     setContent(archives);
-    archives = archives.filter((item) => {
+    archives = archives.filter((item: any) => {
       return item.fields.year === year;
     });
     setCurrentPosts(archives.slice(0, postsPerPage));
@@ -56,7 +56,7 @@ const MarketingContent = ({ archives }: any) => {
     setSourceLoading(false);
   };
 
-  const sleep = (ms) => {
+  const sleep = (ms: number) => {
     return new Promise((resolve) => setTimeout(resolve, ms));
   };
 

@@ -1,10 +1,11 @@
+// @ts-nocheck comment
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import CountUp from 'react-countup';
 import styles from '../styles/Home.module.css';
 import PubArticle from '../components/PublicationsArticle';
-import InitiativesSlideshow from '../components/InitiativesSlideshow.js';
+import InitiativesSlideshow from '../components/InitiativesSlideshow';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Aos from 'aos';
 import { isMobile } from 'react-device-detect';

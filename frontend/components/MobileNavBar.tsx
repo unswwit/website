@@ -89,7 +89,7 @@ const Navbar = () => {
     }
   };
 
-  const setDropdownStyles = (id: number) => {
+  const setDropdownStyles = (id: string) => {
     if (id === 'aboutUsDropdown') {
       if (router.asPath.split('/')[1] === 'about' && aboutUsDropdownOpen) {
         return `${styles.currentPageMenuUnderline} ${styles.currentDropdown} ${styles.menuItem}`;

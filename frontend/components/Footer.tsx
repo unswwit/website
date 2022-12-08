@@ -82,7 +82,7 @@ const Footer = () => {
             </li>
             {links.map((col, index) => {
               return (
-                <div key={col} className="col-width footer-links">
+                <div key={index} className="col-width footer-links">
                   <li className="footer-item footer-header">
                     {' '}
                     {headings[index]}{' '}
