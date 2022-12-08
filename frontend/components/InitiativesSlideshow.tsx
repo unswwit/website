@@ -34,8 +34,8 @@ const InitiativesSlideshow = () => {
   }, []);
 
   // load data from google sheets
-  const loadGoogleSheets = (url) => {
-    const fetchSlideshowData = async (url) => {
+  const loadGoogleSheets = (url: string) => {
+    const fetchSlideshowData = async (url: string) => {
       const res = await axios.get(url);
       switch (url) {
         case 'https://wit-database.herokuapp.com/upcoming-events':
