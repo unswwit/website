@@ -44,7 +44,6 @@ const Home = ({ publications }: any) => {
   // output: array of dictionaries containing publications data
   const fetchPublications = async (publications: any) => {
     setArticles(publications);
-    console.log(publications);
     setLoading(false);
     setSourceLoading(false);
   };
