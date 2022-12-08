@@ -102,7 +102,7 @@ export default function EpisodeTemplate({
   date,
   description,
   episode,
-}) {
+}: any) {
   const classes = useStyles();
 
   return (

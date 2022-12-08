@@ -6,7 +6,7 @@ import EpisodeTemplate from '../../components/PodcastCard';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import ScrollUpBtn from '../../components/ScrollUpBtn';
 import LoadingScreen from '../../components/LoadingScreen';
-import { useStyles, links, categories } from '../../data/PodcastData';
+import { useStyles, links, categories } from '../../data/podcast';
 import { loadPodcasts } from '../../lib/api';
 import { formatPodcastDate } from '../../lib/helpers';
 import Image from 'next/image';
@@ -15,7 +15,7 @@ import Link from 'next/link';
 // TO UNCOMMENT WHEN REACH > 9 PODCASTS
 // import PaginationComp from "../components/Pagination";
 
-const Podcast = ({ episodes }) => {
+const Podcast = ({ episodes }: any) => {
   const classes = useStyles();
   const [loading, setLoading] = useState(true);
   const [sourceLoading, setSourceLoading] = useState(true);
@@ -40,7 +40,7 @@ const Podcast = ({ episodes }) => {
   // get podcasts from Contentful
   // input: podcast data from Contentful
   // output: array of dictionaries containing podcast data
-  const fetchPodcastEpisodes = (episodes) => {
+  const fetchPodcastEpisodes = (episodes: any) => {
     setContent(episodes);
     setSelectedPosts(episodes);
     setLoading(false);
@@ -66,7 +66,7 @@ const Podcast = ({ episodes }) => {
   }, [selectedPosts, loading]);
 
   // filter content by selected category + searchTerm
-  const filterContent = (selectedCategory, searchTerm) => {
+  const filterContent = (selectedCategory: string, searchTerm: string) => {
     const filteredContent = content.filter(
       (picture) =>
         selectedCategory === 'All' ||
@@ -76,8 +76,8 @@ const Podcast = ({ episodes }) => {
   };
 
   // filter category content by search filter in heading, subheading or author
-  const searchPodcasts = (filteredContent, searchTerm) => {
-    const searchResults = filteredContent.filter((episode) => {
+  const searchPodcasts = (filteredContent: any, searchTerm: string) => {
+    const searchResults = filteredContent.filter((episode: any) => {
       const date = formatPodcastDate(episode.fields.date);
       if (
         searchTerm === '' ||
