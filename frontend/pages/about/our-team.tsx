@@ -190,7 +190,6 @@ const OurTeam = ({ execs, subcommittee }: any) => {
                           {filteredSubcom
                             .filter((member) => member.fields.team === sector)
                             .map((member, index) => {
-                              console.log(member);
                               const { name, degree, year } = member.fields;
                               return (
                                 <Subcom

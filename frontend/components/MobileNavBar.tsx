@@ -2,16 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '../../styles/Navbar.module.css';
-import { navigationBarContent } from '../../data/navbar';
-import {
-  changeAboutUsToArrowDown,
-  changeAboutUsToArrowRight,
-  changeMediaToArrowDown,
-  changeMediaToArrowRight,
-} from '../../components/navbarHelpers';
+import styles from '../styles/Navbar.module.css';
+import { navigationBarContent } from '../data/navbar';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
+import { changeAboutUsToArrowDown, changeAboutUsToArrowRight, changeMediaToArrowDown, changeMediaToArrowRight } from '../lib/helpers/navbar';
 
 const Navbar = () => {
   const [clearNavBar, setClearNavBar] = useState(true);
@@ -94,7 +89,7 @@ const Navbar = () => {
     }
   };
 
-  const setDropdownStyles = (id) => {
+  const setDropdownStyles = (id: number) => {
     if (id === 'aboutUsDropdown') {
       if (router.asPath.split('/')[1] === 'about' && aboutUsDropdownOpen) {
         return `${styles.currentPageMenuUnderline} ${styles.currentDropdown} ${styles.menuItem}`;

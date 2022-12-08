@@ -11,13 +11,11 @@ import LoadingScreen from '../components/LoadingScreen';
 import UpcomingEvent from '../components/UpcomingEvent';
 import PaginationComp from '../components/Pagination';
 import { isMobile } from 'react-device-detect';
-import { useStyles, categories, marks, valueToYear } from '../data/EventData';
+import { useStyles, categories, marks, valueToYear } from '../data/event';
 import { loadPastEvents, loadUpcomingEvents } from '../lib/api';
 
-const Events = ({ upcomingEvents, allPastEvents }) => {
+const Events = ({ upcomingEvents, allPastEvents }: any) => {
   const classes = useStyles();
-
-  // const [upcomingEvents, setUpcomingEvents] = useState();
   const [year, setYear] = useState(valueToYear[100]);
   const [pastEvents, setPastEvents] = useState({
     term1: [],
@@ -28,31 +26,23 @@ const Events = ({ upcomingEvents, allPastEvents }) => {
   const [loadingPast, setLoadingPast] = useState(true);
   const [loadingUpcoming, setLoadingUpcoming] = useState(true);
   const [headerLoading, setHeaderLoading] = useState(true);
-
   // set how many posts to view per page
   const postsPerPage = 3;
-
   // current page number
   const [currentPage, setCurrentPage] = useState(1);
-
   const [selectedPosts, setSelectedPosts] = useState([]);
-
   // the posts displayed on the current page for upcoming events
   const [currentPosts, setCurrentPosts] = useState([]);
-
   // currently selected category -> default to "All"
   const [selectedCategory, setSelectedCategory] = useState('All');
-
   // check if category filters result in no results
   const [emptyCategory, setEmptyCategory] = useState(false);
-
   // all past events of the given year
   const [pastContent, setPastContent] = useState({
     term1: [],
     term2: [],
     term3: [],
   });
-
   // all past events after being filtered for category
   const [pastSelectedPosts, setPastSelectedPosts] = useState({
     term1: [],
@@ -61,13 +51,13 @@ const Events = ({ upcomingEvents, allPastEvents }) => {
   });
 
   // set the year for the events timeline
-  const handleYear = (newYear) => {
+  const handleYear = (newYear: string) => {
     setYear(newYear);
     // when year is change, category automatically changes to 'All'
     setSelectedCategory('All');
   };
 
-  const paginate = (pageNumber) => {
+  const paginate = (pageNumber: number) => {
     setCurrentPage(pageNumber);
     setCurrentPosts(
       selectedPosts.slice(
@@ -92,11 +82,11 @@ const Events = ({ upcomingEvents, allPastEvents }) => {
   }
 
   // get past events
-  // input: past events data from google sheets
+  // input: past events data from contentful
   // output: array of dictionaries containing past events data
   const fetchPastEvents = async () => {
     const allEvents = await allPastEvents.filter(
-      (event) => event.fields.year === Number(year)
+      (event: any) => event.fields.year === Number(year)
     );
 
     setTerms(allEvents);
@@ -111,11 +101,11 @@ const Events = ({ upcomingEvents, allPastEvents }) => {
   }, [year]);
 
   // Takes in events from a given year and separates them by term
-  const setTerms = (events) => {
+  const setTerms = (events: any) => {
     const tempPastEvents = {
-      term1: events.filter((event) => event.fields.term === 1),
-      term2: events.filter((event) => event.fields.term === 2),
-      term3: events.filter((event) => event.fields.term === 3),
+      term1: events.filter((event: any) => event.fields.term === 1),
+      term2: events.filter((event: any) => event.fields.term === 2),
+      term3: events.filter((event: any) => event.fields.term === 3),
     };
     setPastEvents(tempPastEvents);
     setPastSelectedPosts(tempPastEvents);
@@ -137,7 +127,7 @@ const Events = ({ upcomingEvents, allPastEvents }) => {
   }, [pastEvents, loadingPast]);
 
   // filter past events of a year by selected category
-  const filterContent = (selectedCategory) => {
+  const filterContent = (selectedCategory: string) => {
     const filteredContent = {
       term1: filterTerm('term1', selectedCategory),
       term2: filterTerm('term2', selectedCategory),
@@ -148,9 +138,9 @@ const Events = ({ upcomingEvents, allPastEvents }) => {
   };
 
   // filter the past events of the given term by the selected category
-  const filterTerm = (term, selectedCategory) => {
+  const filterTerm = (term: string, selectedCategory: string) => {
     const filteredTerm = pastContent[term].filter(
-      (picture) =>
+      (picture: any) =>
         selectedCategory === 'All' ||
         (picture.fields.categories !== null &&
           picture.fields.categories.includes(selectedCategory))
@@ -160,7 +150,7 @@ const Events = ({ upcomingEvents, allPastEvents }) => {
   };
 
   // get upcoming events
-  // input: upcoming events data from google sheets
+  // input: upcoming events data from contenful
   // output: array of dictionaries containing upcoming events data
   const fetchUpcomingEvents = async () => {
     const tempEvents = upcomingEvents;
@@ -180,8 +170,8 @@ const Events = ({ upcomingEvents, allPastEvents }) => {
   }, []);
 
   // get events for a specific term
-  const getTermEvents = (events) => {
-    return events.map((event, index) => {
+  const getTermEvents = (events: any) => {
+    return events.map((event: any, index: number) => {
       let eventLabel = event.fields.img.fields.title.split('.')[0].split('-');
       eventLabel.shift();
       let eventId = event.fields.eventNumber;
@@ -239,7 +229,7 @@ const Events = ({ upcomingEvents, allPastEvents }) => {
               ) : (
                 <div className={styles.upcomingEventsContainer}>
                   {!isMobile &&
-                    upcomingEvents.map((upcomingEvent, index) => {
+                    upcomingEvents.map((upcomingEvent: any, index: number) => {
                       return (
                         <div className={styles.upcomingEventsBox} key={index}>
                           <UpcomingEvent
@@ -251,7 +241,7 @@ const Events = ({ upcomingEvents, allPastEvents }) => {
                     })}
 
                   {isMobile &&
-                    upcomingEvents.map((index, upcomingEvent) => {
+                    upcomingEvents.map((upcomingEvent: any, index: number) => {
                       return (
                         <UpcomingEvent
                           key={index}

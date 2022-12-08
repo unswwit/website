@@ -92,7 +92,7 @@ const Videos = ({ videos }: any) => {
   useEffect(() => {
     window.scrollTo(0, 0);
     fetchVideos(videos);
-  }, []);
+  });
 
   useEffect(() => {
     if (currentPosts.length === 0 && loading === false) {

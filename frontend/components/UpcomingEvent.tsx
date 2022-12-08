@@ -108,7 +108,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function UpcomingEvent({ upcomingEvent }) {
+export default function UpcomingEvent({ upcomingEvent }: any) {
   const classes = useStyles();
 
   const {
@@ -141,6 +141,7 @@ export default function UpcomingEvent({ upcomingEvent }) {
             className={styles.upcomingEventCover}
             width="360px"
             height="300px"
+            alt="upcoming event cover"
           />
         </div>
 

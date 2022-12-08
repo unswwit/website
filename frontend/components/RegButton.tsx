@@ -1,6 +1,6 @@
 import styles from '../styles/Events.module.css';
 
-const RegBtn = ({ link }) => {
+const RegBtn = ({ link }: any) => {
   const openLink = () => {
     window.open(link);
   };

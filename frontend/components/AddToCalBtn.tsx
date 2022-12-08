@@ -1,6 +1,15 @@
 import AddToCalendarHOC from 'react-add-to-calendar-hoc';
 import styles from '../styles/AddToCal.module.css';
 
+interface Details {
+  title: string,
+  description: string,
+  location: string,
+  startDate: string,
+  endDate: string,
+  duration: string
+};
+
 const AddToCalBtn = ({
   title,
   description,
@@ -8,7 +17,7 @@ const AddToCalBtn = ({
   startDate,
   endDate,
   duration,
-}) => {
+}: Details) => {
   const start = new Date();
   let end = new Date();
   end.setHours(start.getHours() + 1);
@@ -33,11 +42,11 @@ const AddToCalBtn = ({
     endDatetime: endDate ? endDate : endDefaultString,
   };
 
-  function Dropdown({ children }) {
+  function Dropdown({ children }: any) {
     return <div className={styles.dropItems}>{children}</div>;
   }
 
-  function Button({ children, onClick }) {
+  function Button({ children, onClick }: any) {
     return (
       <button className={styles.button} onClick={onClick}>
         {children}

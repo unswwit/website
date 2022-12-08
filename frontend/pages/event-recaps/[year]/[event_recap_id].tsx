@@ -12,7 +12,7 @@ import 'react-awesome-slider/dist/styles.css';
 import Image from 'next/image';
 import { loadPastEvents } from '../../../lib/api';
 
-const EventRecapPage = ({ selectedEvent }) => {
+const EventRecapPage = ({ selectedEvent }: any) => {
   const [expanded, setExpanded] = useState(false);
   const [event, setEvent] = useState(selectedEvent);
   const [loading, setLoading] = useState(true);
@@ -23,7 +23,7 @@ const EventRecapPage = ({ selectedEvent }) => {
   const [hasEmbeddedVideo, setHasEmbeddedVideo] = useState(false);
   const [enableGalleryArrows, setEnableGalleryArrows] = useState(true);
 
-  const fetchPastEvent = (event) => {
+  const fetchPastEvent = (event: any) => {
     setLoading(false);
     setPhotos(event);
 
@@ -48,11 +48,11 @@ const EventRecapPage = ({ selectedEvent }) => {
     fetchPastEvent(event);
   }, []);
 
-  const setPhotos = (currEvent) => {
+  const setPhotos = (currEvent: any) => {
     if (currEvent.fields.imagePaths) {
       setHasPhotos(true);
-      var tempArray = [];
-      currEvent.fields.imagePaths.split(',').forEach((filename) => {
+      var tempArray: any = [];
+      currEvent.fields.imagePaths.split(',').forEach((filename: string) => {
         tempArray.push({
           source: `/event-recap/${currEvent.fields.year}/T${currEvent.fields.term}/${currEvent.fields.imageFolder}/${filename}`,
         });
@@ -174,8 +174,11 @@ const EventRecapPage = ({ selectedEvent }) => {
                     title="event-resources"
                     src={`https://drive.google.com/a/unswwit.com/embeddedfolderview?id=${event.fields.resourcesFolderId}#grid`}
                     style={{
+                      // eslint-disable-next-line no-inline-styles/no-inline-styles
                       width: '100%',
+                      // eslint-disable-next-line no-inline-styles/no-inline-styles
                       height: '280px',
+                      // eslint-disable-next-line no-inline-styles/no-inline-styles
                       border: '0',
                     }}
                   ></iframe>
@@ -191,7 +194,7 @@ const EventRecapPage = ({ selectedEvent }) => {
 
 export async function getStaticPaths() {
   const pastEvents = await loadPastEvents();
-  const paths = pastEvents.map((event) => ({
+  const paths = pastEvents.map((event: any) => ({
     params: {
       year: event.fields.year.toString(),
       event_recap_id: event.fields.eventNumber.toString(),
@@ -203,17 +206,16 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: any) {
   const pastEvents = await loadPastEvents();
-  let selectedEvent = pastEvents.filter((event) => {
+  let selectedEvent = pastEvents.filter((event: any) => {
     if (
       event.fields.eventNumber.toString() === params.event_recap_id &&
       event.fields.year.toString() === params.year
     ) {
       return true;
-    } else {
-      return false;
     }
+    return false;
   });
   selectedEvent = selectedEvent[0];
   return {
