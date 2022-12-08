@@ -1,3 +1,4 @@
+// @ts-nocheck comment
 import React from 'react';
 import styles from '../styles/Newsletter.module.css';
 import CloseIcon from '@material-ui/icons/Close';
