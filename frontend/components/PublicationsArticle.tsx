@@ -1,24 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from '../styles/Publications.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { formatPublicationsDate } from '../lib/helpers';
 
-class PubArticle extends Component {
-  render() {
-    return (
-      <div className={styles.article}>
+export default function PubArticle(props: any) {
+  return (
+    <div className={styles.article}>
         {/*Start of publications article*/}
         <div className={styles.dark} />
         <div className={styles.articleImg}>
-          <Image src={this.props.imgUrl} alt="wit logo" layout={'fill'} />
+          <Image src={props.imgUrl} alt="wit logo" layout={'fill'} />
         </div>
 
         <div className={styles.textContainer}>
-          <h2>{this.props.heading}</h2>
-          <p>{formatPublicationsDate(this.props.date)}</p>
+          <h2>{props.heading}</h2>
+          <p>{formatPublicationsDate(props.date)}</p>
           <div tabIndex={0} role="button" className={styles.button}>
-            <Link href={this.props.url}>
+            <Link href={props.url}>
               <a target="_blank" rel="noopener noreferrer">
                 Read More
               </a>
@@ -27,7 +26,5 @@ class PubArticle extends Component {
         </div>
         {/*End of publications article*/}
       </div>
-    );
-  }
-}
-export default PubArticle;
+  );
+};

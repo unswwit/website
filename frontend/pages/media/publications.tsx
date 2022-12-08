@@ -6,7 +6,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import LoadingScreen from '../../components/LoadingScreen';
 import { loadPublications } from '../../lib/api';
 
-const Publications = ({ publications }) => {
+const Publications = ({ publications }: any) => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [sourceLoading, setSourceLoading] = useState(true);
@@ -18,12 +18,12 @@ const Publications = ({ publications }) => {
 
     // load articles
     fetchPublications(publications);
-  }, []);
+  }, [publications]);
 
   // get publications
-  // input: publications data from database
+  // input: publications data from contentful
   // output: array of dictionaries containing publications data
-  const fetchPublications = async (publications) => {
+  const fetchPublications = async (publications: any) => {
     setLoading(false);
     setArticles(publications);
     setSourceLoading(false);
@@ -65,13 +65,10 @@ const Publications = ({ publications }) => {
                       <h1>{year}</h1>
                       <div className={styles.row}>
                         {articles
-
                           .filter(
                             (publication) =>
                               publication.fields.year === year.toString()
-                          )
-
-                          .map((publication, index) => (
+                          ).map((publication, index) => (
                             <PubArticle
                               key={index}
                               imgUrl={
