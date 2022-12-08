@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from '../styles/Opportunities.module.css';
 import Link from 'next/link';
 
-export default function OpportunitiesCard({ individualOpportunity, index }) {
+export default function OpportunitiesCard({ individualOpportunity, index }: any) {
   const {
     link,
     img,

@@ -6,7 +6,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import LoadingScreen from '../components/LoadingScreen';
 import { loadOpportunities } from '../lib/api';
 
-const Opportunities = ({ opportunities }) => {
+const Opportunities = ({ opportunities }: any) => {
   const [loading, setLoading] = useState(true);
   const [sourceLoading, setSourceLoading] = React.useState(true);
   const [headerLoading, setHeaderLoading] = React.useState(true);
@@ -74,7 +74,7 @@ const Opportunities = ({ opportunities }) => {
                   .
                 </p>
                 <div className={styles.oppGridContainer}>
-                  {opportunities.map((individualOpportunity, index) => {
+                  {opportunities.map((individualOpportunity: any, index: number) => {
                     return (
                       <OpportunitiesCard
                         key={index}
