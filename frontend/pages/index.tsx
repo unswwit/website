@@ -5,24 +5,23 @@ import Image from 'next/image';
 import CountUp from 'react-countup';
 import styles from '../styles/Home.module.css';
 import PubArticle from '../components/PublicationsArticle';
-import InitiativesSlideshow from '../components/InitiativesSlideshow';
+// import InitiativesSlideshow from '../components/InitiativesSlideshow';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Aos from 'aos';
 import { isMobile } from 'react-device-detect';
 import 'aos/dist/aos.css';
 import LoadingScreen from '../components/LoadingScreen';
 import NewsletterSection from '../components/NewsletterSection';
-import axios from 'axios';
-import humps from 'humps';
 import QuoteSlideshow from '../components/QuotesSlideshow';
 import execQuotes from '../data/home';
+import { loadPublications } from '../lib/api';
 
-const Home = () => {
+const Home = ({ publications }: any) => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [openNewsletter, setOpenNewsletter] = useState(false);
   const [sourceLoading, setSourceLoading] = useState(true);
-  const last3articles = articles.slice(0, 3);
+  const last3articles = publications.slice(0, 3);
 
   // close newsletter
   const callbackModal = () => {
@@ -41,13 +40,11 @@ const Home = () => {
   }, []);
 
   // get publications
-  // input: publications data from google sheets
+  // input: publications data from contentful
   // output: array of dictionaries containing publications data
-  const fetchPublications = async () => {
-    const res = await axios.get(
-      'https://wit-database.herokuapp.com/publications'
-    );
-    setArticles(humps.camelizeKeys(res.data).reverse());
+  const fetchPublications = async (publications: any) => {
+    setArticles(publications);
+    console.log(publications);
     setLoading(false);
     setSourceLoading(false);
   };
@@ -144,13 +141,14 @@ const Home = () => {
           {/* End of Statistics */}
 
           {/* Start of Upcoming Events / Latest blog / Latest podcast*/}
-          <div
+          {/* TODO: debug this */}
+          {/* <div
             data-aos={isMobile ? 'fade' : 'fade-up'}
             data-aos-delay="150"
             className={styles.carousel}
-          >
-            <InitiativesSlideshow />
-          </div>
+          > */}
+            {/* <InitiativesSlideshow /> */}
+          {/* </div> */}
 
           {/* Start of Publications */}
           <div
@@ -173,10 +171,10 @@ const Home = () => {
                   last3articles.map((article, index) => (
                     <div className={styles.homeArticles} key={index}>
                       <PubArticle
-                        imgUrl={`/publications/${article.year}/${article.img}`}
-                        heading={article.heading}
-                        date={article.date}
-                        url={article.url}
+                        imgUrl={'http:' + article.fields.img.fields.file.url}
+                        heading={article.fields.heading}
+                        date={article.fields.date}
+                        url={article.fields.url}
                       />
                     </div>
                   ))}
@@ -234,3 +232,10 @@ const Home = () => {
 };
 
 export default Home;
+
+export async function getStaticProps() {
+  const publications = await loadPublications();
+  return {
+    props: { publications },
+  };
+}
