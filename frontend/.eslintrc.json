@@ -22,6 +22,6 @@
     "no-unneeded-ternary": "error",
     "no-unused-vars": "warn",
     "semi": ["error", "always"],
-    "quotes": ["error", "double"]
+    "quotes": ["error", "single"]
   }
 }
