@@ -7,7 +7,7 @@ import styles from '../../styles/Sponsors.module.css';
 import PageHeader from '../../components/Header';
 import SponsorsModal from '../../components/SponsorModal';
 import LoadingScreen from '../../components/LoadingScreen';
-import { sponsors, affiliations, partnerships } from '../../data/SponsorData';
+import { sponsors, affiliations, partnerships } from '../../data/sponsor';
 import Link from 'next/link';
 
 export default function Sponsors() {
@@ -68,6 +68,7 @@ export default function Sponsors() {
                 .filter((key) => sponsors[key][3] === 'DIAMOND')
                 .map((key) => (
                   // TODO: change img tags to next/image tags
+                  // eslint-disable-next-line @next/next/no-img-element
                   <img
                     className={styles.logo}
                     src={
@@ -95,6 +96,7 @@ export default function Sponsors() {
                 .sort()
                 .filter((key) => sponsors[key][3] === 'GOLD')
                 .map((key) => (
+                  // eslint-disable-next-line @next/next/no-img-element
                   <img
                     className={styles.logo}
                     src={
@@ -122,6 +124,7 @@ export default function Sponsors() {
                 .sort()
                 .filter((key) => sponsors[key][3] === 'SILVER')
                 .map((key) => (
+                  // eslint-disable-next-line @next/next/no-img-element
                   <img
                     className={styles.logo}
                     src={
@@ -149,6 +152,7 @@ export default function Sponsors() {
                 .sort()
                 .filter((key) => sponsors[key][3] === 'BRONZE')
                 .map((key) => (
+                  // eslint-disable-next-line @next/next/no-img-element
                   <img
                     className={styles.logo}
                     src={
@@ -181,6 +185,7 @@ export default function Sponsors() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       className={styles.logo}
                       src={
@@ -209,6 +214,7 @@ export default function Sponsors() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       className={styles.logo}
                       src={
