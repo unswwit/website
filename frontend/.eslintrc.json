@@ -1,0 +1,28 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": ["eslint:recommended", "next", "prettier"],
+  "plugins": ["eslint-plugin-no-inline-styles"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "rules": {
+    "eqeqeq": ["error", "always"],
+    "eol-last": ["error", "always"],
+    "no-duplicate-imports": "error",
+    "no-inline-styles/no-inline-styles": "warn",
+    "no-unused-expressions": "error",
+    "no-unneeded-ternary": "error",
+    "no-unused-vars": "warn",
+    "semi": ["error", "always"],
+    "quotes": ["error", "single"]
+  }
+}

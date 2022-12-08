@@ -1,0 +1,28 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches: 
+      - develop
+
+jobs:
+  Jest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install dependencies
+        working-directory: ./frontend
+        run: npm install 
+      - name: Format files
+        working-directory: ./frontend
+        run: npm run prettier 
+      # TODO: figure out why linting broke
+      # - name: Lint files
+      #   working-directory: ./frontend
+      #   run: npm run lint
+      - name: Run tests
+        working-directory: ./frontend
+        run: npm run test
