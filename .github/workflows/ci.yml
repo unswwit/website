@@ -21,7 +21,7 @@ jobs:
         run: npm run prettier 
       - name: Lint files
         working-directory: ./frontend
-        run: npm run lint:fix
+        run: npm run lint
       - name: Run tests
         working-directory: ./frontend
         run: npm run test
