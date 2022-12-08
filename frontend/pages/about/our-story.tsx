@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import PageHeader from '../../components/Header.js';
+import PageHeader from '../../components/Header';
 import styles from '../../styles/OurStory.module.css';
 import Timeline from '../../components/OurStoryTimeline';
 import LoadingScreen from '../../components/LoadingScreen';

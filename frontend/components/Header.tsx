@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
-const PageHeader = ({ imageLoading, imgUrl, title }) => {
+interface Header {
+  imageLoading: any,
+  imgUrl: string,
+  title: string,
+}
+
+const PageHeader = ({ imageLoading, imgUrl, title }: Header ) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
@@ -24,7 +30,6 @@ const PageHeader = ({ imageLoading, imgUrl, title }) => {
           typeof imageLoading === 'function' ? () => setImageLoaded(true) : null
         }
         layout={'fill'}
-        priority="True"
       />
 
       {/* text */}
