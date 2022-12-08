@@ -14,10 +14,10 @@ import {
   categories,
   marks,
   valueToYear,
-} from '../../data/MarketingData';
+} from '../../data/marketing';
 import { formatMarketingArchivesDate } from '../../lib/helpers';
 
-const MarketingContent = ({ archives }) => {
+const MarketingContent = ({ archives }: any) => {
   const classes = useStyles();
   const [content, setContent] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -37,7 +37,7 @@ const MarketingContent = ({ archives }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   // set the year for the events timeline
-  const handleYear = (newYear) => {
+  const handleYear = (newYear: string) => {
     setYear(newYear);
     setCurrentPage('All');
   };
@@ -81,7 +81,7 @@ const MarketingContent = ({ archives }) => {
   }, [currentPosts, loading]);
 
   // filter content by selected category
-  const filterContent = (selectedCategory) => {
+  const filterContent = (selectedCategory: string) => {
     const filteredContent = content.filter(
       (picture) =>
         selectedCategory === 'All' ||
@@ -93,7 +93,7 @@ const MarketingContent = ({ archives }) => {
   };
 
   // called when pagination item clicked to slice the correct amount of posts for viewing
-  const paginate = (pageNumber) => {
+  const paginate = (pageNumber: number) => {
     setCurrentPosts(
       selectedPosts.slice(
         (pageNumber - 1) * postsPerPage,
