@@ -7,7 +7,7 @@ import {
   marketingDescription,
   mediaDescription,
   publicationsDescription,
-} from '../data/JoinData';
+} from '../data/join';
 import styles from '../styles/JoinUs.module.css';
 import React, { useState } from 'react';
 
