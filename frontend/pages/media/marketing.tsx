@@ -15,7 +15,7 @@ import {
   marks,
   valueToYear,
 } from '../../data/marketing';
-import { formatMarketingArchivesDate } from '../../lib/helpers';
+import { formatMarketingArchivesDate } from '../../lib/helpers/date';
 
 const MarketingContent = ({ archives }: any) => {
   const classes = useStyles();

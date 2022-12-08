@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../styles/Publications.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import { formatPublicationsDate } from '../lib/helpers';
+import { formatPublicationsDate } from '../lib/helpers/date';
 
 export default function PubArticle(props: any) {
   return (

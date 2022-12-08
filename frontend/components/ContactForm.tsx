@@ -6,7 +6,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 const ContactForm = () => {
   const [email, setEmail] = React.useState('');
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: any) => {
     e.preventDefault();
 
     // validating that the email is in the correct form
@@ -69,7 +69,7 @@ const ContactForm = () => {
         className={styles.formInput}
         name="message"
         placeholder="Message*"
-        rows="5"
+        rows={5}
         required
       />
       <br />

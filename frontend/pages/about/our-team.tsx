@@ -215,7 +215,7 @@ const OurTeam = ({ execs, subcommittee }: any) => {
       )}
     </div>
   );
-}
+};
 
 export default OurTeam;
 

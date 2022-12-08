@@ -8,7 +8,7 @@ import ScrollUpBtn from '../../components/ScrollUpBtn';
 import LoadingScreen from '../../components/LoadingScreen';
 import { useStyles, links, categories } from '../../data/podcast';
 import { loadPodcasts } from '../../lib/api';
-import { formatPodcastDate } from '../../lib/helpers';
+import { formatPodcastDate } from '../../lib/helpers/date';
 import Image from 'next/image';
 import Link from 'next/link';
 

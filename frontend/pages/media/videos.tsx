@@ -10,7 +10,7 @@ import LoadingScreen from '../../components/LoadingScreen';
 import { isMobile } from 'react-device-detect';
 import { loadVideos } from '../../lib/api';
 import { useStyles, categories } from '../../data/video';
-import { formatDate } from '../../lib/helpers';
+import { formatDate } from '../../lib/helpers/date';
 
 const Videos = ({ videos }: any) => {
   const classes = useStyles();

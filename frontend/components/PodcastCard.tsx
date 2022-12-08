@@ -7,7 +7,7 @@ import {
   Typography,
 } from '@material-ui/core';
 import styles from '../styles/Podcast.module.css';
-import { formatPodcastDate } from '../lib/helpers';
+import { formatPodcastDate } from '../lib/helpers/date';
 import Link from 'next/link';
 import Image from 'next/image';
 
