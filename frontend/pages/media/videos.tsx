@@ -9,10 +9,10 @@ import PaginationComp from '../../components/Pagination';
 import LoadingScreen from '../../components/LoadingScreen';
 import { isMobile } from 'react-device-detect';
 import { loadVideos } from '../../lib/api';
-import { useStyles, categories } from '../../data/VideoData';
+import { useStyles, categories } from '../../data/video';
 import { formatDate } from '../../lib/helpers';
 
-const Videos = ({ videos }) => {
+const Videos = ({ videos }: any) => {
   const classes = useStyles();
   const [video, setVideo] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -39,7 +39,7 @@ const Videos = ({ videos }) => {
   const [youtubeTheme, setYoutubeTheme] = useState('full');
 
   // retrieve current video content
-  const handleVideoNumber = (numVideos) => {
+  const handleVideoNumber = (numVideos: any) => {
     let url = window.location.href.split('/');
     if (url[url.length - 1] && url[url.length - 1] !== 'videos') {
       setVideoNumber(url[url.length - 1]);
@@ -49,9 +49,9 @@ const Videos = ({ videos }) => {
   };
 
   // load the page content for the current video
-  const loadPageContent = (allVideos, currVideoNumber) => {
+  const loadPageContent = (allVideos: any, currVideoNumber: any) => {
     var videoIndex = 0;
-    const currVideo = allVideos.filter((video, index) => {
+    const currVideo = allVideos.filter((video: any, index: any) => {
       if (video.fields.episodeNo.toString() === currVideoNumber) {
         videoIndex = index;
         return true;
@@ -65,7 +65,7 @@ const Videos = ({ videos }) => {
   };
 
   // load video previews
-  const loadVideoPreviews = (allVideos, videoIndex) => {
+  const loadVideoPreviews = (allVideos: any, videoIndex: any) => {
     let sortedVideos = allVideos.slice(0, videoIndex).reverse();
     const additionalVideos = allVideos
       .slice(videoIndex + 1, allVideos.length)
@@ -80,7 +80,7 @@ const Videos = ({ videos }) => {
   // get videos from contentful
   // input: video data from contentful
   // output: array of dictionaries containing videos data
-  const fetchVideos = (videos) => {
+  const fetchVideos = (videos: any) => {
     setContent(videos);
     setLoading(false);
     setHeaderLoading(false);
@@ -104,7 +104,7 @@ const Videos = ({ videos }) => {
   }, [currentPosts, loading]);
 
   // filter content by selected category + searchTerm
-  const filterContent = (selectedCategory, searchTerm) => {
+  const filterContent = (selectedCategory: any, searchTerm: string) => {
     // filter by category
     const filteredContent = content.filter(
       (picture) =>
@@ -116,8 +116,8 @@ const Videos = ({ videos }) => {
   };
 
   // filter category content by search filter in heading, subheading or author
-  const searchVideos = (filteredContent, searchTerm) => {
-    const searchResults = filteredContent.filter((video) => {
+  const searchVideos = (filteredContent: any, searchTerm: string) => {
+    const searchResults = filteredContent.filter((video: any) => {
       if (
         searchTerm === '' ||
         video.fields.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -134,7 +134,7 @@ const Videos = ({ videos }) => {
   };
 
   // called when pagination item clicked to slice the correct amount of videos for viewing
-  const paginate = (pageNumber) => {
+  const paginate = (pageNumber: number) => {
     setCurrentPosts(
       selectedPosts.slice(
         (pageNumber - 1) * postsPerPage,
@@ -155,8 +155,8 @@ const Videos = ({ videos }) => {
   }, []);
 
   // get video items
-  const getVideos = (videos) => {
-    return videos.map((video, index) => {
+  const getVideos = (videos: any) => {
+    return videos.map((video: any, index: number) => {
       return (
         <div className={styles.videoDescription} key={index}>
           <a href={'https://www.youtube.com/watch?v=' + video.fields.embedUrl} target="_blank" rel="noopener noreferrer">
