@@ -1,32 +1,32 @@
-import React, { useEffect, useState } from "react";
-import PageHeader from "../../components/Header";
-import Chip from "@material-ui/core/Chip";
-import styles from "../../styles/Videos.module.css";
-import YouTubeSubscribe from "../../components/YoutubeSubscribeBtn";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import Image from "next/image";
-import PaginationComp from "../../components/Pagination";
-import LoadingScreen from "../../components/LoadingScreen";
-import { isMobile } from "react-device-detect";
-import { loadVideos } from "../../lib/api";
-import { useStyles, categories } from "../../data/VideoData";
-import { formatDate } from "../../lib/helpers";
+import React, { useEffect, useState } from 'react';
+import PageHeader from '../../components/Header';
+import Chip from '@material-ui/core/Chip';
+import styles from '../../styles/Videos.module.css';
+import YouTubeSubscribe from '../../components/YoutubeSubscribeBtn';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Image from 'next/image';
+import PaginationComp from '../../components/Pagination';
+import LoadingScreen from '../../components/LoadingScreen';
+import { isMobile } from 'react-device-detect';
+import { loadVideos } from '../../lib/api';
+import { useStyles, categories } from '../../data/VideoData';
+import { formatDate } from '../../lib/helpers';
 
 const Videos = ({ videos }) => {
   const classes = useStyles();
   const [video, setVideo] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [videoNumber, setVideoNumber] = useState("0");
+  const [videoNumber, setVideoNumber] = useState('0');
   const [sourceLoading, setSourceLoading] = useState(true);
   const [headerLoading, setHeaderLoading] = useState(true);
   // all videos
   const [content, setContent] = useState([]);
   // currently selected category -> default to "All"
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState('All');
   // check if search + category filters result in no results
   const [emptyCategory, setEmptyCategory] = useState(false);
   // search term (user input) for videos search bar
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
   // all the posts of the selected filter category
   const [selectedPosts, setSelectedPosts] = useState([]);
   // the posts displayed on the current page
@@ -36,12 +36,12 @@ const Videos = ({ videos }) => {
   // current page number
   const [currentPage, setCurrentPage] = useState(1);
   // set youtube theme
-  const [youtubeTheme, setYoutubeTheme] = useState("full");
+  const [youtubeTheme, setYoutubeTheme] = useState('full');
 
   // retrieve current video content
   const handleVideoNumber = (numVideos) => {
-    let url = window.location.href.split("/");
-    if (url[url.length - 1] && url[url.length - 1] !== "videos") {
+    let url = window.location.href.split('/');
+    if (url[url.length - 1] && url[url.length - 1] !== 'videos') {
       setVideoNumber(url[url.length - 1]);
       return url[url.length - 1];
     }
@@ -108,7 +108,7 @@ const Videos = ({ videos }) => {
     // filter by category
     const filteredContent = content.filter(
       (picture) =>
-        selectedCategory === "All" ||
+        selectedCategory === 'All' ||
         picture.fields.category.includes(selectedCategory)
     );
     // filter by search term
@@ -119,7 +119,7 @@ const Videos = ({ videos }) => {
   const searchVideos = (filteredContent, searchTerm) => {
     const searchResults = filteredContent.filter((video) => {
       if (
-        searchTerm === "" ||
+        searchTerm === '' ||
         video.fields.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         video.fields.date.toLowerCase().includes(searchTerm.toLowerCase())
       ) {
@@ -148,9 +148,9 @@ const Videos = ({ videos }) => {
   useEffect(() => {
     if (
       window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
+      window.matchMedia('(prefers-color-scheme: dark)').matches
     ) {
-      setYoutubeTheme("dark");
+      setYoutubeTheme('dark');
     }
   }, []);
 
@@ -159,7 +159,7 @@ const Videos = ({ videos }) => {
     return videos.map((video, index) => {
       return (
         <div className={styles.videoDescription} key={index}>
-          <a href={"https://www.youtube.com/watch?v=" + video.fields.embedUrl} target="_blank" rel="noopener noreferrer">
+          <a href={'https://www.youtube.com/watch?v=' + video.fields.embedUrl} target="_blank" rel="noopener noreferrer">
             <div
               className={styles.boxContainer}
             >
@@ -167,10 +167,10 @@ const Videos = ({ videos }) => {
               <div className={styles.previewContainer}>
                 <Image
                   className={styles.videoImages}
-                  src={"http://" + video.fields.video.fields.file.url}
+                  src={'http://' + video.fields.video.fields.file.url}
                   alt={video.fields.title}
-                  width={"1200px"}
-                  height={"628px"}
+                  width={'1200px'}
+                  height={'628px'}
                 />
               </div>
               <p className={styles.moreName}>{video.fields.title}</p>
@@ -211,9 +211,9 @@ const Videos = ({ videos }) => {
               <div className={styles.youtubeImgContainer}>
                 <Image
                   className={styles.youtubeImg}
-                  src={"/videos/youtube.png"}
+                  src={'/videos/youtube.png'}
                   alt="Youtube"
-                  layout={"fill"}
+                  layout={'fill'}
                 />
               </div>
               <p className={styles.desc}>
@@ -225,10 +225,10 @@ const Videos = ({ videos }) => {
               <p className={styles.subscribeText}>SUBSCRIBE HERE</p>
               {/*https://www.youtube.com/channel/UCQ8PGe3P4ZuDSNCb9vCeTiw?sub_confirmation=1&feature=subscribe-embed-click*/}
               <YouTubeSubscribe
-                channelid={"UCQ8PGe3P4ZuDSNCb9vCeTiw"}
+                channelid={'UCQ8PGe3P4ZuDSNCb9vCeTiw'}
                 theme={youtubeTheme}
-                layout={"full"}
-                count={"hidden"}
+                layout={'full'}
+                count={'hidden'}
                 className={styles.subscribe}
               />
               {/* YouTube Embedded Video */}
@@ -242,7 +242,7 @@ const Videos = ({ videos }) => {
                       src={`https://www.youtube.com/embed/${video.fields.embedUrl}?`} // embedded path
                       frameBorder="0"
                       allow="fullscreen; autoplay; encrypted-media;"
-                      title={!video.fields.title ? "Video" : video.fields.title}
+                      title={!video.fields.title ? 'Video' : video.fields.title}
                       className={styles.embeddedVideo}
                       allowFullScreen="true"
                     />
@@ -260,8 +260,8 @@ const Videos = ({ videos }) => {
                     .map((category) => {
                       const chipColour =
                         selectedCategory === categories[category]
-                          ? "#e85f5c"
-                          : "#7F7F7F";
+                          ? '#e85f5c'
+                          : '#7F7F7F';
                       return (
                         <Chip
                           key={category}

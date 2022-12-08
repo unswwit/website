@@ -1,10 +1,10 @@
-import React from "react";
-import emailjs from "@emailjs/browser";
-import styles from "../styles/ContactUs.module.css";
-import ReCAPTCHA from "react-google-recaptcha";
+import React from 'react';
+import emailjs from '@emailjs/browser';
+import styles from '../styles/ContactUs.module.css';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 export default function ContactForm() {
-  const [email, setEmail] = React.useState("");
+  const [email, setEmail] = React.useState('');
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -24,17 +24,17 @@ export default function ContactForm() {
         .then(
           () => {
             alert(
-              "Your inquiry was sent successfully. You can expect to hear a response from us within a week."
+              'Your inquiry was sent successfully. You can expect to hear a response from us within a week.'
             );
           },
           (error) => {
-            alert("Your inquiry failed to send. Please try again");
+            alert('Your inquiry failed to send. Please try again');
           }
         );
-      setEmail("");
+      setEmail('');
       e.target.reset();
     } else {
-      alert("Please input a valid email");
+      alert('Please input a valid email');
     }
   };
 

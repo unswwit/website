@@ -1,16 +1,16 @@
-import { useState, useEffect } from "react";
-import PageHeader from "../../../components/Header";
-import styles from "../../../styles/EventRecap.module.css";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import Accordion from "@material-ui/core/Accordion";
-import AccordionDetails from "@material-ui/core/AccordionDetails";
-import AccordionSummary from "@material-ui/core/AccordionSummary";
-import Typography from "@material-ui/core/Typography";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import AwesomeSlider from "react-awesome-slider";
-import "react-awesome-slider/dist/styles.css";
-import Image from "next/image";
-import { loadPastEvents } from "../../../lib/api";
+import { useState, useEffect } from 'react';
+import PageHeader from '../../../components/Header';
+import styles from '../../../styles/EventRecap.module.css';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/styles.css';
+import Image from 'next/image';
+import { loadPastEvents } from '../../../lib/api';
 
 const EventRecapPage = ({ selectedEvent }) => {
   const [expanded, setExpanded] = useState(false);
@@ -52,7 +52,7 @@ const EventRecapPage = ({ selectedEvent }) => {
     if (currEvent.fields.imagePaths) {
       setHasPhotos(true);
       var tempArray = [];
-      currEvent.fields.imagePaths.split(",").forEach((filename) => {
+      currEvent.fields.imagePaths.split(',').forEach((filename) => {
         tempArray.push({
           source: `/event-recap/${currEvent.fields.year}/T${currEvent.fields.term}/${currEvent.fields.imageFolder}/${filename}`,
         });
@@ -68,7 +68,7 @@ const EventRecapPage = ({ selectedEvent }) => {
 
   return (
     <>
-      <PageHeader imgUrl="/headers/events-header.jfif" title={"Events"} />
+      <PageHeader imgUrl="/headers/events-header.jfif" title={'Events'} />
 
       {loading && (
         <div id={styles.eventLoadingContainer}>
@@ -130,7 +130,7 @@ const EventRecapPage = ({ selectedEvent }) => {
           {!hasPhotos && (
             <div className={styles.imageWrapper}>
               <Image
-                src={"http:" + event.fields.img.fields.file.url}
+                src={'http:' + event.fields.img.fields.file.url}
                 alt="header"
                 width="1200px"
                 height="630px"
@@ -174,9 +174,9 @@ const EventRecapPage = ({ selectedEvent }) => {
                     title="event-resources"
                     src={`https://drive.google.com/a/unswwit.com/embeddedfolderview?id=${event.fields.resourcesFolderId}#grid`}
                     style={{
-                      width: "100%",
-                      height: "280px",
-                      border: "0",
+                      width: '100%',
+                      height: '280px',
+                      border: '0',
                     }}
                   ></iframe>
                 </AccordionDetails>

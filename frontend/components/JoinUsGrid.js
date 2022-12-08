@@ -7,9 +7,9 @@ import {
   marketingDescription,
   mediaDescription,
   publicationsDescription,
-} from "../data/JoinData";
-import styles from "../styles/JoinUs.module.css";
-import React, { useState } from "react";
+} from '../data/JoinData';
+import styles from '../styles/JoinUs.module.css';
+import React, { useState } from 'react';
 
 const PortfolioGrid = () => {
   const [portfolios, setPortfolios] = useState({
@@ -36,7 +36,7 @@ const PortfolioGrid = () => {
         }
       >
         {portfolios.clickedCareers ? (
-          "Careers"
+          'Careers'
         ) : (
           <p className={styles.desc}>{careerDescription()}</p>
         )}
@@ -52,7 +52,7 @@ const PortfolioGrid = () => {
         }
       >
         {portfolios.clickedCompetitions ? (
-          "Competitions"
+          'Competitions'
         ) : (
           <p className={styles.desc}>{competitionDescription()}</p>
         )}
@@ -68,7 +68,7 @@ const PortfolioGrid = () => {
         }
       >
         {portfolios.clickedExt ? (
-          "Externals"
+          'Externals'
         ) : (
           <p className={styles.desc}>{externalsDescription()}</p>
         )}
@@ -84,7 +84,7 @@ const PortfolioGrid = () => {
         }
       >
         {portfolios.clickedHr ? (
-          "HR"
+          'HR'
         ) : (
           <p className={styles.desc}>{hrDescription()}</p>
         )}
@@ -100,7 +100,7 @@ const PortfolioGrid = () => {
         }
       >
         {portfolios.clickedIt ? (
-          "IT"
+          'IT'
         ) : (
           <p className={styles.desc}>{itDescription()}</p>
         )}
@@ -116,7 +116,7 @@ const PortfolioGrid = () => {
         }
       >
         {portfolios.clickedMar ? (
-          "Marketing"
+          'Marketing'
         ) : (
           <p className={styles.desc}>{marketingDescription()}</p>
         )}
@@ -132,7 +132,7 @@ const PortfolioGrid = () => {
         }
       >
         {portfolios.clickedMedia ? (
-          "Media"
+          'Media'
         ) : (
           <p className={styles.desc}>{mediaDescription()}</p>
         )}
@@ -148,7 +148,7 @@ const PortfolioGrid = () => {
         }
       >
         {portfolios.clickedPubs ? (
-          "Publications"
+          'Publications'
         ) : (
           <p className={styles.desc}>{publicationsDescription()}</p>
         )}

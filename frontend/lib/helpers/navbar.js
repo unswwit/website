@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import Link from "next/link";
-import Image from "next/image";
-import styles from "../../styles/Navbar.module.css";
-import { navigationBarContent } from "../../data/NavbarData.js";
+import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import Image from 'next/image';
+import styles from '../../styles/Navbar.module.css';
+import { navigationBarContent } from '../../data/navbar';
 import {
   changeAboutUsToArrowDown,
   changeAboutUsToArrowRight,
   changeMediaToArrowDown,
   changeMediaToArrowRight,
-} from "../../components/navbarHelpers";
-import MenuIcon from "@material-ui/icons/Menu";
-import CloseIcon from "@material-ui/icons/Close";
+} from '../../components/navbarHelpers';
+import MenuIcon from '@material-ui/icons/Menu';
+import CloseIcon from '@material-ui/icons/Close';
 
 const Navbar = () => {
   const [clearNavBar, setClearNavBar] = useState(true);
@@ -26,24 +26,24 @@ const Navbar = () => {
   useEffect(() => {
     if (
       window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
+      window.matchMedia('(prefers-color-scheme: dark)').matches
     ) {
       setDarkMode(true);
     }
   }, []);
 
   useEffect(() => {
-    window.addEventListener("scroll", checkBottomScreen);
+    window.addEventListener('scroll', checkBottomScreen);
     return () => {
-      window.removeEventListener("scroll", checkBottomScreen);
+      window.removeEventListener('scroll', checkBottomScreen);
     };
   }, []);
 
   useEffect(() => {
     checkTopScreen();
-    window.addEventListener("scroll", checkTopScreen);
+    window.addEventListener('scroll', checkTopScreen);
     return () => {
-      window.removeEventListener("scroll", checkTopScreen);
+      window.removeEventListener('scroll', checkTopScreen);
     };
   }, []);
 
@@ -95,10 +95,10 @@ const Navbar = () => {
   };
 
   const setDropdownStyles = (id) => {
-    if (id === "aboutUsDropdown") {
-      if (router.asPath.split("/")[1] === "about" && aboutUsDropdownOpen) {
+    if (id === 'aboutUsDropdown') {
+      if (router.asPath.split('/')[1] === 'about' && aboutUsDropdownOpen) {
         return `${styles.currentPageMenuUnderline} ${styles.currentDropdown} ${styles.menuItem}`;
-      } else if (router.asPath.split("/")[1] === "about") {
+      } else if (router.asPath.split('/')[1] === 'about') {
         return `${styles.currentPageMenuUnderline} ${styles.menuItem}`;
       } else if (aboutUsDropdownOpen) {
         return `${styles.currentDropdown} ${styles.menuItem}`;
@@ -106,9 +106,9 @@ const Navbar = () => {
         return styles.menuItem;
       }
     }
-    if (router.asPath.split("/")[1] === "media" && mediaDropdownOpen) {
+    if (router.asPath.split('/')[1] === 'media' && mediaDropdownOpen) {
       return `${styles.currentPageMenuUnderline} ${styles.currentDropdown} ${styles.menuItem}`;
-    } else if (router.asPath.split("/")[1] === "media") {
+    } else if (router.asPath.split('/')[1] === 'media') {
       return `${styles.currentPageMenuUnderline} ${styles.menuItem}`;
     } else if (mediaDropdownOpen) {
       return `${styles.currentDropdown} ${styles.menuItem}`;
@@ -117,7 +117,7 @@ const Navbar = () => {
     }
   };
 
-  if (document.getElementById("loadingWillow")) {
+  if (document.getElementById('loadingWillow')) {
     pageLoading = true;
   } else {
     pageLoading = false;
@@ -128,7 +128,7 @@ const Navbar = () => {
        otherwise return regular navbar */
     <nav
       className={
-        clearNavBar && router.pathname !== "/404"
+        clearNavBar && router.pathname !== '/404'
           ? `${styles.clearNavBar} ${styles.navBarContainer}`
           : hiddenNavBar
           ? `${styles.hiddenNavBar} ${styles.navBarContainer}`
@@ -143,9 +143,9 @@ const Navbar = () => {
               <Image
                 className={styles.logoGridItem}
                 src={
-                  darkMode || (clearNavBar && router.pathname !== "/404")
-                    ? "/logo-white.png"
-                    : "/logo-black.png"
+                  darkMode || (clearNavBar && router.pathname !== '/404')
+                    ? '/logo-white.png'
+                    : '/logo-black.png'
                 }
                 alt="wit logo"
                 width={40}
@@ -177,7 +177,7 @@ const Navbar = () => {
         {/* if the navbar is transparent then the menu is also transparent */}
         <div
           className={
-            clearNavBar && router.pathname !== "/404"
+            clearNavBar && router.pathname !== '/404'
               ? `${styles.clearMenuContent} ${styles.menuContent}`
               : styles.menuContent
           }
@@ -194,7 +194,7 @@ const Navbar = () => {
                     className={styles.menuDropdownContainer}
                     id={page.id}
                     onClick={
-                      page.id === "aboutUsDropdown"
+                      page.id === 'aboutUsDropdown'
                         ? aboutUsDropdownClick
                         : mediaDropdownClick
                     }
@@ -208,11 +208,11 @@ const Navbar = () => {
                   </div>
                   <div
                     className={
-                      page.id === "aboutUsDropdown"
+                      page.id === 'aboutUsDropdown'
                         ? aboutUsDropdownOpen
                           ? styles.menuDropdownContent
                           : `${styles.menuDropdownContent} ${styles.hiddenMenuDropdownContent}`
-                        : page.id === "mediaDropdown" && mediaDropdownOpen
+                        : page.id === 'mediaDropdown' && mediaDropdownOpen
                         ? styles.menuDropdownContent
                         : `${styles.menuDropdownContent} ${styles.hiddenMenuDropdownContent}`
                     }
@@ -222,8 +222,8 @@ const Navbar = () => {
                         <Link href={page.link} key={index}>
                           <div
                             className={
-                              router.asPath.split("/")[2] ===
-                              page.link.split("/")[2]
+                              router.asPath.split('/')[2] ===
+                              page.link.split('/')[2]
                                 ? `${styles.currentPageMenuBold} ${
                                     index === dropdownContentLength
                                       ? styles.menuItemEnd

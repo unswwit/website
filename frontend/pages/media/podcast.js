@@ -1,16 +1,16 @@
-import { useState, useEffect } from "react";
-import PageHeader from "../../components/Header";
-import Chip from "@material-ui/core/Chip";
-import styles from "../../styles/Podcast.module.css";
-import EpisodeTemplate from "../../components/PodcastCard";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import ScrollUpBtn from "../../components/ScrollUpBtn";
-import LoadingScreen from "../../components/LoadingScreen";
-import { useStyles, links, categories } from "../../data/PodcastData";
-import { loadPodcasts } from "../../lib/api";
-import { formatPodcastDate } from "../../lib/helpers";
-import Image from "next/image";
-import Link from "next/link";
+import { useState, useEffect } from 'react';
+import PageHeader from '../../components/Header';
+import Chip from '@material-ui/core/Chip';
+import styles from '../../styles/Podcast.module.css';
+import EpisodeTemplate from '../../components/PodcastCard';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import ScrollUpBtn from '../../components/ScrollUpBtn';
+import LoadingScreen from '../../components/LoadingScreen';
+import { useStyles, links, categories } from '../../data/PodcastData';
+import { loadPodcasts } from '../../lib/api';
+import { formatPodcastDate } from '../../lib/helpers';
+import Image from 'next/image';
+import Link from 'next/link';
 
 // TO UNCOMMENT WHEN REACH > 9 PODCASTS
 // import PaginationComp from "../components/Pagination";
@@ -23,11 +23,11 @@ const Podcast = ({ episodes }) => {
   // all podcast episodes
   const [content, setContent] = useState([]);
   // currently selected category -> default to "All"
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState('All');
   // check if search + category filters result in no results
   const [emptyCategory, setEmptyCategory] = useState(false);
   // search term (user input) for podcast search bar
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
   // all the posts of the selected filter category
   const [selectedPosts, setSelectedPosts] = useState([]);
 
@@ -69,7 +69,7 @@ const Podcast = ({ episodes }) => {
   const filterContent = (selectedCategory, searchTerm) => {
     const filteredContent = content.filter(
       (picture) =>
-        selectedCategory === "All" ||
+        selectedCategory === 'All' ||
         picture.fields.category.includes(selectedCategory)
     );
     searchPodcasts(filteredContent, searchTerm);
@@ -80,7 +80,7 @@ const Podcast = ({ episodes }) => {
     const searchResults = filteredContent.filter((episode) => {
       const date = formatPodcastDate(episode.fields.date);
       if (
-        searchTerm === "" ||
+        searchTerm === '' ||
         date.toLowerCase().includes(searchTerm.toLowerCase()) ||
         episode.fields.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         episode.fields.description
@@ -122,7 +122,7 @@ const Podcast = ({ episodes }) => {
                   alt="Talk WIT Us logo"
                   height="250px"
                   width="250px"
-                  objectFit={"contain"}
+                  objectFit={'contain'}
                 />
               </div>
             </div>
@@ -178,8 +178,8 @@ const Podcast = ({ episodes }) => {
                 .map((category) => {
                   const chipColour =
                     selectedCategory === categories[category]
-                      ? "#e85f5c"
-                      : "#7F7F7F";
+                      ? '#e85f5c'
+                      : '#7F7F7F';
                   return (
                     <Chip
                       key={category}

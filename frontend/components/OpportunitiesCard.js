@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import styles from "../styles/Opportunities.module.css";
-import Link from "next/link";
+import React, { Component } from 'react';
+import styles from '../styles/Opportunities.module.css';
+import Link from 'next/link';
 
 export default function OpportunitiesCard({ individualOpportunity, index }) {
   const {
@@ -14,11 +14,11 @@ export default function OpportunitiesCard({ individualOpportunity, index }) {
     summary,
   } = individualOpportunity.fields;
 
-  const imgUrl = "https:" + img.fields.file.url;
+  const imgUrl = 'https:' + img.fields.file.url;
 
   // contentfulDate = YYYY-MM-DD
   // formattedDate = DD/MM/YYYY
-  const closeDateFormatted = closeDate.split("-").reverse().join("/");
+  const closeDateFormatted = closeDate.split('-').reverse().join('/');
 
   return (
     <Link href={link}>

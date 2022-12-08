@@ -4,14 +4,14 @@ import {
   Slide,
   ButtonBack,
   ButtonNext,
-} from "pure-react-carousel";
-import React, { useEffect, useState } from "react";
-import "pure-react-carousel/dist/react-carousel.es.css";
-import styles from "../styles/Home.module.css";
-import Link from "next/link";
-import Image from "next/image";
-import axios from "axios";
-import humps from "humps";
+} from 'pure-react-carousel';
+import React, { useEffect, useState } from 'react';
+import 'pure-react-carousel/dist/react-carousel.es.css';
+import styles from '../styles/Home.module.css';
+import Link from 'next/link';
+import Image from 'next/image';
+import axios from 'axios';
+import humps from 'humps';
 
 const InitiativesSlideshow = () => {
   const [firstUpcomingEvent, setFirstUpcomingEvent] = useState([]);
@@ -25,10 +25,10 @@ const InitiativesSlideshow = () => {
 
   useEffect(() => {
     const urls = [
-      "https://wit-database.herokuapp.com/upcoming-events",
-      "https://wit-database.herokuapp.com/past-events",
-      "https://wit-database.herokuapp.com/blog/previews",
-      "https://wit-database.herokuapp.com/podcast-episodes",
+      'https://wit-database.herokuapp.com/upcoming-events',
+      'https://wit-database.herokuapp.com/past-events',
+      'https://wit-database.herokuapp.com/blog/previews',
+      'https://wit-database.herokuapp.com/podcast-episodes',
     ];
     urls.forEach((url) => loadGoogleSheets(url));
   }, []);
@@ -38,16 +38,16 @@ const InitiativesSlideshow = () => {
     const fetchSlideshowData = async (url) => {
       const res = await axios.get(url);
       switch (url) {
-        case "https://wit-database.herokuapp.com/upcoming-events":
+        case 'https://wit-database.herokuapp.com/upcoming-events':
           setFirstUpcomingEvent(humps.camelizeKeys(res.data));
           break;
-        case "https://wit-database.herokuapp.com/past-events":
+        case 'https://wit-database.herokuapp.com/past-events':
           setLatestEvent(humps.camelizeKeys(res.data).reverse());
           break;
-        case "https://wit-database.herokuapp.com/blog/previews":
+        case 'https://wit-database.herokuapp.com/blog/previews':
           setLatestBlog(humps.camelizeKeys(res.data).reverse());
           break;
-        case "https://wit-database.herokuapp.com/podcast-episodes":
+        case 'https://wit-database.herokuapp.com/podcast-episodes':
           setLatestPodcast(humps.camelizeKeys(res.data).reverse());
           break;
         default:

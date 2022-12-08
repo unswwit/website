@@ -1,20 +1,20 @@
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import CountUp from "react-countup";
-import styles from "../styles/Home.module.css";
-import PubArticle from "../components/PublicationsArticle";
-import InitiativesSlideshow from "../components/InitiativesSlideshow.js";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import Aos from "aos";
-import { isMobile } from "react-device-detect";
-import "aos/dist/aos.css";
-import LoadingScreen from "../components/LoadingScreen";
-import NewsletterSection from "../components/NewsletterSection";
-import axios from "axios";
-import humps from "humps";
-import QuoteSlideshow from "../components/QuotesSlideshow";
-import execQuotes from "../data/HomeData";
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import CountUp from 'react-countup';
+import styles from '../styles/Home.module.css';
+import PubArticle from '../components/PublicationsArticle';
+import InitiativesSlideshow from '../components/InitiativesSlideshow.js';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Aos from 'aos';
+import { isMobile } from 'react-device-detect';
+import 'aos/dist/aos.css';
+import LoadingScreen from '../components/LoadingScreen';
+import NewsletterSection from '../components/NewsletterSection';
+import axios from 'axios';
+import humps from 'humps';
+import QuoteSlideshow from '../components/QuotesSlideshow';
+import execQuotes from '../data/home';
 
 const Home = () => {
   const [articles, setArticles] = useState([]);
@@ -33,8 +33,8 @@ const Home = () => {
     Aos.init({
       duration: 1300,
       once: true,
-      anchorPlacement: "top-bottom",
-      easing: "ease-in-out",
+      anchorPlacement: 'top-bottom',
+      easing: 'ease-in-out',
       offset: 20,
     });
   }, []);
@@ -44,7 +44,7 @@ const Home = () => {
   // output: array of dictionaries containing publications data
   const fetchPublications = async () => {
     const res = await axios.get(
-      "https://wit-database.herokuapp.com/publications"
+      'https://wit-database.herokuapp.com/publications'
     );
     setArticles(humps.camelizeKeys(res.data).reverse());
     setLoading(false);
@@ -78,7 +78,7 @@ const Home = () => {
 
           {/* Start of Description */}
           <div
-            data-aos={isMobile ? "fade" : "fade-up"}
+            data-aos={isMobile ? 'fade' : 'fade-up'}
             className={styles.description}
           >
             <div className={styles.descriptionLeft}>
@@ -100,11 +100,11 @@ const Home = () => {
 
           {/* Start of Quotes */}
           <div
-            data-aos={isMobile ? "fade" : "fade-up"}
+            data-aos={isMobile ? 'fade' : 'fade-up'}
             className={styles.quotes}
           >
             <h1>HEAR FROM US</h1>
-            <div className={[styles.carousel, styles.quoteCarousel].join(" ")}>
+            <div className={[styles.carousel, styles.quoteCarousel].join(' ')}>
               <QuoteSlideshow
                 height={450}
                 data={execQuotes}
@@ -144,7 +144,7 @@ const Home = () => {
 
           {/* Start of Upcoming Events / Latest blog / Latest podcast*/}
           <div
-            data-aos={isMobile ? "fade" : "fade-up"}
+            data-aos={isMobile ? 'fade' : 'fade-up'}
             data-aos-delay="150"
             className={styles.carousel}
           >
@@ -153,7 +153,7 @@ const Home = () => {
 
           {/* Start of Publications */}
           <div
-            data-aos={isMobile ? "fade" : "fade-up"}
+            data-aos={isMobile ? 'fade' : 'fade-up'}
             data-aos-delay="150"
             className={styles.publications}
           >
@@ -189,7 +189,7 @@ const Home = () => {
 
           {/* Start of Sponsors & Affliations */}
           <div
-            data-aos={isMobile ? "fade" : "fade-up"}
+            data-aos={isMobile ? 'fade' : 'fade-up'}
             data-aos-delay="150"
             className={styles.sponsors}
           >

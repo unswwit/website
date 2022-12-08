@@ -1,4 +1,4 @@
-import styles from "../styles/Events.module.css";
+import styles from '../styles/Events.module.css';
 
 const RegBtn = ({ link }) => {
   const openLink = () => {

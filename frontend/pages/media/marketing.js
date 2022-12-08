@@ -1,28 +1,28 @@
-import { useEffect, useState } from "react";
-import styles from "../../styles/Marketing.module.css";
-import PageHeader from "../../components/Header";
-import Chip from "@material-ui/core/Chip";
-import Initiative from "../../components/Initiative";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import Timeline from "../../components/Timeline";
-import PaginationComp from "../../components/Pagination";
-import LoadingScreen from "../../components/LoadingScreen";
-import { loadMarketingArchives } from "../../lib/api";
-import { isMobile } from "react-device-detect";
+import { useEffect, useState } from 'react';
+import styles from '../../styles/Marketing.module.css';
+import PageHeader from '../../components/Header';
+import Chip from '@material-ui/core/Chip';
+import Initiative from '../../components/Initiative';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Timeline from '../../components/Timeline';
+import PaginationComp from '../../components/Pagination';
+import LoadingScreen from '../../components/LoadingScreen';
+import { loadMarketingArchives } from '../../lib/api';
+import { isMobile } from 'react-device-detect';
 import {
   useStyles,
   categories,
   marks,
   valueToYear,
-} from "../../data/MarketingData";
-import { formatMarketingArchivesDate } from "../../lib/helpers";
+} from '../../data/MarketingData';
+import { formatMarketingArchivesDate } from '../../lib/helpers';
 
 const MarketingContent = ({ archives }) => {
   const classes = useStyles();
   const [content, setContent] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [year, setYear] = useState("2022");
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [year, setYear] = useState('2022');
+  const [selectedCategory, setSelectedCategory] = useState('All');
   const [emptyCategory, setEmptyCategory] = useState(false);
   const [sourceLoading, setSourceLoading] = useState(true);
   const [headerLoading, setHeaderLoading] = useState(true);
@@ -39,7 +39,7 @@ const MarketingContent = ({ archives }) => {
   // set the year for the events timeline
   const handleYear = (newYear) => {
     setYear(newYear);
-    setCurrentPage("All");
+    setCurrentPage('All');
   };
 
   // scroll to top on load
@@ -84,7 +84,7 @@ const MarketingContent = ({ archives }) => {
   const filterContent = (selectedCategory) => {
     const filteredContent = content.filter(
       (picture) =>
-        selectedCategory === "All" ||
+        selectedCategory === 'All' ||
         picture.fields.category.includes(selectedCategory)
     );
     setSelectedPosts(filteredContent);
@@ -127,8 +127,8 @@ const MarketingContent = ({ archives }) => {
                   .map((category) => {
                     const chipColour =
                       selectedCategory === categories[category]
-                        ? "#e85f5c"
-                        : "#7F7F7F";
+                        ? '#e85f5c'
+                        : '#7F7F7F';
                     return (
                       <Chip
                         key={category}
@@ -150,8 +150,8 @@ const MarketingContent = ({ archives }) => {
               <div>
                 {/* Timeline */}
                 <Timeline
-                  margin={"2%"}
-                  page={"marketing"}
+                  margin={'2%'}
+                  page={'marketing'}
                   step={50}
                   valueToYear={valueToYear}
                   marks={marks}

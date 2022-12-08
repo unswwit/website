@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import styles from "../../styles/Publications.module.css";
-import PubArticle from "../../components/PublicationsArticle";
-import PageHeader from "../../components/Header";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import LoadingScreen from "../../components/LoadingScreen";
-import { loadPublications } from "../../lib/api";
+import { useEffect, useState } from 'react';
+import styles from '../../styles/Publications.module.css';
+import PubArticle from '../../components/PublicationsArticle';
+import PageHeader from '../../components/Header';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import LoadingScreen from '../../components/LoadingScreen';
+import { loadPublications } from '../../lib/api';
 
 const Publications = ({ publications }) => {
   const [articles, setArticles] = useState([]);
@@ -75,7 +75,7 @@ const Publications = ({ publications }) => {
                             <PubArticle
                               key={index}
                               imgUrl={
-                                "http:" + publication.fields.img.fields.file.url
+                                'http:' + publication.fields.img.fields.file.url
                               }
                               heading={publication.fields.heading}
                               date={publication.fields.date}

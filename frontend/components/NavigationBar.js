@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Navbar.module.css";
 import Navbar from "../lib/helpers/navbar";
-import { navigationBarContent } from "../data/NavbarData.js";
+import { navigationBarContent } from "../data/navbar";
 import {
   changeAboutUsToArrowDown,
   changeAboutUsToArrowRight,

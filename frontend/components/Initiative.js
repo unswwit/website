@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import styles from "../styles/Marketing.module.css";
-import Image from "next/image";
-import Link from "next/link";
+import React, { Component } from 'react';
+import styles from '../styles/Marketing.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
 
 class Initiative extends Component {
   render() {
@@ -16,7 +16,7 @@ class Initiative extends Component {
             <Image
               src={this.props.imgUrl}
               alt={this.props.alt}
-              layout={"fill"}
+              layout={'fill'}
             />
             <div className={styles.message}>{this.props.date}</div>
           </a>

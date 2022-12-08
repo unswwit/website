@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import styles from "../styles/Publications.module.css";
-import Image from "next/image";
-import Link from "next/link";
-import { formatPublicationsDate } from "../lib/helpers";
+import React, { Component } from 'react';
+import styles from '../styles/Publications.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
+import { formatPublicationsDate } from '../lib/helpers';
 
 class PubArticle extends Component {
   render() {
@@ -11,7 +11,7 @@ class PubArticle extends Component {
         {/*Start of publications article*/}
         <div className={styles.dark} />
         <div className={styles.articleImg}>
-          <Image src={this.props.imgUrl} alt="wit logo" layout={"fill"} />
+          <Image src={this.props.imgUrl} alt="wit logo" layout={'fill'} />
         </div>
 
         <div className={styles.textContainer}>

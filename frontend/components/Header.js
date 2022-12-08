@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const PageHeader = ({ imageLoading, imgUrl, title }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
-    if (typeof imageLoading === "function") {
+    if (typeof imageLoading === 'function') {
       imageLoading(false);
     }
   }, [imageLoaded, imageLoading]);
@@ -21,9 +21,9 @@ const PageHeader = ({ imageLoading, imgUrl, title }) => {
         alt="header"
         className="cover_image"
         onLoad={
-          typeof imageLoading === "function" ? () => setImageLoaded(true) : null
+          typeof imageLoading === 'function' ? () => setImageLoaded(true) : null
         }
-        layout={"fill"}
+        layout={'fill'}
         priority="True"
       />
 

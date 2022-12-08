@@ -1,14 +1,14 @@
-import { useEffect, useRef, useState, useCallback } from "react";
-import styles from "../../styles/Team.module.css";
-import PageHeader from "../../components/Header";
-import Execs from "../../components/ExecSection";
-import SubCom from "../../components/SubcomSection";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import Timeline from "../../components/Timeline";
-import ScrollUpBtn from "../../components/ScrollUpBtn";
-import LoadingScreen from "../../components/LoadingScreen";
-import { execToClassName, marks, valueToYear } from "../../data/TeamData";
-import { loadSubcommittee, loadExecs } from "../../lib/api";
+import { useEffect, useRef, useState, useCallback } from 'react';
+import styles from '../../styles/Team.module.css';
+import PageHeader from '../../components/Header';
+import Execs from '../../components/ExecSection';
+import SubCom from '../../components/SubcomSection';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Timeline from '../../components/Timeline';
+import ScrollUpBtn from '../../components/ScrollUpBtn';
+import LoadingScreen from '../../components/LoadingScreen';
+import { execToClassName, marks, valueToYear } from '../../data/TeamData';
+import { loadSubcommittee, loadExecs } from '../../lib/api';
 
 export default function OurTeam({ execs, subcommittee }) {
   const masterExec = useRef();
@@ -83,22 +83,22 @@ export default function OurTeam({ execs, subcommittee }) {
   const sectors =
     year < 2022
       ? [
-          "Events",
-          "Externals",
-          "Human Resources",
-          "Education",
-          "Marketing",
-          "Information Technology",
+          'Events',
+          'Externals',
+          'Human Resources',
+          'Education',
+          'Marketing',
+          'Information Technology',
         ]
       : [
-          "Careers",
-          "Competitions",
-          "Externals",
-          "Human Resources",
-          "Information Technology",
-          "Marketing",
-          "Media",
-          "Publications",
+          'Careers',
+          'Competitions',
+          'Externals',
+          'Human Resources',
+          'Information Technology',
+          'Marketing',
+          'Media',
+          'Publications',
         ];
 
   return (
@@ -116,8 +116,8 @@ export default function OurTeam({ execs, subcommittee }) {
 
           {/* Timeline */}
           <Timeline
-            margin={"50px"}
-            page={"teams"}
+            margin={'50px'}
+            page={'teams'}
             step={20}
             valueToYear={valueToYear}
             marks={marks}
@@ -151,7 +151,7 @@ export default function OurTeam({ execs, subcommittee }) {
                           return (
                             <Execs
                               key={index}
-                              imgUrl={"http:" + exec.fields.img.fields.file.url}
+                              imgUrl={'http:' + exec.fields.img.fields.file.url}
                               name={exec.fields.name}
                               className={
                                 exec.fields.year === 2020

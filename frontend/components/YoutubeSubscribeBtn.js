@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import styles from "../styles/Videos.module.css";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import styles from '../styles/Videos.module.css';
 
 export default class YouTubeSubscribe extends Component {
   static propTypes = {
@@ -12,11 +12,11 @@ export default class YouTubeSubscribe extends Component {
   };
 
   static defaultProps = {
-    channelName: "",
-    channelid: "UCaYhcUwRBNscFNUKTjgPFiA",
-    theme: "full",
-    layout: "default",
-    count: "default",
+    channelName: '',
+    channelid: 'UCaYhcUwRBNscFNUKTjgPFiA',
+    theme: 'full',
+    layout: 'default',
+    count: 'default',
   };
 
   /**
@@ -56,8 +56,8 @@ export default class YouTubeSubscribe extends Component {
     }
 
     // Make <script src="https://apis.google.com/js/platform.js" ></script>
-    const youtubescript = document.createElement("script");
-    youtubescript.src = "https://apis.google.com/js/platform.js";
+    const youtubescript = document.createElement('script');
+    youtubescript.src = 'https://apis.google.com/js/platform.js';
     this.youtubeSubscribeNode.current.parentNode.appendChild(youtubescript);
     this.initialized();
   }

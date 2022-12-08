@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
-import styles from "../styles/ScrollUpBtn.module.css";
+import { useEffect, useState } from 'react';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import styles from '../styles/ScrollUpBtn.module.css';
 
 export default function ScrollUpBtn() {
   const [isVisible, setIsVisible] = useState(false);
@@ -8,7 +8,7 @@ export default function ScrollUpBtn() {
   // Show button when page is scrolled upto given distance
   const toggleVisibility = () => {
     const coverPhoto =
-      document.getElementsByClassName("coverPhoto")[0].clientHeight;
+      document.getElementsByClassName('coverPhoto')[0].clientHeight;
     const bottom =
       Math.ceil(window.innerHeight + window.scrollY) >=
       document.documentElement.scrollHeight;
@@ -22,14 +22,14 @@ export default function ScrollUpBtn() {
   // Scrolls the page to the top
   const scrollToTop = () => {
     const coverPhoto =
-      document.getElementsByClassName("coverPhoto")[0].clientHeight;
-    window.scrollTo({ top: coverPhoto - 15, behavior: "smooth" });
+      document.getElementsByClassName('coverPhoto')[0].clientHeight;
+    window.scrollTo({ top: coverPhoto - 15, behavior: 'smooth' });
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility, { passive: true });
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
     return () =>
-      window.removeEventListener("scroll", toggleVisibility, {
+      window.removeEventListener('scroll', toggleVisibility, {
         passive: true,
       });
   }, []);
@@ -39,8 +39,8 @@ export default function ScrollUpBtn() {
       <button
         className={
           isVisible
-            ? [styles.scrollUp, styles.showBtn].join(" ")
-            : [styles.scrollUp, styles.hideBtn].join(" ")
+            ? [styles.scrollUp, styles.showBtn].join(' ')
+            : [styles.scrollUp, styles.hideBtn].join(' ')
         }
         onClick={scrollToTop}
       >

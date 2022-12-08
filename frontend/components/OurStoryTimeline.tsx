@@ -1,12 +1,12 @@
-import { useState } from "react";
-import styles from "../styles/OurStoryTimeline.module.css";
-import { marks, valueToYear } from "../data/OurStoryData";
-import Timeline from "../components/Timeline";
-import Image from "next/image";
+import { useState } from 'react';
+import styles from '../styles/OurStoryTimeline.module.css';
+import { marks, valueToYear } from '../data/story';
+import Timeline from './Timeline';
+import Image from 'next/image';
 
 export default function OppositeContentTimeline() {
   const [year, setYear] = useState(valueToYear[250]);
-  const handleYear = (newYear) => {
+  const handleYear = (newYear: any) => {
     setYear(newYear);
   };
 
@@ -14,7 +14,7 @@ export default function OppositeContentTimeline() {
     <div>
       <Timeline
         id={styles.timelineStyle}
-        page={"ourStory"}
+        page={'ourStory'}
         step={50}
         valueToYear={valueToYear}
         marks={marks}
@@ -32,7 +32,7 @@ export default function OppositeContentTimeline() {
         </div>
         <div className={styles.timelineCardText}>
           <p className={styles.witJourneyText}>WIT&apos;s Journey in {year}</p>
-          {year === "2016" ? (
+          {year === '2016' ? (
             <ul>
               <li>
                 WIT was founded becoming the 1st UNSW society catering
@@ -40,7 +40,7 @@ export default function OppositeContentTimeline() {
               </li>
               <li>WIT launched digitally on Facebook, garnering 100+ likes.</li>
             </ul>
-          ) : year === "2017" ? (
+          ) : year === '2017' ? (
             <ul>
               <li>
                 WIT&apos;s first stall was held at UNSW&apos;s Orientation Week,
@@ -49,7 +49,7 @@ export default function OppositeContentTimeline() {
               </li>
               <li>We partnered up with four sponsors in its first year.</li>
             </ul>
-          ) : year === "2018" ? (
+          ) : year === '2018' ? (
             <ul>
               <li>
                 Numerous, successful events were held including our Empowerment
@@ -59,7 +59,7 @@ export default function OppositeContentTimeline() {
               <li>Our student base grew to 900+ members.</li>
               <li>Our sponsorship base more than doubled to 10 sponsors.</li>
             </ul>
-          ) : year === "2019" ? (
+          ) : year === '2019' ? (
             <ul>
               <li>Our student base grew to 1400+ members.</li>
               <li>
@@ -67,7 +67,7 @@ export default function OppositeContentTimeline() {
                 and openness was refocused on within the internal team.
               </li>
             </ul>
-          ) : year === "2020" ? (
+          ) : year === '2020' ? (
             <ul>
               <li>
                 Hosted 47 events, reaching 79.4k people and achieving a 50%

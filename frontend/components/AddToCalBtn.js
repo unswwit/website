@@ -1,5 +1,5 @@
-import AddToCalendarHOC from "react-add-to-calendar-hoc";
-import styles from "../styles/AddToCal.module.css";
+import AddToCalendarHOC from 'react-add-to-calendar-hoc';
+import styles from '../styles/AddToCal.module.css';
 
 const AddToCalBtn = ({
   title,
@@ -13,22 +13,22 @@ const AddToCalBtn = ({
   let end = new Date();
   end.setHours(start.getHours() + 1);
   const startDefaultString = start
-    .toLocaleString("sv")
-    .split(".")[0]
-    .replaceAll(/[Z:-]/g, "")
-    .replaceAll(" ", "T");
+    .toLocaleString('sv')
+    .split('.')[0]
+    .replaceAll(/[Z:-]/g, '')
+    .replaceAll(' ', 'T');
   const endDefaultString = end
-    .toLocaleString("sv")
-    .split(".")[0]
-    .replaceAll(/[Z:-]/g, "")
-    .replaceAll(" ", "T");
+    .toLocaleString('sv')
+    .split('.')[0]
+    .replaceAll(/[Z:-]/g, '')
+    .replaceAll(' ', 'T');
 
   let event = {
     title: title,
     description: description,
     location: location,
-    duration: duration ? duration : "0100",
-    timezone: "Australia/Sydney",
+    duration: duration ? duration : '0100',
+    timezone: 'Australia/Sydney',
     startDatetime: startDate ? startDate : startDefaultString,
     endDatetime: endDate ? endDate : endDefaultString,
   };

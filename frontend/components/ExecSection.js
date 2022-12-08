@@ -1,12 +1,12 @@
-import styles from "../styles/Team.module.css";
-import Image from "next/image";
-import Link from "next/link";
+import styles from '../styles/Team.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Execs = (props) => {
   const socials = {
-    LinkedIn: "https://www.linkedin.com/in/" + props.linkedin + "/",
-    Facebook: "https://www.facebook.com/" + props.fb,
-    email: "mailto:" + props.email,
+    LinkedIn: 'https://www.linkedin.com/in/' + props.linkedin + '/',
+    Facebook: 'https://www.facebook.com/' + props.fb,
+    email: 'mailto:' + props.email,
   };
 
   return (
@@ -32,7 +32,7 @@ const Execs = (props) => {
             {props.degree && (
               <p className={styles.profileDegree}>
                 {props.degree}
-                {props.year && ", " + props.year + " year"}
+                {props.year && ', ' + props.year + ' year'}
               </p>
             )}
             {props.linkedin && (
