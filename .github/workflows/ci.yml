@@ -19,10 +19,9 @@ jobs:
       - name: Format files
         working-directory: ./frontend
         run: npm run prettier 
-      # TODO: figure out why linting broke
-      # - name: Lint files
-      #   working-directory: ./frontend
-      #   run: npm run lint
+      - name: Lint files
+        working-directory: ./frontend
+        run: npm run lint
       - name: Run tests
         working-directory: ./frontend
         run: npm run test

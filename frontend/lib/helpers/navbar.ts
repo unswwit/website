@@ -18,4 +18,9 @@ const changeMediaToArrowRight = () => {
   mediaText.innerHTML = 'Media ▸';
 };
 
-export { changeAboutUsToArrowDown, changeAboutUsToArrowRight, changeMediaToArrowDown, changeMediaToArrowRight };
+export {
+  changeAboutUsToArrowDown,
+  changeAboutUsToArrowRight,
+  changeMediaToArrowDown,
+  changeMediaToArrowRight,
+};

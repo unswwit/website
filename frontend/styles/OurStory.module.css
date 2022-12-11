@@ -5,7 +5,7 @@
 
 /*--- Our Story ---*/
 h2.oppSubheading {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 33pt;
   text-transform: uppercase;
   margin-top: 100px;
@@ -46,7 +46,7 @@ h2#topHeading {
 }
 
 .ourMascotContent {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12pt;
   text-align: justify;
   color: var(--black);
@@ -89,7 +89,7 @@ h2#topHeading {
 
 .ourStory {
   color: var(--black);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-align: justify;
 }
 

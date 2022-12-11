@@ -146,7 +146,7 @@ const Home = ({ publications }: any) => {
             data-aos-delay="150"
             className={styles.carousel}
           > */}
-            {/* <InitiativesSlideshow /> */}
+          {/* <InitiativesSlideshow /> */}
           {/* </div> */}
 
           {/* Start of Publications */}

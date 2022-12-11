@@ -6,7 +6,12 @@ import styles from '../styles/Navbar.module.css';
 import { navigationBarContent } from '../data/navbar';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
-import { changeAboutUsToArrowDown, changeAboutUsToArrowRight, changeMediaToArrowDown, changeMediaToArrowRight } from '../lib/helpers/navbar';
+import {
+  changeAboutUsToArrowDown,
+  changeAboutUsToArrowRight,
+  changeMediaToArrowDown,
+  changeMediaToArrowRight,
+} from '../lib/helpers/navbar';
 
 const Navbar = () => {
   const [clearNavBar, setClearNavBar] = useState(true);

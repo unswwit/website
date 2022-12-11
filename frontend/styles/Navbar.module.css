@@ -23,8 +23,7 @@
 
 .navBarGrid {
   display: grid;
-  grid-template:
-    'logo empty empty empty empty home aboutUs events opportunities media joinUs';
+  grid-template: 'logo empty empty empty empty home aboutUs events opportunities media joinUs';
   align-items: center;
   height: 100%;
 }
@@ -79,7 +78,7 @@
   height: 100%;
   width: 90%;
   font-size: 16px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
 }
 
@@ -147,7 +146,8 @@
   background-color: var(--light-yellow);
   opacity: 0;
   border-radius: 0px 0px 15px 15px;
-  transition: background-color 0.2s, border-radius 0.2s, opacity 0.2s, visibility 0.2s;
+  transition: background-color 0.2s, border-radius 0.2s, opacity 0.2s,
+    visibility 0.2s;
 }
 
 .clearDropdownContent {
@@ -189,7 +189,7 @@
   cursor: pointer;
 }
 
-.dropdownItemEnd:hover a{
+.dropdownItemEnd:hover a {
   color: var(--red);
   transition: color 0.3s, opacity 0.2s, visibility 0.2s;
 }
@@ -207,8 +207,7 @@
 /*------------------------------Compact Navbar--------------------------------*/
 .compactNavBarGrid {
   display: grid;
-  grid-template:
-    'logo empty empty empty empty empty menuIcon';
+  grid-template: 'logo empty empty empty empty empty menuIcon';
   align-items: center;
   height: 99%;
 }
@@ -251,7 +250,7 @@
   margin: auto;
   width: 100%;
   font-size: 16px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   transition: opacity 0.2s;
 }
@@ -350,7 +349,6 @@
   font-weight: bold;
 }
 
-
 /*--- Dark mode ---*/
 @media (prefers-color-scheme: dark) {
   .navBarContainer {
@@ -380,7 +378,7 @@
   .menuItemEnd {
     color: var(--white);
   }
-} 
+}
 
 @media only screen and (max-width: 1280px) {
   .dropdownContent {
@@ -404,22 +402,22 @@
   .navBarContainer {
     height: 8%;
   }
-} 
+}
 
 @media only screen and (max-height: 550px) {
   .navBarContainer {
     height: 10%;
   }
-} 
+}
 
 @media only screen and (max-height: 420px) {
   .navBarContainer {
     height: 15%;
   }
-} 
+}
 
 @media only screen and (max-height: 300px) {
   .navBarContainer {
     height: 18%;
   }
-} 
+}
