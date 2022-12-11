@@ -66,10 +66,10 @@ const Opportunities = ({ opportunities }: any) => {
                   If you would like to make a listing, please contact us
                   at&nbsp;
                   <a
-                    href="mailto:externals@unswwit.com"
+                    href="mailto:sponsorships@unswwit.com"
                     className={styles.link}
                   >
-                    externals@unswwit.com
+                    sponsorships@unswwit.com
                   </a>
                   .
                 </p>
