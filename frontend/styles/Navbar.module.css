@@ -24,7 +24,7 @@
 .navBarGrid {
   display: grid;
   grid-template:
-    'logo empty empty empty empty home aboutUs events opportunities media joinUs';
+    'logo empty home aboutUs sponsorsAndAffiliations events opportunities media joinUs contactUs';
   align-items: center;
   height: 100%;
 }
@@ -45,6 +45,10 @@
   grid-area: aboutUs;
 }
 
+.sponsorsAndAffiliationsGridItem {
+  grid-area: sponsorsAndAffiliations;
+}
+
 .eventsGridItem {
   grid-area: events;
 }
@@ -59,6 +63,10 @@
 
 .joinUsGridItem {
   grid-area: joinUs;
+}
+
+.contactUsGridItem {
+  grid-area: contactUs;
 }
 
 .logoContainer {
@@ -380,7 +388,7 @@
   .menuItemEnd {
     color: var(--white);
   }
-} 
+}
 
 @media only screen and (max-width: 1280px) {
   .dropdownContent {
@@ -404,22 +412,22 @@
   .navBarContainer {
     height: 8%;
   }
-} 
+}
 
 @media only screen and (max-height: 550px) {
   .navBarContainer {
     height: 10%;
   }
-} 
+}
 
 @media only screen and (max-height: 420px) {
   .navBarContainer {
     height: 15%;
   }
-} 
+}
 
 @media only screen and (max-height: 300px) {
   .navBarContainer {
     height: 18%;
   }
-} 
+}

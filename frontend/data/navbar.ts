@@ -1,8 +1,6 @@
 import styles from '../styles/Navbar.module.css';
 import ChromeReaderModeOutlinedIcon from '@material-ui/icons/ChromeReaderModeOutlined';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
-import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
 import InsertDriveFileOutlinedIcon from '@material-ui/icons/InsertDriveFileOutlined';
 import HeadsetMicOutlinedIcon from '@material-ui/icons/HeadsetMicOutlined';
 import LocalPrintshopOutlinedIcon from '@material-ui/icons/LocalPrintshopOutlined';
@@ -16,19 +14,9 @@ const aboutUsDropdownContent = [
     icon: ChromeReaderModeOutlinedIcon,
   },
   {
-    pageName: 'Sponsors and Affiliations',
-    link: '/about/sponsors-affiliations',
-    icon: FavoriteBorderIcon,
-  },
-  {
     pageName: 'Our Team',
     link: '/about/our-team',
     icon: PeopleOutlineIcon,
-  },
-  {
-    pageName: 'Contact Us',
-    link: '/about/contact-us',
-    icon: PhoneOutlinedIcon,
   },
 ];
 
@@ -75,6 +63,11 @@ const navigationBarContent = [
     dropdownContent: aboutUsDropdownContent,
   },
   {
+    pageName: 'Sponsors and Affiliations',
+    link: '/about/sponsors-affiliations',
+    itemName: styles.sponsorsAndAffiliationsGridItem,
+  },
+  {
     pageName: 'Events',
     link: '/events',
     itemName: styles.eventsGridItem,
@@ -96,6 +89,11 @@ const navigationBarContent = [
     pageName: 'Join Us',
     link: '/join-us',
     itemName: styles.joinUsGridItem,
+  },
+  {
+    pageName: 'Contact Us',
+    link: '/about/contact-us',
+    itemName: styles.contactUsGridItem,
   },
 ];
 
