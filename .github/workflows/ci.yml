@@ -3,9 +3,11 @@ name: Continuous Integration
 on:
   push:
     branches:
+      - main
       - develop
   pull_request:
     branches: 
+      - main
       - develop
 
 jobs:
@@ -16,13 +18,9 @@ jobs:
       - name: Install dependencies
         working-directory: ./frontend
         run: npm install 
-      - name: Format files
+      - name: Lint files
         working-directory: ./frontend
-        run: npm run prettier 
-      # TODO: figure out why linting broke
-      # - name: Lint files
-      #   working-directory: ./frontend
-      #   run: npm run lint
+        run: npm run lint
       - name: Run tests
         working-directory: ./frontend
         run: npm run test

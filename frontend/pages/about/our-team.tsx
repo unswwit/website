@@ -48,10 +48,16 @@ const OurTeam = ({ execs, subcommittee }: any) => {
       (exec: any) => exec.fields.yearJoined === year
     );
 
-    const result = tempExecs.reduce(function (result: any, _: any, index: number, tempExecs: any) {
+    const result = tempExecs.reduce(function (
+      result: any,
+      _: any,
+      index: number,
+      tempExecs: any
+    ) {
       if (index % 2 === 0) result.push(tempExecs.slice(index, index + 2));
       return result;
-    }, []);
+    },
+    []);
     setFilteredExecs(result);
 
     // Subcom
