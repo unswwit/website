@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const Execs = (props: any) => {
-  const socials = {
+  const socials: any = {
     LinkedIn: 'https://www.linkedin.com/in/' + props.linkedin + '/',
     Facebook: 'https://www.facebook.com/' + props.fb,
     email: 'mailto:' + props.email,
