@@ -68,7 +68,8 @@ const Publications = ({ publications }: any) => {
                           .filter(
                             (publication) =>
                               publication.fields.year === year.toString()
-                          ).map((publication, index) => (
+                          )
+                          .map((publication, index) => (
                             <PubArticle
                               key={index}
                               imgUrl={

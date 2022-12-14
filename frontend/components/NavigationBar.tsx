@@ -5,7 +5,12 @@ import Image from 'next/image';
 import styles from '../styles/Navbar.module.css';
 import Navbar from './MobileNavBar';
 import { navigationBarContent } from '../data/navbar';
-import { changeAboutUsToArrowDown, changeAboutUsToArrowRight, changeMediaToArrowDown, changeMediaToArrowRight } from '../lib/helpers/navbar';
+import {
+  changeAboutUsToArrowDown,
+  changeAboutUsToArrowRight,
+  changeMediaToArrowDown,
+  changeMediaToArrowRight,
+} from '../lib/helpers/navbar';
 
 const NavigationBar = () => {
   const [clearNavBar, setClearNavBar] = useState(false);
