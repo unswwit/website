@@ -124,8 +124,8 @@ const JoinUs = () => {
             </p>
             <strong>Become apart of our internal team</strong>
             <p>
-              Our subcommittee recruitment drive opens at the beginning of UNSW’s first
-              academic term, in February each year, via our&nbsp;
+              Our subcommittee recruitment drive opens at the beginning of
+              UNSW’s first academic term, in February each year, via our&nbsp;
               <a
                 href="https://www.facebook.com/unsw.wit/"
                 className={styles.link}
@@ -134,8 +134,8 @@ const JoinUs = () => {
               >
                 Facebook page
               </a>
-              . To get involved, search for our subcommittee Facebook event and fill in
-              the registration form attached to the event.
+              . To get involved, search for our subcommittee Facebook event and
+              fill in the registration form attached to the event.
             </p>
           </div>
           {/* End of how to join section */}

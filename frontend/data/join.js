@@ -10,7 +10,7 @@ const memberQuotes = {
     'Brianna Kim',
     '2022 Careers Co-Director | 2021 HR Subcommittee Member',
     '2022-exec/Brianna.jpg',
-    'WIT\'s supportive environment has allowed me to grow both personally and professionally.',
+    "WIT's supportive environment has allowed me to grow both personally and professionally.",
   ],
   2: [
     'Emily Dang',
@@ -22,13 +22,13 @@ const memberQuotes = {
     'Gayathri Balaji',
     '2022 Externals Co-Director',
     '2022-exec/Gayathri.jpg',
-    'Speaking with representatives from sponsor companies as External Relations Co-Director I have come to learn that there is far more to the tech industry than I once imagined. WIT has given me an opportunity to learn about this, which I am incredibly thankful for. It\'s shifted my perspective on tech.',
+    "Speaking with representatives from sponsor companies as External Relations Co-Director I have come to learn that there is far more to the tech industry than I once imagined. WIT has given me an opportunity to learn about this, which I am incredibly thankful for. It's shifted my perspective on tech.",
   ],
   4: [
     'Emily Chang',
     '2022 HR Director | 2021 HR Subcommittee Member',
     '2022-exec/EmChang.jpg',
-    'For me, what\'s worthwhile about being an internal member of WIT\'s team, and even just attending events, is getting to connect with likeminded, driven people. We\'re a very wholesome team and you really get a feel for WIT\'s mission to empower students at every event.',
+    "For me, what's worthwhile about being an internal member of WIT's team, and even just attending events, is getting to connect with likeminded, driven people. We're a very wholesome team and you really get a feel for WIT's mission to empower students at every event.",
   ],
   5: [
     'Joanna He',
@@ -40,13 +40,13 @@ const memberQuotes = {
     'Gabriella Hartanto',
     '2022 Marketing Co-Director | 2021 Marketing Subcommittee Member',
     '2022-exec/Gab.jpg',
-    'It\'s incredible to meet with amazing like-minded people, especially other women in the field of STEM. I learned a variety of things, from good networking practices to making dalgona candy!',
+    "It's incredible to meet with amazing like-minded people, especially other women in the field of STEM. I learned a variety of things, from good networking practices to making dalgona candy!",
   ],
   7: [
     'Abigail Joesan Johan',
     '2022 Marketing Co-Director | 2021 Marketing Subcommittee Member',
     '2022-exec/Abi.jpg',
-    'Being part of WIT\'s team allowed me to work with like-minded tech-enthusiasts, upskill in various soft and hard skills, and hear from inspiring tech professionals. Designing WIT posts and event covers is a fun, creative and rewarding experience that assists WIT\'s overall mission!',
+    "Being part of WIT's team allowed me to work with like-minded tech-enthusiasts, upskill in various soft and hard skills, and hear from inspiring tech professionals. Designing WIT posts and event covers is a fun, creative and rewarding experience that assists WIT's overall mission!",
   ],
   8: [
     'Natalie Leroy',

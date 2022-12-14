@@ -86,9 +86,7 @@ export default function OppositeContentTimeline() {
             </ul>
           ) : (
             <ul>
-              <li>
-                test
-              </li>
+              <li>test</li>
               <li>
                 Our student base grew to over 3000 students by the end of 2021.
               </li>
