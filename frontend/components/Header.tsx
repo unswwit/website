@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 interface Header {
-  imageLoading?: any,
-  imgUrl: string,
-  title: string,
+  imageLoading?: any;
+  imgUrl: string;
+  title: string;
 }
 
-const PageHeader = ({ imageLoading, imgUrl, title }: Header ) => {
+const PageHeader = ({ imageLoading, imgUrl, title }: Header) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {

@@ -53,7 +53,14 @@ const pageToValue = (page: string) => {
     : 250;
 };
 
-const Timeline = ({ updateYear, marks, valueToYear, page, step, margin }: any) => {
+const Timeline = ({
+  updateYear,
+  marks,
+  valueToYear,
+  page,
+  step,
+  margin,
+}: any) => {
   return (
     <div
       id={

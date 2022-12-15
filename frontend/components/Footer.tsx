@@ -139,7 +139,10 @@ const Footer = () => {
           </div>
         </ul>
         <div className="footer-copyright bottom-footer-item">
-          <a href="/"> Copyright © {new Date().getFullYear()}. UNSW Women in Technology </a>
+          <a href="/">
+            {' '}
+            Copyright © {new Date().getFullYear()}. UNSW Women in Technology{' '}
+          </a>
         </div>
       </footer>
     </div>

@@ -87,7 +87,10 @@ const Videos = ({ videos }: any) => {
     setHeaderLoading(false);
     setSourceLoading(false);
     setVideoNumber(handleVideoNumber(videos.length));
-    loadVideoPreviews(videos, loadPageContent(videos, handleVideoNumber(videos.length)));
+    loadVideoPreviews(
+      videos,
+      loadPageContent(videos, handleVideoNumber(videos.length))
+    );
   };
 
   useEffect(() => {
@@ -98,7 +101,7 @@ const Videos = ({ videos }: any) => {
   useEffect(() => {
     if (currentPosts.length === 0 && loading === false) {
       setEmptyCategory(true);
-      console.error = () => { };
+      console.error = () => {};
     } else {
       setEmptyCategory(false);
     }
@@ -160,10 +163,12 @@ const Videos = ({ videos }: any) => {
     return videos.map((video: any, index: number) => {
       return (
         <div className={styles.videoDescription} key={index}>
-          <a href={'https://www.youtube.com/watch?v=' + video.fields.embedUrl} target="_blank" rel="noopener noreferrer">
-            <div
-              className={styles.boxContainer}
-            >
+          <a
+            href={'https://www.youtube.com/watch?v=' + video.fields.embedUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className={styles.boxContainer}>
               <div className={styles.darkOverlay} />
               <div className={styles.previewContainer}>
                 <Image
@@ -249,7 +254,9 @@ const Videos = ({ videos }: any) => {
                     />
                   </div>
                   <p className={styles.videoName}>{video.fields.title}</p>
-                  <p className={styles.videoDate}>{formatDate(video.fields.date)}</p>
+                  <p className={styles.videoDate}>
+                    {formatDate(video.fields.date)}
+                  </p>
                 </div>
               </div>
               <p className={styles.subHeading}>More From WIT</p>

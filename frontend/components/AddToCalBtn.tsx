@@ -2,13 +2,13 @@ import AddToCalendarHOC from 'react-add-to-calendar-hoc';
 import styles from '../styles/AddToCal.module.css';
 
 interface Details {
-  title: string,
-  description: string,
-  location: string,
-  startDate: string,
-  endDate: string,
-  duration: string
-};
+  title: string;
+  description: string;
+  location: string;
+  startDate: string;
+  endDate: string;
+  duration: string;
+}
 
 const AddToCalBtn = ({
   title,
