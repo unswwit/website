@@ -57,6 +57,7 @@ const navigationBarContent = [
   {
     pageName: 'About Us ▸',
     link: '/about/our-story',
+    category: 'about',
     itemName: styles.aboutUsGridItem,
     id: 'aboutUsDropdown',
     text: 'aboutUsText',
@@ -64,7 +65,7 @@ const navigationBarContent = [
   },
   {
     pageName: 'Sponsors and Affiliations',
-    link: '/about/sponsors-affiliations',
+    link: '/sponsors-affiliations',
     itemName: styles.sponsorsAndAffiliationsGridItem,
   },
   {
@@ -80,6 +81,7 @@ const navigationBarContent = [
   {
     pageName: 'Media ▸',
     link: '/media/blog',
+    category: 'media',
     itemName: styles.mediaGridItem,
     id: 'mediaDropdown',
     text: 'mediaText',
@@ -92,7 +94,7 @@ const navigationBarContent = [
   },
   {
     pageName: 'Contact Us',
-    link: '/about/contact-us',
+    link: '/contact-us',
     itemName: styles.contactUsGridItem,
   },
 ];

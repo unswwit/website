@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import styles from '../styles/Events.module.css';
-import PageHeader from '../components/Header';
-import Chip from '@material-ui/core/Chip';
-import Timeline from '../components/Timeline';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import ScrollUpBtn from '../components/ScrollUpBtn';
-import LoadingScreen from '../components/LoadingScreen';
-import UpcomingEvent from '../components/UpcomingEvent';
-import PaginationComp from '../components/Pagination';
-import { isMobile } from 'react-device-detect';
-import { useStyles, categories, marks, valueToYear } from '../data/event';
-import { loadPastEvents, loadUpcomingEvents } from '../lib/api';
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import styles from "../styles/Events.module.css";
+import PageHeader from "../components/Header";
+import Chip from "@material-ui/core/Chip";
+import Timeline from "../components/Timeline";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import ScrollUpBtn from "../components/ScrollUpBtn";
+import LoadingScreen from "../components/LoadingScreen";
+import UpcomingEvent from "../components/UpcomingEvent";
+import PaginationComp from "../components/Pagination";
+import { isMobile } from "react-device-detect";
+import { useStyles, categories, marks, valueToYear } from "../data/event";
+import { loadPastEvents, loadUpcomingEvents } from "../lib/api";
 
 const Events = ({ upcomingEvents, allPastEvents }: any) => {
   const classes = useStyles();
@@ -34,7 +34,7 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
   // the posts displayed on the current page for upcoming events
   const [currentPosts, setCurrentPosts] = useState([]);
   // currently selected category -> default to "All"
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState("All");
   // check if category filters result in no results
   const [emptyCategory, setEmptyCategory] = useState(false);
   // all past events of the given year
@@ -54,7 +54,7 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
   const handleYear = (newYear: string) => {
     setYear(newYear);
     // when year is change, category automatically changes to 'All'
-    setSelectedCategory('All');
+    setSelectedCategory("All");
   };
 
   const paginate = (pageNumber: number) => {
@@ -76,7 +76,7 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
   function delay() {
     return new Promise((resolve) => {
       setTimeout(() => {
-        resolve('resolved');
+        resolve("resolved");
       }, 500);
     });
   }
@@ -129,9 +129,9 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
   // filter past events of a year by selected category
   const filterContent = (selectedCategory: string) => {
     const filteredContent = {
-      term1: filterTerm('term1', selectedCategory),
-      term2: filterTerm('term2', selectedCategory),
-      term3: filterTerm('term3', selectedCategory),
+      term1: filterTerm("term1", selectedCategory),
+      term2: filterTerm("term2", selectedCategory),
+      term3: filterTerm("term3", selectedCategory),
     };
     setPastSelectedPosts(filteredContent);
     setPastEvents(filteredContent);
@@ -141,7 +141,7 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
   const filterTerm = (term: string, selectedCategory: string) => {
     const filteredTerm = pastContent[term].filter(
       (picture: any) =>
-        selectedCategory === 'All' ||
+        selectedCategory === "All" ||
         (picture.fields.categories !== null &&
           picture.fields.categories.includes(selectedCategory))
     );
@@ -172,18 +172,18 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
   // get events for a specific term
   const getTermEvents = (events: any) => {
     return events.map((event: any, index: number) => {
-      let eventLabel = event.fields.img.fields.title.split('.')[0].split('-');
+      let eventLabel = event.fields.img.fields.title.split(".")[0].split("-");
       eventLabel.shift();
       let eventId = event.fields.eventNumber;
-      let imgUrl = 'https:' + event.fields.img.fields.file.url;
+      let imgUrl = "https:" + event.fields.img.fields.file.url;
       return (
         <div className={styles.pastEvent} key={index}>
-          <Link href={`/event-recaps/${year}/${eventId}`}>
+          <Link href={`events/event-recaps/${year}/${eventId}`}>
             <div className={styles.eventImgBox}>
               <Image
                 className={styles.eventImages}
                 src={imgUrl}
-                alt={eventLabel.join(' ')}
+                alt={eventLabel.join(" ")}
                 width="1200px"
                 height="628px"
               />
@@ -268,8 +268,8 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
                   .map((category) => {
                     const chipColour =
                       selectedCategory === categories[category]
-                        ? '#e85f5c'
-                        : '#7F7F7F';
+                        ? "#e85f5c"
+                        : "#7F7F7F";
                     return (
                       <Chip
                         key={category}
@@ -289,8 +289,8 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
               </div>
 
               <Timeline
-                margin={'3%'}
-                page={'events'}
+                margin={"3%"}
+                page={"events"}
                 step={50}
                 valueToYear={valueToYear}
                 marks={marks}
@@ -327,7 +327,7 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
                       return (
                         <div key={key}>
                           <h3 className={styles.termColour}>
-                            TERM {key.replace('term', '')}
+                            TERM {key.replace("term", "")}
                           </h3>
                           <div className={styles.gridContainer}>
                             {getTermEvents(pastSelectedPosts[key])}
