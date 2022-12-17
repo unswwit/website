@@ -1,22 +1,28 @@
 // @ts-nocheck comment
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import CountUp from 'react-countup';
-import styles from '../styles/Home.module.css';
-import PubArticle from '../components/PublicationsArticle';
-import InitiativesSlideshow from '../components/InitiativesSlideshow';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import Aos from 'aos';
-import { isMobile } from 'react-device-detect';
-import 'aos/dist/aos.css';
-import LoadingScreen from '../components/LoadingScreen';
-import NewsletterSection from '../components/NewsletterSection';
-import QuoteSlideshow from '../components/QuotesSlideshow';
-import execQuotes from '../data/home';
-import { loadPublications, loadBlogPreviews, loadUpcomingEvents, loadPastEvents, loadPodcasts } from '../lib/api';
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import CountUp from "react-countup";
+import styles from "../styles/Home.module.css";
+import PubArticle from "../components/PublicationsArticle";
+import InitiativesSlideshow from "../components/InitiativesSlideshow";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import Aos from "aos";
+import { isMobile } from "react-device-detect";
+import "aos/dist/aos.css";
+import LoadingScreen from "../components/LoadingScreen";
+import NewsletterSection from "../components/NewsletterSection";
+import QuoteSlideshow from "../components/QuotesSlideshow";
+import execQuotes from "../data/home";
+import {
+  loadPublications,
+  loadBlogPreviews,
+  loadUpcomingEvents,
+  loadPastEvents,
+  loadPodcasts,
+} from "../lib/api";
 
-const Home = ({ publications, blogs, events, pastEvents, podcasts}: any) => {
+const Home = ({ publications, blogs, events, pastEvents, podcasts }: any) => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [openNewsletter, setOpenNewsletter] = useState(false);
@@ -37,8 +43,8 @@ const Home = ({ publications, blogs, events, pastEvents, podcasts}: any) => {
     Aos.init({
       duration: 1300,
       once: true,
-      anchorPlacement: 'top-bottom',
-      easing: 'ease-in-out',
+      anchorPlacement: "top-bottom",
+      easing: "ease-in-out",
       offset: 20,
     });
   }, []);
@@ -65,6 +71,11 @@ const Home = ({ publications, blogs, events, pastEvents, podcasts}: any) => {
         <div>
           {/* Start of Header */}
           <div className={styles.contain}>
+            <Image
+              className={styles.headerImage}
+              src={"/headers/2022-team-header.jpg"}
+              layout={"fill"}
+            />
             <div data-aos="fade" className={styles.headline}>
               <h1>UNSW</h1>
               <h1>Women In</h1>
@@ -79,7 +90,7 @@ const Home = ({ publications, blogs, events, pastEvents, podcasts}: any) => {
 
           {/* Start of Description */}
           <div
-            data-aos={isMobile ? 'fade' : 'fade-up'}
+            data-aos={isMobile ? "fade" : "fade-up"}
             className={styles.description}
           >
             <div className={styles.descriptionLeft}>
@@ -101,11 +112,11 @@ const Home = ({ publications, blogs, events, pastEvents, podcasts}: any) => {
 
           {/* Start of Quotes */}
           <div
-            data-aos={isMobile ? 'fade' : 'fade-up'}
+            data-aos={isMobile ? "fade" : "fade-up"}
             className={styles.quotes}
           >
             <h1>HEAR FROM US</h1>
-            <div className={[styles.carousel, styles.quoteCarousel].join(' ')}>
+            <div className={[styles.carousel, styles.quoteCarousel].join(" ")}>
               <QuoteSlideshow
                 height={450}
                 data={execQuotes}
@@ -145,7 +156,7 @@ const Home = ({ publications, blogs, events, pastEvents, podcasts}: any) => {
 
           {/* Start of Upcoming Events / Latest blog / Latest podcast*/}
           <div
-            data-aos={isMobile ? 'fade' : 'fade-up'}
+            data-aos={isMobile ? "fade" : "fade-up"}
             data-aos-delay="150"
             className={styles.carousel}
           >
@@ -154,12 +165,12 @@ const Home = ({ publications, blogs, events, pastEvents, podcasts}: any) => {
               nextUpcomingEvent={nextUpcomingEvent}
               mostRecentEvent={mostRecentEvent}
               mostRecentPodcast={mostRecentPodcast}
-              />
+            />
           </div>
 
           {/* Start of Publications */}
           <div
-            data-aos={isMobile ? 'fade' : 'fade-up'}
+            data-aos={isMobile ? "fade" : "fade-up"}
             data-aos-delay="150"
             className={styles.publications}
           >
@@ -178,7 +189,7 @@ const Home = ({ publications, blogs, events, pastEvents, podcasts}: any) => {
                   last3articles.map((article, index) => (
                     <div className={styles.homeArticles} key={index}>
                       <PubArticle
-                        imgUrl={'http:' + article.fields.img.fields.file.url}
+                        imgUrl={"http:" + article.fields.img.fields.file.url}
                         heading={article.fields.heading}
                         date={article.fields.date}
                         url={article.fields.url}
@@ -195,7 +206,7 @@ const Home = ({ publications, blogs, events, pastEvents, podcasts}: any) => {
 
           {/* Start of Sponsors & Affliations */}
           <div
-            data-aos={isMobile ? 'fade' : 'fade-up'}
+            data-aos={isMobile ? "fade" : "fade-up"}
             data-aos-delay="150"
             className={styles.sponsors}
           >
