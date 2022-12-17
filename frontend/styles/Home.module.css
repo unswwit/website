@@ -1,8 +1,6 @@
 /*-------------------------------Home page header-----------------------------*/
 /*Header image*/
 .contain {
-  /* background-image: url("/headers/header-1.jpg"); */
-  /* background-image: url("/headers/2022-team-header.jpg"); */
   background-position: center bottom 40%;
   background-repeat: no-repeat;
   background-size: cover;
