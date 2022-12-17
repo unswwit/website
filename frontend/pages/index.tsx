@@ -21,6 +21,7 @@ import {
   loadPastEvents,
   loadPodcasts,
 } from "../lib/api";
+import SponsorCollage from "../components/SponsorCollage";
 
 const Home = ({ publications, blogs, events, pastEvents, podcasts }: any) => {
   const [articles, setArticles] = useState([]);
@@ -212,25 +213,7 @@ const Home = ({ publications, blogs, events, pastEvents, podcasts }: any) => {
           >
             <h1>SPONSORS AND AFFILIATIONS</h1>
             <div id={styles.sponsorsContainer}>
-              <div className={styles.lightmodeBanner}>
-                <Image
-                  src="/sponsor-collage-light-mode.png"
-                  alt="light mode banner"
-                  margin-top="50px"
-                  width="900px"
-                  height="650px"
-                />
-              </div>
-              <div className={styles.darkmodeBanner}>
-                <Image
-                  display="none"
-                  src="/sponsor-collage-dark-mode.png"
-                  alt="dark mode banner"
-                  margin-top="50px"
-                  width="900px"
-                  height="650px"
-                />
-              </div>
+              <SponsorCollage />
             </div>
           </div>
           {/* End of Sponsors & Affliations */}
