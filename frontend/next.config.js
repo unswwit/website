@@ -2,6 +2,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['unswwit.com', 'images.ctfassets.net'],
+    domains: ['unswwit.netlify.app', 'unswwit.com', 'images.ctfassets.net'],
   },
 };
