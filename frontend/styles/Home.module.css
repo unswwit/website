@@ -1,13 +1,21 @@
 /*-------------------------------Home page header-----------------------------*/
 /*Header image*/
 .contain {
-  background-image: url("/headers/header-1.jpg");
   background-position: center bottom 40%;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   max-width: 100%;
-  background-color: var(--general-text);
+  background-color: var(--black);
+}
+
+.headerImage {
+  opacity: 0.3;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
 }
 
 /*Header title*/
