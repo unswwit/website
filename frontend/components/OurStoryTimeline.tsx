@@ -86,14 +86,23 @@ export default function OppositeContentTimeline() {
             </ul>
           ) : (
             <ul>
-              <li>test</li>
               <li>
-                Our student base grew to over 3000 students by the end of 2021.
+                Awarded Arc Development Program of the year for our flagship
+                Empowerment Mentoring Program
               </li>
-              <li>Our sponsorship base more than doubled to 23 sponsors.</li>
               <li>
-                Produced 39 publications including podcasts, WCW, flagship
-                publications which have amassed over 4340 views/read/listens.
+                Restructured and introduced VP Externals, VP Internals, VP
+                Multimedia, VP Technology{' '}
+              </li>
+              <li>Sponsorship base grew to 28 sponsors</li>
+              <li>
+                Produced 37 multimedia publications including blogs, podcasts,
+                videos and flagship publications which amassed a reach of 22.1k
+                over 2022
+              </li>
+              <li>
+                Held 22 events including our flagship events, workshops,
+                networking nights and competitions
               </li>
             </ul>
           )}
