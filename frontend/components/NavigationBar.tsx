@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import Link from "next/link";
-import Image from "next/image";
-import styles from "../styles/Navbar.module.css";
-import Navbar from "./MobileNavBar";
-import { navigationBarContent } from "../data/navbar";
+import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import Image from 'next/image';
+import styles from '../styles/Navbar.module.css';
+import Navbar from './MobileNavBar';
+import { navigationBarContent } from '../data/navbar';
 import {
   changeAboutUsToArrowDown,
   changeAboutUsToArrowRight,
   changeMediaToArrowDown,
   changeMediaToArrowRight,
-} from "../lib/helpers/navbar";
+} from '../lib/helpers/navbar';
 
 const NavigationBar = () => {
   const [clearNavBar, setClearNavBar] = useState(false);
@@ -22,42 +22,42 @@ const NavigationBar = () => {
   useEffect(() => {
     if (
       window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
+      window.matchMedia('(prefers-color-scheme: dark)').matches
     ) {
       setDarkMode(true);
     }
   }, []);
 
   useEffect(() => {
-    window.addEventListener("scroll", checkBottomScreen);
+    window.addEventListener('scroll', checkBottomScreen);
     return () => {
-      window.removeEventListener("scroll", checkBottomScreen);
+      window.removeEventListener('scroll', checkBottomScreen);
     };
   }, []);
 
   useEffect(() => {
     checkWindowWidth();
-    window.addEventListener("resize", checkWindowWidth);
+    window.addEventListener('resize', checkWindowWidth);
     return () => {
-      window.removeEventListener("resize", checkWindowWidth);
+      window.removeEventListener('resize', checkWindowWidth);
     };
   }, []);
 
   useEffect(() => {
     checkTopScreen();
-    window.addEventListener("scroll", checkTopScreen);
+    window.addEventListener('scroll', checkTopScreen);
     return () => {
-      window.removeEventListener("scroll", checkTopScreen);
+      window.removeEventListener('scroll', checkTopScreen);
     };
   }, []);
 
   useEffect(() => {
-    let aboutUsDropdown = document.getElementById("aboutUsDropdown");
-    let mediaDropdown = document.getElementById("mediaDropdown");
-    aboutUsDropdown.addEventListener("mouseover", changeAboutUsToArrowDown);
-    aboutUsDropdown.addEventListener("mouseleave", changeAboutUsToArrowRight);
-    mediaDropdown.addEventListener("mouseover", changeMediaToArrowDown);
-    mediaDropdown.addEventListener("mouseleave", changeMediaToArrowRight);
+    let aboutUsDropdown = document.getElementById('aboutUsDropdown');
+    let mediaDropdown = document.getElementById('mediaDropdown');
+    aboutUsDropdown.addEventListener('mouseover', changeAboutUsToArrowDown);
+    aboutUsDropdown.addEventListener('mouseleave', changeAboutUsToArrowRight);
+    mediaDropdown.addEventListener('mouseover', changeMediaToArrowDown);
+    mediaDropdown.addEventListener('mouseleave', changeMediaToArrowRight);
   }, []);
 
   const checkWindowWidth = () => {
@@ -85,7 +85,7 @@ const NavigationBar = () => {
        otherwise return regular navbar */
     <nav
       className={
-        clearNavBar && router.pathname !== "/404"
+        clearNavBar && router.pathname !== '/404'
           ? `${styles.clearNavBar} ${styles.navBarContainer}`
           : hiddenNavBar
           ? `${styles.hiddenNavBar} ${styles.navBarContainer}`
@@ -100,9 +100,9 @@ const NavigationBar = () => {
               <Image
                 className={styles.logoGridItem}
                 src={
-                  darkMode || (clearNavBar && router.pathname !== "/404")
-                    ? "/logo-white.png"
-                    : "/logo-black.png"
+                  darkMode || (clearNavBar && router.pathname !== '/404')
+                    ? '/logo-white.png'
+                    : '/logo-black.png'
                 }
                 alt="wit logo"
                 width={40}
@@ -136,7 +136,7 @@ const NavigationBar = () => {
                 </Link>
                 <div
                   className={
-                    clearNavBar && router.pathname !== "/404"
+                    clearNavBar && router.pathname !== '/404'
                       ? `${styles.clearDropdownContent} ${styles.dropdownContent}`
                       : styles.dropdownContent
                   }
@@ -146,8 +146,8 @@ const NavigationBar = () => {
                       <Link href={page.link} key={index}>
                         <div
                           className={
-                            router.asPath.split("/")[2] ===
-                            page.link.split("/")[2]
+                            router.asPath.split('/')[2] ===
+                            page.link.split('/')[2]
                               ? `${styles.currentPageBold} ${
                                   index === dropdownContentLength
                                     ? styles.dropdownItemEnd
@@ -178,7 +178,7 @@ const NavigationBar = () => {
                   <a>{page.pageName}</a>
                   <div
                     className={
-                      router.asPath.split("/")[1] === page.link.split("/")[1]
+                      router.asPath.split('/')[1] === page.link.split('/')[1]
                         ? `${styles.currentPageUnderline} ${styles.linkUnderline}`
                         : styles.linkUnderline
                     }

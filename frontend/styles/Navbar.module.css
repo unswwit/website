@@ -155,7 +155,8 @@
   background-color: var(--light-yellow);
   opacity: 0;
   border-radius: 0px 0px 15px 15px;
-  transition: background-color 0.2s, border-radius 0.2s, opacity 0.2s, visibility 0.2s;
+  transition: background-color 0.2s, border-radius 0.2s, opacity 0.2s,
+    visibility 0.2s;
 }
 
 .clearDropdownContent {
@@ -197,7 +198,7 @@
   cursor: pointer;
 }
 
-.dropdownItemEnd:hover a{
+.dropdownItemEnd:hover a {
   color: var(--red);
   transition: color 0.3s, opacity 0.2s, visibility 0.2s;
 }
@@ -215,8 +216,7 @@
 /*------------------------------Compact Navbar--------------------------------*/
 .compactNavBarGrid {
   display: grid;
-  grid-template:
-    'logo empty empty empty empty empty menuIcon';
+  grid-template: "logo empty empty empty empty empty menuIcon";
   align-items: center;
   height: 99%;
 }
@@ -357,7 +357,6 @@
 .currentPageMenuBold {
   font-weight: bold;
 }
-
 
 /*--- Dark mode ---*/
 @media (prefers-color-scheme: dark) {
