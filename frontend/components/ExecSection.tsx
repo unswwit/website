@@ -30,10 +30,15 @@ const Execs = (props: any) => {
             <p className={styles.profileTextName}>{props.name}</p>
             <p className={styles.profileTextPosition}>{props.position}</p>
             {props.degree && (
+            <>
               <p className={styles.profileDegree}>
                 {props.degree}
                 {props.year && ', ' + props.year + ' year'}
               </p>
+              <p className={styles.profileDegree}>
+              {'(' + props.pronouns + ')'}
+              </p>
+            </>
             )}
             {props.linkedin && (
               <div className={styles.iconBar}>

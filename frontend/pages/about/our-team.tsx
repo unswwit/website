@@ -161,6 +161,7 @@ const OurTeam = ({ execs, subcommittee }: any) => {
                                     ]
                                   : execToClassName[exec.fields.year]
                               }
+                              pronouns={exec.fields.pronouns}
                               position={exec.fields.position}
                               degree={exec.fields.degree}
                               year={exec.fields.year}
