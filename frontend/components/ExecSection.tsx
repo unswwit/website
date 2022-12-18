@@ -32,11 +32,11 @@ const Execs = (props: any) => {
             {props.degree && (
             <>
               <p className={styles.profileDegree}>
-                {props.degree}
-                {props.year && ', ' + props.year + ' year'}
+              {'(' + props.pronouns + ')'}
               </p>
               <p className={styles.profileDegree}>
-              {'(' + props.pronouns + ')'}
+                {props.degree}
+                {props.year && ', ' + props.year + ' year'}
               </p>
             </>
             )}
