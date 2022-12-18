@@ -23,7 +23,11 @@
 
 .navBarGrid {
   display: grid;
+<<<<<<< HEAD
   grid-template: 'logo empty empty empty empty home aboutUs events opportunities media joinUs';
+=======
+  grid-template: "logo empty empty empty empty home aboutUs events opportunities media joinUs";
+>>>>>>> develop
   align-items: center;
   height: 100%;
 }
