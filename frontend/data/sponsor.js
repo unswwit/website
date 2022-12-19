@@ -1,5 +1,34 @@
 import styles from '../styles/Sponsors.module.css';
 
+const audinateDescription = () => {
+  return (
+    <>
+      <p>
+        Audinate is an Australian technology company with global impact, leading
+        the world in networked media. Audinate’s &quot;Dante&quot; technology is used
+        extensively in professional audio / video installations worldwide
+        including live events, broadcast, entertainment venues and
+        communications systems.
+      </p>
+      <p>
+        Dante is available in over 3,000 products from more than 500
+        manufacturers, covering a diverse range of installations and
+        applications across industries, including the Sydney Opera House, on set
+        at films like La La Land, in stadiums such as Target Field and the Paris
+        La Defense Arena, and even at hotels, restaurants, and places of
+        worship.
+      </p>
+      <p>
+        When you’re part of the team at Audinate, your ambition extends as far
+        as our reach. With globally recognized technology and business
+        operations, no matter what your role you’ll contribute to our growth and
+        play a part in the future of game-changing solutions, forever
+        influencing how people experience AV.
+      </p>
+    </>
+  );
+};
+
 const nakatomiDescription = () => {
   return (
     <>
@@ -391,6 +420,13 @@ const sponsors = {
     'atlassian-major.png',
     'DIAMOND',
     placeHolderDescription(),
+  ],
+  Audinate: [
+    'Audinate',
+    'https://www.audinate.com/',
+    'audinate.png',
+    'GOLD',
+    audinateDescription(),
   ],
   Appian: [
     'Appian',
