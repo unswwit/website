@@ -24,7 +24,7 @@
 .navBarGrid {
   display: grid;
   grid-template:
-    'logo empty home aboutUs sponsorsAndAffiliations events opportunities media joinUs contactUs';
+    'logo empty home aboutUs sponsors jobsBoard events media joinUs contactUs';
   align-items: center;
   height: 100%;
 }
@@ -45,16 +45,16 @@
   grid-area: aboutUs;
 }
 
-.sponsorsAndAffiliationsGridItem {
-  grid-area: sponsorsAndAffiliations;
+.sponsorsGridItem {
+  grid-area: sponsors;
 }
 
 .eventsGridItem {
   grid-area: events;
 }
 
-.opportunitiesGridItem {
-  grid-area: opportunities;
+.jobsBoardGridItem {
+  grid-area: jobsBoard;
 }
 
 .mediaGridItem {

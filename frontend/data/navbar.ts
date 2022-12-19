@@ -64,19 +64,19 @@ const navigationBarContent = [
     dropdownContent: aboutUsDropdownContent,
   },
   {
-    pageName: 'Sponsors and Affiliations',
-    link: '/sponsors-affiliations',
-    itemName: styles.sponsorsAndAffiliationsGridItem,
+    pageName: 'Sponsors',
+    link: '/sponsors',
+    itemName: styles.sponsorsGridItem,
+  },
+  {
+    pageName: 'Jobs Board',
+    link: '/jobs-board',
+    itemName: styles.jobsBoardGridItem,
   },
   {
     pageName: 'Events',
     link: '/events',
     itemName: styles.eventsGridItem,
-  },
-  {
-    pageName: 'Opportunities',
-    link: '/opportunities',
-    itemName: styles.opportunitiesGridItem,
   },
   {
     pageName: 'Media ▸',
