@@ -57,9 +57,7 @@ const InitiativesSlideshow = (props) => {
                 <div>
                   <div className={styles.right}>
                     <h1>EVENTS</h1>
-                    <Link
-                      href={nextEvent.fields.facebookLink}
-                    >
+                    <Link href={nextEvent.fields.facebookLink}>
                       <div className={styles.eventImg}>
                         <Image
                           src={`https:${nextEvent.fields.img.fields.file.url}`}
@@ -73,20 +71,20 @@ const InitiativesSlideshow = (props) => {
                 </div>
               ) : (
                 <div>
-                    <div className={styles.right}>
-                      <h1>EVENTS</h1>
+                  <div className={styles.right}>
+                    <h1>EVENTS</h1>
 
-                      <Link
-                        href={`/event-recaps/${latestEvent.fields.year}/${latestEvent.fields.eventNumber}`}
-                      >
-                        <Image
-                          src={`https:${latestEvent.fields.img.fields.file.url}`}
-                          alt={latestEvent.title}
-                          height="924px"
-                          width="1640px"
-                        />
-                      </Link>
-                    </div>
+                    <Link
+                      href={`/event-recaps/${latestEvent.fields.year}/${latestEvent.fields.eventNumber}`}
+                    >
+                      <Image
+                        src={`https:${latestEvent.fields.img.fields.file.url}`}
+                        alt={latestEvent.title}
+                        height="924px"
+                        width="1640px"
+                      />
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>
@@ -116,22 +114,20 @@ const InitiativesSlideshow = (props) => {
                   </button>
                 </p>
               </div>
-                <div className={styles.right} >
-                  <h1>BLOGS</h1>
-                  <Link
-                    href={`/media/blog/${latestBlog.fields.blogNo}`}
-                  >
-                    <div className={styles.eventImg}>
-                      <Image
-                        src={`https:${latestBlog.fields.img.fields.file.url}`}
-                        alt={`${latestBlog.fields.heading}`}
-                        height="300px"
-                        width="450px"
-                      />
-                    </div>
-                  </Link>
-                </div>
+              <div className={styles.right}>
+                <h1>BLOGS</h1>
+                <Link href={`/media/blog/${latestBlog.fields.blogNo}`}>
+                  <div className={styles.eventImg}>
+                    <Image
+                      src={`https:${latestBlog.fields.img.fields.file.url}`}
+                      alt={`${latestBlog.fields.heading}`}
+                      height="300px"
+                      width="450px"
+                    />
+                  </div>
+                </Link>
               </div>
+            </div>
           </div>
         </Slide>
         <Slide className={styles.slideComponent}>
@@ -156,21 +152,19 @@ const InitiativesSlideshow = (props) => {
                   </button>
                 </p>
               </div>
-                <div className={styles.right}>
-                  <h1>PODCASTS</h1>
-                  <Link
-                    href={`/media/podcast/${latestPodcast.fields.episodeNo}`}
-                  >
-                    <div className={styles.eventImg}>
-                      <Image
-                        src={`https:${latestPodcast.fields.img.fields.file.url}`}
-                        height="250px"
-                        width="250px"
-                        alt={`${latestPodcast.title}`}
-                      />
-                    </div>
-                  </Link>
-                </div>
+              <div className={styles.right}>
+                <h1>PODCASTS</h1>
+                <Link href={`/media/podcast/${latestPodcast.fields.episodeNo}`}>
+                  <div className={styles.eventImg}>
+                    <Image
+                      src={`https:${latestPodcast.fields.img.fields.file.url}`}
+                      height="250px"
+                      width="250px"
+                      alt={`${latestPodcast.title}`}
+                    />
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
         </Slide>

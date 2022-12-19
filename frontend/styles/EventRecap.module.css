@@ -20,7 +20,7 @@
   -moz-border-radius: 0;
   border-radius: 0;
   color: #e85f5c;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11pt;
   font-weight: 500;
   padding: 7px;
@@ -71,8 +71,8 @@
 }
 
 .resourcesIframe {
-  width: "100%";
-  border: "0";
+  width: '100%';
+  border: '0';
 }
 
 /* Description */
@@ -206,12 +206,12 @@
   color: #e85f5c;
   flex-basis: 33.33%;
   flex-shrink: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
 #resourcesDescription {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #4f4f4f;
 }
 

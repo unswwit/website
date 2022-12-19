@@ -23,8 +23,7 @@
 
 .navBarGrid {
   display: grid;
-  grid-template:
-    'logo empty home aboutUs sponsors jobsBoard events media joinUs contactUs';
+  grid-template: 'logo empty home aboutUs sponsors jobsBoard events media joinUs contactUs';
   align-items: center;
   height: 100%;
 }
@@ -87,7 +86,7 @@
   height: 100%;
   width: 90%;
   font-size: 16px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
 }
 
@@ -216,7 +215,7 @@
 /*------------------------------Compact Navbar--------------------------------*/
 .compactNavBarGrid {
   display: grid;
-  grid-template: "logo empty empty empty empty empty menuIcon";
+  grid-template: 'logo empty empty empty empty empty menuIcon';
   align-items: center;
   height: 99%;
 }
@@ -259,7 +258,7 @@
   margin: auto;
   width: 100%;
   font-size: 16px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   transition: opacity 0.2s;
 }
