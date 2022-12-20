@@ -10,6 +10,7 @@ import ScrollUpBtn from '../../components/ScrollUpBtn';
 import LoadingScreen from '../../components/LoadingScreen';
 import { execToClassName, marks, valueToYear } from '../../data/team';
 import { loadSubcommittee, loadExecs } from '../../lib/api';
+import Head from 'next/head';
 
 const OurTeam = ({ execs, subcommittee }: any) => {
   const masterExec = useRef();
@@ -110,6 +111,9 @@ const OurTeam = ({ execs, subcommittee }: any) => {
 
   return (
     <div>
+      <Head>
+        <title>Our Team | UNSW WIT</title>
+      </Head>
       {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (

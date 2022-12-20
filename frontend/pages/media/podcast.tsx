@@ -11,7 +11,7 @@ import { loadPodcasts } from '../../lib/api';
 import { formatPodcastDate } from '../../lib/helpers/date';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import Head from 'next/head';
 // TO UNCOMMENT WHEN REACH > 9 PODCASTS
 // import PaginationComp from "../components/Pagination";
 
@@ -104,6 +104,9 @@ const Podcast = ({ episodes }: any) => {
 
   return (
     <div>
+      <Head>
+        <title>Podcast | UNSW WIT</title>
+      </Head>
       {sourceLoading && imageLoading ? (
         <LoadingScreen />
       ) : (

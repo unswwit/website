@@ -4,6 +4,7 @@ import styles from '../../styles/OurStory.module.css';
 import Timeline from '../../components/OurStoryTimeline';
 import LoadingScreen from '../../components/LoadingScreen';
 import Image from 'next/image';
+import Head from 'next/head';
 
 // Start at the top of the page
 const OurStory = () => {
@@ -25,6 +26,9 @@ const OurStory = () => {
 
   return (
     <div>
+      <Head>
+        <title>Our Story | UNSW WIT</title>
+      </Head>
       {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (

@@ -5,6 +5,7 @@ import styles from '../styles/Opportunities.module.css';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import LoadingScreen from '../components/LoadingScreen';
 import { loadOpportunities } from '../lib/api';
+import Head from 'next/head';
 
 const Opportunities = ({ opportunities }: any) => {
   const [loading, setLoading] = useState(true);
@@ -26,6 +27,9 @@ const Opportunities = ({ opportunities }: any) => {
   }, []);
   return (
     <div>
+      <Head>
+        <title>Opportunities | UNSW WIT</title>
+      </Head>
       {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (

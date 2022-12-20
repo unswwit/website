@@ -12,6 +12,7 @@ import { isMobile } from 'react-device-detect';
 import { loadVideos } from '../../lib/api';
 import { useStyles, categories } from '../../data/video';
 import { formatDate } from '../../lib/helpers/date';
+import Head from 'next/head';
 
 const Videos = ({ videos }: any) => {
   const classes = useStyles();
@@ -190,6 +191,9 @@ const Videos = ({ videos }: any) => {
 
   return (
     <div>
+      <Head>
+        <title>Videos | UNSW WIT</title>
+      </Head>
       {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (

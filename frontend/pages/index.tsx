@@ -15,6 +15,7 @@ import NewsletterSection from '../components/NewsletterSection';
 import QuoteSlideshow from '../components/QuotesSlideshow';
 import execQuotes from '../data/home';
 import { loadPublications } from '../lib/api';
+import Head from 'next/head';
 
 const Home = ({ publications }: any) => {
   const [articles, setArticles] = useState([]);
@@ -55,6 +56,9 @@ const Home = ({ publications }: any) => {
 
   return (
     <div>
+      <Head>
+        <title>Home | UNSW WIT</title>
+      </Head>
       {sourceLoading ? (
         <LoadingScreen />
       ) : (

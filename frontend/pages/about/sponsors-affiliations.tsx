@@ -10,6 +10,7 @@ import SponsorsModal from '../../components/SponsorModal';
 import LoadingScreen from '../../components/LoadingScreen';
 import { sponsors, affiliations, partnerships } from '../../data/sponsor';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default function Sponsors() {
   const [open, setOpen] = React.useState(false);
@@ -36,6 +37,9 @@ export default function Sponsors() {
 
   return (
     <div>
+      <Head>
+        <title>Sponsors | UNSW WIT</title>
+      </Head>
       {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (

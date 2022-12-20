@@ -11,6 +11,7 @@ import { memberQuotes, socials } from '../data/join';
 import SimpleAccordion from '../components/JoinUsAccordion';
 import PortfolioGrid from '../components/JoinUsGrid';
 import Image from 'next/image';
+import Head from 'next/head';
 
 const JoinUs = () => {
   const [hideSpinner, setHideSpinner] = useState(false);
@@ -33,6 +34,9 @@ const JoinUs = () => {
 
   return (
     <div>
+      <Head>
+        <title>Join Us | UNSW WIT</title>
+      </Head>
       {sourceLoading && !hideSpinner && headerLoading ? (
         <LoadingScreen />
       ) : (

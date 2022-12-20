@@ -16,6 +16,7 @@ import {
   valueToYear,
 } from '../../data/marketing';
 import { formatMarketingArchivesDate } from '../../lib/helpers/date';
+import Head from 'next/head';
 
 const MarketingContent = ({ archives }: any) => {
   const classes = useStyles();
@@ -105,6 +106,9 @@ const MarketingContent = ({ archives }: any) => {
 
   return (
     <div>
+      <Head>
+        <title>Marketing Archives | UNSW WIT</title>
+      </Head>
       {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (
