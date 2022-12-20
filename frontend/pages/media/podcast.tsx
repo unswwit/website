@@ -46,7 +46,6 @@ const Podcast = ({ episodes }: any) => {
     setLoading(false);
     setSourceLoading(false);
   };
-  console.log(episodes);
 
   useEffect(() => {
     // start at the top of the page
@@ -233,12 +232,7 @@ const Podcast = ({ episodes }: any) => {
 
           <div id={styles.episodes}>
             {selectedPosts.map((episode, index) => {
-              return (
-                <EpisodeTemplate
-                  key={index}
-                  episode={episode}
-                />
-              );
+              return <EpisodeTemplate key={index} episode={episode} />;
             })}
           </div>
           {/* TO UNCOMMENT WHEN REACH > 9 PODCASTS */}

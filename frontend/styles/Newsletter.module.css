@@ -35,7 +35,7 @@
 .formTitle {
   color: var(--yellow);
   font-size: 2.5vw;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: 3px;
   text-transform: uppercase;
   text-align: center;
@@ -43,7 +43,7 @@
 
 .formDescription {
   color: #313638;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12pt;
   margin-left: auto;
   margin-right: auto;
