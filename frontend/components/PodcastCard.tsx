@@ -97,29 +97,26 @@ const useStyles = makeStyles({
 });
 
 export default function EpisodeTemplate({
-  cover,
-  title,
-  date,
-  description,
   episode,
 }: any) {
   const classes = useStyles();
-
+  const { img, date, title, description } = episode.fields;
+  const imgUrl = 'https:' + img.fields.file.url;
   return (
     <Card className={classes.root}>
       <CardActionArea
         className={[classes.click, styles.previewContainer].join(' ')}
       >
-        <Link href={episode['spotify']}>
-          <a className={styles.a}>
+        <a href={episode['spotify']}>
             <div className={classes.media}>
               <Image
                 alt="podcast episode cover"
-                src={'http://' + cover}
+                src={imgUrl}
                 className={styles.episodeCover}
                 layout={'fill'}
                 objectFit={'contain'}
                 objectPosition={'top'}
+                priority
               />
             </div>
             <CardContent className={classes.content}>
@@ -144,7 +141,6 @@ export default function EpisodeTemplate({
               </Typography>
             </CardContent>
           </a>
-        </Link>
       </CardActionArea>
     </Card>
   );

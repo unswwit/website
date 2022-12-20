@@ -46,6 +46,7 @@ const Podcast = ({ episodes }: any) => {
     setLoading(false);
     setSourceLoading(false);
   };
+  console.log(episodes);
 
   useEffect(() => {
     // start at the top of the page
@@ -235,12 +236,7 @@ const Podcast = ({ episodes }: any) => {
               return (
                 <EpisodeTemplate
                   key={index}
-                  episodeNo={episode.fields.episodeNo}
-                  title={episode.fields.title}
-                  cover={episode.fields.img.fields.file.url}
-                  date={episode.fields.date}
-                  description={episode.fields.description}
-                  episode={episode.fields}
+                  episode={episode}
                 />
               );
             })}
