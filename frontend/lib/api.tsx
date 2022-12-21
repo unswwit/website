@@ -133,3 +133,27 @@ export async function loadBlogPreviews() {
     });
   return res.items;
 }
+
+export async function loadBlogRecommendations() {
+  const res = await client
+    .getEntries({
+      content_type: 'blogRecommendations',
+      select: 'fields',
+      order: 'fields.index',
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
+
+export async function loadBlogAuthors() {
+  const res = await client
+    .getEntries({
+      content_type: 'blogAuthors',
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}

@@ -29,8 +29,8 @@
   border-right: 1px transparent;
   border-bottom: 2px solid black;
   width: 80%;
-  font-family: "Montserrat", sans-serif;
-  background: url("/icons/search_icon.png") center left no-repeat;
+  font-family: 'Montserrat', sans-serif;
+  background: url('/icons/search_icon.png') center left no-repeat;
   background-position-x: 0.5%;
   background-size: auto 85%;
   padding: 0.5%;
@@ -54,7 +54,7 @@
 }
 
 h1.vidSubheading {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 30pt;
   text-transform: uppercase;
   margin-top: 5%;
@@ -90,7 +90,7 @@ h1.vidSubheading {
 
 .desc {
   color: var(--general-text);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   max-width: 50%;
   font-size: 16px;
   margin: 0 auto;
@@ -101,7 +101,7 @@ h1.vidSubheading {
   margin: 0 auto;
   margin-top: 4%;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 30px;
   color: var(--yellow);
@@ -157,7 +157,7 @@ h1.vidSubheading {
 
 .videoName {
   color: var(--black);
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-size: 25px;
   padding: 0;
   margin: 0 auto;
@@ -167,7 +167,7 @@ h1.vidSubheading {
 
 .videoDate {
   color: var(--yellow);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 400;
   padding: 0;
@@ -207,7 +207,7 @@ img.videoImages {
 
 .moreName {
   color: var(--black);
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-size: 16px;
   text-align: center;
   padding: 0;
@@ -217,7 +217,7 @@ img.videoImages {
 
 .moreDate {
   color: var(--yellow);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   font-weight: 400;
   text-align: center;
@@ -423,7 +423,7 @@ img.videoImages {
   .inputSearchBar {
     color: white;
     border-color: white;
-    background: url("/icons/dark-search_icon.png") center left no-repeat;
+    background: url('/icons/dark-search_icon.png') center left no-repeat;
     background-position-x: 0.5%;
     background-size: auto 85%;
     font-size: 12pt;

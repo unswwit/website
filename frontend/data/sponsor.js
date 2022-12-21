@@ -5,8 +5,8 @@ const audinateDescription = () => {
     <>
       <p>
         Audinate is an Australian technology company with global impact, leading
-        the world in networked media. Audinate’s &quot;Dante&quot; technology is used
-        extensively in professional audio / video installations worldwide
+        the world in networked media. Audinate’s &quot;Dante&quot; technology is
+        used extensively in professional audio / video installations worldwide
         including live events, broadcast, entertainment venues and
         communications systems.
       </p>
