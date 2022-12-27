@@ -157,8 +157,6 @@ const Videos = ({ videos }: any) => {
     }
   }, []);
 
-  console.log(videos);
-
   // get video items
   const getVideos = (videos: any) => {
     return videos.map((video: any, index: number) => {
