@@ -60,7 +60,6 @@ const Videos = ({ videos }: any) => {
         return false;
       }
     })[0];
-
     setVideo(currVideo);
     return videoIndex;
   };
@@ -96,7 +95,7 @@ const Videos = ({ videos }: any) => {
   useEffect(() => {
     window.scrollTo(0, 0);
     fetchVideos(videos);
-  });
+  }, []);
 
   useEffect(() => {
     if (currentPosts.length === 0 && loading === false) {
@@ -157,6 +156,8 @@ const Videos = ({ videos }: any) => {
       setYoutubeTheme('dark');
     }
   }, []);
+
+  console.log(videos);
 
   // get video items
   const getVideos = (videos: any) => {
@@ -245,12 +246,11 @@ const Videos = ({ videos }: any) => {
                 <div className={styles.iframeWrapper}>
                   <div className={styles.responsiveIframe}>
                     <iframe
-                      src={`https://www.youtube.com/embed/${video.fields.embedUrl}?`} // embedded path
+                      src={`https://www.youtube.com/embed/${video.fields.embedUrl}`} // embedded path
                       frameBorder="0"
                       allow="fullscreen; autoplay; encrypted-media;"
                       title={!video.fields.title ? 'Video' : video.fields.title}
                       className={styles.embeddedVideo}
-                      allowFullScreen="true"
                     />
                   </div>
                   <p className={styles.videoName}>{video.fields.title}</p>
