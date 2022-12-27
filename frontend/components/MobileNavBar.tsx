@@ -94,11 +94,11 @@ const Navbar = () => {
     }
   };
 
-  const setDropdownStyles = (id: string, icon: any) => {
+  const setDropdownStyles = (id: string) => {
     if (id === 'aboutUsDropdown') {
       if (router.asPath.split('/')[1] === 'about' && aboutUsDropdownOpen) {
         return `${styles.currentPageMenuUnderline} ${styles.currentDropdown} ${styles.menuItem}`;
-      } else if (router.asPath.split('/')[1] === 'about' && icon) {
+      } else if (router.asPath.split('/')[1] === 'about') {
         return `${styles.currentPageMenuUnderline} ${styles.menuItem}`;
       } else if (aboutUsDropdownOpen) {
         return `${styles.currentDropdown} ${styles.menuItem}`;
@@ -202,7 +202,7 @@ const Navbar = () => {
                     {/* apply dropdown underline and red text color accordingly:
                         if the current page belongs to the dropdown, the text should be underlined
                         if the dropdown is open, the text should be red */}
-                    <div className={setDropdownStyles(page.id, page.icon)}>
+                    <div className={setDropdownStyles(page.id)}>
                       <a id={page.text}>{page.pageName}</a>
                     </div>
                   </div>
