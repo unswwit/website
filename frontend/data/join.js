@@ -129,20 +129,6 @@ const competitionDescription = () => {
   );
 };
 
-const externalsDescription = () => {
-  return (
-    <ul>
-      <>
-        <li>Maintains communication with our extensive network of sponsors</li>
-        <li>
-          Involves collaborating with other portfolios to host a diverse range
-          of events and publications alongside external partners
-        </li>
-      </>
-    </ul>
-  );
-};
-
 const hrDescription = () => {
   return (
     <ul>
@@ -227,15 +213,46 @@ const publicationsDescription = () => {
   );
 };
 
+const sponsDescription = () => {
+  return (
+    <ul>
+      <>
+        <li>Maintains communication with our extensive network of sponsors</li>
+        <li>
+          Involves collaborating with other portfolios to host a diverse range
+          of events and publications alongside external partners
+        </li>
+      </>
+    </ul>
+  );
+};
+
+const socialsDescription = () => {
+  return (
+    <ul>
+      <>
+        <li>
+          Organises and plans philanthropic events for the wider WIT community
+        </li>
+        <li>
+          Involves creating event run sheets, booking venues and organising
+          catering
+        </li>
+      </>
+    </ul>
+  );
+};
+
 export {
   memberQuotes,
   socials,
   careerDescription,
   competitionDescription,
-  externalsDescription,
   hrDescription,
   itDescription,
   marketingDescription,
   mediaDescription,
   publicationsDescription,
+  sponsDescription,
+  socialsDescription,
 };

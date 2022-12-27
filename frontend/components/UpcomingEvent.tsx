@@ -110,7 +110,6 @@ const useStyles = makeStyles({
 
 export default function UpcomingEvent({ upcomingEvent }: any) {
   const classes = useStyles();
-
   const {
     img,
     title,
@@ -123,7 +122,6 @@ export default function UpcomingEvent({ upcomingEvent }: any) {
     facebookLink,
     location,
   } = upcomingEvent.fields;
-
   const imgUrl = 'https:' + img.fields.file.url;
 
   return (

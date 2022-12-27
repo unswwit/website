@@ -1,3 +1,4 @@
+// @ts-nocheck comment
 const changeAboutUsToArrowDown = () => {
   let aboutUsText = document.getElementById('aboutUsText');
   aboutUsText.innerHTML = 'About Us ▾';
