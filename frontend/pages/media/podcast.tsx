@@ -233,17 +233,7 @@ const Podcast = ({ episodes }: any) => {
 
           <div id={styles.episodes}>
             {selectedPosts.map((episode, index) => {
-              return (
-                <EpisodeTemplate
-                  key={index}
-                  episodeNo={episode.fields.episodeNo}
-                  title={episode.fields.title}
-                  cover={episode.fields.img.fields.file.url}
-                  date={episode.fields.date}
-                  description={episode.fields.description}
-                  episode={episode.fields}
-                />
-              );
+              return <EpisodeTemplate key={index} episode={episode} />;
             })}
           </div>
           {/* TO UNCOMMENT WHEN REACH > 9 PODCASTS */}
