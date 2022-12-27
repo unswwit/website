@@ -1,4 +1,8 @@
-import { loadBlogPreviews, loadBlogRecommendations, loadBlogAuthors } from '../../lib/api';
+import {
+  loadBlogPreviews,
+  loadBlogRecommendations,
+  loadBlogAuthors,
+} from '../../lib/api';
 import BlogRecommendations from '../../components/BlogRecommendations';
 import styles from '../../styles/Blog.module.css';
 import React, { useState, useEffect, useCallback } from 'react';
@@ -49,6 +53,7 @@ const Blog = ({ recommendations, blogPreviews, blogAuthors }) => {
     searchBlogs(filteredBlogs, searchTerm);
   };
 
+  console.log(blogAuthors);
   // search blogs by heading, subheading or author
   const searchBlogs = (filteredBlogs, searchTerm) => {
     const searchResults = filteredBlogs.filter((blog) => {
@@ -74,33 +79,32 @@ const Blog = ({ recommendations, blogPreviews, blogAuthors }) => {
     setCurrentPage(1);
   };
 
+  // TODO: Remove below code if not needed
   // get blog authors
   // input: blog authors data from contentful
   // output: blog authors array of dictionaries
-  const loadAuthors = () => {
-    return new Promise((resolve, reject) => {
-      const fetchBlogAuthors = async () => {
-        setLoading(false);
-      };
-      fetchBlogAuthors().catch((error) =>
-        // error handling
-        console.error(error)
-      );
-    });
-  };
+  // const loadAuthors = () => {
+  //   return new Promise((resolve, reject) => {
+  //     const fetchBlogAuthors = async () => {
+  //       setLoading(false);
+  //     };
+  //     fetchBlogAuthors().catch((error) =>
+  //       // error handling
+  //       console.error(error)
+  //     );
+  //   });
+  // };
 
+  // TODO: Remove console.log and redundancy + make img part work
   // renaming authors to be the image location of the author image and name
   const renameAuthors = (blogOriginal, authorList, blogPreviews) => {
     blogOriginal.forEach((blogPreview, index) => {
       const tempAuthor = {};
       blogPreview.fields.authors.forEach((authorKey) => {
         const result = authorList.filter(
-          (authorItem) => authorItem.authors === authorKey
+          (authorItem) => authorItem.fields.author === authorKey
         )[0];
-        tempAuthor[authorKey] = [
-          `/portraits/blog-authors/${result.img}`,
-          result.name,
-        ];
+        tempAuthor[authorKey] = [result.fields.img.fields.file.url];
       });
       blogPreviews[index].authors = tempAuthor;
     });
@@ -112,11 +116,13 @@ const Blog = ({ recommendations, blogPreviews, blogAuthors }) => {
     setSelectedPosts(tempBlogs);
   };
 
+  // TODO: Remove console.log and redundancy
   // get blog previews
   // input: previews data from contentful
   // output: blog previews array of dictionaries
   const loadBlogs = useCallback(
     (authorList) => {
+      console.log('hello 2');
       setLoading(false);
       const blogOriginal = blogPreviews;
       renameAuthors(blogOriginal, authorList, blogPreviews);
@@ -125,8 +131,11 @@ const Blog = ({ recommendations, blogPreviews, blogAuthors }) => {
     [blogPreviews]
   );
 
+  // TODO: Remove console.log and redundancy
   useEffect(() => {
-    loadAuthors().then((response) => loadBlogs(response));
+    console.log('hello 3');
+    loadBlogs(blogAuthors);
+    // loadAuthors().then((response) => loadBlogs(response));
   }, [loadBlogs]);
 
   // no search results message
