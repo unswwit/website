@@ -53,7 +53,6 @@ const Blog = ({ recommendations, blogPreviews, blogAuthors }) => {
     searchBlogs(filteredBlogs, searchTerm);
   };
 
-  console.log(blogAuthors);
   // search blogs by heading, subheading or author
   const searchBlogs = (filteredBlogs, searchTerm) => {
     const searchResults = filteredBlogs.filter((blog) => {
@@ -100,11 +99,15 @@ const Blog = ({ recommendations, blogPreviews, blogAuthors }) => {
   const renameAuthors = (blogOriginal, authorList, blogPreviews) => {
     blogOriginal.forEach((blogPreview, index) => {
       const tempAuthor = {};
+
       blogPreview.fields.authors.forEach((authorKey) => {
         const result = authorList.filter(
           (authorItem) => authorItem.fields.author === authorKey
         )[0];
-        tempAuthor[authorKey] = [result.fields.img.fields.file.url];
+        tempAuthor[authorKey] = [
+          result.fields.img.fields.file.url,
+          result.fields.name,
+        ];
       });
       blogPreviews[index].authors = tempAuthor;
     });
