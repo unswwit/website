@@ -30,6 +30,7 @@ const PageHeader = ({ imageLoading, imgUrl, title }: Header) => {
         onLoad={
           typeof imageLoading === 'function' ? () => setImageLoaded(true) : null
         }
+        priority
         layout={'fill'}
       />
 

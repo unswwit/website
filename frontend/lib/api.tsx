@@ -72,6 +72,19 @@ export async function loadVideos() {
   return res.items;
 }
 
+export async function loadBlogRecommendations() {
+  const res = await client
+    .getEntries({
+      content_type: 'blogRecommendations',
+      select: 'fields',
+      order: 'fields.index',
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
+
 export async function loadPastEvents() {
   const res = await client
     .getEntries({
