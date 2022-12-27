@@ -56,10 +56,11 @@ const Blog = ({ recommendations, blogPreviews, blogAuthors }) => {
   // search blogs by heading, subheading or author
   const searchBlogs = (filteredBlogs, searchTerm) => {
     const searchResults = filteredBlogs.filter((blog) => {
-      const authors = Object.keys(blogAuthors.fields.name)
+      const authors = Object.keys(blog.authors)
         .join(' ')
         .split(/[-]/)
         .join(' ');
+      console.log(authors);
       if (
         searchTerm === '' ||
         blog.fields.heading.toLowerCase().includes(searchTerm.toLowerCase()) ||
