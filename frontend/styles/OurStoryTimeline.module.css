@@ -11,6 +11,7 @@
   box-shadow: 5px 0px 5px 0 rgba(0, 0, 0, 0.3);
   margin-top: 15px;
   width: 370px;
+  object-fit: cover;
 }
 
 .timelineCardImageContainer {
@@ -19,14 +20,14 @@
 }
 
 .timelineCardImage {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: cover;
 }
 
 .timelineCardText {
   background-color: white;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12pt;
   min-height: 250px;
   padding-right: 15px;
@@ -34,7 +35,7 @@
 }
 
 .witJourneyText {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 12pt !important;
   text-align: center;
@@ -84,7 +85,37 @@
 /*--- Our Story tablet version ---*/
 @media only screen and (max-width: 1000px) {
   .timelineCard {
-    width: 50%;
+    width: 45%;
+  }
+
+  .timelineCardImageContainer {
+    height: 325px;
+    width: 307px;
+  }
+}
+
+@media only screen and (max-width: 912px) {
+  .timelineCard {
+    width: 40%;
+  }
+
+  .timelineCardImageContainer {
+    height: 400px;
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .timelineCardImageContainer {
+    height: 350px;
+    width: 330px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .timelineCardImageContainer {
+    height: 330px;
+    width: 310px;
   }
 }
 
@@ -93,16 +124,44 @@
   .witJourneyText {
     font-size: 10pt;
   }
+
+  .timelineCardImageContainer {
+    height: 230px;
+    width: 217px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
   .timelineCardImageContainer {
     height: 300px;
+    width: 200px;
   }
 }
 
 @media only screen and (max-width: 414px) {
   .timelineCardImageContainer {
-    height: 250px;
+    height: 180px;
+    width: 167px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .timelineCardImageContainer {
+    height: 167px;
+    width: 157px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .timelineCardImageContainer {
+    height: 157px;
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .timelineCardImageContainer {
+    height: 147px;
+    width: 137px;
   }
 }

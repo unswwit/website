@@ -1,12 +1,13 @@
 import {
   careerDescription,
   competitionDescription,
-  externalsDescription,
+  sponsDescription,
   hrDescription,
   itDescription,
   marketingDescription,
   mediaDescription,
   publicationsDescription,
+  socialsDescription,
 } from '../data/join';
 import styles from '../styles/JoinUs.module.css';
 import React, { useState } from 'react';
@@ -15,12 +16,13 @@ const PortfolioGrid = () => {
   const [portfolios, setPortfolios] = useState({
     clickedCareers: true,
     clickedCompetitions: true,
-    clickedExt: true,
     clickedHr: true,
     clickedIt: true,
     clickedMar: true,
     clickedMedia: true,
     clickedPubs: true,
+    clickedSocials: true,
+    clickedSpons: true,
   });
 
   return (
@@ -55,22 +57,6 @@ const PortfolioGrid = () => {
           'Competitions'
         ) : (
           <p className={styles.desc}>{competitionDescription()}</p>
-        )}
-      </div>
-      <div
-        className={styles.portfolioBox}
-        id={styles.externals}
-        onClick={() =>
-          setPortfolios({
-            ...portfolios,
-            clickedExt: !portfolios.clickedExt,
-          })
-        }
-      >
-        {portfolios.clickedExt ? (
-          'Externals'
-        ) : (
-          <p className={styles.desc}>{externalsDescription()}</p>
         )}
       </div>
       <div
@@ -151,6 +137,38 @@ const PortfolioGrid = () => {
           'Publications'
         ) : (
           <p className={styles.desc}>{publicationsDescription()}</p>
+        )}
+      </div>
+      <div
+        className={styles.portfolioBox}
+        id={styles.socials}
+        onClick={() =>
+          setPortfolios({
+            ...portfolios,
+            clickedSocials: !portfolios.clickedSocials,
+          })
+        }
+      >
+        {portfolios.clickedSocials ? (
+          'Socials'
+        ) : (
+          <p className={styles.desc}>{socialsDescription()}</p>
+        )}
+      </div>
+      <div
+        className={styles.portfolioBox}
+        id={styles.spons}
+        onClick={() =>
+          setPortfolios({
+            ...portfolios,
+            clickedSpons: !portfolios.clickedSpons,
+          })
+        }
+      >
+        {portfolios.clickedSpons ? (
+          'Sponsorships'
+        ) : (
+          <p className={styles.desc}>{sponsDescription()}</p>
         )}
       </div>
     </div>

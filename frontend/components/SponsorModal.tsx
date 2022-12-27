@@ -5,7 +5,7 @@ import IconButton from '@material-ui/core/IconButton';
 // import Image from "next/image";
 import Link from 'next/link';
 
-const SponsorsModal = ({ handleClose, sponsorName, sponsors }) => {
+const SponsorsModal = ({ handleClose, sponsorName, sponsors }: any) => {
   return (
     <div className={styles.paper}>
       <IconButton

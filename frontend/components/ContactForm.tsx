@@ -1,3 +1,4 @@
+// @ts-nocheck comment
 import React from 'react';
 import emailjs from '@emailjs/browser';
 import styles from '../styles/ContactUs.module.css';
