@@ -1,3 +1,4 @@
+// @ts-nocheck comment
 import { useState, useEffect } from 'react';
 import PageHeader from '../../components/Header';
 import Chip from '@material-ui/core/Chip';

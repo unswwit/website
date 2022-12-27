@@ -1,3 +1,4 @@
+// @ts-nocheck comment
 import { useEffect, useState } from 'react';
 import styles from '../../styles/Marketing.module.css';
 import PageHeader from '../../components/Header';

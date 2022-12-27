@@ -56,8 +56,8 @@ export default function Sponsors() {
 
             <p className={styles.subheader}>
               Interested in partnering with us? Contact us at{' '}
-              <Link href="mailto:externals@unswwit.com">
-                <a className={styles.subheader}>externals@unswwit.com</a>
+              <Link href="mailto:sponsorships@unswwit.com">
+                <a className={styles.subheader}>sponsorships@unswwit.com</a>
               </Link>
             </p>
 
@@ -91,7 +91,6 @@ export default function Sponsors() {
 
             {/* Start of Gold Sponsors Section */}
             <h2 className={styles.subsponsor}>Gold Sponsors</h2>
-
             <div id={styles.majorContainer}>
               {Object.keys(sponsors)
                 .sort()
@@ -119,7 +118,6 @@ export default function Sponsors() {
 
             {/* Start of Silver Sponsors Section */}
             <h2 className={styles.subsponsor}>Silver Sponsors</h2>
-
             <div id={styles.majorContainer}>
               {Object.keys(sponsors)
                 .sort()
@@ -147,7 +145,6 @@ export default function Sponsors() {
 
             {/* Start of Bronze Sponsors Section */}
             <h2 className={styles.subsponsor}>Bronze Sponsors</h2>
-
             <div id={styles.majorContainer}>
               {Object.keys(sponsors)
                 .sort()
@@ -175,7 +172,6 @@ export default function Sponsors() {
 
             {/* Start of Affliations Section */}
             <h2 className={styles.subsponsor}>Affiliations</h2>
-
             <div id={styles.majorContainer}>
               {Object.keys(affiliations)
                 .sort()
