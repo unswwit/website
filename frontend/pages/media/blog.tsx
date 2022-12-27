@@ -79,28 +79,10 @@ const Blog = ({ recommendations, blogPreviews, blogAuthors }) => {
     setCurrentPage(1);
   };
 
-  // TODO: Remove below code if not needed
-  // get blog authors
-  // input: blog authors data from contentful
-  // output: blog authors array of dictionaries
-  // const loadAuthors = () => {
-  //   return new Promise((resolve, reject) => {
-  //     const fetchBlogAuthors = async () => {
-  //       setLoading(false);
-  //     };
-  //     fetchBlogAuthors().catch((error) =>
-  //       // error handling
-  //       console.error(error)
-  //     );
-  //   });
-  // };
-
-  // TODO: Remove console.log and redundancy + make img part work
   // renaming authors to be the image location of the author image and name
   const renameAuthors = (blogOriginal, authorList, blogPreviews) => {
     blogOriginal.forEach((blogPreview, index) => {
       const tempAuthor = {};
-
       blogPreview.fields.authors.forEach((authorKey) => {
         const result = authorList.filter(
           (authorItem) => authorItem.fields.author === authorKey
@@ -120,13 +102,11 @@ const Blog = ({ recommendations, blogPreviews, blogAuthors }) => {
     setSelectedPosts(tempBlogs);
   };
 
-  // TODO: Remove console.log and redundancy
   // get blog previews
   // input: previews data from contentful
   // output: blog previews array of dictionaries
   const loadBlogs = useCallback(
     (authorList) => {
-      console.log('hello 2');
       setLoading(false);
       const blogOriginal = blogPreviews;
       renameAuthors(blogOriginal, authorList, blogPreviews);
@@ -135,11 +115,8 @@ const Blog = ({ recommendations, blogPreviews, blogAuthors }) => {
     [blogPreviews]
   );
 
-  // TODO: Remove console.log and redundancy
   useEffect(() => {
-    console.log('hello 3');
     loadBlogs(blogAuthors);
-    // loadAuthors().then((response) => loadBlogs(response));
   }, [loadBlogs]);
 
   // no search results message
@@ -278,7 +255,7 @@ const Blog = ({ recommendations, blogPreviews, blogAuthors }) => {
                         />
                       );
                     })}
-                  {/* {!loading &&
+                  {!loading &&
                     isMobile &&
                     selectedPosts.map((individualBlogPreview, index) => {
                       return (
@@ -287,7 +264,7 @@ const Blog = ({ recommendations, blogPreviews, blogAuthors }) => {
                           individualBlogPreview={individualBlogPreview}
                         />
                       );
-                    })} */}
+                    })}
                 </div>
                 {!loading && !isMobile && (
                   <PaginationComp

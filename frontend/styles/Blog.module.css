@@ -179,8 +179,8 @@ h2.blogRecommendationsTitle {
 
 .previewCategories {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   width: 100%;
   margin-bottom: 10px;
 }
@@ -263,8 +263,7 @@ h2.blogRecommendationsTitle {
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
   padding: 0;
-  margin: 5px;
-  text-align: center;
+  text-align: left;
 }
 
 .authorSection {

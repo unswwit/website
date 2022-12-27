@@ -6,20 +6,13 @@ import { useStyles } from '../data/blog';
 
 const BlogPreview = ({ individualBlogPreview }) => {
   const classes = useStyles();
-
   const execs = [
     '/portraits/blog-authors/vivianw2021.jpg',
     '/portraits/blog-authors/georgie2021.jpg',
   ];
-  const { date, img, heading, subheading, blog_no, category } =
-    individualBlogPreview.fields;
-
+  const { date, img, heading, subheading, blog_no, category } = individualBlogPreview.fields;
   const authors = individualBlogPreview.authors;
-
   const imgUrl = 'https:' + img.fields.file.url;
-
-  // contentfulDate = YYYY-MM-DD
-  // formattedDate = DD/MM/YYYY
   const formattedDate = date.split('-').reverse().join('/');
 
   return (
@@ -33,7 +26,7 @@ const BlogPreview = ({ individualBlogPreview }) => {
               <div className={styles.previewContainerImg}>
                 <img
                   className={styles.previewPic}
-                  src={`${imgUrl}`}
+                  src={imgUrl}
                   alt="preview"
                 />
               </div>
