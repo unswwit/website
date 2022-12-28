@@ -46,6 +46,19 @@ export async function loadExecs() {
   return res.items;
 }
 
+export async function loadDirectors() {
+  const res = await client
+    .getEntries({
+      content_type: 'directors',
+      select: 'fields',
+      order: 'fields.index',
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
+
 export async function loadPodcasts() {
   const res = await client
     .getEntries({
