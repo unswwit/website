@@ -1,20 +1,23 @@
 import Image from 'next/image';
 import styles from '../styles/SponsorCollage.module.css';
-import { sponsors, affiliations, partnerships } from '../data/sponsor.js';
+import { sponsors, affiliations, partnerships } from '../data/sponsor';
 
 const SponsorCollage = () => {
+  const data: {} = sponsors;
+  const affiliationsData: {} = affiliations;
+  const partnershipsData: {} = partnerships;
   const diamondSponsors = Object.keys(sponsors)
     .sort()
-    .filter((key) => sponsors[key][3] === 'DIAMOND');
+    .filter((key) => data[key as keyof {}][3] === 'DIAMOND');
   const goldSponsors = Object.keys(sponsors)
     .sort()
-    .filter((key) => sponsors[key][3] === 'GOLD');
+    .filter((key) => data[key as keyof {}][3] === 'GOLD');
   const silverSponsors = Object.keys(sponsors)
     .sort()
-    .filter((key) => sponsors[key][3] === 'SILVER');
+    .filter((key) => data[key as keyof {}][3] === 'SILVER');
   const bronzeSponsors = Object.keys(sponsors)
     .sort()
-    .filter((key) => sponsors[key][3] === 'BRONZE');
+    .filter((key) => data[key as keyof {}][3] === 'BRONZE');
 
   const sponsorsList = [
     diamondSponsors,
@@ -37,9 +40,10 @@ const SponsorCollage = () => {
                   src={
                     window.matchMedia &&
                     window.matchMedia('(prefers-color-scheme: dark)').matches
-                      ? `/sponsors/2022/dark-mode/${sponsors[key][2]}`
-                      : `/sponsors/2022/${sponsors[key][2]}`
+                      ? `/sponsors/2022/dark-mode/${data[key as keyof {}][2]}`
+                      : `/sponsors/2022/${data[key as keyof {}][2]}`
                   }
+                  alt={'sponsor logo'}
                   height={'100%'}
                   width={'100%'}
                 />
@@ -55,9 +59,12 @@ const SponsorCollage = () => {
                 src={
                   window.matchMedia &&
                   window.matchMedia('(prefers-color-scheme: dark)').matches
-                    ? `/affiliations/dark-mode/${affiliations[key][1]}`
-                    : `/affiliations/${affiliations[key][1]}`
+                    ? `/affiliations/dark-mode/${
+                        affiliationsData[key as keyof {}][1]
+                      }`
+                    : `/affiliations/${affiliationsData[key as keyof {}][1]}`
                 }
+                alt={'affiliation logo'}
                 height={'100%'}
                 width={'100%'}
               />
@@ -72,9 +79,12 @@ const SponsorCollage = () => {
                 src={
                   window.matchMedia &&
                   window.matchMedia('(prefers-color-scheme: dark)').matches
-                    ? `/partnerships/dark-mode/${partnerships[key][1]}`
-                    : `/partnerships/${partnerships[key][1]}`
+                    ? `/partnerships/dark-mode/${
+                        partnershipsData[key as keyof {}][1]
+                      }`
+                    : `/partnerships/${partnershipsData[key as keyof {}][1]}`
                 }
+                alt={'partnership logo'}
                 height={'100%'}
                 width={'100%'}
               />
