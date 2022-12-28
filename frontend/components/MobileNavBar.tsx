@@ -124,7 +124,7 @@ const Navbar = () => {
   }
 
   return (
-    /* return clear or hidden navbar if at top or bottom of screen respectively, 
+    /* return clear or hidden navbar if at top or bottom of screen respectively,
        otherwise return regular navbar */
     <nav
       className={

@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { Card, CardContent, Typography, Chip } from '@material-ui/core';
+import { Card, CardContent, Typography } from '@material-ui/core';
 import styles from '../styles/Events.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -94,7 +94,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function BlogRecommendations({ recommendation }) {
+export default function BlogRecommendations({ recommendation }: any) {
   const classes = useStyles();
 
   return (

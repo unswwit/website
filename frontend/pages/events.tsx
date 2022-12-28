@@ -1,3 +1,4 @@
+// @ts-nocheck comment
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -178,7 +179,7 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
       let imgUrl = 'https:' + event.fields.img.fields.file.url;
       return (
         <div className={styles.pastEvent} key={index}>
-          <Link href={`/event-recaps/${year}/${eventId}`}>
+          <Link href={`events/event-recaps/${year}/${eventId}`}>
             <div className={styles.eventImgBox}>
               <Image
                 className={styles.eventImages}

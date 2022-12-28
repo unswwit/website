@@ -1,3 +1,4 @@
+// @ts-nocheck comment
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
@@ -61,7 +62,7 @@ const NavigationBar = () => {
   }, []);
 
   const checkWindowWidth = () => {
-    const checkWidth = window.innerWidth < 950;
+    const checkWidth = window.innerWidth < 1252;
     setCompactNavBar(checkWidth);
   };
 
@@ -81,7 +82,7 @@ const NavigationBar = () => {
   return compactNavBar ? (
     <Navbar />
   ) : (
-    /* return clear or hidden navbar if at top or bottom of screen respectively, 
+    /* return clear or hidden navbar if at top or bottom of screen respectively,
        otherwise return regular navbar */
     <nav
       className={
@@ -127,7 +128,7 @@ const NavigationBar = () => {
                     <a id={page.text}>{page.pageName}</a>
                     <div
                       className={
-                        router.asPath === page.link
+                        router.asPath.includes(page.category)
                           ? `${styles.currentPageUnderline} ${styles.linkUnderline}`
                           : styles.linkUnderline
                       }
@@ -178,7 +179,7 @@ const NavigationBar = () => {
                   <a>{page.pageName}</a>
                   <div
                     className={
-                      router.asPath === page.link
+                      router.asPath.split('/')[1] === page.link.split('/')[1]
                         ? `${styles.currentPageUnderline} ${styles.linkUnderline}`
                         : styles.linkUnderline
                     }

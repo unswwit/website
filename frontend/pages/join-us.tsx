@@ -3,11 +3,10 @@ import { useEffect, useState } from 'react';
 import PageHeader from '../components/Header';
 import styles from '../styles/JoinUs.module.css';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import Slideshow from '../components/QuotesSlideshow';
 import NewsletterSection from '../components/NewsletterSection';
 import { BootstrapTooltip } from '../components/BootstrapTooltip';
 import LoadingScreen from '../components/LoadingScreen';
-import { memberQuotes, socials } from '../data/join';
+import { socials } from '../data/join';
 import SimpleAccordion from '../components/JoinUsAccordion';
 import PortfolioGrid from '../components/JoinUsGrid';
 import Image from 'next/image';
@@ -101,42 +100,32 @@ const JoinUs = () => {
           {/* Start of how to join section */}
           <h2 className={styles.section}>How to join</h2>
           <div className={styles.descriptionHowto}>
-            <strong>Interact through social media</strong>
+            <strong>Join us via SPArc</strong>
             <p>
-              Stay up to date with our latest events, blogs, podcasts, videos
-              and streams through connecting with us through our social media
-              and&nbsp;
+              Fill out the following&nbsp;
               <a
-                href="https://www.facebook.com/groups/unswwit/"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSc5hkfsp_b9_mVVShgDMMYRbzS0r8fhQ-tQBPn5v7S19qP_2g/viewform?usp=sf_link"
                 className={styles.link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Facebook group
+                form
+              </a>{' '}
+              and sign up on{' '}
+              <a
+                href="https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371W0xQAE"
+                className={styles.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                SPArc
               </a>
               .
             </p>
-            <strong>Become a LinkedIn Alumni</strong>
+            <strong>Become apart of our internal team</strong>
             <p>
-              For past and current executives, subcommittee members or speakers
-              at WIT events, our&nbsp;
-              <a
-                href="https://www.linkedin.com/groups/12373268/"
-                className={styles.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn Alumni network
-              </a>
-              &nbsp;is available to provide advice and resources for our team to
-              convey through our platform. In joining our Alumni Network, you
-              will also be notified of new opportunities that will enable you to
-              engage with our members.
-            </p>
-            <strong>Subcommittee Recruitment</strong>
-            <p>
-              Subcommittee recruitment is open at the beginning of UNSW’s first
-              academic term, in February each year, via our&nbsp;
+              Our subcommittee recruitment drive opens at the beginning of
+              UNSW’s first academic term, in February each year, via our&nbsp;
               <a
                 href="https://www.facebook.com/unsw.wit/"
                 className={styles.link}
@@ -145,36 +134,22 @@ const JoinUs = () => {
               >
                 Facebook page
               </a>
-              . To join, search for our subcommittee Facebook event and fill in
-              the registration form attached to the event. The application
-              closing period varies from year to year.
+              . To get involved, search for our subcommittee Facebook event and
+              fill in the registration form attached to the event.
             </p>
           </div>
           {/* End of how to join section */}
 
           {/* Start of what to join section */}
-          <h2 className={styles.section}>What to join</h2>
+          <h2 className={styles.section}>Our portfolios</h2>
           <div className={styles.descriptionHowto}>
             <p>
               WIT has several specialised portfolios that you can join as a
-              subcommittee member. Each portfolio is led by our executives.
-              Click one of the portfolios to find out more about the portfolio.
+              subcommittee member. Click one of the portfolios to find out more
+              about the portfolio.
             </p>
           </div>
           {/* End of what to join section */}
-
-          {/* Start of quotes */}
-          {
-            <div className={styles.carousel}>
-              <Slideshow
-                height={600}
-                data={memberQuotes}
-                customSlideStyle={styles.slide}
-                customQuoteStyle={styles.quoteContainer}
-              />
-            </div>
-          }
-          {/* End of quotes */}
 
           {/* Start of portfolios grid */}
           <PortfolioGrid />

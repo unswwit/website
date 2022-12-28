@@ -128,7 +128,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 2rem;
-  color: var(--general-text);
+  color: var(--white);
 }
 
 .portfolioBox {
@@ -145,39 +145,48 @@
 }
 
 #careers {
-  background-color: #ffdfb4;
+  background-image: url('/join-us/careers.png');
+  background-size: cover;
 }
 
 #competitions {
-  background-color: #a1dbcb;
-}
-
-/* #events {
-  background-color: #b4c9e8;
-} */
-
-#externals {
-  background-color: #ffbfaf;
+  background-image: url('/join-us/comps.png');
+  background-size: cover;
 }
 
 #hr {
-  background-color: #b7ecbc;
+  background-image: url('/join-us/hr.png');
+  background-size: cover;
 }
 
 #it {
-  background-color: #b4c9e8;
+  background-image: url('/join-us/it.png');
+  background-size: cover;
 }
 
 #marketing {
-  background-color: #dcbff7;
+  background-image: url('/join-us/marketing.png');
+  background-size: cover;
 }
 
 #media {
-  background-color: #c0f5ff;
+  background-image: url('/join-us/media.png');
+  background-size: cover;
 }
 
 #publications {
-  background-color: #ffc2e4;
+  background-image: url('/join-us/pubs.png');
+  background-size: cover;
+}
+
+#spons {
+  background-image: url('/join-us/spons.png');
+  background-size: cover;
+}
+
+/* TODO: replace photo with their subcom */
+#socials {
+  background-color: #be6f5c;
 }
 
 .desc {
@@ -190,7 +199,6 @@
   max-width: 80%;
   margin: auto;
   padding-bottom: 100px;
-  /* background-color: #aad9c2; */
 }
 
 .accordionHeading {

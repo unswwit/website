@@ -13,6 +13,7 @@ import { loadVideos } from '../../lib/api';
 import { useStyles, categories } from '../../data/video';
 import { formatDate } from '../../lib/helpers/date';
 
+// TODO: figure out bug
 const Videos = ({ videos }: any) => {
   const classes = useStyles();
   const [video, setVideo] = useState([]);
@@ -60,7 +61,6 @@ const Videos = ({ videos }: any) => {
         return false;
       }
     })[0];
-
     setVideo(currVideo);
     return videoIndex;
   };
@@ -96,7 +96,7 @@ const Videos = ({ videos }: any) => {
   useEffect(() => {
     window.scrollTo(0, 0);
     fetchVideos(videos);
-  });
+  }, []);
 
   useEffect(() => {
     if (currentPosts.length === 0 && loading === false) {
@@ -173,7 +173,7 @@ const Videos = ({ videos }: any) => {
               <div className={styles.previewContainer}>
                 <Image
                   className={styles.videoImages}
-                  src={'http://' + video.fields.video.fields.file.url}
+                  src={'http:' + video.fields.video.fields.file.url}
                   alt={video.fields.title}
                   width={'1200px'}
                   height={'628px'}
@@ -245,12 +245,11 @@ const Videos = ({ videos }: any) => {
                 <div className={styles.iframeWrapper}>
                   <div className={styles.responsiveIframe}>
                     <iframe
-                      src={`https://www.youtube.com/embed/${video.fields.embedUrl}?`} // embedded path
+                      src={`https://www.youtube.com/embed/${video.fields.embedUrl}`} // embedded path
                       frameBorder="0"
                       allow="fullscreen; autoplay; encrypted-media;"
                       title={!video.fields.title ? 'Video' : video.fields.title}
                       className={styles.embeddedVideo}
-                      allowFullScreen="true"
                     />
                   </div>
                   <p className={styles.videoName}>{video.fields.title}</p>
