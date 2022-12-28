@@ -4,11 +4,11 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import { Button } from 'semantic-ui-react';
-import styles from '../../styles/Sponsors.module.css';
-import PageHeader from '../../components/Header';
-import SponsorsModal from '../../components/SponsorModal';
-import LoadingScreen from '../../components/LoadingScreen';
-import { sponsors, affiliations, partnerships } from '../../data/sponsor';
+import styles from '../styles/Sponsors.module.css';
+import PageHeader from '../components/Header';
+import SponsorsModal from '../components/SponsorModal';
+import LoadingScreen from '../components/LoadingScreen';
+import { sponsors, affiliations, partnerships } from '../data/sponsor';
 import Link from 'next/link';
 
 export default function Sponsors() {
@@ -43,7 +43,7 @@ export default function Sponsors() {
           {/* Cover Photo */}
           <PageHeader
             imgUrl="/headers/sponsors-header-2.jpg"
-            title="Sponsors and Affiliations"
+            title="Sponsors"
             imageLoading={setHeaderLoading}
           />
 

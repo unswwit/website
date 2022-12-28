@@ -33,7 +33,7 @@ const Opportunities = ({ opportunities }: any) => {
           {/* Cover Photo */}
           <PageHeader
             imgUrl="/headers/opportunities-header.jfif"
-            title="Opportunities"
+            title="Jobs Board"
             imageLoading={setHeaderLoading}
           />
           {/*start of opportunies*/}

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import CountUp from 'react-countup';
 import styles from '../styles/Home.module.css';
 import PubArticle from '../components/PublicationsArticle';
-// import InitiativesSlideshow from '../components/InitiativesSlideshow';
+import InitiativesSlideshow from '../components/InitiativesSlideshow';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Aos from 'aos';
 import { isMobile } from 'react-device-detect';
@@ -14,14 +14,25 @@ import LoadingScreen from '../components/LoadingScreen';
 import NewsletterSection from '../components/NewsletterSection';
 import QuoteSlideshow from '../components/QuotesSlideshow';
 import execQuotes from '../data/home';
-import { loadPublications } from '../lib/api';
+import {
+  loadPublications,
+  loadBlogPreviews,
+  loadUpcomingEvents,
+  loadPastEvents,
+  loadPodcasts,
+} from '../lib/api';
+import SponsorCollage from '../components/SponsorCollage';
 
-const Home = ({ publications }: any) => {
+const Home = ({ publications, blogs, events, pastEvents, podcasts }: any) => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [openNewsletter, setOpenNewsletter] = useState(false);
   const [sourceLoading, setSourceLoading] = useState(true);
   const last3articles = publications.slice(0, 3);
+  const mostRecentBlog = blogs[0];
+  const nextUpcomingEvent = events[0];
+  const mostRecentEvent = pastEvents[0];
+  const mostRecentPodcast = podcasts[0];
 
   // close newsletter
   const callbackModal = () => {
@@ -61,6 +72,11 @@ const Home = ({ publications }: any) => {
         <div>
           {/* Start of Header */}
           <div className={styles.contain}>
+            <Image
+              className={styles.headerImage}
+              src={'/headers/2022-team-header.jpg'}
+              layout={'fill'}
+            />
             <div data-aos="fade" className={styles.headline}>
               <h1>UNSW</h1>
               <h1>Women In</h1>
@@ -140,14 +156,18 @@ const Home = ({ publications }: any) => {
           {/* End of Statistics */}
 
           {/* Start of Upcoming Events / Latest blog / Latest podcast*/}
-          {/* TODO: debug this */}
-          {/* <div
+          <div
             data-aos={isMobile ? 'fade' : 'fade-up'}
             data-aos-delay="150"
             className={styles.carousel}
-          > */}
-          {/* <InitiativesSlideshow /> */}
-          {/* </div> */}
+          >
+            <InitiativesSlideshow
+              mostRecentBlog={mostRecentBlog}
+              nextUpcomingEvent={nextUpcomingEvent}
+              mostRecentEvent={mostRecentEvent}
+              mostRecentPodcast={mostRecentPodcast}
+            />
+          </div>
 
           {/* Start of Publications */}
           <div
@@ -193,25 +213,7 @@ const Home = ({ publications }: any) => {
           >
             <h1>SPONSORS AND AFFILIATIONS</h1>
             <div id={styles.sponsorsContainer}>
-              <div className={styles.lightmodeBanner}>
-                <Image
-                  src="/sponsor-collage-light-mode.png"
-                  alt="light mode banner"
-                  margin-top="50px"
-                  width="900px"
-                  height="650px"
-                />
-              </div>
-              <div className={styles.darkmodeBanner}>
-                <Image
-                  display="none"
-                  src="/sponsor-collage-dark-mode.png"
-                  alt="dark mode banner"
-                  margin-top="50px"
-                  width="900px"
-                  height="650px"
-                />
-              </div>
+              <SponsorCollage />
             </div>
           </div>
           {/* End of Sponsors & Affliations */}
@@ -234,7 +236,11 @@ export default Home;
 
 export async function getStaticProps() {
   const publications = await loadPublications();
+  const blogs = await loadBlogPreviews();
+  const events = await loadUpcomingEvents();
+  const pastEvents = await loadPastEvents();
+  const podcasts = await loadPodcasts();
   return {
-    props: { publications },
+    props: { publications, blogs, events, pastEvents, podcasts },
   };
 }

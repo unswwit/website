@@ -179,7 +179,7 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
       let imgUrl = 'https:' + event.fields.img.fields.file.url;
       return (
         <div className={styles.pastEvent} key={index}>
-          <Link href={`/event-recaps/${year}/${eventId}`}>
+          <Link href={`events/event-recaps/${year}/${eventId}`}>
             <div className={styles.eventImgBox}>
               <Image
                 className={styles.eventImages}

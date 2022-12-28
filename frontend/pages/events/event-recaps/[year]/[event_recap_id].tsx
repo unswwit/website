@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import PageHeader from '../../../components/Header';
-import styles from '../../../styles/EventRecap.module.css';
+import PageHeader from '../../../../components/Header';
+import styles from '../../../../styles/EventRecap.module.css';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
@@ -10,7 +10,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
 import Image from 'next/image';
-import { loadPastEvents } from '../../../lib/api';
+import { loadPastEvents } from '../../../../lib/api';
 
 const EventRecapPage = ({ selectedEvent }: any) => {
   const [expanded, setExpanded] = useState(false);
