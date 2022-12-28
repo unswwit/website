@@ -69,7 +69,6 @@ const EventRecapPage = ({ selectedEvent }: any) => {
   return (
     <>
       <PageHeader imgUrl="/headers/events-header.jfif" title={'Events'} />
-
       {loading && (
         <div id={styles.eventLoadingContainer}>
           <CircularProgress

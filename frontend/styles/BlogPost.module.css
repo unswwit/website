@@ -1,0 +1,33 @@
+.date {
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  padding-top: 50px;
+};
+
+.heading {
+  font-weight: 600;
+  font-size: 16px;
+  padding-top: 50px;
+}
+
+.auth {
+  color: var(--general-text);
+  font-size: 12pt;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+
+.authorName {
+  width: auto;
+  text-align: center;
+}
+
+.previewCategories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 25px;
+}

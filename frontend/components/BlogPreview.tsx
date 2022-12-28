@@ -80,4 +80,5 @@ const BlogPreview = ({ individualBlogPreview }) => {
     </div>
   );
 };
+
 export default BlogPreview;

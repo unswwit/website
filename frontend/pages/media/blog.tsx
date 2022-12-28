@@ -17,6 +17,7 @@ import { BootstrapTooltip } from '../../components/BootstrapTooltip';
 import { isMobile } from 'react-device-detect';
 import { useStyles, categoryDescriptions } from '../../data/blog';
 
+// TODO: paginate data
 const Blog = ({ recommendations, blogPreviews, blogAuthors }) => {
   const classes = useStyles();
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -37,10 +38,6 @@ const Blog = ({ recommendations, blogPreviews, blogAuthors }) => {
   // if there are search results
   const [emptyCategory, setEmptyCategory] = useState(false);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   // filter blogs by a selected category
   const filterBlogs = (category, searchTerm) => {
     const filteredBlogs = blogs.filter(
@@ -53,6 +50,8 @@ const Blog = ({ recommendations, blogPreviews, blogAuthors }) => {
     searchBlogs(filteredBlogs, searchTerm);
   };
 
+  console.log(blogPreviews);
+
   // search blogs by heading, subheading or author
   const searchBlogs = (filteredBlogs, searchTerm) => {
     const searchResults = filteredBlogs.filter((blog) => {
@@ -60,7 +59,6 @@ const Blog = ({ recommendations, blogPreviews, blogAuthors }) => {
         .join(' ')
         .split(/[-]/)
         .join(' ');
-      console.log(authors);
       if (
         searchTerm === '' ||
         blog.fields.heading.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -116,8 +114,9 @@ const Blog = ({ recommendations, blogPreviews, blogAuthors }) => {
   );
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     loadBlogs(blogAuthors);
-  }, [loadBlogs]);
+  }, [blogAuthors, loadBlogs]);
 
   // no search results message
   useEffect(() => {

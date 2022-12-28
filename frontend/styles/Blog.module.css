@@ -334,7 +334,6 @@ h2.blogRecommendationsTitle {
 }
 
 /*-------------------------------Blog post Responsiveness-----------------------------*/
-
 @media screen and (max-width: 1200px) {
   .blogPost {
     width: 80%;
