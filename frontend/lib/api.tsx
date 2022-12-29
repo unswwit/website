@@ -146,3 +146,16 @@ export async function loadBlogPreviews() {
     });
   return res.items;
 }
+
+export async function loadSponsors() {
+  const res = await client
+    .getEntries({
+      content_type: 'sponsors',
+      select: 'fields',
+      order: 'fields.name',
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
