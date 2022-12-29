@@ -20,8 +20,10 @@ import {
   loadPastEvents,
   loadPodcasts,
   loadExecQuotes,
+  loadSponsors,
 } from '../lib/api';
 import SponsorCollage from '../components/SponsorCollage';
+import { filterSponsors } from '../lib/helpers/sponsor';
 
 const Home = ({
   publications,
@@ -30,7 +32,9 @@ const Home = ({
   pastEvents,
   podcasts,
   execQuotes,
+  sponsors,
 }: any) => {
+  const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [openNewsletter, setOpenNewsletter] = useState(false);
   const [sourceLoading, setSourceLoading] = useState(true);
@@ -39,6 +43,7 @@ const Home = ({
   const nextUpcomingEvent = events[0];
   const mostRecentEvent = pastEvents[0];
   const mostRecentPodcast = podcasts[0];
+  const tempSponsors = filterSponsors(sponsors);
 
   // close newsletter
   const callbackModal = () => {
@@ -211,7 +216,7 @@ const Home = ({
           >
             <h1>SPONSORS AND AFFILIATIONS</h1>
             <div id={styles.sponsorsContainer}>
-              <SponsorCollage />
+              <SponsorCollage tempSponsors={tempSponsors} />
             </div>
           </div>
           {/* End of Sponsors & Affliations */}
@@ -239,7 +244,16 @@ export async function getStaticProps() {
   const pastEvents = await loadPastEvents();
   const podcasts = await loadPodcasts();
   const execQuotes = await loadExecQuotes();
+  const sponsors = await loadSponsors();
   return {
-    props: { publications, blogs, events, pastEvents, podcasts, execQuotes },
+    props: {
+      publications,
+      blogs,
+      events,
+      pastEvents,
+      podcasts,
+      execQuotes,
+      sponsors,
+    },
   };
 }
