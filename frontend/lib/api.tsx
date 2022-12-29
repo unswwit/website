@@ -146,3 +146,16 @@ export async function loadBlogPreviews() {
     });
   return res.items;
 }
+
+export async function loadExecQuotes() {
+  const res = await client
+    .getEntries({
+      content_type: 'execQuotes',
+      select: 'fields',
+      order: 'fields.index',
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
