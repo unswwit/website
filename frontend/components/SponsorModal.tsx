@@ -2,7 +2,6 @@ import React from 'react';
 import styles from '../styles/Sponsors.module.css';
 import CloseIcon from '@material-ui/icons/Close';
 import IconButton from '@material-ui/core/IconButton';
-// import Image from "next/image";
 import Link from 'next/link';
 
 const SponsorsModal = ({ handleClose, sponsor, sponsorType }: any) => {
