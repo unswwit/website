@@ -1,3 +1,9 @@
+/*------------------------------- Blog post content ----------------------------*/
+.document {
+  max-width: 85%;
+  margin: auto;
+}
+
 .date {
   text-align: center;
   font-weight: 600;
@@ -30,4 +36,50 @@
   align-items: center;
   width: 100%;
   padding: 25px;
+}
+
+.post {
+  margin-bottom: 10vw;
+  margin: auto;
+  color: var(--general-text);
+  font-family: "Montserrat", sans-serif;
+  text-align: justify;
+  width: 80%;
+  padding: 20px;
+  line-height: 175%;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.post p {
+  font-size: 12pt;
+}
+
+.post a {
+  color: var(--red);
+  text-decoration: underline;
+}
+
+.post a:hover {
+  color: var(--yellow);
+}
+
+.post h3 {
+  padding-top: 10px;
+}
+
+.image {
+  margin: 0 auto;
+  max-width: 40%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*-------------------------------Blog mobile version-----------------------------*/
+@media only screen and (max-width: 400px) {
+  .image {
+    max-width: 100%;
+  }
 }

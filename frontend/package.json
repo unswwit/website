@@ -12,6 +12,8 @@
     "test": "jest --runInBand"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.16.2",
+    "@contentful/rich-text-types": "^16.0.2",
     "@emailjs/browser": "^3.6.2",
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
