@@ -33,7 +33,6 @@ const Home = ({
   podcasts,
   sponsors,
 }: any) => {
-  const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [openNewsletter, setOpenNewsletter] = useState(false);
   const [sourceLoading, setSourceLoading] = useState(true);
@@ -63,8 +62,7 @@ const Home = ({
   // get publications
   // input: publications data from contentful
   // output: array of dictionaries containing publications data
-  const fetchPublications = async (publications: any) => {
-    setArticles(publications);
+  const fetchPublications = async () => {
     setLoading(false);
     setSourceLoading(false);
   };
@@ -86,6 +84,7 @@ const Home = ({
               className={styles.headerImage}
               src={'/headers/2022-team-header.jpg'}
               layout={'fill'}
+              alt={'header'}
             />
             <div data-aos="fade" className={styles.headline}>
               <h1>UNSW</h1>

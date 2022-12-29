@@ -31,9 +31,6 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
   const postsPerPage = 3;
   // current page number
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedPosts, setSelectedPosts] = useState([]);
-  // the posts displayed on the current page for upcoming events
-  const [currentPosts, setCurrentPosts] = useState([]);
   // currently selected category -> default to "All"
   const [selectedCategory, setSelectedCategory] = useState('All');
   // check if category filters result in no results
@@ -60,12 +57,6 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
 
   const paginate = (pageNumber: number) => {
     setCurrentPage(pageNumber);
-    setCurrentPosts(
-      selectedPosts.slice(
-        (pageNumber - 1) * postsPerPage,
-        pageNumber * postsPerPage
-      )
-    );
   };
 
   // start webpage at the top
@@ -154,9 +145,6 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
   // input: upcoming events data from contenful
   // output: array of dictionaries containing upcoming events data
   const fetchUpcomingEvents = async () => {
-    const tempEvents = upcomingEvents;
-    setCurrentPosts(tempEvents.slice(0, postsPerPage));
-    setSelectedPosts(tempEvents);
     setLoadingUpcoming(false);
     setSourceLoading(false);
   };

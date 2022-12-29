@@ -17,7 +17,6 @@ const Videos = ({ videos }: any) => {
   const classes = useStyles();
   const [video, setVideo] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [videoNumber, setVideoNumber] = useState('0');
   const [sourceLoading, setSourceLoading] = useState(true);
   const [headerLoading, setHeaderLoading] = useState(true);
   // all videos
@@ -43,7 +42,6 @@ const Videos = ({ videos }: any) => {
   const handleVideoNumber = (numVideos: any) => {
     let url = window.location.href.split('/');
     if (url[url.length - 1] && url[url.length - 1] !== 'videos') {
-      setVideoNumber(url[url.length - 1]);
       return url[url.length - 1];
     }
     return `${+numVideos - 1}`;
@@ -85,7 +83,6 @@ const Videos = ({ videos }: any) => {
     setLoading(false);
     setHeaderLoading(false);
     setSourceLoading(false);
-    setVideoNumber(handleVideoNumber(videos.length));
     loadVideoPreviews(
       videos,
       loadPageContent(videos, handleVideoNumber(videos.length))
