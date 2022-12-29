@@ -20,8 +20,7 @@ const QuotesSlideshow = ({
   customQuoteStyle,
 }) => {
   const displayBackground = (exec) => {
-    let quoteBlock = null;
-    quoteBlock = (
+    return (
       <div
         className={[
           styles.quoteBlock,
@@ -32,7 +31,6 @@ const QuotesSlideshow = ({
         {displaySlideInfo(exec, styles.defaultRoleColour)}
       </div>
     );
-    return quoteBlock;
   };
 
   const displaySlideInfo = (exec, colorClass) => {
