@@ -8,14 +8,18 @@ import styles from '../styles/Sponsors.module.css';
 import PageHeader from '../components/Header';
 import SponsorsModal from '../components/SponsorModal';
 import LoadingScreen from '../components/LoadingScreen';
-import { sponsors, affiliations, partnerships } from '../data/sponsor';
 import Link from 'next/link';
+import { loadSponsors } from '../lib/api';
+import { filterSponsors } from '../lib/helpers/sponsor';
 
-export default function Sponsors() {
+export default function Sponsors({ sponsors }: any) {
   const [open, setOpen] = React.useState(false);
+  const [currSponsorType, setCurrSponsorType] = React.useState('');
   const [currSponsor, setCurrSponsor] = React.useState('');
   const [sourceLoading, setSourceLoading] = React.useState(true);
   const [headerLoading, setHeaderLoading] = React.useState(true);
+
+  const tempSponsors = filterSponsors(sponsors);
 
   // control when to stop loading
   useEffect(() => {
@@ -28,10 +32,19 @@ export default function Sponsors() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+
+    fetchSponsors(sponsors);
+  }, [sponsors]);
 
   const callbackModal = () => {
     setOpen(false);
+  };
+
+  // get sponsors
+  // input: sponsors data from contentful
+  // output: array of dictionaries containing sponsors data
+  const fetchSponsors = async () => {
+    setSourceLoading(false);
   };
 
   return (
@@ -61,172 +74,35 @@ export default function Sponsors() {
               </Link>
             </p>
 
-            {/* Start of Diamond Sponsors Section */}
-            <h2 className={styles.subsponsor}>Diamond Sponsors</h2>
-            <div id={styles.majorContainer}>
-              {Object.keys(sponsors)
-                .sort()
-                .filter((key) => sponsors[key][3] === 'DIAMOND')
-                .map((key) => (
-                  // TODO: change img tags to next/image tags
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    className={styles.logo}
-                    src={
-                      window.matchMedia &&
-                      window.matchMedia('(prefers-color-scheme: dark)').matches
-                        ? `/sponsors/2022/dark-mode/${sponsors[key][2]}`
-                        : `/sponsors/2022/${sponsors[key][2]}`
-                    }
-                    alt={key}
-                    onClick={() => {
-                      setOpen(true);
-                      setCurrSponsor(key);
-                    }}
-                    key={key}
-                  />
-                ))}
-            </div>
-            {/* End of Diamond sponsors section */}
-
-            {/* Start of Gold Sponsors Section */}
-            <h2 className={styles.subsponsor}>Gold Sponsors</h2>
-            <div id={styles.majorContainer}>
-              {Object.keys(sponsors)
-                .sort()
-                .filter((key) => sponsors[key][3] === 'GOLD')
-                .map((key) => (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    className={styles.logo}
-                    src={
-                      window.matchMedia &&
-                      window.matchMedia('(prefers-color-scheme: dark)').matches
-                        ? `/sponsors/2022/dark-mode/${sponsors[key][2]}`
-                        : `/sponsors/2022/${sponsors[key][2]}`
-                    }
-                    alt={key}
-                    onClick={() => {
-                      setOpen(true);
-                      setCurrSponsor(key);
-                    }}
-                    key={key}
-                  />
-                ))}
-            </div>
-            {/* End of Gold Sponsors Section */}
-
-            {/* Start of Silver Sponsors Section */}
-            <h2 className={styles.subsponsor}>Silver Sponsors</h2>
-            <div id={styles.majorContainer}>
-              {Object.keys(sponsors)
-                .sort()
-                .filter((key) => sponsors[key][3] === 'SILVER')
-                .map((key) => (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    className={styles.logo}
-                    src={
-                      window.matchMedia &&
-                      window.matchMedia('(prefers-color-scheme: dark)').matches
-                        ? `/sponsors/2022/dark-mode/${sponsors[key][2]}`
-                        : `/sponsors/2022/${sponsors[key][2]}`
-                    }
-                    alt={key}
-                    onClick={() => {
-                      setOpen(true);
-                      setCurrSponsor(key);
-                    }}
-                    key={key}
-                  />
-                ))}
-            </div>
-            {/* End of Silver Sponsors Section */}
-
-            {/* Start of Bronze Sponsors Section */}
-            <h2 className={styles.subsponsor}>Bronze Sponsors</h2>
-            <div id={styles.majorContainer}>
-              {Object.keys(sponsors)
-                .sort()
-                .filter((key) => sponsors[key][3] === 'BRONZE')
-                .map((key) => (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    className={styles.logo}
-                    src={
-                      window.matchMedia &&
-                      window.matchMedia('(prefers-color-scheme: dark)').matches
-                        ? `/sponsors/2022/dark-mode/${sponsors[key][2]}`
-                        : `/sponsors/2022/${sponsors[key][2]}`
-                    }
-                    alt={key}
-                    onClick={() => {
-                      setOpen(true);
-                      setCurrSponsor(key);
-                    }}
-                    key={key}
-                  />
-                ))}
-            </div>
-            {/* End of Bronze Sponsors Section */}
-
-            {/* Start of Affliations Section */}
-            <h2 className={styles.subsponsor}>Affiliations</h2>
-            <div id={styles.majorContainer}>
-              {Object.keys(affiliations)
-                .sort()
-                .map((key, index) => (
-                  <a
-                    key={index}
-                    href={affiliations[key][0]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
+            {/* Start of Sponsors Section */}
+            {Object.keys(tempSponsors).map((sponsorType, index) => (
+              <div key={index}>
+                <h2 className={styles.subsponsor}>{sponsorType}</h2>
+                <div id={styles.majorContainer}>
+                  {tempSponsors[sponsorType].map((sponsor, index) => (
                     <img
                       className={styles.logo}
                       src={
                         window.matchMedia &&
                         window.matchMedia('(prefers-color-scheme: dark)')
                           .matches
-                          ? `/affiliations/dark-mode/${affiliations[key][1]}`
-                          : `/affiliations/${affiliations[key][1]}`
+                          ? 'https:' +
+                            sponsor.fields.darkModeLogo.fields.file.url
+                          : 'https:' +
+                            sponsor.fields.lightModeLogo.fields.file.url
                       }
-                      alt={key}
+                      alt={sponsor.fields.name}
+                      onClick={() => {
+                        setOpen(true);
+                        setCurrSponsorType(sponsorType);
+                        setCurrSponsor(sponsor);
+                      }}
+                      key={index}
                     />
-                  </a>
-                ))}
-            </div>
-            {/* End of Affliations Section*/}
-
-            {/* Start of Partnerships Section */}
-            <h2 className={styles.subsponsor}>Partnerships</h2>
-            <div id={styles.majorContainer}>
-              {Object.keys(partnerships)
-                .sort()
-                .map((key, index) => (
-                  <a
-                    key={index}
-                    href={partnerships[key][0]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      className={styles.logo}
-                      src={
-                        window.matchMedia &&
-                        window.matchMedia('(prefers-color-scheme: dark)')
-                          .matches
-                          ? `/partnerships/dark-mode/${partnerships[key][1]}`
-                          : `/partnerships/${partnerships[key][1]}`
-                      }
-                      alt={key}
-                    />
-                  </a>
-                ))}
-            </div>
-            {/* End of Partnerships */}
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* Start of Modal */}
@@ -247,9 +123,9 @@ export default function Sponsors() {
               <>
                 <Fade in={open}>
                   <SponsorsModal
-                    sponsors={sponsors}
                     handleClose={callbackModal}
-                    sponsorName={currSponsor}
+                    sponsorType={currSponsorType}
+                    sponsor={currSponsor}
                   />
                 </Fade>
               </>
@@ -260,4 +136,11 @@ export default function Sponsors() {
       )}
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const sponsors = await loadSponsors();
+  return {
+    props: { sponsors },
+  };
 }
