@@ -1,5 +1,4 @@
 /*-------------------------------Opportunities Preview-----------------------------*/
-
 .head {
   font-family: 'Montserrat', sans-serif;
   font-size: 11pt;
@@ -122,8 +121,10 @@
 }
 
 .oppGridContainer a:hover .oppImg {
-  -ms-transform: scale(1.05); /* IE 9 */
-  -webkit-transform: scale(1.05); /* Safari 3-8 */
+  -ms-transform: scale(1.05);
+  /* IE 9 */
+  -webkit-transform: scale(1.05);
+  /* Safari 3-8 */
   transform: scale(1.05) translate(0%, 20%);
   transition: transform 0.5s ease;
 }
@@ -135,14 +136,21 @@
   .oppSummary {
     color: white;
   }
+
   .oppGridItems {
     background-color: var(--dark-slate-grey);
   }
+
   .link:hover {
     color: white;
   }
+
   .darkOverlay {
     background-color: white;
+  }
+
+  .oppLookout {
+    color: white
   }
 }
 

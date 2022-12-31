@@ -2,6 +2,7 @@
 .document {
   max-width: 85%;
   margin: auto;
+  padding-top: 30px;
 }
 
 .date {
@@ -13,20 +14,29 @@
 
 .heading {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 20px;
   padding-top: 50px;
+  font-family: "Playfair Display";
+  color: var(--yellow);
 }
 
-.auth {
+.authorContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.authorPortrait {
+  border-radius: 50%;
+}
+
+.author {
   color: var(--general-text);
   font-size: 12pt;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  text-align: center;
-}
-
-.authorName {
-  width: auto;
   text-align: center;
 }
 
@@ -44,7 +54,7 @@
   color: var(--general-text);
   font-family: "Montserrat", sans-serif;
   text-align: justify;
-  width: 80%;
+  width: 70%;
   padding: 20px;
   line-height: 175%;
   word-wrap: break-word;
@@ -70,16 +80,41 @@
 
 .image {
   margin: 0 auto;
-  max-width: 40%;
+  max-width: 85%;
   justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px 10px;
+}
+
+.platformContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 35px;
+  padding-bottom: 100px;
 }
 
 /*-------------------------------Blog mobile version-----------------------------*/
 @media only screen and (max-width: 400px) {
   .image {
     max-width: 100%;
+  }
+}
+
+/*---------------------------------Dark mode-------------------------------------*/
+@media (prefers-color-scheme: dark) {
+  .date {
+    color: white
+  }
+
+  .post {
+    color: white
+  }
+
+  .author {
+    color: white
   }
 }

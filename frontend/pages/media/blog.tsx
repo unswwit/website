@@ -1,12 +1,8 @@
 // @ts-nocheck comment
-import {
-  loadBlogPreviews,
-  loadBlogRecommendations,
-  loadBlogAuthors,
-} from '../../lib/api';
+import { loadBlogPreviews, loadBlogRecommendations } from '../../lib/api';
 import BlogRecommendations from '../../components/BlogRecommendations';
 import styles from '../../styles/Blog.module.css';
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import BlogPreview from '../../components/BlogPreview';
 import PageHeader from '../../components/Header';
 import Chip from '@material-ui/core/Chip';
@@ -17,9 +13,9 @@ import LoadingScreen from '../../components/LoadingScreen';
 import { BootstrapTooltip } from '../../components/BootstrapTooltip';
 import { isMobile } from 'react-device-detect';
 import { useStyles, categoryDescriptions } from '../../data/blog';
+import Head from 'next/head';
 
-// TODO: paginate data
-const Blog = ({ recommendations, blogPreviews, blogAuthors }) => {
+const Blog = ({ recommendations, blogPreviews }) => {
   const classes = useStyles();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [loading, setLoading] = useState(true);
@@ -53,20 +49,13 @@ const Blog = ({ recommendations, blogPreviews, blogAuthors }) => {
 
   console.log(blogPreviews);
 
-  // search blogs by heading, subheading or author
+  // search blogs by heading or subheading
   const searchBlogs = (filteredBlogs, searchTerm) => {
     const searchResults = filteredBlogs.filter((blog) => {
-      const authors = Object.keys(blog.authors)
-        .join(' ')
-        .split(/[-]/)
-        .join(' ');
       if (
         searchTerm === '' ||
         blog.fields.heading.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        blog.fields.subheading
-          .toLowerCase()
-          .includes(searchTerm.toLowerCase()) ||
-        authors.toLowerCase().includes(searchTerm.toLowerCase())
+        blog.fields.subheading.toLowerCase().includes(searchTerm.toLowerCase())
       ) {
         return true;
       } else {
@@ -78,46 +67,17 @@ const Blog = ({ recommendations, blogPreviews, blogAuthors }) => {
     setCurrentPage(1);
   };
 
-  // renaming authors to be the image location of the author image and name
-  const renameAuthors = (blogOriginal, authorList, blogPreviews) => {
-    blogOriginal.forEach((blogPreview, index) => {
-      const tempAuthor = {};
-      blogPreview.fields.authors.forEach((authorKey) => {
-        const result = authorList.filter(
-          (authorItem) => authorItem.fields.author === authorKey
-        )[0];
-        tempAuthor[authorKey] = [
-          result.fields.img.fields.file.url,
-          result.fields.name,
-        ];
-      });
-      blogPreviews[index].authors = tempAuthor;
-    });
-  };
-
   const blogSet = (tempBlogs) => {
     setBlogs(tempBlogs);
     setCurrentPosts(tempBlogs.slice(0, postsPerPage));
     setSelectedPosts(tempBlogs);
   };
 
-  // get blog previews
-  // input: previews data from contentful
-  // output: blog previews array of dictionaries
-  const loadBlogs = useCallback(
-    (authorList) => {
-      setLoading(false);
-      const blogOriginal = blogPreviews;
-      renameAuthors(blogOriginal, authorList, blogPreviews);
-      blogSet(blogPreviews);
-    },
-    [blogPreviews]
-  );
-
   useEffect(() => {
     window.scrollTo(0, 0);
-    loadBlogs(blogAuthors);
-  }, [blogAuthors, loadBlogs]);
+    setLoading(false);
+    blogSet(blogPreviews);
+  }, [blogPreviews]);
 
   // no search results message
   useEffect(() => {
@@ -145,6 +105,9 @@ const Blog = ({ recommendations, blogPreviews, blogAuthors }) => {
         <LoadingScreen />
       ) : (
         <>
+          <Head>
+            <title>Blog Posts | UNSW WIT</title>
+          </Head>
           {/* Cover Photo */}
           <PageHeader
             imageLoading={setHeaderLoading}
@@ -239,7 +202,9 @@ const Blog = ({ recommendations, blogPreviews, blogAuthors }) => {
                 </div>
                 <div>
                   {emptyCategory === true && (
-                    <p id={styles.emptyMessage}>No results were found.</p>
+                    <p className={styles.emptyMessage}>
+                      No results were found.
+                    </p>
                   )}
                 </div>
                 {/* End of search bar */}
@@ -290,8 +255,7 @@ export default Blog;
 export async function getStaticProps() {
   const recommendations = await loadBlogRecommendations();
   const blogPreviews = await loadBlogPreviews();
-  const blogAuthors = await loadBlogAuthors();
   return {
-    props: { recommendations, blogPreviews, blogAuthors },
+    props: { recommendations, blogPreviews },
   };
 }

@@ -3,27 +3,23 @@ import styles from '../styles/Blog.module.css';
 import Link from 'next/link';
 import Chip from '@material-ui/core/Chip';
 import { useStyles } from '../data/blog';
+import Image from 'next/image';
 
-const BlogPreview = ({ individualBlogPreview }) => {
+const BlogPreview = ({ individualBlogPreview }: any) => {
   const classes = useStyles();
-  const execs = [
-    '/portraits/blog-authors/vivianw2021.jpg',
-    '/portraits/blog-authors/georgie2021.jpg',
-  ];
-  const { date, img, heading, subheading, blog_no, category } = individualBlogPreview.fields;
-  const authors = individualBlogPreview.authors;
+  const { date, img, heading, subheading, blog_no, category, author } = individualBlogPreview.fields;
   const imgUrl = 'https:' + img.fields.file.url;
   const formattedDate = date.split('-').reverse().join('/');
 
   return (
     <div className={category}>
-      {/* Start of blog post preview */}
       <div className={styles.blogPost}>
         <Link href={`/media/blog/${blog_no}`}>
           <div>
             <div className={styles.darkOverlay} />
             <div className={styles.previewRow}>
               <div className={styles.previewContainerImg}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   className={styles.previewPic}
                   src={imgUrl}
@@ -45,30 +41,23 @@ const BlogPreview = ({ individualBlogPreview }) => {
                         ></Chip>
                       ))}
                     </div>
-
                     <div className={styles.subheading}>{subheading}</div>
                   </div>
-                  <div className={styles.authorRow}>
-                    {Object.keys(authors).map((key) => (
-                      <div className={styles.authorSection} key={key}>
-                        <div className={styles.authorPic}>
-                          <img
-                            src={`${authors[key][0]}`}
-                            className={
-                              execs.includes(authors[key][0])
-                                ? styles.execAuthor
-                                : styles.anonAuthor
-                            }
-                            alt={key}
-                          />
-                        </div>
-                        <div
-                          className={[styles.auth, styles.authorName].join(' ')}
-                        >
-                          {authors[key][1]}
-                        </div>
-                      </div>
-                    ))}
+                  <div className={styles.authorContainer}>
+                  {Object.keys(author).map((index) => (
+                    <>
+                      <Image
+                        src={'https:' + author[index].fields.img.fields.file.url}
+                        alt={author[index].fields.name}
+                        width="75px"
+                        height="75px"
+                        className={styles.authorPortrait}
+                      />
+                      <p className={styles.author} key={index}>
+                        {author[index].fields.name}
+                      </p>
+                    </>
+                  ))}
                   </div>
                 </div>
               </div>
@@ -76,7 +65,6 @@ const BlogPreview = ({ individualBlogPreview }) => {
           </div>
         </Link>
       </div>
-      {/*End of blog post preview*/}
     </div>
   );
 };

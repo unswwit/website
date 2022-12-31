@@ -1,7 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardContent, Typography } from '@material-ui/core';
 import styles from '../styles/Events.module.css';
-import Image from 'next/image';
 import Link from 'next/link';
 import { formatMarketingArchivesDate } from '../lib/helpers/date';
 
@@ -101,13 +100,13 @@ export default function BlogRecommendations({ recommendation }: any) {
     <Link href={`/media/blog/${recommendation.fields.index}`}>
       <Card className={[classes.root, styles.previewContainer].join(' ')}>
         <div className={styles.darkOverlay} />
-        <Image
-          src={'https://' + recommendation.fields.cover.fields.file.url}
-          alt={recommendation.title}
+        {/* <Image
+          src={'https:' + recommendation.fields.cover.fields.file.url}
+          alt={recommendation.fields.title}
           className={styles.upcomingEventCover}
           width="1800px"
           height="1200px"
-        />
+        /> */}
         <CardContent className={classes.content}>
           <Typography
             className={classes.date}

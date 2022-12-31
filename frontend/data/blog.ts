@@ -9,7 +9,7 @@ const useStyles = makeStyles({
   },
 });
 
-const categoryDescriptions = {
+const categoryDescriptions: Record<string, any> = {
   All: 'Click here to see all the blog posts that we have posted!',
   'WIT Crush Wednesday':
     'Each Wednesday, we post a blog sharing the interview, journey, and experience of inspiring women in tech. Click here to read their empowering stories!',
@@ -25,4 +25,10 @@ const categoryDescriptions = {
     'Wondering what you can do to excel in your professional life? Read here for tips on acing interviews, performing your best, and making the most of career opportunities!',
 };
 
-export { useStyles, categoryDescriptions };
+const links: Record<string, any> = {
+  facebook: ['blog-facebook.png', 'https://www.facebook.com/sharer/sharer.php?u='],
+  linkedIn: ['blog-linkedin.png', 'https://www.linkedin.com/sharing/share-offsite/?url='],
+  twitter: ['blog-twitter.png', 'https://twitter.com/intent/tweet?text='],
+};
+
+export { useStyles, categoryDescriptions, links };

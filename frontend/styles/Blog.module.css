@@ -105,7 +105,6 @@ h2.blogRecommendationsTitle {
   margin: 5vw auto;
   transition: 0.2s;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 16px;
 }
 
 .previewRow {
@@ -124,7 +123,7 @@ h2.blogRecommendationsTitle {
 .previewContainerImg {
   width: 50%;
   overflow: hidden;
-  border-radius: 16px;
+  /* border-radius: 16px; */
   align-items: stretch;
   vertical-align: top;
 }
@@ -135,7 +134,7 @@ h2.blogRecommendationsTitle {
   margin: 0 auto;
   object-fit: fill;
   transition: transform 0.5s ease;
-  border-radius: 16px;
+  /* border-radius: 16px; */
   display: block;
 }
 
@@ -156,8 +155,10 @@ h2.blogRecommendationsTitle {
 }
 
 .blogPost:hover .previewPic {
-  -ms-transform: scale(1.05); /* IE 9 */
-  -webkit-transform: scale(1.05); /* Safari 3-8 */
+  -ms-transform: scale(1.05);
+  /* IE 9 */
+  -webkit-transform: scale(1.05);
+  /* Safari 3-8 */
   transform: scale(1.05);
 }
 
@@ -185,32 +186,24 @@ h2.blogRecommendationsTitle {
   margin-bottom: 10px;
 }
 
-/*Author circle crop*/
-.authorPic {
+.authorContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.authorPortrait {
   border-radius: 50%;
-  max-height: 70px;
-  overflow: hidden;
-  max-width: 70px;
-  margin-right: 1vw;
-  margin-left: 0px;
 }
 
-/*List of authors*/
-.authorRow {
-  display: grid;
-  grid-template-columns: auto auto;
-}
-
-/*Author image*/
-.execAuthor {
-  height: auto;
-  width: 120%;
-  transform: translate(-5%, -10%);
-}
-
-.anonAuthor {
-  height: auto;
-  width: 100%;
+.author {
+  color: var(--general-text);
+  font-size: 10pt;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-align: center;
 }
 
 /*Post preview*/
@@ -231,15 +224,6 @@ h2.blogRecommendationsTitle {
   margin-bottom: 10px;
   font-weight: 500;
   text-align: left;
-}
-
-.auth {
-  color: var(--general-text);
-  font-size: 10pt;
-  font-family: "Montserrat", sans-serif;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: 500;
 }
 
 .heading:hover {
@@ -298,7 +282,7 @@ h2.blogRecommendationsTitle {
   background-color: #ecedeb;
 }
 
-#emptyMessage {
+.emptyMessage {
   text-align: center;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -312,16 +296,15 @@ h2.blogRecommendationsTitle {
 
   .inputSearchBar {
     color: white;
-    border-color: white;
     background: url("/icons/dark-search_icon.png") center left no-repeat;
     background-position-x: 0.5%;
     background-size: auto 85%;
+    background-color: var(--dark-slate-grey);
   }
 
   .inputSearchBar::placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: rgba(255, 255, 255, 0.741);
-    opacity: 1; /* Firefox */
+    color: white;
+    opacity: 1;
   }
 
   .blogPost {
@@ -330,6 +313,14 @@ h2.blogRecommendationsTitle {
 
   .darkOverlay {
     background-color: white;
+  }
+
+  .author {
+    color: white;
+  }
+
+  .emptyMessage {
+    color: white
   }
 }
 
@@ -341,18 +332,6 @@ h2.blogRecommendationsTitle {
 
   .inputSearchBar {
     width: 80%;
-  }
-
-  .authorName {
-    width: auto;
-    padding-left: 5px;
-  }
-
-  .authorPic {
-    width: 50px;
-    height: 50px;
-    margin: 0 1.5vw;
-    object-fit: contain;
   }
 }
 
@@ -402,12 +381,6 @@ h2.blogRecommendationsTitle {
 }
 
 @media screen and (max-width: 500px) {
-  .authorRow {
-    display: grid;
-    grid-template-columns: auto;
-    row-gap: 2vw;
-  }
-
   .searchBar {
     padding-top: 8%;
   }

@@ -77,6 +77,9 @@ const useStyles = makeStyles({
     fontWeight: 500,
     textAlign: 'center',
     margin: '5px 0px',
+    '@media (prefers-color-scheme:dark)': {
+      color: '#fff',
+    },
   },
   click: {
     height: 560,
