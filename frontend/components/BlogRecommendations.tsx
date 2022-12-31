@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardContent, Typography } from '@material-ui/core';
 import styles from '../styles/Events.module.css';
-import Link from 'next/link';
+import Image from 'next/image';
 import { formatMarketingArchivesDate } from '../lib/helpers/date';
 
 const useStyles = makeStyles({
@@ -33,19 +33,9 @@ const useStyles = makeStyles({
     fontWeight: 600,
     margin: '5px 5px',
   },
-  description: {
-    textAlign: 'justify',
-    fontSize: 14,
-    color: '#313638',
-    fontFamily: 'Montserrat, sans-serif',
-    '@media (prefers-color-scheme:dark)': {
-      color: 'white',
-    },
-    margin: '5px 5px',
-  },
   title: {
     fontFamily: 'Playfair Display, serif',
-    fontSize: '24px',
+    fontSize: '20px',
     fontWeight: 550,
     textAlign: 'center',
     margin: '5px 5px',
@@ -78,35 +68,24 @@ const useStyles = makeStyles({
       justifyContent: 'space-between',
     },
   },
-  previewCategories: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    flexFlow: 'row-wrap',
-    width: '100%',
-    marginBottom: '10px',
-  },
-  chip: {
-    color: 'white',
-    marginRight: '5px',
-    fontFamily: 'Montserrat',
-    backgroundColor: '#6d6e6d',
-  },
 });
 
 export default function BlogRecommendations({ recommendation }: any) {
   const classes = useStyles();
+  const {link, cover, date, title, author } = recommendation.fields;
+  const imgUrl = 'https:' + cover.fields.file.url;
 
   return (
-    <Link href={`/media/blog/${recommendation.fields.index}`}>
+    <a href={'https:' + link}>
       <Card className={[classes.root, styles.previewContainer].join(' ')}>
         <div className={styles.darkOverlay} />
-        {/* <Image
-          src={'https:' + recommendation.fields.cover.fields.file.url}
-          alt={recommendation.fields.title}
+        <Image
+          src={imgUrl}
+          alt={title}
           className={styles.upcomingEventCover}
           width="1800px"
           height="1200px"
-        /> */}
+        />
         <CardContent className={classes.content}>
           <Typography
             className={classes.date}
@@ -114,21 +93,13 @@ export default function BlogRecommendations({ recommendation }: any) {
             color="textSecondary"
             component="p"
           >
-            {formatMarketingArchivesDate(recommendation.fields.date)}
+            {formatMarketingArchivesDate(date)}
           </Typography>
           <Typography className={classes.title}>
-            {recommendation.fields.title}
-          </Typography>
-          <Typography
-            className={classes.description}
-            variant="body2"
-            color="textSecondary"
-            component="p"
-          >
-            {recommendation.fields.subheading}
+            {title}
           </Typography>
         </CardContent>
       </Card>
-    </Link>
+    </a>
   );
 }

@@ -47,8 +47,6 @@ const Blog = ({ recommendations, blogPreviews }) => {
     searchBlogs(filteredBlogs, searchTerm);
   };
 
-  console.log(blogPreviews);
-
   // search blogs by heading or subheading
   const searchBlogs = (filteredBlogs, searchTerm) => {
     const searchResults = filteredBlogs.filter((blog) => {
