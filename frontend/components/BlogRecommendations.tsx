@@ -72,7 +72,7 @@ const useStyles = makeStyles({
 
 export default function BlogRecommendations({ recommendation }: any) {
   const classes = useStyles();
-  const {link, cover, date, title, author } = recommendation.fields;
+  const {link, cover, date, title } = recommendation.fields;
   const imgUrl = 'https:' + cover.fields.file.url;
 
   return (

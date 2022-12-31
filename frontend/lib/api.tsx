@@ -158,3 +158,29 @@ export async function loadBlogRecommendations() {
     });
   return res.items;
 }
+
+export async function loadExecQuotes() {
+  const res = await client
+    .getEntries({
+      content_type: 'execQuotes',
+      select: 'fields',
+      order: 'fields.index',
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
+
+export async function loadSponsors() {
+  const res = await client
+    .getEntries({
+      content_type: 'sponsors',
+      select: 'fields',
+      order: 'fields.name',
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}

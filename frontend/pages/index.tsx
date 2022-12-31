@@ -13,18 +13,27 @@ import 'aos/dist/aos.css';
 import LoadingScreen from '../components/LoadingScreen';
 import NewsletterSection from '../components/NewsletterSection';
 import QuoteSlideshow from '../components/QuotesSlideshow';
-import execQuotes from '../data/home';
 import {
   loadPublications,
   loadBlogPreviews,
   loadUpcomingEvents,
   loadPastEvents,
   loadPodcasts,
+  loadExecQuotes,
+  loadSponsors,
 } from '../lib/api';
 import SponsorCollage from '../components/SponsorCollage';
+import { filterSponsors } from '../lib/helpers/sponsor';
 
-const Home = ({ publications, blogs, events, pastEvents, podcasts }: any) => {
-  const [articles, setArticles] = useState([]);
+const Home = ({
+  publications,
+  blogs,
+  events,
+  pastEvents,
+  podcasts,
+  execQuotes,
+  sponsors,
+}: any) => {
   const [loading, setLoading] = useState(true);
   const [openNewsletter, setOpenNewsletter] = useState(false);
   const [sourceLoading, setSourceLoading] = useState(true);
@@ -33,13 +42,14 @@ const Home = ({ publications, blogs, events, pastEvents, podcasts }: any) => {
   const nextUpcomingEvent = events[0];
   const mostRecentEvent = pastEvents[0];
   const mostRecentPodcast = podcasts[0];
+  const tempSponsors = filterSponsors(sponsors);
 
   // close newsletter
   const callbackModal = () => {
     setOpenNewsletter(false);
   };
 
-  //start webpage at the top
+  // start webpage at the top
   useEffect(() => {
     Aos.init({
       duration: 1300,
@@ -50,18 +60,9 @@ const Home = ({ publications, blogs, events, pastEvents, podcasts }: any) => {
     });
   }, []);
 
-  // get publications
-  // input: publications data from contentful
-  // output: array of dictionaries containing publications data
-  const fetchPublications = async (publications: any) => {
-    setArticles(publications);
+  useEffect(() => {
     setLoading(false);
     setSourceLoading(false);
-  };
-
-  useEffect(() => {
-    setLoading(true);
-    fetchPublications().catch((error) => console.error(error));
   }, []);
 
   return (
@@ -73,10 +74,10 @@ const Home = ({ publications, blogs, events, pastEvents, podcasts }: any) => {
           {/* Start of Header */}
           <div className={styles.contain}>
             <Image
-              alt='header image'
               className={styles.headerImage}
               src={'/headers/2022-team-header.jpg'}
               layout={'fill'}
+              alt={'header'}
             />
             <div data-aos="fade" className={styles.headline}>
               <h1>UNSW</h1>
@@ -208,7 +209,7 @@ const Home = ({ publications, blogs, events, pastEvents, podcasts }: any) => {
           >
             <h1>SPONSORS AND AFFILIATIONS</h1>
             <div id={styles.sponsorsContainer}>
-              <SponsorCollage />
+              <SponsorCollage tempSponsors={tempSponsors} />
             </div>
           </div>
           {/* End of Sponsors & Affliations */}
@@ -234,7 +235,17 @@ export async function getStaticProps() {
   const events = await loadUpcomingEvents();
   const pastEvents = await loadPastEvents();
   const podcasts = await loadPodcasts();
+  const execQuotes = await loadExecQuotes();
+  const sponsors = await loadSponsors();
   return {
-    props: { publications, blogs, events, pastEvents, podcasts },
+    props: {
+      publications,
+      blogs,
+      events,
+      pastEvents,
+      podcasts,
+      execQuotes,
+      sponsors,
+    },
   };
 }
