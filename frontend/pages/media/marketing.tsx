@@ -47,10 +47,10 @@ const MarketingContent = ({ archives }: any) => {
   useEffect(() => window.scrollTo(0, 0), []);
 
   const fetchMarketingArchive = (archives: any) => {
-    setContent(archives);
     archives = archives.filter((item: any) => {
       return item.fields.year === year;
     });
+    setContent(archives);
     setCurrentPosts(archives.slice(0, postsPerPage));
     setSelectedPosts(archives);
     setLoading(false);
