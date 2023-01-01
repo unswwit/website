@@ -234,10 +234,9 @@ export default Home;
 export async function getStaticProps() {
   const latestPubs = await loadLatestPublications();
   const latestBlog = (await loadLatestBlog())[0];
-  const nextEvent =
-    (await loadNextUpcomingEvent())[0] === null
-      ? null
-      : (await loadNextUpcomingEvent())[0];
+  const nextEvent = (await loadNextUpcomingEvent())[0]
+    ? (await loadNextUpcomingEvent())[0]
+    : null;
   const latestEvent = (await loadLatestEvent())[0];
   const latestPodcast = (await loadLatestPodcast())[0];
   const execQuotes = await loadExecQuotes();
