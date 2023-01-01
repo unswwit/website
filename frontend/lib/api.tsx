@@ -104,6 +104,7 @@ export async function loadMarketingArchives() {
       content_type: 'marketing_archives',
       select: 'fields',
       order: '-fields.id',
+      limit: 200,
     })
     .catch((error) => {
       console.error(error);
@@ -115,6 +116,7 @@ export async function loadUpcomingEvents() {
   const res = await client
     .getEntries({
       content_type: 'upcomingEvents',
+      order: '-fields.index',
     })
     .catch((error) => {
       console.error(error);
@@ -166,6 +168,75 @@ export async function loadSponsors() {
       content_type: 'sponsors',
       select: 'fields',
       order: 'fields.name',
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
+
+export async function loadLatestPublications() {
+  const res = await client
+    .getEntries({
+      content_type: 'publications',
+      select: 'fields',
+      order: '-fields.index',
+      limit: 3,
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
+
+export async function loadLatestBlog() {
+  const res = await client
+    .getEntries({
+      content_type: 'blogPreview',
+      select: 'fields',
+      order: '-fields.blog_no',
+      limit: 1,
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
+
+export async function loadNextUpcomingEvent() {
+  const res = await client
+    .getEntries({
+      content_type: 'upcomingEvents',
+      order: '-fields.index',
+      limit: 1,
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
+
+export async function loadLatestEvent() {
+  const res = await client
+    .getEntries({
+      content_type: 'pastEvents',
+      select: 'fields',
+      order: '-fields.index',
+      limit: 1,
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
+
+export async function loadLatestPodcast() {
+  const res = await client
+    .getEntries({
+      content_type: 'podcastEpisode',
+      select: 'fields',
+      order: '-fields.episodeNo',
+      limit: 1,
     })
     .catch((error) => {
       console.error(error);
