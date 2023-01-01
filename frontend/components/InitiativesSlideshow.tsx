@@ -12,10 +12,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const InitiativesSlideshow = (props) => {
-  const nextEvent = props.nextUpcomingEvent;
-  const latestEvent = props.mostRecentEvent;
-  const latestBlog = props.mostRecentBlog;
-  const latestPodcast = props.mostRecentPodcast;
+  const nextEvent = props.nextEvent;
+  const latestEvent = props.latestEvent;
+  const latestBlog = props.latestBlog;
+  const latestPodcast = props.latestPodcast;
 
   return (
     <CarouselProvider

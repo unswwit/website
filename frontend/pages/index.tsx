@@ -14,11 +14,11 @@ import LoadingScreen from '../components/LoadingScreen';
 import NewsletterSection from '../components/NewsletterSection';
 import QuoteSlideshow from '../components/QuotesSlideshow';
 import {
-  loadPublications,
-  loadBlogPreviews,
-  loadUpcomingEvents,
-  loadPastEvents,
-  loadPodcasts,
+  loadLatestPublications,
+  loadLatestBlog,
+  loadNextUpcomingEvent,
+  loadLatestEvent,
+  loadLatestPodcast,
   loadExecQuotes,
   loadSponsors,
 } from '../lib/api';
@@ -26,22 +26,17 @@ import SponsorCollage from '../components/SponsorCollage';
 import { filterSponsors } from '../lib/helpers/sponsor';
 
 const Home = ({
-  publications,
-  blogs,
-  events,
-  pastEvents,
-  podcasts,
+  latestPubs,
+  latestBlog,
+  nextEvent,
+  latestEvent,
+  latestPodcast,
   execQuotes,
   sponsors,
 }: any) => {
   const [loading, setLoading] = useState(true);
   const [openNewsletter, setOpenNewsletter] = useState(false);
   const [sourceLoading, setSourceLoading] = useState(true);
-  const last3articles = publications.slice(0, 3);
-  const mostRecentBlog = blogs[0];
-  const nextUpcomingEvent = events[0];
-  const mostRecentEvent = pastEvents[0];
-  const mostRecentPodcast = podcasts[0];
   const tempSponsors = filterSponsors(sponsors);
 
   // close newsletter
@@ -164,10 +159,10 @@ const Home = ({
             className={styles.carousel}
           >
             <InitiativesSlideshow
-              mostRecentBlog={mostRecentBlog}
-              nextUpcomingEvent={nextUpcomingEvent}
-              mostRecentEvent={mostRecentEvent}
-              mostRecentPodcast={mostRecentPodcast}
+              latestBlog={latestBlog}
+              nextEvent={nextEvent}
+              latestEvent={latestEvent}
+              latestPodcast={latestPodcast}
             />
           </div>
 
@@ -189,7 +184,7 @@ const Home = ({
                   />
                 )}
                 {!loading &&
-                  last3articles.map((article, index) => (
+                  latestPubs.map((article, index) => (
                     <div className={styles.homeArticles} key={index}>
                       <PubArticle
                         imgUrl={'http:' + article.fields.img.fields.file.url}
@@ -237,20 +232,23 @@ const Home = ({
 export default Home;
 
 export async function getStaticProps() {
-  const publications = await loadPublications();
-  const blogs = await loadBlogPreviews();
-  const events = await loadUpcomingEvents();
-  const pastEvents = await loadPastEvents();
-  const podcasts = await loadPodcasts();
+  const latestPubs = await loadLatestPublications();
+  const latestBlog = (await loadLatestBlog())[0];
+  const nextEvent =
+    (await loadNextUpcomingEvent())[0] === null
+      ? null
+      : (await loadNextUpcomingEvent())[0];
+  const latestEvent = (await loadLatestEvent())[0];
+  const latestPodcast = (await loadLatestPodcast())[0];
   const execQuotes = await loadExecQuotes();
   const sponsors = await loadSponsors();
   return {
     props: {
-      publications,
-      blogs,
-      events,
-      pastEvents,
-      podcasts,
+      latestPubs,
+      latestBlog,
+      nextEvent,
+      latestEvent,
+      latestPodcast,
       execQuotes,
       sponsors,
     },
