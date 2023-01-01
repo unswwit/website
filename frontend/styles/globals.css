@@ -458,12 +458,12 @@ footer {
   text-transform: none;
   padding-bottom: 1vw;
   font-size: 1.05vw;
+  text-align: center;
 }
 
 .footer-copyright a {
   color: #313638;
   transition: 0.2s;
-  text-align: center;
 }
 
 .footer-item a {

@@ -122,13 +122,13 @@ const OurTeam = ({ execs, subcommittee, directors }: any) => {
       ? [
           'Careers',
           'Competitions',
-          'Externals',
           'Human Resources',
           'Information Technology',
           'Marketing',
           'Media',
           'Publications',
           'Socials',
+          'Sponsorships',
         ]
       : year < 2022
       ? [
