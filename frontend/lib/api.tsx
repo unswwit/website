@@ -104,7 +104,7 @@ export async function loadMarketingArchives() {
       content_type: 'marketing_archives',
       select: 'fields',
       order: '-fields.id',
-      limit: 200,
+      limit: 1000,
     })
     .catch((error) => {
       console.error(error);
@@ -142,6 +142,7 @@ export async function loadBlogPreviews() {
       content_type: 'blogPreview',
       select: 'fields',
       order: '-fields.blog_no',
+      limit: 1000,
     })
     .catch((error) => {
       console.error(error);
