@@ -14,7 +14,6 @@ import { loadPastEvents } from '../../../../lib/api';
 
 const EventRecapPage = ({ selectedEvent }: any) => {
   const [expanded, setExpanded] = useState(false);
-  const [event, setEvent] = useState(selectedEvent);
   const [loading, setLoading] = useState(true);
   const [hasResources, setHasResources] = useState(false);
   const [hasPhotos, setHasPhotos] = useState(false);
@@ -22,6 +21,7 @@ const EventRecapPage = ({ selectedEvent }: any) => {
   const [imageGalleryFilenames, setImageGalleryFilenames] = useState([]);
   const [hasEmbeddedVideo, setHasEmbeddedVideo] = useState(false);
   const [enableGalleryArrows, setEnableGalleryArrows] = useState(true);
+  const event = selectedEvent;
 
   const fetchPastEvent = (event: any) => {
     setLoading(false);
