@@ -17,7 +17,7 @@ import { loadPastEvents, loadUpcomingEvents } from '../lib/api';
 
 const Events = ({ upcomingEvents, allPastEvents }: any) => {
   const classes = useStyles();
-  const [year, setYear] = useState(valueToYear[100]);
+  const [year, setYear] = useState(valueToYear[99.9]);
   const [pastEvents, setPastEvents] = useState({
     term1: [],
     term2: [],
@@ -280,7 +280,7 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
               <Timeline
                 margin={'3%'}
                 page={'events'}
-                step={50}
+                step={33.3}
                 valueToYear={valueToYear}
                 marks={marks}
                 updateYear={handleYear}
