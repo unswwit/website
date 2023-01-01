@@ -10,8 +10,9 @@ import { BLOCKS, INLINES } from '@contentful/rich-text-types';
 import LoadingScreen from '../../../components/LoadingScreen';
 import Image from 'next/image';
 import React, { useEffect } from 'react';
+import BlogSuggestions from '../../../components/BlogSuggestions';
 
-const BlogDetails = ({ selectedBlog }: any) => {
+const BlogDetails = ({ selectedBlog, blogContent }: any) => {
   const { date, heading, blog_no, category, content, author } =
     selectedBlog.fields;
   const classes = useStyles();
@@ -95,7 +96,11 @@ const BlogDetails = ({ selectedBlog }: any) => {
                   );
                 })}
               </div>
-              {/* TODO: add blog suggestions */}
+              <BlogSuggestions
+                blogPreviews={blogContent}
+                category={category}
+                blogNo={blog_no}
+              />
             </div>
           </div>
         </>
@@ -181,6 +186,6 @@ export async function getStaticProps({ params }: any) {
   });
   selectedBlog = selectedBlog[0];
   return {
-    props: { selectedBlog },
+    props: { selectedBlog, blogContent },
   };
 }
