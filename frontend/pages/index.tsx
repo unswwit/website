@@ -13,13 +13,13 @@ import 'aos/dist/aos.css';
 import LoadingScreen from '../components/LoadingScreen';
 import NewsletterSection from '../components/NewsletterSection';
 import QuoteSlideshow from '../components/QuotesSlideshow';
-import execQuotes from '../data/home';
 import {
   loadPublications,
   loadBlogPreviews,
   loadUpcomingEvents,
   loadPastEvents,
   loadPodcasts,
+  loadExecQuotes,
   loadSponsors,
 } from '../lib/api';
 import SponsorCollage from '../components/SponsorCollage';
@@ -31,6 +31,7 @@ const Home = ({
   events,
   pastEvents,
   podcasts,
+  execQuotes,
   sponsors,
 }: any) => {
   const [loading, setLoading] = useState(true);
@@ -59,17 +60,9 @@ const Home = ({
     });
   }, []);
 
-  // get publications
-  // input: publications data from contentful
-  // output: array of dictionaries containing publications data
-  const fetchPublications = async () => {
+  useEffect(() => {
     setLoading(false);
     setSourceLoading(false);
-  };
-
-  useEffect(() => {
-    setLoading(true);
-    fetchPublications().catch((error) => console.error(error));
   }, []);
 
   return (
@@ -249,8 +242,17 @@ export async function getStaticProps() {
   const events = await loadUpcomingEvents();
   const pastEvents = await loadPastEvents();
   const podcasts = await loadPodcasts();
+  const execQuotes = await loadExecQuotes();
   const sponsors = await loadSponsors();
   return {
-    props: { publications, blogs, events, pastEvents, podcasts, sponsors },
+    props: {
+      publications,
+      blogs,
+      events,
+      pastEvents,
+      podcasts,
+      execQuotes,
+      sponsors,
+    },
   };
 }
