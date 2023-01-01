@@ -73,24 +73,25 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
     });
   }
 
-  // get past events
-  // input: past events data from contentful
-  // output: array of dictionaries containing past events data
-  const fetchPastEvents = async () => {
-    const allEvents = await allPastEvents.filter(
-      (event: any) => event.fields.year === Number(year)
-    );
-
-    setTerms(allEvents);
-    await delay();
-    setLoadingPast(false);
-  };
-
   useEffect(() => {
     // show loading signs for past events
     setLoadingPast(true);
+    
+    // get past events
+    // input: past events data from contentful
+    // output: array of dictionaries containing past events data
+    async function fetchPastEvents() {
+      const allEvents = await allPastEvents.filter(
+        (event: any) => event.fields.year === Number(year)
+      );
+
+      setTerms(allEvents);
+      await delay();
+      setLoadingPast(false);
+    };
+
     fetchPastEvents();
-  }, [year]);
+  }, [allPastEvents, year]);
 
   // Takes in events from a given year and separates them by term
   const setTerms = (events: any) => {

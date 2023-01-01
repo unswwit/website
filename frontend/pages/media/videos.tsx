@@ -13,7 +13,6 @@ import { loadVideos } from '../../lib/api';
 import { useStyles, categories } from '../../data/video';
 import { formatDate } from '../../lib/helpers/date';
 
-// TODO: figure out bug
 const Videos = ({ videos }: any) => {
   const classes = useStyles();
   const [video, setVideo] = useState([]);
@@ -76,24 +75,25 @@ const Videos = ({ videos }: any) => {
     setContent(sortedVideos);
   };
 
-  // get videos from contentful
-  // input: video data from contentful
-  // output: array of dictionaries containing videos data
-  const fetchVideos = (videos: any) => {
-    setContent(videos);
-    setLoading(false);
-    setHeaderLoading(false);
-    setSourceLoading(false);
-    loadVideoPreviews(
-      videos,
-      loadPageContent(videos, handleVideoNumber(videos.length))
-    );
-  };
-
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // get videos from contentful
+    // input: video data from contentful
+    // output: array of dictionaries containing videos data
+    const fetchVideos = (videos: any) => {
+      setContent(videos);
+      setLoading(false);
+      setHeaderLoading(false);
+      setSourceLoading(false);
+      loadVideoPreviews(
+        videos,
+        loadPageContent(videos, handleVideoNumber(videos.length))
+      );
+    };
+
     fetchVideos(videos);
-  }, []);
+  }, [videos]);
 
   useEffect(() => {
     if (currentPosts.length === 0 && loading === false) {

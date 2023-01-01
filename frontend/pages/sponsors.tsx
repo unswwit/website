@@ -80,6 +80,7 @@ export default function Sponsors({ sponsors }: any) {
                 <h2 className={styles.subsponsor}>{sponsorType}</h2>
                 <div id={styles.majorContainer}>
                   {tempSponsors[sponsorType].map((sponsor, index) => (
+                    // eslint-disable-next-line @next/next/no-img-element
                     <img
                       className={styles.logo}
                       src={
