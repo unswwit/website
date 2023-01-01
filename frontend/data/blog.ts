@@ -26,8 +26,14 @@ const categoryDescriptions: Record<string, any> = {
 };
 
 const links: Record<string, any> = {
-  facebook: ['blog-facebook.png', 'https://www.facebook.com/sharer/sharer.php?u='],
-  linkedIn: ['blog-linkedin.png', 'https://www.linkedin.com/sharing/share-offsite/?url='],
+  facebook: [
+    'blog-facebook.png',
+    'https://www.facebook.com/sharer/sharer.php?u=',
+  ],
+  linkedIn: [
+    'blog-linkedin.png',
+    'https://www.linkedin.com/sharing/share-offsite/?url=',
+  ],
   twitter: ['blog-twitter.png', 'https://twitter.com/intent/tweet?text='],
 };
 

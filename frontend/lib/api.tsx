@@ -151,7 +151,7 @@ export async function loadBlogRecommendations() {
     .getEntries({
       content_type: 'blogRecommendations',
       select: 'fields',
-      order: 'fields.index'
+      order: 'fields.index',
     })
     .catch((error) => {
       console.error(error);

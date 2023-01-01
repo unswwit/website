@@ -7,7 +7,8 @@ import Image from 'next/image';
 
 const BlogPreview = ({ individualBlogPreview }: any) => {
   const classes = useStyles();
-  const { date, img, heading, subheading, blog_no, category, author } = individualBlogPreview.fields;
+  const { date, img, heading, subheading, blog_no, category, author } =
+    individualBlogPreview.fields;
   const imgUrl = 'https:' + img.fields.file.url;
   const formattedDate = date.split('-').reverse().join('/');
 
@@ -20,11 +21,7 @@ const BlogPreview = ({ individualBlogPreview }: any) => {
             <div className={styles.previewRow}>
               <div className={styles.previewContainerImg}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  className={styles.previewPic}
-                  src={imgUrl}
-                  alt="preview"
-                />
+                <img className={styles.previewPic} src={imgUrl} alt="preview" />
               </div>
               <div className={styles.previewContainerBlogInfo}>
                 <div className={styles.previewContainerBlogDetails}>
@@ -38,26 +35,28 @@ const BlogPreview = ({ individualBlogPreview }: any) => {
                           label={category[key]}
                           className={classes.chip}
                           key={category[key]}
-                        ></Chip>
+                        />
                       ))}
                     </div>
                     <div className={styles.subheading}>{subheading}</div>
                   </div>
                   <div className={styles.authorContainer}>
-                  {Object.keys(author).map((index) => (
-                    <>
-                      <Image
-                        src={'https:' + author[index].fields.img.fields.file.url}
-                        alt={author[index].fields.name}
-                        width="75px"
-                        height="75px"
-                        className={styles.authorPortrait}
-                      />
-                      <p className={styles.author} key={index}>
-                        {author[index].fields.name}
-                      </p>
-                    </>
-                  ))}
+                    {Object.keys(author).map((index) => (
+                      <>
+                        <Image
+                          src={
+                            'https:' + author[index].fields.img.fields.file.url
+                          }
+                          alt={author[index].fields.name}
+                          width="75px"
+                          height="75px"
+                          className={styles.authorPortrait}
+                        />
+                        <p className={styles.author} key={index}>
+                          {author[index].fields.name}
+                        </p>
+                      </>
+                    ))}
                   </div>
                 </div>
               </div>

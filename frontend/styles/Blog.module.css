@@ -16,7 +16,7 @@
 }
 
 h2.blogRecommendationsTitle {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 33pt;
   text-transform: uppercase;
   margin-top: 100px;
@@ -69,14 +69,14 @@ h2.blogRecommendationsTitle {
 
 .tooltipTitle {
   font-size: 13px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 10px 0;
   text-transform: uppercase;
 }
 
 .tooltipDescription {
   font-size: 11px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 
@@ -115,7 +115,7 @@ h2.blogRecommendationsTitle {
 }
 
 .previewRow::after {
-  content: "";
+  content: '';
   clear: both;
   display: block;
 }
@@ -201,7 +201,7 @@ h2.blogRecommendationsTitle {
 .author {
   color: var(--general-text);
   font-size: 10pt;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   text-align: center;
 }
@@ -219,7 +219,7 @@ h2.blogRecommendationsTitle {
   color: var(--general-text);
   letter-spacing: 0.1vw;
   font-size: 11pt;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   margin-bottom: 10px;
   font-weight: 500;
@@ -233,7 +233,7 @@ h2.blogRecommendationsTitle {
 .subheading {
   color: var(--general-text);
   font-size: 12px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   padding: 0;
   margin-bottom: 10px;
   text-align: left;
@@ -245,7 +245,7 @@ h2.blogRecommendationsTitle {
   letter-spacing: 0.1vw;
   font-size: 10pt;
   font-weight: 600;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   padding: 0;
   text-align: left;
 }
@@ -271,8 +271,8 @@ h2.blogRecommendationsTitle {
   border: 1px transparent;
   justify-content: center;
   width: 71%;
-  font-family: "Montserrat", sans-serif;
-  background: url("/icons/search_icon.png") center left no-repeat;
+  font-family: 'Montserrat', sans-serif;
+  background: url('/icons/search_icon.png') center left no-repeat;
   background-position-x: 0.5%;
   background-size: auto 85%;
   padding: 0.5%;
@@ -296,7 +296,7 @@ h2.blogRecommendationsTitle {
 
   .inputSearchBar {
     color: white;
-    background: url("/icons/dark-search_icon.png") center left no-repeat;
+    background: url('/icons/dark-search_icon.png') center left no-repeat;
     background-position-x: 0.5%;
     background-size: auto 85%;
     background-color: var(--dark-slate-grey);
@@ -320,7 +320,7 @@ h2.blogRecommendationsTitle {
   }
 
   .emptyMessage {
-    color: white
+    color: white;
   }
 }
 

@@ -3,6 +3,7 @@ import { Card, CardContent, Typography } from '@material-ui/core';
 import styles from '../styles/Events.module.css';
 import Image from 'next/image';
 import { formatMarketingArchivesDate } from '../lib/helpers/date';
+import Link from 'next/link';
 
 const useStyles = makeStyles({
   root: {
@@ -72,11 +73,11 @@ const useStyles = makeStyles({
 
 export default function BlogRecommendations({ recommendation }: any) {
   const classes = useStyles();
-  const {link, cover, date, title } = recommendation.fields;
+  const { blogNo, cover, date, title } = recommendation.fields;
   const imgUrl = 'https:' + cover.fields.file.url;
 
   return (
-    <a href={'https:' + link}>
+    <Link href={'/media/blog/' + blogNo}>
       <Card className={[classes.root, styles.previewContainer].join(' ')}>
         <div className={styles.darkOverlay} />
         <Image
@@ -95,11 +96,9 @@ export default function BlogRecommendations({ recommendation }: any) {
           >
             {formatMarketingArchivesDate(date)}
           </Typography>
-          <Typography className={classes.title}>
-            {title}
-          </Typography>
+          <Typography className={classes.title}>{title}</Typography>
         </CardContent>
       </Card>
-    </a>
+    </Link>
   );
 }

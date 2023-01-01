@@ -34,7 +34,6 @@ const Blog = ({ recommendations, blogPreviews }) => {
   const [searchTerm, setSearchTerm] = useState('');
   // if there are search results
   const [emptyCategory, setEmptyCategory] = useState(false);
-
   // filter blogs by a selected category
   const filterBlogs = (category, searchTerm) => {
     const filteredBlogs = blogs.filter(

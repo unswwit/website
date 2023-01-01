@@ -19,9 +19,7 @@ const Opportunities = ({ opportunities }: any) => {
   };
   useEffect(() => {
     setLoading(true);
-    fetchOpportunities().catch((error) =>
-      console.error(error)
-    );
+    fetchOpportunities().catch((error) => console.error(error));
   }, []);
   return (
     <div>
