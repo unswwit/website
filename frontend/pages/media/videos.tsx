@@ -169,7 +169,7 @@ const Videos = ({ videos }: any) => {
               <div className={styles.previewContainer}>
                 <Image
                   className={styles.videoImages}
-                  src={'http://' + video.fields.video.fields.file.url}
+                  src={'http:' + video.fields.video.fields.file.url}
                   alt={video.fields.title}
                   width={'1200px'}
                   height={'628px'}
