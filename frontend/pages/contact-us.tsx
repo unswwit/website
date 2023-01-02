@@ -30,7 +30,7 @@ const ContactUs = () => {
         <div>
           {/* Cover Photo */}
           <PageHeader
-            imgUrl="/headers/2021-exec-header.jpg"
+            imgUrl="/headers/2023-exec-header.jpg"
             title="Contact Us"
             imageLoading={setHeaderLoading}
           />
@@ -65,7 +65,7 @@ const ContactUs = () => {
                   width="50px"
                   height="50px"
                 />
-                <h3>Jane Wang</h3>
+                <h3>Brianna Kim</h3>
                 <Link href="mailto:president@unswwit.com">
                   <a>president@unswwit.com</a>
                 </Link>
@@ -77,7 +77,7 @@ const ContactUs = () => {
                   width="50px"
                   height="50px"
                 />
-                <h3>Nishimi Kapoor</h3>
+                <h3>Vivian Wang</h3>
                 <Link href="mailto:president@unswwit.com">
                   <a>president@unswwit.com</a>
                 </Link>
@@ -89,7 +89,7 @@ const ContactUs = () => {
                   width="50px"
                   height="50px"
                 />
-                <h3>Emily Dang</h3>
+                <h3>Yuhan Zhou</h3>
                 <Link href="mailto:secretary@unswwit.com">
                   <a>secretary@unswwit.com</a>
                 </Link>
@@ -101,7 +101,7 @@ const ContactUs = () => {
                   width="50px"
                   height="50px"
                 />
-                <h3>Tiana Douroudis</h3>
+                <h3>Abigail Joesan Johan</h3>
                 <Link href="mailto:treasurer@unswwit.com">
                   <a>treasurer@unswwit.com</a>
                 </Link>
@@ -114,147 +114,51 @@ const ContactUs = () => {
             />
             <div className={styles.col3}>
               <div className={styles.profile3}>
-                <Image
-                  src="/icons/careers-icon.png"
-                  alt="careers-icon"
-                  width="50px"
-                  height="50px"
-                />
-                <h3>Brianna Kim</h3>
-                <Link href="mailto:careers@unswwit.com">
-                  <a>careers@unswwit.com</a>
-                </Link>
-              </div>
-              <div className={styles.profile3}>
-                <Image
-                  src="/icons/careers-icon.png"
-                  alt="careers-icon"
-                  width="50px"
-                  height="50px"
-                />
-                <h3>Vivian Wang</h3>
-                <Link href="mailto:careers@unswwit.com">
-                  <a>careers@unswwit.com</a>
-                </Link>
-              </div>
-              <div className={styles.profile3}>
-                <Image
-                  src="/icons/comps-icon.png"
-                  alt="comps-icon"
-                  width="50px"
-                  height="50px"
-                />
-                <h3>Vivian Wong</h3>
-                <Link href="mailto:competitions@unswwit.com">
-                  <a>competitions@unswwit.com</a>
-                </Link>
-              </div>
-              <div className={styles.profile3}>
-                <Image
+              <Image
                   src="/icons/ex-icon.png"
                   alt="ex-icon"
                   width="50px"
                   height="50px"
                 />
-                <h3>Gayathri Balaji</h3>
+                <h3>Emily Dang</h3>
                 <Link href="mailto:externals@unswwit.com">
                   <a>externals@unswwit.com</a>
                 </Link>
               </div>
               <div className={styles.profile3}>
                 <Image
-                  src="/icons/ex-icon.png"
-                  alt="ex-icon"
+                  src="/icons/int-icon.png"
+                  alt="int-icon"
                   width="50px"
                   height="50px"
                 />
-                <h3>Tanisha Dasmohaptra</h3>
-                <Link href="mailto:externals@unswwit.com">
-                  <a>externals@unswwit.com</a>
+                <h3>Abarna Ravindran</h3>
+                <Link href="mailto:internals@unswwit.com">
+                  <a>internals@unswwit.com</a>
                 </Link>
               </div>
               <div className={styles.profile3}>
                 <Image
-                  src="/icons/hr-icon.png"
-                  alt="hr-icon"
-                  width="50px"
-                  height="50px"
-                />
-                <h3>Emily Chang</h3>
-                <Link href="mailto:hr@unswwit.com">
-                  <a>hr@unswwit.com</a>
-                </Link>
-              </div>
-              <div className={styles.profile3}>
-                <Image
-                  src="/icons/it.png"
+                  src="/icons/tech.png"
                   alt="it-icon"
                   width="50px"
                   height="50px"
                 />
                 <h3>Joanna He</h3>
-                <Link href="mailto:it@unswwit.com">
-                  <a>it@unswwit.com</a>
+                <Link href="mailto:technology@unswwit.com">
+                  <a>technology@unswwit.com</a>
                 </Link>
               </div>
               <div className={styles.profile3}>
                 <Image
-                  src="/icons/mark-icon.png"
-                  alt="mark-icon"
-                  width="50px"
-                  height="50px"
-                />
-                <h3>Abigail Joesan Johan</h3>
-                <Link href="mailto:marketing@unswwit.com">
-                  <a>marketing@unswwit.com</a>
-                </Link>
-              </div>
-              <div className={styles.profile3}>
-                <Image
-                  src="/icons/mark-icon.png"
-                  alt="mark-icon"
-                  width="50px"
-                  height="50px"
-                />
-                <h3>Gabriella Hartanto</h3>
-                <Link href="mailto:marketing@unswwit.com">
-                  <a>marketing@unswwit.com</a>
-                </Link>
-              </div>
-              <div className={styles.profile3}>
-                <Image
-                  src="/icons/media-icon.png"
-                  alt="media-icon"
-                  width="50px"
-                  height="50px"
-                />
-                <h3>Natalie Leroy</h3>
-                <Link href="mailto:media@unswwit.com">
-                  <a>media@unswwit.com</a>
-                </Link>
-              </div>
-              <div className={styles.profile3}>
-                <Image
-                  src="/icons/pubs-icon.png"
-                  alt="pubs-icon"
+                  src="/icons/multi-icon.png"
+                  alt="multi-icon"
                   width="50px"
                   height="50px"
                 />
                 <h3>Chelsea Chaffey</h3>
-                <Link href="mailto:publications@unswwit.com">
-                  <a>publications@unswwit.com</a>
-                </Link>
-              </div>
-              <div className={styles.profile3}>
-                <Image
-                  src="/icons/pubs-icon.png"
-                  alt="pubs-icon"
-                  width="50px"
-                  height="50px"
-                />
-                <h3>Yuhan Zhou</h3>
-                <Link href="mailto:publications@unswwit.com">
-                  <a>publications@unswwit.com</a>
+                <Link href="mailto:multimedia@unswwit.com">
+                  <a>multimedia@unswwit.com</a>
                 </Link>
               </div>
             </div>

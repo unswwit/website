@@ -202,6 +202,7 @@ const OurTeam = ({ execs, subcommittee, directors }: any) => {
                               key={index}
                               imgUrl={'http:' + exec.fields.img.fields.file.url}
                               name={exec.fields.name}
+                              pronouns={exec.fields.pronouns}
                               className={
                                 exec.fields.year === 2020
                                   ? execToClassName[exec.fields.year][
