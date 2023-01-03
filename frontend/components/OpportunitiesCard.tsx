@@ -28,7 +28,8 @@ export default function OpportunitiesCard({
       <a className={styles.oppGridItems} key={index}>
         <div className={styles.darkOverlay} />
         <div className={styles.imageContainer}>
-          {/* Todo: change to Image tag - attempted but causes css issues */}
+          {/* TODO: change to Image tag - attempted but causes css issues */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img className={styles.oppImg} src={imgUrl} alt={companyName} />
         </div>
 

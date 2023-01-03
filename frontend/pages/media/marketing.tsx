@@ -46,30 +46,31 @@ const MarketingContent = ({ archives }: any) => {
   // scroll to top on load
   useEffect(() => window.scrollTo(0, 0), []);
 
-  const fetchMarketingArchive = (archives: any) => {
-    archives = archives.filter((item: any) => {
-      return item.fields.year === year;
-    });
-    setContent(archives);
-    setCurrentPosts(archives.slice(0, postsPerPage));
-    setSelectedPosts(archives);
-    setLoading(false);
-    setSourceLoading(false);
-  };
-
   const sleep = (ms: number) => {
     return new Promise((resolve) => setTimeout(resolve, ms));
   };
 
-  // get marketing archives
-  // input: marketing archives data from contentful
-  // output: array of dictionaries containing marketing archives data
   useEffect(() => {
     setLoading(true);
+    
+    // get marketing archives
+    // input: marketing archives data from contentful
+    // output: array of dictionaries containing marketing archives data
+    const fetchMarketingArchive = (archives: any) => {
+      archives = archives.filter((item: any) => {
+        return item.fields.year === year;
+      });
+      setContent(archives);
+      setCurrentPosts(archives.slice(0, postsPerPage));
+      setSelectedPosts(archives);
+      setLoading(false);
+      setSourceLoading(false);
+    };
+
     sleep(300).then(() => {
       fetchMarketingArchive(archives);
     });
-  }, [year]);
+  }, [archives, year]);
 
   // marketing archive message
   useEffect(() => {

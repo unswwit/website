@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import PageHeader from '../../../../components/Header';
 import styles from '../../../../styles/EventRecap.module.css';
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -23,7 +23,7 @@ const EventRecapPage = ({ selectedEvent }: any) => {
   const [enableGalleryArrows, setEnableGalleryArrows] = useState(true);
   const event = selectedEvent;
 
-  const fetchPastEvent = (event: any) => {
+  const fetchPastEvent = useCallback((event: any) => {
     setLoading(false);
     setPhotos(event);
 
@@ -38,7 +38,7 @@ const EventRecapPage = ({ selectedEvent }: any) => {
     if (event.fields.facebookLink) {
       setHasFBLink(true);
     }
-  };
+  }, []);
 
   useEffect(() => {
     // start at the top of the page
@@ -46,7 +46,7 @@ const EventRecapPage = ({ selectedEvent }: any) => {
 
     // load event recap
     fetchPastEvent(event);
-  }, []);
+  }, [fetchPastEvent, event]);
 
   const setPhotos = (currEvent: any) => {
     if (currEvent.fields.imagePaths) {
@@ -69,7 +69,6 @@ const EventRecapPage = ({ selectedEvent }: any) => {
   return (
     <>
       <PageHeader imgUrl="/headers/events-header.jfif" title={'Events'} />
-
       {loading && (
         <div id={styles.eventLoadingContainer}>
           <CircularProgress
@@ -201,7 +200,7 @@ export async function getStaticPaths() {
   }));
   return {
     paths,
-    fallback: false, // can also be true or 'blocking'
+    fallback: false,
   };
 }
 

@@ -20,6 +20,7 @@ const SponsorsModal = ({ handleClose, sponsor, sponsorType }: any) => {
       <br />
       <div className={styles.textBlock}>
         {/* TODO: change img tag to next/image */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           className={styles.sponsorImage}
           src={

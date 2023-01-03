@@ -44,7 +44,7 @@ const Home = ({
     setOpenNewsletter(false);
   };
 
-  //start webpage at the top
+  // start webpage at the top
   useEffect(() => {
     Aos.init({
       duration: 1300,
@@ -85,7 +85,6 @@ const Home = ({
             </div>
           </div>
           {/* End of Header */}
-
           {/* Start of Description */}
           <div
             data-aos={isMobile ? 'fade' : 'fade-up'}
@@ -107,7 +106,6 @@ const Home = ({
             </div>
           </div>
           {/* End of Description */}
-
           {/* Start of Quotes */}
           <div
             data-aos={isMobile ? 'fade' : 'fade-up'}
@@ -124,7 +122,6 @@ const Home = ({
             </div>
           </div>
           {/* End of Quotes */}
-
           {/* Start of Statistics */}
           <div className={styles.stats}>
             <Image
@@ -151,7 +148,6 @@ const Home = ({
             </div>
           </div>
           {/* End of Statistics */}
-
           {/* Start of Upcoming Events / Latest blog / Latest podcast*/}
           <div
             data-aos={isMobile ? 'fade' : 'fade-up'}
@@ -165,7 +161,6 @@ const Home = ({
               latestPodcast={latestPodcast}
             />
           </div>
-
           {/* Start of Publications */}
           <div
             data-aos={isMobile ? 'fade' : 'fade-up'}
@@ -201,7 +196,6 @@ const Home = ({
             </button>
           </div>
           {/* End of Publications */}
-
           {/* Start of Sponsors & Affliations */}
           <div
             data-aos={isMobile ? 'fade' : 'fade-up'}
@@ -214,7 +208,6 @@ const Home = ({
             </div>
           </div>
           {/* End of Sponsors & Affliations */}
-
           {/* Start of Newsletter */}
           <NewsletterSection
             setOpen={setOpenNewsletter}
