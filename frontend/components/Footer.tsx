@@ -7,10 +7,10 @@ import styles from '../styles/Footer.module.css';
 const routes: any = {
   Home: '/',
   Events: '/events',
-  Opportunities: '/opportunities',
+  'Jobs Board': '/jobs-board',
   'Join Us': '/join-us',
   'Our Story': '/about/our-story',
-  'Sponsors and Affiliations': '/sponsors-affiliations',
+  Sponsors: '/sponsors',
   'Our Team': '/about/our-team',
   'Contact Us': '/contact-us',
   'Blog Posts': '/media/blog',
@@ -23,8 +23,8 @@ const routes: any = {
 const headings = ['STUDENT INVOLVEMENT', 'ABOUT US', 'MEDIA'];
 
 const links = [
-  ['Home', 'Events', 'Opportunities', 'Join Us'],
-  ['Our Story', 'Sponsors and Affiliations', 'Our Team', 'Contact Us'],
+  ['Home', 'Events', 'Jobs Board', 'Join Us'],
+  ['Our Story', 'Sponsors', 'Our Team', 'Contact Us'],
   ['Blog Posts', 'Podcast', 'Publications', 'Marketing', 'Videos'],
 ];
 
@@ -140,7 +140,9 @@ const Footer = () => {
         </ul>
         <div className="footer-copyright bottom-footer-item">
           <Link href="/">
-            <a>Copyright © {new Date().getFullYear()}. UNSW Women in Technology</a>
+            <a>
+              Copyright © {new Date().getFullYear()}. UNSW Women in Technology
+            </a>
           </Link>
         </div>
       </footer>
