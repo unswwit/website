@@ -1,3 +1,4 @@
+// @ts-nocheck comment
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
@@ -30,6 +31,7 @@ const PageHeader = ({ imageLoading, imgUrl, title }: Header) => {
           typeof imageLoading === 'function' ? () => setImageLoaded(true) : null
         }
         layout={'fill'}
+        priority
       />
 
       {/* text */}

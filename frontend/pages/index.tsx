@@ -5,7 +5,7 @@ import Image from 'next/image';
 import CountUp from 'react-countup';
 import styles from '../styles/Home.module.css';
 import PubArticle from '../components/PublicationsArticle';
-// import InitiativesSlideshow from '../components/InitiativesSlideshow';
+import InitiativesSlideshow from '../components/InitiativesSlideshow';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Aos from 'aos';
 import { isMobile } from 'react-device-detect';
@@ -13,23 +13,39 @@ import 'aos/dist/aos.css';
 import LoadingScreen from '../components/LoadingScreen';
 import NewsletterSection from '../components/NewsletterSection';
 import QuoteSlideshow from '../components/QuotesSlideshow';
-import execQuotes from '../data/home';
-import { loadPublications } from '../lib/api';
+import {
+  loadLatestPublications,
+  loadLatestBlog,
+  loadNextUpcomingEvent,
+  loadLatestEvent,
+  loadLatestPodcast,
+  loadExecQuotes,
+  loadSponsors,
+} from '../lib/api';
+import SponsorCollage from '../components/SponsorCollage';
+import { filterSponsors } from '../lib/helpers/sponsor';
 import Head from 'next/head';
 
-const Home = ({ publications }: any) => {
-  const [articles, setArticles] = useState([]);
+const Home = ({
+  latestPubs,
+  latestBlog,
+  nextEvent,
+  latestEvent,
+  latestPodcast,
+  execQuotes,
+  sponsors,
+}: any) => {
   const [loading, setLoading] = useState(true);
   const [openNewsletter, setOpenNewsletter] = useState(false);
   const [sourceLoading, setSourceLoading] = useState(true);
-  const last3articles = publications.slice(0, 3);
+  const tempSponsors = filterSponsors(sponsors);
 
   // close newsletter
   const callbackModal = () => {
     setOpenNewsletter(false);
   };
 
-  //start webpage at the top
+  // start webpage at the top
   useEffect(() => {
     Aos.init({
       duration: 1300,
@@ -40,18 +56,9 @@ const Home = ({ publications }: any) => {
     });
   }, []);
 
-  // get publications
-  // input: publications data from contentful
-  // output: array of dictionaries containing publications data
-  const fetchPublications = async (publications: any) => {
-    setArticles(publications);
+  useEffect(() => {
     setLoading(false);
     setSourceLoading(false);
-  };
-
-  useEffect(() => {
-    setLoading(true);
-    fetchPublications().catch((error) => console.error(error));
   }, []);
 
   return (
@@ -65,6 +72,12 @@ const Home = ({ publications }: any) => {
         <div>
           {/* Start of Header */}
           <div className={styles.contain}>
+            <Image
+              className={styles.headerImage}
+              src={'/headers/2022-team-header.jpg'}
+              layout={'fill'}
+              alt={'header'}
+            />
             <div data-aos="fade" className={styles.headline}>
               <h1>UNSW</h1>
               <h1>Women In</h1>
@@ -76,7 +89,6 @@ const Home = ({ publications }: any) => {
             </div>
           </div>
           {/* End of Header */}
-
           {/* Start of Description */}
           <div
             data-aos={isMobile ? 'fade' : 'fade-up'}
@@ -98,7 +110,6 @@ const Home = ({ publications }: any) => {
             </div>
           </div>
           {/* End of Description */}
-
           {/* Start of Quotes */}
           <div
             data-aos={isMobile ? 'fade' : 'fade-up'}
@@ -115,7 +126,6 @@ const Home = ({ publications }: any) => {
             </div>
           </div>
           {/* End of Quotes */}
-
           {/* Start of Statistics */}
           <div className={styles.stats}>
             <Image
@@ -142,17 +152,19 @@ const Home = ({ publications }: any) => {
             </div>
           </div>
           {/* End of Statistics */}
-
           {/* Start of Upcoming Events / Latest blog / Latest podcast*/}
-          {/* TODO: debug this */}
-          {/* <div
+          <div
             data-aos={isMobile ? 'fade' : 'fade-up'}
             data-aos-delay="150"
             className={styles.carousel}
-          > */}
-          {/* <InitiativesSlideshow /> */}
-          {/* </div> */}
-
+          >
+            <InitiativesSlideshow
+              latestBlog={latestBlog}
+              nextEvent={nextEvent}
+              latestEvent={latestEvent}
+              latestPodcast={latestPodcast}
+            />
+          </div>
           {/* Start of Publications */}
           <div
             data-aos={isMobile ? 'fade' : 'fade-up'}
@@ -171,7 +183,7 @@ const Home = ({ publications }: any) => {
                   />
                 )}
                 {!loading &&
-                  last3articles.map((article, index) => (
+                  latestPubs.map((article, index) => (
                     <div className={styles.homeArticles} key={index}>
                       <PubArticle
                         imgUrl={'http:' + article.fields.img.fields.file.url}
@@ -188,7 +200,6 @@ const Home = ({ publications }: any) => {
             </button>
           </div>
           {/* End of Publications */}
-
           {/* Start of Sponsors & Affliations */}
           <div
             data-aos={isMobile ? 'fade' : 'fade-up'}
@@ -197,29 +208,10 @@ const Home = ({ publications }: any) => {
           >
             <h1>SPONSORS AND AFFILIATIONS</h1>
             <div id={styles.sponsorsContainer}>
-              <div className={styles.lightmodeBanner}>
-                <Image
-                  src="/sponsor-collage-light-mode.png"
-                  alt="light mode banner"
-                  margin-top="50px"
-                  width="900px"
-                  height="650px"
-                />
-              </div>
-              <div className={styles.darkmodeBanner}>
-                <Image
-                  display="none"
-                  src="/sponsor-collage-dark-mode.png"
-                  alt="dark mode banner"
-                  margin-top="50px"
-                  width="900px"
-                  height="650px"
-                />
-              </div>
+              <SponsorCollage tempSponsors={tempSponsors} />
             </div>
           </div>
           {/* End of Sponsors & Affliations */}
-
           {/* Start of Newsletter */}
           <NewsletterSection
             setOpen={setOpenNewsletter}
@@ -237,8 +229,24 @@ const Home = ({ publications }: any) => {
 export default Home;
 
 export async function getStaticProps() {
-  const publications = await loadPublications();
+  const latestPubs = await loadLatestPublications();
+  const latestBlog = (await loadLatestBlog())[0];
+  const nextEvent = (await loadNextUpcomingEvent())[0]
+    ? (await loadNextUpcomingEvent())[0]
+    : null;
+  const latestEvent = (await loadLatestEvent())[0];
+  const latestPodcast = (await loadLatestPodcast())[0];
+  const execQuotes = await loadExecQuotes();
+  const sponsors = await loadSponsors();
   return {
-    props: { publications },
+    props: {
+      latestPubs,
+      latestBlog,
+      nextEvent,
+      latestEvent,
+      latestPodcast,
+      execQuotes,
+      sponsors,
+    },
   };
 }

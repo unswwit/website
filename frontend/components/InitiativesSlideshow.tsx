@@ -6,58 +6,16 @@ import {
   ButtonBack,
   ButtonNext,
 } from 'pure-react-carousel';
-import React, { useEffect, useState } from 'react';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import axios from 'axios';
-import humps from 'humps';
 
-const InitiativesSlideshow = () => {
-  const [firstUpcomingEvent, setFirstUpcomingEvent] = useState([]);
-  const [latestEvent, setLatestEvent] = useState([]);
-  const [latestBlog, setLatestBlog] = useState([]);
-  const [latestPodcast, setLatestPodcast] = useState([]);
-  const firstEvent = firstUpcomingEvent.slice(0, 1);
-  const lastEvent = latestEvent.slice(0, 1);
-  const lastBlog = latestBlog.slice(0, 1);
-  const lastPodcast = latestPodcast.slice(0, 1);
-
-  useEffect(() => {
-    const urls = [
-      'https://wit-database.herokuapp.com/upcoming-events',
-      'https://wit-database.herokuapp.com/past-events',
-      'https://wit-database.herokuapp.com/blog/previews',
-      'https://wit-database.herokuapp.com/podcast-episodes',
-    ];
-    urls.forEach((url) => loadGoogleSheets(url));
-  }, []);
-
-  // load data from google sheets
-  const loadGoogleSheets = (url) => {
-    const fetchSlideshowData = async (url) => {
-      const res = await axios.get(url);
-      switch (url) {
-        case 'https://wit-database.herokuapp.com/upcoming-events':
-          setFirstUpcomingEvent(humps.camelizeKeys(res.data));
-          break;
-        case 'https://wit-database.herokuapp.com/past-events':
-          setLatestEvent(humps.camelizeKeys(res.data).reverse());
-          break;
-        case 'https://wit-database.herokuapp.com/blog/previews':
-          setLatestBlog(humps.camelizeKeys(res.data).reverse());
-          break;
-        case 'https://wit-database.herokuapp.com/podcast-episodes':
-          setLatestPodcast(humps.camelizeKeys(res.data).reverse());
-          break;
-        default:
-          break;
-      }
-    };
-
-    fetchSlideshowData(url);
-  };
+const InitiativesSlideshow = (props) => {
+  const nextEvent = props.nextEvent;
+  const latestEvent = props.latestEvent;
+  const latestBlog = props.latestBlog;
+  const latestPodcast = props.latestPodcast;
 
   return (
     <CarouselProvider
@@ -71,7 +29,7 @@ const InitiativesSlideshow = () => {
         classNameTray={styles.slideComponent}
         classNameTrayWrap={styles.slideComponent}
       >
-        <Slide index={0} innerClassName={styles}>
+        <Slide className={styles.slideComponent}>
           <div className={styles.slideComponent}>
             <div className={styles.eventsDescription}>
               <div className={styles.titleMobile}>
@@ -95,48 +53,38 @@ const InitiativesSlideshow = () => {
                   </button>
                 </p>
               </div>
-              {firstUpcomingEvent.length ? (
+              {nextEvent ? (
                 <div>
-                  {firstEvent.map((firstUpcomingEvent, index) => (
-                    <div className={styles.right} key={index}>
-                      <h1>EVENTS</h1>
-                      <a
-                        href={firstUpcomingEvent.facebookLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div className={styles.eventImg}>
-                          <Image
-                            src={`/event-covers/2022/${firstUpcomingEvent.img}`}
-                            alt={firstUpcomingEvent.title}
-                            height="320px"
-                            width="500px"
-                          />
-                        </div>
-                      </a>
-                    </div>
-                  ))}
+                  <div className={styles.right}>
+                    <h1>EVENTS</h1>
+                    <Link href={nextEvent.fields.facebookLink}>
+                      <div className={styles.eventImg}>
+                        <Image
+                          src={`https:${nextEvent.fields.img.fields.file.url}`}
+                          alt={nextEvent.fields.title}
+                          height="320px"
+                          width="500px"
+                        />
+                      </div>
+                    </Link>
+                  </div>
                 </div>
               ) : (
                 <div>
-                  {lastEvent.map((latestEvent, index) => (
-                    <div className={styles.right} key={index}>
-                      <h1>EVENTS</h1>
+                  <div className={styles.right}>
+                    <h1>EVENTS</h1>
 
-                      <a
-                        href={latestEvent.facebookLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Image
-                          src={`/event-covers/2022/${latestEvent.img}`}
-                          alt={latestEvent.title}
-                          height="924px"
-                          width="1640px"
-                        />
-                      </a>
-                    </div>
-                  ))}
+                    <Link
+                      href={`/event-recaps/${latestEvent.fields.year}/${latestEvent.fields.eventNumber}`}
+                    >
+                      <Image
+                        src={`https:${latestEvent.fields.img.fields.file.url}`}
+                        alt={latestEvent.title}
+                        height="924px"
+                        width="1640px"
+                      />
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>
@@ -166,43 +114,23 @@ const InitiativesSlideshow = () => {
                   </button>
                 </p>
               </div>
-              {lastBlog.map((latestBlog, index) => (
-                <div className={styles.right} key={index}>
-                  <h1>BLOGS</h1>
-                  {/* <a
-                    href="https://unswwit.com/#/media/blog/9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src={
-                        process.env.PUBLIC_URL +
-                        "/blog-covers/09-procrastinating.png"
-                      }
-                      alt="What are you REALLY Procrastinating?"
+              <div className={styles.right}>
+                <h1>BLOGS</h1>
+                <Link href={`/media/blog/${latestBlog.fields.blog_no}`}>
+                  <div className={styles.eventImg}>
+                    <Image
+                      src={`https:${latestBlog.fields.img.fields.file.url}`}
+                      alt={`${latestBlog.fields.heading}`}
+                      height="300px"
+                      width="450px"
                     />
-                  </a> */}
-
-                  <a
-                    href={`https://unswwit.com/#/media/blog/${latestBlog.blogNo}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className={styles.eventImg}>
-                      <Image
-                        src={`/blog-covers/${latestBlog.img}`}
-                        alt={`${latestBlog.heading}`}
-                        height="300px"
-                        width="450px"
-                      />
-                    </div>
-                  </a>
-                </div>
-              ))}
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
         </Slide>
-        <Slide className={styles.slideComponent} index={2}>
+        <Slide className={styles.slideComponent}>
           <div className={styles.slideComponent}>
             <div className={styles.eventsDescription}>
               <div className={styles.titleMobile}>
@@ -224,25 +152,19 @@ const InitiativesSlideshow = () => {
                   </button>
                 </p>
               </div>
-              {lastPodcast.map((latestPodcast, index) => (
-                <div className={styles.right} key={index}>
-                  <h1>PODCASTS</h1>
-                  <a
-                    href={`https://unswwit.com/#/media/podcast/${latestPodcast.episodeNo}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className={styles.eventImg}>
-                      <Image
-                        src={`/podcast-covers/${latestPodcast.img}`}
-                        height="250px"
-                        width="250px"
-                        alt={`${latestPodcast.title}`}
-                      />
-                    </div>
-                  </a>
-                </div>
-              ))}
+              <div className={styles.right}>
+                <h1>PODCASTS</h1>
+                <Link href={`/media/podcast/${latestPodcast.fields.episodeNo}`}>
+                  <div className={styles.eventImg}>
+                    <Image
+                      src={`https:${latestPodcast.fields.img.fields.file.url}`}
+                      height="250px"
+                      width="250px"
+                      alt={`${latestPodcast.title}`}
+                    />
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
         </Slide>

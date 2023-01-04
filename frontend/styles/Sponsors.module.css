@@ -117,7 +117,7 @@ a.subheader {
   margin-bottom: 20px;
 }
 
-.sponsorDescription p {
+.sponsorDescription {
   color: #313638;
   font-size: 12pt;
   font-family: 'Montserrat', sans-serif;
@@ -218,7 +218,7 @@ a.subheader {
 
 /*--- Dark mode ---*/
 @media (prefers-color-scheme: dark) {
-  .sponsorDescription p {
+  .sponsorDescription {
     color: white;
   }
 

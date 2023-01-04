@@ -1,3 +1,4 @@
+// @ts-nocheck comment
 import { useState, useEffect } from 'react';
 import PageHeader from '../../components/Header';
 import Chip from '@material-ui/core/Chip';
@@ -53,7 +54,7 @@ const Podcast = ({ episodes }: any) => {
 
     // load podcast episode previews
     fetchPodcastEpisodes(episodes);
-  }, []);
+  }, [episodes]);
 
   useEffect(() => {
     // if no posts, setEmptyCategory to true
@@ -146,7 +147,6 @@ const Podcast = ({ episodes }: any) => {
                   />
                 )}
               </div>
-
               <div id={styles.platformContainer}>
                 {Object.keys(links).map((link, index) => {
                   return (
@@ -172,7 +172,6 @@ const Podcast = ({ episodes }: any) => {
               </div>
             </div>
           </div>
-
           <div className={styles.podcastCategories}>
             {/* Start of categories */}
             <div className={styles.contentCategories}>
@@ -202,7 +201,6 @@ const Podcast = ({ episodes }: any) => {
             </div>
           </div>
           {/* End of podcast categories */}
-
           {/* Start of search bar */}
           <div className={styles.searchBar}>
             <input
@@ -221,7 +219,6 @@ const Podcast = ({ episodes }: any) => {
               <p id={styles.emptyMessage}>No results were found.</p>
             )}
           </div>
-
           <div id={styles.podcastLoadingContainer}>
             {loading && (
               <CircularProgress
@@ -235,17 +232,7 @@ const Podcast = ({ episodes }: any) => {
 
           <div id={styles.episodes}>
             {selectedPosts.map((episode, index) => {
-              return (
-                <EpisodeTemplate
-                  key={index}
-                  episodeNo={episode.fields.episodeNo}
-                  title={episode.fields.title}
-                  cover={episode.fields.img.fields.file.url}
-                  date={episode.fields.date}
-                  description={episode.fields.description}
-                  episode={episode.fields}
-                />
-              );
+              return <EpisodeTemplate key={index} episode={episode} />;
             })}
           </div>
           {/* TO UNCOMMENT WHEN REACH > 9 PODCASTS */}

@@ -1,3 +1,4 @@
+// @ts-nocheck comment
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -17,7 +18,7 @@ import Head from 'next/head';
 
 const Events = ({ upcomingEvents, allPastEvents }: any) => {
   const classes = useStyles();
-  const [year, setYear] = useState(valueToYear[100]);
+  const [year, setYear] = useState(valueToYear[99.9]);
   const [pastEvents, setPastEvents] = useState({
     term1: [],
     term2: [],
@@ -31,9 +32,6 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
   const postsPerPage = 3;
   // current page number
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedPosts, setSelectedPosts] = useState([]);
-  // the posts displayed on the current page for upcoming events
-  const [currentPosts, setCurrentPosts] = useState([]);
   // currently selected category -> default to "All"
   const [selectedCategory, setSelectedCategory] = useState('All');
   // check if category filters result in no results
@@ -60,12 +58,6 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
 
   const paginate = (pageNumber: number) => {
     setCurrentPage(pageNumber);
-    setCurrentPosts(
-      selectedPosts.slice(
-        (pageNumber - 1) * postsPerPage,
-        pageNumber * postsPerPage
-      )
-    );
   };
 
   // start webpage at the top
@@ -82,24 +74,25 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
     });
   }
 
-  // get past events
-  // input: past events data from contentful
-  // output: array of dictionaries containing past events data
-  const fetchPastEvents = async () => {
-    const allEvents = await allPastEvents.filter(
-      (event: any) => event.fields.year === Number(year)
-    );
-
-    setTerms(allEvents);
-    await delay();
-    setLoadingPast(false);
-  };
-
   useEffect(() => {
     // show loading signs for past events
     setLoadingPast(true);
+    
+    // get past events
+    // input: past events data from contentful
+    // output: array of dictionaries containing past events data
+    async function fetchPastEvents() {
+      const allEvents = await allPastEvents.filter(
+        (event: any) => event.fields.year === Number(year)
+      );
+
+      setTerms(allEvents);
+      await delay();
+      setLoadingPast(false);
+    };
+
     fetchPastEvents();
-  }, [year]);
+  }, [allPastEvents, year]);
 
   // Takes in events from a given year and separates them by term
   const setTerms = (events: any) => {
@@ -154,9 +147,6 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
   // input: upcoming events data from contenful
   // output: array of dictionaries containing upcoming events data
   const fetchUpcomingEvents = async () => {
-    const tempEvents = upcomingEvents;
-    setCurrentPosts(tempEvents.slice(0, postsPerPage));
-    setSelectedPosts(tempEvents);
     setLoadingUpcoming(false);
     setSourceLoading(false);
   };
@@ -179,7 +169,7 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
       let imgUrl = 'https:' + event.fields.img.fields.file.url;
       return (
         <div className={styles.pastEvent} key={index}>
-          <Link href={`/event-recaps/${year}/${eventId}`}>
+          <Link href={`events/event-recaps/${year}/${eventId}`}>
             <div className={styles.eventImgBox}>
               <Image
                 className={styles.eventImages}
@@ -295,7 +285,7 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
               <Timeline
                 margin={'3%'}
                 page={'events'}
-                step={50}
+                step={33.3}
                 valueToYear={valueToYear}
                 marks={marks}
                 updateYear={handleYear}

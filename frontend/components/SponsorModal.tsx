@@ -2,10 +2,11 @@ import React from 'react';
 import styles from '../styles/Sponsors.module.css';
 import CloseIcon from '@material-ui/icons/Close';
 import IconButton from '@material-ui/core/IconButton';
-// import Image from "next/image";
 import Link from 'next/link';
 
-const SponsorsModal = ({ handleClose, sponsorName, sponsors }) => {
+const SponsorsModal = ({ handleClose, sponsor, sponsorType }: any) => {
+  const content = sponsor.fields.description.content;
+
   return (
     <div className={styles.paper}>
       <IconButton
@@ -19,30 +20,33 @@ const SponsorsModal = ({ handleClose, sponsorName, sponsors }) => {
       <br />
       <div className={styles.textBlock}>
         {/* TODO: change img tag to next/image */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           className={styles.sponsorImage}
           src={
             window.matchMedia &&
             window.matchMedia('(prefers-color-scheme: dark)').matches
-              ? `/sponsors/2022/dark-mode/${sponsors[sponsorName][2]}`
-              : `/sponsors/2022/${sponsors[sponsorName][2]}`
+              ? 'https:' + sponsor.fields.darkModeLogo.fields.file.url
+              : 'https:' + sponsor.fields.lightModeLogo.fields.file.url
           }
-          alt={sponsorName}
+          alt={sponsor.fields.name}
         />
-        <h1 className={styles.sponsorType}>
-          {sponsors[sponsorName][3]} SPONSOR
-        </h1>
+        <h1 className={styles.sponsorType}>{sponsorType.slice(0, -1)}</h1>
         <div className={styles.inLine}>
           <p className={styles.sponsorWebsite}>Website: </p>
           <Link
             target="blank"
-            href={sponsors[sponsorName][1]}
+            href={sponsor.fields.website}
             rel="noopener noreferrer"
           >
-            <a className={styles.sponsorLink}>{sponsors[sponsorName][1]}</a>
+            <a className={styles.sponsorLink}>{sponsor.fields.website}</a>
           </Link>
         </div>
-        <p className={styles.sponsorDescription}>{sponsors[sponsorName][4]} </p>
+        {Object.keys(content).map((contentNo, index) => (
+          <p key={index} className={styles.sponsorDescription}>
+            {content[contentNo].content[0].value}
+          </p>
+        ))}
       </div>
     </div>
   );

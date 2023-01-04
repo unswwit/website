@@ -1,73 +1,3 @@
-const memberQuotes = {
-  // name, role, image, quote
-  0: [
-    'Vivian Wang',
-    '2022 Careers Co-Director | 2021 Events Subcommittee Member',
-    '2022-exec/VivWang.jpg',
-    'WIT has given me the opportunity to learn from some of the most amazing and inspiring people, and helped me grow and achieve so many new things.',
-  ],
-  1: [
-    'Brianna Kim',
-    '2022 Careers Co-Director | 2021 HR Subcommittee Member',
-    '2022-exec/Brianna.jpg',
-    'WIT\'s supportive environment has allowed me to grow both personally and professionally.',
-  ],
-  2: [
-    'Emily Dang',
-    '2022 General Secretary | 2021 Events Subcommittee Member',
-    '2022-exec/EmilyD.png',
-    'Being a part of WIT has allowed me to grow so much both professionally and personally. It has opened my eyes to the numerous opportunities available in the technology industry.',
-  ],
-  3: [
-    'Gayathri Balaji',
-    '2022 Externals Co-Director',
-    '2022-exec/Gayathri.jpg',
-    'Speaking with representatives from sponsor companies as External Relations Co-Director I have come to learn that there is far more to the tech industry than I once imagined. WIT has given me an opportunity to learn about this, which I am incredibly thankful for. It\'s shifted my perspective on tech.',
-  ],
-  4: [
-    'Emily Chang',
-    '2022 HR Director | 2021 HR Subcommittee Member',
-    '2022-exec/EmChang.jpg',
-    'For me, what\'s worthwhile about being an internal member of WIT\'s team, and even just attending events, is getting to connect with likeminded, driven people. We\'re a very wholesome team and you really get a feel for WIT\'s mission to empower students at every event.',
-  ],
-  5: [
-    'Joanna He',
-    '2022 IT Director | 2021 IT Subcommittee Member',
-    '2022-exec/Joanna.jpg',
-    'Being able to meet people from all walks of life and develop myself has been such an amazing experience!',
-  ],
-  6: [
-    'Gabriella Hartanto',
-    '2022 Marketing Co-Director | 2021 Marketing Subcommittee Member',
-    '2022-exec/Gab.jpg',
-    'It\'s incredible to meet with amazing like-minded people, especially other women in the field of STEM. I learned a variety of things, from good networking practices to making dalgona candy!',
-  ],
-  7: [
-    'Abigail Joesan Johan',
-    '2022 Marketing Co-Director | 2021 Marketing Subcommittee Member',
-    '2022-exec/Abi.jpg',
-    'Being part of WIT\'s team allowed me to work with like-minded tech-enthusiasts, upskill in various soft and hard skills, and hear from inspiring tech professionals. Designing WIT posts and event covers is a fun, creative and rewarding experience that assists WIT\'s overall mission!',
-  ],
-  8: [
-    'Natalie Leroy',
-    '2022 Media Director | 2021 Education Subcommittee Member',
-    '2022-exec/Nat.jpg',
-    'No matter what anybody tells you, words and ideas can change the world',
-  ],
-  9: [
-    'Chelsea Chaffey',
-    '2022 Publications Director | 2021 Education Subcommittee Member',
-    '2022-exec/Chelsea.jpg',
-    'The written word has the real potential to intersect with the lives and aspirations of readers. Through WIT, I hope we can inspire our community to explore what is a very rich, vibrant and diverse world of technology.',
-  ],
-  10: [
-    'Yuhan Zhou',
-    '2022 Publications Director | 2021 Marketing Subcommittee Member',
-    '2022-exec/Yuhan_Edited.jpg',
-    'I love the culture at WIT. We give you the whole package: friendships, mentorships and fantastic opportunities for personal and career growth.',
-  ],
-};
-
 const socials = {
   spArc: [
     'https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371W0xQAE',
@@ -123,20 +53,6 @@ const competitionDescription = () => {
         <li>
           Involves creating event run sheets, booking venues and organising
           catering
-        </li>
-      </>
-    </ul>
-  );
-};
-
-const externalsDescription = () => {
-  return (
-    <ul>
-      <>
-        <li>Maintains communication with our extensive network of sponsors</li>
-        <li>
-          Involves collaborating with other portfolios to host a diverse range
-          of events and publications alongside external partners
         </li>
       </>
     </ul>
@@ -227,15 +143,45 @@ const publicationsDescription = () => {
   );
 };
 
+const sponsDescription = () => {
+  return (
+    <ul>
+      <>
+        <li>Maintains communication with our extensive network of sponsors</li>
+        <li>
+          Involves collaborating with other portfolios to host a diverse range
+          of events and publications alongside external partners
+        </li>
+      </>
+    </ul>
+  );
+};
+
+const socialsDescription = () => {
+  return (
+    <ul>
+      <>
+        <li>
+          Organises and plans philanthropic events for the wider WIT community
+        </li>
+        <li>
+          Involves creating event run sheets, booking venues and organising
+          catering
+        </li>
+      </>
+    </ul>
+  );
+};
+
 export {
-  memberQuotes,
   socials,
   careerDescription,
   competitionDescription,
-  externalsDescription,
   hrDescription,
   itDescription,
   marketingDescription,
   mediaDescription,
   publicationsDescription,
+  sponsDescription,
+  socialsDescription,
 };

@@ -1,13 +1,13 @@
 name: Continuous Integration
-
 on:
   push:
     branches:
+      - main
       - develop
   pull_request:
-    branches: 
+    branches:
+      - main
       - develop
-
 jobs:
   Jest:
     runs-on: ubuntu-latest

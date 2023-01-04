@@ -1,3 +1,4 @@
+// @ts-nocheck comment
 import { useEffect, useState } from 'react';
 import styles from '../../styles/Publications.module.css';
 import PubArticle from '../../components/PublicationsArticle';

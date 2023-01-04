@@ -9,15 +9,18 @@ import Timeline from '../../components/Timeline';
 import ScrollUpBtn from '../../components/ScrollUpBtn';
 import LoadingScreen from '../../components/LoadingScreen';
 import { execToClassName, marks, valueToYear } from '../../data/team';
-import { loadSubcommittee, loadExecs } from '../../lib/api';
+import { loadSubcommittee, loadExecs, loadDirectors } from '../../lib/api';
+import Directors from '../../components/DirectorSection';
 import Head from 'next/head';
 
-const OurTeam = ({ execs, subcommittee }: any) => {
+const OurTeam = ({ execs, subcommittee, directors }: any) => {
   const masterExec = useRef();
+  const masterDirector = useRef();
   const masterSubcom = useRef();
   const [filteredExecs, setFilteredExecs] = useState([]);
+  const [filteredDirectors, setFilteredDirectors] = useState([]);
   const [filteredSubcom, setFilteredSubcom] = useState([]);
-  const [year, setYear] = useState(2022);
+  const [year, setYear] = useState(2023);
   const [loading, setLoading] = useState(true);
   const [sourceLoading, setSourceLoading] = useState(true);
   const [headerLoading, setHeaderLoading] = useState(true);
@@ -31,6 +34,13 @@ const OurTeam = ({ execs, subcommittee }: any) => {
   // output: array of dictionaries containing exec data
   const fetchExecs = (execs: any) => {
     masterExec.current = execs;
+  };
+
+  // get directors
+  // input: director data from contentful
+  // output: array of dictionaries containing director data
+  const fetchDirectors = (directors: any) => {
+    masterDirector.current = directors;
   };
 
   // get subcom
@@ -61,9 +71,25 @@ const OurTeam = ({ execs, subcommittee }: any) => {
     []);
     setFilteredExecs(result);
 
+    // Directors
+    const tempDirectors = masterDirector.current.filter(
+      (director: any) => director.fields.yearJoined === year
+    );
+    const resultDir = tempDirectors.reduce(function (
+      result: any,
+      _: any,
+      index: number,
+      tempDirectors: any
+    ) {
+      if (index % 2 === 0) result.push(tempDirectors.slice(index, index + 2));
+      return result;
+    },
+    []);
+    setFilteredDirectors(resultDir);
+
     // Subcom
     const subcom = masterSubcom.current.filter(
-      (exec: any) => exec.fields.yearJoined === year
+      (subcom: any) => subcom.fields.yearJoined === year
     );
     setFilteredSubcom(subcom);
 
@@ -79,17 +105,33 @@ const OurTeam = ({ execs, subcommittee }: any) => {
   useEffect(() => {
     // show loading sign for team page
     setLoading(true);
-    const fetchDataPromises = [fetchSubcom(subcommittee), fetchExecs(execs)];
+    const fetchDataPromises = [
+      fetchSubcom(subcommittee),
+      fetchExecs(execs),
+      fetchDirectors(directors),
+    ];
     Promise.all(fetchDataPromises).then(() => {
       filterDataByYear();
       setSourceLoading(false);
     });
-  }, [filterDataByYear]);
+  }, [filterDataByYear, directors, execs, subcommittee]);
 
   // Moved from teamData.js to prevent new portfolios
   // from showing when the year is earlier than 2021.
   const sectors =
-    year < 2022
+    year === 2023
+      ? [
+          'Careers',
+          'Competitions',
+          'Human Resources',
+          'Information Technology',
+          'Marketing',
+          'Media',
+          'Publications',
+          'Socials',
+          'Sponsorships',
+        ]
+      : year < 2022
       ? [
           'Events',
           'Externals',
@@ -129,7 +171,7 @@ const OurTeam = ({ execs, subcommittee }: any) => {
           <Timeline
             margin={'50px'}
             page={'teams'}
-            step={20}
+            step={16.6}
             valueToYear={valueToYear}
             marks={marks}
             updateYear={handleYear}
@@ -186,6 +228,43 @@ const OurTeam = ({ execs, subcommittee }: any) => {
                 </div>
               </div>
 
+              {/* Director section */}
+              {filteredDirectors.length ? (
+                <>
+                  <h2 className={styles.teamHeading} id={styles.topHeading}>
+                    OUR {year} DIRECTOR TEAM
+                  </h2>
+
+                  <div className={styles.allExecsSection}>
+                    <div className={styles.execRow}>
+                      {filteredDirectors.map((row, index) => {
+                        return (
+                          <div key={index} className={styles.execRow}>
+                            {row.map((director: any, index: number) => {
+                              return (
+                                <Directors
+                                  key={index}
+                                  imgUrl={
+                                    'http:' +
+                                    director.fields.img.fields.file.url
+                                  }
+                                  name={director.fields.name}
+                                  pronouns={director.fields.pronouns}
+                                  position={director.fields.position}
+                                  degree={director.fields.degree}
+                                  year={director.fields.year}
+                                  email={director.fields.email}
+                                />
+                              );
+                            })}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </>
+              ) : null}
+
               {/* Subcommittee section */}
               {filteredSubcom.length ? (
                 <>
@@ -233,7 +312,8 @@ export default OurTeam;
 export async function getStaticProps() {
   const subcommittee = await loadSubcommittee();
   const execs = await loadExecs();
+  const directors = await loadDirectors();
   return {
-    props: { subcommittee, execs },
+    props: { subcommittee, execs, directors },
   };
 }

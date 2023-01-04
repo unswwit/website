@@ -18,7 +18,6 @@ const Videos = ({ videos }: any) => {
   const classes = useStyles();
   const [video, setVideo] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [videoNumber, setVideoNumber] = useState('0');
   const [sourceLoading, setSourceLoading] = useState(true);
   const [headerLoading, setHeaderLoading] = useState(true);
   // all videos
@@ -44,7 +43,6 @@ const Videos = ({ videos }: any) => {
   const handleVideoNumber = (numVideos: any) => {
     let url = window.location.href.split('/');
     if (url[url.length - 1] && url[url.length - 1] !== 'videos') {
-      setVideoNumber(url[url.length - 1]);
       return url[url.length - 1];
     }
     return `${+numVideos - 1}`;
@@ -61,7 +59,6 @@ const Videos = ({ videos }: any) => {
         return false;
       }
     })[0];
-
     setVideo(currVideo);
     return videoIndex;
   };
@@ -79,25 +76,25 @@ const Videos = ({ videos }: any) => {
     setContent(sortedVideos);
   };
 
-  // get videos from contentful
-  // input: video data from contentful
-  // output: array of dictionaries containing videos data
-  const fetchVideos = (videos: any) => {
-    setContent(videos);
-    setLoading(false);
-    setHeaderLoading(false);
-    setSourceLoading(false);
-    setVideoNumber(handleVideoNumber(videos.length));
-    loadVideoPreviews(
-      videos,
-      loadPageContent(videos, handleVideoNumber(videos.length))
-    );
-  };
-
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // get videos from contentful
+    // input: video data from contentful
+    // output: array of dictionaries containing videos data
+    const fetchVideos = (videos: any) => {
+      setContent(videos);
+      setLoading(false);
+      setHeaderLoading(false);
+      setSourceLoading(false);
+      loadVideoPreviews(
+        videos,
+        loadPageContent(videos, handleVideoNumber(videos.length))
+      );
+    };
+
     fetchVideos(videos);
-  });
+  }, [videos]);
 
   useEffect(() => {
     if (currentPosts.length === 0 && loading === false) {
@@ -174,7 +171,7 @@ const Videos = ({ videos }: any) => {
               <div className={styles.previewContainer}>
                 <Image
                   className={styles.videoImages}
-                  src={'http://' + video.fields.video.fields.file.url}
+                  src={'http:' + video.fields.video.fields.file.url}
                   alt={video.fields.title}
                   width={'1200px'}
                   height={'628px'}
@@ -249,12 +246,11 @@ const Videos = ({ videos }: any) => {
                 <div className={styles.iframeWrapper}>
                   <div className={styles.responsiveIframe}>
                     <iframe
-                      src={`https://www.youtube.com/embed/${video.fields.embedUrl}?`} // embedded path
+                      src={`https://www.youtube.com/embed/${video.fields.embedUrl}`} // embedded path
                       frameBorder="0"
                       allow="fullscreen; autoplay; encrypted-media;"
                       title={!video.fields.title ? 'Video' : video.fields.title}
                       className={styles.embeddedVideo}
-                      allowFullScreen="true"
                     />
                   </div>
                   <p className={styles.videoName}>{video.fields.title}</p>

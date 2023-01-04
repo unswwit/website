@@ -11,27 +11,32 @@ const execToClassName = {
 
 const marks = [
   {
-    value: 100,
+    value: 99.6,
+    scaledValue: 2023,
+    label: '2023',
+  },
+  {
+    value: 83,
     scaledValue: 2022,
     label: '2022',
   },
   {
-    value: 80,
+    value: 66.4,
     scaledValue: 2021,
     label: '2021',
   },
   {
-    value: 60,
+    value: 49.8,
     scaledValue: 2020,
     label: '2020',
   },
   {
-    value: 40,
+    value: 33.2,
     scaledValue: 2019,
     label: '2019',
   },
   {
-    value: 20,
+    value: 16.6,
     scaledValue: 2018,
     label: '2018',
   },
@@ -44,11 +49,12 @@ const marks = [
 
 const valueToYear = {
   0: 2017,
-  20: 2018,
-  40: 2019,
-  60: 2020,
-  80: 2021,
-  100: 2022,
+  16.6: 2018,
+  33.2: 2019,
+  49.8: 2020,
+  66.4: 2021,
+  83: 2022,
+  99.6: 2023,
 };
 
 export { execToClassName, marks, valueToYear };

@@ -1,8 +1,6 @@
 import styles from '../styles/Navbar.module.css';
 import ChromeReaderModeOutlinedIcon from '@material-ui/icons/ChromeReaderModeOutlined';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
-import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
 import InsertDriveFileOutlinedIcon from '@material-ui/icons/InsertDriveFileOutlined';
 import HeadsetMicOutlinedIcon from '@material-ui/icons/HeadsetMicOutlined';
 import LocalPrintshopOutlinedIcon from '@material-ui/icons/LocalPrintshopOutlined';
@@ -16,19 +14,9 @@ const aboutUsDropdownContent = [
     icon: ChromeReaderModeOutlinedIcon,
   },
   {
-    pageName: 'Sponsors and Affiliations',
-    link: '/about/sponsors-affiliations',
-    icon: FavoriteBorderIcon,
-  },
-  {
     pageName: 'Our Team',
     link: '/about/our-team',
     icon: PeopleOutlineIcon,
-  },
-  {
-    pageName: 'Contact Us',
-    link: '/about/contact-us',
-    icon: PhoneOutlinedIcon,
   },
 ];
 
@@ -69,10 +57,21 @@ const navigationBarContent = [
   {
     pageName: 'About Us ▸',
     link: '/about/our-story',
+    category: 'about',
     itemName: styles.aboutUsGridItem,
     id: 'aboutUsDropdown',
     text: 'aboutUsText',
     dropdownContent: aboutUsDropdownContent,
+  },
+  {
+    pageName: 'Sponsors',
+    link: '/sponsors',
+    itemName: styles.sponsorsGridItem,
+  },
+  {
+    pageName: 'Jobs Board',
+    link: '/jobs-board',
+    itemName: styles.jobsBoardGridItem,
   },
   {
     pageName: 'Events',
@@ -80,13 +79,9 @@ const navigationBarContent = [
     itemName: styles.eventsGridItem,
   },
   {
-    pageName: 'Opportunities',
-    link: '/opportunities',
-    itemName: styles.opportunitiesGridItem,
-  },
-  {
     pageName: 'Media ▸',
     link: '/media/blog',
+    category: 'media',
     itemName: styles.mediaGridItem,
     id: 'mediaDropdown',
     text: 'mediaText',
@@ -96,6 +91,11 @@ const navigationBarContent = [
     pageName: 'Join Us',
     link: '/join-us',
     itemName: styles.joinUsGridItem,
+  },
+  {
+    pageName: 'Contact Us',
+    link: '/contact-us',
+    itemName: styles.contactUsGridItem,
   },
 ];
 

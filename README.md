@@ -18,7 +18,7 @@ Before you start, make sure you have the following software installed.
 1. Clone the repository
 
 ```
-git clone https://github.com/unswwit/Backend.git
+git clone https://github.com/unswwit/website.git
 ```
 
 2. Add the `.env.local` file to the root of the frontend directory 
@@ -26,6 +26,7 @@ git clone https://github.com/unswwit/Backend.git
 3. Install npm packages and run with 
 
 ```
+cd frontend
 npm install
 npm run dev
 ```
