@@ -158,7 +158,7 @@ const OurTeam = ({ execs, subcommittee, directors }: any) => {
         <div id={styles.pageContainer}>
           {/* Cover Photo */}
           <PageHeader
-            imgUrl="/headers/2022-team-header.jpg"
+            imgUrl="/headers/2022-roadtrip-header.jpeg"
             title="Our Team"
             imageLoading={setHeaderLoading}
           />
