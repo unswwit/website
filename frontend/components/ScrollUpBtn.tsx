@@ -9,7 +9,7 @@ export default function ScrollUpBtn() {
   // Show button when page is scrolled upto given distance
   const toggleVisibility = () => {
     const coverPhoto =
-      document.getElementsByClassName('coverPhoto')[0].clientHeight;
+      document.getElementsByClassName('coverPhoto').clientHeight;
     const bottom =
       Math.ceil(window.innerHeight + window.scrollY) >=
       document.documentElement.scrollHeight;
