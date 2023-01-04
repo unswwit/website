@@ -6,6 +6,7 @@ import styles from '../styles/ContactUs.module.css';
 import LoadingScreen from '../components/LoadingScreen';
 import Image from 'next/image';
 import Link from 'next/link';
+import Head from 'next/head';
 
 const ContactUs = () => {
   const [sourceLoading, setSourceLoading] = useState(true);
@@ -24,6 +25,9 @@ const ContactUs = () => {
 
   return (
     <div>
+      <Head>
+        <title>Contact Us | UNSW WIT</title>
+      </Head>
       {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (

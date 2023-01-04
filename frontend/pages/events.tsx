@@ -14,6 +14,7 @@ import PaginationComp from '../components/Pagination';
 import { isMobile } from 'react-device-detect';
 import { useStyles, categories, marks, valueToYear } from '../data/event';
 import { loadPastEvents, loadUpcomingEvents } from '../lib/api';
+import Head from 'next/head';
 
 const Events = ({ upcomingEvents, allPastEvents }: any) => {
   const classes = useStyles();
@@ -187,6 +188,9 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
 
   return (
     <div>
+      <Head>
+        <title>Events | UNSW WIT</title>
+      </Head>
       {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (

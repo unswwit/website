@@ -24,6 +24,7 @@ import {
 } from '../lib/api';
 import SponsorCollage from '../components/SponsorCollage';
 import { filterSponsors } from '../lib/helpers/sponsor';
+import Head from 'next/head';
 
 const Home = ({
   latestPubs,
@@ -62,6 +63,9 @@ const Home = ({
 
   return (
     <div>
+      <Head>
+        <title>Home | UNSW WIT</title>
+      </Head>
       {sourceLoading ? (
         <LoadingScreen />
       ) : (

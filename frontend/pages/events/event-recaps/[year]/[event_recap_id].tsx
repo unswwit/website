@@ -11,6 +11,7 @@ import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
 import Image from 'next/image';
 import { loadPastEvents } from '../../../../lib/api';
+import Head from 'next/head';
 
 const EventRecapPage = ({ selectedEvent }: any) => {
   const [expanded, setExpanded] = useState(false);
@@ -68,6 +69,9 @@ const EventRecapPage = ({ selectedEvent }: any) => {
 
   return (
     <>
+      <Head>
+        <title>{event.fields.title} | UNSW WIT</title>
+      </Head>
       <PageHeader imgUrl="/headers/events-header.jfif" title={'Events'} />
       {loading && (
         <div id={styles.eventLoadingContainer}>
