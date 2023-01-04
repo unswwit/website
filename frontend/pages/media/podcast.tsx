@@ -54,7 +54,7 @@ const Podcast = ({ episodes }: any) => {
 
     // load podcast episode previews
     fetchPodcastEpisodes(episodes);
-  }, []);
+  }, [episodes]);
 
   useEffect(() => {
     // if no posts, setEmptyCategory to true
@@ -144,7 +144,6 @@ const Podcast = ({ episodes }: any) => {
                   />
                 )}
               </div>
-
               <div id={styles.platformContainer}>
                 {Object.keys(links).map((link, index) => {
                   return (
@@ -170,7 +169,6 @@ const Podcast = ({ episodes }: any) => {
               </div>
             </div>
           </div>
-
           <div className={styles.podcastCategories}>
             {/* Start of categories */}
             <div className={styles.contentCategories}>
@@ -200,7 +198,6 @@ const Podcast = ({ episodes }: any) => {
             </div>
           </div>
           {/* End of podcast categories */}
-
           {/* Start of search bar */}
           <div className={styles.searchBar}>
             <input
@@ -219,7 +216,6 @@ const Podcast = ({ episodes }: any) => {
               <p id={styles.emptyMessage}>No results were found.</p>
             )}
           </div>
-
           <div id={styles.podcastLoadingContainer}>
             {loading && (
               <CircularProgress

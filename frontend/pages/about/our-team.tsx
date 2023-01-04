@@ -113,7 +113,7 @@ const OurTeam = ({ execs, subcommittee, directors }: any) => {
       filterDataByYear();
       setSourceLoading(false);
     });
-  }, [filterDataByYear]);
+  }, [filterDataByYear, directors, execs, subcommittee]);
 
   // Moved from teamData.js to prevent new portfolios
   // from showing when the year is earlier than 2021.

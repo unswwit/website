@@ -4,7 +4,6 @@ import { createClient } from 'contentful';
 const client = createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_API_SPACE,
   accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_API_TOKEN,
-  // host: process.env.NEXT_PUBLIC_CONTENTFUL_API_HOST,
 });
 
 export async function loadPublications() {
@@ -143,6 +142,19 @@ export async function loadBlogPreviews() {
       select: 'fields',
       order: '-fields.blog_no',
       limit: 1000,
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  return res.items;
+}
+
+export async function loadBlogRecommendations() {
+  const res = await client
+    .getEntries({
+      content_type: 'blogRecommendations',
+      select: 'fields',
+      order: 'fields.index',
     })
     .catch((error) => {
       console.error(error);

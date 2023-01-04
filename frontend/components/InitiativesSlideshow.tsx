@@ -116,7 +116,7 @@ const InitiativesSlideshow = (props) => {
               </div>
               <div className={styles.right}>
                 <h1>BLOGS</h1>
-                <Link href={`/media/blog/${latestBlog.fields.blogNo}`}>
+                <Link href={`/media/blog/${latestBlog.fields.blog_no}`}>
                   <div className={styles.eventImg}>
                     <Image
                       src={`https:${latestBlog.fields.img.fields.file.url}`}
