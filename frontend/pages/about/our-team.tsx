@@ -162,7 +162,7 @@ const OurTeam = ({ execs, subcommittee, directors }: any) => {
         <div id={styles.pageContainer}>
           {/* Cover Photo */}
           <PageHeader
-            imgUrl="/headers/2022-team-header.jpg"
+            imgUrl="/headers/2022-roadtrip-header.jpeg"
             title="Our Team"
             imageLoading={setHeaderLoading}
           />
@@ -206,6 +206,7 @@ const OurTeam = ({ execs, subcommittee, directors }: any) => {
                               key={index}
                               imgUrl={'http:' + exec.fields.img.fields.file.url}
                               name={exec.fields.name}
+                              pronouns={exec.fields.pronouns}
                               className={
                                 exec.fields.year === 2020
                                   ? execToClassName[exec.fields.year][
