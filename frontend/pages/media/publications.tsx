@@ -6,6 +6,7 @@ import PageHeader from '../../components/Header';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import LoadingScreen from '../../components/LoadingScreen';
 import { loadPublications } from '../../lib/api';
+import Head from 'next/head';
 
 const Publications = ({ publications }: any) => {
   const [articles, setArticles] = useState([]);
@@ -32,12 +33,14 @@ const Publications = ({ publications }: any) => {
 
   return (
     <div>
+      <Head>
+        <title>Publications | UNSW WIT</title>
+      </Head>
       {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (
         <>
           {/* Cover Photo */}
-
           <PageHeader
             imgUrl="/headers/publications-header.jpg"
             title="Publications"

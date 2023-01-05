@@ -11,6 +11,7 @@ import LoadingScreen from '../../components/LoadingScreen';
 import { execToClassName, marks, valueToYear } from '../../data/team';
 import { loadSubcommittee, loadExecs, loadDirectors } from '../../lib/api';
 import Directors from '../../components/DirectorSection';
+import Head from 'next/head';
 
 const OurTeam = ({ execs, subcommittee, directors }: any) => {
   const masterExec = useRef();
@@ -152,6 +153,9 @@ const OurTeam = ({ execs, subcommittee, directors }: any) => {
 
   return (
     <div>
+      <Head>
+        <title>Our Team | UNSW WIT</title>
+      </Head>
       {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (

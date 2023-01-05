@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import styles from '../styles/NotFound.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
+import Head from 'next/head';
 
 const NotFound = () => {
   useEffect(() => {
@@ -9,6 +10,9 @@ const NotFound = () => {
   }, []);
   return (
     <div id={styles.container}>
+      <Head>
+        <title>Page Not Found | UNSW WIT</title>
+      </Head>
       <Image
         id={styles.image404}
         src={'/404.png'}
