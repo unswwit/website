@@ -9,6 +9,7 @@ import PageHeader from '../components/Header';
 import SponsorsModal from '../components/SponsorModal';
 import LoadingScreen from '../components/LoadingScreen';
 import Link from 'next/link';
+import Head from 'next/head';
 import { loadSponsors } from '../lib/api';
 import { filterSponsors } from '../lib/helpers/sponsor';
 
@@ -49,6 +50,9 @@ export default function Sponsors({ sponsors }: any) {
 
   return (
     <div>
+      <Head>
+        <title>Sponsors | UNSW WIT</title>
+      </Head>
       {sourceLoading && headerLoading ? (
         <LoadingScreen />
       ) : (

@@ -75,14 +75,16 @@ const InitiativesSlideshow = (props) => {
                     <h1>EVENTS</h1>
 
                     <Link
-                      href={`/event-recaps/${latestEvent.fields.year}/${latestEvent.fields.eventNumber}`}
+                      href={`/events/event-recaps/${latestEvent.fields.year}/${latestEvent.fields.eventNumber}`}
                     >
-                      <Image
-                        src={`https:${latestEvent.fields.img.fields.file.url}`}
-                        alt={latestEvent.title}
-                        height="924px"
-                        width="1640px"
-                      />
+                      <div className={styles.eventImg}>
+                        <Image
+                          src={`https:${latestEvent.fields.img.fields.file.url}`}
+                          alt={latestEvent.title}
+                          height="320px"
+                          width="500px"
+                        />
+                      </div>
                     </Link>
                   </div>
                 </div>
@@ -121,8 +123,8 @@ const InitiativesSlideshow = (props) => {
                     <Image
                       src={`https:${latestBlog.fields.img.fields.file.url}`}
                       alt={`${latestBlog.fields.heading}`}
-                      height="300px"
-                      width="450px"
+                      height="320px"
+                      width="500px"
                     />
                   </div>
                 </Link>
@@ -154,12 +156,12 @@ const InitiativesSlideshow = (props) => {
               </div>
               <div className={styles.right}>
                 <h1>PODCASTS</h1>
-                <Link href={`/media/podcast/${latestPodcast.fields.episodeNo}`}>
+                <Link href={`${latestPodcast.fields.spotify}`}>
                   <div className={styles.eventImg}>
                     <Image
                       src={`https:${latestPodcast.fields.img.fields.file.url}`}
-                      height="250px"
-                      width="250px"
+                      height="320px"
+                      width="320px"
                       alt={`${latestPodcast.title}`}
                     />
                   </div>
