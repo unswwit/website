@@ -3,7 +3,7 @@ const socials = {
     'https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371W0xQAE',
     'sparc.png',
   ],
-  'Facebook Page': ['https://www.facebook.com/unsw.wit/', 'facebook.png'],
+  'Facebook Page': ['https://www.facebook.com/unsw.wit/', 'facebook-page.png'],
   'Facebook Group': [
     'https://www.facebook.com/groups/unswwit/',
     'facebook-group.png',
