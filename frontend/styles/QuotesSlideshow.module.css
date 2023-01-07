@@ -267,11 +267,11 @@
 
 @media only screen and (max-width: 1100px) {
   .beginQuote {
-    top: 15px;
+    top: 120px;
   }
 
   .endQuote {
-    top: 75px;
+    top: -20px;
   }
 
   .quoteBlockEducation,
@@ -318,10 +318,6 @@
     width: 70%;
   }
 
-  .quoteBlock {
-    height: 320px;
-  }
-
   .quoteContainer {
     height: 55%;
   }
@@ -347,40 +343,34 @@
     max-height: 100%;
   }
 
+  .quoteBlock,
   .slideComponent,
   .slideContainer {
-    height: 320px;
+    height: 375px;
   }
 }
 
 @media only screen and (max-width: 550px) {
-  .quoteBlock {
-    height: 360px;
-  }
-
   .quoteContainer {
     height: 60%;
   }
 
+  .quoteBlock,
   .slideComponent,
   .slideContainer {
-    height: 360px;
+    height: 390px;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .quoteBlock {
-    width: 70%;
-    height: 400px;
-  }
-
   .quoteBlockDefault {
     width: 60%;
   }
 
+  .quoteBlock,
   .slideComponent,
   .slideContainer {
-    height: 400px;
+    height: 435px;
   }
 
   .quoteContainer {
@@ -389,10 +379,6 @@
 }
 
 @media only screen and (max-width: 450px) {
-  .quoteBlock {
-    height: 460px;
-  }
-
   .quoteContainer {
     height: 68%;
   }
@@ -401,20 +387,19 @@
     text-align: center;
   }
 
+  .quoteBlock,
   .slideComponent,
   .slideContainer {
-    height: 460px;
+    height: 510px;
   }
 }
 
 @media only screen and (max-width: 350px) {
-  .quoteBlock {
-    height: 520px;
-  }
 
+  .quoteBlock,
   .slideComponent,
   .slideContainer {
-    height: 520px;
+    height: 535px;
   }
 
   .quoteContainer {

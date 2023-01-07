@@ -338,7 +338,7 @@ div .headline {
 }
 
 .slideComponent {
-  height: 100%;
+  height: 500px;
 }
 
 .slideContainer {
@@ -800,11 +800,6 @@ div .headline {
   /*Big event image area - flexbox*/
   .event1 {
     order: 3;
-  }
-
-  .contain {
-    background-position: center bottom 40%;
-    height: 66vh;
   }
 
   /*Header title*/
