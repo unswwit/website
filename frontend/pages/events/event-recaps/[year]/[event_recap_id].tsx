@@ -49,14 +49,24 @@ const EventRecapPage = ({ selectedEvent }: any) => {
     fetchPastEvent(event);
   }, [fetchPastEvent, event]);
 
+  function imageExists(imageUrl: string){
+    var http = new XMLHttpRequest();
+    http.open('HEAD', imageUrl, false);
+    http.send();
+    return http.status != 404;
+}
+
   const setPhotos = (currEvent: any) => {
     if (currEvent.fields.imagePaths) {
-      setHasPhotos(true);
       var tempArray: any = [];
       currEvent.fields.imagePaths.split(',').forEach((filename: string) => {
-        tempArray.push({
-          source: `/event-recap/${currEvent.fields.year}/T${currEvent.fields.term}/${currEvent.fields.imageFolder}/${filename}`,
-        });
+        const imageUrl = `/event-recap/${currEvent.fields.year}/T${currEvent.fields.term}/${currEvent.fields.imageFolder}/${filename}`;
+        if (imageExists(imageUrl)) {
+          setHasPhotos(true);
+          tempArray.push({
+            source: imageUrl
+          });
+        }
       });
       // If at least two images dont exist, disable gallery arrows
       if (tempArray.length < 2) {
