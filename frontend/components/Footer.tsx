@@ -1,8 +1,10 @@
+// @ts-nocheck comment
 import React from 'react';
 import Link from 'next/link';
 import { BootstrapTooltip } from './BootstrapTooltip';
 import Image from 'next/image';
 import styles from '../styles/Footer.module.css';
+import { socials } from '../data/join';
 
 const routes: any = {
   Home: '/',
@@ -27,33 +29,6 @@ const links = [
   ['Our Story', 'Sponsors and Affiliations', 'Our Team', 'Contact Us'],
   ['Blog Posts', 'Podcast', 'Publications', 'Marketing', 'Videos'],
 ];
-
-const socials: any = {
-  spArc: [
-    'https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371W0xQAE',
-    'sparc.png',
-  ],
-  'Facebook Page': ['https://www.facebook.com/unsw.wit/', 'facebook.png'],
-  'Facebook Group': [
-    'https://www.facebook.com/groups/unswwit/',
-    'facebook-group.png',
-  ],
-  LinkedIn: [
-    'https://www.linkedin.com/company/unsw-women-in-technology/',
-    'linkedin.png',
-  ],
-  Instagram: ['https://www.instagram.com/wit.unsw/', 'instagram.png'],
-  Youtube: [
-    'https://www.youtube.com/channel/UCQ8PGe3P4ZuDSNCb9vCeTiw/videos/',
-    'youtube.png',
-  ],
-  Twitch: ['https://www.twitch.tv/unswwit', 'twitch.png'],
-  Spotify: [
-    'https://open.spotify.com/show/1iWagdei1mVoyzg8TqbB2P',
-    'spotify.png',
-  ],
-  Discord: ['https://discord.gg/BWY4tzM326', 'discord.png'],
-};
 
 const Footer = () => {
   return (
@@ -123,7 +98,7 @@ const Footer = () => {
                             rel="noopener noreferrer"
                           >
                             <Image
-                              src={`/icons/${social}.png`}
+                              src={`/icons/${socials[social][1]}`}
                               alt={social}
                               width="40px"
                               height="40px"

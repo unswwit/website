@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Execs = (props: any) => {
   const socials: any = {
-    LinkedIn: 'https://www.linkedin.com/in/' + props.linkedin + '/',
+    linkedin: 'https://www.linkedin.com/in/' + props.linkedin + '/',
     Facebook: 'https://www.facebook.com/' + props.fb,
     email: 'mailto:' + props.email,
   };
