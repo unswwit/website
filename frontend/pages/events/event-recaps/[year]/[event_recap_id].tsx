@@ -53,7 +53,7 @@ const EventRecapPage = ({ selectedEvent }: any) => {
     var http = new XMLHttpRequest();
     http.open('HEAD', imageUrl, false);
     http.send();
-    return http.status != 404;
+    return http.status !== 404;
 }
 
   const setPhotos = (currEvent: any) => {
