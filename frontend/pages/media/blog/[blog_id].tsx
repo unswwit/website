@@ -18,7 +18,7 @@ const BlogDetails = ({ selectedBlog, blogContent }: any) => {
   const classes = useStyles();
   const [loading, setLoading] = React.useState(true);
   const [headerLoading, setHeaderLoading] = React.useState(true);
-
+  
   useEffect(() => {
     window.scrollTo(0, 0);
     setLoading(false);
@@ -187,5 +187,6 @@ export async function getStaticProps({ params }: any) {
   selectedBlog = selectedBlog[0];
   return {
     props: { selectedBlog, blogContent },
+    revalidate: 10
   };
 }
