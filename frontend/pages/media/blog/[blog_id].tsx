@@ -18,7 +18,7 @@ const BlogDetails = ({ selectedBlog, blogContent }: any) => {
   const classes = useStyles();
   const [loading, setLoading] = React.useState(true);
   const [headerLoading, setHeaderLoading] = React.useState(true);
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
     setLoading(false);
@@ -172,7 +172,7 @@ export async function getStaticPaths() {
   }));
   return {
     paths,
-    fallback: false,
+    fallback: 'blocking',
   };
 }
 
