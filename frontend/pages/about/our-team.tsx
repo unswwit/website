@@ -316,5 +316,6 @@ export async function getStaticProps() {
   const directors = await loadDirectors();
   return {
     props: { subcommittee, execs, directors },
+    revalidate: 10
   };
 }

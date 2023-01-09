@@ -99,6 +99,7 @@ export async function getStaticProps() {
   const publications = await loadPublications();
   return {
     props: { publications },
+    revalidate: 10
   };
 }
 

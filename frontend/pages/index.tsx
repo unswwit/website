@@ -248,5 +248,6 @@ export async function getStaticProps() {
       execQuotes,
       sponsors,
     },
+    revalidate: 10
   };
 }

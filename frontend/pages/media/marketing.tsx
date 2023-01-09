@@ -242,6 +242,7 @@ export async function getStaticProps() {
   const archives = await loadMarketingArchives();
   return {
     props: { archives },
+    revalidate: 10
   };
 }
 export default MarketingContent;
