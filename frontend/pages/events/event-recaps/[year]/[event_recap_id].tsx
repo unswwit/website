@@ -51,10 +51,10 @@ const EventRecapPage = ({ selectedEvent }: any) => {
 
   const setPhotos = (currEvent: any) => {
     if (currEvent.fields.images) {
+      setHasPhotos(true);
       var tempArray: any = [];
       currEvent.fields.images.forEach((image: any) => {
         const imageUrl = 'http:' + image.fields.file.url;
-        setHasPhotos(true);
         tempArray.push({
           source: imageUrl,
         });
