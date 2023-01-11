@@ -25,6 +25,7 @@ export async function loadSubcommittee() {
       content_type: 'subcommittee',
       select: 'fields',
       order: 'fields.index',
+      limit: 1000,
     })
     .catch((error) => {
       console.error(error);
@@ -90,6 +91,7 @@ export async function loadPastEvents() {
       content_type: 'pastEvents',
       select: 'fields',
       order: '-fields.index',
+      limit: 1000,
     })
     .catch((error) => {
       console.error(error);
