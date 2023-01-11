@@ -27,6 +27,7 @@
     "material-ui": "^0.20.2",
     "moment": "^2.29.4",
     "next": "12.1.6",
+    "nextjs-google-analytics": "^2.2.2",
     "npm": "^8.9.0",
     "pure-react-carousel": "^1.28.1",
     "react": "18.1.0",
