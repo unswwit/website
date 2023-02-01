@@ -19,10 +19,6 @@ export default function OpportunitiesCard({
 
   const imgUrl = 'https:' + img.fields.file.url;
 
-  // contentfulDate = YYYY-MM-DD
-  // formattedDate = DD/MM/YYYY
-  const closeDateFormatted = closeDate.split('-').reverse().join('/');
-
   return (
     <Link href={link}>
       <a className={styles.oppGridItems} key={index}>
@@ -34,15 +30,16 @@ export default function OpportunitiesCard({
         </div>
 
         <div className={styles.oppDesc}>
-          <p className={styles.oppTypeAndLocation}>{type}</p>
+          <p className={styles.oppTypeAndCompany}>{type}</p>
           <p className={styles.jobPosition}>{position}</p>
-          <p className={styles.oppTypeAndLocation}>{location}</p>
-          {closeDate ? (
+          <p className={styles.oppTypeAndCompany}>{companyName}</p>
+          <p className={styles.oppSummary}>Location: {location}</p>
+          {closeDate && (
+            // contentfulDate = YYYY-MM-DD
+            // formattedDate = DD/MM/YYYY
             <p className={styles.oppSummary}>
-              Applications close: {closeDateFormatted}
+              Applications close: {closeDate.split('-').reverse().join('/')}
             </p>
-          ) : (
-            <p className={styles.oppSummary}></p>
           )}
           <p className={styles.oppSummary}>{summary}</p>
         </div>
