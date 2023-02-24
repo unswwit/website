@@ -117,7 +117,7 @@ export async function loadUpcomingEvents() {
   const res = await client
     .getEntries({
       content_type: 'upcomingEvents',
-      order: '-fields.index',
+      order: 'fields.index',
     })
     .catch((error) => {
       console.error(error);
@@ -222,7 +222,7 @@ export async function loadNextUpcomingEvent() {
   const res = await client
     .getEntries({
       content_type: 'upcomingEvents',
-      order: '-fields.index',
+      order: 'fields.index',
       limit: 1,
     })
     .catch((error) => {
