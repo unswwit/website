@@ -81,6 +81,7 @@
 .image {
   margin: 0 auto;
   max-width: 85%;
+  height: auto;
   justify-content: center;
   display: flex;
   flex-direction: column;
