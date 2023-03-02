@@ -15,6 +15,7 @@ const categories = {
   'Monday Motivation': 'Monday',
   'WIT Crush Wednesday': 'WCW',
   'Special Occasions': 'Special',
+  Blogs: 'Blogs',
 };
 
 const marks = [
