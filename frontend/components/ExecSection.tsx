@@ -16,29 +16,31 @@ const Execs = (props: any) => {
           {props.imgUrl && (
             <div className={styles.profileCrop}>
               <div className={styles.profileImg}>
-                <Image
-                  src={props.imgUrl}
-                  className={`${styles[props.className]}`}
-                  alt={props.name}
-                  width="250px"
-                  height="250px"
-                />
+                <>
+                  <Image
+                    src={props.imgUrl}
+                    className={`${styles[props.className]}`}
+                    alt={props.name}
+                    width="250"
+                    height="250"
+                  />
+                </>
               </div>
             </div>
           )}
           <div className={styles.profileDetails}>
-          <p className={styles.profileTextName}>{props.name}</p>
+            <p className={styles.profileTextName}>{props.name}</p>
             <p className={styles.profileTextPosition}>{props.position}</p>
             {props.degree && (
-            <>
-              <p className={styles.profileDegree}>
-              {'(' + props.pronouns + ')'}
-              </p>
-              <p className={styles.profileDegree}>
-                {props.degree}
-                {props.year && ', ' + props.year + ' year'}
-              </p>
-            </>
+              <>
+                <p className={styles.profileDegree}>
+                  {'(' + props.pronouns + ')'}
+                </p>
+                <p className={styles.profileDegree}>
+                  {props.degree}
+                  {props.year && ', ' + props.year + ' year'}
+                </p>
+              </>
             )}
             {props.linkedin && (
               <div className={styles.iconBar}>
@@ -49,15 +51,16 @@ const Execs = (props: any) => {
                       href={socials[social]}
                       rel="noopener noreferrer"
                       key={social}
+                      className={styles.icon}
                     >
-                      <a className={styles.icon}>
-                        <Image
-                          src={`/icons/${social}.png`}
-                          alt={social}
-                          width="25px"
-                          height="25px"
-                        />
-                      </a>
+                      <>
+                      <Image
+                        src={`/icons/${social}.png`}
+                        alt={social}
+                        width="25"
+                        height="25"
+                      />
+                      </>
                     </Link>
                   );
                 })}

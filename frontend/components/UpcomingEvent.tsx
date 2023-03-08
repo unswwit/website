@@ -137,8 +137,8 @@ export default function UpcomingEvent({ upcomingEvent }: any) {
           <Image
             src={imgUrl}
             className={styles.upcomingEventCover}
-            width="360px"
-            height="300px"
+            width="360"
+            height="300"
             alt="upcoming event cover"
           />
         </div>

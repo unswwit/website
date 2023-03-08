@@ -124,8 +124,8 @@ const Podcast = ({ episodes }: any) => {
                 <Image
                   src="/podcast-logos/talk-WIT-us-logo.png"
                   alt="Talk WIT Us logo"
-                  height="250px"
-                  width="250px"
+                  height="250"
+                  width="250"
                   objectFit={'contain'}
                 />
               </div>
@@ -150,7 +150,7 @@ const Podcast = ({ episodes }: any) => {
               <div id={styles.platformContainer}>
                 {Object.keys(links).map((link, index) => {
                   return (
-                    <Link href={links[link][1]} key={index}>
+                    <Link href={links[link][1]} key={index} legacyBehavior>
                       <div className={styles.platformLogos}>
                         <a
                           className={styles.a}
@@ -161,8 +161,8 @@ const Podcast = ({ episodes }: any) => {
                           <Image
                             src={`/podcast-logos/${links[link][0]}`}
                             alt={link}
-                            width="25px"
-                            height="25px"
+                            width="25"
+                            height="25"
                           />
                         </a>
                       </div>

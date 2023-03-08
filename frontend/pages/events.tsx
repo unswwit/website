@@ -169,14 +169,14 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
       let imgUrl = 'https:' + event.fields.img.fields.file.url;
       return (
         <div className={styles.pastEvent} key={index}>
-          <Link href={`events/event-recaps/${year}/${eventId}`}>
+          <Link href={`events/event-recaps/${year}/${eventId}`} legacyBehavior>
             <div className={styles.eventImgBox}>
               <Image
                 className={styles.eventImages}
                 src={imgUrl}
                 alt={eventLabel.join(' ')}
-                width="1200px"
-                height="628px"
+                width="1200"
+                height="628"
               />
               <div className={styles.darkOverlay} />
             </div>

@@ -17,13 +17,13 @@ const NotFound = () => {
         id={styles.image404}
         src={'/404.png'}
         alt="404"
-        width="375px"
-        height="375px"
+        width="375"
+        height="375"
       />
       <h2>Page Not Found</h2>
       <p>Oops! We can&apos;t seem to find the page you are looking for.</p>
       <div id={styles.homeBtn}>
-        <Link href="/">
+        <Link href="/" legacyBehavior>
           <div className={styles.text}>Go back home</div>
         </Link>
       </div>

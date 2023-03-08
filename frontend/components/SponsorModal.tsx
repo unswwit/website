@@ -38,8 +38,8 @@ const SponsorsModal = ({ handleClose, sponsor, sponsorType }: any) => {
             target="blank"
             href={sponsor.fields.website}
             rel="noopener noreferrer"
-          >
-            <a className={styles.sponsorLink}>{sponsor.fields.website}</a>
+            className={styles.sponsorLink}>
+            {sponsor.fields.website}
           </Link>
         </div>
         {Object.keys(content).map((contentNo, index) => (

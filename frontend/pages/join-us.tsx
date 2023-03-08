@@ -70,8 +70,8 @@ const JoinUs = () => {
                         <Image
                           src={`/icons/${socials[social][1]}`}
                           alt={social}
-                          height="250px"
-                          width="250px"
+                          height="250"
+                          width="250"
                         />
                       </a>
                     </BootstrapTooltip>

@@ -173,8 +173,8 @@ const Videos = ({ videos }: any) => {
                   className={styles.videoImages}
                   src={'http:' + video.fields.video.fields.file.url}
                   alt={video.fields.title}
-                  width={'1200px'}
-                  height={'628px'}
+                  width={'1200'}
+                  height={'628'}
                 />
               </div>
               <p className={styles.moreName}>{video.fields.title}</p>

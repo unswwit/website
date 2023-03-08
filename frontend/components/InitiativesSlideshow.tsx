@@ -57,13 +57,13 @@ const InitiativesSlideshow = (props) => {
                 <div>
                   <div className={styles.right}>
                     <h1>EVENTS</h1>
-                    <Link href={nextEvent.fields.facebookLink}>
+                    <Link href={nextEvent.fields.facebookLink} legacyBehavior>
                       <div className={styles.eventImg}>
                         <Image
                           src={`https:${nextEvent.fields.img.fields.file.url}`}
                           alt={nextEvent.fields.title}
-                          height="320px"
-                          width="500px"
+                          height="320"
+                          width="500"
                         />
                       </div>
                     </Link>
@@ -76,13 +76,13 @@ const InitiativesSlideshow = (props) => {
 
                     <Link
                       href={`/events/event-recaps/${latestEvent.fields.year}/${latestEvent.fields.eventNumber}`}
-                    >
+                      legacyBehavior>
                       <div className={styles.eventImg}>
                         <Image
                           src={`https:${latestEvent.fields.img.fields.file.url}`}
                           alt={latestEvent.title}
-                          height="320px"
-                          width="500px"
+                          height="320"
+                          width="500"
                         />
                       </div>
                     </Link>
@@ -118,13 +118,13 @@ const InitiativesSlideshow = (props) => {
               </div>
               <div className={styles.right}>
                 <h1>BLOGS</h1>
-                <Link href={`/media/blog/${latestBlog.fields.blog_no}`}>
+                <Link href={`/media/blog/${latestBlog.fields.blog_no}`} legacyBehavior>
                   <div className={styles.eventImg}>
                     <Image
                       src={`https:${latestBlog.fields.img.fields.file.url}`}
                       alt={`${latestBlog.fields.heading}`}
-                      height="320px"
-                      width="500px"
+                      height="320"
+                      width="500"
                     />
                   </div>
                 </Link>
@@ -156,12 +156,12 @@ const InitiativesSlideshow = (props) => {
               </div>
               <div className={styles.right}>
                 <h1>PODCASTS</h1>
-                <Link href={`${latestPodcast.fields.spotify}`}>
+                <Link href={`${latestPodcast.fields.spotify}`} legacyBehavior>
                   <div className={styles.eventImg}>
                     <Image
                       src={`https:${latestPodcast.fields.img.fields.file.url}`}
-                      height="320px"
-                      width="320px"
+                      height="320"
+                      width="320"
                       alt={`${latestPodcast.title}`}
                     />
                   </div>

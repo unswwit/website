@@ -50,8 +50,8 @@ const OurStory = () => {
                 <Image
                   src="/our-story/our-mission.jpg"
                   alt="WIT members"
-                  width="4000px"
-                  height="6000px"
+                  width="400"
+                  height="350"
                 />
               </div>
               <div className={styles.ourStory}>
@@ -81,12 +81,10 @@ const OurStory = () => {
             <h2 className={styles.oppSubheading}>Our Mascot</h2>
             <div className={styles.ourMascotSection}>
               <div className={styles.ourMascotImg}>
-                <Image
+                {/* <Image
                   src="/our-story/our-mascot.png"
                   alt="Introducing Willow the Australian Wombat, WIT's mascot"
-                  width="3000px"
-                  height="2000px"
-                />
+                /> */}
               </div>
               <div className={styles.ourStory}>
                 <p className={styles.ourMascotContent}>

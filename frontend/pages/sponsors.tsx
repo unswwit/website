@@ -73,8 +73,8 @@ export default function Sponsors({ sponsors }: any) {
 
             <p className={styles.subheader}>
               Interested in partnering with us? Contact us at{' '}
-              <Link href="mailto:sponsorships@unswwit.com">
-                <a className={styles.subheader}>sponsorships@unswwit.com</a>
+              <Link href="mailto:sponsorships@unswwit.com" className={styles.subheader}>
+                sponsorships@unswwit.com
               </Link>
             </p>
 

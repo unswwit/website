@@ -77,28 +77,30 @@ export default function BlogRecommendations({ recommendation }: any) {
   const imgUrl = 'https:' + cover.fields.file.url;
 
   return (
-    <Link href={'/media/blog/' + blogNo}>
-      <Card className={[classes.root, styles.previewContainer].join(' ')}>
-        <div className={styles.darkOverlay} />
-        <Image
-          src={imgUrl}
-          alt={title}
-          className={styles.upcomingEventCover}
-          width="1800px"
-          height="1200px"
-        />
-        <CardContent className={classes.content}>
-          <Typography
-            className={classes.date}
-            variant="body2"
-            color="textSecondary"
-            component="p"
-          >
-            {formatMarketingArchivesDate(date)}
-          </Typography>
-          <Typography className={classes.title}>{title}</Typography>
-        </CardContent>
-      </Card>
+    <Link href={'/media/blog/' + blogNo} legacyBehavior>
+      <>
+        <Card className={[classes.root, styles.previewContainer].join(' ')}>
+          <div className={styles.darkOverlay} />
+          <Image
+            src={imgUrl}
+            alt={title}
+            className={styles.upcomingEventCover}
+            width="370"
+            height="220"
+          />
+          <CardContent className={classes.content}>
+            <Typography
+              className={classes.date}
+              variant="body2"
+              color="textSecondary"
+              component="p"
+            >
+              {formatMarketingArchivesDate(date)}
+            </Typography>
+            <Typography className={classes.title}>{title}</Typography>
+          </CardContent>
+        </Card>
+      </>
     </Link>
   );
 }

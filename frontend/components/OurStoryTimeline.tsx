@@ -25,8 +25,8 @@ export default function OppositeContentTimeline() {
           <Image
             src={`/our-story/timelinePhotos/${year}.jpg`}
             className={styles.timelineCardImage}
-            width="370px"
-            height="400px"
+            width="370"
+            height="400"
             alt="TIMELINE"
           />
         </div>

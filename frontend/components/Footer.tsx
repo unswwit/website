@@ -65,7 +65,9 @@ const Footer = () => {
                   {col.map((route) => {
                     return (
                       <li className="footer-item" key={route}>
-                        <Link href={routes[route] || '/'}>{route}</Link>
+                        <Link href={routes[route] || '/'} legacyBehavior>
+                          {route}
+                        </Link>
                       </li>
                     );
                   })}
@@ -100,8 +102,8 @@ const Footer = () => {
                             <Image
                               src={`/icons/${socials[social][1]}`}
                               alt={social}
-                              width="40px"
-                              height="40px"
+                              width="40"
+                              height="40"
                             />
                           </a>
                         </BootstrapTooltip>
@@ -114,9 +116,7 @@ const Footer = () => {
           </div>
         </ul>
         <div className="footer-copyright bottom-footer-item">
-          <Link href="/">
-              Copyright © {new Date().getFullYear()}. UNSW Women in Technology
-          </Link>
+          Copyright © {new Date().getFullYear()}. UNSW Women in Technology
         </div>
       </footer>
     </div>

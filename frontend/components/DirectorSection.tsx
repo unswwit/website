@@ -14,8 +14,8 @@ const Directors = (props: any) => {
                   src={props.imgUrl}
                   className={`${styles[props.className]}`}
                   alt={props.name}
-                  width="250px"
-                  height="250px"
+                  width="250"
+                  height="250"
                 />
               </div>
             </div>
@@ -40,15 +40,16 @@ const Directors = (props: any) => {
                 href={'mailto:' + props.email}
                 rel="noopener noreferrer"
                 key={'email'}
+                className={styles.icon}
               >
-                <a className={styles.icon}>
+                <>
                   <Image
                     src={'/icons/email.png'}
                     alt={'email'}
-                    width="25px"
-                    height="25px"
+                    width="25"
+                    height="25"
                   />
-                </a>
+                </>
               </Link>
             </div>
           </div>

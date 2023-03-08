@@ -96,20 +96,18 @@ const NavigationBar = () => {
       <div className={styles.navBarGrid}>
         <div className={styles.logoContainer}>
           <Link href="/">
-            <a>
-              {/* change WIT logo depending on device theme and scroll position */}
-              <Image
-                className={styles.logoGridItem}
-                src={
-                  darkMode || (clearNavBar && router.pathname !== '/404')
-                    ? '/logo-white.png'
-                    : '/logo-black.png'
-                }
-                alt="wit logo"
-                width={40}
-                height={35}
-              />
-            </a>
+            {/* change WIT logo depending on device theme and scroll position */}
+            <Image
+              className={styles.logoGridItem}
+              src={
+                darkMode || (clearNavBar && router.pathname !== '/404')
+                  ? '/logo-white.png'
+                  : '/logo-black.png'
+              }
+              alt="wit logo"
+              width={40}
+              height={35}
+            />
           </Link>
         </div>
         <div className={styles.emptyGridItem}></div>
@@ -123,7 +121,7 @@ const NavigationBar = () => {
                 id={page.id}
                 key={index}
               >
-                <Link href={page.link}>
+                <Link href={page.link} legacyBehavior>
                   <div className={styles.linkContent}>
                     <a id={page.text}>{page.pageName}</a>
                     <div
@@ -144,7 +142,7 @@ const NavigationBar = () => {
                 >
                   {page.dropdownContent.map((page, index) => {
                     return (
-                      <Link href={page.link} key={index}>
+                      <Link href={page.link} key={index} legacyBehavior>
                         <div
                           className={
                             router.asPath.split('/')[2] ===
@@ -174,7 +172,7 @@ const NavigationBar = () => {
               className={`${page.itemName} ${styles.linkContainer}`}
               key={index}
             >
-              <Link href={page.link}>
+              <Link href={page.link} legacyBehavior>
                 <div className={styles.linkContent}>
                   <a>{page.pageName}</a>
                   <div

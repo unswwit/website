@@ -49,8 +49,8 @@ const BlogDetails = ({ selectedBlog, blogContent }: any) => {
                   <Image
                     src={'https:' + author[index].fields.img.fields.file.url}
                     alt={author[index].fields.name}
-                    width="75px"
-                    height="75px"
+                    width="75"
+                    height="75"
                     className={styles.authorPortrait}
                   />
                   <p className={styles.author} key={index}>
@@ -88,8 +88,8 @@ const BlogDetails = ({ selectedBlog, blogContent }: any) => {
                         <Image
                           src={`/blog-logos/${links[link][0]}`}
                           alt={link}
-                          width="30px"
-                          height="30px"
+                          width="30"
+                          height="30"
                         />
                       </div>
                     </a>

@@ -19,8 +19,8 @@ const SponsorCollage = ({ tempSponsors }: any) => {
                       : 'https:' + sponsor.fields.lightModeLogo.fields.file.url
                   }
                   alt={'sponsor logo'}
-                  height={'100%'}
-                  width={'100%'}
+                  width="100"
+                  height="100"
                 />
               </div>
             ))}

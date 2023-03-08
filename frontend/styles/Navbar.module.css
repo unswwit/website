@@ -98,6 +98,7 @@
   height: 100%;
   width: 100%;
   transition: color 0.3s;
+  letter-spacing: 1.5px;
 }
 
 .linkContent:hover {
@@ -171,6 +172,7 @@
   align-items: center;
   padding: 5% 15% 0% 15%; /* no bottom padding */
   transition: color 0.3s, opacity 0.2s, visibility 0.2s;
+  letter-spacing: 1.5px;
 }
 
 .dropdownItem:hover {

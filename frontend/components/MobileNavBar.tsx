@@ -137,21 +137,19 @@ const Navbar = () => {
     >
       <div className={styles.compactNavBarGrid}>
         <div className={styles.logoContainer}>
-          <Link href="/">
-            <a onClick={menuItemClick}>
-              {/* change WIT logo depending on device theme and scroll position */}
-              <Image
-                className={styles.logoGridItem}
-                src={
-                  darkMode || (clearNavBar && router.pathname !== '/404')
-                    ? '/logo-white.png'
-                    : '/logo-black.png'
-                }
-                alt="wit logo"
-                width={40}
-                height={35}
-              />
-            </a>
+          <Link href="/" onClick={menuItemClick}>
+            {/* change WIT logo depending on device theme and scroll position */}
+            <Image
+              className={styles.logoGridItem}
+              src={
+                darkMode || (clearNavBar && router.pathname !== '/404')
+                  ? '/logo-white.png'
+                  : '/logo-black.png'
+              }
+              alt="wit logo"
+              width={40}
+              height={35}
+            />
           </Link>
         </div>
         <div className={styles.emptyGridItem}></div>
@@ -219,7 +217,7 @@ const Navbar = () => {
                   >
                     {page.dropdownContent.map((page, index) => {
                       return (
-                        <Link href={page.link} key={index}>
+                        <Link href={page.link} key={index} legacyBehavior>
                           <div
                             className={
                               router.asPath.split('/')[2] ===
@@ -245,7 +243,7 @@ const Navbar = () => {
               );
             }
             return (
-              <Link href={page.link} key={index}>
+              <Link href={page.link} key={index} legacyBehavior>
                 <div className={styles.menuItemContent}>
                   <div
                     className={

@@ -459,14 +459,7 @@ footer {
   padding-bottom: 1vw;
   font-size: 1.05vw;
   text-align: center;
-}
-
-.footer-copyright a {
   color: #313638;
-  transition: 0.2s;
-}
-
-.footer-item a {
   transition: 0.2s;
 }
 
@@ -501,7 +494,7 @@ footer {
     color: var(--white);
   }
 
-  .footer-copyright a {
+  .footer-copyright {
     color: var(--white);
   }
 }

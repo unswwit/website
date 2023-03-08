@@ -20,15 +20,14 @@ export default function OpportunitiesCard({
   const imgUrl = 'https:' + img.fields.file.url;
 
   return (
-    <Link href={link}>
-      <a className={styles.oppGridItems} key={index}>
+    <Link href={link} className={styles.oppGridItems} key={index}>
+      <>
         <div className={styles.darkOverlay} />
         <div className={styles.imageContainer}>
           {/* TODO: change to Image tag - attempted but causes css issues */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img className={styles.oppImg} src={imgUrl} alt={companyName} />
         </div>
-
         <div className={styles.oppDesc}>
           <p className={styles.oppTypeAndCompany}>{type}</p>
           <p className={styles.jobPosition}>{position}</p>
@@ -43,7 +42,7 @@ export default function OpportunitiesCard({
           )}
           <p className={styles.oppSummary}>{summary}</p>
         </div>
-      </a>
+      </>
     </Link>
   );
 }

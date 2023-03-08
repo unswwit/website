@@ -48,8 +48,8 @@ const ContactUs = () => {
                     ? `${'/willow_contact_dark_mode.png'}`
                     : `${'/willow_contact.png'}`
                 }
-                width="315px"
-                height="415px"
+                width="315"
+                height="415"
                 className={styles.centre}
                 alt="contact us"
               />
@@ -66,48 +66,48 @@ const ContactUs = () => {
                 <Image
                   src="/icons/pres-icon.png"
                   alt="pres-icon"
-                  width="50px"
-                  height="50px"
+                  width="50"
+                  height="50"
                 />
                 <h3>Brianna Kim</h3>
                 <Link href="mailto:president@unswwit.com">
-                  <a>president@unswwit.com</a>
+                  president@unswwit.com
                 </Link>
               </div>
               <div className={styles.profile2}>
                 <Image
                   src="/icons/pres-icon.png"
                   alt="pres-icon"
-                  width="50px"
-                  height="50px"
+                  width="50"
+                  height="50"
                 />
                 <h3>Vivian Wang</h3>
                 <Link href="mailto:president@unswwit.com">
-                  <a>president@unswwit.com</a>
+                  president@unswwit.com
                 </Link>
               </div>
               <div className={styles.profile2}>
                 <Image
                   src="/icons/sec-icon.png"
                   alt="sec-icon"
-                  width="50px"
-                  height="50px"
+                  width="50"
+                  height="50"
                 />
                 <h3>Yuhan Zhou</h3>
                 <Link href="mailto:secretary@unswwit.com">
-                  <a>secretary@unswwit.com</a>
+                  secretary@unswwit.com
                 </Link>
               </div>
               <div className={styles.profile2}>
                 <Image
                   src="/icons/tr-icon.png"
                   alt="tr-icon"
-                  width="50px"
-                  height="50px"
+                  width="50"
+                  height="50"
                 />
                 <h3>Abigail Joesan Johan</h3>
                 <Link href="mailto:treasurer@unswwit.com">
-                  <a>treasurer@unswwit.com</a>
+                  treasurer@unswwit.com
                 </Link>
               </div>
             </div>
@@ -121,48 +121,48 @@ const ContactUs = () => {
               <Image
                   src="/icons/ex-icon.png"
                   alt="ex-icon"
-                  width="50px"
-                  height="50px"
+                  width="50"
+                  height="50"
                 />
                 <h3>Emily Dang</h3>
                 <Link href="mailto:externals@unswwit.com">
-                  <a>externals@unswwit.com</a>
+                  externals@unswwit.com
                 </Link>
               </div>
               <div className={styles.profile3}>
                 <Image
                   src="/icons/int-icon.png"
                   alt="int-icon"
-                  width="50px"
-                  height="50px"
+                  width="50"
+                  height="50"
                 />
                 <h3>Abarna Ravindran</h3>
                 <Link href="mailto:internals@unswwit.com">
-                  <a>internals@unswwit.com</a>
+                  internals@unswwit.com
                 </Link>
               </div>
               <div className={styles.profile3}>
                 <Image
                   src="/icons/tech.png"
                   alt="it-icon"
-                  width="50px"
-                  height="50px"
+                  width="50"
+                  height="50"
                 />
                 <h3>Joanna He</h3>
                 <Link href="mailto:technology@unswwit.com">
-                  <a>technology@unswwit.com</a>
+                  technology@unswwit.com
                 </Link>
               </div>
               <div className={styles.profile3}>
                 <Image
                   src="/icons/multi-icon.png"
                   alt="multi-icon"
-                  width="50px"
-                  height="50px"
+                  width="50"
+                  height="50"
                 />
                 <h3>Chelsea Chaffey</h3>
                 <Link href="mailto:multimedia@unswwit.com">
-                  <a>multimedia@unswwit.com</a>
+                  multimedia@unswwit.com
                 </Link>
               </div>
             </div>

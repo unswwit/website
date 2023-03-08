@@ -108,7 +108,7 @@ export default function EpisodeTemplate({ episode }: any) {
       <CardActionArea
         className={[classes.click, styles.previewContainer].join(' ')}
       >
-        <Link href={spotify}>
+        <Link href={spotify} legacyBehavior>
           <div>
             <div className={classes.media}>
               <Image
