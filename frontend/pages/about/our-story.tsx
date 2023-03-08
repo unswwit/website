@@ -51,7 +51,7 @@ const OurStory = () => {
                   src="/our-story/our-mission.jpg"
                   alt="WIT members"
                   // TODO: fix fucked proportions 
-                  width="450"
+                  width="500"
                   height="300"
                 />
               </div>
@@ -85,8 +85,8 @@ const OurStory = () => {
                 <Image
                   src="/our-story/our-mascot.png"
                   alt="Introducing Willow the Australian Wombat, WIT's mascot"
-                  width="3000"
-                  height="1000"
+                  width={2048}
+                  height={500}
                 />
               </div>
               <div className={styles.ourStory}>
