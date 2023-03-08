@@ -50,7 +50,7 @@ const OurStory = () => {
                 <Image
                   src="/our-story/our-mission.jpg"
                   alt="WIT members"
-                  // TODO: fix fucked proportions 
+                  // TODO: fix fucked proportions
                   width="500"
                   height="300"
                 />

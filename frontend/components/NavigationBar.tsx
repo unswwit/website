@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import styles from '../styles/Navbar.module.css';
 import Navbar from './MobileNavBar';
 import { navigationBarContent } from '../data/navbar';

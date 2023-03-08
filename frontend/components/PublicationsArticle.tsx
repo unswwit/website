@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/Publications.module.css';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { formatPublicationsDate } from '../lib/helpers/date';
 
@@ -18,7 +18,7 @@ export default function PubArticle(props: any) {
         <p>{formatPublicationsDate(props.date)}</p>
         <div tabIndex={0} role="button" className={styles.button}>
           <Link href={props.url} target="_blank" rel="noopener noreferrer">
-              Read More
+            Read More
           </Link>
         </div>
       </div>

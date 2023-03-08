@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/Marketing.module.css';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 
 export default function Initiative(props: any) {

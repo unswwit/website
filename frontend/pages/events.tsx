@@ -77,7 +77,7 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
   useEffect(() => {
     // show loading signs for past events
     setLoadingPast(true);
-    
+
     // get past events
     // input: past events data from contentful
     // output: array of dictionaries containing past events data
@@ -89,7 +89,7 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
       setTerms(allEvents);
       await delay();
       setLoadingPast(false);
-    };
+    }
 
     fetchPastEvents();
   }, [allPastEvents, year]);
@@ -199,7 +199,7 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
           <PageHeader
             imageLoading={setHeaderLoading}
             imgUrl="/headers/events-header.jfif"
-            title={"Events"}
+            title={'Events'}
           />
 
           {/* UPCOMING EVENTS */}

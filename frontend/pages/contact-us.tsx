@@ -4,7 +4,7 @@ import PageHeader from '../components/Header';
 import ContactForm from '../components/ContactForm';
 import styles from '../styles/ContactUs.module.css';
 import LoadingScreen from '../components/LoadingScreen';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import Head from 'next/head';
 
@@ -118,7 +118,7 @@ const ContactUs = () => {
             />
             <div className={styles.col3}>
               <div className={styles.profile3}>
-              <Image
+                <Image
                   src="/icons/ex-icon.png"
                   alt="ex-icon"
                   width="50"

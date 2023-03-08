@@ -53,7 +53,7 @@ const MarketingContent = ({ archives }: any) => {
 
   useEffect(() => {
     setLoading(true);
-    
+
     // get marketing archives
     // input: marketing archives data from contentful
     // output: array of dictionaries containing marketing archives data

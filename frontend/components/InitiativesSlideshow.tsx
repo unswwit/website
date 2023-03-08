@@ -9,7 +9,7 @@ import {
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 
 const InitiativesSlideshow = (props) => {
   const nextEvent = props.nextEvent;
@@ -76,7 +76,8 @@ const InitiativesSlideshow = (props) => {
 
                     <Link
                       href={`/events/event-recaps/${latestEvent.fields.year}/${latestEvent.fields.eventNumber}`}
-                      legacyBehavior>
+                      legacyBehavior
+                    >
                       <div className={styles.eventImg}>
                         <Image
                           src={`https:${latestEvent.fields.img.fields.file.url}`}
@@ -118,7 +119,10 @@ const InitiativesSlideshow = (props) => {
               </div>
               <div className={styles.right}>
                 <h1>BLOGS</h1>
-                <Link href={`/media/blog/${latestBlog.fields.blog_no}`} legacyBehavior>
+                <Link
+                  href={`/media/blog/${latestBlog.fields.blog_no}`}
+                  legacyBehavior
+                >
                   <div className={styles.eventImg}>
                     <Image
                       src={`https:${latestBlog.fields.img.fields.file.url}`}

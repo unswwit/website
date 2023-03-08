@@ -5,7 +5,7 @@ import Chip from '@material-ui/core/Chip';
 import styles from '../../styles/Videos.module.css';
 import YouTubeSubscribe from '../../components/YoutubeSubscribeBtn';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import PaginationComp from '../../components/Pagination';
 import LoadingScreen from '../../components/LoadingScreen';
 import { isMobile } from 'react-device-detect';

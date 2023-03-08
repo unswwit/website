@@ -10,7 +10,7 @@ import LoadingScreen from '../../components/LoadingScreen';
 import { useStyles, links, categories } from '../../data/podcast';
 import { loadPodcasts } from '../../lib/api';
 import { formatPodcastDate } from '../../lib/helpers/date';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import Head from 'next/head';
 // TO UNCOMMENT WHEN REACH > 9 PODCASTS

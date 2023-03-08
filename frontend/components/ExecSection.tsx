@@ -1,5 +1,5 @@
 import styles from '../styles/Team.module.css';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 
 const Execs = (props: any) => {
@@ -54,12 +54,12 @@ const Execs = (props: any) => {
                       className={styles.icon}
                     >
                       <>
-                      <Image
-                        src={`/icons/${social}.png`}
-                        alt={social}
-                        width="25"
-                        height="25"
-                      />
+                        <Image
+                          src={`/icons/${social}.png`}
+                          alt={social}
+                          width="25"
+                          height="25"
+                        />
                       </>
                     </Link>
                   );
