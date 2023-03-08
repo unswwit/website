@@ -1,5 +1,5 @@
 import styles from '../styles/Team.module.css';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 
 const Directors = (props: any) => {
@@ -14,8 +14,8 @@ const Directors = (props: any) => {
                   src={props.imgUrl}
                   className={`${styles[props.className]}`}
                   alt={props.name}
-                  width="250"
-                  height="250"
+                  width="200"
+                  height="200"
                 />
               </div>
             </div>

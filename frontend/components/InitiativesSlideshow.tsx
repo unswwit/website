@@ -9,7 +9,7 @@ import {
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 const InitiativesSlideshow = (props) => {
   const nextEvent = props.nextEvent;

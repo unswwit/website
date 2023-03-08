@@ -3,7 +3,7 @@ import styles from '../styles/Blog.module.css';
 import Link from 'next/link';
 import Chip from '@material-ui/core/Chip';
 import { useStyles } from '../data/blog';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 const BlogPreview = ({ individualBlogPreview }: any) => {
   const classes = useStyles();

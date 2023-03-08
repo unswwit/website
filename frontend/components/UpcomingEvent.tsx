@@ -3,7 +3,7 @@ import { Card, CardContent, CardActions, Typography } from '@material-ui/core';
 import styles from '../styles/Events.module.css';
 import AddToCalBtn from './AddToCalBtn';
 import RegBtn from './RegButton';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 const useStyles = makeStyles({
   root: {

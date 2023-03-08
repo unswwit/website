@@ -9,7 +9,7 @@ import {
 import React from 'react';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import styles from '../styles/QuotesSlideshow.module.css';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 const QuotesSlideshow = ({
   height,

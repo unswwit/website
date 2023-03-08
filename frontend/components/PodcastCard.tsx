@@ -8,7 +8,7 @@ import {
 } from '@material-ui/core';
 import styles from '../styles/Podcast.module.css';
 import { formatPodcastDate } from '../lib/helpers/date';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 
 const useStyles = makeStyles({

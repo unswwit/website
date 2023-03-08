@@ -9,7 +9,7 @@ import LoadingScreen from '../components/LoadingScreen';
 import { socials } from '../data/join';
 import SimpleAccordion from '../components/JoinUsAccordion';
 import PortfolioGrid from '../components/JoinUsGrid';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Head from 'next/head';
 
 const JoinUs = () => {

@@ -175,8 +175,8 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
                 className={styles.eventImages}
                 src={imgUrl}
                 alt={eventLabel.join(' ')}
-                width="1200"
-                height="628"
+                width="600"
+                height="150"
               />
               <div className={styles.darkOverlay} />
             </div>
@@ -199,7 +199,7 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
           <PageHeader
             imageLoading={setHeaderLoading}
             imgUrl="/headers/events-header.jfif"
-            title="Events"
+            title={"Events"}
           />
 
           {/* UPCOMING EVENTS */}

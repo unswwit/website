@@ -4,7 +4,7 @@ import PageHeader from '../components/Header';
 import ContactForm from '../components/ContactForm';
 import styles from '../styles/ContactUs.module.css';
 import LoadingScreen from '../components/LoadingScreen';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 import Head from 'next/head';
 

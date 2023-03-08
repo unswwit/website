@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import styles from '../styles/NotFound.module.css';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Head from 'next/head';
 
 const NotFound = () => {

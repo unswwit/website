@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { loadPastEvents } from '../../../../lib/api';
 import Head from 'next/head';
 
@@ -135,8 +135,8 @@ const EventRecapPage = ({ selectedEvent }: any) => {
               <Image
                 src={'http:' + event.fields.img.fields.file.url}
                 alt="header"
-                width="1200px"
-                height="630px"
+                width="1200"
+                height="630"
               />
             </div>
           )}
