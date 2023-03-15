@@ -3,12 +3,11 @@ import PageHeader from '../../components/Header';
 import styles from '../../styles/OurStory.module.css';
 import Timeline from '../../components/OurStoryTimeline';
 import LoadingScreen from '../../components/LoadingScreen';
-import Image from 'next/image';
 import Head from 'next/head';
+import Image from 'next/image';
 
 // Start at the top of the page
 const OurStory = () => {
-  const [sourceLoading, setSourceLoading] = useState(true);
   const [headerLoading, setHeaderLoading] = useState(true);
 
   useEffect(() => {
@@ -19,7 +18,7 @@ const OurStory = () => {
   useEffect(() => {
     setTimeout((loading) => {
       if (!loading) {
-        setSourceLoading(false);
+        setHeaderLoading(false);
       }
     }, 1000);
   }, []);
@@ -29,7 +28,7 @@ const OurStory = () => {
       <Head>
         <title>Our Story | UNSW WIT</title>
       </Head>
-      {sourceLoading && headerLoading ? (
+      {headerLoading ? (
         <LoadingScreen />
       ) : (
         <>
@@ -48,11 +47,10 @@ const OurStory = () => {
             <div className={styles.ourMissionSection}>
               <div className={styles.ourMissionImg}>
                 <Image
-                  src="/our-story/our-mission.jpg"
+                  src="/our-story/our-mission.jpeg"
                   alt="WIT members"
-                  // TODO: fix fucked proportions
-                  width="500"
-                  height="300"
+                  width={500}
+                  height={500}
                 />
               </div>
               <div className={styles.ourStory}>
@@ -82,7 +80,7 @@ const OurStory = () => {
             <h2 className={styles.oppSubheading}>Our Mascot</h2>
             <div className={styles.ourMascotSection}>
               <div className={styles.ourMascotImg}>
-                <Image
+                <img
                   src="/our-story/our-mascot.png"
                   alt="Introducing Willow the Australian Wombat, WIT's mascot"
                   width={2048}

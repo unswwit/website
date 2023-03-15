@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Image from 'next/legacy/image';
 import styles from '../styles/Navbar.module.css';
 import { navigationBarContent } from '../data/navbar';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -139,7 +138,7 @@ const Navbar = () => {
         <div className={styles.logoContainer}>
           <Link href="/" onClick={menuItemClick}>
             {/* change WIT logo depending on device theme and scroll position */}
-            <Image
+            <img
               className={styles.logoGridItem}
               src={
                 darkMode || (clearNavBar && router.pathname !== '/404')

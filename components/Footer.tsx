@@ -2,7 +2,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { BootstrapTooltip } from './BootstrapTooltip';
-import Image from 'next/legacy/image';
 import styles from '../styles/Footer.module.css';
 import { socials } from '../data/join';
 
@@ -38,7 +37,7 @@ const Footer = () => {
           <div className="grid-footer-container">
             <li className="col-width footer-item footer-logo">
               <div className={styles.footerLogoWhite}>
-                <Image
+                <img
                   src="/logo-white.png"
                   alt="wit logo"
                   width={45}
@@ -46,7 +45,7 @@ const Footer = () => {
                 />
               </div>
               <div className={styles.footerLogoBlack}>
-                <Image
+                <img
                   src="/logo-black.png"
                   className="footer-logo-black"
                   alt="wit logo"

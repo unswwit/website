@@ -10,7 +10,6 @@ import LoadingScreen from '../../components/LoadingScreen';
 import { useStyles, links, categories } from '../../data/podcast';
 import { loadPodcasts } from '../../lib/api';
 import { formatPodcastDate } from '../../lib/helpers/date';
-import Image from 'next/legacy/image';
 import Link from 'next/link';
 import Head from 'next/head';
 // TO UNCOMMENT WHEN REACH > 9 PODCASTS
@@ -121,7 +120,7 @@ const Podcast = ({ episodes }: any) => {
           <div id={styles.podcastIntroduction}>
             <div className={styles.logoContainer}>
               <div className={styles.podcastLogo}>
-                <Image
+                <img
                   src="/podcast-logos/talk-WIT-us-logo.png"
                   alt="Talk WIT Us logo"
                   height="250"
@@ -158,7 +157,7 @@ const Podcast = ({ episodes }: any) => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <Image
+                          <img
                             src={`/podcast-logos/${links[link][0]}`}
                             alt={link}
                             width="25"

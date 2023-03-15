@@ -3,13 +3,12 @@ import React from 'react';
 import styles from '../styles/Newsletter.module.css';
 import NewsletterForm from './NewsletterForm';
 import { Modal, Backdrop, Fade } from '@material-ui/core';
-import Image from 'next/legacy/image';
 
 const NewsletterSection = ({ setOpen, open, callbackModal, fade }) => {
   return (
     <div id={styles.container}>
       <div id={styles.newsletterBgContainer}>
-        <Image
+        <img
           src={'/newsletter-background.png'}
           className={styles.background}
           alt="banner"

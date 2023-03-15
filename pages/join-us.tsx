@@ -67,7 +67,7 @@ const JoinUs = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Image
+                        <img
                           src={`/icons/${socials[social][1]}`}
                           alt={social}
                           height="250"

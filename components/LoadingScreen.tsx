@@ -1,11 +1,10 @@
 // @ts-nocheck comment
 import React from 'react';
-import Image from 'next/legacy/image';
 
 const LoadingScreen = () => {
   return (
     <div id="loadingBackground">
-      <Image
+      <img
         id="loadingWillow"
         src="/walkingWillow.gif"
         alt="Walking Willow the wombat"

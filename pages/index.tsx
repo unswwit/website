@@ -1,7 +1,6 @@
 // @ts-nocheck comment
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/legacy/image';
 import CountUp from 'react-countup';
 import styles from '../styles/Home.module.css';
 import PubArticle from '../components/PublicationsArticle';
@@ -72,11 +71,11 @@ const Home = ({
         <div>
           {/* Start of Header */}
           <div className={styles.contain}>
-            <Image
+            <img
               className={styles.headerImage}
               src={'/headers/2022-team-header.jpg'}
-              layout={'fill'}
-              alt={'header'}
+              layout="fill"
+              alt="header"
             />
             <div data-aos="fade" className={styles.headline}>
               <h1>UNSW</h1>
@@ -128,7 +127,7 @@ const Home = ({
           {/* End of Quotes */}
           {/* Start of Statistics */}
           <div className={styles.stats}>
-            <Image
+            <img
               src="/stats-background-1.png"
               className={styles.statsBackground}
               alt="banner"

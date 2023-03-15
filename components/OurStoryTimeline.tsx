@@ -2,7 +2,6 @@ import { useState } from 'react';
 import styles from '../styles/OurStoryTimeline.module.css';
 import { marks, valueToYear } from '../data/story';
 import Timeline from '../components/Timeline';
-import Image from 'next/legacy/image';
 
 export default function OppositeContentTimeline() {
   const [year, setYear] = useState(valueToYear[249.6]);
@@ -22,7 +21,7 @@ export default function OppositeContentTimeline() {
       />
       <div className={styles.timelineCard}>
         <div className={styles.timelineCardImageContainer}>
-          <Image
+          <img
             src={`/our-story/timelinePhotos/${year}.jpg`}
             className={styles.timelineCardImage}
             width="370"

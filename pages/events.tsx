@@ -171,13 +171,14 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
         <div className={styles.pastEvent} key={index}>
           <Link href={`events/event-recaps/${year}/${eventId}`} legacyBehavior>
             <div className={styles.eventImgBox}>
-              <Image
-                className={styles.eventImages}
-                src={imgUrl}
-                alt={eventLabel.join(' ')}
-                width="600"
-                height="150"
-              />
+              <div className={styles.eventImages}>
+                <Image
+                  src={imgUrl}
+                  alt={eventLabel.join(' ')}
+                  width="580"
+                  height="150"
+                />
+              </div>
               <div className={styles.darkOverlay} />
             </div>
           </Link>

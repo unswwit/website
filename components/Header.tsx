@@ -1,6 +1,5 @@
 // @ts-nocheck comment
 import React, { useEffect, useState } from 'react';
-import Image from 'next/legacy/image';
 
 interface Header {
   imageLoading?: any;
@@ -23,7 +22,7 @@ const PageHeader = ({ imageLoading, imgUrl, title }: Header) => {
       <div className="dark" />
 
       {/* header image */}
-      <Image
+      <img
         src={imgUrl}
         alt="header"
         className="cover_image"

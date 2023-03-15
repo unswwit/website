@@ -1,5 +1,4 @@
 import styles from '../styles/Team.module.css';
-import Image from 'next/legacy/image';
 import Link from 'next/link';
 
 const Directors = (props: any) => {
@@ -10,7 +9,7 @@ const Directors = (props: any) => {
           {props.imgUrl && (
             <div className={styles.dirProfileCrop}>
               <div className={styles.dirProfileImg}>
-                <Image
+                <img
                   src={props.imgUrl}
                   className={`${styles[props.className]}`}
                   alt={props.name}
@@ -43,7 +42,7 @@ const Directors = (props: any) => {
                 className={styles.icon}
               >
                 <>
-                  <Image
+                  <img
                     src={'/icons/email.png'}
                     alt={'email'}
                     width="25"
