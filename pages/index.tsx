@@ -75,8 +75,8 @@ const Home = ({
             <Image
               className={styles.headerImage}
               src={'/headers/2022-team-header.jpg'}
-              layout={'fill'}
-              alt={'header'}
+              layout="fill"
+              alt="header"
             />
             <div data-aos="fade" className={styles.headline}>
               <h1>UNSW</h1>

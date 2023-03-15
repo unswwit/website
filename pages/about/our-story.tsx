@@ -8,7 +8,6 @@ import Head from 'next/head';
 
 // Start at the top of the page
 const OurStory = () => {
-  const [sourceLoading, setSourceLoading] = useState(true);
   const [headerLoading, setHeaderLoading] = useState(true);
 
   useEffect(() => {
@@ -19,7 +18,7 @@ const OurStory = () => {
   useEffect(() => {
     setTimeout((loading) => {
       if (!loading) {
-        setSourceLoading(false);
+        setHeaderLoading(false);
       }
     }, 1000);
   }, []);
@@ -29,7 +28,7 @@ const OurStory = () => {
       <Head>
         <title>Our Story | UNSW WIT</title>
       </Head>
-      {sourceLoading && headerLoading ? (
+      {headerLoading ? (
         <LoadingScreen />
       ) : (
         <>
@@ -50,7 +49,6 @@ const OurStory = () => {
                 <Image
                   src="/our-story/our-mission.jpg"
                   alt="WIT members"
-                  // TODO: fix fucked proportions
                   width="500"
                   height="300"
                 />
