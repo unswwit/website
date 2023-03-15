@@ -99,7 +99,8 @@ const Footer = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <Image
+                            {/* // eslint-disable-next-line @next/next/no-img-element */}
+                            <img
                               src={`/icons/${socials[social][1]}`}
                               alt={social}
                               width="40"
