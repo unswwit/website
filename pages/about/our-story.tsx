@@ -4,6 +4,7 @@ import styles from '../../styles/OurStory.module.css';
 import Timeline from '../../components/OurStoryTimeline';
 import LoadingScreen from '../../components/LoadingScreen';
 import Head from 'next/head';
+import Image from 'next/image';
 
 // Start at the top of the page
 const OurStory = () => {
@@ -45,9 +46,11 @@ const OurStory = () => {
             </h2>
             <div className={styles.ourMissionSection}>
               <div className={styles.ourMissionImg}>
-                <img
-                  src="/our-story/our-mission.jpg"
+                <Image
+                  src="/our-story/our-mission.jpeg"
                   alt="WIT members"
+                  width={500}
+                  height={500}
                 />
               </div>
               <div className={styles.ourStory}>

@@ -19,7 +19,7 @@ h2#topHeading {
 /*--- Our Mission ---*/
 .ourMissionSection {
   display: flex;
-  width: 80%;
+  max-width: 80%;
   margin: 0 auto;
   flex-direction: row-reverse;
 }
@@ -35,7 +35,7 @@ h2#topHeading {
 }
 
 .ourMissionImg img {
-  width: 30%;
+  width: 100%;
   height: 100%;
 }
 
