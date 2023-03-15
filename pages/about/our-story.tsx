@@ -3,7 +3,6 @@ import PageHeader from '../../components/Header';
 import styles from '../../styles/OurStory.module.css';
 import Timeline from '../../components/OurStoryTimeline';
 import LoadingScreen from '../../components/LoadingScreen';
-import Image from 'next/image';
 import Head from 'next/head';
 
 // Start at the top of the page
@@ -46,11 +45,9 @@ const OurStory = () => {
             </h2>
             <div className={styles.ourMissionSection}>
               <div className={styles.ourMissionImg}>
-                <Image
+                <img
                   src="/our-story/our-mission.jpg"
                   alt="WIT members"
-                  width="500"
-                  height="300"
                 />
               </div>
               <div className={styles.ourStory}>
@@ -80,7 +77,7 @@ const OurStory = () => {
             <h2 className={styles.oppSubheading}>Our Mascot</h2>
             <div className={styles.ourMascotSection}>
               <div className={styles.ourMascotImg}>
-                <Image
+                <img
                   src="/our-story/our-mascot.png"
                   alt="Introducing Willow the Australian Wombat, WIT's mascot"
                   width={2048}

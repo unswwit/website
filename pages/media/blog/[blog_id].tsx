@@ -85,7 +85,7 @@ const BlogDetails = ({ selectedBlog, blogContent }: any) => {
                       rel="noopener noreferrer"
                     >
                       <div className={styles.platformLogos}>
-                        <Image
+                        <img
                           src={`/blog-logos/${links[link][0]}`}
                           alt={link}
                           width="30"

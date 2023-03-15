@@ -216,7 +216,7 @@ const Videos = ({ videos }: any) => {
             <div className={styles.videosBody}>
               <h1 className={styles.vidSubheading}>Welcome to our channel</h1>
               <div className={styles.youtubeImgContainer}>
-                <Image
+                <img
                   className={styles.youtubeImg}
                   src={'/videos/youtube.png'}
                   alt="Youtube"

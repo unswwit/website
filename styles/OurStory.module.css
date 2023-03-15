@@ -27,6 +27,7 @@ h2#topHeading {
 .ourMissionContent {
   font-size: 12pt;
   color: var(--black);
+  width: 100%;
 }
 
 .ourMissionImg {
@@ -34,7 +35,7 @@ h2#topHeading {
 }
 
 .ourMissionImg img {
-  width: 100%;
+  width: 30%;
   height: 100%;
 }
 

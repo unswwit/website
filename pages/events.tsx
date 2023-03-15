@@ -176,7 +176,7 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
                   src={imgUrl}
                   alt={eventLabel.join(' ')}
                   width="600"
-                  height="175"
+                  height="170"
                 />
               </div>
               <div className={styles.darkOverlay} />
