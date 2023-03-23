@@ -24,6 +24,7 @@ import {
 import SponsorCollage from '../components/SponsorCollage';
 import { filterSponsors } from '../lib/helpers/sponsor';
 import Head from 'next/head';
+import Image from 'next/image';
 
 const Home = ({
   latestPubs,
@@ -71,7 +72,7 @@ const Home = ({
         <div>
           {/* Start of Header */}
           <div className={styles.contain}>
-            <img
+            <Image
               className={styles.headerImage}
               src={'/headers/2022-team-header.jpg'}
               layout="fill"
@@ -127,7 +128,7 @@ const Home = ({
           {/* End of Quotes */}
           {/* Start of Statistics */}
           <div className={styles.stats}>
-            <img
+            <Image
               src="/stats-background-1.png"
               className={styles.statsBackground}
               alt="banner"

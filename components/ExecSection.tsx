@@ -1,5 +1,6 @@
 import styles from '../styles/Team.module.css';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Execs = (props: any) => {
   const socials: any = {
@@ -16,7 +17,7 @@ const Execs = (props: any) => {
             <div className={styles.profileCrop}>
               <div className={styles.profileImg}>
                 <>
-                  <img
+                  <Image
                     src={props.imgUrl}
                     className={`${styles[props.className]}`}
                     alt={props.name}
@@ -53,7 +54,7 @@ const Execs = (props: any) => {
                       className={styles.icon}
                     >
                       <>
-                        <img
+                        <Image
                           src={`/icons/${social}.png`}
                           alt={social}
                           width="25"

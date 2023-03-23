@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { BootstrapTooltip } from './BootstrapTooltip';
 import styles from '../styles/Footer.module.css';
 import { socials } from '../data/join';
+import Image from 'next/image';
 
 const routes: any = {
   Home: '/',
@@ -37,7 +38,7 @@ const Footer = () => {
           <div className="grid-footer-container">
             <li className="col-width footer-item footer-logo">
               <div className={styles.footerLogoWhite}>
-                <img
+                <Image
                   src="/logo-white.png"
                   alt="wit logo"
                   width={45}
@@ -45,7 +46,7 @@ const Footer = () => {
                 />
               </div>
               <div className={styles.footerLogoBlack}>
-                <img
+                <Image
                   src="/logo-black.png"
                   className="footer-logo-black"
                   alt="wit logo"
@@ -98,8 +99,7 @@ const Footer = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            {/* // eslint-disable-next-line @next/next/no-img-element */}
-                            <img
+                            <Image
                               src={`/icons/${socials[social][1]}`}
                               alt={social}
                               width="40"

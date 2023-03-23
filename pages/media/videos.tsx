@@ -5,7 +5,7 @@ import Chip from '@material-ui/core/Chip';
 import styles from '../../styles/Videos.module.css';
 import YouTubeSubscribe from '../../components/YoutubeSubscribeBtn';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import PaginationComp from '../../components/Pagination';
 import LoadingScreen from '../../components/LoadingScreen';
 import { isMobile } from 'react-device-detect';
@@ -173,8 +173,8 @@ const Videos = ({ videos }: any) => {
                   className={styles.videoImages}
                   src={'http:' + video.fields.video.fields.file.url}
                   alt={video.fields.title}
-                  width={'550'}
-                  height={'300'}
+                  width={'1200px'}
+                  height={'628px'}
                 />
               </div>
               <p className={styles.moreName}>{video.fields.title}</p>
@@ -216,7 +216,7 @@ const Videos = ({ videos }: any) => {
             <div className={styles.videosBody}>
               <h1 className={styles.vidSubheading}>Welcome to our channel</h1>
               <div className={styles.youtubeImgContainer}>
-                <img
+                <Image
                   className={styles.youtubeImg}
                   src={'/videos/youtube.png'}
                   alt="Youtube"

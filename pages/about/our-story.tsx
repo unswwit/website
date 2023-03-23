@@ -80,7 +80,7 @@ const OurStory = () => {
             <h2 className={styles.oppSubheading}>Our Mascot</h2>
             <div className={styles.ourMascotSection}>
               <div className={styles.ourMascotImg}>
-                <img
+                <Image
                   src="/our-story/our-mascot.png"
                   alt="Introducing Willow the Australian Wombat, WIT's mascot"
                   width={2048}
