@@ -12,7 +12,7 @@ import { loadPodcasts } from '../../lib/api';
 import { formatPodcastDate } from '../../lib/helpers/date';
 import Link from 'next/link';
 import Head from 'next/head';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 // TO UNCOMMENT WHEN REACH > 9 PODCASTS
 // import PaginationComp from "../components/Pagination";
 

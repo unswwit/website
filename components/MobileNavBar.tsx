@@ -11,7 +11,7 @@ import {
   changeMediaToArrowDown,
   changeMediaToArrowRight,
 } from '../lib/helpers/navbar';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 const Navbar = () => {
   const [clearNavBar, setClearNavBar] = useState(true);

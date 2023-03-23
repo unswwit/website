@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { BootstrapTooltip } from './BootstrapTooltip';
 import styles from '../styles/Footer.module.css';
 import { socials } from '../data/join';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 const routes: any = {
   Home: '/',

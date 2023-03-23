@@ -1,6 +1,6 @@
 import React from 'react';
-import Image from 'next/legacy/image';
 import styles from '../styles/SponsorCollage.module.css';
+import Image from 'next/image';
 
 const SponsorCollage = ({ tempSponsors }: any) => {
   return (

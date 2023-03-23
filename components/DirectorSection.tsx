@@ -1,6 +1,6 @@
 import styles from '../styles/Team.module.css';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 const Directors = (props: any) => {
   return (
@@ -43,7 +43,7 @@ const Directors = (props: any) => {
                 className={styles.icon}
               >
                 <>
-                  <img
+                  <Image
                     src={'/icons/email.png'}
                     alt={'email'}
                     width="25"

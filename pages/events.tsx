@@ -175,7 +175,7 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
                 <Image
                   src={imgUrl}
                   alt={eventLabel.join(' ')}
-                  width="580"
+                  width="600"
                   height="150"
                 />
               </div>
