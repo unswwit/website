@@ -34,7 +34,7 @@ const ContactUs = () => {
         <div>
           {/* Cover Photo */}
           <PageHeader
-            src="/headers/2023-exec-header.jpg"
+            imgUrl="/headers/2023-exec-header.jpg"
             title="Contact Us"
             imageLoading={setHeaderLoading}
           />
