@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardContent, Typography } from '@material-ui/core';
 import styles from '../styles/Events.module.css';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import { formatMarketingArchivesDate } from '../lib/helpers/date';
 import Link from 'next/link';
 

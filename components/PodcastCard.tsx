@@ -8,7 +8,7 @@ import {
 } from '@material-ui/core';
 import styles from '../styles/Podcast.module.css';
 import { formatPodcastDate } from '../lib/helpers/date';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import Link from 'next/link';
 
 const useStyles = makeStyles({
@@ -115,9 +115,7 @@ export default function EpisodeTemplate({ episode }: any) {
                 alt="podcast episode cover"
                 src={imgUrl}
                 className={styles.episodeCover}
-                layout={'fill'}
-                objectFit={'contain'}
-                objectPosition={'top'}
+                fill
                 priority
               />
             </div>

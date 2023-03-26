@@ -6,7 +6,7 @@ import styles from '../styles/ContactUs.module.css';
 import LoadingScreen from '../components/LoadingScreen';
 import Link from 'next/link';
 import Head from 'next/head';
-import Image from 'next/image';
+import LazyImage from '../components/LazyImage/LazyImage';
 
 const ContactUs = () => {
   const [sourceLoading, setSourceLoading] = useState(true);
@@ -34,14 +34,14 @@ const ContactUs = () => {
         <div>
           {/* Cover Photo */}
           <PageHeader
-            imgUrl="/headers/2023-exec-header.jpg"
+            src="/headers/2023-exec-header.jpg"
             title="Contact Us"
             imageLoading={setHeaderLoading}
           />
           <div className={styles.form}>
             <h2 className={styles.inquiry}>Send Through a General Inquiry</h2>
             <div className={styles.formRight}>
-              <Image
+              <LazyImage
                 src={
                   window.matchMedia &&
                   window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -63,7 +63,7 @@ const ContactUs = () => {
           <div className={styles.newEmails}>
             <div className={styles.col2}>
               <div className={styles.profile2}>
-                <Image
+                <LazyImage
                   src="/icons/pres-icon.png"
                   alt="pres-icon"
                   width="50"
@@ -75,7 +75,7 @@ const ContactUs = () => {
                 </Link>
               </div>
               <div className={styles.profile2}>
-                <Image
+                <LazyImage
                   src="/icons/pres-icon.png"
                   alt="pres-icon"
                   width="50"
@@ -87,7 +87,7 @@ const ContactUs = () => {
                 </Link>
               </div>
               <div className={styles.profile2}>
-                <Image
+                <LazyImage
                   src="/icons/sec-icon.png"
                   alt="sec-icon"
                   width="50"
@@ -99,7 +99,7 @@ const ContactUs = () => {
                 </Link>
               </div>
               <div className={styles.profile2}>
-                <Image
+                <LazyImage
                   src="/icons/tr-icon.png"
                   alt="tr-icon"
                   width="50"
@@ -118,7 +118,7 @@ const ContactUs = () => {
             />
             <div className={styles.col3}>
               <div className={styles.profile3}>
-                <Image
+                <LazyImage
                   src="/icons/ex-icon.png"
                   alt="ex-icon"
                   width="50"
@@ -130,7 +130,7 @@ const ContactUs = () => {
                 </Link>
               </div>
               <div className={styles.profile3}>
-                <Image
+                <LazyImage
                   src="/icons/int-icon.png"
                   alt="int-icon"
                   width="50"
@@ -142,7 +142,7 @@ const ContactUs = () => {
                 </Link>
               </div>
               <div className={styles.profile3}>
-                <Image
+                <LazyImage
                   src="/icons/tech.png"
                   alt="it-icon"
                   width="50"
@@ -154,7 +154,7 @@ const ContactUs = () => {
                 </Link>
               </div>
               <div className={styles.profile3}>
-                <Image
+                <LazyImage
                   src="/icons/multi-icon.png"
                   alt="multi-icon"
                   width="50"

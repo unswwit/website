@@ -8,7 +8,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Head from 'next/head';
 import { BLOCKS, INLINES } from '@contentful/rich-text-types';
 import LoadingScreen from '../../../components/LoadingScreen';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import React, { useEffect } from 'react';
 import BlogSuggestions from '../../../components/BlogSuggestions';
 

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from '../styles/OurStoryTimeline.module.css';
 import { marks, valueToYear } from '../data/story';
 import Timeline from '../components/Timeline';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 
 export default function OppositeContentTimeline() {
   const [year, setYear] = useState(valueToYear[249.6]);

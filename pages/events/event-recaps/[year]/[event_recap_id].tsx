@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import { loadPastEvents } from '../../../../lib/api';
 import Head from 'next/head';
 

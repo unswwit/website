@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/Marketing.module.css';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Initiative(props: any) {
@@ -13,7 +13,7 @@ export default function Initiative(props: any) {
         rel="noopener noreferrer"
       >
         <>
-          <Image src={props.imgUrl} alt={props.alt} layout={'fill'} />
+          <Image src={props.imgUrl} alt={props.alt} fill />
           <div className={styles.message}>{props.date}</div>
         </>
       </Link>

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../styles/Blog.module.css';
 import Chip from '@material-ui/core/Chip';
 import { useStyles } from '../data/blog';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 
 const BlogPreview = ({ individualBlogPreview }: any) => {
   const classes = useStyles();
@@ -50,6 +50,7 @@ const BlogPreview = ({ individualBlogPreview }: any) => {
                           width="75"
                           height="75"
                           className={styles.authorPortrait}
+                          loading='lazy'
                         />
                         <p className={styles.author} key={index}>
                           {author[index].fields.name}

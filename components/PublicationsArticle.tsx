@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/Publications.module.css';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import { formatPublicationsDate } from '../lib/helpers/date';
 
@@ -10,7 +10,7 @@ export default function PubArticle(props: any) {
       {/*Start of publications article*/}
       <div className={styles.dark} />
       <div className={styles.articleImg}>
-        <Image src={props.imgUrl} alt="wit logo" layout={'fill'} />
+        <Image src={props.imgUrl} alt={props.heading} fill />
       </div>
 
       <div className={styles.textContainer}>
