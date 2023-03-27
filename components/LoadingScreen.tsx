@@ -1,6 +1,6 @@
 // @ts-nocheck comment
 import React from 'react';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 
 const LoadingScreen = () => {
   return (
@@ -11,7 +11,7 @@ const LoadingScreen = () => {
         alt="Walking Willow the wombat"
         height="300"
         width="300"
-        priority="true"
+        priority
       />
       <p>Loading...</p>
     </div>

@@ -1,6 +1,6 @@
 // @ts-nocheck comment
 import React, { useEffect, useState } from 'react';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 
 interface Header {
   imageLoading?: any;
@@ -30,8 +30,7 @@ const PageHeader = ({ imageLoading, imgUrl, title }: Header) => {
         onLoad={
           typeof imageLoading === 'function' ? () => setImageLoaded(true) : null
         }
-        layout={'fill'}
-        object-fit="cover"
+        fill
         priority
       />
 

@@ -1,6 +1,6 @@
 import styles from '../styles/Team.module.css';
 import Link from 'next/link';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 
 const Execs = (props: any) => {
   const socials: any = {

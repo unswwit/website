@@ -11,7 +11,7 @@ import {
   changeMediaToArrowDown,
   changeMediaToArrowRight,
 } from '../lib/helpers/navbar';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 
 const NavigationBar = () => {
   const [clearNavBar, setClearNavBar] = useState(false);
@@ -99,11 +99,7 @@ const NavigationBar = () => {
             {/* change WIT logo depending on device theme and scroll position */}
             <Image
               className={styles.logoGridItem}
-              src={
-                darkMode || (clearNavBar && router.pathname !== '/404')
-                  ? '/logo-white.png'
-                  : '/logo-black.png'
-              }
+              src='/logo-white.png'
               alt="wit logo"
               width={40}
               height={35}
