@@ -251,6 +251,7 @@ export async function getStaticProps() {
   const episodes = await loadPodcasts();
   return {
     props: { episodes },
+    revalidate: 60
   };
 }
 

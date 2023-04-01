@@ -331,6 +331,7 @@ export async function getStaticProps() {
   const videos = await loadVideos();
   return {
     props: { videos },
+    revalidate: 60
   };
 }
 

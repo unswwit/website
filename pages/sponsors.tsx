@@ -150,5 +150,6 @@ export async function getStaticProps() {
   const sponsors = await loadSponsors();
   return {
     props: { sponsors },
+    revalidate: 60
   };
 }

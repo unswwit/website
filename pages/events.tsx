@@ -347,6 +347,7 @@ export async function getStaticProps() {
   const upcomingEvents = await loadUpcomingEvents();
   return {
     props: { allPastEvents, upcomingEvents },
+    revalidate: 60
   };
 }
 

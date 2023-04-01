@@ -187,5 +187,6 @@ export async function getStaticProps({ params }: any) {
   selectedBlog = selectedBlog[0];
   return {
     props: { selectedBlog, blogContent },
+    revalidate: 60
   };
 }

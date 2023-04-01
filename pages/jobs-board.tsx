@@ -101,5 +101,6 @@ export async function getStaticProps() {
   const opportunities = await loadOpportunities();
   return {
     props: { opportunities },
+    revalidate: 60
   };
 }
