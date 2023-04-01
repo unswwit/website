@@ -14,6 +14,7 @@ import { BootstrapTooltip } from '../../components/BootstrapTooltip';
 import { isMobile } from 'react-device-detect';
 import { useStyles, categoryDescriptions } from '../../data/blog';
 import Head from 'next/head';
+import { revalidate } from '../../lib/helpers/constants';
 
 const Blog = ({ recommendations, blogPreviews }) => {
   const classes = useStyles();
@@ -254,6 +255,6 @@ export async function getStaticProps() {
   const blogPreviews = await loadBlogPreviews();
   return {
     props: { recommendations, blogPreviews },
-    revalidate: 60
+    revalidate: revalidate
   };
 }

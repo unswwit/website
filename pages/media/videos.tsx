@@ -13,6 +13,7 @@ import { loadVideos } from '../../lib/api';
 import { useStyles, categories } from '../../data/video';
 import { formatDate } from '../../lib/helpers/date';
 import Head from 'next/head';
+import { revalidate } from '../../lib/helpers/constants';
 
 const Videos = ({ videos }: any) => {
   const classes = useStyles();
@@ -331,7 +332,7 @@ export async function getStaticProps() {
   const videos = await loadVideos();
   return {
     props: { videos },
-    revalidate: 60
+    revalidate: revalidate
   };
 }
 

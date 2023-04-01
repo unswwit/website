@@ -11,6 +11,7 @@ import LoadingScreen from '../../../components/LoadingScreen';
 import Image from 'next/image';
 import React, { useEffect } from 'react';
 import BlogSuggestions from '../../../components/BlogSuggestions';
+import { revalidate } from '../../../lib/helpers/constants';
 
 const BlogDetails = ({ selectedBlog, blogContent }: any) => {
   const { date, heading, blog_no, category, content, author } =
@@ -187,6 +188,6 @@ export async function getStaticProps({ params }: any) {
   selectedBlog = selectedBlog[0];
   return {
     props: { selectedBlog, blogContent },
-    revalidate: 60
+    revalidate: revalidate
   };
 }

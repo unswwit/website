@@ -25,6 +25,7 @@ import SponsorCollage from '../components/SponsorCollage';
 import { filterSponsors } from '../lib/helpers/sponsor';
 import Head from 'next/head';
 import Image from 'next/image';
+import { revalidate } from '../lib/helpers/constants';
 
 const Home = ({
   latestPubs,
@@ -248,6 +249,6 @@ export async function getStaticProps() {
       execQuotes,
       sponsors,
     },
-    revalidate: 60
+    revalidate: revalidate
   };
 }

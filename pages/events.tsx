@@ -15,6 +15,7 @@ import { isMobile } from 'react-device-detect';
 import { useStyles, categories, marks, valueToYear } from '../data/event';
 import { loadPastEvents, loadUpcomingEvents } from '../lib/api';
 import Head from 'next/head';
+import { revalidate } from '../lib/helpers/constants';
 
 const Events = ({ upcomingEvents, allPastEvents }: any) => {
   const classes = useStyles();
@@ -347,7 +348,7 @@ export async function getStaticProps() {
   const upcomingEvents = await loadUpcomingEvents();
   return {
     props: { allPastEvents, upcomingEvents },
-    revalidate: 60
+    revalidate: revalidate
   };
 }
 

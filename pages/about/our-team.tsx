@@ -12,6 +12,7 @@ import { execToClassName, marks, valueToYear } from '../../data/team';
 import { loadSubcommittee, loadExecs, loadDirectors } from '../../lib/api';
 import Directors from '../../components/DirectorSection';
 import Head from 'next/head';
+import { revalidate } from '../../lib/helpers/constants';
 
 const OurTeam = ({ execs, subcommittee, directors }: any) => {
   const masterExec = useRef();
@@ -316,6 +317,6 @@ export async function getStaticProps() {
   const directors = await loadDirectors();
   return {
     props: { subcommittee, execs, directors },
-    revalidate: 60
+    revalidate: revalidate
   };
 }

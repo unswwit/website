@@ -7,6 +7,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import LoadingScreen from '../../components/LoadingScreen';
 import { loadPublications } from '../../lib/api';
 import Head from 'next/head';
+import { revalidate } from '../../lib/helpers/constants';
 
 const Publications = ({ publications }: any) => {
   const [articles, setArticles] = useState([]);
@@ -99,7 +100,7 @@ export async function getStaticProps() {
   const publications = await loadPublications();
   return {
     props: { publications },
-    revalidate: 60
+    revalidate: revalidate
   };
 }
 

@@ -12,6 +12,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { loadSponsors } from '../lib/api';
 import { filterSponsors } from '../lib/helpers/sponsor';
+import { revalidate } from '../lib/helpers/constants';
 
 export default function Sponsors({ sponsors }: any) {
   const [open, setOpen] = React.useState(false);
@@ -150,6 +151,6 @@ export async function getStaticProps() {
   const sponsors = await loadSponsors();
   return {
     props: { sponsors },
-    revalidate: 60
+    revalidate: revalidate
   };
 }

@@ -18,6 +18,7 @@ import {
 } from '../../data/marketing';
 import { formatMarketingArchivesDate } from '../../lib/helpers/date';
 import Head from 'next/head';
+import { revalidate } from '../../lib/helpers/constants';
 
 const MarketingContent = ({ archives }: any) => {
   const classes = useStyles();
@@ -242,7 +243,7 @@ export async function getStaticProps() {
   const archives = await loadMarketingArchives();
   return {
     props: { archives },
-    revalidate: 60
+    revalidate: revalidate
   };
 }
 export default MarketingContent;
