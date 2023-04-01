@@ -137,11 +137,11 @@ const Home = ({
             <div>
               <div data-aos="fade" className={styles.number}>
                 <div>
-                  <CountUp end={55} duration={5} />
+                  <CountUp end={74} duration={5} />
                   <p>Team Members</p>
                 </div>
                 <div>
-                  <CountUp end={28} duration={5} />
+                  <CountUp end={32} duration={5} />
                   <p>Sponsors</p>
                 </div>
                 <div>
