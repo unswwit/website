@@ -145,7 +145,7 @@ const Home = ({
                   <p>Sponsors</p>
                 </div>
                 <div>
-                  <CountUp end={3021} duration={4} />
+                  <CountUp end={3507} duration={4} />
                   <p>Facebook Followers</p>
                 </div>
               </div>
