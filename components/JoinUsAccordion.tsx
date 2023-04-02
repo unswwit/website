@@ -40,6 +40,63 @@ export default function SimpleAccordion() {
         >
           <Typography id={styles.accordionHeading} component={'span'}>
             <div className={styles.accordionHeading}>
+              <strong>When are subcommittee applications open?</strong>
+            </div>
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <p className={styles.accordionDetails}>
+            Subcommittee applications usually open around O-Week and close
+            within the first month of Term One. You can find more details on
+            subcommittee applications on our social media pages.
+          </p>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion classes={{ root: accordionclasses.root }}>
+        <AccordionSummary
+          expandIcon={
+            <ExpandMoreIcon
+              classes={{
+                colorPrimary: accordionclasses.colorPrimary,
+              }}
+              color="primary"
+            />
+          }
+          aria-controls="panel4bh-content"
+        >
+          <Typography id={styles.accordionHeading} component={'span'}>
+            <div className={styles.accordionHeading}>
+              <strong>
+                What&apos;s the difference between being a WIT member and being
+                part of the subcommittee team?
+              </strong>
+            </div>
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <p className={styles.accordionDetails}>
+            As a subcommittee member, you’ll get to experience the
+            behind-the-scenes of everything our society does! This can vary from
+            organising our events, developing code for our website or producing
+            content. As a WIT member, you’ll get to see the results of all the
+            amazing things that come out from our subcommittee team!
+          </p>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion classes={{ root: accordionclasses.root }}>
+        <AccordionSummary
+          expandIcon={
+            <ExpandMoreIcon
+              classes={{
+                colorPrimary: accordionclasses.colorPrimary,
+              }}
+              color="primary"
+            />
+          }
+          aria-controls="panel4bh-content"
+        >
+          <Typography id={styles.accordionHeading} component={'span'}>
+            <div className={styles.accordionHeading}>
               <strong>
                 Can non-female students apply for a subcommittee position?
               </strong>
@@ -101,8 +158,8 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <p className={styles.accordionDetails}>
-            No. Although some technical experience for IT and Marketing may be
-            beneficial, it is certainly not required.
+            No. Although some technical experience for Marketing, Media and IT
+            may be beneficial, it is certainly not required.
           </p>
         </AccordionDetails>
       </Accordion>
@@ -152,7 +209,7 @@ export default function SimpleAccordion() {
         <AccordionDetails>
           <p className={styles.accordionDetails}>
             Like most societies, the time commitment expected for a subcommittee
-            member will be approximately 2-4 hours per week.
+            member will be approximately 2-5 hours per week.
           </p>
         </AccordionDetails>
       </Accordion>
@@ -181,6 +238,111 @@ export default function SimpleAccordion() {
           <p className={styles.accordionDetails}>
             Yes, we will consider all applicants regardless of year and stage in
             degrees.
+          </p>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion classes={{ root: accordionclasses.root }}>
+        <AccordionSummary
+          expandIcon={
+            <ExpandMoreIcon
+              classes={{
+                colorPrimary: accordionclasses.colorPrimary,
+              }}
+              color="primary"
+            />
+          }
+          aria-controls="panel4bh-content"
+          classes={{ root: styles.accordiontest }}
+        >
+          <Typography id={styles.accordionHeading} component={'span'}>
+            <div className={styles.accordionHeading}>
+              <strong>What events does WIT run?</strong>
+            </div>
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <p className={styles.accordionDetails}>
+            WIT runs a wide variety of events, ranging from professional
+            development in collaboration with our industry sponsors, to social
+            and philanthropic events.
+          </p>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion classes={{ root: accordionclasses.root }}>
+        <AccordionSummary
+          expandIcon={
+            <ExpandMoreIcon
+              classes={{
+                colorPrimary: accordionclasses.colorPrimary,
+              }}
+              color="primary"
+            />
+          }
+          aria-controls="panel4bh-content"
+          classes={{ root: styles.accordiontest }}
+        >
+          <Typography id={styles.accordionHeading} component={'span'}>
+            <div className={styles.accordionHeading}>
+              <strong>Where can I information about your events?</strong>
+            </div>
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <p className={styles.accordionDetails}>
+            You can find information about our events on our website on the
+            Events page or on our social media, such as Facebook and Instagram.
+          </p>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion classes={{ root: accordionclasses.root }}>
+        <AccordionSummary
+          expandIcon={
+            <ExpandMoreIcon
+              classes={{
+                colorPrimary: accordionclasses.colorPrimary,
+              }}
+              color="primary"
+            />
+          }
+          aria-controls="panel4bh-content"
+          classes={{ root: styles.accordiontest }}
+        >
+          <Typography id={styles.accordionHeading} component={'span'}>
+            <div className={styles.accordionHeading}>
+              <strong>Wbat are your flagship events?</strong>
+            </div>
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <p className={styles.accordionDetails}>
+            Our flagship events include the Empowerment Mentoring Program,
+            Hackathon, Case Competition and Annual Networking Night. You can
+            find more information on our website! Check out our “Events” tab.
+          </p>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion classes={{ root: accordionclasses.root }}>
+        <AccordionSummary
+          expandIcon={
+            <ExpandMoreIcon
+              classes={{
+                colorPrimary: accordionclasses.colorPrimary,
+              }}
+              color="primary"
+            />
+          }
+          aria-controls="panel4bh-content"
+          classes={{ root: styles.accordiontest }}
+        >
+          <Typography id={styles.accordionHeading} component={'span'}>
+            <div className={styles.accordionHeading}>
+              <strong>Who can attend your events?</strong>
+            </div>
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <p className={styles.accordionDetails}>
+            Anyone can attend! We’d love to see you there!
           </p>
         </AccordionDetails>
       </Accordion>

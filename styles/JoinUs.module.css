@@ -184,9 +184,9 @@
   background-size: cover;
 }
 
-/* TODO: replace photo with their subcom */
 #socials {
-  background-color: #be6f5c;
+  background-image: url('/join-us/socials.png');
+  background-size: cover;
 }
 
 .desc {

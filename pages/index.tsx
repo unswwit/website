@@ -75,7 +75,7 @@ const Home = ({
           <div className={styles.contain}>
             <Image
               className={styles.headerImage}
-              src={'/headers/2022-team-header.jpg'}
+              src={'/headers/2023-team-header.jpeg'}
               fill
               alt="header"
             />
@@ -138,15 +138,15 @@ const Home = ({
             <div>
               <div data-aos="fade" className={styles.number}>
                 <div>
-                  <CountUp end={55} duration={5} />
+                  <CountUp end={74} duration={5} />
                   <p>Team Members</p>
                 </div>
                 <div>
-                  <CountUp end={28} duration={5} />
+                  <CountUp end={32} duration={5} />
                   <p>Sponsors</p>
                 </div>
                 <div>
-                  <CountUp end={3021} duration={4} />
+                  <CountUp end={3507} duration={4} />
                   <p>Facebook Followers</p>
                 </div>
               </div>

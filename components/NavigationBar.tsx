@@ -99,7 +99,7 @@ const NavigationBar = () => {
             {/* change WIT logo depending on device theme and scroll position */}
             <Image
               className={styles.logoGridItem}
-              src='/logo-white.png'
+              src="/logo-white.png"
               alt="wit logo"
               width={40}
               height={35}

@@ -50,7 +50,7 @@ const BlogPreview = ({ individualBlogPreview }: any) => {
                           width="75"
                           height="75"
                           className={styles.authorPortrait}
-                          loading='lazy'
+                          loading="lazy"
                         />
                         <p className={styles.author} key={index}>
                           {author[index].fields.name}
