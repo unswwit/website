@@ -13,6 +13,7 @@ import { formatPodcastDate } from '../../lib/helpers/date';
 import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/legacy/image';
+import { revalidate } from '../../lib/helpers/constants';
 // TO UNCOMMENT WHEN REACH > 9 PODCASTS
 // import PaginationComp from "../components/Pagination";
 
@@ -251,6 +252,7 @@ export async function getStaticProps() {
   const episodes = await loadPodcasts();
   return {
     props: { episodes },
+    revalidate: revalidate
   };
 }
 
