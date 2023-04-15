@@ -1,0 +1,31 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - spike/next-v2
+  pull_request:
+    branches:
+      - main
+      - develop
+      - spike/next-v2
+
+jobs:
+  name: Frontend Build
+  runs-on: ubuntu-latest
+  defaults:
+    run:
+      working-directory: ./frontend
+  steps:
+    - name: Checking out repository
+      uses: actions/checkout@v3
+    - name: Install pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: latest
+    - name: Frontend builds
+      run: |
+        pnpm install --no-frozen-lockfile
+        pnpm build
