@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint src/**/*.{ts,tsx}",
+    "lint:fix": "eslint --fix src/**/*.{ts,tsx}",
+    "format": "eslint --fix src/**/*.{ts,tsx} && prettier --write 'src/**/*.{ts,tsx}'"
   },
   "dependencies": {
     "@types/node": "18.15.11",
