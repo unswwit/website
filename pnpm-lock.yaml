@@ -4,6 +4,7 @@ specifiers:
   '@types/node': 18.15.11
   '@types/react': 18.0.35
   '@types/react-dom': 18.0.11
+  '@vanilla-extract/css': ^1.11.0
   eslint: 8.38.0
   eslint-config-next: 13.3.0
   next: 13.3.0
@@ -15,6 +16,7 @@ dependencies:
   '@types/node': 18.15.11
   '@types/react': 18.0.35
   '@types/react-dom': 18.0.11
+  '@vanilla-extract/css': 1.11.0
   eslint: 8.38.0
   eslint-config-next: 13.3.0_voubu7prgxjfsfbgx5d4sqnwiy
   next: 13.3.0_biqbaboplfbrettd7655fr4n2y
@@ -29,6 +31,10 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.13.11
+    dev: false
+
+  /@emotion/hash/0.9.0:
+    resolution: {integrity: sha512-14FtKiHhy2QoPIzdTcvh//8OyBlknNs2nXRwIhG904opCby3l+9Xaf/wuPvICBF0rc1ZCNBd3nKe9cd2mecVkQ==}
     dev: false
 
   /@eslint-community/eslint-utils/4.4.0_eslint@8.38.0:
@@ -314,6 +320,26 @@ packages:
       eslint-visitor-keys: 3.4.0
     dev: false
 
+  /@vanilla-extract/css/1.11.0:
+    resolution: {integrity: sha512-uohj+8cGWbnrVzTfrjlJeXqdGjH3d3TcscdQxKe3h5bb5QQXTpPSq+c+SeWADIGiZybzcW0CBvZV8jsy1ywY9w==}
+    dependencies:
+      '@emotion/hash': 0.9.0
+      '@vanilla-extract/private': 1.0.3
+      ahocorasick: 1.0.2
+      chalk: 4.1.2
+      css-what: 5.1.0
+      cssesc: 3.0.0
+      csstype: 3.1.2
+      deep-object-diff: 1.1.9
+      deepmerge: 4.3.1
+      media-query-parser: 2.0.2
+      outdent: 0.8.0
+    dev: false
+
+  /@vanilla-extract/private/1.0.3:
+    resolution: {integrity: sha512-17kVyLq3ePTKOkveHxXuIJZtGYs+cSoev7BlP+Lf4916qfDhk/HBjvlYDe8egrea7LNPHKwSZJK/bzZC+Q6AwQ==}
+    dev: false
+
   /acorn-jsx/5.3.2_acorn@8.8.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
     peerDependencies:
@@ -326,6 +352,10 @@ packages:
     resolution: {integrity: sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==}
     engines: {node: '>=0.4.0'}
     hasBin: true
+    dev: false
+
+  /ahocorasick/1.0.2:
+    resolution: {integrity: sha512-hCOfMzbFx5IDutmWLAt6MZwOUjIfSM9G9FyVxytmE4Rs/5YDPWQrD/+IR1w+FweD9H2oOZEnv36TmkjhNURBVA==}
     dev: false
 
   /ajv/6.12.6:
@@ -509,6 +539,17 @@ packages:
       which: 2.0.2
     dev: false
 
+  /css-what/5.1.0:
+    resolution: {integrity: sha512-arSMRWIIFY0hV8pIxZMEfmMI47Wj3R/aWpZDDxWYCPEiOMv6tfOrnpDtgxBYPEQD4V0Y/958+1TdC3iWTFcUPw==}
+    engines: {node: '>= 6'}
+    dev: false
+
+  /cssesc/3.0.0:
+    resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
+    engines: {node: '>=4'}
+    hasBin: true
+    dev: false
+
   /csstype/3.1.2:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
     dev: false
@@ -564,6 +605,15 @@ packages:
 
   /deep-is/0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
+    dev: false
+
+  /deep-object-diff/1.1.9:
+    resolution: {integrity: sha512-Rn+RuwkmkDwCi2/oXOFS9Gsr5lJZu/yTGpK7wAaAIE75CC+LCGEZHpY6VQJa/RoJcrmaA/docWJZvYohlNkWPA==}
+    dev: false
+
+  /deepmerge/4.3.1:
+    resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
+    engines: {node: '>=0.10.0'}
     dev: false
 
   /define-lazy-prop/2.0.0:
@@ -1501,6 +1551,12 @@ packages:
       yallist: 4.0.0
     dev: false
 
+  /media-query-parser/2.0.2:
+    resolution: {integrity: sha512-1N4qp+jE0pL5Xv4uEcwVUhIkwdUO3S/9gML90nqKA7v7FcOS5vUtatfzok9S9U1EJU8dHWlcv95WLnKmmxZI9w==}
+    dependencies:
+      '@babel/runtime': 7.21.0
+    dev: false
+
   /merge2/1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
@@ -1677,6 +1733,10 @@ packages:
       prelude-ls: 1.2.1
       type-check: 0.4.0
       word-wrap: 1.2.3
+    dev: false
+
+  /outdent/0.8.0:
+    resolution: {integrity: sha512-KiOAIsdpUTcAXuykya5fnVVT+/5uS0Q1mrkRHcF89tpieSmY33O/tmc54CqwA+bfhbtEfZUNLHaPUiB9X3jt1A==}
     dev: false
 
   /p-limit/3.1.0:
