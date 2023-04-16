@@ -132,14 +132,13 @@ const EventRecapPage = ({ selectedEvent }: any) => {
           {/* Image Gallery / Cover Image Section */}
           {/* Display Image gallery if images exist, otherwise display cover image */}
           {!hasPhotos && (
-            <div className={styles.imageWrapper}>
               <Image
                 src={'http:' + event.fields.img.fields.file.url}
                 alt="header"
                 width="1200"
                 height="630"
+                layout="responsive"
               />
-            </div>
           )}
 
           {hasPhotos && (
@@ -196,21 +195,7 @@ const EventRecapPage = ({ selectedEvent }: any) => {
   );
 };
 
-export async function getStaticPaths() {
-  const pastEvents = await loadPastEvents();
-  const paths = pastEvents.map((event: any) => ({
-    params: {
-      year: event.fields.year.toString(),
-      event_recap_id: event.fields.eventNumber.toString(),
-    },
-  }));
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params }: any) {
+export async function getServerSideProps({ params }: any) {
   const pastEvents = await loadPastEvents();
   let selectedEvent = pastEvents.filter((event: any) => {
     if (
@@ -224,7 +209,6 @@ export async function getStaticProps({ params }: any) {
   selectedEvent = selectedEvent[0];
   return {
     props: { selectedEvent },
-    revalidate: revalidate
   };
 }
 
