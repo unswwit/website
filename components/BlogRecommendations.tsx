@@ -87,6 +87,7 @@ export default function BlogRecommendations({ recommendation }: any) {
             className={styles.upcomingEventCover}
             width="420"
             height="300"
+            layout="responsive"
           />
           <CardContent className={classes.content}>
             <Typography

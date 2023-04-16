@@ -164,20 +164,7 @@ const renderOptions = {
   },
 };
 
-export async function getStaticPaths() {
-  const blogContent = await loadBlogPreviews();
-  const paths = blogContent.map((blog: any) => ({
-    params: {
-      blog_id: blog.fields.blog_no.toString(),
-    },
-  }));
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params }: any) {
+export async function getServerSideProps({ params }: any) {
   const blogContent = await loadBlogPreviews();
   let selectedBlog = blogContent.filter((blog: any) => {
     if (blog.fields.blog_no.toString() === params.blog_id) {
@@ -188,6 +175,5 @@ export async function getStaticProps({ params }: any) {
   selectedBlog = selectedBlog[0];
   return {
     props: { selectedBlog, blogContent },
-    revalidate: revalidate
   };
 }
