@@ -23,6 +23,8 @@ const categoryDescriptions: Record<string, any> = {
     'Our understanding of technology is readily evolving along with innovation that is arising in tech. Read more about new start-ups, understanding tech disciplines, and upcoming innovation in these blogs.',
   Careers:
     'Wondering what you can do to excel in your professional life? Read here for tips on acing interviews, performing your best, and making the most of career opportunities!',
+  Projects:
+    'Ever wanted to build your own website? Click here for behind the scenes information about our technical projects, courtesy of the IT Team!',
 };
 
 const links: Record<string, any> = {
