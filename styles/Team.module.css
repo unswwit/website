@@ -267,7 +267,8 @@ h2#topheading {
   }
 
   .subcomType,
-  .profileTextName {
+  .profileTextName,
+  .dirProfileTextName {
     font-size: 20px;
   }
 
@@ -312,11 +313,6 @@ h2#topheading {
     overflow-wrap: break-word;
     word-break: break-word;
     hyphens: auto;
-  }
-
-  .profileCrop {
-    width: 200px;
-    height: 200px;
   }
 }
 

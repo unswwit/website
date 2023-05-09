@@ -54,11 +54,31 @@ a.subheader {
 }
 
 .logo {
-  width: 100%;
-  width: 220px;
+  width: 200px;
   max-height: 160px;
   padding: 15px;
   object-fit: contain;
+}
+
+.logoDiamond {
+  width: 300px
+}
+
+.logoGold {
+  width: 275px
+}
+
+.logoSilver {
+  width: 250px
+}
+
+.logoBronze {
+  width: 225px
+}
+
+.logoAffiliations,
+.logoPartnerships {
+  width: 200px
 }
 
 /*--- Dark mode ---*/
@@ -74,15 +94,48 @@ a.subheader {
 
 /*--- Mobile responsiveness ---*/
 @media only screen and (max-width: 950px) {
-  .logo {
+  .logoDiamond {
     width: 250px;
+  }
+
+  .logoGold {
+    width: 225px
+  }
+
+  .logoSilver {
+    width: 200px
+  }
+
+  .logoBronze {
+    width: 175px
+  }
+
+  .logoAffiliations,
+  .logoPartnerships {
+    width: 150px
   }
 }
 
 @media only screen and (max-width: 715px) {
-  .logo {
-    max-width: 220px;
-    max-height: 160px;
+  .logoDiamond {
+    width: 225px;
+  }
+
+  .logoGold {
+    width: 200px
+  }
+
+  .logoSilver {
+    width: 175px
+  }
+
+  .logoBronze {
+    width: 150px
+  }
+
+  .logoAffiliations,
+  .logoPartnerships {
+    width: 125px
   }
 }
 

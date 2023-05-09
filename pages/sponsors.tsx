@@ -83,14 +83,17 @@ export default function Sponsors({ sponsors }: any) {
             </p>
 
             {/* Start of Sponsors Section */}
-            {Object.keys(tempSponsors).map((sponsorType, index) => (
+            {Object.keys(tempSponsors).map((sponsorType, index) => {
+              const curType = sponsorType.split(' ')[0];
+
+              return (
               <div key={index}>
                 <h2 className={styles.subsponsor}>{sponsorType}</h2>
                 <div id={styles.majorContainer}>
                   {tempSponsors[sponsorType].map((sponsor, index) => (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
-                      className={styles.logo}
+                      className={`${styles.logo} ${styles[`logo${curType}`]}`}
                       src={
                         window.matchMedia &&
                         window.matchMedia('(prefers-color-scheme: dark)')
@@ -111,7 +114,8 @@ export default function Sponsors({ sponsors }: any) {
                   ))}
                 </div>
               </div>
-            ))}
+            );
+          })}
           </div>
 
           {/* Start of Modal */}
