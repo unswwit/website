@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --debug",
     "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
@@ -32,7 +32,7 @@
     "react-add-to-calendar-hoc": "^1.0.10",
     "react-awesome-slider": "^4.1.0",
     "react-bootstrap": "^2.4.0",
-    "react-countup": "^6.3.0",
+    "react-countup": "^6.4.2",
     "react-device-detect": "^2.2.2",
     "react-dom": "^18.2.0",
     "react-ga": "^3.3.1",

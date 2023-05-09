@@ -12,7 +12,6 @@ import 'react-awesome-slider/dist/styles.css';
 import Image from 'next/image';
 import { loadPastEvents } from '../../../../lib/api';
 import Head from 'next/head';
-import { revalidate } from '../../../../lib/helpers/constants';
 
 const EventRecapPage = ({ selectedEvent }: any) => {
   const [expanded, setExpanded] = useState(false);

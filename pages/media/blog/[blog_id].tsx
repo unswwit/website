@@ -11,7 +11,6 @@ import LoadingScreen from '../../../components/LoadingScreen';
 import Image from 'next/image';
 import React, { useEffect } from 'react';
 import BlogSuggestions from '../../../components/BlogSuggestions';
-import { revalidate } from '../../../lib/helpers/constants';
 
 const BlogDetails = ({ selectedBlog, blogContent }: any) => {
   const { date, heading, blog_no, category, content, author } =
