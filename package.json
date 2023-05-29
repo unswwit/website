@@ -46,6 +46,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@types/aos": "^3.0.4",
+    "@types/gtag.js": "^0.0.12",
     "@types/react-google-recaptcha": "^2.1.5",
     "eslint": "8.15.0",
     "eslint-config-next": "^13.2.3",
