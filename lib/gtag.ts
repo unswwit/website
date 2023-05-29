@@ -8,12 +8,13 @@ export const pageview = (url: URL) => {
 };
 
 type GTagEvent = {
+  action: string;
   label: string;
 };
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/events
-export const event = ({ label}: GTagEvent) => {
-  window.gtag('event', {
+export const event = ({ action, label}: GTagEvent) => {
+  window.gtag('event', action, {
     event_label: label,
   });
 };
