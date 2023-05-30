@@ -30,7 +30,6 @@
     "react-add-to-calendar-hoc": "^1.0.10",
     "react-awesome-slider": "^4.1.0",
     "react-bootstrap": "^2.4.0",
-    "react-countup": "^6.4.2",
     "react-device-detect": "^2.2.2",
     "react-dom": "^18.2.0",
     "react-google-recaptcha": "^2.1.0",
@@ -58,8 +57,5 @@
     "jest-environment-jsdom": "^28.1.2",
     "prettier": "^2.7.1",
     "typescript": "^4.9.4"
-  },
-  "resolutions": {
-    "react-countup/countup.js": "2.5.0"
   }
 }

@@ -1,7 +1,6 @@
 // @ts-nocheck comment
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import CountUp from 'react-countup';
 import styles from '../styles/Home.module.css';
 import PubArticle from '../components/PublicationsArticle';
 import InitiativesSlideshow from '../components/InitiativesSlideshow';
@@ -138,15 +137,15 @@ const Home = ({
             <div>
               <div data-aos="fade" className={styles.number}>
                 <div>
-                  <CountUp end={74} duration={5} />
+                  <span>74</span>
                   <p>Team Members</p>
                 </div>
                 <div>
-                  <CountUp end={32} duration={5} />
+                  <span>32</span>
                   <p>Sponsors</p>
                 </div>
                 <div>
-                  <CountUp end={3507} duration={4} />
+                  <span>3507</span>
                   <p>Facebook Followers</p>
                 </div>
               </div>
