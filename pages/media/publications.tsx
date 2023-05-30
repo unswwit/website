@@ -83,6 +83,7 @@ const Publications = ({ publications }: any) => {
                               heading={publication.fields.heading}
                               date={publication.fields.date}
                               url={publication.fields.url}
+                              index={publication.fields.index}
                             />
                           ))}
                       </div>

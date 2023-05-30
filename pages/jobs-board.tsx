@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PageHeader from '../components/Header';
 import OpportunitiesCard from '../components/OpportunitiesCard';
-import styles from '../styles/Opportunities.module.css';
+import styles from '../styles/JobsBoard.module.css';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import LoadingScreen from '../components/LoadingScreen';
 import { loadOpportunities } from '../lib/api';
