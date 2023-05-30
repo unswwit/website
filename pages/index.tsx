@@ -185,12 +185,13 @@ const Home = ({
                 {!loading &&
                   latestPubs.map((article, index) => (
                     <div className={styles.homeArticles} key={index}>
-                      <PubArticle
-                        imgUrl={'http:' + article.fields.img.fields.file.url}
-                        heading={article.fields.heading}
-                        date={article.fields.date}
-                        url={article.fields.url}
-                      />
+                        <PubArticle
+                          imgUrl={'http:' + article.fields.img.fields.file.url}
+                          heading={article.fields.heading}
+                          date={article.fields.date}
+                          url={article.fields.url}
+                          index={article.fields.index}
+                        />
                     </div>
                   ))}
               </div>
