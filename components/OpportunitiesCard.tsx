@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/Opportunities.module.css';
+import styles from '../styles/JobsBoard.module.css';
 import Link from 'next/link';
 
 export default function OpportunitiesCard({

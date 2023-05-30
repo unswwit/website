@@ -17,7 +17,7 @@ export default function PubArticle(props: any) {
         <h2>{props.heading}</h2>
         <p>{formatPublicationsDate(props.date)}</p>
         <div tabIndex={0} role="button" className={styles.button}>
-          <Link href={props.url} target="_blank" rel="noopener noreferrer">
+          <Link href={'/media/publication/' + props.index}>
             Read More
           </Link>
         </div>
