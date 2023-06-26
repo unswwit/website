@@ -10,6 +10,10 @@ import {
   changeAboutUsToArrowRight,
   changeMediaToArrowDown,
   changeMediaToArrowRight,
+  changeSponsorsToArrowDown,
+  changeSponsorsToArrowRight,
+  changeEventsToArrowDown,
+  changeEventsToArrowRight
 } from '../lib/helpers/navbar';
 import Image from 'next/image';
 
@@ -19,6 +23,8 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [aboutUsDropdownOpen, setAboutUsDropdownOpen] = useState(false);
   const [mediaDropdownOpen, setMediaDropdownOpen] = useState(false);
+  const [sponsorsDropdownOpen, setSponsorsDropdownOpen] = useState(false);
+  const [eventsDropdownOpen, setEventsDropdownOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const router = useRouter();
   let pageLoading = false;
@@ -73,6 +79,8 @@ const Navbar = () => {
   const menuItemClick = () => {
     setAboutUsDropdownOpen(false);
     setMediaDropdownOpen(false);
+    setSponsorsDropdownOpen(false);
+    setEventsDropdownOpen(false);
     setMenuOpen(false);
   };
 
@@ -94,6 +102,24 @@ const Navbar = () => {
     }
   };
 
+  const sponsorsDropdownClick = () => {
+    setSponsorsDropdownOpen(!sponsorsDropdownOpen);
+    if (sponsorsDropdownOpen) {
+      changeSponsorsToArrowRight();
+    } else {
+      changeSponsorsToArrowDown();
+    }
+  };
+
+  const eventsDropdownClick = () => {
+    setEventsDropdownOpen(!eventsDropdownOpen);
+    if (eventsDropdownOpen) {
+      changeEventsToArrowRight();
+    } else {
+      changeEventsToArrowDown();
+    }
+  };
+
   const setDropdownStyles = (id: string) => {
     if (id === 'aboutUsDropdown') {
       if (router.asPath.split('/')[1] === 'about' && aboutUsDropdownOpen) {
@@ -105,15 +131,36 @@ const Navbar = () => {
       } else {
         return styles.menuItem;
       }
-    }
-    if (router.asPath.split('/')[1] === 'media' && mediaDropdownOpen) {
-      return `${styles.currentPageMenuUnderline} ${styles.currentDropdown} ${styles.menuItem}`;
-    } else if (router.asPath.split('/')[1] === 'media') {
-      return `${styles.currentPageMenuUnderline} ${styles.menuItem}`;
-    } else if (mediaDropdownOpen) {
-      return `${styles.currentDropdown} ${styles.menuItem}`;
-    } else {
-      return styles.menuItem;
+    } else if (id === 'mediaDropdown') {
+      if (router.asPath.split('/')[1] === 'media' && mediaDropdownOpen) {
+        return `${styles.currentPageMenuUnderline} ${styles.currentDropdown} ${styles.menuItem}`;
+      } else if (router.asPath.split('/')[1] === 'media') {
+        return `${styles.currentPageMenuUnderline} ${styles.menuItem}`;
+      } else if (mediaDropdownOpen) {
+        return `${styles.currentDropdown} ${styles.menuItem}`;
+      } else {
+        return styles.menuItem;
+      }
+    } else if (id === 'sponsorsDropdown') {
+      if (router.asPath.split('/')[1] === 'sponsors' && sponsorsDropdownOpen) {
+        return `${styles.currentPageMenuUnderline} ${styles.currentDropdown} ${styles.menuItem}`;
+      } else if (router.asPath.split('/')[1] === 'sponsors') {
+        return `${styles.currentPageMenuUnderline} ${styles.menuItem}`;
+      } else if (sponsorsDropdownOpen) {
+        return `${styles.currentDropdown} ${styles.menuItem}`;
+      } else {
+        return styles.menuItem;
+      }
+    } else if (id === 'eventsDropdown') {
+      if (router.asPath.split('/')[1] === 'events' && eventsDropdownOpen) {
+        return `${styles.currentPageMenuUnderline} ${styles.currentDropdown} ${styles.menuItem}`;
+      } else if (router.asPath.split('/')[1] === 'events') {
+        return `${styles.currentPageMenuUnderline} ${styles.menuItem}`;
+      } else if (eventsDropdownOpen) {
+        return `${styles.currentDropdown} ${styles.menuItem}`;
+      } else {
+        return styles.menuItem;
+      }
     }
   };
 
@@ -194,7 +241,11 @@ const Navbar = () => {
                     onClick={
                       page.id === 'aboutUsDropdown'
                         ? aboutUsDropdownClick
-                        : mediaDropdownClick
+                        : page.id === 'mediaDropdown'
+                        ? mediaDropdownClick
+                        : page.id === 'sponsorsDropdown'
+                        ? sponsorsDropdownClick
+                        : eventsDropdownClick
                     }
                   >
                     {/* apply dropdown underline and red text color accordingly:
@@ -210,9 +261,17 @@ const Navbar = () => {
                         ? aboutUsDropdownOpen
                           ? styles.menuDropdownContent
                           : `${styles.menuDropdownContent} ${styles.hiddenMenuDropdownContent}`
-                        : page.id === 'mediaDropdown' && mediaDropdownOpen
-                        ? styles.menuDropdownContent
-                        : `${styles.menuDropdownContent} ${styles.hiddenMenuDropdownContent}`
+                        : page.id === 'mediaDropdown'
+                          ? mediaDropdownOpen
+                            ? styles.menuDropdownContent
+                            : `${styles.menuDropdownContent} ${styles.hiddenMenuDropdownContent}`
+                          : page.id === 'sponsorsDropdown'
+                            ? sponsorsDropdownOpen
+                              ? styles.menuDropdownContent
+                              : `${styles.menuDropdownContent} ${styles.hiddenMenuDropdownContent}`
+                            : page.id === 'eventsDropdown' && eventsDropdownOpen
+                              ? styles.menuDropdownContent
+                              : `${styles.menuDropdownContent} ${styles.hiddenMenuDropdownContent}`
                     }
                   >
                     {page.dropdownContent.map((page, index) => {
@@ -231,6 +290,7 @@ const Navbar = () => {
                                 ? styles.menuItemEnd
                                 : styles.menuItem
                             }
+                            onClick={menuItemClick}
                           >
                             <page.icon className={styles.icon} />
                             <a>{page.pageName}</a>

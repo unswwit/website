@@ -9,10 +9,10 @@ import Image from 'next/image';
 const routes: any = {
   Home: '/',
   Events: '/events',
-  'Jobs Board': '/jobs-board',
+  'Jobs Board': '/sponsors/jobs-board',
   'Join Us': '/join-us',
   'Our Story': '/about/our-story',
-  Sponsors: '/sponsors',
+  Sponsors: '/sponsors/current-sponsors',
   'Our Team': '/about/our-team',
   'Contact Us': '/contact-us',
   'Blog Posts': '/media/blog',
@@ -20,13 +20,16 @@ const routes: any = {
   Publications: '/media/publications',
   Marketing: '/media/marketing',
   Videos: '/media/videos',
+  'Empowerment Mentoring Program': 'https://empowerment.unswwit.com/',
+  'Merch Store': 'https://unswwit-collection.square.site/',
 };
 
-const headings = ['STUDENT INVOLVEMENT', 'ABOUT US', 'MEDIA'];
+const headings = ['ABOUT US', 'SPONSORS', 'EVENTS', 'MEDIA'];
 
 const links = [
-  ['Home', 'Events', 'Jobs Board', 'Join Us'],
-  ['Our Story', 'Sponsors', 'Our Team', 'Contact Us'],
+  ['Home', 'Our Story', 'Our Team', 'Join Us', 'Contact Us'],
+  ['Current Sponsors', 'Jobs Board'],
+  ['Events', 'Empowerment Mentoring Program', 'Merch Store'],
   ['Blog Posts', 'Podcast', 'Publications', 'Marketing', 'Videos'],
 ];
 

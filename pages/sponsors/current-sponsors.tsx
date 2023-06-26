@@ -4,15 +4,15 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import { Button } from 'semantic-ui-react';
-import styles from '../styles/Sponsors.module.css';
-import PageHeader from '../components/Header';
-import SponsorsModal from '../components/SponsorModal';
-import LoadingScreen from '../components/LoadingScreen';
+import styles from '../../styles/Sponsors.module.css';
+import PageHeader from '../../components/Header';
+import SponsorsModal from '../../components/SponsorModal';
+import LoadingScreen from '../../components/LoadingScreen';
 import Link from 'next/link';
 import Head from 'next/head';
-import { loadSponsors } from '../lib/api';
-import { filterSponsors } from '../lib/helpers/sponsor';
-import { revalidate } from '../lib/helpers/constants';
+import { loadSponsors } from '../../lib/api';
+import { filterSponsors } from '../../lib/helpers/sponsor';
+import { revalidate } from '../../lib/helpers/constants';
 
 export default function Sponsors({ sponsors }: any) {
   const [open, setOpen] = React.useState(false);

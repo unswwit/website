@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import PageHeader from '../components/Header';
-import OpportunitiesCard from '../components/OpportunitiesCard';
-import styles from '../styles/JobsBoard.module.css';
+import PageHeader from '../../components/Header';
+import OpportunitiesCard from '../../components/OpportunitiesCard';
+import styles from '../../styles/JobsBoard.module.css';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import LoadingScreen from '../components/LoadingScreen';
-import { loadOpportunities } from '../lib/api';
+import LoadingScreen from '../../components/LoadingScreen';
+import { loadOpportunities } from '../../lib/api';
 import Head from 'next/head';
-import { revalidate } from '../lib/helpers/constants';
+import { revalidate } from '../../lib/helpers/constants';
 
 const Opportunities = ({ opportunities }: any) => {
   const [loading, setLoading] = useState(true);
