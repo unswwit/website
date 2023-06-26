@@ -64,7 +64,7 @@ const sponsorsDropdownContent = [
     link: '/sponsors/jobs-board',
     icon: WorkOutlineOutlinedIcon,
   },
-]
+];
 
 const eventsDropdownContent = [
   {
@@ -82,7 +82,7 @@ const eventsDropdownContent = [
     link: 'https://unswwit-collection.square.site/',
     icon: LocalMallOutlinedIcon,
   },
-]
+];
 
 
 const navigationBarContent = [
