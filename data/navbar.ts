@@ -6,6 +6,11 @@ import HeadsetMicOutlinedIcon from '@material-ui/icons/HeadsetMicOutlined';
 import LocalPrintshopOutlinedIcon from '@material-ui/icons/LocalPrintshopOutlined';
 import ImageOutlinedIcon from '@material-ui/icons/ImageOutlined';
 import VideocamOutlinedIcon from '@material-ui/icons/VideocamOutlined';
+import AccountBalanceOutlinedIcon from '@material-ui/icons/AccountBalanceOutlined';
+import WorkOutlineOutlinedIcon from '@material-ui/icons/WorkOutlineOutlined';
+import CalendarTodayOutlinedIcon from '@material-ui/icons/CalendarTodayOutlined';
+import LocalLibraryOutlinedIcon from '@material-ui/icons/LocalLibraryOutlined';
+import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
 
 const aboutUsDropdownContent = [
   {
@@ -48,6 +53,38 @@ const mediaDropdownContent = [
   },
 ];
 
+const sponsorsDropdownContent = [
+  {
+    pageName: 'Current Sponsors',
+    link: '/sponsors/current-sponsors',
+    icon: AccountBalanceOutlinedIcon,
+  },
+  {
+    pageName: 'Jobs Board',
+    link: '/sponsors/jobs-board',
+    icon: WorkOutlineOutlinedIcon,
+  },
+];
+
+const eventsDropdownContent = [
+  {
+    pageName: 'All Events',
+    link: '/events',
+    icon: CalendarTodayOutlinedIcon,
+  },
+  {
+    pageName: 'Empowerment Mentoring Program',
+    link: 'https://empowerment.unswwit.com/',
+    icon: LocalLibraryOutlinedIcon,
+  },
+  {
+    pageName: 'Merch Store',
+    link: 'https://unswwit-collection.square.site/',
+    icon: LocalMallOutlinedIcon,
+  },
+];
+
+
 const navigationBarContent = [
   {
     pageName: 'Home',
@@ -64,19 +101,21 @@ const navigationBarContent = [
     dropdownContent: aboutUsDropdownContent,
   },
   {
-    pageName: 'Sponsors',
-    link: '/sponsors',
+    pageName: 'Sponsors ▸',
+    link: '/sponsors/current-sponsors',
+    category: 'sponsors',
     itemName: styles.sponsorsGridItem,
+    id: 'sponsorsDropdown',
+    text: 'sponsorsText',
+    dropdownContent: sponsorsDropdownContent
   },
   {
-    pageName: 'Jobs Board',
-    link: '/jobs-board',
-    itemName: styles.jobsBoardGridItem,
-  },
-  {
-    pageName: 'Events',
+    pageName: 'Events ▸',
     link: '/events',
     itemName: styles.eventsGridItem,
+    id: 'eventsDropdown',
+    text: 'eventsText',
+    dropdownContent: eventsDropdownContent,
   },
   {
     pageName: 'Media ▸',

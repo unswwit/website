@@ -23,7 +23,7 @@
 
 .navBarGrid {
   display: grid;
-  grid-template: 'logo empty home aboutUs sponsors jobsBoard events media joinUs contactUs';
+  grid-template: 'logo empty home aboutUs sponsors events media joinUs contactUs';
   align-items: center;
   height: 100%;
 }
@@ -50,10 +50,6 @@
 
 .eventsGridItem {
   grid-area: events;
-}
-
-.jobsBoardGridItem {
-  grid-area: jobsBoard;
 }
 
 .mediaGridItem {
@@ -279,9 +275,10 @@
 }
 
 .clearMenuContent {
-  background-color: rgba(255, 255, 255, 0.2) !important;
+  background-color: rgba(82, 82, 82, 0.2) !important;
   border: 0.15vw solid var(--white);
   border-radius: 15px 15px 15px 15px;
+  backdrop-filter: blur(15px);
 }
 
 .menuItemContent {

@@ -10,6 +10,10 @@ import {
   changeAboutUsToArrowRight,
   changeMediaToArrowDown,
   changeMediaToArrowRight,
+  changeSponsorsToArrowDown,
+  changeSponsorsToArrowRight,
+  changeEventsToArrowDown,
+  changeEventsToArrowRight
 } from '../lib/helpers/navbar';
 import Image from 'next/image';
 
@@ -55,10 +59,16 @@ const NavigationBar = () => {
   useEffect(() => {
     let aboutUsDropdown = document.getElementById('aboutUsDropdown');
     let mediaDropdown = document.getElementById('mediaDropdown');
+    let sponsorsDropdown = document.getElementById('sponsorsDropdown');
+    let eventsDropdown = document.getElementById('eventsDropdown');
     aboutUsDropdown.addEventListener('mouseover', changeAboutUsToArrowDown);
     aboutUsDropdown.addEventListener('mouseleave', changeAboutUsToArrowRight);
     mediaDropdown.addEventListener('mouseover', changeMediaToArrowDown);
     mediaDropdown.addEventListener('mouseleave', changeMediaToArrowRight);
+    sponsorsDropdown.addEventListener('mouseover', changeSponsorsToArrowDown);
+    sponsorsDropdown.addEventListener('mouseleave', changeSponsorsToArrowRight);
+    eventsDropdown.addEventListener('mouseover', changeEventsToArrowDown);
+    eventsDropdown.addEventListener('mouseleave', changeEventsToArrowRight);
   }, []);
 
   const checkWindowWidth = () => {
