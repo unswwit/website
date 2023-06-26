@@ -73,7 +73,7 @@ const eventsDropdownContent = [
     icon: CalendarTodayOutlinedIcon,
   },
   {
-    pageName: 'Empowerment Mentoring',
+    pageName: 'Empowerment Mentoring Program',
     link: 'https://empowerment.unswwit.com/',
     icon: LocalLibraryOutlinedIcon,
   },
