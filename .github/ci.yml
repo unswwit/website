@@ -6,11 +6,13 @@ on:
       - main
       - develop
       - spike/next-v2
+      - next/landing-page
   pull_request:
     branches:
       - main
       - develop
       - spike/next-v2
+      - next/landing-page
 
 jobs:
   name: Frontend Build
@@ -21,11 +23,34 @@ jobs:
   steps:
     - name: Checking out repository
       uses: actions/checkout@v3
-    - name: Install pnpm
-      uses: pnpm/action-setup@v2
+
+    - name: Install node
+      uses: actions/setup-node@v3
       with:
-        version: latest
-    - name: Frontend builds
+        node-version: 18
+
+    - uses: pnpm/action-setup@v2
+      name: Install pnpm
+      id: pnpm-install
+      with:
+        run_install: false
+
+    - name: Get pnpm store directory
+      id: pnpm-cache
+      shell: bash
       run: |
-        pnpm install --no-frozen-lockfile
-        pnpm build
+        echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+    - uses: actions/cache@v3
+      name: Setup pnpm cache
+      with:
+        path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+        key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-pnpm-store-
+
+    - name: Install deps
+      run: pnpm install --frozen-lockfile
+
+    - name: Build
+      run: pnpm build
