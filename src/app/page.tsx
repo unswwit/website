@@ -1,16 +1,17 @@
-import Image from 'next/image';
-import { Inter } from 'next/font/google';
-import styles from './page.module.css';
-import Navbar from '@/components/navbar';
-import HeroBackground from '@/assets/landing-page/landing-hero-section.svg';
-import TeamBanner from '@/assets/landing-page/2023-team-header.webp';
-import Willow from '@/assets/landing-page/willow.svg';
-import Button from '@/components/button';
-import Footer from '@/components/footer';
-import Card from '@/components/card';
+import Image from "next/image";
+
+import TeamBanner from "@/assets/landing-page/2023-team-header.webp";
+import HeroBackground from "@/assets/landing-page/landing-hero-section.svg";
+import Willow from "@/assets/landing-page/willow.svg";
+import Button from "@/components/button";
+import Card from "@/components/card";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
+
+import styles from "./page.module.css";
 
 export const metadata = {
-  title: 'Home | UNSW WIT'
+  title: "Home | UNSW WIT",
 };
 
 const Home = () => {

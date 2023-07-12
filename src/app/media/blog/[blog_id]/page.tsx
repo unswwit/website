@@ -1,7 +1,5 @@
 const BlogDetail = () => {
-  return (
-    <div>BlogDetail</div>
-  )
-}
+  return <div>BlogDetail</div>;
+};
 
-export default BlogDetail
+export default BlogDetail;

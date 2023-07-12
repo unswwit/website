@@ -1,7 +1,5 @@
 const EventDetail = () => {
-  return (
-    <div>EventDetail</div>
-  )
-}
+  return <div>EventDetail</div>;
+};
 
-export default EventDetail
+export default EventDetail;

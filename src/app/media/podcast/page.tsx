@@ -1,7 +1,5 @@
 const Podcast = () => {
-  return (
-    <div>Podcast</div>
-  )
-}
+  return <div>Podcast</div>;
+};
 
-export default Podcast
+export default Podcast;

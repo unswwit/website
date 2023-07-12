@@ -1,7 +1,5 @@
 const JobsBoard = () => {
-  return (
-    <div>JobsBoard</div>
-  )
-}
+  return <div>JobsBoard</div>;
+};
 
-export default JobsBoard
+export default JobsBoard;
