@@ -23,7 +23,7 @@
     "contentful": "^9.2.4",
     "material-ui": "^0.20.2",
     "moment": "^2.29.4",
-    "next": "^13.2.3",
+    "next": "^13.4.10",
     "npm": "^8.9.0",
     "pure-react-carousel": "^1.28.1",
     "react": "^18.2.0",

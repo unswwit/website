@@ -260,7 +260,11 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
             <div className={styles.eventCategories}>
               <div className={styles.contentCategories}>
                 {Object.keys(categories)
-                  .sort()
+                  .sort((a, b) => {
+                    if (a === 'Other') return 1;
+                    if (b === 'Other') return -1;
+                    return a.localeCompare(b);
+                  })
                   .map((category) => {
                     const chipColour =
                       selectedCategory === categories[category]
