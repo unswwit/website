@@ -1,14 +1,13 @@
+import { css } from "@ss/css";
 import Image from "next/image";
 
-import TeamBanner from "@/assets/landing-page/2023-team-header.webp";
 import HeroBackground from "@/assets/landing-page/landing-hero-section.svg";
 import Willow from "@/assets/landing-page/willow.svg";
 import Button from "@/components/button";
 import Card from "@/components/card";
 import Footer from "@/components/footer";
-import Navbar from "@/components/navbar";
-
-import styles from "./page.module.css";
+import MainHero from "@/components/landingPage/MainHero";
+import Navbar from "@/components/navbar/Navbar";
 
 export const metadata = {
   title: "Home | UNSW WIT",
@@ -17,18 +16,15 @@ export const metadata = {
 const Home = () => {
   return (
     <main>
-      <div>
+      <div className={css({ position: "relative" })}>
         <Navbar />
-        <Image src={HeroBackground} alt="Landing Hero Section" width="100" height="100" />
+        <Image
+          className={css({ position: "absolute", zIndex: "-1" })}
+          src={HeroBackground}
+          alt="Landing Hero Section"
+        />
       </div>
-      <div>
-        <h1 className={styles.title}>UNSW Women In Technology</h1>
-        <p>"Empowering and inspiring the architects of change"</p>
-        <p>
-          Collaborate <span>|</span> Inspire <span>|</span> Change
-        </p>
-        <Image src={TeamBanner} alt="2023 Team Header" width="100" height="100" />
-      </div>
+      <MainHero />
       <div>
         <h2>Who Are We?</h2>
         <p>

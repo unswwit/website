@@ -2,6 +2,8 @@ import "./globals.css";
 
 import Head from "next/head";
 
+import { InterFont, MontserratFont } from "@/styles/font";
+
 export const metadata = {
   title: {
     template: "%s | Next.js",
@@ -12,7 +14,7 @@ export const metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en">
+    <html lang="en" className={`${InterFont.variable} ${MontserratFont.variable}`}>
       <Head>
         <meta charSet="utf-8" />
         <link rel="manifest" href="/manifest.webmanifest" />
