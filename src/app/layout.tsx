@@ -2,6 +2,7 @@ import "./globals.css";
 
 import Head from "next/head";
 
+import Navbar from "@/components/navbar/Navbar";
 import { InterFont, MontserratFont } from "@/styles/font";
 
 export const metadata = {
@@ -19,7 +20,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <meta charSet="utf-8" />
         <link rel="manifest" href="/manifest.webmanifest" />
       </Head>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 };

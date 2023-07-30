@@ -14,6 +14,12 @@ const globalCss = defineGlobalStyles({
   body: {
     fontFamily: "inter",
   },
+  h2: {
+    fontFamily: "montserrat",
+    fontSize: 40,
+    fontWeight: 700,
+  },
+  p: { fontFamily: "montserrat", fontSize: 24 },
 });
 
 export default defineConfig({
