@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "panda:codegen": "panda codegen --clean",
     "dev": "next dev",
-    "build": "next build",
+    "build": "panda:codegen && next build",
     "start": "next start",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "lint:fix": "eslint --fix 'src/**/*.{ts,tsx}'",
@@ -20,6 +21,7 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@pandacss/dev": "0.9.0",
     "@types/node": "18.15.11",
     "@types/react": "18.2.17",
     "@types/react-dom": "18.2.7",
