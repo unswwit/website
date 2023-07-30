@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import Button from "../button";
 import { card } from "./styles.module.css";
 
