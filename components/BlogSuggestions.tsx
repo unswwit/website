@@ -1,7 +1,6 @@
 import React from 'react';
-import styles from '../styles/Blog.module.css';
 import BlogPreview from './BlogPreview';
-
+import styles from '../styles/Blog.module.css';
 const BlogSuggestions = ({ blogPreviews, category, blogNo }: any) => {
   const filteredBlogs = blogPreviews.filter(
     (blog: any) =>
@@ -11,9 +10,9 @@ const BlogSuggestions = ({ blogPreviews, category, blogNo }: any) => {
   const selectedBlogs = filteredBlogs.splice(0, 3);
 
   return (
-    <div>
-      <h2>MORE FROM WIT</h2>
-      <div className={styles.blogPosts}>
+    <div className={styles.suggestionsContainer}>
+      <h2 className={styles.blogRecommendationsTitle}>MORE FROM WIT</h2>
+      <div>
         {selectedBlogs.map((individualBlogPreview: any, index: any) => {
           return (
             <BlogPreview
