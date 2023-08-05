@@ -77,7 +77,7 @@ export default function BlogRecommendations({ recommendation }: any) {
   const imgUrl = 'https:' + cover.fields.file.url;
 
   return (
-    <Link href={'/media/blog/' + blogNo} legacyBehavior>
+    <Link href={'/media/blog/' + blogNo}>
       <>
         <Card className={[classes.root, styles.previewContainer].join(' ')}>
           <div className={styles.darkOverlay} />
