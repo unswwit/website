@@ -54,29 +54,18 @@ const PublicationDetails = ({ selectedPub }: any) => {
 export default PublicationDetails;
 
 // TODO: fix any types
-export async function getStaticPaths() {
-  const pubContent = await loadPublications();
-  const paths = pubContent.map((pub: any) => ({
-    params: {
-      pub_id: pub.fields.index.toString(),
-    },
-  }));
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
 export async function getServerSideProps({ params }: any) {
   const pubContent = await loadPublications();
   let selectedPub = pubContent.filter((pub: any) => {
-    if (pub.fields.index.toString() === params.pub_id) {
+    if (
+      pub.fields.index.toString() === params.pub_id
+    ) {
       return true;
     }
     return false;
   });
   selectedPub = selectedPub[0];
   return {
-    props: { selectedPub, pubContent },
+    props: { selectedPub },
   };
 }
