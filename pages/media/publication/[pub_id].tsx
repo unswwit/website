@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import PageHeader from '../../../components/Header';
 import { loadPublications } from '../../../lib/api';
-import { revalidate } from '../../../lib/helpers/constants';
 import styles from '../../../styles/PubArticle.module.css';
 
 const PublicationDetails = ({ selectedPub }: any) => {
@@ -68,7 +67,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }: any) {
+export async function getServerSideProps({ params }: any) {
   const pubContent = await loadPublications();
   let selectedPub = pubContent.filter((pub: any) => {
     if (pub.fields.index.toString() === params.pub_id) {
@@ -79,6 +78,5 @@ export async function getStaticProps({ params }: any) {
   selectedPub = selectedPub[0];
   return {
     props: { selectedPub, pubContent },
-    revalidate: revalidate,
   };
 }
