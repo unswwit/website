@@ -39,6 +39,7 @@ const EventWrapper = styled("div", {
     gap: "2rem",
     justifyContent: "center",
     mt: "5.44rem",
+    mb: "9.38rem",
   },
 });
 

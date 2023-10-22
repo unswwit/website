@@ -4,11 +4,11 @@ import Image from "next/image";
 
 import HeroBackground from "@/assets/landing-page/landing-hero-section.svg";
 import Button from "@/components/button";
-import Card from "@/components/card";
 import Footer from "@/components/footer";
 import CommunityInNumbersPage from "@/components/landingPage/CommunityInNumbers";
 import HearFromUsPage from "@/components/landingPage/HearFromUs";
 import MainHero from "@/components/landingPage/MainHero";
+import SponsorsAndAffiliations from "@/components/landingPage/SponsorsAndAffiliations";
 import WhatWeHaveBeenUpTo from "@/components/landingPage/WhatWeHaveBeenUpTo";
 import WhoAreWePage from "@/components/landingPage/WhoAreWe";
 
@@ -48,16 +48,7 @@ const Home = () => {
           <Button title="View More" />
         </div>
         <WhatWeHaveBeenUpTo />
-        <div>
-          <h2>Annual Events</h2>
-          <p>Check out some of our flagship events!</p>
-          {/* Event Cards */}
-          <Card title="WIT Hackathon" description="Some description" image={null} link="/" />
-        </div>
-        <div>
-          <h2>Sponsors and Affliations</h2>
-          {/* Sponsors */}
-        </div>
+        <SponsorsAndAffiliations />
         <div>
           <h2>Newsletter</h2>
           <p>Subscribe to our newsletter to stay up to date with our events and opportunities!</p>
