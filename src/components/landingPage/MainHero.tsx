@@ -10,6 +10,7 @@ const MainWrapper = styled("section", {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    color: "white",
   },
 });
 

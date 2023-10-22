@@ -9,6 +9,7 @@ import Footer from "@/components/footer";
 import CommunityInNumbersPage from "@/components/landingPage/CommunityInNumbers";
 import HearFromUsPage from "@/components/landingPage/HearFromUs";
 import MainHero from "@/components/landingPage/MainHero";
+import WhatWeHaveBeenUpTo from "@/components/landingPage/WhatWeHaveBeenUpTo";
 import WhoAreWePage from "@/components/landingPage/WhoAreWe";
 
 export const metadata = {
@@ -46,11 +47,7 @@ const Home = () => {
           {/* Multimedia Stuff */}
           <Button title="View More" />
         </div>
-        <div>
-          <h2>See What We've Been Up To</h2>
-          {/* Event Cards */}
-          <Card title="WIT Hackathon" description="Some description" image={null} link="/" />
-        </div>
+        <WhatWeHaveBeenUpTo />
         <div>
           <h2>Annual Events</h2>
           <p>Check out some of our flagship events!</p>

@@ -10,10 +10,11 @@ const Wrapper = styled("section", {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#313638",
+    backgroundColor: "#FFF7EF",
     borderTop: "20px solid #F48B01",
     borderBottom: "20px solid #F48B01",
     width: "100%",
+    color: "#000",
   },
 });
 
