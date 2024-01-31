@@ -21,7 +21,7 @@ const OurTeam = ({ execs, subcommittee, directors }: any) => {
   const [filteredExecs, setFilteredExecs] = useState([]);
   const [filteredDirectors, setFilteredDirectors] = useState([]);
   const [filteredSubcom, setFilteredSubcom] = useState([]);
-  const [year, setYear] = useState(2023);
+  const [year, setYear] = useState(2024);
   const [loading, setLoading] = useState(true);
   const [sourceLoading, setSourceLoading] = useState(true);
   const [headerLoading, setHeaderLoading] = useState(true);
