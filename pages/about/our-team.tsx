@@ -181,11 +181,11 @@ const OurTeam = ({ execs, subcommittee, directors }: any) => {
             imageLoading={setHeaderLoading}
           />
 
-          {/* Timeline */}
+          {/* Timeline - should be as close to 100 as possible */}
           <Timeline
             margin={'50px'}
             page={'teams'}
-            step={14}
+            step={14.2}
             valueToYear={valueToYear}
             marks={marks}
             updateYear={handleYear}
