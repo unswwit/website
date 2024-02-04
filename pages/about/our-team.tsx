@@ -120,7 +120,20 @@ const OurTeam = ({ execs, subcommittee, directors }: any) => {
   // Moved from teamData.js to prevent new portfolios
   // from showing when the year is earlier than 2021.
   const sectors =
-    year === 2023
+    year === 2024
+      ? [
+          'Careers',
+          'Competitions',
+          'Education',
+          'Human Resources',
+          'Information Technology',
+          'Marketing',
+          'Media',
+          'Publications',
+          'Socials',
+          'Sponsorships',
+        ]
+    : year === 2023
       ? [
           'Careers',
           'Competitions',
