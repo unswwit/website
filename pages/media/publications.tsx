@@ -62,7 +62,7 @@ const Publications = ({ publications }: any) => {
             </div>
             {/*Articles*/}
             {!loading &&
-              Array.from({ length: 4 }, (_, i) => i + 2020)
+              Array.from({ length: 5 }, (_, i) => i + 2020)
                 .reverse()
                 .map((year) => {
                   return (
