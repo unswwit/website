@@ -11,6 +11,11 @@ const execToClassName = {
 
 const marks = [
   {
+    value: 116.2,
+    scaledValue: 2024,
+    label: '2024',
+  },
+  {
     value: 99.6,
     scaledValue: 2023,
     label: '2023',
@@ -55,6 +60,7 @@ const valueToYear = {
   66.4: 2021,
   83: 2022,
   99.6: 2023,
+  116.2: 2024,
 };
 
 export { execToClassName, marks, valueToYear };
