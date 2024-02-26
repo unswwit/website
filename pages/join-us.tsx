@@ -122,7 +122,7 @@ const JoinUs = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                SPArc
+                SpArc
               </a>
               .
             </p>
