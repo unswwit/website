@@ -104,11 +104,11 @@ const JoinUs = () => {
           {/* Start of how to join section */}
           <h2 className={styles.section}>How to join</h2>
           <div className={styles.descriptionHowto}>
-            <strong>Join us via SPArc</strong>
+            <strong>Join us via SpArc</strong>
             <p>
               Fill out the following&nbsp;
               <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSc5hkfsp_b9_mVVShgDMMYRbzS0r8fhQ-tQBPn5v7S19qP_2g/viewform?usp=sf_link"
+                href="https://bit.ly/join-wit-2024"
                 className={styles.link}
                 target="_blank"
                 rel="noopener noreferrer"
