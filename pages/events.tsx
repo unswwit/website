@@ -19,7 +19,7 @@ import { revalidate } from '../lib/helpers/constants';
 
 const Events = ({ upcomingEvents, allPastEvents }: any) => {
   const classes = useStyles();
-  const [year, setYear] = useState(valueToYear[99.9]);
+  const [year, setYear] = useState(valueToYear[100]);
   const [pastEvents, setPastEvents] = useState({
     term1: [],
     term2: [],
@@ -291,7 +291,7 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
               <Timeline
                 margin={'3%'}
                 page={'events'}
-                step={33.3}
+                step={25}
                 valueToYear={valueToYear}
                 marks={marks}
                 updateYear={handleYear}

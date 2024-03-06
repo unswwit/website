@@ -24,7 +24,7 @@ const MarketingContent = ({ archives }: any) => {
   const classes = useStyles();
   const [content, setContent] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [year, setYear] = useState('2023');
+  const [year, setYear] = useState('2024');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [emptyCategory, setEmptyCategory] = useState(false);
   const [sourceLoading, setSourceLoading] = useState(true);
@@ -159,7 +159,7 @@ const MarketingContent = ({ archives }: any) => {
                 <Timeline
                   margin={'2%'}
                   page={'marketing'}
-                  step={33.3}
+                  step={25}
                   valueToYear={valueToYear}
                   marks={marks}
                   updateYear={handleYear}
