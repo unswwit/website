@@ -21,21 +21,26 @@ const categories = {
 const marks = [
   {
     value: 100,
+    scaledValue: 2025,
+    label: '2025',
+  },
+  {
+    value: 80,
     scaledValue: 2024,
     label: '2024',
   },
   {
-    value: 75,
+    value: 60,
     scaledValue: 2023,
     label: '2023',
   },
   {
-    value: 50,
+    value: 40,
     scaledValue: 2022,
     label: '2022',
   },
   {
-    value: 25,
+    value: 20,
     scaledValue: 2021,
     label: '2021',
   },
@@ -48,10 +53,11 @@ const marks = [
 
 const valueToYear = {
   0: '2020',
-  25: '2021',
-  50: '2022',
-  75: '2023',
-  100: '2024',
+  20: '2021',
+  40: '2022',
+  60: '2023',
+  80: '2024',
+  100: '2025',
 };
 
 export { useStyles, categories, marks, valueToYear };
