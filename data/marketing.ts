@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
-  chip: {
+  chip: { 
     textTransform: 'uppercase',
     color: 'white',
     margin: '5px',
