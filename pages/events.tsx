@@ -291,7 +291,7 @@ const Events = ({ upcomingEvents, allPastEvents }: any) => {
               <Timeline
                 margin={'3%'}
                 page={'events'}
-                step={25}
+                step={20}
                 valueToYear={valueToYear}
                 marks={marks}
                 updateYear={handleYear}
