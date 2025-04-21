@@ -73,7 +73,7 @@ const Home = ({
           <div className={styles.contain}>
             <Image
               className={styles.headerImage}
-              src={'/headers/2024-team-header.jpeg'}
+              src={'/headers/2025-team-header.jpeg'}
               fill
               alt="header"
             />
