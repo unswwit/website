@@ -173,6 +173,22 @@ const socialsDescription = () => {
   );
 };
 
+const eduDescription = () => {
+  return (
+    <ul>
+      <>
+        <li>
+        Responsible for hosting innovating educational ventures 
+        </li>
+        <li>
+        Organises catering services and liaising with and presenting to 
+        high schools interested in technology
+        </li>
+      </>
+    </ul>
+  );
+};
+
 export {
   socials,
   careerDescription,
@@ -184,4 +200,5 @@ export {
   publicationsDescription,
   sponsDescription,
   socialsDescription,
+  eduDescription
 };

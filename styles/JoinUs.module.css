@@ -126,7 +126,6 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
   grid-gap: 2rem;
   color: var(--white);
 }
@@ -186,6 +185,11 @@
 
 #socials {
   background-image: url('/join-us/socials.png');
+  background-size: cover;
+}
+
+#education {
+  background-image: url('/join-us/edu.png');
   background-size: cover;
 }
 
