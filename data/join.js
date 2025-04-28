@@ -178,11 +178,11 @@ const eduDescription = () => {
     <ul>
       <>
         <li>
-        Responsible for hosting innovating educational ventures 
+        Responsible for ideating and running educational workshops to upskill WIT's student community 
         </li>
         <li>
-        Organises catering services and liaising with and presenting to 
-        high schools interested in technology
+        Involves creating workshop content, writing blog posts, managing event logistics,
+         and collaborating with external partners for our flagship High School Outreach initiative
         </li>
       </>
     </ul>
