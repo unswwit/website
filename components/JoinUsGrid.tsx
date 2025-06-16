@@ -8,6 +8,7 @@ import {
   mediaDescription,
   publicationsDescription,
   socialsDescription,
+  eduDescription
 } from '../data/join';
 import styles from '../styles/JoinUs.module.css';
 import React, { useState } from 'react';
@@ -23,6 +24,7 @@ const PortfolioGrid = () => {
     clickedPubs: true,
     clickedSocials: true,
     clickedSpons: true,
+    clickedEdu: true,
   });
 
   return (
@@ -169,6 +171,22 @@ const PortfolioGrid = () => {
           'Sponsorships'
         ) : (
           <p className={styles.desc}>{sponsDescription()}</p>
+        )}
+      </div>
+      <div
+        className={styles.portfolioBox}
+        id={styles.education}
+        onClick={() =>
+          setPortfolios({
+            ...portfolios,
+            clickedEdu: !portfolios.clickedEdu,
+          })
+        }
+      >
+        {portfolios.clickedEdu ? (
+          'Education'
+        ) : (
+          <p className={styles.desc}>{eduDescription()}</p>
         )}
       </div>
     </div>

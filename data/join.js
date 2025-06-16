@@ -173,6 +173,22 @@ const socialsDescription = () => {
   );
 };
 
+const eduDescription = () => {
+  return (
+    <ul>
+      <>
+        <li>
+        Responsible for ideating and running educational workshops to upskill WIT's student community 
+        </li>
+        <li>
+        Involves creating workshop content, writing blog posts, managing event logistics,
+         and collaborating with external partners for our flagship High School Outreach initiative
+        </li>
+      </>
+    </ul>
+  );
+};
+
 export {
   socials,
   careerDescription,
@@ -184,4 +200,5 @@ export {
   publicationsDescription,
   sponsDescription,
   socialsDescription,
+  eduDescription
 };
