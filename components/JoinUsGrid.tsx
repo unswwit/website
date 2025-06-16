@@ -40,6 +40,7 @@ const PortfolioGrid = () => {
           onMouseEnter={() => setHovered(portfolio.key)}
           onMouseLeave={() => setHovered(null)}
         >
+          {/* On hover */}
           <div
             className={`${styles.descWrapper} ${
               hovered === portfolio.key ? styles.descVisible : ''
