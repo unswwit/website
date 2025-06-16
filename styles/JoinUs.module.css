@@ -134,13 +134,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   font-family: 'Montserrat', sans-serif;
   cursor: pointer;
+  transition: background 0.5s ease;
 }
 
 .portfolioBox:before {
   content: '';
   padding-top: 100%;
+}
+
+.portfolioBox:hover {
+  background: #222; /* or any darker color you prefer */
 }
 
 #careers {
@@ -196,6 +202,50 @@
 .desc {
   font-size: 12pt;
   margin-right: 5%;
+}
+
+/* Exclusive to defining how descriptions should appear on hover */
+.descWrapper {
+  opacity: 1; 
+  transform: none; 
+  transition: none; 
+  pointer-events: none;
+  position: absolute;
+  padding: 1em;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: none;
+}
+
+.descWrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0); 
+  z-index: -1;
+  transition: none; 
+  pointer-events: none;
+}
+
+.descVisible::before {
+  background: rgba(0,0,0,0.65); 
+}
+
+.descText {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.4s cubic-bezier(0.4,0,0.2,1), transform 0.4s cubic-bezier(0.4,0,0.2,1);
+  position: relative;
+  z-index: 1;
+}
+
+.descVisible .descText {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /*-------------------------------FAQ Section------------------------------*/
@@ -443,3 +493,6 @@
     color: white;
   }
 }
+
+
+
