@@ -25,16 +25,19 @@ p.subheader {
 
 /* Sponsor filter buttons */
 #sponsorButtonsContainer {
-  margin-bottom: 100px;
+  margin-bottom: 40px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow-x: auto;
+  padding: 0 10px;
+  gap: 12px;
+  scroll-behavior: smooth;
 }
 
 #sponsorButtonsContainer button {
   font-family: 'Montserrat', sans-serif;
-  font-size: 12pt;
+  font-size: 14pt;
   width: 213px;
   height: 66px;
   border-radius: 30px;
