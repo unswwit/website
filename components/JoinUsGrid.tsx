@@ -13,182 +13,46 @@ import {
 import styles from '../styles/JoinUs.module.css';
 import React, { useState } from 'react';
 
+// CHANGED: Easier to keep track of portfolios in array of dictionaries which can map to appropriate portfolio
+const portfolios = [
+  { key: 'careers', label: 'Careers', desc: careerDescription, styleId: styles.careers },
+  { key: 'competitions', label: 'Competitions', desc: competitionDescription, styleId: styles.competitions },
+  { key: 'hr', label: 'HR', desc: hrDescription, styleId: styles.hr },
+  { key: 'it', label: 'IT', desc: itDescription, styleId: styles.it },
+  { key: 'marketing', label: 'Marketing', desc: marketingDescription, styleId: styles.marketing },
+  { key: 'media', label: 'Media', desc: mediaDescription, styleId: styles.media },
+  { key: 'publications', label: 'Publications', desc: publicationsDescription, styleId: styles.publications },
+  { key: 'socials', label: 'Socials', desc: socialsDescription, styleId: styles.socials },
+  { key: 'spons', label: 'Sponsorships', desc: sponsDescription, styleId: styles.spons },
+  { key: 'education', label: 'Education', desc: eduDescription, styleId: styles.education },
+];
+
 const PortfolioGrid = () => {
-  const [portfolios, setPortfolios] = useState({
-    clickedCareers: true,
-    clickedCompetitions: true,
-    clickedHr: true,
-    clickedIt: true,
-    clickedMar: true,
-    clickedMedia: true,
-    clickedPubs: true,
-    clickedSocials: true,
-    clickedSpons: true,
-    clickedEdu: true,
-  });
+  const [hovered, setHovered] = useState<string | null>(null);
 
   return (
     <div className={styles.whatTo}>
-      <div
-        className={styles.portfolioBox}
-        id={styles.careers}
-        onClick={() =>
-          setPortfolios({
-            ...portfolios,
-            clickedCareers: !portfolios.clickedCareers,
-          })
-        }
-      >
-        {portfolios.clickedCareers ? (
-          'Careers'
-        ) : (
-          <p className={styles.desc}>{careerDescription()}</p>
-        )}
-      </div>
-      <div
-        className={styles.portfolioBox}
-        id={styles.competitions}
-        onClick={() =>
-          setPortfolios({
-            ...portfolios,
-            clickedCompetitions: !portfolios.clickedCompetitions,
-          })
-        }
-      >
-        {portfolios.clickedCompetitions ? (
-          'Competitions'
-        ) : (
-          <p className={styles.desc}>{competitionDescription()}</p>
-        )}
-      </div>
-      <div
-        className={styles.portfolioBox}
-        id={styles.hr}
-        onClick={() =>
-          setPortfolios({
-            ...portfolios,
-            clickedHr: !portfolios.clickedHr,
-          })
-        }
-      >
-        {portfolios.clickedHr ? (
-          'HR'
-        ) : (
-          <p className={styles.desc}>{hrDescription()}</p>
-        )}
-      </div>
-      <div
-        className={styles.portfolioBox}
-        id={styles.it}
-        onClick={() =>
-          setPortfolios({
-            ...portfolios,
-            clickedIt: !portfolios.clickedIt,
-          })
-        }
-      >
-        {portfolios.clickedIt ? (
-          'IT'
-        ) : (
-          <p className={styles.desc}>{itDescription()}</p>
-        )}
-      </div>
-      <div
-        className={styles.portfolioBox}
-        id={styles.marketing}
-        onClick={() =>
-          setPortfolios({
-            ...portfolios,
-            clickedMar: !portfolios.clickedMar,
-          })
-        }
-      >
-        {portfolios.clickedMar ? (
-          'Marketing'
-        ) : (
-          <p className={styles.desc}>{marketingDescription()}</p>
-        )}
-      </div>
-      <div
-        className={styles.portfolioBox}
-        id={styles.media}
-        onClick={() =>
-          setPortfolios({
-            ...portfolios,
-            clickedMedia: !portfolios.clickedMedia,
-          })
-        }
-      >
-        {portfolios.clickedMedia ? (
-          'Media'
-        ) : (
-          <p className={styles.desc}>{mediaDescription()}</p>
-        )}
-      </div>
-      <div
-        className={styles.portfolioBox}
-        id={styles.publications}
-        onClick={() =>
-          setPortfolios({
-            ...portfolios,
-            clickedPubs: !portfolios.clickedPubs,
-          })
-        }
-      >
-        {portfolios.clickedPubs ? (
-          'Publications'
-        ) : (
-          <p className={styles.desc}>{publicationsDescription()}</p>
-        )}
-      </div>
-      <div
-        className={styles.portfolioBox}
-        id={styles.socials}
-        onClick={() =>
-          setPortfolios({
-            ...portfolios,
-            clickedSocials: !portfolios.clickedSocials,
-          })
-        }
-      >
-        {portfolios.clickedSocials ? (
-          'Socials'
-        ) : (
-          <p className={styles.desc}>{socialsDescription()}</p>
-        )}
-      </div>
-      <div
-        className={styles.portfolioBox}
-        id={styles.spons}
-        onClick={() =>
-          setPortfolios({
-            ...portfolios,
-            clickedSpons: !portfolios.clickedSpons,
-          })
-        }
-      >
-        {portfolios.clickedSpons ? (
-          'Sponsorships'
-        ) : (
-          <p className={styles.desc}>{sponsDescription()}</p>
-        )}
-      </div>
-      <div
-        className={styles.portfolioBox}
-        id={styles.education}
-        onClick={() =>
-          setPortfolios({
-            ...portfolios,
-            clickedEdu: !portfolios.clickedEdu,
-          })
-        }
-      >
-        {portfolios.clickedEdu ? (
-          'Education'
-        ) : (
-          <p className={styles.desc}>{eduDescription()}</p>
-        )}
-      </div>
+      {portfolios.map((portfolio) => (
+        <div
+          className={styles.portfolioBox}
+          id={portfolio.styleId}
+          key={portfolio.key}
+          onMouseEnter={() => setHovered(portfolio.key)}
+          onMouseLeave={() => setHovered(null)}
+        >
+          {/* On hover */}
+          <div
+            className={`${styles.descWrapper} ${
+              hovered === portfolio.key ? styles.descVisible : ''
+            }`}
+          >
+            <div className={styles.descText}>
+              <p className={styles.desc}>{portfolio.desc()}</p>
+            </div>
+          </div>
+          {hovered !== portfolio.key && portfolio.label}
+        </div>
+      ))}
     </div>
   );
 };
