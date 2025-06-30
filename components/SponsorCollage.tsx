@@ -1,22 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../styles/SponsorCollage.module.css';
 import Image from 'next/image';
 
 const SponsorCollage = ({ tempSponsors }: any) => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const matchDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+    setIsDarkMode(matchDark.matches);
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setIsDarkMode(e.matches);
+    };
+
+    matchDark.addEventListener('change', handleChange);
+
+    return () => {
+      matchDark.removeEventListener('change', handleChange);
+    };
+  }, []);
+
   return (
     <div className={styles.sponsors}>
       <div className={styles.collageContainer}>
         {Object.keys(tempSponsors).map((sponsorType, index) => (
           <div key={index} className={styles.rowContainer}>
             {tempSponsors[sponsorType].map((sponsor: any, index: any) => (
-              <div key={index} className={styles.logoContainer}>
-                <Image
+              <div key={`${index}-${isDarkMode ? 'dark' : 'light'}`} className={styles.logoContainer}>
+                <img
                   className={styles.logo}
                   src={
-                    window.matchMedia &&
-                    window.matchMedia('(prefers-color-scheme: dark)').matches
-                      ? 'https:' + sponsor.fields.darkModeLogo.fields.file.url
-                      : 'https:' + sponsor.fields.lightModeLogo.fields.file.url
+                    'https:' +
+                    (isDarkMode
+                      ? sponsor.fields.darkModeLogo.fields.file.url
+                      : sponsor.fields.lightModeLogo.fields.file.url)
                   }
                   alt={'sponsor logo'}
                   width="100"

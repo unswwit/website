@@ -13,28 +13,28 @@ p.subheader {
 /*Sponsor tier names*/
 .subsponsor {
   font-family: 'Montserrat', sans-serif;
-  font-size: 40px;
+  font-size: 33pt;
   margin-top: 80px;
   margin-bottom: 45px;
   text-align: center;
-  color: var(--black);
-  font-weight: 700;
-  line-height: 49px;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 /* Sponsor filter buttons */
 #sponsorButtonsContainer {
-  margin-bottom: 100px;
+  margin-bottom: 40px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow-x: auto;
+  padding: 0 10px;
+  gap: 12px;
+  scroll-behavior: smooth;
 }
 
 #sponsorButtonsContainer button {
   font-family: 'Montserrat', sans-serif;
-  font-size: 12pt;
+  font-size: 14pt;
   width: 213px;
   height: 66px;
   border-radius: 30px;
@@ -74,6 +74,7 @@ p.subheader {
   -ms-transform: scale(1.5); /* IE 9 */
   -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.05);
+  cursor: pointer;
 }
 
 /*Sponsor contact*/
