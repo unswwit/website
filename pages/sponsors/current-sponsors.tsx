@@ -13,7 +13,7 @@ import Head from 'next/head';
 import { loadSponsors } from '../../lib/api';
 import { filterSponsors } from '../../lib/helpers/sponsor';
 import { revalidate } from '../../lib/helpers/constants';
-import usePrefersDarkMode from '../../components/userDarkMode';
+import useDarkMode from '../../components/useDarkMode';
 
 export default function Sponsors({ sponsors }: any) {
   const [open, setOpen] = React.useState(false);
@@ -24,7 +24,7 @@ export default function Sponsors({ sponsors }: any) {
   const [currSponsorCategory, setCurrSponsorCategory] = React.useState('All Sponsors');
 
   const tempSponsors = filterSponsors(sponsors);
-  const isDarkMode = usePrefersDarkMode();
+  const isDarkMode = useDarkMode();
 
   // control when to stop loading
   useEffect(() => {

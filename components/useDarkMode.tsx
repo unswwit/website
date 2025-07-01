@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const usePrefersDarkMode = () => {
+const useDarkMode = () => {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ const usePrefersDarkMode = () => {
       setIsDark(e.matches);
     };
 
-    setIsDark(mediaQuery.matches); // Initial set
+    setIsDark(mediaQuery.matches); 
     mediaQuery.addEventListener('change', handleChange);
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
@@ -19,4 +19,4 @@ const usePrefersDarkMode = () => {
   return isDark;
 };
 
-export default usePrefersDarkMode;
+export default useDarkMode;
