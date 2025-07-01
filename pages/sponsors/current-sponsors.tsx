@@ -13,6 +13,7 @@ import Head from 'next/head';
 import { loadSponsors } from '../../lib/api';
 import { filterSponsors } from '../../lib/helpers/sponsor';
 import { revalidate } from '../../lib/helpers/constants';
+import usePrefersDarkMode from '../../components/userDarkMode';
 
 export default function Sponsors({ sponsors }: any) {
   const [open, setOpen] = React.useState(false);
@@ -23,6 +24,7 @@ export default function Sponsors({ sponsors }: any) {
   const [currSponsorCategory, setCurrSponsorCategory] = React.useState('All Sponsors');
 
   const tempSponsors = filterSponsors(sponsors);
+  const isDarkMode = usePrefersDarkMode();
 
   // control when to stop loading
   useEffect(() => {
@@ -115,13 +117,9 @@ export default function Sponsors({ sponsors }: any) {
                     <img
                       className={`${styles.logo} ${styles[`logo${curType}`]}`}
                       src={
-                        window.matchMedia &&
-                          window.matchMedia('(prefers-color-scheme: dark)')
-                            .matches
-                          ? 'https:' +
-                          sponsor.fields.darkModeLogo.fields.file.url
-                          : 'https:' +
-                          sponsor.fields.lightModeLogo.fields.file.url
+                        isDarkMode
+                          ? 'https:' + sponsor.fields.darkModeLogo.fields.file.url
+                          : 'https:' + sponsor.fields.lightModeLogo.fields.file.url
                       }
                       alt={sponsor.fields.name}
                       onClick={() => {

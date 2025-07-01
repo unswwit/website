@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../styles/Sponsors.module.css';
 import CloseIcon from '@material-ui/icons/Close';
 import IconButton from '@material-ui/core/IconButton';
@@ -6,6 +6,30 @@ import Link from 'next/link';
 
 const SponsorsModal = ({ handleClose, sponsor, sponsorType }: any) => {
   const content = sponsor.fields.description.content;
+
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = (e: MediaQueryListEvent) => {
+      setIsDark(e.matches);
+    };
+
+    setIsDark(mediaQuery.matches);
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
+  const logoUrl = isDark
+    ? 'https:' + sponsor.fields.darkModeLogo.fields.file.url
+    : 'https:' + sponsor.fields.lightModeLogo.fields.file.url;
+
+  // 🔍 Add console logs to debug
+  console.log('Theme is dark?', isDark);
+  console.log('Logo URL:', logoUrl);
 
   return (
     <div className={styles.paper}>
@@ -23,13 +47,9 @@ const SponsorsModal = ({ handleClose, sponsor, sponsorType }: any) => {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           className={styles.sponsorImage}
-          src={
-            window.matchMedia &&
-            window.matchMedia('(prefers-color-scheme: dark)').matches
-              ? 'https:' + sponsor.fields.darkModeLogo.fields.file.url
-              : 'https:' + sponsor.fields.lightModeLogo.fields.file.url
-          }
+          src={logoUrl}
           alt={sponsor.fields.name}
+          key={logoUrl} // 🔁 forces image to re-render on theme change
         />
         <h1 className={styles.sponsorType}>{sponsorType.slice(0, -1)}</h1>
         <div className={styles.inLine}>
