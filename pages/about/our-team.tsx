@@ -66,7 +66,7 @@ const OurTeam = ({ execs, subcommittee, directors }: any) => {
       index: number,
       tempExecs: any
     ) {
-      if (index % 2 === 0) result.push(tempExecs.slice(index, index + 2));
+      if (index % 4 === 0) result.push(tempExecs.slice(index, index + 4));
       return result;
     },
     []);
@@ -82,7 +82,7 @@ const OurTeam = ({ execs, subcommittee, directors }: any) => {
       index: number,
       tempDirectors: any
     ) {
-      if (index % 2 === 0) result.push(tempDirectors.slice(index, index + 2));
+      if (index % 4 === 0) result.push(tempDirectors.slice(index, index + 4));
       return result;
     },
     []);

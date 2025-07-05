@@ -38,7 +38,7 @@
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 90%;
 }
 
 .execCol {
@@ -169,7 +169,7 @@ h2#topheading {
   position: relative;
   white-space: initial;
   word-wrap: break-word;
-  text-align: center;
+  line-height: 20px;
 }
 
 /*---------------------------Subcommittee team profiles--------------------------*/
