@@ -126,7 +126,7 @@ const JoinUs = () => {
               </a>
               .
             </p>
-            <strong>Become apart of our internal team</strong>
+            <strong>Become a part of our internal team</strong>
             <p>
               Our subcommittee recruitment drive opens at the beginning of
               UNSW’s first academic term, in February each year, via our&nbsp;
@@ -139,7 +139,7 @@ const JoinUs = () => {
                 Facebook page
               </a>
               . To get involved, search for our subcommittee Facebook event and
-              fill in the registration form attached to the event.
+              fill in the application form attached to the event.
             </p>
           </div>
           {/* End of how to join section */}
@@ -149,8 +149,7 @@ const JoinUs = () => {
           <div className={styles.descriptionHowto}>
             <p>
               WIT has several specialised portfolios that you can join as a
-              subcommittee member. Click one of the portfolios to find out more
-              about the portfolio.
+              subcommittee member. Click on one of the portfolios to learn more about it.
             </p>
           </div>
           {/* End of what to join section */}
