@@ -3,9 +3,15 @@ import styles from '../styles/Sponsors.module.css';
 import CloseIcon from '@material-ui/icons/Close';
 import IconButton from '@material-ui/core/IconButton';
 import Link from 'next/link';
+import useDarkMode from './useDarkMode';
 
 const SponsorsModal = ({ handleClose, sponsor, sponsorType }: any) => {
   const content = sponsor.fields.description.content;
+  const isDark = useDarkMode();
+
+  const logoUrl = isDark
+    ? 'https:' + sponsor.fields.darkModeLogo.fields.file.url
+    : 'https:' + sponsor.fields.lightModeLogo.fields.file.url;
 
   return (
     <div className={styles.paper}>
@@ -23,13 +29,9 @@ const SponsorsModal = ({ handleClose, sponsor, sponsorType }: any) => {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           className={styles.sponsorImage}
-          src={
-            window.matchMedia &&
-            window.matchMedia('(prefers-color-scheme: dark)').matches
-              ? 'https:' + sponsor.fields.darkModeLogo.fields.file.url
-              : 'https:' + sponsor.fields.lightModeLogo.fields.file.url
-          }
+          src={logoUrl}
           alt={sponsor.fields.name}
+          key={logoUrl}
         />
         <h1 className={styles.sponsorType}>{sponsorType.slice(0, -1)}</h1>
         <div className={styles.inLine}>
