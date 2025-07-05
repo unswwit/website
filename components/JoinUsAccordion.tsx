@@ -75,10 +75,10 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <p className={styles.accordionDetails}>
-            As a subcommittee member, you’ll get to experience the
+            As a subcommittee member, you&apos;ll get to experience the
             behind-the-scenes of everything our society does! This can vary from
             organising our events, developing code for our website or producing
-            content. As a WIT member, you’ll get to see the results of all the
+            content. As a WIT member, you&apos;ll get to see the results of all the
             amazing things that come out from our subcommittee team!
           </p>
         </AccordionDetails>
@@ -229,7 +229,7 @@ export default function SimpleAccordion() {
           <Typography id={styles.accordionHeading} component={'span'}>
             <div className={styles.accordionHeading}>
               <strong>
-                I’m not in 1st year, can I still join as a subcommittee member?
+                I&apos;m not in 1st year, can I still join as a subcommittee member?
               </strong>
             </div>
           </Typography>
@@ -289,7 +289,7 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <p className={styles.accordionDetails}>
-            You can find information about our events on our website's
+            You can find information about our events on our website&apos;s
             Events page or on our social media, such as Facebook and Instagram.
           </p>
         </AccordionDetails>
@@ -342,7 +342,7 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <p className={styles.accordionDetails}>
-            Anyone can attend! We’d love to see you there!
+            Anyone can attend! We&apos;d love to see you there!
           </p>
         </AccordionDetails>
       </Accordion>
