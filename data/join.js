@@ -47,7 +47,7 @@ const competitionDescription = () => {
     <ul>
       <>
         <li>
-          Create competition materials and plan events that align with WIT and
+          Creates competition materials and plans events that align with WIT and
           our sponsors&apos; interests
         </li>
         <li>
@@ -80,12 +80,12 @@ const itDescription = () => {
     <ul>
       <>
         <li>
-          Responsible for designing, updating and improving on WIT&apos;s
+          Responsible for designing, updating and improving WIT&apos;s
           official website
         </li>
         <li>
-          Supports the creation of IT-related workshops, and events such as
-          Hackathon and WIT coding competition
+          Supports the creation of IT-related workshops and events such as
+          Hackathons and WIT coding competition
         </li>
       </>
     </ul>
