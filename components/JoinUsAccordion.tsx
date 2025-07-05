@@ -151,7 +151,7 @@ export default function SimpleAccordion() {
           <Typography id={styles.accordionHeading} component={'span'}>
             <div className={styles.accordionHeading}>
               <strong>
-                Do I need any prior experience in the portfolio that I applied?
+                Do I need any prior experience in the portfolio that I applied for?
               </strong>
             </div>
           </Typography>
@@ -289,7 +289,7 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <p className={styles.accordionDetails}>
-            You can find information about our events on our website on the
+            You can find information about our events on our website's
             Events page or on our social media, such as Facebook and Instagram.
           </p>
         </AccordionDetails>
@@ -309,7 +309,7 @@ export default function SimpleAccordion() {
         >
           <Typography id={styles.accordionHeading} component={'span'}>
             <div className={styles.accordionHeading}>
-              <strong>Wbat are your flagship events?</strong>
+              <strong>What are your flagship events?</strong>
             </div>
           </Typography>
         </AccordionSummary>
