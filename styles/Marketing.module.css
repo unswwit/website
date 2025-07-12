@@ -56,7 +56,7 @@
 
 a.darken {
   width: 21.9vw;
-  height: 21.9vw;
+  aspect-ratio: 4 / 5;
   display: inline-block;
   position: relative;
   text-align: center;
