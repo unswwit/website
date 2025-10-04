@@ -565,7 +565,6 @@ div .headline {
   margin: auto;
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: var(--section);
 }
 
 .publications h1 {
@@ -591,9 +590,9 @@ div .headline {
 .pubBtn {
   border: 1.5px solid var(--red);
   box-sizing: border-box;
-  background-color: var(--section);
   padding: 6px 6px;
   transition: 0.3s;
+  background-color: #fff;
 }
 
 .pubBtn a {
@@ -646,6 +645,7 @@ div .headline {
   margin: auto;
   padding-top: 100px;
   padding-bottom: 60px;
+  background-color: var(--section);
 }
 
 .beenUpTo h1 {
