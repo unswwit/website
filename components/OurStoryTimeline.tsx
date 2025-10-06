@@ -15,7 +15,7 @@ export default function OppositeContentTimeline() {
       <Timeline
         id={styles.timelineStyle}
         page={'ourStory'}
-        step={35.7}
+        step={31.2375}
         valueToYear={valueToYear}
         marks={marks}
         updateYear={handleYear}
@@ -87,53 +87,74 @@ export default function OppositeContentTimeline() {
           ) : year === '2023' ? (
             <ul>
               <li>
-                Awarded ARC On Campus Activity of the Year, for our 
-                &apos;Plant Your Creativity&apos; social event
+                Awarded ARC On Campus Activity of the Year, for our &apos;Plant
+                Your Creativity&apos; social event
               </li>
               <li>
-                Improved automation of internal systems, such as our website updates
+                Improved automation of internal systems, such as our website
+                updates
+              </li>
+              <li>Had the largest subcommittee team in WIT&apos;s history</li>
+              <li>Continuation of our flagship initiatives</li>
+              <li>
+                Record breaking number of attendees at our Annual Networking
+                Night
               </li>
               <li>
-                Had the largest subcommittee team in WIT&apos;s history
-              </li>
-              <li>
-                Continuation of our flagship initiatives
-              </li>
-              <li>
-                Record breaking number of attendees at our Annual Networking Night
-              </li>
-              <li>
-                Focused on quality over quantity for events, hosting a total of 
-                18 in-person at a variety of venues, including sponsor offices, 
+                Focused on quality over quantity for events, hosting a total of
+                18 in-person at a variety of venues, including sponsor offices,
                 university campus and private venues
               </li>
               <li>
-                Increased our Instagram base by 45%, achieving a near 1K audience,
-                our LinkedIn followers by 23% to 1664, and achieved a milestone 
-                of over 3600 followers on Facebook
+                Increased our Instagram base by 45%, achieving a near 1K
+                audience, our LinkedIn followers by 23% to 1664, and achieved a
+                milestone of over 3600 followers on Facebook
+              </li>
+            </ul>
+          ) : year === '2024' ? (
+            <ul>
+              <li>
+                Expanded to 95 internal team members, a 30% increase from 2023
+              </li>
+              <li>
+                Gained the support of 26 sponsors, including 3 affiliations and
+                8 partnerships
+              </li>
+              <li>
+                Enhanced and continued 3 flagship events and 6 new workshops
+                from the Education Portfolio
+              </li>
+              <li>
+                Released 33 publications, including 3 flagship publications,
+                fortnightly WCWs, and new IT publications
+              </li>
+              <li>Produced 21 videos, built on short-form content on TikTok</li>
+              <li>
+                Delivered 3 IT projects, expanding on last year’s initiatives
+                such as the Empowerment Program website and Discord Bot
               </li>
             </ul>
           ) : (
             <ul>
               <li>
-              WIT introduced 5 new portfolios - Media, Publications, 
-              Careers, Socials and Competitions.
+                WIT introduced 5 new portfolios - Media, Publications, Careers,
+                Socials and Competitions.
               </li>
               <li>
-              Our student base grew to 3000+ students by the end of 2021.
+                Our student base grew to 3000+ students by the end of 2021.
               </li>
               <li>Our sponsorship base more than doubled to 23 sponsors.</li>
               <li>
-              Hosted 39 events, reaching 17.3k people and achieving 
-              a 60% increase since 2020.
+                Hosted 39 events, reaching 17.3k people and achieving a 60%
+                increase since 2020.
               </li>
               <li>
-              Produced 39 publications including podcasts, WCW, flagship 
-              publications which have amassed over 4340 views/ read/ listens.
+                Produced 39 publications including podcasts, WCW, flagship
+                publications which have amassed over 4340 views/ read/ listens.
               </li>
               <li>
-              Published Careers guide which reached 1050+ reads, 
-              1100+ impressions and was read in 10 different countries.
+                Published Careers guide which reached 1050+ reads, 1100+
+                impressions and was read in 10 different countries.
               </li>
             </ul>
           )}
