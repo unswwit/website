@@ -625,13 +625,9 @@ div .headline {
 
 /*---Dark mode---*/
 @media (prefers-color-scheme: dark) {
-  .publications {
-    background-color: #323235;
-  }
-
   .pubBtn {
     border: 1.5px solid var(--red);
-    background-color: #323235;
+    background-color: #202124;
   }
 
   .pubBtn:hover {
@@ -674,6 +670,13 @@ div .headline {
   justify-content: space-evenly;
   width: 100%;
   margin: 0 auto;
+}
+
+/*---Dark mode---*/
+@media (prefers-color-scheme: dark) {
+  .beenUpTo {
+    background-color: #323235;
+  }
 }
 
 /*-----------------------------Responsive Mobile Design--------------------------*/

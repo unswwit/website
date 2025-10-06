@@ -83,6 +83,13 @@
   background-color: #D64745;
 }
 
+/*---Dark mode---*/
+@media (prefers-color-scheme: dark) {
+  .card {
+    background-color: #ccc;
+  }
+}
+
 /* ------------ Responsive mobile design ------------ */
 @media only screen and (max-width: 850px) {
   .card {
