@@ -2,7 +2,7 @@
 
 .card {
   display: inline-block;
-  background-color: #f5f5f5;
+  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 320px;
@@ -81,6 +81,13 @@
 
 .linkButton:hover {
   background-color: #D64745;
+}
+
+/*---Dark mode---*/
+@media (prefers-color-scheme: dark) {
+  .card {
+    background-color: #ccc;
+  }
 }
 
 /* ------------ Responsive mobile design ------------ */

@@ -109,48 +109,6 @@ const Home = ({
             </div>
           </div>
           {/* End of Description */}
-          {/* Start of Quotes */}
-          <div
-            data-aos={isMobile ? 'fade' : 'fade-up'}
-            className={styles.quotes}
-          >
-            <h1>HEAR FROM US</h1>
-            <div className={[styles.carousel, styles.quoteCarousel].join(' ')}>
-              <QuoteSlideshow
-                height={450}
-                data={execQuotes}
-                homeLeftArrow={styles.homeLeftArrow}
-                homeRightArrow={styles.homeRightArrow}
-              />
-            </div>
-          </div>
-          {/* End of Quotes */}
-          {/* Start of Statistics */}
-          <div className={styles.stats}>
-            <Image
-              src="/stats-background-1.png"
-              className={styles.statsBackground}
-              alt="banner"
-              fill
-            />
-            <div>
-              <div data-aos="fade" className={styles.number}>
-                <div>
-                  <span>74</span>
-                  <p>Team Members</p>
-                </div>
-                <div>
-                  <span>32</span>
-                  <p>Sponsors</p>
-                </div>
-                <div>
-                  <span>3507</span>
-                  <p>Facebook Followers</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* End of Statistics */}
           {/* Start of What we've been up to */}
           <div
             data-aos={isMobile ? 'fade' : 'fade-up'}
@@ -204,6 +162,48 @@ const Home = ({
             </button>
           </div>
           {/* End of Publications */}
+          {/* Start of Statistics */}
+          <div className={styles.stats}>
+            <Image
+              src="/stats-background-1.png"
+              className={styles.statsBackground}
+              alt="banner"
+              fill
+            />
+            <div>
+              <div data-aos="fade" className={styles.number}>
+                <div>
+                  <span>74</span>
+                  <p>Team Members</p>
+                </div>
+                <div>
+                  <span>32</span>
+                  <p>Sponsors</p>
+                </div>
+                <div>
+                  <span>3507</span>
+                  <p>Facebook Followers</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* End of Statistics */}
+          {/* Start of Quotes */}
+          <div
+            data-aos={isMobile ? 'fade' : 'fade-up'}
+            className={styles.quotes}
+          >
+            <h1>HEAR FROM US</h1>
+            <div className={[styles.carousel, styles.quoteCarousel].join(' ')}>
+              <QuoteSlideshow
+                height={450}
+                data={execQuotes}
+                homeLeftArrow={styles.homeLeftArrow}
+                homeRightArrow={styles.homeRightArrow}
+              />
+            </div>
+          </div>
+          {/* End of Quotes */}
           {/* Start of Sponsors & Affliations */}
           <div
             data-aos={isMobile ? 'fade' : 'fade-up'}
