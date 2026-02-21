@@ -48,6 +48,6 @@ const profiles = [
         alt: 'multi-icon',
         mail: 'multimedia@unswwit.com',
         mailto: 'mailto:multimedia@unswwit.com',
-    },];
+    },]; 
 
 export default profiles;
