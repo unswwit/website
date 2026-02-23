@@ -37,7 +37,7 @@ const profiles = [
         mail: 'internals@unswwit.com',
         mailto: 'mailto:internals@unswwit.com',
     }, {
-        name: 'Lilly Tang',
+        name: 'Lily Tang',
         src: '/icons/tech.png',
         alt: 'it-icon',
         mail: 'technology@unswwit.com',
