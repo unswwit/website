@@ -1,6 +1,6 @@
 const filterSponsors = (sponsors: any) => {
   const filteredSponsors = sponsors.filter(
-    (sponsor: any) => sponsor.fields.year === 2025
+    (sponsor: any) => sponsor.fields.year >= 2025
   );
   const tempSponsors = {
     'Diamond Sponsors': filteredSponsors.filter(
