@@ -64,6 +64,11 @@ const sponsorsDropdownContent = [
     link: '/sponsors/jobs-board',
     icon: WorkOutlineOutlinedIcon,
   },
+  {
+    pageName: 'Careers Hub',
+    link: '/careers-hub',
+    icon: LocalLibraryOutlinedIcon,
+  },
 ];
 
 const eventsDropdownContent = [

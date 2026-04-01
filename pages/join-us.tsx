@@ -45,84 +45,20 @@ const JoinUs = () => {
             title="Join Us"
             imageLoading={setHeaderLoading}
           />
-          {/* Start of connect with us */}
-          <h2 className={styles.header}>Connect with us</h2>
-          <div className={styles.joinUsBody}>
-            <div className={styles.joinUsRight}>
-              <div className={styles.joinButtons}>
-                {Object.keys(socials).map((social, index) => {
-                  return (
-                    <BootstrapTooltip
-                      key={social}
-                      title={
-                        <>
-                          <div className="tooltipTitle">{social}</div>
-                        </>
-                      }
-                    >
-                      <a
-                        className={styles.joinLink}
-                        key={index}
-                        href={socials[social][0]}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Image
-                          src={`/icons/${socials[social][1]}`}
-                          alt={social}
-                          height="250"
-                          width="250"
-                        />
-                      </a>
-                    </BootstrapTooltip>
-                  );
-                })}
-              </div>
-            </div>
-            <div className={styles.googleMap}>
-              {!hideSpinner ? (
-                <CircularProgress
-                  variant="indeterminate"
-                  size={50}
-                  thickness={5}
-                  id={styles.joinLoading}
-                />
-              ) : null}
-              <iframe
-                onLoad={() => setHideSpinner(true)}
-                title="google-maps"
-                width="100%"
-                height="390"
-                frameBorder="0"
-                className={styles.gmapColour}
-                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=UNSW%20Sydney%20High%20St%20Kensington,%20NSW%202052%20Australia+(UNSW%20Sydney)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-              />
-            </div>
-          </div>
-          {/* End of connect with us section */}
 
           {/* Start of how to join section */}
           <h2 className={styles.section}>How to join</h2>
           <div className={styles.descriptionHowto}>
-            <strong>Join us via SpArc</strong>
+            <strong>Join us via Rubric</strong>
             <p>
-              Fill out the following&nbsp;
+              Sign up on{' '}
               <a
-                href="https://bit.ly/join-wit-2024"
+                href="https://campus.hellorubric.com/?s=4749"
                 className={styles.link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                form
-              </a>{' '}
-              and sign up on{' '}
-              <a
-                href="https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371W0xQAE"
-                className={styles.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                SpArc
+                Rubric
               </a>
               .
             </p>
@@ -131,12 +67,12 @@ const JoinUs = () => {
               Our subcommittee recruitment drive opens at the beginning of
               UNSW’s first academic term, in February each year, via our&nbsp;
               <a
-                href="https://www.facebook.com/unsw.wit/"
+                href="https://www.facebook.com/events/1243781480447084/1243781487113750/"
                 className={styles.link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Facebook page
+                Facebook group
               </a>
               . To get involved, search for our subcommittee Facebook event and
               fill in the application form attached to the event.

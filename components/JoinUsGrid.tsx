@@ -24,7 +24,7 @@ const portfolios = [
   { key: 'publications', label: 'Publications', desc: publicationsDescription, styleId: styles.publications },
   { key: 'socials', label: 'Socials', desc: socialsDescription, styleId: styles.socials },
   { key: 'spons', label: 'Sponsorships', desc: sponsDescription, styleId: styles.spons },
-  { key: 'education', label: 'Education', desc: eduDescription, styleId: styles.education },
+  { key: 'education', label: 'Workshops', desc: eduDescription, styleId: styles.education },
 ];
 
 const PortfolioGrid = () => {
