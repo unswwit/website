@@ -245,6 +245,21 @@ export async function loadLatestEvent() {
   return res.items;
 }
 
+export async function loadCareerResources() {
+  const res = await client
+    .getEntries({
+      content_type: 'careerResource',
+      select: 'fields',
+      order: 'fields.index',
+      limit: 1000,
+    })
+    .catch((error) => {
+      console.error(error);
+      return null;
+    });
+  return res ? res.items : [];
+}
+
 export async function loadLatestPodcast() {
   const res = await client
     .getEntries({
