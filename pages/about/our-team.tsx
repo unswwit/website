@@ -21,7 +21,7 @@ const OurTeam = ({ execs, subcommittee, directors }: any) => {
   const [filteredExecs, setFilteredExecs] = useState([]);
   const [filteredDirectors, setFilteredDirectors] = useState([]);
   const [filteredSubcom, setFilteredSubcom] = useState([]);
-  const [year, setYear] = useState(2025);
+  const [year, setYear] = useState(2026);
   const [loading, setLoading] = useState(true);
   const [sourceLoading, setSourceLoading] = useState(true);
   const [headerLoading, setHeaderLoading] = useState(true);
@@ -120,11 +120,10 @@ const OurTeam = ({ execs, subcommittee, directors }: any) => {
   // Moved from teamData.js to prevent new portfolios
   // from showing when the year is earlier than 2021.
   const sectors =
-    year === 2025
+    year === 2026
     ? [
       'Careers',
       'Competitions',
-      'Education',
       'Human Resources',
       'Information Technology',
       'Marketing',
@@ -132,7 +131,21 @@ const OurTeam = ({ execs, subcommittee, directors }: any) => {
       'Publications',
       'Socials',
       'Sponsorships',
+      'Workshops',
     ]
+  : year === 2025
+      ? [
+          'Careers',
+          'Competitions',
+          'Education',
+          'Human Resources',
+          'Information Technology',
+          'Marketing',
+          'Media',
+          'Publications',
+          'Socials',
+          'Sponsorships',
+        ]
    : year === 2024
       ? [
           'Careers',
