@@ -16,62 +16,56 @@ const marks = [
     label: '2026',
   },
   {
-    value: 88.89,
+    value: 87.5,
     scaledValue: 2025,
     label: '2025',
   },
   {
-    value: 77.78,
+    value: 75,
     scaledValue: 2024,
     label: '2024',
   },
   {
-    value: 66.67,
+    value: 62.5,
     scaledValue: 2023,
     label: '2023',
   },
   {
-    value: 55.56,
+    value: 50,
     scaledValue: 2022,
     label: '2022',
   },
   {
-    value: 44.44,
+    value: 37.5,
     scaledValue: 2021,
     label: '2021',
   },
   {
-    value: 33.33,
+    value: 25,
     scaledValue: 2020,
     label: '2020',
   },
   {
-    value: 22.22,
+    value: 12.5,
     scaledValue: 2019,
     label: '2019',
   },
   {
-    value: 11.11,
+    value: 0,
     scaledValue: 2018,
     label: '2018',
-  },
-  {
-    value: 0,
-    scaledValue: 2017,
-    label: '2017',
   },
 ];
 
 const valueToYear = {
-  0: 2017,
-  11.11: 2018,
-  22.22: 2019,
-  33.33: 2020,
-  44.44: 2021,
-  55.56: 2022,
-  66.67: 2023,
-  77.78: 2024,
-  88.89: 2025,
+  0: 2018,
+  12.5: 2019,
+  25: 2020,
+  37.5: 2021,
+  50: 2022,
+  62.5: 2023,
+  75: 2024,
+  87.5: 2025,
   100: 2026,
 };
 
