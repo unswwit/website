@@ -211,7 +211,7 @@ const OurTeam = ({ execs, subcommittee, directors }: any) => {
           <Timeline
             margin={'50px'}
             page={'teams'}
-            step={12.5}
+            step={11.1}
             valueToYear={valueToYear}
             marks={marks}
             updateYear={handleYear}
