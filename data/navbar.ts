@@ -7,7 +7,6 @@ import LocalPrintshopOutlinedIcon from '@material-ui/icons/LocalPrintshopOutline
 import ImageOutlinedIcon from '@material-ui/icons/ImageOutlined';
 import VideocamOutlinedIcon from '@material-ui/icons/VideocamOutlined';
 import AccountBalanceOutlinedIcon from '@material-ui/icons/AccountBalanceOutlined';
-import WorkOutlineOutlinedIcon from '@material-ui/icons/WorkOutlineOutlined';
 import CalendarTodayOutlinedIcon from '@material-ui/icons/CalendarTodayOutlined';
 import LocalLibraryOutlinedIcon from '@material-ui/icons/LocalLibraryOutlined';
 import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
@@ -58,11 +57,6 @@ const sponsorsDropdownContent = [
     pageName: 'Current Sponsors',
     link: '/sponsors/current-sponsors',
     icon: AccountBalanceOutlinedIcon,
-  },
-  {
-    pageName: 'Jobs Board',
-    link: '/sponsors/jobs-board',
-    icon: WorkOutlineOutlinedIcon,
   },
   {
     pageName: 'Careers Hub',
