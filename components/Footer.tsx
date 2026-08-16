@@ -11,7 +11,7 @@ const routes: any = {
   Events: '/events',
   'Join Us': '/join-us',
   'Our Story': '/about/our-story',
-  Sponsors: '/sponsors/current-sponsors',
+  'Current Sponsors': '/careers-hub/sponsors',
   'Careers Hub': '/careers-hub',
   'Our Team': '/about/our-team',
   'Contact Us': '/contact-us',
