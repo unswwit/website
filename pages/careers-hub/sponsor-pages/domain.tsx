@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import styles from '../../../sponsor-styles/domain/domain.module.css';
-import domainLogoWhite from '../../../sponsor-styles/logos/[DIAMOND] Domain Group/Domain_Logo_RGB_WHITE.svg';
+import domainLogoWhite from '../../../sponsor-styles/domain/Domain_Logo_RGB_WHITE.svg';
 import domainEmployeePhoto from '../../../sponsor-styles/domain/domain-employee-photo.svg';
 import domainGroupPhoto from '../../../sponsor-styles/domain/domain-employee-group-photo.svg';
 import CareersNav from '../../../components/CareersNav';
