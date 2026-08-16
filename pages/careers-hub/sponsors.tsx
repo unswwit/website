@@ -14,6 +14,9 @@ import { revalidate } from '../../lib/helpers/constants';
 const SPONSOR_PAGES: Record<string, string> = {
   pwc: '/careers-hub/sponsor-pages/pwc',
   pricewaterhousecoopers: '/careers-hub/sponsor-pages/pwc',
+  westpac: '/careers-hub/sponsor-pages/w-group',
+  domain: '/careers-hub/sponsor-pages/domain',
+  'jane street': '/careers-hub/sponsor-pages/jane-street',
 };
 
 function getSponsorPage(displayName: string): string | undefined {
@@ -82,8 +85,8 @@ const SponsorsPage = ({ sponsors }: any) => {
                           sponsor.fields.description?.content?.[0]?.content?.[0]?.value || '';
                         const displayName = sponsor.fields.name.replace(/\s*\(\d{4}\)$/, '');
                         const internalHref = getSponsorPage(displayName);
-                        return (
-                          <div key={i} className={styles.featuredSponsorCard}>
+                        const cardInner = (
+                          <>
                             <div className={styles.featuredLogoWrap}>
                               <Image
                                 src={logoUrl}
@@ -95,21 +98,23 @@ const SponsorsPage = ({ sponsors }: any) => {
                             </div>
                             <p className={styles.featuredSponsorName}>{displayName}</p>
                             {descText && <p className={styles.featuredSponsorDesc}>{descText}</p>}
-                            {internalHref ? (
-                              <Link href={internalHref} className={styles.sponsorBtn}>
-                                Find out more
-                              </Link>
-                            ) : (
-                              <a
-                                href={sponsor.fields.website}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={styles.sponsorBtn}
-                              >
-                                Find out more
-                              </a>
-                            )}
-                          </div>
+                            <span className={styles.sponsorBtn}>Find out more</span>
+                          </>
+                        );
+                        return internalHref ? (
+                          <Link key={i} href={internalHref} className={styles.featuredSponsorCard}>
+                            {cardInner}
+                          </Link>
+                        ) : (
+                          <a
+                            key={i}
+                            href={sponsor.fields.website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.featuredSponsorCard}
+                          >
+                            {cardInner}
+                          </a>
                         );
                       })}
                     </div>
