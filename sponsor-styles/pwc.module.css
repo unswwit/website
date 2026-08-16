@@ -30,6 +30,7 @@
 .about{ display:grid; grid-template-columns:280px 1fr; gap:40px; align-items:center; padding-bottom:40px; }
 @media (max-width:640px){ .about{ grid-template-columns:1fr; } }
 .logoMark{ display:flex; align-items:flex-start; }
+.logoImg{ height:auto; object-fit:contain; }
 .aboutHeading{ font-size:22px; font-weight:800; margin:0 0 12px; color:var(--pwc-ink); }
 .aboutText{ font-size:14.5px; line-height:1.8; color:#4a3f39; margin:0; }
 

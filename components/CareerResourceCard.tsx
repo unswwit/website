@@ -19,15 +19,7 @@ export default function CareerResourceCard({ resource, index }: any) {
           // eslint-disable-next-line @next/next/no-img-element
           <img className={styles.resourceImg} src={imgUrl} alt={title} />
         ) : (
-          <div
-            style={{
-              color: 'var(--light-grey)',
-              fontFamily: 'Montserrat',
-              fontSize: '10pt',
-            }}
-          >
-            No image
-          </div>
+          <div className={styles.resourceNoImage}>No image</div>
         )}
       </div>
       <div className={styles.resourceContent}>

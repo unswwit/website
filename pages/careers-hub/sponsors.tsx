@@ -74,13 +74,7 @@ const SponsorsPage = ({ sponsors }: any) => {
                         const cardInner = (
                           <>
                             <div className={styles.featuredLogoWrap}>
-                              <Image
-                                src={logoUrl}
-                                alt={displayName}
-                                width={150}
-                                height={70}
-                                style={{ objectFit: 'contain' }}
-                              />
+                              <Image src={logoUrl} alt={displayName} width={150} height={70} />
                             </div>
                             <p className={styles.featuredSponsorName}>{displayName}</p>
                             {descText && <p className={styles.featuredSponsorDesc}>{descText}</p>}
@@ -122,7 +116,6 @@ const SponsorsPage = ({ sponsors }: any) => {
                             alt={displayName}
                             width={tier === 'affiliations' ? 165 : 140}
                             height={tier === 'affiliations' ? 74 : 65}
-                            style={{ objectFit: 'contain' }}
                             className={styles.logoWallImg}
                           />
                         );

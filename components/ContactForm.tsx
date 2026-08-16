@@ -28,7 +28,7 @@ const ContactForm = () => {
               'Your inquiry was sent successfully. You can expect to hear a response from us within a week.'
             );
           },
-          (error) => {
+          () => {
             alert('Your inquiry failed to send. Please try again');
           }
         );

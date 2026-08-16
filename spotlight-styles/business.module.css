@@ -33,14 +33,13 @@
 }
 @media (max-width:700px){ .heroRow{ grid-template-columns:1fr; } }
 
-.speechWrap{ position:relative; width:100%; }
-.speechImg{ display:block; width:100%; height:auto; }
+.speechWrap{ position:relative; width:100%; aspect-ratio:1989/894; container-type:inline-size; }
+.speechImg{ position:absolute; inset:0; display:block; width:100%; height:100%; }
 .bubbleText{
   position:absolute; left:27%; right:16%; top:29%; bottom:29%; display:flex; align-items:center; justify-content:center;
   text-align:center;
-  font-family:var(--sans); font-size:15.5px; line-height:1.5; color:var(--navy); font-weight:600; margin:0;
+  font-family:var(--sans); font-size:clamp(9px, 2.6cqw, 17px); line-height:1.4; color:var(--navy); font-weight:600; margin:0;
 }
-@media (max-width:700px){ .bubbleText{ font-size:11px; left:26%; right:14%; } }
 
 .heroTitle{ text-align:left; align-self:center; }
 .heroKicker{ font-family:var(--sans); font-size:21px; color:var(--black); margin:0 0 4px; font-weight:500; }

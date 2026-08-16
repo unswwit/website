@@ -1,5 +1,5 @@
 // @ts-nocheck comment
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from '../styles/CareersHub.module.css';
 import ScrollUpBtn from '../components/ScrollUpBtn';
 import CareersNav from '../components/CareersNav';
@@ -156,13 +156,7 @@ const CareersHub = ({ sponsors }: any) => {
                         title={displayName}
                         {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                       >
-                        <Image
-                          src={logoUrl}
-                          alt={displayName}
-                          width={130}
-                          height={60}
-                          style={{ objectFit: 'contain' }}
-                        />
+                        <Image src={logoUrl} alt={displayName} width={130} height={60} />
                       </Link>
                     );
                   })}
@@ -172,8 +166,7 @@ const CareersHub = ({ sponsors }: any) => {
               <div className={styles.sponsorMarqueeCta}>
                 <Link
                   href="/careers-hub/sponsors"
-                  className={styles.btn}
-                  style={{ background: 'var(--black)', color: '#fff' }}
+                  className={`${styles.btn} ${styles.btnDark}`}
                 >
                   View all sponsors →
                 </Link>

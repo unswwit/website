@@ -21,7 +21,7 @@ const NavigationBar = () => {
   const [clearNavBar, setClearNavBar] = useState(false);
   const [hiddenNavBar, setHiddenNavBar] = useState(false);
   const [compactNavBar, setCompactNavBar] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const [, setDarkMode] = useState(false);
   const router = useRouter();
 
   useEffect(() => {

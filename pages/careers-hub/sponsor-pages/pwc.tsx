@@ -44,7 +44,7 @@ const PwcSponsorPage = ({ logoUrl }: { logoUrl: string | null }) => (
               alt="PwC logo"
               width={260}
               height={110}
-              style={{ height: 'auto', objectFit: 'contain' }}
+              className={styles.logoImg}
             />
           )}
         </div>

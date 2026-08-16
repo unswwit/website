@@ -1,6 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import styles from '../../../sponsor-styles/jane-street/jane-street.module.css';
+// Rendered via a plain <img> rather than next/image — Next's built-in image
+// optimizer blocks local SVG sources unless dangerouslyAllowSVG is enabled,
+// and an SVG logo doesn't need raster optimization anyway.
 import janeStreetLogo from '../../../sponsor-styles/jane-street/Jane_Street_Logo_RGB_BLACK.svg';
 import CareersNav from '../../../components/CareersNav';
 import ScrollUpBtn from '../../../components/ScrollUpBtn';
