@@ -11,6 +11,7 @@ import Link from 'next/link';
 import { revalidate } from '../lib/helpers/constants';
 import Image from 'next/image';
 import { PATHWAYS } from '../lib/careersHubData';
+import { getSponsorPage } from '../lib/helpers/sponsorPages';
 
 // ─── Component ───────────────────────────────────────────────────────────────
 // Careers Hub landing page —> Hero, Pathways and a
@@ -144,12 +145,16 @@ const CareersHub = ({ sponsors }: any) => {
                   {marqueeSponsors.map((sponsor: any, i: number) => {
                     const logoUrl = 'https:' + sponsor.fields.lightModeLogo.fields.file.url;
                     const displayName = sponsor.fields.name.replace(/\s*\(\d{4}\)$/, '');
+                    const dedicatedPage = getSponsorPage(displayName);
+                    const href = dedicatedPage || sponsor.fields.website || '/careers-hub/sponsors';
+                    const isExternal = !dedicatedPage && !!sponsor.fields.website;
                     return (
                       <Link
                         key={i}
-                        href="/careers-hub/sponsors"
+                        href={href}
                         className={styles.sponsorMarqueeItem}
                         title={displayName}
+                        {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                       >
                         <Image
                           src={logoUrl}

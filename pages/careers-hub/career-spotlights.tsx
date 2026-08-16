@@ -22,7 +22,7 @@ const CareerSpotlightsPage = () => {
     track.addEventListener('mouseleave', resume);
     track.addEventListener('touchstart', pause, { passive: true });
 
-    const speed = 0.5; // px per frame — one direction only, loops seamlessly
+    const speed = 0.5; 
     let position = track.scrollLeft;
     const step = () => {
       if (!paused) {
@@ -76,7 +76,7 @@ const CareerSpotlightsPage = () => {
       <PageBanner
         eyebrow="Career Spotlights"
         title="What your degree can actually become"
-        description="Roles, responsibilities and the skills that matter right now — tap a card for the full spotlight."
+        description="Roles, responsibilities and the skills that matter right now"
       />
 
       {/* ── Finding Your Path intro ─────────────────────────── */}
@@ -105,7 +105,7 @@ const CareerSpotlightsPage = () => {
                 <p>
                   Career spotlights aim to build your understanding of how your STEM learning
                   is applied across various fields such as <strong>business</strong>,{' '}
-                  <strong>data</strong> and <strong>production management</strong>. This will
+                  <strong>data</strong> and <strong>product management</strong>. This will
                   highlight practical skills and growth opportunities that may be found in the
                   sectors. These spotlights will bridge the gap between academics and
                   real-world application to allow students to see career trajectories.

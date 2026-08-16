@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display&display=swap');
 
+@font-face {
+  font-family: 'Labor Union';
+  src: url('/fonts/LaborUnion-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+}
+
 /*Web colours*/
 :root {
   --white: #fff;

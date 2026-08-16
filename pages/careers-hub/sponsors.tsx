@@ -9,21 +9,7 @@ import CareersNav from '../../components/CareersNav';
 import PageBanner from '../../components/PageBanner';
 import { loadSponsors } from '../../lib/api';
 import { revalidate } from '../../lib/helpers/constants';
-
-// Sponsors with their own dedicated write-up page 
-const SPONSOR_PAGES: Record<string, string> = {
-  pwc: '/careers-hub/sponsor-pages/pwc',
-  pricewaterhousecoopers: '/careers-hub/sponsor-pages/pwc',
-  westpac: '/careers-hub/sponsor-pages/w-group',
-  domain: '/careers-hub/sponsor-pages/domain',
-  'jane street': '/careers-hub/sponsor-pages/jane-street',
-};
-
-function getSponsorPage(displayName: string): string | undefined {
-  const normalized = displayName.toLowerCase().trim();
-  const key = Object.keys(SPONSOR_PAGES).find((k) => normalized.includes(k));
-  return key ? SPONSOR_PAGES[key] : undefined;
-}
+import { getSponsorPage } from '../../lib/helpers/sponsorPages';
 
 const TIER_ORDER = ['diamond', 'gold', 'silver', 'bronze', 'affiliations', 'partnerships'];
 const TIER_LABELS: Record<string, string> = {

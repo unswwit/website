@@ -1,6 +1,5 @@
 /* Palette mapped from CareersHub.module.css design tokens:
-   --black / --white / --yellow / --light-yellow / --grey / --dark-slate-grey
-   Update the hex values below if your global stylesheet's tokens differ. */
+   --black / --white / --yellow / --light-yellow / --grey / --dark-slate-grey */
 .pageRoot{
   --black:#17140F;
   --white:#FFFFFF;
@@ -28,8 +27,7 @@
   --sans:'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 /* box-sizing, html/body reset and the `a` colour rule are already handled
-   site-wide by styles/globals.css — scope the Careers Hub look to this page's
-   own root instead of touching html, body, the universal selector or a globally. */
+   site-wide by styles/globals.css */
 .pageRoot{
   display:block;
   min-height:100vh;
@@ -168,17 +166,22 @@
 @media (max-width:560px){ .gridCards{ grid-template-columns:1fr; } }
 .spotCard{
   text-align:left; text-decoration:none; background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
-  padding:24px 20px; cursor:pointer; box-shadow:var(--shadow); transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-  display:flex; flex-direction:column; gap:10px; font:inherit; color:inherit; width:100%;
+  padding:36px 30px; cursor:pointer; box-shadow:var(--shadow); transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  display:flex; flex-direction:column; gap:14px; font:inherit; color:inherit; width:100%; aspect-ratio:1;
 }
 .spotCard:hover{ transform:translateY(-3px); box-shadow:var(--shadow-hover); border-color:var(--yellow); }
-.spotIcon{ font-size:20px; color:var(--yellow); }
-.spotTitle{ font-family:var(--serif); font-weight:500; font-size:17px; margin:0; color:var(--ink); }
+.spotCardWithImage{ align-items:center; text-align:center; }
+.spotCardWithImage .spotTitle{ width:100%; }
+.spotCardWithImage .spotStat{ align-self:center; }
+.spotCardBody{ display:flex; flex-direction:column; gap:14px; min-width:0; flex:1; }
+.spotIcon{ font-size:30px; color:var(--yellow); }
+.spotImage{ display:block; flex:1; min-height:0; width:auto; max-width:100%; margin:0 auto; object-fit:contain; }
+.spotTitle{ font-family:var(--serif); font-weight:500; font-size:23px; margin:0; color:var(--ink); }
 .spotStat{
-  align-self:flex-start; font-family:var(--sans); font-size:10.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
-  color:var(--black); background:var(--light-yellow); padding:4px 10px; border-radius:2px;
+  align-self:flex-start; font-family:var(--sans); font-size:11.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+  color:var(--black); background:var(--light-yellow); padding:5px 12px; border-radius:2px;
 }
-.spotCta{ font-family:var(--sans); font-size:11.5px; font-weight:700; letter-spacing:.03em; text-transform:uppercase; color:var(--ink-soft); margin-top:auto; display:flex; align-items:center; gap:6px; }
+.spotCta{ font-family:var(--sans); font-size:12.5px; font-weight:700; letter-spacing:.03em; text-transform:uppercase; color:var(--ink-soft); margin-top:auto; display:flex; align-items:center; gap:6px; }
 .spotCard:hover .spotCta{ color:var(--yellow); }
 
 /* ---------- Industry spotlights (editorial alternating rows) ---------- */
@@ -278,9 +281,11 @@
 @media (max-width:900px){ .featuredSponsorGrid, .featuredSponsorGridFour{ grid-template-columns:repeat(2,1fr); } }
 @media (max-width:560px){ .featuredSponsorGrid, .featuredSponsorGridFour{ grid-template-columns:1fr; } }
 .featuredSponsorCard{
+  display:block; text-decoration:none; color:inherit; cursor:pointer;
   background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:24px; text-align:center;
-  box-shadow:var(--shadow); overflow:hidden;
+  box-shadow:var(--shadow); overflow:hidden; transition:transform .18s ease, box-shadow .18s ease;
 }
+.featuredSponsorCard:hover{ transform:translateY(-3px); box-shadow:var(--shadow-hover); }
 .featuredLogoWrap{
   height:70px; display:flex; align-items:center; justify-content:center; margin-bottom:0;
   border-radius:var(--radius-sm); color:var(--yellow-dark); font-family:var(--sans); font-weight:700; font-size:12px;
@@ -548,3 +553,46 @@
 }
 .jobApply:hover{ background:var(--yellow); border-color:var(--yellow); color:var(--black); }
 .jobsEmpty{ text-align:center; padding:60px 0; font-family:var(--sans); color:var(--ink-soft); font-size:14px; }
+
+/* ---------- Career Spotlights: "Finding Your Path" intro ---------- */
+.pathIntroSection{ padding:60px 0 12px; }
+.pathIntroCard{
+  position:relative; overflow:hidden;
+  background:#fbe4e1; border-radius:20px; padding:48px 56px; max-width:900px; margin:0 auto;
+}
+.pathIntroHeading{
+  font-family:'Labor Union', var(--sans); font-weight:400; font-size:clamp(34px,5vw,46px); letter-spacing:.02em;
+  text-transform:uppercase; color:var(--black); text-align:center; margin:0 0 28px;
+}
+.pathIntroLede{
+  font-family:var(--sans); font-size:14.5px; line-height:1.9; color:#3a2a28; max-width:680px;
+  margin:0 auto 40px; text-align:center;
+}
+.pathIntroFeature{ display:grid; grid-template-columns:1fr 1.2fr; gap:32px; align-items:center; margin-bottom:40px; }
+@media (max-width:700px){ .pathIntroFeature{ grid-template-columns:1fr; } }
+.pathIntroBlob{
+  position:relative; aspect-ratio:1; border-radius:45% 55% 60% 40% / 55% 45% 55% 45%;
+  background:#eeb3b0; display:flex; align-items:center; justify-content:center;
+}
+.pathIntroBlobIcon{ display:block; width:90%; height:90%; object-fit:contain; }
+.pathIntroFeatureText p{ font-family:var(--sans); font-size:14px; line-height:1.85; color:#3a2a28; margin:0 0 18px; }
+.pathIntroFeatureText p:last-child{ margin-bottom:0; }
+.pathIntroSubheading{ font-family:var(--sans); font-weight:800; font-size:16px; color:var(--black); margin:0 0 16px; }
+.pathIntroCallout{
+  display:flex; align-items:flex-start; gap:16px;
+  background:#e59a9a; border-radius:8px; padding:20px 24px; margin-bottom:1px;
+}
+.pathIntroCalloutIcon{
+  flex-shrink:0; display:block; width:72px; height:72px; object-fit:contain; margin-top:2px;
+}
+.pathIntroCallout p{ font-family:var(--sans); font-size:17px; line-height:1.8; color:#fff; margin:0; }
+.pathIntroClosing{ font-family:var(--sans); font-size:14px; line-height:1.9; color:#3a2a28; margin:0; }
+
+/* ---------- Career Spotlights carousel ---------- */
+.spotCarousel{ position:relative; }
+.spotCarouselTrack{
+  display:flex; gap:18px; overflow-x:auto;
+  padding:4px 4px 12px; scrollbar-width:none; -ms-overflow-style:none;
+}
+.spotCarouselTrack::-webkit-scrollbar{ display:none; }
+.spotCarouselTrack > *{ flex:0 0 clamp(280px,32vw,360px); scroll-snap-align:start; }
