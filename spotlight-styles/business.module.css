@@ -1,0 +1,142 @@
+/* Business career-spotlight page */
+.page{
+  --navy:#1b1f3b;
+  --orange:#f0a03c;
+  --red:#cf4a4a;
+  --green:#3f8f52;
+  --pink:#f3d6e8;
+  --cream:#fbead2;
+  --bg:#f8dfb9;
+  --ink:#3a352c;
+
+  /* <CareersNav /> is reused on this page */
+  --black:#17140F;
+  --white:#FFFFFF;
+  --yellow:#FEB14B;
+  --yellow-dark:#E8992E;
+  --grey:#6E6A63;
+  --ink-soft:var(--grey);
+  --line:rgba(0,0,0,.08);
+  --card:var(--white);
+  --sans:'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  background:var(--bg);
+  font-family:var(--sans);
+  color:var(--ink);
+}
+
+.wrap{ max-width:1080px; margin:0 auto; padding:48px 48px 88px; }
+
+/* ---------- Hero ---------- */
+.heroRow{
+  display:grid; grid-template-columns:1fr 1.6fr; align-items:start; gap:32px; margin-bottom:20px;
+}
+@media (max-width:700px){ .heroRow{ grid-template-columns:1fr; } }
+
+.speechWrap{ position:relative; width:100%; aspect-ratio:1989/894; container-type:inline-size; }
+.speechImg{ position:absolute; inset:0; display:block; width:100%; height:100%; }
+.bubbleText{
+  position:absolute; left:27%; right:16%; top:29%; bottom:29%; display:flex; align-items:center; justify-content:center;
+  text-align:center;
+  font-family:var(--sans); font-size:clamp(9px, 2.6cqw, 17px); line-height:1.4; color:var(--navy); font-weight:600; margin:0;
+}
+
+.heroTitle{ text-align:left; align-self:center; }
+.heroKicker{ font-family:var(--sans); font-size:21px; color:var(--black); margin:0 0 4px; font-weight:500; }
+.heroHeading{
+  font-family:'Labor Union', var(--sans); font-weight:400; font-size:clamp(44px,6vw,60px); color:var(--black);
+  margin:0; text-transform:none;
+}
+
+/* ---------- Section headings ---------- */
+.sectionHeading{
+  display:inline-block; font-family:var(--sans); font-weight:800; font-size:23px;
+  margin:0 0 28px; padding-bottom:10px; border-bottom:2px solid currentColor; text-transform:none;
+}
+.headingRed{ color:var(--red); position:relative; top:70px; }
+.headingGreen{ color:var(--green); }
+
+/* ---------- The Business Industry in 2026 ---------- */
+.industryIntro{ display:flex; flex-direction:column; gap:20px; margin-bottom:0px; }
+.industryIntro h3{
+  margin-bottom:0; text-align:center; color:var(--black);
+}
+
+/* ---------- Financial Analyst ---------- */
+.finRow{ display:grid; grid-template-columns:1.3fr 1fr; gap:40px; align-items:center; margin-bottom:32px; }
+@media (max-width:760px){ .finRow{ grid-template-columns:1fr; } }
+.finText p{ font-size:14px; line-height:1.85; color:var(--ink); margin:0; }
+.illustrationBox{
+  background:#f3d9b0; border-radius:18px; display:flex; align-items:center; justify-content:center;
+  aspect-ratio:4/3; font-size:64px; padding:24px;
+}
+.illustrationImg{ display:block; width:100%; height:100%; object-fit:contain; }
+
+.rolesRow{ display:grid; grid-template-columns:1.3fr 1fr; gap:32px; align-items:stretch; margin-bottom:64px; }
+@media (max-width:760px){ .rolesRow{ grid-template-columns:1fr; } }
+.roleBoxes{ display:flex; flex-direction:column; gap:16px; }
+.roleBox{ border:2px dashed var(--red); border-radius:10px; padding:16px 20px; }
+.roleBoxTitle{ color:var(--red); font-weight:800; font-size:14px; margin:0 0 4px; }
+.roleBoxText{ font-size:13px; line-height:1.6; color:var(--ink); margin:0; }
+.pinkCallout{
+  background:var(--pink); border-radius:18px; padding:28px 26px; display:flex; align-items:center;
+}
+.pinkCallout p{ font-size:16px; font-weight:700; line-height:1.85; color:#3a2a3a; margin:0; }
+
+/* ---------- Project Manager ---------- */
+.pmRow{ display:grid; grid-template-columns:1fr 1.3fr; gap:40px; align-items:stretch; }
+@media (max-width:760px){ .pmRow{ grid-template-columns:1fr; } }
+.pmTextCol{ display:flex; flex-direction:column; height:100%; }
+.pmTextBlobWrap{ flex:1; display:flex; align-items:center; }
+.pmTextBlob{ background:var(--cream); border-radius:40px; padding:30px 34px; width:100%; }
+.pmTextBlob p{ font-size:14px; line-height:1.85; color:var(--ink); margin:0 0 14px; }
+.pmTextBlob p:last-child{ margin-bottom:0; }
+.pmTextBlob .respHeading{ margin-top:0; }
+.pmTextBold{ font-weight:700; font-size:16px; }
+
+/* ---------- Key Responsibilities of a Project Manager ---------- */
+.responsibilitiesRow{
+  position:relative; display:grid; grid-template-columns:1fr 1fr; gap:40px;
+  margin-top:64px; margin-bottom:56px;
+}
+@media (max-width:760px){ .responsibilitiesRow{ grid-template-columns:1fr; } }
+.responsibilitiesRow::before{
+  content:''; position:absolute; left:50%; top:4px; bottom:4px; border-left:2px dashed var(--green);
+}
+@media (max-width:760px){ .responsibilitiesRow::before{ display:none; } }
+.respHeading{ font-family:var(--sans); font-weight:800; font-size:19px; color:var(--green); margin:0 0 14px; text-transform:none; }
+.respIntro{ font-size:13.5px; line-height:1.8; color:var(--ink); margin:0; }
+.checklist{ display:flex; flex-direction:column; gap:16px; padding-left:8px; }
+.checklistItem{ display:flex; align-items:flex-start; gap:10px; font-size:13.5px; line-height:1.7; color:var(--ink); margin:0; }
+.checkbox{ flex-shrink:0; width:15px; height:15px; border:2px solid var(--green); border-radius:3px; margin-top:2px; }
+
+/* ---------- Consultancy ---------- */
+.consultRow{ display:grid; grid-template-columns:1fr 1.3fr; gap:36px; align-items:stretch; margin-bottom:32px; }
+@media (max-width:760px){ .consultRow{ grid-template-columns:1fr; } }
+.consultTextCol{ display:flex; flex-direction:column; gap:14px; align-items:center; text-align:center; height:100%; }
+.consultHeadingLabel{
+  display:block; width:100%; font-weight:800; font-size:22px; color:var(--red); margin:0;
+  padding-bottom:10px; border-bottom:2px solid currentColor;
+}
+.consultPillWrap{ flex:1; display:flex; align-items:center; justify-content:center; width:100%; }
+.consultPill{ background:var(--pink); border-radius:40px; padding:22px 32px; }
+.consultPill p{ margin:0; font-size:16px; font-weight:700; line-height:1.8; color:#3a2a3a; text-align:center; }
+
+.consultBoxesRow{ display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:64px; }
+@media (max-width:640px){ .consultBoxesRow{ grid-template-columns:1fr; } }
+.consultBox{ border:2px solid var(--pink); background:#fff; border-radius:14px; padding:20px 22px; }
+.consultBoxHead{
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+  padding-bottom:12px; border-bottom:1px dashed var(--pink); margin-bottom:12px;
+}
+.consultBoxTitle{ display:flex; align-items:center; gap:8px; font-weight:800; font-size:15px; color:var(--red); margin:0; }
+.consultBoxClose{ color:var(--pink); font-weight:700; font-size:16px; }
+.consultBoxText{ font-size:13px; line-height:1.75; color:var(--ink); margin:0; }
+
+/* ---------- Consider a Career in Business ---------- */
+.considerHeadRow{ display:flex; align-items:center; gap:16px; justify-content:center; margin-bottom:20px; }
+.considerHeading{ font-family:var(--sans); font-weight:800; font-size:20px; color:var(--black); margin:0; text-transform:none; }
+.considerCard{ background:var(--cream); border-radius:24px; padding:40px 48px; display:flex; flex-direction:column; gap:28px; }
+.considerItem{ text-align:center; }
+.considerItemTitle{ font-weight:800; font-size:14.5px; color:var(--black); margin:0 0 8px; }
+.considerItemText{ font-size:13.5px; line-height:1.8; color:var(--ink); margin:0 auto; max-width:640px; }

@@ -2,18 +2,14 @@
 import { useEffect, useState } from 'react';
 import PageHeader from '../components/Header';
 import styles from '../styles/JoinUs.module.css';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import NewsletterSection from '../components/NewsletterSection';
-import { BootstrapTooltip } from '../components/BootstrapTooltip';
 import LoadingScreen from '../components/LoadingScreen';
-import { socials } from '../data/join';
 import SimpleAccordion from '../components/JoinUsAccordion';
 import PortfolioGrid from '../components/JoinUsGrid';
-import Image from 'next/image';
 import Head from 'next/head';
 
 const JoinUs = () => {
-  const [hideSpinner, setHideSpinner] = useState(false);
+  const [hideSpinner] = useState(false);
   const [openNewsletter, setOpenNewsletter] = useState(false);
   const [sourceLoading, setSourceLoading] = useState(true);
   const [headerLoading, setHeaderLoading] = useState(true);

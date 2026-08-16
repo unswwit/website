@@ -125,18 +125,6 @@ export async function loadUpcomingEvents() {
   return res.items;
 }
 
-export async function loadOpportunities() {
-  const res = await client
-    .getEntries({
-      content_type: 'opportunities',
-      select: 'fields',
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-  return res.items;
-}
-
 export async function loadBlogPreviews() {
   const res = await client
     .getEntries({

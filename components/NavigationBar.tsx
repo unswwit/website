@@ -21,7 +21,7 @@ const NavigationBar = () => {
   const [clearNavBar, setClearNavBar] = useState(false);
   const [hiddenNavBar, setHiddenNavBar] = useState(false);
   const [compactNavBar, setCompactNavBar] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const [, setDarkMode] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -106,10 +106,12 @@ const NavigationBar = () => {
       <div className={styles.navBarGrid}>
         <div className={styles.logoContainer}>
           <Link href="/">
-            {/* change WIT logo depending on device theme and scroll position */}
+            {/* change WIT logo depending on device theme and scroll position;
+                Careers Hub pages sit on a light background so they use the
+                black logo instead of the white one used everywhere else */}
             <Image
               className={styles.logoGridItem}
-              src="/logo-white.png"
+              src={router.pathname.startsWith('/careers-hub') ? '/logo-black.png' : '/logo-white.png'}
               alt="wit logo"
               width={40}
               height={35}

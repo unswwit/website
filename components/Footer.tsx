@@ -9,10 +9,10 @@ import Image from 'next/image';
 const routes: any = {
   Home: '/',
   Events: '/events',
-  'Jobs Board': '/sponsors/jobs-board',
   'Join Us': '/join-us',
   'Our Story': '/about/our-story',
-  Sponsors: '/sponsors/current-sponsors',
+  'Current Sponsors': '/careers-hub/sponsors',
+  'Careers Hub': '/careers-hub',
   'Our Team': '/about/our-team',
   'Contact Us': '/contact-us',
   'Blog Posts': '/media/blog',
@@ -28,7 +28,7 @@ const headings = ['ABOUT US', 'SPONSORS', 'EVENTS', 'MEDIA'];
 
 const links = [
   ['Home', 'Our Story', 'Our Team', 'Join Us', 'Contact Us'],
-  ['Current Sponsors', 'Jobs Board'],
+  ['Current Sponsors', 'Careers Hub'],
   ['Events', 'Empowerment Mentoring Program', 'Merch Store'],
   ['Blog Posts', 'Podcast', 'Publications', 'Marketing', 'Videos'],
 ];

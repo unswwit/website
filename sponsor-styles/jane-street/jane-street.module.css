@@ -1,0 +1,117 @@
+/* Jane Street sponsor info-sheet page */
+.page{
+  --js-purple-light:#ece7f8;
+  --js-purple:#a68fd9;
+  --js-blue:#0e60d1;
+  --js-navy:#26339c;
+  --js-lavender:#e9ecfb;
+  --js-blue-mid:#6f93e8;
+  --js-grey:#f2f2f4;
+  --js-ink:#1c1c24;
+
+  /* <CareersNav /> is reused on this page  */
+  --black:#17140F;
+  --white:#FFFFFF;
+  --yellow:#FEB14B;
+  --yellow-dark:#E8992E;
+  --grey:#6E6A63;
+  --ink:var(--black);
+  --ink-soft:var(--grey);
+  --line:rgba(0,0,0,.08);
+  --card:var(--white);
+  --sans:'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  position:relative;
+  background:#fff;
+  font-family:'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color:var(--js-ink);
+  overflow:hidden;
+}
+
+.wrap{ position:relative; z-index:1; max-width:1080px; margin:0 auto; padding:0 48px 64px; }
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative; overflow:hidden;
+  background:linear-gradient(90deg, var(--js-purple-light) 0%, var(--js-purple) 45%, var(--js-blue) 100%);
+  padding:36px 48px; margin-bottom:36px;
+  /* flat bottom edge, then a distinct kink/bend rising to meet the top-right corner */
+  clip-path:polygon(0 0, 100% 0, 100% 40%, 70% 100%, 0 100%);
+}
+.logoRow{ display:flex; align-items:center; gap:16px; }
+.logoMark{ display:block; width:auto; height:88px; flex-shrink:0; object-fit:contain; }
+.wordmark{ font-size:30px; font-weight:800; color:var(--js-ink); margin:0; }
+
+/* ---------- Body sections ---------- */
+.section{ margin-bottom:36px; }
+.sectionHeading{ font-size:20px; font-weight:800; color:var(--js-navy); margin:0 0 12px; text-transform:none; }
+.section p{ font-size:14px; line-height:1.85; color:#3a3a44; margin:0; }
+
+/* ---------- Qualifications + Locations ---------- */
+.grid2{ display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:start; margin-bottom:36px; }
+@media (max-width:700px){ .grid2{ grid-template-columns:1fr; } }
+
+.qualifications{ background:var(--js-lavender); border-radius:8px; padding:26px 28px; }
+.qualifications h2{ font-size:18px; font-weight:800; color:var(--js-navy); margin:0 0 10px; text-transform:none; }
+.qualifications p{ font-size:13.5px; line-height:1.8; color:#3a3a44; margin:0; }
+
+.locations h2{ font-size:18px; font-weight:800; color:var(--js-navy); margin:0 0 18px; text-transform:none; }
+.locationsGrid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px 18px; }
+.locationItem{ display:flex; flex-direction:column; align-items:center; gap:8px; text-align:center; }
+.locationBadge{
+  width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+  font-size:22px; color:#fff;
+  background:linear-gradient(135deg, var(--js-purple), var(--js-blue));
+}
+.locationLabel{ font-size:12.5px; font-weight:700; color:var(--js-ink); }
+
+/* ---------- Internship and Graduate Opportunities ---------- */
+.opportunities{ background:var(--js-grey); border-radius:8px; padding:32px 36px; }
+.opportunities h2{ font-size:19px; font-weight:800; color:var(--js-navy); margin:0 0 16px; text-transform:none; }
+.opportunities p{ font-size:14px; line-height:1.85; color:#3a3a44; margin:0 0 16px; }
+.opportunities p:last-child{ margin-bottom:0; }
+.opportunities strong{ color:var(--js-ink); }
+.opportunities a{ color:var(--js-navy); font-weight:700; text-decoration:underline; }
+.opportunities a:hover{ color:var(--js-blue); }
+
+/* ---------- Application Process (timeline) ---------- */
+.processHeading{ font-size:22px; font-weight:800; color:var(--js-navy); margin:0 0 24px; text-transform:none; }
+.timeline{ display:grid; grid-template-columns:auto 1fr; gap:0 28px; margin-bottom:40px; }
+.timelineIconCol{
+  position:relative; display:flex; flex-direction:column; justify-content:space-between;
+  align-items:center; padding:4px 0;
+}
+.timelineIconCol::before{
+  content:''; position:absolute; top:28px; bottom:28px; left:50%; width:2px;
+  background:repeating-linear-gradient(to bottom, var(--js-blue-mid) 0 6px, transparent 6px 12px);
+  z-index:0;
+}
+.timelineIcon{
+  position:relative; z-index:1; width:56px; height:56px; border-radius:50%;
+  background:var(--js-lavender); display:flex; align-items:center; justify-content:center;
+  font-size:22px;
+}
+.timelineTextCol{ display:flex; flex-direction:column; justify-content:space-between; gap:16px; }
+.timelineBox{ background:var(--js-lavender); border-radius:8px; padding:18px 22px; }
+.timelineBox p{ font-size:13.5px; line-height:1.75; color:#2c2c3a; margin:0; }
+.timelineBox a{ color:var(--js-navy); text-decoration:underline; font-weight:700; }
+.timelineBox a:hover{ color:var(--js-blue); }
+@media (max-width:640px){
+  .timeline{ grid-template-columns:1fr; }
+  .timelineIconCol{ flex-direction:row; justify-content:flex-start; gap:16px; }
+  .timelineIconCol::before{ display:none; }
+}
+
+/* ---------- Roles Available + Application Tips ---------- */
+.rolesTips{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+@media (max-width:640px){ .rolesTips{ grid-template-columns:1fr; } }
+.rolesBox{ background:var(--js-navy); color:#fff; border-radius:8px; padding:28px 30px; }
+.rolesBox h2{ font-size:18px; font-weight:800; text-align:center; margin:0 0 16px; text-transform:none; }
+.rolesBox ul{ list-style:disc; margin:0; padding-left:20px; }
+.rolesBox li{ font-size:13.5px; line-height:1.9; }
+
+.tipsBox{ background:var(--js-blue-mid); color:#fff; border-radius:8px; padding:28px 30px; }
+.tipsBox h2{ font-size:18px; font-weight:800; text-align:center; margin:0 0 16px; text-transform:none; }
+.tipsBox p{ font-size:13.5px; line-height:1.85; margin:0; }
+.tipsBox a{ color:#fff; text-decoration:underline; font-weight:700; }
+.tipsBox a:hover{ color:var(--js-lavender); }
