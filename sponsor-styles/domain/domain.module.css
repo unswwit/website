@@ -32,9 +32,9 @@
 @media (max-width:640px){ .hero{ grid-template-columns:1fr; } }
 .heroText{ position:relative; z-index:2; align-self:center; }
 .logoRow{ display:flex; align-items:center; gap:16px; margin-bottom:26px; }
-.logo{ display:block; width:320px; height:auto; }
-.logoGroupText{ font-family:'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size:100px; font-weight:400; color:#fff; }
-.tagline{ font-size:26px; line-height:1.4; margin:0; font-weight:500; }
+.logo{ display:block; width:clamp(150px, 34vw, 320px); height:auto; }
+.logoGroupText{ font-family:'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size:clamp(40px, 9vw, 100px); font-weight:400; color:#fff; }
+.tagline{ font-size:clamp(19px, 4.4vw, 26px); line-height:1.4; margin:0; font-weight:500; }
 
 .heroPhoto{
   position:relative; z-index:2; align-self:center; justify-self:end;
@@ -144,3 +144,42 @@
   font-size:20px; font-weight:800; margin:0 0 14px; text-transform:none; color:#fff;
 }
 .tipsBanner p{ font-size:13.5px; line-height:1.85; margin:0; color:rgba(255,255,255,.92); }
+
+/* ============================================================================
+   Mobile / phone-view optimisations
+   Appended last so these override the layout defaults above.
+   ========================================================================== */
+@media (max-width:760px){
+  .hero{ padding:36px 22px 0; gap:20px; }
+  .about{ padding:32px 22px 44px; }
+  .aboutHeading,
+  .sectionHeading{ font-size:19px; }
+  .skills{ padding:32px 24px 44px; }
+  .skillsHeading{ font-size:18px; margin-bottom:22px; }
+  .skillsList{ gap:26px; }
+  .opportunities2{ padding:32px 22px 40px; }
+  .qualifications{ padding:34px 22px 40px; }
+  .qualifications::before{ display:none; }
+  .rolesGrid{ grid-template-columns:repeat(3,1fr); gap:24px 16px; }
+  .processBox{ padding:32px 22px 40px; }
+  .tipsBanner{ padding:32px 22px; }
+  .tipsBanner h2{ font-size:18px; }
+
+  .photoBoxWrap{ margin-top:0; height:auto; }
+  .photoBoxPeak{ flex-basis:64px; }
+  .photoBox{ flex:none; padding:2px; }
+  .photoBoxImg{ width:100%; max-width:none; height:auto; aspect-ratio:1; margin-top:20px; }
+}
+
+@media (max-width:640px){
+  .logoRow{ gap:10px; margin-bottom:18px; }
+  .heroPhoto{
+    width:100%; max-width:230px; height:auto;
+    transform:translateX(10px); justify-self:center;
+  }
+  .heroPhoto img{ margin:0 0 0 auto; width:86%; height:auto; }
+}
+
+@media (max-width:560px){
+  .rolesGrid{ grid-template-columns:repeat(2,1fr); }
+}
