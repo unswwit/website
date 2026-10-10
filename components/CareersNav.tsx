@@ -10,7 +10,6 @@ interface CareersNavProps {
 }
 
 const NAV_LINKS: { page: NavPage; href: string; label: string }[] = [
-  { page: 'home', href: '/careers-hub', label: 'Home' },
   { page: 'spotlights', href: '/careers-hub/career-spotlights', label: 'Career Spotlights' },
   { page: 'industries', href: '/careers-hub/industry-spotlights', label: 'Industry Spotlights' },
   { page: 'toolkit', href: '/careers-hub/job-searching', label: 'Job Searching' },
@@ -34,6 +33,8 @@ const CareersNav = ({ active }: CareersNavProps) => {
     return () => document.removeEventListener('keydown', onKey);
   }, [menuOpen]);
 
+// since each section now lives on its own route.
+const CareersNav = ({ active }: CareersNavProps) => {
   return (
     <nav className={styles.siteNav}>
       <div className={styles.siteNavInner}>
@@ -69,7 +70,6 @@ const CareersNav = ({ active }: CareersNavProps) => {
               key={link.page}
               href={link.href}
               className={link.page === active ? styles.active : ''}
-              onClick={() => setMenuOpen(false)}
             >
               {link.label}
             </Link>
