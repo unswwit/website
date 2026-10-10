@@ -479,20 +479,36 @@
 /* offset anchored sections so the sticky nav doesn't cover the heading */
 .section[id]{ scroll-margin-top:76px; }
 
+/* Hamburger button — mobile only */
+.siteNavToggle{
+  display:none; flex-direction:column; justify-content:center; gap:5px;
+  width:44px; height:44px; padding:0 10px; margin-right:-10px;
+  background:transparent; border:none; cursor:pointer; flex-shrink:0;
+}
+.siteNavToggle span{
+  display:block; width:24px; height:2px; background:var(--ink); border-radius:2px;
+  transition:transform .2s ease, opacity .2s ease;
+}
+/* bars morph into an X when open */
+.siteNavToggleOpen span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+.siteNavToggleOpen span:nth-child(2){ opacity:0; }
+.siteNavToggleOpen span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
 @media (max-width:760px){
-  .siteNavInner{
-    flex-wrap:wrap; height:auto; padding:10px 18px 8px; gap:10px;
-  }
+  .siteNavInner{ height:60px; padding:0 18px; gap:10px; }
   .siteNavBrandGroup{ gap:10px; }
-  /* Links drop to their own full-width row and scroll horizontally */
+  .siteNavToggle{ display:flex; }
+  /* Links collapse into a full-width dropdown under the bar */
   .siteNavLinks{
-    position:static; transform:none; left:auto; top:auto;
-    order:3; width:100%; max-width:none;
-    padding:0 0 2px; gap:2px;
-    -webkit-mask-image:linear-gradient(90deg, #000 0, #000 calc(100% - 44px), transparent);
-    mask-image:linear-gradient(90deg, #000 0, #000 calc(100% - 44px), transparent);
+    display:none; position:absolute; top:100%; left:0; right:0; transform:none; max-width:none;
+    flex-direction:column; align-items:stretch; gap:0; padding:6px 0 10px;
+    background:var(--card); border-bottom:1px solid var(--line); box-shadow:0 12px 24px rgba(0,0,0,.08);
   }
-  .siteNavLinks a{ padding:10px 14px; font-size:11.5px; }
+  .siteNavLinksOpen{ display:flex; }
+  .siteNavLinks a{
+    padding:14px 18px; font-size:12px; border-bottom:none; border-left:3px solid transparent;
+  }
+  .siteNavLinks a.active{ border-left-color:var(--yellow); background:var(--light-yellow); }
 }
 
 /* ---------- Page banner (subpages) ---------- */
@@ -547,12 +563,13 @@
 .jobType.internship{ background:var(--yellow-dark); }
 .jobType.grad{ background:var(--black); }
 .jobType.fulltime{ background:var(--grey); }
+.jobType.other{ background:transparent; color:var(--ink-soft); border:1px solid var(--line); }
 .jobDeadline{ font-family:var(--sans); font-size:11.5px; color:var(--ink-soft); white-space:nowrap; }
 .jobDeadline strong{ color:var(--ink); }
 .jobTitle{ font-family:var(--serif); font-weight:500; font-size:18px; margin:0; color:var(--ink); }
 .jobCompany{ font-family:var(--sans); font-size:13px; font-weight:600; color:var(--yellow-dark); margin:0; }
 .jobMeta{ font-family:var(--sans); font-size:12.5px; color:var(--ink-soft); display:flex; gap:14px; flex-wrap:wrap; margin:0; }
-.jobDesc{ font-family:var(--sans); font-size:13.5px; line-height:1.7; color:var(--ink-soft); margin:0; flex:1; }
+.jobDesc{ font-family:var(--sans); font-size:13.5px; line-height:1.7; color:var(--ink-soft); margin:0; flex:1; white-space:pre-line; }
 .jobApply{
   display:inline-flex; align-items:center; gap:6px; align-self:flex-start; margin-top:6px;
   font-family:var(--sans); font-size:11.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
@@ -561,6 +578,55 @@
 }
 .jobApply:hover{ background:var(--yellow); border-color:var(--yellow); color:var(--black); }
 .jobsEmpty{ text-align:center; padding:60px 0; font-family:var(--sans); color:var(--ink-soft); font-size:14px; }
+.jobsEmpty p{ margin:0 0 16px; }
+.jobsClearBtn{
+  font-family:var(--sans); font-size:11.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+  color:var(--black); background:transparent; border:1.5px solid var(--black); border-radius:2px; padding:9px 18px; cursor:pointer;
+  transition:background .18s ease, border-color .18s ease;
+}
+.jobsClearBtn:hover{ background:var(--yellow); border-color:var(--yellow); }
+
+/* Search + filter toolbar */
+.jobsToolbar{ display:flex; gap:10px; align-items:stretch; margin-bottom:14px; }
+.jobsSearch{ position:relative; flex:1; min-width:0; }
+.jobsSearchIcon{
+  position:absolute; left:14px; top:50%; transform:translateY(-50%);
+  font-size:18px; color:var(--ink-soft); pointer-events:none;
+}
+.jobsSearchInput{
+  width:100%; height:100%; min-height:44px; padding:10px 14px 10px 40px;
+  font-family:var(--sans); font-size:14px; color:var(--ink); background:var(--card);
+  border:1.5px solid rgba(0,0,0,.18); border-radius:2px; outline:none; transition:border-color .15s ease;
+}
+.jobsSearchInput:focus{ border-color:var(--yellow); }
+.jobsFilterMenu{ position:relative; flex-shrink:0; }
+.jobsFilterBtn{
+  height:100%; min-height:44px; padding:0 18px; white-space:nowrap; cursor:pointer;
+  font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+  color:var(--ink); background:var(--card); border:1.5px solid rgba(0,0,0,.18); border-radius:2px; transition:all .15s ease;
+}
+.jobsFilterBtn:hover{ border-color:var(--yellow); color:var(--yellow-dark); }
+.jobsFilterBtnActive{ background:var(--yellow); border-color:var(--yellow); color:var(--black); }
+.jobsFilterBtnActive:hover{ color:var(--black); }
+.jobsFilterPanel{
+  position:absolute; right:0; top:calc(100% + 6px); z-index:20; min-width:200px;
+  display:flex; flex-direction:column; padding:8px; background:var(--card);
+  border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow-hover);
+}
+.jobsFilterPanelLabel{
+  font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--ink-soft); padding:6px 10px 8px;
+}
+.jobsFilterOption{
+  text-align:left; padding:9px 10px; border:none; border-radius:2px; background:transparent; cursor:pointer;
+  font-family:var(--sans); font-size:13.5px; color:var(--ink);
+}
+.jobsFilterOption:hover{ background:rgba(0,0,0,.05); }
+.jobsFilterOptionActive{ font-weight:700; color:var(--yellow-dark); }
+.jobsCount{ font-family:var(--sans); font-size:12.5px; color:var(--ink-soft); margin:0 0 18px; }
+@media (max-width:560px){
+  .jobsSearchInput{ font-size:16px; } /* stops iOS zooming on focus */
+}
 
 /* ---------- Career Spotlights: "Finding Your Path" intro ---------- */
 .pathIntroSection{ padding:60px 0 12px; }
