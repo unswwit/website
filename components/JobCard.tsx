@@ -6,6 +6,7 @@ const TYPE_LABELS: Record<JobEntry['type'], string> = {
   internship: 'Internship',
   grad: 'Grad Program',
   fulltime: 'Full-Time',
+  other: 'Opportunity',
 };
 
 const JobCard = ({ job, stagger = 0 }: { job: JobEntry; stagger?: number }) => (
@@ -17,7 +18,13 @@ const JobCard = ({ job, stagger = 0 }: { job: JobEntry; stagger?: number }) => (
     <div className={styles.jobCardTop}>
       <span className={`${styles.jobType} ${styles[job.type]}`}>{TYPE_LABELS[job.type]}</span>
       <span className={styles.jobDeadline}>
-        Closes <strong>{job.deadline}</strong>
+        {job.deadline === 'Rolling' ? (
+          <strong>Rolling applications</strong>
+        ) : (
+          <>
+            Closes <strong>{job.deadline}</strong>
+          </>
+        )}
       </span>
     </div>
     <h3 className={styles.jobTitle}>{job.title}</h3>

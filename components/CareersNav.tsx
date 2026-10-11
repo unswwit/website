@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../styles/CareersHub.module.css';
@@ -10,6 +10,7 @@ interface CareersNavProps {
 }
 
 const NAV_LINKS: { page: NavPage; href: string; label: string }[] = [
+  { page: 'home', href: '/careers-hub', label: 'Home' },
   { page: 'spotlights', href: '/careers-hub/career-spotlights', label: 'Career Spotlights' },
   { page: 'industries', href: '/careers-hub/industry-spotlights', label: 'Industry Spotlights' },
   { page: 'toolkit', href: '/careers-hub/job-searching', label: 'Job Searching' },
@@ -19,8 +20,20 @@ const NAV_LINKS: { page: NavPage; href: string; label: string }[] = [
 
 // Top nav bar shared by every Careers Hub page. `active` controls which link
 // is highlighted — pass the page key rather than relying on scroll position,
-// since each section now lives on its own route.
+// since each section now lives on its own route. On mobile the links collapse
+// behind a hamburger button and open as a dropdown below the bar.
 const CareersNav = ({ active }: CareersNavProps) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMenuOpen(false);
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [menuOpen]);
+
   return (
     <nav className={styles.siteNav}>
       <div className={styles.siteNavInner}>
@@ -35,12 +48,28 @@ const CareersNav = ({ active }: CareersNavProps) => {
             </span>
           </Link>
         </div>
-        <div className={styles.siteNavLinks}>
+        <button
+          type="button"
+          className={`${styles.siteNavToggle} ${menuOpen ? styles.siteNavToggleOpen : ''}`}
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+          aria-controls="careers-nav-links"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+        <div
+          id="careers-nav-links"
+          className={`${styles.siteNavLinks} ${menuOpen ? styles.siteNavLinksOpen : ''}`}
+        >
           {NAV_LINKS.map((link) => (
             <Link
               key={link.page}
               href={link.href}
               className={link.page === active ? styles.active : ''}
+              onClick={() => setMenuOpen(false)}
             >
               {link.label}
             </Link>

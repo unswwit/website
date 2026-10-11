@@ -35,7 +35,6 @@
   position:relative; overflow:hidden;
   background:linear-gradient(90deg, var(--js-purple-light) 0%, var(--js-purple) 45%, var(--js-blue) 100%);
   padding:36px 48px; margin-bottom:36px;
-  /* flat bottom edge, then a distinct kink/bend rising to meet the top-right corner */
   clip-path:polygon(0 0, 100% 0, 100% 40%, 70% 100%, 0 100%);
 }
 .logoRow{ display:flex; align-items:center; gap:16px; }
@@ -98,20 +97,27 @@
 .timelineBox a:hover{ color:var(--js-blue); }
 @media (max-width:640px){
   .timeline{ grid-template-columns:1fr; }
-  .timelineIconCol{ flex-direction:row; justify-content:flex-start; gap:16px; }
+  .timelineIconCol{ flex-direction:row; justify-content:center; gap:16px; padding-left:8px; margin-bottom:20px; }
   .timelineIconCol::before{ display:none; }
+  .processHeading{ text-align:center; margin-top:44px; margin-bottom:10px; }
 }
 
 /* ---------- Roles Available + Application Tips ---------- */
 .rolesTips{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
 @media (max-width:640px){ .rolesTips{ grid-template-columns:1fr; } }
 .rolesBox{ background:var(--js-navy); color:#fff; border-radius:8px; padding:28px 30px; }
-.rolesBox h2{ font-size:18px; font-weight:800; text-align:center; margin:0 0 16px; text-transform:none; }
+.rolesBox h2{ font-size:18px; font-weight:800; text-align:center; margin:0 0 16px; text-transform:none; color:#fff; }
 .rolesBox ul{ list-style:disc; margin:0; padding-left:20px; }
 .rolesBox li{ font-size:13.5px; line-height:1.9; }
 
 .tipsBox{ background:var(--js-blue-mid); color:#fff; border-radius:8px; padding:28px 30px; }
-.tipsBox h2{ font-size:18px; font-weight:800; text-align:center; margin:0 0 16px; text-transform:none; }
+.tipsBox h2{ font-size:18px; font-weight:800; text-align:center; margin:0 0 16px; text-transform:none; color:#fff; }
 .tipsBox p{ font-size:13.5px; line-height:1.85; margin:0; }
 .tipsBox a{ color:#fff; text-decoration:underline; font-weight:700; }
 .tipsBox a:hover{ color:var(--js-lavender); }
+
+/* ---------- Mobile / phone-view ---------- */
+@media (max-width:640px){
+  .hero{ padding:20px 22px; margin-bottom:26px; }
+  .logoMark{ height:52px; }
+}

@@ -16,6 +16,7 @@ const BlogDetails = ({ selectedBlog, blogContent }: any) => {
   const { date, heading, blog_no, category, content, author, img } =
     selectedBlog.fields;
   const imgUrl = 'https:' + img.fields.file.url;
+  const imgSize = img.fields.file.details?.image || { width: 1200, height: 800 };
   const classes = useStyles();
   const [loading, setLoading] = React.useState(true);
   const [headerLoading, setHeaderLoading] = React.useState(true);
@@ -44,7 +45,15 @@ const BlogDetails = ({ selectedBlog, blogContent }: any) => {
             <h2 className={styles.heading}>{heading}</h2>
             <p className={styles.date}>{formatDate(date)}</p>
             <div className={styles.coverImgContainer}>
-              <img className={styles.coverImg} src={imgUrl} alt="preview" />
+              <Image
+                className={styles.coverImg}
+                src={imgUrl}
+                alt={heading}
+                width={imgSize.width}
+                height={imgSize.height}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
             </div>
             <div className={styles.authorContainer}>
               {Object.keys(author).map((index) => (

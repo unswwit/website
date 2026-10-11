@@ -248,6 +248,21 @@ export async function loadCareerResources() {
   return res ? res.items : [];
 }
 
+export async function loadJobs() {
+  const res = await client
+    .getEntries({
+      content_type: 'opportunities',
+      select: 'sys.id,fields',
+      order: 'fields.closeDate',
+      limit: 1000,
+    })
+    .catch((error) => {
+      console.error(error);
+      return null;
+    });
+  return res ? res.items : [];
+}
+
 export async function loadLatestPodcast() {
   const res = await client
     .getEntries({
